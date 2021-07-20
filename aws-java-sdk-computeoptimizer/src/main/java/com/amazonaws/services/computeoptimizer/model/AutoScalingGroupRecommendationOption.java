@@ -63,9 +63,10 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
      * performance risk score across the analyzed resource specifications.
      * </p>
      * <p>
-     * The value ranges from 0 to 5, with 0 meaning that the recommended resource is predicted to always provide enough
-     * hardware capability. The higher the performance risk is, the more likely you should validate whether the
-     * recommended resource meets the performance requirements of your workload before migrating your resource.
+     * The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended resource
+     * is predicted to always provide enough hardware capability. The higher the performance risk is, the more likely
+     * you should validate whether the recommendation will meet the performance requirements of your workload before
+     * migrating your resource.
      * </p>
      */
     private Double performanceRisk;
@@ -273,9 +274,10 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
      * performance risk score across the analyzed resource specifications.
      * </p>
      * <p>
-     * The value ranges from 0 to 5, with 0 meaning that the recommended resource is predicted to always provide enough
-     * hardware capability. The higher the performance risk is, the more likely you should validate whether the
-     * recommended resource meets the performance requirements of your workload before migrating your resource.
+     * The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended resource
+     * is predicted to always provide enough hardware capability. The higher the performance risk is, the more likely
+     * you should validate whether the recommendation will meet the performance requirements of your workload before
+     * migrating your resource.
      * </p>
      * 
      * @param performanceRisk
@@ -288,10 +290,10 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
      *        maximum performance risk score across the analyzed resource specifications.
      *        </p>
      *        <p>
-     *        The value ranges from 0 to 5, with 0 meaning that the recommended resource is predicted to always provide
-     *        enough hardware capability. The higher the performance risk is, the more likely you should validate
-     *        whether the recommended resource meets the performance requirements of your workload before migrating your
-     *        resource.
+     *        The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended
+     *        resource is predicted to always provide enough hardware capability. The higher the performance risk is,
+     *        the more likely you should validate whether the recommendation will meet the performance requirements of
+     *        your workload before migrating your resource.
      */
 
     public void setPerformanceRisk(Double performanceRisk) {
@@ -310,9 +312,10 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
      * performance risk score across the analyzed resource specifications.
      * </p>
      * <p>
-     * The value ranges from 0 to 5, with 0 meaning that the recommended resource is predicted to always provide enough
-     * hardware capability. The higher the performance risk is, the more likely you should validate whether the
-     * recommended resource meets the performance requirements of your workload before migrating your resource.
+     * The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended resource
+     * is predicted to always provide enough hardware capability. The higher the performance risk is, the more likely
+     * you should validate whether the recommendation will meet the performance requirements of your workload before
+     * migrating your resource.
      * </p>
      * 
      * @return The performance risk of the Auto Scaling group configuration recommendation.</p>
@@ -324,10 +327,10 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
      *         instance is calculated as the maximum performance risk score across the analyzed resource specifications.
      *         </p>
      *         <p>
-     *         The value ranges from 0 to 5, with 0 meaning that the recommended resource is predicted to always provide
-     *         enough hardware capability. The higher the performance risk is, the more likely you should validate
-     *         whether the recommended resource meets the performance requirements of your workload before migrating
-     *         your resource.
+     *         The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended
+     *         resource is predicted to always provide enough hardware capability. The higher the performance risk is,
+     *         the more likely you should validate whether the recommendation will meet the performance requirements of
+     *         your workload before migrating your resource.
      */
 
     public Double getPerformanceRisk() {
@@ -346,9 +349,10 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
      * performance risk score across the analyzed resource specifications.
      * </p>
      * <p>
-     * The value ranges from 0 to 5, with 0 meaning that the recommended resource is predicted to always provide enough
-     * hardware capability. The higher the performance risk is, the more likely you should validate whether the
-     * recommended resource meets the performance requirements of your workload before migrating your resource.
+     * The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended resource
+     * is predicted to always provide enough hardware capability. The higher the performance risk is, the more likely
+     * you should validate whether the recommendation will meet the performance requirements of your workload before
+     * migrating your resource.
      * </p>
      * 
      * @param performanceRisk
@@ -361,10 +365,10 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
      *        maximum performance risk score across the analyzed resource specifications.
      *        </p>
      *        <p>
-     *        The value ranges from 0 to 5, with 0 meaning that the recommended resource is predicted to always provide
-     *        enough hardware capability. The higher the performance risk is, the more likely you should validate
-     *        whether the recommended resource meets the performance requirements of your workload before migrating your
-     *        resource.
+     *        The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended
+     *        resource is predicted to always provide enough hardware capability. The higher the performance risk is,
+     *        the more likely you should validate whether the recommendation will meet the performance requirements of
+     *        your workload before migrating your resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

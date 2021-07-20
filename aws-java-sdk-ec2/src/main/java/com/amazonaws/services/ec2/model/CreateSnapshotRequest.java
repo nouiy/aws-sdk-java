@@ -33,7 +33,7 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
     private String description;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost on which to create a local snapshot.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create a local snapshot.
      * </p>
      * <ul>
      * <li>
@@ -57,14 +57,14 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot"> Creating
-     * local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">Create local
+     * snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
     private String outpostArn;
     /**
      * <p>
-     * The ID of the EBS volume.
+     * The ID of the Amazon EBS volume.
      * </p>
      */
     private String volumeId;
@@ -87,7 +87,7 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
      * to initialize any additional object members.
      * 
      * @param volumeId
-     *        The ID of the EBS volume.
+     *        The ID of the Amazon EBS volume.
      * @param description
      *        A description for the snapshot.
      */
@@ -138,7 +138,7 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost on which to create a local snapshot.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create a local snapshot.
      * </p>
      * <ul>
      * <li>
@@ -162,12 +162,12 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot"> Creating
-     * local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">Create local
+     * snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param outpostArn
-     *        The Amazon Resource Name (ARN) of the AWS Outpost on which to create a local snapshot.</p>
+     *        The Amazon Resource Name (ARN) of the Outpost on which to create a local snapshot.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -190,9 +190,8 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">
-     *        Creating local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">Create
+     *        local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public void setOutpostArn(String outpostArn) {
@@ -201,7 +200,7 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost on which to create a local snapshot.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create a local snapshot.
      * </p>
      * <ul>
      * <li>
@@ -225,11 +224,11 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot"> Creating
-     * local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">Create local
+     * snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Outpost on which to create a local snapshot.</p>
+     * @return The Amazon Resource Name (ARN) of the Outpost on which to create a local snapshot.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -252,9 +251,8 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
      *         </ul>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">
-     *         Creating local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
-     *         Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">Create
+     *         local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public String getOutpostArn() {
@@ -263,7 +261,7 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost on which to create a local snapshot.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create a local snapshot.
      * </p>
      * <ul>
      * <li>
@@ -287,12 +285,12 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot"> Creating
-     * local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">Create local
+     * snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param outpostArn
-     *        The Amazon Resource Name (ARN) of the AWS Outpost on which to create a local snapshot.</p>
+     *        The Amazon Resource Name (ARN) of the Outpost on which to create a local snapshot.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -315,9 +313,8 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">
-     *        Creating local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
-     *        Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-snapshot">Create
+     *        local snapshots from volumes on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -328,11 +325,11 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ID of the EBS volume.
+     * The ID of the Amazon EBS volume.
      * </p>
      * 
      * @param volumeId
-     *        The ID of the EBS volume.
+     *        The ID of the Amazon EBS volume.
      */
 
     public void setVolumeId(String volumeId) {
@@ -341,10 +338,10 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ID of the EBS volume.
+     * The ID of the Amazon EBS volume.
      * </p>
      * 
-     * @return The ID of the EBS volume.
+     * @return The ID of the Amazon EBS volume.
      */
 
     public String getVolumeId() {
@@ -353,11 +350,11 @@ public class CreateSnapshotRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * The ID of the EBS volume.
+     * The ID of the Amazon EBS volume.
      * </p>
      * 
      * @param volumeId
-     *        The ID of the EBS volume.
+     *        The ID of the Amazon EBS volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

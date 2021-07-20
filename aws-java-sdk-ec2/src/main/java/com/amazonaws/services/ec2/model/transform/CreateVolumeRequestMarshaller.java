@@ -21,6 +21,7 @@ import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.services.ec2.model.*;
 import com.amazonaws.transform.Marshaller;
 import com.amazonaws.util.StringUtils;
+import com.amazonaws.util.IdempotentUtils;
 
 /**
  * CreateVolumeRequest Marshaller
@@ -114,6 +115,8 @@ public class CreateVolumeRequestMarshaller implements Marshaller<Request<CreateV
         if (createVolumeRequest.getThroughput() != null) {
             request.addParameter("Throughput", StringUtils.fromInteger(createVolumeRequest.getThroughput()));
         }
+
+        request.addParameter("ClientToken", IdempotentUtils.resolveString(createVolumeRequest.getClientToken()));
 
         return request;
     }

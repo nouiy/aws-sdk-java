@@ -153,7 +153,7 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * performance risk score across the analyzed resource specifications.
      * </p>
      * <p>
-     * The value ranges from <code>0</code> to <code>5</code>, with <code>0</code> meaning that the recommended resource
+     * The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended resource
      * is predicted to always provide enough hardware capability. The higher the performance risk is, the more likely
      * you should validate whether the recommendation will meet the performance requirements of your workload before
      * migrating your resource.
@@ -1314,7 +1314,7 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * performance risk score across the analyzed resource specifications.
      * </p>
      * <p>
-     * The value ranges from <code>0</code> to <code>5</code>, with <code>0</code> meaning that the recommended resource
+     * The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended resource
      * is predicted to always provide enough hardware capability. The higher the performance risk is, the more likely
      * you should validate whether the recommendation will meet the performance requirements of your workload before
      * migrating your resource.
@@ -1330,7 +1330,7 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        maximum performance risk score across the analyzed resource specifications.
      *        </p>
      *        <p>
-     *        The value ranges from <code>0</code> to <code>5</code>, with <code>0</code> meaning that the recommended
+     *        The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended
      *        resource is predicted to always provide enough hardware capability. The higher the performance risk is,
      *        the more likely you should validate whether the recommendation will meet the performance requirements of
      *        your workload before migrating your resource.
@@ -1352,7 +1352,7 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * performance risk score across the analyzed resource specifications.
      * </p>
      * <p>
-     * The value ranges from <code>0</code> to <code>5</code>, with <code>0</code> meaning that the recommended resource
+     * The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended resource
      * is predicted to always provide enough hardware capability. The higher the performance risk is, the more likely
      * you should validate whether the recommendation will meet the performance requirements of your workload before
      * migrating your resource.
@@ -1367,7 +1367,7 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *         instance is calculated as the maximum performance risk score across the analyzed resource specifications.
      *         </p>
      *         <p>
-     *         The value ranges from <code>0</code> to <code>5</code>, with <code>0</code> meaning that the recommended
+     *         The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended
      *         resource is predicted to always provide enough hardware capability. The higher the performance risk is,
      *         the more likely you should validate whether the recommendation will meet the performance requirements of
      *         your workload before migrating your resource.
@@ -1389,7 +1389,7 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * performance risk score across the analyzed resource specifications.
      * </p>
      * <p>
-     * The value ranges from <code>0</code> to <code>5</code>, with <code>0</code> meaning that the recommended resource
+     * The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended resource
      * is predicted to always provide enough hardware capability. The higher the performance risk is, the more likely
      * you should validate whether the recommendation will meet the performance requirements of your workload before
      * migrating your resource.
@@ -1405,7 +1405,7 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        maximum performance risk score across the analyzed resource specifications.
      *        </p>
      *        <p>
-     *        The value ranges from <code>0</code> to <code>5</code>, with <code>0</code> meaning that the recommended
+     *        The value ranges from <code>0</code> - <code>4</code>, with <code>0</code> meaning that the recommended
      *        resource is predicted to always provide enough hardware capability. The higher the performance risk is,
      *        the more likely you should validate whether the recommendation will meet the performance requirements of
      *        your workload before migrating your resource.

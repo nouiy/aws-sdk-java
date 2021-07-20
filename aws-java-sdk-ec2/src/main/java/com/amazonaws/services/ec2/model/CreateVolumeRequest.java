@@ -75,9 +75,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * For <code>io1</code> and <code>io2</code> volumes, we guarantee 64,000 IOPS only for <a
+     * <code>io1</code> and <code>io2</code> volumes support up to 64,000 IOPS only on <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * built on the Nitro System</a>. Other instance families support performance up to 32,000 IOPS.
      * </p>
      * <p>
      * This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for <code>gp3</code>
@@ -88,12 +88,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     private Integer iops;
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     * encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If <code>KmsKeyId</code> is
-     * specified, the encrypted state must be <code>true</code>.
+     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
+     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
+     * must be <code>true</code>.
      * </p>
      * <p>
-     * You can specify the CMK using any of the following:
+     * You can specify the KMS key using any of the following:
      * </p>
      * <ul>
      * <li>
@@ -118,8 +118,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid, the
-     * action can appear to complete, but eventually fails.
+     * Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that
+     * is not valid, the action can appear to complete, but eventually fails.
      * </p>
      */
     private String kmsKeyId;
@@ -239,6 +239,15 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      */
     private Integer throughput;
+    /**
+     * <p>
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     * Idempotency</a>.
+     * </p>
+     */
+    private String clientToken;
 
     /**
      * Default constructor for CreateVolumeRequest object. Callers should use the setter or fluent setter (with...)
@@ -497,9 +506,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * For <code>io1</code> and <code>io2</code> volumes, we guarantee 64,000 IOPS only for <a
+     * <code>io1</code> and <code>io2</code> volumes support up to 64,000 IOPS only on <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * built on the Nitro System</a>. Other instance families support performance up to 32,000 IOPS.
      * </p>
      * <p>
      * This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for <code>gp3</code>
@@ -533,9 +542,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </li>
      *        </ul>
      *        <p>
-     *        For <code>io1</code> and <code>io2</code> volumes, we guarantee 64,000 IOPS only for <a
+     *        <code>io1</code> and <code>io2</code> volumes support up to 64,000 IOPS only on <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >Instances built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     *        >Instances built on the Nitro System</a>. Other instance families support performance up to 32,000 IOPS.
      *        </p>
      *        <p>
      *        This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for
@@ -575,9 +584,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * For <code>io1</code> and <code>io2</code> volumes, we guarantee 64,000 IOPS only for <a
+     * <code>io1</code> and <code>io2</code> volumes support up to 64,000 IOPS only on <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * built on the Nitro System</a>. Other instance families support performance up to 32,000 IOPS.
      * </p>
      * <p>
      * This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for <code>gp3</code>
@@ -610,10 +619,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         </li>
      *         </ul>
      *         <p>
-     *         For <code>io1</code> and <code>io2</code> volumes, we guarantee 64,000 IOPS only for <a
+     *         <code>io1</code> and <code>io2</code> volumes support up to 64,000 IOPS only on <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *         >Instances built on the Nitro System</a>. Other instance families guarantee performance up to 32,000
-     *         IOPS.
+     *         >Instances built on the Nitro System</a>. Other instance families support performance up to 32,000 IOPS.
      *         </p>
      *         <p>
      *         This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for
@@ -653,9 +661,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * For <code>io1</code> and <code>io2</code> volumes, we guarantee 64,000 IOPS only for <a
+     * <code>io1</code> and <code>io2</code> volumes support up to 64,000 IOPS only on <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances">Instances
-     * built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     * built on the Nitro System</a>. Other instance families support performance up to 32,000 IOPS.
      * </p>
      * <p>
      * This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for <code>gp3</code>
@@ -689,9 +697,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </li>
      *        </ul>
      *        <p>
-     *        For <code>io1</code> and <code>io2</code> volumes, we guarantee 64,000 IOPS only for <a
+     *        <code>io1</code> and <code>io2</code> volumes support up to 64,000 IOPS only on <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"
-     *        >Instances built on the Nitro System</a>. Other instance families guarantee performance up to 32,000 IOPS.
+     *        >Instances built on the Nitro System</a>. Other instance families support performance up to 32,000 IOPS.
      *        </p>
      *        <p>
      *        This parameter is required for <code>io1</code> and <code>io2</code> volumes. The default for
@@ -707,12 +715,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     * encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If <code>KmsKeyId</code> is
-     * specified, the encrypted state must be <code>true</code>.
+     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
+     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
+     * must be <code>true</code>.
      * </p>
      * <p>
-     * You can specify the CMK using any of the following:
+     * You can specify the KMS key using any of the following:
      * </p>
      * <ul>
      * <li>
@@ -737,16 +745,16 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid, the
-     * action can appear to complete, but eventually fails.
+     * Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that
+     * is not valid, the action can appear to complete, but eventually fails.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     *        encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If
-     *        <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.</p>
+     *        The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
+     *        parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
+     *        the encrypted state must be <code>true</code>.</p>
      *        <p>
-     *        You can specify the CMK using any of the following:
+     *        You can specify the KMS key using any of the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -771,8 +779,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </li>
      *        </ul>
      *        <p>
-     *        AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not
-     *        valid, the action can appear to complete, but eventually fails.
+     *        Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or
+     *        ARN that is not valid, the action can appear to complete, but eventually fails.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -781,12 +789,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     * encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If <code>KmsKeyId</code> is
-     * specified, the encrypted state must be <code>true</code>.
+     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
+     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
+     * must be <code>true</code>.
      * </p>
      * <p>
-     * You can specify the CMK using any of the following:
+     * You can specify the KMS key using any of the following:
      * </p>
      * <ul>
      * <li>
@@ -811,15 +819,15 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid, the
-     * action can appear to complete, but eventually fails.
+     * Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that
+     * is not valid, the action can appear to complete, but eventually fails.
      * </p>
      * 
-     * @return The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon
-     *         EBS encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If
-     *         <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.</p>
+     * @return The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
+     *         parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
+     *         the encrypted state must be <code>true</code>.</p>
      *         <p>
-     *         You can specify the CMK using any of the following:
+     *         You can specify the KMS key using any of the following:
      *         </p>
      *         <ul>
      *         <li>
@@ -844,8 +852,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         </li>
      *         </ul>
      *         <p>
-     *         AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not
-     *         valid, the action can appear to complete, but eventually fails.
+     *         Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or
+     *         ARN that is not valid, the action can appear to complete, but eventually fails.
      */
 
     public String getKmsKeyId() {
@@ -854,12 +862,12 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     * encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If <code>KmsKeyId</code> is
-     * specified, the encrypted state must be <code>true</code>.
+     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
+     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
+     * must be <code>true</code>.
      * </p>
      * <p>
-     * You can specify the CMK using any of the following:
+     * You can specify the KMS key using any of the following:
      * </p>
      * <ul>
      * <li>
@@ -884,16 +892,16 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid, the
-     * action can appear to complete, but eventually fails.
+     * Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that
+     * is not valid, the action can appear to complete, but eventually fails.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     *        encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If
-     *        <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.</p>
+     *        The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
+     *        parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
+     *        the encrypted state must be <code>true</code>.</p>
      *        <p>
-     *        You can specify the CMK using any of the following:
+     *        You can specify the KMS key using any of the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -918,8 +926,8 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </li>
      *        </ul>
      *        <p>
-     *        AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not
-     *        valid, the action can appear to complete, but eventually fails.
+     *        Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or
+     *        ARN that is not valid, the action can appear to complete, but eventually fails.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1872,6 +1880,64 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
     }
 
     /**
+     * <p>
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     * Idempotency</a>.
+     * </p>
+     * 
+     * @param clientToken
+     *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     *        Idempotency</a>.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     * Idempotency</a>.
+     * </p>
+     * 
+     * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     *         Idempotency</a>.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     * Idempotency</a>.
+     * </p>
+     * 
+     * @param clientToken
+     *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">Ensure
+     *        Idempotency</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateVolumeRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1915,7 +1981,9 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
         if (getMultiAttachEnabled() != null)
             sb.append("MultiAttachEnabled: ").append(getMultiAttachEnabled()).append(",");
         if (getThroughput() != null)
-            sb.append("Throughput: ").append(getThroughput());
+            sb.append("Throughput: ").append(getThroughput()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken());
         sb.append("}");
         return sb.toString();
     }
@@ -1974,6 +2042,10 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
             return false;
         if (other.getThroughput() != null && other.getThroughput().equals(this.getThroughput()) == false)
             return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
         return true;
     }
 
@@ -1993,6 +2065,7 @@ public class CreateVolumeRequest extends AmazonWebServiceRequest implements Seri
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getMultiAttachEnabled() == null) ? 0 : getMultiAttachEnabled().hashCode());
         hashCode = prime * hashCode + ((getThroughput() == null) ? 0 : getThroughput().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         return hashCode;
     }
 

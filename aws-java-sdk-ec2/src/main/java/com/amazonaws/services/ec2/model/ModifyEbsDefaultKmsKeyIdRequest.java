@@ -28,12 +28,12 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     * encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If <code>KmsKeyId</code> is
-     * specified, the encrypted state must be <code>true</code>.
+     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
+     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
+     * must be <code>true</code>.
      * </p>
      * <p>
-     * You can specify the CMK using any of the following:
+     * You can specify the KMS key using any of the following:
      * </p>
      * <ul>
      * <li>
@@ -58,23 +58,23 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid, the
-     * action can appear to complete, but eventually fails.
+     * Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that
+     * is not valid, the action can appear to complete, but eventually fails.
      * </p>
      * <p>
-     * Amazon EBS does not support asymmetric CMKs.
+     * Amazon EBS does not support asymmetric KMS keys.
      * </p>
      */
     private String kmsKeyId;
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     * encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If <code>KmsKeyId</code> is
-     * specified, the encrypted state must be <code>true</code>.
+     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
+     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
+     * must be <code>true</code>.
      * </p>
      * <p>
-     * You can specify the CMK using any of the following:
+     * You can specify the KMS key using any of the following:
      * </p>
      * <ul>
      * <li>
@@ -99,19 +99,19 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid, the
-     * action can appear to complete, but eventually fails.
+     * Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that
+     * is not valid, the action can appear to complete, but eventually fails.
      * </p>
      * <p>
-     * Amazon EBS does not support asymmetric CMKs.
+     * Amazon EBS does not support asymmetric KMS keys.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     *        encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If
-     *        <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.</p>
+     *        The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
+     *        parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
+     *        the encrypted state must be <code>true</code>.</p>
      *        <p>
-     *        You can specify the CMK using any of the following:
+     *        You can specify the KMS key using any of the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -136,11 +136,11 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      *        </li>
      *        </ul>
      *        <p>
-     *        AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not
-     *        valid, the action can appear to complete, but eventually fails.
+     *        Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or
+     *        ARN that is not valid, the action can appear to complete, but eventually fails.
      *        </p>
      *        <p>
-     *        Amazon EBS does not support asymmetric CMKs.
+     *        Amazon EBS does not support asymmetric KMS keys.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -149,12 +149,12 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     * encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If <code>KmsKeyId</code> is
-     * specified, the encrypted state must be <code>true</code>.
+     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
+     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
+     * must be <code>true</code>.
      * </p>
      * <p>
-     * You can specify the CMK using any of the following:
+     * You can specify the KMS key using any of the following:
      * </p>
      * <ul>
      * <li>
@@ -179,18 +179,18 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid, the
-     * action can appear to complete, but eventually fails.
+     * Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that
+     * is not valid, the action can appear to complete, but eventually fails.
      * </p>
      * <p>
-     * Amazon EBS does not support asymmetric CMKs.
+     * Amazon EBS does not support asymmetric KMS keys.
      * </p>
      * 
-     * @return The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon
-     *         EBS encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If
-     *         <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.</p>
+     * @return The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
+     *         parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
+     *         the encrypted state must be <code>true</code>.</p>
      *         <p>
-     *         You can specify the CMK using any of the following:
+     *         You can specify the KMS key using any of the following:
      *         </p>
      *         <ul>
      *         <li>
@@ -215,11 +215,11 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      *         </li>
      *         </ul>
      *         <p>
-     *         AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not
-     *         valid, the action can appear to complete, but eventually fails.
+     *         Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or
+     *         ARN that is not valid, the action can appear to complete, but eventually fails.
      *         </p>
      *         <p>
-     *         Amazon EBS does not support asymmetric CMKs.
+     *         Amazon EBS does not support asymmetric KMS keys.
      */
 
     public String getKmsKeyId() {
@@ -228,12 +228,12 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     * encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If <code>KmsKeyId</code> is
-     * specified, the encrypted state must be <code>true</code>.
+     * The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this parameter is
+     * not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified, the encrypted state
+     * must be <code>true</code>.
      * </p>
      * <p>
-     * You can specify the CMK using any of the following:
+     * You can specify the KMS key using any of the following:
      * </p>
      * <ul>
      * <li>
@@ -258,19 +258,19 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not valid, the
-     * action can appear to complete, but eventually fails.
+     * Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or ARN that
+     * is not valid, the action can appear to complete, but eventually fails.
      * </p>
      * <p>
-     * Amazon EBS does not support asymmetric CMKs.
+     * Amazon EBS does not support asymmetric KMS keys.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use for Amazon EBS
-     *        encryption. If this parameter is not specified, your AWS managed CMK for EBS is used. If
-     *        <code>KmsKeyId</code> is specified, the encrypted state must be <code>true</code>.</p>
+     *        The identifier of the Key Management Service (KMS) KMS key to use for Amazon EBS encryption. If this
+     *        parameter is not specified, your KMS key for Amazon EBS is used. If <code>KmsKeyId</code> is specified,
+     *        the encrypted state must be <code>true</code>.</p>
      *        <p>
-     *        You can specify the CMK using any of the following:
+     *        You can specify the KMS key using any of the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -295,11 +295,11 @@ public class ModifyEbsDefaultKmsKeyIdRequest extends AmazonWebServiceRequest imp
      *        </li>
      *        </ul>
      *        <p>
-     *        AWS authenticates the CMK asynchronously. Therefore, if you specify an ID, alias, or ARN that is not
-     *        valid, the action can appear to complete, but eventually fails.
+     *        Amazon Web Services authenticates the KMS key asynchronously. Therefore, if you specify an ID, alias, or
+     *        ARN that is not valid, the action can appear to complete, but eventually fails.
      *        </p>
      *        <p>
-     *        Amazon EBS does not support asymmetric CMKs.
+     *        Amazon EBS does not support asymmetric KMS keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

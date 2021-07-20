@@ -49,14 +49,14 @@ public class Snapshot implements Serializable, Cloneable {
     private Boolean encrypted;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was
-     * used to protect the volume encryption key for the parent volume.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
+     * encryption key for the parent volume.
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * The AWS account ID of the EBS snapshot owner.
+     * The ID of the account that owns the EBS snapshot.
      * </p>
      */
     private String ownerId;
@@ -87,8 +87,8 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the
-     * proper AWS Key Management Service (AWS KMS) permissions are not obtained) this field displays error state details
-     * to help you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
+     * proper Key Management Service (KMS) permissions are not obtained) this field displays error state details to help
+     * you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      * </p>
      */
     private String stateMessage;
@@ -107,15 +107,15 @@ public class Snapshot implements Serializable, Cloneable {
     private Integer volumeSize;
     /**
      * <p>
-     * The AWS owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the user-configured AWS
-     * account alias set using the IAM console.
+     * The Amazon Web Services owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the
+     * user-configured account alias set using the IAM console.
      * </p>
      */
     private String ownerAlias;
     /**
      * <p>
-     * The ARN of the AWS Outpost on which the snapshot is stored. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">EBS Local Snapshot on
+     * The ARN of the Outpost on which the snapshot is stored. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local snapshots on
      * Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
@@ -285,13 +285,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was
-     * used to protect the volume encryption key for the parent volume.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
+     * encryption key for the parent volume.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) that
-     *        was used to protect the volume encryption key for the parent volume.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the
+     *        volume encryption key for the parent volume.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -300,12 +300,12 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was
-     * used to protect the volume encryption key for the parent volume.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
+     * encryption key for the parent volume.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) that
-     *         was used to protect the volume encryption key for the parent volume.
+     * @return The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the
+     *         volume encryption key for the parent volume.
      */
 
     public String getKmsKeyId() {
@@ -314,13 +314,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was
-     * used to protect the volume encryption key for the parent volume.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the volume
+     * encryption key for the parent volume.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service (AWS KMS) customer master key (CMK) that
-     *        was used to protect the volume encryption key for the parent volume.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) KMS key that was used to protect the
+     *        volume encryption key for the parent volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,11 +331,11 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the EBS snapshot owner.
+     * The ID of the account that owns the EBS snapshot.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the EBS snapshot owner.
+     *        The ID of the account that owns the EBS snapshot.
      */
 
     public void setOwnerId(String ownerId) {
@@ -344,10 +344,10 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the EBS snapshot owner.
+     * The ID of the account that owns the EBS snapshot.
      * </p>
      * 
-     * @return The AWS account ID of the EBS snapshot owner.
+     * @return The ID of the account that owns the EBS snapshot.
      */
 
     public String getOwnerId() {
@@ -356,11 +356,11 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the EBS snapshot owner.
+     * The ID of the account that owns the EBS snapshot.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the EBS snapshot owner.
+     *        The ID of the account that owns the EBS snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -565,14 +565,14 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the
-     * proper AWS Key Management Service (AWS KMS) permissions are not obtained) this field displays error state details
-     * to help you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
+     * proper Key Management Service (KMS) permissions are not obtained) this field displays error state details to help
+     * you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      * </p>
      * 
      * @param stateMessage
      *        Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example,
-     *        if the proper AWS Key Management Service (AWS KMS) permissions are not obtained) this field displays error
-     *        state details to help you diagnose why the error occurred. This parameter is only returned by
+     *        if the proper Key Management Service (KMS) permissions are not obtained) this field displays error state
+     *        details to help you diagnose why the error occurred. This parameter is only returned by
      *        <a>DescribeSnapshots</a>.
      */
 
@@ -583,14 +583,14 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the
-     * proper AWS Key Management Service (AWS KMS) permissions are not obtained) this field displays error state details
-     * to help you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
+     * proper Key Management Service (KMS) permissions are not obtained) this field displays error state details to help
+     * you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      * </p>
      * 
      * @return Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for
-     *         example, if the proper AWS Key Management Service (AWS KMS) permissions are not obtained) this field
-     *         displays error state details to help you diagnose why the error occurred. This parameter is only returned
-     *         by <a>DescribeSnapshots</a>.
+     *         example, if the proper Key Management Service (KMS) permissions are not obtained) this field displays
+     *         error state details to help you diagnose why the error occurred. This parameter is only returned by
+     *         <a>DescribeSnapshots</a>.
      */
 
     public String getStateMessage() {
@@ -600,14 +600,14 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      * Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example, if the
-     * proper AWS Key Management Service (AWS KMS) permissions are not obtained) this field displays error state details
-     * to help you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
+     * proper Key Management Service (KMS) permissions are not obtained) this field displays error state details to help
+     * you diagnose why the error occurred. This parameter is only returned by <a>DescribeSnapshots</a>.
      * </p>
      * 
      * @param stateMessage
      *        Encrypted Amazon EBS snapshots are copied asynchronously. If a snapshot copy operation fails (for example,
-     *        if the proper AWS Key Management Service (AWS KMS) permissions are not obtained) this field displays error
-     *        state details to help you diagnose why the error occurred. This parameter is only returned by
+     *        if the proper Key Management Service (KMS) permissions are not obtained) this field displays error state
+     *        details to help you diagnose why the error occurred. This parameter is only returned by
      *        <a>DescribeSnapshots</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -705,13 +705,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the user-configured AWS
-     * account alias set using the IAM console.
+     * The Amazon Web Services owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the
+     * user-configured account alias set using the IAM console.
      * </p>
      * 
      * @param ownerAlias
-     *        The AWS owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the user-configured
-     *        AWS account alias set using the IAM console.
+     *        The Amazon Web Services owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the
+     *        user-configured account alias set using the IAM console.
      */
 
     public void setOwnerAlias(String ownerAlias) {
@@ -720,12 +720,12 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the user-configured AWS
-     * account alias set using the IAM console.
+     * The Amazon Web Services owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the
+     * user-configured account alias set using the IAM console.
      * </p>
      * 
-     * @return The AWS owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the
-     *         user-configured AWS account alias set using the IAM console.
+     * @return The Amazon Web Services owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not
+     *         the user-configured account alias set using the IAM console.
      */
 
     public String getOwnerAlias() {
@@ -734,13 +734,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the user-configured AWS
-     * account alias set using the IAM console.
+     * The Amazon Web Services owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the
+     * user-configured account alias set using the IAM console.
      * </p>
      * 
      * @param ownerAlias
-     *        The AWS owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the user-configured
-     *        AWS account alias set using the IAM console.
+     *        The Amazon Web Services owner alias, from an Amazon-maintained list (<code>amazon</code>). This is not the
+     *        user-configured account alias set using the IAM console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -751,15 +751,15 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the AWS Outpost on which the snapshot is stored. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">EBS Local Snapshot on
+     * The ARN of the Outpost on which the snapshot is stored. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local snapshots on
      * Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param outpostArn
-     *        The ARN of the AWS Outpost on which the snapshot is stored. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">EBS Local Snapshot on
-     *        Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        The ARN of the Outpost on which the snapshot is stored. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local
+     *        snapshots on Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public void setOutpostArn(String outpostArn) {
@@ -768,14 +768,14 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the AWS Outpost on which the snapshot is stored. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">EBS Local Snapshot on
+     * The ARN of the Outpost on which the snapshot is stored. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local snapshots on
      * Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
-     * @return The ARN of the AWS Outpost on which the snapshot is stored. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">EBS Local Snapshot on
-     *         Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return The ARN of the Outpost on which the snapshot is stored. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local
+     *         snapshots on Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public String getOutpostArn() {
@@ -784,15 +784,15 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ARN of the AWS Outpost on which the snapshot is stored. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">EBS Local Snapshot on
+     * The ARN of the Outpost on which the snapshot is stored. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local snapshots on
      * Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param outpostArn
-     *        The ARN of the AWS Outpost on which the snapshot is stored. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">EBS Local Snapshot on
-     *        Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        The ARN of the Outpost on which the snapshot is stored. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html">Amazon EBS local
+     *        snapshots on Outposts</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

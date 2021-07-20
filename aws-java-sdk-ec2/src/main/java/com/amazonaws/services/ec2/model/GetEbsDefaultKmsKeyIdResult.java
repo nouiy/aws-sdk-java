@@ -25,18 +25,18 @@ public class GetEbsDefaultKmsKeyIdResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the default CMK for encryption by default.
+     * The Amazon Resource Name (ARN) of the default KMS key for encryption by default.
      * </p>
      */
     private String kmsKeyId;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the default CMK for encryption by default.
+     * The Amazon Resource Name (ARN) of the default KMS key for encryption by default.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the default CMK for encryption by default.
+     *        The Amazon Resource Name (ARN) of the default KMS key for encryption by default.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -45,10 +45,10 @@ public class GetEbsDefaultKmsKeyIdResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the default CMK for encryption by default.
+     * The Amazon Resource Name (ARN) of the default KMS key for encryption by default.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the default CMK for encryption by default.
+     * @return The Amazon Resource Name (ARN) of the default KMS key for encryption by default.
      */
 
     public String getKmsKeyId() {
@@ -57,11 +57,11 @@ public class GetEbsDefaultKmsKeyIdResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the default CMK for encryption by default.
+     * The Amazon Resource Name (ARN) of the default KMS key for encryption by default.
      * </p>
      * 
      * @param kmsKeyId
-     *        The Amazon Resource Name (ARN) of the default CMK for encryption by default.
+     *        The Amazon Resource Name (ARN) of the default KMS key for encryption by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

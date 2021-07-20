@@ -62,7 +62,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * Default: If no size is specified, the existing size is retained.
+     * Default: The existing size is retained.
      * </p>
      */
     private Integer size;
@@ -73,7 +73,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * Default: If no type is specified, the existing type is retained.
+     * Default: The existing type is retained.
      * </p>
      */
     private String volumeType;
@@ -103,8 +103,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * Default: If no IOPS value is specified, the existing value is retained, unless a volume type is modified that
-     * supports different values.
+     * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
+     * <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
      * </p>
      */
     private Integer iops;
@@ -114,7 +114,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * maximum value is 1,000.
      * </p>
      * <p>
-     * Default: If no throughput value is specified, the existing value is retained.
+     * Default: The existing value is retained if the source and target volume type is <code>gp3</code>. Otherwise, the
+     * default value is 125.
      * </p>
      * <p>
      * Valid Range: Minimum value of 125. Maximum value of 1000.
@@ -204,7 +205,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * Default: If no size is specified, the existing size is retained.
+     * Default: The existing size is retained.
      * </p>
      * 
      * @param size
@@ -236,7 +237,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If no size is specified, the existing size is retained.
+     *        Default: The existing size is retained.
      */
 
     public void setSize(Integer size) {
@@ -274,7 +275,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * Default: If no size is specified, the existing size is retained.
+     * Default: The existing size is retained.
      * </p>
      * 
      * @return The target size of the volume, in GiB. The target volume size must be greater than or equal to the
@@ -305,7 +306,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         </li>
      *         </ul>
      *         <p>
-     *         Default: If no size is specified, the existing size is retained.
+     *         Default: The existing size is retained.
      */
 
     public Integer getSize() {
@@ -343,7 +344,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * Default: If no size is specified, the existing size is retained.
+     * Default: The existing size is retained.
      * </p>
      * 
      * @param size
@@ -375,7 +376,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If no size is specified, the existing size is retained.
+     *        Default: The existing size is retained.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -391,7 +392,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * Default: If no type is specified, the existing type is retained.
+     * Default: The existing type is retained.
      * </p>
      * 
      * @param volumeType
@@ -399,7 +400,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
      *        in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      *        <p>
-     *        Default: If no type is specified, the existing type is retained.
+     *        Default: The existing type is retained.
      * @see VolumeType
      */
 
@@ -414,14 +415,14 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * Default: If no type is specified, the existing type is retained.
+     * Default: The existing type is retained.
      * </p>
      * 
      * @return The target EBS volume type of the volume. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume
      *         types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      *         <p>
-     *         Default: If no type is specified, the existing type is retained.
+     *         Default: The existing type is retained.
      * @see VolumeType
      */
 
@@ -436,7 +437,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * Default: If no type is specified, the existing type is retained.
+     * Default: The existing type is retained.
      * </p>
      * 
      * @param volumeType
@@ -444,7 +445,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
      *        in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      *        <p>
-     *        Default: If no type is specified, the existing type is retained.
+     *        Default: The existing type is retained.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeType
      */
@@ -461,7 +462,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * Default: If no type is specified, the existing type is retained.
+     * Default: The existing type is retained.
      * </p>
      * 
      * @param volumeType
@@ -469,7 +470,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
      *        in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      *        <p>
-     *        Default: If no type is specified, the existing type is retained.
+     *        Default: The existing type is retained.
      * @see VolumeType
      */
 
@@ -484,7 +485,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * Default: If no type is specified, the existing type is retained.
+     * Default: The existing type is retained.
      * </p>
      * 
      * @param volumeType
@@ -492,7 +493,7 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS volume types</a>
      *        in the <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
      *        <p>
-     *        Default: If no type is specified, the existing type is retained.
+     *        Default: The existing type is retained.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeType
      */
@@ -528,8 +529,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * Default: If no IOPS value is specified, the existing value is retained, unless a volume type is modified that
-     * supports different values.
+     * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
+     * <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
      * </p>
      * 
      * @param iops
@@ -556,8 +557,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If no IOPS value is specified, the existing value is retained, unless a volume type is modified
-     *        that supports different values.
+     *        Default: The existing value is retained if you keep the same volume type. If you change the volume type to
+     *        <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
      */
 
     public void setIops(Integer iops) {
@@ -590,8 +591,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * Default: If no IOPS value is specified, the existing value is retained, unless a volume type is modified that
-     * supports different values.
+     * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
+     * <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
      * </p>
      * 
      * @return The target IOPS rate of the volume. This parameter is valid only for <code>gp3</code>, <code>io1</code>,
@@ -617,8 +618,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *         </li>
      *         </ul>
      *         <p>
-     *         Default: If no IOPS value is specified, the existing value is retained, unless a volume type is modified
-     *         that supports different values.
+     *         Default: The existing value is retained if you keep the same volume type. If you change the volume type
+     *         to <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
      */
 
     public Integer getIops() {
@@ -651,8 +652,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * </li>
      * </ul>
      * <p>
-     * Default: If no IOPS value is specified, the existing value is retained, unless a volume type is modified that
-     * supports different values.
+     * Default: The existing value is retained if you keep the same volume type. If you change the volume type to
+     * <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
      * </p>
      * 
      * @param iops
@@ -679,8 +680,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        </li>
      *        </ul>
      *        <p>
-     *        Default: If no IOPS value is specified, the existing value is retained, unless a volume type is modified
-     *        that supports different values.
+     *        Default: The existing value is retained if you keep the same volume type. If you change the volume type to
+     *        <code>io1</code>, <code>io2</code>, or <code>gp3</code>, the default is 3,000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -695,7 +696,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * maximum value is 1,000.
      * </p>
      * <p>
-     * Default: If no throughput value is specified, the existing value is retained.
+     * Default: The existing value is retained if the source and target volume type is <code>gp3</code>. Otherwise, the
+     * default value is 125.
      * </p>
      * <p>
      * Valid Range: Minimum value of 125. Maximum value of 1000.
@@ -705,7 +707,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        The target throughput of the volume, in MiB/s. This parameter is valid only for <code>gp3</code> volumes.
      *        The maximum value is 1,000.</p>
      *        <p>
-     *        Default: If no throughput value is specified, the existing value is retained.
+     *        Default: The existing value is retained if the source and target volume type is <code>gp3</code>.
+     *        Otherwise, the default value is 125.
      *        </p>
      *        <p>
      *        Valid Range: Minimum value of 125. Maximum value of 1000.
@@ -721,7 +724,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * maximum value is 1,000.
      * </p>
      * <p>
-     * Default: If no throughput value is specified, the existing value is retained.
+     * Default: The existing value is retained if the source and target volume type is <code>gp3</code>. Otherwise, the
+     * default value is 125.
      * </p>
      * <p>
      * Valid Range: Minimum value of 125. Maximum value of 1000.
@@ -730,7 +734,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * @return The target throughput of the volume, in MiB/s. This parameter is valid only for <code>gp3</code> volumes.
      *         The maximum value is 1,000.</p>
      *         <p>
-     *         Default: If no throughput value is specified, the existing value is retained.
+     *         Default: The existing value is retained if the source and target volume type is <code>gp3</code>.
+     *         Otherwise, the default value is 125.
      *         </p>
      *         <p>
      *         Valid Range: Minimum value of 125. Maximum value of 1000.
@@ -746,7 +751,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      * maximum value is 1,000.
      * </p>
      * <p>
-     * Default: If no throughput value is specified, the existing value is retained.
+     * Default: The existing value is retained if the source and target volume type is <code>gp3</code>. Otherwise, the
+     * default value is 125.
      * </p>
      * <p>
      * Valid Range: Minimum value of 125. Maximum value of 1000.
@@ -756,7 +762,8 @@ public class ModifyVolumeRequest extends AmazonWebServiceRequest implements Seri
      *        The target throughput of the volume, in MiB/s. This parameter is valid only for <code>gp3</code> volumes.
      *        The maximum value is 1,000.</p>
      *        <p>
-     *        Default: If no throughput value is specified, the existing value is retained.
+     *        Default: The existing value is retained if the source and target volume type is <code>gp3</code>.
+     *        Otherwise, the default value is 125.
      *        </p>
      *        <p>
      *        Valid Range: Minimum value of 125. Maximum value of 1000.

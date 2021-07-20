@@ -39,7 +39,7 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
     private InstanceSpecification instanceSpecification;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost on which to create the local snapshots.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the local snapshots.
      * </p>
      * <ul>
      * <li>
@@ -64,8 +64,8 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-multivol-snapshot">
-     * Creating multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute Cloud
-     * User Guide</i>.
+     * Create multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
+     * Guide</i>.
      * </p>
      */
     private String outpostArn;
@@ -164,7 +164,7 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost on which to create the local snapshots.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the local snapshots.
      * </p>
      * <ul>
      * <li>
@@ -189,12 +189,12 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-multivol-snapshot">
-     * Creating multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute Cloud
-     * User Guide</i>.
+     * Create multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
+     * Guide</i>.
      * </p>
      * 
      * @param outpostArn
-     *        The Amazon Resource Name (ARN) of the AWS Outpost on which to create the local snapshots.</p>
+     *        The Amazon Resource Name (ARN) of the Outpost on which to create the local snapshots.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -218,7 +218,7 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-multivol-snapshot">
-     *        Creating multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute
+     *        Create multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute
      *        Cloud User Guide</i>.
      */
 
@@ -228,7 +228,7 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost on which to create the local snapshots.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the local snapshots.
      * </p>
      * <ul>
      * <li>
@@ -253,11 +253,11 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-multivol-snapshot">
-     * Creating multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute Cloud
-     * User Guide</i>.
+     * Create multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
+     * Guide</i>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Outpost on which to create the local snapshots.</p>
+     * @return The Amazon Resource Name (ARN) of the Outpost on which to create the local snapshots.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -281,7 +281,7 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
      *         <p>
      *         For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-multivol-snapshot">
-     *         Creating multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute
+     *         Create multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute
      *         Cloud User Guide</i>.
      */
 
@@ -291,7 +291,7 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost on which to create the local snapshots.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the local snapshots.
      * </p>
      * <ul>
      * <li>
@@ -316,12 +316,12 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-multivol-snapshot">
-     * Creating multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute Cloud
-     * User Guide</i>.
+     * Create multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute Cloud User
+     * Guide</i>.
      * </p>
      * 
      * @param outpostArn
-     *        The Amazon Resource Name (ARN) of the AWS Outpost on which to create the local snapshots.</p>
+     *        The Amazon Resource Name (ARN) of the Outpost on which to create the local snapshots.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -345,7 +345,7 @@ public class CreateSnapshotsRequest extends AmazonWebServiceRequest implements S
      *        <p>
      *        For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshots-outposts.html#create-multivol-snapshot">
-     *        Creating multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute
+     *        Create multi-volume local snapshots from instances on an Outpost</a> in the <i>Amazon Elastic Compute
      *        Cloud User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
