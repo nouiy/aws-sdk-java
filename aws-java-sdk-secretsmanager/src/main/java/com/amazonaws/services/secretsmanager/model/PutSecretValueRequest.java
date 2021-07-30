@@ -56,10 +56,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <note>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request. If you don't use the SDK and instead
-     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
+     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
+     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * </note>
      * <p>
@@ -124,7 +124,7 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
      * For information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * <p>
      * For example:
@@ -309,10 +309,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <note>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request. If you don't use the SDK and instead
-     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
+     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
+     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * </note>
      * <p>
@@ -350,11 +350,11 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * @param clientRequestToken
      *        (Optional) Specifies a unique identifier for the new version of the secret. </p> <note>
      *        <p>
-     *        If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter
-     *        empty. The CLI or SDK generates a random UUID for you and includes that in the request. If you don't use
-     *        the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must
-     *        generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the
-     *        request.
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
+     *        the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
+     *        service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
+     *        include that value in the request.
      *        </p>
      *        </note>
      *        <p>
@@ -400,10 +400,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <note>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request. If you don't use the SDK and instead
-     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
+     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
+     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * </note>
      * <p>
@@ -440,11 +440,11 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * 
      * @return (Optional) Specifies a unique identifier for the new version of the secret. </p> <note>
      *         <p>
-     *         If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter
-     *         empty. The CLI or SDK generates a random UUID for you and includes that in the request. If you don't use
-     *         the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must
-     *         generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the
-     *         request.
+     *         If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *         you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
+     *         the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
+     *         service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
+     *         include that value in the request.
      *         </p>
      *         </note>
      *         <p>
@@ -491,10 +491,10 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <note>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request. If you don't use the SDK and instead
-     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
+     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
+     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * </note>
      * <p>
@@ -532,11 +532,11 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * @param clientRequestToken
      *        (Optional) Specifies a unique identifier for the new version of the secret. </p> <note>
      *        <p>
-     *        If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter
-     *        empty. The CLI or SDK generates a random UUID for you and includes that in the request. If you don't use
-     *        the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must
-     *        generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the
-     *        request.
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
+     *        the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
+     *        service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
+     *        include that value in the request.
      *        </p>
      *        </note>
      *        <p>
@@ -705,7 +705,7 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
      * For information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * <p>
      * For example:
@@ -733,7 +733,7 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *        pairs. For information on how to format a JSON parameter for the various command line tool environments,
      *        see <a
      *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
      *        </p>
      *        <p>
      *        For example:
@@ -765,7 +765,7 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
      * For information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * <p>
      * For example:
@@ -792,7 +792,7 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *         pairs. For information on how to format a JSON parameter for the various command line tool environments,
      *         see <a
      *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *         JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *         JSON for Parameters</a> in the <i>CLI User Guide</i>.
      *         </p>
      *         <p>
      *         For example:
@@ -824,7 +824,7 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
      * For information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * <p>
      * For example:
@@ -852,7 +852,7 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *        pairs. For information on how to format a JSON parameter for the various command line tool environments,
      *        see <a
      *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
      *        </p>
      *        <p>
      *        For example:

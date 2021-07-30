@@ -63,7 +63,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an AWS Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
      * </p>
      * </li>
      * <li>
@@ -88,7 +88,8 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     private String type;
     /**
      * <p>
-     * The AWS IAM service role ARN for the data source. The system assumes this role when accessing the data source.
+     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
+     * accessing the data source.
      * </p>
      */
     private String serviceRoleArn;
@@ -100,7 +101,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     private DynamodbDataSourceConfig dynamodbConfig;
     /**
      * <p>
-     * AWS Lambda settings.
+     * Amazon Web Services Lambda settings.
      * </p>
      */
     private LambdaDataSourceConfig lambdaConfig;
@@ -260,7 +261,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an AWS Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
      * </p>
      * </li>
      * <li>
@@ -297,7 +298,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AWS_LAMBDA</b>: The data source is an AWS Lambda function.
+     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
      *        </p>
      *        </li>
      *        <li>
@@ -341,7 +342,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an AWS Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
      * </p>
      * </li>
      * <li>
@@ -377,7 +378,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <b>AWS_LAMBDA</b>: The data source is an AWS Lambda function.
+     *         <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
      *         </p>
      *         </li>
      *         <li>
@@ -421,7 +422,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an AWS Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
      * </p>
      * </li>
      * <li>
@@ -458,7 +459,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AWS_LAMBDA</b>: The data source is an AWS Lambda function.
+     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
      *        </p>
      *        </li>
      *        <li>
@@ -504,7 +505,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an AWS Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
      * </p>
      * </li>
      * <li>
@@ -541,7 +542,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>AWS_LAMBDA</b>: The data source is an AWS Lambda function.
+     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
      *        </p>
      *        </li>
      *        <li>
@@ -572,12 +573,13 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS IAM service role ARN for the data source. The system assumes this role when accessing the data source.
+     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
+     * accessing the data source.
      * </p>
      * 
      * @param serviceRoleArn
-     *        The AWS IAM service role ARN for the data source. The system assumes this role when accessing the data
-     *        source.
+     *        The Identity and Access Management service role ARN for the data source. The system assumes this role when
+     *        accessing the data source.
      */
 
     public void setServiceRoleArn(String serviceRoleArn) {
@@ -586,11 +588,12 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS IAM service role ARN for the data source. The system assumes this role when accessing the data source.
+     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
+     * accessing the data source.
      * </p>
      * 
-     * @return The AWS IAM service role ARN for the data source. The system assumes this role when accessing the data
-     *         source.
+     * @return The Identity and Access Management service role ARN for the data source. The system assumes this role
+     *         when accessing the data source.
      */
 
     public String getServiceRoleArn() {
@@ -599,12 +602,13 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS IAM service role ARN for the data source. The system assumes this role when accessing the data source.
+     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
+     * accessing the data source.
      * </p>
      * 
      * @param serviceRoleArn
-     *        The AWS IAM service role ARN for the data source. The system assumes this role when accessing the data
-     *        source.
+     *        The Identity and Access Management service role ARN for the data source. The system assumes this role when
+     *        accessing the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -655,11 +659,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * AWS Lambda settings.
+     * Amazon Web Services Lambda settings.
      * </p>
      * 
      * @param lambdaConfig
-     *        AWS Lambda settings.
+     *        Amazon Web Services Lambda settings.
      */
 
     public void setLambdaConfig(LambdaDataSourceConfig lambdaConfig) {
@@ -668,10 +672,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * AWS Lambda settings.
+     * Amazon Web Services Lambda settings.
      * </p>
      * 
-     * @return AWS Lambda settings.
+     * @return Amazon Web Services Lambda settings.
      */
 
     public LambdaDataSourceConfig getLambdaConfig() {
@@ -680,11 +684,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * AWS Lambda settings.
+     * Amazon Web Services Lambda settings.
      * </p>
      * 
      * @param lambdaConfig
-     *        AWS Lambda settings.
+     *        Amazon Web Services Lambda settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

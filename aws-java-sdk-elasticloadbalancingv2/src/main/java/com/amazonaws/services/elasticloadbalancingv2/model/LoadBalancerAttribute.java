@@ -101,16 +101,23 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The value is <code>true</code> or
-     * <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message header names
-     * contain only alphanumeric characters and hyphens.
+     * <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code> header
+     * should preserve the source port that the client used to connect to the load balancer. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that
+     * message header names contain only alphanumeric characters and hyphens.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route requests to
-     * targets if it is unable to forward the request to Amazon Web Services WAF. The value is <code>true</code> or
-     * <code>false</code>. The default is <code>false</code>.
+     * targets if it is unable to forward the request to Amazon Web Services WAF. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>false</code>.
      * </p>
      * </li>
      * </ul>
@@ -121,7 +128,7 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>load_balancing.cross_zone.enabled</code> - Indicates whether cross-zone load balancing is enabled. The
-     * value is <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     * possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      * </p>
      * </li>
      * </ul>
@@ -209,16 +216,23 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The value is <code>true</code> or
-     * <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message header names
-     * contain only alphanumeric characters and hyphens.
+     * <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code> header
+     * should preserve the source port that the client used to connect to the load balancer. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that
+     * message header names contain only alphanumeric characters and hyphens.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route requests to
-     * targets if it is unable to forward the request to Amazon Web Services WAF. The value is <code>true</code> or
-     * <code>false</code>. The default is <code>false</code>.
+     * targets if it is unable to forward the request to Amazon Web Services WAF. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>false</code>.
      * </p>
      * </li>
      * </ul>
@@ -229,7 +243,7 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>load_balancing.cross_zone.enabled</code> - Indicates whether cross-zone load balancing is enabled. The
-     * value is <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     * possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      * </p>
      * </li>
      * </ul>
@@ -307,16 +321,23 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The value is <code>true</code>
-     *        or <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message
-     *        header names contain only alphanumeric characters and hyphens.
+     *        <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code>
+     *        header should preserve the source port that the client used to connect to the load balancer. The possible
+     *        values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are
+     *        <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing
+     *        requires that message header names contain only alphanumeric characters and hyphens.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route
-     *        requests to targets if it is unable to forward the request to Amazon Web Services WAF. The value is
-     *        <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     *        requests to targets if it is unable to forward the request to Amazon Web Services WAF. The possible values
+     *        are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -327,7 +348,7 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        <code>load_balancing.cross_zone.enabled</code> - Indicates whether cross-zone load balancing is enabled.
-     *        The value is <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     *        The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      *        </p>
      *        </li>
      */
@@ -411,16 +432,23 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The value is <code>true</code> or
-     * <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message header names
-     * contain only alphanumeric characters and hyphens.
+     * <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code> header
+     * should preserve the source port that the client used to connect to the load balancer. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that
+     * message header names contain only alphanumeric characters and hyphens.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route requests to
-     * targets if it is unable to forward the request to Amazon Web Services WAF. The value is <code>true</code> or
-     * <code>false</code>. The default is <code>false</code>.
+     * targets if it is unable to forward the request to Amazon Web Services WAF. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>false</code>.
      * </p>
      * </li>
      * </ul>
@@ -431,7 +459,7 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>load_balancing.cross_zone.enabled</code> - Indicates whether cross-zone load balancing is enabled. The
-     * value is <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     * possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      * </p>
      * </li>
      * </ul>
@@ -508,16 +536,23 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The value is <code>true</code>
-     *         or <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message
-     *         header names contain only alphanumeric characters and hyphens.
+     *         <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code>
+     *         header should preserve the source port that the client used to connect to the load balancer. The possible
+     *         values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are
+     *         <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing
+     *         requires that message header names contain only alphanumeric characters and hyphens.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route
-     *         requests to targets if it is unable to forward the request to Amazon Web Services WAF. The value is
-     *         <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     *         requests to targets if it is unable to forward the request to Amazon Web Services WAF. The possible
+     *         values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      *         </p>
      *         </li>
      *         </ul>
@@ -528,7 +563,7 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      *         <li>
      *         <p>
      *         <code>load_balancing.cross_zone.enabled</code> - Indicates whether cross-zone load balancing is enabled.
-     *         The value is <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     *         The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      *         </p>
      *         </li>
      */
@@ -612,16 +647,23 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The value is <code>true</code> or
-     * <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message header names
-     * contain only alphanumeric characters and hyphens.
+     * <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code> header
+     * should preserve the source port that the client used to connect to the load balancer. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>false</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that
+     * message header names contain only alphanumeric characters and hyphens.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route requests to
-     * targets if it is unable to forward the request to Amazon Web Services WAF. The value is <code>true</code> or
-     * <code>false</code>. The default is <code>false</code>.
+     * targets if it is unable to forward the request to Amazon Web Services WAF. The possible values are
+     * <code>true</code> and <code>false</code>. The default is <code>false</code>.
      * </p>
      * </li>
      * </ul>
@@ -632,7 +674,7 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>load_balancing.cross_zone.enabled</code> - Indicates whether cross-zone load balancing is enabled. The
-     * value is <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     * possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      * </p>
      * </li>
      * </ul>
@@ -710,16 +752,23 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The value is <code>true</code>
-     *        or <code>false</code>. The default is <code>true</code>. Elastic Load Balancing requires that message
-     *        header names contain only alphanumeric characters and hyphens.
+     *        <code>routing.http.xff_client_port.enabled</code> - Indicates whether the <code>X-Forwarded-For</code>
+     *        header should preserve the source port that the client used to connect to the load balancer. The possible
+     *        values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>routing.http2.enabled</code> - Indicates whether HTTP/2 is enabled. The possible values are
+     *        <code>true</code> and <code>false</code>. The default is <code>true</code>. Elastic Load Balancing
+     *        requires that message header names contain only alphanumeric characters and hyphens.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>waf.fail_open.enabled</code> - Indicates whether to allow a WAF-enabled load balancer to route
-     *        requests to targets if it is unable to forward the request to Amazon Web Services WAF. The value is
-     *        <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     *        requests to targets if it is unable to forward the request to Amazon Web Services WAF. The possible values
+     *        are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      *        </p>
      *        </li>
      *        </ul>
@@ -730,7 +779,7 @@ public class LoadBalancerAttribute implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        <code>load_balancing.cross_zone.enabled</code> - Indicates whether cross-zone load balancing is enabled.
-     *        The value is <code>true</code> or <code>false</code>. The default is <code>false</code>.
+     *        The possible values are <code>true</code> and <code>false</code>. The default is <code>false</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

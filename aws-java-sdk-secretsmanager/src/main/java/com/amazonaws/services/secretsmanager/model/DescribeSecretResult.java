@@ -43,10 +43,10 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
     private String description;
     /**
      * <p>
-     * The ARN or alias of the AWS KMS customer master key (CMK) that's used to encrypt the <code>SecretString</code> or
-     * <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then Secrets Manager
-     * defaults to encrypting the secret fields with the default AWS KMS CMK (the one named
-     * <code>awssecretsmanager</code>) for this account.
+     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
+     * <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't provide
+     * a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web Services KMS CMK
+     * (the one named <code>awssecretsmanager</code>) for this account.
      * </p>
      */
     private String kmsKeyId;
@@ -276,17 +276,17 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN or alias of the AWS KMS customer master key (CMK) that's used to encrypt the <code>SecretString</code> or
-     * <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then Secrets Manager
-     * defaults to encrypting the secret fields with the default AWS KMS CMK (the one named
-     * <code>awssecretsmanager</code>) for this account.
+     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
+     * <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't provide
+     * a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web Services KMS CMK
+     * (the one named <code>awssecretsmanager</code>) for this account.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN or alias of the AWS KMS customer master key (CMK) that's used to encrypt the
+     *        The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
      *        <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't
-     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default AWS KMS CMK
-     *        (the one named <code>awssecretsmanager</code>) for this account.
+     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web
+     *        Services KMS CMK (the one named <code>awssecretsmanager</code>) for this account.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -295,16 +295,16 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN or alias of the AWS KMS customer master key (CMK) that's used to encrypt the <code>SecretString</code> or
-     * <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then Secrets Manager
-     * defaults to encrypting the secret fields with the default AWS KMS CMK (the one named
-     * <code>awssecretsmanager</code>) for this account.
+     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
+     * <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't provide
+     * a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web Services KMS CMK
+     * (the one named <code>awssecretsmanager</code>) for this account.
      * </p>
      * 
-     * @return The ARN or alias of the AWS KMS customer master key (CMK) that's used to encrypt the
+     * @return The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
      *         <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't
-     *         provide a key, then Secrets Manager defaults to encrypting the secret fields with the default AWS KMS CMK
-     *         (the one named <code>awssecretsmanager</code>) for this account.
+     *         provide a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web
+     *         Services KMS CMK (the one named <code>awssecretsmanager</code>) for this account.
      */
 
     public String getKmsKeyId() {
@@ -313,17 +313,17 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN or alias of the AWS KMS customer master key (CMK) that's used to encrypt the <code>SecretString</code> or
-     * <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then Secrets Manager
-     * defaults to encrypting the secret fields with the default AWS KMS CMK (the one named
-     * <code>awssecretsmanager</code>) for this account.
+     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
+     * <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't provide
+     * a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web Services KMS CMK
+     * (the one named <code>awssecretsmanager</code>) for this account.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN or alias of the AWS KMS customer master key (CMK) that's used to encrypt the
+     *        The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
      *        <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't
-     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default AWS KMS CMK
-     *        (the one named <code>awssecretsmanager</code>) for this account.
+     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web
+     *        Services KMS CMK (the one named <code>awssecretsmanager</code>) for this account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

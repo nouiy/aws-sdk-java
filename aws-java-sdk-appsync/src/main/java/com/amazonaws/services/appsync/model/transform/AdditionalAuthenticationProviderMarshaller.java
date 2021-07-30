@@ -33,6 +33,8 @@ public class AdditionalAuthenticationProviderMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("openIDConnectConfig").build();
     private static final MarshallingInfo<StructuredPojo> USERPOOLCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("userPoolConfig").build();
+    private static final MarshallingInfo<StructuredPojo> LAMBDAAUTHORIZERCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaAuthorizerConfig").build();
 
     private static final AdditionalAuthenticationProviderMarshaller instance = new AdditionalAuthenticationProviderMarshaller();
 
@@ -53,6 +55,7 @@ public class AdditionalAuthenticationProviderMarshaller {
             protocolMarshaller.marshall(additionalAuthenticationProvider.getAuthenticationType(), AUTHENTICATIONTYPE_BINDING);
             protocolMarshaller.marshall(additionalAuthenticationProvider.getOpenIDConnectConfig(), OPENIDCONNECTCONFIG_BINDING);
             protocolMarshaller.marshall(additionalAuthenticationProvider.getUserPoolConfig(), USERPOOLCONFIG_BINDING);
+            protocolMarshaller.marshall(additionalAuthenticationProvider.getLambdaAuthorizerConfig(), LAMBDAAUTHORIZERCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -24,9 +24,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * SageMaker ends the training or compilation job. Use this API to cap model training costs.
  * </p>
  * <p>
- * To stop a job, Amazon SageMaker sends the algorithm the <code>SIGTERM</code> signal, which delays job termination for
- * 120 seconds. Algorithms can use this 120-second window to save the model artifacts, so the results of training are
- * not lost.
+ * To stop a training job, Amazon SageMaker sends the algorithm the <code>SIGTERM</code> signal, which delays job
+ * termination for 120 seconds. Algorithms can use this 120-second window to save the model artifacts, so the results of
+ * training are not lost.
  * </p>
  * <p>
  * The training algorithms provided by Amazon SageMaker automatically save the intermediate results of a model training
@@ -49,15 +49,17 @@ public class StoppingCondition implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The maximum length of time, in seconds, that a training or compilation job can run. If the job does not complete
-     * during this time, Amazon SageMaker ends the job.
+     * The maximum length of time, in seconds, that a training or compilation job can run.
      * </p>
      * <p>
-     * When <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
-     * maximum time for all of the attempts in total, not each individual attempt.
+     * For compilation jobs, if the job does not complete during this time, you will receive a <code>TimeOut</code>
+     * error. We recommend starting with 900 seconds and increase as necessary based on your model.
      * </p>
      * <p>
-     * The default value is 1 day. The maximum value is 28 days.
+     * For all other jobs, if the job does not complete during this time, Amazon SageMaker ends the job. When
+     * <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
+     * maximum time for all of the attempts in total, not each individual attempt. The default value is 1 day. The
+     * maximum value is 28 days.
      * </p>
      */
     private Integer maxRuntimeInSeconds;
@@ -76,26 +78,31 @@ public class StoppingCondition implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The maximum length of time, in seconds, that a training or compilation job can run. If the job does not complete
-     * during this time, Amazon SageMaker ends the job.
+     * The maximum length of time, in seconds, that a training or compilation job can run.
      * </p>
      * <p>
-     * When <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
-     * maximum time for all of the attempts in total, not each individual attempt.
+     * For compilation jobs, if the job does not complete during this time, you will receive a <code>TimeOut</code>
+     * error. We recommend starting with 900 seconds and increase as necessary based on your model.
      * </p>
      * <p>
-     * The default value is 1 day. The maximum value is 28 days.
+     * For all other jobs, if the job does not complete during this time, Amazon SageMaker ends the job. When
+     * <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
+     * maximum time for all of the attempts in total, not each individual attempt. The default value is 1 day. The
+     * maximum value is 28 days.
      * </p>
      * 
      * @param maxRuntimeInSeconds
-     *        The maximum length of time, in seconds, that a training or compilation job can run. If the job does not
-     *        complete during this time, Amazon SageMaker ends the job.</p>
+     *        The maximum length of time, in seconds, that a training or compilation job can run.</p>
      *        <p>
-     *        When <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code>
-     *        specifies the maximum time for all of the attempts in total, not each individual attempt.
+     *        For compilation jobs, if the job does not complete during this time, you will receive a
+     *        <code>TimeOut</code> error. We recommend starting with 900 seconds and increase as necessary based on your
+     *        model.
      *        </p>
      *        <p>
-     *        The default value is 1 day. The maximum value is 28 days.
+     *        For all other jobs, if the job does not complete during this time, Amazon SageMaker ends the job. When
+     *        <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
+     *        maximum time for all of the attempts in total, not each individual attempt. The default value is 1 day.
+     *        The maximum value is 28 days.
      */
 
     public void setMaxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
@@ -104,25 +111,30 @@ public class StoppingCondition implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The maximum length of time, in seconds, that a training or compilation job can run. If the job does not complete
-     * during this time, Amazon SageMaker ends the job.
+     * The maximum length of time, in seconds, that a training or compilation job can run.
      * </p>
      * <p>
-     * When <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
-     * maximum time for all of the attempts in total, not each individual attempt.
+     * For compilation jobs, if the job does not complete during this time, you will receive a <code>TimeOut</code>
+     * error. We recommend starting with 900 seconds and increase as necessary based on your model.
      * </p>
      * <p>
-     * The default value is 1 day. The maximum value is 28 days.
+     * For all other jobs, if the job does not complete during this time, Amazon SageMaker ends the job. When
+     * <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
+     * maximum time for all of the attempts in total, not each individual attempt. The default value is 1 day. The
+     * maximum value is 28 days.
      * </p>
      * 
-     * @return The maximum length of time, in seconds, that a training or compilation job can run. If the job does not
-     *         complete during this time, Amazon SageMaker ends the job.</p>
+     * @return The maximum length of time, in seconds, that a training or compilation job can run.</p>
      *         <p>
-     *         When <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code>
-     *         specifies the maximum time for all of the attempts in total, not each individual attempt.
+     *         For compilation jobs, if the job does not complete during this time, you will receive a
+     *         <code>TimeOut</code> error. We recommend starting with 900 seconds and increase as necessary based on
+     *         your model.
      *         </p>
      *         <p>
-     *         The default value is 1 day. The maximum value is 28 days.
+     *         For all other jobs, if the job does not complete during this time, Amazon SageMaker ends the job. When
+     *         <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies
+     *         the maximum time for all of the attempts in total, not each individual attempt. The default value is 1
+     *         day. The maximum value is 28 days.
      */
 
     public Integer getMaxRuntimeInSeconds() {
@@ -131,26 +143,31 @@ public class StoppingCondition implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The maximum length of time, in seconds, that a training or compilation job can run. If the job does not complete
-     * during this time, Amazon SageMaker ends the job.
+     * The maximum length of time, in seconds, that a training or compilation job can run.
      * </p>
      * <p>
-     * When <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
-     * maximum time for all of the attempts in total, not each individual attempt.
+     * For compilation jobs, if the job does not complete during this time, you will receive a <code>TimeOut</code>
+     * error. We recommend starting with 900 seconds and increase as necessary based on your model.
      * </p>
      * <p>
-     * The default value is 1 day. The maximum value is 28 days.
+     * For all other jobs, if the job does not complete during this time, Amazon SageMaker ends the job. When
+     * <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
+     * maximum time for all of the attempts in total, not each individual attempt. The default value is 1 day. The
+     * maximum value is 28 days.
      * </p>
      * 
      * @param maxRuntimeInSeconds
-     *        The maximum length of time, in seconds, that a training or compilation job can run. If the job does not
-     *        complete during this time, Amazon SageMaker ends the job.</p>
+     *        The maximum length of time, in seconds, that a training or compilation job can run.</p>
      *        <p>
-     *        When <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code>
-     *        specifies the maximum time for all of the attempts in total, not each individual attempt.
+     *        For compilation jobs, if the job does not complete during this time, you will receive a
+     *        <code>TimeOut</code> error. We recommend starting with 900 seconds and increase as necessary based on your
+     *        model.
      *        </p>
      *        <p>
-     *        The default value is 1 day. The maximum value is 28 days.
+     *        For all other jobs, if the job does not complete during this time, Amazon SageMaker ends the job. When
+     *        <code>RetryStrategy</code> is specified in the job request, <code>MaxRuntimeInSeconds</code> specifies the
+     *        maximum time for all of the attempts in total, not each individual attempt. The default value is 1 day.
+     *        The maximum value is 28 days.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

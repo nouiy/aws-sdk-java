@@ -43,7 +43,7 @@ public class AuthorizationConfig implements Serializable, Cloneable, StructuredP
     private String authorizationType;
     /**
      * <p>
-     * The AWS IAM settings.
+     * The Identity and Access Management settings.
      * </p>
      */
     private AwsIamConfig awsIamConfig;
@@ -161,11 +161,11 @@ public class AuthorizationConfig implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The AWS IAM settings.
+     * The Identity and Access Management settings.
      * </p>
      * 
      * @param awsIamConfig
-     *        The AWS IAM settings.
+     *        The Identity and Access Management settings.
      */
 
     public void setAwsIamConfig(AwsIamConfig awsIamConfig) {
@@ -174,10 +174,10 @@ public class AuthorizationConfig implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The AWS IAM settings.
+     * The Identity and Access Management settings.
      * </p>
      * 
-     * @return The AWS IAM settings.
+     * @return The Identity and Access Management settings.
      */
 
     public AwsIamConfig getAwsIamConfig() {
@@ -186,11 +186,11 @@ public class AuthorizationConfig implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The AWS IAM settings.
+     * The Identity and Access Management settings.
      * </p>
      * 
      * @param awsIamConfig
-     *        The AWS IAM settings.
+     *        The Identity and Access Management settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

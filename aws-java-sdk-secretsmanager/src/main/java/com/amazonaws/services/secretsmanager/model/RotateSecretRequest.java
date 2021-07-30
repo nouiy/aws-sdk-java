@@ -55,10 +55,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
      * </p>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request for this parameter. If you don't use
-     * the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request for
+     * this parameter. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service
+     * endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and include that
+     * value in the request.
      * </p>
      * <p>
      * You only need to specify your own value if you implement your own retry logic and want to ensure that a given
@@ -238,10 +239,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
      * </p>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request for this parameter. If you don't use
-     * the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request for
+     * this parameter. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service
+     * endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and include that
+     * value in the request.
      * </p>
      * <p>
      * You only need to specify your own value if you implement your own retry logic and want to ensure that a given
@@ -258,11 +260,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
      *        </p>
      *        <p>
-     *        If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter
-     *        empty. The CLI or SDK generates a random UUID for you and includes that in the request for this parameter.
-     *        If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint,
-     *        then you must generate a <code>ClientRequestToken</code> yourself for new versions and include that value
-     *        in the request.
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
+     *        the request for this parameter. If you don't use the SDK and instead generate a raw HTTP request to the
+     *        Secrets Manager service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for
+     *        new versions and include that value in the request.
      *        </p>
      *        <p>
      *        You only need to specify your own value if you implement your own retry logic and want to ensure that a
@@ -285,10 +287,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
      * </p>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request for this parameter. If you don't use
-     * the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request for
+     * this parameter. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service
+     * endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and include that
+     * value in the request.
      * </p>
      * <p>
      * You only need to specify your own value if you implement your own retry logic and want to ensure that a given
@@ -304,11 +307,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @return (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
      *         </p>
      *         <p>
-     *         If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter
-     *         empty. The CLI or SDK generates a random UUID for you and includes that in the request for this
-     *         parameter. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
-     *         service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
-     *         include that value in the request.
+     *         If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *         you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
+     *         the request for this parameter. If you don't use the SDK and instead generate a raw HTTP request to the
+     *         Secrets Manager service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for
+     *         new versions and include that value in the request.
      *         </p>
      *         <p>
      *         You only need to specify your own value if you implement your own retry logic and want to ensure that a
@@ -331,10 +334,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
      * </p>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request for this parameter. If you don't use
-     * the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request for
+     * this parameter. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service
+     * endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and include that
+     * value in the request.
      * </p>
      * <p>
      * You only need to specify your own value if you implement your own retry logic and want to ensure that a given
@@ -351,11 +355,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
      *        </p>
      *        <p>
-     *        If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter
-     *        empty. The CLI or SDK generates a random UUID for you and includes that in the request for this parameter.
-     *        If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint,
-     *        then you must generate a <code>ClientRequestToken</code> yourself for new versions and include that value
-     *        in the request.
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
+     *        the request for this parameter. If you don't use the SDK and instead generate a raw HTTP request to the
+     *        Secrets Manager service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for
+     *        new versions and include that value in the request.
      *        </p>
      *        <p>
      *        You only need to specify your own value if you implement your own retry logic and want to ensure that a

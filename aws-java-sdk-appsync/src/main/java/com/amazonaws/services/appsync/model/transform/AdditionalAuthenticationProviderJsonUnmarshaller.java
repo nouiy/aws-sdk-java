@@ -60,6 +60,10 @@ public class AdditionalAuthenticationProviderJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     additionalAuthenticationProvider.setUserPoolConfig(CognitoUserPoolConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("lambdaAuthorizerConfig", targetDepth)) {
+                    context.nextToken();
+                    additionalAuthenticationProvider.setLambdaAuthorizerConfig(LambdaAuthorizerConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -36,7 +36,7 @@ public class DynamodbDataSourceConfig implements Serializable, Cloneable, Struct
     private String tableName;
     /**
      * <p>
-     * The AWS Region.
+     * The Amazon Web Services Region.
      * </p>
      */
     private String awsRegion;
@@ -101,11 +101,11 @@ public class DynamodbDataSourceConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Region.
+     * The Amazon Web Services Region.
      * </p>
      * 
      * @param awsRegion
-     *        The AWS Region.
+     *        The Amazon Web Services Region.
      */
 
     public void setAwsRegion(String awsRegion) {
@@ -114,10 +114,10 @@ public class DynamodbDataSourceConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Region.
+     * The Amazon Web Services Region.
      * </p>
      * 
-     * @return The AWS Region.
+     * @return The Amazon Web Services Region.
      */
 
     public String getAwsRegion() {
@@ -126,11 +126,11 @@ public class DynamodbDataSourceConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The AWS Region.
+     * The Amazon Web Services Region.
      * </p>
      * 
      * @param awsRegion
-     *        The AWS Region.
+     *        The Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

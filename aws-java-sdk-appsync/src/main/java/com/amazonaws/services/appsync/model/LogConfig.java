@@ -82,7 +82,7 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
     private String fieldLogLevel;
     /**
      * <p>
-     * The service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
      * </p>
      */
     private String cloudWatchLogsRoleArn;
@@ -519,11 +519,11 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
      * </p>
      * 
      * @param cloudWatchLogsRoleArn
-     *        The service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     *        The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
      */
 
     public void setCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
@@ -532,10 +532,10 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
      * </p>
      * 
-     * @return The service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * @return The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
      */
 
     public String getCloudWatchLogsRoleArn() {
@@ -544,11 +544,11 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
      * </p>
      * 
      * @param cloudWatchLogsRoleArn
-     *        The service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     *        The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

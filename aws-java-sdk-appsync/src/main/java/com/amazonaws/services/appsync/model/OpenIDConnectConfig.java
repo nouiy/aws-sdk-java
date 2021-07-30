@@ -39,7 +39,7 @@ public class OpenIDConnectConfig implements Serializable, Cloneable, StructuredP
      * <p>
      * The client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained
      * when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so
-     * the AWS AppSync can validate against multiple client identifiers at a time.
+     * the AppSync can validate against multiple client identifiers at a time.
      * </p>
      */
     private String clientId;
@@ -106,13 +106,13 @@ public class OpenIDConnectConfig implements Serializable, Cloneable, StructuredP
      * <p>
      * The client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained
      * when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so
-     * the AWS AppSync can validate against multiple client identifiers at a time.
+     * the AppSync can validate against multiple client identifiers at a time.
      * </p>
      * 
      * @param clientId
      *        The client identifier of the Relying party at the OpenID identity provider. This identifier is typically
      *        obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular
-     *        expression so the AWS AppSync can validate against multiple client identifiers at a time.
+     *        expression so the AppSync can validate against multiple client identifiers at a time.
      */
 
     public void setClientId(String clientId) {
@@ -123,12 +123,12 @@ public class OpenIDConnectConfig implements Serializable, Cloneable, StructuredP
      * <p>
      * The client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained
      * when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so
-     * the AWS AppSync can validate against multiple client identifiers at a time.
+     * the AppSync can validate against multiple client identifiers at a time.
      * </p>
      * 
      * @return The client identifier of the Relying party at the OpenID identity provider. This identifier is typically
      *         obtained when the Relying party is registered with the OpenID identity provider. You can specify a
-     *         regular expression so the AWS AppSync can validate against multiple client identifiers at a time.
+     *         regular expression so the AppSync can validate against multiple client identifiers at a time.
      */
 
     public String getClientId() {
@@ -139,13 +139,13 @@ public class OpenIDConnectConfig implements Serializable, Cloneable, StructuredP
      * <p>
      * The client identifier of the Relying party at the OpenID identity provider. This identifier is typically obtained
      * when the Relying party is registered with the OpenID identity provider. You can specify a regular expression so
-     * the AWS AppSync can validate against multiple client identifiers at a time.
+     * the AppSync can validate against multiple client identifiers at a time.
      * </p>
      * 
      * @param clientId
      *        The client identifier of the Relying party at the OpenID identity provider. This identifier is typically
      *        obtained when the Relying party is registered with the OpenID identity provider. You can specify a regular
-     *        expression so the AWS AppSync can validate against multiple client identifiers at a time.
+     *        expression so the AppSync can validate against multiple client identifiers at a time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

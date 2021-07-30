@@ -54,24 +54,36 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
     private TuningJobStepMetaData tuningJob;
     /**
      * <p>
-     * Metadata for the Model step.
+     * The Amazon Resource Name (ARN) of the model that was created by this step execution.
      * </p>
      */
     private ModelStepMetadata model;
     /**
      * <p>
-     * Metadata for the RegisterModel step.
+     * The Amazon Resource Name (ARN) of the model package the model was registered to by this step execution.
      * </p>
      */
     private RegisterModelStepMetadata registerModel;
     /**
      * <p>
-     * If this is a Condition step metadata object, details on the condition.
+     * The outcome of the condition evaluation that was run by this step execution.
      * </p>
      */
     private ConditionStepMetadata condition;
-
+    /**
+     * <p>
+     * The URL of the Amazon SQS queue used by this step execution, the pipeline generated token, and a list of output
+     * parameters.
+     * </p>
+     */
     private CallbackStepMetadata callback;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lambda function that was run by this step execution and a list of output
+     * parameters.
+     * </p>
+     */
+    private LambdaStepMetadata lambda;
 
     /**
      * <p>
@@ -235,11 +247,11 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Metadata for the Model step.
+     * The Amazon Resource Name (ARN) of the model that was created by this step execution.
      * </p>
      * 
      * @param model
-     *        Metadata for the Model step.
+     *        The Amazon Resource Name (ARN) of the model that was created by this step execution.
      */
 
     public void setModel(ModelStepMetadata model) {
@@ -248,10 +260,10 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Metadata for the Model step.
+     * The Amazon Resource Name (ARN) of the model that was created by this step execution.
      * </p>
      * 
-     * @return Metadata for the Model step.
+     * @return The Amazon Resource Name (ARN) of the model that was created by this step execution.
      */
 
     public ModelStepMetadata getModel() {
@@ -260,11 +272,11 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Metadata for the Model step.
+     * The Amazon Resource Name (ARN) of the model that was created by this step execution.
      * </p>
      * 
      * @param model
-     *        Metadata for the Model step.
+     *        The Amazon Resource Name (ARN) of the model that was created by this step execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -275,11 +287,11 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Metadata for the RegisterModel step.
+     * The Amazon Resource Name (ARN) of the model package the model was registered to by this step execution.
      * </p>
      * 
      * @param registerModel
-     *        Metadata for the RegisterModel step.
+     *        The Amazon Resource Name (ARN) of the model package the model was registered to by this step execution.
      */
 
     public void setRegisterModel(RegisterModelStepMetadata registerModel) {
@@ -288,10 +300,10 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Metadata for the RegisterModel step.
+     * The Amazon Resource Name (ARN) of the model package the model was registered to by this step execution.
      * </p>
      * 
-     * @return Metadata for the RegisterModel step.
+     * @return The Amazon Resource Name (ARN) of the model package the model was registered to by this step execution.
      */
 
     public RegisterModelStepMetadata getRegisterModel() {
@@ -300,11 +312,11 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Metadata for the RegisterModel step.
+     * The Amazon Resource Name (ARN) of the model package the model was registered to by this step execution.
      * </p>
      * 
      * @param registerModel
-     *        Metadata for the RegisterModel step.
+     *        The Amazon Resource Name (ARN) of the model package the model was registered to by this step execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -315,11 +327,11 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * If this is a Condition step metadata object, details on the condition.
+     * The outcome of the condition evaluation that was run by this step execution.
      * </p>
      * 
      * @param condition
-     *        If this is a Condition step metadata object, details on the condition.
+     *        The outcome of the condition evaluation that was run by this step execution.
      */
 
     public void setCondition(ConditionStepMetadata condition) {
@@ -328,10 +340,10 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * If this is a Condition step metadata object, details on the condition.
+     * The outcome of the condition evaluation that was run by this step execution.
      * </p>
      * 
-     * @return If this is a Condition step metadata object, details on the condition.
+     * @return The outcome of the condition evaluation that was run by this step execution.
      */
 
     public ConditionStepMetadata getCondition() {
@@ -340,11 +352,11 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * If this is a Condition step metadata object, details on the condition.
+     * The outcome of the condition evaluation that was run by this step execution.
      * </p>
      * 
      * @param condition
-     *        If this is a Condition step metadata object, details on the condition.
+     *        The outcome of the condition evaluation that was run by this step execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -354,7 +366,14 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The URL of the Amazon SQS queue used by this step execution, the pipeline generated token, and a list of output
+     * parameters.
+     * </p>
+     * 
      * @param callback
+     *        The URL of the Amazon SQS queue used by this step execution, the pipeline generated token, and a list of
+     *        output parameters.
      */
 
     public void setCallback(CallbackStepMetadata callback) {
@@ -362,7 +381,13 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
     }
 
     /**
-     * @return
+     * <p>
+     * The URL of the Amazon SQS queue used by this step execution, the pipeline generated token, and a list of output
+     * parameters.
+     * </p>
+     * 
+     * @return The URL of the Amazon SQS queue used by this step execution, the pipeline generated token, and a list of
+     *         output parameters.
      */
 
     public CallbackStepMetadata getCallback() {
@@ -370,12 +395,65 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The URL of the Amazon SQS queue used by this step execution, the pipeline generated token, and a list of output
+     * parameters.
+     * </p>
+     * 
      * @param callback
+     *        The URL of the Amazon SQS queue used by this step execution, the pipeline generated token, and a list of
+     *        output parameters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public PipelineExecutionStepMetadata withCallback(CallbackStepMetadata callback) {
         setCallback(callback);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lambda function that was run by this step execution and a list of output
+     * parameters.
+     * </p>
+     * 
+     * @param lambda
+     *        The Amazon Resource Name (ARN) of the Lambda function that was run by this step execution and a list of
+     *        output parameters.
+     */
+
+    public void setLambda(LambdaStepMetadata lambda) {
+        this.lambda = lambda;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lambda function that was run by this step execution and a list of output
+     * parameters.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the Lambda function that was run by this step execution and a list of
+     *         output parameters.
+     */
+
+    public LambdaStepMetadata getLambda() {
+        return this.lambda;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lambda function that was run by this step execution and a list of output
+     * parameters.
+     * </p>
+     * 
+     * @param lambda
+     *        The Amazon Resource Name (ARN) of the Lambda function that was run by this step execution and a list of
+     *        output parameters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecutionStepMetadata withLambda(LambdaStepMetadata lambda) {
+        setLambda(lambda);
         return this;
     }
 
@@ -406,7 +484,9 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
         if (getCondition() != null)
             sb.append("Condition: ").append(getCondition()).append(",");
         if (getCallback() != null)
-            sb.append("Callback: ").append(getCallback());
+            sb.append("Callback: ").append(getCallback()).append(",");
+        if (getLambda() != null)
+            sb.append("Lambda: ").append(getLambda());
         sb.append("}");
         return sb.toString();
     }
@@ -453,6 +533,10 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
             return false;
         if (other.getCallback() != null && other.getCallback().equals(this.getCallback()) == false)
             return false;
+        if (other.getLambda() == null ^ this.getLambda() == null)
+            return false;
+        if (other.getLambda() != null && other.getLambda().equals(this.getLambda()) == false)
+            return false;
         return true;
     }
 
@@ -469,6 +553,7 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getRegisterModel() == null) ? 0 : getRegisterModel().hashCode());
         hashCode = prime * hashCode + ((getCondition() == null) ? 0 : getCondition().hashCode());
         hashCode = prime * hashCode + ((getCallback() == null) ? 0 : getCallback().hashCode());
+        hashCode = prime * hashCode + ((getLambda() == null) ? 0 : getLambda().hashCode());
         return hashCode;
     }
 

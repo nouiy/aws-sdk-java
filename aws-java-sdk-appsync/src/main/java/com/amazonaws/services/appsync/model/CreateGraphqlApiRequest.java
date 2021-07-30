@@ -39,7 +39,7 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     private LogConfig logConfig;
     /**
      * <p>
-     * The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
      * </p>
      */
     private String authenticationType;
@@ -73,6 +73,12 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private Boolean xrayEnabled;
+    /**
+     * <p>
+     * Configuration for AWS Lambda function authorization.
+     * </p>
+     */
+    private LambdaAuthorizerConfig lambdaAuthorizerConfig;
 
     /**
      * <p>
@@ -156,11 +162,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+     *        The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
      * @see AuthenticationType
      */
 
@@ -170,10 +176,10 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
      * </p>
      * 
-     * @return The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+     * @return The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
      * @see AuthenticationType
      */
 
@@ -183,11 +189,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+     *        The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType
      */
@@ -199,11 +205,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+     * The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools.
+     *        The authentication type: API key, Identity and Access Management, OIDC, or Amazon Cognito user pools.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType
      */
@@ -485,6 +491,46 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Configuration for AWS Lambda function authorization.
+     * </p>
+     * 
+     * @param lambdaAuthorizerConfig
+     *        Configuration for AWS Lambda function authorization.
+     */
+
+    public void setLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
+        this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration for AWS Lambda function authorization.
+     * </p>
+     * 
+     * @return Configuration for AWS Lambda function authorization.
+     */
+
+    public LambdaAuthorizerConfig getLambdaAuthorizerConfig() {
+        return this.lambdaAuthorizerConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration for AWS Lambda function authorization.
+     * </p>
+     * 
+     * @param lambdaAuthorizerConfig
+     *        Configuration for AWS Lambda function authorization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateGraphqlApiRequest withLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
+        setLambdaAuthorizerConfig(lambdaAuthorizerConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -511,7 +557,9 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
         if (getAdditionalAuthenticationProviders() != null)
             sb.append("AdditionalAuthenticationProviders: ").append(getAdditionalAuthenticationProviders()).append(",");
         if (getXrayEnabled() != null)
-            sb.append("XrayEnabled: ").append(getXrayEnabled());
+            sb.append("XrayEnabled: ").append(getXrayEnabled()).append(",");
+        if (getLambdaAuthorizerConfig() != null)
+            sb.append("LambdaAuthorizerConfig: ").append(getLambdaAuthorizerConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -559,6 +607,10 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getXrayEnabled() != null && other.getXrayEnabled().equals(this.getXrayEnabled()) == false)
             return false;
+        if (other.getLambdaAuthorizerConfig() == null ^ this.getLambdaAuthorizerConfig() == null)
+            return false;
+        if (other.getLambdaAuthorizerConfig() != null && other.getLambdaAuthorizerConfig().equals(this.getLambdaAuthorizerConfig()) == false)
+            return false;
         return true;
     }
 
@@ -575,6 +627,7 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getAdditionalAuthenticationProviders() == null) ? 0 : getAdditionalAuthenticationProviders().hashCode());
         hashCode = prime * hashCode + ((getXrayEnabled() == null) ? 0 : getXrayEnabled().hashCode());
+        hashCode = prime * hashCode + ((getLambdaAuthorizerConfig() == null) ? 0 : getLambdaAuthorizerConfig().hashCode());
         return hashCode;
     }
 

@@ -22,8 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Describes an API key.
  * </p>
  * <p>
- * Customers invoke AWS AppSync GraphQL API operations with API keys as an identity mechanism. There are two key
- * versions:
+ * Customers invoke AppSync GraphQL API operations with API keys as an identity mechanism. There are two key versions:
  * </p>
  * <p>
  * <b>da1</b>: This version was introduced at launch in November 2017. These keys always expire after 7 days. Key

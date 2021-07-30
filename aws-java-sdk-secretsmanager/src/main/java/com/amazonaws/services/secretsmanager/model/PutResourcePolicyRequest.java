@@ -52,11 +52,11 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     private String secretId;
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an AWS resource-based policy. The
-     * policy in the string identifies who can access or manage this secret and its versions. For information on how to
-     * format a JSON parameter for the various command line tool environments, see <a
+     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
+     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
+     * information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      */
     private String resourcePolicy;
@@ -218,19 +218,20 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an AWS resource-based policy. The
-     * policy in the string identifies who can access or manage this secret and its versions. For information on how to
-     * format a JSON parameter for the various command line tool environments, see <a
+     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
+     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
+     * information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * 
      * @param resourcePolicy
-     *        A JSON-formatted string constructed according to the grammar and syntax for an AWS resource-based policy.
-     *        The policy in the string identifies who can access or manage this secret and its versions. For information
-     *        on how to format a JSON parameter for the various command line tool environments, see <a
+     *        A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services
+     *        resource-based policy. The policy in the string identifies who can access or manage this secret and its
+     *        versions. For information on how to format a JSON parameter for the various command line tool
+     *        environments, see <a
      *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
      */
 
     public void setResourcePolicy(String resourcePolicy) {
@@ -239,18 +240,19 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an AWS resource-based policy. The
-     * policy in the string identifies who can access or manage this secret and its versions. For information on how to
-     * format a JSON parameter for the various command line tool environments, see <a
+     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
+     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
+     * information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * 
-     * @return A JSON-formatted string constructed according to the grammar and syntax for an AWS resource-based policy.
-     *         The policy in the string identifies who can access or manage this secret and its versions. For
-     *         information on how to format a JSON parameter for the various command line tool environments, see <a
+     * @return A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services
+     *         resource-based policy. The policy in the string identifies who can access or manage this secret and its
+     *         versions. For information on how to format a JSON parameter for the various command line tool
+     *         environments, see <a
      *         href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *         JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *         JSON for Parameters</a> in the <i>CLI User Guide</i>.
      */
 
     public String getResourcePolicy() {
@@ -259,19 +261,20 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an AWS resource-based policy. The
-     * policy in the string identifies who can access or manage this secret and its versions. For information on how to
-     * format a JSON parameter for the various command line tool environments, see <a
+     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
+     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
+     * information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * 
      * @param resourcePolicy
-     *        A JSON-formatted string constructed according to the grammar and syntax for an AWS resource-based policy.
-     *        The policy in the string identifies who can access or manage this secret and its versions. For information
-     *        on how to format a JSON parameter for the various command line tool environments, see <a
+     *        A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services
+     *        resource-based policy. The policy in the string identifies who can access or manage this secret and its
+     *        versions. For information on how to format a JSON parameter for the various command line tool
+     *        environments, see <a
      *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -36,7 +36,7 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * For more information about ARNs in Secrets Manager, see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     * >Policy Resources</a> in the <i>AWS Secrets Manager User Guide</i>.
+     * >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      * </p>
      */
     private String aRN;
@@ -56,10 +56,10 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
     private String description;
     /**
      * <p>
-     * The ARN or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code> and
-     * <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then Secrets Manager
-     * defaults to encrypting the secret fields with the default KMS CMK, the key named <code>awssecretsmanager</code>,
-     * for this account.
+     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
+     * <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
+     * provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key
+     * named <code>awssecretsmanager</code>, for this account.
      * </p>
      */
     private String kmsKeyId;
@@ -71,8 +71,8 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
     private Boolean rotationEnabled;
     /**
      * <p>
-     * The ARN of an AWS Lambda function invoked by Secrets Manager to rotate and expire the secret either automatically
-     * per the schedule or manually by a call to <a>RotateSecret</a>.
+     * The ARN of an Amazon Web Services Lambda function invoked by Secrets Manager to rotate and expire the secret
+     * either automatically per the schedule or manually by a call to <a>RotateSecret</a>.
      * </p>
      */
     private String rotationLambdaARN;
@@ -157,7 +157,7 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * For more information about ARNs in Secrets Manager, see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     * >Policy Resources</a> in the <i>AWS Secrets Manager User Guide</i>.
+     * >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      * </p>
      * 
      * @param aRN
@@ -165,7 +165,7 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        For more information about ARNs in Secrets Manager, see <a href=
      *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     *        >Policy Resources</a> in the <i>AWS Secrets Manager User Guide</i>.
+     *        >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      */
 
     public void setARN(String aRN) {
@@ -179,14 +179,14 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * For more information about ARNs in Secrets Manager, see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     * >Policy Resources</a> in the <i>AWS Secrets Manager User Guide</i>.
+     * >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the secret.</p>
      *         <p>
      *         For more information about ARNs in Secrets Manager, see <a href=
      *         "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     *         >Policy Resources</a> in the <i>AWS Secrets Manager User Guide</i>.
+     *         >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      */
 
     public String getARN() {
@@ -200,7 +200,7 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * For more information about ARNs in Secrets Manager, see <a
      * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     * >Policy Resources</a> in the <i>AWS Secrets Manager User Guide</i>.
+     * >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      * </p>
      * 
      * @param aRN
@@ -208,7 +208,7 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        For more information about ARNs in Secrets Manager, see <a href=
      *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     *        >Policy Resources</a> in the <i>AWS Secrets Manager User Guide</i>.
+     *        >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -311,17 +311,17 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code> and
-     * <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then Secrets Manager
-     * defaults to encrypting the secret fields with the default KMS CMK, the key named <code>awssecretsmanager</code>,
-     * for this account.
+     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
+     * <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
+     * provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key
+     * named <code>awssecretsmanager</code>, for this account.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code>
-     *        and <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then
-     *        Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key named
-     *        <code>awssecretsmanager</code>, for this account.
+     *        The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
+     *        <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
+     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the
+     *        key named <code>awssecretsmanager</code>, for this account.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -330,16 +330,16 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code> and
-     * <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then Secrets Manager
-     * defaults to encrypting the secret fields with the default KMS CMK, the key named <code>awssecretsmanager</code>,
-     * for this account.
+     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
+     * <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
+     * provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key
+     * named <code>awssecretsmanager</code>, for this account.
      * </p>
      * 
-     * @return The ARN or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code>
-     *         and <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then
-     *         Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key named
-     *         <code>awssecretsmanager</code>, for this account.
+     * @return The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
+     *         <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you
+     *         don't provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS
+     *         CMK, the key named <code>awssecretsmanager</code>, for this account.
      */
 
     public String getKmsKeyId() {
@@ -348,17 +348,17 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code> and
-     * <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then Secrets Manager
-     * defaults to encrypting the secret fields with the default KMS CMK, the key named <code>awssecretsmanager</code>,
-     * for this account.
+     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
+     * <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
+     * provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key
+     * named <code>awssecretsmanager</code>, for this account.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code>
-     *        and <code>SecretBinary</code> fields in each version of the secret. If you don't provide a key, then
-     *        Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key named
-     *        <code>awssecretsmanager</code>, for this account.
+     *        The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
+     *        <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
+     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the
+     *        key named <code>awssecretsmanager</code>, for this account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -421,13 +421,13 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of an AWS Lambda function invoked by Secrets Manager to rotate and expire the secret either automatically
-     * per the schedule or manually by a call to <a>RotateSecret</a>.
+     * The ARN of an Amazon Web Services Lambda function invoked by Secrets Manager to rotate and expire the secret
+     * either automatically per the schedule or manually by a call to <a>RotateSecret</a>.
      * </p>
      * 
      * @param rotationLambdaARN
-     *        The ARN of an AWS Lambda function invoked by Secrets Manager to rotate and expire the secret either
-     *        automatically per the schedule or manually by a call to <a>RotateSecret</a>.
+     *        The ARN of an Amazon Web Services Lambda function invoked by Secrets Manager to rotate and expire the
+     *        secret either automatically per the schedule or manually by a call to <a>RotateSecret</a>.
      */
 
     public void setRotationLambdaARN(String rotationLambdaARN) {
@@ -436,12 +436,12 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of an AWS Lambda function invoked by Secrets Manager to rotate and expire the secret either automatically
-     * per the schedule or manually by a call to <a>RotateSecret</a>.
+     * The ARN of an Amazon Web Services Lambda function invoked by Secrets Manager to rotate and expire the secret
+     * either automatically per the schedule or manually by a call to <a>RotateSecret</a>.
      * </p>
      * 
-     * @return The ARN of an AWS Lambda function invoked by Secrets Manager to rotate and expire the secret either
-     *         automatically per the schedule or manually by a call to <a>RotateSecret</a>.
+     * @return The ARN of an Amazon Web Services Lambda function invoked by Secrets Manager to rotate and expire the
+     *         secret either automatically per the schedule or manually by a call to <a>RotateSecret</a>.
      */
 
     public String getRotationLambdaARN() {
@@ -450,13 +450,13 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of an AWS Lambda function invoked by Secrets Manager to rotate and expire the secret either automatically
-     * per the schedule or manually by a call to <a>RotateSecret</a>.
+     * The ARN of an Amazon Web Services Lambda function invoked by Secrets Manager to rotate and expire the secret
+     * either automatically per the schedule or manually by a call to <a>RotateSecret</a>.
      * </p>
      * 
      * @param rotationLambdaARN
-     *        The ARN of an AWS Lambda function invoked by Secrets Manager to rotate and expire the secret either
-     *        automatically per the schedule or manually by a call to <a>RotateSecret</a>.
+     *        The ARN of an Amazon Web Services Lambda function invoked by Secrets Manager to rotate and expire the
+     *        secret either automatically per the schedule or manually by a call to <a>RotateSecret</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

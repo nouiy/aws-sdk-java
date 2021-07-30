@@ -63,7 +63,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private DynamodbDataSourceConfig dynamodbConfig;
     /**
      * <p>
-     * The new AWS Lambda configuration.
+     * The new Amazon Web Services Lambda configuration.
      * </p>
      */
     private LambdaDataSourceConfig lambdaConfig;
@@ -347,11 +347,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new AWS Lambda configuration.
+     * The new Amazon Web Services Lambda configuration.
      * </p>
      * 
      * @param lambdaConfig
-     *        The new AWS Lambda configuration.
+     *        The new Amazon Web Services Lambda configuration.
      */
 
     public void setLambdaConfig(LambdaDataSourceConfig lambdaConfig) {
@@ -360,10 +360,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new AWS Lambda configuration.
+     * The new Amazon Web Services Lambda configuration.
      * </p>
      * 
-     * @return The new AWS Lambda configuration.
+     * @return The new Amazon Web Services Lambda configuration.
      */
 
     public LambdaDataSourceConfig getLambdaConfig() {
@@ -372,11 +372,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new AWS Lambda configuration.
+     * The new Amazon Web Services Lambda configuration.
      * </p>
      * 
      * @param lambdaConfig
-     *        The new AWS Lambda configuration.
+     *        The new Amazon Web Services Lambda configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

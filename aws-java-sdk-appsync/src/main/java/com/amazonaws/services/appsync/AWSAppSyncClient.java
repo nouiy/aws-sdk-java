@@ -51,7 +51,7 @@ import com.amazonaws.services.appsync.model.transform.*;
  * service call completes.
  * <p>
  * <p>
- * AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your application.
+ * AppSync provides API actions for creating and interacting with data sources using GraphQL from your application.
  * </p>
  */
 @ThreadSafe
@@ -176,7 +176,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateApiCache
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateApiCache" target="_top">AWS API
      *      Documentation</a>
@@ -244,7 +244,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws LimitExceededException
      *         The request exceeded a limit. Try your request again.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @throws ApiKeyLimitExceededException
      *         The API key exceeded a limit. Try your request again.
      * @throws ApiKeyValidityOutOfBoundsException
@@ -315,7 +315,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateDataSource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateDataSource" target="_top">AWS API
      *      Documentation</a>
@@ -381,7 +381,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateFunction
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateFunction" target="_top">AWS API
      *      Documentation</a>
@@ -447,7 +447,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @throws ApiLimitExceededException
      *         The GraphQL API exceeded a limit. Try your request again.
      * @sample AWSAppSync.CreateGraphqlApi
@@ -516,7 +516,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateResolver
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateResolver" target="_top">AWS API
      *      Documentation</a>
@@ -582,7 +582,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateType" target="_top">AWS API
      *      Documentation</a>
@@ -649,7 +649,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteApiCache
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteApiCache" target="_top">AWS API
      *      Documentation</a>
@@ -713,7 +713,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteApiKey
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteApiKey" target="_top">AWS API
      *      Documentation</a>
@@ -779,7 +779,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteDataSource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteDataSource" target="_top">AWS API
      *      Documentation</a>
@@ -842,7 +842,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteFunction
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteFunction" target="_top">AWS API
      *      Documentation</a>
@@ -908,7 +908,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
      *         You do not have access to perform this operation on this resource.
      * @sample AWSAppSync.DeleteGraphqlApi
@@ -973,7 +973,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteResolver
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteResolver" target="_top">AWS API
      *      Documentation</a>
@@ -1039,7 +1039,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteType" target="_top">AWS API
      *      Documentation</a>
@@ -1106,7 +1106,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.FlushApiCache
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/FlushApiCache" target="_top">AWS API
      *      Documentation</a>
@@ -1173,7 +1173,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetApiCache
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetApiCache" target="_top">AWS API
      *      Documentation</a>
@@ -1239,7 +1239,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetDataSource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetDataSource" target="_top">AWS API
      *      Documentation</a>
@@ -1364,7 +1364,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
      *         You do not have access to perform this operation on this resource.
      * @sample AWSAppSync.GetGraphqlApi
@@ -1429,7 +1429,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetIntrospectionSchema
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetIntrospectionSchema" target="_top">AWS
      *      API Documentation</a>
@@ -1555,7 +1555,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetSchemaCreationStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetSchemaCreationStatus"
      *      target="_top">AWS API Documentation</a>
@@ -1623,7 +1623,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetType" target="_top">AWS API
      *      Documentation</a>
@@ -1694,7 +1694,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListApiKeys
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListApiKeys" target="_top">AWS API
      *      Documentation</a>
@@ -1758,7 +1758,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListDataSources
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListDataSources" target="_top">AWS API
      *      Documentation</a>
@@ -1822,7 +1822,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListFunctions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListFunctions" target="_top">AWS API
      *      Documentation</a>
@@ -1884,7 +1884,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListGraphqlApis
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListGraphqlApis" target="_top">AWS API
      *      Documentation</a>
@@ -1948,7 +1948,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListResolvers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListResolvers" target="_top">AWS API
      *      Documentation</a>
@@ -2012,7 +2012,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListResolversByFunction
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListResolversByFunction"
      *      target="_top">AWS API Documentation</a>
@@ -2080,7 +2080,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
      *         You do not have access to perform this operation on this resource.
      * @sample AWSAppSync.ListTagsForResource
@@ -2148,7 +2148,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListTypes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListTypes" target="_top">AWS API
      *      Documentation</a>
@@ -2217,7 +2217,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.StartSchemaCreation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/StartSchemaCreation" target="_top">AWS
      *      API Documentation</a>
@@ -2283,7 +2283,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
      *         You do not have access to perform this operation on this resource.
      * @sample AWSAppSync.TagResource
@@ -2351,7 +2351,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
      *         You do not have access to perform this operation on this resource.
      * @sample AWSAppSync.UntagResource
@@ -2420,7 +2420,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateApiCache
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateApiCache" target="_top">AWS API
      *      Documentation</a>
@@ -2486,7 +2486,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws LimitExceededException
      *         The request exceeded a limit. Try your request again.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @throws ApiKeyValidityOutOfBoundsException
      *         The API key expiration must be set to a value between 1 and 365 days from creation (for
      *         <code>CreateApiKey</code>) or from update (for <code>UpdateApiKey</code>).
@@ -2555,7 +2555,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateDataSource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateDataSource" target="_top">AWS API
      *      Documentation</a>
@@ -2618,7 +2618,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateFunction
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateFunction" target="_top">AWS API
      *      Documentation</a>
@@ -2684,7 +2684,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
      *         You do not have access to perform this operation on this resource.
      * @sample AWSAppSync.UpdateGraphqlApi
@@ -2749,7 +2749,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateResolver
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateResolver" target="_top">AWS API
      *      Documentation</a>
@@ -2815,7 +2815,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws UnauthorizedException
      *         You are not authorized to perform this operation.
      * @throws InternalFailureException
-     *         An internal AWS AppSync error occurred. Try your request again.
+     *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateType" target="_top">AWS API
      *      Documentation</a>

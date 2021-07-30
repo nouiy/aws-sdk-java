@@ -96,11 +96,17 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
     private Boolean xrayEnabled;
     /**
      * <p>
-     * The ARN of the AWS Web Application Firewall (WAF) ACL associated with this <code>GraphqlApi</code>, if one
-     * exists.
+     * The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
      * </p>
      */
     private String wafWebAclArn;
+    /**
+     * <p/>
+     * <p>
+     * Configuration for AWS Lambda function authorization.
+     * </p>
+     */
+    private LambdaAuthorizerConfig lambdaAuthorizerConfig;
 
     /**
      * <p>
@@ -661,13 +667,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the AWS Web Application Firewall (WAF) ACL associated with this <code>GraphqlApi</code>, if one
-     * exists.
+     * The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
      * </p>
      * 
      * @param wafWebAclArn
-     *        The ARN of the AWS Web Application Firewall (WAF) ACL associated with this <code>GraphqlApi</code>, if one
-     *        exists.
+     *        The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
      */
 
     public void setWafWebAclArn(String wafWebAclArn) {
@@ -676,12 +680,10 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the AWS Web Application Firewall (WAF) ACL associated with this <code>GraphqlApi</code>, if one
-     * exists.
+     * The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
      * </p>
      * 
-     * @return The ARN of the AWS Web Application Firewall (WAF) ACL associated with this <code>GraphqlApi</code>, if
-     *         one exists.
+     * @return The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
      */
 
     public String getWafWebAclArn() {
@@ -690,18 +692,62 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the AWS Web Application Firewall (WAF) ACL associated with this <code>GraphqlApi</code>, if one
-     * exists.
+     * The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
      * </p>
      * 
      * @param wafWebAclArn
-     *        The ARN of the AWS Web Application Firewall (WAF) ACL associated with this <code>GraphqlApi</code>, if one
-     *        exists.
+     *        The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public GraphqlApi withWafWebAclArn(String wafWebAclArn) {
         setWafWebAclArn(wafWebAclArn);
+        return this;
+    }
+
+    /**
+     * <p/>
+     * <p>
+     * Configuration for AWS Lambda function authorization.
+     * </p>
+     * 
+     * @param lambdaAuthorizerConfig
+     *        <p>
+     *        Configuration for AWS Lambda function authorization.
+     */
+
+    public void setLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
+        this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
+    }
+
+    /**
+     * <p/>
+     * <p>
+     * Configuration for AWS Lambda function authorization.
+     * </p>
+     * 
+     * @return <p>
+     *         Configuration for AWS Lambda function authorization.
+     */
+
+    public LambdaAuthorizerConfig getLambdaAuthorizerConfig() {
+        return this.lambdaAuthorizerConfig;
+    }
+
+    /**
+     * <p/>
+     * <p>
+     * Configuration for AWS Lambda function authorization.
+     * </p>
+     * 
+     * @param lambdaAuthorizerConfig
+     *        <p>
+     *        Configuration for AWS Lambda function authorization.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GraphqlApi withLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
+        setLambdaAuthorizerConfig(lambdaAuthorizerConfig);
         return this;
     }
 
@@ -740,7 +786,9 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
         if (getXrayEnabled() != null)
             sb.append("XrayEnabled: ").append(getXrayEnabled()).append(",");
         if (getWafWebAclArn() != null)
-            sb.append("WafWebAclArn: ").append(getWafWebAclArn());
+            sb.append("WafWebAclArn: ").append(getWafWebAclArn()).append(",");
+        if (getLambdaAuthorizerConfig() != null)
+            sb.append("LambdaAuthorizerConfig: ").append(getLambdaAuthorizerConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -804,6 +852,10 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getWafWebAclArn() != null && other.getWafWebAclArn().equals(this.getWafWebAclArn()) == false)
             return false;
+        if (other.getLambdaAuthorizerConfig() == null ^ this.getLambdaAuthorizerConfig() == null)
+            return false;
+        if (other.getLambdaAuthorizerConfig() != null && other.getLambdaAuthorizerConfig().equals(this.getLambdaAuthorizerConfig()) == false)
+            return false;
         return true;
     }
 
@@ -824,6 +876,7 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAdditionalAuthenticationProviders() == null) ? 0 : getAdditionalAuthenticationProviders().hashCode());
         hashCode = prime * hashCode + ((getXrayEnabled() == null) ? 0 : getXrayEnabled().hashCode());
         hashCode = prime * hashCode + ((getWafWebAclArn() == null) ? 0 : getWafWebAclArn().hashCode());
+        hashCode = prime * hashCode + ((getLambdaAuthorizerConfig() == null) ? 0 : getLambdaAuthorizerConfig().hashCode());
         return hashCode;
     }
 

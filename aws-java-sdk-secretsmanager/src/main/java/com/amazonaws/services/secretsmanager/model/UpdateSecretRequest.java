@@ -56,10 +56,10 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * new version that helps ensure idempotency.
      * </p>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request. If you don't use the SDK and instead
-     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
+     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
+     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * <p>
      * You typically only need to interact with this value if you implement your own retry logic and want to ensure that
@@ -106,8 +106,8 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String description;
     /**
      * <p>
-     * (Optional) Specifies an updated ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the
-     * protected text in new versions of this secret.
+     * (Optional) Specifies an updated ARN or alias of the Amazon Web Services KMS customer master key (CMK) to be used
+     * to encrypt the protected text in new versions of this secret.
      * </p>
      * <important>
      * <p>
@@ -147,7 +147,7 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
      * For information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>. For example:
+     * Parameters</a> in the <i>CLI User Guide</i>. For example:
      * </p>
      * <p>
      * <code>[{"username":"bob"},{"password":"abc123xyz456"}]</code>
@@ -318,10 +318,10 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * new version that helps ensure idempotency.
      * </p>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request. If you don't use the SDK and instead
-     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
+     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
+     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * <p>
      * You typically only need to interact with this value if you implement your own retry logic and want to ensure that
@@ -363,11 +363,11 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        (Optional) If you want to add a new version to the secret, this parameter specifies a unique identifier
      *        for the new version that helps ensure idempotency. </p>
      *        <p>
-     *        If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter
-     *        empty. The CLI or SDK generates a random UUID for you and includes that in the request. If you don't use
-     *        the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must
-     *        generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the
-     *        request.
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
+     *        the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
+     *        service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
+     *        include that value in the request.
      *        </p>
      *        <p>
      *        You typically only need to interact with this value if you implement your own retry logic and want to
@@ -415,10 +415,10 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * new version that helps ensure idempotency.
      * </p>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request. If you don't use the SDK and instead
-     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
+     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
+     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * <p>
      * You typically only need to interact with this value if you implement your own retry logic and want to ensure that
@@ -459,11 +459,11 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @return (Optional) If you want to add a new version to the secret, this parameter specifies a unique identifier
      *         for the new version that helps ensure idempotency. </p>
      *         <p>
-     *         If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter
-     *         empty. The CLI or SDK generates a random UUID for you and includes that in the request. If you don't use
-     *         the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must
-     *         generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the
-     *         request.
+     *         If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *         you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
+     *         the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
+     *         service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
+     *         include that value in the request.
      *         </p>
      *         <p>
      *         You typically only need to interact with this value if you implement your own retry logic and want to
@@ -511,10 +511,10 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * new version that helps ensure idempotency.
      * </p>
      * <p>
-     * If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter empty. The
-     * CLI or SDK generates a random UUID for you and includes that in the request. If you don't use the SDK and instead
-     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
-     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
+     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
+     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
+     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * <p>
      * You typically only need to interact with this value if you implement your own retry logic and want to ensure that
@@ -556,11 +556,11 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        (Optional) If you want to add a new version to the secret, this parameter specifies a unique identifier
      *        for the new version that helps ensure idempotency. </p>
      *        <p>
-     *        If you use the AWS CLI or one of the AWS SDK to call this operation, then you can leave this parameter
-     *        empty. The CLI or SDK generates a random UUID for you and includes that in the request. If you don't use
-     *        the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must
-     *        generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the
-     *        request.
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
+     *        the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
+     *        service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
+     *        include that value in the request.
      *        </p>
      *        <p>
      *        You typically only need to interact with this value if you implement your own retry logic and want to
@@ -646,8 +646,8 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies an updated ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the
-     * protected text in new versions of this secret.
+     * (Optional) Specifies an updated ARN or alias of the Amazon Web Services KMS customer master key (CMK) to be used
+     * to encrypt the protected text in new versions of this secret.
      * </p>
      * <important>
      * <p>
@@ -659,8 +659,8 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </important>
      * 
      * @param kmsKeyId
-     *        (Optional) Specifies an updated ARN or alias of the AWS KMS customer master key (CMK) to be used to
-     *        encrypt the protected text in new versions of this secret.</p> <important>
+     *        (Optional) Specifies an updated ARN or alias of the Amazon Web Services KMS customer master key (CMK) to
+     *        be used to encrypt the protected text in new versions of this secret.</p> <important>
      *        <p>
      *        You can only use the account's default CMK to encrypt and decrypt if you call this operation using
      *        credentials from the same account that owns the secret. If the secret is in a different account, then you
@@ -675,8 +675,8 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies an updated ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the
-     * protected text in new versions of this secret.
+     * (Optional) Specifies an updated ARN or alias of the Amazon Web Services KMS customer master key (CMK) to be used
+     * to encrypt the protected text in new versions of this secret.
      * </p>
      * <important>
      * <p>
@@ -687,8 +687,8 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * </important>
      * 
-     * @return (Optional) Specifies an updated ARN or alias of the AWS KMS customer master key (CMK) to be used to
-     *         encrypt the protected text in new versions of this secret.</p> <important>
+     * @return (Optional) Specifies an updated ARN or alias of the Amazon Web Services KMS customer master key (CMK) to
+     *         be used to encrypt the protected text in new versions of this secret.</p> <important>
      *         <p>
      *         You can only use the account's default CMK to encrypt and decrypt if you call this operation using
      *         credentials from the same account that owns the secret. If the secret is in a different account, then you
@@ -703,8 +703,8 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies an updated ARN or alias of the AWS KMS customer master key (CMK) to be used to encrypt the
-     * protected text in new versions of this secret.
+     * (Optional) Specifies an updated ARN or alias of the Amazon Web Services KMS customer master key (CMK) to be used
+     * to encrypt the protected text in new versions of this secret.
      * </p>
      * <important>
      * <p>
@@ -716,8 +716,8 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </important>
      * 
      * @param kmsKeyId
-     *        (Optional) Specifies an updated ARN or alias of the AWS KMS customer master key (CMK) to be used to
-     *        encrypt the protected text in new versions of this secret.</p> <important>
+     *        (Optional) Specifies an updated ARN or alias of the Amazon Web Services KMS customer master key (CMK) to
+     *        be used to encrypt the protected text in new versions of this secret.</p> <important>
      *        <p>
      *        You can only use the account's default CMK to encrypt and decrypt if you call this operation using
      *        credentials from the same account that owns the secret. If the secret is in a different account, then you
@@ -853,7 +853,7 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
      * For information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>. For example:
+     * Parameters</a> in the <i>CLI User Guide</i>. For example:
      * </p>
      * <p>
      * <code>[{"username":"bob"},{"password":"abc123xyz456"}]</code>
@@ -883,7 +883,7 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        pairs. For information on how to format a JSON parameter for the various command line tool environments,
      *        see <a
      *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>AWS CLI User Guide</i>. For example:
+     *        JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
      *        </p>
      *        <p>
      *        <code>[{"username":"bob"},{"password":"abc123xyz456"}]</code>
@@ -917,7 +917,7 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
      * For information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>. For example:
+     * Parameters</a> in the <i>CLI User Guide</i>. For example:
      * </p>
      * <p>
      * <code>[{"username":"bob"},{"password":"abc123xyz456"}]</code>
@@ -946,7 +946,7 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         pairs. For information on how to format a JSON parameter for the various command line tool environments,
      *         see <a
      *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *         JSON for Parameters</a> in the <i>AWS CLI User Guide</i>. For example:
+     *         JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
      *         </p>
      *         <p>
      *         <code>[{"username":"bob"},{"password":"abc123xyz456"}]</code>
@@ -980,7 +980,7 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
      * For information on how to format a JSON parameter for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>. For example:
+     * Parameters</a> in the <i>CLI User Guide</i>. For example:
      * </p>
      * <p>
      * <code>[{"username":"bob"},{"password":"abc123xyz456"}]</code>
@@ -1010,7 +1010,7 @@ public class UpdateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        pairs. For information on how to format a JSON parameter for the various command line tool environments,
      *        see <a
      *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>AWS CLI User Guide</i>. For example:
+     *        JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
      *        </p>
      *        <p>
      *        <code>[{"username":"bob"},{"password":"abc123xyz456"}]</code>

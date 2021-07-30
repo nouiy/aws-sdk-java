@@ -31,8 +31,8 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL scheme
-     * must be HTTP or HTTPS. If the port is not specified, AWS AppSync uses the default port 80 for the HTTP endpoint
-     * and port 443 for HTTPS endpoints.
+     * must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP endpoint and
+     * port 443 for HTTPS endpoints.
      * </p>
      */
     private String endpoint;
@@ -46,14 +46,14 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL scheme
-     * must be HTTP or HTTPS. If the port is not specified, AWS AppSync uses the default port 80 for the HTTP endpoint
-     * and port 443 for HTTPS endpoints.
+     * must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP endpoint and
+     * port 443 for HTTPS endpoints.
      * </p>
      * 
      * @param endpoint
      *        The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL
-     *        scheme must be HTTP or HTTPS. If the port is not specified, AWS AppSync uses the default port 80 for the
-     *        HTTP endpoint and port 443 for HTTPS endpoints.
+     *        scheme must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP
+     *        endpoint and port 443 for HTTPS endpoints.
      */
 
     public void setEndpoint(String endpoint) {
@@ -63,13 +63,13 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL scheme
-     * must be HTTP or HTTPS. If the port is not specified, AWS AppSync uses the default port 80 for the HTTP endpoint
-     * and port 443 for HTTPS endpoints.
+     * must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP endpoint and
+     * port 443 for HTTPS endpoints.
      * </p>
      * 
      * @return The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL
-     *         scheme must be HTTP or HTTPS. If the port is not specified, AWS AppSync uses the default port 80 for the
-     *         HTTP endpoint and port 443 for HTTPS endpoints.
+     *         scheme must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP
+     *         endpoint and port 443 for HTTPS endpoints.
      */
 
     public String getEndpoint() {
@@ -79,14 +79,14 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL scheme
-     * must be HTTP or HTTPS. If the port is not specified, AWS AppSync uses the default port 80 for the HTTP endpoint
-     * and port 443 for HTTPS endpoints.
+     * must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP endpoint and
+     * port 443 for HTTPS endpoints.
      * </p>
      * 
      * @param endpoint
      *        The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL
-     *        scheme must be HTTP or HTTPS. If the port is not specified, AWS AppSync uses the default port 80 for the
-     *        HTTP endpoint and port 443 for HTTPS endpoints.
+     *        scheme must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP
+     *        endpoint and port 443 for HTTPS endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

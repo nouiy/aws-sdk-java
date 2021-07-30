@@ -43,6 +43,21 @@ public class AmazonSageMakerWaiters {
     }
 
     /**
+     * Builds a ImageDeleted waiter by using custom parameters waiterParameters and other parameters defined in the
+     * waiters specification, and then polls until it determines whether the resource entered the desired state or not,
+     * where polling criteria is bound by either default polling strategy or custom polling strategy.
+     */
+    public Waiter<DescribeImageRequest> imageDeleted() {
+
+        return new WaiterBuilder<DescribeImageRequest, DescribeImageResult>()
+                .withSdkFunction(new DescribeImageFunction(client))
+                .withAcceptors(new ImageDeleted.IsResourceNotFoundExceptionMatcher(), new ImageDeleted.IsDELETE_FAILEDMatcher(),
+                        new ImageDeleted.IsValidationExceptionMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(60)))
+                .withExecutorService(executorService).build();
+    }
+
+    /**
      * Builds a NotebookInstanceStopped waiter by using custom parameters waiterParameters and other parameters defined
      * in the waiters specification, and then polls until it determines whether the resource entered the desired state
      * or not, where polling criteria is bound by either default polling strategy or custom polling strategy.
@@ -53,6 +68,78 @@ public class AmazonSageMakerWaiters {
                 .withSdkFunction(new DescribeNotebookInstanceFunction(client))
                 .withAcceptors(new NotebookInstanceStopped.IsStoppedMatcher(), new NotebookInstanceStopped.IsFailedMatcher())
                 .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(30)))
+                .withExecutorService(executorService).build();
+    }
+
+    /**
+     * Builds a NotebookInstanceInService waiter by using custom parameters waiterParameters and other parameters
+     * defined in the waiters specification, and then polls until it determines whether the resource entered the desired
+     * state or not, where polling criteria is bound by either default polling strategy or custom polling strategy.
+     */
+    public Waiter<DescribeNotebookInstanceRequest> notebookInstanceInService() {
+
+        return new WaiterBuilder<DescribeNotebookInstanceRequest, DescribeNotebookInstanceResult>()
+                .withSdkFunction(new DescribeNotebookInstanceFunction(client))
+                .withAcceptors(new NotebookInstanceInService.IsInServiceMatcher(), new NotebookInstanceInService.IsFailedMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(30)))
+                .withExecutorService(executorService).build();
+    }
+
+    /**
+     * Builds a TransformJobCompletedOrStopped waiter by using custom parameters waiterParameters and other parameters
+     * defined in the waiters specification, and then polls until it determines whether the resource entered the desired
+     * state or not, where polling criteria is bound by either default polling strategy or custom polling strategy.
+     */
+    public Waiter<DescribeTransformJobRequest> transformJobCompletedOrStopped() {
+
+        return new WaiterBuilder<DescribeTransformJobRequest, DescribeTransformJobResult>()
+                .withSdkFunction(new DescribeTransformJobFunction(client))
+                .withAcceptors(new TransformJobCompletedOrStopped.IsCompletedMatcher(), new TransformJobCompletedOrStopped.IsStoppedMatcher(),
+                        new TransformJobCompletedOrStopped.IsFailedMatcher(), new TransformJobCompletedOrStopped.IsValidationExceptionMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(60)))
+                .withExecutorService(executorService).build();
+    }
+
+    /**
+     * Builds a TrainingJobCompletedOrStopped waiter by using custom parameters waiterParameters and other parameters
+     * defined in the waiters specification, and then polls until it determines whether the resource entered the desired
+     * state or not, where polling criteria is bound by either default polling strategy or custom polling strategy.
+     */
+    public Waiter<DescribeTrainingJobRequest> trainingJobCompletedOrStopped() {
+
+        return new WaiterBuilder<DescribeTrainingJobRequest, DescribeTrainingJobResult>()
+                .withSdkFunction(new DescribeTrainingJobFunction(client))
+                .withAcceptors(new TrainingJobCompletedOrStopped.IsCompletedMatcher(), new TrainingJobCompletedOrStopped.IsStoppedMatcher(),
+                        new TrainingJobCompletedOrStopped.IsFailedMatcher(), new TrainingJobCompletedOrStopped.IsValidationExceptionMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(180), new FixedDelayStrategy(120)))
+                .withExecutorService(executorService).build();
+    }
+
+    /**
+     * Builds a ImageCreated waiter by using custom parameters waiterParameters and other parameters defined in the
+     * waiters specification, and then polls until it determines whether the resource entered the desired state or not,
+     * where polling criteria is bound by either default polling strategy or custom polling strategy.
+     */
+    public Waiter<DescribeImageRequest> imageCreated() {
+
+        return new WaiterBuilder<DescribeImageRequest, DescribeImageResult>().withSdkFunction(new DescribeImageFunction(client))
+                .withAcceptors(new ImageCreated.IsCREATEDMatcher(), new ImageCreated.IsCREATE_FAILEDMatcher(), new ImageCreated.IsValidationExceptionMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(60)))
+                .withExecutorService(executorService).build();
+    }
+
+    /**
+     * Builds a ImageVersionDeleted waiter by using custom parameters waiterParameters and other parameters defined in
+     * the waiters specification, and then polls until it determines whether the resource entered the desired state or
+     * not, where polling criteria is bound by either default polling strategy or custom polling strategy.
+     */
+    public Waiter<DescribeImageVersionRequest> imageVersionDeleted() {
+
+        return new WaiterBuilder<DescribeImageVersionRequest, DescribeImageVersionResult>()
+                .withSdkFunction(new DescribeImageVersionFunction(client))
+                .withAcceptors(new ImageVersionDeleted.IsResourceNotFoundExceptionMatcher(), new ImageVersionDeleted.IsDELETE_FAILEDMatcher(),
+                        new ImageVersionDeleted.IsValidationExceptionMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(60)))
                 .withExecutorService(executorService).build();
     }
 
@@ -99,20 +186,6 @@ public class AmazonSageMakerWaiters {
     }
 
     /**
-     * Builds a NotebookInstanceInService waiter by using custom parameters waiterParameters and other parameters
-     * defined in the waiters specification, and then polls until it determines whether the resource entered the desired
-     * state or not, where polling criteria is bound by either default polling strategy or custom polling strategy.
-     */
-    public Waiter<DescribeNotebookInstanceRequest> notebookInstanceInService() {
-
-        return new WaiterBuilder<DescribeNotebookInstanceRequest, DescribeNotebookInstanceResult>()
-                .withSdkFunction(new DescribeNotebookInstanceFunction(client))
-                .withAcceptors(new NotebookInstanceInService.IsInServiceMatcher(), new NotebookInstanceInService.IsFailedMatcher())
-                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(30)))
-                .withExecutorService(executorService).build();
-    }
-
-    /**
      * Builds a ProcessingJobCompletedOrStopped waiter by using custom parameters waiterParameters and other parameters
      * defined in the waiters specification, and then polls until it determines whether the resource entered the desired
      * state or not, where polling criteria is bound by either default polling strategy or custom polling strategy.
@@ -128,32 +201,30 @@ public class AmazonSageMakerWaiters {
     }
 
     /**
-     * Builds a TransformJobCompletedOrStopped waiter by using custom parameters waiterParameters and other parameters
-     * defined in the waiters specification, and then polls until it determines whether the resource entered the desired
-     * state or not, where polling criteria is bound by either default polling strategy or custom polling strategy.
+     * Builds a ImageUpdated waiter by using custom parameters waiterParameters and other parameters defined in the
+     * waiters specification, and then polls until it determines whether the resource entered the desired state or not,
+     * where polling criteria is bound by either default polling strategy or custom polling strategy.
      */
-    public Waiter<DescribeTransformJobRequest> transformJobCompletedOrStopped() {
+    public Waiter<DescribeImageRequest> imageUpdated() {
 
-        return new WaiterBuilder<DescribeTransformJobRequest, DescribeTransformJobResult>()
-                .withSdkFunction(new DescribeTransformJobFunction(client))
-                .withAcceptors(new TransformJobCompletedOrStopped.IsCompletedMatcher(), new TransformJobCompletedOrStopped.IsStoppedMatcher(),
-                        new TransformJobCompletedOrStopped.IsFailedMatcher(), new TransformJobCompletedOrStopped.IsValidationExceptionMatcher())
+        return new WaiterBuilder<DescribeImageRequest, DescribeImageResult>().withSdkFunction(new DescribeImageFunction(client))
+                .withAcceptors(new ImageUpdated.IsCREATEDMatcher(), new ImageUpdated.IsUPDATE_FAILEDMatcher(), new ImageUpdated.IsValidationExceptionMatcher())
                 .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(60)))
                 .withExecutorService(executorService).build();
     }
 
     /**
-     * Builds a TrainingJobCompletedOrStopped waiter by using custom parameters waiterParameters and other parameters
-     * defined in the waiters specification, and then polls until it determines whether the resource entered the desired
-     * state or not, where polling criteria is bound by either default polling strategy or custom polling strategy.
+     * Builds a ImageVersionCreated waiter by using custom parameters waiterParameters and other parameters defined in
+     * the waiters specification, and then polls until it determines whether the resource entered the desired state or
+     * not, where polling criteria is bound by either default polling strategy or custom polling strategy.
      */
-    public Waiter<DescribeTrainingJobRequest> trainingJobCompletedOrStopped() {
+    public Waiter<DescribeImageVersionRequest> imageVersionCreated() {
 
-        return new WaiterBuilder<DescribeTrainingJobRequest, DescribeTrainingJobResult>()
-                .withSdkFunction(new DescribeTrainingJobFunction(client))
-                .withAcceptors(new TrainingJobCompletedOrStopped.IsCompletedMatcher(), new TrainingJobCompletedOrStopped.IsStoppedMatcher(),
-                        new TrainingJobCompletedOrStopped.IsFailedMatcher(), new TrainingJobCompletedOrStopped.IsValidationExceptionMatcher())
-                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(180), new FixedDelayStrategy(120)))
+        return new WaiterBuilder<DescribeImageVersionRequest, DescribeImageVersionResult>()
+                .withSdkFunction(new DescribeImageVersionFunction(client))
+                .withAcceptors(new ImageVersionCreated.IsCREATEDMatcher(), new ImageVersionCreated.IsCREATE_FAILEDMatcher(),
+                        new ImageVersionCreated.IsValidationExceptionMatcher())
+                .withDefaultPollingStrategy(new PollingStrategy(new MaxAttemptsRetryStrategy(60), new FixedDelayStrategy(60)))
                 .withExecutorService(executorService).build();
     }
 

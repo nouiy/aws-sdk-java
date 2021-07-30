@@ -1,3 +1,20 @@
+# __1.12.37__ __2021-07-30__
+## __AWS AppSync__
+  - ### Features
+    - AWS AppSync now supports a new authorization mode allowing you to define your own authorization logic using an AWS Lambda function.
+
+## __AWS Secrets Manager__
+  - ### Features
+    - Add support for KmsKeyIds in the ListSecretVersionIds API response
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - API changes with respect to Lambda steps in model building pipelines. Adds several waiters to async Sagemaker Image APIs. Add more instance types to AppInstanceType field
+
+## __Elastic Load Balancing__
+  - ### Features
+    - Client Port Preservation ALB Attribute Launch
+
 # __1.12.36__ __2021-07-29__
 ## __AWS IoT__
   - ### Features

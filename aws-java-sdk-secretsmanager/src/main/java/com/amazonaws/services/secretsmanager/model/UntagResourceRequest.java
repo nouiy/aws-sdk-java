@@ -59,7 +59,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
      * for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      */
     private java.util.List<String> tagKeys;
@@ -221,7 +221,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
      * for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * 
      * @return A list of tag key names to remove from the secret. You don't specify the value. Both the key and its
@@ -230,7 +230,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         This parameter to the API requires a JSON text string argument. For information on how to format a JSON
      *         parameter for the various command line tool environments, see <a
      *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *         JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *         JSON for Parameters</a> in the <i>CLI User Guide</i>.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -246,7 +246,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
      * for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * 
      * @param tagKeys
@@ -256,7 +256,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        This parameter to the API requires a JSON text string argument. For information on how to format a JSON
      *        parameter for the various command line tool environments, see <a
      *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -277,7 +277,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
      * for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -292,7 +292,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        This parameter to the API requires a JSON text string argument. For information on how to format a JSON
      *        parameter for the various command line tool environments, see <a
      *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -315,7 +315,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
      * for the various command line tool environments, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>AWS CLI User Guide</i>.
+     * Parameters</a> in the <i>CLI User Guide</i>.
      * </p>
      * 
      * @param tagKeys
@@ -325,7 +325,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        This parameter to the API requires a JSON text string argument. For information on how to format a JSON
      *        parameter for the various command line tool environments, see <a
      *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>AWS CLI User Guide</i>.
+     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

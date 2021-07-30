@@ -53,6 +53,8 @@ public class GraphqlApiMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("xrayEnabled").build();
     private static final MarshallingInfo<String> WAFWEBACLARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("wafWebAclArn").build();
+    private static final MarshallingInfo<StructuredPojo> LAMBDAAUTHORIZERCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaAuthorizerConfig").build();
 
     private static final GraphqlApiMarshaller instance = new GraphqlApiMarshaller();
 
@@ -82,6 +84,7 @@ public class GraphqlApiMarshaller {
             protocolMarshaller.marshall(graphqlApi.getAdditionalAuthenticationProviders(), ADDITIONALAUTHENTICATIONPROVIDERS_BINDING);
             protocolMarshaller.marshall(graphqlApi.getXrayEnabled(), XRAYENABLED_BINDING);
             protocolMarshaller.marshall(graphqlApi.getWafWebAclArn(), WAFWEBACLARN_BINDING);
+            protocolMarshaller.marshall(graphqlApi.getLambdaAuthorizerConfig(), LAMBDAAUTHORIZERCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

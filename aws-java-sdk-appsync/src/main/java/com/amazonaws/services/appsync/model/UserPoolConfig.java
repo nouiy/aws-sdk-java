@@ -36,7 +36,7 @@ public class UserPoolConfig implements Serializable, Cloneable, StructuredPojo {
     private String userPoolId;
     /**
      * <p>
-     * The AWS Region in which the user pool was created.
+     * The Amazon Web Services Region in which the user pool was created.
      * </p>
      */
     private String awsRegion;
@@ -96,11 +96,11 @@ public class UserPoolConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region in which the user pool was created.
+     * The Amazon Web Services Region in which the user pool was created.
      * </p>
      * 
      * @param awsRegion
-     *        The AWS Region in which the user pool was created.
+     *        The Amazon Web Services Region in which the user pool was created.
      */
 
     public void setAwsRegion(String awsRegion) {
@@ -109,10 +109,10 @@ public class UserPoolConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region in which the user pool was created.
+     * The Amazon Web Services Region in which the user pool was created.
      * </p>
      * 
-     * @return The AWS Region in which the user pool was created.
+     * @return The Amazon Web Services Region in which the user pool was created.
      */
 
     public String getAwsRegion() {
@@ -121,11 +121,11 @@ public class UserPoolConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region in which the user pool was created.
+     * The Amazon Web Services Region in which the user pool was created.
      * </p>
      * 
      * @param awsRegion
-     *        The AWS Region in which the user pool was created.
+     *        The Amazon Web Services Region in which the user pool was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

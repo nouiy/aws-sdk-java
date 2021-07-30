@@ -42,7 +42,7 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
      * this secret. The combined permissions specify who can access the secret and what actions they can perform. For
      * more information, see <a
      * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and Access
-     * Control for AWS Secrets Manager</a> in the <i>AWS Secrets Manager User Guide</i>.
+     * Control for Amazon Web Services Secrets Manager</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      * </p>
      */
     private String resourcePolicy;
@@ -134,7 +134,7 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
      * this secret. The combined permissions specify who can access the secret and what actions they can perform. For
      * more information, see <a
      * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and Access
-     * Control for AWS Secrets Manager</a> in the <i>AWS Secrets Manager User Guide</i>.
+     * Control for Amazon Web Services Secrets Manager</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      * </p>
      * 
      * @param resourcePolicy
@@ -143,7 +143,8 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
      *        access this secret. The combined permissions specify who can access the secret and what actions they can
      *        perform. For more information, see <a
      *        href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and
-     *        Access Control for AWS Secrets Manager</a> in the <i>AWS Secrets Manager User Guide</i>.
+     *        Access Control for Amazon Web Services Secrets Manager</a> in the <i>Amazon Web Services Secrets Manager
+     *        User Guide</i>.
      */
 
     public void setResourcePolicy(String resourcePolicy) {
@@ -157,7 +158,7 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
      * this secret. The combined permissions specify who can access the secret and what actions they can perform. For
      * more information, see <a
      * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and Access
-     * Control for AWS Secrets Manager</a> in the <i>AWS Secrets Manager User Guide</i>.
+     * Control for Amazon Web Services Secrets Manager</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      * </p>
      * 
      * @return A JSON-formatted string that describes the permissions that are associated with the attached secret.
@@ -165,7 +166,8 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
      *         attempts to access this secret. The combined permissions specify who can access the secret and what
      *         actions they can perform. For more information, see <a
      *         href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and
-     *         Access Control for AWS Secrets Manager</a> in the <i>AWS Secrets Manager User Guide</i>.
+     *         Access Control for Amazon Web Services Secrets Manager</a> in the <i>Amazon Web Services Secrets Manager
+     *         User Guide</i>.
      */
 
     public String getResourcePolicy() {
@@ -179,7 +181,7 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
      * this secret. The combined permissions specify who can access the secret and what actions they can perform. For
      * more information, see <a
      * href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and Access
-     * Control for AWS Secrets Manager</a> in the <i>AWS Secrets Manager User Guide</i>.
+     * Control for Amazon Web Services Secrets Manager</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
      * </p>
      * 
      * @param resourcePolicy
@@ -188,7 +190,8 @@ public class GetResourcePolicyResult extends com.amazonaws.AmazonWebServiceResul
      *        access this secret. The combined permissions specify who can access the secret and what actions they can
      *        perform. For more information, see <a
      *        href="http://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html">Authentication and
-     *        Access Control for AWS Secrets Manager</a> in the <i>AWS Secrets Manager User Guide</i>.
+     *        Access Control for Amazon Web Services Secrets Manager</a> in the <i>Amazon Web Services Secrets Manager
+     *        User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -45,6 +45,8 @@ public class CreateGraphqlApiRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("additionalAuthenticationProviders").build();
     private static final MarshallingInfo<Boolean> XRAYENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("xrayEnabled").build();
+    private static final MarshallingInfo<StructuredPojo> LAMBDAAUTHORIZERCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaAuthorizerConfig").build();
 
     private static final CreateGraphqlApiRequestMarshaller instance = new CreateGraphqlApiRequestMarshaller();
 
@@ -70,6 +72,7 @@ public class CreateGraphqlApiRequestMarshaller {
             protocolMarshaller.marshall(createGraphqlApiRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createGraphqlApiRequest.getAdditionalAuthenticationProviders(), ADDITIONALAUTHENTICATIONPROVIDERS_BINDING);
             protocolMarshaller.marshall(createGraphqlApiRequest.getXrayEnabled(), XRAYENABLED_BINDING);
+            protocolMarshaller.marshall(createGraphqlApiRequest.getLambdaAuthorizerConfig(), LAMBDAAUTHORIZERCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

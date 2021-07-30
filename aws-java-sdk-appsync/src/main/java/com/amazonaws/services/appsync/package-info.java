@@ -13,7 +13,7 @@
 
 /**
  * <p>
- * AWS AppSync provides API actions for creating and interacting with data sources using GraphQL from your application.
+ * AppSync provides API actions for creating and interacting with data sources using GraphQL from your application.
  * </p>
  */
 package com.amazonaws.services.appsync;

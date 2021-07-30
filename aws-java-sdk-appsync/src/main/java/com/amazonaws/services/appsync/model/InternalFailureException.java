@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An internal AWS AppSync error occurred. Try your request again.
+ * An internal AppSync error occurred. Try your request again.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
