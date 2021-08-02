@@ -51,21 +51,21 @@ import com.amazonaws.services.greengrassv2.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * AWS IoT Greengrass brings local compute, messaging, data management, sync, and ML inference capabilities to edge
- * devices. This enables devices to collect and analyze data closer to the source of information, react autonomously to
- * local events, and communicate securely with each other on local networks. Local devices can also communicate securely
- * with AWS IoT Core and export IoT data to the AWS Cloud. AWS IoT Greengrass developers can use AWS Lambda functions
- * and components to create and deploy applications to fleets of edge devices for local operation.
+ * IoT Greengrass brings local compute, messaging, data management, sync, and ML inference capabilities to edge devices.
+ * This enables devices to collect and analyze data closer to the source of information, react autonomously to local
+ * events, and communicate securely with each other on local networks. Local devices can also communicate securely with
+ * Amazon Web Services IoT Core and export IoT data to the Amazon Web Services Cloud. IoT Greengrass developers can use
+ * Lambda functions and components to create and deploy applications to fleets of edge devices for local operation.
  * </p>
  * <p>
- * AWS IoT Greengrass Version 2 provides a new major version of the AWS IoT Greengrass Core software, new APIs, and a
- * new console. Use this API reference to learn how to use the AWS IoT Greengrass V2 API operations to manage
- * components, manage deployments, and core devices.
+ * IoT Greengrass Version 2 provides a new major version of the IoT Greengrass Core software, new APIs, and a new
+ * console. Use this API reference to learn how to use the IoT Greengrass V2 API operations to manage components, manage
+ * deployments, and core devices.
  * </p>
  * <p>
  * For more information, see <a
- * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/what-is-iot-greengrass.html">What is AWS IoT
- * Greengrass?</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+ * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/what-is-iot-greengrass.html">What is IoT
+ * Greengrass?</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
  * </p>
  */
 @ThreadSafe
@@ -91,6 +91,9 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .withContentTypeOverride("")
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("RequestAlreadyInProgressException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.greengrassv2.model.transform.RequestAlreadyInProgressExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.greengrassv2.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
@@ -163,18 +166,18 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
     /**
      * <p>
      * Associate a list of client devices with a core device. Use this API operation to specify which client devices can
-     * discover a core device through cloud discovery. With cloud discovery, client devices connect to AWS IoT
-     * Greengrass to retrieve associated core devices' connectivity information and certificates. For more information,
-     * see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-cloud-discovery.html">Configure
-     * cloud discovery</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * discover a core device through cloud discovery. With cloud discovery, client devices connect to IoT Greengrass to
+     * retrieve associated core devices' connectivity information and certificates. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-cloud-discovery.html">Configure cloud
+     * discovery</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * <note>
      * <p>
-     * Client devices are local IoT devices that connect to and communicate with an AWS IoT Greengrass core device over
-     * MQTT. You can connect client devices to a core device to sync MQTT messages and data to AWS IoT Core and interact
-     * with client devices in AWS IoT Greengrass components. For more information, see <a
+     * Client devices are local IoT devices that connect to and communicate with an IoT Greengrass core device over
+     * MQTT. You can connect client devices to a core device to sync MQTT messages and data to Amazon Web Services IoT
+     * Core and interact with client devices in Greengrass components. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/interact-with-local-iot-devices.html">Interact
-     * with local IoT devices</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * with local IoT devices</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * </note>
      * 
@@ -188,7 +191,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -261,7 +264,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -334,7 +337,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ConflictException
      *         Your request has conflicting operations. This can occur if you're trying to perform more than one
      *         operation on the same resource at the same time.
@@ -391,9 +394,9 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Creates a component. Components are software that run on AWS IoT Greengrass core devices. After you develop and
-     * test a component on your core device, you can use this operation to upload your component to AWS IoT Greengrass.
-     * Then, you can deploy the component to other core devices.
+     * Creates a component. Components are software that run on Greengrass core devices. After you develop and test a
+     * component on your core device, you can use this operation to upload your component to IoT Greengrass. Then, you
+     * can deploy the component to other core devices.
      * </p>
      * <p>
      * You can use this operation to do the following:
@@ -406,8 +409,8 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * <p>
      * Create a component from a recipe, which is a file that defines the component's metadata, parameters,
      * dependencies, lifecycle, artifacts, and platform capability. For more information, see <a
-     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/component-recipe-reference.html">AWS IoT
-     * Greengrass component recipe reference</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/component-recipe-reference.html">IoT Greengrass
+     * component recipe reference</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * <p>
      * To create a component from a recipe, specify <code>inlineRecipe</code> when you call this operation.
@@ -418,9 +421,9 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * <b>Create components from Lambda functions</b>
      * </p>
      * <p>
-     * Create a component from an AWS Lambda function that runs on AWS IoT Greengrass. This creates a recipe and
-     * artifacts from the Lambda function's deployment package. You can use this operation to migrate Lambda functions
-     * from AWS IoT Greengrass V1 to AWS IoT Greengrass V2.
+     * Create a component from an Lambda function that runs on IoT Greengrass. This creates a recipe and artifacts from
+     * the Lambda function's deployment package. You can use this operation to migrate Lambda functions from IoT
+     * Greengrass V1 to IoT Greengrass V2.
      * </p>
      * <p>
      * This function only accepts Lambda functions that use the following runtimes:
@@ -480,7 +483,10 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
+     * @throws RequestAlreadyInProgressException
+     *         The request is already in progress. This exception occurs when you use a client token for multiple
+     *         requests while IoT Greengrass is still processing an earlier request that uses the same client token.
      * @sample AWSGreengrassV2.CreateComponentVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/CreateComponentVersion"
      *      target="_top">AWS API Documentation</a>
@@ -532,14 +538,13 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Creates a continuous deployment for a target, which is a AWS IoT Greengrass core device or group of core devices.
-     * When you add a new core device to a group of core devices that has a deployment, AWS IoT Greengrass deploys that
-     * group's deployment to the new device.
+     * Creates a continuous deployment for a target, which is a Greengrass core device or group of core devices. When
+     * you add a new core device to a group of core devices that has a deployment, IoT Greengrass deploys that group's
+     * deployment to the new device.
      * </p>
      * <p>
      * You can define one deployment for each target. When you create a new deployment for a target that has an existing
-     * deployment, you replace the previous deployment. AWS IoT Greengrass applies the new deployment to the target
-     * devices.
+     * deployment, you replace the previous deployment. IoT Greengrass applies the new deployment to the target devices.
      * </p>
      * <p>
      * Every deployment has a revision number that indicates how many deployment revisions you define for a target. Use
@@ -549,7 +554,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * <p>
      * For more information, see the <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create deployments</a> in
-     * the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param createDeploymentRequest
@@ -565,7 +570,10 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
+     * @throws RequestAlreadyInProgressException
+     *         The request is already in progress. This exception occurs when you use a client token for multiple
+     *         requests while IoT Greengrass is still processing an earlier request that uses the same client token.
      * @sample AWSGreengrassV2.CreateDeployment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/CreateDeployment" target="_top">AWS
      *      API Documentation</a>
@@ -616,7 +624,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deletes a version of a component from AWS IoT Greengrass.
+     * Deletes a version of a component from IoT Greengrass.
      * </p>
      * <note>
      * <p>
@@ -642,7 +650,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @sample AWSGreengrassV2.DeleteComponent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/DeleteComponent" target="_top">AWS
      *      API Documentation</a>
@@ -693,11 +701,10 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deletes a AWS IoT Greengrass core device, which is an AWS IoT thing. This operation removes the core device from
-     * the list of core devices. This operation doesn't delete the AWS IoT thing. For more information about how to
-     * delete the AWS IoT thing, see <a
-     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteThing.html">DeleteThing</a> in the <i>AWS IoT
-     * API Reference</i>.
+     * Deletes a Greengrass core device, which is an IoT thing. This operation removes the core device from the list of
+     * core devices. This operation doesn't delete the IoT thing. For more information about how to delete the IoT
+     * thing, see <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_DeleteThing.html">DeleteThing</a> in
+     * the <i>IoT API Reference</i>.
      * </p>
      * 
      * @param deleteCoreDeviceRequest
@@ -710,7 +717,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -783,7 +790,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @sample AWSGreengrassV2.DescribeComponent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/DescribeComponent" target="_top">AWS
      *      API Documentation</a>
@@ -851,7 +858,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @sample AWSGreengrassV2.GetComponent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetComponent" target="_top">AWS API
      *      Documentation</a>
@@ -919,7 +926,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @sample AWSGreengrassV2.GetComponentVersionArtifact
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetComponentVersionArtifact"
      *      target="_top">AWS API Documentation</a>
@@ -972,7 +979,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Retrieves metadata for a AWS IoT Greengrass core device.
+     * Retrieves metadata for a Greengrass core device.
      * </p>
      * 
      * @param getCoreDeviceRequest
@@ -985,7 +992,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -1039,7 +1046,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Gets a deployment. Deployments define the components that run on AWS IoT Greengrass core devices.
+     * Gets a deployment. Deployments define the components that run on Greengrass core devices.
      * </p>
      * 
      * @param getDeploymentRequest
@@ -1052,7 +1059,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -1119,7 +1126,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -1193,7 +1200,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @sample AWSGreengrassV2.ListComponentVersions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ListComponentVersions"
      *      target="_top">AWS API Documentation</a>
@@ -1260,7 +1267,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @sample AWSGreengrassV2.ListComponents
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ListComponents" target="_top">AWS
      *      API Documentation</a>
@@ -1311,7 +1318,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Retrieves a paginated list of AWS IoT Greengrass core devices.
+     * Retrieves a paginated list of Greengrass core devices.
      * </p>
      * 
      * @param listCoreDevicesRequest
@@ -1322,7 +1329,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -1387,7 +1394,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -1441,7 +1448,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Retrieves a paginated list of deployment jobs that AWS IoT Greengrass sends to AWS IoT Greengrass core devices.
+     * Retrieves a paginated list of deployment jobs that IoT Greengrass sends to Greengrass core devices.
      * </p>
      * 
      * @param listEffectiveDeploymentsRequest
@@ -1454,7 +1461,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -1510,7 +1517,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Retrieves a paginated list of the components that a AWS IoT Greengrass core device runs.
+     * Retrieves a paginated list of the components that a Greengrass core device runs.
      * </p>
      * 
      * @param listInstalledComponentsRequest
@@ -1523,7 +1530,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * @throws AccessDeniedException
      *         You don't have permission to perform the action.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ThrottlingException
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
@@ -1579,13 +1586,13 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Retrieves the list of tags for an AWS IoT Greengrass resource.
+     * Retrieves the list of tags for an IoT Greengrass resource.
      * </p>
      * 
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ValidationException
      *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
      *         characters.
@@ -1641,9 +1648,8 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Retrieves a list of components that meet the component, version, and platform requirements of a deployment. AWS
-     * IoT Greengrass core devices call this operation when they receive a deployment to identify the components to
-     * install.
+     * Retrieves a list of components that meet the component, version, and platform requirements of a deployment.
+     * Greengrass core devices call this operation when they receive a deployment to identify the components to install.
      * </p>
      * <p>
      * This operation identifies components that meet all dependency requirements for a deployment. If the requirements
@@ -1652,15 +1658,15 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * <code>&lt;2.0.0</code> of a component dependency.
      * </p>
      * <p>
-     * When you specify the component candidates to resolve, AWS IoT Greengrass compares each component's digest from
-     * the core device with the component's digest in the AWS Cloud. If the digests don't match, then AWS IoT Greengrass
-     * specifies to use the version from the AWS Cloud.
+     * When you specify the component candidates to resolve, IoT Greengrass compares each component's digest from the
+     * core device with the component's digest in the Amazon Web Services Cloud. If the digests don't match, then IoT
+     * Greengrass specifies to use the version from the Amazon Web Services Cloud.
      * </p>
      * <important>
      * <p>
-     * To use this operation, you must use the data plane API endpoint and authenticate with an AWS IoT device
-     * certificate. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/greengrass.html">AWS IoT Greengrass endpoints and quotas</a>.
+     * To use this operation, you must use the data plane API endpoint and authenticate with an IoT device certificate.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/greengrass.html">IoT Greengrass
+     * endpoints and quotas</a>.
      * </p>
      * </important>
      * 
@@ -1677,7 +1683,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      *         Your request exceeded a request rate quota. For example, you might have exceeded the amount of times that
      *         you can retrieve device or deployment status per second.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ConflictException
      *         Your request has conflicting operations. This can occur if you're trying to perform more than one
      *         operation on the same resource at the same time.
@@ -1733,14 +1739,14 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Adds tags to an AWS IoT Greengrass resource. If a tag already exists for the resource, this operation updates the
+     * Adds tags to an IoT Greengrass resource. If a tag already exists for the resource, this operation updates the
      * tag's value.
      * </p>
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ValidationException
      *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
      *         characters.
@@ -1796,13 +1802,13 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Removes a tag from an AWS IoT Greengrass resource.
+     * Removes a tag from an IoT Greengrass resource.
      * </p>
      * 
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws InternalServerException
-     *         AWS IoT Greengrass can't process your request right now. Try again later.
+     *         IoT Greengrass can't process your request right now. Try again later.
      * @throws ValidationException
      *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
      *         characters.

@@ -60,7 +60,7 @@ public class DeploymentComponentUpdatePolicy implements Serializable, Cloneable,
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-defercomponentupdate"
      * >DeferComponentUpdate</a> IPC operation. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create deployments</a> in
-     * the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -153,7 +153,7 @@ public class DeploymentComponentUpdatePolicy implements Serializable, Cloneable,
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-defercomponentupdate"
      * >DeferComponentUpdate</a> IPC operation. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create deployments</a> in
-     * the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -181,7 +181,7 @@ public class DeploymentComponentUpdatePolicy implements Serializable, Cloneable,
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-defercomponentupdate"
      *        >DeferComponentUpdate</a> IPC operation. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create
-     *        deployments</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        deployments</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      *        </p>
      *        </li>
      *        <li>
@@ -216,7 +216,7 @@ public class DeploymentComponentUpdatePolicy implements Serializable, Cloneable,
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-defercomponentupdate"
      * >DeferComponentUpdate</a> IPC operation. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create deployments</a> in
-     * the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -243,7 +243,7 @@ public class DeploymentComponentUpdatePolicy implements Serializable, Cloneable,
      *         "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-defercomponentupdate"
      *         >DeferComponentUpdate</a> IPC operation. For more information, see <a
      *         href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create
-     *         deployments</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *         deployments</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      *         </p>
      *         </li>
      *         <li>
@@ -278,7 +278,7 @@ public class DeploymentComponentUpdatePolicy implements Serializable, Cloneable,
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-defercomponentupdate"
      * >DeferComponentUpdate</a> IPC operation. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create deployments</a> in
-     * the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -306,7 +306,7 @@ public class DeploymentComponentUpdatePolicy implements Serializable, Cloneable,
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-defercomponentupdate"
      *        >DeferComponentUpdate</a> IPC operation. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create
-     *        deployments</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        deployments</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      *        </p>
      *        </li>
      *        <li>
@@ -343,7 +343,7 @@ public class DeploymentComponentUpdatePolicy implements Serializable, Cloneable,
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-defercomponentupdate"
      * >DeferComponentUpdate</a> IPC operation. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create deployments</a> in
-     * the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -371,7 +371,7 @@ public class DeploymentComponentUpdatePolicy implements Serializable, Cloneable,
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-defercomponentupdate"
      *        >DeferComponentUpdate</a> IPC operation. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create
-     *        deployments</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        deployments</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      *        </p>
      *        </li>
      *        <li>

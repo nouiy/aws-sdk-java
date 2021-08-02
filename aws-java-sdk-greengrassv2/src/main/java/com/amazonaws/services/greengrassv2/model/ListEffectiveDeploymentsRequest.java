@@ -27,7 +27,7 @@ public class ListEffectiveDeploymentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      */
     private String coreDeviceThingName;
@@ -46,11 +46,11 @@ public class ListEffectiveDeploymentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      * 
      * @param coreDeviceThingName
-     *        The name of the core device. This is also the name of the AWS IoT thing.
+     *        The name of the core device. This is also the name of the IoT thing.
      */
 
     public void setCoreDeviceThingName(String coreDeviceThingName) {
@@ -59,10 +59,10 @@ public class ListEffectiveDeploymentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      * 
-     * @return The name of the core device. This is also the name of the AWS IoT thing.
+     * @return The name of the core device. This is also the name of the IoT thing.
      */
 
     public String getCoreDeviceThingName() {
@@ -71,11 +71,11 @@ public class ListEffectiveDeploymentsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      * 
      * @param coreDeviceThingName
-     *        The name of the core device. This is also the name of the AWS IoT thing.
+     *        The name of the core device. This is also the name of the IoT thing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

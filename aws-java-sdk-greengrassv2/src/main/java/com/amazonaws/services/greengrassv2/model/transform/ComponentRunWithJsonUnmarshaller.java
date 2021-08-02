@@ -52,6 +52,10 @@ public class ComponentRunWithJsonUnmarshaller implements Unmarshaller<ComponentR
                     context.nextToken();
                     componentRunWith.setPosixUser(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("systemResourceLimits", targetDepth)) {
+                    context.nextToken();
+                    componentRunWith.setSystemResourceLimits(SystemResourceLimitsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

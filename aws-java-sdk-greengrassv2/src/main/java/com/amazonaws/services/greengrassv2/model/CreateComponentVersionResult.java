@@ -50,7 +50,7 @@ public class CreateComponentVersionResult extends com.amazonaws.AmazonWebService
     private java.util.Date creationTimestamp;
     /**
      * <p>
-     * The status of the component version in AWS IoT Greengrass V2. This status is different from the status of the
+     * The status of the component version in IoT Greengrass V2. This status is different from the status of the
      * component on a core device.
      * </p>
      */
@@ -224,13 +224,13 @@ public class CreateComponentVersionResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The status of the component version in AWS IoT Greengrass V2. This status is different from the status of the
+     * The status of the component version in IoT Greengrass V2. This status is different from the status of the
      * component on a core device.
      * </p>
      * 
      * @param status
-     *        The status of the component version in AWS IoT Greengrass V2. This status is different from the status of
-     *        the component on a core device.
+     *        The status of the component version in IoT Greengrass V2. This status is different from the status of the
+     *        component on a core device.
      */
 
     public void setStatus(CloudComponentStatus status) {
@@ -239,12 +239,12 @@ public class CreateComponentVersionResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The status of the component version in AWS IoT Greengrass V2. This status is different from the status of the
+     * The status of the component version in IoT Greengrass V2. This status is different from the status of the
      * component on a core device.
      * </p>
      * 
-     * @return The status of the component version in AWS IoT Greengrass V2. This status is different from the status of
-     *         the component on a core device.
+     * @return The status of the component version in IoT Greengrass V2. This status is different from the status of the
+     *         component on a core device.
      */
 
     public CloudComponentStatus getStatus() {
@@ -253,13 +253,13 @@ public class CreateComponentVersionResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The status of the component version in AWS IoT Greengrass V2. This status is different from the status of the
+     * The status of the component version in IoT Greengrass V2. This status is different from the status of the
      * component on a core device.
      * </p>
      * 
      * @param status
-     *        The status of the component version in AWS IoT Greengrass V2. This status is different from the status of
-     *        the component on a core device.
+     *        The status of the component version in IoT Greengrass V2. This status is different from the status of the
+     *        component on a core device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

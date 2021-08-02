@@ -29,6 +29,8 @@ public class ComponentRunWithMarshaller {
 
     private static final MarshallingInfo<String> POSIXUSER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("posixUser").build();
+    private static final MarshallingInfo<StructuredPojo> SYSTEMRESOURCELIMITS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("systemResourceLimits").build();
 
     private static final ComponentRunWithMarshaller instance = new ComponentRunWithMarshaller();
 
@@ -47,6 +49,7 @@ public class ComponentRunWithMarshaller {
 
         try {
             protocolMarshaller.marshall(componentRunWith.getPosixUser(), POSIXUSER_BINDING);
+            protocolMarshaller.marshall(componentRunWith.getSystemResourceLimits(), SYSTEMRESOURCELIMITS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -27,9 +27,9 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * thing group by which to filter. If you specify this parameter, the list includes only core devices that are
-     * members of this thing group.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT thing
+     * group by which to filter. If you specify this parameter, the list includes only core devices that are members of
+     * this thing group.
      * </p>
      */
     private String thingGroupArn;
@@ -41,14 +41,12 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -69,14 +67,14 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * thing group by which to filter. If you specify this parameter, the list includes only core devices that are
-     * members of this thing group.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT thing
+     * group by which to filter. If you specify this parameter, the list includes only core devices that are members of
+     * this thing group.
      * </p>
      * 
      * @param thingGroupArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        AWS IoT thing group by which to filter. If you specify this parameter, the list includes only core devices
+     *        IoT thing group by which to filter. If you specify this parameter, the list includes only core devices
      *        that are members of this thing group.
      */
 
@@ -86,14 +84,14 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * thing group by which to filter. If you specify this parameter, the list includes only core devices that are
-     * members of this thing group.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT thing
+     * group by which to filter. If you specify this parameter, the list includes only core devices that are members of
+     * this thing group.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *         AWS IoT thing group by which to filter. If you specify this parameter, the list includes only core
-     *         devices that are members of this thing group.
+     *         IoT thing group by which to filter. If you specify this parameter, the list includes only core devices
+     *         that are members of this thing group.
      */
 
     public String getThingGroupArn() {
@@ -102,14 +100,14 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * thing group by which to filter. If you specify this parameter, the list includes only core devices that are
-     * members of this thing group.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT thing
+     * group by which to filter. If you specify this parameter, the list includes only core devices that are members of
+     * this thing group.
      * </p>
      * 
      * @param thingGroupArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        AWS IoT thing group by which to filter. If you specify this parameter, the list includes only core devices
+     *        IoT thing group by which to filter. If you specify this parameter, the list includes only core devices
      *        that are members of this thing group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -127,14 +125,12 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -145,14 +141,14 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *        without issue.
+     *        <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *        issue.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *        core device.
+     *        <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *        device.
      *        </p>
      *        </li>
      * @see CoreDeviceStatus
@@ -170,14 +166,12 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -187,14 +181,14 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *         without issue.
+     *         <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *         issue.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *         core device.
+     *         <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *         device.
      *         </p>
      *         </li>
      * @see CoreDeviceStatus
@@ -212,14 +206,12 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -230,14 +222,14 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *        without issue.
+     *        <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *        issue.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *        core device.
+     *        <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *        device.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -257,14 +249,12 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -275,14 +265,14 @@ public class ListCoreDevicesRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *        without issue.
+     *        <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *        issue.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *        core device.
+     *        <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *        device.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

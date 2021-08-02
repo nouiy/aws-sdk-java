@@ -27,7 +27,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * "https://docs.aws.amazon.com/greengrass/v2/developerguide/interprocess-communication.html#ipc-operation-sendconfigurationvalidityreport"
  * >SendConfigurationValidityReport</a> IPC operation. For more information, see <a
  * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html">Create deployments</a> in the
- * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+ * <i>IoT Greengrass V2 Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/DeploymentConfigurationValidationPolicy"

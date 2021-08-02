@@ -25,16 +25,16 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      */
     private String coreDeviceThingName;
     /**
      * <p>
-     * The version of the AWS IoT Greengrass Core software that the core device runs. This version is equivalent to the
-     * version of the AWS IoT Greengrass nucleus component that runs on the core device. For more information, see the
-     * <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">AWS IoT
-     * Greengrass nucleus component</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * The version of the IoT Greengrass Core software that the core device runs. This version is equivalent to the
+     * version of the Greengrass nucleus component that runs on the core device. For more information, see the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">Greengrass
+     * nucleus component</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private String coreVersion;
@@ -57,14 +57,12 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -80,18 +78,18 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      * 
      * @param coreDeviceThingName
-     *        The name of the core device. This is also the name of the AWS IoT thing.
+     *        The name of the core device. This is also the name of the IoT thing.
      */
 
     public void setCoreDeviceThingName(String coreDeviceThingName) {
@@ -100,10 +98,10 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      * 
-     * @return The name of the core device. This is also the name of the AWS IoT thing.
+     * @return The name of the core device. This is also the name of the IoT thing.
      */
 
     public String getCoreDeviceThingName() {
@@ -112,11 +110,11 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      * 
      * @param coreDeviceThingName
-     *        The name of the core device. This is also the name of the AWS IoT thing.
+     *        The name of the core device. This is also the name of the IoT thing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -127,18 +125,17 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The version of the AWS IoT Greengrass Core software that the core device runs. This version is equivalent to the
-     * version of the AWS IoT Greengrass nucleus component that runs on the core device. For more information, see the
-     * <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">AWS IoT
-     * Greengrass nucleus component</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * The version of the IoT Greengrass Core software that the core device runs. This version is equivalent to the
+     * version of the Greengrass nucleus component that runs on the core device. For more information, see the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">Greengrass
+     * nucleus component</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param coreVersion
-     *        The version of the AWS IoT Greengrass Core software that the core device runs. This version is equivalent
-     *        to the version of the AWS IoT Greengrass nucleus component that runs on the core device. For more
-     *        information, see the <a
-     *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">AWS IoT
-     *        Greengrass nucleus component</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        The version of the IoT Greengrass Core software that the core device runs. This version is equivalent to
+     *        the version of the Greengrass nucleus component that runs on the core device. For more information, see
+     *        the <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">
+     *        Greengrass nucleus component</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setCoreVersion(String coreVersion) {
@@ -147,17 +144,16 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The version of the AWS IoT Greengrass Core software that the core device runs. This version is equivalent to the
-     * version of the AWS IoT Greengrass nucleus component that runs on the core device. For more information, see the
-     * <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">AWS IoT
-     * Greengrass nucleus component</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * The version of the IoT Greengrass Core software that the core device runs. This version is equivalent to the
+     * version of the Greengrass nucleus component that runs on the core device. For more information, see the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">Greengrass
+     * nucleus component</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
-     * @return The version of the AWS IoT Greengrass Core software that the core device runs. This version is equivalent
-     *         to the version of the AWS IoT Greengrass nucleus component that runs on the core device. For more
-     *         information, see the <a
-     *         href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">AWS IoT
-     *         Greengrass nucleus component</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * @return The version of the IoT Greengrass Core software that the core device runs. This version is equivalent to
+     *         the version of the Greengrass nucleus component that runs on the core device. For more information, see
+     *         the <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">
+     *         Greengrass nucleus component</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public String getCoreVersion() {
@@ -166,18 +162,17 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The version of the AWS IoT Greengrass Core software that the core device runs. This version is equivalent to the
-     * version of the AWS IoT Greengrass nucleus component that runs on the core device. For more information, see the
-     * <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">AWS IoT
-     * Greengrass nucleus component</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * The version of the IoT Greengrass Core software that the core device runs. This version is equivalent to the
+     * version of the Greengrass nucleus component that runs on the core device. For more information, see the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">Greengrass
+     * nucleus component</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param coreVersion
-     *        The version of the AWS IoT Greengrass Core software that the core device runs. This version is equivalent
-     *        to the version of the AWS IoT Greengrass nucleus component that runs on the core device. For more
-     *        information, see the <a
-     *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">AWS IoT
-     *        Greengrass nucleus component</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        The version of the IoT Greengrass Core software that the core device runs. This version is equivalent to
+     *        the version of the Greengrass nucleus component that runs on the core device. For more information, see
+     *        the <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-nucleus-component.html">
+     *        Greengrass nucleus component</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,14 +268,12 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -290,14 +283,14 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *        without issue.
+     *        <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *        issue.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *        core device.
+     *        <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *        device.
      *        </p>
      *        </li>
      * @see CoreDeviceStatus
@@ -314,14 +307,12 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -330,14 +321,14 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *         without issue.
+     *         <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *         issue.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *         core device.
+     *         <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *         device.
      *         </p>
      *         </li>
      * @see CoreDeviceStatus
@@ -354,14 +345,12 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -371,14 +360,14 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *        without issue.
+     *        <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *        issue.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *        core device.
+     *        <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *        device.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -397,14 +386,12 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -414,14 +401,14 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *        without issue.
+     *        <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *        issue.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *        core device.
+     *        <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *        device.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -477,12 +464,12 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @return A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *         href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *         in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *         in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -493,13 +480,13 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -510,13 +497,13 @@ public class GetCoreDeviceResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

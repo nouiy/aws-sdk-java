@@ -33,18 +33,18 @@ public class DisassociateClientDeviceFromCoreDeviceEntry implements Serializable
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the client device to disassociate.
+     * The name of the IoT thing that represents the client device to disassociate.
      * </p>
      */
     private String thingName;
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the client device to disassociate.
+     * The name of the IoT thing that represents the client device to disassociate.
      * </p>
      * 
      * @param thingName
-     *        The name of the AWS IoT thing that represents the client device to disassociate.
+     *        The name of the IoT thing that represents the client device to disassociate.
      */
 
     public void setThingName(String thingName) {
@@ -53,10 +53,10 @@ public class DisassociateClientDeviceFromCoreDeviceEntry implements Serializable
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the client device to disassociate.
+     * The name of the IoT thing that represents the client device to disassociate.
      * </p>
      * 
-     * @return The name of the AWS IoT thing that represents the client device to disassociate.
+     * @return The name of the IoT thing that represents the client device to disassociate.
      */
 
     public String getThingName() {
@@ -65,11 +65,11 @@ public class DisassociateClientDeviceFromCoreDeviceEntry implements Serializable
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the client device to disassociate.
+     * The name of the IoT thing that represents the client device to disassociate.
      * </p>
      * 
      * @param thingName
-     *        The name of the AWS IoT thing that represents the client device to disassociate.
+     *        The name of the IoT thing that represents the client device to disassociate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

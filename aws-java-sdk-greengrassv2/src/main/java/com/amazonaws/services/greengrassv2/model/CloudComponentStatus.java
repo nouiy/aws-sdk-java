@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the status of a component in the AWS IoT Greengrass service.
+ * Contains the status of a component in the IoT Greengrass service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/CloudComponentStatus" target="_top">AWS
@@ -42,9 +42,9 @@ public class CloudComponentStatus implements Serializable, Cloneable, Structured
     private String message;
     /**
      * <p>
-     * A dictionary of errors that communicate why the component is in an error state. For example, if AWS IoT
-     * Greengrass can't access an artifact for the component, then <code>errors</code> contains the artifact's URI as a
-     * key, and the error message as the value for that key.
+     * A dictionary of errors that communicate why the component is in an error state. For example, if IoT Greengrass
+     * can't access an artifact for the component, then <code>errors</code> contains the artifact's URI as a key, and
+     * the error message as the value for that key.
      * </p>
      */
     private java.util.Map<String, String> errors;
@@ -150,12 +150,12 @@ public class CloudComponentStatus implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A dictionary of errors that communicate why the component is in an error state. For example, if AWS IoT
-     * Greengrass can't access an artifact for the component, then <code>errors</code> contains the artifact's URI as a
-     * key, and the error message as the value for that key.
+     * A dictionary of errors that communicate why the component is in an error state. For example, if IoT Greengrass
+     * can't access an artifact for the component, then <code>errors</code> contains the artifact's URI as a key, and
+     * the error message as the value for that key.
      * </p>
      * 
-     * @return A dictionary of errors that communicate why the component is in an error state. For example, if AWS IoT
+     * @return A dictionary of errors that communicate why the component is in an error state. For example, if IoT
      *         Greengrass can't access an artifact for the component, then <code>errors</code> contains the artifact's
      *         URI as a key, and the error message as the value for that key.
      */
@@ -166,13 +166,13 @@ public class CloudComponentStatus implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A dictionary of errors that communicate why the component is in an error state. For example, if AWS IoT
-     * Greengrass can't access an artifact for the component, then <code>errors</code> contains the artifact's URI as a
-     * key, and the error message as the value for that key.
+     * A dictionary of errors that communicate why the component is in an error state. For example, if IoT Greengrass
+     * can't access an artifact for the component, then <code>errors</code> contains the artifact's URI as a key, and
+     * the error message as the value for that key.
      * </p>
      * 
      * @param errors
-     *        A dictionary of errors that communicate why the component is in an error state. For example, if AWS IoT
+     *        A dictionary of errors that communicate why the component is in an error state. For example, if IoT
      *        Greengrass can't access an artifact for the component, then <code>errors</code> contains the artifact's
      *        URI as a key, and the error message as the value for that key.
      */
@@ -183,13 +183,13 @@ public class CloudComponentStatus implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A dictionary of errors that communicate why the component is in an error state. For example, if AWS IoT
-     * Greengrass can't access an artifact for the component, then <code>errors</code> contains the artifact's URI as a
-     * key, and the error message as the value for that key.
+     * A dictionary of errors that communicate why the component is in an error state. For example, if IoT Greengrass
+     * can't access an artifact for the component, then <code>errors</code> contains the artifact's URI as a key, and
+     * the error message as the value for that key.
      * </p>
      * 
      * @param errors
-     *        A dictionary of errors that communicate why the component is in an error state. For example, if AWS IoT
+     *        A dictionary of errors that communicate why the component is in an error state. For example, if IoT
      *        Greengrass can't access an artifact for the component, then <code>errors</code> contains the artifact's
      *        URI as a key, and the error message as the value for that key.
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains parameters for a Lambda function that runs on AWS IoT Greengrass.
+ * Contains parameters for a Lambda function that runs on IoT Greengrass.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/LambdaExecutionParameters"
@@ -32,14 +32,14 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <p>
      * The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it
      * receives a message from an event source. You can subscribe this function to local publish/subscribe messages and
-     * AWS IoT Core MQTT messages.
+     * Amazon Web Services IoT Core MQTT messages.
      * </p>
      */
     private java.util.List<LambdaEventSource> eventSources;
     /**
      * <p>
-     * The maximum size of the message queue for the Lambda function component. The AWS IoT Greengrass core stores
-     * messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message.
+     * The maximum size of the message queue for the Lambda function component. The IoT Greengrass core stores messages
+     * in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message.
      * </p>
      */
     private Integer maxQueueSize;
@@ -51,8 +51,8 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
     private Integer maxInstancesCount;
     /**
      * <p>
-     * The maximum amount of time in seconds that a non-pinned Lambda function can idle before the AWS IoT Greengrass
-     * Core software stops its process.
+     * The maximum amount of time in seconds that a non-pinned Lambda function can idle before the IoT Greengrass Core
+     * software stops its process.
      * </p>
      */
     private Integer maxIdleTimeInSeconds;
@@ -76,13 +76,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * A pinned Lambda function starts when AWS IoT Greengrass starts and keeps running in its own container.
+     * A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.
      * </p>
      * </li>
      * <li>
      * <p>
      * A non-pinned Lambda function starts only when it receives a work item and exists after it idles for
-     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the AWS IoT Greengrass Core software
+     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core software
      * creates multiple instances of the function.
      * </p>
      * </li>
@@ -124,12 +124,12 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <p>
      * The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it
      * receives a message from an event source. You can subscribe this function to local publish/subscribe messages and
-     * AWS IoT Core MQTT messages.
+     * Amazon Web Services IoT Core MQTT messages.
      * </p>
      * 
      * @return The list of event sources to which to subscribe to receive work messages. The Lambda function runs when
      *         it receives a message from an event source. You can subscribe this function to local publish/subscribe
-     *         messages and AWS IoT Core MQTT messages.
+     *         messages and Amazon Web Services IoT Core MQTT messages.
      */
 
     public java.util.List<LambdaEventSource> getEventSources() {
@@ -140,13 +140,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <p>
      * The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it
      * receives a message from an event source. You can subscribe this function to local publish/subscribe messages and
-     * AWS IoT Core MQTT messages.
+     * Amazon Web Services IoT Core MQTT messages.
      * </p>
      * 
      * @param eventSources
      *        The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it
      *        receives a message from an event source. You can subscribe this function to local publish/subscribe
-     *        messages and AWS IoT Core MQTT messages.
+     *        messages and Amazon Web Services IoT Core MQTT messages.
      */
 
     public void setEventSources(java.util.Collection<LambdaEventSource> eventSources) {
@@ -162,7 +162,7 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <p>
      * The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it
      * receives a message from an event source. You can subscribe this function to local publish/subscribe messages and
-     * AWS IoT Core MQTT messages.
+     * Amazon Web Services IoT Core MQTT messages.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -173,7 +173,7 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * @param eventSources
      *        The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it
      *        receives a message from an event source. You can subscribe this function to local publish/subscribe
-     *        messages and AWS IoT Core MQTT messages.
+     *        messages and Amazon Web Services IoT Core MQTT messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -191,13 +191,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <p>
      * The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it
      * receives a message from an event source. You can subscribe this function to local publish/subscribe messages and
-     * AWS IoT Core MQTT messages.
+     * Amazon Web Services IoT Core MQTT messages.
      * </p>
      * 
      * @param eventSources
      *        The list of event sources to which to subscribe to receive work messages. The Lambda function runs when it
      *        receives a message from an event source. You can subscribe this function to local publish/subscribe
-     *        messages and AWS IoT Core MQTT messages.
+     *        messages and Amazon Web Services IoT Core MQTT messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -208,13 +208,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The maximum size of the message queue for the Lambda function component. The AWS IoT Greengrass core stores
-     * messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message.
+     * The maximum size of the message queue for the Lambda function component. The IoT Greengrass core stores messages
+     * in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message.
      * </p>
      * 
      * @param maxQueueSize
-     *        The maximum size of the message queue for the Lambda function component. The AWS IoT Greengrass core
-     *        stores messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each
+     *        The maximum size of the message queue for the Lambda function component. The IoT Greengrass core stores
+     *        messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each
      *        message.
      */
 
@@ -224,12 +224,12 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The maximum size of the message queue for the Lambda function component. The AWS IoT Greengrass core stores
-     * messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message.
+     * The maximum size of the message queue for the Lambda function component. The IoT Greengrass core stores messages
+     * in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message.
      * </p>
      * 
-     * @return The maximum size of the message queue for the Lambda function component. The AWS IoT Greengrass core
-     *         stores messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each
+     * @return The maximum size of the message queue for the Lambda function component. The IoT Greengrass core stores
+     *         messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each
      *         message.
      */
 
@@ -239,13 +239,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The maximum size of the message queue for the Lambda function component. The AWS IoT Greengrass core stores
-     * messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message.
+     * The maximum size of the message queue for the Lambda function component. The IoT Greengrass core stores messages
+     * in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each message.
      * </p>
      * 
      * @param maxQueueSize
-     *        The maximum size of the message queue for the Lambda function component. The AWS IoT Greengrass core
-     *        stores messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each
+     *        The maximum size of the message queue for the Lambda function component. The IoT Greengrass core stores
+     *        messages in a FIFO (first-in-first-out) queue until it can run the Lambda function to consume each
      *        message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -297,13 +297,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The maximum amount of time in seconds that a non-pinned Lambda function can idle before the AWS IoT Greengrass
-     * Core software stops its process.
+     * The maximum amount of time in seconds that a non-pinned Lambda function can idle before the IoT Greengrass Core
+     * software stops its process.
      * </p>
      * 
      * @param maxIdleTimeInSeconds
-     *        The maximum amount of time in seconds that a non-pinned Lambda function can idle before the AWS IoT
-     *        Greengrass Core software stops its process.
+     *        The maximum amount of time in seconds that a non-pinned Lambda function can idle before the IoT Greengrass
+     *        Core software stops its process.
      */
 
     public void setMaxIdleTimeInSeconds(Integer maxIdleTimeInSeconds) {
@@ -312,11 +312,11 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The maximum amount of time in seconds that a non-pinned Lambda function can idle before the AWS IoT Greengrass
-     * Core software stops its process.
+     * The maximum amount of time in seconds that a non-pinned Lambda function can idle before the IoT Greengrass Core
+     * software stops its process.
      * </p>
      * 
-     * @return The maximum amount of time in seconds that a non-pinned Lambda function can idle before the AWS IoT
+     * @return The maximum amount of time in seconds that a non-pinned Lambda function can idle before the IoT
      *         Greengrass Core software stops its process.
      */
 
@@ -326,13 +326,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The maximum amount of time in seconds that a non-pinned Lambda function can idle before the AWS IoT Greengrass
-     * Core software stops its process.
+     * The maximum amount of time in seconds that a non-pinned Lambda function can idle before the IoT Greengrass Core
+     * software stops its process.
      * </p>
      * 
      * @param maxIdleTimeInSeconds
-     *        The maximum amount of time in seconds that a non-pinned Lambda function can idle before the AWS IoT
-     *        Greengrass Core software stops its process.
+     *        The maximum amount of time in seconds that a non-pinned Lambda function can idle before the IoT Greengrass
+     *        Core software stops its process.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -434,13 +434,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * A pinned Lambda function starts when AWS IoT Greengrass starts and keeps running in its own container.
+     * A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.
      * </p>
      * </li>
      * <li>
      * <p>
      * A non-pinned Lambda function starts only when it receives a work item and exists after it idles for
-     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the AWS IoT Greengrass Core software
+     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core software
      * creates multiple instances of the function.
      * </p>
      * </li>
@@ -454,13 +454,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        A pinned Lambda function starts when AWS IoT Greengrass starts and keeps running in its own container.
+     *        A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A non-pinned Lambda function starts only when it receives a work item and exists after it idles for
-     *        <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the AWS IoT Greengrass Core
+     *        <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core
      *        software creates multiple instances of the function.
      *        </p>
      *        </li>
@@ -480,13 +480,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * A pinned Lambda function starts when AWS IoT Greengrass starts and keeps running in its own container.
+     * A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.
      * </p>
      * </li>
      * <li>
      * <p>
      * A non-pinned Lambda function starts only when it receives a work item and exists after it idles for
-     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the AWS IoT Greengrass Core software
+     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core software
      * creates multiple instances of the function.
      * </p>
      * </li>
@@ -499,13 +499,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      *         <ul>
      *         <li>
      *         <p>
-     *         A pinned Lambda function starts when AWS IoT Greengrass starts and keeps running in its own container.
+     *         A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         A non-pinned Lambda function starts only when it receives a work item and exists after it idles for
-     *         <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the AWS IoT Greengrass Core
+     *         <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core
      *         software creates multiple instances of the function.
      *         </p>
      *         </li>
@@ -525,13 +525,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * A pinned Lambda function starts when AWS IoT Greengrass starts and keeps running in its own container.
+     * A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.
      * </p>
      * </li>
      * <li>
      * <p>
      * A non-pinned Lambda function starts only when it receives a work item and exists after it idles for
-     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the AWS IoT Greengrass Core software
+     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core software
      * creates multiple instances of the function.
      * </p>
      * </li>
@@ -545,13 +545,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        A pinned Lambda function starts when AWS IoT Greengrass starts and keeps running in its own container.
+     *        A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        A non-pinned Lambda function starts only when it receives a work item and exists after it idles for
-     *        <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the AWS IoT Greengrass Core
+     *        <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core
      *        software creates multiple instances of the function.
      *        </p>
      *        </li>
@@ -573,13 +573,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * A pinned Lambda function starts when AWS IoT Greengrass starts and keeps running in its own container.
+     * A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.
      * </p>
      * </li>
      * <li>
      * <p>
      * A non-pinned Lambda function starts only when it receives a work item and exists after it idles for
-     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the AWS IoT Greengrass Core software
+     * <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core software
      * creates multiple instances of the function.
      * </p>
      * </li>
@@ -592,13 +592,13 @@ public class LambdaExecutionParameters implements Serializable, Cloneable, Struc
      *         <ul>
      *         <li>
      *         <p>
-     *         A pinned Lambda function starts when AWS IoT Greengrass starts and keeps running in its own container.
+     *         A pinned Lambda function starts when IoT Greengrass starts and keeps running in its own container.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         A non-pinned Lambda function starts only when it receives a work item and exists after it idles for
-     *         <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the AWS IoT Greengrass Core
+     *         <code>maxIdleTimeInSeconds</code>. If the function has multiple work items, the IoT Greengrass Core
      *         software creates multiple instances of the function.
      *         </p>
      *         </li>

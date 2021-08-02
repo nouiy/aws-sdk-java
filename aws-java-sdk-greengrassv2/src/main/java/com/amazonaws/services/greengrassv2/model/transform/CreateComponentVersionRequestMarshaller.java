@@ -19,6 +19,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.greengrassv2.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -35,6 +37,9 @@ public class CreateComponentVersionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lambdaFunction").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
 
     private static final CreateComponentVersionRequestMarshaller instance = new CreateComponentVersionRequestMarshaller();
 
@@ -55,6 +60,7 @@ public class CreateComponentVersionRequestMarshaller {
             protocolMarshaller.marshall(createComponentVersionRequest.getInlineRecipe(), INLINERECIPE_BINDING);
             protocolMarshaller.marshall(createComponentVersionRequest.getLambdaFunction(), LAMBDAFUNCTION_BINDING);
             protocolMarshaller.marshall(createComponentVersionRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createComponentVersionRequest.getClientToken(), CLIENTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

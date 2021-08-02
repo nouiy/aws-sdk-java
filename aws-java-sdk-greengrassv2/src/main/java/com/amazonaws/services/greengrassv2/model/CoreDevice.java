@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about a AWS IoT Greengrass core device, which is an AWS IoT thing that runs the AWS IoT
- * Greengrass Core software.
+ * Contains information about a Greengrass core device, which is an IoT thing that runs the IoT Greengrass Core
+ * software.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/CoreDevice" target="_top">AWS API
@@ -31,7 +31,7 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      */
     private String coreDeviceThingName;
@@ -42,14 +42,12 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -64,11 +62,11 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      * 
      * @param coreDeviceThingName
-     *        The name of the core device. This is also the name of the AWS IoT thing.
+     *        The name of the core device. This is also the name of the IoT thing.
      */
 
     public void setCoreDeviceThingName(String coreDeviceThingName) {
@@ -77,10 +75,10 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      * 
-     * @return The name of the core device. This is also the name of the AWS IoT thing.
+     * @return The name of the core device. This is also the name of the IoT thing.
      */
 
     public String getCoreDeviceThingName() {
@@ -89,11 +87,11 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the core device. This is also the name of the AWS IoT thing.
+     * The name of the core device. This is also the name of the IoT thing.
      * </p>
      * 
      * @param coreDeviceThingName
-     *        The name of the core device. This is also the name of the AWS IoT thing.
+     *        The name of the core device. This is also the name of the IoT thing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,14 +107,12 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -126,14 +122,14 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *        without issue.
+     *        <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *        issue.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *        core device.
+     *        <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *        device.
      *        </p>
      *        </li>
      * @see CoreDeviceStatus
@@ -150,14 +146,12 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -166,14 +160,14 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *         without issue.
+     *         <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *         issue.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *         core device.
+     *         <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *         device.
      *         </p>
      *         </li>
      * @see CoreDeviceStatus
@@ -190,14 +184,12 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -207,14 +199,14 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *        without issue.
+     *        <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *        issue.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *        core device.
+     *        <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *        device.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -233,14 +225,12 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device without
-     * issue.
+     * <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without issue.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the core
-     * device.
+     * <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core device.
      * </p>
      * </li>
      * </ul>
@@ -250,14 +240,14 @@ public class CoreDevice implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>HEALTHY</code> – The AWS IoT Greengrass Core software and all components run on the core device
-     *        without issue.
+     *        <code>HEALTHY</code> – The IoT Greengrass Core software and all components run on the core device without
+     *        issue.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UNHEALTHY</code> – The AWS IoT Greengrass Core software or a component is in a failed state on the
-     *        core device.
+     *        <code>UNHEALTHY</code> – The IoT Greengrass Core software or a component is in a failed state on the core
+     *        device.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -33,18 +33,18 @@ public class AssociateClientDeviceWithCoreDeviceEntry implements Serializable, C
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the client device to associate.
+     * The name of the IoT thing that represents the client device to associate.
      * </p>
      */
     private String thingName;
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the client device to associate.
+     * The name of the IoT thing that represents the client device to associate.
      * </p>
      * 
      * @param thingName
-     *        The name of the AWS IoT thing that represents the client device to associate.
+     *        The name of the IoT thing that represents the client device to associate.
      */
 
     public void setThingName(String thingName) {
@@ -53,10 +53,10 @@ public class AssociateClientDeviceWithCoreDeviceEntry implements Serializable, C
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the client device to associate.
+     * The name of the IoT thing that represents the client device to associate.
      * </p>
      * 
-     * @return The name of the AWS IoT thing that represents the client device to associate.
+     * @return The name of the IoT thing that represents the client device to associate.
      */
 
     public String getThingName() {
@@ -65,11 +65,11 @@ public class AssociateClientDeviceWithCoreDeviceEntry implements Serializable, C
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the client device to associate.
+     * The name of the IoT thing that represents the client device to associate.
      * </p>
      * 
      * @param thingName
-     *        The name of the AWS IoT thing that represents the client device to associate.
+     *        The name of the IoT thing that represents the client device to associate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

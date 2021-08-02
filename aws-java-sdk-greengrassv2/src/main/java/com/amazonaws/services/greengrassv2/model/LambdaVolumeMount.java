@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about a volume that Linux processes in a container can access. When you define a volume, the AWS
- * IoT Greengrass Core software mounts the source files to the destination inside the container.
+ * Contains information about a volume that Linux processes in a container can access. When you define a volume, the IoT
+ * Greengrass Core software mounts the source files to the destination inside the container.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/LambdaVolumeMount" target="_top">AWS API
@@ -52,7 +52,7 @@ public class LambdaVolumeMount implements Serializable, Cloneable, StructuredPoj
     private String permission;
     /**
      * <p>
-     * Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.
+     * Whether or not to add the IoT Greengrass user group as an owner of the volume.
      * </p>
      * <p>
      * Default: <code>false</code>
@@ -221,14 +221,14 @@ public class LambdaVolumeMount implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.
+     * Whether or not to add the IoT Greengrass user group as an owner of the volume.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
      * @param addGroupOwner
-     *        Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.</p>
+     *        Whether or not to add the IoT Greengrass user group as an owner of the volume.</p>
      *        <p>
      *        Default: <code>false</code>
      */
@@ -239,13 +239,13 @@ public class LambdaVolumeMount implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.
+     * Whether or not to add the IoT Greengrass user group as an owner of the volume.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
-     * @return Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.</p>
+     * @return Whether or not to add the IoT Greengrass user group as an owner of the volume.</p>
      *         <p>
      *         Default: <code>false</code>
      */
@@ -256,14 +256,14 @@ public class LambdaVolumeMount implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.
+     * Whether or not to add the IoT Greengrass user group as an owner of the volume.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
      * @param addGroupOwner
-     *        Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.</p>
+     *        Whether or not to add the IoT Greengrass user group as an owner of the volume.</p>
      *        <p>
      *        Default: <code>false</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -276,13 +276,13 @@ public class LambdaVolumeMount implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.
+     * Whether or not to add the IoT Greengrass user group as an owner of the volume.
      * </p>
      * <p>
      * Default: <code>false</code>
      * </p>
      * 
-     * @return Whether or not to add the AWS IoT Greengrass user group as an owner of the volume.</p>
+     * @return Whether or not to add the IoT Greengrass user group as an owner of the volume.</p>
      *         <p>
      *         Default: <code>false</code>
      */

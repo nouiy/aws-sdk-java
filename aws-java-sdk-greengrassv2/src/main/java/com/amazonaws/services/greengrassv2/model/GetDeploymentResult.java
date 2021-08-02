@@ -26,7 +26,7 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      */
     private String targetArn;
@@ -46,11 +46,6 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      */
     private String deploymentName;
     /**
@@ -61,14 +56,14 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
     private String deploymentStatus;
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      */
     private String iotJobId;
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      */
     private String iotJobArn;
@@ -109,7 +104,7 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -117,12 +112,12 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      */
 
     public void setTargetArn(String targetArn) {
@@ -132,11 +127,11 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *         target AWS IoT thing or thing group.
+     *         target IoT thing or thing group.
      */
 
     public String getTargetArn() {
@@ -146,12 +141,12 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -244,18 +239,9 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
      * @param deploymentName
-     *        The name of the deployment.</p>
-     *        <p>
-     *        You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *        Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *        where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     *        The name of the deployment.
      */
 
     public void setDeploymentName(String deploymentName) {
@@ -266,17 +252,8 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
-     * @return The name of the deployment.</p>
-     *         <p>
-     *         You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *         Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *         where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     * @return The name of the deployment.
      */
 
     public String getDeploymentName() {
@@ -287,18 +264,9 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
      * @param deploymentName
-     *        The name of the deployment.</p>
-     *        <p>
-     *        You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *        Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *        where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     *        The name of the deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -368,11 +336,11 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobId
-     *        The ID of the AWS IoT job that applies the deployment to target devices.
+     *        The ID of the IoT job that applies the deployment to target devices.
      */
 
     public void setIotJobId(String iotJobId) {
@@ -381,10 +349,10 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      * 
-     * @return The ID of the AWS IoT job that applies the deployment to target devices.
+     * @return The ID of the IoT job that applies the deployment to target devices.
      */
 
     public String getIotJobId() {
@@ -393,11 +361,11 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobId
-     *        The ID of the AWS IoT job that applies the deployment to target devices.
+     *        The ID of the IoT job that applies the deployment to target devices.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -408,13 +376,13 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        AWS IoT job that applies the deployment to target devices.
+     *        IoT job that applies the deployment to target devices.
      */
 
     public void setIotJobArn(String iotJobArn) {
@@ -423,12 +391,12 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *         AWS IoT job that applies the deployment to target devices.
+     *         IoT job that applies the deployment to target devices.
      */
 
     public String getIotJobArn() {
@@ -437,13 +405,13 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        AWS IoT job that applies the deployment to target devices.
+     *        IoT job that applies the deployment to target devices.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -714,12 +682,12 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @return A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *         href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *         in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *         in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -730,13 +698,13 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -747,13 +715,13 @@ public class GetDeploymentResult extends com.amazonaws.AmazonWebServiceResult<co
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

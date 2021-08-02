@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains parameters for a Linux process that contains an AWS Lambda function.
+ * Contains parameters for a Linux process that contains an Lambda function.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/LambdaLinuxProcessParams"
@@ -31,7 +31,7 @@ public class LambdaLinuxProcessParams implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The isolation mode for the process that contains the Lambda function. The process can run in an isolated runtime
-     * environment inside the AWS IoT Greengrass container, or as a regular process outside any container.
+     * environment inside the IoT Greengrass container, or as a regular process outside any container.
      * </p>
      * <p>
      * Default: <code>GreengrassContainer</code>
@@ -48,7 +48,7 @@ public class LambdaLinuxProcessParams implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The isolation mode for the process that contains the Lambda function. The process can run in an isolated runtime
-     * environment inside the AWS IoT Greengrass container, or as a regular process outside any container.
+     * environment inside the IoT Greengrass container, or as a regular process outside any container.
      * </p>
      * <p>
      * Default: <code>GreengrassContainer</code>
@@ -56,7 +56,7 @@ public class LambdaLinuxProcessParams implements Serializable, Cloneable, Struct
      * 
      * @param isolationMode
      *        The isolation mode for the process that contains the Lambda function. The process can run in an isolated
-     *        runtime environment inside the AWS IoT Greengrass container, or as a regular process outside any
+     *        runtime environment inside the IoT Greengrass container, or as a regular process outside any
      *        container.</p>
      *        <p>
      *        Default: <code>GreengrassContainer</code>
@@ -70,14 +70,14 @@ public class LambdaLinuxProcessParams implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The isolation mode for the process that contains the Lambda function. The process can run in an isolated runtime
-     * environment inside the AWS IoT Greengrass container, or as a regular process outside any container.
+     * environment inside the IoT Greengrass container, or as a regular process outside any container.
      * </p>
      * <p>
      * Default: <code>GreengrassContainer</code>
      * </p>
      * 
      * @return The isolation mode for the process that contains the Lambda function. The process can run in an isolated
-     *         runtime environment inside the AWS IoT Greengrass container, or as a regular process outside any
+     *         runtime environment inside the IoT Greengrass container, or as a regular process outside any
      *         container.</p>
      *         <p>
      *         Default: <code>GreengrassContainer</code>
@@ -91,7 +91,7 @@ public class LambdaLinuxProcessParams implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The isolation mode for the process that contains the Lambda function. The process can run in an isolated runtime
-     * environment inside the AWS IoT Greengrass container, or as a regular process outside any container.
+     * environment inside the IoT Greengrass container, or as a regular process outside any container.
      * </p>
      * <p>
      * Default: <code>GreengrassContainer</code>
@@ -99,7 +99,7 @@ public class LambdaLinuxProcessParams implements Serializable, Cloneable, Struct
      * 
      * @param isolationMode
      *        The isolation mode for the process that contains the Lambda function. The process can run in an isolated
-     *        runtime environment inside the AWS IoT Greengrass container, or as a regular process outside any
+     *        runtime environment inside the IoT Greengrass container, or as a regular process outside any
      *        container.</p>
      *        <p>
      *        Default: <code>GreengrassContainer</code>
@@ -115,7 +115,7 @@ public class LambdaLinuxProcessParams implements Serializable, Cloneable, Struct
     /**
      * <p>
      * The isolation mode for the process that contains the Lambda function. The process can run in an isolated runtime
-     * environment inside the AWS IoT Greengrass container, or as a regular process outside any container.
+     * environment inside the IoT Greengrass container, or as a regular process outside any container.
      * </p>
      * <p>
      * Default: <code>GreengrassContainer</code>
@@ -123,7 +123,7 @@ public class LambdaLinuxProcessParams implements Serializable, Cloneable, Struct
      * 
      * @param isolationMode
      *        The isolation mode for the process that contains the Lambda function. The process can run in an isolated
-     *        runtime environment inside the AWS IoT Greengrass container, or as a regular process outside any
+     *        runtime environment inside the IoT Greengrass container, or as a regular process outside any
      *        container.</p>
      *        <p>
      *        Default: <code>GreengrassContainer</code>

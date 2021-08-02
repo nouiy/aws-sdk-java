@@ -30,7 +30,7 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time to wait until beginning the next stage.
+     * The time to wait until beginning the next stage. The duration can only be set to 0 if a target is specified.
      * </p>
      */
     private Integer durationInMinutes;
@@ -43,11 +43,12 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time to wait until beginning the next stage.
+     * The time to wait until beginning the next stage. The duration can only be set to 0 if a target is specified.
      * </p>
      * 
      * @param durationInMinutes
-     *        The time to wait until beginning the next stage.
+     *        The time to wait until beginning the next stage. The duration can only be set to 0 if a target is
+     *        specified.
      */
 
     public void setDurationInMinutes(Integer durationInMinutes) {
@@ -56,10 +57,11 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time to wait until beginning the next stage.
+     * The time to wait until beginning the next stage. The duration can only be set to 0 if a target is specified.
      * </p>
      * 
-     * @return The time to wait until beginning the next stage.
+     * @return The time to wait until beginning the next stage. The duration can only be set to 0 if a target is
+     *         specified.
      */
 
     public Integer getDurationInMinutes() {
@@ -68,11 +70,12 @@ public class Stage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time to wait until beginning the next stage.
+     * The time to wait until beginning the next stage. The duration can only be set to 0 if a target is specified.
      * </p>
      * 
      * @param durationInMinutes
-     *        The time to wait until beginning the next stage.
+     *        The time to wait until beginning the next stage. The duration can only be set to 0 if a target is
+     *        specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

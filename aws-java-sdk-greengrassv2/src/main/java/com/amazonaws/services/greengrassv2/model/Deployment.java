@@ -31,7 +31,7 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      */
     private String targetArn;
@@ -50,11 +50,6 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The name of the deployment.
-     * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
      * </p>
      */
     private String deploymentName;
@@ -80,12 +75,12 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      */
 
     public void setTargetArn(String targetArn) {
@@ -95,11 +90,11 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *         target AWS IoT thing or thing group.
+     *         target IoT thing or thing group.
      */
 
     public String getTargetArn() {
@@ -109,12 +104,12 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -207,18 +202,9 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
      * @param deploymentName
-     *        The name of the deployment.</p>
-     *        <p>
-     *        You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *        Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *        where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     *        The name of the deployment.
      */
 
     public void setDeploymentName(String deploymentName) {
@@ -229,17 +215,8 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
-     * @return The name of the deployment.</p>
-     *         <p>
-     *         You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *         Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *         where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     * @return The name of the deployment.
      */
 
     public String getDeploymentName() {
@@ -250,18 +227,9 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
      * @param deploymentName
-     *        The name of the deployment.</p>
-     *        <p>
-     *        You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *        Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *        where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     *        The name of the deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

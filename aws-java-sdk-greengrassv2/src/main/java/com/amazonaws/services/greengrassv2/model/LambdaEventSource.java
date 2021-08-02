@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about an event source for an AWS Lambda function. The event source defines the topics on which
- * this Lambda function subscribes to receive messages that run the function.
+ * Contains information about an event source for an Lambda function. The event source defines the topics on which this
+ * Lambda function subscribes to receive messages that run the function.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/LambdaEventSource" target="_top">AWS API
@@ -48,8 +48,8 @@ public class LambdaEventSource implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>IOT_CORE</code> – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT wildcards (
-     * <code>+</code> and <code>#</code>) in the event source topic.
+     * <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type supports
+     * MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.
      * </p>
      * </li>
      * </ul>
@@ -109,8 +109,8 @@ public class LambdaEventSource implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>IOT_CORE</code> – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT wildcards (
-     * <code>+</code> and <code>#</code>) in the event source topic.
+     * <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type supports
+     * MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.
      * </p>
      * </li>
      * </ul>
@@ -126,8 +126,8 @@ public class LambdaEventSource implements Serializable, Cloneable, StructuredPoj
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IOT_CORE</code> – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT
-     *        wildcards (<code>+</code> and <code>#</code>) in the event source topic.
+     *        <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type
+     *        supports MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.
      *        </p>
      *        </li>
      * @see LambdaEventSourceType
@@ -150,8 +150,8 @@ public class LambdaEventSource implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>IOT_CORE</code> – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT wildcards (
-     * <code>+</code> and <code>#</code>) in the event source topic.
+     * <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type supports
+     * MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.
      * </p>
      * </li>
      * </ul>
@@ -166,8 +166,8 @@ public class LambdaEventSource implements Serializable, Cloneable, StructuredPoj
      *         </li>
      *         <li>
      *         <p>
-     *         <code>IOT_CORE</code> – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT
-     *         wildcards (<code>+</code> and <code>#</code>) in the event source topic.
+     *         <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type
+     *         supports MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.
      *         </p>
      *         </li>
      * @see LambdaEventSourceType
@@ -190,8 +190,8 @@ public class LambdaEventSource implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>IOT_CORE</code> – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT wildcards (
-     * <code>+</code> and <code>#</code>) in the event source topic.
+     * <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type supports
+     * MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.
      * </p>
      * </li>
      * </ul>
@@ -207,8 +207,8 @@ public class LambdaEventSource implements Serializable, Cloneable, StructuredPoj
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IOT_CORE</code> – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT
-     *        wildcards (<code>+</code> and <code>#</code>) in the event source topic.
+     *        <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type
+     *        supports MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -233,8 +233,8 @@ public class LambdaEventSource implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * <code>IOT_CORE</code> – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT wildcards (
-     * <code>+</code> and <code>#</code>) in the event source topic.
+     * <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type supports
+     * MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.
      * </p>
      * </li>
      * </ul>
@@ -250,8 +250,8 @@ public class LambdaEventSource implements Serializable, Cloneable, StructuredPoj
      *        </li>
      *        <li>
      *        <p>
-     *        <code>IOT_CORE</code> – Subscribe to AWS IoT Core MQTT messages. This event source type supports MQTT
-     *        wildcards (<code>+</code> and <code>#</code>) in the event source topic.
+     *        <code>IOT_CORE</code> – Subscribe to Amazon Web Services IoT Core MQTT messages. This event source type
+     *        supports MQTT wildcards (<code>+</code> and <code>#</code>) in the event source topic.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

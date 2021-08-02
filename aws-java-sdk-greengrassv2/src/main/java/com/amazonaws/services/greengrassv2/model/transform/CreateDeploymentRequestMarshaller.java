@@ -19,6 +19,8 @@ import javax.annotation.Generated;
 import com.amazonaws.SdkClientException;
 import com.amazonaws.services.greengrassv2.model.*;
 
+import com.amazonaws.util.IdempotentUtils;
+
 import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
@@ -41,6 +43,9 @@ public class CreateDeploymentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deploymentPolicies").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientToken")
+            .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
 
     private static final CreateDeploymentRequestMarshaller instance = new CreateDeploymentRequestMarshaller();
 
@@ -64,6 +69,7 @@ public class CreateDeploymentRequestMarshaller {
             protocolMarshaller.marshall(createDeploymentRequest.getIotJobConfiguration(), IOTJOBCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createDeploymentRequest.getDeploymentPolicies(), DEPLOYMENTPOLICIES_BINDING);
             protocolMarshaller.marshall(createDeploymentRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createDeploymentRequest.getClientToken(), CLIENTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

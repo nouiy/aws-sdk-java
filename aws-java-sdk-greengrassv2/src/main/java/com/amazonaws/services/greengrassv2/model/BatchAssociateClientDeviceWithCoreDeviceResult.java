@@ -27,19 +27,19 @@ public class BatchAssociateClientDeviceWithCoreDeviceResult extends com.amazonaw
 
     /**
      * <p>
-     * The list of any errors for the entries in the request. Each error entry contains the name of the AWS IoT thing
-     * that failed to associate.
+     * The list of any errors for the entries in the request. Each error entry contains the name of the IoT thing that
+     * failed to associate.
      * </p>
      */
     private java.util.List<AssociateClientDeviceWithCoreDeviceErrorEntry> errorEntries;
 
     /**
      * <p>
-     * The list of any errors for the entries in the request. Each error entry contains the name of the AWS IoT thing
-     * that failed to associate.
+     * The list of any errors for the entries in the request. Each error entry contains the name of the IoT thing that
+     * failed to associate.
      * </p>
      * 
-     * @return The list of any errors for the entries in the request. Each error entry contains the name of the AWS IoT
+     * @return The list of any errors for the entries in the request. Each error entry contains the name of the IoT
      *         thing that failed to associate.
      */
 
@@ -49,13 +49,13 @@ public class BatchAssociateClientDeviceWithCoreDeviceResult extends com.amazonaw
 
     /**
      * <p>
-     * The list of any errors for the entries in the request. Each error entry contains the name of the AWS IoT thing
-     * that failed to associate.
+     * The list of any errors for the entries in the request. Each error entry contains the name of the IoT thing that
+     * failed to associate.
      * </p>
      * 
      * @param errorEntries
-     *        The list of any errors for the entries in the request. Each error entry contains the name of the AWS IoT
-     *        thing that failed to associate.
+     *        The list of any errors for the entries in the request. Each error entry contains the name of the IoT thing
+     *        that failed to associate.
      */
 
     public void setErrorEntries(java.util.Collection<AssociateClientDeviceWithCoreDeviceErrorEntry> errorEntries) {
@@ -69,8 +69,8 @@ public class BatchAssociateClientDeviceWithCoreDeviceResult extends com.amazonaw
 
     /**
      * <p>
-     * The list of any errors for the entries in the request. Each error entry contains the name of the AWS IoT thing
-     * that failed to associate.
+     * The list of any errors for the entries in the request. Each error entry contains the name of the IoT thing that
+     * failed to associate.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,8 +79,8 @@ public class BatchAssociateClientDeviceWithCoreDeviceResult extends com.amazonaw
      * </p>
      * 
      * @param errorEntries
-     *        The list of any errors for the entries in the request. Each error entry contains the name of the AWS IoT
-     *        thing that failed to associate.
+     *        The list of any errors for the entries in the request. Each error entry contains the name of the IoT thing
+     *        that failed to associate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,13 +96,13 @@ public class BatchAssociateClientDeviceWithCoreDeviceResult extends com.amazonaw
 
     /**
      * <p>
-     * The list of any errors for the entries in the request. Each error entry contains the name of the AWS IoT thing
-     * that failed to associate.
+     * The list of any errors for the entries in the request. Each error entry contains the name of the IoT thing that
+     * failed to associate.
      * </p>
      * 
      * @param errorEntries
-     *        The list of any errors for the entries in the request. Each error entry contains the name of the AWS IoT
-     *        thing that failed to associate.
+     *        The list of any errors for the entries in the request. Each error entry contains the name of the IoT thing
+     *        that failed to associate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

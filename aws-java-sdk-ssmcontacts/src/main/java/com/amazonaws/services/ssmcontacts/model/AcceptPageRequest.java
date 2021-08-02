@@ -55,6 +55,20 @@ public class AcceptPageRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private String acceptCode;
+    /**
+     * <p>
+     * An optional field that Incident Manager uses to <code>ENFORCE</code> <code>AcceptCode</code> validation when
+     * acknowledging an page. Acknowledgement can occur by replying to a page, or when entering the AcceptCode in the
+     * console. Enforcing AcceptCode validation causes Incident Manager to verify that the code entered by the user
+     * matches the code sent by Incident Manager with the page.
+     * </p>
+     * <p>
+     * Incident Manager can also <code>IGNORE</code> <code>AcceptCode</code> validation. Ignoring
+     * <code>AcceptCode</code> validation causes Incident Manager to accept any value entered for the
+     * <code>AcceptCode</code>.
+     * </p>
+     */
+    private String acceptCodeValidation;
 
     /**
      * <p>
@@ -276,6 +290,125 @@ public class AcceptPageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * An optional field that Incident Manager uses to <code>ENFORCE</code> <code>AcceptCode</code> validation when
+     * acknowledging an page. Acknowledgement can occur by replying to a page, or when entering the AcceptCode in the
+     * console. Enforcing AcceptCode validation causes Incident Manager to verify that the code entered by the user
+     * matches the code sent by Incident Manager with the page.
+     * </p>
+     * <p>
+     * Incident Manager can also <code>IGNORE</code> <code>AcceptCode</code> validation. Ignoring
+     * <code>AcceptCode</code> validation causes Incident Manager to accept any value entered for the
+     * <code>AcceptCode</code>.
+     * </p>
+     * 
+     * @param acceptCodeValidation
+     *        An optional field that Incident Manager uses to <code>ENFORCE</code> <code>AcceptCode</code> validation
+     *        when acknowledging an page. Acknowledgement can occur by replying to a page, or when entering the
+     *        AcceptCode in the console. Enforcing AcceptCode validation causes Incident Manager to verify that the code
+     *        entered by the user matches the code sent by Incident Manager with the page.</p>
+     *        <p>
+     *        Incident Manager can also <code>IGNORE</code> <code>AcceptCode</code> validation. Ignoring
+     *        <code>AcceptCode</code> validation causes Incident Manager to accept any value entered for the
+     *        <code>AcceptCode</code>.
+     * @see AcceptCodeValidation
+     */
+
+    public void setAcceptCodeValidation(String acceptCodeValidation) {
+        this.acceptCodeValidation = acceptCodeValidation;
+    }
+
+    /**
+     * <p>
+     * An optional field that Incident Manager uses to <code>ENFORCE</code> <code>AcceptCode</code> validation when
+     * acknowledging an page. Acknowledgement can occur by replying to a page, or when entering the AcceptCode in the
+     * console. Enforcing AcceptCode validation causes Incident Manager to verify that the code entered by the user
+     * matches the code sent by Incident Manager with the page.
+     * </p>
+     * <p>
+     * Incident Manager can also <code>IGNORE</code> <code>AcceptCode</code> validation. Ignoring
+     * <code>AcceptCode</code> validation causes Incident Manager to accept any value entered for the
+     * <code>AcceptCode</code>.
+     * </p>
+     * 
+     * @return An optional field that Incident Manager uses to <code>ENFORCE</code> <code>AcceptCode</code> validation
+     *         when acknowledging an page. Acknowledgement can occur by replying to a page, or when entering the
+     *         AcceptCode in the console. Enforcing AcceptCode validation causes Incident Manager to verify that the
+     *         code entered by the user matches the code sent by Incident Manager with the page.</p>
+     *         <p>
+     *         Incident Manager can also <code>IGNORE</code> <code>AcceptCode</code> validation. Ignoring
+     *         <code>AcceptCode</code> validation causes Incident Manager to accept any value entered for the
+     *         <code>AcceptCode</code>.
+     * @see AcceptCodeValidation
+     */
+
+    public String getAcceptCodeValidation() {
+        return this.acceptCodeValidation;
+    }
+
+    /**
+     * <p>
+     * An optional field that Incident Manager uses to <code>ENFORCE</code> <code>AcceptCode</code> validation when
+     * acknowledging an page. Acknowledgement can occur by replying to a page, or when entering the AcceptCode in the
+     * console. Enforcing AcceptCode validation causes Incident Manager to verify that the code entered by the user
+     * matches the code sent by Incident Manager with the page.
+     * </p>
+     * <p>
+     * Incident Manager can also <code>IGNORE</code> <code>AcceptCode</code> validation. Ignoring
+     * <code>AcceptCode</code> validation causes Incident Manager to accept any value entered for the
+     * <code>AcceptCode</code>.
+     * </p>
+     * 
+     * @param acceptCodeValidation
+     *        An optional field that Incident Manager uses to <code>ENFORCE</code> <code>AcceptCode</code> validation
+     *        when acknowledging an page. Acknowledgement can occur by replying to a page, or when entering the
+     *        AcceptCode in the console. Enforcing AcceptCode validation causes Incident Manager to verify that the code
+     *        entered by the user matches the code sent by Incident Manager with the page.</p>
+     *        <p>
+     *        Incident Manager can also <code>IGNORE</code> <code>AcceptCode</code> validation. Ignoring
+     *        <code>AcceptCode</code> validation causes Incident Manager to accept any value entered for the
+     *        <code>AcceptCode</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AcceptCodeValidation
+     */
+
+    public AcceptPageRequest withAcceptCodeValidation(String acceptCodeValidation) {
+        setAcceptCodeValidation(acceptCodeValidation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional field that Incident Manager uses to <code>ENFORCE</code> <code>AcceptCode</code> validation when
+     * acknowledging an page. Acknowledgement can occur by replying to a page, or when entering the AcceptCode in the
+     * console. Enforcing AcceptCode validation causes Incident Manager to verify that the code entered by the user
+     * matches the code sent by Incident Manager with the page.
+     * </p>
+     * <p>
+     * Incident Manager can also <code>IGNORE</code> <code>AcceptCode</code> validation. Ignoring
+     * <code>AcceptCode</code> validation causes Incident Manager to accept any value entered for the
+     * <code>AcceptCode</code>.
+     * </p>
+     * 
+     * @param acceptCodeValidation
+     *        An optional field that Incident Manager uses to <code>ENFORCE</code> <code>AcceptCode</code> validation
+     *        when acknowledging an page. Acknowledgement can occur by replying to a page, or when entering the
+     *        AcceptCode in the console. Enforcing AcceptCode validation causes Incident Manager to verify that the code
+     *        entered by the user matches the code sent by Incident Manager with the page.</p>
+     *        <p>
+     *        Incident Manager can also <code>IGNORE</code> <code>AcceptCode</code> validation. Ignoring
+     *        <code>AcceptCode</code> validation causes Incident Manager to accept any value entered for the
+     *        <code>AcceptCode</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AcceptCodeValidation
+     */
+
+    public AcceptPageRequest withAcceptCodeValidation(AcceptCodeValidation acceptCodeValidation) {
+        this.acceptCodeValidation = acceptCodeValidation.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -296,7 +429,9 @@ public class AcceptPageRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getNote() != null)
             sb.append("Note: ").append(getNote()).append(",");
         if (getAcceptCode() != null)
-            sb.append("AcceptCode: ").append(getAcceptCode());
+            sb.append("AcceptCode: ").append(getAcceptCode()).append(",");
+        if (getAcceptCodeValidation() != null)
+            sb.append("AcceptCodeValidation: ").append(getAcceptCodeValidation());
         sb.append("}");
         return sb.toString();
     }
@@ -331,6 +466,10 @@ public class AcceptPageRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getAcceptCode() != null && other.getAcceptCode().equals(this.getAcceptCode()) == false)
             return false;
+        if (other.getAcceptCodeValidation() == null ^ this.getAcceptCodeValidation() == null)
+            return false;
+        if (other.getAcceptCodeValidation() != null && other.getAcceptCodeValidation().equals(this.getAcceptCodeValidation()) == false)
+            return false;
         return true;
     }
 
@@ -344,6 +483,7 @@ public class AcceptPageRequest extends com.amazonaws.AmazonWebServiceRequest imp
         hashCode = prime * hashCode + ((getAcceptType() == null) ? 0 : getAcceptType().hashCode());
         hashCode = prime * hashCode + ((getNote() == null) ? 0 : getNote().hashCode());
         hashCode = prime * hashCode + ((getAcceptCode() == null) ? 0 : getAcceptCode().hashCode());
+        hashCode = prime * hashCode + ((getAcceptCodeValidation() == null) ? 0 : getAcceptCodeValidation().hashCode());
         return hashCode;
     }
 

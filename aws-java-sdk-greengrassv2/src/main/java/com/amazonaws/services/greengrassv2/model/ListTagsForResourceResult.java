@@ -27,7 +27,7 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -36,12 +36,12 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @return A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *         href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *         in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *         in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -52,13 +52,13 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -69,13 +69,13 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

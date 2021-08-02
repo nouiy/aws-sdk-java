@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about a component that is a candidate to deploy to a AWS IoT Greengrass core device.
+ * Contains information about a component that is a candidate to deploy to a Greengrass core device.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ComponentCandidate" target="_top">AWS
@@ -42,11 +42,11 @@ public class ComponentCandidate implements Serializable, Cloneable, StructuredPo
     private String componentVersion;
     /**
      * <p>
-     * The version requirements for the component's dependencies. AWS IoT Greengrass core devices get the version
-     * requirements from component recipes.
+     * The version requirements for the component's dependencies. Greengrass core devices get the version requirements
+     * from component recipes.
      * </p>
      * <p>
-     * AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     * IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      * href="https://semver.org/">Semantic Versioning</a>.
      * </p>
      */
@@ -134,18 +134,18 @@ public class ComponentCandidate implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The version requirements for the component's dependencies. AWS IoT Greengrass core devices get the version
-     * requirements from component recipes.
+     * The version requirements for the component's dependencies. Greengrass core devices get the version requirements
+     * from component recipes.
      * </p>
      * <p>
-     * AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     * IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      * href="https://semver.org/">Semantic Versioning</a>.
      * </p>
      * 
-     * @return The version requirements for the component's dependencies. AWS IoT Greengrass core devices get the
-     *         version requirements from component recipes.</p>
+     * @return The version requirements for the component's dependencies. Greengrass core devices get the version
+     *         requirements from component recipes.</p>
      *         <p>
-     *         AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     *         IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      *         href="https://semver.org/">Semantic Versioning</a>.
      */
 
@@ -155,19 +155,19 @@ public class ComponentCandidate implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The version requirements for the component's dependencies. AWS IoT Greengrass core devices get the version
-     * requirements from component recipes.
+     * The version requirements for the component's dependencies. Greengrass core devices get the version requirements
+     * from component recipes.
      * </p>
      * <p>
-     * AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     * IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      * href="https://semver.org/">Semantic Versioning</a>.
      * </p>
      * 
      * @param versionRequirements
-     *        The version requirements for the component's dependencies. AWS IoT Greengrass core devices get the version
+     *        The version requirements for the component's dependencies. Greengrass core devices get the version
      *        requirements from component recipes.</p>
      *        <p>
-     *        AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     *        IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      *        href="https://semver.org/">Semantic Versioning</a>.
      */
 
@@ -177,19 +177,19 @@ public class ComponentCandidate implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The version requirements for the component's dependencies. AWS IoT Greengrass core devices get the version
-     * requirements from component recipes.
+     * The version requirements for the component's dependencies. Greengrass core devices get the version requirements
+     * from component recipes.
      * </p>
      * <p>
-     * AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     * IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      * href="https://semver.org/">Semantic Versioning</a>.
      * </p>
      * 
      * @param versionRequirements
-     *        The version requirements for the component's dependencies. AWS IoT Greengrass core devices get the version
+     *        The version requirements for the component's dependencies. Greengrass core devices get the version
      *        requirements from component recipes.</p>
      *        <p>
-     *        AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     *        IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      *        href="https://semver.org/">Semantic Versioning</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

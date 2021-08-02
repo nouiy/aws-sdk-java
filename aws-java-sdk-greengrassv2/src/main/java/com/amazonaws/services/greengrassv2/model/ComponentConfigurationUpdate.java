@@ -22,7 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Contains information about a deployment's update to a component's configuration on Greengrass core devices. For more
  * information, see <a
  * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html">Update component
- * configurations</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+ * configurations</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/ComponentConfigurationUpdate"
@@ -39,7 +39,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      * means that the core device keeps it's existing configuration for keys and values that you don't specify in this
      * object. For more information, see <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update"
-     * >Merge configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Merge configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private String merge;
@@ -50,7 +50,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      * key for each level in the object. For more information, see the <a
      * href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update"
-     * >Reset configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private java.util.List<String> reset;
@@ -63,7 +63,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      * means that the core device keeps it's existing configuration for keys and values that you don't specify in this
      * object. For more information, see <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update"
-     * >Merge configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Merge configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param merge
@@ -73,7 +73,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      *        configuration. This means that the core device keeps it's existing configuration for keys and values that
      *        you don't specify in this object. For more information, see <a href=
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update"
-     *        >Merge configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        >Merge configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setMerge(String merge) {
@@ -88,7 +88,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      * means that the core device keeps it's existing configuration for keys and values that you don't specify in this
      * object. For more information, see <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update"
-     * >Merge configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Merge configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @return A serialized JSON string that contains the configuration object to merge to target devices. The core
@@ -97,7 +97,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      *         configuration. This means that the core device keeps it's existing configuration for keys and values that
      *         you don't specify in this object. For more information, see <a href=
      *         "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update"
-     *         >Merge configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *         >Merge configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public String getMerge() {
@@ -112,7 +112,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      * means that the core device keeps it's existing configuration for keys and values that you don't specify in this
      * object. For more information, see <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update"
-     * >Merge configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Merge configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param merge
@@ -122,7 +122,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      *        configuration. This means that the core device keeps it's existing configuration for keys and values that
      *        you don't specify in this object. For more information, see <a href=
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#merge-configuration-update"
-     *        >Merge configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        >Merge configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,7 +138,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      * key for each level in the object. For more information, see the <a
      * href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update"
-     * >Reset configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @return The list of configuration nodes to reset to default values on target devices. Use JSON pointers to
@@ -146,7 +146,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      *         slashes to separate the key for each level in the object. For more information, see the <a
      *         href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href=
      *         "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update"
-     *         >Reset configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *         >Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public java.util.List<String> getReset() {
@@ -160,7 +160,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      * key for each level in the object. For more information, see the <a
      * href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update"
-     * >Reset configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param reset
@@ -169,7 +169,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      *        separate the key for each level in the object. For more information, see the <a
      *        href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href=
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update"
-     *        >Reset configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        >Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setReset(java.util.Collection<String> reset) {
@@ -188,7 +188,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      * key for each level in the object. For more information, see the <a
      * href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update"
-     * >Reset configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -202,7 +202,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      *        separate the key for each level in the object. For more information, see the <a
      *        href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href=
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update"
-     *        >Reset configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        >Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -223,7 +223,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      * key for each level in the object. For more information, see the <a
      * href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update"
-     * >Reset configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param reset
@@ -232,7 +232,7 @@ public class ComponentConfigurationUpdate implements Serializable, Cloneable, St
      *        separate the key for each level in the object. For more information, see the <a
      *        href="https://tools.ietf.org/html/rfc6901">JSON pointer specification</a> and <a href=
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html#reset-configuration-update"
-     *        >Reset configuration updates</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        >Reset configuration updates</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

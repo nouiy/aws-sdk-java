@@ -27,20 +27,20 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResult extends com.amazo
 
     /**
      * <p>
-     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the AWS IoT
-     * thing that failed to disassociate.
+     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the IoT thing
+     * that failed to disassociate.
      * </p>
      */
     private java.util.List<DisassociateClientDeviceFromCoreDeviceErrorEntry> errorEntries;
 
     /**
      * <p>
-     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the AWS IoT
-     * thing that failed to disassociate.
+     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the IoT thing
+     * that failed to disassociate.
      * </p>
      * 
-     * @return The list of errors (if any) for the entries in the request. Each error entry contains the name of the AWS
-     *         IoT thing that failed to disassociate.
+     * @return The list of errors (if any) for the entries in the request. Each error entry contains the name of the IoT
+     *         thing that failed to disassociate.
      */
 
     public java.util.List<DisassociateClientDeviceFromCoreDeviceErrorEntry> getErrorEntries() {
@@ -49,13 +49,13 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResult extends com.amazo
 
     /**
      * <p>
-     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the AWS IoT
-     * thing that failed to disassociate.
+     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the IoT thing
+     * that failed to disassociate.
      * </p>
      * 
      * @param errorEntries
-     *        The list of errors (if any) for the entries in the request. Each error entry contains the name of the AWS
-     *        IoT thing that failed to disassociate.
+     *        The list of errors (if any) for the entries in the request. Each error entry contains the name of the IoT
+     *        thing that failed to disassociate.
      */
 
     public void setErrorEntries(java.util.Collection<DisassociateClientDeviceFromCoreDeviceErrorEntry> errorEntries) {
@@ -69,8 +69,8 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResult extends com.amazo
 
     /**
      * <p>
-     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the AWS IoT
-     * thing that failed to disassociate.
+     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the IoT thing
+     * that failed to disassociate.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,8 +79,8 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResult extends com.amazo
      * </p>
      * 
      * @param errorEntries
-     *        The list of errors (if any) for the entries in the request. Each error entry contains the name of the AWS
-     *        IoT thing that failed to disassociate.
+     *        The list of errors (if any) for the entries in the request. Each error entry contains the name of the IoT
+     *        thing that failed to disassociate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,13 +96,13 @@ public class BatchDisassociateClientDeviceFromCoreDeviceResult extends com.amazo
 
     /**
      * <p>
-     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the AWS IoT
-     * thing that failed to disassociate.
+     * The list of errors (if any) for the entries in the request. Each error entry contains the name of the IoT thing
+     * that failed to disassociate.
      * </p>
      * 
      * @param errorEntries
-     *        The list of errors (if any) for the entries in the request. Each error entry contains the name of the AWS
-     *        IoT thing that failed to disassociate.
+     *        The list of errors (if any) for the entries in the request. Each error entry contains the name of the IoT
+     *        thing that failed to disassociate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

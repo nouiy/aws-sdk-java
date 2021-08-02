@@ -28,18 +28,13 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      */
     private String targetArn;
     /**
      * <p>
      * The name of the deployment.
-     * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
      * </p>
      */
     private String deploymentName;
@@ -68,20 +63,30 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent. Idempotency
+     * means that the request is successfully processed only once, even if you send the request multiple times. When a
+     * request succeeds, and you specify the same client token for subsequent successful requests, the IoT Greengrass V2
+     * service returns the successful response that it caches from the previous request. IoT Greengrass V2 caches
+     * successful responses for idempotent requests for up to 8 hours.
+     * </p>
+     */
+    private String clientToken;
 
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      */
 
     public void setTargetArn(String targetArn) {
@@ -91,11 +96,11 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *         target AWS IoT thing or thing group.
+     *         target IoT thing or thing group.
      */
 
     public String getTargetArn() {
@@ -105,12 +110,12 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -123,18 +128,9 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
      * @param deploymentName
-     *        The name of the deployment.</p>
-     *        <p>
-     *        You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *        Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *        where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     *        The name of the deployment.
      */
 
     public void setDeploymentName(String deploymentName) {
@@ -145,17 +141,8 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
-     * @return The name of the deployment.</p>
-     *         <p>
-     *         You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *         Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *         where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     * @return The name of the deployment.
      */
 
     public String getDeploymentName() {
@@ -166,18 +153,9 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
      * @param deploymentName
-     *        The name of the deployment.</p>
-     *        <p>
-     *        You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *        Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *        where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     *        The name of the deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -356,12 +334,12 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @return A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *         href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *         in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *         in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -372,13 +350,13 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -389,13 +367,13 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -433,6 +411,70 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent. Idempotency
+     * means that the request is successfully processed only once, even if you send the request multiple times. When a
+     * request succeeds, and you specify the same client token for subsequent successful requests, the IoT Greengrass V2
+     * service returns the successful response that it caches from the previous request. IoT Greengrass V2 caches
+     * successful responses for idempotent requests for up to 8 hours.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent.
+     *        Idempotency means that the request is successfully processed only once, even if you send the request
+     *        multiple times. When a request succeeds, and you specify the same client token for subsequent successful
+     *        requests, the IoT Greengrass V2 service returns the successful response that it caches from the previous
+     *        request. IoT Greengrass V2 caches successful responses for idempotent requests for up to 8 hours.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent. Idempotency
+     * means that the request is successfully processed only once, even if you send the request multiple times. When a
+     * request succeeds, and you specify the same client token for subsequent successful requests, the IoT Greengrass V2
+     * service returns the successful response that it caches from the previous request. IoT Greengrass V2 caches
+     * successful responses for idempotent requests for up to 8 hours.
+     * </p>
+     * 
+     * @return A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent.
+     *         Idempotency means that the request is successfully processed only once, even if you send the request
+     *         multiple times. When a request succeeds, and you specify the same client token for subsequent successful
+     *         requests, the IoT Greengrass V2 service returns the successful response that it caches from the previous
+     *         request. IoT Greengrass V2 caches successful responses for idempotent requests for up to 8 hours.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent. Idempotency
+     * means that the request is successfully processed only once, even if you send the request multiple times. When a
+     * request succeeds, and you specify the same client token for subsequent successful requests, the IoT Greengrass V2
+     * service returns the successful response that it caches from the previous request. IoT Greengrass V2 caches
+     * successful responses for idempotent requests for up to 8 hours.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent.
+     *        Idempotency means that the request is successfully processed only once, even if you send the request
+     *        multiple times. When a request succeeds, and you specify the same client token for subsequent successful
+     *        requests, the IoT Greengrass V2 service returns the successful response that it caches from the previous
+     *        request. IoT Greengrass V2 caches successful responses for idempotent requests for up to 8 hours.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDeploymentRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -455,7 +497,9 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
         if (getDeploymentPolicies() != null)
             sb.append("DeploymentPolicies: ").append(getDeploymentPolicies()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken());
         sb.append("}");
         return sb.toString();
     }
@@ -494,6 +538,10 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
         return true;
     }
 
@@ -508,6 +556,7 @@ public class CreateDeploymentRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getIotJobConfiguration() == null) ? 0 : getIotJobConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDeploymentPolicies() == null) ? 0 : getDeploymentPolicies().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         return hashCode;
     }
 

@@ -33,7 +33,7 @@ public class ComponentDependencyRequirement implements Serializable, Cloneable, 
      * The component version requirement for the component dependency.
      * </p>
      * <p>
-     * AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     * IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      * href="https://semver.org/">Semantic Versioning</a>.
      * </p>
      */
@@ -65,14 +65,14 @@ public class ComponentDependencyRequirement implements Serializable, Cloneable, 
      * The component version requirement for the component dependency.
      * </p>
      * <p>
-     * AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     * IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      * href="https://semver.org/">Semantic Versioning</a>.
      * </p>
      * 
      * @param versionRequirement
      *        The component version requirement for the component dependency.</p>
      *        <p>
-     *        AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     *        IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      *        href="https://semver.org/">Semantic Versioning</a>.
      */
 
@@ -85,13 +85,13 @@ public class ComponentDependencyRequirement implements Serializable, Cloneable, 
      * The component version requirement for the component dependency.
      * </p>
      * <p>
-     * AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     * IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      * href="https://semver.org/">Semantic Versioning</a>.
      * </p>
      * 
      * @return The component version requirement for the component dependency.</p>
      *         <p>
-     *         AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     *         IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      *         href="https://semver.org/">Semantic Versioning</a>.
      */
 
@@ -104,14 +104,14 @@ public class ComponentDependencyRequirement implements Serializable, Cloneable, 
      * The component version requirement for the component dependency.
      * </p>
      * <p>
-     * AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     * IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      * href="https://semver.org/">Semantic Versioning</a>.
      * </p>
      * 
      * @param versionRequirement
      *        The component version requirement for the component dependency.</p>
      *        <p>
-     *        AWS IoT Greengrass V2 uses semantic version constraints. For more information, see <a
+     *        IoT Greengrass V2 uses semantic version constraints. For more information, see <a
      *        href="https://semver.org/">Semantic Versioning</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

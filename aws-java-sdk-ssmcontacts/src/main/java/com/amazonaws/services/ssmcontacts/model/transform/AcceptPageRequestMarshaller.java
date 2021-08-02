@@ -37,6 +37,8 @@ public class AcceptPageRequestMarshaller {
             .marshallLocationName("Note").build();
     private static final MarshallingInfo<String> ACCEPTCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AcceptCode").build();
+    private static final MarshallingInfo<String> ACCEPTCODEVALIDATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AcceptCodeValidation").build();
 
     private static final AcceptPageRequestMarshaller instance = new AcceptPageRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class AcceptPageRequestMarshaller {
             protocolMarshaller.marshall(acceptPageRequest.getAcceptType(), ACCEPTTYPE_BINDING);
             protocolMarshaller.marshall(acceptPageRequest.getNote(), NOTE_BINDING);
             protocolMarshaller.marshall(acceptPageRequest.getAcceptCode(), ACCEPTCODE_BINDING);
+            protocolMarshaller.marshall(acceptPageRequest.getAcceptCodeValidation(), ACCEPTCODEVALIDATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

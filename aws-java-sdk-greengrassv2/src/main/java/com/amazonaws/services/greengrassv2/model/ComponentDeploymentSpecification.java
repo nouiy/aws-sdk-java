@@ -38,20 +38,20 @@ public class ComponentDeploymentSpecification implements Serializable, Cloneable
      * <p>
      * The configuration updates to deploy for the component. You can define <i>reset</i> updates and <i>merge</i>
      * updates. A reset updates the keys that you specify to the default configuration for the component. A merge
-     * updates the core device's component configuration with the keys and values that you specify. The AWS IoT
-     * Greengrass Core software applies reset updates before it applies merge updates. For more information, see <a
+     * updates the core device's component configuration with the keys and values that you specify. The IoT Greengrass
+     * Core software applies reset updates before it applies merge updates. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html">Update
-     * component configurations</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * component configurations</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private ComponentConfigurationUpdate configurationUpdate;
     /**
      * <p>
-     * The system user and group that the AWS IoT Greengrass Core software uses to run component processes on the core
-     * device. If you omit this parameter, the AWS IoT Greengrass Core software uses the system user and group that you
+     * The system user and group that the IoT Greengrass Core software uses to run component processes on the core
+     * device. If you omit this parameter, the IoT Greengrass Core software uses the system user and group that you
      * configure for the core device. For more information, see <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
-     * >Configure the user and group that run components</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Configure the user and group that run components</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private ComponentRunWith runWith;
@@ -100,20 +100,20 @@ public class ComponentDeploymentSpecification implements Serializable, Cloneable
      * <p>
      * The configuration updates to deploy for the component. You can define <i>reset</i> updates and <i>merge</i>
      * updates. A reset updates the keys that you specify to the default configuration for the component. A merge
-     * updates the core device's component configuration with the keys and values that you specify. The AWS IoT
-     * Greengrass Core software applies reset updates before it applies merge updates. For more information, see <a
+     * updates the core device's component configuration with the keys and values that you specify. The IoT Greengrass
+     * Core software applies reset updates before it applies merge updates. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html">Update
-     * component configurations</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * component configurations</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param configurationUpdate
      *        The configuration updates to deploy for the component. You can define <i>reset</i> updates and
      *        <i>merge</i> updates. A reset updates the keys that you specify to the default configuration for the
      *        component. A merge updates the core device's component configuration with the keys and values that you
-     *        specify. The AWS IoT Greengrass Core software applies reset updates before it applies merge updates. For
-     *        more information, see <a
+     *        specify. The IoT Greengrass Core software applies reset updates before it applies merge updates. For more
+     *        information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html"
-     *        >Update component configurations</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        >Update component configurations</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setConfigurationUpdate(ComponentConfigurationUpdate configurationUpdate) {
@@ -124,19 +124,19 @@ public class ComponentDeploymentSpecification implements Serializable, Cloneable
      * <p>
      * The configuration updates to deploy for the component. You can define <i>reset</i> updates and <i>merge</i>
      * updates. A reset updates the keys that you specify to the default configuration for the component. A merge
-     * updates the core device's component configuration with the keys and values that you specify. The AWS IoT
-     * Greengrass Core software applies reset updates before it applies merge updates. For more information, see <a
+     * updates the core device's component configuration with the keys and values that you specify. The IoT Greengrass
+     * Core software applies reset updates before it applies merge updates. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html">Update
-     * component configurations</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * component configurations</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @return The configuration updates to deploy for the component. You can define <i>reset</i> updates and
      *         <i>merge</i> updates. A reset updates the keys that you specify to the default configuration for the
      *         component. A merge updates the core device's component configuration with the keys and values that you
-     *         specify. The AWS IoT Greengrass Core software applies reset updates before it applies merge updates. For
-     *         more information, see <a
+     *         specify. The IoT Greengrass Core software applies reset updates before it applies merge updates. For more
+     *         information, see <a
      *         href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html"
-     *         >Update component configurations</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *         >Update component configurations</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public ComponentConfigurationUpdate getConfigurationUpdate() {
@@ -147,20 +147,20 @@ public class ComponentDeploymentSpecification implements Serializable, Cloneable
      * <p>
      * The configuration updates to deploy for the component. You can define <i>reset</i> updates and <i>merge</i>
      * updates. A reset updates the keys that you specify to the default configuration for the component. A merge
-     * updates the core device's component configuration with the keys and values that you specify. The AWS IoT
-     * Greengrass Core software applies reset updates before it applies merge updates. For more information, see <a
+     * updates the core device's component configuration with the keys and values that you specify. The IoT Greengrass
+     * Core software applies reset updates before it applies merge updates. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html">Update
-     * component configurations</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * component configurations</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param configurationUpdate
      *        The configuration updates to deploy for the component. You can define <i>reset</i> updates and
      *        <i>merge</i> updates. A reset updates the keys that you specify to the default configuration for the
      *        component. A merge updates the core device's component configuration with the keys and values that you
-     *        specify. The AWS IoT Greengrass Core software applies reset updates before it applies merge updates. For
-     *        more information, see <a
+     *        specify. The IoT Greengrass Core software applies reset updates before it applies merge updates. For more
+     *        information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html"
-     *        >Update component configurations</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        >Update component configurations</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -171,19 +171,19 @@ public class ComponentDeploymentSpecification implements Serializable, Cloneable
 
     /**
      * <p>
-     * The system user and group that the AWS IoT Greengrass Core software uses to run component processes on the core
-     * device. If you omit this parameter, the AWS IoT Greengrass Core software uses the system user and group that you
+     * The system user and group that the IoT Greengrass Core software uses to run component processes on the core
+     * device. If you omit this parameter, the IoT Greengrass Core software uses the system user and group that you
      * configure for the core device. For more information, see <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
-     * >Configure the user and group that run components</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Configure the user and group that run components</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param runWith
-     *        The system user and group that the AWS IoT Greengrass Core software uses to run component processes on the
-     *        core device. If you omit this parameter, the AWS IoT Greengrass Core software uses the system user and
-     *        group that you configure for the core device. For more information, see <a href=
+     *        The system user and group that the IoT Greengrass Core software uses to run component processes on the
+     *        core device. If you omit this parameter, the IoT Greengrass Core software uses the system user and group
+     *        that you configure for the core device. For more information, see <a href=
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
-     *        >Configure the user and group that run components</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        >Configure the user and group that run components</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setRunWith(ComponentRunWith runWith) {
@@ -192,19 +192,18 @@ public class ComponentDeploymentSpecification implements Serializable, Cloneable
 
     /**
      * <p>
-     * The system user and group that the AWS IoT Greengrass Core software uses to run component processes on the core
-     * device. If you omit this parameter, the AWS IoT Greengrass Core software uses the system user and group that you
+     * The system user and group that the IoT Greengrass Core software uses to run component processes on the core
+     * device. If you omit this parameter, the IoT Greengrass Core software uses the system user and group that you
      * configure for the core device. For more information, see <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
-     * >Configure the user and group that run components</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Configure the user and group that run components</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
-     * @return The system user and group that the AWS IoT Greengrass Core software uses to run component processes on
-     *         the core device. If you omit this parameter, the AWS IoT Greengrass Core software uses the system user
-     *         and group that you configure for the core device. For more information, see <a href=
+     * @return The system user and group that the IoT Greengrass Core software uses to run component processes on the
+     *         core device. If you omit this parameter, the IoT Greengrass Core software uses the system user and group
+     *         that you configure for the core device. For more information, see <a href=
      *         "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
-     *         >Configure the user and group that run components</a> in the <i>AWS IoT Greengrass V2 Developer
-     *         Guide</i>.
+     *         >Configure the user and group that run components</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public ComponentRunWith getRunWith() {
@@ -213,19 +212,19 @@ public class ComponentDeploymentSpecification implements Serializable, Cloneable
 
     /**
      * <p>
-     * The system user and group that the AWS IoT Greengrass Core software uses to run component processes on the core
-     * device. If you omit this parameter, the AWS IoT Greengrass Core software uses the system user and group that you
+     * The system user and group that the IoT Greengrass Core software uses to run component processes on the core
+     * device. If you omit this parameter, the IoT Greengrass Core software uses the system user and group that you
      * configure for the core device. For more information, see <a href=
      * "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
-     * >Configure the user and group that run components</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * >Configure the user and group that run components</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param runWith
-     *        The system user and group that the AWS IoT Greengrass Core software uses to run component processes on the
-     *        core device. If you omit this parameter, the AWS IoT Greengrass Core software uses the system user and
-     *        group that you configure for the core device. For more information, see <a href=
+     *        The system user and group that the IoT Greengrass Core software uses to run component processes on the
+     *        core device. If you omit this parameter, the IoT Greengrass Core software uses the system user and group
+     *        that you configure for the core device. For more information, see <a href=
      *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
-     *        >Configure the user and group that run components</a> in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        >Configure the user and group that run components</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

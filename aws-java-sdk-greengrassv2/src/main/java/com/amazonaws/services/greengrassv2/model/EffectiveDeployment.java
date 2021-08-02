@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about a deployment job that AWS IoT Greengrass sends to a AWS IoT Greengrass core device.
+ * Contains information about a deployment job that IoT Greengrass sends to a Greengrass core device.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/EffectiveDeployment" target="_top">AWS
@@ -38,23 +38,18 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      */
     private String deploymentName;
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      */
     private String iotJobId;
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      */
     private String iotJobArn;
@@ -67,13 +62,13 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      */
     private String targetArn;
     /**
      * <p>
-     * The status of the deployment job on the AWS IoT Greengrass core device.
+     * The status of the deployment job on the Greengrass core device.
      * </p>
      */
     private String coreDeviceExecutionStatus;
@@ -140,18 +135,9 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
      * @param deploymentName
-     *        The name of the deployment.</p>
-     *        <p>
-     *        You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *        Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *        where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     *        The name of the deployment.
      */
 
     public void setDeploymentName(String deploymentName) {
@@ -162,17 +148,8 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
-     * @return The name of the deployment.</p>
-     *         <p>
-     *         You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *         Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *         where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     * @return The name of the deployment.
      */
 
     public String getDeploymentName() {
@@ -183,18 +160,9 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
      * <p>
      * The name of the deployment.
      * </p>
-     * <p>
-     * You can create deployments without names. If you create a deployment without a name, the AWS IoT Greengrass V2
-     * console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>, where
-     * <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
-     * </p>
      * 
      * @param deploymentName
-     *        The name of the deployment.</p>
-     *        <p>
-     *        You can create deployments without names. If you create a deployment without a name, the AWS IoT
-     *        Greengrass V2 console shows the deployment name as <code>&lt;targetType&gt;:&lt;targetName&gt;</code>,
-     *        where <code>targetType</code> and <code>targetName</code> are the type and name of the deployment target.
+     *        The name of the deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -205,11 +173,11 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobId
-     *        The ID of the AWS IoT job that applies the deployment to target devices.
+     *        The ID of the IoT job that applies the deployment to target devices.
      */
 
     public void setIotJobId(String iotJobId) {
@@ -218,10 +186,10 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      * 
-     * @return The ID of the AWS IoT job that applies the deployment to target devices.
+     * @return The ID of the IoT job that applies the deployment to target devices.
      */
 
     public String getIotJobId() {
@@ -230,11 +198,11 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobId
-     *        The ID of the AWS IoT job that applies the deployment to target devices.
+     *        The ID of the IoT job that applies the deployment to target devices.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,13 +213,13 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        AWS IoT job that applies the deployment to target devices.
+     *        IoT job that applies the deployment to target devices.
      */
 
     public void setIotJobArn(String iotJobArn) {
@@ -260,12 +228,12 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *         AWS IoT job that applies the deployment to target devices.
+     *         IoT job that applies the deployment to target devices.
      */
 
     public String getIotJobArn() {
@@ -274,13 +242,13 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        AWS IoT job that applies the deployment to target devices.
+     *        IoT job that applies the deployment to target devices.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -332,12 +300,12 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      */
 
     public void setTargetArn(String targetArn) {
@@ -347,11 +315,11 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *         target AWS IoT thing or thing group.
+     *         target IoT thing or thing group.
      */
 
     public String getTargetArn() {
@@ -361,12 +329,12 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -377,11 +345,11 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the deployment job on the AWS IoT Greengrass core device.
+     * The status of the deployment job on the Greengrass core device.
      * </p>
      * 
      * @param coreDeviceExecutionStatus
-     *        The status of the deployment job on the AWS IoT Greengrass core device.
+     *        The status of the deployment job on the Greengrass core device.
      * @see EffectiveDeploymentExecutionStatus
      */
 
@@ -391,10 +359,10 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the deployment job on the AWS IoT Greengrass core device.
+     * The status of the deployment job on the Greengrass core device.
      * </p>
      * 
-     * @return The status of the deployment job on the AWS IoT Greengrass core device.
+     * @return The status of the deployment job on the Greengrass core device.
      * @see EffectiveDeploymentExecutionStatus
      */
 
@@ -404,11 +372,11 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the deployment job on the AWS IoT Greengrass core device.
+     * The status of the deployment job on the Greengrass core device.
      * </p>
      * 
      * @param coreDeviceExecutionStatus
-     *        The status of the deployment job on the AWS IoT Greengrass core device.
+     *        The status of the deployment job on the Greengrass core device.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EffectiveDeploymentExecutionStatus
      */
@@ -420,11 +388,11 @@ public class EffectiveDeployment implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The status of the deployment job on the AWS IoT Greengrass core device.
+     * The status of the deployment job on the Greengrass core device.
      * </p>
      * 
      * @param coreDeviceExecutionStatus
-     *        The status of the deployment job on the AWS IoT Greengrass core device.
+     *        The status of the deployment job on the Greengrass core device.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EffectiveDeploymentExecutionStatus
      */

@@ -28,7 +28,7 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      */
     private String targetArn;
@@ -69,12 +69,12 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      */
 
     public void setTargetArn(String targetArn) {
@@ -84,11 +84,11 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *         target AWS IoT thing or thing group.
+     *         target IoT thing or thing group.
      */
 
     public String getTargetArn() {
@@ -98,12 +98,12 @@ public class ListDeploymentsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the target
-     * AWS IoT thing or thing group.
+     * IoT thing or thing group.
      * </p>
      * 
      * @param targetArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        target AWS IoT thing or thing group.
+     *        target IoT thing or thing group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

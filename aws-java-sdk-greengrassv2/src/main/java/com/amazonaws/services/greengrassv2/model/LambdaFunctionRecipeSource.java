@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about an AWS Lambda function to import to create a component.
+ * Contains information about an Lambda function to import to create a component.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/LambdaFunctionRecipeSource"
@@ -69,7 +69,7 @@ public class LambdaFunctionRecipeSource implements Serializable, Cloneable, Stru
     private java.util.Map<String, ComponentDependencyRequirement> componentDependencies;
     /**
      * <p>
-     * The system and runtime parameters for the Lambda function as it runs on the AWS IoT Greengrass core device.
+     * The system and runtime parameters for the Lambda function as it runs on the Greengrass core device.
      * </p>
      */
     private LambdaExecutionParameters componentLambdaParameters;
@@ -382,12 +382,11 @@ public class LambdaFunctionRecipeSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The system and runtime parameters for the Lambda function as it runs on the AWS IoT Greengrass core device.
+     * The system and runtime parameters for the Lambda function as it runs on the Greengrass core device.
      * </p>
      * 
      * @param componentLambdaParameters
-     *        The system and runtime parameters for the Lambda function as it runs on the AWS IoT Greengrass core
-     *        device.
+     *        The system and runtime parameters for the Lambda function as it runs on the Greengrass core device.
      */
 
     public void setComponentLambdaParameters(LambdaExecutionParameters componentLambdaParameters) {
@@ -396,11 +395,10 @@ public class LambdaFunctionRecipeSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The system and runtime parameters for the Lambda function as it runs on the AWS IoT Greengrass core device.
+     * The system and runtime parameters for the Lambda function as it runs on the Greengrass core device.
      * </p>
      * 
-     * @return The system and runtime parameters for the Lambda function as it runs on the AWS IoT Greengrass core
-     *         device.
+     * @return The system and runtime parameters for the Lambda function as it runs on the Greengrass core device.
      */
 
     public LambdaExecutionParameters getComponentLambdaParameters() {
@@ -409,12 +407,11 @@ public class LambdaFunctionRecipeSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The system and runtime parameters for the Lambda function as it runs on the AWS IoT Greengrass core device.
+     * The system and runtime parameters for the Lambda function as it runs on the Greengrass core device.
      * </p>
      * 
      * @param componentLambdaParameters
-     *        The system and runtime parameters for the Lambda function as it runs on the AWS IoT Greengrass core
-     *        device.
+     *        The system and runtime parameters for the Lambda function as it runs on the Greengrass core device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

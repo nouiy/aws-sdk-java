@@ -31,14 +31,14 @@ public class CreateDeploymentResult extends com.amazonaws.AmazonWebServiceResult
     private String deploymentId;
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      */
     private String iotJobId;
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      */
     private String iotJobArn;
@@ -85,11 +85,11 @@ public class CreateDeploymentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobId
-     *        The ID of the AWS IoT job that applies the deployment to target devices.
+     *        The ID of the IoT job that applies the deployment to target devices.
      */
 
     public void setIotJobId(String iotJobId) {
@@ -98,10 +98,10 @@ public class CreateDeploymentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      * 
-     * @return The ID of the AWS IoT job that applies the deployment to target devices.
+     * @return The ID of the IoT job that applies the deployment to target devices.
      */
 
     public String getIotJobId() {
@@ -110,11 +110,11 @@ public class CreateDeploymentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of the AWS IoT job that applies the deployment to target devices.
+     * The ID of the IoT job that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobId
-     *        The ID of the AWS IoT job that applies the deployment to target devices.
+     *        The ID of the IoT job that applies the deployment to target devices.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -125,13 +125,13 @@ public class CreateDeploymentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        AWS IoT job that applies the deployment to target devices.
+     *        IoT job that applies the deployment to target devices.
      */
 
     public void setIotJobArn(String iotJobArn) {
@@ -140,12 +140,12 @@ public class CreateDeploymentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      * 
      * @return The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *         AWS IoT job that applies the deployment to target devices.
+     *         IoT job that applies the deployment to target devices.
      */
 
     public String getIotJobArn() {
@@ -154,13 +154,13 @@ public class CreateDeploymentResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the AWS IoT
-     * job that applies the deployment to target devices.
+     * The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the IoT job
+     * that applies the deployment to target devices.
      * </p>
      * 
      * @param iotJobArn
      *        The <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">ARN</a> of the
-     *        AWS IoT job that applies the deployment to target devices.
+     *        IoT job that applies the deployment to target devices.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

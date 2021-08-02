@@ -30,7 +30,7 @@ public class AssociatedClientDevice implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the associated client device.
+     * The name of the IoT thing that represents the associated client device.
      * </p>
      */
     private String thingName;
@@ -43,11 +43,11 @@ public class AssociatedClientDevice implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the associated client device.
+     * The name of the IoT thing that represents the associated client device.
      * </p>
      * 
      * @param thingName
-     *        The name of the AWS IoT thing that represents the associated client device.
+     *        The name of the IoT thing that represents the associated client device.
      */
 
     public void setThingName(String thingName) {
@@ -56,10 +56,10 @@ public class AssociatedClientDevice implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the associated client device.
+     * The name of the IoT thing that represents the associated client device.
      * </p>
      * 
-     * @return The name of the AWS IoT thing that represents the associated client device.
+     * @return The name of the IoT thing that represents the associated client device.
      */
 
     public String getThingName() {
@@ -68,11 +68,11 @@ public class AssociatedClientDevice implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the AWS IoT thing that represents the associated client device.
+     * The name of the IoT thing that represents the associated client device.
      * </p>
      * 
      * @param thingName
-     *        The name of the AWS IoT thing that represents the associated client device.
+     *        The name of the IoT thing that represents the associated client device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

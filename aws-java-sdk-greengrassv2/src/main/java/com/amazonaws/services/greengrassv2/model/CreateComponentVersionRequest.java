@@ -48,10 +48,20 @@ public class CreateComponentVersionRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent. Idempotency
+     * means that the request is successfully processed only once, even if you send the request multiple times. When a
+     * request succeeds, and you specify the same client token for subsequent successful requests, the IoT Greengrass V2
+     * service returns the successful response that it caches from the previous request. IoT Greengrass V2 caches
+     * successful responses for idempotent requests for up to 8 hours.
+     * </p>
+     */
+    private String clientToken;
 
     /**
      * <p>
@@ -200,12 +210,12 @@ public class CreateComponentVersionRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @return A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *         href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *         in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *         in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -216,13 +226,13 @@ public class CreateComponentVersionRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -233,13 +243,13 @@ public class CreateComponentVersionRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * A list of key-value pairs that contain metadata for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a> in the
-     * <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     * <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * 
      * @param tags
      *        A list of key-value pairs that contain metadata for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/greengrass/v2/developerguide/tag-resources.html">Tag your resources</a>
-     *        in the <i>AWS IoT Greengrass V2 Developer Guide</i>.
+     *        in the <i>IoT Greengrass V2 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,6 +287,70 @@ public class CreateComponentVersionRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent. Idempotency
+     * means that the request is successfully processed only once, even if you send the request multiple times. When a
+     * request succeeds, and you specify the same client token for subsequent successful requests, the IoT Greengrass V2
+     * service returns the successful response that it caches from the previous request. IoT Greengrass V2 caches
+     * successful responses for idempotent requests for up to 8 hours.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent.
+     *        Idempotency means that the request is successfully processed only once, even if you send the request
+     *        multiple times. When a request succeeds, and you specify the same client token for subsequent successful
+     *        requests, the IoT Greengrass V2 service returns the successful response that it caches from the previous
+     *        request. IoT Greengrass V2 caches successful responses for idempotent requests for up to 8 hours.
+     */
+
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent. Idempotency
+     * means that the request is successfully processed only once, even if you send the request multiple times. When a
+     * request succeeds, and you specify the same client token for subsequent successful requests, the IoT Greengrass V2
+     * service returns the successful response that it caches from the previous request. IoT Greengrass V2 caches
+     * successful responses for idempotent requests for up to 8 hours.
+     * </p>
+     * 
+     * @return A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent.
+     *         Idempotency means that the request is successfully processed only once, even if you send the request
+     *         multiple times. When a request succeeds, and you specify the same client token for subsequent successful
+     *         requests, the IoT Greengrass V2 service returns the successful response that it caches from the previous
+     *         request. IoT Greengrass V2 caches successful responses for idempotent requests for up to 8 hours.
+     */
+
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * <p>
+     * A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent. Idempotency
+     * means that the request is successfully processed only once, even if you send the request multiple times. When a
+     * request succeeds, and you specify the same client token for subsequent successful requests, the IoT Greengrass V2
+     * service returns the successful response that it caches from the previous request. IoT Greengrass V2 caches
+     * successful responses for idempotent requests for up to 8 hours.
+     * </p>
+     * 
+     * @param clientToken
+     *        A unique, case-sensitive identifier that you can provide to ensure that the request is idempotent.
+     *        Idempotency means that the request is successfully processed only once, even if you send the request
+     *        multiple times. When a request succeeds, and you specify the same client token for subsequent successful
+     *        requests, the IoT Greengrass V2 service returns the successful response that it caches from the previous
+     *        request. IoT Greengrass V2 caches successful responses for idempotent requests for up to 8 hours.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateComponentVersionRequest withClientToken(String clientToken) {
+        setClientToken(clientToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -293,7 +367,9 @@ public class CreateComponentVersionRequest extends com.amazonaws.AmazonWebServic
         if (getLambdaFunction() != null)
             sb.append("LambdaFunction: ").append(getLambdaFunction()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getClientToken() != null)
+            sb.append("ClientToken: ").append(getClientToken());
         sb.append("}");
         return sb.toString();
     }
@@ -320,6 +396,10 @@ public class CreateComponentVersionRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getClientToken() == null ^ this.getClientToken() == null)
+            return false;
+        if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
+            return false;
         return true;
     }
 
@@ -331,6 +411,7 @@ public class CreateComponentVersionRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getInlineRecipe() == null) ? 0 : getInlineRecipe().hashCode());
         hashCode = prime * hashCode + ((getLambdaFunction() == null) ? 0 : getLambdaFunction().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         return hashCode;
     }
 

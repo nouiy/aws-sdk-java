@@ -33,7 +33,7 @@ public class DisassociateClientDeviceFromCoreDeviceErrorEntry implements Seriali
 
     /**
      * <p>
-     * The name of the AWS IoT thing whose disassociate request failed.
+     * The name of the IoT thing whose disassociate request failed.
      * </p>
      */
     private String thingName;
@@ -52,11 +52,11 @@ public class DisassociateClientDeviceFromCoreDeviceErrorEntry implements Seriali
 
     /**
      * <p>
-     * The name of the AWS IoT thing whose disassociate request failed.
+     * The name of the IoT thing whose disassociate request failed.
      * </p>
      * 
      * @param thingName
-     *        The name of the AWS IoT thing whose disassociate request failed.
+     *        The name of the IoT thing whose disassociate request failed.
      */
 
     public void setThingName(String thingName) {
@@ -65,10 +65,10 @@ public class DisassociateClientDeviceFromCoreDeviceErrorEntry implements Seriali
 
     /**
      * <p>
-     * The name of the AWS IoT thing whose disassociate request failed.
+     * The name of the IoT thing whose disassociate request failed.
      * </p>
      * 
-     * @return The name of the AWS IoT thing whose disassociate request failed.
+     * @return The name of the IoT thing whose disassociate request failed.
      */
 
     public String getThingName() {
@@ -77,11 +77,11 @@ public class DisassociateClientDeviceFromCoreDeviceErrorEntry implements Seriali
 
     /**
      * <p>
-     * The name of the AWS IoT thing whose disassociate request failed.
+     * The name of the IoT thing whose disassociate request failed.
      * </p>
      * 
      * @param thingName
-     *        The name of the AWS IoT thing whose disassociate request failed.
+     *        The name of the IoT thing whose disassociate request failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
