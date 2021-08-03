@@ -361,6 +361,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
         exceptionUnmarshallers.add(new EndpointAuthorizationNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new InvalidClusterTrackExceptionUnmarshaller());
         exceptionUnmarshallers.add(new SubscriptionSeverityNotFoundExceptionUnmarshaller());
+        exceptionUnmarshallers.add(new InvalidNamespaceExceptionUnmarshaller());
         exceptionUnmarshallers.add(new AccessToClusterDeniedExceptionUnmarshaller());
         exceptionUnmarshallers.add(new CopyToRegionDisabledExceptionUnmarshaller());
         exceptionUnmarshallers.add(new SubscriptionCategoryNotFoundExceptionUnmarshaller());
@@ -399,6 +400,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
         exceptionUnmarshallers.add(new InvalidClusterSubnetGroupStateExceptionUnmarshaller());
         exceptionUnmarshallers.add(new ClusterOnLatestRevisionExceptionUnmarshaller());
         exceptionUnmarshallers.add(new ClusterSnapshotNotFoundExceptionUnmarshaller());
+        exceptionUnmarshallers.add(new InvalidDataShareExceptionUnmarshaller());
         exceptionUnmarshallers.add(new BatchModifyClusterSnapshotsLimitExceededExceptionUnmarshaller());
         exceptionUnmarshallers.add(new HsmClientCertificateQuotaExceededExceptionUnmarshaller());
         exceptionUnmarshallers.add(new InvalidClusterSecurityGroupStateExceptionUnmarshaller());
@@ -564,6 +566,67 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * From a datashare consumer account, associates a datashare with the account (AssociateEntireAccount) or the
+     * specified namespace (ConsumerArn). If you make this association, the consumer can consume the datashare.
+     * </p>
+     * 
+     * @param associateDataShareConsumerRequest
+     * @return Result of the AssociateDataShareConsumer operation returned by the service.
+     * @throws InvalidDataShareException
+     *         There is an error with the datashare.
+     * @throws InvalidNamespaceException
+     *         The namespace isn't valid because the namespace doesn't exist. Provide a valid namespace.
+     * @sample AmazonRedshift.AssociateDataShareConsumer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/AssociateDataShareConsumer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateDataShareConsumerResult associateDataShareConsumer(AssociateDataShareConsumerRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateDataShareConsumer(request);
+    }
+
+    @SdkInternalApi
+    final AssociateDataShareConsumerResult executeAssociateDataShareConsumer(AssociateDataShareConsumerRequest associateDataShareConsumerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateDataShareConsumerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateDataShareConsumerRequest> request = null;
+        Response<AssociateDataShareConsumerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateDataShareConsumerRequestMarshaller().marshall(super.beforeMarshalling(associateDataShareConsumerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateDataShareConsumer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AssociateDataShareConsumerResult> responseHandler = new StaxResponseHandler<AssociateDataShareConsumerResult>(
+                    new AssociateDataShareConsumerResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Adds an inbound (ingress) rule to an Amazon Redshift security group. Depending on whether the application
      * accessing your cluster is running on the Internet or an Amazon EC2 instance, you can authorize inbound access to
      * either a Classless Interdomain Routing (CIDR)/Internet Protocol (IP) range or to an Amazon EC2 security group.
@@ -572,7 +635,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * <p>
      * If you authorize access to an Amazon EC2 security group, specify <i>EC2SecurityGroupName</i> and
      * <i>EC2SecurityGroupOwnerId</i>. The Amazon EC2 security group and Amazon Redshift cluster must be in the same
-     * Region.
+     * Amazon Web Services Region.
      * </p>
      * <p>
      * If you authorize access to a CIDR/IP address range, specify <i>CIDRIP</i>. For an overview of CIDR blocks, see
@@ -637,6 +700,65 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
             StaxResponseHandler<ClusterSecurityGroup> responseHandler = new StaxResponseHandler<ClusterSecurityGroup>(
                     new ClusterSecurityGroupStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * From a data producer account, authorizes the sharing of a datashare with one or more consumer accounts. To
+     * authorize a datashare for a data consumer, the producer account must have the correct access privileges.
+     * </p>
+     * 
+     * @param authorizeDataShareRequest
+     * @return Result of the AuthorizeDataShare operation returned by the service.
+     * @throws InvalidDataShareException
+     *         There is an error with the datashare.
+     * @sample AmazonRedshift.AuthorizeDataShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/AuthorizeDataShare" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public AuthorizeDataShareResult authorizeDataShare(AuthorizeDataShareRequest request) {
+        request = beforeClientExecution(request);
+        return executeAuthorizeDataShare(request);
+    }
+
+    @SdkInternalApi
+    final AuthorizeDataShareResult executeAuthorizeDataShare(AuthorizeDataShareRequest authorizeDataShareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(authorizeDataShareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AuthorizeDataShareRequest> request = null;
+        Response<AuthorizeDataShareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AuthorizeDataShareRequestMarshaller().marshall(super.beforeMarshalling(authorizeDataShareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AuthorizeDataShare");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<AuthorizeDataShareResult> responseHandler = new StaxResponseHandler<AuthorizeDataShareResult>(
+                    new AuthorizeDataShareResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -718,7 +840,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Authorizes the specified account to restore the specified snapshot.
+     * Authorizes the specified Amazon Web Services account to restore the specified snapshot.
      * </p>
      * <p>
      * For more information about working with snapshots, go to <a
@@ -1068,7 +1190,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         string and maximum number of authentication profiles is determined by a quota for your account.
      * @throws InvalidAuthenticationProfileRequestException
      *         The authentication profile request is not valid. The profile name can't be null or empty. The
-     *         authentication profile API operation must be available in the Region.
+     *         authentication profile API operation must be available in the Amazon Web Services Region.
      * @sample AmazonRedshift.CreateAuthenticationProfile
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/CreateAuthenticationProfile"
      *      target="_top">AWS API Documentation</a>
@@ -1637,9 +1759,9 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * If you specify both the source type and source IDs, such as source type = cluster and source identifier =
      * my-cluster-1, notifications will be sent for all the cluster events for my-cluster-1. If you specify a source
      * type but do not specify a source identifier, you will receive notice of the events for the objects of that type
-     * in your account. If you do not specify either the SourceType nor the SourceIdentifier, you will be notified of
-     * events generated from all Amazon Redshift sources belonging to your account. You must specify a source type if
-     * you specify a source ID.
+     * in your Amazon Web Services account. If you do not specify either the SourceType nor the SourceIdentifier, you
+     * will be notified of events generated from all Amazon Redshift sources belonging to your Amazon Web Services
+     * account. You must specify a source type if you specify a source ID.
      * </p>
      * 
      * @param createEventSubscriptionRequest
@@ -1952,7 +2074,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      * @throws SnapshotCopyGrantAlreadyExistsException
      *         The snapshot copy grant can't be created because a grant with the same name already exists.
      * @throws SnapshotCopyGrantQuotaExceededException
-     *         The account has exceeded the maximum number of snapshot copy grants in this region.
+     *         The Amazon Web Services account has exceeded the maximum number of snapshot copy grants in this region.
      * @throws LimitExceededException
      *         The encryption key has exceeded its grant limit in Amazon Web Services KMS.
      * @throws TagLimitExceededException
@@ -2224,6 +2346,64 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * From the producer account, removes authorization from the specified datashare.
+     * </p>
+     * 
+     * @param deauthorizeDataShareRequest
+     * @return Result of the DeauthorizeDataShare operation returned by the service.
+     * @throws InvalidDataShareException
+     *         There is an error with the datashare.
+     * @sample AmazonRedshift.DeauthorizeDataShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeauthorizeDataShare" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeauthorizeDataShareResult deauthorizeDataShare(DeauthorizeDataShareRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeauthorizeDataShare(request);
+    }
+
+    @SdkInternalApi
+    final DeauthorizeDataShareResult executeDeauthorizeDataShare(DeauthorizeDataShareRequest deauthorizeDataShareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deauthorizeDataShareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeauthorizeDataShareRequest> request = null;
+        Response<DeauthorizeDataShareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeauthorizeDataShareRequestMarshaller().marshall(super.beforeMarshalling(deauthorizeDataShareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeauthorizeDataShare");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeauthorizeDataShareResult> responseHandler = new StaxResponseHandler<DeauthorizeDataShareResult>(
+                    new DeauthorizeDataShareResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes an authentication profile.
      * </p>
      * 
@@ -2233,7 +2413,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The authentication profile can't be found.
      * @throws InvalidAuthenticationProfileRequestException
      *         The authentication profile request is not valid. The profile name can't be null or empty. The
-     *         authentication profile API operation must be available in the Region.
+     *         authentication profile API operation must be available in the Amazon Web Services Region.
      * @sample AmazonRedshift.DeleteAuthenticationProfile
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DeleteAuthenticationProfile"
      *      target="_top">AWS API Documentation</a>
@@ -3314,7 +3494,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         The authentication profile can't be found.
      * @throws InvalidAuthenticationProfileRequestException
      *         The authentication profile request is not valid. The profile name can't be null or empty. The
-     *         authentication profile API operation must be available in the Region.
+     *         authentication profile API operation must be available in the Amazon Web Services Region.
      * @sample AmazonRedshift.DescribeAuthenticationProfiles
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeAuthenticationProfiles"
      *      target="_top">AWS API Documentation</a>
@@ -3661,8 +3841,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
     /**
      * <p>
      * Returns one or more snapshot objects, which contain metadata about your cluster snapshots. By default, this
-     * operation returns information about all snapshots of all clusters that are owned by your account. No information
-     * is returned for snapshots owned by inactive accounts.
+     * operation returns information about all snapshots of all clusters that are owned by your Amazon Web Services
+     * account. No information is returned for snapshots owned by inactive Amazon Web Services accounts.
      * </p>
      * <p>
      * If you specify both tag keys and tag values in the same request, Amazon Redshift returns all snapshots that match
@@ -3741,7 +3921,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
     /**
      * <p>
      * Returns one or more cluster subnet group objects, which contain metadata about your cluster subnet groups. By
-     * default, this operation returns information about all cluster subnet groups that are defined in your account.
+     * default, this operation returns information about all cluster subnet groups that are defined in your Amazon Web
+     * Services account.
      * </p>
      * <p>
      * If you specify both tag keys and tag values in the same request, Amazon Redshift returns all subnet groups that
@@ -4015,6 +4196,180 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
     @Override
     public DescribeClustersResult describeClusters() {
         return describeClusters(new DescribeClustersRequest());
+    }
+
+    /**
+     * <p>
+     * Shows the status of any inbound or outbound datashares available in the specified account.
+     * </p>
+     * 
+     * @param describeDataSharesRequest
+     * @return Result of the DescribeDataShares operation returned by the service.
+     * @throws InvalidDataShareException
+     *         There is an error with the datashare.
+     * @sample AmazonRedshift.DescribeDataShares
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeDataShares" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeDataSharesResult describeDataShares(DescribeDataSharesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDataShares(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDataSharesResult executeDescribeDataShares(DescribeDataSharesRequest describeDataSharesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDataSharesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDataSharesRequest> request = null;
+        Response<DescribeDataSharesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDataSharesRequestMarshaller().marshall(super.beforeMarshalling(describeDataSharesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDataShares");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeDataSharesResult> responseHandler = new StaxResponseHandler<DescribeDataSharesResult>(
+                    new DescribeDataSharesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of datashares where the account identifier being called is a consumer account identifier.
+     * </p>
+     * 
+     * @param describeDataSharesForConsumerRequest
+     * @return Result of the DescribeDataSharesForConsumer operation returned by the service.
+     * @throws InvalidNamespaceException
+     *         The namespace isn't valid because the namespace doesn't exist. Provide a valid namespace.
+     * @sample AmazonRedshift.DescribeDataSharesForConsumer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeDataSharesForConsumer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeDataSharesForConsumerResult describeDataSharesForConsumer(DescribeDataSharesForConsumerRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDataSharesForConsumer(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDataSharesForConsumerResult executeDescribeDataSharesForConsumer(DescribeDataSharesForConsumerRequest describeDataSharesForConsumerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDataSharesForConsumerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDataSharesForConsumerRequest> request = null;
+        Response<DescribeDataSharesForConsumerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDataSharesForConsumerRequestMarshaller().marshall(super.beforeMarshalling(describeDataSharesForConsumerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDataSharesForConsumer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeDataSharesForConsumerResult> responseHandler = new StaxResponseHandler<DescribeDataSharesForConsumerResult>(
+                    new DescribeDataSharesForConsumerResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a list of datashares when the account identifier being called is a producer account identifier.
+     * </p>
+     * 
+     * @param describeDataSharesForProducerRequest
+     * @return Result of the DescribeDataSharesForProducer operation returned by the service.
+     * @throws InvalidNamespaceException
+     *         The namespace isn't valid because the namespace doesn't exist. Provide a valid namespace.
+     * @sample AmazonRedshift.DescribeDataSharesForProducer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeDataSharesForProducer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeDataSharesForProducerResult describeDataSharesForProducer(DescribeDataSharesForProducerRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDataSharesForProducer(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDataSharesForProducerResult executeDescribeDataSharesForProducer(DescribeDataSharesForProducerRequest describeDataSharesForProducerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDataSharesForProducerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDataSharesForProducerRequest> request = null;
+        Response<DescribeDataSharesForProducerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDataSharesForProducerRequestMarshaller().marshall(super.beforeMarshalling(describeDataSharesForProducerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDataSharesForProducer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeDataSharesForProducerResult> responseHandler = new StaxResponseHandler<DescribeDataSharesForProducerResult>(
+                    new DescribeDataSharesForProducerResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -4406,7 +4761,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
     /**
      * <p>
      * Returns information about the specified HSM client certificate. If no certificate ID is specified, returns
-     * information about all the HSM certificates owned by your account.
+     * information about all the HSM certificates owned by your Amazon Web Services account.
      * </p>
      * <p>
      * If you specify both tag keys and tag values in the same request, Amazon Redshift returns all HSM client
@@ -4482,7 +4837,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
     /**
      * <p>
      * Returns information about the specified Amazon Redshift HSM configuration. If no configuration ID is specified,
-     * returns information about all the HSM configurations owned by your account.
+     * returns information about all the HSM configurations owned by your Amazon Web Services account.
      * </p>
      * <p>
      * If you specify both tag keys and tag values in the same request, Amazon Redshift returns all HSM connections that
@@ -4684,10 +5039,10 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
     /**
      * <p>
      * Returns a list of orderable cluster options. Before you create a new cluster you can use this operation to find
-     * what options are available, such as the EC2 Availability Zones (AZ) in the specific Region that you can specify,
-     * and the node types you can request. The node types differ by available storage, memory, CPU and price. With the
-     * cost involved you might want to obtain a list of cluster options in the specific region and specify values when
-     * creating a cluster. For more information about managing clusters, go to <a
+     * what options are available, such as the EC2 Availability Zones (AZ) in the specific Amazon Web Services Region
+     * that you can specify, and the node types you can request. The node types differ by available storage, memory, CPU
+     * and price. With the cost involved you might want to obtain a list of cluster options in the specific region and
+     * specify values when creating a cluster. For more information about managing clusters, go to <a
      * href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html">Amazon Redshift Clusters</a>
      * in the <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
@@ -5080,7 +5435,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Returns a list of snapshot copy grants owned by the account in the destination region.
+     * Returns a list of snapshot copy grants owned by the Amazon Web Services account in the destination region.
      * </p>
      * <p>
      * For more information about managing snapshot copy grants, go to <a
@@ -5641,6 +5996,66 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * From a consumer account, remove association for the specified datashare.
+     * </p>
+     * 
+     * @param disassociateDataShareConsumerRequest
+     * @return Result of the DisassociateDataShareConsumer operation returned by the service.
+     * @throws InvalidDataShareException
+     *         There is an error with the datashare.
+     * @throws InvalidNamespaceException
+     *         The namespace isn't valid because the namespace doesn't exist. Provide a valid namespace.
+     * @sample AmazonRedshift.DisassociateDataShareConsumer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DisassociateDataShareConsumer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateDataShareConsumerResult disassociateDataShareConsumer(DisassociateDataShareConsumerRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateDataShareConsumer(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateDataShareConsumerResult executeDisassociateDataShareConsumer(DisassociateDataShareConsumerRequest disassociateDataShareConsumerRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateDataShareConsumerRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateDataShareConsumerRequest> request = null;
+        Response<DisassociateDataShareConsumerResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateDataShareConsumerRequestMarshaller().marshall(super.beforeMarshalling(disassociateDataShareConsumerRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateDataShareConsumer");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisassociateDataShareConsumerResult> responseHandler = new StaxResponseHandler<DisassociateDataShareConsumerResult>(
+                    new DisassociateDataShareConsumerResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Starts logging information, such as queries and connection attempts, for the specified Amazon Redshift cluster.
      * </p>
      * 
@@ -6024,7 +6439,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         string and maximum number of authentication profiles is determined by a quota for your account.
      * @throws InvalidAuthenticationProfileRequestException
      *         The authentication profile request is not valid. The profile name can't be null or empty. The
-     *         authentication profile API operation must be available in the Region.
+     *         authentication profile API operation must be available in the Amazon Web Services Region.
      * @sample AmazonRedshift.ModifyAuthenticationProfile
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ModifyAuthenticationProfile"
      *      target="_top">AWS API Documentation</a>
@@ -6370,7 +6785,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Modifies the parameters of a parameter group.
+     * Modifies the parameters of a parameter group. For the parameters parameter, it can't contain ASCII characters.
      * </p>
      * <p>
      * For more information about parameters and parameter groups, go to <a
@@ -6849,11 +7264,12 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Modifies the number of days to retain snapshots in the destination Region after they are copied from the source
-     * Region. By default, this operation only changes the retention period of copied automated snapshots. The retention
-     * periods for both new and existing copied automated snapshots are updated with the new retention period. You can
-     * set the manual option to change only the retention periods of copied manual snapshots. If you set this option,
-     * only newly copied manual snapshots have the new retention period.
+     * Modifies the number of days to retain snapshots in the destination Amazon Web Services Region after they are
+     * copied from the source Amazon Web Services Region. By default, this operation only changes the retention period
+     * of copied automated snapshots. The retention periods for both new and existing copied automated snapshots are
+     * updated with the new retention period. You can set the manual option to change only the retention periods of
+     * copied manual snapshots. If you set this option, only newly copied manual snapshots have the new retention
+     * period.
      * </p>
      * 
      * @param modifySnapshotCopyRetentionPeriodRequest
@@ -7229,6 +7645,64 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
             }
 
             StaxResponseHandler<Cluster> responseHandler = new StaxResponseHandler<Cluster>(new ClusterStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * From the consumer account, rejects the specified datashare.
+     * </p>
+     * 
+     * @param rejectDataShareRequest
+     * @return Result of the RejectDataShare operation returned by the service.
+     * @throws InvalidDataShareException
+     *         There is an error with the datashare.
+     * @sample AmazonRedshift.RejectDataShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RejectDataShare" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public RejectDataShareResult rejectDataShare(RejectDataShareRequest request) {
+        request = beforeClientExecution(request);
+        return executeRejectDataShare(request);
+    }
+
+    @SdkInternalApi
+    final RejectDataShareResult executeRejectDataShare(RejectDataShareRequest rejectDataShareRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(rejectDataShareRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RejectDataShareRequest> request = null;
+        Response<RejectDataShareResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RejectDataShareRequestMarshaller().marshall(super.beforeMarshalling(rejectDataShareRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RejectDataShare");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<RejectDataShareResult> responseHandler = new StaxResponseHandler<RejectDataShareResult>(
+                    new RejectDataShareResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -7855,8 +8329,8 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Removes the ability of the specified account to restore the specified snapshot. If the account is currently
-     * restoring the snapshot, the restore will run to completion.
+     * Removes the ability of the specified Amazon Web Services account to restore the specified snapshot. If the
+     * account is currently restoring the snapshot, the restore will run to completion.
      * </p>
      * <p>
      * For more information about working with snapshots, go to <a

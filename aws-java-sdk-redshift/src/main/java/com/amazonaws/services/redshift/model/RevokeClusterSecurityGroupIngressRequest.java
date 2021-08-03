@@ -49,8 +49,8 @@ public class RevokeClusterSecurityGroupIngressRequest extends com.amazonaws.Amaz
     private String eC2SecurityGroupName;
     /**
      * <p>
-     * The account number of the owner of the security group specified in the <code>EC2SecurityGroupName</code>
-     * parameter. The Amazon Web Services access key ID is not an acceptable value. If
+     * The Amazon Web Services account number of the owner of the security group specified in the
+     * <code>EC2SecurityGroupName</code> parameter. The Amazon Web Services access key ID is not an acceptable value. If
      * <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also be provided. and
      * <code>CIDRIP</code> cannot be provided.
      * </p>
@@ -203,8 +203,8 @@ public class RevokeClusterSecurityGroupIngressRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The account number of the owner of the security group specified in the <code>EC2SecurityGroupName</code>
-     * parameter. The Amazon Web Services access key ID is not an acceptable value. If
+     * The Amazon Web Services account number of the owner of the security group specified in the
+     * <code>EC2SecurityGroupName</code> parameter. The Amazon Web Services access key ID is not an acceptable value. If
      * <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also be provided. and
      * <code>CIDRIP</code> cannot be provided.
      * </p>
@@ -213,10 +213,10 @@ public class RevokeClusterSecurityGroupIngressRequest extends com.amazonaws.Amaz
      * </p>
      * 
      * @param eC2SecurityGroupOwnerId
-     *        The account number of the owner of the security group specified in the <code>EC2SecurityGroupName</code>
-     *        parameter. The Amazon Web Services access key ID is not an acceptable value. If
-     *        <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also be
-     *        provided. and <code>CIDRIP</code> cannot be provided. </p>
+     *        The Amazon Web Services account number of the owner of the security group specified in the
+     *        <code>EC2SecurityGroupName</code> parameter. The Amazon Web Services access key ID is not an acceptable
+     *        value. If <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also
+     *        be provided. and <code>CIDRIP</code> cannot be provided. </p>
      *        <p>
      *        Example: <code>111122223333</code>
      */
@@ -227,8 +227,8 @@ public class RevokeClusterSecurityGroupIngressRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The account number of the owner of the security group specified in the <code>EC2SecurityGroupName</code>
-     * parameter. The Amazon Web Services access key ID is not an acceptable value. If
+     * The Amazon Web Services account number of the owner of the security group specified in the
+     * <code>EC2SecurityGroupName</code> parameter. The Amazon Web Services access key ID is not an acceptable value. If
      * <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also be provided. and
      * <code>CIDRIP</code> cannot be provided.
      * </p>
@@ -236,10 +236,10 @@ public class RevokeClusterSecurityGroupIngressRequest extends com.amazonaws.Amaz
      * Example: <code>111122223333</code>
      * </p>
      * 
-     * @return The account number of the owner of the security group specified in the <code>EC2SecurityGroupName</code>
-     *         parameter. The Amazon Web Services access key ID is not an acceptable value. If
-     *         <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also be
-     *         provided. and <code>CIDRIP</code> cannot be provided. </p>
+     * @return The Amazon Web Services account number of the owner of the security group specified in the
+     *         <code>EC2SecurityGroupName</code> parameter. The Amazon Web Services access key ID is not an acceptable
+     *         value. If <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also
+     *         be provided. and <code>CIDRIP</code> cannot be provided. </p>
      *         <p>
      *         Example: <code>111122223333</code>
      */
@@ -250,8 +250,8 @@ public class RevokeClusterSecurityGroupIngressRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The account number of the owner of the security group specified in the <code>EC2SecurityGroupName</code>
-     * parameter. The Amazon Web Services access key ID is not an acceptable value. If
+     * The Amazon Web Services account number of the owner of the security group specified in the
+     * <code>EC2SecurityGroupName</code> parameter. The Amazon Web Services access key ID is not an acceptable value. If
      * <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also be provided. and
      * <code>CIDRIP</code> cannot be provided.
      * </p>
@@ -260,10 +260,10 @@ public class RevokeClusterSecurityGroupIngressRequest extends com.amazonaws.Amaz
      * </p>
      * 
      * @param eC2SecurityGroupOwnerId
-     *        The account number of the owner of the security group specified in the <code>EC2SecurityGroupName</code>
-     *        parameter. The Amazon Web Services access key ID is not an acceptable value. If
-     *        <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also be
-     *        provided. and <code>CIDRIP</code> cannot be provided. </p>
+     *        The Amazon Web Services account number of the owner of the security group specified in the
+     *        <code>EC2SecurityGroupName</code> parameter. The Amazon Web Services access key ID is not an acceptable
+     *        value. If <code>EC2SecurityGroupOwnerId</code> is specified, <code>EC2SecurityGroupName</code> must also
+     *        be provided. and <code>CIDRIP</code> cannot be provided. </p>
      *        <p>
      *        Example: <code>111122223333</code>
      * @return Returns a reference to this object so that method calls can be chained together.

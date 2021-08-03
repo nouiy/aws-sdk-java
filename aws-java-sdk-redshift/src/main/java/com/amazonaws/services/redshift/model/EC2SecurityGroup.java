@@ -40,7 +40,8 @@ public class EC2SecurityGroup implements Serializable, Cloneable {
     private String eC2SecurityGroupName;
     /**
      * <p>
-     * The account ID of the owner of the EC2 security group specified in the <code>EC2SecurityGroupName</code> field.
+     * The Amazon Web Services account ID of the owner of the EC2 security group specified in the
+     * <code>EC2SecurityGroupName</code> field.
      * </p>
      */
     private String eC2SecurityGroupOwnerId;
@@ -133,12 +134,13 @@ public class EC2SecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The account ID of the owner of the EC2 security group specified in the <code>EC2SecurityGroupName</code> field.
+     * The Amazon Web Services account ID of the owner of the EC2 security group specified in the
+     * <code>EC2SecurityGroupName</code> field.
      * </p>
      * 
      * @param eC2SecurityGroupOwnerId
-     *        The account ID of the owner of the EC2 security group specified in the <code>EC2SecurityGroupName</code>
-     *        field.
+     *        The Amazon Web Services account ID of the owner of the EC2 security group specified in the
+     *        <code>EC2SecurityGroupName</code> field.
      */
 
     public void setEC2SecurityGroupOwnerId(String eC2SecurityGroupOwnerId) {
@@ -147,11 +149,12 @@ public class EC2SecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The account ID of the owner of the EC2 security group specified in the <code>EC2SecurityGroupName</code> field.
+     * The Amazon Web Services account ID of the owner of the EC2 security group specified in the
+     * <code>EC2SecurityGroupName</code> field.
      * </p>
      * 
-     * @return The account ID of the owner of the EC2 security group specified in the <code>EC2SecurityGroupName</code>
-     *         field.
+     * @return The Amazon Web Services account ID of the owner of the EC2 security group specified in the
+     *         <code>EC2SecurityGroupName</code> field.
      */
 
     public String getEC2SecurityGroupOwnerId() {
@@ -160,12 +163,13 @@ public class EC2SecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The account ID of the owner of the EC2 security group specified in the <code>EC2SecurityGroupName</code> field.
+     * The Amazon Web Services account ID of the owner of the EC2 security group specified in the
+     * <code>EC2SecurityGroupName</code> field.
      * </p>
      * 
      * @param eC2SecurityGroupOwnerId
-     *        The account ID of the owner of the EC2 security group specified in the <code>EC2SecurityGroupName</code>
-     *        field.
+     *        The Amazon Web Services account ID of the owner of the EC2 security group specified in the
+     *        <code>EC2SecurityGroupName</code> field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

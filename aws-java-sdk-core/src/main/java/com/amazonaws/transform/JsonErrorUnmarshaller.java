@@ -20,7 +20,8 @@ import com.amazonaws.annotation.ThreadSafe;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy.PascalCaseStrategy;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.node.NullNode;
 
 /**
@@ -33,11 +34,21 @@ public class JsonErrorUnmarshaller extends AbstractErrorUnmarshaller<JsonNode> {
     public static final JsonErrorUnmarshaller DEFAULT_UNMARSHALLER = new JsonErrorUnmarshaller(
             AmazonServiceException.class, null);
 
-    private static final ObjectMapper MAPPER = new ObjectMapper().configure(
-            DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false).setPropertyNamingStrategy(
-            new PascalCaseStrategy());
+    private static final ObjectMapper MAPPER;
 
     private final String handledErrorCode;
+
+    static {
+        MAPPER = new ObjectMapper();
+        MAPPER.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        try {
+            MAPPER.setPropertyNamingStrategy(PropertyNamingStrategies.UPPER_CAMEL_CASE);
+        } catch (LinkageError e) {
+            // If a customer is using an older Jackson version than 2.12.x, fall back to the old (deprecated)
+            // name for the same property that might cause deadlocks.
+            MAPPER.setPropertyNamingStrategy(PropertyNamingStrategy.PASCAL_CASE_TO_CAMEL_CASE);
+        }
+    }
 
     /**
      * @param exceptionClass   Exception class this unmarshaller will attempt to deserialize error response into

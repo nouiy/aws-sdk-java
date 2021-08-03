@@ -1378,6 +1378,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         The operation timed out.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
      * @sample AWSGlue.CreateDatabase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateDatabase" target="_top">AWS API
      *      Documentation</a>
@@ -2081,6 +2083,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         The operation timed out.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
      * @sample AWSGlue.CreateTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateTable" target="_top">AWS API
      *      Documentation</a>
@@ -2688,6 +2692,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         An internal service error occurred.
      * @throws OperationTimeoutException
      *         The operation timed out.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
      * @sample AWSGlue.DeleteDatabase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteDatabase" target="_top">AWS API
      *      Documentation</a>
@@ -3426,6 +3432,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         An internal service error occurred.
      * @throws OperationTimeoutException
      *         The operation timed out.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
      * @sample AWSGlue.DeleteTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteTable" target="_top">AWS API
      *      Documentation</a>
@@ -9845,6 +9853,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         The operation timed out.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
      * @sample AWSGlue.UpdateDatabase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateDatabase" target="_top">AWS API
      *      Documentation</a>

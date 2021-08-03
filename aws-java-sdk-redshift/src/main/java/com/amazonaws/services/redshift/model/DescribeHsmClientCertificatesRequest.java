@@ -29,7 +29,7 @@ public class DescribeHsmClientCertificatesRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The identifier of a specific HSM client certificate for which you want information. If no identifier is
-     * specified, information is returned for all HSM client certificates owned by your account.
+     * specified, information is returned for all HSM client certificates owned by your Amazon Web Services account.
      * </p>
      */
     private String hsmClientCertificateIdentifier;
@@ -81,12 +81,13 @@ public class DescribeHsmClientCertificatesRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The identifier of a specific HSM client certificate for which you want information. If no identifier is
-     * specified, information is returned for all HSM client certificates owned by your account.
+     * specified, information is returned for all HSM client certificates owned by your Amazon Web Services account.
      * </p>
      * 
      * @param hsmClientCertificateIdentifier
      *        The identifier of a specific HSM client certificate for which you want information. If no identifier is
-     *        specified, information is returned for all HSM client certificates owned by your account.
+     *        specified, information is returned for all HSM client certificates owned by your Amazon Web Services
+     *        account.
      */
 
     public void setHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
@@ -96,11 +97,12 @@ public class DescribeHsmClientCertificatesRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The identifier of a specific HSM client certificate for which you want information. If no identifier is
-     * specified, information is returned for all HSM client certificates owned by your account.
+     * specified, information is returned for all HSM client certificates owned by your Amazon Web Services account.
      * </p>
      * 
      * @return The identifier of a specific HSM client certificate for which you want information. If no identifier is
-     *         specified, information is returned for all HSM client certificates owned by your account.
+     *         specified, information is returned for all HSM client certificates owned by your Amazon Web Services
+     *         account.
      */
 
     public String getHsmClientCertificateIdentifier() {
@@ -110,12 +112,13 @@ public class DescribeHsmClientCertificatesRequest extends com.amazonaws.AmazonWe
     /**
      * <p>
      * The identifier of a specific HSM client certificate for which you want information. If no identifier is
-     * specified, information is returned for all HSM client certificates owned by your account.
+     * specified, information is returned for all HSM client certificates owned by your Amazon Web Services account.
      * </p>
      * 
      * @param hsmClientCertificateIdentifier
      *        The identifier of a specific HSM client certificate for which you want information. If no identifier is
-     *        specified, information is returned for all HSM client certificates owned by your account.
+     *        specified, information is returned for all HSM client certificates owned by your Amazon Web Services
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

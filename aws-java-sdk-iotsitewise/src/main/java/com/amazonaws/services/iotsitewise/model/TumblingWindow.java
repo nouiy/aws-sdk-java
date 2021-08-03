@@ -19,8 +19,18 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains a tumbling window, which is a repeating fixed-sized, non-overlapping, and contiguous time interval. This
- * window is used in metric and aggregation computations.
+ * Contains a tumbling window, which is a repeating fixed-sized, non-overlapping, and contiguous time window. You use
+ * this window in metrics to aggregate data from properties and other assets.
+ * </p>
+ * <p>
+ * You can use <code>m</code>, <code>h</code>, <code>d</code>, and <code>w</code> when you specify an interval or
+ * offset. Note that <code>m</code> represents minutes, and <code>w</code> represents weeks. You can also use
+ * <code>s</code> to represent seconds in <code>offset</code>.
+ * </p>
+ * <p>
+ * The <code>interval</code> and <code>offset</code> parameters support the <a
+ * href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 format</a>. For example, <code>PT5S</code> represents five
+ * seconds, <code>PT5M</code> represents five minutes, and <code>PT5H</code> represents five hours.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/TumblingWindow" target="_top">AWS API
@@ -31,10 +41,12 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time interval for the tumbling window. Note that <code>w</code> represents weeks, <code>d</code> represents
-     * days, <code>h</code> represents hours, and <code>m</code> represents minutes. IoT SiteWise computes the
-     * <code>1w</code> interval the end of Sunday at midnight each week (UTC), the <code>1d</code> interval at the end
-     * of each day at midnight (UTC), the <code>1h</code> interval at the end of each hour, and so on.
+     * The time interval for the tumbling window. The interval time must be between 1 minute and 1 week.
+     * </p>
+     * <p>
+     * IoT SiteWise computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the
+     * <code>1d</code> interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the end of
+     * each hour, and so on.
      * </p>
      * <p>
      * When IoT SiteWise aggregates data points for metric computations, the start of each interval is exclusive and the
@@ -42,13 +54,102 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String interval;
+    /**
+     * <p>
+     * The offset for the tumbling window. The <code>offset</code> parameter accepts the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The offset time.
+     * </p>
+     * <p>
+     * For example, if you specify <code>18h</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * The ISO 8601 format.
+     * </p>
+     * <p>
+     * For example, if you specify <code>PT18H</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * The 24-hour clock.
+     * </p>
+     * <p>
+     * For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
+     * <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at 2:03
+     * p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The offset time zone.
+     * </p>
+     * <p>
+     * For example, if you specify <code>2021-07-23T18:00-08</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     */
+    private String offset;
 
     /**
      * <p>
-     * The time interval for the tumbling window. Note that <code>w</code> represents weeks, <code>d</code> represents
-     * days, <code>h</code> represents hours, and <code>m</code> represents minutes. IoT SiteWise computes the
-     * <code>1w</code> interval the end of Sunday at midnight each week (UTC), the <code>1d</code> interval at the end
-     * of each day at midnight (UTC), the <code>1h</code> interval at the end of each hour, and so on.
+     * The time interval for the tumbling window. The interval time must be between 1 minute and 1 week.
+     * </p>
+     * <p>
+     * IoT SiteWise computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the
+     * <code>1d</code> interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the end of
+     * each hour, and so on.
      * </p>
      * <p>
      * When IoT SiteWise aggregates data points for metric computations, the start of each interval is exclusive and the
@@ -56,11 +157,12 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param interval
-     *        The time interval for the tumbling window. Note that <code>w</code> represents weeks, <code>d</code>
-     *        represents days, <code>h</code> represents hours, and <code>m</code> represents minutes. IoT SiteWise
-     *        computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the <code>1d</code>
-     *        interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the end of each hour,
-     *        and so on. </p>
+     *        The time interval for the tumbling window. The interval time must be between 1 minute and 1 week.</p>
+     *        <p>
+     *        IoT SiteWise computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the
+     *        <code>1d</code> interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the end
+     *        of each hour, and so on.
+     *        </p>
      *        <p>
      *        When IoT SiteWise aggregates data points for metric computations, the start of each interval is exclusive
      *        and the end of each interval is inclusive. IoT SiteWise places the computed data point at the end of the
@@ -73,21 +175,24 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time interval for the tumbling window. Note that <code>w</code> represents weeks, <code>d</code> represents
-     * days, <code>h</code> represents hours, and <code>m</code> represents minutes. IoT SiteWise computes the
-     * <code>1w</code> interval the end of Sunday at midnight each week (UTC), the <code>1d</code> interval at the end
-     * of each day at midnight (UTC), the <code>1h</code> interval at the end of each hour, and so on.
+     * The time interval for the tumbling window. The interval time must be between 1 minute and 1 week.
+     * </p>
+     * <p>
+     * IoT SiteWise computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the
+     * <code>1d</code> interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the end of
+     * each hour, and so on.
      * </p>
      * <p>
      * When IoT SiteWise aggregates data points for metric computations, the start of each interval is exclusive and the
      * end of each interval is inclusive. IoT SiteWise places the computed data point at the end of the interval.
      * </p>
      * 
-     * @return The time interval for the tumbling window. Note that <code>w</code> represents weeks, <code>d</code>
-     *         represents days, <code>h</code> represents hours, and <code>m</code> represents minutes. IoT SiteWise
-     *         computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the <code>1d</code>
-     *         interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the end of each hour,
-     *         and so on. </p>
+     * @return The time interval for the tumbling window. The interval time must be between 1 minute and 1 week.</p>
+     *         <p>
+     *         IoT SiteWise computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the
+     *         <code>1d</code> interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the
+     *         end of each hour, and so on.
+     *         </p>
      *         <p>
      *         When IoT SiteWise aggregates data points for metric computations, the start of each interval is exclusive
      *         and the end of each interval is inclusive. IoT SiteWise places the computed data point at the end of the
@@ -100,10 +205,12 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time interval for the tumbling window. Note that <code>w</code> represents weeks, <code>d</code> represents
-     * days, <code>h</code> represents hours, and <code>m</code> represents minutes. IoT SiteWise computes the
-     * <code>1w</code> interval the end of Sunday at midnight each week (UTC), the <code>1d</code> interval at the end
-     * of each day at midnight (UTC), the <code>1h</code> interval at the end of each hour, and so on.
+     * The time interval for the tumbling window. The interval time must be between 1 minute and 1 week.
+     * </p>
+     * <p>
+     * IoT SiteWise computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the
+     * <code>1d</code> interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the end of
+     * each hour, and so on.
      * </p>
      * <p>
      * When IoT SiteWise aggregates data points for metric computations, the start of each interval is exclusive and the
@@ -111,11 +218,12 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param interval
-     *        The time interval for the tumbling window. Note that <code>w</code> represents weeks, <code>d</code>
-     *        represents days, <code>h</code> represents hours, and <code>m</code> represents minutes. IoT SiteWise
-     *        computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the <code>1d</code>
-     *        interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the end of each hour,
-     *        and so on. </p>
+     *        The time interval for the tumbling window. The interval time must be between 1 minute and 1 week.</p>
+     *        <p>
+     *        IoT SiteWise computes the <code>1w</code> interval the end of Sunday at midnight each week (UTC), the
+     *        <code>1d</code> interval at the end of each day at midnight (UTC), the <code>1h</code> interval at the end
+     *        of each hour, and so on.
+     *        </p>
      *        <p>
      *        When IoT SiteWise aggregates data points for metric computations, the start of each interval is exclusive
      *        and the end of each interval is inclusive. IoT SiteWise places the computed data point at the end of the
@@ -125,6 +233,529 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
 
     public TumblingWindow withInterval(String interval) {
         setInterval(interval);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The offset for the tumbling window. The <code>offset</code> parameter accepts the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The offset time.
+     * </p>
+     * <p>
+     * For example, if you specify <code>18h</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * The ISO 8601 format.
+     * </p>
+     * <p>
+     * For example, if you specify <code>PT18H</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * The 24-hour clock.
+     * </p>
+     * <p>
+     * For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
+     * <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at 2:03
+     * p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The offset time zone.
+     * </p>
+     * <p>
+     * For example, if you specify <code>2021-07-23T18:00-08</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param offset
+     *        The offset for the tumbling window. The <code>offset</code> parameter accepts the following:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The offset time.
+     *        </p>
+     *        <p>
+     *        For example, if you specify <code>18h</code> for <code>offset</code> and <code>1d</code> for
+     *        <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
+     *        (UTC) on the day when you create the metric.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
+     *        next day.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The ISO 8601 format.
+     *        </p>
+     *        <p>
+     *        For example, if you specify <code>PT18H</code> for <code>offset</code> and <code>1d</code> for
+     *        <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
+     *        (UTC) on the day when you create the metric.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
+     *        next day.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The 24-hour clock.
+     *        </p>
+     *        <p>
+     *        For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
+     *        <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at
+     *        2:03 p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The offset time zone.
+     *        </p>
+     *        <p>
+     *        For example, if you specify <code>2021-07-23T18:00-08</code> for <code>offset</code> and <code>1d</code>
+     *        for <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m.
+     *        (PST) on the day when you create the metric.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the
+     *        next day.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     */
+
+    public void setOffset(String offset) {
+        this.offset = offset;
+    }
+
+    /**
+     * <p>
+     * The offset for the tumbling window. The <code>offset</code> parameter accepts the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The offset time.
+     * </p>
+     * <p>
+     * For example, if you specify <code>18h</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * The ISO 8601 format.
+     * </p>
+     * <p>
+     * For example, if you specify <code>PT18H</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * The 24-hour clock.
+     * </p>
+     * <p>
+     * For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
+     * <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at 2:03
+     * p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The offset time zone.
+     * </p>
+     * <p>
+     * For example, if you specify <code>2021-07-23T18:00-08</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @return The offset for the tumbling window. The <code>offset</code> parameter accepts the following:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The offset time.
+     *         </p>
+     *         <p>
+     *         For example, if you specify <code>18h</code> for <code>offset</code> and <code>1d</code> for
+     *         <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
+     *         (UTC) on the day when you create the metric.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
+     *         next day.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The ISO 8601 format.
+     *         </p>
+     *         <p>
+     *         For example, if you specify <code>PT18H</code> for <code>offset</code> and <code>1d</code> for
+     *         <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
+     *         (UTC) on the day when you create the metric.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
+     *         next day.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The 24-hour clock.
+     *         </p>
+     *         <p>
+     *         For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
+     *         <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at
+     *         2:03 p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The offset time zone.
+     *         </p>
+     *         <p>
+     *         For example, if you specify <code>2021-07-23T18:00-08</code> for <code>offset</code> and <code>1d</code>
+     *         for <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m.
+     *         (PST) on the day when you create the metric.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the
+     *         next day.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     */
+
+    public String getOffset() {
+        return this.offset;
+    }
+
+    /**
+     * <p>
+     * The offset for the tumbling window. The <code>offset</code> parameter accepts the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The offset time.
+     * </p>
+     * <p>
+     * For example, if you specify <code>18h</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * The ISO 8601 format.
+     * </p>
+     * <p>
+     * For example, if you specify <code>PT18H</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * The 24-hour clock.
+     * </p>
+     * <p>
+     * For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
+     * <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at 2:03
+     * p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The offset time zone.
+     * </p>
+     * <p>
+     * For example, if you specify <code>2021-07-23T18:00-08</code> for <code>offset</code> and <code>1d</code> for
+     * <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) on
+     * the day when you create the metric.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the next
+     * day.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param offset
+     *        The offset for the tumbling window. The <code>offset</code> parameter accepts the following:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The offset time.
+     *        </p>
+     *        <p>
+     *        For example, if you specify <code>18h</code> for <code>offset</code> and <code>1d</code> for
+     *        <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
+     *        (UTC) on the day when you create the metric.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
+     *        next day.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The ISO 8601 format.
+     *        </p>
+     *        <p>
+     *        For example, if you specify <code>PT18H</code> for <code>offset</code> and <code>1d</code> for
+     *        <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
+     *        (UTC) on the day when you create the metric.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
+     *        next day.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The 24-hour clock.
+     *        </p>
+     *        <p>
+     *        For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
+     *        <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at
+     *        2:03 p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The offset time zone.
+     *        </p>
+     *        <p>
+     *        For example, if you specify <code>2021-07-23T18:00-08</code> for <code>offset</code> and <code>1d</code>
+     *        for <code>interval</code>, IoT SiteWise aggregates data in one of the following ways:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m.
+     *        (PST) on the day when you create the metric.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the
+     *        next day.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TumblingWindow withOffset(String offset) {
+        setOffset(offset);
         return this;
     }
 
@@ -141,7 +772,9 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getInterval() != null)
-            sb.append("Interval: ").append(getInterval());
+            sb.append("Interval: ").append(getInterval()).append(",");
+        if (getOffset() != null)
+            sb.append("Offset: ").append(getOffset());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +793,10 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getInterval() != null && other.getInterval().equals(this.getInterval()) == false)
             return false;
+        if (other.getOffset() == null ^ this.getOffset() == null)
+            return false;
+        if (other.getOffset() != null && other.getOffset().equals(this.getOffset()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +806,7 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getInterval() == null) ? 0 : getInterval().hashCode());
+        hashCode = prime * hashCode + ((getOffset() == null) ? 0 : getOffset().hashCode());
         return hashCode;
     }
 

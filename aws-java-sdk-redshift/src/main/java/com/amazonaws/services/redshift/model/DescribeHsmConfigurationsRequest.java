@@ -29,7 +29,7 @@ public class DescribeHsmConfigurationsRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The identifier of a specific Amazon Redshift HSM configuration to be described. If no identifier is specified,
-     * information is returned for all HSM configurations owned by your account.
+     * information is returned for all HSM configurations owned by your Amazon Web Services account.
      * </p>
      */
     private String hsmConfigurationIdentifier;
@@ -81,12 +81,12 @@ public class DescribeHsmConfigurationsRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The identifier of a specific Amazon Redshift HSM configuration to be described. If no identifier is specified,
-     * information is returned for all HSM configurations owned by your account.
+     * information is returned for all HSM configurations owned by your Amazon Web Services account.
      * </p>
      * 
      * @param hsmConfigurationIdentifier
      *        The identifier of a specific Amazon Redshift HSM configuration to be described. If no identifier is
-     *        specified, information is returned for all HSM configurations owned by your account.
+     *        specified, information is returned for all HSM configurations owned by your Amazon Web Services account.
      */
 
     public void setHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
@@ -96,11 +96,11 @@ public class DescribeHsmConfigurationsRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The identifier of a specific Amazon Redshift HSM configuration to be described. If no identifier is specified,
-     * information is returned for all HSM configurations owned by your account.
+     * information is returned for all HSM configurations owned by your Amazon Web Services account.
      * </p>
      * 
      * @return The identifier of a specific Amazon Redshift HSM configuration to be described. If no identifier is
-     *         specified, information is returned for all HSM configurations owned by your account.
+     *         specified, information is returned for all HSM configurations owned by your Amazon Web Services account.
      */
 
     public String getHsmConfigurationIdentifier() {
@@ -110,12 +110,12 @@ public class DescribeHsmConfigurationsRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The identifier of a specific Amazon Redshift HSM configuration to be described. If no identifier is specified,
-     * information is returned for all HSM configurations owned by your account.
+     * information is returned for all HSM configurations owned by your Amazon Web Services account.
      * </p>
      * 
      * @param hsmConfigurationIdentifier
      *        The identifier of a specific Amazon Redshift HSM configuration to be described. If no identifier is
-     *        specified, information is returned for all HSM configurations owned by your account.
+     *        specified, information is returned for all HSM configurations owned by your Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

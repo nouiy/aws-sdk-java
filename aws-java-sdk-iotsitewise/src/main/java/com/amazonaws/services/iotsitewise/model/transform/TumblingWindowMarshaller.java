@@ -29,6 +29,8 @@ public class TumblingWindowMarshaller {
 
     private static final MarshallingInfo<String> INTERVAL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("interval").build();
+    private static final MarshallingInfo<String> OFFSET_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("offset").build();
 
     private static final TumblingWindowMarshaller instance = new TumblingWindowMarshaller();
 
@@ -47,6 +49,7 @@ public class TumblingWindowMarshaller {
 
         try {
             protocolMarshaller.marshall(tumblingWindow.getInterval(), INTERVAL_BINDING);
+            protocolMarshaller.marshall(tumblingWindow.getOffset(), OFFSET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

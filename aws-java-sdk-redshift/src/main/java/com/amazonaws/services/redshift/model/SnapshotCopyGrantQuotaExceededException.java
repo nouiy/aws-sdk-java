@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The account has exceeded the maximum number of snapshot copy grants in this region.
+ * The Amazon Web Services account has exceeded the maximum number of snapshot copy grants in this region.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -33,7 +33,7 @@ public class DescribeEndpointAccessRequest extends com.amazonaws.AmazonWebServic
     private String clusterIdentifier;
     /**
      * <p>
-     * The account ID of the owner of the cluster.
+     * The Amazon Web Services account ID of the owner of the cluster.
      * </p>
      */
     private String resourceOwner;
@@ -108,11 +108,11 @@ public class DescribeEndpointAccessRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The account ID of the owner of the cluster.
+     * The Amazon Web Services account ID of the owner of the cluster.
      * </p>
      * 
      * @param resourceOwner
-     *        The account ID of the owner of the cluster.
+     *        The Amazon Web Services account ID of the owner of the cluster.
      */
 
     public void setResourceOwner(String resourceOwner) {
@@ -121,10 +121,10 @@ public class DescribeEndpointAccessRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The account ID of the owner of the cluster.
+     * The Amazon Web Services account ID of the owner of the cluster.
      * </p>
      * 
-     * @return The account ID of the owner of the cluster.
+     * @return The Amazon Web Services account ID of the owner of the cluster.
      */
 
     public String getResourceOwner() {
@@ -133,11 +133,11 @@ public class DescribeEndpointAccessRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The account ID of the owner of the cluster.
+     * The Amazon Web Services account ID of the owner of the cluster.
      * </p>
      * 
      * @param resourceOwner
-     *        The account ID of the owner of the cluster.
+     *        The Amazon Web Services account ID of the owner of the cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,7 +33,8 @@ public class CreateEndpointAccessRequest extends com.amazonaws.AmazonWebServiceR
     private String clusterIdentifier;
     /**
      * <p>
-     * The account ID of the owner of the cluster. This is only required if the cluster is in another account.
+     * The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is in
+     * another Amazon Web Services account.
      * </p>
      */
     private String resourceOwner;
@@ -103,11 +104,13 @@ public class CreateEndpointAccessRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The account ID of the owner of the cluster. This is only required if the cluster is in another account.
+     * The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is in
+     * another Amazon Web Services account.
      * </p>
      * 
      * @param resourceOwner
-     *        The account ID of the owner of the cluster. This is only required if the cluster is in another account.
+     *        The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is in
+     *        another Amazon Web Services account.
      */
 
     public void setResourceOwner(String resourceOwner) {
@@ -116,10 +119,12 @@ public class CreateEndpointAccessRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The account ID of the owner of the cluster. This is only required if the cluster is in another account.
+     * The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is in
+     * another Amazon Web Services account.
      * </p>
      * 
-     * @return The account ID of the owner of the cluster. This is only required if the cluster is in another account.
+     * @return The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is
+     *         in another Amazon Web Services account.
      */
 
     public String getResourceOwner() {
@@ -128,11 +133,13 @@ public class CreateEndpointAccessRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The account ID of the owner of the cluster. This is only required if the cluster is in another account.
+     * The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is in
+     * another Amazon Web Services account.
      * </p>
      * 
      * @param resourceOwner
-     *        The account ID of the owner of the cluster. This is only required if the cluster is in another account.
+     *        The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is in
+     *        another Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

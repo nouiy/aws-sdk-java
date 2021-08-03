@@ -348,6 +348,39 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateDataShareConsumerResult> associateDataShareConsumerAsync(AssociateDataShareConsumerRequest request) {
+
+        return associateDataShareConsumerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateDataShareConsumerResult> associateDataShareConsumerAsync(final AssociateDataShareConsumerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateDataShareConsumerRequest, AssociateDataShareConsumerResult> asyncHandler) {
+        final AssociateDataShareConsumerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateDataShareConsumerResult>() {
+            @Override
+            public AssociateDataShareConsumerResult call() throws Exception {
+                AssociateDataShareConsumerResult result = null;
+
+                try {
+                    result = executeAssociateDataShareConsumer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ClusterSecurityGroup> authorizeClusterSecurityGroupIngressAsync(AuthorizeClusterSecurityGroupIngressRequest request) {
 
         return authorizeClusterSecurityGroupIngressAsync(request, null);
@@ -366,6 +399,39 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
 
                 try {
                     result = executeAuthorizeClusterSecurityGroupIngress(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<AuthorizeDataShareResult> authorizeDataShareAsync(AuthorizeDataShareRequest request) {
+
+        return authorizeDataShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AuthorizeDataShareResult> authorizeDataShareAsync(final AuthorizeDataShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AuthorizeDataShareRequest, AuthorizeDataShareResult> asyncHandler) {
+        final AuthorizeDataShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AuthorizeDataShareResult>() {
+            @Override
+            public AuthorizeDataShareResult call() throws Exception {
+                AuthorizeDataShareResult result = null;
+
+                try {
+                    result = executeAuthorizeDataShare(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1059,6 +1125,39 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
 
                 try {
                     result = executeCreateUsageLimit(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeauthorizeDataShareResult> deauthorizeDataShareAsync(DeauthorizeDataShareRequest request) {
+
+        return deauthorizeDataShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeauthorizeDataShareResult> deauthorizeDataShareAsync(final DeauthorizeDataShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeauthorizeDataShareRequest, DeauthorizeDataShareResult> asyncHandler) {
+        final DeauthorizeDataShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeauthorizeDataShareResult>() {
+            @Override
+            public DeauthorizeDataShareResult call() throws Exception {
+                DeauthorizeDataShareResult result = null;
+
+                try {
+                    result = executeDeauthorizeDataShare(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2106,6 +2205,107 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
             com.amazonaws.handlers.AsyncHandler<DescribeClustersRequest, DescribeClustersResult> asyncHandler) {
 
         return describeClustersAsync(new DescribeClustersRequest(), asyncHandler);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDataSharesResult> describeDataSharesAsync(DescribeDataSharesRequest request) {
+
+        return describeDataSharesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDataSharesResult> describeDataSharesAsync(final DescribeDataSharesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDataSharesRequest, DescribeDataSharesResult> asyncHandler) {
+        final DescribeDataSharesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDataSharesResult>() {
+            @Override
+            public DescribeDataSharesResult call() throws Exception {
+                DescribeDataSharesResult result = null;
+
+                try {
+                    result = executeDescribeDataShares(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDataSharesForConsumerResult> describeDataSharesForConsumerAsync(DescribeDataSharesForConsumerRequest request) {
+
+        return describeDataSharesForConsumerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDataSharesForConsumerResult> describeDataSharesForConsumerAsync(
+            final DescribeDataSharesForConsumerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDataSharesForConsumerRequest, DescribeDataSharesForConsumerResult> asyncHandler) {
+        final DescribeDataSharesForConsumerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDataSharesForConsumerResult>() {
+            @Override
+            public DescribeDataSharesForConsumerResult call() throws Exception {
+                DescribeDataSharesForConsumerResult result = null;
+
+                try {
+                    result = executeDescribeDataSharesForConsumer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDataSharesForProducerResult> describeDataSharesForProducerAsync(DescribeDataSharesForProducerRequest request) {
+
+        return describeDataSharesForProducerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDataSharesForProducerResult> describeDataSharesForProducerAsync(
+            final DescribeDataSharesForProducerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDataSharesForProducerRequest, DescribeDataSharesForProducerResult> asyncHandler) {
+        final DescribeDataSharesForProducerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDataSharesForProducerResult>() {
+            @Override
+            public DescribeDataSharesForProducerResult call() throws Exception {
+                DescribeDataSharesForProducerResult result = null;
+
+                try {
+                    result = executeDescribeDataSharesForProducer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
     }
 
     @Override
@@ -3164,6 +3364,40 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateDataShareConsumerResult> disassociateDataShareConsumerAsync(DisassociateDataShareConsumerRequest request) {
+
+        return disassociateDataShareConsumerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateDataShareConsumerResult> disassociateDataShareConsumerAsync(
+            final DisassociateDataShareConsumerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateDataShareConsumerRequest, DisassociateDataShareConsumerResult> asyncHandler) {
+        final DisassociateDataShareConsumerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateDataShareConsumerResult>() {
+            @Override
+            public DisassociateDataShareConsumerResult call() throws Exception {
+                DisassociateDataShareConsumerResult result = null;
+
+                try {
+                    result = executeDisassociateDataShareConsumer(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<EnableLoggingResult> enableLoggingAsync(EnableLoggingRequest request) {
 
         return enableLoggingAsync(request, null);
@@ -3910,6 +4144,39 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
 
                 try {
                     result = executeRebootCluster(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RejectDataShareResult> rejectDataShareAsync(RejectDataShareRequest request) {
+
+        return rejectDataShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RejectDataShareResult> rejectDataShareAsync(final RejectDataShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RejectDataShareRequest, RejectDataShareResult> asyncHandler) {
+        final RejectDataShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RejectDataShareResult>() {
+            @Override
+            public RejectDataShareResult call() throws Exception {
+                RejectDataShareResult result = null;
+
+                try {
+                    result = executeRejectDataShare(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

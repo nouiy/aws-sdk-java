@@ -49,7 +49,7 @@ public class Event implements Serializable, Cloneable {
      * A list of the event categories.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> eventCategories;
@@ -233,12 +233,12 @@ public class Event implements Serializable, Cloneable {
      * A list of the event categories.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      * 
      * @return A list of the event categories.</p>
      *         <p>
-     *         Values: Configuration, Management, Monitoring, Security
+     *         Values: Configuration, Management, Monitoring, Security, Pending
      */
 
     public java.util.List<String> getEventCategories() {
@@ -253,13 +253,13 @@ public class Event implements Serializable, Cloneable {
      * A list of the event categories.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      * 
      * @param eventCategories
      *        A list of the event categories.</p>
      *        <p>
-     *        Values: Configuration, Management, Monitoring, Security
+     *        Values: Configuration, Management, Monitoring, Security, Pending
      */
 
     public void setEventCategories(java.util.Collection<String> eventCategories) {
@@ -276,7 +276,7 @@ public class Event implements Serializable, Cloneable {
      * A list of the event categories.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -287,7 +287,7 @@ public class Event implements Serializable, Cloneable {
      * @param eventCategories
      *        A list of the event categories.</p>
      *        <p>
-     *        Values: Configuration, Management, Monitoring, Security
+     *        Values: Configuration, Management, Monitoring, Security, Pending
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -306,13 +306,13 @@ public class Event implements Serializable, Cloneable {
      * A list of the event categories.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      * 
      * @param eventCategories
      *        A list of the event categories.</p>
      *        <p>
-     *        Values: Configuration, Management, Monitoring, Security
+     *        Values: Configuration, Management, Monitoring, Security, Pending
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

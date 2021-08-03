@@ -33,7 +33,7 @@ public class AuthorizeEndpointAccessRequest extends com.amazonaws.AmazonWebServi
     private String clusterIdentifier;
     /**
      * <p>
-     * The account ID to grant access to.
+     * The Amazon Web Services account ID to grant access to.
      * </p>
      */
     private String account;
@@ -86,11 +86,11 @@ public class AuthorizeEndpointAccessRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The account ID to grant access to.
+     * The Amazon Web Services account ID to grant access to.
      * </p>
      * 
      * @param account
-     *        The account ID to grant access to.
+     *        The Amazon Web Services account ID to grant access to.
      */
 
     public void setAccount(String account) {
@@ -99,10 +99,10 @@ public class AuthorizeEndpointAccessRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The account ID to grant access to.
+     * The Amazon Web Services account ID to grant access to.
      * </p>
      * 
-     * @return The account ID to grant access to.
+     * @return The Amazon Web Services account ID to grant access to.
      */
 
     public String getAccount() {
@@ -111,11 +111,11 @@ public class AuthorizeEndpointAccessRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The account ID to grant access to.
+     * The Amazon Web Services account ID to grant access to.
      * </p>
      * 
      * @param account
-     *        The account ID to grant access to.
+     *        The Amazon Web Services account ID to grant access to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

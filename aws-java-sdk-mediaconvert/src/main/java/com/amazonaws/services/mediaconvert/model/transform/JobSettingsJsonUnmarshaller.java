@@ -60,6 +60,10 @@ public class JobSettingsJsonUnmarshaller implements Unmarshaller<JobSettings, Js
                     context.nextToken();
                     jobSettings.setEsam(EsamSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("extendedDataServices", targetDepth)) {
+                    context.nextToken();
+                    jobSettings.setExtendedDataServices(ExtendedDataServicesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("inputs", targetDepth)) {
                     context.nextToken();
                     jobSettings.setInputs(new ListUnmarshaller<Input>(InputJsonUnmarshaller.getInstance())

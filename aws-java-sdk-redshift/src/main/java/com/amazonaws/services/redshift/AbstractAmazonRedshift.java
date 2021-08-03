@@ -49,7 +49,17 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public AssociateDataShareConsumerResult associateDataShareConsumer(AssociateDataShareConsumerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ClusterSecurityGroup authorizeClusterSecurityGroupIngress(AuthorizeClusterSecurityGroupIngressRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public AuthorizeDataShareResult authorizeDataShare(AuthorizeDataShareRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -155,6 +165,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
 
     @Override
     public CreateUsageLimitResult createUsageLimit(CreateUsageLimitRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeauthorizeDataShareResult deauthorizeDataShare(DeauthorizeDataShareRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -321,6 +336,21 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     @Override
     public DescribeClustersResult describeClusters() {
         return describeClusters(new DescribeClustersRequest());
+    }
+
+    @Override
+    public DescribeDataSharesResult describeDataShares(DescribeDataSharesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeDataSharesForConsumerResult describeDataSharesForConsumer(DescribeDataSharesForConsumerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeDataSharesForProducerResult describeDataSharesForProducer(DescribeDataSharesForProducerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -499,6 +529,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public DisassociateDataShareConsumerResult disassociateDataShareConsumer(DisassociateDataShareConsumerRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public EnableLoggingResult enableLogging(EnableLoggingRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -610,6 +645,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
 
     @Override
     public Cluster rebootCluster(RebootClusterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RejectDataShareResult rejectDataShare(RejectDataShareRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

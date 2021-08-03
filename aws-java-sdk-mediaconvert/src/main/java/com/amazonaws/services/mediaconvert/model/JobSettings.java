@@ -35,6 +35,8 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
     private AvailBlanking availBlanking;
     /** Settings for Event Signaling And Messaging (ESAM). If you don't do ad insertion, you can ignore these settings. */
     private EsamSettings esam;
+    /** Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory. */
+    private ExtendedDataServices extendedDataServices;
     /**
      * Use Inputs (inputs) to define source file used in the transcode job. There can be multiple inputs add in a job.
      * These inputs will be concantenated together to create the output.
@@ -199,6 +201,40 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
 
     public JobSettings withEsam(EsamSettings esam) {
         setEsam(esam);
+        return this;
+    }
+
+    /**
+     * Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     * 
+     * @param extendedDataServices
+     *        Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     */
+
+    public void setExtendedDataServices(ExtendedDataServices extendedDataServices) {
+        this.extendedDataServices = extendedDataServices;
+    }
+
+    /**
+     * Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     * 
+     * @return Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     */
+
+    public ExtendedDataServices getExtendedDataServices() {
+        return this.extendedDataServices;
+    }
+
+    /**
+     * Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     * 
+     * @param extendedDataServices
+     *        Hexadecimal value as per EIA-608 Line 21 Data Services, section 9.5.1.5 05h Content Advisory.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobSettings withExtendedDataServices(ExtendedDataServices extendedDataServices) {
+        setExtendedDataServices(extendedDataServices);
         return this;
     }
 
@@ -706,6 +742,8 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
             sb.append("AvailBlanking: ").append(getAvailBlanking()).append(",");
         if (getEsam() != null)
             sb.append("Esam: ").append(getEsam()).append(",");
+        if (getExtendedDataServices() != null)
+            sb.append("ExtendedDataServices: ").append(getExtendedDataServices()).append(",");
         if (getInputs() != null)
             sb.append("Inputs: ").append(getInputs()).append(",");
         if (getKantarWatermark() != null)
@@ -747,6 +785,10 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
         if (other.getEsam() == null ^ this.getEsam() == null)
             return false;
         if (other.getEsam() != null && other.getEsam().equals(this.getEsam()) == false)
+            return false;
+        if (other.getExtendedDataServices() == null ^ this.getExtendedDataServices() == null)
+            return false;
+        if (other.getExtendedDataServices() != null && other.getExtendedDataServices().equals(this.getExtendedDataServices()) == false)
             return false;
         if (other.getInputs() == null ^ this.getInputs() == null)
             return false;
@@ -791,6 +833,7 @@ public class JobSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAdAvailOffset() == null) ? 0 : getAdAvailOffset().hashCode());
         hashCode = prime * hashCode + ((getAvailBlanking() == null) ? 0 : getAvailBlanking().hashCode());
         hashCode = prime * hashCode + ((getEsam() == null) ? 0 : getEsam().hashCode());
+        hashCode = prime * hashCode + ((getExtendedDataServices() == null) ? 0 : getExtendedDataServices().hashCode());
         hashCode = prime * hashCode + ((getInputs() == null) ? 0 : getInputs().hashCode());
         hashCode = prime * hashCode + ((getKantarWatermark() == null) ? 0 : getKantarWatermark().hashCode());
         hashCode = prime * hashCode + ((getMotionImageInserter() == null) ? 0 : getMotionImageInserter().hashCode());

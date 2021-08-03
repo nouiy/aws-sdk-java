@@ -94,7 +94,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -510,7 +510,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -781,7 +781,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -819,7 +819,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        Must be unique for all clusters within an account.
+     *        Must be unique for all clusters within an Amazon Web Services account.
      *        </p>
      *        </li>
      *        </ul>
@@ -862,7 +862,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -899,7 +899,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         </li>
      *         <li>
      *         <p>
-     *         Must be unique for all clusters within an account.
+     *         Must be unique for all clusters within an Amazon Web Services account.
      *         </p>
      *         </li>
      *         </ul>
@@ -942,7 +942,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -980,7 +980,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        Must be unique for all clusters within an account.
+     *        Must be unique for all clusters within an Amazon Web Services account.
      *        </p>
      *        </li>
      *        </ul>
@@ -3713,7 +3713,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -3734,7 +3734,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *        type.
      *        </p>
      *        </li>
      *        <li>
@@ -3762,7 +3763,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -3782,7 +3783,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <ul>
      *         <li>
      *         <p>
-     *         enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *         enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *         type.
      *         </p>
      *         </li>
      *         <li>
@@ -3810,7 +3812,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -3831,7 +3833,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *        type.
      *        </p>
      *        </li>
      *        <li>
@@ -3861,7 +3864,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -3882,7 +3885,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *        type.
      *        </p>
      *        </li>
      *        <li>

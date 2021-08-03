@@ -56,7 +56,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -130,8 +130,8 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     private Boolean publiclyAccessible;
     /**
      * <p>
-     * The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     * optional if you own the snapshot.
+     * The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a snapshot you
+     * do not own, optional if you own the snapshot.
      * </p>
      */
     private String ownerAccount;
@@ -351,7 +351,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -398,7 +398,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -431,7 +431,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        Must be unique for all clusters within an account.
+     *        Must be unique for all clusters within an Amazon Web Services account.
      *        </p>
      *        </li>
      */
@@ -470,7 +470,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -502,7 +502,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      *         </li>
      *         <li>
      *         <p>
-     *         Must be unique for all clusters within an account.
+     *         Must be unique for all clusters within an Amazon Web Services account.
      *         </p>
      *         </li>
      */
@@ -541,7 +541,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -574,7 +574,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      *        </li>
      *        <li>
      *        <p>
-     *        Must be unique for all clusters within an account.
+     *        Must be unique for all clusters within an Amazon Web Services account.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1030,13 +1030,13 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     * optional if you own the snapshot.
+     * The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a snapshot you
+     * do not own, optional if you own the snapshot.
      * </p>
      * 
      * @param ownerAccount
-     *        The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     *        optional if you own the snapshot.
+     *        The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a
+     *        snapshot you do not own, optional if you own the snapshot.
      */
 
     public void setOwnerAccount(String ownerAccount) {
@@ -1045,12 +1045,12 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     * optional if you own the snapshot.
+     * The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a snapshot you
+     * do not own, optional if you own the snapshot.
      * </p>
      * 
-     * @return The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     *         optional if you own the snapshot.
+     * @return The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a
+     *         snapshot you do not own, optional if you own the snapshot.
      */
 
     public String getOwnerAccount() {
@@ -1059,13 +1059,13 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     * optional if you own the snapshot.
+     * The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a snapshot you
+     * do not own, optional if you own the snapshot.
      * </p>
      * 
      * @param ownerAccount
-     *        The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     *        optional if you own the snapshot.
+     *        The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a
+     *        snapshot you do not own, optional if you own the snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2554,7 +2554,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -2575,7 +2575,8 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      *        <ul>
      *        <li>
      *        <p>
-     *        enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *        type.
      *        </p>
      *        </li>
      *        <li>
@@ -2603,7 +2604,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -2623,7 +2624,8 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      *         <ul>
      *         <li>
      *         <p>
-     *         enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *         enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *         type.
      *         </p>
      *         </li>
      *         <li>
@@ -2651,7 +2653,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -2672,7 +2674,8 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      *        <ul>
      *        <li>
      *        <p>
-     *        enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *        type.
      *        </p>
      *        </li>
      *        <li>
@@ -2702,7 +2705,7 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -2723,7 +2726,8 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      *        <ul>
      *        <li>
      *        <p>
-     *        enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *        type.
      *        </p>
      *        </li>
      *        <li>

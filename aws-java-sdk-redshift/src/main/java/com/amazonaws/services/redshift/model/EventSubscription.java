@@ -28,7 +28,7 @@ public class EventSubscription implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The account associated with the Amazon Redshift event notification subscription.
+     * The Amazon Web Services account associated with the Amazon Redshift event notification subscription.
      * </p>
      */
     private String customerAwsId;
@@ -90,7 +90,7 @@ public class EventSubscription implements Serializable, Cloneable {
      * The list of Amazon Redshift event categories specified in the event notification subscription.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> eventCategoriesList;
@@ -119,11 +119,11 @@ public class EventSubscription implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The account associated with the Amazon Redshift event notification subscription.
+     * The Amazon Web Services account associated with the Amazon Redshift event notification subscription.
      * </p>
      * 
      * @param customerAwsId
-     *        The account associated with the Amazon Redshift event notification subscription.
+     *        The Amazon Web Services account associated with the Amazon Redshift event notification subscription.
      */
 
     public void setCustomerAwsId(String customerAwsId) {
@@ -132,10 +132,10 @@ public class EventSubscription implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The account associated with the Amazon Redshift event notification subscription.
+     * The Amazon Web Services account associated with the Amazon Redshift event notification subscription.
      * </p>
      * 
-     * @return The account associated with the Amazon Redshift event notification subscription.
+     * @return The Amazon Web Services account associated with the Amazon Redshift event notification subscription.
      */
 
     public String getCustomerAwsId() {
@@ -144,11 +144,11 @@ public class EventSubscription implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The account associated with the Amazon Redshift event notification subscription.
+     * The Amazon Web Services account associated with the Amazon Redshift event notification subscription.
      * </p>
      * 
      * @param customerAwsId
-     *        The account associated with the Amazon Redshift event notification subscription.
+     *        The Amazon Web Services account associated with the Amazon Redshift event notification subscription.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -537,12 +537,12 @@ public class EventSubscription implements Serializable, Cloneable {
      * The list of Amazon Redshift event categories specified in the event notification subscription.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      * 
      * @return The list of Amazon Redshift event categories specified in the event notification subscription.</p>
      *         <p>
-     *         Values: Configuration, Management, Monitoring, Security
+     *         Values: Configuration, Management, Monitoring, Security, Pending
      */
 
     public java.util.List<String> getEventCategoriesList() {
@@ -557,13 +557,13 @@ public class EventSubscription implements Serializable, Cloneable {
      * The list of Amazon Redshift event categories specified in the event notification subscription.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      * 
      * @param eventCategoriesList
      *        The list of Amazon Redshift event categories specified in the event notification subscription.</p>
      *        <p>
-     *        Values: Configuration, Management, Monitoring, Security
+     *        Values: Configuration, Management, Monitoring, Security, Pending
      */
 
     public void setEventCategoriesList(java.util.Collection<String> eventCategoriesList) {
@@ -580,7 +580,7 @@ public class EventSubscription implements Serializable, Cloneable {
      * The list of Amazon Redshift event categories specified in the event notification subscription.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -591,7 +591,7 @@ public class EventSubscription implements Serializable, Cloneable {
      * @param eventCategoriesList
      *        The list of Amazon Redshift event categories specified in the event notification subscription.</p>
      *        <p>
-     *        Values: Configuration, Management, Monitoring, Security
+     *        Values: Configuration, Management, Monitoring, Security, Pending
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -610,13 +610,13 @@ public class EventSubscription implements Serializable, Cloneable {
      * The list of Amazon Redshift event categories specified in the event notification subscription.
      * </p>
      * <p>
-     * Values: Configuration, Management, Monitoring, Security
+     * Values: Configuration, Management, Monitoring, Security, Pending
      * </p>
      * 
      * @param eventCategoriesList
      *        The list of Amazon Redshift event categories specified in the event notification subscription.</p>
      *        <p>
-     *        Values: Configuration, Management, Monitoring, Security
+     *        Values: Configuration, Management, Monitoring, Security, Pending
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

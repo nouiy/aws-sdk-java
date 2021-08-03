@@ -27,7 +27,7 @@ public class AddPartnerRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Region ID that owns the cluster.
+     * The Amazon Web Services account ID that owns the cluster.
      * </p>
      */
     private String accountId;
@@ -52,11 +52,11 @@ public class AddPartnerRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Region ID that owns the cluster.
+     * The Amazon Web Services account ID that owns the cluster.
      * </p>
      * 
      * @param accountId
-     *        The Region ID that owns the cluster.
+     *        The Amazon Web Services account ID that owns the cluster.
      */
 
     public void setAccountId(String accountId) {
@@ -65,10 +65,10 @@ public class AddPartnerRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Region ID that owns the cluster.
+     * The Amazon Web Services account ID that owns the cluster.
      * </p>
      * 
-     * @return The Region ID that owns the cluster.
+     * @return The Amazon Web Services account ID that owns the cluster.
      */
 
     public String getAccountId() {
@@ -77,11 +77,11 @@ public class AddPartnerRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Region ID that owns the cluster.
+     * The Amazon Web Services account ID that owns the cluster.
      * </p>
      * 
      * @param accountId
-     *        The Region ID that owns the cluster.
+     *        The Amazon Web Services account ID that owns the cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

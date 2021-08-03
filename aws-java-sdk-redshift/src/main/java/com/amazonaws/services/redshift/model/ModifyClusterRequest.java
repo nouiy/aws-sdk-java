@@ -312,7 +312,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -2128,7 +2128,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -2164,7 +2164,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        Must be unique for all clusters within an account.
+     *        Must be unique for all clusters within an Amazon Web Services account.
      *        </p>
      *        </li>
      *        </ul>
@@ -2206,7 +2206,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -2241,7 +2241,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         </li>
      *         <li>
      *         <p>
-     *         Must be unique for all clusters within an account.
+     *         Must be unique for all clusters within an Amazon Web Services account.
      *         </p>
      *         </li>
      *         </ul>
@@ -2283,7 +2283,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Must be unique for all clusters within an account.
+     * Must be unique for all clusters within an Amazon Web Services account.
      * </p>
      * </li>
      * </ul>
@@ -2319,7 +2319,7 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        Must be unique for all clusters within an account.
+     *        Must be unique for all clusters within an Amazon Web Services account.
      *        </p>
      *        </li>
      *        </ul>

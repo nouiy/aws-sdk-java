@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The authentication profile request is not valid. The profile name can't be null or empty. The authentication profile
- * API operation must be available in the Region.
+ * API operation must be available in the Amazon Web Services Region.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

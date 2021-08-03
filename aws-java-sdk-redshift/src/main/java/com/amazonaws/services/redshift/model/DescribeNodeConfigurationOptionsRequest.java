@@ -48,8 +48,8 @@ public class DescribeNodeConfigurationOptionsRequest extends com.amazonaws.Amazo
     private String snapshotIdentifier;
     /**
      * <p>
-     * The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     * optional if you own the snapshot.
+     * The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a snapshot you
+     * do not own, optional if you own the snapshot.
      * </p>
      */
     private String ownerAccount;
@@ -249,13 +249,13 @@ public class DescribeNodeConfigurationOptionsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     * optional if you own the snapshot.
+     * The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a snapshot you
+     * do not own, optional if you own the snapshot.
      * </p>
      * 
      * @param ownerAccount
-     *        The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     *        optional if you own the snapshot.
+     *        The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a
+     *        snapshot you do not own, optional if you own the snapshot.
      */
 
     public void setOwnerAccount(String ownerAccount) {
@@ -264,12 +264,12 @@ public class DescribeNodeConfigurationOptionsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     * optional if you own the snapshot.
+     * The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a snapshot you
+     * do not own, optional if you own the snapshot.
      * </p>
      * 
-     * @return The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     *         optional if you own the snapshot.
+     * @return The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a
+     *         snapshot you do not own, optional if you own the snapshot.
      */
 
     public String getOwnerAccount() {
@@ -278,13 +278,13 @@ public class DescribeNodeConfigurationOptionsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     * optional if you own the snapshot.
+     * The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a snapshot you
+     * do not own, optional if you own the snapshot.
      * </p>
      * 
      * @param ownerAccount
-     *        The account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own,
-     *        optional if you own the snapshot.
+     *        The Amazon Web Services account used to create or copy the snapshot. Required if you are restoring a
+     *        snapshot you do not own, optional if you own the snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

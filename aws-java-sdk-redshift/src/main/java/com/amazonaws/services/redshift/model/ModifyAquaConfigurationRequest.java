@@ -38,7 +38,7 @@ public class ModifyAquaConfigurationRequest extends com.amazonaws.AmazonWebServi
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -102,7 +102,7 @@ public class ModifyAquaConfigurationRequest extends com.amazonaws.AmazonWebServi
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -122,7 +122,8 @@ public class ModifyAquaConfigurationRequest extends com.amazonaws.AmazonWebServi
      *        <ul>
      *        <li>
      *        <p>
-     *        enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *        type.
      *        </p>
      *        </li>
      *        <li>
@@ -149,7 +150,7 @@ public class ModifyAquaConfigurationRequest extends com.amazonaws.AmazonWebServi
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -168,7 +169,8 @@ public class ModifyAquaConfigurationRequest extends com.amazonaws.AmazonWebServi
      *         <ul>
      *         <li>
      *         <p>
-     *         enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *         enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *         type.
      *         </p>
      *         </li>
      *         <li>
@@ -195,7 +197,7 @@ public class ModifyAquaConfigurationRequest extends com.amazonaws.AmazonWebServi
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -215,7 +217,8 @@ public class ModifyAquaConfigurationRequest extends com.amazonaws.AmazonWebServi
      *        <ul>
      *        <li>
      *        <p>
-     *        enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *        type.
      *        </p>
      *        </li>
      *        <li>
@@ -244,7 +247,7 @@ public class ModifyAquaConfigurationRequest extends com.amazonaws.AmazonWebServi
      * <ul>
      * <li>
      * <p>
-     * enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     * enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node type.
      * </p>
      * </li>
      * <li>
@@ -264,7 +267,8 @@ public class ModifyAquaConfigurationRequest extends com.amazonaws.AmazonWebServi
      *        <ul>
      *        <li>
      *        <p>
-     *        enabled - Use AQUA if it is available for the current Region and Amazon Redshift node type.
+     *        enabled - Use AQUA if it is available for the current Amazon Web Services Region and Amazon Redshift node
+     *        type.
      *        </p>
      *        </li>
      *        <li>

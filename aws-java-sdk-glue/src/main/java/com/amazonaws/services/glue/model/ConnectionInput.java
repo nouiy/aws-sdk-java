@@ -68,8 +68,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Marketplace to
-     * read from and write to data stores that are not natively supported by Glue.
+     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Amazon Web
+     * Services Marketplace to read from and write to data stores that are not natively supported by Glue.
      * </p>
      * </li>
      * <li>
@@ -212,8 +212,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Marketplace to
-     * read from and write to data stores that are not natively supported by Glue.
+     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Amazon Web
+     * Services Marketplace to read from and write to data stores that are not natively supported by Glue.
      * </p>
      * </li>
      * <li>
@@ -253,8 +253,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Marketplace
-     *        to read from and write to data stores that are not natively supported by Glue.
+     *        <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Amazon Web
+     *        Services Marketplace to read from and write to data stores that are not natively supported by Glue.
      *        </p>
      *        </li>
      *        <li>
@@ -301,8 +301,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Marketplace to
-     * read from and write to data stores that are not natively supported by Glue.
+     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Amazon Web
+     * Services Marketplace to read from and write to data stores that are not natively supported by Glue.
      * </p>
      * </li>
      * <li>
@@ -341,8 +341,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      *         </li>
      *         <li>
      *         <p>
-     *         <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from
-     *         Marketplace to read from and write to data stores that are not natively supported by Glue.
+     *         <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Amazon Web
+     *         Services Marketplace to read from and write to data stores that are not natively supported by Glue.
      *         </p>
      *         </li>
      *         <li>
@@ -389,8 +389,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Marketplace to
-     * read from and write to data stores that are not natively supported by Glue.
+     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Amazon Web
+     * Services Marketplace to read from and write to data stores that are not natively supported by Glue.
      * </p>
      * </li>
      * <li>
@@ -430,8 +430,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Marketplace
-     *        to read from and write to data stores that are not natively supported by Glue.
+     *        <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Amazon Web
+     *        Services Marketplace to read from and write to data stores that are not natively supported by Glue.
      *        </p>
      *        </li>
      *        <li>
@@ -480,8 +480,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      * </li>
      * <li>
      * <p>
-     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Marketplace to
-     * read from and write to data stores that are not natively supported by Glue.
+     * <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Amazon Web
+     * Services Marketplace to read from and write to data stores that are not natively supported by Glue.
      * </p>
      * </li>
      * <li>
@@ -521,8 +521,8 @@ public class ConnectionInput implements Serializable, Cloneable, StructuredPojo 
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Marketplace
-     *        to read from and write to data stores that are not natively supported by Glue.
+     *        <code>MARKETPLACE</code> - Uses configuration settings contained in a connector purchased from Amazon Web
+     *        Services Marketplace to read from and write to data stores that are not natively supported by Glue.
      *        </p>
      *        </li>
      *        <li>

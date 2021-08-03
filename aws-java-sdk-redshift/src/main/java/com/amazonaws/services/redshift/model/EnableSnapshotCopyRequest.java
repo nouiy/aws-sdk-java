@@ -38,10 +38,10 @@ public class EnableSnapshotCopyRequest extends com.amazonaws.AmazonWebServiceReq
     private String clusterIdentifier;
     /**
      * <p>
-     * The destination Region that you want to copy snapshots to.
+     * The destination Amazon Web Services Region that you want to copy snapshots to.
      * </p>
      * <p>
-     * Constraints: Must be the name of a valid Region. For more information, see <a
+     * Constraints: Must be the name of a valid Amazon Web Services Region. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region">Regions and Endpoints</a> in the
      * Amazon Web Services General Reference.
      * </p>
@@ -69,8 +69,9 @@ public class EnableSnapshotCopyRequest extends com.amazonaws.AmazonWebServiceReq
     private String snapshotCopyGrantName;
     /**
      * <p>
-     * The number of days to retain newly copied snapshots in the destination Region after they are copied from the
-     * source Region. If the value is -1, the manual snapshot is retained indefinitely.
+     * The number of days to retain newly copied snapshots in the destination Amazon Web Services Region after they are
+     * copied from the source Amazon Web Services Region. If the value is -1, the manual snapshot is retained
+     * indefinitely.
      * </p>
      * <p>
      * The value must be either -1 or an integer between 1 and 3,653.
@@ -141,18 +142,18 @@ public class EnableSnapshotCopyRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The destination Region that you want to copy snapshots to.
+     * The destination Amazon Web Services Region that you want to copy snapshots to.
      * </p>
      * <p>
-     * Constraints: Must be the name of a valid Region. For more information, see <a
+     * Constraints: Must be the name of a valid Amazon Web Services Region. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region">Regions and Endpoints</a> in the
      * Amazon Web Services General Reference.
      * </p>
      * 
      * @param destinationRegion
-     *        The destination Region that you want to copy snapshots to.</p>
+     *        The destination Amazon Web Services Region that you want to copy snapshots to.</p>
      *        <p>
-     *        Constraints: Must be the name of a valid Region. For more information, see <a
+     *        Constraints: Must be the name of a valid Amazon Web Services Region. For more information, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region">Regions and Endpoints</a>
      *        in the Amazon Web Services General Reference.
      */
@@ -163,17 +164,17 @@ public class EnableSnapshotCopyRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The destination Region that you want to copy snapshots to.
+     * The destination Amazon Web Services Region that you want to copy snapshots to.
      * </p>
      * <p>
-     * Constraints: Must be the name of a valid Region. For more information, see <a
+     * Constraints: Must be the name of a valid Amazon Web Services Region. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region">Regions and Endpoints</a> in the
      * Amazon Web Services General Reference.
      * </p>
      * 
-     * @return The destination Region that you want to copy snapshots to.</p>
+     * @return The destination Amazon Web Services Region that you want to copy snapshots to.</p>
      *         <p>
-     *         Constraints: Must be the name of a valid Region. For more information, see <a
+     *         Constraints: Must be the name of a valid Amazon Web Services Region. For more information, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region">Regions and Endpoints</a>
      *         in the Amazon Web Services General Reference.
      */
@@ -184,18 +185,18 @@ public class EnableSnapshotCopyRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The destination Region that you want to copy snapshots to.
+     * The destination Amazon Web Services Region that you want to copy snapshots to.
      * </p>
      * <p>
-     * Constraints: Must be the name of a valid Region. For more information, see <a
+     * Constraints: Must be the name of a valid Amazon Web Services Region. For more information, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region">Regions and Endpoints</a> in the
      * Amazon Web Services General Reference.
      * </p>
      * 
      * @param destinationRegion
-     *        The destination Region that you want to copy snapshots to.</p>
+     *        The destination Amazon Web Services Region that you want to copy snapshots to.</p>
      *        <p>
-     *        Constraints: Must be the name of a valid Region. For more information, see <a
+     *        Constraints: Must be the name of a valid Amazon Web Services Region. For more information, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/rande.html#redshift_region">Regions and Endpoints</a>
      *        in the Amazon Web Services General Reference.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -333,16 +334,18 @@ public class EnableSnapshotCopyRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The number of days to retain newly copied snapshots in the destination Region after they are copied from the
-     * source Region. If the value is -1, the manual snapshot is retained indefinitely.
+     * The number of days to retain newly copied snapshots in the destination Amazon Web Services Region after they are
+     * copied from the source Amazon Web Services Region. If the value is -1, the manual snapshot is retained
+     * indefinitely.
      * </p>
      * <p>
      * The value must be either -1 or an integer between 1 and 3,653.
      * </p>
      * 
      * @param manualSnapshotRetentionPeriod
-     *        The number of days to retain newly copied snapshots in the destination Region after they are copied from
-     *        the source Region. If the value is -1, the manual snapshot is retained indefinitely. </p>
+     *        The number of days to retain newly copied snapshots in the destination Amazon Web Services Region after
+     *        they are copied from the source Amazon Web Services Region. If the value is -1, the manual snapshot is
+     *        retained indefinitely. </p>
      *        <p>
      *        The value must be either -1 or an integer between 1 and 3,653.
      */
@@ -353,15 +356,17 @@ public class EnableSnapshotCopyRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The number of days to retain newly copied snapshots in the destination Region after they are copied from the
-     * source Region. If the value is -1, the manual snapshot is retained indefinitely.
+     * The number of days to retain newly copied snapshots in the destination Amazon Web Services Region after they are
+     * copied from the source Amazon Web Services Region. If the value is -1, the manual snapshot is retained
+     * indefinitely.
      * </p>
      * <p>
      * The value must be either -1 or an integer between 1 and 3,653.
      * </p>
      * 
-     * @return The number of days to retain newly copied snapshots in the destination Region after they are copied from
-     *         the source Region. If the value is -1, the manual snapshot is retained indefinitely. </p>
+     * @return The number of days to retain newly copied snapshots in the destination Amazon Web Services Region after
+     *         they are copied from the source Amazon Web Services Region. If the value is -1, the manual snapshot is
+     *         retained indefinitely. </p>
      *         <p>
      *         The value must be either -1 or an integer between 1 and 3,653.
      */
@@ -372,16 +377,18 @@ public class EnableSnapshotCopyRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The number of days to retain newly copied snapshots in the destination Region after they are copied from the
-     * source Region. If the value is -1, the manual snapshot is retained indefinitely.
+     * The number of days to retain newly copied snapshots in the destination Amazon Web Services Region after they are
+     * copied from the source Amazon Web Services Region. If the value is -1, the manual snapshot is retained
+     * indefinitely.
      * </p>
      * <p>
      * The value must be either -1 or an integer between 1 and 3,653.
      * </p>
      * 
      * @param manualSnapshotRetentionPeriod
-     *        The number of days to retain newly copied snapshots in the destination Region after they are copied from
-     *        the source Region. If the value is -1, the manual snapshot is retained indefinitely. </p>
+     *        The number of days to retain newly copied snapshots in the destination Amazon Web Services Region after
+     *        they are copied from the source Amazon Web Services Region. If the value is -1, the manual snapshot is
+     *        retained indefinitely. </p>
      *        <p>
      *        The value must be either -1 or an integer between 1 and 3,653.
      * @return Returns a reference to this object so that method calls can be chained together.

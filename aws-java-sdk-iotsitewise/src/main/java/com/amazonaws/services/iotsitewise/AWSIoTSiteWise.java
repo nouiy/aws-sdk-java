@@ -1049,12 +1049,6 @@ public interface AWSIoTSiteWise {
      * <p>
      * Retrieves information about the storage configuration for IoT SiteWise.
      * </p>
-     * <note>
-     * <p>
-     * Exporting data to Amazon S3 is currently in preview release and is subject to change. We recommend that you use
-     * this feature only with test data, and not in production environments.
-     * </p>
-     * </note>
      * 
      * @param describeStorageConfigurationRequest
      * @return Result of the DescribeStorageConfiguration operation returned by the service.
@@ -1724,12 +1718,6 @@ public interface AWSIoTSiteWise {
      * <p>
      * Configures storage settings for IoT SiteWise.
      * </p>
-     * <note>
-     * <p>
-     * Exporting data to Amazon S3 is currently in preview release and is subject to change. We recommend that you use
-     * this feature only with test data, and not in production environments.
-     * </p>
-     * </note>
      * 
      * @param putStorageConfigurationRequest
      * @return Result of the PutStorageConfiguration operation returned by the service.

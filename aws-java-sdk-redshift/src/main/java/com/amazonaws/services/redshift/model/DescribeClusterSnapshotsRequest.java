@@ -95,8 +95,9 @@ public class DescribeClusterSnapshotsRequest extends com.amazonaws.AmazonWebServ
     private String marker;
     /**
      * <p>
-     * The account used to create or copy the snapshot. Use this field to filter the results to snapshots owned by a
-     * particular account. To describe snapshots you own, either specify your account, or do not specify the parameter.
+     * The Amazon Web Services account used to create or copy the snapshot. Use this field to filter the results to
+     * snapshots owned by a particular account. To describe snapshots you own, either specify your Amazon Web Services
+     * account, or do not specify the parameter.
      * </p>
      */
     private String ownerAccount;
@@ -580,14 +581,15 @@ public class DescribeClusterSnapshotsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The account used to create or copy the snapshot. Use this field to filter the results to snapshots owned by a
-     * particular account. To describe snapshots you own, either specify your account, or do not specify the parameter.
+     * The Amazon Web Services account used to create or copy the snapshot. Use this field to filter the results to
+     * snapshots owned by a particular account. To describe snapshots you own, either specify your Amazon Web Services
+     * account, or do not specify the parameter.
      * </p>
      * 
      * @param ownerAccount
-     *        The account used to create or copy the snapshot. Use this field to filter the results to snapshots owned
-     *        by a particular account. To describe snapshots you own, either specify your account, or do not specify the
-     *        parameter.
+     *        The Amazon Web Services account used to create or copy the snapshot. Use this field to filter the results
+     *        to snapshots owned by a particular account. To describe snapshots you own, either specify your Amazon Web
+     *        Services account, or do not specify the parameter.
      */
 
     public void setOwnerAccount(String ownerAccount) {
@@ -596,13 +598,14 @@ public class DescribeClusterSnapshotsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The account used to create or copy the snapshot. Use this field to filter the results to snapshots owned by a
-     * particular account. To describe snapshots you own, either specify your account, or do not specify the parameter.
+     * The Amazon Web Services account used to create or copy the snapshot. Use this field to filter the results to
+     * snapshots owned by a particular account. To describe snapshots you own, either specify your Amazon Web Services
+     * account, or do not specify the parameter.
      * </p>
      * 
-     * @return The account used to create or copy the snapshot. Use this field to filter the results to snapshots owned
-     *         by a particular account. To describe snapshots you own, either specify your account, or do not specify
-     *         the parameter.
+     * @return The Amazon Web Services account used to create or copy the snapshot. Use this field to filter the results
+     *         to snapshots owned by a particular account. To describe snapshots you own, either specify your Amazon Web
+     *         Services account, or do not specify the parameter.
      */
 
     public String getOwnerAccount() {
@@ -611,14 +614,15 @@ public class DescribeClusterSnapshotsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The account used to create or copy the snapshot. Use this field to filter the results to snapshots owned by a
-     * particular account. To describe snapshots you own, either specify your account, or do not specify the parameter.
+     * The Amazon Web Services account used to create or copy the snapshot. Use this field to filter the results to
+     * snapshots owned by a particular account. To describe snapshots you own, either specify your Amazon Web Services
+     * account, or do not specify the parameter.
      * </p>
      * 
      * @param ownerAccount
-     *        The account used to create or copy the snapshot. Use this field to filter the results to snapshots owned
-     *        by a particular account. To describe snapshots you own, either specify your account, or do not specify the
-     *        parameter.
+     *        The Amazon Web Services account used to create or copy the snapshot. Use this field to filter the results
+     *        to snapshots owned by a particular account. To describe snapshots you own, either specify your Amazon Web
+     *        Services account, or do not specify the parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -46,8 +46,8 @@ public class AuthorizeClusterSecurityGroupIngressRequest extends com.amazonaws.A
     private String eC2SecurityGroupName;
     /**
      * <p>
-     * The account number of the owner of the security group specified by the <i>EC2SecurityGroupName</i> parameter. The
-     * Amazon Web Services Access Key ID is not an acceptable value.
+     * The Amazon Web Services account number of the owner of the security group specified by the
+     * <i>EC2SecurityGroupName</i> parameter. The Amazon Web Services Access Key ID is not an acceptable value.
      * </p>
      * <p>
      * Example: <code>111122223333</code>
@@ -177,16 +177,17 @@ public class AuthorizeClusterSecurityGroupIngressRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The account number of the owner of the security group specified by the <i>EC2SecurityGroupName</i> parameter. The
-     * Amazon Web Services Access Key ID is not an acceptable value.
+     * The Amazon Web Services account number of the owner of the security group specified by the
+     * <i>EC2SecurityGroupName</i> parameter. The Amazon Web Services Access Key ID is not an acceptable value.
      * </p>
      * <p>
      * Example: <code>111122223333</code>
      * </p>
      * 
      * @param eC2SecurityGroupOwnerId
-     *        The account number of the owner of the security group specified by the <i>EC2SecurityGroupName</i>
-     *        parameter. The Amazon Web Services Access Key ID is not an acceptable value. </p>
+     *        The Amazon Web Services account number of the owner of the security group specified by the
+     *        <i>EC2SecurityGroupName</i> parameter. The Amazon Web Services Access Key ID is not an acceptable value.
+     *        </p>
      *        <p>
      *        Example: <code>111122223333</code>
      */
@@ -197,15 +198,16 @@ public class AuthorizeClusterSecurityGroupIngressRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The account number of the owner of the security group specified by the <i>EC2SecurityGroupName</i> parameter. The
-     * Amazon Web Services Access Key ID is not an acceptable value.
+     * The Amazon Web Services account number of the owner of the security group specified by the
+     * <i>EC2SecurityGroupName</i> parameter. The Amazon Web Services Access Key ID is not an acceptable value.
      * </p>
      * <p>
      * Example: <code>111122223333</code>
      * </p>
      * 
-     * @return The account number of the owner of the security group specified by the <i>EC2SecurityGroupName</i>
-     *         parameter. The Amazon Web Services Access Key ID is not an acceptable value. </p>
+     * @return The Amazon Web Services account number of the owner of the security group specified by the
+     *         <i>EC2SecurityGroupName</i> parameter. The Amazon Web Services Access Key ID is not an acceptable value.
+     *         </p>
      *         <p>
      *         Example: <code>111122223333</code>
      */
@@ -216,16 +218,17 @@ public class AuthorizeClusterSecurityGroupIngressRequest extends com.amazonaws.A
 
     /**
      * <p>
-     * The account number of the owner of the security group specified by the <i>EC2SecurityGroupName</i> parameter. The
-     * Amazon Web Services Access Key ID is not an acceptable value.
+     * The Amazon Web Services account number of the owner of the security group specified by the
+     * <i>EC2SecurityGroupName</i> parameter. The Amazon Web Services Access Key ID is not an acceptable value.
      * </p>
      * <p>
      * Example: <code>111122223333</code>
      * </p>
      * 
      * @param eC2SecurityGroupOwnerId
-     *        The account number of the owner of the security group specified by the <i>EC2SecurityGroupName</i>
-     *        parameter. The Amazon Web Services Access Key ID is not an acceptable value. </p>
+     *        The Amazon Web Services account number of the owner of the security group specified by the
+     *        <i>EC2SecurityGroupName</i> parameter. The Amazon Web Services Access Key ID is not an acceptable value.
+     *        </p>
      *        <p>
      *        Example: <code>111122223333</code>
      * @return Returns a reference to this object so that method calls can be chained together.

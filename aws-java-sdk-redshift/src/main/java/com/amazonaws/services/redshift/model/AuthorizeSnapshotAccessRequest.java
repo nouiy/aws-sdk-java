@@ -41,7 +41,7 @@ public class AuthorizeSnapshotAccessRequest extends com.amazonaws.AmazonWebServi
     private String snapshotClusterIdentifier;
     /**
      * <p>
-     * The identifier of the account authorized to restore the specified snapshot.
+     * The identifier of the Amazon Web Services account authorized to restore the specified snapshot.
      * </p>
      * <p>
      * To share a snapshot with Amazon Web Services Support, specify amazon-redshift-support.
@@ -140,14 +140,14 @@ public class AuthorizeSnapshotAccessRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the account authorized to restore the specified snapshot.
+     * The identifier of the Amazon Web Services account authorized to restore the specified snapshot.
      * </p>
      * <p>
      * To share a snapshot with Amazon Web Services Support, specify amazon-redshift-support.
      * </p>
      * 
      * @param accountWithRestoreAccess
-     *        The identifier of the account authorized to restore the specified snapshot.</p>
+     *        The identifier of the Amazon Web Services account authorized to restore the specified snapshot.</p>
      *        <p>
      *        To share a snapshot with Amazon Web Services Support, specify amazon-redshift-support.
      */
@@ -158,13 +158,13 @@ public class AuthorizeSnapshotAccessRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the account authorized to restore the specified snapshot.
+     * The identifier of the Amazon Web Services account authorized to restore the specified snapshot.
      * </p>
      * <p>
      * To share a snapshot with Amazon Web Services Support, specify amazon-redshift-support.
      * </p>
      * 
-     * @return The identifier of the account authorized to restore the specified snapshot.</p>
+     * @return The identifier of the Amazon Web Services account authorized to restore the specified snapshot.</p>
      *         <p>
      *         To share a snapshot with Amazon Web Services Support, specify amazon-redshift-support.
      */
@@ -175,14 +175,14 @@ public class AuthorizeSnapshotAccessRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier of the account authorized to restore the specified snapshot.
+     * The identifier of the Amazon Web Services account authorized to restore the specified snapshot.
      * </p>
      * <p>
      * To share a snapshot with Amazon Web Services Support, specify amazon-redshift-support.
      * </p>
      * 
      * @param accountWithRestoreAccess
-     *        The identifier of the account authorized to restore the specified snapshot.</p>
+     *        The identifier of the Amazon Web Services account authorized to restore the specified snapshot.</p>
      *        <p>
      *        To share a snapshot with Amazon Web Services Support, specify amazon-redshift-support.
      * @return Returns a reference to this object so that method calls can be chained together.

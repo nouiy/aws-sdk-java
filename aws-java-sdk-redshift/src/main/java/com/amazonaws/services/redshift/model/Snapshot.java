@@ -158,15 +158,16 @@ public class Snapshot implements Serializable, Cloneable {
     private Boolean encryptedWithHSM;
     /**
      * <p>
-     * A list of the accounts authorized to restore the snapshot. Returns <code>null</code> if no accounts are
-     * authorized. Visible only to the snapshot owner.
+     * A list of the Amazon Web Services accounts authorized to restore the snapshot. Returns <code>null</code> if no
+     * accounts are authorized. Visible only to the snapshot owner.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<AccountWithRestoreAccess> accountsWithRestoreAccess;
     /**
      * <p>
-     * For manual snapshots, the account used to create or copy the snapshot. For automatic snapshots, the owner of the
-     * cluster. The owner can perform all snapshot actions, such as sharing a manual snapshot.
+     * For manual snapshots, the Amazon Web Services account used to create or copy the snapshot. For automatic
+     * snapshots, the owner of the cluster. The owner can perform all snapshot actions, such as sharing a manual
+     * snapshot.
      * </p>
      */
     private String ownerAccount;
@@ -1148,12 +1149,12 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of the accounts authorized to restore the snapshot. Returns <code>null</code> if no accounts are
-     * authorized. Visible only to the snapshot owner.
+     * A list of the Amazon Web Services accounts authorized to restore the snapshot. Returns <code>null</code> if no
+     * accounts are authorized. Visible only to the snapshot owner.
      * </p>
      * 
-     * @return A list of the accounts authorized to restore the snapshot. Returns <code>null</code> if no accounts are
-     *         authorized. Visible only to the snapshot owner.
+     * @return A list of the Amazon Web Services accounts authorized to restore the snapshot. Returns <code>null</code>
+     *         if no accounts are authorized. Visible only to the snapshot owner.
      */
 
     public java.util.List<AccountWithRestoreAccess> getAccountsWithRestoreAccess() {
@@ -1165,13 +1166,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of the accounts authorized to restore the snapshot. Returns <code>null</code> if no accounts are
-     * authorized. Visible only to the snapshot owner.
+     * A list of the Amazon Web Services accounts authorized to restore the snapshot. Returns <code>null</code> if no
+     * accounts are authorized. Visible only to the snapshot owner.
      * </p>
      * 
      * @param accountsWithRestoreAccess
-     *        A list of the accounts authorized to restore the snapshot. Returns <code>null</code> if no accounts are
-     *        authorized. Visible only to the snapshot owner.
+     *        A list of the Amazon Web Services accounts authorized to restore the snapshot. Returns <code>null</code>
+     *        if no accounts are authorized. Visible only to the snapshot owner.
      */
 
     public void setAccountsWithRestoreAccess(java.util.Collection<AccountWithRestoreAccess> accountsWithRestoreAccess) {
@@ -1185,8 +1186,8 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of the accounts authorized to restore the snapshot. Returns <code>null</code> if no accounts are
-     * authorized. Visible only to the snapshot owner.
+     * A list of the Amazon Web Services accounts authorized to restore the snapshot. Returns <code>null</code> if no
+     * accounts are authorized. Visible only to the snapshot owner.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1195,8 +1196,8 @@ public class Snapshot implements Serializable, Cloneable {
      * </p>
      * 
      * @param accountsWithRestoreAccess
-     *        A list of the accounts authorized to restore the snapshot. Returns <code>null</code> if no accounts are
-     *        authorized. Visible only to the snapshot owner.
+     *        A list of the Amazon Web Services accounts authorized to restore the snapshot. Returns <code>null</code>
+     *        if no accounts are authorized. Visible only to the snapshot owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1212,13 +1213,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of the accounts authorized to restore the snapshot. Returns <code>null</code> if no accounts are
-     * authorized. Visible only to the snapshot owner.
+     * A list of the Amazon Web Services accounts authorized to restore the snapshot. Returns <code>null</code> if no
+     * accounts are authorized. Visible only to the snapshot owner.
      * </p>
      * 
      * @param accountsWithRestoreAccess
-     *        A list of the accounts authorized to restore the snapshot. Returns <code>null</code> if no accounts are
-     *        authorized. Visible only to the snapshot owner.
+     *        A list of the Amazon Web Services accounts authorized to restore the snapshot. Returns <code>null</code>
+     *        if no accounts are authorized. Visible only to the snapshot owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1229,13 +1230,15 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For manual snapshots, the account used to create or copy the snapshot. For automatic snapshots, the owner of the
-     * cluster. The owner can perform all snapshot actions, such as sharing a manual snapshot.
+     * For manual snapshots, the Amazon Web Services account used to create or copy the snapshot. For automatic
+     * snapshots, the owner of the cluster. The owner can perform all snapshot actions, such as sharing a manual
+     * snapshot.
      * </p>
      * 
      * @param ownerAccount
-     *        For manual snapshots, the account used to create or copy the snapshot. For automatic snapshots, the owner
-     *        of the cluster. The owner can perform all snapshot actions, such as sharing a manual snapshot.
+     *        For manual snapshots, the Amazon Web Services account used to create or copy the snapshot. For automatic
+     *        snapshots, the owner of the cluster. The owner can perform all snapshot actions, such as sharing a manual
+     *        snapshot.
      */
 
     public void setOwnerAccount(String ownerAccount) {
@@ -1244,12 +1247,14 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For manual snapshots, the account used to create or copy the snapshot. For automatic snapshots, the owner of the
-     * cluster. The owner can perform all snapshot actions, such as sharing a manual snapshot.
+     * For manual snapshots, the Amazon Web Services account used to create or copy the snapshot. For automatic
+     * snapshots, the owner of the cluster. The owner can perform all snapshot actions, such as sharing a manual
+     * snapshot.
      * </p>
      * 
-     * @return For manual snapshots, the account used to create or copy the snapshot. For automatic snapshots, the owner
-     *         of the cluster. The owner can perform all snapshot actions, such as sharing a manual snapshot.
+     * @return For manual snapshots, the Amazon Web Services account used to create or copy the snapshot. For automatic
+     *         snapshots, the owner of the cluster. The owner can perform all snapshot actions, such as sharing a manual
+     *         snapshot.
      */
 
     public String getOwnerAccount() {
@@ -1258,13 +1263,15 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For manual snapshots, the account used to create or copy the snapshot. For automatic snapshots, the owner of the
-     * cluster. The owner can perform all snapshot actions, such as sharing a manual snapshot.
+     * For manual snapshots, the Amazon Web Services account used to create or copy the snapshot. For automatic
+     * snapshots, the owner of the cluster. The owner can perform all snapshot actions, such as sharing a manual
+     * snapshot.
      * </p>
      * 
      * @param ownerAccount
-     *        For manual snapshots, the account used to create or copy the snapshot. For automatic snapshots, the owner
-     *        of the cluster. The owner can perform all snapshot actions, such as sharing a manual snapshot.
+     *        For manual snapshots, the Amazon Web Services account used to create or copy the snapshot. For automatic
+     *        snapshots, the owner of the cluster. The owner can perform all snapshot actions, such as sharing a manual
+     *        snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
