@@ -77,20 +77,20 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.transcribe.model.transform.ConflictExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalFailureException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transcribe.model.transform.InternalFailureExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transcribe.model.transform.NotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("BadRequestException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.transcribe.model.transform.BadRequestExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.transcribe.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.transcribe.model.transform.ConflictExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("BadRequestException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.transcribe.model.transform.BadRequestExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.transcribe.model.AmazonTranscribeException.class));
 
     public static AmazonTranscribeClientBuilder builder() {
@@ -137,6 +137,77 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
         requestHandler2s.addAll(chainFactory.newRequestHandlerChain("/com/amazonaws/services/transcribe/request.handlers"));
         requestHandler2s.addAll(chainFactory.newRequestHandler2Chain("/com/amazonaws/services/transcribe/request.handler2s"));
         requestHandler2s.addAll(chainFactory.getGlobalHandlers());
+    }
+
+    /**
+     * <p>
+     * Creates an analytics category. Amazon Transcribe applies the conditions specified by your analytics categories to
+     * your call analytics jobs. For each analytics category, you specify one or more rules. For example, you can
+     * specify a rule that the customer sentiment was neutral or negative within that category. If you start a call
+     * analytics job, Amazon Transcribe applies the category to the analytics job that you've specified.
+     * </p>
+     * 
+     * @param createCallAnalyticsCategoryRequest
+     * @return Result of the CreateCallAnalyticsCategory operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws ConflictException
+     *         There is already a resource with that name.
+     * @sample AmazonTranscribe.CreateCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/CreateCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateCallAnalyticsCategoryResult createCallAnalyticsCategory(CreateCallAnalyticsCategoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateCallAnalyticsCategory(request);
+    }
+
+    @SdkInternalApi
+    final CreateCallAnalyticsCategoryResult executeCreateCallAnalyticsCategory(CreateCallAnalyticsCategoryRequest createCallAnalyticsCategoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createCallAnalyticsCategoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateCallAnalyticsCategoryRequest> request = null;
+        Response<CreateCallAnalyticsCategoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateCallAnalyticsCategoryRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createCallAnalyticsCategoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateCallAnalyticsCategory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateCallAnalyticsCategoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateCallAnalyticsCategoryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
     }
 
     /**
@@ -400,6 +471,139 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<CreateVocabularyFilterResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new CreateVocabularyFilterResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a call analytics category using its name.
+     * </p>
+     * 
+     * @param deleteCallAnalyticsCategoryRequest
+     * @return Result of the DeleteCallAnalyticsCategory operation returned by the service.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.DeleteCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteCallAnalyticsCategoryResult deleteCallAnalyticsCategory(DeleteCallAnalyticsCategoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteCallAnalyticsCategory(request);
+    }
+
+    @SdkInternalApi
+    final DeleteCallAnalyticsCategoryResult executeDeleteCallAnalyticsCategory(DeleteCallAnalyticsCategoryRequest deleteCallAnalyticsCategoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteCallAnalyticsCategoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteCallAnalyticsCategoryRequest> request = null;
+        Response<DeleteCallAnalyticsCategoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteCallAnalyticsCategoryRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteCallAnalyticsCategoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteCallAnalyticsCategory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteCallAnalyticsCategoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteCallAnalyticsCategoryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a call analytics job using its name.
+     * </p>
+     * 
+     * @param deleteCallAnalyticsJobRequest
+     * @return Result of the DeleteCallAnalyticsJob operation returned by the service.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.DeleteCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteCallAnalyticsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteCallAnalyticsJobResult deleteCallAnalyticsJob(DeleteCallAnalyticsJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteCallAnalyticsJob(request);
+    }
+
+    @SdkInternalApi
+    final DeleteCallAnalyticsJobResult executeDeleteCallAnalyticsJob(DeleteCallAnalyticsJobRequest deleteCallAnalyticsJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteCallAnalyticsJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteCallAnalyticsJobRequest> request = null;
+        Response<DeleteCallAnalyticsJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteCallAnalyticsJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteCallAnalyticsJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteCallAnalyticsJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteCallAnalyticsJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteCallAnalyticsJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -810,10 +1014,10 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
     /**
      * <p>
      * Gets information about a single custom language model. Use this information to see details about the language
-     * model in your AWS account. You can also see whether the base language model used to create your custom language
-     * model has been updated. If Amazon Transcribe has updated the base model, you can create a new custom language
-     * model using the updated base model. If the language model wasn't created, you can use this operation to
-     * understand why Amazon Transcribe couldn't create it.
+     * model in your Amazon Web Services account. You can also see whether the base language model used to create your
+     * custom language model has been updated. If Amazon Transcribe has updated the base model, you can create a new
+     * custom language model using the updated base model. If the language model wasn't created, you can use this
+     * operation to understand why Amazon Transcribe couldn't create it.
      * </p>
      * 
      * @param describeLanguageModelRequest
@@ -868,6 +1072,144 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<DescribeLanguageModelResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new DescribeLanguageModelResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves information about a call analytics category.
+     * </p>
+     * 
+     * @param getCallAnalyticsCategoryRequest
+     * @return Result of the GetCallAnalyticsCategory operation returned by the service.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @sample AmazonTranscribe.GetCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetCallAnalyticsCategoryResult getCallAnalyticsCategory(GetCallAnalyticsCategoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetCallAnalyticsCategory(request);
+    }
+
+    @SdkInternalApi
+    final GetCallAnalyticsCategoryResult executeGetCallAnalyticsCategory(GetCallAnalyticsCategoryRequest getCallAnalyticsCategoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getCallAnalyticsCategoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetCallAnalyticsCategoryRequest> request = null;
+        Response<GetCallAnalyticsCategoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetCallAnalyticsCategoryRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getCallAnalyticsCategoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetCallAnalyticsCategory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetCallAnalyticsCategoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetCallAnalyticsCategoryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information about a call analytics job. To see the status of the job, check the
+     * <code>CallAnalyticsJobStatus</code> field. If the status is <code>COMPLETED</code>, the job is finished and you
+     * can find the results at the location specified in the <code>TranscriptFileUri</code> field. If you enable
+     * personally identifiable information (PII) redaction, the redacted transcript appears in the
+     * <code>RedactedTranscriptFileUri</code> field.
+     * </p>
+     * 
+     * @param getCallAnalyticsJobRequest
+     * @return Result of the GetCallAnalyticsJob operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @sample AmazonTranscribe.GetCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetCallAnalyticsJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetCallAnalyticsJobResult getCallAnalyticsJob(GetCallAnalyticsJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetCallAnalyticsJob(request);
+    }
+
+    @SdkInternalApi
+    final GetCallAnalyticsJobResult executeGetCallAnalyticsJob(GetCallAnalyticsJobRequest getCallAnalyticsJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getCallAnalyticsJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetCallAnalyticsJobRequest> request = null;
+        Response<GetCallAnalyticsJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetCallAnalyticsJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getCallAnalyticsJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetCallAnalyticsJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetCallAnalyticsJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetCallAnalyticsJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1205,6 +1547,138 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
 
             HttpResponseHandler<AmazonWebServiceResponse<GetVocabularyFilterResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetVocabularyFilterResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Provides more information about the call analytics categories that you've created. You can use the information in
+     * this list to find a specific category. You can then use the operation to get more information about it.
+     * </p>
+     * 
+     * @param listCallAnalyticsCategoriesRequest
+     * @return Result of the ListCallAnalyticsCategories operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.ListCallAnalyticsCategories
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListCallAnalyticsCategories"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListCallAnalyticsCategoriesResult listCallAnalyticsCategories(ListCallAnalyticsCategoriesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCallAnalyticsCategories(request);
+    }
+
+    @SdkInternalApi
+    final ListCallAnalyticsCategoriesResult executeListCallAnalyticsCategories(ListCallAnalyticsCategoriesRequest listCallAnalyticsCategoriesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCallAnalyticsCategoriesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCallAnalyticsCategoriesRequest> request = null;
+        Response<ListCallAnalyticsCategoriesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCallAnalyticsCategoriesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listCallAnalyticsCategoriesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCallAnalyticsCategories");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCallAnalyticsCategoriesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListCallAnalyticsCategoriesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List call analytics jobs with a specified status or substring that matches their names.
+     * </p>
+     * 
+     * @param listCallAnalyticsJobsRequest
+     * @return Result of the ListCallAnalyticsJobs operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.ListCallAnalyticsJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListCallAnalyticsJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListCallAnalyticsJobsResult listCallAnalyticsJobs(ListCallAnalyticsJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListCallAnalyticsJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListCallAnalyticsJobsResult executeListCallAnalyticsJobs(ListCallAnalyticsJobsRequest listCallAnalyticsJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listCallAnalyticsJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListCallAnalyticsJobsRequest> request = null;
+        Response<ListCallAnalyticsJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListCallAnalyticsJobsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listCallAnalyticsJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListCallAnalyticsJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListCallAnalyticsJobsResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListCallAnalyticsJobsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1610,6 +2084,77 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Starts an asynchronous analytics job that not only transcribes the audio recording of a caller and agent, but
+     * also returns additional insights. These insights include how quickly or loudly the caller or agent was speaking.
+     * To retrieve additional insights with your analytics jobs, create categories. A category is a way to classify
+     * analytics jobs based on attributes, such as a customer's sentiment or a particular phrase being used during the
+     * call. For more information, see the operation.
+     * </p>
+     * 
+     * @param startCallAnalyticsJobRequest
+     * @return Result of the StartCallAnalyticsJob operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws ConflictException
+     *         There is already a resource with that name.
+     * @sample AmazonTranscribe.StartCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/StartCallAnalyticsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartCallAnalyticsJobResult startCallAnalyticsJob(StartCallAnalyticsJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartCallAnalyticsJob(request);
+    }
+
+    @SdkInternalApi
+    final StartCallAnalyticsJobResult executeStartCallAnalyticsJob(StartCallAnalyticsJobRequest startCallAnalyticsJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startCallAnalyticsJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartCallAnalyticsJobRequest> request = null;
+        Response<StartCallAnalyticsJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartCallAnalyticsJobRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startCallAnalyticsJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartCallAnalyticsJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartCallAnalyticsJobResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new StartCallAnalyticsJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Starts a batch job to transcribe medical speech to text.
      * </p>
      * 
@@ -1733,6 +2278,77 @@ public class AmazonTranscribeClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<StartTranscriptionJobResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new StartTranscriptionJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the call analytics category with new values. The <code>UpdateCallAnalyticsCategory</code> operation
+     * overwrites all of the existing information with the values that you provide in the request.
+     * </p>
+     * 
+     * @param updateCallAnalyticsCategoryRequest
+     * @return Result of the UpdateCallAnalyticsCategory operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @throws ConflictException
+     *         There is already a resource with that name.
+     * @sample AmazonTranscribe.UpdateCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/UpdateCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateCallAnalyticsCategoryResult updateCallAnalyticsCategory(UpdateCallAnalyticsCategoryRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateCallAnalyticsCategory(request);
+    }
+
+    @SdkInternalApi
+    final UpdateCallAnalyticsCategoryResult executeUpdateCallAnalyticsCategory(UpdateCallAnalyticsCategoryRequest updateCallAnalyticsCategoryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateCallAnalyticsCategoryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateCallAnalyticsCategoryRequest> request = null;
+        Response<UpdateCallAnalyticsCategoryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateCallAnalyticsCategoryRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateCallAnalyticsCategoryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Transcribe");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateCallAnalyticsCategory");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateCallAnalyticsCategoryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateCallAnalyticsCategoryResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

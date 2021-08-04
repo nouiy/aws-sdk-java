@@ -27,8 +27,40 @@ public class ListImagePipelinesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>description</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>distributionConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>imageRecipeArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>infrastructureConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>status</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<Filter> filters;
     /**
@@ -46,10 +78,73 @@ public class ListImagePipelinesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>description</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>distributionConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>imageRecipeArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>infrastructureConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>status</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The filters.
+     * @return Use the following filters to streamline results:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>description</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>distributionConfigurationArn</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>imageRecipeArn</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>infrastructureConfigurationArn</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>name</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>status</code>
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<Filter> getFilters() {
@@ -58,11 +153,74 @@ public class ListImagePipelinesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>description</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>distributionConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>imageRecipeArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>infrastructureConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>status</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        The filters.
+     *        Use the following filters to streamline results:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>description</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>distributionConfigurationArn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>imageRecipeArn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>infrastructureConfigurationArn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>status</code>
+     *        </p>
+     *        </li>
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -76,8 +234,40 @@ public class ListImagePipelinesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>description</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>distributionConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>imageRecipeArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>infrastructureConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>status</code>
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
@@ -85,7 +275,38 @@ public class ListImagePipelinesRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param filters
-     *        The filters.
+     *        Use the following filters to streamline results:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>description</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>distributionConfigurationArn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>imageRecipeArn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>infrastructureConfigurationArn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>status</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +322,74 @@ public class ListImagePipelinesRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>description</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>distributionConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>imageRecipeArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>infrastructureConfigurationArn</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>status</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        The filters.
+     *        Use the following filters to streamline results:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>description</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>distributionConfigurationArn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>imageRecipeArn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>infrastructureConfigurationArn</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>status</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

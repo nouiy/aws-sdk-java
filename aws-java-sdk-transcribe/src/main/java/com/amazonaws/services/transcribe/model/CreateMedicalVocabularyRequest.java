@@ -27,8 +27,9 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the custom vocabulary. This case-sensitive name must be unique within an AWS account. If you try to
-     * create a vocabulary with the same name as a previous vocabulary, you get a <code>ConflictException</code> error.
+     * The name of the custom vocabulary. This case-sensitive name must be unique within an Amazon Web Services account.
+     * If you try to create a vocabulary with the same name as a previous vocabulary, you get a
+     * <code>ConflictException</code> error.
      * </p>
      */
     private String vocabularyName;
@@ -43,8 +44,8 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The location in Amazon S3 of the text file you use to define your custom vocabulary. The URI must be in the same
-     * AWS Region as the resource that you're calling. Enter information about your <code>VocabularyFileUri</code> in
-     * the following format:
+     * Amazon Web Services Region as the resource that you're calling. Enter information about your
+     * <code>VocabularyFileUri</code> in the following format:
      * </p>
      * <p>
      * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
@@ -57,12 +58,12 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * For more information about Amazon S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
      * Vocabularies</a>.
      * </p>
      */
@@ -70,13 +71,14 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the custom vocabulary. This case-sensitive name must be unique within an AWS account. If you try to
-     * create a vocabulary with the same name as a previous vocabulary, you get a <code>ConflictException</code> error.
+     * The name of the custom vocabulary. This case-sensitive name must be unique within an Amazon Web Services account.
+     * If you try to create a vocabulary with the same name as a previous vocabulary, you get a
+     * <code>ConflictException</code> error.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the custom vocabulary. This case-sensitive name must be unique within an AWS account. If you
-     *        try to create a vocabulary with the same name as a previous vocabulary, you get a
+     *        The name of the custom vocabulary. This case-sensitive name must be unique within an Amazon Web Services
+     *        account. If you try to create a vocabulary with the same name as a previous vocabulary, you get a
      *        <code>ConflictException</code> error.
      */
 
@@ -86,12 +88,13 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the custom vocabulary. This case-sensitive name must be unique within an AWS account. If you try to
-     * create a vocabulary with the same name as a previous vocabulary, you get a <code>ConflictException</code> error.
+     * The name of the custom vocabulary. This case-sensitive name must be unique within an Amazon Web Services account.
+     * If you try to create a vocabulary with the same name as a previous vocabulary, you get a
+     * <code>ConflictException</code> error.
      * </p>
      * 
-     * @return The name of the custom vocabulary. This case-sensitive name must be unique within an AWS account. If you
-     *         try to create a vocabulary with the same name as a previous vocabulary, you get a
+     * @return The name of the custom vocabulary. This case-sensitive name must be unique within an Amazon Web Services
+     *         account. If you try to create a vocabulary with the same name as a previous vocabulary, you get a
      *         <code>ConflictException</code> error.
      */
 
@@ -101,13 +104,14 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the custom vocabulary. This case-sensitive name must be unique within an AWS account. If you try to
-     * create a vocabulary with the same name as a previous vocabulary, you get a <code>ConflictException</code> error.
+     * The name of the custom vocabulary. This case-sensitive name must be unique within an Amazon Web Services account.
+     * If you try to create a vocabulary with the same name as a previous vocabulary, you get a
+     * <code>ConflictException</code> error.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the custom vocabulary. This case-sensitive name must be unique within an AWS account. If you
-     *        try to create a vocabulary with the same name as a previous vocabulary, you get a
+     *        The name of the custom vocabulary. This case-sensitive name must be unique within an Amazon Web Services
+     *        account. If you try to create a vocabulary with the same name as a previous vocabulary, you get a
      *        <code>ConflictException</code> error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -195,8 +199,8 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The location in Amazon S3 of the text file you use to define your custom vocabulary. The URI must be in the same
-     * AWS Region as the resource that you're calling. Enter information about your <code>VocabularyFileUri</code> in
-     * the following format:
+     * Amazon Web Services Region as the resource that you're calling. Enter information about your
+     * <code>VocabularyFileUri</code> in the following format:
      * </p>
      * <p>
      * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
@@ -209,18 +213,18 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * For more information about Amazon S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
      * Vocabularies</a>.
      * </p>
      * 
      * @param vocabularyFileUri
      *        The location in Amazon S3 of the text file you use to define your custom vocabulary. The URI must be in
-     *        the same AWS Region as the resource that you're calling. Enter information about your
+     *        the same Amazon Web Services Region as the resource that you're calling. Enter information about your
      *        <code>VocabularyFileUri</code> in the following format:</p>
      *        <p>
      *        <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
@@ -233,13 +237,13 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *        </p>
      *        <p>
      *        For more information about Amazon S3 object names, see <a
-     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
      *        the <i>Amazon S3 Developer Guide</i>.
      *        </p>
      *        <p>
      *        For more information about custom vocabularies, see <a
-     *        href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
-     *        Vocabularies</a>.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical
+     *        Custom Vocabularies</a>.
      */
 
     public void setVocabularyFileUri(String vocabularyFileUri) {
@@ -249,8 +253,8 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The location in Amazon S3 of the text file you use to define your custom vocabulary. The URI must be in the same
-     * AWS Region as the resource that you're calling. Enter information about your <code>VocabularyFileUri</code> in
-     * the following format:
+     * Amazon Web Services Region as the resource that you're calling. Enter information about your
+     * <code>VocabularyFileUri</code> in the following format:
      * </p>
      * <p>
      * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
@@ -263,17 +267,17 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * For more information about Amazon S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
      * Vocabularies</a>.
      * </p>
      * 
      * @return The location in Amazon S3 of the text file you use to define your custom vocabulary. The URI must be in
-     *         the same AWS Region as the resource that you're calling. Enter information about your
+     *         the same Amazon Web Services Region as the resource that you're calling. Enter information about your
      *         <code>VocabularyFileUri</code> in the following format:</p>
      *         <p>
      *         <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
@@ -286,12 +290,12 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *         </p>
      *         <p>
      *         For more information about Amazon S3 object names, see <a
-     *         href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
      *         the <i>Amazon S3 Developer Guide</i>.
      *         </p>
      *         <p>
      *         For more information about custom vocabularies, see <a
-     *         href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical
      *         Custom Vocabularies</a>.
      */
 
@@ -302,8 +306,8 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The location in Amazon S3 of the text file you use to define your custom vocabulary. The URI must be in the same
-     * AWS Region as the resource that you're calling. Enter information about your <code>VocabularyFileUri</code> in
-     * the following format:
+     * Amazon Web Services Region as the resource that you're calling. Enter information about your
+     * <code>VocabularyFileUri</code> in the following format:
      * </p>
      * <p>
      * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
@@ -316,18 +320,18 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * For more information about Amazon S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
      * Vocabularies</a>.
      * </p>
      * 
      * @param vocabularyFileUri
      *        The location in Amazon S3 of the text file you use to define your custom vocabulary. The URI must be in
-     *        the same AWS Region as the resource that you're calling. Enter information about your
+     *        the same Amazon Web Services Region as the resource that you're calling. Enter information about your
      *        <code>VocabularyFileUri</code> in the following format:</p>
      *        <p>
      *        <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
@@ -340,13 +344,13 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *        </p>
      *        <p>
      *        For more information about Amazon S3 object names, see <a
-     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
      *        the <i>Amazon S3 Developer Guide</i>.
      *        </p>
      *        <p>
      *        For more information about custom vocabularies, see <a
-     *        href="http://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
-     *        Vocabularies</a>.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical
+     *        Custom Vocabularies</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

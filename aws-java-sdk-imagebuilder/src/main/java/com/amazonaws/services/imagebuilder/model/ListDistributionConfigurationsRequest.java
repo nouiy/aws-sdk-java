@@ -27,15 +27,8 @@ public class ListDistributionConfigurationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>name</code> - The name of this distribution configuration.
-     * </p>
-     * </li>
-     * </ul>
      */
     private java.util.List<Filter> filters;
     /**
@@ -53,23 +46,10 @@ public class ListDistributionConfigurationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>name</code> - The name of this distribution configuration.
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return The filters.</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>name</code> - The name of this distribution configuration.
-     *         </p>
-     *         </li>
+     * @return You can filter on <code>name</code> to streamline results.
      */
 
     public java.util.List<Filter> getFilters() {
@@ -78,24 +58,11 @@ public class ListDistributionConfigurationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>name</code> - The name of this distribution configuration.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param filters
-     *        The filters.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>name</code> - The name of this distribution configuration.
-     *        </p>
-     *        </li>
+     *        You can filter on <code>name</code> to streamline results.
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -109,15 +76,8 @@ public class ListDistributionConfigurationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>name</code> - The name of this distribution configuration.
-     * </p>
-     * </li>
-     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
@@ -125,13 +85,7 @@ public class ListDistributionConfigurationsRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param filters
-     *        The filters.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>name</code> - The name of this distribution configuration.
-     *        </p>
-     *        </li>
+     *        You can filter on <code>name</code> to streamline results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,24 +101,11 @@ public class ListDistributionConfigurationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>name</code> - The name of this distribution configuration.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param filters
-     *        The filters.</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>name</code> - The name of this distribution configuration.
-     *        </p>
-     *        </li>
+     *        You can filter on <code>name</code> to streamline results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,8 +33,35 @@ public class ListImageBuildVersionsRequest extends com.amazonaws.AmazonWebServic
     private String imageVersionArn;
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>osVersion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>version</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<Filter> filters;
     /**
@@ -92,10 +119,63 @@ public class ListImageBuildVersionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>osVersion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>version</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The filters.
+     * @return Use the following filters to streamline results:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>name</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>osVersion</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>platform</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>type</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>version</code>
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<Filter> getFilters() {
@@ -104,11 +184,64 @@ public class ListImageBuildVersionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>osVersion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>version</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        The filters.
+     *        Use the following filters to streamline results:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>osVersion</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>platform</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>type</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>version</code>
+     *        </p>
+     *        </li>
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -122,8 +255,35 @@ public class ListImageBuildVersionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>osVersion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>version</code>
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
@@ -131,7 +291,33 @@ public class ListImageBuildVersionsRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param filters
-     *        The filters.
+     *        Use the following filters to streamline results:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>osVersion</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>platform</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>type</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>version</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,11 +333,64 @@ public class ListImageBuildVersionsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The filters.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>osVersion</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>type</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>version</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        The filters.
+     *        Use the following filters to streamline results:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>osVersion</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>platform</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>type</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>version</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

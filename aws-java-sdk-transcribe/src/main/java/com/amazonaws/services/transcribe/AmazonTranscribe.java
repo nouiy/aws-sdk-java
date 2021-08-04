@@ -43,6 +43,33 @@ public interface AmazonTranscribe {
 
     /**
      * <p>
+     * Creates an analytics category. Amazon Transcribe applies the conditions specified by your analytics categories to
+     * your call analytics jobs. For each analytics category, you specify one or more rules. For example, you can
+     * specify a rule that the customer sentiment was neutral or negative within that category. If you start a call
+     * analytics job, Amazon Transcribe applies the category to the analytics job that you've specified.
+     * </p>
+     * 
+     * @param createCallAnalyticsCategoryRequest
+     * @return Result of the CreateCallAnalyticsCategory operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws ConflictException
+     *         There is already a resource with that name.
+     * @sample AmazonTranscribe.CreateCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/CreateCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateCallAnalyticsCategoryResult createCallAnalyticsCategory(CreateCallAnalyticsCategoryRequest createCallAnalyticsCategoryRequest);
+
+    /**
+     * <p>
      * Creates a new custom language model. Use Amazon S3 prefixes to provide the location of your input files. The time
      * it takes to create your model depends on the size of your training data.
      * </p>
@@ -140,6 +167,52 @@ public interface AmazonTranscribe {
      *      target="_top">AWS API Documentation</a>
      */
     CreateVocabularyFilterResult createVocabularyFilter(CreateVocabularyFilterRequest createVocabularyFilterRequest);
+
+    /**
+     * <p>
+     * Deletes a call analytics category using its name.
+     * </p>
+     * 
+     * @param deleteCallAnalyticsCategoryRequest
+     * @return Result of the DeleteCallAnalyticsCategory operation returned by the service.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.DeleteCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteCallAnalyticsCategoryResult deleteCallAnalyticsCategory(DeleteCallAnalyticsCategoryRequest deleteCallAnalyticsCategoryRequest);
+
+    /**
+     * <p>
+     * Deletes a call analytics job using its name.
+     * </p>
+     * 
+     * @param deleteCallAnalyticsJobRequest
+     * @return Result of the DeleteCallAnalyticsJob operation returned by the service.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.DeleteCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteCallAnalyticsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteCallAnalyticsJobResult deleteCallAnalyticsJob(DeleteCallAnalyticsJobRequest deleteCallAnalyticsJobRequest);
 
     /**
      * <p>
@@ -283,10 +356,10 @@ public interface AmazonTranscribe {
     /**
      * <p>
      * Gets information about a single custom language model. Use this information to see details about the language
-     * model in your AWS account. You can also see whether the base language model used to create your custom language
-     * model has been updated. If Amazon Transcribe has updated the base model, you can create a new custom language
-     * model using the updated base model. If the language model wasn't created, you can use this operation to
-     * understand why Amazon Transcribe couldn't create it.
+     * model in your Amazon Web Services account. You can also see whether the base language model used to create your
+     * custom language model has been updated. If Amazon Transcribe has updated the base model, you can create a new
+     * custom language model using the updated base model. If the language model wasn't created, you can use this
+     * operation to understand why Amazon Transcribe couldn't create it.
      * </p>
      * 
      * @param describeLanguageModelRequest
@@ -307,6 +380,58 @@ public interface AmazonTranscribe {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeLanguageModelResult describeLanguageModel(DescribeLanguageModelRequest describeLanguageModelRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a call analytics category.
+     * </p>
+     * 
+     * @param getCallAnalyticsCategoryRequest
+     * @return Result of the GetCallAnalyticsCategory operation returned by the service.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @sample AmazonTranscribe.GetCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetCallAnalyticsCategoryResult getCallAnalyticsCategory(GetCallAnalyticsCategoryRequest getCallAnalyticsCategoryRequest);
+
+    /**
+     * <p>
+     * Returns information about a call analytics job. To see the status of the job, check the
+     * <code>CallAnalyticsJobStatus</code> field. If the status is <code>COMPLETED</code>, the job is finished and you
+     * can find the results at the location specified in the <code>TranscriptFileUri</code> field. If you enable
+     * personally identifiable information (PII) redaction, the redacted transcript appears in the
+     * <code>RedactedTranscriptFileUri</code> field.
+     * </p>
+     * 
+     * @param getCallAnalyticsJobRequest
+     * @return Result of the GetCallAnalyticsJob operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @sample AmazonTranscribe.GetCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetCallAnalyticsJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetCallAnalyticsJobResult getCallAnalyticsJob(GetCallAnalyticsJobRequest getCallAnalyticsJobRequest);
 
     /**
      * <p>
@@ -432,6 +557,51 @@ public interface AmazonTranscribe {
      *      API Documentation</a>
      */
     GetVocabularyFilterResult getVocabularyFilter(GetVocabularyFilterRequest getVocabularyFilterRequest);
+
+    /**
+     * <p>
+     * Provides more information about the call analytics categories that you've created. You can use the information in
+     * this list to find a specific category. You can then use the operation to get more information about it.
+     * </p>
+     * 
+     * @param listCallAnalyticsCategoriesRequest
+     * @return Result of the ListCallAnalyticsCategories operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.ListCallAnalyticsCategories
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListCallAnalyticsCategories"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListCallAnalyticsCategoriesResult listCallAnalyticsCategories(ListCallAnalyticsCategoriesRequest listCallAnalyticsCategoriesRequest);
+
+    /**
+     * <p>
+     * List call analytics jobs with a specified status or substring that matches their names.
+     * </p>
+     * 
+     * @param listCallAnalyticsJobsRequest
+     * @return Result of the ListCallAnalyticsJobs operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.ListCallAnalyticsJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListCallAnalyticsJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListCallAnalyticsJobsResult listCallAnalyticsJobs(ListCallAnalyticsJobsRequest listCallAnalyticsJobsRequest);
 
     /**
      * <p>
@@ -570,6 +740,34 @@ public interface AmazonTranscribe {
 
     /**
      * <p>
+     * Starts an asynchronous analytics job that not only transcribes the audio recording of a caller and agent, but
+     * also returns additional insights. These insights include how quickly or loudly the caller or agent was speaking.
+     * To retrieve additional insights with your analytics jobs, create categories. A category is a way to classify
+     * analytics jobs based on attributes, such as a customer's sentiment or a particular phrase being used during the
+     * call. For more information, see the operation.
+     * </p>
+     * 
+     * @param startCallAnalyticsJobRequest
+     * @return Result of the StartCallAnalyticsJob operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws ConflictException
+     *         There is already a resource with that name.
+     * @sample AmazonTranscribe.StartCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/StartCallAnalyticsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartCallAnalyticsJobResult startCallAnalyticsJob(StartCallAnalyticsJobRequest startCallAnalyticsJobRequest);
+
+    /**
+     * <p>
      * Starts a batch job to transcribe medical speech to text.
      * </p>
      * 
@@ -615,6 +813,33 @@ public interface AmazonTranscribe {
      *      target="_top">AWS API Documentation</a>
      */
     StartTranscriptionJobResult startTranscriptionJob(StartTranscriptionJobRequest startTranscriptionJobRequest);
+
+    /**
+     * <p>
+     * Updates the call analytics category with new values. The <code>UpdateCallAnalyticsCategory</code> operation
+     * overwrites all of the existing information with the values that you provide in the request.
+     * </p>
+     * 
+     * @param updateCallAnalyticsCategoryRequest
+     * @return Result of the UpdateCallAnalyticsCategory operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @throws ConflictException
+     *         There is already a resource with that name.
+     * @sample AmazonTranscribe.UpdateCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/UpdateCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateCallAnalyticsCategoryResult updateCallAnalyticsCategory(UpdateCallAnalyticsCategoryRequest updateCallAnalyticsCategoryRequest);
 
     /**
      * <p>

@@ -222,7 +222,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private String dBInstanceIdentifier;
     /**
      * <p>
-     * The amount of storage (in gibibytes) to allocate for the DB instance.
+     * The amount of storage in gibibytes (GiB) to allocate for the DB instance.
      * </p>
      * <p>
      * Type: Integer
@@ -1384,7 +1384,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private Boolean deletionProtection;
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -1451,7 +1451,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        Example: <code>mydbinstance</code>
      * @param allocatedStorage
-     *        The amount of storage (in gibibytes) to allocate for the DB instance.
+     *        The amount of storage in gibibytes (GiB) to allocate for the DB instance.
      *        </p>
      *        <p>
      *        Type: Integer
@@ -3060,7 +3060,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The amount of storage (in gibibytes) to allocate for the DB instance.
+     * The amount of storage in gibibytes (GiB) to allocate for the DB instance.
      * </p>
      * <p>
      * Type: Integer
@@ -3225,7 +3225,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * 
      * @param allocatedStorage
-     *        The amount of storage (in gibibytes) to allocate for the DB instance.</p>
+     *        The amount of storage in gibibytes (GiB) to allocate for the DB instance.</p>
      *        <p>
      *        Type: Integer
      *        </p>
@@ -3394,7 +3394,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The amount of storage (in gibibytes) to allocate for the DB instance.
+     * The amount of storage in gibibytes (GiB) to allocate for the DB instance.
      * </p>
      * <p>
      * Type: Integer
@@ -3558,7 +3558,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * 
-     * @return The amount of storage (in gibibytes) to allocate for the DB instance.</p>
+     * @return The amount of storage in gibibytes (GiB) to allocate for the DB instance.</p>
      *         <p>
      *         Type: Integer
      *         </p>
@@ -3727,7 +3727,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The amount of storage (in gibibytes) to allocate for the DB instance.
+     * The amount of storage in gibibytes (GiB) to allocate for the DB instance.
      * </p>
      * <p>
      * Type: Integer
@@ -3892,7 +3892,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * 
      * @param allocatedStorage
-     *        The amount of storage (in gibibytes) to allocate for the DB instance.</p>
+     *        The amount of storage in gibibytes (GiB) to allocate for the DB instance.</p>
      *        <p>
      *        Type: Integer
      *        </p>
@@ -10678,7 +10678,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -10687,7 +10687,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param maxAllocatedStorage
-     *        The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+     *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *        instance.</p>
      *        <p>
      *        For more information about this setting, including limitations that apply to it, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"
@@ -10701,7 +10702,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -10709,7 +10710,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
-     * @return The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+     * @return The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *         instance.</p>
      *         <p>
      *         For more information about this setting, including limitations that apply to it, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"
@@ -10723,7 +10725,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -10732,7 +10734,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param maxAllocatedStorage
-     *        The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+     *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *        instance.</p>
      *        <p>
      *        For more information about this setting, including limitations that apply to it, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"

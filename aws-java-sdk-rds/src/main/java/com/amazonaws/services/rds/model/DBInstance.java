@@ -60,6 +60,12 @@ public class DBInstance implements Serializable, Cloneable {
     private String dBInstanceStatus;
     /**
      * <p>
+     * The time when a stopped DB instance is restarted automatically.
+     * </p>
+     */
+    private java.util.Date automaticRestartTime;
+    /**
+     * <p>
      * Contains the master username for the DB instance.
      * </p>
      */
@@ -91,11 +97,16 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * Specifies the connection endpoint.
      * </p>
+     * <note>
+     * <p>
+     * The endpoint might not be shown for instances whose status is <code>creating</code>.
+     * </p>
+     * </note>
      */
     private Endpoint endpoint;
     /**
      * <p>
-     * Specifies the allocated storage size specified in gibibytes.
+     * Specifies the allocated storage size specified in gibibytes (GiB).
      * </p>
      */
     private Integer allocatedStorage;
@@ -495,7 +506,7 @@ public class DBInstance implements Serializable, Cloneable {
     private Endpoint listenerEndpoint;
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      */
     private Integer maxAllocatedStorage;
@@ -760,6 +771,46 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
+     * The time when a stopped DB instance is restarted automatically.
+     * </p>
+     * 
+     * @param automaticRestartTime
+     *        The time when a stopped DB instance is restarted automatically.
+     */
+
+    public void setAutomaticRestartTime(java.util.Date automaticRestartTime) {
+        this.automaticRestartTime = automaticRestartTime;
+    }
+
+    /**
+     * <p>
+     * The time when a stopped DB instance is restarted automatically.
+     * </p>
+     * 
+     * @return The time when a stopped DB instance is restarted automatically.
+     */
+
+    public java.util.Date getAutomaticRestartTime() {
+        return this.automaticRestartTime;
+    }
+
+    /**
+     * <p>
+     * The time when a stopped DB instance is restarted automatically.
+     * </p>
+     * 
+     * @param automaticRestartTime
+     *        The time when a stopped DB instance is restarted automatically.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withAutomaticRestartTime(java.util.Date automaticRestartTime) {
+        setAutomaticRestartTime(automaticRestartTime);
+        return this;
+    }
+
+    /**
+     * <p>
      * Contains the master username for the DB instance.
      * </p>
      * 
@@ -941,9 +992,17 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * Specifies the connection endpoint.
      * </p>
+     * <note>
+     * <p>
+     * The endpoint might not be shown for instances whose status is <code>creating</code>.
+     * </p>
+     * </note>
      * 
      * @param endpoint
-     *        Specifies the connection endpoint.
+     *        Specifies the connection endpoint.</p> <note>
+     *        <p>
+     *        The endpoint might not be shown for instances whose status is <code>creating</code>.
+     *        </p>
      */
 
     public void setEndpoint(Endpoint endpoint) {
@@ -954,8 +1013,16 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * Specifies the connection endpoint.
      * </p>
+     * <note>
+     * <p>
+     * The endpoint might not be shown for instances whose status is <code>creating</code>.
+     * </p>
+     * </note>
      * 
-     * @return Specifies the connection endpoint.
+     * @return Specifies the connection endpoint.</p> <note>
+     *         <p>
+     *         The endpoint might not be shown for instances whose status is <code>creating</code>.
+     *         </p>
      */
 
     public Endpoint getEndpoint() {
@@ -966,9 +1033,17 @@ public class DBInstance implements Serializable, Cloneable {
      * <p>
      * Specifies the connection endpoint.
      * </p>
+     * <note>
+     * <p>
+     * The endpoint might not be shown for instances whose status is <code>creating</code>.
+     * </p>
+     * </note>
      * 
      * @param endpoint
-     *        Specifies the connection endpoint.
+     *        Specifies the connection endpoint.</p> <note>
+     *        <p>
+     *        The endpoint might not be shown for instances whose status is <code>creating</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -979,11 +1054,11 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the allocated storage size specified in gibibytes.
+     * Specifies the allocated storage size specified in gibibytes (GiB).
      * </p>
      * 
      * @param allocatedStorage
-     *        Specifies the allocated storage size specified in gibibytes.
+     *        Specifies the allocated storage size specified in gibibytes (GiB).
      */
 
     public void setAllocatedStorage(Integer allocatedStorage) {
@@ -992,10 +1067,10 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the allocated storage size specified in gibibytes.
+     * Specifies the allocated storage size specified in gibibytes (GiB).
      * </p>
      * 
-     * @return Specifies the allocated storage size specified in gibibytes.
+     * @return Specifies the allocated storage size specified in gibibytes (GiB).
      */
 
     public Integer getAllocatedStorage() {
@@ -1004,11 +1079,11 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the allocated storage size specified in gibibytes.
+     * Specifies the allocated storage size specified in gibibytes (GiB).
      * </p>
      * 
      * @param allocatedStorage
-     *        Specifies the allocated storage size specified in gibibytes.
+     *        Specifies the allocated storage size specified in gibibytes (GiB).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4165,11 +4240,12 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * 
      * @param maxAllocatedStorage
-     *        The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *        instance.
      */
 
     public void setMaxAllocatedStorage(Integer maxAllocatedStorage) {
@@ -4178,10 +4254,11 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * 
-     * @return The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * @return The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *         instance.
      */
 
     public Integer getMaxAllocatedStorage() {
@@ -4190,11 +4267,12 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * 
      * @param maxAllocatedStorage
-     *        The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *        instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4833,6 +4911,8 @@ public class DBInstance implements Serializable, Cloneable {
             sb.append("Engine: ").append(getEngine()).append(",");
         if (getDBInstanceStatus() != null)
             sb.append("DBInstanceStatus: ").append(getDBInstanceStatus()).append(",");
+        if (getAutomaticRestartTime() != null)
+            sb.append("AutomaticRestartTime: ").append(getAutomaticRestartTime()).append(",");
         if (getMasterUsername() != null)
             sb.append("MasterUsername: ").append(getMasterUsername()).append(",");
         if (getDBName() != null)
@@ -4992,6 +5072,10 @@ public class DBInstance implements Serializable, Cloneable {
         if (other.getDBInstanceStatus() == null ^ this.getDBInstanceStatus() == null)
             return false;
         if (other.getDBInstanceStatus() != null && other.getDBInstanceStatus().equals(this.getDBInstanceStatus()) == false)
+            return false;
+        if (other.getAutomaticRestartTime() == null ^ this.getAutomaticRestartTime() == null)
+            return false;
+        if (other.getAutomaticRestartTime() != null && other.getAutomaticRestartTime().equals(this.getAutomaticRestartTime()) == false)
             return false;
         if (other.getMasterUsername() == null ^ this.getMasterUsername() == null)
             return false;
@@ -5274,6 +5358,7 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDBInstanceClass() == null) ? 0 : getDBInstanceClass().hashCode());
         hashCode = prime * hashCode + ((getEngine() == null) ? 0 : getEngine().hashCode());
         hashCode = prime * hashCode + ((getDBInstanceStatus() == null) ? 0 : getDBInstanceStatus().hashCode());
+        hashCode = prime * hashCode + ((getAutomaticRestartTime() == null) ? 0 : getAutomaticRestartTime().hashCode());
         hashCode = prime * hashCode + ((getMasterUsername() == null) ? 0 : getMasterUsername().hashCode());
         hashCode = prime * hashCode + ((getDBName() == null) ? 0 : getDBName().hashCode());
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());

@@ -19,7 +19,11 @@ import static com.amazonaws.SDKGlobalConfiguration.AWS_RETRY_MODE_ENV_VAR;
 import static com.amazonaws.SDKGlobalConfiguration.AWS_RETRY_MODE_SYSTEM_PROPERTY;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
+import static org.mockito.Mockito.when;
 
+import com.amazonaws.auth.profile.internal.BasicProfileConfigFileLoader;
+import com.amazonaws.internal.config.InternalConfig;
+import com.amazonaws.profile.path.AwsProfileFileLocationProvider;
 import com.amazonaws.retry.RetryMode;
 import java.util.Arrays;
 import java.util.Collection;
@@ -27,6 +31,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.mockito.Mockito;
 import utils.EnvironmentVariableHelper;
 import utils.TestProfileFileLocationProvider;
 
@@ -41,18 +46,19 @@ public class RetryModeResolverTest {
     @Parameterized.Parameters
     public static Collection<Object> data() {
         return Arrays.asList(new Object[] {
-            new TestData(null, null, null, RetryMode.LEGACY),
-            new TestData("standard", "legacy", "PropertySetToStandard", RetryMode.STANDARD),
-            new TestData( "wrongValue", null, null, RetryMode.LEGACY),
-            new TestData(null, "wrongValue", null, RetryMode.LEGACY),
-            new TestData( "standard", "legacy", "PropertySetToStandard", RetryMode.STANDARD),
-            new TestData( null, "standard", "PropertySetToLegacy", RetryMode.STANDARD),
-            new TestData(null, null, "PropertyNotSet", RetryMode.LEGACY),
-            new TestData(null, null, "Property_MixedCase", RetryMode.STANDARD),
-            new TestData( null, null, "Property_SetToUnsupportedValue", RetryMode.LEGACY),
-            new TestData("adaptive", "legacy", "PropertySetToAdaptive", RetryMode.ADAPTIVE),
-            new TestData( null, "adaptive", "PropertySetToLegacy", RetryMode.ADAPTIVE),
-            new TestData(null, null, "Property_Adaptive_MixedCase", RetryMode.ADAPTIVE),
+            new TestData(null, null, null, null, RetryMode.LEGACY),
+            new TestData("standard", "legacy", "PropertySetToStandard", null, RetryMode.STANDARD),
+            new TestData("wrongValue", null, null, null, RetryMode.LEGACY),
+            new TestData(null, "wrongValue", null, null, RetryMode.LEGACY),
+            new TestData("standard", "legacy", "PropertySetToStandard", null, RetryMode.STANDARD),
+            new TestData(null, "standard", "PropertySetToLegacy", null, RetryMode.STANDARD),
+            new TestData(null, null, "PropertyNotSet", null, RetryMode.LEGACY),
+            new TestData(null, null, "Property_MixedCase", null, RetryMode.STANDARD),
+            new TestData(null, null, "Property_SetToUnsupportedValue", null, RetryMode.LEGACY),
+            new TestData("adaptive", "legacy", "PropertySetToAdaptive", null, RetryMode.ADAPTIVE),
+            new TestData(null, "adaptive", "PropertySetToLegacy", null, RetryMode.ADAPTIVE),
+            new TestData(null, null, "Property_Adaptive_MixedCase", null, RetryMode.ADAPTIVE),
+            new TestData(null, null, null, "STANDARD", RetryMode.STANDARD),
         });
     }
 
@@ -72,13 +78,14 @@ public class RetryModeResolverTest {
             System.setProperty(AWS_RETRY_MODE_SYSTEM_PROPERTY, testData.systemProperty);
         }
 
-        RetryModeResolver resolver;
+        AwsProfileFileLocationProvider profileFileLocationProvider =
+            new TestProfileFileLocationProvider(testData.configFile, "/resources/retry/");
+        BasicProfileConfigFileLoader configFileLoader = new BasicProfileConfigFileLoader(profileFileLocationProvider);
 
-        if (testData.configFile != null) {
-            resolver = new RetryModeResolver(new TestProfileFileLocationProvider(testData.configFile, "/resources/retry/"));
-        } else {
-            resolver = new RetryModeResolver();
-        }
+        InternalConfig internalConfig = Mockito.mock(InternalConfig.class);
+        when(internalConfig.getDefaultRetryMode()).thenReturn(testData.defaultRetryMode);
+
+        RetryModeResolver resolver = new RetryModeResolver(configFileLoader, internalConfig);
 
         assertThat(resolver.retryMode(), equalTo(testData.expected));
     }
@@ -88,13 +95,15 @@ public class RetryModeResolverTest {
         private String envVarValue;
         private String systemProperty;
         private String configFile;
+        private String defaultRetryMode;
         private RetryMode expected;
 
         TestData(String envVarValue, String systemProperty, String configFile,
-                 RetryMode expected) {
+                 String defaultRetryMode, RetryMode expected) {
             this.envVarValue = envVarValue;
             this.systemProperty = systemProperty;
             this.configFile = configFile;
+            this.defaultRetryMode = defaultRetryMode;
             this.expected = expected;
         }
     }

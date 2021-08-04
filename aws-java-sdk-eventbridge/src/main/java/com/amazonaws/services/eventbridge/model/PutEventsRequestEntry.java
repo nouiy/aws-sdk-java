@@ -31,7 +31,8 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The time stamp of the event, per <a href="https://www.rfc-editor.org/rfc/rfc3339.txt">RFC3339</a>. If no time
-     * stamp is provided, the time stamp of the <a>PutEvents</a> call is used.
+     * stamp is provided, the time stamp of the <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">PutEvents</a> call is used.
      * </p>
      */
     private java.util.Date time;
@@ -43,8 +44,8 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
     private String source;
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      */
     private java.util.List<String> resources;
@@ -69,13 +70,13 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
     private String eventBusName;
     /**
      * <p>
-     * An AWS X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with
-     * the event.
+     * An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
+     * event.
      * </p>
      * <p>
      * To learn more about X-Ray trace headers, see <a
      * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-tracingheader">Tracing
-     * header</a> in the AWS X-Ray Developer Guide.
+     * header</a> in the X-Ray Developer Guide.
      * </p>
      */
     private String traceHeader;
@@ -83,12 +84,15 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The time stamp of the event, per <a href="https://www.rfc-editor.org/rfc/rfc3339.txt">RFC3339</a>. If no time
-     * stamp is provided, the time stamp of the <a>PutEvents</a> call is used.
+     * stamp is provided, the time stamp of the <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">PutEvents</a> call is used.
      * </p>
      * 
      * @param time
      *        The time stamp of the event, per <a href="https://www.rfc-editor.org/rfc/rfc3339.txt">RFC3339</a>. If no
-     *        time stamp is provided, the time stamp of the <a>PutEvents</a> call is used.
+     *        time stamp is provided, the time stamp of the <a
+     *        href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">PutEvents</a> call
+     *        is used.
      */
 
     public void setTime(java.util.Date time) {
@@ -98,11 +102,14 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The time stamp of the event, per <a href="https://www.rfc-editor.org/rfc/rfc3339.txt">RFC3339</a>. If no time
-     * stamp is provided, the time stamp of the <a>PutEvents</a> call is used.
+     * stamp is provided, the time stamp of the <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">PutEvents</a> call is used.
      * </p>
      * 
      * @return The time stamp of the event, per <a href="https://www.rfc-editor.org/rfc/rfc3339.txt">RFC3339</a>. If no
-     *         time stamp is provided, the time stamp of the <a>PutEvents</a> call is used.
+     *         time stamp is provided, the time stamp of the <a
+     *         href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">PutEvents</a> call
+     *         is used.
      */
 
     public java.util.Date getTime() {
@@ -112,12 +119,15 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The time stamp of the event, per <a href="https://www.rfc-editor.org/rfc/rfc3339.txt">RFC3339</a>. If no time
-     * stamp is provided, the time stamp of the <a>PutEvents</a> call is used.
+     * stamp is provided, the time stamp of the <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">PutEvents</a> call is used.
      * </p>
      * 
      * @param time
      *        The time stamp of the event, per <a href="https://www.rfc-editor.org/rfc/rfc3339.txt">RFC3339</a>. If no
-     *        time stamp is provided, the time stamp of the <a>PutEvents</a> call is used.
+     *        time stamp is provided, the time stamp of the <a
+     *        href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEvents.html">PutEvents</a> call
+     *        is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -168,12 +178,12 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      * 
-     * @return AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     *         including zero, may be present.
+     * @return Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily
+     *         concerns. Any number, including zero, may be present.
      */
 
     public java.util.List<String> getResources() {
@@ -182,13 +192,13 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      * 
      * @param resources
-     *        AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     *        including zero, may be present.
+     *        Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily
+     *        concerns. Any number, including zero, may be present.
      */
 
     public void setResources(java.util.Collection<String> resources) {
@@ -202,8 +212,8 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -212,8 +222,8 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param resources
-     *        AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     *        including zero, may be present.
+     *        Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily
+     *        concerns. Any number, including zero, may be present.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,13 +239,13 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      * 
      * @param resources
-     *        AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     *        including zero, may be present.
+     *        Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily
+     *        concerns. Any number, including zero, may be present.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -375,22 +385,22 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An AWS X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with
-     * the event.
+     * An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
+     * event.
      * </p>
      * <p>
      * To learn more about X-Ray trace headers, see <a
      * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-tracingheader">Tracing
-     * header</a> in the AWS X-Ray Developer Guide.
+     * header</a> in the X-Ray Developer Guide.
      * </p>
      * 
      * @param traceHeader
-     *        An AWS X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
+     *        An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
      *        with the event.</p>
      *        <p>
      *        To learn more about X-Ray trace headers, see <a
      *        href="https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-tracingheader"
-     *        >Tracing header</a> in the AWS X-Ray Developer Guide.
+     *        >Tracing header</a> in the X-Ray Developer Guide.
      */
 
     public void setTraceHeader(String traceHeader) {
@@ -399,21 +409,21 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An AWS X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with
-     * the event.
+     * An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
+     * event.
      * </p>
      * <p>
      * To learn more about X-Ray trace headers, see <a
      * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-tracingheader">Tracing
-     * header</a> in the AWS X-Ray Developer Guide.
+     * header</a> in the X-Ray Developer Guide.
      * </p>
      * 
-     * @return An AWS X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id
-     *         associated with the event.</p>
+     * @return An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
+     *         with the event.</p>
      *         <p>
      *         To learn more about X-Ray trace headers, see <a
      *         href="https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-tracingheader"
-     *         >Tracing header</a> in the AWS X-Ray Developer Guide.
+     *         >Tracing header</a> in the X-Ray Developer Guide.
      */
 
     public String getTraceHeader() {
@@ -422,22 +432,22 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An AWS X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with
-     * the event.
+     * An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
+     * event.
      * </p>
      * <p>
      * To learn more about X-Ray trace headers, see <a
      * href="https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-tracingheader">Tracing
-     * header</a> in the AWS X-Ray Developer Guide.
+     * header</a> in the X-Ray Developer Guide.
      * </p>
      * 
      * @param traceHeader
-     *        An AWS X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
+     *        An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
      *        with the event.</p>
      *        <p>
      *        To learn more about X-Ray trace headers, see <a
      *        href="https://docs.aws.amazon.com/xray/latest/devguide/xray-concepts.html#xray-concepts-tracingheader"
-     *        >Tracing header</a> in the AWS X-Ray Developer Guide.
+     *        >Tracing header</a> in the X-Ray Developer Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

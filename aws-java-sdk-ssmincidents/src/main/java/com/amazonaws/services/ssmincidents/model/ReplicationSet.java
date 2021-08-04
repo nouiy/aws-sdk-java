@@ -30,6 +30,12 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the replication set.
+     * </p>
+     */
+    private String arn;
+    /**
+     * <p>
      * Details about who created the replication set.
      * </p>
      */
@@ -73,6 +79,46 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String status;
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the replication set.
+     * </p>
+     * 
+     * @param arn
+     *        The Amazon Resource Name (ARN) of the replication set.
+     */
+
+    public void setArn(String arn) {
+        this.arn = arn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the replication set.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the replication set.
+     */
+
+    public String getArn() {
+        return this.arn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the replication set.
+     * </p>
+     * 
+     * @param arn
+     *        The Amazon Resource Name (ARN) of the replication set.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReplicationSet withArn(String arn) {
+        setArn(arn);
+        return this;
+    }
 
     /**
      * <p>
@@ -447,6 +493,8 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getArn() != null)
+            sb.append("Arn: ").append(getArn()).append(",");
         if (getCreatedBy() != null)
             sb.append("CreatedBy: ").append(getCreatedBy()).append(",");
         if (getCreatedTime() != null)
@@ -475,6 +523,10 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof ReplicationSet == false)
             return false;
         ReplicationSet other = (ReplicationSet) obj;
+        if (other.getArn() == null ^ this.getArn() == null)
+            return false;
+        if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
+            return false;
         if (other.getCreatedBy() == null ^ this.getCreatedBy() == null)
             return false;
         if (other.getCreatedBy() != null && other.getCreatedBy().equals(this.getCreatedBy()) == false)
@@ -511,6 +563,7 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getCreatedTime() == null) ? 0 : getCreatedTime().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtected() == null) ? 0 : getDeletionProtected().hashCode());

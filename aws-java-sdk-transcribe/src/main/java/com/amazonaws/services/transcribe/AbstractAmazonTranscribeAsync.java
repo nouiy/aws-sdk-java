@@ -28,6 +28,19 @@ public class AbstractAmazonTranscribeAsync extends AbstractAmazonTranscribe impl
     }
 
     @Override
+    public java.util.concurrent.Future<CreateCallAnalyticsCategoryResult> createCallAnalyticsCategoryAsync(CreateCallAnalyticsCategoryRequest request) {
+
+        return createCallAnalyticsCategoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCallAnalyticsCategoryResult> createCallAnalyticsCategoryAsync(CreateCallAnalyticsCategoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateCallAnalyticsCategoryRequest, CreateCallAnalyticsCategoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLanguageModelResult> createLanguageModelAsync(CreateLanguageModelRequest request) {
 
         return createLanguageModelAsync(request, null);
@@ -75,6 +88,32 @@ public class AbstractAmazonTranscribeAsync extends AbstractAmazonTranscribe impl
     @Override
     public java.util.concurrent.Future<CreateVocabularyFilterResult> createVocabularyFilterAsync(CreateVocabularyFilterRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateVocabularyFilterRequest, CreateVocabularyFilterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCallAnalyticsCategoryResult> deleteCallAnalyticsCategoryAsync(DeleteCallAnalyticsCategoryRequest request) {
+
+        return deleteCallAnalyticsCategoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCallAnalyticsCategoryResult> deleteCallAnalyticsCategoryAsync(DeleteCallAnalyticsCategoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteCallAnalyticsCategoryRequest, DeleteCallAnalyticsCategoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCallAnalyticsJobResult> deleteCallAnalyticsJobAsync(DeleteCallAnalyticsJobRequest request) {
+
+        return deleteCallAnalyticsJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCallAnalyticsJobResult> deleteCallAnalyticsJobAsync(DeleteCallAnalyticsJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteCallAnalyticsJobRequest, DeleteCallAnalyticsJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -171,6 +210,32 @@ public class AbstractAmazonTranscribeAsync extends AbstractAmazonTranscribe impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetCallAnalyticsCategoryResult> getCallAnalyticsCategoryAsync(GetCallAnalyticsCategoryRequest request) {
+
+        return getCallAnalyticsCategoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCallAnalyticsCategoryResult> getCallAnalyticsCategoryAsync(GetCallAnalyticsCategoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetCallAnalyticsCategoryRequest, GetCallAnalyticsCategoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCallAnalyticsJobResult> getCallAnalyticsJobAsync(GetCallAnalyticsJobRequest request) {
+
+        return getCallAnalyticsJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCallAnalyticsJobResult> getCallAnalyticsJobAsync(GetCallAnalyticsJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetCallAnalyticsJobRequest, GetCallAnalyticsJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMedicalTranscriptionJobResult> getMedicalTranscriptionJobAsync(GetMedicalTranscriptionJobRequest request) {
 
         return getMedicalTranscriptionJobAsync(request, null);
@@ -231,6 +296,32 @@ public class AbstractAmazonTranscribeAsync extends AbstractAmazonTranscribe impl
     @Override
     public java.util.concurrent.Future<GetVocabularyFilterResult> getVocabularyFilterAsync(GetVocabularyFilterRequest request,
             com.amazonaws.handlers.AsyncHandler<GetVocabularyFilterRequest, GetVocabularyFilterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCallAnalyticsCategoriesResult> listCallAnalyticsCategoriesAsync(ListCallAnalyticsCategoriesRequest request) {
+
+        return listCallAnalyticsCategoriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCallAnalyticsCategoriesResult> listCallAnalyticsCategoriesAsync(ListCallAnalyticsCategoriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCallAnalyticsCategoriesRequest, ListCallAnalyticsCategoriesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCallAnalyticsJobsResult> listCallAnalyticsJobsAsync(ListCallAnalyticsJobsRequest request) {
+
+        return listCallAnalyticsJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCallAnalyticsJobsResult> listCallAnalyticsJobsAsync(ListCallAnalyticsJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListCallAnalyticsJobsRequest, ListCallAnalyticsJobsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -314,6 +405,19 @@ public class AbstractAmazonTranscribeAsync extends AbstractAmazonTranscribe impl
     }
 
     @Override
+    public java.util.concurrent.Future<StartCallAnalyticsJobResult> startCallAnalyticsJobAsync(StartCallAnalyticsJobRequest request) {
+
+        return startCallAnalyticsJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartCallAnalyticsJobResult> startCallAnalyticsJobAsync(StartCallAnalyticsJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartCallAnalyticsJobRequest, StartCallAnalyticsJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartMedicalTranscriptionJobResult> startMedicalTranscriptionJobAsync(StartMedicalTranscriptionJobRequest request) {
 
         return startMedicalTranscriptionJobAsync(request, null);
@@ -335,6 +439,19 @@ public class AbstractAmazonTranscribeAsync extends AbstractAmazonTranscribe impl
     @Override
     public java.util.concurrent.Future<StartTranscriptionJobResult> startTranscriptionJobAsync(StartTranscriptionJobRequest request,
             com.amazonaws.handlers.AsyncHandler<StartTranscriptionJobRequest, StartTranscriptionJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateCallAnalyticsCategoryResult> updateCallAnalyticsCategoryAsync(UpdateCallAnalyticsCategoryRequest request) {
+
+        return updateCallAnalyticsCategoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateCallAnalyticsCategoryResult> updateCallAnalyticsCategoryAsync(UpdateCallAnalyticsCategoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateCallAnalyticsCategoryRequest, UpdateCallAnalyticsCategoryResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

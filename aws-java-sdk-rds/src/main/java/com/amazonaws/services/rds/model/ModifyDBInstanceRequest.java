@@ -44,7 +44,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private String dBInstanceIdentifier;
     /**
      * <p>
-     * The new amount of storage (in gibibytes) to allocate for the DB instance.
+     * The new amount of storage in gibibytes (GiB) to allocate for the DB instance.
      * </p>
      * <p>
      * For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the current
@@ -780,7 +780,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private Boolean deletionProtection;
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -997,7 +997,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new amount of storage (in gibibytes) to allocate for the DB instance.
+     * The new amount of storage in gibibytes (GiB) to allocate for the DB instance.
      * </p>
      * <p>
      * For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the current
@@ -1009,7 +1009,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param allocatedStorage
-     *        The new amount of storage (in gibibytes) to allocate for the DB instance. </p>
+     *        The new amount of storage in gibibytes (GiB) to allocate for the DB instance. </p>
      *        <p>
      *        For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the
      *        current value. Values that are not at least 10% greater than the existing value are rounded up so that
@@ -1025,7 +1025,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new amount of storage (in gibibytes) to allocate for the DB instance.
+     * The new amount of storage in gibibytes (GiB) to allocate for the DB instance.
      * </p>
      * <p>
      * For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the current
@@ -1036,7 +1036,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * For the valid values for allocated storage for each engine, see <code>CreateDBInstance</code>.
      * </p>
      * 
-     * @return The new amount of storage (in gibibytes) to allocate for the DB instance. </p>
+     * @return The new amount of storage in gibibytes (GiB) to allocate for the DB instance. </p>
      *         <p>
      *         For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the
      *         current value. Values that are not at least 10% greater than the existing value are rounded up so that
@@ -1052,7 +1052,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new amount of storage (in gibibytes) to allocate for the DB instance.
+     * The new amount of storage in gibibytes (GiB) to allocate for the DB instance.
      * </p>
      * <p>
      * For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the current
@@ -1064,7 +1064,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param allocatedStorage
-     *        The new amount of storage (in gibibytes) to allocate for the DB instance. </p>
+     *        The new amount of storage in gibibytes (GiB) to allocate for the DB instance. </p>
      *        <p>
      *        For MariaDB, MySQL, Oracle, and PostgreSQL, the value supplied must be at least 10% greater than the
      *        current value. Values that are not at least 10% greater than the existing value are rounded up so that
@@ -5912,7 +5912,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -5921,7 +5921,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param maxAllocatedStorage
-     *        The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+     *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *        instance.</p>
      *        <p>
      *        For more information about this setting, including limitations that apply to it, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"
@@ -5935,7 +5936,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -5943,7 +5944,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
-     * @return The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+     * @return The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *         instance.</p>
      *         <p>
      *         For more information about this setting, including limitations that apply to it, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"
@@ -5957,7 +5959,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -5966,7 +5968,8 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param maxAllocatedStorage
-     *        The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+     *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *        instance.</p>
      *        <p>
      *        For more information about this setting, including limitations that apply to it, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"

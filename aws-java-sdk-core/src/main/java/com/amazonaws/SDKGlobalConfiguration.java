@@ -78,6 +78,13 @@ public class SDKGlobalConfiguration {
         "AWS_EC2_METADATA_SERVICE_ENDPOINT";
 
     /**
+     * The number of seconds (either as an integer or double) before a connection to the instance
+     * metadata service should time out. This is used for both the socket connect and read timeouts.
+     */
+    public static final String AWS_METADATA_SERVICE_TIMEOUT_ENV_VAR =
+        "AWS_METADATA_SERVICE_TIMEOUT";
+
+    /**
      * System property for enabling retry throttling.
      * <p>
      * Retry throttling is a feature which intelligently throttles retry attempts when a

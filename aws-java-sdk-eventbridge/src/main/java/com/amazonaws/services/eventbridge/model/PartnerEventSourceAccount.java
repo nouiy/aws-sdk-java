@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The AWS account that a partner event source has been offered to.
+ * The Amazon Web Services account that a partner event source has been offered to.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/PartnerEventSourceAccount"
@@ -30,7 +30,7 @@ public class PartnerEventSourceAccount implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS account ID that the partner event source was offered to.
+     * The Amazon Web Services account ID that the partner event source was offered to.
      * </p>
      */
     private String account;
@@ -42,8 +42,8 @@ public class PartnerEventSourceAccount implements Serializable, Cloneable, Struc
     private java.util.Date creationTime;
     /**
      * <p>
-     * The date and time that the event source will expire, if the AWS account doesn't create a matching event bus for
-     * it.
+     * The date and time that the event source will expire, if the Amazon Web Services account doesn't create a matching
+     * event bus for it.
      * </p>
      */
     private java.util.Date expirationTime;
@@ -59,11 +59,11 @@ public class PartnerEventSourceAccount implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS account ID that the partner event source was offered to.
+     * The Amazon Web Services account ID that the partner event source was offered to.
      * </p>
      * 
      * @param account
-     *        The AWS account ID that the partner event source was offered to.
+     *        The Amazon Web Services account ID that the partner event source was offered to.
      */
 
     public void setAccount(String account) {
@@ -72,10 +72,10 @@ public class PartnerEventSourceAccount implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS account ID that the partner event source was offered to.
+     * The Amazon Web Services account ID that the partner event source was offered to.
      * </p>
      * 
-     * @return The AWS account ID that the partner event source was offered to.
+     * @return The Amazon Web Services account ID that the partner event source was offered to.
      */
 
     public String getAccount() {
@@ -84,11 +84,11 @@ public class PartnerEventSourceAccount implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS account ID that the partner event source was offered to.
+     * The Amazon Web Services account ID that the partner event source was offered to.
      * </p>
      * 
      * @param account
-     *        The AWS account ID that the partner event source was offered to.
+     *        The Amazon Web Services account ID that the partner event source was offered to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -139,13 +139,13 @@ public class PartnerEventSourceAccount implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date and time that the event source will expire, if the AWS account doesn't create a matching event bus for
-     * it.
+     * The date and time that the event source will expire, if the Amazon Web Services account doesn't create a matching
+     * event bus for it.
      * </p>
      * 
      * @param expirationTime
-     *        The date and time that the event source will expire, if the AWS account doesn't create a matching event
-     *        bus for it.
+     *        The date and time that the event source will expire, if the Amazon Web Services account doesn't create a
+     *        matching event bus for it.
      */
 
     public void setExpirationTime(java.util.Date expirationTime) {
@@ -154,12 +154,12 @@ public class PartnerEventSourceAccount implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date and time that the event source will expire, if the AWS account doesn't create a matching event bus for
-     * it.
+     * The date and time that the event source will expire, if the Amazon Web Services account doesn't create a matching
+     * event bus for it.
      * </p>
      * 
-     * @return The date and time that the event source will expire, if the AWS account doesn't create a matching event
-     *         bus for it.
+     * @return The date and time that the event source will expire, if the Amazon Web Services account doesn't create a
+     *         matching event bus for it.
      */
 
     public java.util.Date getExpirationTime() {
@@ -168,13 +168,13 @@ public class PartnerEventSourceAccount implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The date and time that the event source will expire, if the AWS account doesn't create a matching event bus for
-     * it.
+     * The date and time that the event source will expire, if the Amazon Web Services account doesn't create a matching
+     * event bus for it.
      * </p>
      * 
      * @param expirationTime
-     *        The date and time that the event source will expire, if the AWS account doesn't create a matching event
-     *        bus for it.
+     *        The date and time that the event source will expire, if the Amazon Web Services account doesn't create a
+     *        matching event bus for it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

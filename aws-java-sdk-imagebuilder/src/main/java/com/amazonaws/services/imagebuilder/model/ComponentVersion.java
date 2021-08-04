@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The defining characteristics of a specific version of an TOE component.
+ * The defining characteristics of a specific version of an Amazon Web Services TOE component.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/ComponentVersion" target="_top">AWS API

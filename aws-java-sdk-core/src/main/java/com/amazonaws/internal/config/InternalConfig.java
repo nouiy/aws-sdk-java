@@ -70,6 +70,8 @@ public class InternalConfig {
     private final String userAgentTemplate;
 
     private final boolean endpointDiscoveryEnabled;
+    
+    private final String defaultRetryMode;
 
     /**
      * @param defaults
@@ -99,6 +101,8 @@ public class InternalConfig {
         }
 
         endpointDiscoveryEnabled = endpointDiscoveryConfig.isEndpointDiscoveryEnabled();
+
+        defaultRetryMode = override.getDefaultRetryMode();
     }
 
     /**
@@ -242,6 +246,13 @@ public class InternalConfig {
 
     public boolean endpointDiscoveryEnabled() {
         return endpointDiscoveryEnabled;
+    }
+
+    /**
+     * @return the default retry mode, or null if not configured
+     */
+    public String getDefaultRetryMode() {
+        return defaultRetryMode;
     }
 
     static <T> T loadfrom(URL url, Class<T> clazz) throws JsonParseException, JsonMappingException, IOException {

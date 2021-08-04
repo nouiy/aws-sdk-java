@@ -29,6 +29,8 @@ public class MediaMarshaller {
 
     private static final MarshallingInfo<String> MEDIAFILEURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MediaFileUri").build();
+    private static final MarshallingInfo<String> REDACTEDMEDIAFILEURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RedactedMediaFileUri").build();
 
     private static final MediaMarshaller instance = new MediaMarshaller();
 
@@ -47,6 +49,7 @@ public class MediaMarshaller {
 
         try {
             protocolMarshaller.marshall(media.getMediaFileUri(), MEDIAFILEURI_BINDING);
+            protocolMarshaller.marshall(media.getRedactedMediaFileUri(), REDACTEDMEDIAFILEURI_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

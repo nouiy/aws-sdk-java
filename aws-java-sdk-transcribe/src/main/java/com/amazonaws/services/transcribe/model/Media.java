@@ -38,11 +38,17 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      */
     private String mediaFileUri;
+    /**
+     * <p>
+     * The S3 object location for your redacted output media file. This is only supported for call analytics jobs.
+     * </p>
+     */
+    private String redactedMediaFileUri;
 
     /**
      * <p>
@@ -54,7 +60,7 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * 
@@ -66,7 +72,7 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <p>
      *        For more information about S3 object names, see <a
-     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
      *        the <i>Amazon S3 Developer Guide</i>.
      */
 
@@ -84,7 +90,7 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * 
@@ -95,7 +101,7 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <p>
      *         For more information about S3 object names, see <a
-     *         href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
      *         the <i>Amazon S3 Developer Guide</i>.
      */
 
@@ -113,7 +119,7 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For more information about S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * 
@@ -125,13 +131,56 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <p>
      *        For more information about S3 object names, see <a
-     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
      *        the <i>Amazon S3 Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Media withMediaFileUri(String mediaFileUri) {
         setMediaFileUri(mediaFileUri);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The S3 object location for your redacted output media file. This is only supported for call analytics jobs.
+     * </p>
+     * 
+     * @param redactedMediaFileUri
+     *        The S3 object location for your redacted output media file. This is only supported for call analytics
+     *        jobs.
+     */
+
+    public void setRedactedMediaFileUri(String redactedMediaFileUri) {
+        this.redactedMediaFileUri = redactedMediaFileUri;
+    }
+
+    /**
+     * <p>
+     * The S3 object location for your redacted output media file. This is only supported for call analytics jobs.
+     * </p>
+     * 
+     * @return The S3 object location for your redacted output media file. This is only supported for call analytics
+     *         jobs.
+     */
+
+    public String getRedactedMediaFileUri() {
+        return this.redactedMediaFileUri;
+    }
+
+    /**
+     * <p>
+     * The S3 object location for your redacted output media file. This is only supported for call analytics jobs.
+     * </p>
+     * 
+     * @param redactedMediaFileUri
+     *        The S3 object location for your redacted output media file. This is only supported for call analytics
+     *        jobs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Media withRedactedMediaFileUri(String redactedMediaFileUri) {
+        setRedactedMediaFileUri(redactedMediaFileUri);
         return this;
     }
 
@@ -148,7 +197,9 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getMediaFileUri() != null)
-            sb.append("MediaFileUri: ").append(getMediaFileUri());
+            sb.append("MediaFileUri: ").append(getMediaFileUri()).append(",");
+        if (getRedactedMediaFileUri() != null)
+            sb.append("RedactedMediaFileUri: ").append(getRedactedMediaFileUri());
         sb.append("}");
         return sb.toString();
     }
@@ -167,6 +218,10 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMediaFileUri() != null && other.getMediaFileUri().equals(this.getMediaFileUri()) == false)
             return false;
+        if (other.getRedactedMediaFileUri() == null ^ this.getRedactedMediaFileUri() == null)
+            return false;
+        if (other.getRedactedMediaFileUri() != null && other.getRedactedMediaFileUri().equals(this.getRedactedMediaFileUri()) == false)
+            return false;
         return true;
     }
 
@@ -176,6 +231,7 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getMediaFileUri() == null) ? 0 : getMediaFileUri().hashCode());
+        hashCode = prime * hashCode + ((getRedactedMediaFileUri() == null) ? 0 : getRedactedMediaFileUri().hashCode());
         return hashCode;
     }
 

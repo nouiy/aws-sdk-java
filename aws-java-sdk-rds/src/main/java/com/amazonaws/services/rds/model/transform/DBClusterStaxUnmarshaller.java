@@ -95,6 +95,11 @@ public class DBClusterStaxUnmarshaller implements Unmarshaller<DBCluster, StaxUn
                     continue;
                 }
 
+                if (context.testExpression("AutomaticRestartTime", targetDepth)) {
+                    dBCluster.setAutomaticRestartTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("PercentProgress", targetDepth)) {
                     dBCluster.setPercentProgress(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

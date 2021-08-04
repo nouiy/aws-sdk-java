@@ -48,6 +48,10 @@ public class ReplicationSetJsonUnmarshaller implements Unmarshaller<ReplicationS
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("arn", targetDepth)) {
+                    context.nextToken();
+                    replicationSet.setArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("createdBy", targetDepth)) {
                     context.nextToken();
                     replicationSet.setCreatedBy(context.getUnmarshaller(String.class).unmarshall(context));

@@ -35,7 +35,7 @@ public class PendingModifiedValues implements Serializable, Cloneable {
     private String dBInstanceClass;
     /**
      * <p>
-     * The allocated storage size for the DB instance specified in gibibytes .
+     * The allocated storage size for the DB instance specified in gibibytes (GiB).
      * </p>
      */
     private Integer allocatedStorage;
@@ -167,11 +167,11 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The allocated storage size for the DB instance specified in gibibytes .
+     * The allocated storage size for the DB instance specified in gibibytes (GiB).
      * </p>
      * 
      * @param allocatedStorage
-     *        The allocated storage size for the DB instance specified in gibibytes .
+     *        The allocated storage size for the DB instance specified in gibibytes (GiB).
      */
 
     public void setAllocatedStorage(Integer allocatedStorage) {
@@ -180,10 +180,10 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The allocated storage size for the DB instance specified in gibibytes .
+     * The allocated storage size for the DB instance specified in gibibytes (GiB).
      * </p>
      * 
-     * @return The allocated storage size for the DB instance specified in gibibytes .
+     * @return The allocated storage size for the DB instance specified in gibibytes (GiB).
      */
 
     public Integer getAllocatedStorage() {
@@ -192,11 +192,11 @@ public class PendingModifiedValues implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The allocated storage size for the DB instance specified in gibibytes .
+     * The allocated storage size for the DB instance specified in gibibytes (GiB).
      * </p>
      * 
      * @param allocatedStorage
-     *        The allocated storage size for the DB instance specified in gibibytes .
+     *        The allocated storage size for the DB instance specified in gibibytes (GiB).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

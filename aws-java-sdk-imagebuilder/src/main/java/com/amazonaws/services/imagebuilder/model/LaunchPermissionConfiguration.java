@@ -35,7 +35,7 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The account ID.
+     * The Amazon Web Services account ID.
      * </p>
      */
     private java.util.List<String> userIds;
@@ -48,10 +48,10 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
-     * @return The account ID.
+     * @return The Amazon Web Services account ID.
      */
 
     public java.util.List<String> getUserIds() {
@@ -60,11 +60,11 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param userIds
-     *        The account ID.
+     *        The Amazon Web Services account ID.
      */
 
     public void setUserIds(java.util.Collection<String> userIds) {
@@ -78,7 +78,7 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -87,7 +87,7 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
      * </p>
      * 
      * @param userIds
-     *        The account ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,11 +103,11 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param userIds
-     *        The account ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

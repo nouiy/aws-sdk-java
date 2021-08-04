@@ -52,6 +52,10 @@ public class MediaJsonUnmarshaller implements Unmarshaller<Media, JsonUnmarshall
                     context.nextToken();
                     media.setMediaFileUri(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("RedactedMediaFileUri", targetDepth)) {
+                    context.nextToken();
+                    media.setRedactedMediaFileUri(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

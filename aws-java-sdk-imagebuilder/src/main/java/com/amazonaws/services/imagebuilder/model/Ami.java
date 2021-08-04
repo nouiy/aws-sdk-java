@@ -30,7 +30,7 @@ public class Ami implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region of the Amazon EC2 AMI.
+     * The Amazon Web Services Region of the Amazon EC2 AMI.
      * </p>
      */
     private String region;
@@ -63,11 +63,11 @@ public class Ami implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region of the Amazon EC2 AMI.
+     * The Amazon Web Services Region of the Amazon EC2 AMI.
      * </p>
      * 
      * @param region
-     *        The Region of the Amazon EC2 AMI.
+     *        The Amazon Web Services Region of the Amazon EC2 AMI.
      */
 
     public void setRegion(String region) {
@@ -76,10 +76,10 @@ public class Ami implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region of the Amazon EC2 AMI.
+     * The Amazon Web Services Region of the Amazon EC2 AMI.
      * </p>
      * 
-     * @return The Region of the Amazon EC2 AMI.
+     * @return The Amazon Web Services Region of the Amazon EC2 AMI.
      */
 
     public String getRegion() {
@@ -88,11 +88,11 @@ public class Ami implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region of the Amazon EC2 AMI.
+     * The Amazon Web Services Region of the Amazon EC2 AMI.
      * </p>
      * 
      * @param region
-     *        The Region of the Amazon EC2 AMI.
+     *        The Amazon Web Services Region of the Amazon EC2 AMI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

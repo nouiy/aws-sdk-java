@@ -27,8 +27,8 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive. If you try
-     * to create a vocabulary with the same name as a previous vocabulary you will receive a
+     * The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is case
+     * sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a
      * <code>ConflictException</code> error.
      * </p>
      */
@@ -53,27 +53,27 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * For more information about S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="http://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
      * </p>
      */
     private String vocabularyFileUri;
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive. If you try
-     * to create a vocabulary with the same name as a previous vocabulary you will receive a
+     * The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is case
+     * sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a
      * <code>ConflictException</code> error.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive. If
-     *        you try to create a vocabulary with the same name as a previous vocabulary you will receive a
-     *        <code>ConflictException</code> error.
+     *        The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is
+     *        case sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will
+     *        receive a <code>ConflictException</code> error.
      */
 
     public void setVocabularyName(String vocabularyName) {
@@ -82,14 +82,14 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive. If you try
-     * to create a vocabulary with the same name as a previous vocabulary you will receive a
+     * The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is case
+     * sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a
      * <code>ConflictException</code> error.
      * </p>
      * 
-     * @return The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive. If
-     *         you try to create a vocabulary with the same name as a previous vocabulary you will receive a
-     *         <code>ConflictException</code> error.
+     * @return The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is
+     *         case sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will
+     *         receive a <code>ConflictException</code> error.
      */
 
     public String getVocabularyName() {
@@ -98,15 +98,15 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive. If you try
-     * to create a vocabulary with the same name as a previous vocabulary you will receive a
+     * The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is case
+     * sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will receive a
      * <code>ConflictException</code> error.
      * </p>
      * 
      * @param vocabularyName
-     *        The name of the vocabulary. The name must be unique within an AWS account. The name is case sensitive. If
-     *        you try to create a vocabulary with the same name as a previous vocabulary you will receive a
-     *        <code>ConflictException</code> error.
+     *        The name of the vocabulary. The name must be unique within an Amazon Web Services account. The name is
+     *        case sensitive. If you try to create a vocabulary with the same name as a previous vocabulary you will
+     *        receive a <code>ConflictException</code> error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -259,12 +259,12 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * For more information about S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="http://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
      * </p>
      * 
      * @param vocabularyFileUri
@@ -272,12 +272,12 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      *        the same region as the API endpoint that you are calling. The general form is </p>
      *        <p>
      *        For more information about S3 object names, see <a
-     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
      *        the <i>Amazon S3 Developer Guide</i>.
      *        </p>
      *        <p>
      *        For more information about custom vocabularies, see <a
-     *        href="http://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
      */
 
     public void setVocabularyFileUri(String vocabularyFileUri) {
@@ -291,24 +291,24 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * For more information about S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="http://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
      * </p>
      * 
      * @return The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be
      *         in the same region as the API endpoint that you are calling. The general form is </p>
      *         <p>
      *         For more information about S3 object names, see <a
-     *         href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
      *         the <i>Amazon S3 Developer Guide</i>.
      *         </p>
      *         <p>
      *         For more information about custom vocabularies, see <a
-     *         href="http://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
      */
 
     public String getVocabularyFileUri() {
@@ -322,12 +322,12 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * For more information about S3 object names, see <a
-     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in the
      * <i>Amazon S3 Developer Guide</i>.
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="http://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
      * </p>
      * 
      * @param vocabularyFileUri
@@ -335,12 +335,12 @@ public class CreateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      *        the same region as the API endpoint that you are calling. The general form is </p>
      *        <p>
      *        For more information about S3 object names, see <a
-     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#object-keys">Object Keys</a> in
      *        the <i>Amazon S3 Developer Guide</i>.
      *        </p>
      *        <p>
      *        For more information about custom vocabularies, see <a
-     *        href="http://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary">Custom Vocabularies</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

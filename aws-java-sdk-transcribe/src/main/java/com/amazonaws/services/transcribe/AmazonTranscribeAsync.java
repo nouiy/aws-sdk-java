@@ -34,6 +34,45 @@ public interface AmazonTranscribeAsync extends AmazonTranscribe {
 
     /**
      * <p>
+     * Creates an analytics category. Amazon Transcribe applies the conditions specified by your analytics categories to
+     * your call analytics jobs. For each analytics category, you specify one or more rules. For example, you can
+     * specify a rule that the customer sentiment was neutral or negative within that category. If you start a call
+     * analytics job, Amazon Transcribe applies the category to the analytics job that you've specified.
+     * </p>
+     * 
+     * @param createCallAnalyticsCategoryRequest
+     * @return A Java Future containing the result of the CreateCallAnalyticsCategory operation returned by the service.
+     * @sample AmazonTranscribeAsync.CreateCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/CreateCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCallAnalyticsCategoryResult> createCallAnalyticsCategoryAsync(
+            CreateCallAnalyticsCategoryRequest createCallAnalyticsCategoryRequest);
+
+    /**
+     * <p>
+     * Creates an analytics category. Amazon Transcribe applies the conditions specified by your analytics categories to
+     * your call analytics jobs. For each analytics category, you specify one or more rules. For example, you can
+     * specify a rule that the customer sentiment was neutral or negative within that category. If you start a call
+     * analytics job, Amazon Transcribe applies the category to the analytics job that you've specified.
+     * </p>
+     * 
+     * @param createCallAnalyticsCategoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateCallAnalyticsCategory operation returned by the service.
+     * @sample AmazonTranscribeAsyncHandler.CreateCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/CreateCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateCallAnalyticsCategoryResult> createCallAnalyticsCategoryAsync(
+            CreateCallAnalyticsCategoryRequest createCallAnalyticsCategoryRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateCallAnalyticsCategoryRequest, CreateCallAnalyticsCategoryResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new custom language model. Use Amazon S3 prefixes to provide the location of your input files. The time
      * it takes to create your model depends on the size of your training data.
      * </p>
@@ -163,6 +202,70 @@ public interface AmazonTranscribeAsync extends AmazonTranscribe {
      */
     java.util.concurrent.Future<CreateVocabularyFilterResult> createVocabularyFilterAsync(CreateVocabularyFilterRequest createVocabularyFilterRequest,
             com.amazonaws.handlers.AsyncHandler<CreateVocabularyFilterRequest, CreateVocabularyFilterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a call analytics category using its name.
+     * </p>
+     * 
+     * @param deleteCallAnalyticsCategoryRequest
+     * @return A Java Future containing the result of the DeleteCallAnalyticsCategory operation returned by the service.
+     * @sample AmazonTranscribeAsync.DeleteCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCallAnalyticsCategoryResult> deleteCallAnalyticsCategoryAsync(
+            DeleteCallAnalyticsCategoryRequest deleteCallAnalyticsCategoryRequest);
+
+    /**
+     * <p>
+     * Deletes a call analytics category using its name.
+     * </p>
+     * 
+     * @param deleteCallAnalyticsCategoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteCallAnalyticsCategory operation returned by the service.
+     * @sample AmazonTranscribeAsyncHandler.DeleteCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCallAnalyticsCategoryResult> deleteCallAnalyticsCategoryAsync(
+            DeleteCallAnalyticsCategoryRequest deleteCallAnalyticsCategoryRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteCallAnalyticsCategoryRequest, DeleteCallAnalyticsCategoryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a call analytics job using its name.
+     * </p>
+     * 
+     * @param deleteCallAnalyticsJobRequest
+     * @return A Java Future containing the result of the DeleteCallAnalyticsJob operation returned by the service.
+     * @sample AmazonTranscribeAsync.DeleteCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteCallAnalyticsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCallAnalyticsJobResult> deleteCallAnalyticsJobAsync(DeleteCallAnalyticsJobRequest deleteCallAnalyticsJobRequest);
+
+    /**
+     * <p>
+     * Deletes a call analytics job using its name.
+     * </p>
+     * 
+     * @param deleteCallAnalyticsJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteCallAnalyticsJob operation returned by the service.
+     * @sample AmazonTranscribeAsyncHandler.DeleteCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/DeleteCallAnalyticsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteCallAnalyticsJobResult> deleteCallAnalyticsJobAsync(DeleteCallAnalyticsJobRequest deleteCallAnalyticsJobRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteCallAnalyticsJobRequest, DeleteCallAnalyticsJobResult> asyncHandler);
 
     /**
      * <p>
@@ -359,10 +462,10 @@ public interface AmazonTranscribeAsync extends AmazonTranscribe {
     /**
      * <p>
      * Gets information about a single custom language model. Use this information to see details about the language
-     * model in your AWS account. You can also see whether the base language model used to create your custom language
-     * model has been updated. If Amazon Transcribe has updated the base model, you can create a new custom language
-     * model using the updated base model. If the language model wasn't created, you can use this operation to
-     * understand why Amazon Transcribe couldn't create it.
+     * model in your Amazon Web Services account. You can also see whether the base language model used to create your
+     * custom language model has been updated. If Amazon Transcribe has updated the base model, you can create a new
+     * custom language model using the updated base model. If the language model wasn't created, you can use this
+     * operation to understand why Amazon Transcribe couldn't create it.
      * </p>
      * 
      * @param describeLanguageModelRequest
@@ -376,10 +479,10 @@ public interface AmazonTranscribeAsync extends AmazonTranscribe {
     /**
      * <p>
      * Gets information about a single custom language model. Use this information to see details about the language
-     * model in your AWS account. You can also see whether the base language model used to create your custom language
-     * model has been updated. If Amazon Transcribe has updated the base model, you can create a new custom language
-     * model using the updated base model. If the language model wasn't created, you can use this operation to
-     * understand why Amazon Transcribe couldn't create it.
+     * model in your Amazon Web Services account. You can also see whether the base language model used to create your
+     * custom language model has been updated. If Amazon Transcribe has updated the base model, you can create a new
+     * custom language model using the updated base model. If the language model wasn't created, you can use this
+     * operation to understand why Amazon Transcribe couldn't create it.
      * </p>
      * 
      * @param describeLanguageModelRequest
@@ -394,6 +497,76 @@ public interface AmazonTranscribeAsync extends AmazonTranscribe {
      */
     java.util.concurrent.Future<DescribeLanguageModelResult> describeLanguageModelAsync(DescribeLanguageModelRequest describeLanguageModelRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeLanguageModelRequest, DescribeLanguageModelResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves information about a call analytics category.
+     * </p>
+     * 
+     * @param getCallAnalyticsCategoryRequest
+     * @return A Java Future containing the result of the GetCallAnalyticsCategory operation returned by the service.
+     * @sample AmazonTranscribeAsync.GetCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCallAnalyticsCategoryResult> getCallAnalyticsCategoryAsync(GetCallAnalyticsCategoryRequest getCallAnalyticsCategoryRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a call analytics category.
+     * </p>
+     * 
+     * @param getCallAnalyticsCategoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetCallAnalyticsCategory operation returned by the service.
+     * @sample AmazonTranscribeAsyncHandler.GetCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCallAnalyticsCategoryResult> getCallAnalyticsCategoryAsync(GetCallAnalyticsCategoryRequest getCallAnalyticsCategoryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetCallAnalyticsCategoryRequest, GetCallAnalyticsCategoryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information about a call analytics job. To see the status of the job, check the
+     * <code>CallAnalyticsJobStatus</code> field. If the status is <code>COMPLETED</code>, the job is finished and you
+     * can find the results at the location specified in the <code>TranscriptFileUri</code> field. If you enable
+     * personally identifiable information (PII) redaction, the redacted transcript appears in the
+     * <code>RedactedTranscriptFileUri</code> field.
+     * </p>
+     * 
+     * @param getCallAnalyticsJobRequest
+     * @return A Java Future containing the result of the GetCallAnalyticsJob operation returned by the service.
+     * @sample AmazonTranscribeAsync.GetCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetCallAnalyticsJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCallAnalyticsJobResult> getCallAnalyticsJobAsync(GetCallAnalyticsJobRequest getCallAnalyticsJobRequest);
+
+    /**
+     * <p>
+     * Returns information about a call analytics job. To see the status of the job, check the
+     * <code>CallAnalyticsJobStatus</code> field. If the status is <code>COMPLETED</code>, the job is finished and you
+     * can find the results at the location specified in the <code>TranscriptFileUri</code> field. If you enable
+     * personally identifiable information (PII) redaction, the redacted transcript appears in the
+     * <code>RedactedTranscriptFileUri</code> field.
+     * </p>
+     * 
+     * @param getCallAnalyticsJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetCallAnalyticsJob operation returned by the service.
+     * @sample AmazonTranscribeAsyncHandler.GetCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/GetCallAnalyticsJob" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetCallAnalyticsJobResult> getCallAnalyticsJobAsync(GetCallAnalyticsJobRequest getCallAnalyticsJobRequest,
+            com.amazonaws.handlers.AsyncHandler<GetCallAnalyticsJobRequest, GetCallAnalyticsJobResult> asyncHandler);
 
     /**
      * <p>
@@ -561,6 +734,72 @@ public interface AmazonTranscribeAsync extends AmazonTranscribe {
      */
     java.util.concurrent.Future<GetVocabularyFilterResult> getVocabularyFilterAsync(GetVocabularyFilterRequest getVocabularyFilterRequest,
             com.amazonaws.handlers.AsyncHandler<GetVocabularyFilterRequest, GetVocabularyFilterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides more information about the call analytics categories that you've created. You can use the information in
+     * this list to find a specific category. You can then use the operation to get more information about it.
+     * </p>
+     * 
+     * @param listCallAnalyticsCategoriesRequest
+     * @return A Java Future containing the result of the ListCallAnalyticsCategories operation returned by the service.
+     * @sample AmazonTranscribeAsync.ListCallAnalyticsCategories
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListCallAnalyticsCategories"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCallAnalyticsCategoriesResult> listCallAnalyticsCategoriesAsync(
+            ListCallAnalyticsCategoriesRequest listCallAnalyticsCategoriesRequest);
+
+    /**
+     * <p>
+     * Provides more information about the call analytics categories that you've created. You can use the information in
+     * this list to find a specific category. You can then use the operation to get more information about it.
+     * </p>
+     * 
+     * @param listCallAnalyticsCategoriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCallAnalyticsCategories operation returned by the service.
+     * @sample AmazonTranscribeAsyncHandler.ListCallAnalyticsCategories
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListCallAnalyticsCategories"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCallAnalyticsCategoriesResult> listCallAnalyticsCategoriesAsync(
+            ListCallAnalyticsCategoriesRequest listCallAnalyticsCategoriesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCallAnalyticsCategoriesRequest, ListCallAnalyticsCategoriesResult> asyncHandler);
+
+    /**
+     * <p>
+     * List call analytics jobs with a specified status or substring that matches their names.
+     * </p>
+     * 
+     * @param listCallAnalyticsJobsRequest
+     * @return A Java Future containing the result of the ListCallAnalyticsJobs operation returned by the service.
+     * @sample AmazonTranscribeAsync.ListCallAnalyticsJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListCallAnalyticsJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCallAnalyticsJobsResult> listCallAnalyticsJobsAsync(ListCallAnalyticsJobsRequest listCallAnalyticsJobsRequest);
+
+    /**
+     * <p>
+     * List call analytics jobs with a specified status or substring that matches their names.
+     * </p>
+     * 
+     * @param listCallAnalyticsJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListCallAnalyticsJobs operation returned by the service.
+     * @sample AmazonTranscribeAsyncHandler.ListCallAnalyticsJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListCallAnalyticsJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListCallAnalyticsJobsResult> listCallAnalyticsJobsAsync(ListCallAnalyticsJobsRequest listCallAnalyticsJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListCallAnalyticsJobsRequest, ListCallAnalyticsJobsResult> asyncHandler);
 
     /**
      * <p>
@@ -760,6 +999,45 @@ public interface AmazonTranscribeAsync extends AmazonTranscribe {
 
     /**
      * <p>
+     * Starts an asynchronous analytics job that not only transcribes the audio recording of a caller and agent, but
+     * also returns additional insights. These insights include how quickly or loudly the caller or agent was speaking.
+     * To retrieve additional insights with your analytics jobs, create categories. A category is a way to classify
+     * analytics jobs based on attributes, such as a customer's sentiment or a particular phrase being used during the
+     * call. For more information, see the operation.
+     * </p>
+     * 
+     * @param startCallAnalyticsJobRequest
+     * @return A Java Future containing the result of the StartCallAnalyticsJob operation returned by the service.
+     * @sample AmazonTranscribeAsync.StartCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/StartCallAnalyticsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartCallAnalyticsJobResult> startCallAnalyticsJobAsync(StartCallAnalyticsJobRequest startCallAnalyticsJobRequest);
+
+    /**
+     * <p>
+     * Starts an asynchronous analytics job that not only transcribes the audio recording of a caller and agent, but
+     * also returns additional insights. These insights include how quickly or loudly the caller or agent was speaking.
+     * To retrieve additional insights with your analytics jobs, create categories. A category is a way to classify
+     * analytics jobs based on attributes, such as a customer's sentiment or a particular phrase being used during the
+     * call. For more information, see the operation.
+     * </p>
+     * 
+     * @param startCallAnalyticsJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartCallAnalyticsJob operation returned by the service.
+     * @sample AmazonTranscribeAsyncHandler.StartCallAnalyticsJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/StartCallAnalyticsJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartCallAnalyticsJobResult> startCallAnalyticsJobAsync(StartCallAnalyticsJobRequest startCallAnalyticsJobRequest,
+            com.amazonaws.handlers.AsyncHandler<StartCallAnalyticsJobRequest, StartCallAnalyticsJobResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts a batch job to transcribe medical speech to text.
      * </p>
      * 
@@ -823,6 +1101,41 @@ public interface AmazonTranscribeAsync extends AmazonTranscribe {
      */
     java.util.concurrent.Future<StartTranscriptionJobResult> startTranscriptionJobAsync(StartTranscriptionJobRequest startTranscriptionJobRequest,
             com.amazonaws.handlers.AsyncHandler<StartTranscriptionJobRequest, StartTranscriptionJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the call analytics category with new values. The <code>UpdateCallAnalyticsCategory</code> operation
+     * overwrites all of the existing information with the values that you provide in the request.
+     * </p>
+     * 
+     * @param updateCallAnalyticsCategoryRequest
+     * @return A Java Future containing the result of the UpdateCallAnalyticsCategory operation returned by the service.
+     * @sample AmazonTranscribeAsync.UpdateCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/UpdateCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateCallAnalyticsCategoryResult> updateCallAnalyticsCategoryAsync(
+            UpdateCallAnalyticsCategoryRequest updateCallAnalyticsCategoryRequest);
+
+    /**
+     * <p>
+     * Updates the call analytics category with new values. The <code>UpdateCallAnalyticsCategory</code> operation
+     * overwrites all of the existing information with the values that you provide in the request.
+     * </p>
+     * 
+     * @param updateCallAnalyticsCategoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateCallAnalyticsCategory operation returned by the service.
+     * @sample AmazonTranscribeAsyncHandler.UpdateCallAnalyticsCategory
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/UpdateCallAnalyticsCategory"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateCallAnalyticsCategoryResult> updateCallAnalyticsCategoryAsync(
+            UpdateCallAnalyticsCategoryRequest updateCallAnalyticsCategoryRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateCallAnalyticsCategoryRequest, UpdateCallAnalyticsCategoryResult> asyncHandler);
 
     /**
      * <p>

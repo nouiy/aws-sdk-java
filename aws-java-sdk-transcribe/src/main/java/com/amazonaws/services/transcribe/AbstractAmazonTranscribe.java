@@ -28,6 +28,11 @@ public class AbstractAmazonTranscribe implements AmazonTranscribe {
     }
 
     @Override
+    public CreateCallAnalyticsCategoryResult createCallAnalyticsCategory(CreateCallAnalyticsCategoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateLanguageModelResult createLanguageModel(CreateLanguageModelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -44,6 +49,16 @@ public class AbstractAmazonTranscribe implements AmazonTranscribe {
 
     @Override
     public CreateVocabularyFilterResult createVocabularyFilter(CreateVocabularyFilterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteCallAnalyticsCategoryResult deleteCallAnalyticsCategory(DeleteCallAnalyticsCategoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteCallAnalyticsJobResult deleteCallAnalyticsJob(DeleteCallAnalyticsJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -83,6 +98,16 @@ public class AbstractAmazonTranscribe implements AmazonTranscribe {
     }
 
     @Override
+    public GetCallAnalyticsCategoryResult getCallAnalyticsCategory(GetCallAnalyticsCategoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetCallAnalyticsJobResult getCallAnalyticsJob(GetCallAnalyticsJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetMedicalTranscriptionJobResult getMedicalTranscriptionJob(GetMedicalTranscriptionJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -104,6 +129,16 @@ public class AbstractAmazonTranscribe implements AmazonTranscribe {
 
     @Override
     public GetVocabularyFilterResult getVocabularyFilter(GetVocabularyFilterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCallAnalyticsCategoriesResult listCallAnalyticsCategories(ListCallAnalyticsCategoriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListCallAnalyticsJobsResult listCallAnalyticsJobs(ListCallAnalyticsJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -138,12 +173,22 @@ public class AbstractAmazonTranscribe implements AmazonTranscribe {
     }
 
     @Override
+    public StartCallAnalyticsJobResult startCallAnalyticsJob(StartCallAnalyticsJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartMedicalTranscriptionJobResult startMedicalTranscriptionJob(StartMedicalTranscriptionJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public StartTranscriptionJobResult startTranscriptionJob(StartTranscriptionJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateCallAnalyticsCategoryResult updateCallAnalyticsCategory(UpdateCallAnalyticsCategoryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

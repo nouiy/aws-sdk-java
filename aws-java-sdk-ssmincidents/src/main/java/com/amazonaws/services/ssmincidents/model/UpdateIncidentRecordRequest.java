@@ -83,8 +83,7 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
     private Integer impact;
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel using the SNS topics.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the case that a Region is down during the incident.
@@ -464,15 +463,13 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel using the SNS topics.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the case that a Region is down during the incident.
      * </p>
      * 
-     * @return The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also
-     *         make updates to the incident through the chat channel using the SNS topics. </p>
+     * @return The SNS targets that are notified when updates are made to an incident.</p>
      *         <p>
      *         Using multiple SNS topics creates redundancy in the case that a Region is down during the incident.
      */
@@ -483,16 +480,14 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel using the SNS topics.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the case that a Region is down during the incident.
      * </p>
      * 
      * @param notificationTargets
-     *        The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also
-     *        make updates to the incident through the chat channel using the SNS topics. </p>
+     *        The SNS targets that are notified when updates are made to an incident.</p>
      *        <p>
      *        Using multiple SNS topics creates redundancy in the case that a Region is down during the incident.
      */
@@ -508,8 +503,7 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel using the SNS topics.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the case that a Region is down during the incident.
@@ -521,8 +515,7 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param notificationTargets
-     *        The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also
-     *        make updates to the incident through the chat channel using the SNS topics. </p>
+     *        The SNS targets that are notified when updates are made to an incident.</p>
      *        <p>
      *        Using multiple SNS topics creates redundancy in the case that a Region is down during the incident.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -540,16 +533,14 @@ public class UpdateIncidentRecordRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel using the SNS topics.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * <p>
      * Using multiple SNS topics creates redundancy in the case that a Region is down during the incident.
      * </p>
      * 
      * @param notificationTargets
-     *        The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also
-     *        make updates to the incident through the chat channel using the SNS topics. </p>
+     *        The SNS targets that are notified when updates are made to an incident.</p>
      *        <p>
      *        Using multiple SNS topics creates redundancy in the case that a Region is down during the incident.
      * @return Returns a reference to this object so that method calls can be chained together.

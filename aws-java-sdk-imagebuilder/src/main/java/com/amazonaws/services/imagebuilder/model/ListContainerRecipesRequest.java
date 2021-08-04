@@ -34,8 +34,30 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
     private String owner;
     /**
      * <p>
-     * Request filters that are used to narrow the list of container images that are returned.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>containerType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>parentImage</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<Filter> filters;
     /**
@@ -121,10 +143,53 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Request filters that are used to narrow the list of container images that are returned.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>containerType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>parentImage</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Request filters that are used to narrow the list of container images that are returned.
+     * @return Use the following filters to streamline results:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>containerType</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>name</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>parentImage</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>platform</code>
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<Filter> getFilters() {
@@ -133,11 +198,54 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Request filters that are used to narrow the list of container images that are returned.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>containerType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>parentImage</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        Request filters that are used to narrow the list of container images that are returned.
+     *        Use the following filters to streamline results:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>containerType</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>parentImage</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>platform</code>
+     *        </p>
+     *        </li>
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -151,8 +259,30 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Request filters that are used to narrow the list of container images that are returned.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>containerType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>parentImage</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
@@ -160,7 +290,28 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param filters
-     *        Request filters that are used to narrow the list of container images that are returned.
+     *        Use the following filters to streamline results:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>containerType</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>parentImage</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>platform</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,11 +327,54 @@ public class ListContainerRecipesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Request filters that are used to narrow the list of container images that are returned.
+     * Use the following filters to streamline results:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>containerType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>name</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>parentImage</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>platform</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        Request filters that are used to narrow the list of container images that are returned.
+     *        Use the following filters to streamline results:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>containerType</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>name</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>parentImage</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>platform</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

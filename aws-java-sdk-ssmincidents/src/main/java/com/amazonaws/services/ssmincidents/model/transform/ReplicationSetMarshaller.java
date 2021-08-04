@@ -29,6 +29,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ReplicationSetMarshaller {
 
+    private static final MarshallingInfo<String> ARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("arn").build();
     private static final MarshallingInfo<String> CREATEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("createdBy").build();
     private static final MarshallingInfo<java.util.Date> CREATEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -60,6 +62,7 @@ public class ReplicationSetMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(replicationSet.getArn(), ARN_BINDING);
             protocolMarshaller.marshall(replicationSet.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(replicationSet.getCreatedTime(), CREATEDTIME_BINDING);
             protocolMarshaller.marshall(replicationSet.getDeletionProtected(), DELETIONPROTECTED_BINDING);

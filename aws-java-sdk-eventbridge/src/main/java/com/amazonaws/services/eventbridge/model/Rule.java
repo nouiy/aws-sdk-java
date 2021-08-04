@@ -62,7 +62,9 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)".
+     * The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)". For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-rule-schedule.html">Creating an Amazon
+     * EventBridge rule that runs on a schedule</a>.
      * </p>
      */
     private String scheduleExpression;
@@ -70,12 +72,17 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the role that is used for target invocation.
      * </p>
+     * <p>
+     * If you're setting an event bus in another account as the target and that account granted permission to your
+     * account through an organization instead of directly by the account ID, you must specify a <code>RoleArn</code>
+     * with proper permissions in the <code>Target</code> structure, instead of here in this parameter.
+     * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * If the rule was created on behalf of your account by an AWS service, this field displays the principal name of
-     * the service that created the rule.
+     * If the rule was created on behalf of your account by an Amazon Web Services service, this field displays the
+     * principal name of the service that created the rule.
      * </p>
      */
     private String managedBy;
@@ -319,11 +326,15 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)".
+     * The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)". For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-rule-schedule.html">Creating an Amazon
+     * EventBridge rule that runs on a schedule</a>.
      * </p>
      * 
      * @param scheduleExpression
-     *        The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)".
+     *        The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)". For more information, see
+     *        <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-rule-schedule.html">Creating
+     *        an Amazon EventBridge rule that runs on a schedule</a>.
      */
 
     public void setScheduleExpression(String scheduleExpression) {
@@ -332,10 +343,15 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)".
+     * The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)". For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-rule-schedule.html">Creating an Amazon
+     * EventBridge rule that runs on a schedule</a>.
      * </p>
      * 
-     * @return The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)".
+     * @return The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)". For more information,
+     *         see <a
+     *         href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-rule-schedule.html">Creating an
+     *         Amazon EventBridge rule that runs on a schedule</a>.
      */
 
     public String getScheduleExpression() {
@@ -344,11 +360,15 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)".
+     * The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)". For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-rule-schedule.html">Creating an Amazon
+     * EventBridge rule that runs on a schedule</a>.
      * </p>
      * 
      * @param scheduleExpression
-     *        The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)".
+     *        The scheduling expression. For example, "cron(0 20 * * ? *)", "rate(5 minutes)". For more information, see
+     *        <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-create-rule-schedule.html">Creating
+     *        an Amazon EventBridge rule that runs on a schedule</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -361,9 +381,19 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the role that is used for target invocation.
      * </p>
+     * <p>
+     * If you're setting an event bus in another account as the target and that account granted permission to your
+     * account through an organization instead of directly by the account ID, you must specify a <code>RoleArn</code>
+     * with proper permissions in the <code>Target</code> structure, instead of here in this parameter.
+     * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the role that is used for target invocation.
+     *        The Amazon Resource Name (ARN) of the role that is used for target invocation.</p>
+     *        <p>
+     *        If you're setting an event bus in another account as the target and that account granted permission to
+     *        your account through an organization instead of directly by the account ID, you must specify a
+     *        <code>RoleArn</code> with proper permissions in the <code>Target</code> structure, instead of here in this
+     *        parameter.
      */
 
     public void setRoleArn(String roleArn) {
@@ -374,8 +404,18 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the role that is used for target invocation.
      * </p>
+     * <p>
+     * If you're setting an event bus in another account as the target and that account granted permission to your
+     * account through an organization instead of directly by the account ID, you must specify a <code>RoleArn</code>
+     * with proper permissions in the <code>Target</code> structure, instead of here in this parameter.
+     * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the role that is used for target invocation.
+     * @return The Amazon Resource Name (ARN) of the role that is used for target invocation.</p>
+     *         <p>
+     *         If you're setting an event bus in another account as the target and that account granted permission to
+     *         your account through an organization instead of directly by the account ID, you must specify a
+     *         <code>RoleArn</code> with proper permissions in the <code>Target</code> structure, instead of here in
+     *         this parameter.
      */
 
     public String getRoleArn() {
@@ -386,9 +426,19 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the role that is used for target invocation.
      * </p>
+     * <p>
+     * If you're setting an event bus in another account as the target and that account granted permission to your
+     * account through an organization instead of directly by the account ID, you must specify a <code>RoleArn</code>
+     * with proper permissions in the <code>Target</code> structure, instead of here in this parameter.
+     * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the role that is used for target invocation.
+     *        The Amazon Resource Name (ARN) of the role that is used for target invocation.</p>
+     *        <p>
+     *        If you're setting an event bus in another account as the target and that account granted permission to
+     *        your account through an organization instead of directly by the account ID, you must specify a
+     *        <code>RoleArn</code> with proper permissions in the <code>Target</code> structure, instead of here in this
+     *        parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -399,13 +449,13 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If the rule was created on behalf of your account by an AWS service, this field displays the principal name of
-     * the service that created the rule.
+     * If the rule was created on behalf of your account by an Amazon Web Services service, this field displays the
+     * principal name of the service that created the rule.
      * </p>
      * 
      * @param managedBy
-     *        If the rule was created on behalf of your account by an AWS service, this field displays the principal
-     *        name of the service that created the rule.
+     *        If the rule was created on behalf of your account by an Amazon Web Services service, this field displays
+     *        the principal name of the service that created the rule.
      */
 
     public void setManagedBy(String managedBy) {
@@ -414,12 +464,12 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If the rule was created on behalf of your account by an AWS service, this field displays the principal name of
-     * the service that created the rule.
+     * If the rule was created on behalf of your account by an Amazon Web Services service, this field displays the
+     * principal name of the service that created the rule.
      * </p>
      * 
-     * @return If the rule was created on behalf of your account by an AWS service, this field displays the principal
-     *         name of the service that created the rule.
+     * @return If the rule was created on behalf of your account by an Amazon Web Services service, this field displays
+     *         the principal name of the service that created the rule.
      */
 
     public String getManagedBy() {
@@ -428,13 +478,13 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If the rule was created on behalf of your account by an AWS service, this field displays the principal name of
-     * the service that created the rule.
+     * If the rule was created on behalf of your account by an Amazon Web Services service, this field displays the
+     * principal name of the service that created the rule.
      * </p>
      * 
      * @param managedBy
-     *        If the rule was created on behalf of your account by an AWS service, this field displays the principal
-     *        name of the service that created the rule.
+     *        If the rule was created on behalf of your account by an Amazon Web Services service, this field displays
+     *        the principal name of the service that created the rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

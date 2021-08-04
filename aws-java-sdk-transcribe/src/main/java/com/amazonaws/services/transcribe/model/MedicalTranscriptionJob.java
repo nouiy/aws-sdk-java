@@ -55,7 +55,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <p>
      * If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to specify
      * the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you should leave
-     * the <code>MediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
+     * the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
      * </p>
      */
     private Integer mediaSampleRateHertz;
@@ -180,7 +180,8 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <p>
      * The type of speech in the transcription job. <code>CONVERSATION</code> is generally used for patient-physician
      * dialogues. <code>DICTATION</code> is the setting for physicians speaking their notes after seeing a patient. For
-     * more information, see <a>how-it-works-med</a>
+     * more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe-med.html">What
+     * is Amazon Transcribe Medical?</a>.
      * </p>
      */
     private String type;
@@ -366,7 +367,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <p>
      * If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to specify
      * the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you should leave
-     * the <code>MediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
+     * the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
      * </p>
      * 
      * @param mediaSampleRateHertz
@@ -374,8 +375,8 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *        <p>
      *        If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to
      *        specify the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you
-     *        should leave the <code>MediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the
-     *        sample rate.
+     *        should leave the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine
+     *        the sample rate.
      */
 
     public void setMediaSampleRateHertz(Integer mediaSampleRateHertz) {
@@ -389,15 +390,15 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <p>
      * If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to specify
      * the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you should leave
-     * the <code>MediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
+     * the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
      * </p>
      * 
      * @return The sample rate, in Hertz, of the source audio containing medical information.</p>
      *         <p>
      *         If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to
      *         specify the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you
-     *         should leave the <code>MediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the
-     *         sample rate.
+     *         should leave the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine
+     *         the sample rate.
      */
 
     public Integer getMediaSampleRateHertz() {
@@ -411,7 +412,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <p>
      * If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to specify
      * the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you should leave
-     * the <code>MediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
+     * the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
      * </p>
      * 
      * @param mediaSampleRateHertz
@@ -419,8 +420,8 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *        <p>
      *        If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to
      *        specify the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you
-     *        should leave the <code>MediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the
-     *        sample rate.
+     *        should leave the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine
+     *        the sample rate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1260,13 +1261,16 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <p>
      * The type of speech in the transcription job. <code>CONVERSATION</code> is generally used for patient-physician
      * dialogues. <code>DICTATION</code> is the setting for physicians speaking their notes after seeing a patient. For
-     * more information, see <a>how-it-works-med</a>
+     * more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe-med.html">What
+     * is Amazon Transcribe Medical?</a>.
      * </p>
      * 
      * @param type
      *        The type of speech in the transcription job. <code>CONVERSATION</code> is generally used for
      *        patient-physician dialogues. <code>DICTATION</code> is the setting for physicians speaking their notes
-     *        after seeing a patient. For more information, see <a>how-it-works-med</a>
+     *        after seeing a patient. For more information, see <a
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe-med.html">What is Amazon
+     *        Transcribe Medical?</a>.
      * @see Type
      */
 
@@ -1278,12 +1282,15 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <p>
      * The type of speech in the transcription job. <code>CONVERSATION</code> is generally used for patient-physician
      * dialogues. <code>DICTATION</code> is the setting for physicians speaking their notes after seeing a patient. For
-     * more information, see <a>how-it-works-med</a>
+     * more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe-med.html">What
+     * is Amazon Transcribe Medical?</a>.
      * </p>
      * 
      * @return The type of speech in the transcription job. <code>CONVERSATION</code> is generally used for
      *         patient-physician dialogues. <code>DICTATION</code> is the setting for physicians speaking their notes
-     *         after seeing a patient. For more information, see <a>how-it-works-med</a>
+     *         after seeing a patient. For more information, see <a
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe-med.html">What is Amazon
+     *         Transcribe Medical?</a>.
      * @see Type
      */
 
@@ -1295,13 +1302,16 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <p>
      * The type of speech in the transcription job. <code>CONVERSATION</code> is generally used for patient-physician
      * dialogues. <code>DICTATION</code> is the setting for physicians speaking their notes after seeing a patient. For
-     * more information, see <a>how-it-works-med</a>
+     * more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe-med.html">What
+     * is Amazon Transcribe Medical?</a>.
      * </p>
      * 
      * @param type
      *        The type of speech in the transcription job. <code>CONVERSATION</code> is generally used for
      *        patient-physician dialogues. <code>DICTATION</code> is the setting for physicians speaking their notes
-     *        after seeing a patient. For more information, see <a>how-it-works-med</a>
+     *        after seeing a patient. For more information, see <a
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe-med.html">What is Amazon
+     *        Transcribe Medical?</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Type
      */
@@ -1315,13 +1325,16 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <p>
      * The type of speech in the transcription job. <code>CONVERSATION</code> is generally used for patient-physician
      * dialogues. <code>DICTATION</code> is the setting for physicians speaking their notes after seeing a patient. For
-     * more information, see <a>how-it-works-med</a>
+     * more information, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe-med.html">What
+     * is Amazon Transcribe Medical?</a>.
      * </p>
      * 
      * @param type
      *        The type of speech in the transcription job. <code>CONVERSATION</code> is generally used for
      *        patient-physician dialogues. <code>DICTATION</code> is the setting for physicians speaking their notes
-     *        after seeing a patient. For more information, see <a>how-it-works-med</a>
+     *        after seeing a patient. For more information, see <a
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe-med.html">What is Amazon
+     *        Transcribe Medical?</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Type
      */

@@ -35,7 +35,7 @@ public class ValidStorageOptions implements Serializable, Cloneable {
     private String storageType;
     /**
      * <p>
-     * The valid range of storage in gibibytes. For example, 100 to 16384.
+     * The valid range of storage in gibibytes (GiB). For example, 100 to 16384.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Range> storageSize;
@@ -101,10 +101,10 @@ public class ValidStorageOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The valid range of storage in gibibytes. For example, 100 to 16384.
+     * The valid range of storage in gibibytes (GiB). For example, 100 to 16384.
      * </p>
      * 
-     * @return The valid range of storage in gibibytes. For example, 100 to 16384.
+     * @return The valid range of storage in gibibytes (GiB). For example, 100 to 16384.
      */
 
     public java.util.List<Range> getStorageSize() {
@@ -116,11 +116,11 @@ public class ValidStorageOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The valid range of storage in gibibytes. For example, 100 to 16384.
+     * The valid range of storage in gibibytes (GiB). For example, 100 to 16384.
      * </p>
      * 
      * @param storageSize
-     *        The valid range of storage in gibibytes. For example, 100 to 16384.
+     *        The valid range of storage in gibibytes (GiB). For example, 100 to 16384.
      */
 
     public void setStorageSize(java.util.Collection<Range> storageSize) {
@@ -134,7 +134,7 @@ public class ValidStorageOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The valid range of storage in gibibytes. For example, 100 to 16384.
+     * The valid range of storage in gibibytes (GiB). For example, 100 to 16384.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -143,7 +143,7 @@ public class ValidStorageOptions implements Serializable, Cloneable {
      * </p>
      * 
      * @param storageSize
-     *        The valid range of storage in gibibytes. For example, 100 to 16384.
+     *        The valid range of storage in gibibytes (GiB). For example, 100 to 16384.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,11 +159,11 @@ public class ValidStorageOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The valid range of storage in gibibytes. For example, 100 to 16384.
+     * The valid range of storage in gibibytes (GiB). For example, 100 to 16384.
      * </p>
      * 
      * @param storageSize
-     *        The valid range of storage in gibibytes. For example, 100 to 16384.
+     *        The valid range of storage in gibibytes (GiB). For example, 100 to 16384.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

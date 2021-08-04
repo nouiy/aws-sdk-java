@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A partner event source is created by an SaaS partner. If a customer creates a partner event bus that matches this
- * event source, that AWS account can receive events from the partner's applications or services.
+ * event source, that Amazon Web Services account can receive events from the partner's applications or services.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/PartnerEventSource" target="_top">AWS API

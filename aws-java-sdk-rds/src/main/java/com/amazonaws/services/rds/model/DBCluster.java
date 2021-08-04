@@ -90,6 +90,12 @@ public class DBCluster implements Serializable, Cloneable {
     private String status;
     /**
      * <p>
+     * The time when a stopped DB cluster is restarted automatically.
+     * </p>
+     */
+    private java.util.Date automaticRestartTime;
+    /**
+     * <p>
      * Specifies the progress of the operation as a percentage.
      * </p>
      */
@@ -835,6 +841,46 @@ public class DBCluster implements Serializable, Cloneable {
 
     public DBCluster withStatus(String status) {
         setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time when a stopped DB cluster is restarted automatically.
+     * </p>
+     * 
+     * @param automaticRestartTime
+     *        The time when a stopped DB cluster is restarted automatically.
+     */
+
+    public void setAutomaticRestartTime(java.util.Date automaticRestartTime) {
+        this.automaticRestartTime = automaticRestartTime;
+    }
+
+    /**
+     * <p>
+     * The time when a stopped DB cluster is restarted automatically.
+     * </p>
+     * 
+     * @return The time when a stopped DB cluster is restarted automatically.
+     */
+
+    public java.util.Date getAutomaticRestartTime() {
+        return this.automaticRestartTime;
+    }
+
+    /**
+     * <p>
+     * The time when a stopped DB cluster is restarted automatically.
+     * </p>
+     * 
+     * @param automaticRestartTime
+     *        The time when a stopped DB cluster is restarted automatically.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withAutomaticRestartTime(java.util.Date automaticRestartTime) {
+        setAutomaticRestartTime(automaticRestartTime);
         return this;
     }
 
@@ -3542,6 +3588,8 @@ public class DBCluster implements Serializable, Cloneable {
             sb.append("DBSubnetGroup: ").append(getDBSubnetGroup()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
+        if (getAutomaticRestartTime() != null)
+            sb.append("AutomaticRestartTime: ").append(getAutomaticRestartTime()).append(",");
         if (getPercentProgress() != null)
             sb.append("PercentProgress: ").append(getPercentProgress()).append(",");
         if (getEarliestRestorableTime() != null)
@@ -3685,6 +3733,10 @@ public class DBCluster implements Serializable, Cloneable {
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
+        if (other.getAutomaticRestartTime() == null ^ this.getAutomaticRestartTime() == null)
+            return false;
+        if (other.getAutomaticRestartTime() != null && other.getAutomaticRestartTime().equals(this.getAutomaticRestartTime()) == false)
             return false;
         if (other.getPercentProgress() == null ^ this.getPercentProgress() == null)
             return false;
@@ -3896,6 +3948,7 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getDBClusterParameterGroup() == null) ? 0 : getDBClusterParameterGroup().hashCode());
         hashCode = prime * hashCode + ((getDBSubnetGroup() == null) ? 0 : getDBSubnetGroup().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getAutomaticRestartTime() == null) ? 0 : getAutomaticRestartTime().hashCode());
         hashCode = prime * hashCode + ((getPercentProgress() == null) ? 0 : getPercentProgress().hashCode());
         hashCode = prime * hashCode + ((getEarliestRestorableTime() == null) ? 0 : getEarliestRestorableTime().hashCode());
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());

@@ -39,7 +39,7 @@ public class ListReplaysRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String state;
     /**
      * <p>
-     * The ARN of the event source associated with the replay.
+     * The ARN of the archive from which the events are replayed.
      * </p>
      */
     private String eventSourceArn;
@@ -157,11 +157,11 @@ public class ListReplaysRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the event source associated with the replay.
+     * The ARN of the archive from which the events are replayed.
      * </p>
      * 
      * @param eventSourceArn
-     *        The ARN of the event source associated with the replay.
+     *        The ARN of the archive from which the events are replayed.
      */
 
     public void setEventSourceArn(String eventSourceArn) {
@@ -170,10 +170,10 @@ public class ListReplaysRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the event source associated with the replay.
+     * The ARN of the archive from which the events are replayed.
      * </p>
      * 
-     * @return The ARN of the event source associated with the replay.
+     * @return The ARN of the archive from which the events are replayed.
      */
 
     public String getEventSourceArn() {
@@ -182,11 +182,11 @@ public class ListReplaysRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The ARN of the event source associated with the replay.
+     * The ARN of the archive from which the events are replayed.
      * </p>
      * 
      * @param eventSourceArn
-     *        The ARN of the event source associated with the replay.
+     *        The ARN of the archive from which the events are replayed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,7 +27,7 @@ public class ListInfrastructureConfigurationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
      */
     private java.util.List<Filter> filters;
@@ -46,10 +46,10 @@ public class ListInfrastructureConfigurationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
      * 
-     * @return The filters.
+     * @return You can filter on <code>name</code> to streamline results.
      */
 
     public java.util.List<Filter> getFilters() {
@@ -58,11 +58,11 @@ public class ListInfrastructureConfigurationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
      * 
      * @param filters
-     *        The filters.
+     *        You can filter on <code>name</code> to streamline results.
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -76,7 +76,7 @@ public class ListInfrastructureConfigurationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -85,7 +85,7 @@ public class ListInfrastructureConfigurationsRequest extends com.amazonaws.Amazo
      * </p>
      * 
      * @param filters
-     *        The filters.
+     *        You can filter on <code>name</code> to streamline results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +101,11 @@ public class ListInfrastructureConfigurationsRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The filters.
+     * You can filter on <code>name</code> to streamline results.
      * </p>
      * 
      * @param filters
-     *        The filters.
+     *        You can filter on <code>name</code> to streamline results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

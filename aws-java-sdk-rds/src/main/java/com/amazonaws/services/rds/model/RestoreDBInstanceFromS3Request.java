@@ -540,7 +540,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
     private Boolean deletionProtection;
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -4089,7 +4089,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -4098,7 +4098,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param maxAllocatedStorage
-     *        The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+     *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *        instance.</p>
      *        <p>
      *        For more information about this setting, including limitations that apply to it, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"
@@ -4112,7 +4113,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -4120,7 +4121,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * 
-     * @return The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+     * @return The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *         instance.</p>
      *         <p>
      *         For more information about this setting, including limitations that apply to it, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"
@@ -4134,7 +4136,7 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.
+     * The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB instance.
      * </p>
      * <p>
      * For more information about this setting, including limitations that apply to it, see <a href=
@@ -4143,7 +4145,8 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param maxAllocatedStorage
-     *        The upper limit to which Amazon RDS can automatically scale the storage of the DB instance.</p>
+     *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
+     *        instance.</p>
      *        <p>
      *        For more information about this setting, including limitations that apply to it, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"

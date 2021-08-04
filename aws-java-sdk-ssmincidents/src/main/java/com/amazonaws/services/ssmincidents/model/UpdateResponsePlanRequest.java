@@ -41,6 +41,9 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The AWS Chatbot chat channel used for collaboration during an incident.
      * </p>
+     * <p>
+     * Use the empty structure to remove the chat channel from the response plan.
+     * </p>
      */
     private ChatChannel chatChannel;
     /**
@@ -105,7 +108,7 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
     private Integer incidentTemplateImpact;
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      */
     private java.util.List<NotificationTargetItem> incidentTemplateNotificationTargets;
@@ -237,9 +240,14 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The AWS Chatbot chat channel used for collaboration during an incident.
      * </p>
+     * <p>
+     * Use the empty structure to remove the chat channel from the response plan.
+     * </p>
      * 
      * @param chatChannel
-     *        The AWS Chatbot chat channel used for collaboration during an incident.
+     *        The AWS Chatbot chat channel used for collaboration during an incident.</p>
+     *        <p>
+     *        Use the empty structure to remove the chat channel from the response plan.
      */
 
     public void setChatChannel(ChatChannel chatChannel) {
@@ -250,8 +258,13 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The AWS Chatbot chat channel used for collaboration during an incident.
      * </p>
+     * <p>
+     * Use the empty structure to remove the chat channel from the response plan.
+     * </p>
      * 
-     * @return The AWS Chatbot chat channel used for collaboration during an incident.
+     * @return The AWS Chatbot chat channel used for collaboration during an incident.</p>
+     *         <p>
+     *         Use the empty structure to remove the chat channel from the response plan.
      */
 
     public ChatChannel getChatChannel() {
@@ -262,9 +275,14 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * The AWS Chatbot chat channel used for collaboration during an incident.
      * </p>
+     * <p>
+     * Use the empty structure to remove the chat channel from the response plan.
+     * </p>
      * 
      * @param chatChannel
-     *        The AWS Chatbot chat channel used for collaboration during an incident.
+     *        The AWS Chatbot chat channel used for collaboration during an incident.</p>
+     *        <p>
+     *        Use the empty structure to remove the chat channel from the response plan.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -685,11 +703,10 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
-     * @return The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident
-     *         record.
+     * @return The SNS targets that are notified when updates are made to an incident.
      */
 
     public java.util.List<NotificationTargetItem> getIncidentTemplateNotificationTargets() {
@@ -698,12 +715,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
      * @param incidentTemplateNotificationTargets
-     *        The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident
-     *        record.
+     *        The SNS targets that are notified when updates are made to an incident.
      */
 
     public void setIncidentTemplateNotificationTargets(java.util.Collection<NotificationTargetItem> incidentTemplateNotificationTargets) {
@@ -717,7 +733,7 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -727,8 +743,7 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param incidentTemplateNotificationTargets
-     *        The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident
-     *        record.
+     *        The SNS targets that are notified when updates are made to an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -744,12 +759,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
      * @param incidentTemplateNotificationTargets
-     *        The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident
-     *        record.
+     *        The SNS targets that are notified when updates are made to an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -22,6 +22,7 @@ import com.amazonaws.annotation.SdkInternalApi;
 import com.amazonaws.annotation.SdkTestInternalApi;
 import com.amazonaws.auth.profile.internal.BasicProfile;
 import com.amazonaws.auth.profile.internal.BasicProfileConfigFileLoader;
+import com.amazonaws.internal.config.InternalConfig;
 import com.amazonaws.profile.path.AwsProfileFileLocationProvider;
 import com.amazonaws.retry.RetryMode;
 
@@ -37,23 +38,25 @@ import com.amazonaws.retry.RetryMode;
 @SdkInternalApi
 public final class RetryModeResolver {
     private static final String PROFILE_PROPERTY = "retry_mode";
+    private static final RetryMode SDK_DEFAULT_RETRY_MODE = RetryMode.LEGACY;
 
     private final BasicProfileConfigFileLoader configFileLoader;
+    private final InternalConfig internalConfig;
     private final RetryMode retryMode;
 
     public RetryModeResolver() {
-        this.configFileLoader = BasicProfileConfigFileLoader.INSTANCE;
-        this.retryMode = resolveRetryMode();
+        this(BasicProfileConfigFileLoader.INSTANCE, InternalConfig.Factory.getInternalConfig());
     }
 
     @SdkTestInternalApi
-    RetryModeResolver(AwsProfileFileLocationProvider configFileLocationProvider) {
-        this.configFileLoader = new BasicProfileConfigFileLoader(configFileLocationProvider);
+    RetryModeResolver(BasicProfileConfigFileLoader configFileLoader, InternalConfig internalConfig) {
+        this.configFileLoader = configFileLoader;
+        this.internalConfig = internalConfig;
         this.retryMode = resolveRetryMode();
     }
 
     /**
-     * @return the resolved retry mode. If not found, {@link RetryMode.LEGACY} will be returned
+     * @return the resolved retry mode. If not found, {@link RetryMode#LEGACY} will be returned
      */
     public RetryMode retryMode() {
         return retryMode;
@@ -65,7 +68,10 @@ public final class RetryModeResolver {
 
     private RetryMode envVar() {
         return RetryMode.fromName(System.getenv(AWS_RETRY_MODE_ENV_VAR));
+    }
 
+    private RetryMode internalDefault() {
+        return RetryMode.fromName(internalConfig.getDefaultRetryMode());
     }
 
     private RetryMode resolveRetryMode() {
@@ -84,8 +90,13 @@ public final class RetryModeResolver {
         if (mode != null) {
             return mode;
         }
-
-        return RetryMode.LEGACY;
+        
+        mode = internalDefault();
+        if (mode != null) {
+            return mode;
+        }
+        
+        return SDK_DEFAULT_RETRY_MODE;
     }
 
     private RetryMode profile() {

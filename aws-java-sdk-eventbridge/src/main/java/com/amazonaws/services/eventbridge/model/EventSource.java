@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A partner event source is created by an SaaS partner. If a customer creates a partner event bus that matches this
- * event source, that AWS account can receive events from the partner's applications or services.
+ * event source, that Amazon Web Services account can receive events from the partner's applications or services.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/EventSource" target="_top">AWS API
@@ -49,8 +49,8 @@ public class EventSource implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date creationTime;
     /**
      * <p>
-     * The date and time that the event source will expire, if the AWS account doesn't create a matching event bus for
-     * it.
+     * The date and time that the event source will expire, if the Amazon Web Services account doesn't create a matching
+     * event bus for it.
      * </p>
      */
     private java.util.Date expirationTime;
@@ -192,13 +192,13 @@ public class EventSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that the event source will expire, if the AWS account doesn't create a matching event bus for
-     * it.
+     * The date and time that the event source will expire, if the Amazon Web Services account doesn't create a matching
+     * event bus for it.
      * </p>
      * 
      * @param expirationTime
-     *        The date and time that the event source will expire, if the AWS account doesn't create a matching event
-     *        bus for it.
+     *        The date and time that the event source will expire, if the Amazon Web Services account doesn't create a
+     *        matching event bus for it.
      */
 
     public void setExpirationTime(java.util.Date expirationTime) {
@@ -207,12 +207,12 @@ public class EventSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that the event source will expire, if the AWS account doesn't create a matching event bus for
-     * it.
+     * The date and time that the event source will expire, if the Amazon Web Services account doesn't create a matching
+     * event bus for it.
      * </p>
      * 
-     * @return The date and time that the event source will expire, if the AWS account doesn't create a matching event
-     *         bus for it.
+     * @return The date and time that the event source will expire, if the Amazon Web Services account doesn't create a
+     *         matching event bus for it.
      */
 
     public java.util.Date getExpirationTime() {
@@ -221,13 +221,13 @@ public class EventSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that the event source will expire, if the AWS account doesn't create a matching event bus for
-     * it.
+     * The date and time that the event source will expire, if the Amazon Web Services account doesn't create a matching
+     * event bus for it.
      * </p>
      * 
      * @param expirationTime
-     *        The date and time that the event source will expire, if the AWS account doesn't create a matching event
-     *        bus for it.
+     *        The date and time that the event source will expire, if the Amazon Web Services account doesn't create a
+     *        matching event bus for it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

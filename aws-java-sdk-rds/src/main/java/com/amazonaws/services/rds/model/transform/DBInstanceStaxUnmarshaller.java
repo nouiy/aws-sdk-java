@@ -65,6 +65,11 @@ public class DBInstanceStaxUnmarshaller implements Unmarshaller<DBInstance, Stax
                     continue;
                 }
 
+                if (context.testExpression("AutomaticRestartTime", targetDepth)) {
+                    dBInstance.setAutomaticRestartTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("MasterUsername", targetDepth)) {
                     dBInstance.setMasterUsername(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

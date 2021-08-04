@@ -28,8 +28,8 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The name of the job. You can't use the strings "<code>.</code>" or "<code>..</code>" by themselves as the job
-     * name. The name must also be unique within an AWS account. If you try to create a transcription job with the same
-     * name as a previous transcription job, you get a <code>ConflictException</code> error.
+     * name. The name must also be unique within an Amazon Web Services account. If you try to create a transcription
+     * job with the same name as a previous transcription job, you get a <code>ConflictException</code> error.
      * </p>
      */
     private String transcriptionJobName;
@@ -81,9 +81,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * >Permissions Required for IAM User Roles</a>.
      * </p>
      * <p>
-     * You can specify an AWS Key Management Service (KMS) key to encrypt the output of your transcription using the
-     * <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses the
-     * default Amazon S3 key for server-side encryption of transcripts that are placed in your S3 bucket.
+     * You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of your
+     * transcription using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon
+     * Transcribe uses the default Amazon S3 key for server-side encryption of transcripts that are placed in your S3
+     * bucket.
      * </p>
      * <p>
      * If you don't set the <code>OutputBucketName</code>, Amazon Transcribe generates a pre-signed URL, a shareable URL
@@ -114,9 +115,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
     private String outputKey;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to encrypt the output of the
-     * transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have permission to use
-     * the specified KMS key.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service (KMS) key used to encrypt the
+     * output of the transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have
+     * permission to use the specified KMS key.
      * </p>
      * <p>
      * You can use either of the following to identify a KMS key in the current account:
@@ -197,20 +198,25 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * An object containing a list of languages that might be present in your collection of audio files. Automatic
      * language identification chooses a language that best matches the source audio from that list.
      * </p>
+     * <p>
+     * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
+     * of 16000 Hz or higher.
+     * </p>
      */
     private java.util.List<String> languageOptions;
 
     /**
      * <p>
      * The name of the job. You can't use the strings "<code>.</code>" or "<code>..</code>" by themselves as the job
-     * name. The name must also be unique within an AWS account. If you try to create a transcription job with the same
-     * name as a previous transcription job, you get a <code>ConflictException</code> error.
+     * name. The name must also be unique within an Amazon Web Services account. If you try to create a transcription
+     * job with the same name as a previous transcription job, you get a <code>ConflictException</code> error.
      * </p>
      * 
      * @param transcriptionJobName
      *        The name of the job. You can't use the strings "<code>.</code>" or "<code>..</code>" by themselves as the
-     *        job name. The name must also be unique within an AWS account. If you try to create a transcription job
-     *        with the same name as a previous transcription job, you get a <code>ConflictException</code> error.
+     *        job name. The name must also be unique within an Amazon Web Services account. If you try to create a
+     *        transcription job with the same name as a previous transcription job, you get a
+     *        <code>ConflictException</code> error.
      */
 
     public void setTranscriptionJobName(String transcriptionJobName) {
@@ -220,13 +226,14 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The name of the job. You can't use the strings "<code>.</code>" or "<code>..</code>" by themselves as the job
-     * name. The name must also be unique within an AWS account. If you try to create a transcription job with the same
-     * name as a previous transcription job, you get a <code>ConflictException</code> error.
+     * name. The name must also be unique within an Amazon Web Services account. If you try to create a transcription
+     * job with the same name as a previous transcription job, you get a <code>ConflictException</code> error.
      * </p>
      * 
      * @return The name of the job. You can't use the strings "<code>.</code>" or "<code>..</code>" by themselves as the
-     *         job name. The name must also be unique within an AWS account. If you try to create a transcription job
-     *         with the same name as a previous transcription job, you get a <code>ConflictException</code> error.
+     *         job name. The name must also be unique within an Amazon Web Services account. If you try to create a
+     *         transcription job with the same name as a previous transcription job, you get a
+     *         <code>ConflictException</code> error.
      */
 
     public String getTranscriptionJobName() {
@@ -236,14 +243,15 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The name of the job. You can't use the strings "<code>.</code>" or "<code>..</code>" by themselves as the job
-     * name. The name must also be unique within an AWS account. If you try to create a transcription job with the same
-     * name as a previous transcription job, you get a <code>ConflictException</code> error.
+     * name. The name must also be unique within an Amazon Web Services account. If you try to create a transcription
+     * job with the same name as a previous transcription job, you get a <code>ConflictException</code> error.
      * </p>
      * 
      * @param transcriptionJobName
      *        The name of the job. You can't use the strings "<code>.</code>" or "<code>..</code>" by themselves as the
-     *        job name. The name must also be unique within an AWS account. If you try to create a transcription job
-     *        with the same name as a previous transcription job, you get a <code>ConflictException</code> error.
+     *        job name. The name must also be unique within an Amazon Web Services account. If you try to create a
+     *        transcription job with the same name as a previous transcription job, you get a
+     *        <code>ConflictException</code> error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -523,9 +531,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * >Permissions Required for IAM User Roles</a>.
      * </p>
      * <p>
-     * You can specify an AWS Key Management Service (KMS) key to encrypt the output of your transcription using the
-     * <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses the
-     * default Amazon S3 key for server-side encryption of transcripts that are placed in your S3 bucket.
+     * You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of your
+     * transcription using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon
+     * Transcribe uses the default Amazon S3 key for server-side encryption of transcripts that are placed in your S3
+     * bucket.
      * </p>
      * <p>
      * If you don't set the <code>OutputBucketName</code>, Amazon Transcribe generates a pre-signed URL, a shareable URL
@@ -547,10 +556,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        >Permissions Required for IAM User Roles</a>.
      *        </p>
      *        <p>
-     *        You can specify an AWS Key Management Service (KMS) key to encrypt the output of your transcription using
-     *        the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe
-     *        uses the default Amazon S3 key for server-side encryption of transcripts that are placed in your S3
-     *        bucket.
+     *        You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of your
+     *        transcription using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key,
+     *        Amazon Transcribe uses the default Amazon S3 key for server-side encryption of transcripts that are placed
+     *        in your S3 bucket.
      *        </p>
      *        <p>
      *        If you don't set the <code>OutputBucketName</code>, Amazon Transcribe generates a pre-signed URL, a
@@ -577,9 +586,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * >Permissions Required for IAM User Roles</a>.
      * </p>
      * <p>
-     * You can specify an AWS Key Management Service (KMS) key to encrypt the output of your transcription using the
-     * <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses the
-     * default Amazon S3 key for server-side encryption of transcripts that are placed in your S3 bucket.
+     * You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of your
+     * transcription using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon
+     * Transcribe uses the default Amazon S3 key for server-side encryption of transcripts that are placed in your S3
+     * bucket.
      * </p>
      * <p>
      * If you don't set the <code>OutputBucketName</code>, Amazon Transcribe generates a pre-signed URL, a shareable URL
@@ -600,10 +610,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *         >Permissions Required for IAM User Roles</a>.
      *         </p>
      *         <p>
-     *         You can specify an AWS Key Management Service (KMS) key to encrypt the output of your transcription using
-     *         the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe
-     *         uses the default Amazon S3 key for server-side encryption of transcripts that are placed in your S3
-     *         bucket.
+     *         You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of your
+     *         transcription using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key,
+     *         Amazon Transcribe uses the default Amazon S3 key for server-side encryption of transcripts that are
+     *         placed in your S3 bucket.
      *         </p>
      *         <p>
      *         If you don't set the <code>OutputBucketName</code>, Amazon Transcribe generates a pre-signed URL, a
@@ -630,9 +640,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * >Permissions Required for IAM User Roles</a>.
      * </p>
      * <p>
-     * You can specify an AWS Key Management Service (KMS) key to encrypt the output of your transcription using the
-     * <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses the
-     * default Amazon S3 key for server-side encryption of transcripts that are placed in your S3 bucket.
+     * You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of your
+     * transcription using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon
+     * Transcribe uses the default Amazon S3 key for server-side encryption of transcripts that are placed in your S3
+     * bucket.
      * </p>
      * <p>
      * If you don't set the <code>OutputBucketName</code>, Amazon Transcribe generates a pre-signed URL, a shareable URL
@@ -654,10 +665,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        >Permissions Required for IAM User Roles</a>.
      *        </p>
      *        <p>
-     *        You can specify an AWS Key Management Service (KMS) key to encrypt the output of your transcription using
-     *        the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe
-     *        uses the default Amazon S3 key for server-side encryption of transcripts that are placed in your S3
-     *        bucket.
+     *        You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of your
+     *        transcription using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key,
+     *        Amazon Transcribe uses the default Amazon S3 key for server-side encryption of transcripts that are placed
+     *        in your S3 bucket.
      *        </p>
      *        <p>
      *        If you don't set the <code>OutputBucketName</code>, Amazon Transcribe generates a pre-signed URL, a
@@ -800,9 +811,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to encrypt the output of the
-     * transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have permission to use
-     * the specified KMS key.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service (KMS) key used to encrypt the
+     * output of the transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have
+     * permission to use the specified KMS key.
      * </p>
      * <p>
      * You can use either of the following to identify a KMS key in the current account:
@@ -844,9 +855,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param outputEncryptionKMSKeyId
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to encrypt the output of
-     *        the transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have
-     *        permission to use the specified KMS key.</p>
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service (KMS) key used to encrypt
+     *        the output of the transcription job. The user calling the <code>StartTranscriptionJob</code> operation
+     *        must have permission to use the specified KMS key.</p>
      *        <p>
      *        You can use either of the following to identify a KMS key in the current account:
      *        </p>
@@ -893,9 +904,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to encrypt the output of the
-     * transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have permission to use
-     * the specified KMS key.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service (KMS) key used to encrypt the
+     * output of the transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have
+     * permission to use the specified KMS key.
      * </p>
      * <p>
      * You can use either of the following to identify a KMS key in the current account:
@@ -936,9 +947,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * <code>OutputBucketName</code> parameter.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to encrypt the output of
-     *         the transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have
-     *         permission to use the specified KMS key.</p>
+     * @return The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service (KMS) key used to
+     *         encrypt the output of the transcription job. The user calling the <code>StartTranscriptionJob</code>
+     *         operation must have permission to use the specified KMS key.</p>
      *         <p>
      *         You can use either of the following to identify a KMS key in the current account:
      *         </p>
@@ -985,9 +996,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to encrypt the output of the
-     * transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have permission to use
-     * the specified KMS key.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service (KMS) key used to encrypt the
+     * output of the transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have
+     * permission to use the specified KMS key.
      * </p>
      * <p>
      * You can use either of the following to identify a KMS key in the current account:
@@ -1029,9 +1040,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param outputEncryptionKMSKeyId
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key used to encrypt the output of
-     *        the transcription job. The user calling the <code>StartTranscriptionJob</code> operation must have
-     *        permission to use the specified KMS key.</p>
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service (KMS) key used to encrypt
+     *        the output of the transcription job. The user calling the <code>StartTranscriptionJob</code> operation
+     *        must have permission to use the specified KMS key.</p>
      *        <p>
      *        You can use either of the following to identify a KMS key in the current account:
      *        </p>
@@ -1323,9 +1334,17 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * An object containing a list of languages that might be present in your collection of audio files. Automatic
      * language identification chooses a language that best matches the source audio from that list.
      * </p>
+     * <p>
+     * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
+     * of 16000 Hz or higher.
+     * </p>
      * 
      * @return An object containing a list of languages that might be present in your collection of audio files.
-     *         Automatic language identification chooses a language that best matches the source audio from that list.
+     *         Automatic language identification chooses a language that best matches the source audio from that
+     *         list.</p>
+     *         <p>
+     *         To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
+     *         sample rate of 16000 Hz or higher.
      * @see LanguageCode
      */
 
@@ -1338,10 +1357,18 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * An object containing a list of languages that might be present in your collection of audio files. Automatic
      * language identification chooses a language that best matches the source audio from that list.
      * </p>
+     * <p>
+     * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
+     * of 16000 Hz or higher.
+     * </p>
      * 
      * @param languageOptions
      *        An object containing a list of languages that might be present in your collection of audio files.
-     *        Automatic language identification chooses a language that best matches the source audio from that list.
+     *        Automatic language identification chooses a language that best matches the source audio from that
+     *        list.</p>
+     *        <p>
+     *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
+     *        sample rate of 16000 Hz or higher.
      * @see LanguageCode
      */
 
@@ -1360,6 +1387,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * language identification chooses a language that best matches the source audio from that list.
      * </p>
      * <p>
+     * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
+     * of 16000 Hz or higher.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setLanguageOptions(java.util.Collection)} or {@link #withLanguageOptions(java.util.Collection)} if you
      * want to override the existing values.
@@ -1367,7 +1398,11 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * 
      * @param languageOptions
      *        An object containing a list of languages that might be present in your collection of audio files.
-     *        Automatic language identification chooses a language that best matches the source audio from that list.
+     *        Automatic language identification chooses a language that best matches the source audio from that
+     *        list.</p>
+     *        <p>
+     *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
+     *        sample rate of 16000 Hz or higher.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -1387,10 +1422,18 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * An object containing a list of languages that might be present in your collection of audio files. Automatic
      * language identification chooses a language that best matches the source audio from that list.
      * </p>
+     * <p>
+     * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
+     * of 16000 Hz or higher.
+     * </p>
      * 
      * @param languageOptions
      *        An object containing a list of languages that might be present in your collection of audio files.
-     *        Automatic language identification chooses a language that best matches the source audio from that list.
+     *        Automatic language identification chooses a language that best matches the source audio from that
+     *        list.</p>
+     *        <p>
+     *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
+     *        sample rate of 16000 Hz or higher.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -1405,10 +1448,18 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * An object containing a list of languages that might be present in your collection of audio files. Automatic
      * language identification chooses a language that best matches the source audio from that list.
      * </p>
+     * <p>
+     * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
+     * of 16000 Hz or higher.
+     * </p>
      * 
      * @param languageOptions
      *        An object containing a list of languages that might be present in your collection of audio files.
-     *        Automatic language identification chooses a language that best matches the source audio from that list.
+     *        Automatic language identification chooses a language that best matches the source audio from that
+     *        list.</p>
+     *        <p>
+     *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
+     *        sample rate of 16000 Hz or higher.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */

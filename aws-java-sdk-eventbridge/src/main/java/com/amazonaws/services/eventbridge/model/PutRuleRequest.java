@@ -61,6 +61,11 @@ public class PutRuleRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role associated with the rule.
      * </p>
+     * <p>
+     * If you're setting an event bus in another account as the target and that account granted permission to your
+     * account through an organization instead of directly by the account ID, you must specify a <code>RoleArn</code>
+     * with proper permissions in the <code>Target</code> structure, instead of here in this parameter.
+     * </p>
      */
     private String roleArn;
     /**
@@ -311,9 +316,19 @@ public class PutRuleRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role associated with the rule.
      * </p>
+     * <p>
+     * If you're setting an event bus in another account as the target and that account granted permission to your
+     * account through an organization instead of directly by the account ID, you must specify a <code>RoleArn</code>
+     * with proper permissions in the <code>Target</code> structure, instead of here in this parameter.
+     * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role associated with the rule.
+     *        The Amazon Resource Name (ARN) of the IAM role associated with the rule.</p>
+     *        <p>
+     *        If you're setting an event bus in another account as the target and that account granted permission to
+     *        your account through an organization instead of directly by the account ID, you must specify a
+     *        <code>RoleArn</code> with proper permissions in the <code>Target</code> structure, instead of here in this
+     *        parameter.
      */
 
     public void setRoleArn(String roleArn) {
@@ -324,8 +339,18 @@ public class PutRuleRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role associated with the rule.
      * </p>
+     * <p>
+     * If you're setting an event bus in another account as the target and that account granted permission to your
+     * account through an organization instead of directly by the account ID, you must specify a <code>RoleArn</code>
+     * with proper permissions in the <code>Target</code> structure, instead of here in this parameter.
+     * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM role associated with the rule.
+     * @return The Amazon Resource Name (ARN) of the IAM role associated with the rule.</p>
+     *         <p>
+     *         If you're setting an event bus in another account as the target and that account granted permission to
+     *         your account through an organization instead of directly by the account ID, you must specify a
+     *         <code>RoleArn</code> with proper permissions in the <code>Target</code> structure, instead of here in
+     *         this parameter.
      */
 
     public String getRoleArn() {
@@ -336,9 +361,19 @@ public class PutRuleRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * <p>
      * The Amazon Resource Name (ARN) of the IAM role associated with the rule.
      * </p>
+     * <p>
+     * If you're setting an event bus in another account as the target and that account granted permission to your
+     * account through an organization instead of directly by the account ID, you must specify a <code>RoleArn</code>
+     * with proper permissions in the <code>Target</code> structure, instead of here in this parameter.
+     * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM role associated with the rule.
+     *        The Amazon Resource Name (ARN) of the IAM role associated with the rule.</p>
+     *        <p>
+     *        If you're setting an event bus in another account as the target and that account granted permission to
+     *        your account through an organization instead of directly by the account ID, you must specify a
+     *        <code>RoleArn</code> with proper permissions in the <code>Target</code> structure, instead of here in this
+     *        parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

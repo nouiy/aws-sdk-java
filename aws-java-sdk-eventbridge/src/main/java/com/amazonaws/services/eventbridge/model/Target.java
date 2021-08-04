@@ -20,14 +20,15 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Targets are the resources to be invoked when a rule is triggered. For a complete list of services and resources that
- * can be set as a target, see <a>PutTargets</a>.
+ * can be set as a target, see <a
+ * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutTargets.html">PutTargets</a>.
  * </p>
  * <p>
  * If you are setting the event bus of another account as the target, and that account granted permission to your
  * account through an organization instead of directly by the account ID, then you must specify a <code>RoleArn</code>
  * with proper permissions in the <code>Target</code> structure. For more information, see <a
  * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html">Sending
- * and Receiving Events Between AWS Accounts</a> in the <i>Amazon EventBridge User Guide</i>.
+ * and Receiving Events Between Amazon Web Services Accounts</a> in the <i>Amazon EventBridge User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eventbridge-2015-10-07/Target" target="_top">AWS API
@@ -38,7 +39,7 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target.
+     * The ID of the target. We recommend using a memorable and unique string.
      * </p>
      */
     private String id;
@@ -102,9 +103,9 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
     private EcsParameters ecsParameters;
     /**
      * <p>
-     * If the event target is an AWS Batch job, this contains the job definition, job name, and other parameters. For
-     * more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in the
-     * <i>AWS Batch User Guide</i>.
+     * If the event target is an Batch job, this contains the job definition, job name, and other parameters. For more
+     * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in the <i>Batch
+     * User Guide</i>.
      * </p>
      */
     private BatchParameters batchParameters;
@@ -131,11 +132,11 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
     private HttpParameters httpParameters;
     /**
      * <p>
-     * Contains the Redshift Data API parameters to use when the target is a Redshift cluster.
+     * Contains the Amazon Redshift Data API parameters to use when the target is a Amazon Redshift cluster.
      * </p>
      * <p>
-     * If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the Redshift Data
-     * API ExecuteStatement based on EventBridge events.
+     * If you specify a Amazon Redshift Cluster as a Target, you can use this to specify parameters to invoke the Amazon
+     * Redshift Data API ExecuteStatement based on EventBridge events.
      * </p>
      */
     private RedshiftDataParameters redshiftDataParameters;
@@ -166,11 +167,11 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target.
+     * The ID of the target. We recommend using a memorable and unique string.
      * </p>
      * 
      * @param id
-     *        The ID of the target.
+     *        The ID of the target. We recommend using a memorable and unique string.
      */
 
     public void setId(String id) {
@@ -179,10 +180,10 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target.
+     * The ID of the target. We recommend using a memorable and unique string.
      * </p>
      * 
-     * @return The ID of the target.
+     * @return The ID of the target. We recommend using a memorable and unique string.
      */
 
     public String getId() {
@@ -191,11 +192,11 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target.
+     * The ID of the target. We recommend using a memorable and unique string.
      * </p>
      * 
      * @param id
-     *        The ID of the target.
+     *        The ID of the target. We recommend using a memorable and unique string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -589,15 +590,15 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If the event target is an AWS Batch job, this contains the job definition, job name, and other parameters. For
-     * more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in the
-     * <i>AWS Batch User Guide</i>.
+     * If the event target is an Batch job, this contains the job definition, job name, and other parameters. For more
+     * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in the <i>Batch
+     * User Guide</i>.
      * </p>
      * 
      * @param batchParameters
-     *        If the event target is an AWS Batch job, this contains the job definition, job name, and other parameters.
-     *        For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a>
-     *        in the <i>AWS Batch User Guide</i>.
+     *        If the event target is an Batch job, this contains the job definition, job name, and other parameters. For
+     *        more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in
+     *        the <i>Batch User Guide</i>.
      */
 
     public void setBatchParameters(BatchParameters batchParameters) {
@@ -606,15 +607,14 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If the event target is an AWS Batch job, this contains the job definition, job name, and other parameters. For
-     * more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in the
-     * <i>AWS Batch User Guide</i>.
+     * If the event target is an Batch job, this contains the job definition, job name, and other parameters. For more
+     * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in the <i>Batch
+     * User Guide</i>.
      * </p>
      * 
-     * @return If the event target is an AWS Batch job, this contains the job definition, job name, and other
-     *         parameters. For more information, see <a
-     *         href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in the <i>AWS Batch User
-     *         Guide</i>.
+     * @return If the event target is an Batch job, this contains the job definition, job name, and other parameters.
+     *         For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a>
+     *         in the <i>Batch User Guide</i>.
      */
 
     public BatchParameters getBatchParameters() {
@@ -623,15 +623,15 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If the event target is an AWS Batch job, this contains the job definition, job name, and other parameters. For
-     * more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in the
-     * <i>AWS Batch User Guide</i>.
+     * If the event target is an Batch job, this contains the job definition, job name, and other parameters. For more
+     * information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in the <i>Batch
+     * User Guide</i>.
      * </p>
      * 
      * @param batchParameters
-     *        If the event target is an AWS Batch job, this contains the job definition, job name, and other parameters.
-     *        For more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a>
-     *        in the <i>AWS Batch User Guide</i>.
+     *        If the event target is an Batch job, this contains the job definition, job name, and other parameters. For
+     *        more information, see <a href="https://docs.aws.amazon.com/batch/latest/userguide/jobs.html">Jobs</a> in
+     *        the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -773,18 +773,18 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains the Redshift Data API parameters to use when the target is a Redshift cluster.
+     * Contains the Amazon Redshift Data API parameters to use when the target is a Amazon Redshift cluster.
      * </p>
      * <p>
-     * If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the Redshift Data
-     * API ExecuteStatement based on EventBridge events.
+     * If you specify a Amazon Redshift Cluster as a Target, you can use this to specify parameters to invoke the Amazon
+     * Redshift Data API ExecuteStatement based on EventBridge events.
      * </p>
      * 
      * @param redshiftDataParameters
-     *        Contains the Redshift Data API parameters to use when the target is a Redshift cluster.</p>
+     *        Contains the Amazon Redshift Data API parameters to use when the target is a Amazon Redshift cluster.</p>
      *        <p>
-     *        If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the
-     *        Redshift Data API ExecuteStatement based on EventBridge events.
+     *        If you specify a Amazon Redshift Cluster as a Target, you can use this to specify parameters to invoke the
+     *        Amazon Redshift Data API ExecuteStatement based on EventBridge events.
      */
 
     public void setRedshiftDataParameters(RedshiftDataParameters redshiftDataParameters) {
@@ -793,17 +793,17 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains the Redshift Data API parameters to use when the target is a Redshift cluster.
+     * Contains the Amazon Redshift Data API parameters to use when the target is a Amazon Redshift cluster.
      * </p>
      * <p>
-     * If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the Redshift Data
-     * API ExecuteStatement based on EventBridge events.
+     * If you specify a Amazon Redshift Cluster as a Target, you can use this to specify parameters to invoke the Amazon
+     * Redshift Data API ExecuteStatement based on EventBridge events.
      * </p>
      * 
-     * @return Contains the Redshift Data API parameters to use when the target is a Redshift cluster.</p>
+     * @return Contains the Amazon Redshift Data API parameters to use when the target is a Amazon Redshift cluster.</p>
      *         <p>
-     *         If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the
-     *         Redshift Data API ExecuteStatement based on EventBridge events.
+     *         If you specify a Amazon Redshift Cluster as a Target, you can use this to specify parameters to invoke
+     *         the Amazon Redshift Data API ExecuteStatement based on EventBridge events.
      */
 
     public RedshiftDataParameters getRedshiftDataParameters() {
@@ -812,18 +812,18 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains the Redshift Data API parameters to use when the target is a Redshift cluster.
+     * Contains the Amazon Redshift Data API parameters to use when the target is a Amazon Redshift cluster.
      * </p>
      * <p>
-     * If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the Redshift Data
-     * API ExecuteStatement based on EventBridge events.
+     * If you specify a Amazon Redshift Cluster as a Target, you can use this to specify parameters to invoke the Amazon
+     * Redshift Data API ExecuteStatement based on EventBridge events.
      * </p>
      * 
      * @param redshiftDataParameters
-     *        Contains the Redshift Data API parameters to use when the target is a Redshift cluster.</p>
+     *        Contains the Amazon Redshift Data API parameters to use when the target is a Amazon Redshift cluster.</p>
      *        <p>
-     *        If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the
-     *        Redshift Data API ExecuteStatement based on EventBridge events.
+     *        If you specify a Amazon Redshift Cluster as a Target, you can use this to specify parameters to invoke the
+     *        Amazon Redshift Data API ExecuteStatement based on EventBridge events.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

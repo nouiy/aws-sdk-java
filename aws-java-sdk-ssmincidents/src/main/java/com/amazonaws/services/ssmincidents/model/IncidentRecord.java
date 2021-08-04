@@ -84,7 +84,7 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastModifiedTime;
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      */
     private java.util.List<NotificationTargetItem> notificationTargets;
@@ -506,11 +506,10 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
-     * @return The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident
-     *         record.
+     * @return The SNS targets that are notified when updates are made to an incident.
      */
 
     public java.util.List<NotificationTargetItem> getNotificationTargets() {
@@ -519,12 +518,11 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
      * @param notificationTargets
-     *        The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident
-     *        record.
+     *        The SNS targets that are notified when updates are made to an incident.
      */
 
     public void setNotificationTargets(java.util.Collection<NotificationTargetItem> notificationTargets) {
@@ -538,7 +536,7 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -547,8 +545,7 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param notificationTargets
-     *        The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident
-     *        record.
+     *        The SNS targets that are notified when updates are made to an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -564,12 +561,11 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident record.
+     * The SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
      * @param notificationTargets
-     *        The SNS targets that AWS Chatbot uses to notify the chat channels and perform actions on the incident
-     *        record.
+     *        The SNS targets that are notified when updates are made to an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

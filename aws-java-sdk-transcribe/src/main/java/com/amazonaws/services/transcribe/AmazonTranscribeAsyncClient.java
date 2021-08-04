@@ -76,6 +76,39 @@ public class AmazonTranscribeAsyncClient extends AmazonTranscribeClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateCallAnalyticsCategoryResult> createCallAnalyticsCategoryAsync(CreateCallAnalyticsCategoryRequest request) {
+
+        return createCallAnalyticsCategoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCallAnalyticsCategoryResult> createCallAnalyticsCategoryAsync(final CreateCallAnalyticsCategoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateCallAnalyticsCategoryRequest, CreateCallAnalyticsCategoryResult> asyncHandler) {
+        final CreateCallAnalyticsCategoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateCallAnalyticsCategoryResult>() {
+            @Override
+            public CreateCallAnalyticsCategoryResult call() throws Exception {
+                CreateCallAnalyticsCategoryResult result = null;
+
+                try {
+                    result = executeCreateCallAnalyticsCategory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLanguageModelResult> createLanguageModelAsync(CreateLanguageModelRequest request) {
 
         return createLanguageModelAsync(request, null);
@@ -192,6 +225,72 @@ public class AmazonTranscribeAsyncClient extends AmazonTranscribeClient implemen
 
                 try {
                     result = executeCreateVocabularyFilter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCallAnalyticsCategoryResult> deleteCallAnalyticsCategoryAsync(DeleteCallAnalyticsCategoryRequest request) {
+
+        return deleteCallAnalyticsCategoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCallAnalyticsCategoryResult> deleteCallAnalyticsCategoryAsync(final DeleteCallAnalyticsCategoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteCallAnalyticsCategoryRequest, DeleteCallAnalyticsCategoryResult> asyncHandler) {
+        final DeleteCallAnalyticsCategoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteCallAnalyticsCategoryResult>() {
+            @Override
+            public DeleteCallAnalyticsCategoryResult call() throws Exception {
+                DeleteCallAnalyticsCategoryResult result = null;
+
+                try {
+                    result = executeDeleteCallAnalyticsCategory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCallAnalyticsJobResult> deleteCallAnalyticsJobAsync(DeleteCallAnalyticsJobRequest request) {
+
+        return deleteCallAnalyticsJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCallAnalyticsJobResult> deleteCallAnalyticsJobAsync(final DeleteCallAnalyticsJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteCallAnalyticsJobRequest, DeleteCallAnalyticsJobResult> asyncHandler) {
+        final DeleteCallAnalyticsJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteCallAnalyticsJobResult>() {
+            @Override
+            public DeleteCallAnalyticsJobResult call() throws Exception {
+                DeleteCallAnalyticsJobResult result = null;
+
+                try {
+                    result = executeDeleteCallAnalyticsJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -440,6 +539,72 @@ public class AmazonTranscribeAsyncClient extends AmazonTranscribeClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetCallAnalyticsCategoryResult> getCallAnalyticsCategoryAsync(GetCallAnalyticsCategoryRequest request) {
+
+        return getCallAnalyticsCategoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCallAnalyticsCategoryResult> getCallAnalyticsCategoryAsync(final GetCallAnalyticsCategoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCallAnalyticsCategoryRequest, GetCallAnalyticsCategoryResult> asyncHandler) {
+        final GetCallAnalyticsCategoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCallAnalyticsCategoryResult>() {
+            @Override
+            public GetCallAnalyticsCategoryResult call() throws Exception {
+                GetCallAnalyticsCategoryResult result = null;
+
+                try {
+                    result = executeGetCallAnalyticsCategory(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCallAnalyticsJobResult> getCallAnalyticsJobAsync(GetCallAnalyticsJobRequest request) {
+
+        return getCallAnalyticsJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetCallAnalyticsJobResult> getCallAnalyticsJobAsync(final GetCallAnalyticsJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetCallAnalyticsJobRequest, GetCallAnalyticsJobResult> asyncHandler) {
+        final GetCallAnalyticsJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetCallAnalyticsJobResult>() {
+            @Override
+            public GetCallAnalyticsJobResult call() throws Exception {
+                GetCallAnalyticsJobResult result = null;
+
+                try {
+                    result = executeGetCallAnalyticsJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMedicalTranscriptionJobResult> getMedicalTranscriptionJobAsync(GetMedicalTranscriptionJobRequest request) {
 
         return getMedicalTranscriptionJobAsync(request, null);
@@ -589,6 +754,72 @@ public class AmazonTranscribeAsyncClient extends AmazonTranscribeClient implemen
 
                 try {
                     result = executeGetVocabularyFilter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCallAnalyticsCategoriesResult> listCallAnalyticsCategoriesAsync(ListCallAnalyticsCategoriesRequest request) {
+
+        return listCallAnalyticsCategoriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCallAnalyticsCategoriesResult> listCallAnalyticsCategoriesAsync(final ListCallAnalyticsCategoriesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCallAnalyticsCategoriesRequest, ListCallAnalyticsCategoriesResult> asyncHandler) {
+        final ListCallAnalyticsCategoriesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCallAnalyticsCategoriesResult>() {
+            @Override
+            public ListCallAnalyticsCategoriesResult call() throws Exception {
+                ListCallAnalyticsCategoriesResult result = null;
+
+                try {
+                    result = executeListCallAnalyticsCategories(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCallAnalyticsJobsResult> listCallAnalyticsJobsAsync(ListCallAnalyticsJobsRequest request) {
+
+        return listCallAnalyticsJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListCallAnalyticsJobsResult> listCallAnalyticsJobsAsync(final ListCallAnalyticsJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListCallAnalyticsJobsRequest, ListCallAnalyticsJobsResult> asyncHandler) {
+        final ListCallAnalyticsJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListCallAnalyticsJobsResult>() {
+            @Override
+            public ListCallAnalyticsJobsResult call() throws Exception {
+                ListCallAnalyticsJobsResult result = null;
+
+                try {
+                    result = executeListCallAnalyticsJobs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -803,6 +1034,39 @@ public class AmazonTranscribeAsyncClient extends AmazonTranscribeClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<StartCallAnalyticsJobResult> startCallAnalyticsJobAsync(StartCallAnalyticsJobRequest request) {
+
+        return startCallAnalyticsJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartCallAnalyticsJobResult> startCallAnalyticsJobAsync(final StartCallAnalyticsJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartCallAnalyticsJobRequest, StartCallAnalyticsJobResult> asyncHandler) {
+        final StartCallAnalyticsJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartCallAnalyticsJobResult>() {
+            @Override
+            public StartCallAnalyticsJobResult call() throws Exception {
+                StartCallAnalyticsJobResult result = null;
+
+                try {
+                    result = executeStartCallAnalyticsJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartMedicalTranscriptionJobResult> startMedicalTranscriptionJobAsync(StartMedicalTranscriptionJobRequest request) {
 
         return startMedicalTranscriptionJobAsync(request, null);
@@ -853,6 +1117,39 @@ public class AmazonTranscribeAsyncClient extends AmazonTranscribeClient implemen
 
                 try {
                     result = executeStartTranscriptionJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateCallAnalyticsCategoryResult> updateCallAnalyticsCategoryAsync(UpdateCallAnalyticsCategoryRequest request) {
+
+        return updateCallAnalyticsCategoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateCallAnalyticsCategoryResult> updateCallAnalyticsCategoryAsync(final UpdateCallAnalyticsCategoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateCallAnalyticsCategoryRequest, UpdateCallAnalyticsCategoryResult> asyncHandler) {
+        final UpdateCallAnalyticsCategoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateCallAnalyticsCategoryResult>() {
+            @Override
+            public UpdateCallAnalyticsCategoryResult call() throws Exception {
+                UpdateCallAnalyticsCategoryResult result = null;
+
+                try {
+                    result = executeUpdateCallAnalyticsCategory(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

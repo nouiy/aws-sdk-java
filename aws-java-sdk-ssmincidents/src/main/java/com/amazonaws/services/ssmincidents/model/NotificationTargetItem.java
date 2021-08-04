@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The SNS topic that's used by AWS Chatbot to notify the incidents chat channel.
+ * The SNS targets that are notified when updates are made to an incident.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-incidents-2018-05-10/NotificationTargetItem"
