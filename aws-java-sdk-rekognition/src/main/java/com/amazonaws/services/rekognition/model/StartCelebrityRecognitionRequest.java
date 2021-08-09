@@ -37,7 +37,8 @@ public class StartCelebrityRecognitionRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the celebrity
-     * recognition analysis to.
+     * recognition analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i> if
+     * you are using the AmazonRekognitionServiceRole permissions policy.
      * </p>
      */
     private NotificationChannel notificationChannel;
@@ -145,12 +146,14 @@ public class StartCelebrityRecognitionRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the celebrity
-     * recognition analysis to.
+     * recognition analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i> if
+     * you are using the AmazonRekognitionServiceRole permissions policy.
      * </p>
      * 
      * @param notificationChannel
      *        The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the
-     *        celebrity recognition analysis to.
+     *        celebrity recognition analysis to. The Amazon SNS topic must have a topic name that begins with
+     *        <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy.
      */
 
     public void setNotificationChannel(NotificationChannel notificationChannel) {
@@ -160,11 +163,13 @@ public class StartCelebrityRecognitionRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the celebrity
-     * recognition analysis to.
+     * recognition analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i> if
+     * you are using the AmazonRekognitionServiceRole permissions policy.
      * </p>
      * 
      * @return The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the
-     *         celebrity recognition analysis to.
+     *         celebrity recognition analysis to. The Amazon SNS topic must have a topic name that begins with
+     *         <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy.
      */
 
     public NotificationChannel getNotificationChannel() {
@@ -174,12 +179,14 @@ public class StartCelebrityRecognitionRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the celebrity
-     * recognition analysis to.
+     * recognition analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i> if
+     * you are using the AmazonRekognitionServiceRole permissions policy.
      * </p>
      * 
      * @param notificationChannel
      *        The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the
-     *        celebrity recognition analysis to.
+     *        celebrity recognition analysis to. The Amazon SNS topic must have a topic name that begins with
+     *        <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

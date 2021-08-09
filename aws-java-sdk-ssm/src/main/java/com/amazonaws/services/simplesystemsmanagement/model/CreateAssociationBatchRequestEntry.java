@@ -38,8 +38,8 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
      * with you from another account.
      * </p>
      * <p>
-     * For SSM documents that are shared with you from other accounts, you must specify the complete SSM document ARN,
-     * in the following format:
+     * For SSM documents that are shared with you from other Amazon Web Services accounts, you must specify the complete
+     * SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -58,8 +58,18 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
     private String name;
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
+     * <note>
+     * <p>
+     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
+     * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
+     * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
+     * <code>MaxErrors</code>, <code>MaxConcurrency</code>, <code>OutputLocation</code>, or
+     * <code>ScheduleExpression</code>. To use these parameters, you must use the <code>Targets</code> parameter.
+     * </p>
+     * </note>
      */
     private String instanceId;
     /**
@@ -193,8 +203,8 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
      * with you from another account.
      * </p>
      * <p>
-     * For SSM documents that are shared with you from other accounts, you must specify the complete SSM document ARN,
-     * in the following format:
+     * For SSM documents that are shared with you from other Amazon Web Services accounts, you must specify the complete
+     * SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -218,8 +228,8 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
      *        shared with you from another account.
      *        </p>
      *        <p>
-     *        For SSM documents that are shared with you from other accounts, you must specify the complete SSM document
-     *        ARN, in the following format:
+     *        For SSM documents that are shared with you from other Amazon Web Services accounts, you must specify the
+     *        complete SSM document ARN, in the following format:
      *        </p>
      *        <p>
      *        <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -249,8 +259,8 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
      * with you from another account.
      * </p>
      * <p>
-     * For SSM documents that are shared with you from other accounts, you must specify the complete SSM document ARN,
-     * in the following format:
+     * For SSM documents that are shared with you from other Amazon Web Services accounts, you must specify the complete
+     * SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -273,8 +283,8 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
      *         shared with you from another account.
      *         </p>
      *         <p>
-     *         For SSM documents that are shared with you from other accounts, you must specify the complete SSM
-     *         document ARN, in the following format:
+     *         For SSM documents that are shared with you from other Amazon Web Services accounts, you must specify the
+     *         complete SSM document ARN, in the following format:
      *         </p>
      *         <p>
      *         <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -305,8 +315,8 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
      * with you from another account.
      * </p>
      * <p>
-     * For SSM documents that are shared with you from other accounts, you must specify the complete SSM document ARN,
-     * in the following format:
+     * For SSM documents that are shared with you from other Amazon Web Services accounts, you must specify the complete
+     * SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -330,8 +340,8 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
      *        shared with you from another account.
      *        </p>
      *        <p>
-     *        For SSM documents that are shared with you from other accounts, you must specify the complete SSM document
-     *        ARN, in the following format:
+     *        For SSM documents that are shared with you from other Amazon Web Services accounts, you must specify the
+     *        complete SSM document ARN, in the following format:
      *        </p>
      *        <p>
      *        <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -355,11 +365,30 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
 
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
+     * <note>
+     * <p>
+     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
+     * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
+     * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
+     * <code>MaxErrors</code>, <code>MaxConcurrency</code>, <code>OutputLocation</code>, or
+     * <code>ScheduleExpression</code>. To use these parameters, you must use the <code>Targets</code> parameter.
+     * </p>
+     * </note>
      * 
      * @param instanceId
-     *        The ID of the instance.
+     *        The instance ID.</p> <note>
+     *        <p>
+     *        <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     *        <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems
+     *        Manager documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use
+     *        the parameter <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>,
+     *        <code>DocumentVersion</code>, <code>MaxErrors</code>, <code>MaxConcurrency</code>,
+     *        <code>OutputLocation</code>, or <code>ScheduleExpression</code>. To use these parameters, you must use the
+     *        <code>Targets</code> parameter.
+     *        </p>
      */
 
     public void setInstanceId(String instanceId) {
@@ -368,10 +397,29 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
 
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
+     * <note>
+     * <p>
+     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
+     * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
+     * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
+     * <code>MaxErrors</code>, <code>MaxConcurrency</code>, <code>OutputLocation</code>, or
+     * <code>ScheduleExpression</code>. To use these parameters, you must use the <code>Targets</code> parameter.
+     * </p>
+     * </note>
      * 
-     * @return The ID of the instance.
+     * @return The instance ID.</p> <note>
+     *         <p>
+     *         <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     *         <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems
+     *         Manager documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use
+     *         the parameter <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>,
+     *         <code>DocumentVersion</code>, <code>MaxErrors</code>, <code>MaxConcurrency</code>,
+     *         <code>OutputLocation</code>, or <code>ScheduleExpression</code>. To use these parameters, you must use
+     *         the <code>Targets</code> parameter.
+     *         </p>
      */
 
     public String getInstanceId() {
@@ -380,11 +428,30 @@ public class CreateAssociationBatchRequestEntry implements Serializable, Cloneab
 
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
+     * <note>
+     * <p>
+     * <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     * <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems Manager
+     * documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use the parameter
+     * <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>, <code>DocumentVersion</code>,
+     * <code>MaxErrors</code>, <code>MaxConcurrency</code>, <code>OutputLocation</code>, or
+     * <code>ScheduleExpression</code>. To use these parameters, you must use the <code>Targets</code> parameter.
+     * </p>
+     * </note>
      * 
      * @param instanceId
-     *        The ID of the instance.
+     *        The instance ID.</p> <note>
+     *        <p>
+     *        <code>InstanceId</code> has been deprecated. To specify an instance ID for an association, use the
+     *        <code>Targets</code> parameter. Requests that include the parameter <code>InstanceID</code> with Systems
+     *        Manager documents (SSM documents) that use schema version 2.0 or later will fail. In addition, if you use
+     *        the parameter <code>InstanceId</code>, you can't use the parameters <code>AssociationName</code>,
+     *        <code>DocumentVersion</code>, <code>MaxErrors</code>, <code>MaxConcurrency</code>,
+     *        <code>OutputLocation</code>, or <code>ScheduleExpression</code>. To use these parameters, you must use the
+     *        <code>Targets</code> parameter.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

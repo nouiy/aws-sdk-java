@@ -35,8 +35,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * with you from another account.
      * </p>
      * <p>
-     * For Systems Manager documents (SSM documents) that are shared with you from other accounts, you must specify the
-     * complete SSM document ARN, in the following format:
+     * For Systems Manager documents (SSM documents) that are shared with you from other Amazon Web Services accounts,
+     * you must specify the complete SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:<i>partition</i>:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -84,8 +84,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an account, or individual instance IDs. For more information about choosing targets for an
-     * association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
+     * targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -189,8 +189,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     private com.amazonaws.internal.SdkInternalList<String> calendarNames;
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * create an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to create an association in multiple Regions and multiple accounts.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TargetLocation> targetLocations;
@@ -205,8 +205,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * with you from another account.
      * </p>
      * <p>
-     * For Systems Manager documents (SSM documents) that are shared with you from other accounts, you must specify the
-     * complete SSM document ARN, in the following format:
+     * For Systems Manager documents (SSM documents) that are shared with you from other Amazon Web Services accounts,
+     * you must specify the complete SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:<i>partition</i>:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -230,8 +230,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        shared with you from another account.
      *        </p>
      *        <p>
-     *        For Systems Manager documents (SSM documents) that are shared with you from other accounts, you must
-     *        specify the complete SSM document ARN, in the following format:
+     *        For Systems Manager documents (SSM documents) that are shared with you from other Amazon Web Services
+     *        accounts, you must specify the complete SSM document ARN, in the following format:
      *        </p>
      *        <p>
      *        <code>arn:<i>partition</i>:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -261,8 +261,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * with you from another account.
      * </p>
      * <p>
-     * For Systems Manager documents (SSM documents) that are shared with you from other accounts, you must specify the
-     * complete SSM document ARN, in the following format:
+     * For Systems Manager documents (SSM documents) that are shared with you from other Amazon Web Services accounts,
+     * you must specify the complete SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:<i>partition</i>:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -285,8 +285,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *         shared with you from another account.
      *         </p>
      *         <p>
-     *         For Systems Manager documents (SSM documents) that are shared with you from other accounts, you must
-     *         specify the complete SSM document ARN, in the following format:
+     *         For Systems Manager documents (SSM documents) that are shared with you from other Amazon Web Services
+     *         accounts, you must specify the complete SSM document ARN, in the following format:
      *         </p>
      *         <p>
      *         <code>arn:<i>partition</i>:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -317,8 +317,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * with you from another account.
      * </p>
      * <p>
-     * For Systems Manager documents (SSM documents) that are shared with you from other accounts, you must specify the
-     * complete SSM document ARN, in the following format:
+     * For Systems Manager documents (SSM documents) that are shared with you from other Amazon Web Services accounts,
+     * you must specify the complete SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:<i>partition</i>:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -342,8 +342,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        shared with you from another account.
      *        </p>
      *        <p>
-     *        For Systems Manager documents (SSM documents) that are shared with you from other accounts, you must
-     *        specify the complete SSM document ARN, in the following format:
+     *        For Systems Manager documents (SSM documents) that are shared with you from other Amazon Web Services
+     *        accounts, you must specify the complete SSM document ARN, in the following format:
      *        </p>
      *        <p>
      *        <code>arn:<i>partition</i>:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -576,16 +576,16 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an account, or individual instance IDs. For more information about choosing targets for an
-     * association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
+     * targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
      * </p>
      * 
      * @return The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *         groups, all instances in an account, or individual instance IDs. For more information about choosing
-     *         targets for an association, see <a href=
+     *         groups, all instances in an Amazon Web Services account, or individual instance IDs. For more information
+     *         about choosing targets for an association, see <a href=
      *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *         >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services
      *         Systems Manager User Guide</i>.
@@ -601,8 +601,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an account, or individual instance IDs. For more information about choosing targets for an
-     * association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
+     * targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -610,8 +610,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param targets
      *        The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *        groups, all instances in an account, or individual instance IDs. For more information about choosing
-     *        targets for an association, see <a href=
+     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. For more information
+     *        about choosing targets for an association, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
@@ -629,8 +629,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an account, or individual instance IDs. For more information about choosing targets for an
-     * association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
+     * targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -643,8 +643,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param targets
      *        The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *        groups, all instances in an account, or individual instance IDs. For more information about choosing
-     *        targets for an association, see <a href=
+     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. For more information
+     *        about choosing targets for an association, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
@@ -664,8 +664,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The targets for the association. You can target instances by using tags, Amazon Web Services resource groups, all
-     * instances in an account, or individual instance IDs. For more information about choosing targets for an
-     * association, see <a href=
+     * instances in an Amazon Web Services account, or individual instance IDs. For more information about choosing
+     * targets for an association, see <a href=
      * "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      * >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      * Manager User Guide</i>.
@@ -673,8 +673,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param targets
      *        The targets for the association. You can target instances by using tags, Amazon Web Services resource
-     *        groups, all instances in an account, or individual instance IDs. For more information about choosing
-     *        targets for an association, see <a href=
+     *        groups, all instances in an Amazon Web Services account, or individual instance IDs. For more information
+     *        about choosing targets for an association, see <a href=
      *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-state-manager-targets-and-rate-controls.html"
      *        >Using targets and rate controls with State Manager associations</a> in the <i>Amazon Web Services Systems
      *        Manager User Guide</i>.
@@ -1417,12 +1417,13 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * create an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to create an association in multiple Regions and multiple accounts.
      * </p>
      * 
-     * @return A location is a combination of Regions and accounts where you want to run the association. Use this
-     *         action to create an association in multiple Regions and multiple accounts.
+     * @return A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you
+     *         want to run the association. Use this action to create an association in multiple Regions and multiple
+     *         accounts.
      */
 
     public java.util.List<TargetLocation> getTargetLocations() {
@@ -1434,13 +1435,14 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * create an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to create an association in multiple Regions and multiple accounts.
      * </p>
      * 
      * @param targetLocations
-     *        A location is a combination of Regions and accounts where you want to run the association. Use this action
-     *        to create an association in multiple Regions and multiple accounts.
+     *        A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want
+     *        to run the association. Use this action to create an association in multiple Regions and multiple
+     *        accounts.
      */
 
     public void setTargetLocations(java.util.Collection<TargetLocation> targetLocations) {
@@ -1454,8 +1456,8 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * create an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to create an association in multiple Regions and multiple accounts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1464,8 +1466,9 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param targetLocations
-     *        A location is a combination of Regions and accounts where you want to run the association. Use this action
-     *        to create an association in multiple Regions and multiple accounts.
+     *        A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want
+     *        to run the association. Use this action to create an association in multiple Regions and multiple
+     *        accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1481,13 +1484,14 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * create an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to create an association in multiple Regions and multiple accounts.
      * </p>
      * 
      * @param targetLocations
-     *        A location is a combination of Regions and accounts where you want to run the association. Use this action
-     *        to create an association in multiple Regions and multiple accounts.
+     *        A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want
+     *        to run the association. Use this action to create an association in multiple Regions and multiple
+     *        accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

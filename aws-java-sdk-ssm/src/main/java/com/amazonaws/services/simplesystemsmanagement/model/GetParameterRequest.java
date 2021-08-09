@@ -29,6 +29,10 @@ public class GetParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The name of the parameter you want to query.
      * </p>
+     * <p>
+     * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     * <code>"Name": "name:version"</code>.
+     * </p>
      */
     private String name;
     /**
@@ -43,9 +47,16 @@ public class GetParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The name of the parameter you want to query.
      * </p>
+     * <p>
+     * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     * <code>"Name": "name:version"</code>.
+     * </p>
      * 
      * @param name
-     *        The name of the parameter you want to query.
+     *        The name of the parameter you want to query.</p>
+     *        <p>
+     *        To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     *        <code>"Name": "name:version"</code>.
      */
 
     public void setName(String name) {
@@ -56,8 +67,15 @@ public class GetParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The name of the parameter you want to query.
      * </p>
+     * <p>
+     * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     * <code>"Name": "name:version"</code>.
+     * </p>
      * 
-     * @return The name of the parameter you want to query.
+     * @return The name of the parameter you want to query.</p>
+     *         <p>
+     *         To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     *         <code>"Name": "name:version"</code>.
      */
 
     public String getName() {
@@ -68,9 +86,16 @@ public class GetParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The name of the parameter you want to query.
      * </p>
+     * <p>
+     * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     * <code>"Name": "name:version"</code>.
+     * </p>
      * 
      * @param name
-     *        The name of the parameter you want to query.
+     *        The name of the parameter you want to query.</p>
+     *        <p>
+     *        To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     *        <code>"Name": "name:version"</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

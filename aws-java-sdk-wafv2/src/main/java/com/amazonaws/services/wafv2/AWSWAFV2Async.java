@@ -54,12 +54,11 @@ import com.amazonaws.services.wafv2.model.*;
  * <p>
  * This API guide is for developers who need detailed information about WAF API actions, data types, and errors. For
  * detailed information about WAF features and an overview of how to use WAF, see the <a
- * href="https://docs.aws.amazon.com/waf/latest/developerguide/">WAF Developer Guide</a>.
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html">WAF Developer Guide</a>.
  * </p>
  * <p>
- * You can make calls using the endpoints listed in <a
- * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">Amazon Web Services Service Endpoints for
- * WAF</a>.
+ * You can make calls using the endpoints listed in <a href="https://docs.aws.amazon.com/general/latest/gr/waf.html">WAF
+ * endpoints and quotas</a>.
  * </p>
  * <ul>
  * <li>
@@ -742,6 +741,59 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
 
     /**
      * <p>
+     * Retrieves the specified managed rule set.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param getManagedRuleSetRequest
+     * @return A Java Future containing the result of the GetManagedRuleSet operation returned by the service.
+     * @sample AWSWAFV2Async.GetManagedRuleSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetManagedRuleSet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetManagedRuleSetResult> getManagedRuleSetAsync(GetManagedRuleSetRequest getManagedRuleSetRequest);
+
+    /**
+     * <p>
+     * Retrieves the specified managed rule set.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param getManagedRuleSetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetManagedRuleSet operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.GetManagedRuleSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetManagedRuleSet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetManagedRuleSetResult> getManagedRuleSetAsync(GetManagedRuleSetRequest getManagedRuleSetRequest,
+            com.amazonaws.handlers.AsyncHandler<GetManagedRuleSetRequest, GetManagedRuleSetResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the IAM policy that is attached to the specified rule group.
      * </p>
      * <p>
@@ -989,8 +1041,43 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
 
     /**
      * <p>
+     * Returns a list of the available versions for the specified managed rule group.
+     * </p>
+     * 
+     * @param listAvailableManagedRuleGroupVersionsRequest
+     * @return A Java Future containing the result of the ListAvailableManagedRuleGroupVersions operation returned by
+     *         the service.
+     * @sample AWSWAFV2Async.ListAvailableManagedRuleGroupVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListAvailableManagedRuleGroupVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAvailableManagedRuleGroupVersionsResult> listAvailableManagedRuleGroupVersionsAsync(
+            ListAvailableManagedRuleGroupVersionsRequest listAvailableManagedRuleGroupVersionsRequest);
+
+    /**
+     * <p>
+     * Returns a list of the available versions for the specified managed rule group.
+     * </p>
+     * 
+     * @param listAvailableManagedRuleGroupVersionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAvailableManagedRuleGroupVersions operation returned by
+     *         the service.
+     * @sample AWSWAFV2AsyncHandler.ListAvailableManagedRuleGroupVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListAvailableManagedRuleGroupVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAvailableManagedRuleGroupVersionsResult> listAvailableManagedRuleGroupVersionsAsync(
+            ListAvailableManagedRuleGroupVersionsRequest listAvailableManagedRuleGroupVersionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAvailableManagedRuleGroupVersionsRequest, ListAvailableManagedRuleGroupVersionsResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves an array of managed rule groups that are available for you to use. This list includes all Amazon Web
-     * Services Managed Rules rule groups and the Marketplace managed rule groups that you're subscribed to.
+     * Services Managed Rules rule groups and all of the Marketplace managed rule groups that you're subscribed to.
      * </p>
      * 
      * @param listAvailableManagedRuleGroupsRequest
@@ -1006,7 +1093,7 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
     /**
      * <p>
      * Retrieves an array of managed rule groups that are available for you to use. This list includes all Amazon Web
-     * Services Managed Rules rule groups and the Marketplace managed rule groups that you're subscribed to.
+     * Services Managed Rules rule groups and all of the Marketplace managed rule groups that you're subscribed to.
      * </p>
      * 
      * @param listAvailableManagedRuleGroupsRequest
@@ -1087,6 +1174,59 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
     java.util.concurrent.Future<ListLoggingConfigurationsResult> listLoggingConfigurationsAsync(
             ListLoggingConfigurationsRequest listLoggingConfigurationsRequest,
             com.amazonaws.handlers.AsyncHandler<ListLoggingConfigurationsRequest, ListLoggingConfigurationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the managed rule sets that you own.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param listManagedRuleSetsRequest
+     * @return A Java Future containing the result of the ListManagedRuleSets operation returned by the service.
+     * @sample AWSWAFV2Async.ListManagedRuleSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListManagedRuleSets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListManagedRuleSetsResult> listManagedRuleSetsAsync(ListManagedRuleSetsRequest listManagedRuleSetsRequest);
+
+    /**
+     * <p>
+     * Retrieves the managed rule sets that you own.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param listManagedRuleSetsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListManagedRuleSets operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.ListManagedRuleSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListManagedRuleSets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListManagedRuleSetsResult> listManagedRuleSetsAsync(ListManagedRuleSetsRequest listManagedRuleSetsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListManagedRuleSetsRequest, ListManagedRuleSetsResult> asyncHandler);
 
     /**
      * <p>
@@ -1378,6 +1518,83 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
 
     /**
      * <p>
+     * Defines the versions of your managed rule set that you are offering to the customers. Customers see your
+     * offerings as managed rule groups with versioning.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * <p>
+     * Customers retrieve their managed rule group list by calling <a>ListAvailableManagedRuleGroups</a>. The name that
+     * you provide here for your managed rule set is the name the customer sees for the corresponding managed rule
+     * group. Customers can retrieve the available versions for a managed rule group by calling
+     * <a>ListAvailableManagedRuleGroupVersions</a>. You provide a rule group specification for each version. For each
+     * managed rule set, you must specify a version that you recommend using.
+     * </p>
+     * <p>
+     * To initiate the expiration of a managed rule group version, use <a>UpdateManagedRuleSetVersionExpiryDate</a>.
+     * </p>
+     * 
+     * @param putManagedRuleSetVersionsRequest
+     * @return A Java Future containing the result of the PutManagedRuleSetVersions operation returned by the service.
+     * @sample AWSWAFV2Async.PutManagedRuleSetVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/PutManagedRuleSetVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutManagedRuleSetVersionsResult> putManagedRuleSetVersionsAsync(
+            PutManagedRuleSetVersionsRequest putManagedRuleSetVersionsRequest);
+
+    /**
+     * <p>
+     * Defines the versions of your managed rule set that you are offering to the customers. Customers see your
+     * offerings as managed rule groups with versioning.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * <p>
+     * Customers retrieve their managed rule group list by calling <a>ListAvailableManagedRuleGroups</a>. The name that
+     * you provide here for your managed rule set is the name the customer sees for the corresponding managed rule
+     * group. Customers can retrieve the available versions for a managed rule group by calling
+     * <a>ListAvailableManagedRuleGroupVersions</a>. You provide a rule group specification for each version. For each
+     * managed rule set, you must specify a version that you recommend using.
+     * </p>
+     * <p>
+     * To initiate the expiration of a managed rule group version, use <a>UpdateManagedRuleSetVersionExpiryDate</a>.
+     * </p>
+     * 
+     * @param putManagedRuleSetVersionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutManagedRuleSetVersions operation returned by the service.
+     * @sample AWSWAFV2AsyncHandler.PutManagedRuleSetVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/PutManagedRuleSetVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutManagedRuleSetVersionsResult> putManagedRuleSetVersionsAsync(
+            PutManagedRuleSetVersionsRequest putManagedRuleSetVersionsRequest,
+            com.amazonaws.handlers.AsyncHandler<PutManagedRuleSetVersionsRequest, PutManagedRuleSetVersionsResult> asyncHandler);
+
+    /**
+     * <p>
      * Attaches an IAM policy to the specified resource. Use this to share a rule group across accounts.
      * </p>
      * <p>
@@ -1579,6 +1796,67 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
      */
     java.util.concurrent.Future<UpdateIPSetResult> updateIPSetAsync(UpdateIPSetRequest updateIPSetRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateIPSetRequest, UpdateIPSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the expiration information for your managed rule set. Use this to initiate the expiration of a managed
+     * rule group version. After you initiate expiration for a version, WAF excludes it from the reponse to
+     * <a>ListAvailableManagedRuleGroupVersions</a> for the managed rule group.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param updateManagedRuleSetVersionExpiryDateRequest
+     * @return A Java Future containing the result of the UpdateManagedRuleSetVersionExpiryDate operation returned by
+     *         the service.
+     * @sample AWSWAFV2Async.UpdateManagedRuleSetVersionExpiryDate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateManagedRuleSetVersionExpiryDate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateManagedRuleSetVersionExpiryDateResult> updateManagedRuleSetVersionExpiryDateAsync(
+            UpdateManagedRuleSetVersionExpiryDateRequest updateManagedRuleSetVersionExpiryDateRequest);
+
+    /**
+     * <p>
+     * Updates the expiration information for your managed rule set. Use this to initiate the expiration of a managed
+     * rule group version. After you initiate expiration for a version, WAF excludes it from the reponse to
+     * <a>ListAvailableManagedRuleGroupVersions</a> for the managed rule group.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param updateManagedRuleSetVersionExpiryDateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateManagedRuleSetVersionExpiryDate operation returned by
+     *         the service.
+     * @sample AWSWAFV2AsyncHandler.UpdateManagedRuleSetVersionExpiryDate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateManagedRuleSetVersionExpiryDate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateManagedRuleSetVersionExpiryDateResult> updateManagedRuleSetVersionExpiryDateAsync(
+            UpdateManagedRuleSetVersionExpiryDateRequest updateManagedRuleSetVersionExpiryDateRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateManagedRuleSetVersionExpiryDateRequest, UpdateManagedRuleSetVersionExpiryDateResult> asyncHandler);
 
     /**
      * <p>

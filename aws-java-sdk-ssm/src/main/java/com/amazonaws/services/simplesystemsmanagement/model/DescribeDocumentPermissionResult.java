@@ -25,13 +25,15 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The account IDs that have permission to use this document. The ID can be either an account or <i>All</i>.
+     * The account IDs that have permission to use this document. The ID can be either an Amazon Web Services account or
+     * <i>All</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> accountIds;
     /**
      * <p>
-     * A list of accounts where the current document is shared and the version shared with each account.
+     * A list of Amazon Web Services accounts where the current document is shared and the version shared with each
+     * account.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<AccountSharingInfo> accountSharingInfoList;
@@ -44,10 +46,12 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The account IDs that have permission to use this document. The ID can be either an account or <i>All</i>.
+     * The account IDs that have permission to use this document. The ID can be either an Amazon Web Services account or
+     * <i>All</i>.
      * </p>
      * 
-     * @return The account IDs that have permission to use this document. The ID can be either an account or <i>All</i>.
+     * @return The account IDs that have permission to use this document. The ID can be either an Amazon Web Services
+     *         account or <i>All</i>.
      */
 
     public java.util.List<String> getAccountIds() {
@@ -59,11 +63,13 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The account IDs that have permission to use this document. The ID can be either an account or <i>All</i>.
+     * The account IDs that have permission to use this document. The ID can be either an Amazon Web Services account or
+     * <i>All</i>.
      * </p>
      * 
      * @param accountIds
-     *        The account IDs that have permission to use this document. The ID can be either an account or <i>All</i>.
+     *        The account IDs that have permission to use this document. The ID can be either an Amazon Web Services
+     *        account or <i>All</i>.
      */
 
     public void setAccountIds(java.util.Collection<String> accountIds) {
@@ -77,7 +83,8 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The account IDs that have permission to use this document. The ID can be either an account or <i>All</i>.
+     * The account IDs that have permission to use this document. The ID can be either an Amazon Web Services account or
+     * <i>All</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -86,7 +93,8 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param accountIds
-     *        The account IDs that have permission to use this document. The ID can be either an account or <i>All</i>.
+     *        The account IDs that have permission to use this document. The ID can be either an Amazon Web Services
+     *        account or <i>All</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,11 +110,13 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The account IDs that have permission to use this document. The ID can be either an account or <i>All</i>.
+     * The account IDs that have permission to use this document. The ID can be either an Amazon Web Services account or
+     * <i>All</i>.
      * </p>
      * 
      * @param accountIds
-     *        The account IDs that have permission to use this document. The ID can be either an account or <i>All</i>.
+     *        The account IDs that have permission to use this document. The ID can be either an Amazon Web Services
+     *        account or <i>All</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,10 +127,12 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A list of accounts where the current document is shared and the version shared with each account.
+     * A list of Amazon Web Services accounts where the current document is shared and the version shared with each
+     * account.
      * </p>
      * 
-     * @return A list of accounts where the current document is shared and the version shared with each account.
+     * @return A list of Amazon Web Services accounts where the current document is shared and the version shared with
+     *         each account.
      */
 
     public java.util.List<AccountSharingInfo> getAccountSharingInfoList() {
@@ -132,11 +144,13 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A list of accounts where the current document is shared and the version shared with each account.
+     * A list of Amazon Web Services accounts where the current document is shared and the version shared with each
+     * account.
      * </p>
      * 
      * @param accountSharingInfoList
-     *        A list of accounts where the current document is shared and the version shared with each account.
+     *        A list of Amazon Web Services accounts where the current document is shared and the version shared with
+     *        each account.
      */
 
     public void setAccountSharingInfoList(java.util.Collection<AccountSharingInfo> accountSharingInfoList) {
@@ -150,7 +164,8 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A list of accounts where the current document is shared and the version shared with each account.
+     * A list of Amazon Web Services accounts where the current document is shared and the version shared with each
+     * account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -159,7 +174,8 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param accountSharingInfoList
-     *        A list of accounts where the current document is shared and the version shared with each account.
+     *        A list of Amazon Web Services accounts where the current document is shared and the version shared with
+     *        each account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +191,13 @@ public class DescribeDocumentPermissionResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A list of accounts where the current document is shared and the version shared with each account.
+     * A list of Amazon Web Services accounts where the current document is shared and the version shared with each
+     * account.
      * </p>
      * 
      * @param accountSharingInfoList
-     *        A list of accounts where the current document is shared and the version shared with each account.
+     *        A list of Amazon Web Services accounts where the current document is shared and the version shared with
+     *        each account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

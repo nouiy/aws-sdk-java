@@ -36,7 +36,7 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
     private String name;
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
      */
     private String instanceId;
@@ -204,7 +204,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
     private com.amazonaws.internal.SdkInternalList<String> calendarNames;
     /**
      * <p>
-     * The combination of Regions and accounts where you want to run the association.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run the
+     * association.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TargetLocation> targetLocations;
@@ -251,11 +252,11 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the instance.
+     *        The instance ID.
      */
 
     public void setInstanceId(String instanceId) {
@@ -264,10 +265,10 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
      * 
-     * @return The ID of the instance.
+     * @return The instance ID.
      */
 
     public String getInstanceId() {
@@ -276,11 +277,11 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the instance.
+     *        The instance ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1526,10 +1527,12 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The combination of Regions and accounts where you want to run the association.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run the
+     * association.
      * </p>
      * 
-     * @return The combination of Regions and accounts where you want to run the association.
+     * @return The combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run the
+     *         association.
      */
 
     public java.util.List<TargetLocation> getTargetLocations() {
@@ -1541,11 +1544,13 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The combination of Regions and accounts where you want to run the association.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run the
+     * association.
      * </p>
      * 
      * @param targetLocations
-     *        The combination of Regions and accounts where you want to run the association.
+     *        The combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run the
+     *        association.
      */
 
     public void setTargetLocations(java.util.Collection<TargetLocation> targetLocations) {
@@ -1559,7 +1564,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The combination of Regions and accounts where you want to run the association.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run the
+     * association.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1568,7 +1574,8 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param targetLocations
-     *        The combination of Regions and accounts where you want to run the association.
+     *        The combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run the
+     *        association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1584,11 +1591,13 @@ public class AssociationDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The combination of Regions and accounts where you want to run the association.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run the
+     * association.
      * </p>
      * 
      * @param targetLocations
-     *        The combination of Regions and accounts where you want to run the association.
+     *        The combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run the
+     *        association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

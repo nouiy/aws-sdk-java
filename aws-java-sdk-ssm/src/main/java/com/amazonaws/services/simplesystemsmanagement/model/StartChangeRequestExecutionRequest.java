@@ -84,8 +84,8 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
      * <p>
      * Optional metadata that you assign to a resource. You can specify a maximum of five tags for a change request.
      * Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment. For
-     * example, you might want to tag a change request to identify an environment or target Region. In this case, you
-     * could specify the following key-value pairs:
+     * example, you might want to tag a change request to identify an environment or target Amazon Web Services Region.
+     * In this case, you could specify the following key-value pairs:
      * </p>
      * <ul>
      * <li>
@@ -537,8 +537,8 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
      * <p>
      * Optional metadata that you assign to a resource. You can specify a maximum of five tags for a change request.
      * Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment. For
-     * example, you might want to tag a change request to identify an environment or target Region. In this case, you
-     * could specify the following key-value pairs:
+     * example, you might want to tag a change request to identify an environment or target Amazon Web Services Region.
+     * In this case, you could specify the following key-value pairs:
      * </p>
      * <ul>
      * <li>
@@ -556,7 +556,7 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
      * @return Optional metadata that you assign to a resource. You can specify a maximum of five tags for a change
      *         request. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or
      *         environment. For example, you might want to tag a change request to identify an environment or target
-     *         Region. In this case, you could specify the following key-value pairs:</p>
+     *         Amazon Web Services Region. In this case, you could specify the following key-value pairs:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -581,8 +581,8 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
      * <p>
      * Optional metadata that you assign to a resource. You can specify a maximum of five tags for a change request.
      * Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment. For
-     * example, you might want to tag a change request to identify an environment or target Region. In this case, you
-     * could specify the following key-value pairs:
+     * example, you might want to tag a change request to identify an environment or target Amazon Web Services Region.
+     * In this case, you could specify the following key-value pairs:
      * </p>
      * <ul>
      * <li>
@@ -601,7 +601,7 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
      *        Optional metadata that you assign to a resource. You can specify a maximum of five tags for a change
      *        request. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or
      *        environment. For example, you might want to tag a change request to identify an environment or target
-     *        Region. In this case, you could specify the following key-value pairs:</p>
+     *        Amazon Web Services Region. In this case, you could specify the following key-value pairs:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -628,8 +628,8 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
      * <p>
      * Optional metadata that you assign to a resource. You can specify a maximum of five tags for a change request.
      * Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment. For
-     * example, you might want to tag a change request to identify an environment or target Region. In this case, you
-     * could specify the following key-value pairs:
+     * example, you might want to tag a change request to identify an environment or target Amazon Web Services Region.
+     * In this case, you could specify the following key-value pairs:
      * </p>
      * <ul>
      * <li>
@@ -653,7 +653,7 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
      *        Optional metadata that you assign to a resource. You can specify a maximum of five tags for a change
      *        request. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or
      *        environment. For example, you might want to tag a change request to identify an environment or target
-     *        Region. In this case, you could specify the following key-value pairs:</p>
+     *        Amazon Web Services Region. In this case, you could specify the following key-value pairs:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -682,8 +682,8 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
      * <p>
      * Optional metadata that you assign to a resource. You can specify a maximum of five tags for a change request.
      * Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment. For
-     * example, you might want to tag a change request to identify an environment or target Region. In this case, you
-     * could specify the following key-value pairs:
+     * example, you might want to tag a change request to identify an environment or target Amazon Web Services Region.
+     * In this case, you could specify the following key-value pairs:
      * </p>
      * <ul>
      * <li>
@@ -702,7 +702,7 @@ public class StartChangeRequestExecutionRequest extends com.amazonaws.AmazonWebS
      *        Optional metadata that you assign to a resource. You can specify a maximum of five tags for a change
      *        request. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or
      *        environment. For example, you might want to tag a change request to identify an environment or target
-     *        Region. In this case, you could specify the following key-value pairs:</p>
+     *        Amazon Web Services Region. In this case, you could specify the following key-value pairs:</p>
      *        <ul>
      *        <li>
      *        <p>

@@ -43,8 +43,9 @@ public class CreateResourceDataSyncRequest extends com.amazonaws.AmazonWebServic
      * Specify <code>SyncToDestination</code> to create a resource data sync that synchronizes data to an S3 bucket for
      * Inventory. If you specify <code>SyncToDestination</code>, you must provide a value for <code>S3Destination</code>
      * . Specify <code>SyncFromSource</code> to synchronize data from a single account and multiple Regions, or multiple
-     * accounts and Regions, as listed in Organizations for Explorer. If you specify <code>SyncFromSource</code>, you
-     * must provide a value for <code>SyncSource</code>. The default value is <code>SyncToDestination</code>.
+     * Amazon Web Services accounts and Amazon Web Services Regions, as listed in Organizations for Explorer. If you
+     * specify <code>SyncFromSource</code>, you must provide a value for <code>SyncSource</code>. The default value is
+     * <code>SyncToDestination</code>.
      * </p>
      */
     private String syncType;
@@ -147,17 +148,18 @@ public class CreateResourceDataSyncRequest extends com.amazonaws.AmazonWebServic
      * Specify <code>SyncToDestination</code> to create a resource data sync that synchronizes data to an S3 bucket for
      * Inventory. If you specify <code>SyncToDestination</code>, you must provide a value for <code>S3Destination</code>
      * . Specify <code>SyncFromSource</code> to synchronize data from a single account and multiple Regions, or multiple
-     * accounts and Regions, as listed in Organizations for Explorer. If you specify <code>SyncFromSource</code>, you
-     * must provide a value for <code>SyncSource</code>. The default value is <code>SyncToDestination</code>.
+     * Amazon Web Services accounts and Amazon Web Services Regions, as listed in Organizations for Explorer. If you
+     * specify <code>SyncFromSource</code>, you must provide a value for <code>SyncSource</code>. The default value is
+     * <code>SyncToDestination</code>.
      * </p>
      * 
      * @param syncType
      *        Specify <code>SyncToDestination</code> to create a resource data sync that synchronizes data to an S3
      *        bucket for Inventory. If you specify <code>SyncToDestination</code>, you must provide a value for
      *        <code>S3Destination</code>. Specify <code>SyncFromSource</code> to synchronize data from a single account
-     *        and multiple Regions, or multiple accounts and Regions, as listed in Organizations for Explorer. If you
-     *        specify <code>SyncFromSource</code>, you must provide a value for <code>SyncSource</code>. The default
-     *        value is <code>SyncToDestination</code>.
+     *        and multiple Regions, or multiple Amazon Web Services accounts and Amazon Web Services Regions, as listed
+     *        in Organizations for Explorer. If you specify <code>SyncFromSource</code>, you must provide a value for
+     *        <code>SyncSource</code>. The default value is <code>SyncToDestination</code>.
      */
 
     public void setSyncType(String syncType) {
@@ -169,16 +171,17 @@ public class CreateResourceDataSyncRequest extends com.amazonaws.AmazonWebServic
      * Specify <code>SyncToDestination</code> to create a resource data sync that synchronizes data to an S3 bucket for
      * Inventory. If you specify <code>SyncToDestination</code>, you must provide a value for <code>S3Destination</code>
      * . Specify <code>SyncFromSource</code> to synchronize data from a single account and multiple Regions, or multiple
-     * accounts and Regions, as listed in Organizations for Explorer. If you specify <code>SyncFromSource</code>, you
-     * must provide a value for <code>SyncSource</code>. The default value is <code>SyncToDestination</code>.
+     * Amazon Web Services accounts and Amazon Web Services Regions, as listed in Organizations for Explorer. If you
+     * specify <code>SyncFromSource</code>, you must provide a value for <code>SyncSource</code>. The default value is
+     * <code>SyncToDestination</code>.
      * </p>
      * 
      * @return Specify <code>SyncToDestination</code> to create a resource data sync that synchronizes data to an S3
      *         bucket for Inventory. If you specify <code>SyncToDestination</code>, you must provide a value for
      *         <code>S3Destination</code>. Specify <code>SyncFromSource</code> to synchronize data from a single account
-     *         and multiple Regions, or multiple accounts and Regions, as listed in Organizations for Explorer. If you
-     *         specify <code>SyncFromSource</code>, you must provide a value for <code>SyncSource</code>. The default
-     *         value is <code>SyncToDestination</code>.
+     *         and multiple Regions, or multiple Amazon Web Services accounts and Amazon Web Services Regions, as listed
+     *         in Organizations for Explorer. If you specify <code>SyncFromSource</code>, you must provide a value for
+     *         <code>SyncSource</code>. The default value is <code>SyncToDestination</code>.
      */
 
     public String getSyncType() {
@@ -190,17 +193,18 @@ public class CreateResourceDataSyncRequest extends com.amazonaws.AmazonWebServic
      * Specify <code>SyncToDestination</code> to create a resource data sync that synchronizes data to an S3 bucket for
      * Inventory. If you specify <code>SyncToDestination</code>, you must provide a value for <code>S3Destination</code>
      * . Specify <code>SyncFromSource</code> to synchronize data from a single account and multiple Regions, or multiple
-     * accounts and Regions, as listed in Organizations for Explorer. If you specify <code>SyncFromSource</code>, you
-     * must provide a value for <code>SyncSource</code>. The default value is <code>SyncToDestination</code>.
+     * Amazon Web Services accounts and Amazon Web Services Regions, as listed in Organizations for Explorer. If you
+     * specify <code>SyncFromSource</code>, you must provide a value for <code>SyncSource</code>. The default value is
+     * <code>SyncToDestination</code>.
      * </p>
      * 
      * @param syncType
      *        Specify <code>SyncToDestination</code> to create a resource data sync that synchronizes data to an S3
      *        bucket for Inventory. If you specify <code>SyncToDestination</code>, you must provide a value for
      *        <code>S3Destination</code>. Specify <code>SyncFromSource</code> to synchronize data from a single account
-     *        and multiple Regions, or multiple accounts and Regions, as listed in Organizations for Explorer. If you
-     *        specify <code>SyncFromSource</code>, you must provide a value for <code>SyncSource</code>. The default
-     *        value is <code>SyncToDestination</code>.
+     *        and multiple Regions, or multiple Amazon Web Services accounts and Amazon Web Services Regions, as listed
+     *        in Organizations for Explorer. If you specify <code>SyncFromSource</code>, you must provide a value for
+     *        <code>SyncSource</code>. The default value is <code>SyncToDestination</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

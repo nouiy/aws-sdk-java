@@ -27,13 +27,13 @@ public class ListDocumentMetadataHistoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the document.
+     * The name of the change template.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The version of the document.
+     * The version of the change template.
      * </p>
      */
     private String documentVersion;
@@ -60,11 +60,11 @@ public class ListDocumentMetadataHistoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the document.
+     * The name of the change template.
      * </p>
      * 
      * @param name
-     *        The name of the document.
+     *        The name of the change template.
      */
 
     public void setName(String name) {
@@ -73,10 +73,10 @@ public class ListDocumentMetadataHistoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the document.
+     * The name of the change template.
      * </p>
      * 
-     * @return The name of the document.
+     * @return The name of the change template.
      */
 
     public String getName() {
@@ -85,11 +85,11 @@ public class ListDocumentMetadataHistoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the document.
+     * The name of the change template.
      * </p>
      * 
      * @param name
-     *        The name of the document.
+     *        The name of the change template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,11 +100,11 @@ public class ListDocumentMetadataHistoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The version of the document.
+     * The version of the change template.
      * </p>
      * 
      * @param documentVersion
-     *        The version of the document.
+     *        The version of the change template.
      */
 
     public void setDocumentVersion(String documentVersion) {
@@ -113,10 +113,10 @@ public class ListDocumentMetadataHistoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The version of the document.
+     * The version of the change template.
      * </p>
      * 
-     * @return The version of the document.
+     * @return The version of the change template.
      */
 
     public String getDocumentVersion() {
@@ -125,11 +125,11 @@ public class ListDocumentMetadataHistoryRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The version of the document.
+     * The version of the change template.
      * </p>
      * 
      * @param documentVersion
-     *        The version of the document.
+     *        The version of the change template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

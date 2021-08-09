@@ -25,25 +25,25 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the document.
+     * The name of the change template.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The version of the document.
+     * The version of the change template.
      * </p>
      */
     private String documentVersion;
     /**
      * <p>
-     * The user ID of the person in the organization who requested the document review.
+     * The user ID of the person in the organization who requested the review of the change template.
      * </p>
      */
     private String author;
     /**
      * <p>
-     * Information about the response to the document approval request.
+     * Information about the response to the change template approval request.
      * </p>
      */
     private DocumentMetadataResponseInfo metadata;
@@ -57,11 +57,11 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the document.
+     * The name of the change template.
      * </p>
      * 
      * @param name
-     *        The name of the document.
+     *        The name of the change template.
      */
 
     public void setName(String name) {
@@ -70,10 +70,10 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the document.
+     * The name of the change template.
      * </p>
      * 
-     * @return The name of the document.
+     * @return The name of the change template.
      */
 
     public String getName() {
@@ -82,11 +82,11 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The name of the document.
+     * The name of the change template.
      * </p>
      * 
      * @param name
-     *        The name of the document.
+     *        The name of the change template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The version of the document.
+     * The version of the change template.
      * </p>
      * 
      * @param documentVersion
-     *        The version of the document.
+     *        The version of the change template.
      */
 
     public void setDocumentVersion(String documentVersion) {
@@ -110,10 +110,10 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The version of the document.
+     * The version of the change template.
      * </p>
      * 
-     * @return The version of the document.
+     * @return The version of the change template.
      */
 
     public String getDocumentVersion() {
@@ -122,11 +122,11 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The version of the document.
+     * The version of the change template.
      * </p>
      * 
      * @param documentVersion
-     *        The version of the document.
+     *        The version of the change template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -137,11 +137,11 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The user ID of the person in the organization who requested the document review.
+     * The user ID of the person in the organization who requested the review of the change template.
      * </p>
      * 
      * @param author
-     *        The user ID of the person in the organization who requested the document review.
+     *        The user ID of the person in the organization who requested the review of the change template.
      */
 
     public void setAuthor(String author) {
@@ -150,10 +150,10 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The user ID of the person in the organization who requested the document review.
+     * The user ID of the person in the organization who requested the review of the change template.
      * </p>
      * 
-     * @return The user ID of the person in the organization who requested the document review.
+     * @return The user ID of the person in the organization who requested the review of the change template.
      */
 
     public String getAuthor() {
@@ -162,11 +162,11 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The user ID of the person in the organization who requested the document review.
+     * The user ID of the person in the organization who requested the review of the change template.
      * </p>
      * 
      * @param author
-     *        The user ID of the person in the organization who requested the document review.
+     *        The user ID of the person in the organization who requested the review of the change template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -177,11 +177,11 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Information about the response to the document approval request.
+     * Information about the response to the change template approval request.
      * </p>
      * 
      * @param metadata
-     *        Information about the response to the document approval request.
+     *        Information about the response to the change template approval request.
      */
 
     public void setMetadata(DocumentMetadataResponseInfo metadata) {
@@ -190,10 +190,10 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Information about the response to the document approval request.
+     * Information about the response to the change template approval request.
      * </p>
      * 
-     * @return Information about the response to the document approval request.
+     * @return Information about the response to the change template approval request.
      */
 
     public DocumentMetadataResponseInfo getMetadata() {
@@ -202,11 +202,11 @@ public class ListDocumentMetadataHistoryResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * Information about the response to the document approval request.
+     * Information about the response to the change template approval request.
      * </p>
      * 
      * @param metadata
-     *        Information about the response to the document approval request.
+     *        Information about the response to the change template approval request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

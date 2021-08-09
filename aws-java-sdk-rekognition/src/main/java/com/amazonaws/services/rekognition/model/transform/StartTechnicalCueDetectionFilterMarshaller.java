@@ -29,6 +29,8 @@ public class StartTechnicalCueDetectionFilterMarshaller {
 
     private static final MarshallingInfo<Float> MINSEGMENTCONFIDENCE_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MinSegmentConfidence").build();
+    private static final MarshallingInfo<StructuredPojo> BLACKFRAME_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BlackFrame").build();
 
     private static final StartTechnicalCueDetectionFilterMarshaller instance = new StartTechnicalCueDetectionFilterMarshaller();
 
@@ -47,6 +49,7 @@ public class StartTechnicalCueDetectionFilterMarshaller {
 
         try {
             protocolMarshaller.marshall(startTechnicalCueDetectionFilter.getMinSegmentConfidence(), MINSEGMENTCONFIDENCE_BINDING);
+            protocolMarshaller.marshall(startTechnicalCueDetectionFilter.getBlackFrame(), BLACKFRAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

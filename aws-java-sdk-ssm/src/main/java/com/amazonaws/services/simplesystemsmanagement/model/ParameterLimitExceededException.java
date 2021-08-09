@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You have exceeded the number of parameters for this account. Delete one or more parameters and try again.
+ * You have exceeded the number of parameters for this Amazon Web Services account. Delete one or more parameters and
+ * try again.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

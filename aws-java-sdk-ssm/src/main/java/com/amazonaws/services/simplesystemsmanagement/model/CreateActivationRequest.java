@@ -50,8 +50,8 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
     private String defaultInstanceName;
     /**
      * <p>
-     * The Identity and Access Management (IAM) role that you want to assign to the managed instance. This IAMrole must
-     * provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
+     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance. This
+     * IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
@@ -250,17 +250,17 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Identity and Access Management (IAM) role that you want to assign to the managed instance. This IAMrole must
-     * provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
+     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance. This
+     * IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param iamRole
-     *        The Identity and Access Management (IAM) role that you want to assign to the managed instance. This
-     *        IAMrole must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
-     *        <code>ssm.amazonaws.com</code>. For more information, see <a
+     *        The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance.
+     *        This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service
+     *        principal <code>ssm.amazonaws.com</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      *        service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      */
@@ -271,16 +271,16 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Identity and Access Management (IAM) role that you want to assign to the managed instance. This IAMrole must
-     * provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
+     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance. This
+     * IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
-     * @return The Identity and Access Management (IAM) role that you want to assign to the managed instance. This
-     *         IAMrole must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
-     *         <code>ssm.amazonaws.com</code>. For more information, see <a
+     * @return The name of the Identity and Access Management (IAM) role that you want to assign to the managed
+     *         instance. This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager
+     *         service principal <code>ssm.amazonaws.com</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an
      *         IAM service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User
      *         Guide</i>.
@@ -292,17 +292,17 @@ public class CreateActivationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Identity and Access Management (IAM) role that you want to assign to the managed instance. This IAMrole must
-     * provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
+     * The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance. This
+     * IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
      * <code>ssm.amazonaws.com</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      * service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * 
      * @param iamRole
-     *        The Identity and Access Management (IAM) role that you want to assign to the managed instance. This
-     *        IAMrole must provide AssumeRole permissions for the Amazon Web Services Systems Manager service principal
-     *        <code>ssm.amazonaws.com</code>. For more information, see <a
+     *        The name of the Identity and Access Management (IAM) role that you want to assign to the managed instance.
+     *        This IAM role must provide AssumeRole permissions for the Amazon Web Services Systems Manager service
+     *        principal <code>ssm.amazonaws.com</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-service-role.html">Create an IAM
      *        service role for a hybrid environment</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

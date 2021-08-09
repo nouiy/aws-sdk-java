@@ -47,10 +47,23 @@ import javax.annotation.Generated;
 public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.model.AWSWAFV2Exception {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * <p>
+     * The settings where the invalid parameter was found.
+     * </p>
+     */
     private String field;
-
+    /**
+     * <p>
+     * The invalid parameter that resulted in the exception.
+     * </p>
+     */
     private String parameter;
-
+    /**
+     * <p>
+     * Additional information about the exception.
+     * </p>
+     */
     private String reason;
 
     /**
@@ -64,7 +77,12 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
+     * <p>
+     * The settings where the invalid parameter was found.
+     * </p>
+     * 
      * @param field
+     *        The settings where the invalid parameter was found.
      * @see ParameterExceptionField
      */
 
@@ -74,7 +92,11 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
-     * @return
+     * <p>
+     * The settings where the invalid parameter was found.
+     * </p>
+     * 
+     * @return The settings where the invalid parameter was found.
      * @see ParameterExceptionField
      */
 
@@ -84,7 +106,12 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
+     * <p>
+     * The settings where the invalid parameter was found.
+     * </p>
+     * 
      * @param field
+     *        The settings where the invalid parameter was found.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParameterExceptionField
      */
@@ -95,7 +122,12 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
+     * <p>
+     * The settings where the invalid parameter was found.
+     * </p>
+     * 
      * @param field
+     *        The settings where the invalid parameter was found.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ParameterExceptionField
      */
@@ -106,7 +138,12 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
+     * <p>
+     * The invalid parameter that resulted in the exception.
+     * </p>
+     * 
      * @param parameter
+     *        The invalid parameter that resulted in the exception.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("Parameter")
@@ -115,7 +152,11 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
-     * @return
+     * <p>
+     * The invalid parameter that resulted in the exception.
+     * </p>
+     * 
+     * @return The invalid parameter that resulted in the exception.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("Parameter")
@@ -124,7 +165,12 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
+     * <p>
+     * The invalid parameter that resulted in the exception.
+     * </p>
+     * 
      * @param parameter
+     *        The invalid parameter that resulted in the exception.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -134,7 +180,12 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
+     * <p>
+     * Additional information about the exception.
+     * </p>
+     * 
      * @param reason
+     *        Additional information about the exception.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("Reason")
@@ -143,7 +194,11 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
-     * @return
+     * <p>
+     * Additional information about the exception.
+     * </p>
+     * 
+     * @return Additional information about the exception.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("Reason")
@@ -152,7 +207,12 @@ public class WAFInvalidParameterException extends com.amazonaws.services.wafv2.m
     }
 
     /**
+     * <p>
+     * Additional information about the exception.
+     * </p>
+     * 
      * @param reason
+     *        Additional information about the exception.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

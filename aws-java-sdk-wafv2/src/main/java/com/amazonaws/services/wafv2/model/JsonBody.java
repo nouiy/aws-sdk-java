@@ -75,8 +75,8 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * it encounters.
      * </p>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as characters that
-     * aren't valid, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
+     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
      * </p>
      * <p>
      * WAF parses the JSON in the following examples as two valid key, value pairs:
@@ -242,8 +242,8 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * it encounters.
      * </p>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as characters that
-     * aren't valid, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
+     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
      * </p>
      * <p>
      * WAF parses the JSON in the following examples as two valid key, value pairs:
@@ -292,9 +292,8 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      *        failure that it encounters.
      *        </p>
      *        <p>
-     *        WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as
-     *        characters that aren't valid, duplicate keys, truncation, and any content whose root node isn't an object
-     *        or an array.
+     *        WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
+     *        characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
      *        </p>
      *        <p>
      *        WAF parses the JSON in the following examples as two valid key, value pairs:
@@ -350,8 +349,8 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * it encounters.
      * </p>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as characters that
-     * aren't valid, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
+     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
      * </p>
      * <p>
      * WAF parses the JSON in the following examples as two valid key, value pairs:
@@ -399,9 +398,8 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      *         failure that it encounters.
      *         </p>
      *         <p>
-     *         WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as
-     *         characters that aren't valid, duplicate keys, truncation, and any content whose root node isn't an object
-     *         or an array.
+     *         WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
+     *         characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
      *         </p>
      *         <p>
      *         WAF parses the JSON in the following examples as two valid key, value pairs:
@@ -457,8 +455,8 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * it encounters.
      * </p>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as characters that
-     * aren't valid, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
+     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
      * </p>
      * <p>
      * WAF parses the JSON in the following examples as two valid key, value pairs:
@@ -507,9 +505,8 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      *        failure that it encounters.
      *        </p>
      *        <p>
-     *        WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as
-     *        characters that aren't valid, duplicate keys, truncation, and any content whose root node isn't an object
-     *        or an array.
+     *        WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
+     *        characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
      *        </p>
      *        <p>
      *        WAF parses the JSON in the following examples as two valid key, value pairs:
@@ -567,8 +564,8 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      * it encounters.
      * </p>
      * <p>
-     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as characters that
-     * aren't valid, duplicate keys, truncation, and any content whose root node isn't an object or an array.
+     * WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
+     * characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
      * </p>
      * <p>
      * WAF parses the JSON in the following examples as two valid key, value pairs:
@@ -617,9 +614,8 @@ public class JsonBody implements Serializable, Cloneable, StructuredPojo {
      *        failure that it encounters.
      *        </p>
      *        <p>
-     *        WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as
-     *        characters that aren't valid, duplicate keys, truncation, and any content whose root node isn't an object
-     *        or an array.
+     *        WAF does its best to parse the entire JSON body, but might be forced to stop for reasons such as invalid
+     *        characters, duplicate keys, truncation, and any content whose root node isn't an object or an array.
      *        </p>
      *        <p>
      *        WAF parses the JSON in the following examples as two valid key, value pairs:

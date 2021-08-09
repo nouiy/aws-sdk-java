@@ -67,8 +67,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * with you from another account.
      * </p>
      * <p>
-     * For Systems Manager document (SSM document) that are shared with you from other accounts, you must specify the
-     * complete SSM document ARN, in the following format:
+     * For Systems Manager document (SSM document) that are shared with you from other Amazon Web Services accounts, you
+     * must specify the complete SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -190,8 +190,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
     private com.amazonaws.internal.SdkInternalList<String> calendarNames;
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * update an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to update an association in multiple Regions and multiple accounts.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TargetLocation> targetLocations;
@@ -446,8 +446,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * with you from another account.
      * </p>
      * <p>
-     * For Systems Manager document (SSM document) that are shared with you from other accounts, you must specify the
-     * complete SSM document ARN, in the following format:
+     * For Systems Manager document (SSM document) that are shared with you from other Amazon Web Services accounts, you
+     * must specify the complete SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -471,8 +471,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        shared with you from another account.
      *        </p>
      *        <p>
-     *        For Systems Manager document (SSM document) that are shared with you from other accounts, you must specify
-     *        the complete SSM document ARN, in the following format:
+     *        For Systems Manager document (SSM document) that are shared with you from other Amazon Web Services
+     *        accounts, you must specify the complete SSM document ARN, in the following format:
      *        </p>
      *        <p>
      *        <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -502,8 +502,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * with you from another account.
      * </p>
      * <p>
-     * For Systems Manager document (SSM document) that are shared with you from other accounts, you must specify the
-     * complete SSM document ARN, in the following format:
+     * For Systems Manager document (SSM document) that are shared with you from other Amazon Web Services accounts, you
+     * must specify the complete SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -526,8 +526,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *         shared with you from another account.
      *         </p>
      *         <p>
-     *         For Systems Manager document (SSM document) that are shared with you from other accounts, you must
-     *         specify the complete SSM document ARN, in the following format:
+     *         For Systems Manager document (SSM document) that are shared with you from other Amazon Web Services
+     *         accounts, you must specify the complete SSM document ARN, in the following format:
      *         </p>
      *         <p>
      *         <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -558,8 +558,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * with you from another account.
      * </p>
      * <p>
-     * For Systems Manager document (SSM document) that are shared with you from other accounts, you must specify the
-     * complete SSM document ARN, in the following format:
+     * For Systems Manager document (SSM document) that are shared with you from other Amazon Web Services accounts, you
+     * must specify the complete SSM document ARN, in the following format:
      * </p>
      * <p>
      * <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -583,8 +583,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        shared with you from another account.
      *        </p>
      *        <p>
-     *        For Systems Manager document (SSM document) that are shared with you from other accounts, you must specify
-     *        the complete SSM document ARN, in the following format:
+     *        For Systems Manager document (SSM document) that are shared with you from other Amazon Web Services
+     *        accounts, you must specify the complete SSM document ARN, in the following format:
      *        </p>
      *        <p>
      *        <code>arn:aws:ssm:<i>region</i>:<i>account-id</i>:document/<i>document-name</i> </code>
@@ -1427,12 +1427,13 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * update an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to update an association in multiple Regions and multiple accounts.
      * </p>
      * 
-     * @return A location is a combination of Regions and accounts where you want to run the association. Use this
-     *         action to update an association in multiple Regions and multiple accounts.
+     * @return A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you
+     *         want to run the association. Use this action to update an association in multiple Regions and multiple
+     *         accounts.
      */
 
     public java.util.List<TargetLocation> getTargetLocations() {
@@ -1444,13 +1445,14 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * update an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to update an association in multiple Regions and multiple accounts.
      * </p>
      * 
      * @param targetLocations
-     *        A location is a combination of Regions and accounts where you want to run the association. Use this action
-     *        to update an association in multiple Regions and multiple accounts.
+     *        A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want
+     *        to run the association. Use this action to update an association in multiple Regions and multiple
+     *        accounts.
      */
 
     public void setTargetLocations(java.util.Collection<TargetLocation> targetLocations) {
@@ -1464,8 +1466,8 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * update an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to update an association in multiple Regions and multiple accounts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1474,8 +1476,9 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param targetLocations
-     *        A location is a combination of Regions and accounts where you want to run the association. Use this action
-     *        to update an association in multiple Regions and multiple accounts.
+     *        A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want
+     *        to run the association. Use this action to update an association in multiple Regions and multiple
+     *        accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1491,13 +1494,14 @@ public class UpdateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A location is a combination of Regions and accounts where you want to run the association. Use this action to
-     * update an association in multiple Regions and multiple accounts.
+     * A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want to run
+     * the association. Use this action to update an association in multiple Regions and multiple accounts.
      * </p>
      * 
      * @param targetLocations
-     *        A location is a combination of Regions and accounts where you want to run the association. Use this action
-     *        to update an association in multiple Regions and multiple accounts.
+     *        A location is a combination of Amazon Web Services Regions and Amazon Web Services accounts where you want
+     *        to run the association. Use this action to update an association in multiple Regions and multiple
+     *        accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

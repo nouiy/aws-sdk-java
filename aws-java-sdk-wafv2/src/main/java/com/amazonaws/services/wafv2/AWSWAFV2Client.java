@@ -79,12 +79,11 @@ import com.amazonaws.services.wafv2.model.transform.*;
  * <p>
  * This API guide is for developers who need detailed information about WAF API actions, data types, and errors. For
  * detailed information about WAF features and an overview of how to use WAF, see the <a
- * href="https://docs.aws.amazon.com/waf/latest/developerguide/">WAF Developer Guide</a>.
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html">WAF Developer Guide</a>.
  * </p>
  * <p>
- * You can make calls using the endpoints listed in <a
- * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">Amazon Web Services Service Endpoints for
- * WAF</a>.
+ * You can make calls using the endpoints listed in <a href="https://docs.aws.amazon.com/general/latest/gr/waf.html">WAF
+ * endpoints and quotas</a>.
  * </p>
  * <ul>
  * <li>
@@ -155,26 +154,14 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
                             new JsonErrorShapeMetadata().withErrorCode("WAFLimitsExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wafv2.model.transform.WAFLimitsExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("WAFNonexistentItemException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.wafv2.model.transform.WAFNonexistentItemExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("WAFAssociatedItemException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wafv2.model.transform.WAFAssociatedItemExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("WAFServiceLinkedRoleErrorException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.wafv2.model.transform.WAFServiceLinkedRoleErrorExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("WAFInvalidPermissionPolicyException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wafv2.model.transform.WAFInvalidPermissionPolicyExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("WAFInternalErrorException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.wafv2.model.transform.WAFInternalErrorExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("WAFDuplicateItemException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wafv2.model.transform.WAFDuplicateItemExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("WAFInvalidOperationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.wafv2.model.transform.WAFInvalidOperationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("WAFInvalidParameterException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wafv2.model.transform.WAFInvalidParameterExceptionUnmarshaller.getInstance()))
@@ -188,14 +175,29 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
                             new JsonErrorShapeMetadata().withErrorCode("WAFSubscriptionNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wafv2.model.transform.WAFSubscriptionNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("WAFUnavailableEntityException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.wafv2.model.transform.WAFUnavailableEntityExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("WAFInvalidResourceException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wafv2.model.transform.WAFInvalidResourceExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("WAFOptimisticLockException").withExceptionUnmarshaller(
                                     com.amazonaws.services.wafv2.model.transform.WAFOptimisticLockExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("WAFNonexistentItemException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.wafv2.model.transform.WAFNonexistentItemExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("WAFServiceLinkedRoleErrorException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.wafv2.model.transform.WAFServiceLinkedRoleErrorExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("WAFInternalErrorException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.wafv2.model.transform.WAFInternalErrorExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("WAFInvalidOperationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.wafv2.model.transform.WAFInvalidOperationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("WAFExpiredManagedRuleGroupVersionException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.wafv2.model.transform.WAFExpiredManagedRuleGroupVersionExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("WAFUnavailableEntityException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.wafv2.model.transform.WAFUnavailableEntityExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.wafv2.model.AWSWAFV2Exception.class));
 
     public static AWSWAFV2ClientBuilder builder() {
@@ -388,9 +390,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         WAF couldn’t perform the operation because your resource doesn’t exist.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidResourceException
      *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
      *         resource, and try again.
@@ -399,6 +401,10 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      * @throws WAFSubscriptionNotFoundException
      *         You tried to use a managed rule group that's available by subscription, but you aren't subscribed to it
      *         yet.
+     * @throws WAFExpiredManagedRuleGroupVersionException
+     *         The operation failed because the specified version for the managed rule group has expired. You can
+     *         retrieve the available versions for the managed rule group by calling
+     *         <a>ListAvailableManagedRuleGroupVersions</a>.
      * @sample AWSWAFV2.CheckCapacity
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CheckCapacity" target="_top">AWS API
      *      Documentation</a>
@@ -493,9 +499,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
@@ -595,9 +601,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
@@ -703,9 +709,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFUnavailableEntityException
      *         WAF couldn’t retrieve the resource that you requested. Retry your request.
      * @throws WAFTagOperationException
@@ -819,9 +825,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidResourceException
      *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
      *         resource, and try again.
@@ -1603,6 +1609,10 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         WAF couldn’t perform the operation because your resource doesn’t exist.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
+     * @throws WAFExpiredManagedRuleGroupVersionException
+     *         The operation failed because the specified version for the managed rule group has expired. You can
+     *         retrieve the available versions for the managed rule group by calling
+     *         <a>ListAvailableManagedRuleGroupVersions</a>.
      * @sample AWSWAFV2.DescribeManagedRuleGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeManagedRuleGroup" target="_top">AWS
      *      API Documentation</a>
@@ -1914,6 +1924,104 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
             HttpResponseHandler<AmazonWebServiceResponse<GetLoggingConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetLoggingConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the specified managed rule set.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param getManagedRuleSetRequest
+     * @return Result of the GetManagedRuleSet operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn’t exist.
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.GetManagedRuleSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetManagedRuleSet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetManagedRuleSetResult getManagedRuleSet(GetManagedRuleSetRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetManagedRuleSet(request);
+    }
+
+    @SdkInternalApi
+    final GetManagedRuleSetResult executeGetManagedRuleSet(GetManagedRuleSetRequest getManagedRuleSetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getManagedRuleSetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetManagedRuleSetRequest> request = null;
+        Response<GetManagedRuleSetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetManagedRuleSetRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getManagedRuleSetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WAFV2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetManagedRuleSet");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetManagedRuleSetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetManagedRuleSetResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2549,8 +2657,96 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
 
     /**
      * <p>
+     * Returns a list of the available versions for the specified managed rule group.
+     * </p>
+     * 
+     * @param listAvailableManagedRuleGroupVersionsRequest
+     * @return Result of the ListAvailableManagedRuleGroupVersions operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.ListAvailableManagedRuleGroupVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListAvailableManagedRuleGroupVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAvailableManagedRuleGroupVersionsResult listAvailableManagedRuleGroupVersions(ListAvailableManagedRuleGroupVersionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAvailableManagedRuleGroupVersions(request);
+    }
+
+    @SdkInternalApi
+    final ListAvailableManagedRuleGroupVersionsResult executeListAvailableManagedRuleGroupVersions(
+            ListAvailableManagedRuleGroupVersionsRequest listAvailableManagedRuleGroupVersionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAvailableManagedRuleGroupVersionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAvailableManagedRuleGroupVersionsRequest> request = null;
+        Response<ListAvailableManagedRuleGroupVersionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAvailableManagedRuleGroupVersionsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAvailableManagedRuleGroupVersionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WAFV2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAvailableManagedRuleGroupVersions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAvailableManagedRuleGroupVersionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAvailableManagedRuleGroupVersionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves an array of managed rule groups that are available for you to use. This list includes all Amazon Web
-     * Services Managed Rules rule groups and the Marketplace managed rule groups that you're subscribed to.
+     * Services Managed Rules rule groups and all of the Marketplace managed rule groups that you're subscribed to.
      * </p>
      * 
      * @param listAvailableManagedRuleGroupsRequest
@@ -2797,6 +2993,102 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
             HttpResponseHandler<AmazonWebServiceResponse<ListLoggingConfigurationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListLoggingConfigurationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the managed rule sets that you own.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param listManagedRuleSetsRequest
+     * @return Result of the ListManagedRuleSets operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.ListManagedRuleSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListManagedRuleSets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListManagedRuleSetsResult listManagedRuleSets(ListManagedRuleSetsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListManagedRuleSets(request);
+    }
+
+    @SdkInternalApi
+    final ListManagedRuleSetsResult executeListManagedRuleSets(ListManagedRuleSetsRequest listManagedRuleSetsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listManagedRuleSetsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListManagedRuleSetsRequest> request = null;
+        Response<ListManagedRuleSetsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListManagedRuleSetsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listManagedRuleSetsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WAFV2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListManagedRuleSets");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListManagedRuleSetsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListManagedRuleSetsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3345,9 +3637,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         The operation isn't valid.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @sample AWSWAFV2.PutLoggingConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/PutLoggingConfiguration" target="_top">AWS
      *      API Documentation</a>
@@ -3388,6 +3680,121 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
             HttpResponseHandler<AmazonWebServiceResponse<PutLoggingConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new PutLoggingConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Defines the versions of your managed rule set that you are offering to the customers. Customers see your
+     * offerings as managed rule groups with versioning.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * <p>
+     * Customers retrieve their managed rule group list by calling <a>ListAvailableManagedRuleGroups</a>. The name that
+     * you provide here for your managed rule set is the name the customer sees for the corresponding managed rule
+     * group. Customers can retrieve the available versions for a managed rule group by calling
+     * <a>ListAvailableManagedRuleGroupVersions</a>. You provide a rule group specification for each version. For each
+     * managed rule set, you must specify a version that you recommend using.
+     * </p>
+     * <p>
+     * To initiate the expiration of a managed rule group version, use <a>UpdateManagedRuleSetVersionExpiryDate</a>.
+     * </p>
+     * 
+     * @param putManagedRuleSetVersionsRequest
+     * @return Result of the PutManagedRuleSetVersions operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn’t exist.
+     * @throws WAFOptimisticLockException
+     *         WAF couldn’t save your changes because you tried to update or delete a resource that has changed since
+     *         you last retrieved it. Get the resource again, make any changes you need to make to the new copy, and
+     *         retry your operation.
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.PutManagedRuleSetVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/PutManagedRuleSetVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutManagedRuleSetVersionsResult putManagedRuleSetVersions(PutManagedRuleSetVersionsRequest request) {
+        request = beforeClientExecution(request);
+        return executePutManagedRuleSetVersions(request);
+    }
+
+    @SdkInternalApi
+    final PutManagedRuleSetVersionsResult executePutManagedRuleSetVersions(PutManagedRuleSetVersionsRequest putManagedRuleSetVersionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putManagedRuleSetVersionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutManagedRuleSetVersionsRequest> request = null;
+        Response<PutManagedRuleSetVersionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutManagedRuleSetVersionsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putManagedRuleSetVersionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WAFV2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutManagedRuleSetVersions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutManagedRuleSetVersionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutManagedRuleSetVersionsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3588,9 +3995,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         </li>
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFNonexistentItemException
      *         WAF couldn’t perform the operation because your resource doesn’t exist.
      * @throws WAFTagOperationException
@@ -3794,9 +4201,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.UpdateIPSet
@@ -3837,6 +4244,113 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateIPSetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateIPSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the expiration information for your managed rule set. Use this to initiate the expiration of a managed
+     * rule group version. After you initiate expiration for a version, WAF excludes it from the reponse to
+     * <a>ListAvailableManagedRuleGroupVersions</a> for the managed rule group.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param updateManagedRuleSetVersionExpiryDateRequest
+     * @return Result of the UpdateManagedRuleSetVersionExpiryDate operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn’t exist.
+     * @throws WAFOptimisticLockException
+     *         WAF couldn’t save your changes because you tried to update or delete a resource that has changed since
+     *         you last retrieved it. Get the resource again, make any changes you need to make to the new copy, and
+     *         retry your operation.
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.UpdateManagedRuleSetVersionExpiryDate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateManagedRuleSetVersionExpiryDate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateManagedRuleSetVersionExpiryDateResult updateManagedRuleSetVersionExpiryDate(UpdateManagedRuleSetVersionExpiryDateRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateManagedRuleSetVersionExpiryDate(request);
+    }
+
+    @SdkInternalApi
+    final UpdateManagedRuleSetVersionExpiryDateResult executeUpdateManagedRuleSetVersionExpiryDate(
+            UpdateManagedRuleSetVersionExpiryDateRequest updateManagedRuleSetVersionExpiryDateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateManagedRuleSetVersionExpiryDateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateManagedRuleSetVersionExpiryDateRequest> request = null;
+        Response<UpdateManagedRuleSetVersionExpiryDateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateManagedRuleSetVersionExpiryDateRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateManagedRuleSetVersionExpiryDateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WAFV2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateManagedRuleSetVersionExpiryDate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateManagedRuleSetVersionExpiryDateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateManagedRuleSetVersionExpiryDateResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3901,9 +4415,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.UpdateRegexPatternSet
@@ -4014,9 +4528,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFUnavailableEntityException
      *         WAF couldn’t retrieve the resource that you requested. Retry your request.
      * @throws WAFSubscriptionNotFoundException
@@ -4133,9 +4647,9 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidResourceException
      *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
      *         resource, and try again.
@@ -4146,6 +4660,10 @@ public class AWSWAFV2Client extends AmazonWebServiceClient implements AWSWAFV2 {
      *         yet.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
+     * @throws WAFExpiredManagedRuleGroupVersionException
+     *         The operation failed because the specified version for the managed rule group has expired. You can
+     *         retrieve the available versions for the managed rule group by calling
+     *         <a>ListAvailableManagedRuleGroupVersions</a>.
      * @sample AWSWAFV2.UpdateWebACL
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateWebACL" target="_top">AWS API
      *      Documentation</a>

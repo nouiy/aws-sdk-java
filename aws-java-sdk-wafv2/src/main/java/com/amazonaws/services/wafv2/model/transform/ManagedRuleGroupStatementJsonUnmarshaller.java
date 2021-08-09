@@ -56,6 +56,10 @@ public class ManagedRuleGroupStatementJsonUnmarshaller implements Unmarshaller<M
                     context.nextToken();
                     managedRuleGroupStatement.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Version", targetDepth)) {
+                    context.nextToken();
+                    managedRuleGroupStatement.setVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("ExcludedRules", targetDepth)) {
                     context.nextToken();
                     managedRuleGroupStatement.setExcludedRules(new ListUnmarshaller<ExcludedRule>(ExcludedRuleJsonUnmarshaller.getInstance())

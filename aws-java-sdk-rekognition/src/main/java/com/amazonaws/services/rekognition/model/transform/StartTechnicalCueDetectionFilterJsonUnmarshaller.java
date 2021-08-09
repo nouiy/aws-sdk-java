@@ -52,6 +52,10 @@ public class StartTechnicalCueDetectionFilterJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     startTechnicalCueDetectionFilter.setMinSegmentConfidence(context.getUnmarshaller(Float.class).unmarshall(context));
                 }
+                if (context.testExpression("BlackFrame", targetDepth)) {
+                    context.nextToken();
+                    startTechnicalCueDetectionFilter.setBlackFrame(BlackFrameJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

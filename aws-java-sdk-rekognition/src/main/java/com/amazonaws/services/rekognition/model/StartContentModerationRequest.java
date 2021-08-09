@@ -22,7 +22,8 @@ public class StartContentModerationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The video in which you want to detect unsafe content. The video must be stored in an Amazon S3 bucket.
+     * The video in which you want to detect inappropriate, unwanted, or offensive content. The video must be stored in
+     * an Amazon S3 bucket.
      * </p>
      */
     private Video video;
@@ -46,8 +47,9 @@ public class StartContentModerationRequest extends com.amazonaws.AmazonWebServic
     private String clientRequestToken;
     /**
      * <p>
-     * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the unsafe
-     * content analysis to.
+     * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the content
+     * analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i> if you are
+     * using the AmazonRekognitionServiceRole permissions policy to access the topic.
      * </p>
      */
     private NotificationChannel notificationChannel;
@@ -62,11 +64,13 @@ public class StartContentModerationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The video in which you want to detect unsafe content. The video must be stored in an Amazon S3 bucket.
+     * The video in which you want to detect inappropriate, unwanted, or offensive content. The video must be stored in
+     * an Amazon S3 bucket.
      * </p>
      * 
      * @param video
-     *        The video in which you want to detect unsafe content. The video must be stored in an Amazon S3 bucket.
+     *        The video in which you want to detect inappropriate, unwanted, or offensive content. The video must be
+     *        stored in an Amazon S3 bucket.
      */
 
     public void setVideo(Video video) {
@@ -75,10 +79,12 @@ public class StartContentModerationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The video in which you want to detect unsafe content. The video must be stored in an Amazon S3 bucket.
+     * The video in which you want to detect inappropriate, unwanted, or offensive content. The video must be stored in
+     * an Amazon S3 bucket.
      * </p>
      * 
-     * @return The video in which you want to detect unsafe content. The video must be stored in an Amazon S3 bucket.
+     * @return The video in which you want to detect inappropriate, unwanted, or offensive content. The video must be
+     *         stored in an Amazon S3 bucket.
      */
 
     public Video getVideo() {
@@ -87,11 +93,13 @@ public class StartContentModerationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The video in which you want to detect unsafe content. The video must be stored in an Amazon S3 bucket.
+     * The video in which you want to detect inappropriate, unwanted, or offensive content. The video must be stored in
+     * an Amazon S3 bucket.
      * </p>
      * 
      * @param video
-     *        The video in which you want to detect unsafe content. The video must be stored in an Amazon S3 bucket.
+     *        The video in which you want to detect inappropriate, unwanted, or offensive content. The video must be
+     *        stored in an Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,13 +229,15 @@ public class StartContentModerationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the unsafe
-     * content analysis to.
+     * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the content
+     * analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i> if you are
+     * using the AmazonRekognitionServiceRole permissions policy to access the topic.
      * </p>
      * 
      * @param notificationChannel
      *        The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the
-     *        unsafe content analysis to.
+     *        content analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i>
+     *        if you are using the AmazonRekognitionServiceRole permissions policy to access the topic.
      */
 
     public void setNotificationChannel(NotificationChannel notificationChannel) {
@@ -236,12 +246,15 @@ public class StartContentModerationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the unsafe
-     * content analysis to.
+     * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the content
+     * analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i> if you are
+     * using the AmazonRekognitionServiceRole permissions policy to access the topic.
      * </p>
      * 
      * @return The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the
-     *         unsafe content analysis to.
+     *         content analysis to. The Amazon SNS topic must have a topic name that begins with
+     *         <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy to access
+     *         the topic.
      */
 
     public NotificationChannel getNotificationChannel() {
@@ -250,13 +263,15 @@ public class StartContentModerationRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the unsafe
-     * content analysis to.
+     * The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the content
+     * analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i> if you are
+     * using the AmazonRekognitionServiceRole permissions policy to access the topic.
      * </p>
      * 
      * @param notificationChannel
      *        The Amazon SNS topic ARN that you want Amazon Rekognition Video to publish the completion status of the
-     *        unsafe content analysis to.
+     *        content analysis to. The Amazon SNS topic must have a topic name that begins with <i>AmazonRekognition</i>
+     *        if you are using the AmazonRekognitionServiceRole permissions policy to access the topic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

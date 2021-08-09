@@ -250,6 +250,19 @@ public class AbstractAWSWAFV2Async extends AbstractAWSWAFV2 implements AWSWAFV2A
     }
 
     @Override
+    public java.util.concurrent.Future<GetManagedRuleSetResult> getManagedRuleSetAsync(GetManagedRuleSetRequest request) {
+
+        return getManagedRuleSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetManagedRuleSetResult> getManagedRuleSetAsync(GetManagedRuleSetRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetManagedRuleSetRequest, GetManagedRuleSetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPermissionPolicyResult> getPermissionPolicyAsync(GetPermissionPolicyRequest request) {
 
         return getPermissionPolicyAsync(request, null);
@@ -343,6 +356,21 @@ public class AbstractAWSWAFV2Async extends AbstractAWSWAFV2 implements AWSWAFV2A
     }
 
     @Override
+    public java.util.concurrent.Future<ListAvailableManagedRuleGroupVersionsResult> listAvailableManagedRuleGroupVersionsAsync(
+            ListAvailableManagedRuleGroupVersionsRequest request) {
+
+        return listAvailableManagedRuleGroupVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableManagedRuleGroupVersionsResult> listAvailableManagedRuleGroupVersionsAsync(
+            ListAvailableManagedRuleGroupVersionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAvailableManagedRuleGroupVersionsRequest, ListAvailableManagedRuleGroupVersionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAvailableManagedRuleGroupsResult> listAvailableManagedRuleGroupsAsync(ListAvailableManagedRuleGroupsRequest request) {
 
         return listAvailableManagedRuleGroupsAsync(request, null);
@@ -377,6 +405,19 @@ public class AbstractAWSWAFV2Async extends AbstractAWSWAFV2 implements AWSWAFV2A
     @Override
     public java.util.concurrent.Future<ListLoggingConfigurationsResult> listLoggingConfigurationsAsync(ListLoggingConfigurationsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListLoggingConfigurationsRequest, ListLoggingConfigurationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListManagedRuleSetsResult> listManagedRuleSetsAsync(ListManagedRuleSetsRequest request) {
+
+        return listManagedRuleSetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListManagedRuleSetsResult> listManagedRuleSetsAsync(ListManagedRuleSetsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListManagedRuleSetsRequest, ListManagedRuleSetsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -460,6 +501,19 @@ public class AbstractAWSWAFV2Async extends AbstractAWSWAFV2 implements AWSWAFV2A
     }
 
     @Override
+    public java.util.concurrent.Future<PutManagedRuleSetVersionsResult> putManagedRuleSetVersionsAsync(PutManagedRuleSetVersionsRequest request) {
+
+        return putManagedRuleSetVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutManagedRuleSetVersionsResult> putManagedRuleSetVersionsAsync(PutManagedRuleSetVersionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutManagedRuleSetVersionsRequest, PutManagedRuleSetVersionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<PutPermissionPolicyResult> putPermissionPolicyAsync(PutPermissionPolicyRequest request) {
 
         return putPermissionPolicyAsync(request, null);
@@ -507,6 +561,21 @@ public class AbstractAWSWAFV2Async extends AbstractAWSWAFV2 implements AWSWAFV2A
     @Override
     public java.util.concurrent.Future<UpdateIPSetResult> updateIPSetAsync(UpdateIPSetRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateIPSetRequest, UpdateIPSetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateManagedRuleSetVersionExpiryDateResult> updateManagedRuleSetVersionExpiryDateAsync(
+            UpdateManagedRuleSetVersionExpiryDateRequest request) {
+
+        return updateManagedRuleSetVersionExpiryDateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateManagedRuleSetVersionExpiryDateResult> updateManagedRuleSetVersionExpiryDateAsync(
+            UpdateManagedRuleSetVersionExpiryDateRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateManagedRuleSetVersionExpiryDateRequest, UpdateManagedRuleSetVersionExpiryDateResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

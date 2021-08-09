@@ -39,6 +39,14 @@ public class StartTechnicalCueDetectionFilter implements Serializable, Cloneable
      * </p>
      */
     private Float minSegmentConfidence;
+    /**
+     * <p>
+     * A filter that allows you to control the black frame detection by specifying the black levels and pixel coverage
+     * of black pixels in a frame. Videos can come from multiple sources, formats, and time periods, with different
+     * standards and varying noise levels for black frames that need to be accounted for.
+     * </p>
+     */
+    private BlackFrame blackFrame;
 
     /**
      * <p>
@@ -120,6 +128,58 @@ public class StartTechnicalCueDetectionFilter implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * A filter that allows you to control the black frame detection by specifying the black levels and pixel coverage
+     * of black pixels in a frame. Videos can come from multiple sources, formats, and time periods, with different
+     * standards and varying noise levels for black frames that need to be accounted for.
+     * </p>
+     * 
+     * @param blackFrame
+     *        A filter that allows you to control the black frame detection by specifying the black levels and pixel
+     *        coverage of black pixels in a frame. Videos can come from multiple sources, formats, and time periods,
+     *        with different standards and varying noise levels for black frames that need to be accounted for.
+     */
+
+    public void setBlackFrame(BlackFrame blackFrame) {
+        this.blackFrame = blackFrame;
+    }
+
+    /**
+     * <p>
+     * A filter that allows you to control the black frame detection by specifying the black levels and pixel coverage
+     * of black pixels in a frame. Videos can come from multiple sources, formats, and time periods, with different
+     * standards and varying noise levels for black frames that need to be accounted for.
+     * </p>
+     * 
+     * @return A filter that allows you to control the black frame detection by specifying the black levels and pixel
+     *         coverage of black pixels in a frame. Videos can come from multiple sources, formats, and time periods,
+     *         with different standards and varying noise levels for black frames that need to be accounted for.
+     */
+
+    public BlackFrame getBlackFrame() {
+        return this.blackFrame;
+    }
+
+    /**
+     * <p>
+     * A filter that allows you to control the black frame detection by specifying the black levels and pixel coverage
+     * of black pixels in a frame. Videos can come from multiple sources, formats, and time periods, with different
+     * standards and varying noise levels for black frames that need to be accounted for.
+     * </p>
+     * 
+     * @param blackFrame
+     *        A filter that allows you to control the black frame detection by specifying the black levels and pixel
+     *        coverage of black pixels in a frame. Videos can come from multiple sources, formats, and time periods,
+     *        with different standards and varying noise levels for black frames that need to be accounted for.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTechnicalCueDetectionFilter withBlackFrame(BlackFrame blackFrame) {
+        setBlackFrame(blackFrame);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -132,7 +192,9 @@ public class StartTechnicalCueDetectionFilter implements Serializable, Cloneable
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getMinSegmentConfidence() != null)
-            sb.append("MinSegmentConfidence: ").append(getMinSegmentConfidence());
+            sb.append("MinSegmentConfidence: ").append(getMinSegmentConfidence()).append(",");
+        if (getBlackFrame() != null)
+            sb.append("BlackFrame: ").append(getBlackFrame());
         sb.append("}");
         return sb.toString();
     }
@@ -151,6 +213,10 @@ public class StartTechnicalCueDetectionFilter implements Serializable, Cloneable
             return false;
         if (other.getMinSegmentConfidence() != null && other.getMinSegmentConfidence().equals(this.getMinSegmentConfidence()) == false)
             return false;
+        if (other.getBlackFrame() == null ^ this.getBlackFrame() == null)
+            return false;
+        if (other.getBlackFrame() != null && other.getBlackFrame().equals(this.getBlackFrame()) == false)
+            return false;
         return true;
     }
 
@@ -160,6 +226,7 @@ public class StartTechnicalCueDetectionFilter implements Serializable, Cloneable
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getMinSegmentConfidence() == null) ? 0 : getMinSegmentConfidence().hashCode());
+        hashCode = prime * hashCode + ((getBlackFrame() == null) ? 0 : getBlackFrame().hashCode());
         return hashCode;
     }
 

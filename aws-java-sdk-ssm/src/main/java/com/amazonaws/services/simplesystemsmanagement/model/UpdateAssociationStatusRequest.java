@@ -33,7 +33,7 @@ public class UpdateAssociationStatusRequest extends com.amazonaws.AmazonWebServi
     private String name;
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
      */
     private String instanceId;
@@ -86,11 +86,11 @@ public class UpdateAssociationStatusRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the instance.
+     *        The instance ID.
      */
 
     public void setInstanceId(String instanceId) {
@@ -99,10 +99,10 @@ public class UpdateAssociationStatusRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
      * 
-     * @return The ID of the instance.
+     * @return The instance ID.
      */
 
     public String getInstanceId() {
@@ -111,11 +111,11 @@ public class UpdateAssociationStatusRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the instance.
+     * The instance ID.
      * </p>
      * 
      * @param instanceId
-     *        The ID of the instance.
+     *        The instance ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

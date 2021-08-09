@@ -29,6 +29,10 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Names of the parameters for which you want to query information.
      * </p>
+     * <p>
+     * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     * <code>"Name": "name:version"</code>.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> names;
     /**
@@ -43,8 +47,15 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Names of the parameters for which you want to query information.
      * </p>
+     * <p>
+     * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     * <code>"Name": "name:version"</code>.
+     * </p>
      * 
-     * @return Names of the parameters for which you want to query information.
+     * @return Names of the parameters for which you want to query information.</p>
+     *         <p>
+     *         To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     *         <code>"Name": "name:version"</code>.
      */
 
     public java.util.List<String> getNames() {
@@ -58,9 +69,16 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Names of the parameters for which you want to query information.
      * </p>
+     * <p>
+     * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     * <code>"Name": "name:version"</code>.
+     * </p>
      * 
      * @param names
-     *        Names of the parameters for which you want to query information.
+     *        Names of the parameters for which you want to query information.</p>
+     *        <p>
+     *        To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     *        <code>"Name": "name:version"</code>.
      */
 
     public void setNames(java.util.Collection<String> names) {
@@ -77,13 +95,20 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Names of the parameters for which you want to query information.
      * </p>
      * <p>
+     * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     * <code>"Name": "name:version"</code>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setNames(java.util.Collection)} or {@link #withNames(java.util.Collection)} if you want to override the
      * existing values.
      * </p>
      * 
      * @param names
-     *        Names of the parameters for which you want to query information.
+     *        Names of the parameters for which you want to query information.</p>
+     *        <p>
+     *        To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     *        <code>"Name": "name:version"</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,9 +126,16 @@ public class GetParametersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * Names of the parameters for which you want to query information.
      * </p>
+     * <p>
+     * To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     * <code>"Name": "name:version"</code>.
+     * </p>
      * 
      * @param names
-     *        Names of the parameters for which you want to query information.
+     *        Names of the parameters for which you want to query information.</p>
+     *        <p>
+     *        To query by parameter label, use <code>"Name": "name:label"</code>. To query by parameter version, use
+     *        <code>"Name": "name:version"</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

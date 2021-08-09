@@ -72,6 +72,10 @@ public class VideoMetadataJsonUnmarshaller implements Unmarshaller<VideoMetadata
                     context.nextToken();
                     videoMetadata.setFrameWidth(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("ColorRange", targetDepth)) {
+                    context.nextToken();
+                    videoMetadata.setColorRange(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -51,7 +51,7 @@ public class LoggingInfo implements Serializable, Cloneable, StructuredPojo {
     private String s3KeyPrefix;
     /**
      * <p>
-     * The Region where the S3 bucket is located.
+     * The Amazon Web Services Region where the S3 bucket is located.
      * </p>
      */
     private String s3Region;
@@ -138,11 +138,11 @@ public class LoggingInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region where the S3 bucket is located.
+     * The Amazon Web Services Region where the S3 bucket is located.
      * </p>
      * 
      * @param s3Region
-     *        The Region where the S3 bucket is located.
+     *        The Amazon Web Services Region where the S3 bucket is located.
      */
 
     public void setS3Region(String s3Region) {
@@ -151,10 +151,10 @@ public class LoggingInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region where the S3 bucket is located.
+     * The Amazon Web Services Region where the S3 bucket is located.
      * </p>
      * 
-     * @return The Region where the S3 bucket is located.
+     * @return The Amazon Web Services Region where the S3 bucket is located.
      */
 
     public String getS3Region() {
@@ -163,11 +163,11 @@ public class LoggingInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region where the S3 bucket is located.
+     * The Amazon Web Services Region where the S3 bucket is located.
      * </p>
      * 
      * @param s3Region
-     *        The Region where the S3 bucket is located.
+     *        The Amazon Web Services Region where the S3 bucket is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

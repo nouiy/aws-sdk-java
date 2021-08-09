@@ -162,8 +162,8 @@ public class AssociationVersionInfo implements Serializable, Cloneable, Structur
     private com.amazonaws.internal.SdkInternalList<String> calendarNames;
     /**
      * <p>
-     * The combination of Regions and accounts where you wanted to run the association when this association version was
-     * created.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you wanted to run the
+     * association when this association version was created.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TargetLocation> targetLocations;
@@ -1205,12 +1205,12 @@ public class AssociationVersionInfo implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The combination of Regions and accounts where you wanted to run the association when this association version was
-     * created.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you wanted to run the
+     * association when this association version was created.
      * </p>
      * 
-     * @return The combination of Regions and accounts where you wanted to run the association when this association
-     *         version was created.
+     * @return The combination of Amazon Web Services Regions and Amazon Web Services accounts where you wanted to run
+     *         the association when this association version was created.
      */
 
     public java.util.List<TargetLocation> getTargetLocations() {
@@ -1222,13 +1222,13 @@ public class AssociationVersionInfo implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The combination of Regions and accounts where you wanted to run the association when this association version was
-     * created.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you wanted to run the
+     * association when this association version was created.
      * </p>
      * 
      * @param targetLocations
-     *        The combination of Regions and accounts where you wanted to run the association when this association
-     *        version was created.
+     *        The combination of Amazon Web Services Regions and Amazon Web Services accounts where you wanted to run
+     *        the association when this association version was created.
      */
 
     public void setTargetLocations(java.util.Collection<TargetLocation> targetLocations) {
@@ -1242,8 +1242,8 @@ public class AssociationVersionInfo implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The combination of Regions and accounts where you wanted to run the association when this association version was
-     * created.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you wanted to run the
+     * association when this association version was created.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1252,8 +1252,8 @@ public class AssociationVersionInfo implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param targetLocations
-     *        The combination of Regions and accounts where you wanted to run the association when this association
-     *        version was created.
+     *        The combination of Amazon Web Services Regions and Amazon Web Services accounts where you wanted to run
+     *        the association when this association version was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1269,13 +1269,13 @@ public class AssociationVersionInfo implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The combination of Regions and accounts where you wanted to run the association when this association version was
-     * created.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts where you wanted to run the
+     * association when this association version was created.
      * </p>
      * 
      * @param targetLocations
-     *        The combination of Regions and accounts where you wanted to run the association when this association
-     *        version was created.
+     *        The combination of Amazon Web Services Regions and Amazon Web Services accounts where you wanted to run
+     *        the association when this association version was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

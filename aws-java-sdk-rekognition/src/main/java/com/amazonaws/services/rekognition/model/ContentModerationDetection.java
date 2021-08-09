@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about an unsafe content label detection in a stored video.
+ * Information about an inappropriate, unwanted, or offensive content label detection in a stored video.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,24 +27,24 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Time, in milliseconds from the beginning of the video, that the unsafe content label was detected.
+     * Time, in milliseconds from the beginning of the video, that the content moderation label was detected.
      * </p>
      */
     private Long timestamp;
     /**
      * <p>
-     * The unsafe content label detected by in the stored video.
+     * The content moderation label detected by in the stored video.
      * </p>
      */
     private ModerationLabel moderationLabel;
 
     /**
      * <p>
-     * Time, in milliseconds from the beginning of the video, that the unsafe content label was detected.
+     * Time, in milliseconds from the beginning of the video, that the content moderation label was detected.
      * </p>
      * 
      * @param timestamp
-     *        Time, in milliseconds from the beginning of the video, that the unsafe content label was detected.
+     *        Time, in milliseconds from the beginning of the video, that the content moderation label was detected.
      */
 
     public void setTimestamp(Long timestamp) {
@@ -53,10 +53,10 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Time, in milliseconds from the beginning of the video, that the unsafe content label was detected.
+     * Time, in milliseconds from the beginning of the video, that the content moderation label was detected.
      * </p>
      * 
-     * @return Time, in milliseconds from the beginning of the video, that the unsafe content label was detected.
+     * @return Time, in milliseconds from the beginning of the video, that the content moderation label was detected.
      */
 
     public Long getTimestamp() {
@@ -65,11 +65,11 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Time, in milliseconds from the beginning of the video, that the unsafe content label was detected.
+     * Time, in milliseconds from the beginning of the video, that the content moderation label was detected.
      * </p>
      * 
      * @param timestamp
-     *        Time, in milliseconds from the beginning of the video, that the unsafe content label was detected.
+     *        Time, in milliseconds from the beginning of the video, that the content moderation label was detected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The unsafe content label detected by in the stored video.
+     * The content moderation label detected by in the stored video.
      * </p>
      * 
      * @param moderationLabel
-     *        The unsafe content label detected by in the stored video.
+     *        The content moderation label detected by in the stored video.
      */
 
     public void setModerationLabel(ModerationLabel moderationLabel) {
@@ -93,10 +93,10 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The unsafe content label detected by in the stored video.
+     * The content moderation label detected by in the stored video.
      * </p>
      * 
-     * @return The unsafe content label detected by in the stored video.
+     * @return The content moderation label detected by in the stored video.
      */
 
     public ModerationLabel getModerationLabel() {
@@ -105,11 +105,11 @@ public class ContentModerationDetection implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The unsafe content label detected by in the stored video.
+     * The content moderation label detected by in the stored video.
      * </p>
      * 
      * @param moderationLabel
-     *        The unsafe content label detected by in the stored video.
+     *        The content moderation label detected by in the stored video.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

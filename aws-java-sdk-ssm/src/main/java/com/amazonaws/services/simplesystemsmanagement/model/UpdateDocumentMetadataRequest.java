@@ -27,30 +27,30 @@ public class UpdateDocumentMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the document for which a version is to be updated.
+     * The name of the change template for which a version's metadata is to be updated.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The version of a document to update.
+     * The version of a change template in which to update approval metadata.
      * </p>
      */
     private String documentVersion;
     /**
      * <p>
-     * The document review details to update.
+     * The change template review details to update.
      * </p>
      */
     private DocumentReviews documentReviews;
 
     /**
      * <p>
-     * The name of the document for which a version is to be updated.
+     * The name of the change template for which a version's metadata is to be updated.
      * </p>
      * 
      * @param name
-     *        The name of the document for which a version is to be updated.
+     *        The name of the change template for which a version's metadata is to be updated.
      */
 
     public void setName(String name) {
@@ -59,10 +59,10 @@ public class UpdateDocumentMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the document for which a version is to be updated.
+     * The name of the change template for which a version's metadata is to be updated.
      * </p>
      * 
-     * @return The name of the document for which a version is to be updated.
+     * @return The name of the change template for which a version's metadata is to be updated.
      */
 
     public String getName() {
@@ -71,11 +71,11 @@ public class UpdateDocumentMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the document for which a version is to be updated.
+     * The name of the change template for which a version's metadata is to be updated.
      * </p>
      * 
      * @param name
-     *        The name of the document for which a version is to be updated.
+     *        The name of the change template for which a version's metadata is to be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +86,11 @@ public class UpdateDocumentMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The version of a document to update.
+     * The version of a change template in which to update approval metadata.
      * </p>
      * 
      * @param documentVersion
-     *        The version of a document to update.
+     *        The version of a change template in which to update approval metadata.
      */
 
     public void setDocumentVersion(String documentVersion) {
@@ -99,10 +99,10 @@ public class UpdateDocumentMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The version of a document to update.
+     * The version of a change template in which to update approval metadata.
      * </p>
      * 
-     * @return The version of a document to update.
+     * @return The version of a change template in which to update approval metadata.
      */
 
     public String getDocumentVersion() {
@@ -111,11 +111,11 @@ public class UpdateDocumentMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The version of a document to update.
+     * The version of a change template in which to update approval metadata.
      * </p>
      * 
      * @param documentVersion
-     *        The version of a document to update.
+     *        The version of a change template in which to update approval metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +126,11 @@ public class UpdateDocumentMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The document review details to update.
+     * The change template review details to update.
      * </p>
      * 
      * @param documentReviews
-     *        The document review details to update.
+     *        The change template review details to update.
      */
 
     public void setDocumentReviews(DocumentReviews documentReviews) {
@@ -139,10 +139,10 @@ public class UpdateDocumentMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The document review details to update.
+     * The change template review details to update.
      * </p>
      * 
-     * @return The document review details to update.
+     * @return The change template review details to update.
      */
 
     public DocumentReviews getDocumentReviews() {
@@ -151,11 +151,11 @@ public class UpdateDocumentMetadataRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The document review details to update.
+     * The change template review details to update.
      * </p>
      * 
      * @param documentReviews
-     *        The document review details to update.
+     *        The change template review details to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

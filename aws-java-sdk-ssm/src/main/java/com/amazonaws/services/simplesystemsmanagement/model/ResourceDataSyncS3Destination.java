@@ -48,7 +48,7 @@ public class ResourceDataSyncS3Destination implements Serializable, Cloneable, S
     private String syncFormat;
     /**
      * <p>
-     * The Region with the S3 bucket targeted by the resource data sync.
+     * The Amazon Web Services Region with the S3 bucket targeted by the resource data sync.
      * </p>
      */
     private String region;
@@ -221,11 +221,11 @@ public class ResourceDataSyncS3Destination implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The Region with the S3 bucket targeted by the resource data sync.
+     * The Amazon Web Services Region with the S3 bucket targeted by the resource data sync.
      * </p>
      * 
      * @param region
-     *        The Region with the S3 bucket targeted by the resource data sync.
+     *        The Amazon Web Services Region with the S3 bucket targeted by the resource data sync.
      */
 
     public void setRegion(String region) {
@@ -234,10 +234,10 @@ public class ResourceDataSyncS3Destination implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The Region with the S3 bucket targeted by the resource data sync.
+     * The Amazon Web Services Region with the S3 bucket targeted by the resource data sync.
      * </p>
      * 
-     * @return The Region with the S3 bucket targeted by the resource data sync.
+     * @return The Amazon Web Services Region with the S3 bucket targeted by the resource data sync.
      */
 
     public String getRegion() {
@@ -246,11 +246,11 @@ public class ResourceDataSyncS3Destination implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The Region with the S3 bucket targeted by the resource data sync.
+     * The Amazon Web Services Region with the S3 bucket targeted by the resource data sync.
      * </p>
      * 
      * @param region
-     *        The Region with the S3 bucket targeted by the resource data sync.
+     *        The Amazon Web Services Region with the S3 bucket targeted by the resource data sync.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

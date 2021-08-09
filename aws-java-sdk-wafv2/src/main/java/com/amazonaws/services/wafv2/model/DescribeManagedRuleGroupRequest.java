@@ -60,6 +60,13 @@ public class DescribeManagedRuleGroupRequest extends com.amazonaws.AmazonWebServ
      * </ul>
      */
     private String scope;
+    /**
+     * <p>
+     * The version of the rule group. You can only use a version that is not scheduled for expiration. If you don't
+     * provide this, WAF uses the vendor's default version.
+     * </p>
+     */
+    private String versionName;
 
     /**
      * <p>
@@ -339,6 +346,52 @@ public class DescribeManagedRuleGroupRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The version of the rule group. You can only use a version that is not scheduled for expiration. If you don't
+     * provide this, WAF uses the vendor's default version.
+     * </p>
+     * 
+     * @param versionName
+     *        The version of the rule group. You can only use a version that is not scheduled for expiration. If you
+     *        don't provide this, WAF uses the vendor's default version.
+     */
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
+
+    /**
+     * <p>
+     * The version of the rule group. You can only use a version that is not scheduled for expiration. If you don't
+     * provide this, WAF uses the vendor's default version.
+     * </p>
+     * 
+     * @return The version of the rule group. You can only use a version that is not scheduled for expiration. If you
+     *         don't provide this, WAF uses the vendor's default version.
+     */
+
+    public String getVersionName() {
+        return this.versionName;
+    }
+
+    /**
+     * <p>
+     * The version of the rule group. You can only use a version that is not scheduled for expiration. If you don't
+     * provide this, WAF uses the vendor's default version.
+     * </p>
+     * 
+     * @param versionName
+     *        The version of the rule group. You can only use a version that is not scheduled for expiration. If you
+     *        don't provide this, WAF uses the vendor's default version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeManagedRuleGroupRequest withVersionName(String versionName) {
+        setVersionName(versionName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -355,7 +408,9 @@ public class DescribeManagedRuleGroupRequest extends com.amazonaws.AmazonWebServ
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getScope() != null)
-            sb.append("Scope: ").append(getScope());
+            sb.append("Scope: ").append(getScope()).append(",");
+        if (getVersionName() != null)
+            sb.append("VersionName: ").append(getVersionName());
         sb.append("}");
         return sb.toString();
     }
@@ -382,6 +437,10 @@ public class DescribeManagedRuleGroupRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getScope() != null && other.getScope().equals(this.getScope()) == false)
             return false;
+        if (other.getVersionName() == null ^ this.getVersionName() == null)
+            return false;
+        if (other.getVersionName() != null && other.getVersionName().equals(this.getVersionName()) == false)
+            return false;
         return true;
     }
 
@@ -393,6 +452,7 @@ public class DescribeManagedRuleGroupRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getVendorName() == null) ? 0 : getVendorName().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getScope() == null) ? 0 : getScope().hashCode());
+        hashCode = prime * hashCode + ((getVersionName() == null) ? 0 : getVersionName().hashCode());
         return hashCode;
     }
 

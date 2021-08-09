@@ -54,12 +54,11 @@ import java.util.concurrent.ExecutorService;
  * <p>
  * This API guide is for developers who need detailed information about WAF API actions, data types, and errors. For
  * detailed information about WAF features and an overview of how to use WAF, see the <a
- * href="https://docs.aws.amazon.com/waf/latest/developerguide/">WAF Developer Guide</a>.
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html">WAF Developer Guide</a>.
  * </p>
  * <p>
- * You can make calls using the endpoints listed in <a
- * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">Amazon Web Services Service Endpoints for
- * WAF</a>.
+ * You can make calls using the endpoints listed in <a href="https://docs.aws.amazon.com/general/latest/gr/waf.html">WAF
+ * endpoints and quotas</a>.
  * </p>
  * <ul>
  * <li>
@@ -712,6 +711,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
     }
 
     @Override
+    public java.util.concurrent.Future<GetManagedRuleSetResult> getManagedRuleSetAsync(GetManagedRuleSetRequest request) {
+
+        return getManagedRuleSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetManagedRuleSetResult> getManagedRuleSetAsync(final GetManagedRuleSetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetManagedRuleSetRequest, GetManagedRuleSetResult> asyncHandler) {
+        final GetManagedRuleSetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetManagedRuleSetResult>() {
+            @Override
+            public GetManagedRuleSetResult call() throws Exception {
+                GetManagedRuleSetResult result = null;
+
+                try {
+                    result = executeGetManagedRuleSet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPermissionPolicyResult> getPermissionPolicyAsync(GetPermissionPolicyRequest request) {
 
         return getPermissionPolicyAsync(request, null);
@@ -945,6 +977,41 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
     }
 
     @Override
+    public java.util.concurrent.Future<ListAvailableManagedRuleGroupVersionsResult> listAvailableManagedRuleGroupVersionsAsync(
+            ListAvailableManagedRuleGroupVersionsRequest request) {
+
+        return listAvailableManagedRuleGroupVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAvailableManagedRuleGroupVersionsResult> listAvailableManagedRuleGroupVersionsAsync(
+            final ListAvailableManagedRuleGroupVersionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAvailableManagedRuleGroupVersionsRequest, ListAvailableManagedRuleGroupVersionsResult> asyncHandler) {
+        final ListAvailableManagedRuleGroupVersionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAvailableManagedRuleGroupVersionsResult>() {
+            @Override
+            public ListAvailableManagedRuleGroupVersionsResult call() throws Exception {
+                ListAvailableManagedRuleGroupVersionsResult result = null;
+
+                try {
+                    result = executeListAvailableManagedRuleGroupVersions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAvailableManagedRuleGroupsResult> listAvailableManagedRuleGroupsAsync(ListAvailableManagedRuleGroupsRequest request) {
 
         return listAvailableManagedRuleGroupsAsync(request, null);
@@ -1029,6 +1096,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
 
                 try {
                     result = executeListLoggingConfigurations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListManagedRuleSetsResult> listManagedRuleSetsAsync(ListManagedRuleSetsRequest request) {
+
+        return listManagedRuleSetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListManagedRuleSetsResult> listManagedRuleSetsAsync(final ListManagedRuleSetsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListManagedRuleSetsRequest, ListManagedRuleSetsResult> asyncHandler) {
+        final ListManagedRuleSetsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListManagedRuleSetsResult>() {
+            @Override
+            public ListManagedRuleSetsResult call() throws Exception {
+                ListManagedRuleSetsResult result = null;
+
+                try {
+                    result = executeListManagedRuleSets(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1243,6 +1343,39 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
     }
 
     @Override
+    public java.util.concurrent.Future<PutManagedRuleSetVersionsResult> putManagedRuleSetVersionsAsync(PutManagedRuleSetVersionsRequest request) {
+
+        return putManagedRuleSetVersionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutManagedRuleSetVersionsResult> putManagedRuleSetVersionsAsync(final PutManagedRuleSetVersionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutManagedRuleSetVersionsRequest, PutManagedRuleSetVersionsResult> asyncHandler) {
+        final PutManagedRuleSetVersionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutManagedRuleSetVersionsResult>() {
+            @Override
+            public PutManagedRuleSetVersionsResult call() throws Exception {
+                PutManagedRuleSetVersionsResult result = null;
+
+                try {
+                    result = executePutManagedRuleSetVersions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<PutPermissionPolicyResult> putPermissionPolicyAsync(PutPermissionPolicyRequest request) {
 
         return putPermissionPolicyAsync(request, null);
@@ -1359,6 +1492,41 @@ public class AWSWAFV2AsyncClient extends AWSWAFV2Client implements AWSWAFV2Async
 
                 try {
                     result = executeUpdateIPSet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateManagedRuleSetVersionExpiryDateResult> updateManagedRuleSetVersionExpiryDateAsync(
+            UpdateManagedRuleSetVersionExpiryDateRequest request) {
+
+        return updateManagedRuleSetVersionExpiryDateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateManagedRuleSetVersionExpiryDateResult> updateManagedRuleSetVersionExpiryDateAsync(
+            final UpdateManagedRuleSetVersionExpiryDateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateManagedRuleSetVersionExpiryDateRequest, UpdateManagedRuleSetVersionExpiryDateResult> asyncHandler) {
+        final UpdateManagedRuleSetVersionExpiryDateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateManagedRuleSetVersionExpiryDateResult>() {
+            @Override
+            public UpdateManagedRuleSetVersionExpiryDateResult call() throws Exception {
+                UpdateManagedRuleSetVersionExpiryDateResult result = null;
+
+                try {
+                    result = executeUpdateManagedRuleSetVersionExpiryDate(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

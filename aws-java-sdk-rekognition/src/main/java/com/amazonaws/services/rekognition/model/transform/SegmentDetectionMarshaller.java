@@ -45,6 +45,12 @@ public class SegmentDetectionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TechnicalCueSegment").build();
     private static final MarshallingInfo<StructuredPojo> SHOTSEGMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ShotSegment").build();
+    private static final MarshallingInfo<Long> STARTFRAMENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartFrameNumber").build();
+    private static final MarshallingInfo<Long> ENDFRAMENUMBER_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndFrameNumber").build();
+    private static final MarshallingInfo<Long> DURATIONFRAMES_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DurationFrames").build();
 
     private static final SegmentDetectionMarshaller instance = new SegmentDetectionMarshaller();
 
@@ -71,6 +77,9 @@ public class SegmentDetectionMarshaller {
             protocolMarshaller.marshall(segmentDetection.getDurationSMPTE(), DURATIONSMPTE_BINDING);
             protocolMarshaller.marshall(segmentDetection.getTechnicalCueSegment(), TECHNICALCUESEGMENT_BINDING);
             protocolMarshaller.marshall(segmentDetection.getShotSegment(), SHOTSEGMENT_BINDING);
+            protocolMarshaller.marshall(segmentDetection.getStartFrameNumber(), STARTFRAMENUMBER_BINDING);
+            protocolMarshaller.marshall(segmentDetection.getEndFrameNumber(), ENDFRAMENUMBER_BINDING);
+            protocolMarshaller.marshall(segmentDetection.getDurationFrames(), DURATIONFRAMES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

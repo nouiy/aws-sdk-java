@@ -32,6 +32,8 @@ public class ManagedRuleGroupStatementMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VendorName").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Name").build();
+    private static final MarshallingInfo<String> VERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Version").build();
     private static final MarshallingInfo<List> EXCLUDEDRULES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ExcludedRules").build();
     private static final MarshallingInfo<StructuredPojo> SCOPEDOWNSTATEMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -55,6 +57,7 @@ public class ManagedRuleGroupStatementMarshaller {
         try {
             protocolMarshaller.marshall(managedRuleGroupStatement.getVendorName(), VENDORNAME_BINDING);
             protocolMarshaller.marshall(managedRuleGroupStatement.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(managedRuleGroupStatement.getVersion(), VERSION_BINDING);
             protocolMarshaller.marshall(managedRuleGroupStatement.getExcludedRules(), EXCLUDEDRULES_BINDING);
             protocolMarshaller.marshall(managedRuleGroupStatement.getScopeDownStatement(), SCOPEDOWNSTATEMENT_BINDING);
         } catch (Exception e) {

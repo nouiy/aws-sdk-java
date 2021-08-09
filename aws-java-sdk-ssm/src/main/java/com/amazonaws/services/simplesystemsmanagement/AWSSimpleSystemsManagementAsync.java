@@ -693,16 +693,16 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * </p>
      * <p>
      * You can configure Systems Manager Inventory to use the <code>SyncToDestination</code> type to synchronize
-     * Inventory data from multiple Regions to a single Amazon Simple Storage Service (Amazon S3) bucket. For more
-     * information, see <a
+     * Inventory data from multiple Amazon Web Services Regions to a single Amazon Simple Storage Service (Amazon S3)
+     * bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync.html">Configuring
      * resource data sync for Inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * You can configure Systems Manager Explorer to use the <code>SyncFromSource</code> type to synchronize operational
-     * work items (OpsItems) and operational data (OpsData) from multiple Regions to a single Amazon S3 bucket. This
-     * type can synchronize OpsItems and OpsData from multiple accounts and Regions or <code>EntireOrganization</code>
-     * by using Organizations. For more information, see <a
+     * work items (OpsItems) and operational data (OpsData) from multiple Amazon Web Services Regions to a single Amazon
+     * S3 bucket. This type can synchronize OpsItems and OpsData from multiple Amazon Web Services accounts and Amazon
+     * Web Services Regions or <code>EntireOrganization</code> by using Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/Explorer-resource-data-sync.html">Setting up
      * Systems Manager Explorer to display data from multiple accounts and Regions</a> in the <i>Amazon Web Services
      * Systems Manager User Guide</i>.
@@ -735,16 +735,16 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * </p>
      * <p>
      * You can configure Systems Manager Inventory to use the <code>SyncToDestination</code> type to synchronize
-     * Inventory data from multiple Regions to a single Amazon Simple Storage Service (Amazon S3) bucket. For more
-     * information, see <a
+     * Inventory data from multiple Amazon Web Services Regions to a single Amazon Simple Storage Service (Amazon S3)
+     * bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync.html">Configuring
      * resource data sync for Inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * You can configure Systems Manager Explorer to use the <code>SyncFromSource</code> type to synchronize operational
-     * work items (OpsItems) and operational data (OpsData) from multiple Regions to a single Amazon S3 bucket. This
-     * type can synchronize OpsItems and OpsData from multiple accounts and Regions or <code>EntireOrganization</code>
-     * by using Organizations. For more information, see <a
+     * work items (OpsItems) and operational data (OpsData) from multiple Amazon Web Services Regions to a single Amazon
+     * S3 bucket. This type can synchronize OpsItems and OpsData from multiple Amazon Web Services accounts and Amazon
+     * Web Services Regions or <code>EntireOrganization</code> by using Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/Explorer-resource-data-sync.html">Setting up
      * Systems Manager Explorer to display data from multiple accounts and Regions</a> in the <i>Amazon Web Services
      * Systems Manager User Guide</i>.
@@ -813,7 +813,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
     /**
      * <p>
      * Disassociates the specified Amazon Web Services Systems Manager document (SSM document) from the specified
-     * instance.
+     * instance. If you created the association by using the <code>Targets</code> parameter, then you must delete the
+     * association by using the association ID.
      * </p>
      * <p>
      * When you disassociate a document from an instance, it doesn't change the configuration of the instance. To change
@@ -832,7 +833,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
     /**
      * <p>
      * Disassociates the specified Amazon Web Services Systems Manager document (SSM document) from the specified
-     * instance.
+     * instance. If you created the association by using the <code>Targets</code> parameter, then you must delete the
+     * association by using the association ID.
      * </p>
      * <p>
      * When you disassociate a document from an instance, it doesn't change the configuration of the instance. To change
@@ -991,7 +993,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Delete a parameter from the system.
+     * Delete a parameter from the system. After deleting a parameter, wait for at least 30 seconds to create a
+     * parameter with the same name.
      * </p>
      * 
      * @param deleteParameterRequest
@@ -1004,7 +1007,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Delete a parameter from the system.
+     * Delete a parameter from the system. After deleting a parameter, wait for at least 30 seconds to create a
+     * parameter with the same name.
      * </p>
      * 
      * @param deleteParameterRequest
@@ -1022,7 +1026,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Delete a list of parameters.
+     * Delete a list of parameters. After deleting a parameter, wait for at least 30 seconds to create a parameter with
+     * the same name.
      * </p>
      * 
      * @param deleteParametersRequest
@@ -1035,7 +1040,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Delete a list of parameters.
+     * Delete a list of parameters. After deleting a parameter, wait for at least 30 seconds to create a parameter with
+     * the same name.
      * </p>
      * 
      * @param deleteParametersRequest
@@ -1293,9 +1299,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
     /**
      * <p>
      * Describes the association for the specified target or instance. If you created the association by using the
-     * <code>Targets</code> parameter, then you must retrieve the association by using the association ID. If you
-     * created the association by specifying an instance ID and an Amazon Web Services Systems Manager document (SSM
-     * document), then you retrieve the association by specifying the document name and the instance ID.
+     * <code>Targets</code> parameter, then you must retrieve the association by using the association ID.
      * </p>
      * 
      * @param describeAssociationRequest
@@ -1309,9 +1313,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
     /**
      * <p>
      * Describes the association for the specified target or instance. If you created the association by using the
-     * <code>Targets</code> parameter, then you must retrieve the association by using the association ID. If you
-     * created the association by specifying an instance ID and an Amazon Web Services Systems Manager document (SSM
-     * document), then you retrieve the association by specifying the document name and the instance ID.
+     * <code>Targets</code> parameter, then you must retrieve the association by using the association ID.
      * </p>
      * 
      * @param describeAssociationRequest
@@ -1533,7 +1535,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <p>
      * Describes the permissions for a Amazon Web Services Systems Manager document (SSM document). If you created the
      * document, you are the owner. If a document is shared, it can either be shared privately (by specifying a user's
-     * account ID) or publicly (<i>All</i>).
+     * Amazon Web Services account ID) or publicly (<i>All</i>).
      * </p>
      * 
      * @param describeDocumentPermissionRequest
@@ -1549,7 +1551,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <p>
      * Describes the permissions for a Amazon Web Services Systems Manager document (SSM document). If you created the
      * document, you are the owner. If a document is shared, it can either be shared privately (by specifying a user's
-     * account ID) or publicly (<i>All</i>).
+     * Amazon Web Services account ID) or publicly (<i>All</i>).
      * </p>
      * 
      * @param describeDocumentPermissionRequest
@@ -2098,7 +2100,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Retrieves the maintenance windows in an account.
+     * Retrieves the maintenance windows in an Amazon Web Services account.
      * </p>
      * 
      * @param describeMaintenanceWindowsRequest
@@ -2112,7 +2114,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Retrieves the maintenance windows in an account.
+     * Retrieves the maintenance windows in an Amazon Web Services account.
      * </p>
      * 
      * @param describeMaintenanceWindowsRequest
@@ -2262,7 +2264,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Lists the patch baselines in your account.
+     * Lists the patch baselines in your Amazon Web Services account.
      * </p>
      * 
      * @param describePatchBaselinesRequest
@@ -2275,7 +2277,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Lists the patch baselines in your account.
+     * Lists the patch baselines in your Amazon Web Services account.
      * </p>
      * 
      * @param describePatchBaselinesRequest
@@ -2805,10 +2807,11 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <note>
      * <p>
      * If you run the command locally, such as with the Command Line Interface (CLI), the system attempts to use your
-     * local AWS credentials and the operation fails. To avoid this, you can run the command in the Amazon Web Services
-     * Systems Manager console. Use Run Command, a capability of Amazon Web Services Systems Manager, with an SSM
-     * document that enables you to target an instance with a script or command. For example, run the command using the
-     * <code>AWS-RunShellScript</code> document or the <code>AWS-RunPowerShellScript</code> document.
+     * local Amazon Web Services credentials and the operation fails. To avoid this, you can run the command in the
+     * Amazon Web Services Systems Manager console. Use Run Command, a capability of Amazon Web Services Systems
+     * Manager, with an SSM document that enables you to target an instance with a script or command. For example, run
+     * the command using the <code>AWS-RunShellScript</code> document or the <code>AWS-RunPowerShellScript</code>
+     * document.
      * </p>
      * </note>
      * 
@@ -2830,10 +2833,11 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <note>
      * <p>
      * If you run the command locally, such as with the Command Line Interface (CLI), the system attempts to use your
-     * local AWS credentials and the operation fails. To avoid this, you can run the command in the Amazon Web Services
-     * Systems Manager console. Use Run Command, a capability of Amazon Web Services Systems Manager, with an SSM
-     * document that enables you to target an instance with a script or command. For example, run the command using the
-     * <code>AWS-RunShellScript</code> document or the <code>AWS-RunPowerShellScript</code> document.
+     * local Amazon Web Services credentials and the operation fails. To avoid this, you can run the command in the
+     * Amazon Web Services Systems Manager console. Use Run Command, a capability of Amazon Web Services Systems
+     * Manager, with an SSM document that enables you to target an instance with a script or command. For example, run
+     * the command using the <code>AWS-RunShellScript</code> document or the <code>AWS-RunPowerShellScript</code>
+     * document.
      * </p>
      * </note>
      * 
@@ -2885,7 +2889,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Query inventory information.
+     * Query inventory information. This includes instance status, such as <code>Stopped</code> or
+     * <code>Terminated</code>.
      * </p>
      * 
      * @param getInventoryRequest
@@ -2898,7 +2903,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Query inventory information.
+     * Query inventory information. This includes instance status, such as <code>Stopped</code> or
+     * <code>Terminated</code>.
      * </p>
      * 
      * @param getInventoryRequest
@@ -3251,9 +3257,13 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Get information about a parameter by using the parameter name. Don't confuse this API operation with the
-     * <a>GetParameters</a> API operation.
+     * Get information about a single parameter by specifying the parameter name.
      * </p>
+     * <note>
+     * <p>
+     * To get information about more than one parameter at a time, use the <a>GetParameters</a> operation.
+     * </p>
+     * </note>
      * 
      * @param getParameterRequest
      * @return A Java Future containing the result of the GetParameter operation returned by the service.
@@ -3265,9 +3275,13 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Get information about a parameter by using the parameter name. Don't confuse this API operation with the
-     * <a>GetParameters</a> API operation.
+     * Get information about a single parameter by specifying the parameter name.
      * </p>
+     * <note>
+     * <p>
+     * To get information about more than one parameter at a time, use the <a>GetParameters</a> operation.
+     * </p>
+     * </note>
      * 
      * @param getParameterRequest
      * @param asyncHandler
@@ -3315,8 +3329,13 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Get details of a parameter. Don't confuse this API operation with the <a>GetParameter</a> API operation.
+     * Get information about one or more parameters by specifying multiple parameter names.
      * </p>
+     * <note>
+     * <p>
+     * To get information about a single parameter, you can use the <a>GetParameter</a> operation instead.
+     * </p>
+     * </note>
      * 
      * @param getParametersRequest
      * @return A Java Future containing the result of the GetParameters operation returned by the service.
@@ -3328,8 +3347,13 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Get details of a parameter. Don't confuse this API operation with the <a>GetParameter</a> API operation.
+     * Get information about one or more parameters by specifying multiple parameter names.
      * </p>
+     * <note>
+     * <p>
+     * To get information about a single parameter, you can use the <a>GetParameter</a> operation instead.
+     * </p>
+     * </note>
      * 
      * @param getParametersRequest
      * @param asyncHandler
@@ -3471,7 +3495,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * change the value back to the original value defined by the Amazon Web Services service team.
      * </p>
      * <p>
-     * Query the current service setting for the account.
+     * Query the current service setting for the Amazon Web Services account.
      * </p>
      * 
      * @param getServiceSettingRequest
@@ -3499,7 +3523,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * change the value back to the original value defined by the Amazon Web Services service team.
      * </p>
      * <p>
-     * Query the current service setting for the account.
+     * Query the current service setting for the Amazon Web Services account.
      * </p>
      * 
      * @param getServiceSettingRequest
@@ -3684,9 +3708,9 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Returns all State Manager associations in the current account and Region. You can limit the results to a specific
-     * State Manager association document or instance by specifying a filter. State Manager is a capability of Amazon
-     * Web Services Systems Manager.
+     * Returns all State Manager associations in the current Amazon Web Services account and Amazon Web Services Region.
+     * You can limit the results to a specific State Manager association document or instance by specifying a filter.
+     * State Manager is a capability of Amazon Web Services Systems Manager.
      * </p>
      * 
      * @param listAssociationsRequest
@@ -3699,9 +3723,9 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Returns all State Manager associations in the current account and Region. You can limit the results to a specific
-     * State Manager association document or instance by specifying a filter. State Manager is a capability of Amazon
-     * Web Services Systems Manager.
+     * Returns all State Manager associations in the current Amazon Web Services account and Amazon Web Services Region.
+     * You can limit the results to a specific State Manager association document or instance by specifying a filter.
+     * State Manager is a capability of Amazon Web Services Systems Manager.
      * </p>
      * 
      * @param listAssociationsRequest
@@ -3756,7 +3780,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Lists the commands requested by users of the account.
+     * Lists the commands requested by users of the Amazon Web Services account.
      * </p>
      * 
      * @param listCommandsRequest
@@ -3769,7 +3793,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Lists the commands requested by users of the account.
+     * Lists the commands requested by users of the Amazon Web Services account.
      * </p>
      * 
      * @param listCommandsRequest
@@ -3857,7 +3881,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Information about approval reviews for a version of an SSM document.
+     * Information about approval reviews for a version of a change template in Change Manager.
      * </p>
      * 
      * @param listDocumentMetadataHistoryRequest
@@ -3871,7 +3895,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Information about approval reviews for a version of an SSM document.
+     * Information about approval reviews for a version of a change template in Change Manager.
      * </p>
      * 
      * @param listDocumentMetadataHistoryRequest
@@ -3921,8 +3945,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Returns all Systems Manager (SSM) documents in the current account and Region. You can limit the results of this
-     * request by using a filter.
+     * Returns all Systems Manager (SSM) documents in the current Amazon Web Services account and Amazon Web Services
+     * Region. You can limit the results of this request by using a filter.
      * </p>
      * 
      * @param listDocumentsRequest
@@ -3935,8 +3959,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Returns all Systems Manager (SSM) documents in the current account and Region. You can limit the results of this
-     * request by using a filter.
+     * Returns all Systems Manager (SSM) documents in the current Amazon Web Services account and Amazon Web Services
+     * Region. You can limit the results of this request by using a filter.
      * </p>
      * 
      * @param listDocumentsRequest
@@ -4000,8 +4024,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Returns a list of all OpsItem events in the current Region and account. You can limit the results to events
-     * associated with specific OpsItems by specifying a filter.
+     * Returns a list of all OpsItem events in the current Amazon Web Services Region and Amazon Web Services account.
+     * You can limit the results to events associated with specific OpsItems by specifying a filter.
      * </p>
      * 
      * @param listOpsItemEventsRequest
@@ -4014,8 +4038,8 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Returns a list of all OpsItem events in the current Region and account. You can limit the results to events
-     * associated with specific OpsItems by specifying a filter.
+     * Returns a list of all OpsItem events in the current Amazon Web Services Region and Amazon Web Services account.
+     * You can limit the results to events associated with specific OpsItems by specifying a filter.
      * </p>
      * 
      * @param listOpsItemEventsRequest
@@ -5180,6 +5204,11 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * Updates the status of the Amazon Web Services Systems Manager document (SSM document) associated with the
      * specified instance.
      * </p>
+     * <p>
+     * <code>UpdateAssociationStatus</code> is primarily used by the Amazon Web Services Systems Manager Agent (SSM
+     * Agent) to report status updates about your associations and is only used for associations created with the
+     * <code>InstanceId</code> legacy parameter.
+     * </p>
      * 
      * @param updateAssociationStatusRequest
      * @return A Java Future containing the result of the UpdateAssociationStatus operation returned by the service.
@@ -5193,6 +5222,11 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
      * <p>
      * Updates the status of the Amazon Web Services Systems Manager document (SSM document) associated with the
      * specified instance.
+     * </p>
+     * <p>
+     * <code>UpdateAssociationStatus</code> is primarily used by the Amazon Web Services Systems Manager Agent (SSM
+     * Agent) to report status updates about your associations and is only used for associations created with the
+     * <code>InstanceId</code> legacy parameter.
      * </p>
      * 
      * @param updateAssociationStatusRequest
@@ -5276,7 +5310,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Updates information related to approval reviews for a specific version of a document.
+     * Updates information related to approval reviews for a specific version of a change template in Change Manager.
      * </p>
      * 
      * @param updateDocumentMetadataRequest
@@ -5289,7 +5323,7 @@ public interface AWSSimpleSystemsManagementAsync extends AWSSimpleSystemsManagem
 
     /**
      * <p>
-     * Updates information related to approval reviews for a specific version of a document.
+     * Updates information related to approval reviews for a specific version of a change template in Change Manager.
      * </p>
      * 
      * @param updateDocumentMetadataRequest

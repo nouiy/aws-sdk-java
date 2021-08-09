@@ -170,7 +170,8 @@ public class AutomationExecution implements Serializable, Cloneable, StructuredP
     private String target;
     /**
      * <p>
-     * The combination of Regions and/or accounts where you want to run the Automation.
+     * The combination of Amazon Web Services Regions and/or Amazon Web Services accounts where you want to run the
+     * Automation.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TargetLocation> targetLocations;
@@ -1398,10 +1399,12 @@ public class AutomationExecution implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The combination of Regions and/or accounts where you want to run the Automation.
+     * The combination of Amazon Web Services Regions and/or Amazon Web Services accounts where you want to run the
+     * Automation.
      * </p>
      * 
-     * @return The combination of Regions and/or accounts where you want to run the Automation.
+     * @return The combination of Amazon Web Services Regions and/or Amazon Web Services accounts where you want to run
+     *         the Automation.
      */
 
     public java.util.List<TargetLocation> getTargetLocations() {
@@ -1413,11 +1416,13 @@ public class AutomationExecution implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The combination of Regions and/or accounts where you want to run the Automation.
+     * The combination of Amazon Web Services Regions and/or Amazon Web Services accounts where you want to run the
+     * Automation.
      * </p>
      * 
      * @param targetLocations
-     *        The combination of Regions and/or accounts where you want to run the Automation.
+     *        The combination of Amazon Web Services Regions and/or Amazon Web Services accounts where you want to run
+     *        the Automation.
      */
 
     public void setTargetLocations(java.util.Collection<TargetLocation> targetLocations) {
@@ -1431,7 +1436,8 @@ public class AutomationExecution implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The combination of Regions and/or accounts where you want to run the Automation.
+     * The combination of Amazon Web Services Regions and/or Amazon Web Services accounts where you want to run the
+     * Automation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1440,7 +1446,8 @@ public class AutomationExecution implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param targetLocations
-     *        The combination of Regions and/or accounts where you want to run the Automation.
+     *        The combination of Amazon Web Services Regions and/or Amazon Web Services accounts where you want to run
+     *        the Automation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1456,11 +1463,13 @@ public class AutomationExecution implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The combination of Regions and/or accounts where you want to run the Automation.
+     * The combination of Amazon Web Services Regions and/or Amazon Web Services accounts where you want to run the
+     * Automation.
      * </p>
      * 
      * @param targetLocations
-     *        The combination of Regions and/or accounts where you want to run the Automation.
+     *        The combination of Amazon Web Services Regions and/or Amazon Web Services accounts where you want to run
+     *        the Automation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

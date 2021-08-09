@@ -20,7 +20,7 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The current status of the unsafe content analysis job.
+     * The current status of the content moderation analysis job.
      * </p>
      */
     private String jobStatus;
@@ -39,31 +39,32 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
     private VideoMetadata videoMetadata;
     /**
      * <p>
-     * The detected unsafe content labels and the time(s) they were detected.
+     * The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were detected.
      * </p>
      */
     private java.util.List<ContentModerationDetection> moderationLabels;
     /**
      * <p>
      * If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent
-     * request to retrieve the next set of unsafe content labels.
+     * request to retrieve the next set of content moderation labels.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * Version number of the moderation detection model that was used to detect unsafe content.
+     * Version number of the moderation detection model that was used to detect inappropriate, unwanted, or offensive
+     * content.
      * </p>
      */
     private String moderationModelVersion;
 
     /**
      * <p>
-     * The current status of the unsafe content analysis job.
+     * The current status of the content moderation analysis job.
      * </p>
      * 
      * @param jobStatus
-     *        The current status of the unsafe content analysis job.
+     *        The current status of the content moderation analysis job.
      * @see VideoJobStatus
      */
 
@@ -73,10 +74,10 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The current status of the unsafe content analysis job.
+     * The current status of the content moderation analysis job.
      * </p>
      * 
-     * @return The current status of the unsafe content analysis job.
+     * @return The current status of the content moderation analysis job.
      * @see VideoJobStatus
      */
 
@@ -86,11 +87,11 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The current status of the unsafe content analysis job.
+     * The current status of the content moderation analysis job.
      * </p>
      * 
      * @param jobStatus
-     *        The current status of the unsafe content analysis job.
+     *        The current status of the content moderation analysis job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VideoJobStatus
      */
@@ -102,11 +103,11 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The current status of the unsafe content analysis job.
+     * The current status of the content moderation analysis job.
      * </p>
      * 
      * @param jobStatus
-     *        The current status of the unsafe content analysis job.
+     *        The current status of the content moderation analysis job.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VideoJobStatus
      */
@@ -204,10 +205,11 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The detected unsafe content labels and the time(s) they were detected.
+     * The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were detected.
      * </p>
      * 
-     * @return The detected unsafe content labels and the time(s) they were detected.
+     * @return The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were
+     *         detected.
      */
 
     public java.util.List<ContentModerationDetection> getModerationLabels() {
@@ -216,11 +218,12 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The detected unsafe content labels and the time(s) they were detected.
+     * The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were detected.
      * </p>
      * 
      * @param moderationLabels
-     *        The detected unsafe content labels and the time(s) they were detected.
+     *        The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were
+     *        detected.
      */
 
     public void setModerationLabels(java.util.Collection<ContentModerationDetection> moderationLabels) {
@@ -234,7 +237,7 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The detected unsafe content labels and the time(s) they were detected.
+     * The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were detected.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -243,7 +246,8 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param moderationLabels
-     *        The detected unsafe content labels and the time(s) they were detected.
+     *        The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were
+     *        detected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -259,11 +263,12 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The detected unsafe content labels and the time(s) they were detected.
+     * The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were detected.
      * </p>
      * 
      * @param moderationLabels
-     *        The detected unsafe content labels and the time(s) they were detected.
+     *        The detected inappropriate, unwanted, or offensive content moderation labels and the time(s) they were
+     *        detected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -275,12 +280,12 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent
-     * request to retrieve the next set of unsafe content labels.
+     * request to retrieve the next set of content moderation labels.
      * </p>
      * 
      * @param nextToken
      *        If the response is truncated, Amazon Rekognition Video returns this token that you can use in the
-     *        subsequent request to retrieve the next set of unsafe content labels.
+     *        subsequent request to retrieve the next set of content moderation labels.
      */
 
     public void setNextToken(String nextToken) {
@@ -290,11 +295,11 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent
-     * request to retrieve the next set of unsafe content labels.
+     * request to retrieve the next set of content moderation labels.
      * </p>
      * 
      * @return If the response is truncated, Amazon Rekognition Video returns this token that you can use in the
-     *         subsequent request to retrieve the next set of unsafe content labels.
+     *         subsequent request to retrieve the next set of content moderation labels.
      */
 
     public String getNextToken() {
@@ -304,12 +309,12 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * If the response is truncated, Amazon Rekognition Video returns this token that you can use in the subsequent
-     * request to retrieve the next set of unsafe content labels.
+     * request to retrieve the next set of content moderation labels.
      * </p>
      * 
      * @param nextToken
      *        If the response is truncated, Amazon Rekognition Video returns this token that you can use in the
-     *        subsequent request to retrieve the next set of unsafe content labels.
+     *        subsequent request to retrieve the next set of content moderation labels.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -320,11 +325,13 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Version number of the moderation detection model that was used to detect unsafe content.
+     * Version number of the moderation detection model that was used to detect inappropriate, unwanted, or offensive
+     * content.
      * </p>
      * 
      * @param moderationModelVersion
-     *        Version number of the moderation detection model that was used to detect unsafe content.
+     *        Version number of the moderation detection model that was used to detect inappropriate, unwanted, or
+     *        offensive content.
      */
 
     public void setModerationModelVersion(String moderationModelVersion) {
@@ -333,10 +340,12 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Version number of the moderation detection model that was used to detect unsafe content.
+     * Version number of the moderation detection model that was used to detect inappropriate, unwanted, or offensive
+     * content.
      * </p>
      * 
-     * @return Version number of the moderation detection model that was used to detect unsafe content.
+     * @return Version number of the moderation detection model that was used to detect inappropriate, unwanted, or
+     *         offensive content.
      */
 
     public String getModerationModelVersion() {
@@ -345,11 +354,13 @@ public class GetContentModerationResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Version number of the moderation detection model that was used to detect unsafe content.
+     * Version number of the moderation detection model that was used to detect inappropriate, unwanted, or offensive
+     * content.
      * </p>
      * 
      * @param moderationModelVersion
-     *        Version number of the moderation detection model that was used to detect unsafe content.
+     *        Version number of the moderation detection model that was used to detect inappropriate, unwanted, or
+     *        offensive content.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -55,12 +55,11 @@ import com.amazonaws.services.wafv2.model.*;
  * <p>
  * This API guide is for developers who need detailed information about WAF API actions, data types, and errors. For
  * detailed information about WAF features and an overview of how to use WAF, see the <a
- * href="https://docs.aws.amazon.com/waf/latest/developerguide/">WAF Developer Guide</a>.
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html">WAF Developer Guide</a>.
  * </p>
  * <p>
- * You can make calls using the endpoints listed in <a
- * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">Amazon Web Services Service Endpoints for
- * WAF</a>.
+ * You can make calls using the endpoints listed in <a href="https://docs.aws.amazon.com/general/latest/gr/waf.html">WAF
+ * endpoints and quotas</a>.
  * </p>
  * <ul>
  * <li>
@@ -218,9 +217,9 @@ public interface AWSWAFV2 {
      *         WAF couldn’t perform the operation because your resource doesn’t exist.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidResourceException
      *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
      *         resource, and try again.
@@ -229,6 +228,10 @@ public interface AWSWAFV2 {
      * @throws WAFSubscriptionNotFoundException
      *         You tried to use a managed rule group that's available by subscription, but you aren't subscribed to it
      *         yet.
+     * @throws WAFExpiredManagedRuleGroupVersionException
+     *         The operation failed because the specified version for the managed rule group has expired. You can
+     *         retrieve the available versions for the managed rule group by calling
+     *         <a>ListAvailableManagedRuleGroupVersions</a>.
      * @sample AWSWAFV2.CheckCapacity
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/CheckCapacity" target="_top">AWS API
      *      Documentation</a>
@@ -281,9 +284,9 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
@@ -341,9 +344,9 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFTagOperationException
      *         An error occurred during the tagging operation. Retry your request.
      * @throws WAFTagOperationInternalErrorException
@@ -406,9 +409,9 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFUnavailableEntityException
      *         WAF couldn’t retrieve the resource that you requested. Retry your request.
      * @throws WAFTagOperationException
@@ -480,9 +483,9 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidResourceException
      *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
      *         resource, and try again.
@@ -921,6 +924,10 @@ public interface AWSWAFV2 {
      *         WAF couldn’t perform the operation because your resource doesn’t exist.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
+     * @throws WAFExpiredManagedRuleGroupVersionException
+     *         The operation failed because the specified version for the managed rule group has expired. You can
+     *         retrieve the available versions for the managed rule group by calling
+     *         <a>ListAvailableManagedRuleGroupVersions</a>.
      * @sample AWSWAFV2.DescribeManagedRuleGroup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/DescribeManagedRuleGroup" target="_top">AWS
      *      API Documentation</a>
@@ -1069,6 +1076,62 @@ public interface AWSWAFV2 {
      *      API Documentation</a>
      */
     GetLoggingConfigurationResult getLoggingConfiguration(GetLoggingConfigurationRequest getLoggingConfigurationRequest);
+
+    /**
+     * <p>
+     * Retrieves the specified managed rule set.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param getManagedRuleSetRequest
+     * @return Result of the GetManagedRuleSet operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn’t exist.
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.GetManagedRuleSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/GetManagedRuleSet" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetManagedRuleSetResult getManagedRuleSet(GetManagedRuleSetRequest getManagedRuleSetRequest);
 
     /**
      * <p>
@@ -1398,8 +1461,52 @@ public interface AWSWAFV2 {
 
     /**
      * <p>
+     * Returns a list of the available versions for the specified managed rule group.
+     * </p>
+     * 
+     * @param listAvailableManagedRuleGroupVersionsRequest
+     * @return Result of the ListAvailableManagedRuleGroupVersions operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.ListAvailableManagedRuleGroupVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListAvailableManagedRuleGroupVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAvailableManagedRuleGroupVersionsResult listAvailableManagedRuleGroupVersions(
+            ListAvailableManagedRuleGroupVersionsRequest listAvailableManagedRuleGroupVersionsRequest);
+
+    /**
+     * <p>
      * Retrieves an array of managed rule groups that are available for you to use. This list includes all Amazon Web
-     * Services Managed Rules rule groups and the Marketplace managed rule groups that you're subscribed to.
+     * Services Managed Rules rule groups and all of the Marketplace managed rule groups that you're subscribed to.
      * </p>
      * 
      * @param listAvailableManagedRuleGroupsRequest
@@ -1525,6 +1632,60 @@ public interface AWSWAFV2 {
      *      target="_top">AWS API Documentation</a>
      */
     ListLoggingConfigurationsResult listLoggingConfigurations(ListLoggingConfigurationsRequest listLoggingConfigurationsRequest);
+
+    /**
+     * <p>
+     * Retrieves the managed rule sets that you own.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param listManagedRuleSetsRequest
+     * @return Result of the ListManagedRuleSets operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.ListManagedRuleSets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/ListManagedRuleSets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListManagedRuleSetsResult listManagedRuleSets(ListManagedRuleSetsRequest listManagedRuleSetsRequest);
 
     /**
      * <p>
@@ -1853,14 +2014,85 @@ public interface AWSWAFV2 {
      *         The operation isn't valid.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @sample AWSWAFV2.PutLoggingConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/PutLoggingConfiguration" target="_top">AWS
      *      API Documentation</a>
      */
     PutLoggingConfigurationResult putLoggingConfiguration(PutLoggingConfigurationRequest putLoggingConfigurationRequest);
+
+    /**
+     * <p>
+     * Defines the versions of your managed rule set that you are offering to the customers. Customers see your
+     * offerings as managed rule groups with versioning.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * <p>
+     * Customers retrieve their managed rule group list by calling <a>ListAvailableManagedRuleGroups</a>. The name that
+     * you provide here for your managed rule set is the name the customer sees for the corresponding managed rule
+     * group. Customers can retrieve the available versions for a managed rule group by calling
+     * <a>ListAvailableManagedRuleGroupVersions</a>. You provide a rule group specification for each version. For each
+     * managed rule set, you must specify a version that you recommend using.
+     * </p>
+     * <p>
+     * To initiate the expiration of a managed rule group version, use <a>UpdateManagedRuleSetVersionExpiryDate</a>.
+     * </p>
+     * 
+     * @param putManagedRuleSetVersionsRequest
+     * @return Result of the PutManagedRuleSetVersions operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn’t exist.
+     * @throws WAFOptimisticLockException
+     *         WAF couldn’t save your changes because you tried to update or delete a resource that has changed since
+     *         you last retrieved it. Get the resource again, make any changes you need to make to the new copy, and
+     *         retry your operation.
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.PutManagedRuleSetVersions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/PutManagedRuleSetVersions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutManagedRuleSetVersionsResult putManagedRuleSetVersions(PutManagedRuleSetVersionsRequest putManagedRuleSetVersionsRequest);
 
     /**
      * <p>
@@ -2010,9 +2242,9 @@ public interface AWSWAFV2 {
      *         </li>
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFNonexistentItemException
      *         WAF couldn’t perform the operation because your resource doesn’t exist.
      * @throws WAFTagOperationException
@@ -2132,9 +2364,9 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.UpdateIPSet
@@ -2142,6 +2374,69 @@ public interface AWSWAFV2 {
      *      Documentation</a>
      */
     UpdateIPSetResult updateIPSet(UpdateIPSetRequest updateIPSetRequest);
+
+    /**
+     * <p>
+     * Updates the expiration information for your managed rule set. Use this to initiate the expiration of a managed
+     * rule group version. After you initiate expiration for a version, WAF excludes it from the reponse to
+     * <a>ListAvailableManagedRuleGroupVersions</a> for the managed rule group.
+     * </p>
+     * <note>
+     * <p>
+     * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
+     * sellers.
+     * </p>
+     * <p>
+     * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group
+     * offerings for your customers. The APIs are <code>ListManagedRuleSets</code>, <code>GetManagedRuleSet</code>,
+     * <code>PutManagedRuleSetVersions</code>, and <code>UpdateManagedRuleSetVersionExpiryDate</code>.
+     * </p>
+     * </note>
+     * 
+     * @param updateManagedRuleSetVersionExpiryDateRequest
+     * @return Result of the UpdateManagedRuleSetVersionExpiryDate operation returned by the service.
+     * @throws WAFInternalErrorException
+     *         Your request is valid, but WAF couldn’t perform the operation because of a system problem. Retry your
+     *         request.
+     * @throws WAFInvalidParameterException
+     *         The operation failed because WAF didn't recognize a parameter in the request. For example: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         You specified a parameter name or value that isn't valid.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your nested statement isn't valid. You might have tried to nest a statement that can’t be nested.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         You tried to update a <code>WebACL</code> with a <code>DefaultAction</code> that isn't among the types
+     *         available at <a>DefaultAction</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Your request references an ARN that is malformed, or corresponds to a resource with which a web ACL can't
+     *         be associated.
+     *         </p>
+     *         </li>
+     * @throws WAFNonexistentItemException
+     *         WAF couldn’t perform the operation because your resource doesn’t exist.
+     * @throws WAFOptimisticLockException
+     *         WAF couldn’t save your changes because you tried to update or delete a resource that has changed since
+     *         you last retrieved it. Get the resource again, make any changes you need to make to the new copy, and
+     *         retry your operation.
+     * @throws WAFInvalidOperationException
+     *         The operation isn't valid.
+     * @sample AWSWAFV2.UpdateManagedRuleSetVersionExpiryDate
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateManagedRuleSetVersionExpiryDate"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateManagedRuleSetVersionExpiryDateResult updateManagedRuleSetVersionExpiryDate(
+            UpdateManagedRuleSetVersionExpiryDateRequest updateManagedRuleSetVersionExpiryDateRequest);
 
     /**
      * <p>
@@ -2197,9 +2492,9 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
      * @sample AWSWAFV2.UpdateRegexPatternSet
@@ -2267,9 +2562,9 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFUnavailableEntityException
      *         WAF couldn’t retrieve the resource that you requested. Retry your request.
      * @throws WAFSubscriptionNotFoundException
@@ -2344,9 +2639,9 @@ public interface AWSWAFV2 {
      *         retry your operation.
      * @throws WAFLimitsExceededException
      *         WAF couldn’t perform the operation because you exceeded your resource limit. For example, the maximum
-     *         number of <code>WebACL</code> objects that you can create for an account. For more information, see <a
-     *         href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">Limits</a> in the <i>WAF
-     *         Developer Guide</i>.
+     *         number of <code>WebACL</code> objects that you can create for an Amazon Web Services account. For more
+     *         information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/limits.html">WAF
+     *         quotas</a> in the <i>WAF Developer Guide</i>.
      * @throws WAFInvalidResourceException
      *         WAF couldn’t perform the operation because the resource that you requested isn’t valid. Check the
      *         resource, and try again.
@@ -2357,6 +2652,10 @@ public interface AWSWAFV2 {
      *         yet.
      * @throws WAFInvalidOperationException
      *         The operation isn't valid.
+     * @throws WAFExpiredManagedRuleGroupVersionException
+     *         The operation failed because the specified version for the managed rule group has expired. You can
+     *         retrieve the available versions for the managed rule group by calling
+     *         <a>ListAvailableManagedRuleGroupVersions</a>.
      * @sample AWSWAFV2.UpdateWebACL
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/UpdateWebACL" target="_top">AWS API
      *      Documentation</a>

@@ -160,7 +160,8 @@ public class StepExecution implements Serializable, Cloneable, StructuredPojo {
     private com.amazonaws.internal.SdkInternalList<Target> targets;
     /**
      * <p>
-     * The combination of Regions and accounts targeted by the current Automation execution.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     * Automation execution.
      * </p>
      */
     private TargetLocation targetLocation;
@@ -1247,11 +1248,13 @@ public class StepExecution implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The combination of Regions and accounts targeted by the current Automation execution.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     * Automation execution.
      * </p>
      * 
      * @param targetLocation
-     *        The combination of Regions and accounts targeted by the current Automation execution.
+     *        The combination of Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     *        Automation execution.
      */
 
     public void setTargetLocation(TargetLocation targetLocation) {
@@ -1260,10 +1263,12 @@ public class StepExecution implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The combination of Regions and accounts targeted by the current Automation execution.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     * Automation execution.
      * </p>
      * 
-     * @return The combination of Regions and accounts targeted by the current Automation execution.
+     * @return The combination of Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     *         Automation execution.
      */
 
     public TargetLocation getTargetLocation() {
@@ -1272,11 +1277,13 @@ public class StepExecution implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The combination of Regions and accounts targeted by the current Automation execution.
+     * The combination of Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     * Automation execution.
      * </p>
      * 
      * @param targetLocation
-     *        The combination of Regions and accounts targeted by the current Automation execution.
+     *        The combination of Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     *        Automation execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

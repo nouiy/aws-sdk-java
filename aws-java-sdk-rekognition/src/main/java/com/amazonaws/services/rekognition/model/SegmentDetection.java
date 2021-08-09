@@ -84,6 +84,24 @@ public class SegmentDetection implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private ShotSegment shotSegment;
+    /**
+     * <p>
+     * The frame number of the start of a video segment, using a frame index that starts with 0.
+     * </p>
+     */
+    private Long startFrameNumber;
+    /**
+     * <p>
+     * The frame number at the end of a video segment, using a frame index that starts with 0.
+     * </p>
+     */
+    private Long endFrameNumber;
+    /**
+     * <p>
+     * The duration of a video segment, expressed in frames.
+     * </p>
+     */
+    private Long durationFrames;
 
     /**
      * <p>
@@ -492,6 +510,126 @@ public class SegmentDetection implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The frame number of the start of a video segment, using a frame index that starts with 0.
+     * </p>
+     * 
+     * @param startFrameNumber
+     *        The frame number of the start of a video segment, using a frame index that starts with 0.
+     */
+
+    public void setStartFrameNumber(Long startFrameNumber) {
+        this.startFrameNumber = startFrameNumber;
+    }
+
+    /**
+     * <p>
+     * The frame number of the start of a video segment, using a frame index that starts with 0.
+     * </p>
+     * 
+     * @return The frame number of the start of a video segment, using a frame index that starts with 0.
+     */
+
+    public Long getStartFrameNumber() {
+        return this.startFrameNumber;
+    }
+
+    /**
+     * <p>
+     * The frame number of the start of a video segment, using a frame index that starts with 0.
+     * </p>
+     * 
+     * @param startFrameNumber
+     *        The frame number of the start of a video segment, using a frame index that starts with 0.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SegmentDetection withStartFrameNumber(Long startFrameNumber) {
+        setStartFrameNumber(startFrameNumber);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The frame number at the end of a video segment, using a frame index that starts with 0.
+     * </p>
+     * 
+     * @param endFrameNumber
+     *        The frame number at the end of a video segment, using a frame index that starts with 0.
+     */
+
+    public void setEndFrameNumber(Long endFrameNumber) {
+        this.endFrameNumber = endFrameNumber;
+    }
+
+    /**
+     * <p>
+     * The frame number at the end of a video segment, using a frame index that starts with 0.
+     * </p>
+     * 
+     * @return The frame number at the end of a video segment, using a frame index that starts with 0.
+     */
+
+    public Long getEndFrameNumber() {
+        return this.endFrameNumber;
+    }
+
+    /**
+     * <p>
+     * The frame number at the end of a video segment, using a frame index that starts with 0.
+     * </p>
+     * 
+     * @param endFrameNumber
+     *        The frame number at the end of a video segment, using a frame index that starts with 0.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SegmentDetection withEndFrameNumber(Long endFrameNumber) {
+        setEndFrameNumber(endFrameNumber);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The duration of a video segment, expressed in frames.
+     * </p>
+     * 
+     * @param durationFrames
+     *        The duration of a video segment, expressed in frames.
+     */
+
+    public void setDurationFrames(Long durationFrames) {
+        this.durationFrames = durationFrames;
+    }
+
+    /**
+     * <p>
+     * The duration of a video segment, expressed in frames.
+     * </p>
+     * 
+     * @return The duration of a video segment, expressed in frames.
+     */
+
+    public Long getDurationFrames() {
+        return this.durationFrames;
+    }
+
+    /**
+     * <p>
+     * The duration of a video segment, expressed in frames.
+     * </p>
+     * 
+     * @param durationFrames
+     *        The duration of a video segment, expressed in frames.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SegmentDetection withDurationFrames(Long durationFrames) {
+        setDurationFrames(durationFrames);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -520,7 +658,13 @@ public class SegmentDetection implements Serializable, Cloneable, StructuredPojo
         if (getTechnicalCueSegment() != null)
             sb.append("TechnicalCueSegment: ").append(getTechnicalCueSegment()).append(",");
         if (getShotSegment() != null)
-            sb.append("ShotSegment: ").append(getShotSegment());
+            sb.append("ShotSegment: ").append(getShotSegment()).append(",");
+        if (getStartFrameNumber() != null)
+            sb.append("StartFrameNumber: ").append(getStartFrameNumber()).append(",");
+        if (getEndFrameNumber() != null)
+            sb.append("EndFrameNumber: ").append(getEndFrameNumber()).append(",");
+        if (getDurationFrames() != null)
+            sb.append("DurationFrames: ").append(getDurationFrames());
         sb.append("}");
         return sb.toString();
     }
@@ -571,6 +715,18 @@ public class SegmentDetection implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getShotSegment() != null && other.getShotSegment().equals(this.getShotSegment()) == false)
             return false;
+        if (other.getStartFrameNumber() == null ^ this.getStartFrameNumber() == null)
+            return false;
+        if (other.getStartFrameNumber() != null && other.getStartFrameNumber().equals(this.getStartFrameNumber()) == false)
+            return false;
+        if (other.getEndFrameNumber() == null ^ this.getEndFrameNumber() == null)
+            return false;
+        if (other.getEndFrameNumber() != null && other.getEndFrameNumber().equals(this.getEndFrameNumber()) == false)
+            return false;
+        if (other.getDurationFrames() == null ^ this.getDurationFrames() == null)
+            return false;
+        if (other.getDurationFrames() != null && other.getDurationFrames().equals(this.getDurationFrames()) == false)
+            return false;
         return true;
     }
 
@@ -588,6 +744,9 @@ public class SegmentDetection implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getDurationSMPTE() == null) ? 0 : getDurationSMPTE().hashCode());
         hashCode = prime * hashCode + ((getTechnicalCueSegment() == null) ? 0 : getTechnicalCueSegment().hashCode());
         hashCode = prime * hashCode + ((getShotSegment() == null) ? 0 : getShotSegment().hashCode());
+        hashCode = prime * hashCode + ((getStartFrameNumber() == null) ? 0 : getStartFrameNumber().hashCode());
+        hashCode = prime * hashCode + ((getEndFrameNumber() == null) ? 0 : getEndFrameNumber().hashCode());
+        hashCode = prime * hashCode + ((getDurationFrames() == null) ? 0 : getDurationFrames().hashCode());
         return hashCode;
     }
 

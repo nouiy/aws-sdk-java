@@ -1744,16 +1744,16 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * </p>
      * <p>
      * You can configure Systems Manager Inventory to use the <code>SyncToDestination</code> type to synchronize
-     * Inventory data from multiple Regions to a single Amazon Simple Storage Service (Amazon S3) bucket. For more
-     * information, see <a
+     * Inventory data from multiple Amazon Web Services Regions to a single Amazon Simple Storage Service (Amazon S3)
+     * bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-datasync.html">Configuring
      * resource data sync for Inventory</a> in the <i>Amazon Web Services Systems Manager User Guide</i>.
      * </p>
      * <p>
      * You can configure Systems Manager Explorer to use the <code>SyncFromSource</code> type to synchronize operational
-     * work items (OpsItems) and operational data (OpsData) from multiple Regions to a single Amazon S3 bucket. This
-     * type can synchronize OpsItems and OpsData from multiple accounts and Regions or <code>EntireOrganization</code>
-     * by using Organizations. For more information, see <a
+     * work items (OpsItems) and operational data (OpsData) from multiple Amazon Web Services Regions to a single Amazon
+     * S3 bucket. This type can synchronize OpsItems and OpsData from multiple Amazon Web Services accounts and Amazon
+     * Web Services Regions or <code>EntireOrganization</code> by using Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/Explorer-resource-data-sync.html">Setting up
      * Systems Manager Explorer to display data from multiple accounts and Regions</a> in the <i>Amazon Web Services
      * Systems Manager User Guide</i>.
@@ -1900,7 +1900,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
     /**
      * <p>
      * Disassociates the specified Amazon Web Services Systems Manager document (SSM document) from the specified
-     * instance.
+     * instance. If you created the association by using the <code>Targets</code> parameter, then you must delete the
+     * association by using the association ID.
      * </p>
      * <p>
      * When you disassociate a document from an instance, it doesn't change the configuration of the instance. To change
@@ -2249,7 +2250,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Delete a parameter from the system.
+     * Delete a parameter from the system. After deleting a parameter, wait for at least 30 seconds to create a
+     * parameter with the same name.
      * </p>
      * 
      * @param deleteParameterRequest
@@ -2308,7 +2310,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Delete a list of parameters.
+     * Delete a list of parameters. After deleting a parameter, wait for at least 30 seconds to create a parameter with
+     * the same name.
      * </p>
      * 
      * @param deleteParametersRequest
@@ -2835,9 +2838,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
     /**
      * <p>
      * Describes the association for the specified target or instance. If you created the association by using the
-     * <code>Targets</code> parameter, then you must retrieve the association by using the association ID. If you
-     * created the association by specifying an instance ID and an Amazon Web Services Systems Manager document (SSM
-     * document), then you retrieve the association by specifying the document name and the instance ID.
+     * <code>Targets</code> parameter, then you must retrieve the association by using the association ID.
      * </p>
      * 
      * @param describeAssociationRequest
@@ -3311,7 +3312,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * <p>
      * Describes the permissions for a Amazon Web Services Systems Manager document (SSM document). If you created the
      * document, you are the owner. If a document is shared, it can either be shared privately (by specifying a user's
-     * account ID) or publicly (<i>All</i>).
+     * Amazon Web Services account ID) or publicly (<i>All</i>).
      * </p>
      * 
      * @param describeDocumentPermissionRequest
@@ -4411,7 +4412,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Retrieves the maintenance windows in an account.
+     * Retrieves the maintenance windows in an Amazon Web Services account.
      * </p>
      * 
      * @param describeMaintenanceWindowsRequest
@@ -4670,7 +4671,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Lists the patch baselines in your account.
+     * Lists the patch baselines in your Amazon Web Services account.
      * </p>
      * 
      * @param describePatchBaselinesRequest
@@ -5463,10 +5464,11 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * <note>
      * <p>
      * If you run the command locally, such as with the Command Line Interface (CLI), the system attempts to use your
-     * local AWS credentials and the operation fails. To avoid this, you can run the command in the Amazon Web Services
-     * Systems Manager console. Use Run Command, a capability of Amazon Web Services Systems Manager, with an SSM
-     * document that enables you to target an instance with a script or command. For example, run the command using the
-     * <code>AWS-RunShellScript</code> document or the <code>AWS-RunPowerShellScript</code> document.
+     * local Amazon Web Services credentials and the operation fails. To avoid this, you can run the command in the
+     * Amazon Web Services Systems Manager console. Use Run Command, a capability of Amazon Web Services Systems
+     * Manager, with an SSM document that enables you to target an instance with a script or command. For example, run
+     * the command using the <code>AWS-RunShellScript</code> document or the <code>AWS-RunPowerShellScript</code>
+     * document.
      * </p>
      * </note>
      * 
@@ -5597,7 +5599,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Query inventory information.
+     * Query inventory information. This includes instance status, such as <code>Stopped</code> or
+     * <code>Terminated</code>.
      * </p>
      * 
      * @param getInventoryRequest
@@ -6269,9 +6272,13 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Get information about a parameter by using the parameter name. Don't confuse this API operation with the
-     * <a>GetParameters</a> API operation.
+     * Get information about a single parameter by specifying the parameter name.
      * </p>
+     * <note>
+     * <p>
+     * To get information about more than one parameter at a time, use the <a>GetParameters</a> operation.
+     * </p>
+     * </note>
      * 
      * @param getParameterRequest
      * @return Result of the GetParameter operation returned by the service.
@@ -6396,8 +6403,13 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Get details of a parameter. Don't confuse this API operation with the <a>GetParameter</a> API operation.
+     * Get information about one or more parameters by specifying multiple parameter names.
      * </p>
+     * <note>
+     * <p>
+     * To get information about a single parameter, you can use the <a>GetParameter</a> operation instead.
+     * </p>
+     * </note>
      * 
      * @param getParametersRequest
      * @return Result of the GetParameters operation returned by the service.
@@ -6669,7 +6681,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * change the value back to the original value defined by the Amazon Web Services service team.
      * </p>
      * <p>
-     * Query the current service setting for the account.
+     * Query the current service setting for the Amazon Web Services account.
      * </p>
      * 
      * @param getServiceSettingRequest
@@ -6911,9 +6923,9 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Returns all State Manager associations in the current account and Region. You can limit the results to a specific
-     * State Manager association document or instance by specifying a filter. State Manager is a capability of Amazon
-     * Web Services Systems Manager.
+     * Returns all State Manager associations in the current Amazon Web Services account and Amazon Web Services Region.
+     * You can limit the results to a specific State Manager association document or instance by specifying a filter.
+     * State Manager is a capability of Amazon Web Services Systems Manager.
      * </p>
      * 
      * @param listAssociationsRequest
@@ -7064,7 +7076,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Lists the commands requested by users of the account.
+     * Lists the commands requested by users of the Amazon Web Services account.
      * </p>
      * 
      * @param listCommandsRequest
@@ -7285,7 +7297,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Information about approval reviews for a version of an SSM document.
+     * Information about approval reviews for a version of a change template in Change Manager.
      * </p>
      * 
      * @param listDocumentMetadataHistoryRequest
@@ -7411,8 +7423,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Returns all Systems Manager (SSM) documents in the current account and Region. You can limit the results of this
-     * request by using a filter.
+     * Returns all Systems Manager (SSM) documents in the current Amazon Web Services account and Amazon Web Services
+     * Region. You can limit the results of this request by using a filter.
      * </p>
      * 
      * @param listDocumentsRequest
@@ -7566,8 +7578,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Returns a list of all OpsItem events in the current Region and account. You can limit the results to events
-     * associated with specific OpsItems by specifying a filter.
+     * Returns a list of all OpsItem events in the current Amazon Web Services Region and Amazon Web Services account.
+     * You can limit the results to events associated with specific OpsItems by specifying a filter.
      * </p>
      * 
      * @param listOpsItemEventsRequest
@@ -8295,7 +8307,8 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * @throws InvalidKeyIdException
      *         The query key ID isn't valid.
      * @throws ParameterLimitExceededException
-     *         You have exceeded the number of parameters for this account. Delete one or more parameters and try again.
+     *         You have exceeded the number of parameters for this Amazon Web Services account. Delete one or more
+     *         parameters and try again.
      * @throws TooManyUpdatesException
      *         There are concurrent updates for a resource that supports one update at a time.
      * @throws ParameterAlreadyExistsException
@@ -9672,6 +9685,11 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
      * Updates the status of the Amazon Web Services Systems Manager document (SSM document) associated with the
      * specified instance.
      * </p>
+     * <p>
+     * <code>UpdateAssociationStatus</code> is primarily used by the Amazon Web Services Systems Manager Agent (SSM
+     * Agent) to report status updates about your associations and is only used for associations created with the
+     * <code>InstanceId</code> legacy parameter.
+     * </p>
      * 
      * @param updateAssociationStatusRequest
      * @return Result of the UpdateAssociationStatus operation returned by the service.
@@ -9905,7 +9923,7 @@ public class AWSSimpleSystemsManagementClient extends AmazonWebServiceClient imp
 
     /**
      * <p>
-     * Updates information related to approval reviews for a specific version of a document.
+     * Updates information related to approval reviews for a specific version of a change template in Change Manager.
      * </p>
      * 
      * @param updateDocumentMetadataRequest

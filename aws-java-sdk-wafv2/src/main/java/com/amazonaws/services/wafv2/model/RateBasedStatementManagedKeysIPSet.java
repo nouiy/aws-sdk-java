@@ -28,6 +28,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class RateBasedStatementManagedKeysIPSet implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
+     * </p>
+     */
     private String iPAddressVersion;
     /**
      * <p>
@@ -37,7 +42,12 @@ public class RateBasedStatementManagedKeysIPSet implements Serializable, Cloneab
     private java.util.List<String> addresses;
 
     /**
+     * <p>
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
+     * </p>
+     * 
      * @param iPAddressVersion
+     *        The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * @see IPAddressVersion
      */
 
@@ -46,7 +56,11 @@ public class RateBasedStatementManagedKeysIPSet implements Serializable, Cloneab
     }
 
     /**
-     * @return
+     * <p>
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
+     * </p>
+     * 
+     * @return The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * @see IPAddressVersion
      */
 
@@ -55,7 +69,12 @@ public class RateBasedStatementManagedKeysIPSet implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
+     * </p>
+     * 
      * @param iPAddressVersion
+     *        The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IPAddressVersion
      */
@@ -66,7 +85,12 @@ public class RateBasedStatementManagedKeysIPSet implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
+     * </p>
+     * 
      * @param iPAddressVersion
+     *        The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IPAddressVersion
      */

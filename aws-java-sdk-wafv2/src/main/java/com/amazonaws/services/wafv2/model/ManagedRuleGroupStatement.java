@@ -49,6 +49,14 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
     private String name;
     /**
      * <p>
+     * The version of the managed rule group to use. If you specify this, the version setting is fixed until you change
+     * it. If you don't specify this, WAF uses the vendor's default version, and then keeps the version at the vendor's
+     * default when the vendor updates the managed rule group settings.
+     * </p>
+     */
+    private String version;
+    /**
+     * <p>
      * The rules whose actions are set to <code>COUNT</code> by the web ACL, regardless of the action that is set on the
      * rule. This effectively excludes the rule from acting on web requests.
      * </p>
@@ -147,6 +155,58 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
 
     public ManagedRuleGroupStatement withName(String name) {
         setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The version of the managed rule group to use. If you specify this, the version setting is fixed until you change
+     * it. If you don't specify this, WAF uses the vendor's default version, and then keeps the version at the vendor's
+     * default when the vendor updates the managed rule group settings.
+     * </p>
+     * 
+     * @param version
+     *        The version of the managed rule group to use. If you specify this, the version setting is fixed until you
+     *        change it. If you don't specify this, WAF uses the vendor's default version, and then keeps the version at
+     *        the vendor's default when the vendor updates the managed rule group settings.
+     */
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    /**
+     * <p>
+     * The version of the managed rule group to use. If you specify this, the version setting is fixed until you change
+     * it. If you don't specify this, WAF uses the vendor's default version, and then keeps the version at the vendor's
+     * default when the vendor updates the managed rule group settings.
+     * </p>
+     * 
+     * @return The version of the managed rule group to use. If you specify this, the version setting is fixed until you
+     *         change it. If you don't specify this, WAF uses the vendor's default version, and then keeps the version
+     *         at the vendor's default when the vendor updates the managed rule group settings.
+     */
+
+    public String getVersion() {
+        return this.version;
+    }
+
+    /**
+     * <p>
+     * The version of the managed rule group to use. If you specify this, the version setting is fixed until you change
+     * it. If you don't specify this, WAF uses the vendor's default version, and then keeps the version at the vendor's
+     * default when the vendor updates the managed rule group settings.
+     * </p>
+     * 
+     * @param version
+     *        The version of the managed rule group to use. If you specify this, the version setting is fixed until you
+     *        change it. If you don't specify this, WAF uses the vendor's default version, and then keeps the version at
+     *        the vendor's default when the vendor updates the managed rule group settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ManagedRuleGroupStatement withVersion(String version) {
+        setVersion(version);
         return this;
     }
 
@@ -302,6 +362,8 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
             sb.append("VendorName: ").append(getVendorName()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getVersion() != null)
+            sb.append("Version: ").append(getVersion()).append(",");
         if (getExcludedRules() != null)
             sb.append("ExcludedRules: ").append(getExcludedRules()).append(",");
         if (getScopeDownStatement() != null)
@@ -328,6 +390,10 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getVersion() == null ^ this.getVersion() == null)
+            return false;
+        if (other.getVersion() != null && other.getVersion().equals(this.getVersion()) == false)
+            return false;
         if (other.getExcludedRules() == null ^ this.getExcludedRules() == null)
             return false;
         if (other.getExcludedRules() != null && other.getExcludedRules().equals(this.getExcludedRules()) == false)
@@ -346,6 +412,7 @@ public class ManagedRuleGroupStatement implements Serializable, Cloneable, Struc
 
         hashCode = prime * hashCode + ((getVendorName() == null) ? 0 : getVendorName().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
         hashCode = prime * hashCode + ((getExcludedRules() == null) ? 0 : getExcludedRules().hashCode());
         hashCode = prime * hashCode + ((getScopeDownStatement() == null) ? 0 : getScopeDownStatement().hashCode());
         return hashCode;

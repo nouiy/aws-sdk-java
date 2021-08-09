@@ -20,7 +20,18 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Operations engineers and IT professionals use Amazon Web Services Systems Manager OpsCenter to view, investigate, and
- * remediate operational issues impacting the performance and health of their Amazon Web Services resources. For more
+ * remediate operational work items (OpsItems) impacting the performance and health of their Amazon Web Services
+ * resources. OpsCenter is integrated with Amazon EventBridge and Amazon CloudWatch. This means you can configure these
+ * services to automatically create an OpsItem in OpsCenter when a CloudWatch alarm enters the ALARM state or when
+ * EventBridge processes an event from any Amazon Web Services service that publishes events. Configuring Amazon
+ * CloudWatch alarms and EventBridge events to automatically create OpsItems allows you to quickly diagnose and
+ * remediate issues with Amazon Web Services resources from a single console.
+ * </p>
+ * <p>
+ * To help you diagnose issues, each OpsItem includes contextually relevant information such as the name and ID of the
+ * Amazon Web Services resource that generated the OpsItem, alarm or event details, alarm history, and an alarm timeline
+ * graph. For the Amazon Web Services resource, OpsCenter aggregates information from Config, CloudTrail logs, and
+ * EventBridge, so you don't have to navigate across multiple console pages during your investigation. For more
  * information, see <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/OpsCenter.html">OpsCenter</a>
  * in the <i>Amazon Web Services Systems Manager User Guide</i>.
  * </p>
@@ -32,7 +43,7 @@ public class OpsItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the account that created the OpsItem.
+     * The ARN of the Amazon Web Services account that created the OpsItem.
      * </p>
      */
     private String createdBy;
@@ -57,7 +68,7 @@ public class OpsItem implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The ARN of the account that last updated the OpsItem.
+     * The ARN of the Amazon Web Services account that last updated the OpsItem.
      * </p>
      */
     private String lastModifiedBy;
@@ -192,11 +203,11 @@ public class OpsItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the account that created the OpsItem.
+     * The ARN of the Amazon Web Services account that created the OpsItem.
      * </p>
      * 
      * @param createdBy
-     *        The ARN of the account that created the OpsItem.
+     *        The ARN of the Amazon Web Services account that created the OpsItem.
      */
 
     public void setCreatedBy(String createdBy) {
@@ -205,10 +216,10 @@ public class OpsItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the account that created the OpsItem.
+     * The ARN of the Amazon Web Services account that created the OpsItem.
      * </p>
      * 
-     * @return The ARN of the account that created the OpsItem.
+     * @return The ARN of the Amazon Web Services account that created the OpsItem.
      */
 
     public String getCreatedBy() {
@@ -217,11 +228,11 @@ public class OpsItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the account that created the OpsItem.
+     * The ARN of the Amazon Web Services account that created the OpsItem.
      * </p>
      * 
      * @param createdBy
-     *        The ARN of the account that created the OpsItem.
+     *        The ARN of the Amazon Web Services account that created the OpsItem.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -358,11 +369,11 @@ public class OpsItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the account that last updated the OpsItem.
+     * The ARN of the Amazon Web Services account that last updated the OpsItem.
      * </p>
      * 
      * @param lastModifiedBy
-     *        The ARN of the account that last updated the OpsItem.
+     *        The ARN of the Amazon Web Services account that last updated the OpsItem.
      */
 
     public void setLastModifiedBy(String lastModifiedBy) {
@@ -371,10 +382,10 @@ public class OpsItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the account that last updated the OpsItem.
+     * The ARN of the Amazon Web Services account that last updated the OpsItem.
      * </p>
      * 
-     * @return The ARN of the account that last updated the OpsItem.
+     * @return The ARN of the Amazon Web Services account that last updated the OpsItem.
      */
 
     public String getLastModifiedBy() {
@@ -383,11 +394,11 @@ public class OpsItem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the account that last updated the OpsItem.
+     * The ARN of the Amazon Web Services account that last updated the OpsItem.
      * </p>
      * 
      * @param lastModifiedBy
-     *        The ARN of the account that last updated the OpsItem.
+     *        The ARN of the Amazon Web Services account that last updated the OpsItem.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

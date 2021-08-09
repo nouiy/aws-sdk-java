@@ -31,46 +31,49 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps run in all specified Regions and accounts for the current Automation execution.
+     * The total number of steps run in all specified Amazon Web Services Regions and Amazon Web Services accounts for
+     * the current Automation execution.
      * </p>
      */
     private Integer totalSteps;
     /**
      * <p>
-     * The total number of steps that successfully completed in all specified Regions and accounts for the current
-     * Automation execution.
+     * The total number of steps that successfully completed in all specified Amazon Web Services Regions and Amazon Web
+     * Services accounts for the current Automation execution.
      * </p>
      */
     private Integer successSteps;
     /**
      * <p>
-     * The total number of steps that failed to run in all specified Regions and accounts for the current Automation
-     * execution.
+     * The total number of steps that failed to run in all specified Amazon Web Services Regions and Amazon Web Services
+     * accounts for the current Automation execution.
      * </p>
      */
     private Integer failedSteps;
     /**
      * <p>
-     * The total number of steps that the system cancelled in all specified Regions and accounts for the current
-     * Automation execution.
+     * The total number of steps that the system cancelled in all specified Amazon Web Services Regions and Amazon Web
+     * Services accounts for the current Automation execution.
      * </p>
      */
     private Integer cancelledSteps;
     /**
      * <p>
-     * The total number of steps that timed out in all specified Regions and accounts for the current Automation
-     * execution.
+     * The total number of steps that timed out in all specified Amazon Web Services Regions and Amazon Web Services
+     * accounts for the current Automation execution.
      * </p>
      */
     private Integer timedOutSteps;
 
     /**
      * <p>
-     * The total number of steps run in all specified Regions and accounts for the current Automation execution.
+     * The total number of steps run in all specified Amazon Web Services Regions and Amazon Web Services accounts for
+     * the current Automation execution.
      * </p>
      * 
      * @param totalSteps
-     *        The total number of steps run in all specified Regions and accounts for the current Automation execution.
+     *        The total number of steps run in all specified Amazon Web Services Regions and Amazon Web Services
+     *        accounts for the current Automation execution.
      */
 
     public void setTotalSteps(Integer totalSteps) {
@@ -79,10 +82,12 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps run in all specified Regions and accounts for the current Automation execution.
+     * The total number of steps run in all specified Amazon Web Services Regions and Amazon Web Services accounts for
+     * the current Automation execution.
      * </p>
      * 
-     * @return The total number of steps run in all specified Regions and accounts for the current Automation execution.
+     * @return The total number of steps run in all specified Amazon Web Services Regions and Amazon Web Services
+     *         accounts for the current Automation execution.
      */
 
     public Integer getTotalSteps() {
@@ -91,11 +96,13 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps run in all specified Regions and accounts for the current Automation execution.
+     * The total number of steps run in all specified Amazon Web Services Regions and Amazon Web Services accounts for
+     * the current Automation execution.
      * </p>
      * 
      * @param totalSteps
-     *        The total number of steps run in all specified Regions and accounts for the current Automation execution.
+     *        The total number of steps run in all specified Amazon Web Services Regions and Amazon Web Services
+     *        accounts for the current Automation execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,13 +113,13 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that successfully completed in all specified Regions and accounts for the current
-     * Automation execution.
+     * The total number of steps that successfully completed in all specified Amazon Web Services Regions and Amazon Web
+     * Services accounts for the current Automation execution.
      * </p>
      * 
      * @param successSteps
-     *        The total number of steps that successfully completed in all specified Regions and accounts for the
-     *        current Automation execution.
+     *        The total number of steps that successfully completed in all specified Amazon Web Services Regions and
+     *        Amazon Web Services accounts for the current Automation execution.
      */
 
     public void setSuccessSteps(Integer successSteps) {
@@ -121,12 +128,12 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that successfully completed in all specified Regions and accounts for the current
-     * Automation execution.
+     * The total number of steps that successfully completed in all specified Amazon Web Services Regions and Amazon Web
+     * Services accounts for the current Automation execution.
      * </p>
      * 
-     * @return The total number of steps that successfully completed in all specified Regions and accounts for the
-     *         current Automation execution.
+     * @return The total number of steps that successfully completed in all specified Amazon Web Services Regions and
+     *         Amazon Web Services accounts for the current Automation execution.
      */
 
     public Integer getSuccessSteps() {
@@ -135,13 +142,13 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that successfully completed in all specified Regions and accounts for the current
-     * Automation execution.
+     * The total number of steps that successfully completed in all specified Amazon Web Services Regions and Amazon Web
+     * Services accounts for the current Automation execution.
      * </p>
      * 
      * @param successSteps
-     *        The total number of steps that successfully completed in all specified Regions and accounts for the
-     *        current Automation execution.
+     *        The total number of steps that successfully completed in all specified Amazon Web Services Regions and
+     *        Amazon Web Services accounts for the current Automation execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -152,13 +159,13 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that failed to run in all specified Regions and accounts for the current Automation
-     * execution.
+     * The total number of steps that failed to run in all specified Amazon Web Services Regions and Amazon Web Services
+     * accounts for the current Automation execution.
      * </p>
      * 
      * @param failedSteps
-     *        The total number of steps that failed to run in all specified Regions and accounts for the current
-     *        Automation execution.
+     *        The total number of steps that failed to run in all specified Amazon Web Services Regions and Amazon Web
+     *        Services accounts for the current Automation execution.
      */
 
     public void setFailedSteps(Integer failedSteps) {
@@ -167,12 +174,12 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that failed to run in all specified Regions and accounts for the current Automation
-     * execution.
+     * The total number of steps that failed to run in all specified Amazon Web Services Regions and Amazon Web Services
+     * accounts for the current Automation execution.
      * </p>
      * 
-     * @return The total number of steps that failed to run in all specified Regions and accounts for the current
-     *         Automation execution.
+     * @return The total number of steps that failed to run in all specified Amazon Web Services Regions and Amazon Web
+     *         Services accounts for the current Automation execution.
      */
 
     public Integer getFailedSteps() {
@@ -181,13 +188,13 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that failed to run in all specified Regions and accounts for the current Automation
-     * execution.
+     * The total number of steps that failed to run in all specified Amazon Web Services Regions and Amazon Web Services
+     * accounts for the current Automation execution.
      * </p>
      * 
      * @param failedSteps
-     *        The total number of steps that failed to run in all specified Regions and accounts for the current
-     *        Automation execution.
+     *        The total number of steps that failed to run in all specified Amazon Web Services Regions and Amazon Web
+     *        Services accounts for the current Automation execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -198,13 +205,13 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that the system cancelled in all specified Regions and accounts for the current
-     * Automation execution.
+     * The total number of steps that the system cancelled in all specified Amazon Web Services Regions and Amazon Web
+     * Services accounts for the current Automation execution.
      * </p>
      * 
      * @param cancelledSteps
-     *        The total number of steps that the system cancelled in all specified Regions and accounts for the current
-     *        Automation execution.
+     *        The total number of steps that the system cancelled in all specified Amazon Web Services Regions and
+     *        Amazon Web Services accounts for the current Automation execution.
      */
 
     public void setCancelledSteps(Integer cancelledSteps) {
@@ -213,12 +220,12 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that the system cancelled in all specified Regions and accounts for the current
-     * Automation execution.
+     * The total number of steps that the system cancelled in all specified Amazon Web Services Regions and Amazon Web
+     * Services accounts for the current Automation execution.
      * </p>
      * 
-     * @return The total number of steps that the system cancelled in all specified Regions and accounts for the current
-     *         Automation execution.
+     * @return The total number of steps that the system cancelled in all specified Amazon Web Services Regions and
+     *         Amazon Web Services accounts for the current Automation execution.
      */
 
     public Integer getCancelledSteps() {
@@ -227,13 +234,13 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that the system cancelled in all specified Regions and accounts for the current
-     * Automation execution.
+     * The total number of steps that the system cancelled in all specified Amazon Web Services Regions and Amazon Web
+     * Services accounts for the current Automation execution.
      * </p>
      * 
      * @param cancelledSteps
-     *        The total number of steps that the system cancelled in all specified Regions and accounts for the current
-     *        Automation execution.
+     *        The total number of steps that the system cancelled in all specified Amazon Web Services Regions and
+     *        Amazon Web Services accounts for the current Automation execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -244,13 +251,13 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that timed out in all specified Regions and accounts for the current Automation
-     * execution.
+     * The total number of steps that timed out in all specified Amazon Web Services Regions and Amazon Web Services
+     * accounts for the current Automation execution.
      * </p>
      * 
      * @param timedOutSteps
-     *        The total number of steps that timed out in all specified Regions and accounts for the current Automation
-     *        execution.
+     *        The total number of steps that timed out in all specified Amazon Web Services Regions and Amazon Web
+     *        Services accounts for the current Automation execution.
      */
 
     public void setTimedOutSteps(Integer timedOutSteps) {
@@ -259,12 +266,12 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that timed out in all specified Regions and accounts for the current Automation
-     * execution.
+     * The total number of steps that timed out in all specified Amazon Web Services Regions and Amazon Web Services
+     * accounts for the current Automation execution.
      * </p>
      * 
-     * @return The total number of steps that timed out in all specified Regions and accounts for the current Automation
-     *         execution.
+     * @return The total number of steps that timed out in all specified Amazon Web Services Regions and Amazon Web
+     *         Services accounts for the current Automation execution.
      */
 
     public Integer getTimedOutSteps() {
@@ -273,13 +280,13 @@ public class ProgressCounters implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The total number of steps that timed out in all specified Regions and accounts for the current Automation
-     * execution.
+     * The total number of steps that timed out in all specified Amazon Web Services Regions and Amazon Web Services
+     * accounts for the current Automation execution.
      * </p>
      * 
      * @param timedOutSteps
-     *        The total number of steps that timed out in all specified Regions and accounts for the current Automation
-     *        execution.
+     *        The total number of steps that timed out in all specified Amazon Web Services Regions and Amazon Web
+     *        Services accounts for the current Automation execution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

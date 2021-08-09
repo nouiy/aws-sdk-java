@@ -82,7 +82,8 @@ public class Runbook implements Serializable, Cloneable, StructuredPojo {
     private String maxErrors;
     /**
      * <p>
-     * Information about the Regions and accounts targeted by the current Runbook operation.
+     * Information about the Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     * Runbook operation.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<TargetLocation> targetLocations;
@@ -462,10 +463,12 @@ public class Runbook implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the Regions and accounts targeted by the current Runbook operation.
+     * Information about the Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     * Runbook operation.
      * </p>
      * 
-     * @return Information about the Regions and accounts targeted by the current Runbook operation.
+     * @return Information about the Amazon Web Services Regions and Amazon Web Services accounts targeted by the
+     *         current Runbook operation.
      */
 
     public java.util.List<TargetLocation> getTargetLocations() {
@@ -477,11 +480,13 @@ public class Runbook implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the Regions and accounts targeted by the current Runbook operation.
+     * Information about the Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     * Runbook operation.
      * </p>
      * 
      * @param targetLocations
-     *        Information about the Regions and accounts targeted by the current Runbook operation.
+     *        Information about the Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     *        Runbook operation.
      */
 
     public void setTargetLocations(java.util.Collection<TargetLocation> targetLocations) {
@@ -495,7 +500,8 @@ public class Runbook implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the Regions and accounts targeted by the current Runbook operation.
+     * Information about the Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     * Runbook operation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -504,7 +510,8 @@ public class Runbook implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param targetLocations
-     *        Information about the Regions and accounts targeted by the current Runbook operation.
+     *        Information about the Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     *        Runbook operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -520,11 +527,13 @@ public class Runbook implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the Regions and accounts targeted by the current Runbook operation.
+     * Information about the Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     * Runbook operation.
      * </p>
      * 
      * @param targetLocations
-     *        Information about the Regions and accounts targeted by the current Runbook operation.
+     *        Information about the Amazon Web Services Regions and Amazon Web Services accounts targeted by the current
+     *        Runbook operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

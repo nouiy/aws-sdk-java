@@ -22,7 +22,11 @@ public enum TechnicalCueType {
 
     ColorBars("ColorBars"),
     EndCredits("EndCredits"),
-    BlackFrames("BlackFrames");
+    BlackFrames("BlackFrames"),
+    OpeningCredits("OpeningCredits"),
+    StudioLogo("StudioLogo"),
+    Slate("Slate"),
+    Content("Content");
 
     private String value;
 

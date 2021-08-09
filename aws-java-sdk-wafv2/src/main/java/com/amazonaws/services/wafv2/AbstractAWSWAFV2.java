@@ -113,6 +113,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
     }
 
     @Override
+    public GetManagedRuleSetResult getManagedRuleSet(GetManagedRuleSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPermissionPolicyResult getPermissionPolicy(GetPermissionPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -148,6 +153,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
     }
 
     @Override
+    public ListAvailableManagedRuleGroupVersionsResult listAvailableManagedRuleGroupVersions(ListAvailableManagedRuleGroupVersionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAvailableManagedRuleGroupsResult listAvailableManagedRuleGroups(ListAvailableManagedRuleGroupsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -159,6 +169,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
 
     @Override
     public ListLoggingConfigurationsResult listLoggingConfigurations(ListLoggingConfigurationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListManagedRuleSetsResult listManagedRuleSets(ListManagedRuleSetsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -193,6 +208,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
     }
 
     @Override
+    public PutManagedRuleSetVersionsResult putManagedRuleSetVersions(PutManagedRuleSetVersionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PutPermissionPolicyResult putPermissionPolicy(PutPermissionPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -209,6 +229,11 @@ public class AbstractAWSWAFV2 implements AWSWAFV2 {
 
     @Override
     public UpdateIPSetResult updateIPSet(UpdateIPSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateManagedRuleSetVersionExpiryDateResult updateManagedRuleSetVersionExpiryDate(UpdateManagedRuleSetVersionExpiryDateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

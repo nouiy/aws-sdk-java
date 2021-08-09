@@ -48,6 +48,14 @@ public class DescribeManagedRuleGroupResultJsonUnmarshaller implements Unmarshal
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("VersionName", targetDepth)) {
+                    context.nextToken();
+                    describeManagedRuleGroupResult.setVersionName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SnsTopicArn", targetDepth)) {
+                    context.nextToken();
+                    describeManagedRuleGroupResult.setSnsTopicArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Capacity", targetDepth)) {
                     context.nextToken();
                     describeManagedRuleGroupResult.setCapacity(context.getUnmarshaller(Long.class).unmarshall(context));

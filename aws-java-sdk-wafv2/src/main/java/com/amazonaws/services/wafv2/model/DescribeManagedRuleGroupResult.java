@@ -25,6 +25,22 @@ public class DescribeManagedRuleGroupResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
+     * The managed rule group's version.
+     * </p>
+     */
+    private String versionName;
+    /**
+     * <p>
+     * The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes
+     * to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule
+     * group is modified, such as for new versions and for version expiration. For more information, see the <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer
+     * Guide</a>.
+     * </p>
+     */
+    private String snsTopicArn;
+    /**
+     * <p>
      * The web ACL capacity units (WCUs) required for this rule group. WAF uses web ACL capacity units (WCU) to
      * calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs. WAF
      * calculates capacity differently for each rule type, to reflect each rule's relative cost. Rule group capacity is
@@ -75,6 +91,110 @@ public class DescribeManagedRuleGroupResult extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private java.util.List<LabelSummary> consumedLabels;
+
+    /**
+     * <p>
+     * The managed rule group's version.
+     * </p>
+     * 
+     * @param versionName
+     *        The managed rule group's version.
+     */
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
+
+    /**
+     * <p>
+     * The managed rule group's version.
+     * </p>
+     * 
+     * @return The managed rule group's version.
+     */
+
+    public String getVersionName() {
+        return this.versionName;
+    }
+
+    /**
+     * <p>
+     * The managed rule group's version.
+     * </p>
+     * 
+     * @param versionName
+     *        The managed rule group's version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeManagedRuleGroupResult withVersionName(String versionName) {
+        setVersionName(versionName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes
+     * to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule
+     * group is modified, such as for new versions and for version expiration. For more information, see the <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer
+     * Guide</a>.
+     * </p>
+     * 
+     * @param snsTopicArn
+     *        The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record
+     *        changes to the managed rule group. You can subscribe to the SNS topic to receive notifications when the
+     *        managed rule group is modified, such as for new versions and for version expiration. For more information,
+     *        see the <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification
+     *        Service Developer Guide</a>.
+     */
+
+    public void setSnsTopicArn(String snsTopicArn) {
+        this.snsTopicArn = snsTopicArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes
+     * to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule
+     * group is modified, such as for new versions and for version expiration. For more information, see the <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer
+     * Guide</a>.
+     * </p>
+     * 
+     * @return The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record
+     *         changes to the managed rule group. You can subscribe to the SNS topic to receive notifications when the
+     *         managed rule group is modified, such as for new versions and for version expiration. For more
+     *         information, see the <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple
+     *         Notification Service Developer Guide</a>.
+     */
+
+    public String getSnsTopicArn() {
+        return this.snsTopicArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record changes
+     * to the managed rule group. You can subscribe to the SNS topic to receive notifications when the managed rule
+     * group is modified, such as for new versions and for version expiration. For more information, see the <a
+     * href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification Service Developer
+     * Guide</a>.
+     * </p>
+     * 
+     * @param snsTopicArn
+     *        The Amazon resource name (ARN) of the Amazon Simple Notification Service SNS topic that's used to record
+     *        changes to the managed rule group. You can subscribe to the SNS topic to receive notifications when the
+     *        managed rule group is modified, such as for new versions and for version expiration. For more information,
+     *        see the <a href="https://docs.aws.amazon.com/sns/latest/dg/welcome.html">Amazon Simple Notification
+     *        Service Developer Guide</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeManagedRuleGroupResult withSnsTopicArn(String snsTopicArn) {
+        setSnsTopicArn(snsTopicArn);
+        return this;
+    }
 
     /**
      * <p>
@@ -531,6 +651,10 @@ public class DescribeManagedRuleGroupResult extends com.amazonaws.AmazonWebServi
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getVersionName() != null)
+            sb.append("VersionName: ").append(getVersionName()).append(",");
+        if (getSnsTopicArn() != null)
+            sb.append("SnsTopicArn: ").append(getSnsTopicArn()).append(",");
         if (getCapacity() != null)
             sb.append("Capacity: ").append(getCapacity()).append(",");
         if (getRules() != null)
@@ -555,6 +679,14 @@ public class DescribeManagedRuleGroupResult extends com.amazonaws.AmazonWebServi
         if (obj instanceof DescribeManagedRuleGroupResult == false)
             return false;
         DescribeManagedRuleGroupResult other = (DescribeManagedRuleGroupResult) obj;
+        if (other.getVersionName() == null ^ this.getVersionName() == null)
+            return false;
+        if (other.getVersionName() != null && other.getVersionName().equals(this.getVersionName()) == false)
+            return false;
+        if (other.getSnsTopicArn() == null ^ this.getSnsTopicArn() == null)
+            return false;
+        if (other.getSnsTopicArn() != null && other.getSnsTopicArn().equals(this.getSnsTopicArn()) == false)
+            return false;
         if (other.getCapacity() == null ^ this.getCapacity() == null)
             return false;
         if (other.getCapacity() != null && other.getCapacity().equals(this.getCapacity()) == false)
@@ -583,6 +715,8 @@ public class DescribeManagedRuleGroupResult extends com.amazonaws.AmazonWebServi
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getVersionName() == null) ? 0 : getVersionName().hashCode());
+        hashCode = prime * hashCode + ((getSnsTopicArn() == null) ? 0 : getSnsTopicArn().hashCode());
         hashCode = prime * hashCode + ((getCapacity() == null) ? 0 : getCapacity().hashCode());
         hashCode = prime * hashCode + ((getRules() == null) ? 0 : getRules().hashCode());
         hashCode = prime * hashCode + ((getLabelNamespace() == null) ? 0 : getLabelNamespace().hashCode());

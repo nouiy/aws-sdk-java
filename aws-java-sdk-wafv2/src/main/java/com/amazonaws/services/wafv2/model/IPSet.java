@@ -61,7 +61,7 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * Specify IPV4 or IPV6.
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      */
     private String iPAddressVersion;
@@ -275,11 +275,11 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specify IPV4 or IPV6.
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
      * @param iPAddressVersion
-     *        Specify IPV4 or IPV6.
+     *        The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * @see IPAddressVersion
      */
 
@@ -289,10 +289,10 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specify IPV4 or IPV6.
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
-     * @return Specify IPV4 or IPV6.
+     * @return The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * @see IPAddressVersion
      */
 
@@ -302,11 +302,11 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specify IPV4 or IPV6.
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
      * @param iPAddressVersion
-     *        Specify IPV4 or IPV6.
+     *        The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IPAddressVersion
      */
@@ -318,11 +318,11 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specify IPV4 or IPV6.
+     * The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * </p>
      * 
      * @param iPAddressVersion
-     *        Specify IPV4 or IPV6.
+     *        The version of the IP addresses, either <code>IPV4</code> or <code>IPV6</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IPAddressVersion
      */

@@ -84,6 +84,18 @@ public class SegmentDetectionJsonUnmarshaller implements Unmarshaller<SegmentDet
                     context.nextToken();
                     segmentDetection.setShotSegment(ShotSegmentJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("StartFrameNumber", targetDepth)) {
+                    context.nextToken();
+                    segmentDetection.setStartFrameNumber(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("EndFrameNumber", targetDepth)) {
+                    context.nextToken();
+                    segmentDetection.setEndFrameNumber(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
+                if (context.testExpression("DurationFrames", targetDepth)) {
+                    context.nextToken();
+                    segmentDetection.setDurationFrames(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

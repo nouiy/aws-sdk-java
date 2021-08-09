@@ -32,7 +32,9 @@ public class StartSegmentDetectionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The ARN of the Amazon SNS topic to which you want Amazon Rekognition Video to publish the completion status of
-     * the segment detection operation.
+     * the segment detection operation. Note that the Amazon SNS topic must have a topic name that begins with
+     * <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy to access the
+     * topic.
      * </p>
      */
     private NotificationChannel notificationChannel;
@@ -138,12 +140,16 @@ public class StartSegmentDetectionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The ARN of the Amazon SNS topic to which you want Amazon Rekognition Video to publish the completion status of
-     * the segment detection operation.
+     * the segment detection operation. Note that the Amazon SNS topic must have a topic name that begins with
+     * <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy to access the
+     * topic.
      * </p>
      * 
      * @param notificationChannel
      *        The ARN of the Amazon SNS topic to which you want Amazon Rekognition Video to publish the completion
-     *        status of the segment detection operation.
+     *        status of the segment detection operation. Note that the Amazon SNS topic must have a topic name that
+     *        begins with <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy
+     *        to access the topic.
      */
 
     public void setNotificationChannel(NotificationChannel notificationChannel) {
@@ -153,11 +159,15 @@ public class StartSegmentDetectionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The ARN of the Amazon SNS topic to which you want Amazon Rekognition Video to publish the completion status of
-     * the segment detection operation.
+     * the segment detection operation. Note that the Amazon SNS topic must have a topic name that begins with
+     * <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy to access the
+     * topic.
      * </p>
      * 
      * @return The ARN of the Amazon SNS topic to which you want Amazon Rekognition Video to publish the completion
-     *         status of the segment detection operation.
+     *         status of the segment detection operation. Note that the Amazon SNS topic must have a topic name that
+     *         begins with <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy
+     *         to access the topic.
      */
 
     public NotificationChannel getNotificationChannel() {
@@ -167,12 +177,16 @@ public class StartSegmentDetectionRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The ARN of the Amazon SNS topic to which you want Amazon Rekognition Video to publish the completion status of
-     * the segment detection operation.
+     * the segment detection operation. Note that the Amazon SNS topic must have a topic name that begins with
+     * <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy to access the
+     * topic.
      * </p>
      * 
      * @param notificationChannel
      *        The ARN of the Amazon SNS topic to which you want Amazon Rekognition Video to publish the completion
-     *        status of the segment detection operation.
+     *        status of the segment detection operation. Note that the Amazon SNS topic must have a topic name that
+     *        begins with <i>AmazonRekognition</i> if you are using the AmazonRekognitionServiceRole permissions policy
+     *        to access the topic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

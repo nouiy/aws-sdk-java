@@ -41,12 +41,11 @@
  * <p>
  * This API guide is for developers who need detailed information about WAF API actions, data types, and errors. For
  * detailed information about WAF features and an overview of how to use WAF, see the <a
- * href="https://docs.aws.amazon.com/waf/latest/developerguide/">WAF Developer Guide</a>.
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html">WAF Developer Guide</a>.
  * </p>
  * <p>
- * You can make calls using the endpoints listed in <a
- * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#waf_region">Amazon Web Services Service Endpoints for
- * WAF</a>.
+ * You can make calls using the endpoints listed in <a href="https://docs.aws.amazon.com/general/latest/gr/waf.html">WAF
+ * endpoints and quotas</a>.
  * </p>
  * <ul>
  * <li>

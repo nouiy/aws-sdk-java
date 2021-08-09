@@ -117,7 +117,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <b>State Manager association targets only</b>: <code>Key=InstanceIds,Values=<i>*</i> </code>
  * </p>
  * <p>
- * This example demonstrates how to target all managed instances in the Region where the association was created.
+ * This example demonstrates how to target all managed instances in the Amazon Web Services Region where the association
+ * was created.
  * </p>
  * </li>
  * </ul>

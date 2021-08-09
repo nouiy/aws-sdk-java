@@ -38,7 +38,7 @@ public class ResourceDataSyncItem implements Serializable, Cloneable, Structured
      * <p>
      * The type of resource data sync. If <code>SyncType</code> is <code>SyncToDestination</code>, then the resource
      * data sync synchronizes data to an S3 bucket. If the <code>SyncType</code> is <code>SyncFromSource</code> then the
-     * resource data sync synchronizes data from Organizations or from multiple Regions.
+     * resource data sync synchronizes data from Organizations or from multiple Amazon Web Services Regions.
      * </p>
      */
     private String syncType;
@@ -135,14 +135,14 @@ public class ResourceDataSyncItem implements Serializable, Cloneable, Structured
      * <p>
      * The type of resource data sync. If <code>SyncType</code> is <code>SyncToDestination</code>, then the resource
      * data sync synchronizes data to an S3 bucket. If the <code>SyncType</code> is <code>SyncFromSource</code> then the
-     * resource data sync synchronizes data from Organizations or from multiple Regions.
+     * resource data sync synchronizes data from Organizations or from multiple Amazon Web Services Regions.
      * </p>
      * 
      * @param syncType
      *        The type of resource data sync. If <code>SyncType</code> is <code>SyncToDestination</code>, then the
      *        resource data sync synchronizes data to an S3 bucket. If the <code>SyncType</code> is
      *        <code>SyncFromSource</code> then the resource data sync synchronizes data from Organizations or from
-     *        multiple Regions.
+     *        multiple Amazon Web Services Regions.
      */
 
     public void setSyncType(String syncType) {
@@ -153,13 +153,13 @@ public class ResourceDataSyncItem implements Serializable, Cloneable, Structured
      * <p>
      * The type of resource data sync. If <code>SyncType</code> is <code>SyncToDestination</code>, then the resource
      * data sync synchronizes data to an S3 bucket. If the <code>SyncType</code> is <code>SyncFromSource</code> then the
-     * resource data sync synchronizes data from Organizations or from multiple Regions.
+     * resource data sync synchronizes data from Organizations or from multiple Amazon Web Services Regions.
      * </p>
      * 
      * @return The type of resource data sync. If <code>SyncType</code> is <code>SyncToDestination</code>, then the
      *         resource data sync synchronizes data to an S3 bucket. If the <code>SyncType</code> is
      *         <code>SyncFromSource</code> then the resource data sync synchronizes data from Organizations or from
-     *         multiple Regions.
+     *         multiple Amazon Web Services Regions.
      */
 
     public String getSyncType() {
@@ -170,14 +170,14 @@ public class ResourceDataSyncItem implements Serializable, Cloneable, Structured
      * <p>
      * The type of resource data sync. If <code>SyncType</code> is <code>SyncToDestination</code>, then the resource
      * data sync synchronizes data to an S3 bucket. If the <code>SyncType</code> is <code>SyncFromSource</code> then the
-     * resource data sync synchronizes data from Organizations or from multiple Regions.
+     * resource data sync synchronizes data from Organizations or from multiple Amazon Web Services Regions.
      * </p>
      * 
      * @param syncType
      *        The type of resource data sync. If <code>SyncType</code> is <code>SyncToDestination</code>, then the
      *        resource data sync synchronizes data to an S3 bucket. If the <code>SyncType</code> is
      *        <code>SyncFromSource</code> then the resource data sync synchronizes data from Organizations or from
-     *        multiple Regions.
+     *        multiple Amazon Web Services Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
