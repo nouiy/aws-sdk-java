@@ -29,11 +29,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 public class ChannelMembershipForAppInstanceUserSummary implements Serializable, Cloneable, StructuredPojo {
 
     private ChannelSummary channelSummary;
-    /**
-     * <p>
-     * Returns the channel membership data for an <code>AppInstance</code>.
-     * </p>
-     */
+
     private AppInstanceUserMembershipSummary appInstanceUserMembershipSummary;
 
     /**
@@ -63,12 +59,7 @@ public class ChannelMembershipForAppInstanceUserSummary implements Serializable,
     }
 
     /**
-     * <p>
-     * Returns the channel membership data for an <code>AppInstance</code>.
-     * </p>
-     * 
      * @param appInstanceUserMembershipSummary
-     *        Returns the channel membership data for an <code>AppInstance</code>.
      */
 
     public void setAppInstanceUserMembershipSummary(AppInstanceUserMembershipSummary appInstanceUserMembershipSummary) {
@@ -76,11 +67,7 @@ public class ChannelMembershipForAppInstanceUserSummary implements Serializable,
     }
 
     /**
-     * <p>
-     * Returns the channel membership data for an <code>AppInstance</code>.
-     * </p>
-     * 
-     * @return Returns the channel membership data for an <code>AppInstance</code>.
+     * @return
      */
 
     public AppInstanceUserMembershipSummary getAppInstanceUserMembershipSummary() {
@@ -88,12 +75,7 @@ public class ChannelMembershipForAppInstanceUserSummary implements Serializable,
     }
 
     /**
-     * <p>
-     * Returns the channel membership data for an <code>AppInstance</code>.
-     * </p>
-     * 
      * @param appInstanceUserMembershipSummary
-     *        Returns the channel membership data for an <code>AppInstance</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

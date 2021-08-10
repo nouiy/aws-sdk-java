@@ -25,7 +25,8 @@ public enum TranscribeMedicalRegion {
     UsWest2("us-west-2"),
     ApSoutheast2("ap-southeast-2"),
     CaCentral1("ca-central-1"),
-    EuWest1("eu-west-1");
+    EuWest1("eu-west-1"),
+    Auto("auto");
 
     private String value;
 

@@ -28,10 +28,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ChannelModeratedByAppInstanceUserSummary implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Summary of the details of a <code>Channel</code>.
+     * </p>
+     */
     private ChannelSummary channelSummary;
 
     /**
+     * <p>
+     * Summary of the details of a <code>Channel</code>.
+     * </p>
+     * 
      * @param channelSummary
+     *        Summary of the details of a <code>Channel</code>.
      */
 
     public void setChannelSummary(ChannelSummary channelSummary) {
@@ -39,7 +49,11 @@ public class ChannelModeratedByAppInstanceUserSummary implements Serializable, C
     }
 
     /**
-     * @return
+     * <p>
+     * Summary of the details of a <code>Channel</code>.
+     * </p>
+     * 
+     * @return Summary of the details of a <code>Channel</code>.
      */
 
     public ChannelSummary getChannelSummary() {
@@ -47,7 +61,12 @@ public class ChannelModeratedByAppInstanceUserSummary implements Serializable, C
     }
 
     /**
+     * <p>
+     * Summary of the details of a <code>Channel</code>.
+     * </p>
+     * 
      * @param channelSummary
+     *        Summary of the details of a <code>Channel</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

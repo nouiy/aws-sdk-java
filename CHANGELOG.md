@@ -1,3 +1,8 @@
+# __1.12.44__ __2021-08-10__
+## __Amazon Chime__
+  - ### Features
+    - Add support for "auto" in Region field of StartMeetingTranscription API request.
+
 # __1.12.43__ __2021-08-09__
 ## __AWS WAFV2__
   - ### Features

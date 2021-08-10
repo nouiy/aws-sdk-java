@@ -2738,7 +2738,7 @@ public interface AmazonChimeAsync extends AmazonChime {
 
     /**
      * <p>
-     * Returns the full details of an <code>AppInstanceUser</code> .
+     * Returns the full details of an <code>AppInstanceUser</code>.
      * </p>
      * 
      * @param describeAppInstanceUserRequest
@@ -2751,7 +2751,7 @@ public interface AmazonChimeAsync extends AmazonChime {
 
     /**
      * <p>
-     * Returns the full details of an <code>AppInstanceUser</code> .
+     * Returns the full details of an <code>AppInstanceUser</code>.
      * </p>
      * 
      * @param describeAppInstanceUserRequest

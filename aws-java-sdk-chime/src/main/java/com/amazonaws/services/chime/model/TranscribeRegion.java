@@ -30,7 +30,8 @@ public enum TranscribeRegion {
     EuCentral1("eu-central-1"),
     EuWest1("eu-west-1"),
     EuWest2("eu-west-2"),
-    SaEast1("sa-east-1");
+    SaEast1("sa-east-1"),
+    Auto("auto");
 
     private String value;
 

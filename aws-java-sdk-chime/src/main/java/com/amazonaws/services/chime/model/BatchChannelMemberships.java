@@ -28,6 +28,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BatchChannelMemberships implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The identifier of the member who invited another member.
+     * </p>
+     */
     private Identity invitedBy;
     /**
      * <p>
@@ -49,7 +54,12 @@ public class BatchChannelMemberships implements Serializable, Cloneable, Structu
     private String channelArn;
 
     /**
+     * <p>
+     * The identifier of the member who invited another member.
+     * </p>
+     * 
      * @param invitedBy
+     *        The identifier of the member who invited another member.
      */
 
     public void setInvitedBy(Identity invitedBy) {
@@ -57,7 +67,11 @@ public class BatchChannelMemberships implements Serializable, Cloneable, Structu
     }
 
     /**
-     * @return
+     * <p>
+     * The identifier of the member who invited another member.
+     * </p>
+     * 
+     * @return The identifier of the member who invited another member.
      */
 
     public Identity getInvitedBy() {
@@ -65,7 +79,12 @@ public class BatchChannelMemberships implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The identifier of the member who invited another member.
+     * </p>
+     * 
      * @param invitedBy
+     *        The identifier of the member who invited another member.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

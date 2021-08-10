@@ -2189,7 +2189,7 @@ public interface AmazonChime {
 
     /**
      * <p>
-     * Returns the full details of an <code>AppInstanceUser</code> .
+     * Returns the full details of an <code>AppInstanceUser</code>.
      * </p>
      * 
      * @param describeAppInstanceUserRequest
