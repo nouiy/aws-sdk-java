@@ -134,7 +134,7 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
     private AutoMLJobArtifacts autoMLJobArtifacts;
     /**
      * <p>
-     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code> and <code>CompletionCriteria</code>. If
+     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If
      * you do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
      * provide.
      * </p>
@@ -1014,13 +1014,13 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code> and <code>CompletionCriteria</code>. If
+     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If
      * you do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
      * provide.
      * </p>
      * 
      * @param resolvedAttributes
-     *        This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code> and
+     *        This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and
      *        <code>CompletionCriteria</code>. If you do not provide these values, they are auto-inferred. If you do
      *        provide them, the values used are the ones you provide.
      */
@@ -1031,12 +1031,12 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code> and <code>CompletionCriteria</code>. If
+     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If
      * you do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
      * provide.
      * </p>
      * 
-     * @return This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code> and
+     * @return This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and
      *         <code>CompletionCriteria</code>. If you do not provide these values, they are auto-inferred. If you do
      *         provide them, the values used are the ones you provide.
      */
@@ -1047,13 +1047,13 @@ public class DescribeAutoMLJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code> and <code>CompletionCriteria</code>. If
+     * This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and <code>CompletionCriteria</code>. If
      * you do not provide these values, they are auto-inferred. If you do provide them, the values used are the ones you
      * provide.
      * </p>
      * 
      * @param resolvedAttributes
-     *        This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code> and
+     *        This contains <code>ProblemType</code>, <code>AutoMLJobObjective</code>, and
      *        <code>CompletionCriteria</code>. If you do not provide these values, they are auto-inferred. If you do
      *        provide them, the values used are the ones you provide.
      * @return Returns a reference to this object so that method calls can be chained together.

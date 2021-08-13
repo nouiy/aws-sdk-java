@@ -57583,6 +57583,9 @@
       }, {
         "name" : "XML",
         "value" : "XML"
+      }, {
+        "name" : "TABLEAUHYPER",
+        "value" : "TABLEAUHYPER"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.gluedatabrew.enum.OutputFormat",

@@ -119,9 +119,9 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
     private EndpointConfiguration endpointConfiguration;
     /**
      * <p>
-     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code> and
-     * <code>UPDATING</code>. If the status is <code>UPDATING</code>, the domain cannot be modified further until the
-     * existing operation is complete. If it is <code>AVAILABLE</code>, the domain can be updated.
+     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code>, <code>UPDATING</code>, <code>PENDING_CERTIFICATE_REIMPORT</code>, and <code>PENDING_OWNERSHIP_VERIFICATION</code>. If the status is
+     * <code>UPDATING</code>, the domain cannot be modified further until the existing operation is complete. If it is
+     * <code>AVAILABLE</code>, the domain can be updated.
      * </p>
      */
     private String domainNameStatus;
@@ -151,6 +151,13 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private MutualTlsAuthentication mutualTlsAuthentication;
+    /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn.
+     * </p>
+     */
+    private String ownershipVerificationCertificateArn;
 
     /**
      * <p>
@@ -699,15 +706,17 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code> and
-     * <code>UPDATING</code>. If the status is <code>UPDATING</code>, the domain cannot be modified further until the
-     * existing operation is complete. If it is <code>AVAILABLE</code>, the domain can be updated.
+     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code>, <code>UPDATING</code>, <code>PENDING_CERTIFICATE_REIMPORT</code>, and <code>PENDING_OWNERSHIP_VERIFICATION</code>. If the status is
+     * <code>UPDATING</code>, the domain cannot be modified further until the existing operation is complete. If it is
+     * <code>AVAILABLE</code>, the domain can be updated.
      * </p>
      * 
      * @param domainNameStatus
-     *        The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code> and
-     *        <code>UPDATING</code>. If the status is <code>UPDATING</code>, the domain cannot be modified further until
-     *        the existing operation is complete. If it is <code>AVAILABLE</code>, the domain can be updated.
+     *        The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code>,
+     *        <code>UPDATING</code>, <code>PENDING_CERTIFICATE_REIMPORT</code>, and
+     *        <code>PENDING_OWNERSHIP_VERIFICATION</code>. If the status is <code>UPDATING</code>, the domain cannot be
+     *        modified further until the existing operation is complete. If it is <code>AVAILABLE</code>, the domain can
+     *        be updated.
      * @see DomainNameStatus
      */
 
@@ -717,14 +726,16 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code> and
-     * <code>UPDATING</code>. If the status is <code>UPDATING</code>, the domain cannot be modified further until the
-     * existing operation is complete. If it is <code>AVAILABLE</code>, the domain can be updated.
+     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code>, <code>UPDATING</code>, <code>PENDING_CERTIFICATE_REIMPORT</code>, and <code>PENDING_OWNERSHIP_VERIFICATION</code>. If the status is
+     * <code>UPDATING</code>, the domain cannot be modified further until the existing operation is complete. If it is
+     * <code>AVAILABLE</code>, the domain can be updated.
      * </p>
      * 
-     * @return The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code> and
-     *         <code>UPDATING</code>. If the status is <code>UPDATING</code>, the domain cannot be modified further
-     *         until the existing operation is complete. If it is <code>AVAILABLE</code>, the domain can be updated.
+     * @return The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code>,
+     *         <code>UPDATING</code>, <code>PENDING_CERTIFICATE_REIMPORT</code>, and
+     *         <code>PENDING_OWNERSHIP_VERIFICATION</code>. If the status is <code>UPDATING</code>, the domain cannot be
+     *         modified further until the existing operation is complete. If it is <code>AVAILABLE</code>, the domain
+     *         can be updated.
      * @see DomainNameStatus
      */
 
@@ -734,15 +745,17 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code> and
-     * <code>UPDATING</code>. If the status is <code>UPDATING</code>, the domain cannot be modified further until the
-     * existing operation is complete. If it is <code>AVAILABLE</code>, the domain can be updated.
+     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code>, <code>UPDATING</code>, <code>PENDING_CERTIFICATE_REIMPORT</code>, and <code>PENDING_OWNERSHIP_VERIFICATION</code>. If the status is
+     * <code>UPDATING</code>, the domain cannot be modified further until the existing operation is complete. If it is
+     * <code>AVAILABLE</code>, the domain can be updated.
      * </p>
      * 
      * @param domainNameStatus
-     *        The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code> and
-     *        <code>UPDATING</code>. If the status is <code>UPDATING</code>, the domain cannot be modified further until
-     *        the existing operation is complete. If it is <code>AVAILABLE</code>, the domain can be updated.
+     *        The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code>,
+     *        <code>UPDATING</code>, <code>PENDING_CERTIFICATE_REIMPORT</code>, and
+     *        <code>PENDING_OWNERSHIP_VERIFICATION</code>. If the status is <code>UPDATING</code>, the domain cannot be
+     *        modified further until the existing operation is complete. If it is <code>AVAILABLE</code>, the domain can
+     *        be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DomainNameStatus
      */
@@ -754,15 +767,17 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code> and
-     * <code>UPDATING</code>. If the status is <code>UPDATING</code>, the domain cannot be modified further until the
-     * existing operation is complete. If it is <code>AVAILABLE</code>, the domain can be updated.
+     * The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code>, <code>UPDATING</code>, <code>PENDING_CERTIFICATE_REIMPORT</code>, and <code>PENDING_OWNERSHIP_VERIFICATION</code>. If the status is
+     * <code>UPDATING</code>, the domain cannot be modified further until the existing operation is complete. If it is
+     * <code>AVAILABLE</code>, the domain can be updated.
      * </p>
      * 
      * @param domainNameStatus
-     *        The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code> and
-     *        <code>UPDATING</code>. If the status is <code>UPDATING</code>, the domain cannot be modified further until
-     *        the existing operation is complete. If it is <code>AVAILABLE</code>, the domain can be updated.
+     *        The status of the <a>DomainName</a> migration. The valid values are <code>AVAILABLE</code>,
+     *        <code>UPDATING</code>, <code>PENDING_CERTIFICATE_REIMPORT</code>, and
+     *        <code>PENDING_OWNERSHIP_VERIFICATION</code>. If the status is <code>UPDATING</code>, the domain cannot be
+     *        modified further until the existing operation is complete. If it is <code>AVAILABLE</code>, the domain can
+     *        be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DomainNameStatus
      */
@@ -997,6 +1012,55 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn.
+     * </p>
+     * 
+     * @param ownershipVerificationCertificateArn
+     *        The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required
+     *        when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the
+     *        regionalCertificateArn.
+     */
+
+    public void setOwnershipVerificationCertificateArn(String ownershipVerificationCertificateArn) {
+        this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn.
+     * </p>
+     * 
+     * @return The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only
+     *         required when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the
+     *         regionalCertificateArn.
+     */
+
+    public String getOwnershipVerificationCertificateArn() {
+        return this.ownershipVerificationCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn.
+     * </p>
+     * 
+     * @param ownershipVerificationCertificateArn
+     *        The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required
+     *        when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the
+     *        regionalCertificateArn.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetDomainNameResult withOwnershipVerificationCertificateArn(String ownershipVerificationCertificateArn) {
+        setOwnershipVerificationCertificateArn(ownershipVerificationCertificateArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1039,7 +1103,9 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getMutualTlsAuthentication() != null)
-            sb.append("MutualTlsAuthentication: ").append(getMutualTlsAuthentication());
+            sb.append("MutualTlsAuthentication: ").append(getMutualTlsAuthentication()).append(",");
+        if (getOwnershipVerificationCertificateArn() != null)
+            sb.append("OwnershipVerificationCertificateArn: ").append(getOwnershipVerificationCertificateArn());
         sb.append("}");
         return sb.toString();
     }
@@ -1118,6 +1184,11 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getMutualTlsAuthentication() != null && other.getMutualTlsAuthentication().equals(this.getMutualTlsAuthentication()) == false)
             return false;
+        if (other.getOwnershipVerificationCertificateArn() == null ^ this.getOwnershipVerificationCertificateArn() == null)
+            return false;
+        if (other.getOwnershipVerificationCertificateArn() != null
+                && other.getOwnershipVerificationCertificateArn().equals(this.getOwnershipVerificationCertificateArn()) == false)
+            return false;
         return true;
     }
 
@@ -1142,6 +1213,7 @@ public class GetDomainNameResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getSecurityPolicy() == null) ? 0 : getSecurityPolicy().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getMutualTlsAuthentication() == null) ? 0 : getMutualTlsAuthentication().hashCode());
+        hashCode = prime * hashCode + ((getOwnershipVerificationCertificateArn() == null) ? 0 : getOwnershipVerificationCertificateArn().hashCode());
         return hashCode;
     }
 

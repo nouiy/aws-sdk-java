@@ -30,7 +30,7 @@ public class AutoMLJobSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the AutoML you are requesting.
+     * The name of the AutoML job you are requesting.
      * </p>
      */
     private String autoMLJobName;
@@ -85,11 +85,11 @@ public class AutoMLJobSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the AutoML you are requesting.
+     * The name of the AutoML job you are requesting.
      * </p>
      * 
      * @param autoMLJobName
-     *        The name of the AutoML you are requesting.
+     *        The name of the AutoML job you are requesting.
      */
 
     public void setAutoMLJobName(String autoMLJobName) {
@@ -98,10 +98,10 @@ public class AutoMLJobSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the AutoML you are requesting.
+     * The name of the AutoML job you are requesting.
      * </p>
      * 
-     * @return The name of the AutoML you are requesting.
+     * @return The name of the AutoML job you are requesting.
      */
 
     public String getAutoMLJobName() {
@@ -110,11 +110,11 @@ public class AutoMLJobSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the AutoML you are requesting.
+     * The name of the AutoML job you are requesting.
      * </p>
      * 
      * @param autoMLJobName
-     *        The name of the AutoML you are requesting.
+     *        The name of the AutoML job you are requesting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

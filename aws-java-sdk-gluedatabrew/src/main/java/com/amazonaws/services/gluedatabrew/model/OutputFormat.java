@@ -26,7 +26,8 @@ public enum OutputFormat {
     GLUEPARQUET("GLUEPARQUET"),
     AVRO("AVRO"),
     ORC("ORC"),
-    XML("XML");
+    XML("XML"),
+    TABLEAUHYPER("TABLEAUHYPER");
 
     private String value;
 

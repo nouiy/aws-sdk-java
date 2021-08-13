@@ -52,6 +52,12 @@ public class CandidatePropertiesJsonUnmarshaller implements Unmarshaller<Candida
                     context.nextToken();
                     candidateProperties.setCandidateArtifactLocations(CandidateArtifactLocationsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("CandidateMetrics", targetDepth)) {
+                    context.nextToken();
+                    candidateProperties.setCandidateMetrics(new ListUnmarshaller<MetricDatum>(MetricDatumJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

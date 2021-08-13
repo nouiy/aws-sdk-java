@@ -34,6 +34,12 @@ public class CandidateProperties implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private CandidateArtifactLocations candidateArtifactLocations;
+    /**
+     * <p>
+     * Information about the candidate metrics for an AutoML job.
+     * </p>
+     */
+    private java.util.List<MetricDatum> candidateMetrics;
 
     /**
      * <p>
@@ -76,6 +82,76 @@ public class CandidateProperties implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Information about the candidate metrics for an AutoML job.
+     * </p>
+     * 
+     * @return Information about the candidate metrics for an AutoML job.
+     */
+
+    public java.util.List<MetricDatum> getCandidateMetrics() {
+        return candidateMetrics;
+    }
+
+    /**
+     * <p>
+     * Information about the candidate metrics for an AutoML job.
+     * </p>
+     * 
+     * @param candidateMetrics
+     *        Information about the candidate metrics for an AutoML job.
+     */
+
+    public void setCandidateMetrics(java.util.Collection<MetricDatum> candidateMetrics) {
+        if (candidateMetrics == null) {
+            this.candidateMetrics = null;
+            return;
+        }
+
+        this.candidateMetrics = new java.util.ArrayList<MetricDatum>(candidateMetrics);
+    }
+
+    /**
+     * <p>
+     * Information about the candidate metrics for an AutoML job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCandidateMetrics(java.util.Collection)} or {@link #withCandidateMetrics(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param candidateMetrics
+     *        Information about the candidate metrics for an AutoML job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CandidateProperties withCandidateMetrics(MetricDatum... candidateMetrics) {
+        if (this.candidateMetrics == null) {
+            setCandidateMetrics(new java.util.ArrayList<MetricDatum>(candidateMetrics.length));
+        }
+        for (MetricDatum ele : candidateMetrics) {
+            this.candidateMetrics.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the candidate metrics for an AutoML job.
+     * </p>
+     * 
+     * @param candidateMetrics
+     *        Information about the candidate metrics for an AutoML job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CandidateProperties withCandidateMetrics(java.util.Collection<MetricDatum> candidateMetrics) {
+        setCandidateMetrics(candidateMetrics);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +164,9 @@ public class CandidateProperties implements Serializable, Cloneable, StructuredP
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getCandidateArtifactLocations() != null)
-            sb.append("CandidateArtifactLocations: ").append(getCandidateArtifactLocations());
+            sb.append("CandidateArtifactLocations: ").append(getCandidateArtifactLocations()).append(",");
+        if (getCandidateMetrics() != null)
+            sb.append("CandidateMetrics: ").append(getCandidateMetrics());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +185,10 @@ public class CandidateProperties implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getCandidateArtifactLocations() != null && other.getCandidateArtifactLocations().equals(this.getCandidateArtifactLocations()) == false)
             return false;
+        if (other.getCandidateMetrics() == null ^ this.getCandidateMetrics() == null)
+            return false;
+        if (other.getCandidateMetrics() != null && other.getCandidateMetrics().equals(this.getCandidateMetrics()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +198,7 @@ public class CandidateProperties implements Serializable, Cloneable, StructuredP
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCandidateArtifactLocations() == null) ? 0 : getCandidateArtifactLocations().hashCode());
+        hashCode = prime * hashCode + ((getCandidateMetrics() == null) ? 0 : getCandidateMetrics().hashCode());
         return hashCode;
     }
 

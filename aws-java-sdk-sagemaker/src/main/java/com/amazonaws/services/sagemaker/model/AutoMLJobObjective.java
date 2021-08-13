@@ -41,7 +41,7 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <p>
      * <code>MSE</code>: The mean squared error (MSE) is the average of the squared differences between the predicted
      * and actual values. It is used for regression. MSE values are always positive: the better a model is at predicting
-     * the actual values, the smaller the MSE value. When the data contains outliers, they tend to dominate the MSE,
+     * the actual values, the smaller the MSE value is. When the data contains outliers, they tend to dominate the MSE,
      * which might cause subpar prediction performance.
      * </p>
      * </li>
@@ -128,7 +128,7 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <p>
      * <code>MSE</code>: The mean squared error (MSE) is the average of the squared differences between the predicted
      * and actual values. It is used for regression. MSE values are always positive: the better a model is at predicting
-     * the actual values, the smaller the MSE value. When the data contains outliers, they tend to dominate the MSE,
+     * the actual values, the smaller the MSE value is. When the data contains outliers, they tend to dominate the MSE,
      * which might cause subpar prediction performance.
      * </p>
      * </li>
@@ -211,8 +211,8 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *        <p>
      *        <code>MSE</code>: The mean squared error (MSE) is the average of the squared differences between the
      *        predicted and actual values. It is used for regression. MSE values are always positive: the better a model
-     *        is at predicting the actual values, the smaller the MSE value. When the data contains outliers, they tend
-     *        to dominate the MSE, which might cause subpar prediction performance.
+     *        is at predicting the actual values, the smaller the MSE value is. When the data contains outliers, they
+     *        tend to dominate the MSE, which might cause subpar prediction performance.
      *        </p>
      *        </li>
      *        <li>
@@ -302,7 +302,7 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <p>
      * <code>MSE</code>: The mean squared error (MSE) is the average of the squared differences between the predicted
      * and actual values. It is used for regression. MSE values are always positive: the better a model is at predicting
-     * the actual values, the smaller the MSE value. When the data contains outliers, they tend to dominate the MSE,
+     * the actual values, the smaller the MSE value is. When the data contains outliers, they tend to dominate the MSE,
      * which might cause subpar prediction performance.
      * </p>
      * </li>
@@ -385,7 +385,7 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *         <p>
      *         <code>MSE</code>: The mean squared error (MSE) is the average of the squared differences between the
      *         predicted and actual values. It is used for regression. MSE values are always positive: the better a
-     *         model is at predicting the actual values, the smaller the MSE value. When the data contains outliers,
+     *         model is at predicting the actual values, the smaller the MSE value is. When the data contains outliers,
      *         they tend to dominate the MSE, which might cause subpar prediction performance.
      *         </p>
      *         </li>
@@ -477,7 +477,7 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <p>
      * <code>MSE</code>: The mean squared error (MSE) is the average of the squared differences between the predicted
      * and actual values. It is used for regression. MSE values are always positive: the better a model is at predicting
-     * the actual values, the smaller the MSE value. When the data contains outliers, they tend to dominate the MSE,
+     * the actual values, the smaller the MSE value is. When the data contains outliers, they tend to dominate the MSE,
      * which might cause subpar prediction performance.
      * </p>
      * </li>
@@ -560,8 +560,8 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *        <p>
      *        <code>MSE</code>: The mean squared error (MSE) is the average of the squared differences between the
      *        predicted and actual values. It is used for regression. MSE values are always positive: the better a model
-     *        is at predicting the actual values, the smaller the MSE value. When the data contains outliers, they tend
-     *        to dominate the MSE, which might cause subpar prediction performance.
+     *        is at predicting the actual values, the smaller the MSE value is. When the data contains outliers, they
+     *        tend to dominate the MSE, which might cause subpar prediction performance.
      *        </p>
      *        </li>
      *        <li>
@@ -653,7 +653,7 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      * <p>
      * <code>MSE</code>: The mean squared error (MSE) is the average of the squared differences between the predicted
      * and actual values. It is used for regression. MSE values are always positive: the better a model is at predicting
-     * the actual values, the smaller the MSE value. When the data contains outliers, they tend to dominate the MSE,
+     * the actual values, the smaller the MSE value is. When the data contains outliers, they tend to dominate the MSE,
      * which might cause subpar prediction performance.
      * </p>
      * </li>
@@ -736,8 +736,8 @@ public class AutoMLJobObjective implements Serializable, Cloneable, StructuredPo
      *        <p>
      *        <code>MSE</code>: The mean squared error (MSE) is the average of the squared differences between the
      *        predicted and actual values. It is used for regression. MSE values are always positive: the better a model
-     *        is at predicting the actual values, the smaller the MSE value. When the data contains outliers, they tend
-     *        to dominate the MSE, which might cause subpar prediction performance.
+     *        is at predicting the actual values, the smaller the MSE value is. When the data contains outliers, they
+     *        tend to dominate the MSE, which might cause subpar prediction performance.
      *        </p>
      *        </li>
      *        <li>

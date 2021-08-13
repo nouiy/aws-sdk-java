@@ -113,6 +113,10 @@ public class CreateDomainNameResultJsonUnmarshaller implements Unmarshaller<Crea
                     context.nextToken();
                     createDomainNameResult.setMutualTlsAuthentication(MutualTlsAuthenticationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ownershipVerificationCertificateArn", targetDepth)) {
+                    context.nextToken();
+                    createDomainNameResult.setOwnershipVerificationCertificateArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

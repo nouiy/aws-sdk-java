@@ -25,18 +25,18 @@ public class CreateAutoMLJobResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The unique ARN that is assigned to the AutoML job when it is created.
+     * The unique ARN assigned to the AutoML job when it is created.
      * </p>
      */
     private String autoMLJobArn;
 
     /**
      * <p>
-     * The unique ARN that is assigned to the AutoML job when it is created.
+     * The unique ARN assigned to the AutoML job when it is created.
      * </p>
      * 
      * @param autoMLJobArn
-     *        The unique ARN that is assigned to the AutoML job when it is created.
+     *        The unique ARN assigned to the AutoML job when it is created.
      */
 
     public void setAutoMLJobArn(String autoMLJobArn) {
@@ -45,10 +45,10 @@ public class CreateAutoMLJobResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The unique ARN that is assigned to the AutoML job when it is created.
+     * The unique ARN assigned to the AutoML job when it is created.
      * </p>
      * 
-     * @return The unique ARN that is assigned to the AutoML job when it is created.
+     * @return The unique ARN assigned to the AutoML job when it is created.
      */
 
     public String getAutoMLJobArn() {
@@ -57,11 +57,11 @@ public class CreateAutoMLJobResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The unique ARN that is assigned to the AutoML job when it is created.
+     * The unique ARN assigned to the AutoML job when it is created.
      * </p>
      * 
      * @param autoMLJobArn
-     *        The unique ARN that is assigned to the AutoML job when it is created.
+     *        The unique ARN assigned to the AutoML job when it is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

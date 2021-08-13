@@ -31,7 +31,7 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ECR path of the container. For more information, see .
+     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
      * </p>
      */
     private String image;
@@ -50,11 +50,11 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ECR path of the container. For more information, see .
+     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
      * </p>
      * 
      * @param image
-     *        The ECR path of the container. For more information, see .
+     *        The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
      */
 
     public void setImage(String image) {
@@ -63,10 +63,10 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ECR path of the container. For more information, see .
+     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
      * </p>
      * 
-     * @return The ECR path of the container. For more information, see .
+     * @return The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
      */
 
     public String getImage() {
@@ -75,11 +75,11 @@ public class AutoMLContainerDefinition implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ECR path of the container. For more information, see .
+     * The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
      * </p>
      * 
      * @param image
-     *        The ECR path of the container. For more information, see .
+     *        The Amazon Elastic Container Registry (Amazon ECR) path of the container. For more information, see .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An Autopilot job returns recommendations, or candidates. Each candidate has futher details about the steps involved
- * and the status.
+ * Information about a candidate produced by an AutoML training job, including its status, steps, and other properties.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/AutoMLCandidate" target="_top">AWS API
@@ -87,7 +86,7 @@ public class AutoMLCandidate implements Serializable, Cloneable, StructuredPojo 
     private String failureReason;
     /**
      * <p>
-     * The AutoML candidate's properties.
+     * The properties of an AutoML candidate job.
      * </p>
      */
     private CandidateProperties candidateProperties;
@@ -578,11 +577,11 @@ public class AutoMLCandidate implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The AutoML candidate's properties.
+     * The properties of an AutoML candidate job.
      * </p>
      * 
      * @param candidateProperties
-     *        The AutoML candidate's properties.
+     *        The properties of an AutoML candidate job.
      */
 
     public void setCandidateProperties(CandidateProperties candidateProperties) {
@@ -591,10 +590,10 @@ public class AutoMLCandidate implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The AutoML candidate's properties.
+     * The properties of an AutoML candidate job.
      * </p>
      * 
-     * @return The AutoML candidate's properties.
+     * @return The properties of an AutoML candidate job.
      */
 
     public CandidateProperties getCandidateProperties() {
@@ -603,11 +602,11 @@ public class AutoMLCandidate implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The AutoML candidate's properties.
+     * The properties of an AutoML candidate job.
      * </p>
      * 
      * @param candidateProperties
-     *        The AutoML candidate's properties.
+     *        The properties of an AutoML candidate job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

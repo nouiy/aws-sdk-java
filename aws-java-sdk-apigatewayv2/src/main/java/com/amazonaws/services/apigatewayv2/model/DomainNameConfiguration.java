@@ -52,9 +52,9 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
     private java.util.Date certificateUploadDate;
     /**
      * <p>
-     * The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is UPDATING,
-     * the domain cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain
-     * can be updated.
+     * The status of the domain name migration. The valid values are AVAILABLE, UPDATING, PENDING_CERTIFICATE_REIMPORT,
+     * and PENDING_OWNERSHIP_VERIFICATION. If the status is UPDATING, the domain cannot be modified further until the
+     * existing operation is complete. If it is AVAILABLE, the domain can be updated.
      * </p>
      */
     private String domainNameStatus;
@@ -83,6 +83,13 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
      * </p>
      */
     private String securityPolicy;
+    /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn
+     * </p>
+     */
+    private String ownershipVerificationCertificateArn;
 
     /**
      * <p>
@@ -258,15 +265,16 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is UPDATING,
-     * the domain cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain
-     * can be updated.
+     * The status of the domain name migration. The valid values are AVAILABLE, UPDATING, PENDING_CERTIFICATE_REIMPORT,
+     * and PENDING_OWNERSHIP_VERIFICATION. If the status is UPDATING, the domain cannot be modified further until the
+     * existing operation is complete. If it is AVAILABLE, the domain can be updated.
      * </p>
      * 
      * @param domainNameStatus
-     *        The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is
-     *        UPDATING, the domain cannot be modified further until the existing operation is complete. If it is
-     *        AVAILABLE, the domain can be updated.
+     *        The status of the domain name migration. The valid values are AVAILABLE, UPDATING,
+     *        PENDING_CERTIFICATE_REIMPORT, and PENDING_OWNERSHIP_VERIFICATION. If the status is UPDATING, the domain
+     *        cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain can be
+     *        updated.
      * @see DomainNameStatus
      */
 
@@ -276,14 +284,15 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is UPDATING,
-     * the domain cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain
-     * can be updated.
+     * The status of the domain name migration. The valid values are AVAILABLE, UPDATING, PENDING_CERTIFICATE_REIMPORT,
+     * and PENDING_OWNERSHIP_VERIFICATION. If the status is UPDATING, the domain cannot be modified further until the
+     * existing operation is complete. If it is AVAILABLE, the domain can be updated.
      * </p>
      * 
-     * @return The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is
-     *         UPDATING, the domain cannot be modified further until the existing operation is complete. If it is
-     *         AVAILABLE, the domain can be updated.
+     * @return The status of the domain name migration. The valid values are AVAILABLE, UPDATING,
+     *         PENDING_CERTIFICATE_REIMPORT, and PENDING_OWNERSHIP_VERIFICATION. If the status is UPDATING, the domain
+     *         cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain can
+     *         be updated.
      * @see DomainNameStatus
      */
 
@@ -293,15 +302,16 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is UPDATING,
-     * the domain cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain
-     * can be updated.
+     * The status of the domain name migration. The valid values are AVAILABLE, UPDATING, PENDING_CERTIFICATE_REIMPORT,
+     * and PENDING_OWNERSHIP_VERIFICATION. If the status is UPDATING, the domain cannot be modified further until the
+     * existing operation is complete. If it is AVAILABLE, the domain can be updated.
      * </p>
      * 
      * @param domainNameStatus
-     *        The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is
-     *        UPDATING, the domain cannot be modified further until the existing operation is complete. If it is
-     *        AVAILABLE, the domain can be updated.
+     *        The status of the domain name migration. The valid values are AVAILABLE, UPDATING,
+     *        PENDING_CERTIFICATE_REIMPORT, and PENDING_OWNERSHIP_VERIFICATION. If the status is UPDATING, the domain
+     *        cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain can be
+     *        updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DomainNameStatus
      */
@@ -313,15 +323,16 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is UPDATING,
-     * the domain cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain
-     * can be updated.
+     * The status of the domain name migration. The valid values are AVAILABLE, UPDATING, PENDING_CERTIFICATE_REIMPORT,
+     * and PENDING_OWNERSHIP_VERIFICATION. If the status is UPDATING, the domain cannot be modified further until the
+     * existing operation is complete. If it is AVAILABLE, the domain can be updated.
      * </p>
      * 
      * @param domainNameStatus
-     *        The status of the domain name migration. The valid values are AVAILABLE and UPDATING. If the status is
-     *        UPDATING, the domain cannot be modified further until the existing operation is complete. If it is
-     *        AVAILABLE, the domain can be updated.
+     *        The status of the domain name migration. The valid values are AVAILABLE, UPDATING,
+     *        PENDING_CERTIFICATE_REIMPORT, and PENDING_OWNERSHIP_VERIFICATION. If the status is UPDATING, the domain
+     *        cannot be modified further until the existing operation is complete. If it is AVAILABLE, the domain can be
+     *        updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DomainNameStatus
      */
@@ -538,6 +549,55 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn
+     * </p>
+     * 
+     * @param ownershipVerificationCertificateArn
+     *        The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required
+     *        when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the
+     *        regionalCertificateArn
+     */
+
+    public void setOwnershipVerificationCertificateArn(String ownershipVerificationCertificateArn) {
+        this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn
+     * </p>
+     * 
+     * @return The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only
+     *         required when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the
+     *         regionalCertificateArn
+     */
+
+    public String getOwnershipVerificationCertificateArn() {
+        return this.ownershipVerificationCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn
+     * </p>
+     * 
+     * @param ownershipVerificationCertificateArn
+     *        The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required
+     *        when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the
+     *        regionalCertificateArn
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DomainNameConfiguration withOwnershipVerificationCertificateArn(String ownershipVerificationCertificateArn) {
+        setOwnershipVerificationCertificateArn(ownershipVerificationCertificateArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -566,7 +626,9 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
         if (getHostedZoneId() != null)
             sb.append("HostedZoneId: ").append(getHostedZoneId()).append(",");
         if (getSecurityPolicy() != null)
-            sb.append("SecurityPolicy: ").append(getSecurityPolicy());
+            sb.append("SecurityPolicy: ").append(getSecurityPolicy()).append(",");
+        if (getOwnershipVerificationCertificateArn() != null)
+            sb.append("OwnershipVerificationCertificateArn: ").append(getOwnershipVerificationCertificateArn());
         sb.append("}");
         return sb.toString();
     }
@@ -617,6 +679,11 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getSecurityPolicy() != null && other.getSecurityPolicy().equals(this.getSecurityPolicy()) == false)
             return false;
+        if (other.getOwnershipVerificationCertificateArn() == null ^ this.getOwnershipVerificationCertificateArn() == null)
+            return false;
+        if (other.getOwnershipVerificationCertificateArn() != null
+                && other.getOwnershipVerificationCertificateArn().equals(this.getOwnershipVerificationCertificateArn()) == false)
+            return false;
         return true;
     }
 
@@ -634,6 +701,7 @@ public class DomainNameConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getEndpointType() == null) ? 0 : getEndpointType().hashCode());
         hashCode = prime * hashCode + ((getHostedZoneId() == null) ? 0 : getHostedZoneId().hashCode());
         hashCode = prime * hashCode + ((getSecurityPolicy() == null) ? 0 : getSecurityPolicy().hashCode());
+        hashCode = prime * hashCode + ((getOwnershipVerificationCertificateArn() == null) ? 0 : getOwnershipVerificationCertificateArn().hashCode());
         return hashCode;
     }
 

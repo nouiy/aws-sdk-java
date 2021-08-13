@@ -313,7 +313,7 @@ public class AnnotationConsolidationConfig implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>rn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
+     * <code>arn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
      * </p>
      * </li>
      * <li>
@@ -1801,7 +1801,7 @@ public class AnnotationConsolidationConfig implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>rn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
+     * <code>arn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
      * </p>
      * </li>
      * <li>
@@ -3285,7 +3285,7 @@ public class AnnotationConsolidationConfig implements Serializable, Cloneable, S
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>rn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
+     *        <code>arn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
      *        </p>
      *        </li>
      *        <li>
@@ -4778,7 +4778,7 @@ public class AnnotationConsolidationConfig implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>rn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
+     * <code>arn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
      * </p>
      * </li>
      * <li>
@@ -6261,7 +6261,7 @@ public class AnnotationConsolidationConfig implements Serializable, Cloneable, S
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>rn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
+     *         <code>arn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
      *         </p>
      *         </li>
      *         <li>
@@ -7756,7 +7756,7 @@ public class AnnotationConsolidationConfig implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>rn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
+     * <code>arn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
      * </p>
      * </li>
      * <li>
@@ -9240,7 +9240,7 @@ public class AnnotationConsolidationConfig implements Serializable, Cloneable, S
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>rn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
+     *        <code>arn:aws:lambda:us-east-1:432418664414:function:ACS-TextMultiClass</code>
      *        </p>
      *        </li>
      *        <li>

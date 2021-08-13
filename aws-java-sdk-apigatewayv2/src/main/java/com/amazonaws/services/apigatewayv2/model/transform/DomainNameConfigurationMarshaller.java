@@ -45,6 +45,8 @@ public class DomainNameConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("hostedZoneId").build();
     private static final MarshallingInfo<String> SECURITYPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("securityPolicy").build();
+    private static final MarshallingInfo<String> OWNERSHIPVERIFICATIONCERTIFICATEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ownershipVerificationCertificateArn").build();
 
     private static final DomainNameConfigurationMarshaller instance = new DomainNameConfigurationMarshaller();
 
@@ -71,6 +73,7 @@ public class DomainNameConfigurationMarshaller {
             protocolMarshaller.marshall(domainNameConfiguration.getEndpointType(), ENDPOINTTYPE_BINDING);
             protocolMarshaller.marshall(domainNameConfiguration.getHostedZoneId(), HOSTEDZONEID_BINDING);
             protocolMarshaller.marshall(domainNameConfiguration.getSecurityPolicy(), SECURITYPOLICY_BINDING);
+            protocolMarshaller.marshall(domainNameConfiguration.getOwnershipVerificationCertificateArn(), OWNERSHIPVERIFICATIONCERTIFICATEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -102,6 +102,13 @@ public class CreateDomainNameRequest extends com.amazonaws.AmazonWebServiceReque
     private String securityPolicy;
 
     private MutualTlsAuthenticationInput mutualTlsAuthentication;
+    /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn.
+     * </p>
+     */
+    private String ownershipVerificationCertificateArn;
 
     /**
      * <p>
@@ -676,6 +683,55 @@ public class CreateDomainNameRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn.
+     * </p>
+     * 
+     * @param ownershipVerificationCertificateArn
+     *        The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required
+     *        when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the
+     *        regionalCertificateArn.
+     */
+
+    public void setOwnershipVerificationCertificateArn(String ownershipVerificationCertificateArn) {
+        this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn.
+     * </p>
+     * 
+     * @return The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only
+     *         required when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the
+     *         regionalCertificateArn.
+     */
+
+    public String getOwnershipVerificationCertificateArn() {
+        return this.ownershipVerificationCertificateArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required when
+     * configuring mutual TLS and using an ACM imported or private CA certificate ARN as the regionalCertificateArn.
+     * </p>
+     * 
+     * @param ownershipVerificationCertificateArn
+     *        The ARN of the public certificate issued by ACM to validate ownership of your custom domain. Only required
+     *        when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the
+     *        regionalCertificateArn.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDomainNameRequest withOwnershipVerificationCertificateArn(String ownershipVerificationCertificateArn) {
+        setOwnershipVerificationCertificateArn(ownershipVerificationCertificateArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -710,7 +766,9 @@ public class CreateDomainNameRequest extends com.amazonaws.AmazonWebServiceReque
         if (getSecurityPolicy() != null)
             sb.append("SecurityPolicy: ").append(getSecurityPolicy()).append(",");
         if (getMutualTlsAuthentication() != null)
-            sb.append("MutualTlsAuthentication: ").append(getMutualTlsAuthentication());
+            sb.append("MutualTlsAuthentication: ").append(getMutualTlsAuthentication()).append(",");
+        if (getOwnershipVerificationCertificateArn() != null)
+            sb.append("OwnershipVerificationCertificateArn: ").append(getOwnershipVerificationCertificateArn());
         sb.append("}");
         return sb.toString();
     }
@@ -773,6 +831,11 @@ public class CreateDomainNameRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getMutualTlsAuthentication() != null && other.getMutualTlsAuthentication().equals(this.getMutualTlsAuthentication()) == false)
             return false;
+        if (other.getOwnershipVerificationCertificateArn() == null ^ this.getOwnershipVerificationCertificateArn() == null)
+            return false;
+        if (other.getOwnershipVerificationCertificateArn() != null
+                && other.getOwnershipVerificationCertificateArn().equals(this.getOwnershipVerificationCertificateArn()) == false)
+            return false;
         return true;
     }
 
@@ -793,6 +856,7 @@ public class CreateDomainNameRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getSecurityPolicy() == null) ? 0 : getSecurityPolicy().hashCode());
         hashCode = prime * hashCode + ((getMutualTlsAuthentication() == null) ? 0 : getMutualTlsAuthentication().hashCode());
+        hashCode = prime * hashCode + ((getOwnershipVerificationCertificateArn() == null) ? 0 : getOwnershipVerificationCertificateArn().hashCode());
         return hashCode;
     }
 

@@ -157,6 +157,14 @@ public class CreateLabelingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      * Labeling Category Configuration File for 3D Point Cloud Labeling Jobs</a>.
      * </p>
      * <p>
+     * For named entity recognition jobs, in addition to <code>"labels"</code>, you must provide worker instructions in
+     * the label category configuration file using the <code>"instructions"</code> parameter:
+     * <code>"instructions": {"shortInstruction":"&lt;h1&gt;Add header&lt;/h1&gt;&lt;p&gt;Add Instructions&lt;/p&gt;", "fullInstruction":"&lt;p&gt;Add additional instructions.&lt;/p&gt;"}</code>
+     * . For details and an example, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-named-entity-recg.html#sms-creating-ner-api">Create a
+     * Named Entity Recognition Labeling Job (API) </a>.
+     * </p>
+     * <p>
      * For all other <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-task-types.html">built-in task
      * types</a> and <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-custom-templates.html">custom
      * tasks</a>, your label category configuration file must be a JSON file in the following format. Identify the
@@ -983,6 +991,14 @@ public class CreateLabelingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      * Labeling Category Configuration File for 3D Point Cloud Labeling Jobs</a>.
      * </p>
      * <p>
+     * For named entity recognition jobs, in addition to <code>"labels"</code>, you must provide worker instructions in
+     * the label category configuration file using the <code>"instructions"</code> parameter:
+     * <code>"instructions": {"shortInstruction":"&lt;h1&gt;Add header&lt;/h1&gt;&lt;p&gt;Add Instructions&lt;/p&gt;", "fullInstruction":"&lt;p&gt;Add additional instructions.&lt;/p&gt;"}</code>
+     * . For details and an example, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-named-entity-recg.html#sms-creating-ner-api">Create a
+     * Named Entity Recognition Labeling Job (API) </a>.
+     * </p>
+     * <p>
      * For all other <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-task-types.html">built-in task
      * types</a> and <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-custom-templates.html">custom
      * tasks</a>, your label category configuration file must be a JSON file in the following format. Identify the
@@ -1035,6 +1051,14 @@ public class CreateLabelingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      *        to your label category configuration file. To learn how, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-point-cloud-label-category-config.html">Create a
      *        Labeling Category Configuration File for 3D Point Cloud Labeling Jobs</a>.
+     *        </p>
+     *        <p>
+     *        For named entity recognition jobs, in addition to <code>"labels"</code>, you must provide worker
+     *        instructions in the label category configuration file using the <code>"instructions"</code> parameter:
+     *        <code>"instructions": {"shortInstruction":"&lt;h1&gt;Add header&lt;/h1&gt;&lt;p&gt;Add Instructions&lt;/p&gt;", "fullInstruction":"&lt;p&gt;Add additional instructions.&lt;/p&gt;"}</code>
+     *        . For details and an example, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-named-entity-recg.html#sms-creating-ner-api"
+     *        >Create a Named Entity Recognition Labeling Job (API) </a>.
      *        </p>
      *        <p>
      *        For all other <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-task-types.html">built-in task
@@ -1097,6 +1121,14 @@ public class CreateLabelingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      * Labeling Category Configuration File for 3D Point Cloud Labeling Jobs</a>.
      * </p>
      * <p>
+     * For named entity recognition jobs, in addition to <code>"labels"</code>, you must provide worker instructions in
+     * the label category configuration file using the <code>"instructions"</code> parameter:
+     * <code>"instructions": {"shortInstruction":"&lt;h1&gt;Add header&lt;/h1&gt;&lt;p&gt;Add Instructions&lt;/p&gt;", "fullInstruction":"&lt;p&gt;Add additional instructions.&lt;/p&gt;"}</code>
+     * . For details and an example, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-named-entity-recg.html#sms-creating-ner-api">Create a
+     * Named Entity Recognition Labeling Job (API) </a>.
+     * </p>
+     * <p>
      * For all other <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-task-types.html">built-in task
      * types</a> and <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-custom-templates.html">custom
      * tasks</a>, your label category configuration file must be a JSON file in the following format. Identify the
@@ -1148,6 +1180,14 @@ public class CreateLabelingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      *         to your label category configuration file. To learn how, see <a
      *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-point-cloud-label-category-config.html">Create
      *         a Labeling Category Configuration File for 3D Point Cloud Labeling Jobs</a>.
+     *         </p>
+     *         <p>
+     *         For named entity recognition jobs, in addition to <code>"labels"</code>, you must provide worker
+     *         instructions in the label category configuration file using the <code>"instructions"</code> parameter:
+     *         <code>"instructions": {"shortInstruction":"&lt;h1&gt;Add header&lt;/h1&gt;&lt;p&gt;Add Instructions&lt;/p&gt;", "fullInstruction":"&lt;p&gt;Add additional instructions.&lt;/p&gt;"}</code>
+     *         . For details and an example, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-named-entity-recg.html#sms-creating-ner-api"
+     *         >Create a Named Entity Recognition Labeling Job (API) </a>.
      *         </p>
      *         <p>
      *         For all other <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-task-types.html">built-in task
@@ -1210,6 +1250,14 @@ public class CreateLabelingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      * Labeling Category Configuration File for 3D Point Cloud Labeling Jobs</a>.
      * </p>
      * <p>
+     * For named entity recognition jobs, in addition to <code>"labels"</code>, you must provide worker instructions in
+     * the label category configuration file using the <code>"instructions"</code> parameter:
+     * <code>"instructions": {"shortInstruction":"&lt;h1&gt;Add header&lt;/h1&gt;&lt;p&gt;Add Instructions&lt;/p&gt;", "fullInstruction":"&lt;p&gt;Add additional instructions.&lt;/p&gt;"}</code>
+     * . For details and an example, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-named-entity-recg.html#sms-creating-ner-api">Create a
+     * Named Entity Recognition Labeling Job (API) </a>.
+     * </p>
+     * <p>
      * For all other <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-task-types.html">built-in task
      * types</a> and <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-custom-templates.html">custom
      * tasks</a>, your label category configuration file must be a JSON file in the following format. Identify the
@@ -1262,6 +1310,14 @@ public class CreateLabelingJobRequest extends com.amazonaws.AmazonWebServiceRequ
      *        to your label category configuration file. To learn how, see <a
      *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-point-cloud-label-category-config.html">Create a
      *        Labeling Category Configuration File for 3D Point Cloud Labeling Jobs</a>.
+     *        </p>
+     *        <p>
+     *        For named entity recognition jobs, in addition to <code>"labels"</code>, you must provide worker
+     *        instructions in the label category configuration file using the <code>"instructions"</code> parameter:
+     *        <code>"instructions": {"shortInstruction":"&lt;h1&gt;Add header&lt;/h1&gt;&lt;p&gt;Add Instructions&lt;/p&gt;", "fullInstruction":"&lt;p&gt;Add additional instructions.&lt;/p&gt;"}</code>
+     *        . For details and an example, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-named-entity-recg.html#sms-creating-ner-api"
+     *        >Create a Named Entity Recognition Labeling Job (API) </a>.
      *        </p>
      *        <p>
      *        For all other <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/sms-task-types.html">built-in task
