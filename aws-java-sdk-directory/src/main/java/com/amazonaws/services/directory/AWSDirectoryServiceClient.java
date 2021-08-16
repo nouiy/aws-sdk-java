@@ -50,21 +50,22 @@ import com.amazonaws.services.directory.model.transform.*;
  * Client for accessing Directory Service. All service calls made using this client are blocking, and will not return
  * until the service call completes.
  * <p>
- * <fullname>AWS Directory Service</fullname>
+ * <fullname>Directory Service</fullname>
  * <p>
- * AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
- * connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
- * information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
- * Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the
- * <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service
- * Administration Guide</a>.
+ * Directory Service is a web service that makes it easy for you to setup and run directories in the Amazon Web Services
+ * cloud, or connect your Amazon Web Services resources with an existing self-managed Microsoft Active Directory. This
+ * guide provides detailed information about Directory Service operations, data types, parameters, and errors. For
+ * information about Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">Directory
+ * Service</a> and the <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">Directory
+ * Service Administration Guide</a>.
  * </p>
  * <note>
  * <p>
- * AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java,
- * Ruby, .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory
- * Service and other AWS services. For more information about the AWS SDKs, including how to download and install them,
- * see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.
+ * Amazon Web Services provides SDKs that consist of libraries and sample code for various programming languages and
+ * platforms (Java, Ruby, .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to
+ * Directory Service and other Amazon Web Services services. For more information about the Amazon Web Services SDKs,
+ * including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * Services</a>.
  * </p>
  * </note>
  */
@@ -406,11 +407,11 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws EntityDoesNotExistException
      *         The specified entity could not be found.
      * @throws DirectoryAlreadySharedException
-     *         The specified directory has already been shared with this AWS account.
+     *         The specified directory has already been shared with this Amazon Web Services account.
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.AcceptSharedDirectory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/AcceptSharedDirectory" target="_top">AWS API
      *      Documentation</a>
@@ -462,16 +463,15 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * If the DNS server for your on-premises domain uses a publicly addressable IP address, you must add a CIDR address
-     * block to correctly route traffic to and from your Microsoft AD on Amazon Web Services. <i>AddIpRoutes</i> adds
-     * this address block. You can also use <i>AddIpRoutes</i> to facilitate routing traffic that uses public IP ranges
-     * from your Microsoft AD on AWS to a peer VPC.
+     * If the DNS server for your self-managed domain uses a publicly addressable IP address, you must add a CIDR
+     * address block to correctly route traffic to and from your Microsoft AD on Amazon Web Services. <i>AddIpRoutes</i>
+     * adds this address block. You can also use <i>AddIpRoutes</i> to facilitate routing traffic that uses public IP
+     * ranges from your Microsoft AD on Amazon Web Services to a peer VPC.
      * </p>
      * <p>
      * Before you call <i>AddIpRoutes</i>, ensure that all of the required permissions have been explicitly granted
      * through a policy. For details about what permissions are required to run the <i>AddIpRoutes</i> operation, see <a
-     * href
-     * ="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">AWS
+     * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">
      * Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.
      * </p>
      * 
@@ -490,7 +490,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.AddIpRoutes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/AddIpRoutes" target="_top">AWS API
      *      Documentation</a>
@@ -553,8 +553,8 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws EntityDoesNotExistException
      *         The specified entity could not be found.
      * @throws DirectoryAlreadyInRegionException
-     *         The Region you specified is the same Region where the AWS Managed Microsoft AD directory was created.
-     *         Specify a different Region and try again.
+     *         The Region you specified is the same Region where the Managed Microsoft AD directory was created. Specify
+     *         a different Region and try again.
      * @throws UnsupportedOperationException
      *         The operation is not supported.
      * @throws DirectoryDoesNotExistException
@@ -566,7 +566,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.AddRegion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/AddRegion" target="_top">AWS API
      *      Documentation</a>
@@ -632,7 +632,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.AddTagsToResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/AddTagsToResource" target="_top">AWS API
      *      Documentation</a>
@@ -696,7 +696,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.CancelSchemaExtension
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CancelSchemaExtension" target="_top">AWS API
      *      Documentation</a>
@@ -748,14 +748,14 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Creates an AD Connector to connect to an on-premises directory.
+     * Creates an AD Connector to connect to a self-managed directory.
      * </p>
      * <p>
      * Before you call <code>ConnectDirectory</code>, ensure that all of the required permissions have been explicitly
      * granted through a policy. For details about what permissions are required to run the
      * <code>ConnectDirectory</code> operation, see <a
      * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html"
-     * >AWS Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.
+     * >Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.
      * </p>
      * 
      * @param connectDirectoryRequest
@@ -769,7 +769,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.ConnectDirectory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ConnectDirectory" target="_top">AWS API
      *      Documentation</a>
@@ -842,7 +842,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.CreateAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateAlias" target="_top">AWS API
      *      Documentation</a>
@@ -914,7 +914,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.CreateComputer
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateComputer" target="_top">AWS API
      *      Documentation</a>
@@ -965,12 +965,13 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Creates a conditional forwarder associated with your AWS directory. Conditional forwarders are required in order
-     * to set up a trust relationship with another domain. The conditional forwarder points to the trusted domain.
+     * Creates a conditional forwarder associated with your Amazon Web Services directory. Conditional forwarders are
+     * required in order to set up a trust relationship with another domain. The conditional forwarder points to the
+     * trusted domain.
      * </p>
      * 
      * @param createConditionalForwarderRequest
-     *        Initiates the creation of a conditional forwarder for your AWS Directory Service for Microsoft Active
+     *        Initiates the creation of a conditional forwarder for your Directory Service for Microsoft Active
      *        Directory. Conditional forwarders are required in order to set up a trust relationship with another
      *        domain.
      * @return Result of the CreateConditionalForwarder operation returned by the service.
@@ -987,7 +988,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.CreateConditionalForwarder
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateConditionalForwarder" target="_top">AWS
      *      API Documentation</a>
@@ -1042,14 +1043,14 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * <p>
      * Creates a Simple AD directory. For more information, see <a
      * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_simple_ad.html">Simple Active
-     * Directory</a> in the <i>AWS Directory Service Admin Guide</i>.
+     * Directory</a> in the <i>Directory Service Admin Guide</i>.
      * </p>
      * <p>
      * Before you call <code>CreateDirectory</code>, ensure that all of the required permissions have been explicitly
      * granted through a policy. For details about what permissions are required to run the <code>CreateDirectory</code>
      * operation, see <a
      * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html"
-     * >AWS Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.
+     * >Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.
      * </p>
      * 
      * @param createDirectoryRequest
@@ -1063,7 +1064,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.CreateDirectory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateDirectory" target="_top">AWS API
      *      Documentation</a>
@@ -1115,7 +1116,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
     /**
      * <p>
      * Creates a subscription to forward real-time Directory Service domain controller security logs to the specified
-     * Amazon CloudWatch log group in your AWS account.
+     * Amazon CloudWatch log group in your Amazon Web Services account.
      * </p>
      * 
      * @param createLogSubscriptionRequest
@@ -1131,7 +1132,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.CreateLogSubscription
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateLogSubscription" target="_top">AWS API
      *      Documentation</a>
@@ -1183,20 +1184,20 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Creates a Microsoft AD directory in the AWS Cloud. For more information, see <a
-     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">AWS Managed
-     * Microsoft AD</a> in the <i>AWS Directory Service Admin Guide</i>.
+     * Creates a Microsoft AD directory in the Amazon Web Services Cloud. For more information, see <a
+     * href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">Managed
+     * Microsoft AD</a> in the <i>Directory Service Admin Guide</i>.
      * </p>
      * <p>
      * Before you call <i>CreateMicrosoftAD</i>, ensure that all of the required permissions have been explicitly
      * granted through a policy. For details about what permissions are required to run the <i>CreateMicrosoftAD</i>
      * operation, see <a
      * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html"
-     * >AWS Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.
+     * >Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.
      * </p>
      * 
      * @param createMicrosoftADRequest
-     *        Creates an AWS Managed Microsoft AD directory.
+     *        Creates an Managed Microsoft AD directory.
      * @return Result of the CreateMicrosoftAD operation returned by the service.
      * @throws DirectoryLimitExceededException
      *         The maximum number of directories in the region has been reached. You can use the
@@ -1206,7 +1207,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @throws UnsupportedOperationException
      *         The operation is not supported.
      * @sample AWSDirectoryService.CreateMicrosoftAD
@@ -1259,7 +1260,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Creates a snapshot of a Simple AD or Microsoft AD directory in the AWS cloud.
+     * Creates a snapshot of a Simple AD or Microsoft AD directory in the Amazon Web Services cloud.
      * </p>
      * <note>
      * <p>
@@ -1280,7 +1281,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.CreateSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateSnapshot" target="_top">AWS API
      *      Documentation</a>
@@ -1331,24 +1332,24 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * AWS Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example,
-     * you can establish a trust between your AWS Managed Microsoft AD directory, and your existing on-premises
-     * Microsoft Active Directory. This would allow you to provide users and groups access to resources in either
-     * domain, with a single set of credentials.
+     * Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example, you
+     * can establish a trust between your Managed Microsoft AD directory, and your existing self-managed Microsoft
+     * Active Directory. This would allow you to provide users and groups access to resources in either domain, with a
+     * single set of credentials.
      * </p>
      * <p>
-     * This action initiates the creation of the AWS side of a trust relationship between an AWS Managed Microsoft AD
-     * directory and an external domain. You can create either a forest trust or an external trust.
+     * This action initiates the creation of the Amazon Web Services side of a trust relationship between an Managed
+     * Microsoft AD directory and an external domain. You can create either a forest trust or an external trust.
      * </p>
      * 
      * @param createTrustRequest
-     *        AWS Directory Service for Microsoft Active Directory allows you to configure trust relationships. For
-     *        example, you can establish a trust between your AWS Managed Microsoft AD directory, and your existing
-     *        on-premises Microsoft Active Directory. This would allow you to provide users and groups access to
-     *        resources in either domain, with a single set of credentials.</p>
+     *        Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example,
+     *        you can establish a trust between your Managed Microsoft AD directory, and your existing self-managed
+     *        Microsoft Active Directory. This would allow you to provide users and groups access to resources in either
+     *        domain, with a single set of credentials.</p>
      *        <p>
-     *        This action initiates the creation of the AWS side of a trust relationship between an AWS Managed
-     *        Microsoft AD directory and an external domain.
+     *        This action initiates the creation of the Amazon Web Services side of a trust relationship between an
+     *        Managed Microsoft AD directory and an external domain.
      * @return Result of the CreateTrust operation returned by the service.
      * @throws EntityAlreadyExistsException
      *         The specified entity already exists.
@@ -1359,7 +1360,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @throws UnsupportedOperationException
      *         The operation is not supported.
      * @sample AWSDirectoryService.CreateTrust
@@ -1412,7 +1413,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Deletes a conditional forwarder that has been set up for your AWS directory.
+     * Deletes a conditional forwarder that has been set up for your Amazon Web Services directory.
      * </p>
      * 
      * @param deleteConditionalForwarderRequest
@@ -1429,7 +1430,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DeleteConditionalForwarder
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeleteConditionalForwarder" target="_top">AWS
      *      API Documentation</a>
@@ -1482,14 +1483,14 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Deletes an AWS Directory Service directory.
+     * Deletes an Directory Service directory.
      * </p>
      * <p>
      * Before you call <code>DeleteDirectory</code>, ensure that all of the required permissions have been explicitly
      * granted through a policy. For details about what permissions are required to run the <code>DeleteDirectory</code>
      * operation, see <a
      * href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html"
-     * >AWS Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.
+     * >Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.
      * </p>
      * 
      * @param deleteDirectoryRequest
@@ -1500,7 +1501,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DeleteDirectory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeleteDirectory" target="_top">AWS API
      *      Documentation</a>
@@ -1563,7 +1564,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DeleteLogSubscription
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeleteLogSubscription" target="_top">AWS API
      *      Documentation</a>
@@ -1628,7 +1629,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DeleteSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeleteSnapshot" target="_top">AWS API
      *      Documentation</a>
@@ -1679,12 +1680,12 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Deletes an existing trust relationship between your AWS Managed Microsoft AD directory and an external domain.
+     * Deletes an existing trust relationship between your Managed Microsoft AD directory and an external domain.
      * </p>
      * 
      * @param deleteTrustRequest
-     *        Deletes the local side of an existing trust relationship between the AWS Managed Microsoft AD directory
-     *        and the external domain.
+     *        Deletes the local side of an existing trust relationship between the Managed Microsoft AD directory and
+     *        the external domain.
      * @return Result of the DeleteTrust operation returned by the service.
      * @throws EntityDoesNotExistException
      *         The specified entity could not be found.
@@ -1693,7 +1694,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @throws UnsupportedOperationException
      *         The operation is not supported.
      * @sample AWSDirectoryService.DeleteTrust
@@ -1767,7 +1768,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DeregisterCertificate
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeregisterCertificate" target="_top">AWS API
      *      Documentation</a>
@@ -1819,11 +1820,11 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Removes the specified directory as a publisher to the specified SNS topic.
+     * Removes the specified directory as a publisher to the specified Amazon SNS topic.
      * </p>
      * 
      * @param deregisterEventTopicRequest
-     *        Removes the specified directory as a publisher to the specified SNS topic.
+     *        Removes the specified directory as a publisher to the specified Amazon SNS topic.
      * @return Result of the DeregisterEventTopic operation returned by the service.
      * @throws EntityDoesNotExistException
      *         The specified entity could not be found.
@@ -1832,7 +1833,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DeregisterEventTopic
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DeregisterEventTopic" target="_top">AWS API
      *      Documentation</a>
@@ -1899,7 +1900,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DescribeCertificate
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeCertificate" target="_top">AWS API
      *      Documentation</a>
@@ -1950,6 +1951,78 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
+     * Retrieves information about the type of client authentication for the specified directory, if the type is
+     * specified. If no type is specified, information about all client authentication types that are supported for the
+     * specified directory is retrieved. Currently, only <code>SmartCard</code> is supported.
+     * </p>
+     * 
+     * @param describeClientAuthenticationSettingsRequest
+     * @return Result of the DescribeClientAuthenticationSettings operation returned by the service.
+     * @throws DirectoryDoesNotExistException
+     *         The specified directory does not exist in the system.
+     * @throws UnsupportedOperationException
+     *         The operation is not supported.
+     * @throws AccessDeniedException
+     *         Client authentication is not available in this region at this time.
+     * @throws InvalidParameterException
+     *         One or more parameters are not valid.
+     * @throws ClientException
+     *         A client exception has occurred.
+     * @throws ServiceException
+     *         An exception has occurred in Directory Service.
+     * @sample AWSDirectoryService.DescribeClientAuthenticationSettings
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeClientAuthenticationSettings"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeClientAuthenticationSettingsResult describeClientAuthenticationSettings(DescribeClientAuthenticationSettingsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeClientAuthenticationSettings(request);
+    }
+
+    @SdkInternalApi
+    final DescribeClientAuthenticationSettingsResult executeDescribeClientAuthenticationSettings(
+            DescribeClientAuthenticationSettingsRequest describeClientAuthenticationSettingsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeClientAuthenticationSettingsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeClientAuthenticationSettingsRequest> request = null;
+        Response<DescribeClientAuthenticationSettingsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeClientAuthenticationSettingsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeClientAuthenticationSettingsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Directory Service");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeClientAuthenticationSettings");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeClientAuthenticationSettingsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeClientAuthenticationSettingsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Obtains information about the conditional forwarders for this account.
      * </p>
      * <p>
@@ -1971,7 +2044,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DescribeConditionalForwarders
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeConditionalForwarders"
      *      target="_top">AWS API Documentation</a>
@@ -2051,7 +2124,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DescribeDirectories
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeDirectories" target="_top">AWS API
      *      Documentation</a>
@@ -2121,7 +2194,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @throws UnsupportedOperationException
      *         The operation is not supported.
      * @sample AWSDirectoryService.DescribeDomainControllers
@@ -2176,7 +2249,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Obtains information about which SNS topics receive status messages from the specified directory.
+     * Obtains information about which Amazon SNS topics receive status messages from the specified directory.
      * </p>
      * <p>
      * If no input parameters are provided, such as DirectoryId or TopicName, this request describes all of the
@@ -2193,7 +2266,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DescribeEventTopics
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeEventTopics" target="_top">AWS API
      *      Documentation</a>
@@ -2260,7 +2333,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DescribeLDAPSSettings
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeLDAPSSettings" target="_top">AWS API
      *      Documentation</a>
@@ -2330,7 +2403,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DescribeRegions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeRegions" target="_top">AWS API
      *      Documentation</a>
@@ -2397,7 +2470,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DescribeSharedDirectories
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeSharedDirectories" target="_top">AWS
      *      API Documentation</a>
@@ -2473,7 +2546,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DescribeSnapshots
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DescribeSnapshots" target="_top">AWS API
      *      Documentation</a>
@@ -2537,9 +2610,8 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * </p>
      * 
      * @param describeTrustsRequest
-     *        Describes the trust relationships for a particular AWS Managed Microsoft AD directory. If no input
-     *        parameters are are provided, such as directory ID or trust ID, this request describes all the trust
-     *        relationships.
+     *        Describes the trust relationships for a particular Managed Microsoft AD directory. If no input parameters
+     *        are provided, such as directory ID or trust ID, this request describes all the trust relationships.
      * @return Result of the DescribeTrusts operation returned by the service.
      * @throws EntityDoesNotExistException
      *         The specified entity could not be found.
@@ -2550,7 +2622,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @throws UnsupportedOperationException
      *         The operation is not supported.
      * @sample AWSDirectoryService.DescribeTrusts
@@ -2619,7 +2691,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DisableClientAuthentication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DisableClientAuthentication" target="_top">AWS
      *      API Documentation</a>
@@ -2690,7 +2762,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DisableLDAPS
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DisableLDAPS" target="_top">AWS API
      *      Documentation</a>
@@ -2753,7 +2825,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DisableRadius
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DisableRadius" target="_top">AWS API
      *      Documentation</a>
@@ -2819,7 +2891,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.DisableSso
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/DisableSso" target="_top">AWS API
      *      Documentation</a>
@@ -2889,7 +2961,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.EnableClientAuthentication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/EnableClientAuthentication" target="_top">AWS
      *      API Documentation</a>
@@ -2963,7 +3035,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.EnableLDAPS
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/EnableLDAPS" target="_top">AWS API
      *      Documentation</a>
@@ -3030,7 +3102,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.EnableRadius
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/EnableRadius" target="_top">AWS API
      *      Documentation</a>
@@ -3081,8 +3153,9 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Enables single sign-on for a directory. Single sign-on allows users in your directory to access certain AWS
-     * services from a computer joined to the directory without having to enter their credentials separately.
+     * Enables single sign-on for a directory. Single sign-on allows users in your directory to access certain Amazon
+     * Web Services services from a computer joined to the directory without having to enter their credentials
+     * separately.
      * </p>
      * 
      * @param enableSsoRequest
@@ -3097,7 +3170,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.EnableSso
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/EnableSso" target="_top">AWS API
      *      Documentation</a>
@@ -3159,7 +3232,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.GetDirectoryLimits
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/GetDirectoryLimits" target="_top">AWS API
      *      Documentation</a>
@@ -3226,7 +3299,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.GetSnapshotLimits
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/GetSnapshotLimits" target="_top">AWS API
      *      Documentation</a>
@@ -3294,7 +3367,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.ListCertificates
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListCertificates" target="_top">AWS API
      *      Documentation</a>
@@ -3359,7 +3432,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.ListIpRoutes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListIpRoutes" target="_top">AWS API
      *      Documentation</a>
@@ -3410,7 +3483,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Lists the active log subscriptions for the AWS account.
+     * Lists the active log subscriptions for the Amazon Web Services account.
      * </p>
      * 
      * @param listLogSubscriptionsRequest
@@ -3422,7 +3495,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.ListLogSubscriptions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListLogSubscriptions" target="_top">AWS API
      *      Documentation</a>
@@ -3485,7 +3558,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.ListSchemaExtensions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListSchemaExtensions" target="_top">AWS API
      *      Documentation</a>
@@ -3550,7 +3623,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ListTagsForResource" target="_top">AWS API
      *      Documentation</a>
@@ -3623,7 +3696,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.RegisterCertificate
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RegisterCertificate" target="_top">AWS API
      *      Documentation</a>
@@ -3674,10 +3747,10 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Associates a directory with an SNS topic. This establishes the directory as a publisher to the specified SNS
-     * topic. You can then receive email or text (SMS) messages when the status of your directory changes. You get
-     * notified if your directory goes from an Active status to an Impaired or Inoperable status. You also receive a
-     * notification when the directory returns to an Active status.
+     * Associates a directory with an Amazon SNS topic. This establishes the directory as a publisher to the specified
+     * Amazon SNS topic. You can then receive email or text (SMS) messages when the status of your directory changes.
+     * You get notified if your directory goes from an Active status to an Impaired or Inoperable status. You also
+     * receive a notification when the directory returns to an Active status.
      * </p>
      * 
      * @param registerEventTopicRequest
@@ -3690,7 +3763,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.RegisterEventTopic
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RegisterEventTopic" target="_top">AWS API
      *      Documentation</a>
@@ -3751,11 +3824,11 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws EntityDoesNotExistException
      *         The specified entity could not be found.
      * @throws DirectoryAlreadySharedException
-     *         The specified directory has already been shared with this AWS account.
+     *         The specified directory has already been shared with this Amazon Web Services account.
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.RejectSharedDirectory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RejectSharedDirectory" target="_top">AWS API
      *      Documentation</a>
@@ -3821,7 +3894,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.RemoveIpRoutes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RemoveIpRoutes" target="_top">AWS API
      *      Documentation</a>
@@ -3889,7 +3962,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.RemoveRegion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RemoveRegion" target="_top">AWS API
      *      Documentation</a>
@@ -3952,7 +4025,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.RemoveTagsFromResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RemoveTagsFromResource" target="_top">AWS API
      *      Documentation</a>
@@ -4004,7 +4077,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Resets the password for any user in your AWS Managed Microsoft AD or Simple AD directory.
+     * Resets the password for any user in your Managed Microsoft AD or Simple AD directory.
      * </p>
      * <p>
      * You can reset the password for any user in your directory with the following exceptions:
@@ -4018,12 +4091,12 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * </li>
      * <li>
      * <p>
-     * For AWS Managed Microsoft AD, you can only reset the password for a user that is in an OU based off of the
-     * NetBIOS name that you typed when you created your directory. For example, you cannot reset the password for a
-     * user in the <b>AWS Reserved</b> OU. For more information about the OU structure for an AWS Managed Microsoft AD
+     * For Managed Microsoft AD, you can only reset the password for a user that is in an OU based off of the NetBIOS
+     * name that you typed when you created your directory. For example, you cannot reset the password for a user in the
+     * <b>Amazon Web Services Reserved</b> OU. For more information about the OU structure for an Managed Microsoft AD
      * directory, see <a href=
      * "https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_getting_started_what_gets_created.html"
-     * >What Gets Created</a> in the <i>AWS Directory Service Administration Guide</i>.
+     * >What Gets Created</a> in the <i>Directory Service Administration Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -4044,7 +4117,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.ResetUserPassword
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ResetUserPassword" target="_top">AWS API
      *      Documentation</a>
@@ -4117,7 +4190,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.RestoreFromSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/RestoreFromSnapshot" target="_top">AWS API
      *      Documentation</a>
@@ -4168,19 +4241,20 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Shares a specified directory (<code>DirectoryId</code>) in your AWS account (directory owner) with another AWS
-     * account (directory consumer). With this operation you can use your directory from any AWS account and from any
-     * Amazon VPC within an AWS Region.
+     * Shares a specified directory (<code>DirectoryId</code>) in your Amazon Web Services account (directory owner)
+     * with another Amazon Web Services account (directory consumer). With this operation you can use your directory
+     * from any Amazon Web Services account and from any Amazon VPC within an Amazon Web Services Region.
      * </p>
      * <p>
-     * When you share your AWS Managed Microsoft AD directory, AWS Directory Service creates a shared directory in the
-     * directory consumer account. This shared directory contains the metadata to provide access to the directory within
-     * the directory owner account. The shared directory is visible in all VPCs in the directory consumer account.
+     * When you share your Managed Microsoft AD directory, Directory Service creates a shared directory in the directory
+     * consumer account. This shared directory contains the metadata to provide access to the directory within the
+     * directory owner account. The shared directory is visible in all VPCs in the directory consumer account.
      * </p>
      * <p>
-     * The <code>ShareMethod</code> parameter determines whether the specified directory can be shared between AWS
-     * accounts inside the same AWS organization (<code>ORGANIZATIONS</code>). It also determines whether you can share
-     * the directory with any other AWS account either inside or outside of the organization (<code>HANDSHAKE</code>).
+     * The <code>ShareMethod</code> parameter determines whether the specified directory can be shared between Amazon
+     * Web Services accounts inside the same Amazon Web Services organization (<code>ORGANIZATIONS</code>). It also
+     * determines whether you can share the directory with any other Amazon Web Services account either inside or
+     * outside of the organization (<code>HANDSHAKE</code>).
      * </p>
      * <p>
      * The <code>ShareNotes</code> parameter is only used when <code>HANDSHAKE</code> is called, which sends a directory
@@ -4190,7 +4264,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @param shareDirectoryRequest
      * @return Result of the ShareDirectory operation returned by the service.
      * @throws DirectoryAlreadySharedException
-     *         The specified directory has already been shared with this AWS account.
+     *         The specified directory has already been shared with this Amazon Web Services account.
      * @throws EntityDoesNotExistException
      *         The specified entity could not be found.
      * @throws InvalidTargetException
@@ -4200,15 +4274,16 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ShareLimitExceededException
-     *         The maximum number of AWS accounts that you can share with this directory has been reached.
+     *         The maximum number of Amazon Web Services accounts that you can share with this directory has been
+     *         reached.
      * @throws OrganizationsException
-     *         Exception encountered while trying to access your AWS organization.
+     *         Exception encountered while trying to access your Amazon Web Services organization.
      * @throws AccessDeniedException
      *         Client authentication is not available in this region at this time.
      * @throws UnsupportedOperationException
      *         The operation is not supported.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.ShareDirectory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/ShareDirectory" target="_top">AWS API
      *      Documentation</a>
@@ -4276,7 +4351,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.StartSchemaExtension
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/StartSchemaExtension" target="_top">AWS API
      *      Documentation</a>
@@ -4337,11 +4412,11 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws InvalidTargetException
      *         The specified shared target is not valid.
      * @throws DirectoryNotSharedException
-     *         The specified directory has not been shared with this AWS account.
+     *         The specified directory has not been shared with this Amazon Web Services account.
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.UnshareDirectory
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UnshareDirectory" target="_top">AWS API
      *      Documentation</a>
@@ -4392,7 +4467,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Updates a conditional forwarder that has been set up for your AWS directory.
+     * Updates a conditional forwarder that has been set up for your Amazon Web Services directory.
      * </p>
      * 
      * @param updateConditionalForwarderRequest
@@ -4409,7 +4484,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.UpdateConditionalForwarder
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateConditionalForwarder" target="_top">AWS
      *      API Documentation</a>
@@ -4484,7 +4559,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.UpdateNumberOfDomainControllers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateNumberOfDomainControllers"
      *      target="_top">AWS API Documentation</a>
@@ -4552,7 +4627,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.UpdateRadius
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateRadius" target="_top">AWS API
      *      Documentation</a>
@@ -4603,7 +4678,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Updates the trust that has been set up between your AWS Managed Microsoft AD directory and an on-premises Active
+     * Updates the trust that has been set up between your Managed Microsoft AD directory and an self-managed Active
      * Directory.
      * </p>
      * 
@@ -4616,7 +4691,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @sample AWSDirectoryService.UpdateTrust
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/UpdateTrust" target="_top">AWS API
      *      Documentation</a>
@@ -4667,15 +4742,15 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * AWS Directory Service for Microsoft Active Directory allows you to configure and verify trust relationships.
+     * Directory Service for Microsoft Active Directory allows you to configure and verify trust relationships.
      * </p>
      * <p>
-     * This action verifies a trust relationship between your AWS Managed Microsoft AD directory and an external domain.
+     * This action verifies a trust relationship between your Managed Microsoft AD directory and an external domain.
      * </p>
      * 
      * @param verifyTrustRequest
-     *        Initiates the verification of an existing trust relationship between an AWS Managed Microsoft AD directory
-     *        and an external domain.
+     *        Initiates the verification of an existing trust relationship between an Managed Microsoft AD directory and
+     *        an external domain.
      * @return Result of the VerifyTrust operation returned by the service.
      * @throws EntityDoesNotExistException
      *         The specified entity could not be found.
@@ -4684,7 +4759,7 @@ public class AWSDirectoryServiceClient extends AmazonWebServiceClient implements
      * @throws ClientException
      *         A client exception has occurred.
      * @throws ServiceException
-     *         An exception has occurred in AWS Directory Service.
+     *         An exception has occurred in Directory Service.
      * @throws UnsupportedOperationException
      *         The operation is not supported.
      * @sample AWSDirectoryService.VerifyTrust

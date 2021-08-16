@@ -57,7 +57,7 @@ public class ClientConfigurationMaxErrorRetryTest extends RetryPolicyTestBase {
         Assert.assertTrue(clientConfiguration.getRetryPolicy() == PredefinedRetryPolicies.DEFAULT);
         
         // Don't change any of the default settings in ClientConfiguration
-        testActualRetries(PredefinedRetryPolicies.DEFAULT_MAX_ERROR_RETRY);
+        testActualRetries(PredefinedRetryPolicies.DEFAULT_MAX_ERROR_RETRY_STANDARD_MODE);
     
         /* DynamoDB default */
         // Change to dynamodb default policy.

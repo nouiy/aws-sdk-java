@@ -152,15 +152,16 @@ public class RetryPolicyAdapterTest {
     }
 
     @Test
-    public void nonStandardMode_shouldUseLegacyDefaultModeMaxError() {
+    public void standardMode_shouldUseStandardDefaultModeMaxError() {
         when(retryCondition.shouldRetry(any(AmazonWebServiceRequest.class), any(AmazonClientException.class), anyInt()))
             .thenReturn(true);
-        legacyPolicy = new RetryPolicy(retryCondition, backoffStrategy, 5, false, true, false);
+        // maxErrorRetry in the RetryPolicy is only honored for non-standard mode,
+        // so we use a high number here to assert that it's not being used
+        legacyPolicy = new RetryPolicy(retryCondition, backoffStrategy, 100, false, true, false);
         adapter = new RetryPolicyAdapter(legacyPolicy, new ClientConfiguration());
 
         assertFalse(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(1)));
-        assertFalse(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(4)));
-        assertTrue(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(5)));
+        assertTrue(adapter.maxRetriesExceeded(RetryPolicyContexts.withRetriesAttempted(2)));
     }
 
     @Test

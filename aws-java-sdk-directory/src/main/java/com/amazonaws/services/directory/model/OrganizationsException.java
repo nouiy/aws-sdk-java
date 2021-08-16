@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Exception encountered while trying to access your AWS organization.
+ * Exception encountered while trying to access your Amazon Web Services organization.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The maximum number of AWS accounts that you can share with this directory has been reached.
+ * The maximum number of Amazon Web Services accounts that you can share with this directory has been reached.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

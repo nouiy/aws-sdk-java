@@ -28,17 +28,17 @@ public class DescribeEventTopicsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of SNS topic names that receive status messages from the specified Directory ID.
+     * A list of Amazon SNS topic names that receive status messages from the specified Directory ID.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<EventTopic> eventTopics;
 
     /**
      * <p>
-     * A list of SNS topic names that receive status messages from the specified Directory ID.
+     * A list of Amazon SNS topic names that receive status messages from the specified Directory ID.
      * </p>
      * 
-     * @return A list of SNS topic names that receive status messages from the specified Directory ID.
+     * @return A list of Amazon SNS topic names that receive status messages from the specified Directory ID.
      */
 
     public java.util.List<EventTopic> getEventTopics() {
@@ -50,11 +50,11 @@ public class DescribeEventTopicsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of SNS topic names that receive status messages from the specified Directory ID.
+     * A list of Amazon SNS topic names that receive status messages from the specified Directory ID.
      * </p>
      * 
      * @param eventTopics
-     *        A list of SNS topic names that receive status messages from the specified Directory ID.
+     *        A list of Amazon SNS topic names that receive status messages from the specified Directory ID.
      */
 
     public void setEventTopics(java.util.Collection<EventTopic> eventTopics) {
@@ -68,7 +68,7 @@ public class DescribeEventTopicsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of SNS topic names that receive status messages from the specified Directory ID.
+     * A list of Amazon SNS topic names that receive status messages from the specified Directory ID.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class DescribeEventTopicsResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param eventTopics
-     *        A list of SNS topic names that receive status messages from the specified Directory ID.
+     *        A list of Amazon SNS topic names that receive status messages from the specified Directory ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class DescribeEventTopicsResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * A list of SNS topic names that receive status messages from the specified Directory ID.
+     * A list of Amazon SNS topic names that receive status messages from the specified Directory ID.
      * </p>
      * 
      * @param eventTopics
-     *        A list of SNS topic names that receive status messages from the specified Directory ID.
+     *        A list of Amazon SNS topic names that receive status messages from the specified Directory ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

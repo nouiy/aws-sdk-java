@@ -37,8 +37,8 @@ public class RadiusSettings implements Serializable, Cloneable, StructuredPojo {
     private com.amazonaws.internal.SdkInternalList<String> radiusServers;
     /**
      * <p>
-     * The port that your RADIUS server is using for communications. Your on-premises network must allow inbound traffic
-     * over this port from the AWS Directory Service servers.
+     * The port that your RADIUS server is using for communications. Your self-managed network must allow inbound
+     * traffic over this port from the Directory Service servers.
      * </p>
      */
     private Integer radiusPort;
@@ -162,13 +162,13 @@ public class RadiusSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The port that your RADIUS server is using for communications. Your on-premises network must allow inbound traffic
-     * over this port from the AWS Directory Service servers.
+     * The port that your RADIUS server is using for communications. Your self-managed network must allow inbound
+     * traffic over this port from the Directory Service servers.
      * </p>
      * 
      * @param radiusPort
-     *        The port that your RADIUS server is using for communications. Your on-premises network must allow inbound
-     *        traffic over this port from the AWS Directory Service servers.
+     *        The port that your RADIUS server is using for communications. Your self-managed network must allow inbound
+     *        traffic over this port from the Directory Service servers.
      */
 
     public void setRadiusPort(Integer radiusPort) {
@@ -177,12 +177,12 @@ public class RadiusSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The port that your RADIUS server is using for communications. Your on-premises network must allow inbound traffic
-     * over this port from the AWS Directory Service servers.
+     * The port that your RADIUS server is using for communications. Your self-managed network must allow inbound
+     * traffic over this port from the Directory Service servers.
      * </p>
      * 
-     * @return The port that your RADIUS server is using for communications. Your on-premises network must allow inbound
-     *         traffic over this port from the AWS Directory Service servers.
+     * @return The port that your RADIUS server is using for communications. Your self-managed network must allow
+     *         inbound traffic over this port from the Directory Service servers.
      */
 
     public Integer getRadiusPort() {
@@ -191,13 +191,13 @@ public class RadiusSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The port that your RADIUS server is using for communications. Your on-premises network must allow inbound traffic
-     * over this port from the AWS Directory Service servers.
+     * The port that your RADIUS server is using for communications. Your self-managed network must allow inbound
+     * traffic over this port from the Directory Service servers.
      * </p>
      * 
      * @param radiusPort
-     *        The port that your RADIUS server is using for communications. Your on-premises network must allow inbound
-     *        traffic over this port from the AWS Directory Service servers.
+     *        The port that your RADIUS server is using for communications. Your self-managed network must allow inbound
+     *        traffic over this port from the Directory Service servers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

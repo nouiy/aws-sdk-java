@@ -148,6 +148,11 @@ public class AbstractAWSDirectoryService implements AWSDirectoryService {
     }
 
     @Override
+    public DescribeClientAuthenticationSettingsResult describeClientAuthenticationSettings(DescribeClientAuthenticationSettingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeConditionalForwardersResult describeConditionalForwarders(DescribeConditionalForwardersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

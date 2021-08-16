@@ -9541,6 +9541,9 @@
       "enums" : [ {
         "name" : "PROVISIONAL",
         "value" : "PROVISIONAL"
+      }, {
+        "name" : "PERPETUAL",
+        "value" : "PERPETUAL"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.licensemanager.enum.CheckoutType",

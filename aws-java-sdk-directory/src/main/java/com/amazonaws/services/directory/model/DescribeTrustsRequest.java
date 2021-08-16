@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Describes the trust relationships for a particular AWS Managed Microsoft AD directory. If no input parameters are are
+ * Describes the trust relationships for a particular Managed Microsoft AD directory. If no input parameters are
  * provided, such as directory ID or trust ID, this request describes all the trust relationships.
  * </p>
  * 
@@ -31,7 +31,7 @@ public class DescribeTrustsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Directory ID of the AWS directory that is a part of the requested trust relationship.
+     * The Directory ID of the Amazon Web Services directory that is a part of the requested trust relationship.
      * </p>
      */
     private String directoryId;
@@ -61,11 +61,11 @@ public class DescribeTrustsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Directory ID of the AWS directory that is a part of the requested trust relationship.
+     * The Directory ID of the Amazon Web Services directory that is a part of the requested trust relationship.
      * </p>
      * 
      * @param directoryId
-     *        The Directory ID of the AWS directory that is a part of the requested trust relationship.
+     *        The Directory ID of the Amazon Web Services directory that is a part of the requested trust relationship.
      */
 
     public void setDirectoryId(String directoryId) {
@@ -74,10 +74,10 @@ public class DescribeTrustsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Directory ID of the AWS directory that is a part of the requested trust relationship.
+     * The Directory ID of the Amazon Web Services directory that is a part of the requested trust relationship.
      * </p>
      * 
-     * @return The Directory ID of the AWS directory that is a part of the requested trust relationship.
+     * @return The Directory ID of the Amazon Web Services directory that is a part of the requested trust relationship.
      */
 
     public String getDirectoryId() {
@@ -86,11 +86,11 @@ public class DescribeTrustsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Directory ID of the AWS directory that is a part of the requested trust relationship.
+     * The Directory ID of the Amazon Web Services directory that is a part of the requested trust relationship.
      * </p>
      * 
      * @param directoryId
-     *        The Directory ID of the AWS directory that is a part of the requested trust relationship.
+     *        The Directory ID of the Amazon Web Services directory that is a part of the requested trust relationship.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

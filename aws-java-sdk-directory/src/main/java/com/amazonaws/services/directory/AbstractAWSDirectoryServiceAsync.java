@@ -314,6 +314,21 @@ public class AbstractAWSDirectoryServiceAsync extends AbstractAWSDirectoryServic
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeClientAuthenticationSettingsResult> describeClientAuthenticationSettingsAsync(
+            DescribeClientAuthenticationSettingsRequest request) {
+
+        return describeClientAuthenticationSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClientAuthenticationSettingsResult> describeClientAuthenticationSettingsAsync(
+            DescribeClientAuthenticationSettingsRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeClientAuthenticationSettingsRequest, DescribeClientAuthenticationSettingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeConditionalForwardersResult> describeConditionalForwardersAsync(DescribeConditionalForwardersRequest request) {
 
         return describeConditionalForwardersAsync(request, null);

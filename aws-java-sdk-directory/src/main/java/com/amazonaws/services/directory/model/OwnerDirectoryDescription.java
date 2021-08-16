@@ -30,7 +30,7 @@ public class OwnerDirectoryDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Identifier of the AWS Managed Microsoft AD directory in the directory owner account.
+     * Identifier of the Managed Microsoft AD directory in the directory owner account.
      * </p>
      */
     private String directoryId;
@@ -67,11 +67,11 @@ public class OwnerDirectoryDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Identifier of the AWS Managed Microsoft AD directory in the directory owner account.
+     * Identifier of the Managed Microsoft AD directory in the directory owner account.
      * </p>
      * 
      * @param directoryId
-     *        Identifier of the AWS Managed Microsoft AD directory in the directory owner account.
+     *        Identifier of the Managed Microsoft AD directory in the directory owner account.
      */
 
     public void setDirectoryId(String directoryId) {
@@ -80,10 +80,10 @@ public class OwnerDirectoryDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Identifier of the AWS Managed Microsoft AD directory in the directory owner account.
+     * Identifier of the Managed Microsoft AD directory in the directory owner account.
      * </p>
      * 
-     * @return Identifier of the AWS Managed Microsoft AD directory in the directory owner account.
+     * @return Identifier of the Managed Microsoft AD directory in the directory owner account.
      */
 
     public String getDirectoryId() {
@@ -92,11 +92,11 @@ public class OwnerDirectoryDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Identifier of the AWS Managed Microsoft AD directory in the directory owner account.
+     * Identifier of the Managed Microsoft AD directory in the directory owner account.
      * </p>
      * 
      * @param directoryId
-     *        Identifier of the AWS Managed Microsoft AD directory in the directory owner account.
+     *        Identifier of the Managed Microsoft AD directory in the directory owner account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

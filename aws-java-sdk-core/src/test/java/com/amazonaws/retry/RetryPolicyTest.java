@@ -55,7 +55,7 @@ public class RetryPolicyTest {
                                                   false);
 
 
-        assertEquals(RetryMode.LEGACY, retryPolicy.getRetryMode());
+        assertEquals(RetryMode.STANDARD, retryPolicy.getRetryMode());
     }
 
     @Test

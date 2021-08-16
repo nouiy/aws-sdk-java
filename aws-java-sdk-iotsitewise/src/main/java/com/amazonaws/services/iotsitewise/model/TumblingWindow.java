@@ -70,14 +70,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
-     * day.
+     * If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next day.
      * </p>
      * </li>
      * </ul>
@@ -93,14 +92,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
-     * day.
+     * If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next day.
      * </p>
      * </li>
      * </ul>
@@ -111,8 +109,8 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
-     * <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at 2:03
-     * p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     * <code>interval</code>, and you create the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM
+     * (UTC). You get the second aggregation result at 2:08 PM (UTC).
      * </p>
      * </li>
      * <li>
@@ -126,14 +124,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the next
-     * day.
+     * If you create the metric after 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) the next day.
      * </p>
      * </li>
      * </ul>
@@ -252,14 +249,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
-     * day.
+     * If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next day.
      * </p>
      * </li>
      * </ul>
@@ -275,14 +271,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
-     * day.
+     * If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next day.
      * </p>
      * </li>
      * </ul>
@@ -293,8 +288,8 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
-     * <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at 2:03
-     * p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     * <code>interval</code>, and you create the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM
+     * (UTC). You get the second aggregation result at 2:08 PM (UTC).
      * </p>
      * </li>
      * <li>
@@ -308,14 +303,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the next
-     * day.
+     * If you create the metric after 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) the next day.
      * </p>
      * </li>
      * </ul>
@@ -336,14 +330,14 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
-     *        (UTC) on the day when you create the metric.
+     *        If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on
+     *        the day when you create the metric.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
-     *        next day.
+     *        If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next
+     *        day.
      *        </p>
      *        </li>
      *        </ul>
@@ -359,14 +353,14 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
-     *        (UTC) on the day when you create the metric.
+     *        If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on
+     *        the day when you create the metric.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
-     *        next day.
+     *        If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next
+     *        day.
      *        </p>
      *        </li>
      *        </ul>
@@ -377,8 +371,8 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <p>
      *        For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
-     *        <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at
-     *        2:03 p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     *        <code>interval</code>, and you create the metric at 2 PM (UTC), you get the first aggregation result at
+     *        2:03 PM (UTC). You get the second aggregation result at 2:08 PM (UTC).
      *        </p>
      *        </li>
      *        <li>
@@ -392,14 +386,14 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m.
-     *        (PST) on the day when you create the metric.
+     *        If you create the metric before or at 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) on
+     *        the day when you create the metric.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the
-     *        next day.
+     *        If you create the metric after 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) the next
+     *        day.
      *        </p>
      *        </li>
      *        </ul>
@@ -426,14 +420,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
-     * day.
+     * If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next day.
      * </p>
      * </li>
      * </ul>
@@ -449,14 +442,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
-     * day.
+     * If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next day.
      * </p>
      * </li>
      * </ul>
@@ -467,8 +459,8 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
-     * <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at 2:03
-     * p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     * <code>interval</code>, and you create the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM
+     * (UTC). You get the second aggregation result at 2:08 PM (UTC).
      * </p>
      * </li>
      * <li>
@@ -482,14 +474,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the next
-     * day.
+     * If you create the metric after 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) the next day.
      * </p>
      * </li>
      * </ul>
@@ -509,14 +500,14 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
-     *         (UTC) on the day when you create the metric.
+     *         If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC)
+     *         on the day when you create the metric.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
-     *         next day.
+     *         If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next
+     *         day.
      *         </p>
      *         </li>
      *         </ul>
@@ -532,14 +523,14 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
-     *         (UTC) on the day when you create the metric.
+     *         If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC)
+     *         on the day when you create the metric.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
-     *         next day.
+     *         If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next
+     *         day.
      *         </p>
      *         </li>
      *         </ul>
@@ -550,8 +541,8 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <p>
      *         For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
-     *         <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at
-     *         2:03 p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     *         <code>interval</code>, and you create the metric at 2 PM (UTC), you get the first aggregation result at
+     *         2:03 PM (UTC). You get the second aggregation result at 2:08 PM (UTC).
      *         </p>
      *         </li>
      *         <li>
@@ -565,14 +556,14 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m.
-     *         (PST) on the day when you create the metric.
+     *         If you create the metric before or at 6:00 PM (PST), you get the first aggregation result at 6 PM (PST)
+     *         on the day when you create the metric.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the
-     *         next day.
+     *         If you create the metric after 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) the next
+     *         day.
      *         </p>
      *         </li>
      *         </ul>
@@ -599,14 +590,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
-     * day.
+     * If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next day.
      * </p>
      * </li>
      * </ul>
@@ -622,14 +612,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the next
-     * day.
+     * If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next day.
      * </p>
      * </li>
      * </ul>
@@ -640,8 +629,8 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
-     * <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at 2:03
-     * p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     * <code>interval</code>, and you create the metric at 2 PM (UTC), you get the first aggregation result at 2:03 PM
+     * (UTC). You get the second aggregation result at 2:08 PM (UTC).
      * </p>
      * </li>
      * <li>
@@ -655,14 +644,13 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) on
-     * the day when you create the metric.
+     * If you create the metric before or at 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) on the
+     * day when you create the metric.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the next
-     * day.
+     * If you create the metric after 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) the next day.
      * </p>
      * </li>
      * </ul>
@@ -683,14 +671,14 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
-     *        (UTC) on the day when you create the metric.
+     *        If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on
+     *        the day when you create the metric.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
-     *        next day.
+     *        If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next
+     *        day.
      *        </p>
      *        </li>
      *        </ul>
@@ -706,14 +694,14 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If you create the metric before or at 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m.
-     *        (UTC) on the day when you create the metric.
+     *        If you create the metric before or at 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) on
+     *        the day when you create the metric.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you create the metric after 6:00 p.m. (UTC), you get the first aggregation result at 6 p.m. (UTC) the
-     *        next day.
+     *        If you create the metric after 6:00 PM (UTC), you get the first aggregation result at 6 PM (UTC) the next
+     *        day.
      *        </p>
      *        </li>
      *        </ul>
@@ -724,8 +712,8 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <p>
      *        For example, if you specify <code>00:03:00</code> for <code>offset</code> and <code>5m</code> for
-     *        <code>interval</code>, and you create the metric at 2 p.m. (UTC), you get the first aggregation result at
-     *        2:03 p.m. (UTC). You get the second aggregation result at 2:08 p.m. (UTC).
+     *        <code>interval</code>, and you create the metric at 2 PM (UTC), you get the first aggregation result at
+     *        2:03 PM (UTC). You get the second aggregation result at 2:08 PM (UTC).
      *        </p>
      *        </li>
      *        <li>
@@ -739,14 +727,14 @@ public class TumblingWindow implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If you create the metric before or at 6:00 p.m. (PST), you get the first aggregation result at 6 p.m.
-     *        (PST) on the day when you create the metric.
+     *        If you create the metric before or at 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) on
+     *        the day when you create the metric.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you create the metric after 6:00 p.m. (PST), you get the first aggregation result at 6 p.m. (PST) the
-     *        next day.
+     *        If you create the metric after 6:00 PM (PST), you get the first aggregation result at 6 PM (PST) the next
+     *        day.
      *        </p>
      *        </li>
      *        </ul>

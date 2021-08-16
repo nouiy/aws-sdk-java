@@ -30,7 +30,7 @@ public class UpdateConditionalForwarderRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The directory ID of the AWS directory for which to update the conditional forwarder.
+     * The directory ID of the Amazon Web Services directory for which to update the conditional forwarder.
      * </p>
      */
     private String directoryId;
@@ -49,11 +49,11 @@ public class UpdateConditionalForwarderRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The directory ID of the AWS directory for which to update the conditional forwarder.
+     * The directory ID of the Amazon Web Services directory for which to update the conditional forwarder.
      * </p>
      * 
      * @param directoryId
-     *        The directory ID of the AWS directory for which to update the conditional forwarder.
+     *        The directory ID of the Amazon Web Services directory for which to update the conditional forwarder.
      */
 
     public void setDirectoryId(String directoryId) {
@@ -62,10 +62,10 @@ public class UpdateConditionalForwarderRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The directory ID of the AWS directory for which to update the conditional forwarder.
+     * The directory ID of the Amazon Web Services directory for which to update the conditional forwarder.
      * </p>
      * 
-     * @return The directory ID of the AWS directory for which to update the conditional forwarder.
+     * @return The directory ID of the Amazon Web Services directory for which to update the conditional forwarder.
      */
 
     public String getDirectoryId() {
@@ -74,11 +74,11 @@ public class UpdateConditionalForwarderRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The directory ID of the AWS directory for which to update the conditional forwarder.
+     * The directory ID of the Amazon Web Services directory for which to update the conditional forwarder.
      * </p>
      * 
      * @param directoryId
-     *        The directory ID of the AWS directory for which to update the conditional forwarder.
+     *        The directory ID of the Amazon Web Services directory for which to update the conditional forwarder.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Creates an AWS Managed Microsoft AD directory.
+ * Creates an Managed Microsoft AD directory.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ds-2015-04-16/CreateMicrosoftAD" target="_top">AWS API
@@ -30,8 +30,8 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The fully qualified domain name for the AWS Managed Microsoft AD directory, such as <code>corp.example.com</code>
-     * . This name will resolve inside your VPC only. It does not need to be publicly resolvable.
+     * The fully qualified domain name for the Managed Microsoft AD directory, such as <code>corp.example.com</code>.
+     * This name will resolve inside your VPC only. It does not need to be publicly resolvable.
      * </p>
      */
     private String name;
@@ -55,8 +55,8 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
     private String password;
     /**
      * <p>
-     * A description for the directory. This label will appear on the AWS console <code>Directory Details</code> page
-     * after the directory is created.
+     * A description for the directory. This label will appear on the Amazon Web Services console
+     * <code>Directory Details</code> page after the directory is created.
      * </p>
      */
     private String description;
@@ -68,26 +68,26 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
     private DirectoryVpcSettings vpcSettings;
     /**
      * <p>
-     * AWS Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
+     * Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
      * <code>Enterprise</code> is the default.
      * </p>
      */
     private String edition;
     /**
      * <p>
-     * The tags to be assigned to the AWS Managed Microsoft AD directory.
+     * The tags to be assigned to the Managed Microsoft AD directory.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
 
     /**
      * <p>
-     * The fully qualified domain name for the AWS Managed Microsoft AD directory, such as <code>corp.example.com</code>
-     * . This name will resolve inside your VPC only. It does not need to be publicly resolvable.
+     * The fully qualified domain name for the Managed Microsoft AD directory, such as <code>corp.example.com</code>.
+     * This name will resolve inside your VPC only. It does not need to be publicly resolvable.
      * </p>
      * 
      * @param name
-     *        The fully qualified domain name for the AWS Managed Microsoft AD directory, such as
+     *        The fully qualified domain name for the Managed Microsoft AD directory, such as
      *        <code>corp.example.com</code>. This name will resolve inside your VPC only. It does not need to be
      *        publicly resolvable.
      */
@@ -98,11 +98,11 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The fully qualified domain name for the AWS Managed Microsoft AD directory, such as <code>corp.example.com</code>
-     * . This name will resolve inside your VPC only. It does not need to be publicly resolvable.
+     * The fully qualified domain name for the Managed Microsoft AD directory, such as <code>corp.example.com</code>.
+     * This name will resolve inside your VPC only. It does not need to be publicly resolvable.
      * </p>
      * 
-     * @return The fully qualified domain name for the AWS Managed Microsoft AD directory, such as
+     * @return The fully qualified domain name for the Managed Microsoft AD directory, such as
      *         <code>corp.example.com</code>. This name will resolve inside your VPC only. It does not need to be
      *         publicly resolvable.
      */
@@ -113,12 +113,12 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The fully qualified domain name for the AWS Managed Microsoft AD directory, such as <code>corp.example.com</code>
-     * . This name will resolve inside your VPC only. It does not need to be publicly resolvable.
+     * The fully qualified domain name for the Managed Microsoft AD directory, such as <code>corp.example.com</code>.
+     * This name will resolve inside your VPC only. It does not need to be publicly resolvable.
      * </p>
      * 
      * @param name
-     *        The fully qualified domain name for the AWS Managed Microsoft AD directory, such as
+     *        The fully qualified domain name for the Managed Microsoft AD directory, such as
      *        <code>corp.example.com</code>. This name will resolve inside your VPC only. It does not need to be
      *        publicly resolvable.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -244,13 +244,13 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A description for the directory. This label will appear on the AWS console <code>Directory Details</code> page
-     * after the directory is created.
+     * A description for the directory. This label will appear on the Amazon Web Services console
+     * <code>Directory Details</code> page after the directory is created.
      * </p>
      * 
      * @param description
-     *        A description for the directory. This label will appear on the AWS console <code>Directory Details</code>
-     *        page after the directory is created.
+     *        A description for the directory. This label will appear on the Amazon Web Services console
+     *        <code>Directory Details</code> page after the directory is created.
      */
 
     public void setDescription(String description) {
@@ -259,12 +259,12 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A description for the directory. This label will appear on the AWS console <code>Directory Details</code> page
-     * after the directory is created.
+     * A description for the directory. This label will appear on the Amazon Web Services console
+     * <code>Directory Details</code> page after the directory is created.
      * </p>
      * 
-     * @return A description for the directory. This label will appear on the AWS console <code>Directory Details</code>
-     *         page after the directory is created.
+     * @return A description for the directory. This label will appear on the Amazon Web Services console
+     *         <code>Directory Details</code> page after the directory is created.
      */
 
     public String getDescription() {
@@ -273,13 +273,13 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A description for the directory. This label will appear on the AWS console <code>Directory Details</code> page
-     * after the directory is created.
+     * A description for the directory. This label will appear on the Amazon Web Services console
+     * <code>Directory Details</code> page after the directory is created.
      * </p>
      * 
      * @param description
-     *        A description for the directory. This label will appear on the AWS console <code>Directory Details</code>
-     *        page after the directory is created.
+     *        A description for the directory. This label will appear on the Amazon Web Services console
+     *        <code>Directory Details</code> page after the directory is created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -330,12 +330,12 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * AWS Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
+     * Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
      * <code>Enterprise</code> is the default.
      * </p>
      * 
      * @param edition
-     *        AWS Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
+     *        Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
      *        <code>Enterprise</code> is the default.
      * @see DirectoryEdition
      */
@@ -346,11 +346,11 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * AWS Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
+     * Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
      * <code>Enterprise</code> is the default.
      * </p>
      * 
-     * @return AWS Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
+     * @return Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
      *         <code>Enterprise</code> is the default.
      * @see DirectoryEdition
      */
@@ -361,12 +361,12 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * AWS Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
+     * Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
      * <code>Enterprise</code> is the default.
      * </p>
      * 
      * @param edition
-     *        AWS Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
+     *        Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
      *        <code>Enterprise</code> is the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DirectoryEdition
@@ -379,12 +379,12 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * AWS Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
+     * Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
      * <code>Enterprise</code> is the default.
      * </p>
      * 
      * @param edition
-     *        AWS Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
+     *        Managed Microsoft AD is available in two editions: <code>Standard</code> and <code>Enterprise</code>.
      *        <code>Enterprise</code> is the default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DirectoryEdition
@@ -397,10 +397,10 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The tags to be assigned to the AWS Managed Microsoft AD directory.
+     * The tags to be assigned to the Managed Microsoft AD directory.
      * </p>
      * 
-     * @return The tags to be assigned to the AWS Managed Microsoft AD directory.
+     * @return The tags to be assigned to the Managed Microsoft AD directory.
      */
 
     public java.util.List<Tag> getTags() {
@@ -412,11 +412,11 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The tags to be assigned to the AWS Managed Microsoft AD directory.
+     * The tags to be assigned to the Managed Microsoft AD directory.
      * </p>
      * 
      * @param tags
-     *        The tags to be assigned to the AWS Managed Microsoft AD directory.
+     *        The tags to be assigned to the Managed Microsoft AD directory.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -430,7 +430,7 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The tags to be assigned to the AWS Managed Microsoft AD directory.
+     * The tags to be assigned to the Managed Microsoft AD directory.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -439,7 +439,7 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param tags
-     *        The tags to be assigned to the AWS Managed Microsoft AD directory.
+     *        The tags to be assigned to the Managed Microsoft AD directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -455,11 +455,11 @@ public class CreateMicrosoftADRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The tags to be assigned to the AWS Managed Microsoft AD directory.
+     * The tags to be assigned to the Managed Microsoft AD directory.
      * </p>
      * 
      * @param tags
-     *        The tags to be assigned to the AWS Managed Microsoft AD directory.
+     *        The tags to be assigned to the Managed Microsoft AD directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

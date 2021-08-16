@@ -116,7 +116,18 @@ public enum ResourceType {
     AWSQLDBLedger("AWS::QLDB::Ledger"),
     AWSSecretsManagerSecret("AWS::SecretsManager::Secret"),
     AWSSNSTopic("AWS::SNS::Topic"),
-    AWSSSMFileData("AWS::SSM::FileData");
+    AWSSSMFileData("AWS::SSM::FileData"),
+    AWSBackupBackupPlan("AWS::Backup::BackupPlan"),
+    AWSBackupBackupSelection("AWS::Backup::BackupSelection"),
+    AWSBackupBackupVault("AWS::Backup::BackupVault"),
+    AWSBackupRecoveryPoint("AWS::Backup::RecoveryPoint"),
+    AWSECRRepository("AWS::ECR::Repository"),
+    AWSECSCluster("AWS::ECS::Cluster"),
+    AWSECSService("AWS::ECS::Service"),
+    AWSECSTaskDefinition("AWS::ECS::TaskDefinition"),
+    AWSEFSAccessPoint("AWS::EFS::AccessPoint"),
+    AWSEFSFileSystem("AWS::EFS::FileSystem"),
+    AWSEKSCluster("AWS::EKS::Cluster");
 
     private String value;
 

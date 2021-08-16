@@ -30,21 +30,22 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
- * <fullname>AWS Directory Service</fullname>
+ * <fullname>Directory Service</fullname>
  * <p>
- * AWS Directory Service is a web service that makes it easy for you to setup and run directories in the AWS cloud, or
- * connect your AWS resources with an existing on-premises Microsoft Active Directory. This guide provides detailed
- * information about AWS Directory Service operations, data types, parameters, and errors. For information about AWS
- * Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">AWS Directory Service</a> and the
- * <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">AWS Directory Service
- * Administration Guide</a>.
+ * Directory Service is a web service that makes it easy for you to setup and run directories in the Amazon Web Services
+ * cloud, or connect your Amazon Web Services resources with an existing self-managed Microsoft Active Directory. This
+ * guide provides detailed information about Directory Service operations, data types, parameters, and errors. For
+ * information about Directory Services features, see <a href="https://aws.amazon.com/directoryservice/">Directory
+ * Service</a> and the <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/what_is.html">Directory
+ * Service Administration Guide</a>.
  * </p>
  * <note>
  * <p>
- * AWS provides SDKs that consist of libraries and sample code for various programming languages and platforms (Java,
- * Ruby, .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to AWS Directory
- * Service and other AWS services. For more information about the AWS SDKs, including how to download and install them,
- * see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web Services</a>.
+ * Amazon Web Services provides SDKs that consist of libraries and sample code for various programming languages and
+ * platforms (Java, Ruby, .Net, iOS, Android, etc.). The SDKs provide a convenient way to create programmatic access to
+ * Directory Service and other Amazon Web Services services. For more information about the Amazon Web Services SDKs,
+ * including how to download and install them, see <a href="http://aws.amazon.com/tools/">Tools for Amazon Web
+ * Services</a>.
  * </p>
  * </note>
  */
@@ -983,6 +984,41 @@ public class AWSDirectoryServiceAsyncClient extends AWSDirectoryServiceClient im
 
                 try {
                     result = executeDescribeCertificate(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClientAuthenticationSettingsResult> describeClientAuthenticationSettingsAsync(
+            DescribeClientAuthenticationSettingsRequest request) {
+
+        return describeClientAuthenticationSettingsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClientAuthenticationSettingsResult> describeClientAuthenticationSettingsAsync(
+            final DescribeClientAuthenticationSettingsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeClientAuthenticationSettingsRequest, DescribeClientAuthenticationSettingsResult> asyncHandler) {
+        final DescribeClientAuthenticationSettingsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeClientAuthenticationSettingsResult>() {
+            @Override
+            public DescribeClientAuthenticationSettingsResult call() throws Exception {
+                DescribeClientAuthenticationSettingsResult result = null;
+
+                try {
+                    result = executeDescribeClientAuthenticationSettings(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

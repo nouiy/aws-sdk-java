@@ -101,7 +101,7 @@ public class AmazonHttpClientTest {
             .expect(httpClient.execute(EasyMock.<HttpUriRequest>anyObject(),
                                        EasyMock.<HttpContext>anyObject()))
             .andThrow(exception)
-            .times(4);
+            .times(3);
 
         EasyMock.replay(httpClient);
 
@@ -140,7 +140,7 @@ public class AmazonHttpClientTest {
         EasyMock
             .expect(handler.handle(EasyMock.<HttpResponse>anyObject()))
             .andThrow(exception)
-            .times(4);
+            .times(3);
 
         EasyMock.replay(handler);
 
@@ -157,7 +157,7 @@ public class AmazonHttpClientTest {
             .expect(httpClient.execute(EasyMock.<HttpUriRequest>anyObject(),
                                        EasyMock.<HttpContext>anyObject()))
             .andReturn(response)
-            .times(4);
+            .times(3);
 
         EasyMock.replay(httpClient);
 
@@ -287,7 +287,7 @@ public class AmazonHttpClientTest {
     }
 
     @Test
-    public void testNoRetryMode_legacyRetryModeIsInUserAgent() throws Exception {
+    public void testNoRetryMode_standardRetryModeIsInUserAgent() throws Exception {
         Request<?> request = mockRequest(SERVER_NAME, HttpMethodName.PUT, URI_NAME, true);
 
         HttpResponseHandler<AmazonWebServiceResponse<Object>> handler = createStubResponseHandler();
@@ -309,7 +309,7 @@ public class AmazonHttpClientTest {
         client.requestExecutionBuilder().request(request).execute(handler);
 
         String userAgent = capturedRequest.getValue().getFirstHeader("User-Agent").getValue();
-        Assert.assertTrue(userAgent.contains("cfg/retry-mode/legacy"));
+        Assert.assertTrue(userAgent.contains("cfg/retry-mode/standard"));
     }
 
     @Test
@@ -541,11 +541,11 @@ public class AmazonHttpClientTest {
                 .expect(httpClient.execute(EasyMock.<HttpUriRequest>anyObject(),
                         EasyMock.<HttpContext>anyObject()))
                 .andThrow(exception)
-                .times(4);
+                .times(3);
 
         EasyMock.replay(httpClient);
 
-        SetupMockRequestHandler2(mockHandler, 4, MockRequestOutcome.FailureWithAwsClientException);
+        SetupMockRequestHandler2(mockHandler, 3, MockRequestOutcome.FailureWithAwsClientException);
 
         ExecutionContext.Builder contextBuilder = ExecutionContext.builder();
         contextBuilder.withRequestHandler2s(requestHandlers);

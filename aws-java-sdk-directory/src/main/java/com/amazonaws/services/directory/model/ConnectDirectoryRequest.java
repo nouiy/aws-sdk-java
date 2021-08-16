@@ -30,19 +30,19 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The fully qualified name of the on-premises directory, such as <code>corp.example.com</code>.
+     * The fully qualified name of your self-managed directory, such as <code>corp.example.com</code>.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The NetBIOS name of the on-premises directory, such as <code>CORP</code>.
+     * The NetBIOS name of your self-managed directory, such as <code>CORP</code>.
      * </p>
      */
     private String shortName;
     /**
      * <p>
-     * The password for the on-premises user account.
+     * The password for your self-managed user account.
      * </p>
      */
     private String password;
@@ -73,11 +73,11 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The fully qualified name of the on-premises directory, such as <code>corp.example.com</code>.
+     * The fully qualified name of your self-managed directory, such as <code>corp.example.com</code>.
      * </p>
      * 
      * @param name
-     *        The fully qualified name of the on-premises directory, such as <code>corp.example.com</code>.
+     *        The fully qualified name of your self-managed directory, such as <code>corp.example.com</code>.
      */
 
     public void setName(String name) {
@@ -86,10 +86,10 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The fully qualified name of the on-premises directory, such as <code>corp.example.com</code>.
+     * The fully qualified name of your self-managed directory, such as <code>corp.example.com</code>.
      * </p>
      * 
-     * @return The fully qualified name of the on-premises directory, such as <code>corp.example.com</code>.
+     * @return The fully qualified name of your self-managed directory, such as <code>corp.example.com</code>.
      */
 
     public String getName() {
@@ -98,11 +98,11 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The fully qualified name of the on-premises directory, such as <code>corp.example.com</code>.
+     * The fully qualified name of your self-managed directory, such as <code>corp.example.com</code>.
      * </p>
      * 
      * @param name
-     *        The fully qualified name of the on-premises directory, such as <code>corp.example.com</code>.
+     *        The fully qualified name of your self-managed directory, such as <code>corp.example.com</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -113,11 +113,11 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The NetBIOS name of the on-premises directory, such as <code>CORP</code>.
+     * The NetBIOS name of your self-managed directory, such as <code>CORP</code>.
      * </p>
      * 
      * @param shortName
-     *        The NetBIOS name of the on-premises directory, such as <code>CORP</code>.
+     *        The NetBIOS name of your self-managed directory, such as <code>CORP</code>.
      */
 
     public void setShortName(String shortName) {
@@ -126,10 +126,10 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The NetBIOS name of the on-premises directory, such as <code>CORP</code>.
+     * The NetBIOS name of your self-managed directory, such as <code>CORP</code>.
      * </p>
      * 
-     * @return The NetBIOS name of the on-premises directory, such as <code>CORP</code>.
+     * @return The NetBIOS name of your self-managed directory, such as <code>CORP</code>.
      */
 
     public String getShortName() {
@@ -138,11 +138,11 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The NetBIOS name of the on-premises directory, such as <code>CORP</code>.
+     * The NetBIOS name of your self-managed directory, such as <code>CORP</code>.
      * </p>
      * 
      * @param shortName
-     *        The NetBIOS name of the on-premises directory, such as <code>CORP</code>.
+     *        The NetBIOS name of your self-managed directory, such as <code>CORP</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -153,11 +153,11 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The password for the on-premises user account.
+     * The password for your self-managed user account.
      * </p>
      * 
      * @param password
-     *        The password for the on-premises user account.
+     *        The password for your self-managed user account.
      */
 
     public void setPassword(String password) {
@@ -166,10 +166,10 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The password for the on-premises user account.
+     * The password for your self-managed user account.
      * </p>
      * 
-     * @return The password for the on-premises user account.
+     * @return The password for your self-managed user account.
      */
 
     public String getPassword() {
@@ -178,11 +178,11 @@ public class ConnectDirectoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The password for the on-premises user account.
+     * The password for your self-managed user account.
      * </p>
      * 
      * @param password
-     *        The password for the on-premises user account.
+     *        The password for your self-managed user account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

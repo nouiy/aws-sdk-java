@@ -51,6 +51,8 @@ public class GetInterpolatedAssetPropertyValuesRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<Long> INTERVALWINDOWINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("intervalWindowInSeconds").build();
 
     private static final GetInterpolatedAssetPropertyValuesRequestMarshaller instance = new GetInterpolatedAssetPropertyValuesRequestMarshaller();
 
@@ -80,6 +82,7 @@ public class GetInterpolatedAssetPropertyValuesRequestMarshaller {
             protocolMarshaller.marshall(getInterpolatedAssetPropertyValuesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(getInterpolatedAssetPropertyValuesRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(getInterpolatedAssetPropertyValuesRequest.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(getInterpolatedAssetPropertyValuesRequest.getIntervalWindowInSeconds(), INTERVALWINDOWINSECONDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

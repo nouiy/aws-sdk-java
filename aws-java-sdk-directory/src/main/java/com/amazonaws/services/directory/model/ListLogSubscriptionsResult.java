@@ -25,7 +25,7 @@ public class ListLogSubscriptionsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of active <a>LogSubscription</a> objects for calling the AWS account.
+     * A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<LogSubscription> logSubscriptions;
@@ -38,10 +38,10 @@ public class ListLogSubscriptionsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of active <a>LogSubscription</a> objects for calling the AWS account.
+     * A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.
      * </p>
      * 
-     * @return A list of active <a>LogSubscription</a> objects for calling the AWS account.
+     * @return A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.
      */
 
     public java.util.List<LogSubscription> getLogSubscriptions() {
@@ -53,11 +53,11 @@ public class ListLogSubscriptionsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of active <a>LogSubscription</a> objects for calling the AWS account.
+     * A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.
      * </p>
      * 
      * @param logSubscriptions
-     *        A list of active <a>LogSubscription</a> objects for calling the AWS account.
+     *        A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.
      */
 
     public void setLogSubscriptions(java.util.Collection<LogSubscription> logSubscriptions) {
@@ -71,7 +71,7 @@ public class ListLogSubscriptionsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of active <a>LogSubscription</a> objects for calling the AWS account.
+     * A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -80,7 +80,7 @@ public class ListLogSubscriptionsResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param logSubscriptions
-     *        A list of active <a>LogSubscription</a> objects for calling the AWS account.
+     *        A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,11 +96,11 @@ public class ListLogSubscriptionsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of active <a>LogSubscription</a> objects for calling the AWS account.
+     * A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.
      * </p>
      * 
      * @param logSubscriptions
-     *        A list of active <a>LogSubscription</a> objects for calling the AWS account.
+     *        A list of active <a>LogSubscription</a> objects for calling the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

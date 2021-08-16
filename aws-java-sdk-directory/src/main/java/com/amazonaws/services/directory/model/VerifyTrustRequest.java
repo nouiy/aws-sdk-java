@@ -19,7 +19,7 @@ import com.amazonaws.AmazonWebServiceRequest;
 
 /**
  * <p>
- * Initiates the verification of an existing trust relationship between an AWS Managed Microsoft AD directory and an
+ * Initiates the verification of an existing trust relationship between an Managed Microsoft AD directory and an
  * external domain.
  * </p>
  * 

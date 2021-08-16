@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * An exception has occurred in AWS Directory Service.
+ * An exception has occurred in Directory Service.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

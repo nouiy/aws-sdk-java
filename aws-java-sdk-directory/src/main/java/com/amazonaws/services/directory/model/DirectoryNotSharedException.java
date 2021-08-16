@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified directory has not been shared with this AWS account.
+ * The specified directory has not been shared with this Amazon Web Services account.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

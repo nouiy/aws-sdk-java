@@ -35,7 +35,7 @@ public class EnableClientAuthenticationRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * The type of client authentication to enable. Currently only the value <code>SmartCard</code> is supported. Smart
      * card authentication in AD Connector requires that you enable Kerberos Constrained Delegation for the Service User
-     * to the LDAP service in the on-premises AD.
+     * to the LDAP service in your self-managed AD.
      * </p>
      */
     private String type;
@@ -84,13 +84,13 @@ public class EnableClientAuthenticationRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * The type of client authentication to enable. Currently only the value <code>SmartCard</code> is supported. Smart
      * card authentication in AD Connector requires that you enable Kerberos Constrained Delegation for the Service User
-     * to the LDAP service in the on-premises AD.
+     * to the LDAP service in your self-managed AD.
      * </p>
      * 
      * @param type
      *        The type of client authentication to enable. Currently only the value <code>SmartCard</code> is supported.
      *        Smart card authentication in AD Connector requires that you enable Kerberos Constrained Delegation for the
-     *        Service User to the LDAP service in the on-premises AD.
+     *        Service User to the LDAP service in your self-managed AD.
      * @see ClientAuthenticationType
      */
 
@@ -102,12 +102,12 @@ public class EnableClientAuthenticationRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * The type of client authentication to enable. Currently only the value <code>SmartCard</code> is supported. Smart
      * card authentication in AD Connector requires that you enable Kerberos Constrained Delegation for the Service User
-     * to the LDAP service in the on-premises AD.
+     * to the LDAP service in your self-managed AD.
      * </p>
      * 
      * @return The type of client authentication to enable. Currently only the value <code>SmartCard</code> is
      *         supported. Smart card authentication in AD Connector requires that you enable Kerberos Constrained
-     *         Delegation for the Service User to the LDAP service in the on-premises AD.
+     *         Delegation for the Service User to the LDAP service in your self-managed AD.
      * @see ClientAuthenticationType
      */
 
@@ -119,13 +119,13 @@ public class EnableClientAuthenticationRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * The type of client authentication to enable. Currently only the value <code>SmartCard</code> is supported. Smart
      * card authentication in AD Connector requires that you enable Kerberos Constrained Delegation for the Service User
-     * to the LDAP service in the on-premises AD.
+     * to the LDAP service in your self-managed AD.
      * </p>
      * 
      * @param type
      *        The type of client authentication to enable. Currently only the value <code>SmartCard</code> is supported.
      *        Smart card authentication in AD Connector requires that you enable Kerberos Constrained Delegation for the
-     *        Service User to the LDAP service in the on-premises AD.
+     *        Service User to the LDAP service in your self-managed AD.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClientAuthenticationType
      */
@@ -139,13 +139,13 @@ public class EnableClientAuthenticationRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * The type of client authentication to enable. Currently only the value <code>SmartCard</code> is supported. Smart
      * card authentication in AD Connector requires that you enable Kerberos Constrained Delegation for the Service User
-     * to the LDAP service in the on-premises AD.
+     * to the LDAP service in your self-managed AD.
      * </p>
      * 
      * @param type
      *        The type of client authentication to enable. Currently only the value <code>SmartCard</code> is supported.
      *        Smart card authentication in AD Connector requires that you enable Kerberos Constrained Delegation for the
-     *        Service User to the LDAP service in the on-premises AD.
+     *        Service User to the LDAP service in your self-managed AD.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClientAuthenticationType
      */
