@@ -91,6 +91,10 @@ public class DescribeEndpointResultJsonUnmarshaller implements Unmarshaller<Desc
                     context.nextToken();
                     describeEndpointResult.setLastDeploymentConfig(DeploymentConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AsyncInferenceConfig", targetDepth)) {
+                    context.nextToken();
+                    describeEndpointResult.setAsyncInferenceConfig(AsyncInferenceConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

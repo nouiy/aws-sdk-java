@@ -52,28 +52,6 @@ public class ProjectBuildBatchConfig implements Serializable, Cloneable, Structu
      * </p>
      */
     private Integer timeoutInMins;
-    /**
-     * <p>
-     * Specifies how build status reports are sent to the source provider for the batch build. This property is only
-     * used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your project is
-     * configured to report build statuses to the source provider.
-     * </p>
-     * <dl>
-     * <dt>REPORT_AGGREGATED_BATCH</dt>
-     * <dd>
-     * <p>
-     * (Default) Aggregate all of the build statuses into a single status report.
-     * </p>
-     * </dd>
-     * <dt>REPORT_INDIVIDUAL_BUILDS</dt>
-     * <dd>
-     * <p>
-     * Send a separate status report for each individual build.
-     * </p>
-     * </dd>
-     * </dl>
-     */
-    private String batchReportMode;
 
     /**
      * <p>
@@ -248,189 +226,6 @@ public class ProjectBuildBatchConfig implements Serializable, Cloneable, Structu
     }
 
     /**
-     * <p>
-     * Specifies how build status reports are sent to the source provider for the batch build. This property is only
-     * used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your project is
-     * configured to report build statuses to the source provider.
-     * </p>
-     * <dl>
-     * <dt>REPORT_AGGREGATED_BATCH</dt>
-     * <dd>
-     * <p>
-     * (Default) Aggregate all of the build statuses into a single status report.
-     * </p>
-     * </dd>
-     * <dt>REPORT_INDIVIDUAL_BUILDS</dt>
-     * <dd>
-     * <p>
-     * Send a separate status report for each individual build.
-     * </p>
-     * </dd>
-     * </dl>
-     * 
-     * @param batchReportMode
-     *        Specifies how build status reports are sent to the source provider for the batch build. This property is
-     *        only used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your
-     *        project is configured to report build statuses to the source provider.</p>
-     *        <dl>
-     *        <dt>REPORT_AGGREGATED_BATCH</dt>
-     *        <dd>
-     *        <p>
-     *        (Default) Aggregate all of the build statuses into a single status report.
-     *        </p>
-     *        </dd>
-     *        <dt>REPORT_INDIVIDUAL_BUILDS</dt>
-     *        <dd>
-     *        <p>
-     *        Send a separate status report for each individual build.
-     *        </p>
-     *        </dd>
-     * @see BatchReportModeType
-     */
-
-    public void setBatchReportMode(String batchReportMode) {
-        this.batchReportMode = batchReportMode;
-    }
-
-    /**
-     * <p>
-     * Specifies how build status reports are sent to the source provider for the batch build. This property is only
-     * used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your project is
-     * configured to report build statuses to the source provider.
-     * </p>
-     * <dl>
-     * <dt>REPORT_AGGREGATED_BATCH</dt>
-     * <dd>
-     * <p>
-     * (Default) Aggregate all of the build statuses into a single status report.
-     * </p>
-     * </dd>
-     * <dt>REPORT_INDIVIDUAL_BUILDS</dt>
-     * <dd>
-     * <p>
-     * Send a separate status report for each individual build.
-     * </p>
-     * </dd>
-     * </dl>
-     * 
-     * @return Specifies how build status reports are sent to the source provider for the batch build. This property is
-     *         only used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your
-     *         project is configured to report build statuses to the source provider.</p>
-     *         <dl>
-     *         <dt>REPORT_AGGREGATED_BATCH</dt>
-     *         <dd>
-     *         <p>
-     *         (Default) Aggregate all of the build statuses into a single status report.
-     *         </p>
-     *         </dd>
-     *         <dt>REPORT_INDIVIDUAL_BUILDS</dt>
-     *         <dd>
-     *         <p>
-     *         Send a separate status report for each individual build.
-     *         </p>
-     *         </dd>
-     * @see BatchReportModeType
-     */
-
-    public String getBatchReportMode() {
-        return this.batchReportMode;
-    }
-
-    /**
-     * <p>
-     * Specifies how build status reports are sent to the source provider for the batch build. This property is only
-     * used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your project is
-     * configured to report build statuses to the source provider.
-     * </p>
-     * <dl>
-     * <dt>REPORT_AGGREGATED_BATCH</dt>
-     * <dd>
-     * <p>
-     * (Default) Aggregate all of the build statuses into a single status report.
-     * </p>
-     * </dd>
-     * <dt>REPORT_INDIVIDUAL_BUILDS</dt>
-     * <dd>
-     * <p>
-     * Send a separate status report for each individual build.
-     * </p>
-     * </dd>
-     * </dl>
-     * 
-     * @param batchReportMode
-     *        Specifies how build status reports are sent to the source provider for the batch build. This property is
-     *        only used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your
-     *        project is configured to report build statuses to the source provider.</p>
-     *        <dl>
-     *        <dt>REPORT_AGGREGATED_BATCH</dt>
-     *        <dd>
-     *        <p>
-     *        (Default) Aggregate all of the build statuses into a single status report.
-     *        </p>
-     *        </dd>
-     *        <dt>REPORT_INDIVIDUAL_BUILDS</dt>
-     *        <dd>
-     *        <p>
-     *        Send a separate status report for each individual build.
-     *        </p>
-     *        </dd>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see BatchReportModeType
-     */
-
-    public ProjectBuildBatchConfig withBatchReportMode(String batchReportMode) {
-        setBatchReportMode(batchReportMode);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Specifies how build status reports are sent to the source provider for the batch build. This property is only
-     * used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your project is
-     * configured to report build statuses to the source provider.
-     * </p>
-     * <dl>
-     * <dt>REPORT_AGGREGATED_BATCH</dt>
-     * <dd>
-     * <p>
-     * (Default) Aggregate all of the build statuses into a single status report.
-     * </p>
-     * </dd>
-     * <dt>REPORT_INDIVIDUAL_BUILDS</dt>
-     * <dd>
-     * <p>
-     * Send a separate status report for each individual build.
-     * </p>
-     * </dd>
-     * </dl>
-     * 
-     * @param batchReportMode
-     *        Specifies how build status reports are sent to the source provider for the batch build. This property is
-     *        only used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your
-     *        project is configured to report build statuses to the source provider.</p>
-     *        <dl>
-     *        <dt>REPORT_AGGREGATED_BATCH</dt>
-     *        <dd>
-     *        <p>
-     *        (Default) Aggregate all of the build statuses into a single status report.
-     *        </p>
-     *        </dd>
-     *        <dt>REPORT_INDIVIDUAL_BUILDS</dt>
-     *        <dd>
-     *        <p>
-     *        Send a separate status report for each individual build.
-     *        </p>
-     *        </dd>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see BatchReportModeType
-     */
-
-    public ProjectBuildBatchConfig withBatchReportMode(BatchReportModeType batchReportMode) {
-        this.batchReportMode = batchReportMode.toString();
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -449,9 +244,7 @@ public class ProjectBuildBatchConfig implements Serializable, Cloneable, Structu
         if (getRestrictions() != null)
             sb.append("Restrictions: ").append(getRestrictions()).append(",");
         if (getTimeoutInMins() != null)
-            sb.append("TimeoutInMins: ").append(getTimeoutInMins()).append(",");
-        if (getBatchReportMode() != null)
-            sb.append("BatchReportMode: ").append(getBatchReportMode());
+            sb.append("TimeoutInMins: ").append(getTimeoutInMins());
         sb.append("}");
         return sb.toString();
     }
@@ -482,10 +275,6 @@ public class ProjectBuildBatchConfig implements Serializable, Cloneable, Structu
             return false;
         if (other.getTimeoutInMins() != null && other.getTimeoutInMins().equals(this.getTimeoutInMins()) == false)
             return false;
-        if (other.getBatchReportMode() == null ^ this.getBatchReportMode() == null)
-            return false;
-        if (other.getBatchReportMode() != null && other.getBatchReportMode().equals(this.getBatchReportMode()) == false)
-            return false;
         return true;
     }
 
@@ -498,7 +287,6 @@ public class ProjectBuildBatchConfig implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getCombineArtifacts() == null) ? 0 : getCombineArtifacts().hashCode());
         hashCode = prime * hashCode + ((getRestrictions() == null) ? 0 : getRestrictions().hashCode());
         hashCode = prime * hashCode + ((getTimeoutInMins() == null) ? 0 : getTimeoutInMins().hashCode());
-        hashCode = prime * hashCode + ((getBatchReportMode() == null) ? 0 : getBatchReportMode().hashCode());
         return hashCode;
     }
 

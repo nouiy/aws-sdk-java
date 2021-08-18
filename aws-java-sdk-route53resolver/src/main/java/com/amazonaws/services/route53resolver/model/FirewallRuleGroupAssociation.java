@@ -74,8 +74,8 @@ public class FirewallRuleGroupAssociation implements Serializable, Cloneable, St
     private String mutationProtection;
     /**
      * <p>
-     * The owner of the association, used only for associations that are not managed by you. If you use AWS Firewall
-     * Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
+     * The owner of the association, used only for associations that are not managed by you. If you use Firewall Manager
+     * to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
      * </p>
      */
     private String managedOwnerName;
@@ -430,13 +430,13 @@ public class FirewallRuleGroupAssociation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The owner of the association, used only for associations that are not managed by you. If you use AWS Firewall
-     * Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
+     * The owner of the association, used only for associations that are not managed by you. If you use Firewall Manager
+     * to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
      * </p>
      * 
      * @param managedOwnerName
-     *        The owner of the association, used only for associations that are not managed by you. If you use AWS
-     *        Firewall Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
+     *        The owner of the association, used only for associations that are not managed by you. If you use Firewall
+     *        Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
      */
 
     public void setManagedOwnerName(String managedOwnerName) {
@@ -445,12 +445,12 @@ public class FirewallRuleGroupAssociation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The owner of the association, used only for associations that are not managed by you. If you use AWS Firewall
-     * Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
+     * The owner of the association, used only for associations that are not managed by you. If you use Firewall Manager
+     * to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
      * </p>
      * 
-     * @return The owner of the association, used only for associations that are not managed by you. If you use AWS
-     *         Firewall Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
+     * @return The owner of the association, used only for associations that are not managed by you. If you use Firewall
+     *         Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
      */
 
     public String getManagedOwnerName() {
@@ -459,13 +459,13 @@ public class FirewallRuleGroupAssociation implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The owner of the association, used only for associations that are not managed by you. If you use AWS Firewall
-     * Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
+     * The owner of the association, used only for associations that are not managed by you. If you use Firewall Manager
+     * to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
      * </p>
      * 
      * @param managedOwnerName
-     *        The owner of the association, used only for associations that are not managed by you. If you use AWS
-     *        Firewall Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
+     *        The owner of the association, used only for associations that are not managed by you. If you use Firewall
+     *        Manager to manage your DNS Firewalls, then this reports Firewall Manager as the managed owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

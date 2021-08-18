@@ -39,8 +39,8 @@ public class ListResolverEndpointsResult extends com.amazonaws.AmazonWebServiceR
     private Integer maxResults;
     /**
      * <p>
-     * The Resolver endpoints that were created by using the current AWS account, and that match the specified filters,
-     * if any.
+     * The Resolver endpoints that were created by using the current Amazon Web Services account, and that match the
+     * specified filters, if any.
      * </p>
      */
     private java.util.List<ResolverEndpoint> resolverEndpoints;
@@ -139,12 +139,12 @@ public class ListResolverEndpointsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Resolver endpoints that were created by using the current AWS account, and that match the specified filters,
-     * if any.
+     * The Resolver endpoints that were created by using the current Amazon Web Services account, and that match the
+     * specified filters, if any.
      * </p>
      * 
-     * @return The Resolver endpoints that were created by using the current AWS account, and that match the specified
-     *         filters, if any.
+     * @return The Resolver endpoints that were created by using the current Amazon Web Services account, and that match
+     *         the specified filters, if any.
      */
 
     public java.util.List<ResolverEndpoint> getResolverEndpoints() {
@@ -153,13 +153,13 @@ public class ListResolverEndpointsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Resolver endpoints that were created by using the current AWS account, and that match the specified filters,
-     * if any.
+     * The Resolver endpoints that were created by using the current Amazon Web Services account, and that match the
+     * specified filters, if any.
      * </p>
      * 
      * @param resolverEndpoints
-     *        The Resolver endpoints that were created by using the current AWS account, and that match the specified
-     *        filters, if any.
+     *        The Resolver endpoints that were created by using the current Amazon Web Services account, and that match
+     *        the specified filters, if any.
      */
 
     public void setResolverEndpoints(java.util.Collection<ResolverEndpoint> resolverEndpoints) {
@@ -173,8 +173,8 @@ public class ListResolverEndpointsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Resolver endpoints that were created by using the current AWS account, and that match the specified filters,
-     * if any.
+     * The Resolver endpoints that were created by using the current Amazon Web Services account, and that match the
+     * specified filters, if any.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -183,8 +183,8 @@ public class ListResolverEndpointsResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param resolverEndpoints
-     *        The Resolver endpoints that were created by using the current AWS account, and that match the specified
-     *        filters, if any.
+     *        The Resolver endpoints that were created by using the current Amazon Web Services account, and that match
+     *        the specified filters, if any.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,13 +200,13 @@ public class ListResolverEndpointsResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The Resolver endpoints that were created by using the current AWS account, and that match the specified filters,
-     * if any.
+     * The Resolver endpoints that were created by using the current Amazon Web Services account, and that match the
+     * specified filters, if any.
      * </p>
      * 
      * @param resolverEndpoints
-     *        The Resolver endpoints that were created by using the current AWS account, and that match the specified
-     *        filters, if any.
+     *        The Resolver endpoints that were created by using the current Amazon Web Services account, and that match
+     *        the specified filters, if any.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

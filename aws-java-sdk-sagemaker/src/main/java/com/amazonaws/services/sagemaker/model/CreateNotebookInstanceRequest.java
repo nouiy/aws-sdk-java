@@ -157,6 +157,12 @@ public class CreateNotebookInstanceRequest extends com.amazonaws.AmazonWebServic
      * </note>
      */
     private String rootAccess;
+    /**
+     * <p>
+     * The platform identifier of the notebook instance runtime environment.
+     * </p>
+     */
+    private String platformIdentifier;
 
     /**
      * <p>
@@ -1277,6 +1283,46 @@ public class CreateNotebookInstanceRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The platform identifier of the notebook instance runtime environment.
+     * </p>
+     * 
+     * @param platformIdentifier
+     *        The platform identifier of the notebook instance runtime environment.
+     */
+
+    public void setPlatformIdentifier(String platformIdentifier) {
+        this.platformIdentifier = platformIdentifier;
+    }
+
+    /**
+     * <p>
+     * The platform identifier of the notebook instance runtime environment.
+     * </p>
+     * 
+     * @return The platform identifier of the notebook instance runtime environment.
+     */
+
+    public String getPlatformIdentifier() {
+        return this.platformIdentifier;
+    }
+
+    /**
+     * <p>
+     * The platform identifier of the notebook instance runtime environment.
+     * </p>
+     * 
+     * @param platformIdentifier
+     *        The platform identifier of the notebook instance runtime environment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateNotebookInstanceRequest withPlatformIdentifier(String platformIdentifier) {
+        setPlatformIdentifier(platformIdentifier);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1315,7 +1361,9 @@ public class CreateNotebookInstanceRequest extends com.amazonaws.AmazonWebServic
         if (getAdditionalCodeRepositories() != null)
             sb.append("AdditionalCodeRepositories: ").append(getAdditionalCodeRepositories()).append(",");
         if (getRootAccess() != null)
-            sb.append("RootAccess: ").append(getRootAccess());
+            sb.append("RootAccess: ").append(getRootAccess()).append(",");
+        if (getPlatformIdentifier() != null)
+            sb.append("PlatformIdentifier: ").append(getPlatformIdentifier());
         sb.append("}");
         return sb.toString();
     }
@@ -1386,6 +1434,10 @@ public class CreateNotebookInstanceRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getRootAccess() != null && other.getRootAccess().equals(this.getRootAccess()) == false)
             return false;
+        if (other.getPlatformIdentifier() == null ^ this.getPlatformIdentifier() == null)
+            return false;
+        if (other.getPlatformIdentifier() != null && other.getPlatformIdentifier().equals(this.getPlatformIdentifier()) == false)
+            return false;
         return true;
     }
 
@@ -1408,6 +1460,7 @@ public class CreateNotebookInstanceRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getDefaultCodeRepository() == null) ? 0 : getDefaultCodeRepository().hashCode());
         hashCode = prime * hashCode + ((getAdditionalCodeRepositories() == null) ? 0 : getAdditionalCodeRepositories().hashCode());
         hashCode = prime * hashCode + ((getRootAccess() == null) ? 0 : getRootAccess().hashCode());
+        hashCode = prime * hashCode + ((getPlatformIdentifier() == null) ? 0 : getPlatformIdentifier().hashCode());
         return hashCode;
     }
 

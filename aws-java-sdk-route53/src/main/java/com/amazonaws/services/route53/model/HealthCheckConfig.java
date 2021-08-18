@@ -236,7 +236,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * <code>IPAddress</code> in the <code>Host</code> header in each of the preceding cases.
      * </p>
      * <p>
-     * <b>If you don't specify a value for <code>IPAddress</code> </b>:
+     * <b>If you don't specify a value for</b> <code>IPAddress</code>:
      * </p>
      * <p>
      * Route 53 sends a DNS request to the domain that you specify for <code>FullyQualifiedDomainName</code> at the
@@ -1867,7 +1867,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * <code>IPAddress</code> in the <code>Host</code> header in each of the preceding cases.
      * </p>
      * <p>
-     * <b>If you don't specify a value for <code>IPAddress</code> </b>:
+     * <b>If you don't specify a value for</b> <code>IPAddress</code>:
      * </p>
      * <p>
      * Route 53 sends a DNS request to the domain that you specify for <code>FullyQualifiedDomainName</code> at the
@@ -1945,7 +1945,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      *        <code>IPAddress</code> in the <code>Host</code> header in each of the preceding cases.
      *        </p>
      *        <p>
-     *        <b>If you don't specify a value for <code>IPAddress</code> </b>:
+     *        <b>If you don't specify a value for</b> <code>IPAddress</code>:
      *        </p>
      *        <p>
      *        Route 53 sends a DNS request to the domain that you specify for <code>FullyQualifiedDomainName</code> at
@@ -2029,7 +2029,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * <code>IPAddress</code> in the <code>Host</code> header in each of the preceding cases.
      * </p>
      * <p>
-     * <b>If you don't specify a value for <code>IPAddress</code> </b>:
+     * <b>If you don't specify a value for</b> <code>IPAddress</code>:
      * </p>
      * <p>
      * Route 53 sends a DNS request to the domain that you specify for <code>FullyQualifiedDomainName</code> at the
@@ -2106,7 +2106,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      *         <code>IPAddress</code> in the <code>Host</code> header in each of the preceding cases.
      *         </p>
      *         <p>
-     *         <b>If you don't specify a value for <code>IPAddress</code> </b>:
+     *         <b>If you don't specify a value for</b> <code>IPAddress</code>:
      *         </p>
      *         <p>
      *         Route 53 sends a DNS request to the domain that you specify for <code>FullyQualifiedDomainName</code> at
@@ -2189,7 +2189,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      * <code>IPAddress</code> in the <code>Host</code> header in each of the preceding cases.
      * </p>
      * <p>
-     * <b>If you don't specify a value for <code>IPAddress</code> </b>:
+     * <b>If you don't specify a value for</b> <code>IPAddress</code>:
      * </p>
      * <p>
      * Route 53 sends a DNS request to the domain that you specify for <code>FullyQualifiedDomainName</code> at the
@@ -2267,7 +2267,7 @@ public class HealthCheckConfig implements Serializable, Cloneable {
      *        <code>IPAddress</code> in the <code>Host</code> header in each of the preceding cases.
      *        </p>
      *        <p>
-     *        <b>If you don't specify a value for <code>IPAddress</code> </b>:
+     *        <b>If you don't specify a value for</b> <code>IPAddress</code>:
      *        </p>
      *        <p>
      *        Route 53 sends a DNS request to the domain that you specify for <code>FullyQualifiedDomainName</code> at

@@ -35,8 +35,6 @@ public class ProjectBuildBatchConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("restrictions").build();
     private static final MarshallingInfo<Integer> TIMEOUTINMINS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("timeoutInMins").build();
-    private static final MarshallingInfo<String> BATCHREPORTMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
-            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("batchReportMode").build();
 
     private static final ProjectBuildBatchConfigMarshaller instance = new ProjectBuildBatchConfigMarshaller();
 
@@ -58,7 +56,6 @@ public class ProjectBuildBatchConfigMarshaller {
             protocolMarshaller.marshall(projectBuildBatchConfig.getCombineArtifacts(), COMBINEARTIFACTS_BINDING);
             protocolMarshaller.marshall(projectBuildBatchConfig.getRestrictions(), RESTRICTIONS_BINDING);
             protocolMarshaller.marshall(projectBuildBatchConfig.getTimeoutInMins(), TIMEOUTINMINS_BINDING);
-            protocolMarshaller.marshall(projectBuildBatchConfig.getBatchReportMode(), BATCHREPORTMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -105,6 +105,15 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
      * </note>
      */
     private String kmsKeyId;
+    /**
+     * <p>
+     * Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in order
+     * for your Endpoint to be invoked using <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
+     * <code>InvokeEndpointAsync</code> </a>.
+     * </p>
+     */
+    private AsyncInferenceConfig asyncInferenceConfig;
 
     /**
      * <p>
@@ -692,6 +701,64 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in order
+     * for your Endpoint to be invoked using <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
+     * <code>InvokeEndpointAsync</code> </a>.
+     * </p>
+     * 
+     * @param asyncInferenceConfig
+     *        Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in
+     *        order for your Endpoint to be invoked using <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
+     *        <code>InvokeEndpointAsync</code> </a>.
+     */
+
+    public void setAsyncInferenceConfig(AsyncInferenceConfig asyncInferenceConfig) {
+        this.asyncInferenceConfig = asyncInferenceConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in order
+     * for your Endpoint to be invoked using <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
+     * <code>InvokeEndpointAsync</code> </a>.
+     * </p>
+     * 
+     * @return Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in
+     *         order for your Endpoint to be invoked using <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
+     *         <code>InvokeEndpointAsync</code> </a>.
+     */
+
+    public AsyncInferenceConfig getAsyncInferenceConfig() {
+        return this.asyncInferenceConfig;
+    }
+
+    /**
+     * <p>
+     * Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in order
+     * for your Endpoint to be invoked using <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
+     * <code>InvokeEndpointAsync</code> </a>.
+     * </p>
+     * 
+     * @param asyncInferenceConfig
+     *        Specifies configuration for how an endpoint performs asynchronous inference. This is a required field in
+     *        order for your Endpoint to be invoked using <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html">
+     *        <code>InvokeEndpointAsync</code> </a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEndpointConfigRequest withAsyncInferenceConfig(AsyncInferenceConfig asyncInferenceConfig) {
+        setAsyncInferenceConfig(asyncInferenceConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -712,7 +779,9 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getKmsKeyId() != null)
-            sb.append("KmsKeyId: ").append(getKmsKeyId());
+            sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
+        if (getAsyncInferenceConfig() != null)
+            sb.append("AsyncInferenceConfig: ").append(getAsyncInferenceConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -747,6 +816,10 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
+        if (other.getAsyncInferenceConfig() == null ^ this.getAsyncInferenceConfig() == null)
+            return false;
+        if (other.getAsyncInferenceConfig() != null && other.getAsyncInferenceConfig().equals(this.getAsyncInferenceConfig()) == false)
+            return false;
         return true;
     }
 
@@ -760,6 +833,7 @@ public class CreateEndpointConfigRequest extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getDataCaptureConfig() == null) ? 0 : getDataCaptureConfig().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getAsyncInferenceConfig() == null) ? 0 : getAsyncInferenceConfig().hashCode());
         return hashCode;
     }
 

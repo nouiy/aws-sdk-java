@@ -190,11 +190,13 @@ public class ProjectSource implements Serializable, Cloneable, StructuredPojo {
      * more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source
      * provider access</a> in the <i>CodeBuild User Guide</i>.
      * </p>
-     * <note>
      * <p>
      * The status of a build triggered by a webhook is always reported to your source provider.
      * </p>
-     * </note>
+     * <p>
+     * If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change to this
+     * property to take effect.
+     * </p>
      */
     private Boolean reportBuildStatus;
     /**
@@ -1335,11 +1337,13 @@ public class ProjectSource implements Serializable, Cloneable, StructuredPojo {
      * more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source
      * provider access</a> in the <i>CodeBuild User Guide</i>.
      * </p>
-     * <note>
      * <p>
      * The status of a build triggered by a webhook is always reported to your source provider.
      * </p>
-     * </note>
+     * <p>
+     * If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change to this
+     * property to take effect.
+     * </p>
      * 
      * @param reportBuildStatus
      *        Set to true to report the status of a build's start and finish to your source provider. This option is
@@ -1352,10 +1356,12 @@ public class ProjectSource implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source provider
      *        access</a> in the <i>CodeBuild User Guide</i>.
      *        </p>
-     *        <note>
      *        <p>
      *        The status of a build triggered by a webhook is always reported to your source provider.
      *        </p>
+     *        <p>
+     *        If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change
+     *        to this property to take effect.
      */
 
     public void setReportBuildStatus(Boolean reportBuildStatus) {
@@ -1374,11 +1380,13 @@ public class ProjectSource implements Serializable, Cloneable, StructuredPojo {
      * more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source
      * provider access</a> in the <i>CodeBuild User Guide</i>.
      * </p>
-     * <note>
      * <p>
      * The status of a build triggered by a webhook is always reported to your source provider.
      * </p>
-     * </note>
+     * <p>
+     * If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change to this
+     * property to take effect.
+     * </p>
      * 
      * @return Set to true to report the status of a build's start and finish to your source provider. This option is
      *         valid only when your source provider is GitHub, GitHub Enterprise, or Bitbucket. If this is set and you
@@ -1390,10 +1398,12 @@ public class ProjectSource implements Serializable, Cloneable, StructuredPojo {
      *         href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source provider
      *         access</a> in the <i>CodeBuild User Guide</i>.
      *         </p>
-     *         <note>
      *         <p>
      *         The status of a build triggered by a webhook is always reported to your source provider.
      *         </p>
+     *         <p>
+     *         If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change
+     *         to this property to take effect.
      */
 
     public Boolean getReportBuildStatus() {
@@ -1412,11 +1422,13 @@ public class ProjectSource implements Serializable, Cloneable, StructuredPojo {
      * more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source
      * provider access</a> in the <i>CodeBuild User Guide</i>.
      * </p>
-     * <note>
      * <p>
      * The status of a build triggered by a webhook is always reported to your source provider.
      * </p>
-     * </note>
+     * <p>
+     * If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change to this
+     * property to take effect.
+     * </p>
      * 
      * @param reportBuildStatus
      *        Set to true to report the status of a build's start and finish to your source provider. This option is
@@ -1429,10 +1441,12 @@ public class ProjectSource implements Serializable, Cloneable, StructuredPojo {
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source provider
      *        access</a> in the <i>CodeBuild User Guide</i>.
      *        </p>
-     *        <note>
      *        <p>
      *        The status of a build triggered by a webhook is always reported to your source provider.
      *        </p>
+     *        <p>
+     *        If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change
+     *        to this property to take effect.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1453,11 +1467,13 @@ public class ProjectSource implements Serializable, Cloneable, StructuredPojo {
      * more information, see <a href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source
      * provider access</a> in the <i>CodeBuild User Guide</i>.
      * </p>
-     * <note>
      * <p>
      * The status of a build triggered by a webhook is always reported to your source provider.
      * </p>
-     * </note>
+     * <p>
+     * If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change to this
+     * property to take effect.
+     * </p>
      * 
      * @return Set to true to report the status of a build's start and finish to your source provider. This option is
      *         valid only when your source provider is GitHub, GitHub Enterprise, or Bitbucket. If this is set and you
@@ -1469,10 +1485,12 @@ public class ProjectSource implements Serializable, Cloneable, StructuredPojo {
      *         href="https://docs.aws.amazon.com/codebuild/latest/userguide/access-tokens.html">Source provider
      *         access</a> in the <i>CodeBuild User Guide</i>.
      *         </p>
-     *         <note>
      *         <p>
      *         The status of a build triggered by a webhook is always reported to your source provider.
      *         </p>
+     *         <p>
+     *         If your project's builds are triggered by a webhook, you must push a new commit to the repo for a change
+     *         to this property to take effect.
      */
 
     public Boolean isReportBuildStatus() {

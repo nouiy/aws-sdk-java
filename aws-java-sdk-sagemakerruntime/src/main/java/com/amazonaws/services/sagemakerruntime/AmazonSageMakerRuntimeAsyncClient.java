@@ -108,6 +108,39 @@ public class AmazonSageMakerRuntimeAsyncClient extends AmazonSageMakerRuntimeCli
         });
     }
 
+    @Override
+    public java.util.concurrent.Future<InvokeEndpointAsyncResult> invokeEndpointAsyncAsync(InvokeEndpointAsyncRequest request) {
+
+        return invokeEndpointAsyncAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<InvokeEndpointAsyncResult> invokeEndpointAsyncAsync(final InvokeEndpointAsyncRequest request,
+            final com.amazonaws.handlers.AsyncHandler<InvokeEndpointAsyncRequest, InvokeEndpointAsyncResult> asyncHandler) {
+        final InvokeEndpointAsyncRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<InvokeEndpointAsyncResult>() {
+            @Override
+            public InvokeEndpointAsyncResult call() throws Exception {
+                InvokeEndpointAsyncResult result = null;
+
+                try {
+                    result = executeInvokeEndpointAsync(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
     /**
      * Shuts down the client, releasing all managed resources. This includes forcibly terminating all pending
      * asynchronous service calls. Clients who wish to give pending asynchronous service calls time to complete should

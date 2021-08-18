@@ -129,6 +129,14 @@ public class DescribeEndpointResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      */
     private DeploymentConfig lastDeploymentConfig;
+    /**
+     * <p>
+     * Returns the description of an endpoint configuration created using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html">
+     * <code>CreateEndpointConfig</code> </a> API.
+     * </p>
+     */
+    private AsyncInferenceConfig asyncInferenceConfig;
 
     /**
      * <p>
@@ -966,6 +974,58 @@ public class DescribeEndpointResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * Returns the description of an endpoint configuration created using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html">
+     * <code>CreateEndpointConfig</code> </a> API.
+     * </p>
+     * 
+     * @param asyncInferenceConfig
+     *        Returns the description of an endpoint configuration created using the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html">
+     *        <code>CreateEndpointConfig</code> </a> API.
+     */
+
+    public void setAsyncInferenceConfig(AsyncInferenceConfig asyncInferenceConfig) {
+        this.asyncInferenceConfig = asyncInferenceConfig;
+    }
+
+    /**
+     * <p>
+     * Returns the description of an endpoint configuration created using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html">
+     * <code>CreateEndpointConfig</code> </a> API.
+     * </p>
+     * 
+     * @return Returns the description of an endpoint configuration created using the <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html">
+     *         <code>CreateEndpointConfig</code> </a> API.
+     */
+
+    public AsyncInferenceConfig getAsyncInferenceConfig() {
+        return this.asyncInferenceConfig;
+    }
+
+    /**
+     * <p>
+     * Returns the description of an endpoint configuration created using the <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html">
+     * <code>CreateEndpointConfig</code> </a> API.
+     * </p>
+     * 
+     * @param asyncInferenceConfig
+     *        Returns the description of an endpoint configuration created using the <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpointConfig.html">
+     *        <code>CreateEndpointConfig</code> </a> API.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeEndpointResult withAsyncInferenceConfig(AsyncInferenceConfig asyncInferenceConfig) {
+        setAsyncInferenceConfig(asyncInferenceConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -996,7 +1056,9 @@ public class DescribeEndpointResult extends com.amazonaws.AmazonWebServiceResult
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
         if (getLastDeploymentConfig() != null)
-            sb.append("LastDeploymentConfig: ").append(getLastDeploymentConfig());
+            sb.append("LastDeploymentConfig: ").append(getLastDeploymentConfig()).append(",");
+        if (getAsyncInferenceConfig() != null)
+            sb.append("AsyncInferenceConfig: ").append(getAsyncInferenceConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1051,6 +1113,10 @@ public class DescribeEndpointResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getLastDeploymentConfig() != null && other.getLastDeploymentConfig().equals(this.getLastDeploymentConfig()) == false)
             return false;
+        if (other.getAsyncInferenceConfig() == null ^ this.getAsyncInferenceConfig() == null)
+            return false;
+        if (other.getAsyncInferenceConfig() != null && other.getAsyncInferenceConfig().equals(this.getAsyncInferenceConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1069,6 +1135,7 @@ public class DescribeEndpointResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getLastDeploymentConfig() == null) ? 0 : getLastDeploymentConfig().hashCode());
+        hashCode = prime * hashCode + ((getAsyncInferenceConfig() == null) ? 0 : getAsyncInferenceConfig().hashCode());
         return hashCode;
     }
 

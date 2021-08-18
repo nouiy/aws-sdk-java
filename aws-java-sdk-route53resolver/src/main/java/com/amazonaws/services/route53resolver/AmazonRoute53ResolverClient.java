@@ -63,8 +63,8 @@ import com.amazonaws.services.route53resolver.model.transform.*;
  * </p>
  * <p>
  * DNS resolvers on your network can forward DNS queries to Resolver in a specified VPC. This allows your DNS resolvers
- * to easily resolve domain names for AWS resources such as EC2 instances or records in a Route 53 private hosted zone.
- * For more information, see <a href=
+ * to easily resolve domain names for Amazon Web Services resources such as EC2 instances or records in a Route 53
+ * private hosted zone. For more information, see <a href=
  * "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver.html#resolver-overview-forward-network-to-vpc"
  * >How DNS Resolvers on Your Network Forward DNS Queries to Route 53 Resolver</a> in the <i>Amazon Route 53 Developer
  * Guide</i>.
@@ -817,10 +817,10 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * >AssociateResolverQueryLogConfig</a>.
      * </p>
      * <p>
-     * You can optionally use AWS Resource Access Manager (AWS RAM) to share a query logging configuration with other
-     * AWS accounts. The other accounts can then associate VPCs with the configuration. The query logs that Resolver
-     * creates for a configuration include all DNS queries that originate in all VPCs that are associated with the
-     * configuration.
+     * You can optionally use Resource Access Manager (RAM) to share a query logging configuration with other Amazon Web
+     * Services accounts. The other accounts can then associate VPCs with the configuration. The query logs that
+     * Resolver creates for a configuration include all DNS queries that originate in all VPCs that are associated with
+     * the configuration.
      * </p>
      * 
      * @param createResolverQueryLogConfigRequest
@@ -1246,8 +1246,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * <p>
      * Deletes a query logging configuration. When you delete a configuration, Resolver stops logging DNS queries for
      * all of the Amazon VPCs that are associated with the configuration. This also applies if the query logging
-     * configuration is shared with other AWS accounts, and the other accounts have associated VPCs with the shared
-     * configuration.
+     * configuration is shared with other Amazon Web Services accounts, and the other accounts have associated VPCs with
+     * the shared configuration.
      * </p>
      * <p>
      * Before you can delete a query logging configuration, you must first disassociate all VPCs from the configuration.
@@ -1548,8 +1548,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
      * <note>
      * <p>
      * Before you can delete a query logging configuration, you must first disassociate all VPCs from the configuration.
-     * If you used AWS Resource Access Manager (AWS RAM) to share a query logging configuration with other accounts,
-     * VPCs can be disassociated from the configuration in the following ways:
+     * If you used Resource Access Manager (RAM) to share a query logging configuration with other accounts, VPCs can be
+     * disassociated from the configuration in the following ways:
      * </p>
      * <ul>
      * <li>
@@ -1968,8 +1968,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Returns the AWS Identity and Access Management (AWS IAM) policy for sharing the specified rule group. You can use
-     * the policy to share the rule group using AWS Resource Access Manager (AWS RAM).
+     * Returns the Identity and Access Management (Amazon Web Services IAM) policy for sharing the specified rule group.
+     * You can use the policy to share the rule group using Resource Access Manager (RAM).
      * </p>
      * 
      * @param getFirewallRuleGroupPolicyRequest
@@ -2316,7 +2316,7 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
     /**
      * <p>
      * Gets information about a query logging policy. A query logging policy specifies the Resolver query logging
-     * operations and resources that you want to allow another AWS account to be able to use.
+     * operations and resources that you want to allow another Amazon Web Services account to be able to use.
      * </p>
      * 
      * @param getResolverQueryLogConfigPolicyRequest
@@ -3084,7 +3084,7 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Lists the configurations for DNSSEC validation that are associated with the current AWS account.
+     * Lists the configurations for DNSSEC validation that are associated with the current Amazon Web Services account.
      * </p>
      * 
      * @param listResolverDnssecConfigsRequest
@@ -3222,7 +3222,7 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Lists all the Resolver endpoints that were created using the current AWS account.
+     * Lists all the Resolver endpoints that were created using the current Amazon Web Services account.
      * </p>
      * 
      * @param listResolverEndpointsRequest
@@ -3431,7 +3431,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Lists the associations that were created between Resolver rules and VPCs using the current AWS account.
+     * Lists the associations that were created between Resolver rules and VPCs using the current Amazon Web Services
+     * account.
      * </p>
      * 
      * @param listResolverRuleAssociationsRequest
@@ -3498,7 +3499,7 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Lists the Resolver rules that were created using the current AWS account.
+     * Lists the Resolver rules that were created using the current Amazon Web Services account.
      * </p>
      * 
      * @param listResolverRulesRequest
@@ -3630,8 +3631,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Attaches an AWS Identity and Access Management (AWS IAM) policy for sharing the rule group. You can use the
-     * policy to share the rule group using AWS Resource Access Manager (AWS RAM).
+     * Attaches an Identity and Access Management (Amazon Web Services IAM) policy for sharing the rule group. You can
+     * use the policy to share the rule group using Resource Access Manager (RAM).
      * </p>
      * 
      * @param putFirewallRuleGroupPolicyRequest
@@ -3698,9 +3699,9 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Specifies an AWS account that you want to share a query logging configuration with, the query logging
-     * configuration that you want to share, and the operations that you want the account to be able to perform on the
-     * configuration.
+     * Specifies an Amazon Web Services account that you want to share a query logging configuration with, the query
+     * logging configuration that you want to share, and the operations that you want the account to be able to perform
+     * on the configuration.
      * </p>
      * 
      * @param putResolverQueryLogConfigPolicyRequest
@@ -3771,8 +3772,8 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Specifies an AWS rule that you want to share with another account, the account that you want to share the rule
-     * with, and the operations that you want the account to be able to perform on the rule.
+     * Specifies an Amazon Web Services rule that you want to share with another account, the account that you want to
+     * share the rule with, and the operations that you want the account to be able to perform on the rule.
      * </p>
      * 
      * @param putResolverRulePolicyRequest

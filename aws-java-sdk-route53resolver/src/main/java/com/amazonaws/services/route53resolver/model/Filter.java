@@ -90,7 +90,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>HostVpcId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your network to
+     * <code>HostVPCId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your network to
      * your VPCs in a region, or the VPC that outbound queries pass through on the way from your VPCs to your network.
      * In a <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html"
@@ -239,8 +239,8 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>Destination</code>: The AWS service that you want to forward query logs to. Valid values include the
-     * following:
+     * <code>Destination</code>: The Amazon Web Services service that you want to forward query logs to. Valid values
+     * include the following:
      * </p>
      * <ul>
      * <li>
@@ -278,14 +278,15 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>OwnerId</code>: The AWS account ID for the account that created the query logging configuration.
+     * <code>OwnerId</code>: The Amazon Web Services account ID for the account that created the query logging
+     * configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other AWS
-     * accounts, or was shared with the current account by another AWS account. Valid values include:
-     * <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
+     * <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other Amazon
+     * Web Services accounts, or was shared with the current account by another Amazon Web Services account. Valid
+     * values include: <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
      * </p>
      * </li>
      * <li>
@@ -399,7 +400,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>HostVpcId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your network to
+     * <code>HostVPCId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your network to
      * your VPCs in a region, or the VPC that outbound queries pass through on the way from your VPCs to your network.
      * In a <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html"
@@ -548,8 +549,8 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>Destination</code>: The AWS service that you want to forward query logs to. Valid values include the
-     * following:
+     * <code>Destination</code>: The Amazon Web Services service that you want to forward query logs to. Valid values
+     * include the following:
      * </p>
      * <ul>
      * <li>
@@ -587,14 +588,15 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>OwnerId</code>: The AWS account ID for the account that created the query logging configuration.
+     * <code>OwnerId</code>: The Amazon Web Services account ID for the account that created the query logging
+     * configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other AWS
-     * accounts, or was shared with the current account by another AWS account. Valid values include:
-     * <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
+     * <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other Amazon
+     * Web Services accounts, or was shared with the current account by another Amazon Web Services account. Valid
+     * values include: <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
      * </p>
      * </li>
      * <li>
@@ -695,7 +697,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>HostVpcId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your
+     *        <code>HostVPCId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your
      *        network to your VPCs in a region, or the VPC that outbound queries pass through on the way from your VPCs
      *        to your network. In a <a href=
      *        "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html"
@@ -848,8 +850,8 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Destination</code>: The AWS service that you want to forward query logs to. Valid values include the
-     *        following:
+     *        <code>Destination</code>: The Amazon Web Services service that you want to forward query logs to. Valid
+     *        values include the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -887,14 +889,16 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>OwnerId</code>: The AWS account ID for the account that created the query logging configuration.
+     *        <code>OwnerId</code>: The Amazon Web Services account ID for the account that created the query logging
+     *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other
-     *        AWS accounts, or was shared with the current account by another AWS account. Valid values include:
-     *        <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
+     *        Amazon Web Services accounts, or was shared with the current account by another Amazon Web Services
+     *        account. Valid values include: <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or
+     *        <code>SHARED_BY_ME</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -1002,7 +1006,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>HostVpcId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your network to
+     * <code>HostVPCId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your network to
      * your VPCs in a region, or the VPC that outbound queries pass through on the way from your VPCs to your network.
      * In a <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html"
@@ -1151,8 +1155,8 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>Destination</code>: The AWS service that you want to forward query logs to. Valid values include the
-     * following:
+     * <code>Destination</code>: The Amazon Web Services service that you want to forward query logs to. Valid values
+     * include the following:
      * </p>
      * <ul>
      * <li>
@@ -1190,14 +1194,15 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>OwnerId</code>: The AWS account ID for the account that created the query logging configuration.
+     * <code>OwnerId</code>: The Amazon Web Services account ID for the account that created the query logging
+     * configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other AWS
-     * accounts, or was shared with the current account by another AWS account. Valid values include:
-     * <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
+     * <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other Amazon
+     * Web Services accounts, or was shared with the current account by another Amazon Web Services account. Valid
+     * values include: <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
      * </p>
      * </li>
      * <li>
@@ -1297,7 +1302,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>HostVpcId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your
+     *         <code>HostVPCId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your
      *         network to your VPCs in a region, or the VPC that outbound queries pass through on the way from your VPCs
      *         to your network. In a <a href=
      *         "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html"
@@ -1450,8 +1455,8 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Destination</code>: The AWS service that you want to forward query logs to. Valid values include
-     *         the following:
+     *         <code>Destination</code>: The Amazon Web Services service that you want to forward query logs to. Valid
+     *         values include the following:
      *         </p>
      *         <ul>
      *         <li>
@@ -1489,14 +1494,16 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>OwnerId</code>: The AWS account ID for the account that created the query logging configuration.
+     *         <code>OwnerId</code>: The Amazon Web Services account ID for the account that created the query logging
+     *         configuration.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other
-     *         AWS accounts, or was shared with the current account by another AWS account. Valid values include:
-     *         <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
+     *         Amazon Web Services accounts, or was shared with the current account by another Amazon Web Services
+     *         account. Valid values include: <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or
+     *         <code>SHARED_BY_ME</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -1605,7 +1612,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>HostVpcId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your network to
+     * <code>HostVPCId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your network to
      * your VPCs in a region, or the VPC that outbound queries pass through on the way from your VPCs to your network.
      * In a <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html"
@@ -1754,8 +1761,8 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>Destination</code>: The AWS service that you want to forward query logs to. Valid values include the
-     * following:
+     * <code>Destination</code>: The Amazon Web Services service that you want to forward query logs to. Valid values
+     * include the following:
      * </p>
      * <ul>
      * <li>
@@ -1793,14 +1800,15 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>OwnerId</code>: The AWS account ID for the account that created the query logging configuration.
+     * <code>OwnerId</code>: The Amazon Web Services account ID for the account that created the query logging
+     * configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other AWS
-     * accounts, or was shared with the current account by another AWS account. Valid values include:
-     * <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
+     * <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other Amazon
+     * Web Services accounts, or was shared with the current account by another Amazon Web Services account. Valid
+     * values include: <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
      * </p>
      * </li>
      * <li>
@@ -1901,7 +1909,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>HostVpcId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your
+     *        <code>HostVPCId</code>: The ID of the VPC that inbound DNS queries pass through on the way from your
      *        network to your VPCs in a region, or the VPC that outbound queries pass through on the way from your VPCs
      *        to your network. In a <a href=
      *        "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_CreateResolverEndpoint.html"
@@ -2054,8 +2062,8 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Destination</code>: The AWS service that you want to forward query logs to. Valid values include the
-     *        following:
+     *        <code>Destination</code>: The Amazon Web Services service that you want to forward query logs to. Valid
+     *        values include the following:
      *        </p>
      *        <ul>
      *        <li>
@@ -2093,14 +2101,16 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>OwnerId</code>: The AWS account ID for the account that created the query logging configuration.
+     *        <code>OwnerId</code>: The Amazon Web Services account ID for the account that created the query logging
+     *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ShareStatus</code>: An indication of whether the query logging configuration is shared with other
-     *        AWS accounts, or was shared with the current account by another AWS account. Valid values include:
-     *        <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or <code>SHARED_BY_ME</code>.
+     *        Amazon Web Services accounts, or was shared with the current account by another Amazon Web Services
+     *        account. Valid values include: <code>NOT_SHARED</code>, <code>SHARED_WITH_ME</code>, or
+     *        <code>SHARED_BY_ME</code>.
      *        </p>
      *        </li>
      *        <li>

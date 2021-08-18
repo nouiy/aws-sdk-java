@@ -68,8 +68,8 @@ public class FirewallRuleGroup implements Serializable, Cloneable, StructuredPoj
     private String statusMessage;
     /**
      * <p>
-     * The AWS account ID for the account that created the rule group. When a rule group is shared with your account,
-     * this is the account that has shared the rule group with you.
+     * The Amazon Web Services account ID for the account that created the rule group. When a rule group is shared with
+     * your account, this is the account that has shared the rule group with you.
      * </p>
      */
     private String ownerId;
@@ -82,8 +82,8 @@ public class FirewallRuleGroup implements Serializable, Cloneable, StructuredPoj
     private String creatorRequestId;
     /**
      * <p>
-     * Whether the rule group is shared with other AWS accounts, or was shared with the current account by another AWS
-     * account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * Whether the rule group is shared with other Amazon Web Services accounts, or was shared with the current account
+     * by another Amazon Web Services account. Sharing is configured through Resource Access Manager (RAM).
      * </p>
      */
     private String shareStatus;
@@ -362,13 +362,13 @@ public class FirewallRuleGroup implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The AWS account ID for the account that created the rule group. When a rule group is shared with your account,
-     * this is the account that has shared the rule group with you.
+     * The Amazon Web Services account ID for the account that created the rule group. When a rule group is shared with
+     * your account, this is the account that has shared the rule group with you.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID for the account that created the rule group. When a rule group is shared with your
-     *        account, this is the account that has shared the rule group with you.
+     *        The Amazon Web Services account ID for the account that created the rule group. When a rule group is
+     *        shared with your account, this is the account that has shared the rule group with you.
      */
 
     public void setOwnerId(String ownerId) {
@@ -377,12 +377,12 @@ public class FirewallRuleGroup implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The AWS account ID for the account that created the rule group. When a rule group is shared with your account,
-     * this is the account that has shared the rule group with you.
+     * The Amazon Web Services account ID for the account that created the rule group. When a rule group is shared with
+     * your account, this is the account that has shared the rule group with you.
      * </p>
      * 
-     * @return The AWS account ID for the account that created the rule group. When a rule group is shared with your
-     *         account, this is the account that has shared the rule group with you.
+     * @return The Amazon Web Services account ID for the account that created the rule group. When a rule group is
+     *         shared with your account, this is the account that has shared the rule group with you.
      */
 
     public String getOwnerId() {
@@ -391,13 +391,13 @@ public class FirewallRuleGroup implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The AWS account ID for the account that created the rule group. When a rule group is shared with your account,
-     * this is the account that has shared the rule group with you.
+     * The Amazon Web Services account ID for the account that created the rule group. When a rule group is shared with
+     * your account, this is the account that has shared the rule group with you.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID for the account that created the rule group. When a rule group is shared with your
-     *        account, this is the account that has shared the rule group with you.
+     *        The Amazon Web Services account ID for the account that created the rule group. When a rule group is
+     *        shared with your account, this is the account that has shared the rule group with you.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -454,13 +454,14 @@ public class FirewallRuleGroup implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether the rule group is shared with other AWS accounts, or was shared with the current account by another AWS
-     * account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * Whether the rule group is shared with other Amazon Web Services accounts, or was shared with the current account
+     * by another Amazon Web Services account. Sharing is configured through Resource Access Manager (RAM).
      * </p>
      * 
      * @param shareStatus
-     *        Whether the rule group is shared with other AWS accounts, or was shared with the current account by
-     *        another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     *        Whether the rule group is shared with other Amazon Web Services accounts, or was shared with the current
+     *        account by another Amazon Web Services account. Sharing is configured through Resource Access Manager
+     *        (RAM).
      * @see ShareStatus
      */
 
@@ -470,12 +471,13 @@ public class FirewallRuleGroup implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether the rule group is shared with other AWS accounts, or was shared with the current account by another AWS
-     * account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * Whether the rule group is shared with other Amazon Web Services accounts, or was shared with the current account
+     * by another Amazon Web Services account. Sharing is configured through Resource Access Manager (RAM).
      * </p>
      * 
-     * @return Whether the rule group is shared with other AWS accounts, or was shared with the current account by
-     *         another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * @return Whether the rule group is shared with other Amazon Web Services accounts, or was shared with the current
+     *         account by another Amazon Web Services account. Sharing is configured through Resource Access Manager
+     *         (RAM).
      * @see ShareStatus
      */
 
@@ -485,13 +487,14 @@ public class FirewallRuleGroup implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether the rule group is shared with other AWS accounts, or was shared with the current account by another AWS
-     * account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * Whether the rule group is shared with other Amazon Web Services accounts, or was shared with the current account
+     * by another Amazon Web Services account. Sharing is configured through Resource Access Manager (RAM).
      * </p>
      * 
      * @param shareStatus
-     *        Whether the rule group is shared with other AWS accounts, or was shared with the current account by
-     *        another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     *        Whether the rule group is shared with other Amazon Web Services accounts, or was shared with the current
+     *        account by another Amazon Web Services account. Sharing is configured through Resource Access Manager
+     *        (RAM).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShareStatus
      */
@@ -503,13 +506,14 @@ public class FirewallRuleGroup implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Whether the rule group is shared with other AWS accounts, or was shared with the current account by another AWS
-     * account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * Whether the rule group is shared with other Amazon Web Services accounts, or was shared with the current account
+     * by another Amazon Web Services account. Sharing is configured through Resource Access Manager (RAM).
      * </p>
      * 
      * @param shareStatus
-     *        Whether the rule group is shared with other AWS accounts, or was shared with the current account by
-     *        another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     *        Whether the rule group is shared with other Amazon Web Services accounts, or was shared with the current
+     *        account by another Amazon Web Services account. Sharing is configured through Resource Access Manager
+     *        (RAM).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShareStatus
      */

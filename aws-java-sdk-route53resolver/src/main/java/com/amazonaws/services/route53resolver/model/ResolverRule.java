@@ -118,7 +118,8 @@ public class ResolverRule implements Serializable, Cloneable, StructuredPojo {
     private String resolverEndpointId;
     /**
      * <p>
-     * When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
+     * When a rule is shared with another Amazon Web Services account, the account ID of the account that the rule is
+     * shared with.
      * </p>
      */
     private String ownerId;
@@ -750,12 +751,13 @@ public class ResolverRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
+     * When a rule is shared with another Amazon Web Services account, the account ID of the account that the rule is
+     * shared with.
      * </p>
      * 
      * @param ownerId
-     *        When a rule is shared with another AWS account, the account ID of the account that the rule is shared
-     *        with.
+     *        When a rule is shared with another Amazon Web Services account, the account ID of the account that the
+     *        rule is shared with.
      */
 
     public void setOwnerId(String ownerId) {
@@ -764,11 +766,12 @@ public class ResolverRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
+     * When a rule is shared with another Amazon Web Services account, the account ID of the account that the rule is
+     * shared with.
      * </p>
      * 
-     * @return When a rule is shared with another AWS account, the account ID of the account that the rule is shared
-     *         with.
+     * @return When a rule is shared with another Amazon Web Services account, the account ID of the account that the
+     *         rule is shared with.
      */
 
     public String getOwnerId() {
@@ -777,12 +780,13 @@ public class ResolverRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
+     * When a rule is shared with another Amazon Web Services account, the account ID of the account that the rule is
+     * shared with.
      * </p>
      * 
      * @param ownerId
-     *        When a rule is shared with another AWS account, the account ID of the account that the rule is shared
-     *        with.
+     *        When a rule is shared with another Amazon Web Services account, the account ID of the account that the
+     *        rule is shared with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

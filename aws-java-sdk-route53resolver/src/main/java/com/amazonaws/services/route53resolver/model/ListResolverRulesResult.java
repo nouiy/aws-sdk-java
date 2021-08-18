@@ -39,7 +39,8 @@ public class ListResolverRulesResult extends com.amazonaws.AmazonWebServiceResul
     private Integer maxResults;
     /**
      * <p>
-     * The Resolver rules that were created using the current AWS account and that match the specified filters, if any.
+     * The Resolver rules that were created using the current Amazon Web Services account and that match the specified
+     * filters, if any.
      * </p>
      */
     private java.util.List<ResolverRule> resolverRules;
@@ -138,11 +139,12 @@ public class ListResolverRulesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Resolver rules that were created using the current AWS account and that match the specified filters, if any.
+     * The Resolver rules that were created using the current Amazon Web Services account and that match the specified
+     * filters, if any.
      * </p>
      * 
-     * @return The Resolver rules that were created using the current AWS account and that match the specified filters,
-     *         if any.
+     * @return The Resolver rules that were created using the current Amazon Web Services account and that match the
+     *         specified filters, if any.
      */
 
     public java.util.List<ResolverRule> getResolverRules() {
@@ -151,12 +153,13 @@ public class ListResolverRulesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Resolver rules that were created using the current AWS account and that match the specified filters, if any.
+     * The Resolver rules that were created using the current Amazon Web Services account and that match the specified
+     * filters, if any.
      * </p>
      * 
      * @param resolverRules
-     *        The Resolver rules that were created using the current AWS account and that match the specified filters,
-     *        if any.
+     *        The Resolver rules that were created using the current Amazon Web Services account and that match the
+     *        specified filters, if any.
      */
 
     public void setResolverRules(java.util.Collection<ResolverRule> resolverRules) {
@@ -170,7 +173,8 @@ public class ListResolverRulesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Resolver rules that were created using the current AWS account and that match the specified filters, if any.
+     * The Resolver rules that were created using the current Amazon Web Services account and that match the specified
+     * filters, if any.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -179,8 +183,8 @@ public class ListResolverRulesResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      * 
      * @param resolverRules
-     *        The Resolver rules that were created using the current AWS account and that match the specified filters,
-     *        if any.
+     *        The Resolver rules that were created using the current Amazon Web Services account and that match the
+     *        specified filters, if any.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -196,12 +200,13 @@ public class ListResolverRulesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The Resolver rules that were created using the current AWS account and that match the specified filters, if any.
+     * The Resolver rules that were created using the current Amazon Web Services account and that match the specified
+     * filters, if any.
      * </p>
      * 
      * @param resolverRules
-     *        The Resolver rules that were created using the current AWS account and that match the specified filters,
-     *        if any.
+     *        The Resolver rules that were created using the current Amazon Web Services account and that match the
+     *        specified filters, if any.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -38,6 +38,8 @@ public class CreateEndpointConfigRequestMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<String> KMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("KmsKeyId").build();
+    private static final MarshallingInfo<StructuredPojo> ASYNCINFERENCECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AsyncInferenceConfig").build();
 
     private static final CreateEndpointConfigRequestMarshaller instance = new CreateEndpointConfigRequestMarshaller();
 
@@ -60,6 +62,7 @@ public class CreateEndpointConfigRequestMarshaller {
             protocolMarshaller.marshall(createEndpointConfigRequest.getDataCaptureConfig(), DATACAPTURECONFIG_BINDING);
             protocolMarshaller.marshall(createEndpointConfigRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createEndpointConfigRequest.getKmsKeyId(), KMSKEYID_BINDING);
+            protocolMarshaller.marshall(createEndpointConfigRequest.getAsyncInferenceConfig(), ASYNCINFERENCECONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

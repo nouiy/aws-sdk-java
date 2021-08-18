@@ -74,6 +74,10 @@ public class DescribeEndpointConfigResultJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     describeEndpointConfigResult.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("AsyncInferenceConfig", targetDepth)) {
+                    context.nextToken();
+                    describeEndpointConfigResult.setAsyncInferenceConfig(AsyncInferenceConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

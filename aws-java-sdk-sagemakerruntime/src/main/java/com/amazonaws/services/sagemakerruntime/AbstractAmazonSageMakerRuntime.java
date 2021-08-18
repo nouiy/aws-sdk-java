@@ -33,6 +33,11 @@ public class AbstractAmazonSageMakerRuntime implements AmazonSageMakerRuntime {
     }
 
     @Override
+    public InvokeEndpointAsyncResult invokeEndpointAsync(InvokeEndpointAsyncRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

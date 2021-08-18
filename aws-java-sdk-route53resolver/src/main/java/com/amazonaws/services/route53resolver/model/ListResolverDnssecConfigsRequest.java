@@ -35,8 +35,8 @@ public class ListResolverDnssecConfigsRequest extends com.amazonaws.AmazonWebSer
     private Integer maxResults;
     /**
      * <p>
-     * (Optional) If the current AWS account has more than <code>MaxResults</code> DNSSEC configurations, use
-     * <code>NextToken</code> to get the second and subsequent pages of results.
+     * (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> DNSSEC
+     * configurations, use <code>NextToken</code> to get the second and subsequent pages of results.
      * </p>
      * <p>
      * For the first <code>ListResolverDnssecConfigs</code> request, omit this value.
@@ -108,8 +108,8 @@ public class ListResolverDnssecConfigsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * (Optional) If the current AWS account has more than <code>MaxResults</code> DNSSEC configurations, use
-     * <code>NextToken</code> to get the second and subsequent pages of results.
+     * (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> DNSSEC
+     * configurations, use <code>NextToken</code> to get the second and subsequent pages of results.
      * </p>
      * <p>
      * For the first <code>ListResolverDnssecConfigs</code> request, omit this value.
@@ -120,8 +120,8 @@ public class ListResolverDnssecConfigsRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param nextToken
-     *        (Optional) If the current AWS account has more than <code>MaxResults</code> DNSSEC configurations, use
-     *        <code>NextToken</code> to get the second and subsequent pages of results.</p>
+     *        (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> DNSSEC
+     *        configurations, use <code>NextToken</code> to get the second and subsequent pages of results.</p>
      *        <p>
      *        For the first <code>ListResolverDnssecConfigs</code> request, omit this value.
      *        </p>
@@ -136,8 +136,8 @@ public class ListResolverDnssecConfigsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * (Optional) If the current AWS account has more than <code>MaxResults</code> DNSSEC configurations, use
-     * <code>NextToken</code> to get the second and subsequent pages of results.
+     * (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> DNSSEC
+     * configurations, use <code>NextToken</code> to get the second and subsequent pages of results.
      * </p>
      * <p>
      * For the first <code>ListResolverDnssecConfigs</code> request, omit this value.
@@ -147,8 +147,8 @@ public class ListResolverDnssecConfigsRequest extends com.amazonaws.AmazonWebSer
      * specify that value for <code>NextToken</code> in the request.
      * </p>
      * 
-     * @return (Optional) If the current AWS account has more than <code>MaxResults</code> DNSSEC configurations, use
-     *         <code>NextToken</code> to get the second and subsequent pages of results.</p>
+     * @return (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> DNSSEC
+     *         configurations, use <code>NextToken</code> to get the second and subsequent pages of results.</p>
      *         <p>
      *         For the first <code>ListResolverDnssecConfigs</code> request, omit this value.
      *         </p>
@@ -163,8 +163,8 @@ public class ListResolverDnssecConfigsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * (Optional) If the current AWS account has more than <code>MaxResults</code> DNSSEC configurations, use
-     * <code>NextToken</code> to get the second and subsequent pages of results.
+     * (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> DNSSEC
+     * configurations, use <code>NextToken</code> to get the second and subsequent pages of results.
      * </p>
      * <p>
      * For the first <code>ListResolverDnssecConfigs</code> request, omit this value.
@@ -175,8 +175,8 @@ public class ListResolverDnssecConfigsRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param nextToken
-     *        (Optional) If the current AWS account has more than <code>MaxResults</code> DNSSEC configurations, use
-     *        <code>NextToken</code> to get the second and subsequent pages of results.</p>
+     *        (Optional) If the current Amazon Web Services account has more than <code>MaxResults</code> DNSSEC
+     *        configurations, use <code>NextToken</code> to get the second and subsequent pages of results.</p>
      *        <p>
      *        For the first <code>ListResolverDnssecConfigs</code> request, omit this value.
      *        </p>

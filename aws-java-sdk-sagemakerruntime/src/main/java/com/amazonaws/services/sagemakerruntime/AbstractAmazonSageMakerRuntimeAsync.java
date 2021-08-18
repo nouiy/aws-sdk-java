@@ -40,4 +40,17 @@ public class AbstractAmazonSageMakerRuntimeAsync extends AbstractAmazonSageMaker
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<InvokeEndpointAsyncResult> invokeEndpointAsyncAsync(InvokeEndpointAsyncRequest request) {
+
+        return invokeEndpointAsyncAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<InvokeEndpointAsyncResult> invokeEndpointAsyncAsync(InvokeEndpointAsyncRequest request,
+            com.amazonaws.handlers.AsyncHandler<InvokeEndpointAsyncRequest, InvokeEndpointAsyncResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

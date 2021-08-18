@@ -33,9 +33,9 @@ public class PutResolverRulePolicyRequest extends com.amazonaws.AmazonWebService
     private String arn;
     /**
      * <p>
-     * An AWS Identity and Access Management policy statement that lists the rules that you want to share with another
-     * AWS account and the operations that you want the account to be able to perform. You can specify the following
-     * operations in the <code>Action</code> section of the statement:
+     * An Identity and Access Management policy statement that lists the rules that you want to share with another
+     * Amazon Web Services account and the operations that you want the account to be able to perform. You can specify
+     * the following operations in the <code>Action</code> section of the statement:
      * </p>
      * <ul>
      * <li>
@@ -113,9 +113,9 @@ public class PutResolverRulePolicyRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An AWS Identity and Access Management policy statement that lists the rules that you want to share with another
-     * AWS account and the operations that you want the account to be able to perform. You can specify the following
-     * operations in the <code>Action</code> section of the statement:
+     * An Identity and Access Management policy statement that lists the rules that you want to share with another
+     * Amazon Web Services account and the operations that you want the account to be able to perform. You can specify
+     * the following operations in the <code>Action</code> section of the statement:
      * </p>
      * <ul>
      * <li>
@@ -150,9 +150,9 @@ public class PutResolverRulePolicyRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param resolverRulePolicy
-     *        An AWS Identity and Access Management policy statement that lists the rules that you want to share with
-     *        another AWS account and the operations that you want the account to be able to perform. You can specify
-     *        the following operations in the <code>Action</code> section of the statement:</p>
+     *        An Identity and Access Management policy statement that lists the rules that you want to share with
+     *        another Amazon Web Services account and the operations that you want the account to be able to perform.
+     *        You can specify the following operations in the <code>Action</code> section of the statement:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -191,9 +191,9 @@ public class PutResolverRulePolicyRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An AWS Identity and Access Management policy statement that lists the rules that you want to share with another
-     * AWS account and the operations that you want the account to be able to perform. You can specify the following
-     * operations in the <code>Action</code> section of the statement:
+     * An Identity and Access Management policy statement that lists the rules that you want to share with another
+     * Amazon Web Services account and the operations that you want the account to be able to perform. You can specify
+     * the following operations in the <code>Action</code> section of the statement:
      * </p>
      * <ul>
      * <li>
@@ -227,9 +227,9 @@ public class PutResolverRulePolicyRequest extends com.amazonaws.AmazonWebService
      * another account. Specify the same ARN that you specified in <code>Arn</code>.
      * </p>
      * 
-     * @return An AWS Identity and Access Management policy statement that lists the rules that you want to share with
-     *         another AWS account and the operations that you want the account to be able to perform. You can specify
-     *         the following operations in the <code>Action</code> section of the statement:</p>
+     * @return An Identity and Access Management policy statement that lists the rules that you want to share with
+     *         another Amazon Web Services account and the operations that you want the account to be able to perform.
+     *         You can specify the following operations in the <code>Action</code> section of the statement:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -268,9 +268,9 @@ public class PutResolverRulePolicyRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An AWS Identity and Access Management policy statement that lists the rules that you want to share with another
-     * AWS account and the operations that you want the account to be able to perform. You can specify the following
-     * operations in the <code>Action</code> section of the statement:
+     * An Identity and Access Management policy statement that lists the rules that you want to share with another
+     * Amazon Web Services account and the operations that you want the account to be able to perform. You can specify
+     * the following operations in the <code>Action</code> section of the statement:
      * </p>
      * <ul>
      * <li>
@@ -305,9 +305,9 @@ public class PutResolverRulePolicyRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param resolverRulePolicy
-     *        An AWS Identity and Access Management policy statement that lists the rules that you want to share with
-     *        another AWS account and the operations that you want the account to be able to perform. You can specify
-     *        the following operations in the <code>Action</code> section of the statement:</p>
+     *        An Identity and Access Management policy statement that lists the rules that you want to share with
+     *        another Amazon Web Services account and the operations that you want the account to be able to perform.
+     *        You can specify the following operations in the <code>Action</code> section of the statement:</p>
      *        <ul>
      *        <li>
      *        <p>

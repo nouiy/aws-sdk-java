@@ -25,8 +25,8 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * If a response includes the last of the DNSSEC configurations that are associated with the current AWS account,
-     * <code>NextToken</code> doesn't appear in the response.
+     * If a response includes the last of the DNSSEC configurations that are associated with the current Amazon Web
+     * Services account, <code>NextToken</code> doesn't appear in the response.
      * </p>
      * <p>
      * If a response doesn't include the last of the configurations, you can get more configurations by submitting
@@ -41,15 +41,15 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
      * An array that contains one <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResolverDnssecConfig.html"
      * >ResolverDnssecConfig</a> element for each configuration for DNSSEC validation that is associated with the
-     * current AWS account.
+     * current Amazon Web Services account.
      * </p>
      */
     private java.util.List<ResolverDnssecConfig> resolverDnssecConfigs;
 
     /**
      * <p>
-     * If a response includes the last of the DNSSEC configurations that are associated with the current AWS account,
-     * <code>NextToken</code> doesn't appear in the response.
+     * If a response includes the last of the DNSSEC configurations that are associated with the current Amazon Web
+     * Services account, <code>NextToken</code> doesn't appear in the response.
      * </p>
      * <p>
      * If a response doesn't include the last of the configurations, you can get more configurations by submitting
@@ -59,8 +59,8 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param nextToken
-     *        If a response includes the last of the DNSSEC configurations that are associated with the current AWS
-     *        account, <code>NextToken</code> doesn't appear in the response.</p>
+     *        If a response includes the last of the DNSSEC configurations that are associated with the current Amazon
+     *        Web Services account, <code>NextToken</code> doesn't appear in the response.</p>
      *        <p>
      *        If a response doesn't include the last of the configurations, you can get more configurations by
      *        submitting another <a
@@ -75,8 +75,8 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * If a response includes the last of the DNSSEC configurations that are associated with the current AWS account,
-     * <code>NextToken</code> doesn't appear in the response.
+     * If a response includes the last of the DNSSEC configurations that are associated with the current Amazon Web
+     * Services account, <code>NextToken</code> doesn't appear in the response.
      * </p>
      * <p>
      * If a response doesn't include the last of the configurations, you can get more configurations by submitting
@@ -85,8 +85,8 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
      * the previous response and include it in <code>NextToken</code> in the next request.
      * </p>
      * 
-     * @return If a response includes the last of the DNSSEC configurations that are associated with the current AWS
-     *         account, <code>NextToken</code> doesn't appear in the response.</p>
+     * @return If a response includes the last of the DNSSEC configurations that are associated with the current Amazon
+     *         Web Services account, <code>NextToken</code> doesn't appear in the response.</p>
      *         <p>
      *         If a response doesn't include the last of the configurations, you can get more configurations by
      *         submitting another <a
@@ -101,8 +101,8 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * If a response includes the last of the DNSSEC configurations that are associated with the current AWS account,
-     * <code>NextToken</code> doesn't appear in the response.
+     * If a response includes the last of the DNSSEC configurations that are associated with the current Amazon Web
+     * Services account, <code>NextToken</code> doesn't appear in the response.
      * </p>
      * <p>
      * If a response doesn't include the last of the configurations, you can get more configurations by submitting
@@ -112,8 +112,8 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param nextToken
-     *        If a response includes the last of the DNSSEC configurations that are associated with the current AWS
-     *        account, <code>NextToken</code> doesn't appear in the response.</p>
+     *        If a response includes the last of the DNSSEC configurations that are associated with the current Amazon
+     *        Web Services account, <code>NextToken</code> doesn't appear in the response.</p>
      *        <p>
      *        If a response doesn't include the last of the configurations, you can get more configurations by
      *        submitting another <a
@@ -133,13 +133,13 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
      * An array that contains one <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResolverDnssecConfig.html"
      * >ResolverDnssecConfig</a> element for each configuration for DNSSEC validation that is associated with the
-     * current AWS account.
+     * current Amazon Web Services account.
      * </p>
      * 
      * @return An array that contains one <a
      *         href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResolverDnssecConfig.html"
      *         >ResolverDnssecConfig</a> element for each configuration for DNSSEC validation that is associated with
-     *         the current AWS account.
+     *         the current Amazon Web Services account.
      */
 
     public java.util.List<ResolverDnssecConfig> getResolverDnssecConfigs() {
@@ -151,14 +151,14 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
      * An array that contains one <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResolverDnssecConfig.html"
      * >ResolverDnssecConfig</a> element for each configuration for DNSSEC validation that is associated with the
-     * current AWS account.
+     * current Amazon Web Services account.
      * </p>
      * 
      * @param resolverDnssecConfigs
      *        An array that contains one <a
      *        href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResolverDnssecConfig.html"
      *        >ResolverDnssecConfig</a> element for each configuration for DNSSEC validation that is associated with the
-     *        current AWS account.
+     *        current Amazon Web Services account.
      */
 
     public void setResolverDnssecConfigs(java.util.Collection<ResolverDnssecConfig> resolverDnssecConfigs) {
@@ -175,7 +175,7 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
      * An array that contains one <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResolverDnssecConfig.html"
      * >ResolverDnssecConfig</a> element for each configuration for DNSSEC validation that is associated with the
-     * current AWS account.
+     * current Amazon Web Services account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -187,7 +187,7 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
      *        An array that contains one <a
      *        href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResolverDnssecConfig.html"
      *        >ResolverDnssecConfig</a> element for each configuration for DNSSEC validation that is associated with the
-     *        current AWS account.
+     *        current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -206,14 +206,14 @@ public class ListResolverDnssecConfigsResult extends com.amazonaws.AmazonWebServ
      * An array that contains one <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResolverDnssecConfig.html"
      * >ResolverDnssecConfig</a> element for each configuration for DNSSEC validation that is associated with the
-     * current AWS account.
+     * current Amazon Web Services account.
      * </p>
      * 
      * @param resolverDnssecConfigs
      *        An array that contains one <a
      *        href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResolverDnssecConfig.html"
      *        >ResolverDnssecConfig</a> element for each configuration for DNSSEC validation that is associated with the
-     *        current AWS account.
+     *        current Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

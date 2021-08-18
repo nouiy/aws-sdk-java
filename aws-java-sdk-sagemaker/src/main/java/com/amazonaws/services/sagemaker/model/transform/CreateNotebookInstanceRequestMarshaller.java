@@ -56,6 +56,8 @@ public class CreateNotebookInstanceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdditionalCodeRepositories").build();
     private static final MarshallingInfo<String> ROOTACCESS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RootAccess").build();
+    private static final MarshallingInfo<String> PLATFORMIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PlatformIdentifier").build();
 
     private static final CreateNotebookInstanceRequestMarshaller instance = new CreateNotebookInstanceRequestMarshaller();
 
@@ -87,6 +89,7 @@ public class CreateNotebookInstanceRequestMarshaller {
             protocolMarshaller.marshall(createNotebookInstanceRequest.getDefaultCodeRepository(), DEFAULTCODEREPOSITORY_BINDING);
             protocolMarshaller.marshall(createNotebookInstanceRequest.getAdditionalCodeRepositories(), ADDITIONALCODEREPOSITORIES_BINDING);
             protocolMarshaller.marshall(createNotebookInstanceRequest.getRootAccess(), ROOTACCESS_BINDING);
+            protocolMarshaller.marshall(createNotebookInstanceRequest.getPlatformIdentifier(), PLATFORMIDENTIFIER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

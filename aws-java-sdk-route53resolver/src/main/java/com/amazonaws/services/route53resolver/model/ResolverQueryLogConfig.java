@@ -44,7 +44,7 @@ public class ResolverQueryLogConfig implements Serializable, Cloneable, Structur
     private String id;
     /**
      * <p>
-     * The AWS account ID for the account that created the query logging configuration.
+     * The Amazon Web Services account ID for the account that created the query logging configuration.
      * </p>
      */
     private String ownerId;
@@ -92,8 +92,9 @@ public class ResolverQueryLogConfig implements Serializable, Cloneable, Structur
     private String status;
     /**
      * <p>
-     * An indication of whether the query logging configuration is shared with other AWS accounts, or was shared with
-     * the current account by another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * An indication of whether the query logging configuration is shared with other Amazon Web Services accounts, or
+     * was shared with the current account by another Amazon Web Services account. Sharing is configured through
+     * Resource Access Manager (RAM).
      * </p>
      */
     private String shareStatus;
@@ -180,11 +181,11 @@ public class ResolverQueryLogConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID for the account that created the query logging configuration.
+     * The Amazon Web Services account ID for the account that created the query logging configuration.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID for the account that created the query logging configuration.
+     *        The Amazon Web Services account ID for the account that created the query logging configuration.
      */
 
     public void setOwnerId(String ownerId) {
@@ -193,10 +194,10 @@ public class ResolverQueryLogConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID for the account that created the query logging configuration.
+     * The Amazon Web Services account ID for the account that created the query logging configuration.
      * </p>
      * 
-     * @return The AWS account ID for the account that created the query logging configuration.
+     * @return The Amazon Web Services account ID for the account that created the query logging configuration.
      */
 
     public String getOwnerId() {
@@ -205,11 +206,11 @@ public class ResolverQueryLogConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID for the account that created the query logging configuration.
+     * The Amazon Web Services account ID for the account that created the query logging configuration.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID for the account that created the query logging configuration.
+     *        The Amazon Web Services account ID for the account that created the query logging configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -563,14 +564,15 @@ public class ResolverQueryLogConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An indication of whether the query logging configuration is shared with other AWS accounts, or was shared with
-     * the current account by another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * An indication of whether the query logging configuration is shared with other Amazon Web Services accounts, or
+     * was shared with the current account by another Amazon Web Services account. Sharing is configured through
+     * Resource Access Manager (RAM).
      * </p>
      * 
      * @param shareStatus
-     *        An indication of whether the query logging configuration is shared with other AWS accounts, or was shared
-     *        with the current account by another AWS account. Sharing is configured through AWS Resource Access Manager
-     *        (AWS RAM).
+     *        An indication of whether the query logging configuration is shared with other Amazon Web Services
+     *        accounts, or was shared with the current account by another Amazon Web Services account. Sharing is
+     *        configured through Resource Access Manager (RAM).
      * @see ShareStatus
      */
 
@@ -580,13 +582,14 @@ public class ResolverQueryLogConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An indication of whether the query logging configuration is shared with other AWS accounts, or was shared with
-     * the current account by another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * An indication of whether the query logging configuration is shared with other Amazon Web Services accounts, or
+     * was shared with the current account by another Amazon Web Services account. Sharing is configured through
+     * Resource Access Manager (RAM).
      * </p>
      * 
-     * @return An indication of whether the query logging configuration is shared with other AWS accounts, or was shared
-     *         with the current account by another AWS account. Sharing is configured through AWS Resource Access
-     *         Manager (AWS RAM).
+     * @return An indication of whether the query logging configuration is shared with other Amazon Web Services
+     *         accounts, or was shared with the current account by another Amazon Web Services account. Sharing is
+     *         configured through Resource Access Manager (RAM).
      * @see ShareStatus
      */
 
@@ -596,14 +599,15 @@ public class ResolverQueryLogConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An indication of whether the query logging configuration is shared with other AWS accounts, or was shared with
-     * the current account by another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * An indication of whether the query logging configuration is shared with other Amazon Web Services accounts, or
+     * was shared with the current account by another Amazon Web Services account. Sharing is configured through
+     * Resource Access Manager (RAM).
      * </p>
      * 
      * @param shareStatus
-     *        An indication of whether the query logging configuration is shared with other AWS accounts, or was shared
-     *        with the current account by another AWS account. Sharing is configured through AWS Resource Access Manager
-     *        (AWS RAM).
+     *        An indication of whether the query logging configuration is shared with other Amazon Web Services
+     *        accounts, or was shared with the current account by another Amazon Web Services account. Sharing is
+     *        configured through Resource Access Manager (RAM).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShareStatus
      */
@@ -615,14 +619,15 @@ public class ResolverQueryLogConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An indication of whether the query logging configuration is shared with other AWS accounts, or was shared with
-     * the current account by another AWS account. Sharing is configured through AWS Resource Access Manager (AWS RAM).
+     * An indication of whether the query logging configuration is shared with other Amazon Web Services accounts, or
+     * was shared with the current account by another Amazon Web Services account. Sharing is configured through
+     * Resource Access Manager (RAM).
      * </p>
      * 
      * @param shareStatus
-     *        An indication of whether the query logging configuration is shared with other AWS accounts, or was shared
-     *        with the current account by another AWS account. Sharing is configured through AWS Resource Access Manager
-     *        (AWS RAM).
+     *        An indication of whether the query logging configuration is shared with other Amazon Web Services
+     *        accounts, or was shared with the current account by another Amazon Web Services account. Sharing is
+     *        configured through Resource Access Manager (RAM).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShareStatus
      */

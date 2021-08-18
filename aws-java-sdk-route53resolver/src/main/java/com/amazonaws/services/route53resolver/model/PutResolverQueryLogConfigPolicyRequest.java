@@ -33,9 +33,9 @@ public class PutResolverQueryLogConfigPolicyRequest extends com.amazonaws.Amazon
     private String arn;
     /**
      * <p>
-     * An AWS Identity and Access Management policy statement that lists the query logging configurations that you want
-     * to share with another AWS account and the operations that you want the account to be able to perform. You can
-     * specify the following operations in the <code>Actions</code> section of the statement:
+     * An Identity and Access Management policy statement that lists the query logging configurations that you want to
+     * share with another Amazon Web Services account and the operations that you want the account to be able to
+     * perform. You can specify the following operations in the <code>Actions</code> section of the statement:
      * </p>
      * <ul>
      * <li>
@@ -108,9 +108,9 @@ public class PutResolverQueryLogConfigPolicyRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An AWS Identity and Access Management policy statement that lists the query logging configurations that you want
-     * to share with another AWS account and the operations that you want the account to be able to perform. You can
-     * specify the following operations in the <code>Actions</code> section of the statement:
+     * An Identity and Access Management policy statement that lists the query logging configurations that you want to
+     * share with another Amazon Web Services account and the operations that you want the account to be able to
+     * perform. You can specify the following operations in the <code>Actions</code> section of the statement:
      * </p>
      * <ul>
      * <li>
@@ -140,9 +140,9 @@ public class PutResolverQueryLogConfigPolicyRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param resolverQueryLogConfigPolicy
-     *        An AWS Identity and Access Management policy statement that lists the query logging configurations that
-     *        you want to share with another AWS account and the operations that you want the account to be able to
-     *        perform. You can specify the following operations in the <code>Actions</code> section of the
+     *        An Identity and Access Management policy statement that lists the query logging configurations that you
+     *        want to share with another Amazon Web Services account and the operations that you want the account to be
+     *        able to perform. You can specify the following operations in the <code>Actions</code> section of the
      *        statement:</p>
      *        <ul>
      *        <li>
@@ -177,9 +177,9 @@ public class PutResolverQueryLogConfigPolicyRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An AWS Identity and Access Management policy statement that lists the query logging configurations that you want
-     * to share with another AWS account and the operations that you want the account to be able to perform. You can
-     * specify the following operations in the <code>Actions</code> section of the statement:
+     * An Identity and Access Management policy statement that lists the query logging configurations that you want to
+     * share with another Amazon Web Services account and the operations that you want the account to be able to
+     * perform. You can specify the following operations in the <code>Actions</code> section of the statement:
      * </p>
      * <ul>
      * <li>
@@ -208,9 +208,9 @@ public class PutResolverQueryLogConfigPolicyRequest extends com.amazonaws.Amazon
      * that you want to share with the account that you specified in <code>Arn</code>.
      * </p>
      * 
-     * @return An AWS Identity and Access Management policy statement that lists the query logging configurations that
-     *         you want to share with another AWS account and the operations that you want the account to be able to
-     *         perform. You can specify the following operations in the <code>Actions</code> section of the
+     * @return An Identity and Access Management policy statement that lists the query logging configurations that you
+     *         want to share with another Amazon Web Services account and the operations that you want the account to be
+     *         able to perform. You can specify the following operations in the <code>Actions</code> section of the
      *         statement:</p>
      *         <ul>
      *         <li>
@@ -245,9 +245,9 @@ public class PutResolverQueryLogConfigPolicyRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * An AWS Identity and Access Management policy statement that lists the query logging configurations that you want
-     * to share with another AWS account and the operations that you want the account to be able to perform. You can
-     * specify the following operations in the <code>Actions</code> section of the statement:
+     * An Identity and Access Management policy statement that lists the query logging configurations that you want to
+     * share with another Amazon Web Services account and the operations that you want the account to be able to
+     * perform. You can specify the following operations in the <code>Actions</code> section of the statement:
      * </p>
      * <ul>
      * <li>
@@ -277,9 +277,9 @@ public class PutResolverQueryLogConfigPolicyRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param resolverQueryLogConfigPolicy
-     *        An AWS Identity and Access Management policy statement that lists the query logging configurations that
-     *        you want to share with another AWS account and the operations that you want the account to be able to
-     *        perform. You can specify the following operations in the <code>Actions</code> section of the
+     *        An Identity and Access Management policy statement that lists the query logging configurations that you
+     *        want to share with another Amazon Web Services account and the operations that you want the account to be
+     *        able to perform. You can specify the following operations in the <code>Actions</code> section of the
      *        statement:</p>
      *        <ul>
      *        <li>

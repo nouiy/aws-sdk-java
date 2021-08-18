@@ -43,7 +43,7 @@ public class FirewallConfig implements Serializable, Cloneable, StructuredPojo {
     private String resourceId;
     /**
      * <p>
-     * The AWS account ID of the owner of the VPC that this firewall configuration applies to.
+     * The Amazon Web Services account ID of the owner of the VPC that this firewall configuration applies to.
      * </p>
      */
     private String ownerId;
@@ -154,11 +154,11 @@ public class FirewallConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the owner of the VPC that this firewall configuration applies to.
+     * The Amazon Web Services account ID of the owner of the VPC that this firewall configuration applies to.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the owner of the VPC that this firewall configuration applies to.
+     *        The Amazon Web Services account ID of the owner of the VPC that this firewall configuration applies to.
      */
 
     public void setOwnerId(String ownerId) {
@@ -167,10 +167,10 @@ public class FirewallConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the owner of the VPC that this firewall configuration applies to.
+     * The Amazon Web Services account ID of the owner of the VPC that this firewall configuration applies to.
      * </p>
      * 
-     * @return The AWS account ID of the owner of the VPC that this firewall configuration applies to.
+     * @return The Amazon Web Services account ID of the owner of the VPC that this firewall configuration applies to.
      */
 
     public String getOwnerId() {
@@ -179,11 +179,11 @@ public class FirewallConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the owner of the VPC that this firewall configuration applies to.
+     * The Amazon Web Services account ID of the owner of the VPC that this firewall configuration applies to.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the owner of the VPC that this firewall configuration applies to.
+     *        The Amazon Web Services account ID of the owner of the VPC that this firewall configuration applies to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

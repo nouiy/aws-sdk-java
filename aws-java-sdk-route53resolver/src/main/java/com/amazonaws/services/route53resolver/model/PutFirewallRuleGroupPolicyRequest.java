@@ -33,7 +33,7 @@ public class PutFirewallRuleGroupPolicyRequest extends com.amazonaws.AmazonWebSe
     private String arn;
     /**
      * <p>
-     * The AWS Identity and Access Management (AWS IAM) policy to attach to the rule group.
+     * The Identity and Access Management (Amazon Web Services IAM) policy to attach to the rule group.
      * </p>
      */
     private String firewallRuleGroupPolicy;
@@ -80,11 +80,11 @@ public class PutFirewallRuleGroupPolicyRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The AWS Identity and Access Management (AWS IAM) policy to attach to the rule group.
+     * The Identity and Access Management (Amazon Web Services IAM) policy to attach to the rule group.
      * </p>
      * 
      * @param firewallRuleGroupPolicy
-     *        The AWS Identity and Access Management (AWS IAM) policy to attach to the rule group.
+     *        The Identity and Access Management (Amazon Web Services IAM) policy to attach to the rule group.
      */
 
     public void setFirewallRuleGroupPolicy(String firewallRuleGroupPolicy) {
@@ -93,10 +93,10 @@ public class PutFirewallRuleGroupPolicyRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The AWS Identity and Access Management (AWS IAM) policy to attach to the rule group.
+     * The Identity and Access Management (Amazon Web Services IAM) policy to attach to the rule group.
      * </p>
      * 
-     * @return The AWS Identity and Access Management (AWS IAM) policy to attach to the rule group.
+     * @return The Identity and Access Management (Amazon Web Services IAM) policy to attach to the rule group.
      */
 
     public String getFirewallRuleGroupPolicy() {
@@ -105,11 +105,11 @@ public class PutFirewallRuleGroupPolicyRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The AWS Identity and Access Management (AWS IAM) policy to attach to the rule group.
+     * The Identity and Access Management (Amazon Web Services IAM) policy to attach to the rule group.
      * </p>
      * 
      * @param firewallRuleGroupPolicy
-     *        The AWS Identity and Access Management (AWS IAM) policy to attach to the rule group.
+     *        The Identity and Access Management (Amazon Web Services IAM) policy to attach to the rule group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
