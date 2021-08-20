@@ -70,7 +70,7 @@ public class DescribeInstanceEventWindowsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the event window. Use the tag key
+     * <code>tag:&lt;key&gt;</code> - The key/value combination of a tag assigned to the event window. Use the tag key
      * in the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>CMX</code>, specify <code>tag:Owner</code> for the filter name and
      * <code>CMX</code> for the filter value.
@@ -217,7 +217,7 @@ public class DescribeInstanceEventWindowsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the event window. Use the tag key
+     * <code>tag:&lt;key&gt;</code> - The key/value combination of a tag assigned to the event window. Use the tag key
      * in the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>CMX</code>, specify <code>tag:Owner</code> for the filter name and
      * <code>CMX</code> for the filter value.
@@ -273,7 +273,7 @@ public class DescribeInstanceEventWindowsRequest extends AmazonWebServiceRequest
      *         </li>
      *         <li>
      *         <p>
-     *         <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the event window. Use the
+     *         <code>tag:&lt;key&gt;</code> - The key/value combination of a tag assigned to the event window. Use the
      *         tag key in the filter name and the tag value as the filter value. For example, to find all resources that
      *         have a tag with the key <code>Owner</code> and the value <code>CMX</code>, specify <code>tag:Owner</code>
      *         for the filter name and <code>CMX</code> for the filter value.
@@ -338,7 +338,7 @@ public class DescribeInstanceEventWindowsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the event window. Use the tag key
+     * <code>tag:&lt;key&gt;</code> - The key/value combination of a tag assigned to the event window. Use the tag key
      * in the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>CMX</code>, specify <code>tag:Owner</code> for the filter name and
      * <code>CMX</code> for the filter value.
@@ -395,7 +395,7 @@ public class DescribeInstanceEventWindowsRequest extends AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the event window. Use the
+     *        <code>tag:&lt;key&gt;</code> - The key/value combination of a tag assigned to the event window. Use the
      *        tag key in the filter name and the tag value as the filter value. For example, to find all resources that
      *        have a tag with the key <code>Owner</code> and the value <code>CMX</code>, specify <code>tag:Owner</code>
      *        for the filter name and <code>CMX</code> for the filter value.
@@ -462,7 +462,7 @@ public class DescribeInstanceEventWindowsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the event window. Use the tag key
+     * <code>tag:&lt;key&gt;</code> - The key/value combination of a tag assigned to the event window. Use the tag key
      * in the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>CMX</code>, specify <code>tag:Owner</code> for the filter name and
      * <code>CMX</code> for the filter value.
@@ -524,7 +524,7 @@ public class DescribeInstanceEventWindowsRequest extends AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the event window. Use the
+     *        <code>tag:&lt;key&gt;</code> - The key/value combination of a tag assigned to the event window. Use the
      *        tag key in the filter name and the tag value as the filter value. For example, to find all resources that
      *        have a tag with the key <code>Owner</code> and the value <code>CMX</code>, specify <code>tag:Owner</code>
      *        for the filter name and <code>CMX</code> for the filter value.
@@ -593,7 +593,7 @@ public class DescribeInstanceEventWindowsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the event window. Use the tag key
+     * <code>tag:&lt;key&gt;</code> - The key/value combination of a tag assigned to the event window. Use the tag key
      * in the filter name and the tag value as the filter value. For example, to find all resources that have a tag with
      * the key <code>Owner</code> and the value <code>CMX</code>, specify <code>tag:Owner</code> for the filter name and
      * <code>CMX</code> for the filter value.
@@ -650,7 +650,7 @@ public class DescribeInstanceEventWindowsRequest extends AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>tag</code>:&lt;key&gt; - The key/value combination of a tag assigned to the event window. Use the
+     *        <code>tag:&lt;key&gt;</code> - The key/value combination of a tag assigned to the event window. Use the
      *        tag key in the filter name and the tag value as the filter value. For example, to find all resources that
      *        have a tag with the key <code>Owner</code> and the value <code>CMX</code>, specify <code>tag:Owner</code>
      *        for the filter name and <code>CMX</code> for the filter value.

@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Information about an IPv6 delegated prefix.
+ * Information about an IPv6 prefix.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/InstanceIpv6Prefix" target="_top">AWS API
@@ -28,18 +28,18 @@ public class InstanceIpv6Prefix implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes assigned to the network interface.
+     * One or more IPv6 prefixes assigned to the network interface.
      * </p>
      */
     private String ipv6Prefix;
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes assigned to the network interface.
+     * One or more IPv6 prefixes assigned to the network interface.
      * </p>
      * 
      * @param ipv6Prefix
-     *        One or more IPv6 delegated prefixes assigned to the network interface.
+     *        One or more IPv6 prefixes assigned to the network interface.
      */
 
     public void setIpv6Prefix(String ipv6Prefix) {
@@ -48,10 +48,10 @@ public class InstanceIpv6Prefix implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes assigned to the network interface.
+     * One or more IPv6 prefixes assigned to the network interface.
      * </p>
      * 
-     * @return One or more IPv6 delegated prefixes assigned to the network interface.
+     * @return One or more IPv6 prefixes assigned to the network interface.
      */
 
     public String getIpv6Prefix() {
@@ -60,11 +60,11 @@ public class InstanceIpv6Prefix implements Serializable, Cloneable {
 
     /**
      * <p>
-     * One or more IPv6 delegated prefixes assigned to the network interface.
+     * One or more IPv6 prefixes assigned to the network interface.
      * </p>
      * 
      * @param ipv6Prefix
-     *        One or more IPv6 delegated prefixes assigned to the network interface.
+     *        One or more IPv6 prefixes assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

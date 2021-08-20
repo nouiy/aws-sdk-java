@@ -35,7 +35,8 @@ public enum ErrorCode {
     InsufficientNumberOfReplicas("InsufficientNumberOfReplicas"),
     ConfigurationConflict("ConfigurationConflict"),
     AdmissionRequestDenied("AdmissionRequestDenied"),
-    UnsupportedAddonModification("UnsupportedAddonModification");
+    UnsupportedAddonModification("UnsupportedAddonModification"),
+    K8sResourceNotFound("K8sResourceNotFound");
 
     private String value;
 

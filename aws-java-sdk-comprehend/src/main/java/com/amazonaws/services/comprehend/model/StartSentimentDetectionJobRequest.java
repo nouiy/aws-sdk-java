@@ -95,6 +95,14 @@ public class StartSentimentDetectionJobRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private VpcConfig vpcConfig;
+    /**
+     * <p>
+     * Tags to be associated with the sentiment detection job. A tag is a key-value pair that adds metadata to a
+     * resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a resource to
+     * indicate its use by the sales department.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -570,6 +578,92 @@ public class StartSentimentDetectionJobRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * Tags to be associated with the sentiment detection job. A tag is a key-value pair that adds metadata to a
+     * resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a resource to
+     * indicate its use by the sales department.
+     * </p>
+     * 
+     * @return Tags to be associated with the sentiment detection job. A tag is a key-value pair that adds metadata to a
+     *         resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a
+     *         resource to indicate its use by the sales department.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * Tags to be associated with the sentiment detection job. A tag is a key-value pair that adds metadata to a
+     * resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a resource to
+     * indicate its use by the sales department.
+     * </p>
+     * 
+     * @param tags
+     *        Tags to be associated with the sentiment detection job. A tag is a key-value pair that adds metadata to a
+     *        resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a
+     *        resource to indicate its use by the sales department.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * Tags to be associated with the sentiment detection job. A tag is a key-value pair that adds metadata to a
+     * resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a resource to
+     * indicate its use by the sales department.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        Tags to be associated with the sentiment detection job. A tag is a key-value pair that adds metadata to a
+     *        resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a
+     *        resource to indicate its use by the sales department.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartSentimentDetectionJobRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Tags to be associated with the sentiment detection job. A tag is a key-value pair that adds metadata to a
+     * resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a resource to
+     * indicate its use by the sales department.
+     * </p>
+     * 
+     * @param tags
+     *        Tags to be associated with the sentiment detection job. A tag is a key-value pair that adds metadata to a
+     *        resource used by Amazon Comprehend. For example, a tag with "Sales" as the key might be added to a
+     *        resource to indicate its use by the sales department.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartSentimentDetectionJobRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -596,7 +690,9 @@ public class StartSentimentDetectionJobRequest extends com.amazonaws.AmazonWebSe
         if (getVolumeKmsKeyId() != null)
             sb.append("VolumeKmsKeyId: ").append(getVolumeKmsKeyId()).append(",");
         if (getVpcConfig() != null)
-            sb.append("VpcConfig: ").append(getVpcConfig());
+            sb.append("VpcConfig: ").append(getVpcConfig()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -643,6 +739,10 @@ public class StartSentimentDetectionJobRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getVpcConfig() != null && other.getVpcConfig().equals(this.getVpcConfig()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -659,6 +759,7 @@ public class StartSentimentDetectionJobRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getVolumeKmsKeyId() == null) ? 0 : getVolumeKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

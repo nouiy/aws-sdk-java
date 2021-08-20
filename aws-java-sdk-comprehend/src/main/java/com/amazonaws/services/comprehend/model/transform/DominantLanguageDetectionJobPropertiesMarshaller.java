@@ -29,6 +29,8 @@ public class DominantLanguageDetectionJobPropertiesMarshaller {
 
     private static final MarshallingInfo<String> JOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("JobId").build();
+    private static final MarshallingInfo<String> JOBARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("JobArn").build();
     private static final MarshallingInfo<String> JOBNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("JobName").build();
     private static final MarshallingInfo<String> JOBSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -67,6 +69,7 @@ public class DominantLanguageDetectionJobPropertiesMarshaller {
 
         try {
             protocolMarshaller.marshall(dominantLanguageDetectionJobProperties.getJobId(), JOBID_BINDING);
+            protocolMarshaller.marshall(dominantLanguageDetectionJobProperties.getJobArn(), JOBARN_BINDING);
             protocolMarshaller.marshall(dominantLanguageDetectionJobProperties.getJobName(), JOBNAME_BINDING);
             protocolMarshaller.marshall(dominantLanguageDetectionJobProperties.getJobStatus(), JOBSTATUS_BINDING);
             protocolMarshaller.marshall(dominantLanguageDetectionJobProperties.getMessage(), MESSAGE_BINDING);

@@ -29,6 +29,8 @@ public class KeyPhrasesDetectionJobPropertiesMarshaller {
 
     private static final MarshallingInfo<String> JOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("JobId").build();
+    private static final MarshallingInfo<String> JOBARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("JobArn").build();
     private static final MarshallingInfo<String> JOBNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("JobName").build();
     private static final MarshallingInfo<String> JOBSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -69,6 +71,7 @@ public class KeyPhrasesDetectionJobPropertiesMarshaller {
 
         try {
             protocolMarshaller.marshall(keyPhrasesDetectionJobProperties.getJobId(), JOBID_BINDING);
+            protocolMarshaller.marshall(keyPhrasesDetectionJobProperties.getJobArn(), JOBARN_BINDING);
             protocolMarshaller.marshall(keyPhrasesDetectionJobProperties.getJobName(), JOBNAME_BINDING);
             protocolMarshaller.marshall(keyPhrasesDetectionJobProperties.getJobStatus(), JOBSTATUS_BINDING);
             protocolMarshaller.marshall(keyPhrasesDetectionJobProperties.getMessage(), MESSAGE_BINDING);

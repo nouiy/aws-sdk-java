@@ -52,6 +52,10 @@ public class StartDocumentClassificationJobResultJsonUnmarshaller implements Unm
                     context.nextToken();
                     startDocumentClassificationJobResult.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobArn", targetDepth)) {
+                    context.nextToken();
+                    startDocumentClassificationJobResult.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("JobStatus", targetDepth)) {
                     context.nextToken();
                     startDocumentClassificationJobResult.setJobStatus(context.getUnmarshaller(String.class).unmarshall(context));

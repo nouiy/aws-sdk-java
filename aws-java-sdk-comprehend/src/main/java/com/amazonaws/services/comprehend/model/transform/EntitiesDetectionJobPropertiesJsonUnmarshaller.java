@@ -52,6 +52,10 @@ public class EntitiesDetectionJobPropertiesJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     entitiesDetectionJobProperties.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobArn", targetDepth)) {
+                    context.nextToken();
+                    entitiesDetectionJobProperties.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("JobName", targetDepth)) {
                     context.nextToken();
                     entitiesDetectionJobProperties.setJobName(context.getUnmarshaller(String.class).unmarshall(context));

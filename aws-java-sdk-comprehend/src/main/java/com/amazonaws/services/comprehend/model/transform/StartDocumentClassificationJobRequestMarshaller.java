@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.comprehend.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -46,6 +47,8 @@ public class StartDocumentClassificationJobRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VolumeKmsKeyId").build();
     private static final MarshallingInfo<StructuredPojo> VPCCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcConfig").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final StartDocumentClassificationJobRequestMarshaller instance = new StartDocumentClassificationJobRequestMarshaller();
 
@@ -71,6 +74,7 @@ public class StartDocumentClassificationJobRequestMarshaller {
             protocolMarshaller.marshall(startDocumentClassificationJobRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(startDocumentClassificationJobRequest.getVolumeKmsKeyId(), VOLUMEKMSKEYID_BINDING);
             protocolMarshaller.marshall(startDocumentClassificationJobRequest.getVpcConfig(), VPCCONFIG_BINDING);
+            protocolMarshaller.marshall(startDocumentClassificationJobRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

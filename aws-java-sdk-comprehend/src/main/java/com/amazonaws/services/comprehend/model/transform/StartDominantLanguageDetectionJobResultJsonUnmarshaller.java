@@ -52,6 +52,10 @@ public class StartDominantLanguageDetectionJobResultJsonUnmarshaller implements 
                     context.nextToken();
                     startDominantLanguageDetectionJobResult.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobArn", targetDepth)) {
+                    context.nextToken();
+                    startDominantLanguageDetectionJobResult.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("JobStatus", targetDepth)) {
                     context.nextToken();
                     startDominantLanguageDetectionJobResult.setJobStatus(context.getUnmarshaller(String.class).unmarshall(context));

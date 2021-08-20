@@ -66,7 +66,7 @@ public class CreateSimulationJobRequest extends com.amazonaws.AmazonWebServiceRe
      * <dt>Continue</dt>
      * <dd>
      * <p>
-     * Restart the simulation job in the same host instance.
+     * Leaves the instance running for its maximum timeout duration after a <code>4XX</code> error code.
      * </p>
      * </dd>
      * <dt>Fail</dt>
@@ -349,7 +349,7 @@ public class CreateSimulationJobRequest extends com.amazonaws.AmazonWebServiceRe
      * <dt>Continue</dt>
      * <dd>
      * <p>
-     * Restart the simulation job in the same host instance.
+     * Leaves the instance running for its maximum timeout duration after a <code>4XX</code> error code.
      * </p>
      * </dd>
      * <dt>Fail</dt>
@@ -366,7 +366,7 @@ public class CreateSimulationJobRequest extends com.amazonaws.AmazonWebServiceRe
      *        <dt>Continue</dt>
      *        <dd>
      *        <p>
-     *        Restart the simulation job in the same host instance.
+     *        Leaves the instance running for its maximum timeout duration after a <code>4XX</code> error code.
      *        </p>
      *        </dd>
      *        <dt>Fail</dt>
@@ -390,7 +390,7 @@ public class CreateSimulationJobRequest extends com.amazonaws.AmazonWebServiceRe
      * <dt>Continue</dt>
      * <dd>
      * <p>
-     * Restart the simulation job in the same host instance.
+     * Leaves the instance running for its maximum timeout duration after a <code>4XX</code> error code.
      * </p>
      * </dd>
      * <dt>Fail</dt>
@@ -406,7 +406,7 @@ public class CreateSimulationJobRequest extends com.amazonaws.AmazonWebServiceRe
      *         <dt>Continue</dt>
      *         <dd>
      *         <p>
-     *         Restart the simulation job in the same host instance.
+     *         Leaves the instance running for its maximum timeout duration after a <code>4XX</code> error code.
      *         </p>
      *         </dd>
      *         <dt>Fail</dt>
@@ -430,7 +430,7 @@ public class CreateSimulationJobRequest extends com.amazonaws.AmazonWebServiceRe
      * <dt>Continue</dt>
      * <dd>
      * <p>
-     * Restart the simulation job in the same host instance.
+     * Leaves the instance running for its maximum timeout duration after a <code>4XX</code> error code.
      * </p>
      * </dd>
      * <dt>Fail</dt>
@@ -447,7 +447,7 @@ public class CreateSimulationJobRequest extends com.amazonaws.AmazonWebServiceRe
      *        <dt>Continue</dt>
      *        <dd>
      *        <p>
-     *        Restart the simulation job in the same host instance.
+     *        Leaves the instance running for its maximum timeout duration after a <code>4XX</code> error code.
      *        </p>
      *        </dd>
      *        <dt>Fail</dt>
@@ -473,7 +473,7 @@ public class CreateSimulationJobRequest extends com.amazonaws.AmazonWebServiceRe
      * <dt>Continue</dt>
      * <dd>
      * <p>
-     * Restart the simulation job in the same host instance.
+     * Leaves the instance running for its maximum timeout duration after a <code>4XX</code> error code.
      * </p>
      * </dd>
      * <dt>Fail</dt>
@@ -490,7 +490,7 @@ public class CreateSimulationJobRequest extends com.amazonaws.AmazonWebServiceRe
      *        <dt>Continue</dt>
      *        <dd>
      *        <p>
-     *        Restart the simulation job in the same host instance.
+     *        Leaves the instance running for its maximum timeout duration after a <code>4XX</code> error code.
      *        </p>
      *        </dd>
      *        <dt>Fail</dt>

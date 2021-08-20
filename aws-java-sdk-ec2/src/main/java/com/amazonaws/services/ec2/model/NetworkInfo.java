@@ -92,6 +92,12 @@ public class NetworkInfo implements Serializable, Cloneable {
      * </p>
      */
     private EfaInfo efaInfo;
+    /**
+     * <p>
+     * Indicates whether the instance type automatically encrypts in-transit traffic between instances.
+     * </p>
+     */
+    private Boolean encryptionInTransitSupported;
 
     /**
      * <p>
@@ -610,6 +616,58 @@ public class NetworkInfo implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether the instance type automatically encrypts in-transit traffic between instances.
+     * </p>
+     * 
+     * @param encryptionInTransitSupported
+     *        Indicates whether the instance type automatically encrypts in-transit traffic between instances.
+     */
+
+    public void setEncryptionInTransitSupported(Boolean encryptionInTransitSupported) {
+        this.encryptionInTransitSupported = encryptionInTransitSupported;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the instance type automatically encrypts in-transit traffic between instances.
+     * </p>
+     * 
+     * @return Indicates whether the instance type automatically encrypts in-transit traffic between instances.
+     */
+
+    public Boolean getEncryptionInTransitSupported() {
+        return this.encryptionInTransitSupported;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the instance type automatically encrypts in-transit traffic between instances.
+     * </p>
+     * 
+     * @param encryptionInTransitSupported
+     *        Indicates whether the instance type automatically encrypts in-transit traffic between instances.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkInfo withEncryptionInTransitSupported(Boolean encryptionInTransitSupported) {
+        setEncryptionInTransitSupported(encryptionInTransitSupported);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether the instance type automatically encrypts in-transit traffic between instances.
+     * </p>
+     * 
+     * @return Indicates whether the instance type automatically encrypts in-transit traffic between instances.
+     */
+
+    public Boolean isEncryptionInTransitSupported() {
+        return this.encryptionInTransitSupported;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -642,7 +700,9 @@ public class NetworkInfo implements Serializable, Cloneable {
         if (getEfaSupported() != null)
             sb.append("EfaSupported: ").append(getEfaSupported()).append(",");
         if (getEfaInfo() != null)
-            sb.append("EfaInfo: ").append(getEfaInfo());
+            sb.append("EfaInfo: ").append(getEfaInfo()).append(",");
+        if (getEncryptionInTransitSupported() != null)
+            sb.append("EncryptionInTransitSupported: ").append(getEncryptionInTransitSupported());
         sb.append("}");
         return sb.toString();
     }
@@ -701,6 +761,10 @@ public class NetworkInfo implements Serializable, Cloneable {
             return false;
         if (other.getEfaInfo() != null && other.getEfaInfo().equals(this.getEfaInfo()) == false)
             return false;
+        if (other.getEncryptionInTransitSupported() == null ^ this.getEncryptionInTransitSupported() == null)
+            return false;
+        if (other.getEncryptionInTransitSupported() != null && other.getEncryptionInTransitSupported().equals(this.getEncryptionInTransitSupported()) == false)
+            return false;
         return true;
     }
 
@@ -720,6 +784,7 @@ public class NetworkInfo implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getEnaSupport() == null) ? 0 : getEnaSupport().hashCode());
         hashCode = prime * hashCode + ((getEfaSupported() == null) ? 0 : getEfaSupported().hashCode());
         hashCode = prime * hashCode + ((getEfaInfo() == null) ? 0 : getEfaInfo().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionInTransitSupported() == null) ? 0 : getEncryptionInTransitSupported().hashCode());
         return hashCode;
     }
 

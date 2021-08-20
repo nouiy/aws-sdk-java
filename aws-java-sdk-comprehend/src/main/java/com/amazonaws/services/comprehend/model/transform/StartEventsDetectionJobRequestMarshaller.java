@@ -45,6 +45,8 @@ public class StartEventsDetectionJobRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<List> TARGETEVENTTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TargetEventTypes").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final StartEventsDetectionJobRequestMarshaller instance = new StartEventsDetectionJobRequestMarshaller();
 
@@ -69,6 +71,7 @@ public class StartEventsDetectionJobRequestMarshaller {
             protocolMarshaller.marshall(startEventsDetectionJobRequest.getLanguageCode(), LANGUAGECODE_BINDING);
             protocolMarshaller.marshall(startEventsDetectionJobRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(startEventsDetectionJobRequest.getTargetEventTypes(), TARGETEVENTTYPES_BINDING);
+            protocolMarshaller.marshall(startEventsDetectionJobRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

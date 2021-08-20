@@ -52,6 +52,10 @@ public class PiiEntitiesDetectionJobPropertiesJsonUnmarshaller implements Unmars
                     context.nextToken();
                     piiEntitiesDetectionJobProperties.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobArn", targetDepth)) {
+                    context.nextToken();
+                    piiEntitiesDetectionJobProperties.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("JobName", targetDepth)) {
                     context.nextToken();
                     piiEntitiesDetectionJobProperties.setJobName(context.getUnmarshaller(String.class).unmarshall(context));

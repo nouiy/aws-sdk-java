@@ -52,6 +52,10 @@ public class DocumentClassificationJobPropertiesJsonUnmarshaller implements Unma
                     context.nextToken();
                     documentClassificationJobProperties.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobArn", targetDepth)) {
+                    context.nextToken();
+                    documentClassificationJobProperties.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("JobName", targetDepth)) {
                     context.nextToken();
                     documentClassificationJobProperties.setJobName(context.getUnmarshaller(String.class).unmarshall(context));

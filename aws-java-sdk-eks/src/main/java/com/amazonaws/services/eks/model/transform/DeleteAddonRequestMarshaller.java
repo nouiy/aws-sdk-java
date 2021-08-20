@@ -31,6 +31,8 @@ public class DeleteAddonRequestMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> ADDONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("addonName").build();
+    private static final MarshallingInfo<Boolean> PRESERVE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("preserve").build();
 
     private static final DeleteAddonRequestMarshaller instance = new DeleteAddonRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class DeleteAddonRequestMarshaller {
         try {
             protocolMarshaller.marshall(deleteAddonRequest.getClusterName(), CLUSTERNAME_BINDING);
             protocolMarshaller.marshall(deleteAddonRequest.getAddonName(), ADDONNAME_BINDING);
+            protocolMarshaller.marshall(deleteAddonRequest.getPreserve(), PRESERVE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

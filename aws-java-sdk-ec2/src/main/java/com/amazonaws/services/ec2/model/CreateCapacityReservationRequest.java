@@ -86,6 +86,9 @@ public class CreateCapacityReservationRequest extends AmazonWebServiceRequest im
      * <p>
      * The number of instances for which to reserve capacity.
      * </p>
+     * <p>
+     * Valid range: 1 - 1000
+     * </p>
      */
     private Integer instanceCount;
     /**
@@ -607,9 +610,14 @@ public class CreateCapacityReservationRequest extends AmazonWebServiceRequest im
      * <p>
      * The number of instances for which to reserve capacity.
      * </p>
+     * <p>
+     * Valid range: 1 - 1000
+     * </p>
      * 
      * @param instanceCount
-     *        The number of instances for which to reserve capacity.
+     *        The number of instances for which to reserve capacity.</p>
+     *        <p>
+     *        Valid range: 1 - 1000
      */
 
     public void setInstanceCount(Integer instanceCount) {
@@ -620,8 +628,13 @@ public class CreateCapacityReservationRequest extends AmazonWebServiceRequest im
      * <p>
      * The number of instances for which to reserve capacity.
      * </p>
+     * <p>
+     * Valid range: 1 - 1000
+     * </p>
      * 
-     * @return The number of instances for which to reserve capacity.
+     * @return The number of instances for which to reserve capacity.</p>
+     *         <p>
+     *         Valid range: 1 - 1000
      */
 
     public Integer getInstanceCount() {
@@ -632,9 +645,14 @@ public class CreateCapacityReservationRequest extends AmazonWebServiceRequest im
      * <p>
      * The number of instances for which to reserve capacity.
      * </p>
+     * <p>
+     * Valid range: 1 - 1000
+     * </p>
      * 
      * @param instanceCount
-     *        The number of instances for which to reserve capacity.
+     *        The number of instances for which to reserve capacity.</p>
+     *        <p>
+     *        Valid range: 1 - 1000
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

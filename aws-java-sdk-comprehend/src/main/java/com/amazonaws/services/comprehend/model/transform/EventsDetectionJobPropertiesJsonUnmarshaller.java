@@ -52,6 +52,10 @@ public class EventsDetectionJobPropertiesJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     eventsDetectionJobProperties.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobArn", targetDepth)) {
+                    context.nextToken();
+                    eventsDetectionJobProperties.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("JobName", targetDepth)) {
                     context.nextToken();
                     eventsDetectionJobProperties.setJobName(context.getUnmarshaller(String.class).unmarshall(context));

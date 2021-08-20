@@ -52,6 +52,10 @@ public class StartKeyPhrasesDetectionJobResultJsonUnmarshaller implements Unmars
                     context.nextToken();
                     startKeyPhrasesDetectionJobResult.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobArn", targetDepth)) {
+                    context.nextToken();
+                    startKeyPhrasesDetectionJobResult.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("JobStatus", targetDepth)) {
                     context.nextToken();
                     startKeyPhrasesDetectionJobResult.setJobStatus(context.getUnmarshaller(String.class).unmarshall(context));

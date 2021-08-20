@@ -36,6 +36,22 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
     private String jobId;
     /**
      * <p>
+     * The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier
+     * for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * </p>
+     * <p>
+     * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
+     * </p>
+     * <p>
+     * The following is an example job ARN:
+     * </p>
+     * <p>
+     * <code>arn:aws:comprehend:us-west-2:111122223333:dominant-language-detection-job/1234abcd12ab34cd56ef1234567890ab</code>
+     * </p>
+     */
+    private String jobArn;
+    /**
+     * <p>
      * The name that you assigned to the dominant language detection job.
      * </p>
      */
@@ -150,6 +166,106 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
 
     public DominantLanguageDetectionJobProperties withJobId(String jobId) {
         setJobId(jobId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier
+     * for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * </p>
+     * <p>
+     * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
+     * </p>
+     * <p>
+     * The following is an example job ARN:
+     * </p>
+     * <p>
+     * <code>arn:aws:comprehend:us-west-2:111122223333:dominant-language-detection-job/1234abcd12ab34cd56ef1234567890ab</code>
+     * </p>
+     * 
+     * @param jobArn
+     *        The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified
+     *        identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
+     *        follows:</p>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
+     *        </p>
+     *        <p>
+     *        The following is an example job ARN:
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:comprehend:us-west-2:111122223333:dominant-language-detection-job/1234abcd12ab34cd56ef1234567890ab</code>
+     */
+
+    public void setJobArn(String jobArn) {
+        this.jobArn = jobArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier
+     * for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * </p>
+     * <p>
+     * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
+     * </p>
+     * <p>
+     * The following is an example job ARN:
+     * </p>
+     * <p>
+     * <code>arn:aws:comprehend:us-west-2:111122223333:dominant-language-detection-job/1234abcd12ab34cd56ef1234567890ab</code>
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified
+     *         identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
+     *         follows:</p>
+     *         <p>
+     *         <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
+     *         </p>
+     *         <p>
+     *         The following is an example job ARN:
+     *         </p>
+     *         <p>
+     *         <code>arn:aws:comprehend:us-west-2:111122223333:dominant-language-detection-job/1234abcd12ab34cd56ef1234567890ab</code>
+     */
+
+    public String getJobArn() {
+        return this.jobArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified identifier
+     * for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as follows:
+     * </p>
+     * <p>
+     * <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
+     * </p>
+     * <p>
+     * The following is an example job ARN:
+     * </p>
+     * <p>
+     * <code>arn:aws:comprehend:us-west-2:111122223333:dominant-language-detection-job/1234abcd12ab34cd56ef1234567890ab</code>
+     * </p>
+     * 
+     * @param jobArn
+     *        The Amazon Resource Name (ARN) of the dominant language detection job. It is a unique, fully qualified
+     *        identifier for the job. It includes the AWS account, Region, and the job ID. The format of the ARN is as
+     *        follows:</p>
+     *        <p>
+     *        <code>arn:&lt;partition&gt;:comprehend:&lt;region&gt;:&lt;account-id&gt;:dominant-language-detection-job/&lt;job-id&gt;</code>
+     *        </p>
+     *        <p>
+     *        The following is an example job ARN:
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:comprehend:us-west-2:111122223333:dominant-language-detection-job/1234abcd12ab34cd56ef1234567890ab</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DominantLanguageDetectionJobProperties withJobArn(String jobArn) {
+        setJobArn(jobArn);
         return this;
     }
 
@@ -693,6 +809,8 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
         sb.append("{");
         if (getJobId() != null)
             sb.append("JobId: ").append(getJobId()).append(",");
+        if (getJobArn() != null)
+            sb.append("JobArn: ").append(getJobArn()).append(",");
         if (getJobName() != null)
             sb.append("JobName: ").append(getJobName()).append(",");
         if (getJobStatus() != null)
@@ -730,6 +848,10 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
         if (other.getJobId() == null ^ this.getJobId() == null)
             return false;
         if (other.getJobId() != null && other.getJobId().equals(this.getJobId()) == false)
+            return false;
+        if (other.getJobArn() == null ^ this.getJobArn() == null)
+            return false;
+        if (other.getJobArn() != null && other.getJobArn().equals(this.getJobArn()) == false)
             return false;
         if (other.getJobName() == null ^ this.getJobName() == null)
             return false;
@@ -780,6 +902,7 @@ public class DominantLanguageDetectionJobProperties implements Serializable, Clo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getJobId() == null) ? 0 : getJobId().hashCode());
+        hashCode = prime * hashCode + ((getJobArn() == null) ? 0 : getJobArn().hashCode());
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
         hashCode = prime * hashCode + ((getJobStatus() == null) ? 0 : getJobStatus().hashCode());
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());

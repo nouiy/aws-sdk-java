@@ -52,6 +52,10 @@ public class StartSentimentDetectionJobResultJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     startSentimentDetectionJobResult.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobArn", targetDepth)) {
+                    context.nextToken();
+                    startSentimentDetectionJobResult.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("JobStatus", targetDepth)) {
                     context.nextToken();
                     startSentimentDetectionJobResult.setJobStatus(context.getUnmarshaller(String.class).unmarshall(context));

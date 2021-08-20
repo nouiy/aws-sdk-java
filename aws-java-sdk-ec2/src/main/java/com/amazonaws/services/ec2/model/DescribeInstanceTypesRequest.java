@@ -198,6 +198,12 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
+     * encrypts in-transit traffic between instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-info.ipv4-addresses-per-interface</code> - The maximum number of private IPv4 addresses per network
      * interface.
      * </p>
@@ -584,6 +590,12 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
+     * encrypts in-transit traffic between instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-info.ipv4-addresses-per-interface</code> - The maximum number of private IPv4 addresses per network
      * interface.
      * </p>
@@ -829,6 +841,12 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *         <p>
      *         <code>network-info.ena-support</code> - Indicates whether Elastic Network Adapter (ENA) is supported or
      *         required (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type
+     *         automatically encrypts in-transit traffic between instances.
      *         </p>
      *         </li>
      *         <li>
@@ -1093,6 +1111,12 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
+     * encrypts in-transit traffic between instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-info.ipv4-addresses-per-interface</code> - The maximum number of private IPv4 addresses per network
      * interface.
      * </p>
@@ -1338,6 +1362,12 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <p>
      *        <code>network-info.ena-support</code> - Indicates whether Elastic Network Adapter (ENA) is supported or
      *        required (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type
+     *        automatically encrypts in-transit traffic between instances.
      *        </p>
      *        </li>
      *        <li>
@@ -1604,6 +1634,12 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
+     * encrypts in-transit traffic between instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-info.ipv4-addresses-per-interface</code> - The maximum number of private IPv4 addresses per network
      * interface.
      * </p>
@@ -1854,6 +1890,12 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <p>
      *        <code>network-info.ena-support</code> - Indicates whether Elastic Network Adapter (ENA) is supported or
      *        required (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type
+     *        automatically encrypts in-transit traffic between instances.
      *        </p>
      *        </li>
      *        <li>
@@ -2122,6 +2164,12 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
+     * encrypts in-transit traffic between instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>network-info.ipv4-addresses-per-interface</code> - The maximum number of private IPv4 addresses per network
      * interface.
      * </p>
@@ -2367,6 +2415,12 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <p>
      *        <code>network-info.ena-support</code> - Indicates whether Elastic Network Adapter (ENA) is supported or
      *        required (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type
+     *        automatically encrypts in-transit traffic between instances.
      *        </p>
      *        </li>
      *        <li>

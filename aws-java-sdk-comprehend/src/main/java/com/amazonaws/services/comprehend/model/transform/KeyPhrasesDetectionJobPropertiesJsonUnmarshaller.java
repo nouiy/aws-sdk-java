@@ -52,6 +52,10 @@ public class KeyPhrasesDetectionJobPropertiesJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     keyPhrasesDetectionJobProperties.setJobId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("JobArn", targetDepth)) {
+                    context.nextToken();
+                    keyPhrasesDetectionJobProperties.setJobArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("JobName", targetDepth)) {
                     context.nextToken();
                     keyPhrasesDetectionJobProperties.setJobName(context.getUnmarshaller(String.class).unmarshall(context));

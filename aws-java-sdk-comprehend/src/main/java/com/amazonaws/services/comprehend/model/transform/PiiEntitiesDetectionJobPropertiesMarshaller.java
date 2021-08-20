@@ -29,6 +29,8 @@ public class PiiEntitiesDetectionJobPropertiesMarshaller {
 
     private static final MarshallingInfo<String> JOBID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("JobId").build();
+    private static final MarshallingInfo<String> JOBARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("JobArn").build();
     private static final MarshallingInfo<String> JOBNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("JobName").build();
     private static final MarshallingInfo<String> JOBSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -69,6 +71,7 @@ public class PiiEntitiesDetectionJobPropertiesMarshaller {
 
         try {
             protocolMarshaller.marshall(piiEntitiesDetectionJobProperties.getJobId(), JOBID_BINDING);
+            protocolMarshaller.marshall(piiEntitiesDetectionJobProperties.getJobArn(), JOBARN_BINDING);
             protocolMarshaller.marshall(piiEntitiesDetectionJobProperties.getJobName(), JOBNAME_BINDING);
             protocolMarshaller.marshall(piiEntitiesDetectionJobProperties.getJobStatus(), JOBSTATUS_BINDING);
             protocolMarshaller.marshall(piiEntitiesDetectionJobProperties.getMessage(), MESSAGE_BINDING);

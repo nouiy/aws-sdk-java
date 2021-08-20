@@ -101,7 +101,7 @@ public class EventInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>modify_successful</code> - The EC2 Fleet or Spot Fleet request was modified.
+     * <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
      * </p>
      * </li>
      * <li>
@@ -273,7 +273,7 @@ public class EventInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>modify_successful</code> - The EC2 Fleet or Spot Fleet request was modified.
+     * <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
      * </p>
      * </li>
      * <li>
@@ -397,7 +397,7 @@ public class EventInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>modify_successful</code> - The EC2 Fleet or Spot Fleet request was modified.
+     *        <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
      *        </p>
      *        </li>
      *        <li>
@@ -525,7 +525,7 @@ public class EventInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>modify_successful</code> - The EC2 Fleet or Spot Fleet request was modified.
+     * <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
      * </p>
      * </li>
      * <li>
@@ -648,7 +648,7 @@ public class EventInformation implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>modify_successful</code> - The EC2 Fleet or Spot Fleet request was modified.
+     *         <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
      *         </p>
      *         </li>
      *         <li>
@@ -776,7 +776,7 @@ public class EventInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>modify_successful</code> - The EC2 Fleet or Spot Fleet request was modified.
+     * <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
      * </p>
      * </li>
      * <li>
@@ -900,7 +900,7 @@ public class EventInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>modify_successful</code> - The EC2 Fleet or Spot Fleet request was modified.
+     *        <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
      *        </p>
      *        </li>
      *        <li>
