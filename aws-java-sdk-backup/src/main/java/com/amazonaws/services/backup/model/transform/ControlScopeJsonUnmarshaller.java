@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.frauddetector.model.transform;
+package com.amazonaws.services.backup.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.frauddetector.model.*;
+import com.amazonaws.services.backup.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,13 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * LogitMetric JSON Unmarshaller
+ * ControlScope JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class LogitMetricJsonUnmarshaller implements Unmarshaller<LogitMetric, JsonUnmarshallerContext> {
+public class ControlScopeJsonUnmarshaller implements Unmarshaller<ControlScope, JsonUnmarshallerContext> {
 
-    public LogitMetric unmarshall(JsonUnmarshallerContext context) throws Exception {
-        LogitMetric logitMetric = new LogitMetric();
+    public ControlScope unmarshall(JsonUnmarshallerContext context) throws Exception {
+        ControlScope controlScope = new ControlScope();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -48,17 +48,22 @@ public class LogitMetricJsonUnmarshaller implements Unmarshaller<LogitMetric, Js
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("variableName", targetDepth)) {
+                if (context.testExpression("ComplianceResourceIds", targetDepth)) {
                     context.nextToken();
-                    logitMetric.setVariableName(context.getUnmarshaller(String.class).unmarshall(context));
+                    controlScope.setComplianceResourceIds(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
-                if (context.testExpression("variableType", targetDepth)) {
+                if (context.testExpression("ComplianceResourceTypes", targetDepth)) {
                     context.nextToken();
-                    logitMetric.setVariableType(context.getUnmarshaller(String.class).unmarshall(context));
+                    controlScope.setComplianceResourceTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
                 }
-                if (context.testExpression("variableImportance", targetDepth)) {
+                if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
-                    logitMetric.setVariableImportance(context.getUnmarshaller(Float.class).unmarshall(context));
+                    controlScope.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
+                            .unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
@@ -69,14 +74,14 @@ public class LogitMetricJsonUnmarshaller implements Unmarshaller<LogitMetric, Js
             token = context.nextToken();
         }
 
-        return logitMetric;
+        return controlScope;
     }
 
-    private static LogitMetricJsonUnmarshaller instance;
+    private static ControlScopeJsonUnmarshaller instance;
 
-    public static LogitMetricJsonUnmarshaller getInstance() {
+    public static ControlScopeJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new LogitMetricJsonUnmarshaller();
+            instance = new ControlScopeJsonUnmarshaller();
         return instance;
     }
 }

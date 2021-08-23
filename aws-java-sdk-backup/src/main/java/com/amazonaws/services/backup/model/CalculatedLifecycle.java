@@ -23,7 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * for a recovery point.
  * </p>
  * <p>
- * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
+ * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup
  * transitions and expires backups automatically according to the lifecycle that you define.
  * </p>
  * <p>

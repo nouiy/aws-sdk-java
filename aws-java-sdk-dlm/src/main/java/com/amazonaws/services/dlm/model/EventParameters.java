@@ -36,8 +36,8 @@ public class EventParameters implements Serializable, Cloneable, StructuredPojo 
     private String eventType;
     /**
      * <p>
-     * The IDs of the AWS accounts that can trigger policy by sharing snapshots with your account. The policy only runs
-     * if one of the specified AWS accounts shares a snapshot with your account.
+     * The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your account. The
+     * policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with your account.
      * </p>
      */
     private java.util.List<String> snapshotOwner;
@@ -115,12 +115,13 @@ public class EventParameters implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The IDs of the AWS accounts that can trigger policy by sharing snapshots with your account. The policy only runs
-     * if one of the specified AWS accounts shares a snapshot with your account.
+     * The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your account. The
+     * policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with your account.
      * </p>
      * 
-     * @return The IDs of the AWS accounts that can trigger policy by sharing snapshots with your account. The policy
-     *         only runs if one of the specified AWS accounts shares a snapshot with your account.
+     * @return The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your
+     *         account. The policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with
+     *         your account.
      */
 
     public java.util.List<String> getSnapshotOwner() {
@@ -129,13 +130,14 @@ public class EventParameters implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The IDs of the AWS accounts that can trigger policy by sharing snapshots with your account. The policy only runs
-     * if one of the specified AWS accounts shares a snapshot with your account.
+     * The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your account. The
+     * policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with your account.
      * </p>
      * 
      * @param snapshotOwner
-     *        The IDs of the AWS accounts that can trigger policy by sharing snapshots with your account. The policy
-     *        only runs if one of the specified AWS accounts shares a snapshot with your account.
+     *        The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your
+     *        account. The policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with
+     *        your account.
      */
 
     public void setSnapshotOwner(java.util.Collection<String> snapshotOwner) {
@@ -149,8 +151,8 @@ public class EventParameters implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The IDs of the AWS accounts that can trigger policy by sharing snapshots with your account. The policy only runs
-     * if one of the specified AWS accounts shares a snapshot with your account.
+     * The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your account. The
+     * policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with your account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -159,8 +161,9 @@ public class EventParameters implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param snapshotOwner
-     *        The IDs of the AWS accounts that can trigger policy by sharing snapshots with your account. The policy
-     *        only runs if one of the specified AWS accounts shares a snapshot with your account.
+     *        The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your
+     *        account. The policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with
+     *        your account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -176,13 +179,14 @@ public class EventParameters implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The IDs of the AWS accounts that can trigger policy by sharing snapshots with your account. The policy only runs
-     * if one of the specified AWS accounts shares a snapshot with your account.
+     * The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your account. The
+     * policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with your account.
      * </p>
      * 
      * @param snapshotOwner
-     *        The IDs of the AWS accounts that can trigger policy by sharing snapshots with your account. The policy
-     *        only runs if one of the specified AWS accounts shares a snapshot with your account.
+     *        The IDs of the Amazon Web Services accounts that can trigger policy by sharing snapshots with your
+     *        account. The policy only runs if one of the specified Amazon Web Services accounts shares a snapshot with
+     *        your account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

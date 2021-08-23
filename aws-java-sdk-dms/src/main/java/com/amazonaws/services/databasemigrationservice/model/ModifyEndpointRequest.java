@@ -296,6 +296,12 @@ public class ModifyEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     private DocDbSettings docDbSettings;
     /**
      * <p>
+     * Settings in JSON format for the Redis target endpoint.
+     * </p>
+     */
+    private RedisSettings redisSettings;
+    /**
+     * <p>
      * If this attribute is Y, the current call to <code>ModifyEndpoint</code> replaces all existing endpoint settings
      * with the exact settings that you specify in this call. If this attribute is N, the current call to
      * <code>ModifyEndpoint</code> does two things:
@@ -2143,6 +2149,46 @@ public class ModifyEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
+     * Settings in JSON format for the Redis target endpoint.
+     * </p>
+     * 
+     * @param redisSettings
+     *        Settings in JSON format for the Redis target endpoint.
+     */
+
+    public void setRedisSettings(RedisSettings redisSettings) {
+        this.redisSettings = redisSettings;
+    }
+
+    /**
+     * <p>
+     * Settings in JSON format for the Redis target endpoint.
+     * </p>
+     * 
+     * @return Settings in JSON format for the Redis target endpoint.
+     */
+
+    public RedisSettings getRedisSettings() {
+        return this.redisSettings;
+    }
+
+    /**
+     * <p>
+     * Settings in JSON format for the Redis target endpoint.
+     * </p>
+     * 
+     * @param redisSettings
+     *        Settings in JSON format for the Redis target endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyEndpointRequest withRedisSettings(RedisSettings redisSettings) {
+        setRedisSettings(redisSettings);
+        return this;
+    }
+
+    /**
+     * <p>
      * If this attribute is Y, the current call to <code>ModifyEndpoint</code> replaces all existing endpoint settings
      * with the exact settings that you specify in this call. If this attribute is N, the current call to
      * <code>ModifyEndpoint</code> does two things:
@@ -2469,6 +2515,8 @@ public class ModifyEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
             sb.append("IBMDb2Settings: ").append(getIBMDb2Settings()).append(",");
         if (getDocDbSettings() != null)
             sb.append("DocDbSettings: ").append(getDocDbSettings()).append(",");
+        if (getRedisSettings() != null)
+            sb.append("RedisSettings: ").append(getRedisSettings()).append(",");
         if (getExactSettings() != null)
             sb.append("ExactSettings: ").append(getExactSettings());
         sb.append("}");
@@ -2605,6 +2653,10 @@ public class ModifyEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getDocDbSettings() != null && other.getDocDbSettings().equals(this.getDocDbSettings()) == false)
             return false;
+        if (other.getRedisSettings() == null ^ this.getRedisSettings() == null)
+            return false;
+        if (other.getRedisSettings() != null && other.getRedisSettings().equals(this.getRedisSettings()) == false)
+            return false;
         if (other.getExactSettings() == null ^ this.getExactSettings() == null)
             return false;
         if (other.getExactSettings() != null && other.getExactSettings().equals(this.getExactSettings()) == false)
@@ -2647,6 +2699,7 @@ public class ModifyEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getMicrosoftSQLServerSettings() == null) ? 0 : getMicrosoftSQLServerSettings().hashCode());
         hashCode = prime * hashCode + ((getIBMDb2Settings() == null) ? 0 : getIBMDb2Settings().hashCode());
         hashCode = prime * hashCode + ((getDocDbSettings() == null) ? 0 : getDocDbSettings().hashCode());
+        hashCode = prime * hashCode + ((getRedisSettings() == null) ? 0 : getRedisSettings().hashCode());
         hashCode = prime * hashCode + ((getExactSettings() == null) ? 0 : getExactSettings().hashCode());
         return hashCode;
     }

@@ -163,6 +163,25 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Retrieves information about a list of blueprints.
+     * </p>
+     * 
+     * @param batchGetBlueprintsRequest
+     * @return Result of the BatchGetBlueprints operation returned by the service.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @sample AWSGlue.BatchGetBlueprints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetBlueprints" target="_top">AWS API
+     *      Documentation</a>
+     */
+    BatchGetBlueprintsResult batchGetBlueprints(BatchGetBlueprintsRequest batchGetBlueprintsRequest);
+
+    /**
+     * <p>
      * Returns a list of resource metadata for a given list of crawler names. After calling the
      * <code>ListCrawlers</code> operation, you can call this operation to access the data to which you have been
      * granted permissions. This operation supports all IAM permissions, including permission conditions that uses tags.
@@ -375,6 +394,29 @@ public interface AWSGlue {
      *      target="_top">AWS API Documentation</a>
      */
     CheckSchemaVersionValidityResult checkSchemaVersionValidity(CheckSchemaVersionValidityRequest checkSchemaVersionValidityRequest);
+
+    /**
+     * <p>
+     * Registers a blueprint with Glue.
+     * </p>
+     * 
+     * @param createBlueprintRequest
+     * @return Result of the CreateBlueprint operation returned by the service.
+     * @throws AlreadyExistsException
+     *         A resource to be created or added already exists.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws ResourceNumberLimitExceededException
+     *         A resource numerical limit was exceeded.
+     * @sample AWSGlue.CreateBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateBlueprintResult createBlueprint(CreateBlueprintRequest createBlueprintRequest);
 
     /**
      * <p>
@@ -833,6 +875,25 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     CreateWorkflowResult createWorkflow(CreateWorkflowRequest createWorkflowRequest);
+
+    /**
+     * <p>
+     * Deletes an existing blueprint.
+     * </p>
+     * 
+     * @param deleteBlueprintRequest
+     * @return Result of the DeleteBlueprint operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @sample AWSGlue.DeleteBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteBlueprintResult deleteBlueprint(DeleteBlueprintRequest deleteBlueprintRequest);
 
     /**
      * <p>
@@ -1337,6 +1398,67 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     DeleteWorkflowResult deleteWorkflow(DeleteWorkflowRequest deleteWorkflowRequest);
+
+    /**
+     * <p>
+     * Retrieves the details of a blueprint.
+     * </p>
+     * 
+     * @param getBlueprintRequest
+     * @return Result of the GetBlueprint operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @sample AWSGlue.GetBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetBlueprintResult getBlueprint(GetBlueprintRequest getBlueprintRequest);
+
+    /**
+     * <p>
+     * Retrieves the details of a blueprint run.
+     * </p>
+     * 
+     * @param getBlueprintRunRequest
+     * @return Result of the GetBlueprintRun operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.GetBlueprintRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetBlueprintRunResult getBlueprintRun(GetBlueprintRunRequest getBlueprintRunRequest);
+
+    /**
+     * <p>
+     * Retrieves the details of blueprint runs for a specified blueprint.
+     * </p>
+     * 
+     * @param getBlueprintRunsRequest
+     * @return Result of the GetBlueprintRuns operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @sample AWSGlue.GetBlueprintRuns
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRuns" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetBlueprintRunsResult getBlueprintRuns(GetBlueprintRunsRequest getBlueprintRunsRequest);
 
     /**
      * <p>
@@ -2487,6 +2609,25 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Lists all the blueprint names in an account.
+     * </p>
+     * 
+     * @param listBlueprintsRequest
+     * @return Result of the ListBlueprints operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @sample AWSGlue.ListBlueprints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListBlueprints" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListBlueprintsResult listBlueprints(ListBlueprintsRequest listBlueprintsRequest);
+
+    /**
+     * <p>
      * Retrieves the names of all crawler resources in this Amazon Web Services account, or the resources with the
      * specified tag. This operation allows you to see which resources are available in your account, and their names.
      * </p>
@@ -2947,6 +3088,30 @@ public interface AWSGlue {
 
     /**
      * <p>
+     * Starts a new run of the specified blueprint.
+     * </p>
+     * 
+     * @param startBlueprintRunRequest
+     * @return Result of the StartBlueprintRun operation returned by the service.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws ResourceNumberLimitExceededException
+     *         A resource numerical limit was exceeded.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws IllegalBlueprintStateException
+     * @sample AWSGlue.StartBlueprintRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartBlueprintRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    StartBlueprintRunResult startBlueprintRun(StartBlueprintRunRequest startBlueprintRunRequest);
+
+    /**
+     * <p>
      * Starts a crawl using the specified crawler, regardless of what is scheduled. If the crawler is already running,
      * returns a <a href=
      * "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-exceptions.html#aws-glue-api-exceptions-CrawlerRunningException"
@@ -3342,6 +3507,30 @@ public interface AWSGlue {
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates a registered blueprint.
+     * </p>
+     * 
+     * @param updateBlueprintRequest
+     * @return Result of the UpdateBlueprint operation returned by the service.
+     * @throws EntityNotFoundException
+     *         A specified entity does not exist
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
+     * @throws InvalidInputException
+     *         The input provided was not valid.
+     * @throws OperationTimeoutException
+     *         The operation timed out.
+     * @throws InternalServiceException
+     *         An internal service error occurred.
+     * @throws IllegalBlueprintStateException
+     * @sample AWSGlue.UpdateBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateBlueprintResult updateBlueprint(UpdateBlueprintRequest updateBlueprintRequest);
 
     /**
      * <p>

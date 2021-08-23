@@ -81,6 +81,12 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Integer maxConcurrentRuns;
+    /**
+     * <p>
+     * This structure indicates the details of the blueprint that this particular workflow is created from.
+     * </p>
+     */
+    private BlueprintDetails blueprintDetails;
 
     /**
      * <p>
@@ -456,6 +462,46 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * This structure indicates the details of the blueprint that this particular workflow is created from.
+     * </p>
+     * 
+     * @param blueprintDetails
+     *        This structure indicates the details of the blueprint that this particular workflow is created from.
+     */
+
+    public void setBlueprintDetails(BlueprintDetails blueprintDetails) {
+        this.blueprintDetails = blueprintDetails;
+    }
+
+    /**
+     * <p>
+     * This structure indicates the details of the blueprint that this particular workflow is created from.
+     * </p>
+     * 
+     * @return This structure indicates the details of the blueprint that this particular workflow is created from.
+     */
+
+    public BlueprintDetails getBlueprintDetails() {
+        return this.blueprintDetails;
+    }
+
+    /**
+     * <p>
+     * This structure indicates the details of the blueprint that this particular workflow is created from.
+     * </p>
+     * 
+     * @param blueprintDetails
+     *        This structure indicates the details of the blueprint that this particular workflow is created from.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Workflow withBlueprintDetails(BlueprintDetails blueprintDetails) {
+        setBlueprintDetails(blueprintDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -482,7 +528,9 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
         if (getGraph() != null)
             sb.append("Graph: ").append(getGraph()).append(",");
         if (getMaxConcurrentRuns() != null)
-            sb.append("MaxConcurrentRuns: ").append(getMaxConcurrentRuns());
+            sb.append("MaxConcurrentRuns: ").append(getMaxConcurrentRuns()).append(",");
+        if (getBlueprintDetails() != null)
+            sb.append("BlueprintDetails: ").append(getBlueprintDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -529,6 +577,10 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getMaxConcurrentRuns() != null && other.getMaxConcurrentRuns().equals(this.getMaxConcurrentRuns()) == false)
             return false;
+        if (other.getBlueprintDetails() == null ^ this.getBlueprintDetails() == null)
+            return false;
+        if (other.getBlueprintDetails() != null && other.getBlueprintDetails().equals(this.getBlueprintDetails()) == false)
+            return false;
         return true;
     }
 
@@ -545,6 +597,7 @@ public class Workflow implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLastRun() == null) ? 0 : getLastRun().hashCode());
         hashCode = prime * hashCode + ((getGraph() == null) ? 0 : getGraph().hashCode());
         hashCode = prime * hashCode + ((getMaxConcurrentRuns() == null) ? 0 : getMaxConcurrentRuns().hashCode());
+        hashCode = prime * hashCode + ((getBlueprintDetails() == null) ? 0 : getBlueprintDetails().hashCode());
         return hashCode;
     }
 

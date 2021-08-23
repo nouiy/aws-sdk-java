@@ -36,15 +36,15 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
     private String accountId;
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      */
     private String backupJobId;
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      */
     private String backupVaultName;
@@ -145,9 +145,9 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date startBy;
     /**
      * <p>
-     * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource
-     * type is Amazon EC2.
+     * The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service
+     * (VSS) backups, the only supported resource type is Amazon EC2.
      * </p>
      */
     private String resourceType;
@@ -159,12 +159,13 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
     private Long bytesTransferred;
     /**
      * <p>
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs.
+     * Specifies the backup option for a selected resource. This option is only available for Windows Volume Shadow Copy
+     * Service (VSS) backup jobs.
      * </p>
      * <p>
-     * Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a VSS
-     * Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. If you specify an invalid option, you
-     * get an <code>InvalidParameterValueException</code> exception.
+     * Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and
+     * create a Windows VSS backup. Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. If you
+     * specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
      * </p>
      */
     private java.util.Map<String, String> backupOptions;
@@ -217,11 +218,11 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      * 
      * @param backupJobId
-     *        Uniquely identifies a request to AWS Backup to back up a resource.
+     *        Uniquely identifies a request to Backup to back up a resource.
      */
 
     public void setBackupJobId(String backupJobId) {
@@ -230,10 +231,10 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      * 
-     * @return Uniquely identifies a request to AWS Backup to back up a resource.
+     * @return Uniquely identifies a request to Backup to back up a resource.
      */
 
     public String getBackupJobId() {
@@ -242,11 +243,11 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      * 
      * @param backupJobId
-     *        Uniquely identifies a request to AWS Backup to back up a resource.
+     *        Uniquely identifies a request to Backup to back up a resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -258,14 +259,14 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      */
 
     public void setBackupVaultName(String backupVaultName) {
@@ -275,13 +276,13 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @return The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *         unique to the account used to create them and the AWS Region where they are created. They consist of
-     *         lowercase letters, numbers, and hyphens.
+     *         unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *         consist of lowercase letters, numbers, and hyphens.
      */
 
     public String getBackupVaultName() {
@@ -291,14 +292,14 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -950,15 +951,15 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource
-     * type is Amazon EC2.
+     * The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service
+     * (VSS) backups, the only supported resource type is Amazon EC2.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume
-     *        or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     *        supported resource type is Amazon EC2.
+     *        The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store
+     *        (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume
+     *        Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      */
 
     public void setResourceType(String resourceType) {
@@ -967,14 +968,14 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource
-     * type is Amazon EC2.
+     * The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service
+     * (VSS) backups, the only supported resource type is Amazon EC2.
      * </p>
      * 
-     * @return The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume
-     *         or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     *         supported resource type is Amazon EC2.
+     * @return The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store
+     *         (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume
+     *         Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      */
 
     public String getResourceType() {
@@ -983,15 +984,15 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource
-     * type is Amazon EC2.
+     * The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service
+     * (VSS) backups, the only supported resource type is Amazon EC2.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume
-     *        or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     *        supported resource type is Amazon EC2.
+     *        The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store
+     *        (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume
+     *        Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1042,20 +1043,22 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs.
+     * Specifies the backup option for a selected resource. This option is only available for Windows Volume Shadow Copy
+     * Service (VSS) backup jobs.
      * </p>
      * <p>
-     * Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a VSS
-     * Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. If you specify an invalid option, you
-     * get an <code>InvalidParameterValueException</code> exception.
+     * Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and
+     * create a Windows VSS backup. Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. If you
+     * specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
      * </p>
      * 
-     * @return Specifies the backup option for a selected resource. This option is only available for Windows VSS backup
-     *         jobs.</p>
+     * @return Specifies the backup option for a selected resource. This option is only available for Windows Volume
+     *         Shadow Copy Service (VSS) backup jobs.</p>
      *         <p>
-     *         Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a
-     *         VSS Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. If you specify an invalid
-     *         option, you get an <code>InvalidParameterValueException</code> exception.
+     *         Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup
+     *         option and create a Windows VSS backup. Set to <code>"WindowsVSS":"disabled"</code> to create a regular
+     *         backup. If you specify an invalid option, you get an <code>InvalidParameterValueException</code>
+     *         exception.
      */
 
     public java.util.Map<String, String> getBackupOptions() {
@@ -1064,21 +1067,23 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs.
+     * Specifies the backup option for a selected resource. This option is only available for Windows Volume Shadow Copy
+     * Service (VSS) backup jobs.
      * </p>
      * <p>
-     * Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a VSS
-     * Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. If you specify an invalid option, you
-     * get an <code>InvalidParameterValueException</code> exception.
+     * Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and
+     * create a Windows VSS backup. Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. If you
+     * specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
      * </p>
      * 
      * @param backupOptions
-     *        Specifies the backup option for a selected resource. This option is only available for Windows VSS backup
-     *        jobs.</p>
+     *        Specifies the backup option for a selected resource. This option is only available for Windows Volume
+     *        Shadow Copy Service (VSS) backup jobs.</p>
      *        <p>
-     *        Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a
-     *        VSS Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. If you specify an invalid
-     *        option, you get an <code>InvalidParameterValueException</code> exception.
+     *        Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup
+     *        option and create a Windows VSS backup. Set to <code>"WindowsVSS":"disabled"</code> to create a regular
+     *        backup. If you specify an invalid option, you get an <code>InvalidParameterValueException</code>
+     *        exception.
      */
 
     public void setBackupOptions(java.util.Map<String, String> backupOptions) {
@@ -1087,21 +1092,23 @@ public class BackupJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs.
+     * Specifies the backup option for a selected resource. This option is only available for Windows Volume Shadow Copy
+     * Service (VSS) backup jobs.
      * </p>
      * <p>
-     * Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a VSS
-     * Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. If you specify an invalid option, you
-     * get an <code>InvalidParameterValueException</code> exception.
+     * Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and
+     * create a Windows VSS backup. Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. If you
+     * specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
      * </p>
      * 
      * @param backupOptions
-     *        Specifies the backup option for a selected resource. This option is only available for Windows VSS backup
-     *        jobs.</p>
+     *        Specifies the backup option for a selected resource. This option is only available for Windows Volume
+     *        Shadow Copy Service (VSS) backup jobs.</p>
      *        <p>
-     *        Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a
-     *        VSS Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. If you specify an invalid
-     *        option, you get an <code>InvalidParameterValueException</code> exception.
+     *        Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup
+     *        option and create a Windows VSS backup. Set to <code>"WindowsVSS":"disabled"</code> to create a regular
+     *        backup. If you specify an invalid option, you get an <code>InvalidParameterValueException</code>
+     *        exception.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

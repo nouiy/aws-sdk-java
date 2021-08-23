@@ -38,8 +38,8 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      */
     private String backupVaultName;
@@ -65,9 +65,9 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
     private String resourceArn;
     /**
      * <p>
-     * The type of AWS resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS)
-     * volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     * supported resource type is Amazon EC2.
+     * The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon Elastic Block Store
+     * (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow
+     * Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      * </p>
      */
     private String resourceType;
@@ -91,6 +91,12 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
      * </p>
      */
     private String status;
+    /**
+     * <p>
+     * A message explaining the reason of the recovery point deletion failure.
+     * </p>
+     */
+    private String statusMessage;
     /**
      * <p>
      * The date and time a recovery point is created, in Unix format and Coordinated Universal Time (UTC). The value of
@@ -122,7 +128,7 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
     private CalculatedLifecycle calculatedLifecycle;
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup
      * transitions and expires backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
@@ -207,14 +213,14 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      */
 
     public void setBackupVaultName(String backupVaultName) {
@@ -224,13 +230,13 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @return The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *         unique to the account used to create them and the AWS Region where they are created. They consist of
-     *         lowercase letters, numbers, and hyphens.
+     *         unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *         consist of lowercase letters, numbers, and hyphens.
      */
 
     public String getBackupVaultName() {
@@ -240,14 +246,14 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -390,15 +396,15 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The type of AWS resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS)
-     * volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     * supported resource type is Amazon EC2.
+     * The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon Elastic Block Store
+     * (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow
+     * Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon
-     *        EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the
-     *        only supported resource type is Amazon EC2.
+     *        The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon Elastic Block
+     *        Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows
+     *        Volume Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      */
 
     public void setResourceType(String resourceType) {
@@ -407,14 +413,14 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The type of AWS resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS)
-     * volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     * supported resource type is Amazon EC2.
+     * The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon Elastic Block Store
+     * (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow
+     * Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      * </p>
      * 
-     * @return The type of AWS resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon
-     *         EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the
-     *         only supported resource type is Amazon EC2.
+     * @return The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon Elastic Block
+     *         Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows
+     *         Volume Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      */
 
     public String getResourceType() {
@@ -423,15 +429,15 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The type of AWS resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS)
-     * volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     * supported resource type is Amazon EC2.
+     * The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon Elastic Block Store
+     * (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow
+     * Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource saved as a recovery point; for example, an Amazon Elastic Block Store (Amazon
-     *        EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the
-     *        only supported resource type is Amazon EC2.
+     *        The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon Elastic Block
+     *        Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows
+     *        Volume Shadow Copy Service (VSS) backups, the only supported resource type is Amazon EC2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -591,6 +597,46 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
 
     public RecoveryPointByBackupVault withStatus(RecoveryPointStatus status) {
         this.status = status.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A message explaining the reason of the recovery point deletion failure.
+     * </p>
+     * 
+     * @param statusMessage
+     *        A message explaining the reason of the recovery point deletion failure.
+     */
+
+    public void setStatusMessage(String statusMessage) {
+        this.statusMessage = statusMessage;
+    }
+
+    /**
+     * <p>
+     * A message explaining the reason of the recovery point deletion failure.
+     * </p>
+     * 
+     * @return A message explaining the reason of the recovery point deletion failure.
+     */
+
+    public String getStatusMessage() {
+        return this.statusMessage;
+    }
+
+    /**
+     * <p>
+     * A message explaining the reason of the recovery point deletion failure.
+     * </p>
+     * 
+     * @param statusMessage
+     *        A message explaining the reason of the recovery point deletion failure.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecoveryPointByBackupVault withStatusMessage(String statusMessage) {
+        setStatusMessage(statusMessage);
         return this;
     }
 
@@ -786,7 +832,7 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup
      * transitions and expires backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
@@ -799,7 +845,7 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
      * </p>
      * 
      * @param lifecycle
-     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *        Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
@@ -817,7 +863,7 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup
      * transitions and expires backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
@@ -829,7 +875,7 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
      * Only Amazon EFS file system backups can be transitioned to cold storage.
      * </p>
      * 
-     * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *         Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
      *         <p>
      *         Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
@@ -847,7 +893,7 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup
      * transitions and expires backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
@@ -860,7 +906,7 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
      * </p>
      * 
      * @param lifecycle
-     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *        Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
@@ -1066,6 +1112,8 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
             sb.append("IamRoleArn: ").append(getIamRoleArn()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
+        if (getStatusMessage() != null)
+            sb.append("StatusMessage: ").append(getStatusMessage()).append(",");
         if (getCreationDate() != null)
             sb.append("CreationDate: ").append(getCreationDate()).append(",");
         if (getCompletionDate() != null)
@@ -1132,6 +1180,10 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getStatusMessage() == null ^ this.getStatusMessage() == null)
+            return false;
+        if (other.getStatusMessage() != null && other.getStatusMessage().equals(this.getStatusMessage()) == false)
+            return false;
         if (other.getCreationDate() == null ^ this.getCreationDate() == null)
             return false;
         if (other.getCreationDate() != null && other.getCreationDate().equals(this.getCreationDate()) == false)
@@ -1181,6 +1233,7 @@ public class RecoveryPointByBackupVault implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getIamRoleArn() == null) ? 0 : getIamRoleArn().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
         hashCode = prime * hashCode + ((getCompletionDate() == null) ? 0 : getCompletionDate().hashCode());
         hashCode = prime * hashCode + ((getBackupSizeInBytes() == null) ? 0 : getBackupSizeInBytes().hashCode());

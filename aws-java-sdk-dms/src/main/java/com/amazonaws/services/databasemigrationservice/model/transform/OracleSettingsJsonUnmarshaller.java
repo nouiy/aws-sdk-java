@@ -60,6 +60,12 @@ public class OracleSettingsJsonUnmarshaller implements Unmarshaller<OracleSettin
                     context.nextToken();
                     oracleSettings.setAdditionalArchivedLogDestId(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("ExtraArchivedLogDestIds", targetDepth)) {
+                    context.nextToken();
+                    oracleSettings.setExtraArchivedLogDestIds(new ListUnmarshaller<Integer>(context.getUnmarshaller(Integer.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("AllowSelectNestedTables", targetDepth)) {
                     context.nextToken();
                     oracleSettings.setAllowSelectNestedTables(context.getUnmarshaller(Boolean.class).unmarshall(context));

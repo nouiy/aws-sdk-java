@@ -91,7 +91,12 @@ public class CreateTriggerRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private java.util.Map<String, String> tags;
-
+    /**
+     * <p>
+     * Batch condition that must be met (specified number of events received or batch time window expired) before
+     * EventBridge event trigger fires.
+     * </p>
+     */
     private EventBatchingCondition eventBatchingCondition;
 
     /**
@@ -612,7 +617,14 @@ public class CreateTriggerRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * Batch condition that must be met (specified number of events received or batch time window expired) before
+     * EventBridge event trigger fires.
+     * </p>
+     * 
      * @param eventBatchingCondition
+     *        Batch condition that must be met (specified number of events received or batch time window expired) before
+     *        EventBridge event trigger fires.
      */
 
     public void setEventBatchingCondition(EventBatchingCondition eventBatchingCondition) {
@@ -620,7 +632,13 @@ public class CreateTriggerRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
-     * @return
+     * <p>
+     * Batch condition that must be met (specified number of events received or batch time window expired) before
+     * EventBridge event trigger fires.
+     * </p>
+     * 
+     * @return Batch condition that must be met (specified number of events received or batch time window expired)
+     *         before EventBridge event trigger fires.
      */
 
     public EventBatchingCondition getEventBatchingCondition() {
@@ -628,7 +646,14 @@ public class CreateTriggerRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * Batch condition that must be met (specified number of events received or batch time window expired) before
+     * EventBridge event trigger fires.
+     * </p>
+     * 
      * @param eventBatchingCondition
+     *        Batch condition that must be met (specified number of events received or batch time window expired) before
+     *        EventBridge event trigger fires.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -34,7 +34,7 @@ public class GetEventPredictionResult extends com.amazonaws.AmazonWebServiceResu
     private java.util.List<ModelScores> modelScores;
     /**
      * <p>
-     * The results.
+     * The results from the rules.
      * </p>
      */
     private java.util.List<RuleResult> ruleResults;
@@ -135,10 +135,10 @@ public class GetEventPredictionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The results.
+     * The results from the rules.
      * </p>
      * 
-     * @return The results.
+     * @return The results from the rules.
      */
 
     public java.util.List<RuleResult> getRuleResults() {
@@ -147,11 +147,11 @@ public class GetEventPredictionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The results.
+     * The results from the rules.
      * </p>
      * 
      * @param ruleResults
-     *        The results.
+     *        The results from the rules.
      */
 
     public void setRuleResults(java.util.Collection<RuleResult> ruleResults) {
@@ -165,7 +165,7 @@ public class GetEventPredictionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The results.
+     * The results from the rules.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -174,7 +174,7 @@ public class GetEventPredictionResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param ruleResults
-     *        The results.
+     *        The results from the rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -190,11 +190,11 @@ public class GetEventPredictionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The results.
+     * The results from the rules.
      * </p>
      * 
      * @param ruleResults
-     *        The results.
+     *        The results from the rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

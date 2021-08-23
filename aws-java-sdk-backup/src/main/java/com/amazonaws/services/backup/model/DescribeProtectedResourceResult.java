@@ -31,7 +31,8 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
     private String resourceArn;
     /**
      * <p>
-     * The type of AWS resource saved as a recovery point; for example, an EBS volume or an Amazon RDS database.
+     * The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon EBS volume or an
+     * Amazon RDS database.
      * </p>
      */
     private String resourceType;
@@ -86,11 +87,13 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The type of AWS resource saved as a recovery point; for example, an EBS volume or an Amazon RDS database.
+     * The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon EBS volume or an
+     * Amazon RDS database.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource saved as a recovery point; for example, an EBS volume or an Amazon RDS database.
+     *        The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon EBS volume or
+     *        an Amazon RDS database.
      */
 
     public void setResourceType(String resourceType) {
@@ -99,10 +102,12 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The type of AWS resource saved as a recovery point; for example, an EBS volume or an Amazon RDS database.
+     * The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon EBS volume or an
+     * Amazon RDS database.
      * </p>
      * 
-     * @return The type of AWS resource saved as a recovery point; for example, an EBS volume or an Amazon RDS database.
+     * @return The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon EBS volume or
+     *         an Amazon RDS database.
      */
 
     public String getResourceType() {
@@ -111,11 +116,13 @@ public class DescribeProtectedResourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The type of AWS resource saved as a recovery point; for example, an EBS volume or an Amazon RDS database.
+     * The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon EBS volume or an
+     * Amazon RDS database.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource saved as a recovery point; for example, an EBS volume or an Amazon RDS database.
+     *        The type of Amazon Web Services resource saved as a recovery point; for example, an Amazon EBS volume or
+     *        an Amazon RDS database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

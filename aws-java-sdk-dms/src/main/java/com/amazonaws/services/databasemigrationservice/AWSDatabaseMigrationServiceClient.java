@@ -2429,8 +2429,8 @@ public class AWSDatabaseMigrationServiceClient extends AmazonWebServiceClient im
 
     /**
      * <p>
-     * Returns the task assessment results from the Amazon S3 bucket that DMS creates in your account. This action
-     * always returns the latest results.
+     * Returns the task assessment results from the Amazon S3 bucket that DMS creates in your Amazon Web Services
+     * account. This action always returns the latest results.
      * </p>
      * <p>
      * For more information about DMS task assessments, see <a
@@ -3319,6 +3319,8 @@ public class AWSDatabaseMigrationServiceClient extends AmazonWebServiceClient im
      *         The resource could not be found.
      * @throws KMSKeyNotAccessibleException
      *         DMS cannot access the KMS key.
+     * @throws ResourceQuotaExceededException
+     *         The quota for this resource quota has been exceeded.
      * @sample AWSDatabaseMigrationService.MoveReplicationTask
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/MoveReplicationTask" target="_top">AWS API
      *      Documentation</a>

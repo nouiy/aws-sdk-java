@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a quota for an account, for example the number of replication instances allowed.
+ * Describes a quota for an Amazon Web Services account, for example the number of replication instances allowed.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/AccountQuota" target="_top">AWS API
@@ -30,7 +30,7 @@ public class AccountQuota implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the DMS quota for this account.
+     * The name of the DMS quota for this Amazon Web Services account.
      * </p>
      */
     private String accountQuotaName;
@@ -49,11 +49,11 @@ public class AccountQuota implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the DMS quota for this account.
+     * The name of the DMS quota for this Amazon Web Services account.
      * </p>
      * 
      * @param accountQuotaName
-     *        The name of the DMS quota for this account.
+     *        The name of the DMS quota for this Amazon Web Services account.
      */
 
     public void setAccountQuotaName(String accountQuotaName) {
@@ -62,10 +62,10 @@ public class AccountQuota implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the DMS quota for this account.
+     * The name of the DMS quota for this Amazon Web Services account.
      * </p>
      * 
-     * @return The name of the DMS quota for this account.
+     * @return The name of the DMS quota for this Amazon Web Services account.
      */
 
     public String getAccountQuotaName() {
@@ -74,11 +74,11 @@ public class AccountQuota implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the DMS quota for this account.
+     * The name of the DMS quota for this Amazon Web Services account.
      * </p>
      * 
      * @param accountQuotaName
-     *        The name of the DMS quota for this account.
+     *        The name of the DMS quota for this Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

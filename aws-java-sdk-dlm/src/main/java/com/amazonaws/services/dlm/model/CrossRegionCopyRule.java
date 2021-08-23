@@ -30,21 +30,21 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The target Region for the snapshot copies.
+     * Avoid using this parameter when creating new policies. Instead, use <b>Target</b> to specify a target Region or a
+     * target Outpost for snapshot copies.
      * </p>
      * <p>
-     * If you specify a target Region, you must omit <b>Target</b>. You cannot specify a target Region and a target
-     * Outpost in the same rule.
+     * For policies created before the <b>Target</b> parameter was introduced, this parameter indicates the target
+     * Region for snapshot copies.
      * </p>
      */
     private String targetRegion;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the target AWS Outpost for the snapshot copies.
+     * The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.
      * </p>
      * <p>
-     * If you specify an ARN, you must omit <b>TargetRegion</b>. You cannot specify a target Region and a target Outpost
-     * in the same rule.
+     * Use this parameter instead of <b>TargetRegion</b>. Do not specify both.
      * </p>
      */
     private String target;
@@ -58,38 +58,46 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
     private Boolean encrypted;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     * parameter is not specified, your AWS managed CMK for EBS is used.
+     * The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the
+     * default KMS key for the account is used.
      * </p>
      */
     private String cmkArn;
     /**
      * <p>
-     * Copy all user-defined tags from the source snapshot to the copied snapshot.
+     * Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot copy.
      * </p>
      */
     private Boolean copyTags;
     /**
      * <p>
-     * The retention rule.
+     * The retention rule that indicates how long snapshot copies are to be retained in the destination Region.
      * </p>
      */
     private CrossRegionCopyRetainRule retainRule;
+    /**
+     * <p>
+     * The AMI deprecation rule for cross-Region AMI copies created by the rule.
+     * </p>
+     */
+    private CrossRegionCopyDeprecateRule deprecateRule;
 
     /**
      * <p>
-     * The target Region for the snapshot copies.
+     * Avoid using this parameter when creating new policies. Instead, use <b>Target</b> to specify a target Region or a
+     * target Outpost for snapshot copies.
      * </p>
      * <p>
-     * If you specify a target Region, you must omit <b>Target</b>. You cannot specify a target Region and a target
-     * Outpost in the same rule.
+     * For policies created before the <b>Target</b> parameter was introduced, this parameter indicates the target
+     * Region for snapshot copies.
      * </p>
      * 
      * @param targetRegion
-     *        The target Region for the snapshot copies.</p>
+     *        Avoid using this parameter when creating new policies. Instead, use <b>Target</b> to specify a target
+     *        Region or a target Outpost for snapshot copies.</p>
      *        <p>
-     *        If you specify a target Region, you must omit <b>Target</b>. You cannot specify a target Region and a
-     *        target Outpost in the same rule.
+     *        For policies created before the <b>Target</b> parameter was introduced, this parameter indicates the
+     *        target Region for snapshot copies.
      */
 
     public void setTargetRegion(String targetRegion) {
@@ -98,17 +106,19 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The target Region for the snapshot copies.
+     * Avoid using this parameter when creating new policies. Instead, use <b>Target</b> to specify a target Region or a
+     * target Outpost for snapshot copies.
      * </p>
      * <p>
-     * If you specify a target Region, you must omit <b>Target</b>. You cannot specify a target Region and a target
-     * Outpost in the same rule.
+     * For policies created before the <b>Target</b> parameter was introduced, this parameter indicates the target
+     * Region for snapshot copies.
      * </p>
      * 
-     * @return The target Region for the snapshot copies.</p>
+     * @return Avoid using this parameter when creating new policies. Instead, use <b>Target</b> to specify a target
+     *         Region or a target Outpost for snapshot copies.</p>
      *         <p>
-     *         If you specify a target Region, you must omit <b>Target</b>. You cannot specify a target Region and a
-     *         target Outpost in the same rule.
+     *         For policies created before the <b>Target</b> parameter was introduced, this parameter indicates the
+     *         target Region for snapshot copies.
      */
 
     public String getTargetRegion() {
@@ -117,18 +127,20 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The target Region for the snapshot copies.
+     * Avoid using this parameter when creating new policies. Instead, use <b>Target</b> to specify a target Region or a
+     * target Outpost for snapshot copies.
      * </p>
      * <p>
-     * If you specify a target Region, you must omit <b>Target</b>. You cannot specify a target Region and a target
-     * Outpost in the same rule.
+     * For policies created before the <b>Target</b> parameter was introduced, this parameter indicates the target
+     * Region for snapshot copies.
      * </p>
      * 
      * @param targetRegion
-     *        The target Region for the snapshot copies.</p>
+     *        Avoid using this parameter when creating new policies. Instead, use <b>Target</b> to specify a target
+     *        Region or a target Outpost for snapshot copies.</p>
      *        <p>
-     *        If you specify a target Region, you must omit <b>Target</b>. You cannot specify a target Region and a
-     *        target Outpost in the same rule.
+     *        For policies created before the <b>Target</b> parameter was introduced, this parameter indicates the
+     *        target Region for snapshot copies.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -139,18 +151,16 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the target AWS Outpost for the snapshot copies.
+     * The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.
      * </p>
      * <p>
-     * If you specify an ARN, you must omit <b>TargetRegion</b>. You cannot specify a target Region and a target Outpost
-     * in the same rule.
+     * Use this parameter instead of <b>TargetRegion</b>. Do not specify both.
      * </p>
      * 
      * @param target
-     *        The Amazon Resource Name (ARN) of the target AWS Outpost for the snapshot copies.</p>
+     *        The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.</p>
      *        <p>
-     *        If you specify an ARN, you must omit <b>TargetRegion</b>. You cannot specify a target Region and a target
-     *        Outpost in the same rule.
+     *        Use this parameter instead of <b>TargetRegion</b>. Do not specify both.
      */
 
     public void setTarget(String target) {
@@ -159,17 +169,15 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the target AWS Outpost for the snapshot copies.
+     * The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.
      * </p>
      * <p>
-     * If you specify an ARN, you must omit <b>TargetRegion</b>. You cannot specify a target Region and a target Outpost
-     * in the same rule.
+     * Use this parameter instead of <b>TargetRegion</b>. Do not specify both.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the target AWS Outpost for the snapshot copies.</p>
+     * @return The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.</p>
      *         <p>
-     *         If you specify an ARN, you must omit <b>TargetRegion</b>. You cannot specify a target Region and a target
-     *         Outpost in the same rule.
+     *         Use this parameter instead of <b>TargetRegion</b>. Do not specify both.
      */
 
     public String getTarget() {
@@ -178,18 +186,16 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the target AWS Outpost for the snapshot copies.
+     * The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.
      * </p>
      * <p>
-     * If you specify an ARN, you must omit <b>TargetRegion</b>. You cannot specify a target Region and a target Outpost
-     * in the same rule.
+     * Use this parameter instead of <b>TargetRegion</b>. Do not specify both.
      * </p>
      * 
      * @param target
-     *        The Amazon Resource Name (ARN) of the target AWS Outpost for the snapshot copies.</p>
+     *        The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.</p>
      *        <p>
-     *        If you specify an ARN, you must omit <b>TargetRegion</b>. You cannot specify a target Region and a target
-     *        Outpost in the same rule.
+     *        Use this parameter instead of <b>TargetRegion</b>. Do not specify both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -268,13 +274,13 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     * parameter is not specified, your AWS managed CMK for EBS is used.
+     * The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the
+     * default KMS key for the account is used.
      * </p>
      * 
      * @param cmkArn
-     *        The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     *        parameter is not specified, your AWS managed CMK for EBS is used.
+     *        The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not
+     *        specified, the default KMS key for the account is used.
      */
 
     public void setCmkArn(String cmkArn) {
@@ -283,12 +289,12 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     * parameter is not specified, your AWS managed CMK for EBS is used.
+     * The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the
+     * default KMS key for the account is used.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If
-     *         this parameter is not specified, your AWS managed CMK for EBS is used.
+     * @return The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not
+     *         specified, the default KMS key for the account is used.
      */
 
     public String getCmkArn() {
@@ -297,13 +303,13 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     * parameter is not specified, your AWS managed CMK for EBS is used.
+     * The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the
+     * default KMS key for the account is used.
      * </p>
      * 
      * @param cmkArn
-     *        The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     *        parameter is not specified, your AWS managed CMK for EBS is used.
+     *        The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not
+     *        specified, the default KMS key for the account is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -314,11 +320,12 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Copy all user-defined tags from the source snapshot to the copied snapshot.
+     * Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot copy.
      * </p>
      * 
      * @param copyTags
-     *        Copy all user-defined tags from the source snapshot to the copied snapshot.
+     *        Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot
+     *        copy.
      */
 
     public void setCopyTags(Boolean copyTags) {
@@ -327,10 +334,11 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Copy all user-defined tags from the source snapshot to the copied snapshot.
+     * Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot copy.
      * </p>
      * 
-     * @return Copy all user-defined tags from the source snapshot to the copied snapshot.
+     * @return Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot
+     *         copy.
      */
 
     public Boolean getCopyTags() {
@@ -339,11 +347,12 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Copy all user-defined tags from the source snapshot to the copied snapshot.
+     * Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot copy.
      * </p>
      * 
      * @param copyTags
-     *        Copy all user-defined tags from the source snapshot to the copied snapshot.
+     *        Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot
+     *        copy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -354,10 +363,11 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Copy all user-defined tags from the source snapshot to the copied snapshot.
+     * Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot copy.
      * </p>
      * 
-     * @return Copy all user-defined tags from the source snapshot to the copied snapshot.
+     * @return Indicates whether to copy all user-defined tags from the source snapshot to the cross-Region snapshot
+     *         copy.
      */
 
     public Boolean isCopyTags() {
@@ -366,11 +376,11 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The retention rule.
+     * The retention rule that indicates how long snapshot copies are to be retained in the destination Region.
      * </p>
      * 
      * @param retainRule
-     *        The retention rule.
+     *        The retention rule that indicates how long snapshot copies are to be retained in the destination Region.
      */
 
     public void setRetainRule(CrossRegionCopyRetainRule retainRule) {
@@ -379,10 +389,10 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The retention rule.
+     * The retention rule that indicates how long snapshot copies are to be retained in the destination Region.
      * </p>
      * 
-     * @return The retention rule.
+     * @return The retention rule that indicates how long snapshot copies are to be retained in the destination Region.
      */
 
     public CrossRegionCopyRetainRule getRetainRule() {
@@ -391,16 +401,56 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The retention rule.
+     * The retention rule that indicates how long snapshot copies are to be retained in the destination Region.
      * </p>
      * 
      * @param retainRule
-     *        The retention rule.
+     *        The retention rule that indicates how long snapshot copies are to be retained in the destination Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CrossRegionCopyRule withRetainRule(CrossRegionCopyRetainRule retainRule) {
         setRetainRule(retainRule);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The AMI deprecation rule for cross-Region AMI copies created by the rule.
+     * </p>
+     * 
+     * @param deprecateRule
+     *        The AMI deprecation rule for cross-Region AMI copies created by the rule.
+     */
+
+    public void setDeprecateRule(CrossRegionCopyDeprecateRule deprecateRule) {
+        this.deprecateRule = deprecateRule;
+    }
+
+    /**
+     * <p>
+     * The AMI deprecation rule for cross-Region AMI copies created by the rule.
+     * </p>
+     * 
+     * @return The AMI deprecation rule for cross-Region AMI copies created by the rule.
+     */
+
+    public CrossRegionCopyDeprecateRule getDeprecateRule() {
+        return this.deprecateRule;
+    }
+
+    /**
+     * <p>
+     * The AMI deprecation rule for cross-Region AMI copies created by the rule.
+     * </p>
+     * 
+     * @param deprecateRule
+     *        The AMI deprecation rule for cross-Region AMI copies created by the rule.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CrossRegionCopyRule withDeprecateRule(CrossRegionCopyDeprecateRule deprecateRule) {
+        setDeprecateRule(deprecateRule);
         return this;
     }
 
@@ -427,7 +477,9 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
         if (getCopyTags() != null)
             sb.append("CopyTags: ").append(getCopyTags()).append(",");
         if (getRetainRule() != null)
-            sb.append("RetainRule: ").append(getRetainRule());
+            sb.append("RetainRule: ").append(getRetainRule()).append(",");
+        if (getDeprecateRule() != null)
+            sb.append("DeprecateRule: ").append(getDeprecateRule());
         sb.append("}");
         return sb.toString();
     }
@@ -466,6 +518,10 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getRetainRule() != null && other.getRetainRule().equals(this.getRetainRule()) == false)
             return false;
+        if (other.getDeprecateRule() == null ^ this.getDeprecateRule() == null)
+            return false;
+        if (other.getDeprecateRule() != null && other.getDeprecateRule().equals(this.getDeprecateRule()) == false)
+            return false;
         return true;
     }
 
@@ -480,6 +536,7 @@ public class CrossRegionCopyRule implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getCmkArn() == null) ? 0 : getCmkArn().hashCode());
         hashCode = prime * hashCode + ((getCopyTags() == null) ? 0 : getCopyTags().hashCode());
         hashCode = prime * hashCode + ((getRetainRule() == null) ? 0 : getRetainRule().hashCode());
+        hashCode = prime * hashCode + ((getDeprecateRule() == null) ? 0 : getDeprecateRule().hashCode());
         return hashCode;
     }
 

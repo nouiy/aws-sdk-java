@@ -19,14 +19,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The logit metric details.
+ * The log odds metric details.
  * </p>
  * 
- * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/LogitMetric" target="_top">AWS API
+ * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/LogOddsMetric" target="_top">AWS API
  *      Documentation</a>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class LogitMetric implements Serializable, Cloneable, StructuredPojo {
+public class LogOddsMetric implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
@@ -42,7 +42,9 @@ public class LogitMetric implements Serializable, Cloneable, StructuredPojo {
     private String variableType;
     /**
      * <p>
-     * The relative importance of the variable.
+     * The relative importance of the variable. For more information, see <a
+     * href="https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html">Model variable
+     * importance</a>.
      * </p>
      */
     private Float variableImportance;
@@ -82,7 +84,7 @@ public class LogitMetric implements Serializable, Cloneable, StructuredPojo {
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public LogitMetric withVariableName(String variableName) {
+    public LogOddsMetric withVariableName(String variableName) {
         setVariableName(variableName);
         return this;
     }
@@ -122,18 +124,22 @@ public class LogitMetric implements Serializable, Cloneable, StructuredPojo {
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public LogitMetric withVariableType(String variableType) {
+    public LogOddsMetric withVariableType(String variableType) {
         setVariableType(variableType);
         return this;
     }
 
     /**
      * <p>
-     * The relative importance of the variable.
+     * The relative importance of the variable. For more information, see <a
+     * href="https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html">Model variable
+     * importance</a>.
      * </p>
      * 
      * @param variableImportance
-     *        The relative importance of the variable.
+     *        The relative importance of the variable. For more information, see <a
+     *        href="https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html">Model variable
+     *        importance</a>.
      */
 
     public void setVariableImportance(Float variableImportance) {
@@ -142,10 +148,14 @@ public class LogitMetric implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The relative importance of the variable.
+     * The relative importance of the variable. For more information, see <a
+     * href="https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html">Model variable
+     * importance</a>.
      * </p>
      * 
-     * @return The relative importance of the variable.
+     * @return The relative importance of the variable. For more information, see <a
+     *         href="https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html">Model variable
+     *         importance</a>.
      */
 
     public Float getVariableImportance() {
@@ -154,15 +164,19 @@ public class LogitMetric implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The relative importance of the variable.
+     * The relative importance of the variable. For more information, see <a
+     * href="https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html">Model variable
+     * importance</a>.
      * </p>
      * 
      * @param variableImportance
-     *        The relative importance of the variable.
+     *        The relative importance of the variable. For more information, see <a
+     *        href="https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html">Model variable
+     *        importance</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public LogitMetric withVariableImportance(Float variableImportance) {
+    public LogOddsMetric withVariableImportance(Float variableImportance) {
         setVariableImportance(variableImportance);
         return this;
     }
@@ -196,9 +210,9 @@ public class LogitMetric implements Serializable, Cloneable, StructuredPojo {
         if (obj == null)
             return false;
 
-        if (obj instanceof LogitMetric == false)
+        if (obj instanceof LogOddsMetric == false)
             return false;
-        LogitMetric other = (LogitMetric) obj;
+        LogOddsMetric other = (LogOddsMetric) obj;
         if (other.getVariableName() == null ^ this.getVariableName() == null)
             return false;
         if (other.getVariableName() != null && other.getVariableName().equals(this.getVariableName()) == false)
@@ -226,9 +240,9 @@ public class LogitMetric implements Serializable, Cloneable, StructuredPojo {
     }
 
     @Override
-    public LogitMetric clone() {
+    public LogOddsMetric clone() {
         try {
-            return (LogitMetric) super.clone();
+            return (LogOddsMetric) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new IllegalStateException("Got a CloneNotSupportedException from Object.clone() " + "even though we're Cloneable!", e);
         }
@@ -237,6 +251,6 @@ public class LogitMetric implements Serializable, Cloneable, StructuredPojo {
     @com.amazonaws.annotation.SdkInternalApi
     @Override
     public void marshall(ProtocolMarshaller protocolMarshaller) {
-        com.amazonaws.services.frauddetector.model.transform.LogitMetricMarshaller.getInstance().marshall(this, protocolMarshaller);
+        com.amazonaws.services.frauddetector.model.transform.LogOddsMetricMarshaller.getInstance().marshall(this, protocolMarshaller);
     }
 }

@@ -37,14 +37,14 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      */
     private String targetBackupVaultName;
     /**
      * <p>
-     * A CRON expression specifying when AWS Backup initiates a backup job.
+     * A CRON expression in UTC specifying when Backup initiates a backup job.
      * </p>
      */
     private String scheduleExpression;
@@ -58,14 +58,14 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A value in minutes after a backup job is successfully started before it must be completed or it will be canceled
-     * by AWS Backup. This value is optional.
+     * by Backup. This value is optional.
      * </p>
      */
     private Long completionWindowMinutes;
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
-     * will transition and expire backups automatically according to the lifecycle that you define.
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will
+     * transition and expire backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
@@ -92,8 +92,8 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     private java.util.List<CopyAction> copyActions;
     /**
      * <p>
-     * Specifies whether AWS Backup creates continuous backups. True causes AWS Backup to create continuous backups
-     * capable of point-in-time restore (PITR). False (or not specified) causes AWS Backup to create snapshot backups.
+     * Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups capable of
+     * point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot backups.
      * </p>
      */
     private Boolean enableContinuousBackup;
@@ -141,14 +141,14 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param targetBackupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      */
 
     public void setTargetBackupVaultName(String targetBackupVaultName) {
@@ -158,13 +158,13 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @return The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *         unique to the account used to create them and the AWS Region where they are created. They consist of
-     *         lowercase letters, numbers, and hyphens.
+     *         unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *         consist of lowercase letters, numbers, and hyphens.
      */
 
     public String getTargetBackupVaultName() {
@@ -174,14 +174,14 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param targetBackupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -192,11 +192,11 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A CRON expression specifying when AWS Backup initiates a backup job.
+     * A CRON expression in UTC specifying when Backup initiates a backup job.
      * </p>
      * 
      * @param scheduleExpression
-     *        A CRON expression specifying when AWS Backup initiates a backup job.
+     *        A CRON expression in UTC specifying when Backup initiates a backup job.
      */
 
     public void setScheduleExpression(String scheduleExpression) {
@@ -205,10 +205,10 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A CRON expression specifying when AWS Backup initiates a backup job.
+     * A CRON expression in UTC specifying when Backup initiates a backup job.
      * </p>
      * 
-     * @return A CRON expression specifying when AWS Backup initiates a backup job.
+     * @return A CRON expression in UTC specifying when Backup initiates a backup job.
      */
 
     public String getScheduleExpression() {
@@ -217,11 +217,11 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A CRON expression specifying when AWS Backup initiates a backup job.
+     * A CRON expression in UTC specifying when Backup initiates a backup job.
      * </p>
      * 
      * @param scheduleExpression
-     *        A CRON expression specifying when AWS Backup initiates a backup job.
+     *        A CRON expression in UTC specifying when Backup initiates a backup job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -279,12 +279,12 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A value in minutes after a backup job is successfully started before it must be completed or it will be canceled
-     * by AWS Backup. This value is optional.
+     * by Backup. This value is optional.
      * </p>
      * 
      * @param completionWindowMinutes
      *        A value in minutes after a backup job is successfully started before it must be completed or it will be
-     *        canceled by AWS Backup. This value is optional.
+     *        canceled by Backup. This value is optional.
      */
 
     public void setCompletionWindowMinutes(Long completionWindowMinutes) {
@@ -294,11 +294,11 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A value in minutes after a backup job is successfully started before it must be completed or it will be canceled
-     * by AWS Backup. This value is optional.
+     * by Backup. This value is optional.
      * </p>
      * 
      * @return A value in minutes after a backup job is successfully started before it must be completed or it will be
-     *         canceled by AWS Backup. This value is optional.
+     *         canceled by Backup. This value is optional.
      */
 
     public Long getCompletionWindowMinutes() {
@@ -308,12 +308,12 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A value in minutes after a backup job is successfully started before it must be completed or it will be canceled
-     * by AWS Backup. This value is optional.
+     * by Backup. This value is optional.
      * </p>
      * 
      * @param completionWindowMinutes
      *        A value in minutes after a backup job is successfully started before it must be completed or it will be
-     *        canceled by AWS Backup. This value is optional.
+     *        canceled by Backup. This value is optional.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -324,8 +324,8 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
-     * will transition and expire backups automatically according to the lifecycle that you define.
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will
+     * transition and expire backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
@@ -337,7 +337,7 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param lifecycle
-     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *        Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
@@ -355,8 +355,8 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
-     * will transition and expire backups automatically according to the lifecycle that you define.
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will
+     * transition and expire backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
@@ -367,7 +367,7 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
      * Only Amazon EFS file system backups can be transitioned to cold storage.
      * </p>
      * 
-     * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *         Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
      *         <p>
      *         Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
@@ -385,8 +385,8 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
-     * will transition and expire backups automatically according to the lifecycle that you define.
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will
+     * transition and expire backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
@@ -398,7 +398,7 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param lifecycle
-     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *        Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
@@ -562,14 +562,14 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether AWS Backup creates continuous backups. True causes AWS Backup to create continuous backups
-     * capable of point-in-time restore (PITR). False (or not specified) causes AWS Backup to create snapshot backups.
+     * Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups capable of
+     * point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot backups.
      * </p>
      * 
      * @param enableContinuousBackup
-     *        Specifies whether AWS Backup creates continuous backups. True causes AWS Backup to create continuous
-     *        backups capable of point-in-time restore (PITR). False (or not specified) causes AWS Backup to create
-     *        snapshot backups.
+     *        Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups
+     *        capable of point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot
+     *        backups.
      */
 
     public void setEnableContinuousBackup(Boolean enableContinuousBackup) {
@@ -578,13 +578,13 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether AWS Backup creates continuous backups. True causes AWS Backup to create continuous backups
-     * capable of point-in-time restore (PITR). False (or not specified) causes AWS Backup to create snapshot backups.
+     * Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups capable of
+     * point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot backups.
      * </p>
      * 
-     * @return Specifies whether AWS Backup creates continuous backups. True causes AWS Backup to create continuous
-     *         backups capable of point-in-time restore (PITR). False (or not specified) causes AWS Backup to create
-     *         snapshot backups.
+     * @return Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups
+     *         capable of point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot
+     *         backups.
      */
 
     public Boolean getEnableContinuousBackup() {
@@ -593,14 +593,14 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether AWS Backup creates continuous backups. True causes AWS Backup to create continuous backups
-     * capable of point-in-time restore (PITR). False (or not specified) causes AWS Backup to create snapshot backups.
+     * Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups capable of
+     * point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot backups.
      * </p>
      * 
      * @param enableContinuousBackup
-     *        Specifies whether AWS Backup creates continuous backups. True causes AWS Backup to create continuous
-     *        backups capable of point-in-time restore (PITR). False (or not specified) causes AWS Backup to create
-     *        snapshot backups.
+     *        Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups
+     *        capable of point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot
+     *        backups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -611,13 +611,13 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether AWS Backup creates continuous backups. True causes AWS Backup to create continuous backups
-     * capable of point-in-time restore (PITR). False (or not specified) causes AWS Backup to create snapshot backups.
+     * Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups capable of
+     * point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot backups.
      * </p>
      * 
-     * @return Specifies whether AWS Backup creates continuous backups. True causes AWS Backup to create continuous
-     *         backups capable of point-in-time restore (PITR). False (or not specified) causes AWS Backup to create
-     *         snapshot backups.
+     * @return Specifies whether Backup creates continuous backups. True causes Backup to create continuous backups
+     *         capable of point-in-time restore (PITR). False (or not specified) causes Backup to create snapshot
+     *         backups.
      */
 
     public Boolean isEnableContinuousBackup() {

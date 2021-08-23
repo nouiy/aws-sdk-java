@@ -70,8 +70,8 @@ public class CopyJob implements Serializable, Cloneable, StructuredPojo {
     private String destinationRecoveryPointArn;
     /**
      * <p>
-     * The AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon
-     * Relational Database Service (Amazon RDS) database.
+     * The Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
+     * an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      */
     private String resourceArn;
@@ -120,8 +120,8 @@ public class CopyJob implements Serializable, Cloneable, StructuredPojo {
     private RecoveryPointCreator createdBy;
     /**
      * <p>
-     * The type of AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      */
     private String resourceType;
@@ -392,13 +392,13 @@ public class CopyJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon
-     * Relational Database Service (Amazon RDS) database.
+     * The Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
+     * an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
      * @param resourceArn
-     *        The AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon
-     *        Relational Database Service (Amazon RDS) database.
+     *        The Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS)
+     *        volume or an Amazon Relational Database Service (Amazon RDS) database.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -407,12 +407,12 @@ public class CopyJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon
-     * Relational Database Service (Amazon RDS) database.
+     * The Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
+     * an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
-     * @return The AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     *         Amazon Relational Database Service (Amazon RDS) database.
+     * @return The Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS)
+     *         volume or an Amazon Relational Database Service (Amazon RDS) database.
      */
 
     public String getResourceArn() {
@@ -421,13 +421,13 @@ public class CopyJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon
-     * Relational Database Service (Amazon RDS) database.
+     * The Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
+     * an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
      * @param resourceArn
-     *        The AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an Amazon
-     *        Relational Database Service (Amazon RDS) database.
+     *        The Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS)
+     *        volume or an Amazon Relational Database Service (Amazon RDS) database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -753,13 +753,13 @@ public class CopyJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
-     *        an Amazon Relational Database Service (Amazon RDS) database.
+     *        The type of Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon
+     *        EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      */
 
     public void setResourceType(String resourceType) {
@@ -768,12 +768,12 @@ public class CopyJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
-     * @return The type of AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
-     *         an Amazon Relational Database Service (Amazon RDS) database.
+     * @return The type of Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon
+     *         EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      */
 
     public String getResourceType() {
@@ -782,13 +782,13 @@ public class CopyJob implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource to be copied; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
-     *        an Amazon Relational Database Service (Amazon RDS) database.
+     *        The type of Amazon Web Services resource to be copied; for example, an Amazon Elastic Block Store (Amazon
+     *        EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

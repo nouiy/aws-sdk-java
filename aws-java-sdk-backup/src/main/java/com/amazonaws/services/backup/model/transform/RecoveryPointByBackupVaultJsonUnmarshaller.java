@@ -84,6 +84,10 @@ public class RecoveryPointByBackupVaultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     recoveryPointByBackupVault.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("StatusMessage", targetDepth)) {
+                    context.nextToken();
+                    recoveryPointByBackupVault.setStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreationDate", targetDepth)) {
                     context.nextToken();
                     recoveryPointByBackupVault.setCreationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

@@ -38,8 +38,8 @@ public class EncryptionConfiguration implements Serializable, Cloneable, Structu
     private Boolean encrypted;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     * parameter is not specified, your AWS managed CMK for EBS is used.
+     * The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the
+     * default KMS key for the account is used.
      * </p>
      */
     private String cmkArn;
@@ -114,13 +114,13 @@ public class EncryptionConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     * parameter is not specified, your AWS managed CMK for EBS is used.
+     * The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the
+     * default KMS key for the account is used.
      * </p>
      * 
      * @param cmkArn
-     *        The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     *        parameter is not specified, your AWS managed CMK for EBS is used.
+     *        The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not
+     *        specified, the default KMS key for the account is used.
      */
 
     public void setCmkArn(String cmkArn) {
@@ -129,12 +129,12 @@ public class EncryptionConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     * parameter is not specified, your AWS managed CMK for EBS is used.
+     * The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the
+     * default KMS key for the account is used.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If
-     *         this parameter is not specified, your AWS managed CMK for EBS is used.
+     * @return The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not
+     *         specified, the default KMS key for the account is used.
      */
 
     public String getCmkArn() {
@@ -143,13 +143,13 @@ public class EncryptionConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     * parameter is not specified, your AWS managed CMK for EBS is used.
+     * The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not specified, the
+     * default KMS key for the account is used.
      * </p>
      * 
      * @param cmkArn
-     *        The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this
-     *        parameter is not specified, your AWS managed CMK for EBS is used.
+     *        The Amazon Resource Name (ARN) of the KMS key to use for EBS encryption. If this parameter is not
+     *        specified, the default KMS key for the account is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

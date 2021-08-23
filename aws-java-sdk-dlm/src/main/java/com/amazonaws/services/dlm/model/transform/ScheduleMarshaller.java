@@ -46,6 +46,8 @@ public class ScheduleMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CrossRegionCopyRules").build();
     private static final MarshallingInfo<List> SHARERULES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ShareRules").build();
+    private static final MarshallingInfo<StructuredPojo> DEPRECATERULE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeprecateRule").build();
 
     private static final ScheduleMarshaller instance = new ScheduleMarshaller();
 
@@ -72,6 +74,7 @@ public class ScheduleMarshaller {
             protocolMarshaller.marshall(schedule.getFastRestoreRule(), FASTRESTORERULE_BINDING);
             protocolMarshaller.marshall(schedule.getCrossRegionCopyRules(), CROSSREGIONCOPYRULES_BINDING);
             protocolMarshaller.marshall(schedule.getShareRules(), SHARERULES_BINDING);
+            protocolMarshaller.marshall(schedule.getDeprecateRule(), DEPRECATERULE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

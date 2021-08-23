@@ -511,6 +511,109 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
      * </note>
      */
     private String cdcPath;
+    /**
+     * <p>
+     * A value that enables DMS to specify a predefined (canned) access control list for objects created in an Amazon S3
+     * bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     * <i>Amazon S3 Developer Guide.</i>
+     * </p>
+     * <p>
+     * The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     * AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * </p>
+     */
+    private String cannedAclForObjects;
+    /**
+     * <p>
+     * An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column name
+     * information to the .csv output file.
+     * </p>
+     * <p>
+     * The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>, <code>y</code>,
+     * and <code>n</code>.
+     * </p>
+     */
+    private Boolean addColumnName;
+    /**
+     * <p>
+     * Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3.
+     * </p>
+     * <p>
+     * When <code>CdcMaxBatchInterval</code> and <code>CdcMinFileSize</code> are both specified, the file write is
+     * triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     * </p>
+     * <p>
+     * The default value is 60 seconds.
+     * </p>
+     */
+    private Integer cdcMaxBatchInterval;
+    /**
+     * <p>
+     * Minimum file size, defined in megabytes, to reach for a file output to Amazon S3.
+     * </p>
+     * <p>
+     * When <code>CdcMinFileSize</code> and <code>CdcMaxBatchInterval</code> are both specified, the file write is
+     * triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     * </p>
+     * <p>
+     * The default value is 32 MB.
+     * </p>
+     */
+    private Integer cdcMinFileSize;
+    /**
+     * <p>
+     * An optional parameter that specifies how DMS treats null values. While handling the null value, you can use this
+     * parameter to pass a user-defined string as null when writing to the target. For example, when target columns are
+     * not nullable, you can use this option to differentiate between the empty string value and the null value. So, if
+     * you set this parameter value to the empty string ("" or ''), DMS treats the empty string as the null value
+     * instead of <code>NULL</code>.
+     * </p>
+     * <p>
+     * The default value is <code>NULL</code>. Valid values include any valid string.
+     * </p>
+     */
+    private String csvNullValue;
+    /**
+     * <p>
+     * When this value is set to 1, DMS ignores the first row header in a .csv file. A value of 1 turns on the feature;
+     * a value of 0 turns off the feature.
+     * </p>
+     * <p>
+     * The default is 0.
+     * </p>
+     */
+    private Integer ignoreHeaderRows;
+    /**
+     * <p>
+     * A value that specifies the maximum size (in KB) of any .csv file to be created while migrating to an S3 target
+     * during full load.
+     * </p>
+     * <p>
+     * The default value is 1,048,576 KB (1 GB). Valid values include 1 to 1,048,576.
+     * </p>
+     */
+    private Integer maxFileSize;
+    /**
+     * <p>
+     * For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double quotation
+     * mark has to be followed by an ending double quotation mark. This formatting complies with RFC 4180. When this
+     * value is set to <code>false</code> or <code>n</code>, string literals are copied to the target as is. In this
+     * case, a delimiter (row or column) signals the end of the field. Thus, you can't use a delimiter as part of the
+     * string, because it signals the end of the value.
+     * </p>
+     * <p>
+     * For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to Amazon
+     * S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code> using Amazon S3 as
+     * a target, if the data has quotation marks or newline characters in it, DMS encloses the entire column with an
+     * additional pair of double quotation marks ("). Every quotation mark within the data is repeated twice.
+     * </p>
+     * <p>
+     * The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>,
+     * <code>y</code>, and <code>n</code>.
+     * </p>
+     */
+    private Boolean rfc4180;
 
     /**
      * <p>
@@ -4479,6 +4582,755 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A value that enables DMS to specify a predefined (canned) access control list for objects created in an Amazon S3
+     * bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     * <i>Amazon S3 Developer Guide.</i>
+     * </p>
+     * <p>
+     * The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     * AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * </p>
+     * 
+     * @param cannedAclForObjects
+     *        A value that enables DMS to specify a predefined (canned) access control list for objects created in an
+     *        Amazon S3 bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     *        <i>Amazon S3 Developer Guide.</i> </p>
+     *        <p>
+     *        The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     *        AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * @see CannedAclForObjectsValue
+     */
+
+    public void setCannedAclForObjects(String cannedAclForObjects) {
+        this.cannedAclForObjects = cannedAclForObjects;
+    }
+
+    /**
+     * <p>
+     * A value that enables DMS to specify a predefined (canned) access control list for objects created in an Amazon S3
+     * bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     * <i>Amazon S3 Developer Guide.</i>
+     * </p>
+     * <p>
+     * The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     * AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * </p>
+     * 
+     * @return A value that enables DMS to specify a predefined (canned) access control list for objects created in an
+     *         Amazon S3 bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     *         href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     *         <i>Amazon S3 Developer Guide.</i> </p>
+     *         <p>
+     *         The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     *         AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * @see CannedAclForObjectsValue
+     */
+
+    public String getCannedAclForObjects() {
+        return this.cannedAclForObjects;
+    }
+
+    /**
+     * <p>
+     * A value that enables DMS to specify a predefined (canned) access control list for objects created in an Amazon S3
+     * bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     * <i>Amazon S3 Developer Guide.</i>
+     * </p>
+     * <p>
+     * The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     * AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * </p>
+     * 
+     * @param cannedAclForObjects
+     *        A value that enables DMS to specify a predefined (canned) access control list for objects created in an
+     *        Amazon S3 bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     *        <i>Amazon S3 Developer Guide.</i> </p>
+     *        <p>
+     *        The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     *        AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CannedAclForObjectsValue
+     */
+
+    public S3Settings withCannedAclForObjects(String cannedAclForObjects) {
+        setCannedAclForObjects(cannedAclForObjects);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that enables DMS to specify a predefined (canned) access control list for objects created in an Amazon S3
+     * bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     * <i>Amazon S3 Developer Guide.</i>
+     * </p>
+     * <p>
+     * The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     * AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * </p>
+     * 
+     * @param cannedAclForObjects
+     *        A value that enables DMS to specify a predefined (canned) access control list for objects created in an
+     *        Amazon S3 bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     *        <i>Amazon S3 Developer Guide.</i> </p>
+     *        <p>
+     *        The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     *        AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * @see CannedAclForObjectsValue
+     */
+
+    public void setCannedAclForObjects(CannedAclForObjectsValue cannedAclForObjects) {
+        withCannedAclForObjects(cannedAclForObjects);
+    }
+
+    /**
+     * <p>
+     * A value that enables DMS to specify a predefined (canned) access control list for objects created in an Amazon S3
+     * bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     * <i>Amazon S3 Developer Guide.</i>
+     * </p>
+     * <p>
+     * The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     * AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * </p>
+     * 
+     * @param cannedAclForObjects
+     *        A value that enables DMS to specify a predefined (canned) access control list for objects created in an
+     *        Amazon S3 bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
+     *        href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
+     *        <i>Amazon S3 Developer Guide.</i> </p>
+     *        <p>
+     *        The default value is NONE. Valid values include NONE, PRIVATE, PUBLIC_READ, PUBLIC_READ_WRITE,
+     *        AUTHENTICATED_READ, AWS_EXEC_READ, BUCKET_OWNER_READ, and BUCKET_OWNER_FULL_CONTROL.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CannedAclForObjectsValue
+     */
+
+    public S3Settings withCannedAclForObjects(CannedAclForObjectsValue cannedAclForObjects) {
+        this.cannedAclForObjects = cannedAclForObjects.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column name
+     * information to the .csv output file.
+     * </p>
+     * <p>
+     * The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>, <code>y</code>,
+     * and <code>n</code>.
+     * </p>
+     * 
+     * @param addColumnName
+     *        An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column
+     *        name information to the .csv output file.</p>
+     *        <p>
+     *        The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>,
+     *        <code>y</code>, and <code>n</code>.
+     */
+
+    public void setAddColumnName(Boolean addColumnName) {
+        this.addColumnName = addColumnName;
+    }
+
+    /**
+     * <p>
+     * An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column name
+     * information to the .csv output file.
+     * </p>
+     * <p>
+     * The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>, <code>y</code>,
+     * and <code>n</code>.
+     * </p>
+     * 
+     * @return An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column
+     *         name information to the .csv output file.</p>
+     *         <p>
+     *         The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>,
+     *         <code>y</code>, and <code>n</code>.
+     */
+
+    public Boolean getAddColumnName() {
+        return this.addColumnName;
+    }
+
+    /**
+     * <p>
+     * An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column name
+     * information to the .csv output file.
+     * </p>
+     * <p>
+     * The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>, <code>y</code>,
+     * and <code>n</code>.
+     * </p>
+     * 
+     * @param addColumnName
+     *        An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column
+     *        name information to the .csv output file.</p>
+     *        <p>
+     *        The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>,
+     *        <code>y</code>, and <code>n</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Settings withAddColumnName(Boolean addColumnName) {
+        setAddColumnName(addColumnName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column name
+     * information to the .csv output file.
+     * </p>
+     * <p>
+     * The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>, <code>y</code>,
+     * and <code>n</code>.
+     * </p>
+     * 
+     * @return An optional parameter that, when set to <code>true</code> or <code>y</code>, you can use to add column
+     *         name information to the .csv output file.</p>
+     *         <p>
+     *         The default value is <code>false</code>. Valid values are <code>true</code>, <code>false</code>,
+     *         <code>y</code>, and <code>n</code>.
+     */
+
+    public Boolean isAddColumnName() {
+        return this.addColumnName;
+    }
+
+    /**
+     * <p>
+     * Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3.
+     * </p>
+     * <p>
+     * When <code>CdcMaxBatchInterval</code> and <code>CdcMinFileSize</code> are both specified, the file write is
+     * triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     * </p>
+     * <p>
+     * The default value is 60 seconds.
+     * </p>
+     * 
+     * @param cdcMaxBatchInterval
+     *        Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3.</p>
+     *        <p>
+     *        When <code>CdcMaxBatchInterval</code> and <code>CdcMinFileSize</code> are both specified, the file write
+     *        is triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     *        </p>
+     *        <p>
+     *        The default value is 60 seconds.
+     */
+
+    public void setCdcMaxBatchInterval(Integer cdcMaxBatchInterval) {
+        this.cdcMaxBatchInterval = cdcMaxBatchInterval;
+    }
+
+    /**
+     * <p>
+     * Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3.
+     * </p>
+     * <p>
+     * When <code>CdcMaxBatchInterval</code> and <code>CdcMinFileSize</code> are both specified, the file write is
+     * triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     * </p>
+     * <p>
+     * The default value is 60 seconds.
+     * </p>
+     * 
+     * @return Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3.</p>
+     *         <p>
+     *         When <code>CdcMaxBatchInterval</code> and <code>CdcMinFileSize</code> are both specified, the file write
+     *         is triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     *         </p>
+     *         <p>
+     *         The default value is 60 seconds.
+     */
+
+    public Integer getCdcMaxBatchInterval() {
+        return this.cdcMaxBatchInterval;
+    }
+
+    /**
+     * <p>
+     * Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3.
+     * </p>
+     * <p>
+     * When <code>CdcMaxBatchInterval</code> and <code>CdcMinFileSize</code> are both specified, the file write is
+     * triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     * </p>
+     * <p>
+     * The default value is 60 seconds.
+     * </p>
+     * 
+     * @param cdcMaxBatchInterval
+     *        Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3.</p>
+     *        <p>
+     *        When <code>CdcMaxBatchInterval</code> and <code>CdcMinFileSize</code> are both specified, the file write
+     *        is triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     *        </p>
+     *        <p>
+     *        The default value is 60 seconds.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Settings withCdcMaxBatchInterval(Integer cdcMaxBatchInterval) {
+        setCdcMaxBatchInterval(cdcMaxBatchInterval);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Minimum file size, defined in megabytes, to reach for a file output to Amazon S3.
+     * </p>
+     * <p>
+     * When <code>CdcMinFileSize</code> and <code>CdcMaxBatchInterval</code> are both specified, the file write is
+     * triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     * </p>
+     * <p>
+     * The default value is 32 MB.
+     * </p>
+     * 
+     * @param cdcMinFileSize
+     *        Minimum file size, defined in megabytes, to reach for a file output to Amazon S3.</p>
+     *        <p>
+     *        When <code>CdcMinFileSize</code> and <code>CdcMaxBatchInterval</code> are both specified, the file write
+     *        is triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     *        </p>
+     *        <p>
+     *        The default value is 32 MB.
+     */
+
+    public void setCdcMinFileSize(Integer cdcMinFileSize) {
+        this.cdcMinFileSize = cdcMinFileSize;
+    }
+
+    /**
+     * <p>
+     * Minimum file size, defined in megabytes, to reach for a file output to Amazon S3.
+     * </p>
+     * <p>
+     * When <code>CdcMinFileSize</code> and <code>CdcMaxBatchInterval</code> are both specified, the file write is
+     * triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     * </p>
+     * <p>
+     * The default value is 32 MB.
+     * </p>
+     * 
+     * @return Minimum file size, defined in megabytes, to reach for a file output to Amazon S3.</p>
+     *         <p>
+     *         When <code>CdcMinFileSize</code> and <code>CdcMaxBatchInterval</code> are both specified, the file write
+     *         is triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     *         </p>
+     *         <p>
+     *         The default value is 32 MB.
+     */
+
+    public Integer getCdcMinFileSize() {
+        return this.cdcMinFileSize;
+    }
+
+    /**
+     * <p>
+     * Minimum file size, defined in megabytes, to reach for a file output to Amazon S3.
+     * </p>
+     * <p>
+     * When <code>CdcMinFileSize</code> and <code>CdcMaxBatchInterval</code> are both specified, the file write is
+     * triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     * </p>
+     * <p>
+     * The default value is 32 MB.
+     * </p>
+     * 
+     * @param cdcMinFileSize
+     *        Minimum file size, defined in megabytes, to reach for a file output to Amazon S3.</p>
+     *        <p>
+     *        When <code>CdcMinFileSize</code> and <code>CdcMaxBatchInterval</code> are both specified, the file write
+     *        is triggered by whichever parameter condition is met first within an DMS CloudFormation template.
+     *        </p>
+     *        <p>
+     *        The default value is 32 MB.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Settings withCdcMinFileSize(Integer cdcMinFileSize) {
+        setCdcMinFileSize(cdcMinFileSize);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An optional parameter that specifies how DMS treats null values. While handling the null value, you can use this
+     * parameter to pass a user-defined string as null when writing to the target. For example, when target columns are
+     * not nullable, you can use this option to differentiate between the empty string value and the null value. So, if
+     * you set this parameter value to the empty string ("" or ''), DMS treats the empty string as the null value
+     * instead of <code>NULL</code>.
+     * </p>
+     * <p>
+     * The default value is <code>NULL</code>. Valid values include any valid string.
+     * </p>
+     * 
+     * @param csvNullValue
+     *        An optional parameter that specifies how DMS treats null values. While handling the null value, you can
+     *        use this parameter to pass a user-defined string as null when writing to the target. For example, when
+     *        target columns are not nullable, you can use this option to differentiate between the empty string value
+     *        and the null value. So, if you set this parameter value to the empty string ("" or ''), DMS treats the
+     *        empty string as the null value instead of <code>NULL</code>.</p>
+     *        <p>
+     *        The default value is <code>NULL</code>. Valid values include any valid string.
+     */
+
+    public void setCsvNullValue(String csvNullValue) {
+        this.csvNullValue = csvNullValue;
+    }
+
+    /**
+     * <p>
+     * An optional parameter that specifies how DMS treats null values. While handling the null value, you can use this
+     * parameter to pass a user-defined string as null when writing to the target. For example, when target columns are
+     * not nullable, you can use this option to differentiate between the empty string value and the null value. So, if
+     * you set this parameter value to the empty string ("" or ''), DMS treats the empty string as the null value
+     * instead of <code>NULL</code>.
+     * </p>
+     * <p>
+     * The default value is <code>NULL</code>. Valid values include any valid string.
+     * </p>
+     * 
+     * @return An optional parameter that specifies how DMS treats null values. While handling the null value, you can
+     *         use this parameter to pass a user-defined string as null when writing to the target. For example, when
+     *         target columns are not nullable, you can use this option to differentiate between the empty string value
+     *         and the null value. So, if you set this parameter value to the empty string ("" or ''), DMS treats the
+     *         empty string as the null value instead of <code>NULL</code>.</p>
+     *         <p>
+     *         The default value is <code>NULL</code>. Valid values include any valid string.
+     */
+
+    public String getCsvNullValue() {
+        return this.csvNullValue;
+    }
+
+    /**
+     * <p>
+     * An optional parameter that specifies how DMS treats null values. While handling the null value, you can use this
+     * parameter to pass a user-defined string as null when writing to the target. For example, when target columns are
+     * not nullable, you can use this option to differentiate between the empty string value and the null value. So, if
+     * you set this parameter value to the empty string ("" or ''), DMS treats the empty string as the null value
+     * instead of <code>NULL</code>.
+     * </p>
+     * <p>
+     * The default value is <code>NULL</code>. Valid values include any valid string.
+     * </p>
+     * 
+     * @param csvNullValue
+     *        An optional parameter that specifies how DMS treats null values. While handling the null value, you can
+     *        use this parameter to pass a user-defined string as null when writing to the target. For example, when
+     *        target columns are not nullable, you can use this option to differentiate between the empty string value
+     *        and the null value. So, if you set this parameter value to the empty string ("" or ''), DMS treats the
+     *        empty string as the null value instead of <code>NULL</code>.</p>
+     *        <p>
+     *        The default value is <code>NULL</code>. Valid values include any valid string.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Settings withCsvNullValue(String csvNullValue) {
+        setCsvNullValue(csvNullValue);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When this value is set to 1, DMS ignores the first row header in a .csv file. A value of 1 turns on the feature;
+     * a value of 0 turns off the feature.
+     * </p>
+     * <p>
+     * The default is 0.
+     * </p>
+     * 
+     * @param ignoreHeaderRows
+     *        When this value is set to 1, DMS ignores the first row header in a .csv file. A value of 1 turns on the
+     *        feature; a value of 0 turns off the feature.</p>
+     *        <p>
+     *        The default is 0.
+     */
+
+    public void setIgnoreHeaderRows(Integer ignoreHeaderRows) {
+        this.ignoreHeaderRows = ignoreHeaderRows;
+    }
+
+    /**
+     * <p>
+     * When this value is set to 1, DMS ignores the first row header in a .csv file. A value of 1 turns on the feature;
+     * a value of 0 turns off the feature.
+     * </p>
+     * <p>
+     * The default is 0.
+     * </p>
+     * 
+     * @return When this value is set to 1, DMS ignores the first row header in a .csv file. A value of 1 turns on the
+     *         feature; a value of 0 turns off the feature.</p>
+     *         <p>
+     *         The default is 0.
+     */
+
+    public Integer getIgnoreHeaderRows() {
+        return this.ignoreHeaderRows;
+    }
+
+    /**
+     * <p>
+     * When this value is set to 1, DMS ignores the first row header in a .csv file. A value of 1 turns on the feature;
+     * a value of 0 turns off the feature.
+     * </p>
+     * <p>
+     * The default is 0.
+     * </p>
+     * 
+     * @param ignoreHeaderRows
+     *        When this value is set to 1, DMS ignores the first row header in a .csv file. A value of 1 turns on the
+     *        feature; a value of 0 turns off the feature.</p>
+     *        <p>
+     *        The default is 0.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Settings withIgnoreHeaderRows(Integer ignoreHeaderRows) {
+        setIgnoreHeaderRows(ignoreHeaderRows);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that specifies the maximum size (in KB) of any .csv file to be created while migrating to an S3 target
+     * during full load.
+     * </p>
+     * <p>
+     * The default value is 1,048,576 KB (1 GB). Valid values include 1 to 1,048,576.
+     * </p>
+     * 
+     * @param maxFileSize
+     *        A value that specifies the maximum size (in KB) of any .csv file to be created while migrating to an S3
+     *        target during full load.</p>
+     *        <p>
+     *        The default value is 1,048,576 KB (1 GB). Valid values include 1 to 1,048,576.
+     */
+
+    public void setMaxFileSize(Integer maxFileSize) {
+        this.maxFileSize = maxFileSize;
+    }
+
+    /**
+     * <p>
+     * A value that specifies the maximum size (in KB) of any .csv file to be created while migrating to an S3 target
+     * during full load.
+     * </p>
+     * <p>
+     * The default value is 1,048,576 KB (1 GB). Valid values include 1 to 1,048,576.
+     * </p>
+     * 
+     * @return A value that specifies the maximum size (in KB) of any .csv file to be created while migrating to an S3
+     *         target during full load.</p>
+     *         <p>
+     *         The default value is 1,048,576 KB (1 GB). Valid values include 1 to 1,048,576.
+     */
+
+    public Integer getMaxFileSize() {
+        return this.maxFileSize;
+    }
+
+    /**
+     * <p>
+     * A value that specifies the maximum size (in KB) of any .csv file to be created while migrating to an S3 target
+     * during full load.
+     * </p>
+     * <p>
+     * The default value is 1,048,576 KB (1 GB). Valid values include 1 to 1,048,576.
+     * </p>
+     * 
+     * @param maxFileSize
+     *        A value that specifies the maximum size (in KB) of any .csv file to be created while migrating to an S3
+     *        target during full load.</p>
+     *        <p>
+     *        The default value is 1,048,576 KB (1 GB). Valid values include 1 to 1,048,576.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Settings withMaxFileSize(Integer maxFileSize) {
+        setMaxFileSize(maxFileSize);
+        return this;
+    }
+
+    /**
+     * <p>
+     * For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double quotation
+     * mark has to be followed by an ending double quotation mark. This formatting complies with RFC 4180. When this
+     * value is set to <code>false</code> or <code>n</code>, string literals are copied to the target as is. In this
+     * case, a delimiter (row or column) signals the end of the field. Thus, you can't use a delimiter as part of the
+     * string, because it signals the end of the value.
+     * </p>
+     * <p>
+     * For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to Amazon
+     * S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code> using Amazon S3 as
+     * a target, if the data has quotation marks or newline characters in it, DMS encloses the entire column with an
+     * additional pair of double quotation marks ("). Every quotation mark within the data is repeated twice.
+     * </p>
+     * <p>
+     * The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>,
+     * <code>y</code>, and <code>n</code>.
+     * </p>
+     * 
+     * @param rfc4180
+     *        For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double
+     *        quotation mark has to be followed by an ending double quotation mark. This formatting complies with RFC
+     *        4180. When this value is set to <code>false</code> or <code>n</code>, string literals are copied to the
+     *        target as is. In this case, a delimiter (row or column) signals the end of the field. Thus, you can't use
+     *        a delimiter as part of the string, because it signals the end of the value.</p>
+     *        <p>
+     *        For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to
+     *        Amazon S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code> using
+     *        Amazon S3 as a target, if the data has quotation marks or newline characters in it, DMS encloses the
+     *        entire column with an additional pair of double quotation marks ("). Every quotation mark within the data
+     *        is repeated twice.
+     *        </p>
+     *        <p>
+     *        The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>,
+     *        <code>y</code>, and <code>n</code>.
+     */
+
+    public void setRfc4180(Boolean rfc4180) {
+        this.rfc4180 = rfc4180;
+    }
+
+    /**
+     * <p>
+     * For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double quotation
+     * mark has to be followed by an ending double quotation mark. This formatting complies with RFC 4180. When this
+     * value is set to <code>false</code> or <code>n</code>, string literals are copied to the target as is. In this
+     * case, a delimiter (row or column) signals the end of the field. Thus, you can't use a delimiter as part of the
+     * string, because it signals the end of the value.
+     * </p>
+     * <p>
+     * For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to Amazon
+     * S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code> using Amazon S3 as
+     * a target, if the data has quotation marks or newline characters in it, DMS encloses the entire column with an
+     * additional pair of double quotation marks ("). Every quotation mark within the data is repeated twice.
+     * </p>
+     * <p>
+     * The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>,
+     * <code>y</code>, and <code>n</code>.
+     * </p>
+     * 
+     * @return For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double
+     *         quotation mark has to be followed by an ending double quotation mark. This formatting complies with RFC
+     *         4180. When this value is set to <code>false</code> or <code>n</code>, string literals are copied to the
+     *         target as is. In this case, a delimiter (row or column) signals the end of the field. Thus, you can't use
+     *         a delimiter as part of the string, because it signals the end of the value.</p>
+     *         <p>
+     *         For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to
+     *         Amazon S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code>
+     *         using Amazon S3 as a target, if the data has quotation marks or newline characters in it, DMS encloses
+     *         the entire column with an additional pair of double quotation marks ("). Every quotation mark within the
+     *         data is repeated twice.
+     *         </p>
+     *         <p>
+     *         The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>,
+     *         <code>y</code>, and <code>n</code>.
+     */
+
+    public Boolean getRfc4180() {
+        return this.rfc4180;
+    }
+
+    /**
+     * <p>
+     * For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double quotation
+     * mark has to be followed by an ending double quotation mark. This formatting complies with RFC 4180. When this
+     * value is set to <code>false</code> or <code>n</code>, string literals are copied to the target as is. In this
+     * case, a delimiter (row or column) signals the end of the field. Thus, you can't use a delimiter as part of the
+     * string, because it signals the end of the value.
+     * </p>
+     * <p>
+     * For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to Amazon
+     * S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code> using Amazon S3 as
+     * a target, if the data has quotation marks or newline characters in it, DMS encloses the entire column with an
+     * additional pair of double quotation marks ("). Every quotation mark within the data is repeated twice.
+     * </p>
+     * <p>
+     * The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>,
+     * <code>y</code>, and <code>n</code>.
+     * </p>
+     * 
+     * @param rfc4180
+     *        For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double
+     *        quotation mark has to be followed by an ending double quotation mark. This formatting complies with RFC
+     *        4180. When this value is set to <code>false</code> or <code>n</code>, string literals are copied to the
+     *        target as is. In this case, a delimiter (row or column) signals the end of the field. Thus, you can't use
+     *        a delimiter as part of the string, because it signals the end of the value.</p>
+     *        <p>
+     *        For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to
+     *        Amazon S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code> using
+     *        Amazon S3 as a target, if the data has quotation marks or newline characters in it, DMS encloses the
+     *        entire column with an additional pair of double quotation marks ("). Every quotation mark within the data
+     *        is repeated twice.
+     *        </p>
+     *        <p>
+     *        The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>,
+     *        <code>y</code>, and <code>n</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Settings withRfc4180(Boolean rfc4180) {
+        setRfc4180(rfc4180);
+        return this;
+    }
+
+    /**
+     * <p>
+     * For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double quotation
+     * mark has to be followed by an ending double quotation mark. This formatting complies with RFC 4180. When this
+     * value is set to <code>false</code> or <code>n</code>, string literals are copied to the target as is. In this
+     * case, a delimiter (row or column) signals the end of the field. Thus, you can't use a delimiter as part of the
+     * string, because it signals the end of the value.
+     * </p>
+     * <p>
+     * For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to Amazon
+     * S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code> using Amazon S3 as
+     * a target, if the data has quotation marks or newline characters in it, DMS encloses the entire column with an
+     * additional pair of double quotation marks ("). Every quotation mark within the data is repeated twice.
+     * </p>
+     * <p>
+     * The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>,
+     * <code>y</code>, and <code>n</code>.
+     * </p>
+     * 
+     * @return For an S3 source, when this value is set to <code>true</code> or <code>y</code>, each leading double
+     *         quotation mark has to be followed by an ending double quotation mark. This formatting complies with RFC
+     *         4180. When this value is set to <code>false</code> or <code>n</code>, string literals are copied to the
+     *         target as is. In this case, a delimiter (row or column) signals the end of the field. Thus, you can't use
+     *         a delimiter as part of the string, because it signals the end of the value.</p>
+     *         <p>
+     *         For an S3 target, an optional parameter used to set behavior to comply with RFC 4180 for data migrated to
+     *         Amazon S3 using .csv file format only. When this value is set to <code>true</code> or <code>y</code>
+     *         using Amazon S3 as a target, if the data has quotation marks or newline characters in it, DMS encloses
+     *         the entire column with an additional pair of double quotation marks ("). Every quotation mark within the
+     *         data is repeated twice.
+     *         </p>
+     *         <p>
+     *         The default value is <code>true</code>. Valid values include <code>true</code>, <code>false</code>,
+     *         <code>y</code>, and <code>n</code>.
+     */
+
+    public Boolean isRfc4180() {
+        return this.rfc4180;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4545,7 +5397,23 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
         if (getPreserveTransactions() != null)
             sb.append("PreserveTransactions: ").append(getPreserveTransactions()).append(",");
         if (getCdcPath() != null)
-            sb.append("CdcPath: ").append(getCdcPath());
+            sb.append("CdcPath: ").append(getCdcPath()).append(",");
+        if (getCannedAclForObjects() != null)
+            sb.append("CannedAclForObjects: ").append(getCannedAclForObjects()).append(",");
+        if (getAddColumnName() != null)
+            sb.append("AddColumnName: ").append(getAddColumnName()).append(",");
+        if (getCdcMaxBatchInterval() != null)
+            sb.append("CdcMaxBatchInterval: ").append(getCdcMaxBatchInterval()).append(",");
+        if (getCdcMinFileSize() != null)
+            sb.append("CdcMinFileSize: ").append(getCdcMinFileSize()).append(",");
+        if (getCsvNullValue() != null)
+            sb.append("CsvNullValue: ").append(getCsvNullValue()).append(",");
+        if (getIgnoreHeaderRows() != null)
+            sb.append("IgnoreHeaderRows: ").append(getIgnoreHeaderRows()).append(",");
+        if (getMaxFileSize() != null)
+            sb.append("MaxFileSize: ").append(getMaxFileSize()).append(",");
+        if (getRfc4180() != null)
+            sb.append("Rfc4180: ").append(getRfc4180());
         sb.append("}");
         return sb.toString();
     }
@@ -4673,6 +5541,38 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCdcPath() != null && other.getCdcPath().equals(this.getCdcPath()) == false)
             return false;
+        if (other.getCannedAclForObjects() == null ^ this.getCannedAclForObjects() == null)
+            return false;
+        if (other.getCannedAclForObjects() != null && other.getCannedAclForObjects().equals(this.getCannedAclForObjects()) == false)
+            return false;
+        if (other.getAddColumnName() == null ^ this.getAddColumnName() == null)
+            return false;
+        if (other.getAddColumnName() != null && other.getAddColumnName().equals(this.getAddColumnName()) == false)
+            return false;
+        if (other.getCdcMaxBatchInterval() == null ^ this.getCdcMaxBatchInterval() == null)
+            return false;
+        if (other.getCdcMaxBatchInterval() != null && other.getCdcMaxBatchInterval().equals(this.getCdcMaxBatchInterval()) == false)
+            return false;
+        if (other.getCdcMinFileSize() == null ^ this.getCdcMinFileSize() == null)
+            return false;
+        if (other.getCdcMinFileSize() != null && other.getCdcMinFileSize().equals(this.getCdcMinFileSize()) == false)
+            return false;
+        if (other.getCsvNullValue() == null ^ this.getCsvNullValue() == null)
+            return false;
+        if (other.getCsvNullValue() != null && other.getCsvNullValue().equals(this.getCsvNullValue()) == false)
+            return false;
+        if (other.getIgnoreHeaderRows() == null ^ this.getIgnoreHeaderRows() == null)
+            return false;
+        if (other.getIgnoreHeaderRows() != null && other.getIgnoreHeaderRows().equals(this.getIgnoreHeaderRows()) == false)
+            return false;
+        if (other.getMaxFileSize() == null ^ this.getMaxFileSize() == null)
+            return false;
+        if (other.getMaxFileSize() != null && other.getMaxFileSize().equals(this.getMaxFileSize()) == false)
+            return false;
+        if (other.getRfc4180() == null ^ this.getRfc4180() == null)
+            return false;
+        if (other.getRfc4180() != null && other.getRfc4180().equals(this.getRfc4180()) == false)
+            return false;
         return true;
     }
 
@@ -4709,6 +5609,14 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCsvNoSupValue() == null) ? 0 : getCsvNoSupValue().hashCode());
         hashCode = prime * hashCode + ((getPreserveTransactions() == null) ? 0 : getPreserveTransactions().hashCode());
         hashCode = prime * hashCode + ((getCdcPath() == null) ? 0 : getCdcPath().hashCode());
+        hashCode = prime * hashCode + ((getCannedAclForObjects() == null) ? 0 : getCannedAclForObjects().hashCode());
+        hashCode = prime * hashCode + ((getAddColumnName() == null) ? 0 : getAddColumnName().hashCode());
+        hashCode = prime * hashCode + ((getCdcMaxBatchInterval() == null) ? 0 : getCdcMaxBatchInterval().hashCode());
+        hashCode = prime * hashCode + ((getCdcMinFileSize() == null) ? 0 : getCdcMinFileSize().hashCode());
+        hashCode = prime * hashCode + ((getCsvNullValue() == null) ? 0 : getCsvNullValue().hashCode());
+        hashCode = prime * hashCode + ((getIgnoreHeaderRows() == null) ? 0 : getIgnoreHeaderRows().hashCode());
+        hashCode = prime * hashCode + ((getMaxFileSize() == null) ? 0 : getMaxFileSize().hashCode());
+        hashCode = prime * hashCode + ((getRfc4180() == null) ? 0 : getRfc4180().hashCode());
         return hashCode;
     }
 

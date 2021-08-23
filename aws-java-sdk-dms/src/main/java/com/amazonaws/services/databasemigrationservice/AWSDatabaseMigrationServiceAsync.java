@@ -1282,8 +1282,8 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
-     * Returns the task assessment results from the Amazon S3 bucket that DMS creates in your account. This action
-     * always returns the latest results.
+     * Returns the task assessment results from the Amazon S3 bucket that DMS creates in your Amazon Web Services
+     * account. This action always returns the latest results.
      * </p>
      * <p>
      * For more information about DMS task assessments, see <a
@@ -1305,8 +1305,8 @@ public interface AWSDatabaseMigrationServiceAsync extends AWSDatabaseMigrationSe
 
     /**
      * <p>
-     * Returns the task assessment results from the Amazon S3 bucket that DMS creates in your account. This action
-     * always returns the latest results.
+     * Returns the task assessment results from the Amazon S3 bucket that DMS creates in your Amazon Web Services
+     * account. This action always returns the latest results.
      * </p>
      * <p>
      * For more information about DMS task assessments, see <a

@@ -31,15 +31,15 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
     private String accountId;
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      */
     private String backupJobId;
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      */
     private String backupVaultName;
@@ -120,8 +120,8 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
     private RecoveryPointCreator createdBy;
     /**
      * <p>
-     * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      */
     private String resourceType;
@@ -157,9 +157,9 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
     private java.util.Map<String, String> backupOptions;
     /**
      * <p>
-     * Represents the actual backup type selected for a backup job. For example, if a successful WindowsVSS backup was
-     * taken, <code>BackupType</code> returns "WindowsVSS". If <code>BackupType</code> is empty, then the backup type
-     * that was is a regular backup.
+     * Represents the actual backup type selected for a backup job. For example, if a successful Windows Volume Shadow
+     * Copy Service (VSS) backup was taken, <code>BackupType</code> returns <code>"WindowsVSS"</code>. If
+     * <code>BackupType</code> is empty, then the backup type was a regular backup.
      * </p>
      */
     private String backupType;
@@ -206,11 +206,11 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      * 
      * @param backupJobId
-     *        Uniquely identifies a request to AWS Backup to back up a resource.
+     *        Uniquely identifies a request to Backup to back up a resource.
      */
 
     public void setBackupJobId(String backupJobId) {
@@ -219,10 +219,10 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      * 
-     * @return Uniquely identifies a request to AWS Backup to back up a resource.
+     * @return Uniquely identifies a request to Backup to back up a resource.
      */
 
     public String getBackupJobId() {
@@ -231,11 +231,11 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      * 
      * @param backupJobId
-     *        Uniquely identifies a request to AWS Backup to back up a resource.
+     *        Uniquely identifies a request to Backup to back up a resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -247,14 +247,14 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      */
 
     public void setBackupVaultName(String backupVaultName) {
@@ -264,13 +264,13 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @return The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *         unique to the account used to create them and the AWS Region where they are created. They consist of
-     *         lowercase letters, numbers, and hyphens.
+     *         unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *         consist of lowercase letters, numbers, and hyphens.
      */
 
     public String getBackupVaultName() {
@@ -280,14 +280,14 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -811,13 +811,13 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume
-     *        or an Amazon Relational Database Service (Amazon RDS) database.
+     *        The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store
+     *        (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      */
 
     public void setResourceType(String resourceType) {
@@ -826,12 +826,12 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
-     * @return The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume
-     *         or an Amazon Relational Database Service (Amazon RDS) database.
+     * @return The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store
+     *         (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      */
 
     public String getResourceType() {
@@ -840,13 +840,13 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume or an
-     * Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS)
+     * volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource to be backed up; for example, an Amazon Elastic Block Store (Amazon EBS) volume
-     *        or an Amazon Relational Database Service (Amazon RDS) database.
+     *        The type of Amazon Web Services resource to be backed up; for example, an Amazon Elastic Block Store
+     *        (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1081,15 +1081,15 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Represents the actual backup type selected for a backup job. For example, if a successful WindowsVSS backup was
-     * taken, <code>BackupType</code> returns "WindowsVSS". If <code>BackupType</code> is empty, then the backup type
-     * that was is a regular backup.
+     * Represents the actual backup type selected for a backup job. For example, if a successful Windows Volume Shadow
+     * Copy Service (VSS) backup was taken, <code>BackupType</code> returns <code>"WindowsVSS"</code>. If
+     * <code>BackupType</code> is empty, then the backup type was a regular backup.
      * </p>
      * 
      * @param backupType
-     *        Represents the actual backup type selected for a backup job. For example, if a successful WindowsVSS
-     *        backup was taken, <code>BackupType</code> returns "WindowsVSS". If <code>BackupType</code> is empty, then
-     *        the backup type that was is a regular backup.
+     *        Represents the actual backup type selected for a backup job. For example, if a successful Windows Volume
+     *        Shadow Copy Service (VSS) backup was taken, <code>BackupType</code> returns <code>"WindowsVSS"</code>. If
+     *        <code>BackupType</code> is empty, then the backup type was a regular backup.
      */
 
     public void setBackupType(String backupType) {
@@ -1098,14 +1098,14 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Represents the actual backup type selected for a backup job. For example, if a successful WindowsVSS backup was
-     * taken, <code>BackupType</code> returns "WindowsVSS". If <code>BackupType</code> is empty, then the backup type
-     * that was is a regular backup.
+     * Represents the actual backup type selected for a backup job. For example, if a successful Windows Volume Shadow
+     * Copy Service (VSS) backup was taken, <code>BackupType</code> returns <code>"WindowsVSS"</code>. If
+     * <code>BackupType</code> is empty, then the backup type was a regular backup.
      * </p>
      * 
-     * @return Represents the actual backup type selected for a backup job. For example, if a successful WindowsVSS
-     *         backup was taken, <code>BackupType</code> returns "WindowsVSS". If <code>BackupType</code> is empty, then
-     *         the backup type that was is a regular backup.
+     * @return Represents the actual backup type selected for a backup job. For example, if a successful Windows Volume
+     *         Shadow Copy Service (VSS) backup was taken, <code>BackupType</code> returns <code>"WindowsVSS"</code>. If
+     *         <code>BackupType</code> is empty, then the backup type was a regular backup.
      */
 
     public String getBackupType() {
@@ -1114,15 +1114,15 @@ public class DescribeBackupJobResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Represents the actual backup type selected for a backup job. For example, if a successful WindowsVSS backup was
-     * taken, <code>BackupType</code> returns "WindowsVSS". If <code>BackupType</code> is empty, then the backup type
-     * that was is a regular backup.
+     * Represents the actual backup type selected for a backup job. For example, if a successful Windows Volume Shadow
+     * Copy Service (VSS) backup was taken, <code>BackupType</code> returns <code>"WindowsVSS"</code>. If
+     * <code>BackupType</code> is empty, then the backup type was a regular backup.
      * </p>
      * 
      * @param backupType
-     *        Represents the actual backup type selected for a backup job. For example, if a successful WindowsVSS
-     *        backup was taken, <code>BackupType</code> returns "WindowsVSS". If <code>BackupType</code> is empty, then
-     *        the backup type that was is a regular backup.
+     *        Represents the actual backup type selected for a backup job. For example, if a successful Windows Volume
+     *        Shadow Copy Service (VSS) backup was taken, <code>BackupType</code> returns <code>"WindowsVSS"</code>. If
+     *        <code>BackupType</code> is empty, then the backup type was a regular backup.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

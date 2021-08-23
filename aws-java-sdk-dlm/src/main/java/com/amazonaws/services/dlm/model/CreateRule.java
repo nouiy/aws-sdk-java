@@ -38,8 +38,8 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
      * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
      * </p>
      * <p>
-     * If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source
-     * resource.
+     * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
+     * Region as the source resource.
      * </p>
      * <p>
      * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
@@ -86,8 +86,8 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
      * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
      * </p>
      * <p>
-     * If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source
-     * resource.
+     * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
+     * Region as the source resource.
      * </p>
      * <p>
      * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
@@ -100,8 +100,8 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
      *        resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by
      *        default.</p>
      *        <p>
-     *        If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the
-     *        source resource.
+     *        If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the
+     *        same Region as the source resource.
      *        </p>
      *        <p>
      *        If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the
@@ -120,8 +120,8 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
      * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
      * </p>
      * <p>
-     * If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source
-     * resource.
+     * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
+     * Region as the source resource.
      * </p>
      * <p>
      * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
@@ -133,8 +133,8 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
      *         resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by
      *         default.</p>
      *         <p>
-     *         If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as
-     *         the source resource.
+     *         If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the
+     *         same Region as the source resource.
      *         </p>
      *         <p>
      *         If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the
@@ -153,8 +153,8 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
      * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
      * </p>
      * <p>
-     * If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source
-     * resource.
+     * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
+     * Region as the source resource.
      * </p>
      * <p>
      * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
@@ -167,8 +167,8 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
      *        resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by
      *        default.</p>
      *        <p>
-     *        If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the
-     *        source resource.
+     *        If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the
+     *        same Region as the source resource.
      *        </p>
      *        <p>
      *        If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the
@@ -189,8 +189,8 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
      * specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by default.
      * </p>
      * <p>
-     * If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source
-     * resource.
+     * If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the same
+     * Region as the source resource.
      * </p>
      * <p>
      * If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source
@@ -203,8 +203,8 @@ public class CreateRule implements Serializable, Cloneable, StructuredPojo {
      *        resource, specify <code>OUTPOST_LOCAL</code>. If you omit this parameter, <code>CLOUD</code> is used by
      *        default.</p>
      *        <p>
-     *        If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the
-     *        source resource.
+     *        If the policy targets resources in an Amazon Web Services Region, then you must create snapshots in the
+     *        same Region as the source resource.
      *        </p>
      *        <p>
      *        If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the

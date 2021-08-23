@@ -53,6 +53,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public BatchGetBlueprintsResult batchGetBlueprints(BatchGetBlueprintsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchGetCrawlersResult batchGetCrawlers(BatchGetCrawlersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +104,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public CheckSchemaVersionValidityResult checkSchemaVersionValidity(CheckSchemaVersionValidityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateBlueprintResult createBlueprint(CreateBlueprintRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -184,6 +194,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public CreateWorkflowResult createWorkflow(CreateWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteBlueprintResult deleteBlueprint(DeleteBlueprintRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -289,6 +304,21 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public DeleteWorkflowResult deleteWorkflow(DeleteWorkflowRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetBlueprintResult getBlueprint(GetBlueprintRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetBlueprintRunResult getBlueprintRun(GetBlueprintRunRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetBlueprintRunsResult getBlueprintRuns(GetBlueprintRunsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -558,6 +588,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public ListBlueprintsResult listBlueprints(ListBlueprintsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListCrawlersResult listCrawlers(ListCrawlersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -653,6 +688,11 @@ public class AbstractAWSGlue implements AWSGlue {
     }
 
     @Override
+    public StartBlueprintRunResult startBlueprintRun(StartBlueprintRunRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartCrawlerResult startCrawler(StartCrawlerRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -724,6 +764,11 @@ public class AbstractAWSGlue implements AWSGlue {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateBlueprintResult updateBlueprint(UpdateBlueprintRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

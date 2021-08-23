@@ -98,8 +98,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      */
     private String kmsKeyId;
@@ -316,6 +316,12 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     private String resourceIdentifier;
 
     private DocDbSettings docDbSettings;
+    /**
+     * <p>
+     * Settings in JSON format for the target Redis endpoint.
+     * </p>
+     */
+    private RedisSettings redisSettings;
 
     /**
      * <p>
@@ -778,8 +784,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
@@ -789,8 +795,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      *        encryption key.
      *        </p>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Region.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Region.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -805,8 +811,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @return An KMS key identifier that is used to encrypt the connection parameters for the endpoint.</p>
@@ -815,8 +821,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      *         encryption key.
      *         </p>
      *         <p>
-     *         KMS creates the default encryption key for your account. Your account has a different default encryption
-     *         key for each Region.
+     *         KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *         account has a different default encryption key for each Amazon Web Services Region.
      */
 
     public String getKmsKeyId() {
@@ -831,8 +837,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
@@ -842,8 +848,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      *        encryption key.
      *        </p>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Region.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2312,6 +2318,46 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Settings in JSON format for the target Redis endpoint.
+     * </p>
+     * 
+     * @param redisSettings
+     *        Settings in JSON format for the target Redis endpoint.
+     */
+
+    public void setRedisSettings(RedisSettings redisSettings) {
+        this.redisSettings = redisSettings;
+    }
+
+    /**
+     * <p>
+     * Settings in JSON format for the target Redis endpoint.
+     * </p>
+     * 
+     * @return Settings in JSON format for the target Redis endpoint.
+     */
+
+    public RedisSettings getRedisSettings() {
+        return this.redisSettings;
+    }
+
+    /**
+     * <p>
+     * Settings in JSON format for the target Redis endpoint.
+     * </p>
+     * 
+     * @param redisSettings
+     *        Settings in JSON format for the target Redis endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEndpointRequest withRedisSettings(RedisSettings redisSettings) {
+        setRedisSettings(redisSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2386,7 +2432,9 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getResourceIdentifier() != null)
             sb.append("ResourceIdentifier: ").append(getResourceIdentifier()).append(",");
         if (getDocDbSettings() != null)
-            sb.append("DocDbSettings: ").append(getDocDbSettings());
+            sb.append("DocDbSettings: ").append(getDocDbSettings()).append(",");
+        if (getRedisSettings() != null)
+            sb.append("RedisSettings: ").append(getRedisSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -2529,6 +2577,10 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getDocDbSettings() != null && other.getDocDbSettings().equals(this.getDocDbSettings()) == false)
             return false;
+        if (other.getRedisSettings() == null ^ this.getRedisSettings() == null)
+            return false;
+        if (other.getRedisSettings() != null && other.getRedisSettings().equals(this.getRedisSettings()) == false)
+            return false;
         return true;
     }
 
@@ -2569,6 +2621,7 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getIBMDb2Settings() == null) ? 0 : getIBMDb2Settings().hashCode());
         hashCode = prime * hashCode + ((getResourceIdentifier() == null) ? 0 : getResourceIdentifier().hashCode());
         hashCode = prime * hashCode + ((getDocDbSettings() == null) ? 0 : getDocDbSettings().hashCode());
+        hashCode = prime * hashCode + ((getRedisSettings() == null) ? 0 : getRedisSettings().hashCode());
         return hashCode;
     }
 

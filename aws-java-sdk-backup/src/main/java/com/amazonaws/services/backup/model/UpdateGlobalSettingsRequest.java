@@ -27,17 +27,21 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A list of resources along with the opt-in preferences for the account.
+     * A value for <code>isCrossAccountBackupEnabled</code> and a Region. Example:
+     * <code>update-global-settings --global-settings isCrossAccountBackupEnabled=false --region us-west-2</code>.
      * </p>
      */
     private java.util.Map<String, String> globalSettings;
 
     /**
      * <p>
-     * A list of resources along with the opt-in preferences for the account.
+     * A value for <code>isCrossAccountBackupEnabled</code> and a Region. Example:
+     * <code>update-global-settings --global-settings isCrossAccountBackupEnabled=false --region us-west-2</code>.
      * </p>
      * 
-     * @return A list of resources along with the opt-in preferences for the account.
+     * @return A value for <code>isCrossAccountBackupEnabled</code> and a Region. Example:
+     *         <code>update-global-settings --global-settings isCrossAccountBackupEnabled=false --region us-west-2</code>
+     *         .
      */
 
     public java.util.Map<String, String> getGlobalSettings() {
@@ -46,11 +50,14 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A list of resources along with the opt-in preferences for the account.
+     * A value for <code>isCrossAccountBackupEnabled</code> and a Region. Example:
+     * <code>update-global-settings --global-settings isCrossAccountBackupEnabled=false --region us-west-2</code>.
      * </p>
      * 
      * @param globalSettings
-     *        A list of resources along with the opt-in preferences for the account.
+     *        A value for <code>isCrossAccountBackupEnabled</code> and a Region. Example:
+     *        <code>update-global-settings --global-settings isCrossAccountBackupEnabled=false --region us-west-2</code>
+     *        .
      */
 
     public void setGlobalSettings(java.util.Map<String, String> globalSettings) {
@@ -59,11 +66,14 @@ public class UpdateGlobalSettingsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A list of resources along with the opt-in preferences for the account.
+     * A value for <code>isCrossAccountBackupEnabled</code> and a Region. Example:
+     * <code>update-global-settings --global-settings isCrossAccountBackupEnabled=false --region us-west-2</code>.
      * </p>
      * 
      * @param globalSettings
-     *        A list of resources along with the opt-in preferences for the account.
+     *        A value for <code>isCrossAccountBackupEnabled</code> and a Region. Example:
+     *        <code>update-global-settings --global-settings isCrossAccountBackupEnabled=false --region us-west-2</code>
+     *        .
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

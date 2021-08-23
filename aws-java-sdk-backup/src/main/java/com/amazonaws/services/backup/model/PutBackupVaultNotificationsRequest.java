@@ -28,8 +28,8 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      */
     private String backupVaultName;
@@ -44,20 +44,40 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <p>
      * An array of events that indicate the status of jobs to back up resources to the backup vault.
      * </p>
+     * <note>
+     * <p>
+     * The following events are supported:
+     * </p>
+     * <p>
+     * <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     * </p>
+     * <p>
+     * <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     * </p>
+     * <p>
+     * <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and <code>RECOVERY_POINT_MODIFIED</code>.
+     * </p>
+     * <p>
+     * To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     * </p>
+     * <p>
+     * Other events in the following list are deprecated.
+     * </p>
+     * </note>
      */
     private java.util.List<String> backupVaultEvents;
 
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      */
 
     public void setBackupVaultName(String backupVaultName) {
@@ -67,13 +87,13 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @return The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *         unique to the account used to create them and the AWS Region where they are created. They consist of
-     *         lowercase letters, numbers, and hyphens.
+     *         unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *         consist of lowercase letters, numbers, and hyphens.
      */
 
     public String getBackupVaultName() {
@@ -83,14 +103,14 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -149,8 +169,47 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <p>
      * An array of events that indicate the status of jobs to back up resources to the backup vault.
      * </p>
+     * <note>
+     * <p>
+     * The following events are supported:
+     * </p>
+     * <p>
+     * <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     * </p>
+     * <p>
+     * <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     * </p>
+     * <p>
+     * <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and <code>RECOVERY_POINT_MODIFIED</code>.
+     * </p>
+     * <p>
+     * To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     * </p>
+     * <p>
+     * Other events in the following list are deprecated.
+     * </p>
+     * </note>
      * 
-     * @return An array of events that indicate the status of jobs to back up resources to the backup vault.
+     * @return An array of events that indicate the status of jobs to back up resources to the backup vault.</p> <note>
+     *         <p>
+     *         The following events are supported:
+     *         </p>
+     *         <p>
+     *         <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     *         </p>
+     *         <p>
+     *         <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     *         </p>
+     *         <p>
+     *         <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and
+     *         <code>RECOVERY_POINT_MODIFIED</code>.
+     *         </p>
+     *         <p>
+     *         To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     *         </p>
+     *         <p>
+     *         Other events in the following list are deprecated.
+     *         </p>
      * @see BackupVaultEvent
      */
 
@@ -162,9 +221,48 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <p>
      * An array of events that indicate the status of jobs to back up resources to the backup vault.
      * </p>
+     * <note>
+     * <p>
+     * The following events are supported:
+     * </p>
+     * <p>
+     * <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     * </p>
+     * <p>
+     * <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     * </p>
+     * <p>
+     * <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and <code>RECOVERY_POINT_MODIFIED</code>.
+     * </p>
+     * <p>
+     * To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     * </p>
+     * <p>
+     * Other events in the following list are deprecated.
+     * </p>
+     * </note>
      * 
      * @param backupVaultEvents
-     *        An array of events that indicate the status of jobs to back up resources to the backup vault.
+     *        An array of events that indicate the status of jobs to back up resources to the backup vault.</p> <note>
+     *        <p>
+     *        The following events are supported:
+     *        </p>
+     *        <p>
+     *        <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     *        </p>
+     *        <p>
+     *        <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     *        </p>
+     *        <p>
+     *        <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and
+     *        <code>RECOVERY_POINT_MODIFIED</code>.
+     *        </p>
+     *        <p>
+     *        To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     *        </p>
+     *        <p>
+     *        Other events in the following list are deprecated.
+     *        </p>
      * @see BackupVaultEvent
      */
 
@@ -181,6 +279,26 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <p>
      * An array of events that indicate the status of jobs to back up resources to the backup vault.
      * </p>
+     * <note>
+     * <p>
+     * The following events are supported:
+     * </p>
+     * <p>
+     * <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     * </p>
+     * <p>
+     * <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     * </p>
+     * <p>
+     * <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and <code>RECOVERY_POINT_MODIFIED</code>.
+     * </p>
+     * <p>
+     * To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     * </p>
+     * <p>
+     * Other events in the following list are deprecated.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setBackupVaultEvents(java.util.Collection)} or {@link #withBackupVaultEvents(java.util.Collection)} if
@@ -188,7 +306,26 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param backupVaultEvents
-     *        An array of events that indicate the status of jobs to back up resources to the backup vault.
+     *        An array of events that indicate the status of jobs to back up resources to the backup vault.</p> <note>
+     *        <p>
+     *        The following events are supported:
+     *        </p>
+     *        <p>
+     *        <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     *        </p>
+     *        <p>
+     *        <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     *        </p>
+     *        <p>
+     *        <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and
+     *        <code>RECOVERY_POINT_MODIFIED</code>.
+     *        </p>
+     *        <p>
+     *        To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     *        </p>
+     *        <p>
+     *        Other events in the following list are deprecated.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BackupVaultEvent
      */
@@ -207,9 +344,48 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <p>
      * An array of events that indicate the status of jobs to back up resources to the backup vault.
      * </p>
+     * <note>
+     * <p>
+     * The following events are supported:
+     * </p>
+     * <p>
+     * <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     * </p>
+     * <p>
+     * <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     * </p>
+     * <p>
+     * <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and <code>RECOVERY_POINT_MODIFIED</code>.
+     * </p>
+     * <p>
+     * To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     * </p>
+     * <p>
+     * Other events in the following list are deprecated.
+     * </p>
+     * </note>
      * 
      * @param backupVaultEvents
-     *        An array of events that indicate the status of jobs to back up resources to the backup vault.
+     *        An array of events that indicate the status of jobs to back up resources to the backup vault.</p> <note>
+     *        <p>
+     *        The following events are supported:
+     *        </p>
+     *        <p>
+     *        <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     *        </p>
+     *        <p>
+     *        <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     *        </p>
+     *        <p>
+     *        <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and
+     *        <code>RECOVERY_POINT_MODIFIED</code>.
+     *        </p>
+     *        <p>
+     *        To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     *        </p>
+     *        <p>
+     *        Other events in the following list are deprecated.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BackupVaultEvent
      */
@@ -223,9 +399,48 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <p>
      * An array of events that indicate the status of jobs to back up resources to the backup vault.
      * </p>
+     * <note>
+     * <p>
+     * The following events are supported:
+     * </p>
+     * <p>
+     * <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     * </p>
+     * <p>
+     * <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     * </p>
+     * <p>
+     * <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and <code>RECOVERY_POINT_MODIFIED</code>.
+     * </p>
+     * <p>
+     * To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     * </p>
+     * <p>
+     * Other events in the following list are deprecated.
+     * </p>
+     * </note>
      * 
      * @param backupVaultEvents
-     *        An array of events that indicate the status of jobs to back up resources to the backup vault.
+     *        An array of events that indicate the status of jobs to back up resources to the backup vault.</p> <note>
+     *        <p>
+     *        The following events are supported:
+     *        </p>
+     *        <p>
+     *        <code>BACKUP_JOB_STARTED</code>, <code>BACKUP_JOB_COMPLETED</code>,
+     *        </p>
+     *        <p>
+     *        <code>COPY_JOB_STARTED</code>, <code>COPY_JOB_SUCCESSFUL</code>, <code>COPY_JOB_FAILED</code>,
+     *        </p>
+     *        <p>
+     *        <code>RESTORE_JOB_STARTED</code>, <code>RESTORE_JOB_COMPLETED</code>, and
+     *        <code>RECOVERY_POINT_MODIFIED</code>.
+     *        </p>
+     *        <p>
+     *        To find failed backup jobs, use <code>BACKUP_JOB_COMPLETED</code> and filter using event metadata.
+     *        </p>
+     *        <p>
+     *        Other events in the following list are deprecated.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BackupVaultEvent
      */

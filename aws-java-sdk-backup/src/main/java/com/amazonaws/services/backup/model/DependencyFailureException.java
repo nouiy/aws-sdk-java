@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A dependent AWS service or resource returned an error to the AWS Backup service, and the action cannot be completed.
+ * A dependent Amazon Web Services service or resource returned an error to the Backup service, and the action cannot be
+ * completed.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

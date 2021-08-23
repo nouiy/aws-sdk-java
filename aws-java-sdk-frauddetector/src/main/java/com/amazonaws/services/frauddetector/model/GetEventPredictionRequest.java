@@ -752,7 +752,7 @@ public class GetEventPredictionRequest extends com.amazonaws.AmazonWebServiceReq
         if (getEventTypeName() != null)
             sb.append("EventTypeName: ").append(getEventTypeName()).append(",");
         if (getEntities() != null)
-            sb.append("Entities: ").append(getEntities()).append(",");
+            sb.append("Entities: ").append("***Sensitive Data Redacted***").append(",");
         if (getEventTimestamp() != null)
             sb.append("EventTimestamp: ").append(getEventTimestamp()).append(",");
         if (getEventVariables() != null)

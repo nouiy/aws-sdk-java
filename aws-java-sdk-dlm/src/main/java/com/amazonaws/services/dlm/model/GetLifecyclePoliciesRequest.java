@@ -60,7 +60,7 @@ public class GetLifecyclePoliciesRequest extends com.amazonaws.AmazonWebServiceR
      * Tags are strings in the format <code>key=value</code>.
      * </p>
      * <p>
-     * These user-defined tags are added in addition to the AWS-added lifecycle tags.
+     * These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.
      * </p>
      */
     private java.util.List<String> tagsToAdd;
@@ -390,7 +390,7 @@ public class GetLifecyclePoliciesRequest extends com.amazonaws.AmazonWebServiceR
      * Tags are strings in the format <code>key=value</code>.
      * </p>
      * <p>
-     * These user-defined tags are added in addition to the AWS-added lifecycle tags.
+     * These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.
      * </p>
      * 
      * @return The tags to add to objects created by the policy.</p>
@@ -398,7 +398,7 @@ public class GetLifecyclePoliciesRequest extends com.amazonaws.AmazonWebServiceR
      *         Tags are strings in the format <code>key=value</code>.
      *         </p>
      *         <p>
-     *         These user-defined tags are added in addition to the AWS-added lifecycle tags.
+     *         These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.
      */
 
     public java.util.List<String> getTagsToAdd() {
@@ -413,7 +413,7 @@ public class GetLifecyclePoliciesRequest extends com.amazonaws.AmazonWebServiceR
      * Tags are strings in the format <code>key=value</code>.
      * </p>
      * <p>
-     * These user-defined tags are added in addition to the AWS-added lifecycle tags.
+     * These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.
      * </p>
      * 
      * @param tagsToAdd
@@ -422,7 +422,7 @@ public class GetLifecyclePoliciesRequest extends com.amazonaws.AmazonWebServiceR
      *        Tags are strings in the format <code>key=value</code>.
      *        </p>
      *        <p>
-     *        These user-defined tags are added in addition to the AWS-added lifecycle tags.
+     *        These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.
      */
 
     public void setTagsToAdd(java.util.Collection<String> tagsToAdd) {
@@ -442,7 +442,7 @@ public class GetLifecyclePoliciesRequest extends com.amazonaws.AmazonWebServiceR
      * Tags are strings in the format <code>key=value</code>.
      * </p>
      * <p>
-     * These user-defined tags are added in addition to the AWS-added lifecycle tags.
+     * These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -456,7 +456,7 @@ public class GetLifecyclePoliciesRequest extends com.amazonaws.AmazonWebServiceR
      *        Tags are strings in the format <code>key=value</code>.
      *        </p>
      *        <p>
-     *        These user-defined tags are added in addition to the AWS-added lifecycle tags.
+     *        These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -478,7 +478,7 @@ public class GetLifecyclePoliciesRequest extends com.amazonaws.AmazonWebServiceR
      * Tags are strings in the format <code>key=value</code>.
      * </p>
      * <p>
-     * These user-defined tags are added in addition to the AWS-added lifecycle tags.
+     * These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.
      * </p>
      * 
      * @param tagsToAdd
@@ -487,7 +487,7 @@ public class GetLifecyclePoliciesRequest extends com.amazonaws.AmazonWebServiceR
      *        Tags are strings in the format <code>key=value</code>.
      *        </p>
      *        <p>
-     *        These user-defined tags are added in addition to the AWS-added lifecycle tags.
+     *        These user-defined tags are added in addition to the Amazon Web Services-added lifecycle tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -119,8 +119,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      */
     private String kmsKeyId;
@@ -289,6 +289,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     private IBMDb2Settings iBMDb2Settings;
 
     private DocDbSettings docDbSettings;
+    /**
+     * <p>
+     * The settings for the Redis target endpoint. For more information, see the <code>RedisSettings</code> structure.
+     * </p>
+     */
+    private RedisSettings redisSettings;
 
     /**
      * <p>
@@ -773,8 +779,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
@@ -784,8 +790,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      *        encryption key.
      *        </p>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Region.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Region.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -800,8 +806,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @return An KMS key identifier that is used to encrypt the connection parameters for the endpoint.</p>
@@ -810,8 +816,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      *         encryption key.
      *         </p>
      *         <p>
-     *         KMS creates the default encryption key for your account. Your account has a different default encryption
-     *         key for each Region.
+     *         KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *         account has a different default encryption key for each Amazon Web Services Region.
      */
 
     public String getKmsKeyId() {
@@ -826,8 +832,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
@@ -837,8 +843,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      *        encryption key.
      *        </p>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Region.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1969,6 +1975,49 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The settings for the Redis target endpoint. For more information, see the <code>RedisSettings</code> structure.
+     * </p>
+     * 
+     * @param redisSettings
+     *        The settings for the Redis target endpoint. For more information, see the <code>RedisSettings</code>
+     *        structure.
+     */
+
+    public void setRedisSettings(RedisSettings redisSettings) {
+        this.redisSettings = redisSettings;
+    }
+
+    /**
+     * <p>
+     * The settings for the Redis target endpoint. For more information, see the <code>RedisSettings</code> structure.
+     * </p>
+     * 
+     * @return The settings for the Redis target endpoint. For more information, see the <code>RedisSettings</code>
+     *         structure.
+     */
+
+    public RedisSettings getRedisSettings() {
+        return this.redisSettings;
+    }
+
+    /**
+     * <p>
+     * The settings for the Redis target endpoint. For more information, see the <code>RedisSettings</code> structure.
+     * </p>
+     * 
+     * @param redisSettings
+     *        The settings for the Redis target endpoint. For more information, see the <code>RedisSettings</code>
+     *        structure.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Endpoint withRedisSettings(RedisSettings redisSettings) {
+        setRedisSettings(redisSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2045,7 +2094,9 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
         if (getIBMDb2Settings() != null)
             sb.append("IBMDb2Settings: ").append(getIBMDb2Settings()).append(",");
         if (getDocDbSettings() != null)
-            sb.append("DocDbSettings: ").append(getDocDbSettings());
+            sb.append("DocDbSettings: ").append(getDocDbSettings()).append(",");
+        if (getRedisSettings() != null)
+            sb.append("RedisSettings: ").append(getRedisSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -2192,6 +2243,10 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDocDbSettings() != null && other.getDocDbSettings().equals(this.getDocDbSettings()) == false)
             return false;
+        if (other.getRedisSettings() == null ^ this.getRedisSettings() == null)
+            return false;
+        if (other.getRedisSettings() != null && other.getRedisSettings().equals(this.getRedisSettings()) == false)
+            return false;
         return true;
     }
 
@@ -2233,6 +2288,7 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getMicrosoftSQLServerSettings() == null) ? 0 : getMicrosoftSQLServerSettings().hashCode());
         hashCode = prime * hashCode + ((getIBMDb2Settings() == null) ? 0 : getIBMDb2Settings().hashCode());
         hashCode = prime * hashCode + ((getDocDbSettings() == null) ? 0 : getDocDbSettings().hashCode());
+        hashCode = prime * hashCode + ((getRedisSettings() == null) ? 0 : getRedisSettings().hashCode());
         return hashCode;
     }
 

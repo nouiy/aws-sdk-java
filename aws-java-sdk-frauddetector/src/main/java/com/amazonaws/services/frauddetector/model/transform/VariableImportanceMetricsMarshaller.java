@@ -28,8 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class VariableImportanceMetricsMarshaller {
 
-    private static final MarshallingInfo<List> LOGITMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("LogitMetrics").build();
+    private static final MarshallingInfo<List> LOGODDSMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logOddsMetrics").build();
 
     private static final VariableImportanceMetricsMarshaller instance = new VariableImportanceMetricsMarshaller();
 
@@ -47,7 +47,7 @@ public class VariableImportanceMetricsMarshaller {
         }
 
         try {
-            protocolMarshaller.marshall(variableImportanceMetrics.getLogitMetrics(), LOGITMETRICS_BINDING);
+            protocolMarshaller.marshall(variableImportanceMetrics.getLogOddsMetrics(), LOGODDSMETRICS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

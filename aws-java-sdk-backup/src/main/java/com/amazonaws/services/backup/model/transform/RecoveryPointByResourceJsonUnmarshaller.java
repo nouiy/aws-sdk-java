@@ -60,6 +60,10 @@ public class RecoveryPointByResourceJsonUnmarshaller implements Unmarshaller<Rec
                     context.nextToken();
                     recoveryPointByResource.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("StatusMessage", targetDepth)) {
+                    context.nextToken();
+                    recoveryPointByResource.setStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("EncryptionKeyArn", targetDepth)) {
                     context.nextToken();
                     recoveryPointByResource.setEncryptionKeyArn(context.getUnmarshaller(String.class).unmarshall(context));

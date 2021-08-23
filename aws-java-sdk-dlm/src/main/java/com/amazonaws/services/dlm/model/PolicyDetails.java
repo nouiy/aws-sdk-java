@@ -34,7 +34,7 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify
      * <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify
      * <code>EVENT_BASED_POLICY </code> to create an event-based policy that performs specific actions when a defined
-     * event occurs in your AWS account.
+     * event occurs in your Amazon Web Services account.
      * </p>
      * <p>
      * The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.
@@ -55,8 +55,8 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> resourceTypes;
     /**
      * <p>
-     * The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     * <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
+     * The location of the resources to backup. If the source resources are located in an Amazon Web Services Region,
+     * specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account, specify
      * <code>OUTPOST</code>.
      * </p>
      * <p>
@@ -123,7 +123,7 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify
      * <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify
      * <code>EVENT_BASED_POLICY </code> to create an event-based policy that performs specific actions when a defined
-     * event occurs in your AWS account.
+     * event occurs in your Amazon Web Services account.
      * </p>
      * <p>
      * The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.
@@ -134,7 +134,7 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      *        <code>EBS_SNAPSHOT_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of Amazon EBS
      *        snapshots. Specify <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle
      *        of EBS-backed AMIs. Specify <code>EVENT_BASED_POLICY </code> to create an event-based policy that performs
-     *        specific actions when a defined event occurs in your AWS account.</p>
+     *        specific actions when a defined event occurs in your Amazon Web Services account.</p>
      *        <p>
      *        The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.
      * @see PolicyTypeValues
@@ -150,7 +150,7 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify
      * <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify
      * <code>EVENT_BASED_POLICY </code> to create an event-based policy that performs specific actions when a defined
-     * event occurs in your AWS account.
+     * event occurs in your Amazon Web Services account.
      * </p>
      * <p>
      * The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.
@@ -160,7 +160,7 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      *         <code>EBS_SNAPSHOT_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of Amazon
      *         EBS snapshots. Specify <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the
      *         lifecycle of EBS-backed AMIs. Specify <code>EVENT_BASED_POLICY </code> to create an event-based policy
-     *         that performs specific actions when a defined event occurs in your AWS account.</p>
+     *         that performs specific actions when a defined event occurs in your Amazon Web Services account.</p>
      *         <p>
      *         The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.
      * @see PolicyTypeValues
@@ -176,7 +176,7 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify
      * <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify
      * <code>EVENT_BASED_POLICY </code> to create an event-based policy that performs specific actions when a defined
-     * event occurs in your AWS account.
+     * event occurs in your Amazon Web Services account.
      * </p>
      * <p>
      * The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.
@@ -187,7 +187,7 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      *        <code>EBS_SNAPSHOT_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of Amazon EBS
      *        snapshots. Specify <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle
      *        of EBS-backed AMIs. Specify <code>EVENT_BASED_POLICY </code> to create an event-based policy that performs
-     *        specific actions when a defined event occurs in your AWS account.</p>
+     *        specific actions when a defined event occurs in your Amazon Web Services account.</p>
      *        <p>
      *        The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -205,7 +205,7 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots. Specify
      * <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of EBS-backed AMIs. Specify
      * <code>EVENT_BASED_POLICY </code> to create an event-based policy that performs specific actions when a defined
-     * event occurs in your AWS account.
+     * event occurs in your Amazon Web Services account.
      * </p>
      * <p>
      * The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.
@@ -216,7 +216,7 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      *        <code>EBS_SNAPSHOT_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle of Amazon EBS
      *        snapshots. Specify <code>IMAGE_MANAGEMENT</code> to create a lifecycle policy that manages the lifecycle
      *        of EBS-backed AMIs. Specify <code>EVENT_BASED_POLICY </code> to create an event-based policy that performs
-     *        specific actions when a defined event occurs in your AWS account.</p>
+     *        specific actions when a defined event occurs in your Amazon Web Services account.</p>
      *        <p>
      *        The default is <code>EBS_SNAPSHOT_MANAGEMENT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -383,8 +383,8 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     * <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
+     * The location of the resources to backup. If the source resources are located in an Amazon Web Services Region,
+     * specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account, specify
      * <code>OUTPOST</code>.
      * </p>
      * <p>
@@ -392,9 +392,9 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * with matching target tags across all of the Outposts in your account.
      * </p>
      * 
-     * @return The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     *         <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
-     *         <code>OUTPOST</code>. </p>
+     * @return The location of the resources to backup. If the source resources are located in an Amazon Web Services
+     *         Region, specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account,
+     *         specify <code>OUTPOST</code>. </p>
      *         <p>
      *         If you specify <code>OUTPOST</code>, Amazon Data Lifecycle Manager backs up all resources of the
      *         specified type with matching target tags across all of the Outposts in your account.
@@ -407,8 +407,8 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     * <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
+     * The location of the resources to backup. If the source resources are located in an Amazon Web Services Region,
+     * specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account, specify
      * <code>OUTPOST</code>.
      * </p>
      * <p>
@@ -417,9 +417,9 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param resourceLocations
-     *        The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     *        <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
-     *        <code>OUTPOST</code>. </p>
+     *        The location of the resources to backup. If the source resources are located in an Amazon Web Services
+     *        Region, specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account,
+     *        specify <code>OUTPOST</code>. </p>
      *        <p>
      *        If you specify <code>OUTPOST</code>, Amazon Data Lifecycle Manager backs up all resources of the specified
      *        type with matching target tags across all of the Outposts in your account.
@@ -437,8 +437,8 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     * <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
+     * The location of the resources to backup. If the source resources are located in an Amazon Web Services Region,
+     * specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account, specify
      * <code>OUTPOST</code>.
      * </p>
      * <p>
@@ -452,9 +452,9 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param resourceLocations
-     *        The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     *        <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
-     *        <code>OUTPOST</code>. </p>
+     *        The location of the resources to backup. If the source resources are located in an Amazon Web Services
+     *        Region, specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account,
+     *        specify <code>OUTPOST</code>. </p>
      *        <p>
      *        If you specify <code>OUTPOST</code>, Amazon Data Lifecycle Manager backs up all resources of the specified
      *        type with matching target tags across all of the Outposts in your account.
@@ -474,8 +474,8 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     * <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
+     * The location of the resources to backup. If the source resources are located in an Amazon Web Services Region,
+     * specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account, specify
      * <code>OUTPOST</code>.
      * </p>
      * <p>
@@ -484,9 +484,9 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param resourceLocations
-     *        The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     *        <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
-     *        <code>OUTPOST</code>. </p>
+     *        The location of the resources to backup. If the source resources are located in an Amazon Web Services
+     *        Region, specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account,
+     *        specify <code>OUTPOST</code>. </p>
      *        <p>
      *        If you specify <code>OUTPOST</code>, Amazon Data Lifecycle Manager backs up all resources of the specified
      *        type with matching target tags across all of the Outposts in your account.
@@ -501,8 +501,8 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     * <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
+     * The location of the resources to backup. If the source resources are located in an Amazon Web Services Region,
+     * specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account, specify
      * <code>OUTPOST</code>.
      * </p>
      * <p>
@@ -511,9 +511,9 @@ public class PolicyDetails implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param resourceLocations
-     *        The location of the resources to backup. If the source resources are located in an AWS Region, specify
-     *        <code>CLOUD</code>. If the source resources are located on an AWS Outpost in your account, specify
-     *        <code>OUTPOST</code>. </p>
+     *        The location of the resources to backup. If the source resources are located in an Amazon Web Services
+     *        Region, specify <code>CLOUD</code>. If the source resources are located on an Outpost in your account,
+     *        specify <code>OUTPOST</code>. </p>
      *        <p>
      *        If you specify <code>OUTPOST</code>, Amazon Data Lifecycle Manager backs up all resources of the specified
      *        type with matching target tags across all of the Outposts in your account.

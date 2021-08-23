@@ -28,9 +28,14 @@ public class ListRecoveryPointsByBackupVaultRequest extends com.amazonaws.Amazon
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
+     * <note>
+     * <p>
+     * Backup vault name might not be available when a supported service creates the backup.
+     * </p>
+     * </note>
      */
     private String backupVaultName;
     /**
@@ -81,14 +86,22 @@ public class ListRecoveryPointsByBackupVaultRequest extends com.amazonaws.Amazon
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
+     * <note>
+     * <p>
+     * Backup vault name might not be available when a supported service creates the backup.
+     * </p>
+     * </note>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.</p> <note>
+     *        <p>
+     *        Backup vault name might not be available when a supported service creates the backup.
+     *        </p>
      */
 
     public void setBackupVaultName(String backupVaultName) {
@@ -98,13 +111,21 @@ public class ListRecoveryPointsByBackupVaultRequest extends com.amazonaws.Amazon
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
+     * <note>
+     * <p>
+     * Backup vault name might not be available when a supported service creates the backup.
+     * </p>
+     * </note>
      * 
      * @return The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *         unique to the account used to create them and the AWS Region where they are created. They consist of
-     *         lowercase letters, numbers, and hyphens.
+     *         unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *         consist of lowercase letters, numbers, and hyphens.</p> <note>
+     *         <p>
+     *         Backup vault name might not be available when a supported service creates the backup.
+     *         </p>
      */
 
     public String getBackupVaultName() {
@@ -114,14 +135,22 @@ public class ListRecoveryPointsByBackupVaultRequest extends com.amazonaws.Amazon
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
+     * <note>
+     * <p>
+     * Backup vault name might not be available when a supported service creates the backup.
+     * </p>
+     * </note>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.</p> <note>
+     *        <p>
+     *        Backup vault name might not be available when a supported service creates the backup.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

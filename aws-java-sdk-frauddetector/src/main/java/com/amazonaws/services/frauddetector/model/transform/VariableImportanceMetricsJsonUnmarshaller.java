@@ -48,9 +48,9 @@ public class VariableImportanceMetricsJsonUnmarshaller implements Unmarshaller<V
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
-                if (context.testExpression("LogitMetrics", targetDepth)) {
+                if (context.testExpression("logOddsMetrics", targetDepth)) {
                     context.nextToken();
-                    variableImportanceMetrics.setLogitMetrics(new ListUnmarshaller<LogitMetric>(LogitMetricJsonUnmarshaller.getInstance())
+                    variableImportanceMetrics.setLogOddsMetrics(new ListUnmarshaller<LogOddsMetric>(LogOddsMetricJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }

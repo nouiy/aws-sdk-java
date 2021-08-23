@@ -180,6 +180,10 @@ public class EndpointJsonUnmarshaller implements Unmarshaller<Endpoint, JsonUnma
                     context.nextToken();
                     endpoint.setDocDbSettings(DocDbSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RedisSettings", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setRedisSettings(RedisSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

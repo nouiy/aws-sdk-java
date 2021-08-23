@@ -91,7 +91,8 @@ public class DocDbSettings implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The KMS key identifier that is used to encrypt the content on the replication instance. If you don't specify a
      * value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key. KMS creates the default
-     * encryption key for your account. Your account has a different default encryption key for each Region.
+     * encryption key for your Amazon Web Services account. Your Amazon Web Services account has a different default
+     * encryption key for each Amazon Web Services Region.
      * </p>
      */
     private String kmsKeyId;
@@ -551,14 +552,15 @@ public class DocDbSettings implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The KMS key identifier that is used to encrypt the content on the replication instance. If you don't specify a
      * value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key. KMS creates the default
-     * encryption key for your account. Your account has a different default encryption key for each Region.
+     * encryption key for your Amazon Web Services account. Your Amazon Web Services account has a different default
+     * encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
      *        The KMS key identifier that is used to encrypt the content on the replication instance. If you don't
      *        specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key. KMS
-     *        creates the default encryption key for your account. Your account has a different default encryption key
-     *        for each Region.
+     *        creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account
+     *        has a different default encryption key for each Amazon Web Services Region.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -569,13 +571,14 @@ public class DocDbSettings implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The KMS key identifier that is used to encrypt the content on the replication instance. If you don't specify a
      * value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key. KMS creates the default
-     * encryption key for your account. Your account has a different default encryption key for each Region.
+     * encryption key for your Amazon Web Services account. Your Amazon Web Services account has a different default
+     * encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @return The KMS key identifier that is used to encrypt the content on the replication instance. If you don't
      *         specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key. KMS
-     *         creates the default encryption key for your account. Your account has a different default encryption key
-     *         for each Region.
+     *         creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account
+     *         has a different default encryption key for each Amazon Web Services Region.
      */
 
     public String getKmsKeyId() {
@@ -586,14 +589,15 @@ public class DocDbSettings implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The KMS key identifier that is used to encrypt the content on the replication instance. If you don't specify a
      * value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key. KMS creates the default
-     * encryption key for your account. Your account has a different default encryption key for each Region.
+     * encryption key for your Amazon Web Services account. Your Amazon Web Services account has a different default
+     * encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
      *        The KMS key identifier that is used to encrypt the content on the replication instance. If you don't
      *        specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key. KMS
-     *        creates the default encryption key for your account. Your account has a different default encryption key
-     *        for each Region.
+     *        creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account
+     *        has a different default encryption key for each Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

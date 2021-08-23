@@ -160,6 +160,38 @@ public class S3SettingsJsonUnmarshaller implements Unmarshaller<S3Settings, Json
                     context.nextToken();
                     s3Settings.setCdcPath(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CannedAclForObjects", targetDepth)) {
+                    context.nextToken();
+                    s3Settings.setCannedAclForObjects(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AddColumnName", targetDepth)) {
+                    context.nextToken();
+                    s3Settings.setAddColumnName(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("CdcMaxBatchInterval", targetDepth)) {
+                    context.nextToken();
+                    s3Settings.setCdcMaxBatchInterval(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("CdcMinFileSize", targetDepth)) {
+                    context.nextToken();
+                    s3Settings.setCdcMinFileSize(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("CsvNullValue", targetDepth)) {
+                    context.nextToken();
+                    s3Settings.setCsvNullValue(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("IgnoreHeaderRows", targetDepth)) {
+                    context.nextToken();
+                    s3Settings.setIgnoreHeaderRows(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("MaxFileSize", targetDepth)) {
+                    context.nextToken();
+                    s3Settings.setMaxFileSize(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("Rfc4180", targetDepth)) {
+                    context.nextToken();
+                    s3Settings.setRfc4180(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

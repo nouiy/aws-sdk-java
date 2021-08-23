@@ -92,6 +92,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetBlueprintsResult> batchGetBlueprintsAsync(BatchGetBlueprintsRequest request) {
+
+        return batchGetBlueprintsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetBlueprintsResult> batchGetBlueprintsAsync(BatchGetBlueprintsRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchGetBlueprintsRequest, BatchGetBlueprintsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetCrawlersResult> batchGetCrawlersAsync(BatchGetCrawlersRequest request) {
 
         return batchGetCrawlersAsync(request, null);
@@ -217,6 +230,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<CheckSchemaVersionValidityResult> checkSchemaVersionValidityAsync(CheckSchemaVersionValidityRequest request,
             com.amazonaws.handlers.AsyncHandler<CheckSchemaVersionValidityRequest, CheckSchemaVersionValidityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBlueprintResult> createBlueprintAsync(CreateBlueprintRequest request) {
+
+        return createBlueprintAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBlueprintResult> createBlueprintAsync(CreateBlueprintRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateBlueprintRequest, CreateBlueprintResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -438,6 +464,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<CreateWorkflowResult> createWorkflowAsync(CreateWorkflowRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateWorkflowRequest, CreateWorkflowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBlueprintResult> deleteBlueprintAsync(DeleteBlueprintRequest request) {
+
+        return deleteBlueprintAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBlueprintResult> deleteBlueprintAsync(DeleteBlueprintRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteBlueprintRequest, DeleteBlueprintResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -713,6 +752,45 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteWorkflowRequest, DeleteWorkflowResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintResult> getBlueprintAsync(GetBlueprintRequest request) {
+
+        return getBlueprintAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintResult> getBlueprintAsync(GetBlueprintRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetBlueprintRequest, GetBlueprintResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintRunResult> getBlueprintRunAsync(GetBlueprintRunRequest request) {
+
+        return getBlueprintRunAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintRunResult> getBlueprintRunAsync(GetBlueprintRunRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetBlueprintRunRequest, GetBlueprintRunResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintRunsResult> getBlueprintRunsAsync(GetBlueprintRunsRequest request) {
+
+        return getBlueprintRunsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintRunsResult> getBlueprintRunsAsync(GetBlueprintRunsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetBlueprintRunsRequest, GetBlueprintRunsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1411,6 +1489,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<ListBlueprintsResult> listBlueprintsAsync(ListBlueprintsRequest request) {
+
+        return listBlueprintsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBlueprintsResult> listBlueprintsAsync(ListBlueprintsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListBlueprintsRequest, ListBlueprintsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCrawlersResult> listCrawlersAsync(ListCrawlersRequest request) {
 
         return listCrawlersAsync(request, null);
@@ -1660,6 +1751,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     }
 
     @Override
+    public java.util.concurrent.Future<StartBlueprintRunResult> startBlueprintRunAsync(StartBlueprintRunRequest request) {
+
+        return startBlueprintRunAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBlueprintRunResult> startBlueprintRunAsync(StartBlueprintRunRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartBlueprintRunRequest, StartBlueprintRunResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartCrawlerResult> startCrawlerAsync(StartCrawlerRequest request) {
 
         return startCrawlerAsync(request, null);
@@ -1852,6 +1956,19 @@ public class AbstractAWSGlueAsync extends AbstractAWSGlue implements AWSGlueAsyn
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBlueprintResult> updateBlueprintAsync(UpdateBlueprintRequest request) {
+
+        return updateBlueprintAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBlueprintResult> updateBlueprintAsync(UpdateBlueprintRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateBlueprintRequest, UpdateBlueprintResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -35,6 +35,11 @@ public class ListRecoveryPointsByResourceResult extends com.amazonaws.AmazonWebS
      * <p>
      * An array of objects that contain detailed information about recovery points of the specified resource type.
      * </p>
+     * <note>
+     * <p>
+     * Only Amazon EFS and Amazon EC2 recovery points return BackupVaultName.
+     * </p>
+     * </note>
      */
     private java.util.List<RecoveryPointByResource> recoveryPoints;
 
@@ -94,9 +99,17 @@ public class ListRecoveryPointsByResourceResult extends com.amazonaws.AmazonWebS
      * <p>
      * An array of objects that contain detailed information about recovery points of the specified resource type.
      * </p>
+     * <note>
+     * <p>
+     * Only Amazon EFS and Amazon EC2 recovery points return BackupVaultName.
+     * </p>
+     * </note>
      * 
      * @return An array of objects that contain detailed information about recovery points of the specified resource
-     *         type.
+     *         type.</p> <note>
+     *         <p>
+     *         Only Amazon EFS and Amazon EC2 recovery points return BackupVaultName.
+     *         </p>
      */
 
     public java.util.List<RecoveryPointByResource> getRecoveryPoints() {
@@ -107,10 +120,18 @@ public class ListRecoveryPointsByResourceResult extends com.amazonaws.AmazonWebS
      * <p>
      * An array of objects that contain detailed information about recovery points of the specified resource type.
      * </p>
+     * <note>
+     * <p>
+     * Only Amazon EFS and Amazon EC2 recovery points return BackupVaultName.
+     * </p>
+     * </note>
      * 
      * @param recoveryPoints
      *        An array of objects that contain detailed information about recovery points of the specified resource
-     *        type.
+     *        type.</p> <note>
+     *        <p>
+     *        Only Amazon EFS and Amazon EC2 recovery points return BackupVaultName.
+     *        </p>
      */
 
     public void setRecoveryPoints(java.util.Collection<RecoveryPointByResource> recoveryPoints) {
@@ -126,6 +147,11 @@ public class ListRecoveryPointsByResourceResult extends com.amazonaws.AmazonWebS
      * <p>
      * An array of objects that contain detailed information about recovery points of the specified resource type.
      * </p>
+     * <note>
+     * <p>
+     * Only Amazon EFS and Amazon EC2 recovery points return BackupVaultName.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRecoveryPoints(java.util.Collection)} or {@link #withRecoveryPoints(java.util.Collection)} if you want
@@ -134,7 +160,10 @@ public class ListRecoveryPointsByResourceResult extends com.amazonaws.AmazonWebS
      * 
      * @param recoveryPoints
      *        An array of objects that contain detailed information about recovery points of the specified resource
-     *        type.
+     *        type.</p> <note>
+     *        <p>
+     *        Only Amazon EFS and Amazon EC2 recovery points return BackupVaultName.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -152,10 +181,18 @@ public class ListRecoveryPointsByResourceResult extends com.amazonaws.AmazonWebS
      * <p>
      * An array of objects that contain detailed information about recovery points of the specified resource type.
      * </p>
+     * <note>
+     * <p>
+     * Only Amazon EFS and Amazon EC2 recovery points return BackupVaultName.
+     * </p>
+     * </note>
      * 
      * @param recoveryPoints
      *        An array of objects that contain detailed information about recovery points of the specified resource
-     *        type.
+     *        type.</p> <note>
+     *        <p>
+     *        Only Amazon EFS and Amazon EC2 recovery points return BackupVaultName.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

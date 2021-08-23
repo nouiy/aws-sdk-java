@@ -27,24 +27,24 @@ public class DisassociateRecoveryPointRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The unique name of an AWS Backup vault. Required.
+     * The unique name of an Backup vault.
      * </p>
      */
     private String backupVaultName;
     /**
      * <p>
-     * An Amazon Resource Name (ARN) that uniquely identifies an AWS Backup recovery point. Required.
+     * An Amazon Resource Name (ARN) that uniquely identifies an Backup recovery point.
      * </p>
      */
     private String recoveryPointArn;
 
     /**
      * <p>
-     * The unique name of an AWS Backup vault. Required.
+     * The unique name of an Backup vault.
      * </p>
      * 
      * @param backupVaultName
-     *        The unique name of an AWS Backup vault. Required.
+     *        The unique name of an Backup vault.
      */
 
     public void setBackupVaultName(String backupVaultName) {
@@ -53,10 +53,10 @@ public class DisassociateRecoveryPointRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The unique name of an AWS Backup vault. Required.
+     * The unique name of an Backup vault.
      * </p>
      * 
-     * @return The unique name of an AWS Backup vault. Required.
+     * @return The unique name of an Backup vault.
      */
 
     public String getBackupVaultName() {
@@ -65,11 +65,11 @@ public class DisassociateRecoveryPointRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The unique name of an AWS Backup vault. Required.
+     * The unique name of an Backup vault.
      * </p>
      * 
      * @param backupVaultName
-     *        The unique name of an AWS Backup vault. Required.
+     *        The unique name of an Backup vault.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class DisassociateRecoveryPointRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An Amazon Resource Name (ARN) that uniquely identifies an AWS Backup recovery point. Required.
+     * An Amazon Resource Name (ARN) that uniquely identifies an Backup recovery point.
      * </p>
      * 
      * @param recoveryPointArn
-     *        An Amazon Resource Name (ARN) that uniquely identifies an AWS Backup recovery point. Required.
+     *        An Amazon Resource Name (ARN) that uniquely identifies an Backup recovery point.
      */
 
     public void setRecoveryPointArn(String recoveryPointArn) {
@@ -93,10 +93,10 @@ public class DisassociateRecoveryPointRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An Amazon Resource Name (ARN) that uniquely identifies an AWS Backup recovery point. Required.
+     * An Amazon Resource Name (ARN) that uniquely identifies an Backup recovery point.
      * </p>
      * 
-     * @return An Amazon Resource Name (ARN) that uniquely identifies an AWS Backup recovery point. Required.
+     * @return An Amazon Resource Name (ARN) that uniquely identifies an Backup recovery point.
      */
 
     public String getRecoveryPointArn() {
@@ -105,11 +105,11 @@ public class DisassociateRecoveryPointRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An Amazon Resource Name (ARN) that uniquely identifies an AWS Backup recovery point. Required.
+     * An Amazon Resource Name (ARN) that uniquely identifies an Backup recovery point.
      * </p>
      * 
      * @param recoveryPointArn
-     *        An Amazon Resource Name (ARN) that uniquely identifies an AWS Backup recovery point. Required.
+     *        An Amazon Resource Name (ARN) that uniquely identifies an Backup recovery point.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

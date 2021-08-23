@@ -92,6 +92,8 @@ public class CreateEndpointRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceIdentifier").build();
     private static final MarshallingInfo<StructuredPojo> DOCDBSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DocDbSettings").build();
+    private static final MarshallingInfo<StructuredPojo> REDISSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RedisSettings").build();
 
     private static final CreateEndpointRequestMarshaller instance = new CreateEndpointRequestMarshaller();
 
@@ -141,6 +143,7 @@ public class CreateEndpointRequestMarshaller {
             protocolMarshaller.marshall(createEndpointRequest.getIBMDb2Settings(), IBMDB2SETTINGS_BINDING);
             protocolMarshaller.marshall(createEndpointRequest.getResourceIdentifier(), RESOURCEIDENTIFIER_BINDING);
             protocolMarshaller.marshall(createEndpointRequest.getDocDbSettings(), DOCDBSETTINGS_BINDING);
+            protocolMarshaller.marshall(createEndpointRequest.getRedisSettings(), REDISSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -201,11 +201,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -253,12 +257,16 @@
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -299,7 +307,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -355,6 +363,10 @@
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
         "httpStatusCode" : null
@@ -397,11 +409,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -544,11 +560,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -646,7 +666,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -708,6 +728,10 @@
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -808,6 +832,10 @@
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
         "httpStatusCode" : null
@@ -906,6 +934,10 @@
         "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
@@ -955,6 +987,10 @@
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
         "httpStatusCode" : null
@@ -1002,6 +1038,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ConflictException",
@@ -1205,7 +1245,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -1258,11 +1298,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1307,11 +1351,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1356,7 +1404,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -1409,7 +1457,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -1462,11 +1510,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1511,7 +1563,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -1528,6 +1580,10 @@
       }, {
         "exceptionName" : "ConflictException",
         "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ResourceUnavailableException",
+        "documentation" : "<p> An exception indicating that the attached customer-owned (external) model threw an exception when Amazon Fraud Detector invoked the model. </p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -1568,11 +1624,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1617,7 +1677,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -1666,11 +1726,15 @@
       "endpointTrait" : null,
       "exceptions" : [ {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1715,11 +1779,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1764,11 +1832,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1802,7 +1874,7 @@
       "asyncReturnType" : "GetModelsResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Gets one or more models. Gets all models for the AWS account if no model type and no model id provided. Gets all models for the AWS account and model type, if the model type is specified but model id is not provided. Gets a specific model if (model type, model id) tuple is specified. </p> <p>This is a paginated API. If you provide a null <code>maxResults</code>, this action retrieves a maximum of 10 records per page. If you provide a <code>maxResults</code>, the value must be between 1 and 10. To get the next page results, provide the pagination token from the response as part of your request. A null pagination token fetches the records from the beginning.</p>",
+      "documentation" : "<p>Gets one or more models. Gets all models for the Amazon Web Services account if no model type and no model id provided. Gets all models for the Amazon Web Services account and model type, if the model type is specified but model id is not provided. Gets a specific model if (model type, model id) tuple is specified. </p> <p>This is a paginated API. If you provide a null <code>maxResults</code>, this action retrieves a maximum of 10 records per page. If you provide a <code>maxResults</code>, the value must be between 1 and 10. To get the next page results, provide the pagination token from the response as part of your request. A null pagination token fetches the records from the beginning.</p>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -1813,11 +1885,15 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -1862,7 +1938,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -1915,7 +1991,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -1968,7 +2044,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -2021,7 +2097,11 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2076,6 +2156,10 @@
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -2118,8 +2202,16 @@
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2163,8 +2255,16 @@
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2215,6 +2315,10 @@
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -2254,15 +2358,23 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2306,8 +2418,16 @@
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2358,6 +2478,10 @@
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -2397,7 +2521,11 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2442,7 +2570,11 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
@@ -2487,7 +2619,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -2500,6 +2632,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2550,6 +2686,10 @@
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -2589,7 +2729,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -2602,6 +2742,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2642,15 +2786,23 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2691,15 +2843,23 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2740,15 +2900,23 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>An exception indicating an internal server error.</p>",
         "httpStatusCode" : null
       }, {
+        "exceptionName" : "ThrottlingException",
+        "documentation" : "<p>An exception indicating a throttling error.</p>",
+        "httpStatusCode" : null
+      }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2789,7 +2957,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -2802,6 +2970,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2842,7 +3014,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -2855,6 +3027,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -2895,7 +3071,7 @@
         "httpStatusCode" : null
       }, {
         "exceptionName" : "ResourceNotFoundException",
-        "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+        "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
         "httpStatusCode" : null
       }, {
         "exceptionName" : "InternalServerException",
@@ -2908,6 +3084,10 @@
       }, {
         "exceptionName" : "AccessDeniedException",
         "documentation" : "<p>An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your account.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>An exception indicating there was a conflict during a delete operation. The following delete operations can cause a conflict exception:</p> <ul> <li> <p>DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or <code>DetectorVersions</code>.</p> </li> <li> <p>DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is <code>ACTIVE</code>.</p> </li> <li> <p>DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.</p> </li> </ul>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -36992,7 +37172,7 @@
             "marshallingTargetClass" : "StructuredPojo",
             "marshallingType" : "STRUCTURED",
             "name" : "Member",
-            "sensitive" : false,
+            "sensitive" : true,
             "setterDocumentation" : "/**\n@param member */",
             "setterMethodName" : "setMember",
             "setterModel" : {
@@ -37037,7 +37217,7 @@
         "marshallingTargetClass" : "List",
         "marshallingType" : "LIST",
         "name" : "Entities",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>The entity type (associated with the detector's event type) and specific entity ID representing who performed the event. If an entity id is not available, use \"UNKNOWN.\"</p>\n@param entities The entity type (associated with the detector's event type) and specific entity ID representing who performed the event. If an entity id is not available, use \"UNKNOWN.\"*/",
         "setterMethodName" : "setEntities",
         "setterModel" : {
@@ -37066,7 +37246,7 @@
         "xmlNameSpaceUri" : null
       }, {
         "c2jName" : "eventTimestamp",
-        "c2jShape" : "string",
+        "c2jShape" : "utcTimestampISO8601",
         "deprecated" : false,
         "documentation" : "<p>Timestamp that defines when the event under evaluation occurred.</p>",
         "endpointDiscoveryId" : false,
@@ -37662,7 +37842,7 @@
               "marshallingTargetClass" : "StructuredPojo",
               "marshallingType" : "STRUCTURED",
               "name" : "Member",
-              "sensitive" : false,
+              "sensitive" : true,
               "setterDocumentation" : "/**\n@param member */",
               "setterMethodName" : "setMember",
               "setterModel" : {
@@ -37707,7 +37887,7 @@
           "marshallingTargetClass" : "List",
           "marshallingType" : "LIST",
           "name" : "Entities",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>The entity type (associated with the detector's event type) and specific entity ID representing who performed the event. If an entity id is not available, use \"UNKNOWN.\"</p>\n@param entities The entity type (associated with the detector's event type) and specific entity ID representing who performed the event. If an entity id is not available, use \"UNKNOWN.\"*/",
           "setterMethodName" : "setEntities",
           "setterModel" : {
@@ -37807,7 +37987,7 @@
         },
         "EventTimestamp" : {
           "c2jName" : "eventTimestamp",
-          "c2jShape" : "string",
+          "c2jShape" : "utcTimestampISO8601",
           "deprecated" : false,
           "documentation" : "<p>Timestamp that defines when the event under evaluation occurred.</p>",
           "endpointDiscoveryId" : false,
@@ -38450,12 +38630,12 @@
         "c2jName" : "ruleResults",
         "c2jShape" : "ListOfRuleResults",
         "deprecated" : false,
-        "documentation" : "<p>The results.</p>",
+        "documentation" : "<p>The results from the rules.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The results.</p>\n@param ruleResults The results.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The results from the rules.</p>\n@param ruleResults The results from the rules.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withRuleResults",
-        "getterDocumentation" : "/**<p>The results.</p>\n@return The results.*/",
+        "getterDocumentation" : "/**<p>The results from the rules.</p>\n@return The results from the rules.*/",
         "getterMethodName" : "getRuleResults",
         "getterModel" : {
           "returnType" : "java.util.List<RuleResult>",
@@ -38573,7 +38753,7 @@
         "marshallingType" : "LIST",
         "name" : "RuleResults",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The results.</p>\n@param ruleResults The results.*/",
+        "setterDocumentation" : "/**<p>The results from the rules.</p>\n@param ruleResults The results from the rules.*/",
         "setterMethodName" : "setRuleResults",
         "setterModel" : {
           "timestampFormat" : null,
@@ -38588,13 +38768,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The results.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setRuleResults(java.util.Collection)} or {@link #withRuleResults(java.util.Collection)} if you want to override the existing values.</p>\n@param ruleResults The results.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The results from the rules.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setRuleResults(java.util.Collection)} or {@link #withRuleResults(java.util.Collection)} if you want to override the existing values.</p>\n@param ruleResults The results from the rules.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "java.util.List<RuleResult>",
           "variableName" : "ruleResults",
           "variableType" : "java.util.List<RuleResult>",
-          "documentation" : "<p>The results.</p>",
+          "documentation" : "<p>The results from the rules.</p>",
           "simpleType" : "List<RuleResult>",
           "variableSetterType" : "java.util.Collection<RuleResult>"
         },
@@ -38759,12 +38939,12 @@
           "c2jName" : "ruleResults",
           "c2jShape" : "ListOfRuleResults",
           "deprecated" : false,
-          "documentation" : "<p>The results.</p>",
+          "documentation" : "<p>The results from the rules.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The results.</p>\n@param ruleResults The results.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The results from the rules.</p>\n@param ruleResults The results from the rules.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withRuleResults",
-          "getterDocumentation" : "/**<p>The results.</p>\n@return The results.*/",
+          "getterDocumentation" : "/**<p>The results from the rules.</p>\n@return The results from the rules.*/",
           "getterMethodName" : "getRuleResults",
           "getterModel" : {
             "returnType" : "java.util.List<RuleResult>",
@@ -38882,7 +39062,7 @@
           "marshallingType" : "LIST",
           "name" : "RuleResults",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The results.</p>\n@param ruleResults The results.*/",
+          "setterDocumentation" : "/**<p>The results from the rules.</p>\n@param ruleResults The results from the rules.*/",
           "setterMethodName" : "setRuleResults",
           "setterModel" : {
             "timestampFormat" : null,
@@ -38897,13 +39077,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The results.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setRuleResults(java.util.Collection)} or {@link #withRuleResults(java.util.Collection)} if you want to override the existing values.</p>\n@param ruleResults The results.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The results from the rules.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setRuleResults(java.util.Collection)} or {@link #withRuleResults(java.util.Collection)} if you want to override the existing values.</p>\n@param ruleResults The results from the rules.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "java.util.List<RuleResult>",
             "variableName" : "ruleResults",
             "variableType" : "java.util.List<RuleResult>",
-            "documentation" : "<p>The results.</p>",
+            "documentation" : "<p>The results from the rules.</p>",
             "simpleType" : "List<RuleResult>",
             "variableSetterType" : "java.util.Collection<RuleResult>"
           },
@@ -39499,7 +39679,7 @@
             "marshallingTargetClass" : "StructuredPojo",
             "marshallingType" : "STRUCTURED",
             "name" : "Member",
-            "sensitive" : false,
+            "sensitive" : true,
             "setterDocumentation" : "/**\n@param member */",
             "setterMethodName" : "setMember",
             "setterModel" : {
@@ -39544,7 +39724,7 @@
         "marshallingTargetClass" : "List",
         "marshallingType" : "LIST",
         "name" : "EventTypes",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p>An array of event types.</p>\n@param eventTypes An array of event types.*/",
         "setterMethodName" : "setEventTypes",
         "setterModel" : {
@@ -39723,7 +39903,7 @@
               "marshallingTargetClass" : "StructuredPojo",
               "marshallingType" : "STRUCTURED",
               "name" : "Member",
-              "sensitive" : false,
+              "sensitive" : true,
               "setterDocumentation" : "/**\n@param member */",
               "setterMethodName" : "setMember",
               "setterModel" : {
@@ -39768,7 +39948,7 @@
           "marshallingTargetClass" : "List",
           "marshallingType" : "LIST",
           "name" : "EventTypes",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p>An array of event types.</p>\n@param eventTypes An array of event types.*/",
           "setterMethodName" : "setEventTypes",
           "setterModel" : {
@@ -48935,7 +49115,7 @@
           "valueLocationName" : "value",
           "valueModel" : {
             "c2jName" : "value",
-            "c2jShape" : "ListOfStrings",
+            "c2jShape" : "NonEmptyListOfStrings",
             "deprecated" : false,
             "documentation" : "",
             "endpointDiscoveryId" : false,
@@ -49174,7 +49354,7 @@
             "valueLocationName" : "value",
             "valueModel" : {
               "c2jName" : "value",
-              "c2jShape" : "ListOfStrings",
+              "c2jShape" : "NonEmptyListOfStrings",
               "deprecated" : false,
               "documentation" : "",
               "endpointDiscoveryId" : false,
@@ -50392,8 +50572,8 @@
       },
       "wrapper" : false
     },
-    "LogitMetric" : {
-      "c2jName" : "LogitMetric",
+    "LogOddsMetric" : {
+      "c2jName" : "LogOddsMetric",
       "customization" : {
         "artificialResultWrapper" : null,
         "skipGeneratingMarshaller" : false,
@@ -50401,11 +50581,11 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>The logit metric details.</p>",
+      "documentation" : "<p>The log odds metric details.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
-      "fullyQualifiedName" : "com.amazonaws.services.frauddetector.model.LogitMetric",
+      "fullyQualifiedName" : "com.amazonaws.services.frauddetector.model.LogOddsMetric",
       "hasHeaderMember" : false,
       "hasPayloadMember" : false,
       "hasRequiresLengthMember" : false,
@@ -50554,12 +50734,12 @@
         "c2jName" : "variableImportance",
         "c2jShape" : "float",
         "deprecated" : false,
-        "documentation" : "<p>The relative importance of the variable.</p>",
+        "documentation" : "<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The relative importance of the variable.</p>\n@param variableImportance The relative importance of the variable.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>\n@param variableImportance The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withVariableImportance",
-        "getterDocumentation" : "/**<p>The relative importance of the variable.</p>\n@return The relative importance of the variable.*/",
+        "getterDocumentation" : "/**<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>\n@return The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.*/",
         "getterMethodName" : "getVariableImportance",
         "getterModel" : {
           "returnType" : "Float",
@@ -50593,7 +50773,7 @@
         "marshallingType" : "FLOAT",
         "name" : "VariableImportance",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The relative importance of the variable.</p>\n@param variableImportance The relative importance of the variable.*/",
+        "setterDocumentation" : "/**<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>\n@param variableImportance The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.*/",
         "setterMethodName" : "setVariableImportance",
         "setterModel" : {
           "timestampFormat" : null,
@@ -50608,13 +50788,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The relative importance of the variable.</p>\n@param variableImportance The relative importance of the variable.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>\n@param variableImportance The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "Float",
           "variableName" : "variableImportance",
           "variableType" : "Float",
-          "documentation" : "<p>The relative importance of the variable.</p>",
+          "documentation" : "<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>",
           "simpleType" : "Float",
           "variableSetterType" : "Float"
         },
@@ -50625,12 +50805,12 @@
           "c2jName" : "variableImportance",
           "c2jShape" : "float",
           "deprecated" : false,
-          "documentation" : "<p>The relative importance of the variable.</p>",
+          "documentation" : "<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The relative importance of the variable.</p>\n@param variableImportance The relative importance of the variable.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>\n@param variableImportance The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withVariableImportance",
-          "getterDocumentation" : "/**<p>The relative importance of the variable.</p>\n@return The relative importance of the variable.*/",
+          "getterDocumentation" : "/**<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>\n@return The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.*/",
           "getterMethodName" : "getVariableImportance",
           "getterModel" : {
             "returnType" : "Float",
@@ -50664,7 +50844,7 @@
           "marshallingType" : "FLOAT",
           "name" : "VariableImportance",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The relative importance of the variable.</p>\n@param variableImportance The relative importance of the variable.*/",
+          "setterDocumentation" : "/**<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>\n@param variableImportance The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.*/",
           "setterMethodName" : "setVariableImportance",
           "setterModel" : {
             "timestampFormat" : null,
@@ -50679,13 +50859,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The relative importance of the variable.</p>\n@param variableImportance The relative importance of the variable.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>\n@param variableImportance The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "Float",
             "variableName" : "variableImportance",
             "variableType" : "Float",
-            "documentation" : "<p>The relative importance of the variable.</p>",
+            "documentation" : "<p>The relative importance of the variable. For more information, see <a href=\"https://docs.aws.amazon.com/frauddetector/latest/ug/model-variable-importance.html\">Model variable importance</a>.</p>",
             "simpleType" : "Float",
             "variableSetterType" : "Float"
           },
@@ -50836,7 +51016,7 @@
       "requestSignerAware" : false,
       "requestSignerClassFqcn" : null,
       "required" : [ "variableName", "variableType", "variableImportance" ],
-      "shapeName" : "LogitMetric",
+      "shapeName" : "LogOddsMetric",
       "signerAware" : false,
       "signerType" : null,
       "unmarshaller" : {
@@ -50845,12 +51025,12 @@
       },
       "variable" : {
         "timestampFormat" : null,
-        "variableDeclarationType" : "LogitMetric",
-        "variableName" : "logitMetric",
-        "variableType" : "LogitMetric",
+        "variableDeclarationType" : "LogOddsMetric",
+        "variableName" : "logOddsMetric",
+        "variableType" : "LogOddsMetric",
         "documentation" : null,
-        "simpleType" : "LogitMetric",
-        "variableSetterType" : "LogitMetric"
+        "simpleType" : "LogOddsMetric",
+        "variableSetterType" : "LogOddsMetric"
       },
       "wrapper" : false
     },
@@ -63962,7 +64142,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>An exception indicating the specified resource was not found.</p>",
+      "documentation" : "<p>An exception indicating the specified resource was not found. This can occur if you submit a request, such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : "ResourceNotFoundException",
@@ -63991,6 +64171,47 @@
         "documentation" : null,
         "simpleType" : "ResourceNotFoundException",
         "variableSetterType" : "ResourceNotFoundException"
+      },
+      "wrapper" : false
+    },
+    "ResourceUnavailableException" : {
+      "c2jName" : "ResourceUnavailableException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p> An exception indicating that the attached customer-owned (external) model threw an exception when Amazon Fraud Detector invoked the model. </p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "ResourceUnavailableException",
+      "fullyQualifiedName" : "com.amazonaws.services.frauddetector.exception.ResourceUnavailableException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.frauddetector.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : null,
+      "shapeName" : "ResourceUnavailableException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "ResourceUnavailableException",
+        "variableName" : "resourceUnavailableException",
+        "variableType" : "ResourceUnavailableException",
+        "documentation" : null,
+        "simpleType" : "ResourceUnavailableException",
+        "variableSetterType" : "ResourceUnavailableException"
       },
       "wrapper" : false
     },
@@ -79455,18 +79676,18 @@
       "hasStreamingMember" : false,
       "marshaller" : null,
       "members" : [ {
-        "c2jName" : "LogitMetrics",
-        "c2jShape" : "ListOfLogitMetrics",
+        "c2jName" : "logOddsMetrics",
+        "c2jShape" : "ListOfLogOddsMetrics",
         "deprecated" : false,
         "documentation" : "<p>List of variable metrics.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>List of variable metrics.</p>\n@param logitMetrics List of variable metrics.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-        "fluentSetterMethodName" : "withLogitMetrics",
+        "fluentSetterDocumentation" : "/**<p>List of variable metrics.</p>\n@param logOddsMetrics List of variable metrics.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withLogOddsMetrics",
         "getterDocumentation" : "/**<p>List of variable metrics.</p>\n@return List of variable metrics.*/",
-        "getterMethodName" : "getLogitMetrics",
+        "getterMethodName" : "getLogOddsMetrics",
         "getterModel" : {
-          "returnType" : "java.util.List<LogitMetric>",
+          "returnType" : "java.util.List<LogOddsMetric>",
           "documentation" : null
         },
         "http" : {
@@ -79479,11 +79700,11 @@
           "isStreaming" : false,
           "location" : null,
           "marshallLocation" : "PAYLOAD",
-          "marshallLocationName" : "LogitMetrics",
+          "marshallLocationName" : "logOddsMetrics",
           "queryString" : false,
           "requiresLength" : false,
           "statusCode" : false,
-          "unmarshallLocationName" : "LogitMetrics",
+          "unmarshallLocationName" : "logOddsMetrics",
           "uri" : false
         },
         "idempotencyToken" : false,
@@ -79495,7 +79716,7 @@
           "interfaceType" : "java.util.List",
           "listMemberModel" : {
             "c2jName" : "member",
-            "c2jShape" : "LogitMetric",
+            "c2jShape" : "LogOddsMetric",
             "deprecated" : false,
             "documentation" : "",
             "endpointDiscoveryId" : false,
@@ -79505,7 +79726,7 @@
             "getterDocumentation" : "/**\n@return */",
             "getterMethodName" : "getMember",
             "getterModel" : {
-              "returnType" : "LogitMetric",
+              "returnType" : "LogOddsMetric",
               "documentation" : null
             },
             "http" : {
@@ -79540,12 +79761,12 @@
             "setterMethodName" : "setMember",
             "setterModel" : {
               "timestampFormat" : null,
-              "variableDeclarationType" : "LogitMetric",
+              "variableDeclarationType" : "LogOddsMetric",
               "variableName" : "member",
-              "variableType" : "LogitMetric",
+              "variableType" : "LogOddsMetric",
               "documentation" : "",
-              "simpleType" : "LogitMetric",
-              "variableSetterType" : "LogitMetric"
+              "simpleType" : "LogOddsMetric",
+              "variableSetterType" : "LogOddsMetric"
             },
             "shouldEmitLegacyEnumSetter" : false,
             "shouldFullyQualify" : false,
@@ -79554,74 +79775,74 @@
             "varargSetterDocumentation" : "/**\n@param member \n@return Returns a reference to this object so that method calls can be chained together.*/",
             "variable" : {
               "timestampFormat" : null,
-              "variableDeclarationType" : "LogitMetric",
+              "variableDeclarationType" : "LogOddsMetric",
               "variableName" : "member",
-              "variableType" : "LogitMetric",
+              "variableType" : "LogOddsMetric",
               "documentation" : "",
-              "simpleType" : "LogitMetric",
-              "variableSetterType" : "LogitMetric"
+              "simpleType" : "LogOddsMetric",
+              "variableSetterType" : "LogOddsMetric"
             },
             "xmlNameSpaceUri" : null
           },
           "memberLocationName" : null,
-          "memberType" : "LogitMetric",
+          "memberType" : "LogOddsMetric",
           "map" : false,
           "marshallNonAutoConstructedEmptyLists" : false,
           "memberAdditionalMarshallingPath" : null,
           "memberAdditionalUnmarshallingPath" : null,
           "sendEmptyQueryString" : false,
           "simple" : false,
-          "simpleType" : "LogitMetric",
-          "templateImplType" : "java.util.ArrayList<LogitMetric>",
-          "templateType" : "java.util.List<LogitMetric>"
+          "simpleType" : "LogOddsMetric",
+          "templateImplType" : "java.util.ArrayList<LogOddsMetric>",
+          "templateType" : "java.util.List<LogOddsMetric>"
         },
         "map" : false,
         "mapModel" : null,
         "marshallingTargetClass" : "List",
         "marshallingType" : "LIST",
-        "name" : "LogitMetrics",
+        "name" : "LogOddsMetrics",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>List of variable metrics.</p>\n@param logitMetrics List of variable metrics.*/",
-        "setterMethodName" : "setLogitMetrics",
+        "setterDocumentation" : "/**<p>List of variable metrics.</p>\n@param logOddsMetrics List of variable metrics.*/",
+        "setterMethodName" : "setLogOddsMetrics",
         "setterModel" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "java.util.List<LogitMetric>",
-          "variableName" : "logitMetrics",
-          "variableType" : "java.util.List<LogitMetric>",
+          "variableDeclarationType" : "java.util.List<LogOddsMetric>",
+          "variableName" : "logOddsMetrics",
+          "variableType" : "java.util.List<LogOddsMetric>",
           "documentation" : "",
-          "simpleType" : "List<LogitMetric>",
-          "variableSetterType" : "java.util.Collection<LogitMetric>"
+          "simpleType" : "List<LogOddsMetric>",
+          "variableSetterType" : "java.util.Collection<LogOddsMetric>"
         },
         "shouldEmitLegacyEnumSetter" : false,
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>List of variable metrics.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setLogitMetrics(java.util.Collection)} or {@link #withLogitMetrics(java.util.Collection)} if you want to override the existing values.</p>\n@param logitMetrics List of variable metrics.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>List of variable metrics.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setLogOddsMetrics(java.util.Collection)} or {@link #withLogOddsMetrics(java.util.Collection)} if you want to override the existing values.</p>\n@param logOddsMetrics List of variable metrics.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
-          "variableDeclarationType" : "java.util.List<LogitMetric>",
-          "variableName" : "logitMetrics",
-          "variableType" : "java.util.List<LogitMetric>",
+          "variableDeclarationType" : "java.util.List<LogOddsMetric>",
+          "variableName" : "logOddsMetrics",
+          "variableType" : "java.util.List<LogOddsMetric>",
           "documentation" : "<p>List of variable metrics.</p>",
-          "simpleType" : "List<LogitMetric>",
-          "variableSetterType" : "java.util.Collection<LogitMetric>"
+          "simpleType" : "List<LogOddsMetric>",
+          "variableSetterType" : "java.util.Collection<LogOddsMetric>"
         },
         "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
-        "LogitMetrics" : {
-          "c2jName" : "LogitMetrics",
-          "c2jShape" : "ListOfLogitMetrics",
+        "LogOddsMetrics" : {
+          "c2jName" : "logOddsMetrics",
+          "c2jShape" : "ListOfLogOddsMetrics",
           "deprecated" : false,
           "documentation" : "<p>List of variable metrics.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>List of variable metrics.</p>\n@param logitMetrics List of variable metrics.\n@return Returns a reference to this object so that method calls can be chained together.*/",
-          "fluentSetterMethodName" : "withLogitMetrics",
+          "fluentSetterDocumentation" : "/**<p>List of variable metrics.</p>\n@param logOddsMetrics List of variable metrics.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withLogOddsMetrics",
           "getterDocumentation" : "/**<p>List of variable metrics.</p>\n@return List of variable metrics.*/",
-          "getterMethodName" : "getLogitMetrics",
+          "getterMethodName" : "getLogOddsMetrics",
           "getterModel" : {
-            "returnType" : "java.util.List<LogitMetric>",
+            "returnType" : "java.util.List<LogOddsMetric>",
             "documentation" : null
           },
           "http" : {
@@ -79634,11 +79855,11 @@
             "isStreaming" : false,
             "location" : null,
             "marshallLocation" : "PAYLOAD",
-            "marshallLocationName" : "LogitMetrics",
+            "marshallLocationName" : "logOddsMetrics",
             "queryString" : false,
             "requiresLength" : false,
             "statusCode" : false,
-            "unmarshallLocationName" : "LogitMetrics",
+            "unmarshallLocationName" : "logOddsMetrics",
             "uri" : false
           },
           "idempotencyToken" : false,
@@ -79650,7 +79871,7 @@
             "interfaceType" : "java.util.List",
             "listMemberModel" : {
               "c2jName" : "member",
-              "c2jShape" : "LogitMetric",
+              "c2jShape" : "LogOddsMetric",
               "deprecated" : false,
               "documentation" : "",
               "endpointDiscoveryId" : false,
@@ -79660,7 +79881,7 @@
               "getterDocumentation" : "/**\n@return */",
               "getterMethodName" : "getMember",
               "getterModel" : {
-                "returnType" : "LogitMetric",
+                "returnType" : "LogOddsMetric",
                 "documentation" : null
               },
               "http" : {
@@ -79695,12 +79916,12 @@
               "setterMethodName" : "setMember",
               "setterModel" : {
                 "timestampFormat" : null,
-                "variableDeclarationType" : "LogitMetric",
+                "variableDeclarationType" : "LogOddsMetric",
                 "variableName" : "member",
-                "variableType" : "LogitMetric",
+                "variableType" : "LogOddsMetric",
                 "documentation" : "",
-                "simpleType" : "LogitMetric",
-                "variableSetterType" : "LogitMetric"
+                "simpleType" : "LogOddsMetric",
+                "variableSetterType" : "LogOddsMetric"
               },
               "shouldEmitLegacyEnumSetter" : false,
               "shouldFullyQualify" : false,
@@ -79709,57 +79930,57 @@
               "varargSetterDocumentation" : "/**\n@param member \n@return Returns a reference to this object so that method calls can be chained together.*/",
               "variable" : {
                 "timestampFormat" : null,
-                "variableDeclarationType" : "LogitMetric",
+                "variableDeclarationType" : "LogOddsMetric",
                 "variableName" : "member",
-                "variableType" : "LogitMetric",
+                "variableType" : "LogOddsMetric",
                 "documentation" : "",
-                "simpleType" : "LogitMetric",
-                "variableSetterType" : "LogitMetric"
+                "simpleType" : "LogOddsMetric",
+                "variableSetterType" : "LogOddsMetric"
               },
               "xmlNameSpaceUri" : null
             },
             "memberLocationName" : null,
-            "memberType" : "LogitMetric",
+            "memberType" : "LogOddsMetric",
             "map" : false,
             "marshallNonAutoConstructedEmptyLists" : false,
             "memberAdditionalMarshallingPath" : null,
             "memberAdditionalUnmarshallingPath" : null,
             "sendEmptyQueryString" : false,
             "simple" : false,
-            "simpleType" : "LogitMetric",
-            "templateImplType" : "java.util.ArrayList<LogitMetric>",
-            "templateType" : "java.util.List<LogitMetric>"
+            "simpleType" : "LogOddsMetric",
+            "templateImplType" : "java.util.ArrayList<LogOddsMetric>",
+            "templateType" : "java.util.List<LogOddsMetric>"
           },
           "map" : false,
           "mapModel" : null,
           "marshallingTargetClass" : "List",
           "marshallingType" : "LIST",
-          "name" : "LogitMetrics",
+          "name" : "LogOddsMetrics",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>List of variable metrics.</p>\n@param logitMetrics List of variable metrics.*/",
-          "setterMethodName" : "setLogitMetrics",
+          "setterDocumentation" : "/**<p>List of variable metrics.</p>\n@param logOddsMetrics List of variable metrics.*/",
+          "setterMethodName" : "setLogOddsMetrics",
           "setterModel" : {
             "timestampFormat" : null,
-            "variableDeclarationType" : "java.util.List<LogitMetric>",
-            "variableName" : "logitMetrics",
-            "variableType" : "java.util.List<LogitMetric>",
+            "variableDeclarationType" : "java.util.List<LogOddsMetric>",
+            "variableName" : "logOddsMetrics",
+            "variableType" : "java.util.List<LogOddsMetric>",
             "documentation" : "",
-            "simpleType" : "List<LogitMetric>",
-            "variableSetterType" : "java.util.Collection<LogitMetric>"
+            "simpleType" : "List<LogOddsMetric>",
+            "variableSetterType" : "java.util.Collection<LogOddsMetric>"
           },
           "shouldEmitLegacyEnumSetter" : false,
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>List of variable metrics.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setLogitMetrics(java.util.Collection)} or {@link #withLogitMetrics(java.util.Collection)} if you want to override the existing values.</p>\n@param logitMetrics List of variable metrics.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>List of variable metrics.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setLogOddsMetrics(java.util.Collection)} or {@link #withLogOddsMetrics(java.util.Collection)} if you want to override the existing values.</p>\n@param logOddsMetrics List of variable metrics.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
-            "variableDeclarationType" : "java.util.List<LogitMetric>",
-            "variableName" : "logitMetrics",
-            "variableType" : "java.util.List<LogitMetric>",
+            "variableDeclarationType" : "java.util.List<LogOddsMetric>",
+            "variableName" : "logOddsMetrics",
+            "variableType" : "java.util.List<LogOddsMetric>",
             "documentation" : "<p>List of variable metrics.</p>",
-            "simpleType" : "List<LogitMetric>",
-            "variableSetterType" : "java.util.Collection<LogitMetric>"
+            "simpleType" : "List<LogOddsMetric>",
+            "variableSetterType" : "java.util.Collection<LogOddsMetric>"
           },
           "xmlNameSpaceUri" : null
         }

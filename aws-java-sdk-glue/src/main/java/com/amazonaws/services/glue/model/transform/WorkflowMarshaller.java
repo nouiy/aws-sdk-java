@@ -45,6 +45,8 @@ public class WorkflowMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Graph").build();
     private static final MarshallingInfo<Integer> MAXCONCURRENTRUNS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxConcurrentRuns").build();
+    private static final MarshallingInfo<StructuredPojo> BLUEPRINTDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BlueprintDetails").build();
 
     private static final WorkflowMarshaller instance = new WorkflowMarshaller();
 
@@ -70,6 +72,7 @@ public class WorkflowMarshaller {
             protocolMarshaller.marshall(workflow.getLastRun(), LASTRUN_BINDING);
             protocolMarshaller.marshall(workflow.getGraph(), GRAPH_BINDING);
             protocolMarshaller.marshall(workflow.getMaxConcurrentRuns(), MAXCONCURRENTRUNS_BINDING);
+            protocolMarshaller.marshall(workflow.getBlueprintDetails(), BLUEPRINTDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

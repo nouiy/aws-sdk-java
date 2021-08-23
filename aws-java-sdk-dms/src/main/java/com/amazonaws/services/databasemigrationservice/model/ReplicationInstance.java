@@ -220,8 +220,8 @@ public class ReplicationInstance implements Serializable, Cloneable, StructuredP
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      */
     private String kmsKeyId;
@@ -1501,8 +1501,8 @@ public class ReplicationInstance implements Serializable, Cloneable, StructuredP
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
@@ -1512,8 +1512,8 @@ public class ReplicationInstance implements Serializable, Cloneable, StructuredP
      *        encryption key.
      *        </p>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Region.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Region.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1528,8 +1528,8 @@ public class ReplicationInstance implements Serializable, Cloneable, StructuredP
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @return An KMS key identifier that is used to encrypt the data on the replication instance.</p>
@@ -1538,8 +1538,8 @@ public class ReplicationInstance implements Serializable, Cloneable, StructuredP
      *         encryption key.
      *         </p>
      *         <p>
-     *         KMS creates the default encryption key for your account. Your account has a different default encryption
-     *         key for each Region.
+     *         KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *         account has a different default encryption key for each Amazon Web Services Region.
      */
 
     public String getKmsKeyId() {
@@ -1554,8 +1554,8 @@ public class ReplicationInstance implements Serializable, Cloneable, StructuredP
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
@@ -1565,8 +1565,8 @@ public class ReplicationInstance implements Serializable, Cloneable, StructuredP
      *        encryption key.
      *        </p>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Region.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -21,11 +21,11 @@ import com.amazonaws.protocol.*;
 import com.amazonaws.annotation.SdkInternalApi;
 
 /**
- * LogitMetricMarshaller
+ * LogOddsMetricMarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 @SdkInternalApi
-public class LogitMetricMarshaller {
+public class LogOddsMetricMarshaller {
 
     private static final MarshallingInfo<String> VARIABLENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("variableName").build();
@@ -34,25 +34,25 @@ public class LogitMetricMarshaller {
     private static final MarshallingInfo<Float> VARIABLEIMPORTANCE_BINDING = MarshallingInfo.builder(MarshallingType.FLOAT)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("variableImportance").build();
 
-    private static final LogitMetricMarshaller instance = new LogitMetricMarshaller();
+    private static final LogOddsMetricMarshaller instance = new LogOddsMetricMarshaller();
 
-    public static LogitMetricMarshaller getInstance() {
+    public static LogOddsMetricMarshaller getInstance() {
         return instance;
     }
 
     /**
      * Marshall the given parameter object.
      */
-    public void marshall(LogitMetric logitMetric, ProtocolMarshaller protocolMarshaller) {
+    public void marshall(LogOddsMetric logOddsMetric, ProtocolMarshaller protocolMarshaller) {
 
-        if (logitMetric == null) {
+        if (logOddsMetric == null) {
             throw new SdkClientException("Invalid argument passed to marshall(...)");
         }
 
         try {
-            protocolMarshaller.marshall(logitMetric.getVariableName(), VARIABLENAME_BINDING);
-            protocolMarshaller.marshall(logitMetric.getVariableType(), VARIABLETYPE_BINDING);
-            protocolMarshaller.marshall(logitMetric.getVariableImportance(), VARIABLEIMPORTANCE_BINDING);
+            protocolMarshaller.marshall(logOddsMetric.getVariableName(), VARIABLENAME_BINDING);
+            protocolMarshaller.marshall(logOddsMetric.getVariableType(), VARIABLETYPE_BINDING);
+            protocolMarshaller.marshall(logOddsMetric.getVariableImportance(), VARIABLEIMPORTANCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

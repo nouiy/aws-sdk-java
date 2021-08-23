@@ -41,8 +41,8 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
     private Boolean copyTags;
     /**
      * <p>
-     * The tags to apply to policy-created resources. These user-defined tags are in addition to the AWS-added lifecycle
-     * tags.
+     * The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web
+     * Services-added lifecycle tags.
      * </p>
      */
     private java.util.List<Tag> tagsToAdd;
@@ -85,10 +85,16 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<CrossRegionCopyRule> crossRegionCopyRules;
     /**
      * <p>
-     * The rule for sharing snapshots with other AWS accounts.
+     * The rule for sharing snapshots with other Amazon Web Services accounts.
      * </p>
      */
     private java.util.List<ShareRule> shareRules;
+    /**
+     * <p>
+     * The AMI deprecation rule for the schedule.
+     * </p>
+     */
+    private DeprecateRule deprecateRule;
 
     /**
      * <p>
@@ -184,12 +190,12 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags to apply to policy-created resources. These user-defined tags are in addition to the AWS-added lifecycle
-     * tags.
+     * The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web
+     * Services-added lifecycle tags.
      * </p>
      * 
-     * @return The tags to apply to policy-created resources. These user-defined tags are in addition to the AWS-added
-     *         lifecycle tags.
+     * @return The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web
+     *         Services-added lifecycle tags.
      */
 
     public java.util.List<Tag> getTagsToAdd() {
@@ -198,13 +204,13 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags to apply to policy-created resources. These user-defined tags are in addition to the AWS-added lifecycle
-     * tags.
+     * The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web
+     * Services-added lifecycle tags.
      * </p>
      * 
      * @param tagsToAdd
-     *        The tags to apply to policy-created resources. These user-defined tags are in addition to the AWS-added
-     *        lifecycle tags.
+     *        The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web
+     *        Services-added lifecycle tags.
      */
 
     public void setTagsToAdd(java.util.Collection<Tag> tagsToAdd) {
@@ -218,8 +224,8 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags to apply to policy-created resources. These user-defined tags are in addition to the AWS-added lifecycle
-     * tags.
+     * The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web
+     * Services-added lifecycle tags.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -228,8 +234,8 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param tagsToAdd
-     *        The tags to apply to policy-created resources. These user-defined tags are in addition to the AWS-added
-     *        lifecycle tags.
+     *        The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web
+     *        Services-added lifecycle tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,13 +251,13 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags to apply to policy-created resources. These user-defined tags are in addition to the AWS-added lifecycle
-     * tags.
+     * The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web
+     * Services-added lifecycle tags.
      * </p>
      * 
      * @param tagsToAdd
-     *        The tags to apply to policy-created resources. These user-defined tags are in addition to the AWS-added
-     *        lifecycle tags.
+     *        The tags to apply to policy-created resources. These user-defined tags are in addition to the Amazon Web
+     *        Services-added lifecycle tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -579,10 +585,10 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The rule for sharing snapshots with other AWS accounts.
+     * The rule for sharing snapshots with other Amazon Web Services accounts.
      * </p>
      * 
-     * @return The rule for sharing snapshots with other AWS accounts.
+     * @return The rule for sharing snapshots with other Amazon Web Services accounts.
      */
 
     public java.util.List<ShareRule> getShareRules() {
@@ -591,11 +597,11 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The rule for sharing snapshots with other AWS accounts.
+     * The rule for sharing snapshots with other Amazon Web Services accounts.
      * </p>
      * 
      * @param shareRules
-     *        The rule for sharing snapshots with other AWS accounts.
+     *        The rule for sharing snapshots with other Amazon Web Services accounts.
      */
 
     public void setShareRules(java.util.Collection<ShareRule> shareRules) {
@@ -609,7 +615,7 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The rule for sharing snapshots with other AWS accounts.
+     * The rule for sharing snapshots with other Amazon Web Services accounts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -618,7 +624,7 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param shareRules
-     *        The rule for sharing snapshots with other AWS accounts.
+     *        The rule for sharing snapshots with other Amazon Web Services accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -634,16 +640,56 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The rule for sharing snapshots with other AWS accounts.
+     * The rule for sharing snapshots with other Amazon Web Services accounts.
      * </p>
      * 
      * @param shareRules
-     *        The rule for sharing snapshots with other AWS accounts.
+     *        The rule for sharing snapshots with other Amazon Web Services accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Schedule withShareRules(java.util.Collection<ShareRule> shareRules) {
         setShareRules(shareRules);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The AMI deprecation rule for the schedule.
+     * </p>
+     * 
+     * @param deprecateRule
+     *        The AMI deprecation rule for the schedule.
+     */
+
+    public void setDeprecateRule(DeprecateRule deprecateRule) {
+        this.deprecateRule = deprecateRule;
+    }
+
+    /**
+     * <p>
+     * The AMI deprecation rule for the schedule.
+     * </p>
+     * 
+     * @return The AMI deprecation rule for the schedule.
+     */
+
+    public DeprecateRule getDeprecateRule() {
+        return this.deprecateRule;
+    }
+
+    /**
+     * <p>
+     * The AMI deprecation rule for the schedule.
+     * </p>
+     * 
+     * @param deprecateRule
+     *        The AMI deprecation rule for the schedule.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Schedule withDeprecateRule(DeprecateRule deprecateRule) {
+        setDeprecateRule(deprecateRule);
         return this;
     }
 
@@ -676,7 +722,9 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
         if (getCrossRegionCopyRules() != null)
             sb.append("CrossRegionCopyRules: ").append(getCrossRegionCopyRules()).append(",");
         if (getShareRules() != null)
-            sb.append("ShareRules: ").append(getShareRules());
+            sb.append("ShareRules: ").append(getShareRules()).append(",");
+        if (getDeprecateRule() != null)
+            sb.append("DeprecateRule: ").append(getDeprecateRule());
         sb.append("}");
         return sb.toString();
     }
@@ -727,6 +775,10 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getShareRules() != null && other.getShareRules().equals(this.getShareRules()) == false)
             return false;
+        if (other.getDeprecateRule() == null ^ this.getDeprecateRule() == null)
+            return false;
+        if (other.getDeprecateRule() != null && other.getDeprecateRule().equals(this.getDeprecateRule()) == false)
+            return false;
         return true;
     }
 
@@ -744,6 +796,7 @@ public class Schedule implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getFastRestoreRule() == null) ? 0 : getFastRestoreRule().hashCode());
         hashCode = prime * hashCode + ((getCrossRegionCopyRules() == null) ? 0 : getCrossRegionCopyRules().hashCode());
         hashCode = prime * hashCode + ((getShareRules() == null) ? 0 : getShareRules().hashCode());
+        hashCode = prime * hashCode + ((getDeprecateRule() == null) ? 0 : getDeprecateRule().hashCode());
         return hashCode;
     }
 

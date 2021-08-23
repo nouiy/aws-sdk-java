@@ -38,7 +38,7 @@ public class UpdateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
     private String backupPlanArn;
     /**
      * <p>
-     * The date and time a backup plan is updated, in Unix format and Coordinated Universal Time (UTC). The value of
+     * The date and time a backup plan is created, in Unix format and Coordinated Universal Time (UTC). The value of
      * <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday,
      * January 26, 2018 12:11:30.087 AM.
      * </p>
@@ -146,13 +146,13 @@ public class UpdateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The date and time a backup plan is updated, in Unix format and Coordinated Universal Time (UTC). The value of
+     * The date and time a backup plan is created, in Unix format and Coordinated Universal Time (UTC). The value of
      * <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday,
      * January 26, 2018 12:11:30.087 AM.
      * </p>
      * 
      * @param creationDate
-     *        The date and time a backup plan is updated, in Unix format and Coordinated Universal Time (UTC). The value
+     *        The date and time a backup plan is created, in Unix format and Coordinated Universal Time (UTC). The value
      *        of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents
      *        Friday, January 26, 2018 12:11:30.087 AM.
      */
@@ -163,12 +163,12 @@ public class UpdateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The date and time a backup plan is updated, in Unix format and Coordinated Universal Time (UTC). The value of
+     * The date and time a backup plan is created, in Unix format and Coordinated Universal Time (UTC). The value of
      * <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday,
      * January 26, 2018 12:11:30.087 AM.
      * </p>
      * 
-     * @return The date and time a backup plan is updated, in Unix format and Coordinated Universal Time (UTC). The
+     * @return The date and time a backup plan is created, in Unix format and Coordinated Universal Time (UTC). The
      *         value of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087
      *         represents Friday, January 26, 2018 12:11:30.087 AM.
      */
@@ -179,13 +179,13 @@ public class UpdateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The date and time a backup plan is updated, in Unix format and Coordinated Universal Time (UTC). The value of
+     * The date and time a backup plan is created, in Unix format and Coordinated Universal Time (UTC). The value of
      * <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents Friday,
      * January 26, 2018 12:11:30.087 AM.
      * </p>
      * 
      * @param creationDate
-     *        The date and time a backup plan is updated, in Unix format and Coordinated Universal Time (UTC). The value
+     *        The date and time a backup plan is created, in Unix format and Coordinated Universal Time (UTC). The value
      *        of <code>CreationDate</code> is accurate to milliseconds. For example, the value 1516925490.087 represents
      *        Friday, January 26, 2018 12:11:30.087 AM.
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -35,8 +35,8 @@ public class StartCopyJobRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The name of a logical source container where backups are stored. Backup vaults are identified by names that are
-     * unique to the account used to create them and the AWS Region where they are created. They consist of lowercase
-     * letters, numbers, and hyphens.
+     * unique to the account used to create them and the Amazon Web Services Region where they are created. They consist
+     * of lowercase letters, numbers, and hyphens.
      * </p>
      */
     private String sourceBackupVaultName;
@@ -56,7 +56,9 @@ public class StartCopyJobRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String iamRoleArn;
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartCopyJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartCopyJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      */
     private String idempotencyToken;
@@ -112,14 +114,14 @@ public class StartCopyJobRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The name of a logical source container where backups are stored. Backup vaults are identified by names that are
-     * unique to the account used to create them and the AWS Region where they are created. They consist of lowercase
-     * letters, numbers, and hyphens.
+     * unique to the account used to create them and the Amazon Web Services Region where they are created. They consist
+     * of lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param sourceBackupVaultName
      *        The name of a logical source container where backups are stored. Backup vaults are identified by names
-     *        that are unique to the account used to create them and the AWS Region where they are created. They consist
-     *        of lowercase letters, numbers, and hyphens.
+     *        that are unique to the account used to create them and the Amazon Web Services Region where they are
+     *        created. They consist of lowercase letters, numbers, and hyphens.
      */
 
     public void setSourceBackupVaultName(String sourceBackupVaultName) {
@@ -129,13 +131,13 @@ public class StartCopyJobRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The name of a logical source container where backups are stored. Backup vaults are identified by names that are
-     * unique to the account used to create them and the AWS Region where they are created. They consist of lowercase
-     * letters, numbers, and hyphens.
+     * unique to the account used to create them and the Amazon Web Services Region where they are created. They consist
+     * of lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @return The name of a logical source container where backups are stored. Backup vaults are identified by names
-     *         that are unique to the account used to create them and the AWS Region where they are created. They
-     *         consist of lowercase letters, numbers, and hyphens.
+     *         that are unique to the account used to create them and the Amazon Web Services Region where they are
+     *         created. They consist of lowercase letters, numbers, and hyphens.
      */
 
     public String getSourceBackupVaultName() {
@@ -145,14 +147,14 @@ public class StartCopyJobRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The name of a logical source container where backups are stored. Backup vaults are identified by names that are
-     * unique to the account used to create them and the AWS Region where they are created. They consist of lowercase
-     * letters, numbers, and hyphens.
+     * unique to the account used to create them and the Amazon Web Services Region where they are created. They consist
+     * of lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param sourceBackupVaultName
      *        The name of a logical source container where backups are stored. Backup vaults are identified by names
-     *        that are unique to the account used to create them and the AWS Region where they are created. They consist
-     *        of lowercase letters, numbers, and hyphens.
+     *        that are unique to the account used to create them and the Amazon Web Services Region where they are
+     *        created. They consist of lowercase letters, numbers, and hyphens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -255,11 +257,15 @@ public class StartCopyJobRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartCopyJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartCopyJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      * 
      * @param idempotencyToken
-     *        A customer chosen string that can be used to distinguish between calls to <code>StartCopyJob</code>.
+     *        A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     *        <code>StartCopyJob</code>. Retrying a successful request with the same idempotency token results in a
+     *        success message with no action taken.
      */
 
     public void setIdempotencyToken(String idempotencyToken) {
@@ -268,10 +274,14 @@ public class StartCopyJobRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartCopyJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartCopyJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      * 
-     * @return A customer chosen string that can be used to distinguish between calls to <code>StartCopyJob</code>.
+     * @return A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     *         <code>StartCopyJob</code>. Retrying a successful request with the same idempotency token results in a
+     *         success message with no action taken.
      */
 
     public String getIdempotencyToken() {
@@ -280,11 +290,15 @@ public class StartCopyJobRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartCopyJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartCopyJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      * 
      * @param idempotencyToken
-     *        A customer chosen string that can be used to distinguish between calls to <code>StartCopyJob</code>.
+     *        A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     *        <code>StartCopyJob</code>. Retrying a successful request with the same idempotency token results in a
+     *        success message with no action taken.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

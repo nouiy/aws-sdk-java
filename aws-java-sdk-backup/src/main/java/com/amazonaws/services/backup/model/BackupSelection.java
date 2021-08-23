@@ -36,7 +36,7 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
     private String selectionName;
     /**
      * <p>
-     * The ARN of the IAM role that AWS Backup uses to authenticate when backing up the target resource; for example,
+     * The ARN of the IAM role that Backup uses to authenticate when backing up the target resource; for example,
      * <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * </p>
      */
@@ -98,13 +98,13 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the IAM role that AWS Backup uses to authenticate when backing up the target resource; for example,
+     * The ARN of the IAM role that Backup uses to authenticate when backing up the target resource; for example,
      * <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * </p>
      * 
      * @param iamRoleArn
-     *        The ARN of the IAM role that AWS Backup uses to authenticate when backing up the target resource; for
-     *        example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
+     *        The ARN of the IAM role that Backup uses to authenticate when backing up the target resource; for example,
+     *        <code>arn:aws:iam::123456789012:role/S3Access</code>.
      */
 
     public void setIamRoleArn(String iamRoleArn) {
@@ -113,11 +113,11 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the IAM role that AWS Backup uses to authenticate when backing up the target resource; for example,
+     * The ARN of the IAM role that Backup uses to authenticate when backing up the target resource; for example,
      * <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * </p>
      * 
-     * @return The ARN of the IAM role that AWS Backup uses to authenticate when backing up the target resource; for
+     * @return The ARN of the IAM role that Backup uses to authenticate when backing up the target resource; for
      *         example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
      */
 
@@ -127,13 +127,13 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the IAM role that AWS Backup uses to authenticate when backing up the target resource; for example,
+     * The ARN of the IAM role that Backup uses to authenticate when backing up the target resource; for example,
      * <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * </p>
      * 
      * @param iamRoleArn
-     *        The ARN of the IAM role that AWS Backup uses to authenticate when backing up the target resource; for
-     *        example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
+     *        The ARN of the IAM role that Backup uses to authenticate when backing up the target resource; for example,
+     *        <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

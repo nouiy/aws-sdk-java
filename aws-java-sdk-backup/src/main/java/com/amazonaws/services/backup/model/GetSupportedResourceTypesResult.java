@@ -25,7 +25,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Contains a string with the supported AWS resource types:
+     * Contains a string with the supported Amazon Web Services resource types:
      * </p>
      * <ul>
      * <li>
@@ -60,7 +60,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -69,7 +69,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Contains a string with the supported AWS resource types:
+     * Contains a string with the supported Amazon Web Services resource types:
      * </p>
      * <ul>
      * <li>
@@ -104,12 +104,12 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Contains a string with the supported AWS resource types:</p>
+     * @return Contains a string with the supported Amazon Web Services resource types:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -143,7 +143,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Storage Gateway</code> for AWS Storage Gateway
+     *         <code>Storage Gateway</code> for Storage Gateway
      *         </p>
      *         </li>
      */
@@ -154,7 +154,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Contains a string with the supported AWS resource types:
+     * Contains a string with the supported Amazon Web Services resource types:
      * </p>
      * <ul>
      * <li>
@@ -189,13 +189,13 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
      * 
      * @param resourceTypes
-     *        Contains a string with the supported AWS resource types:</p>
+     *        Contains a string with the supported Amazon Web Services resource types:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -229,7 +229,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Storage Gateway</code> for AWS Storage Gateway
+     *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      */
@@ -245,7 +245,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Contains a string with the supported AWS resource types:
+     * Contains a string with the supported Amazon Web Services resource types:
      * </p>
      * <ul>
      * <li>
@@ -280,7 +280,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -291,7 +291,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param resourceTypes
-     *        Contains a string with the supported AWS resource types:</p>
+     *        Contains a string with the supported Amazon Web Services resource types:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -325,7 +325,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Storage Gateway</code> for AWS Storage Gateway
+     *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -343,7 +343,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Contains a string with the supported AWS resource types:
+     * Contains a string with the supported Amazon Web Services resource types:
      * </p>
      * <ul>
      * <li>
@@ -378,13 +378,13 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
      * 
      * @param resourceTypes
-     *        Contains a string with the supported AWS resource types:</p>
+     *        Contains a string with the supported Amazon Web Services resource types:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -418,7 +418,7 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Storage Gateway</code> for AWS Storage Gateway
+     *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

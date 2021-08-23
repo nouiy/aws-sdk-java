@@ -49,7 +49,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by AWS Backup. Returned in
+     * <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by Backup. Returned in
      * <code>GetRecoveryPointRestoreMetadata</code>.
      * </p>
      * </li>
@@ -61,8 +61,9 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>KmsKeyId</code>: Specifies the AWS KMS key that is used to encrypt the restored file system. You can
-     * specify a key from another AWS account provided that key it is properly shared with your account via AWS KMS.
+     * <code>KmsKeyId</code>: Specifies the Amazon Web Services KMS key that is used to encrypt the restored file
+     * system. You can specify a key from another Amazon Web Services account provided that key it is properly shared
+     * with your account via Amazon Web Services KMS.
      * </p>
      * </li>
      * <li>
@@ -83,7 +84,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>ItemsToRestore </code>: An array of one to five strings where each string is a file path. Use
+     * <code>ItemsToRestore</code>: An array of one to five strings where each string is a file path. Use
      * <code>ItemsToRestore</code> to restore specific files or directories rather than the entire file system. This
      * parameter is optional. For example, <code>"itemsToRestore":"[\"/my.test\"]"</code>.
      * </p>
@@ -93,14 +94,16 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
     private java.util.Map<String, String> metadata;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the target recovery point; for
-     * example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
+     * The Amazon Resource Name (ARN) of the IAM role that Backup uses to create the target recovery point; for example,
+     * <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * </p>
      */
     private String iamRoleArn;
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartRestoreJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartRestoreJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      */
     private String idempotencyToken;
@@ -141,7 +144,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -211,7 +214,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by AWS Backup. Returned in
+     * <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by Backup. Returned in
      * <code>GetRecoveryPointRestoreMetadata</code>.
      * </p>
      * </li>
@@ -223,8 +226,9 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>KmsKeyId</code>: Specifies the AWS KMS key that is used to encrypt the restored file system. You can
-     * specify a key from another AWS account provided that key it is properly shared with your account via AWS KMS.
+     * <code>KmsKeyId</code>: Specifies the Amazon Web Services KMS key that is used to encrypt the restored file
+     * system. You can specify a key from another Amazon Web Services account provided that key it is properly shared
+     * with your account via Amazon Web Services KMS.
      * </p>
      * </li>
      * <li>
@@ -245,7 +249,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>ItemsToRestore </code>: An array of one to five strings where each string is a file path. Use
+     * <code>ItemsToRestore</code>: An array of one to five strings where each string is a file path. Use
      * <code>ItemsToRestore</code> to restore specific files or directories rather than the entire file system. This
      * parameter is optional. For example, <code>"itemsToRestore":"[\"/my.test\"]"</code>.
      * </p>
@@ -266,8 +270,8 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by AWS Backup.
-     *         Returned in <code>GetRecoveryPointRestoreMetadata</code>.
+     *         <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by Backup. Returned
+     *         in <code>GetRecoveryPointRestoreMetadata</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -278,9 +282,9 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
-     *         <code>KmsKeyId</code>: Specifies the AWS KMS key that is used to encrypt the restored file system. You
-     *         can specify a key from another AWS account provided that key it is properly shared with your account via
-     *         AWS KMS.
+     *         <code>KmsKeyId</code>: Specifies the Amazon Web Services KMS key that is used to encrypt the restored
+     *         file system. You can specify a key from another Amazon Web Services account provided that key it is
+     *         properly shared with your account via Amazon Web Services KMS.
      *         </p>
      *         </li>
      *         <li>
@@ -302,7 +306,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ItemsToRestore </code>: An array of one to five strings where each string is a file path. Use
+     *         <code>ItemsToRestore</code>: An array of one to five strings where each string is a file path. Use
      *         <code>ItemsToRestore</code> to restore specific files or directories rather than the entire file system.
      *         This parameter is optional. For example, <code>"itemsToRestore":"[\"/my.test\"]"</code>.
      *         </p>
@@ -330,7 +334,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by AWS Backup. Returned in
+     * <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by Backup. Returned in
      * <code>GetRecoveryPointRestoreMetadata</code>.
      * </p>
      * </li>
@@ -342,8 +346,9 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>KmsKeyId</code>: Specifies the AWS KMS key that is used to encrypt the restored file system. You can
-     * specify a key from another AWS account provided that key it is properly shared with your account via AWS KMS.
+     * <code>KmsKeyId</code>: Specifies the Amazon Web Services KMS key that is used to encrypt the restored file
+     * system. You can specify a key from another Amazon Web Services account provided that key it is properly shared
+     * with your account via Amazon Web Services KMS.
      * </p>
      * </li>
      * <li>
@@ -364,7 +369,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>ItemsToRestore </code>: An array of one to five strings where each string is a file path. Use
+     * <code>ItemsToRestore</code>: An array of one to five strings where each string is a file path. Use
      * <code>ItemsToRestore</code> to restore specific files or directories rather than the entire file system. This
      * parameter is optional. For example, <code>"itemsToRestore":"[\"/my.test\"]"</code>.
      * </p>
@@ -386,8 +391,8 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by AWS Backup.
-     *        Returned in <code>GetRecoveryPointRestoreMetadata</code>.
+     *        <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by Backup. Returned in
+     *        <code>GetRecoveryPointRestoreMetadata</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -398,9 +403,9 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KmsKeyId</code>: Specifies the AWS KMS key that is used to encrypt the restored file system. You can
-     *        specify a key from another AWS account provided that key it is properly shared with your account via AWS
-     *        KMS.
+     *        <code>KmsKeyId</code>: Specifies the Amazon Web Services KMS key that is used to encrypt the restored file
+     *        system. You can specify a key from another Amazon Web Services account provided that key it is properly
+     *        shared with your account via Amazon Web Services KMS.
      *        </p>
      *        </li>
      *        <li>
@@ -422,7 +427,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ItemsToRestore </code>: An array of one to five strings where each string is a file path. Use
+     *        <code>ItemsToRestore</code>: An array of one to five strings where each string is a file path. Use
      *        <code>ItemsToRestore</code> to restore specific files or directories rather than the entire file system.
      *        This parameter is optional. For example, <code>"itemsToRestore":"[\"/my.test\"]"</code>.
      *        </p>
@@ -450,7 +455,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by AWS Backup. Returned in
+     * <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by Backup. Returned in
      * <code>GetRecoveryPointRestoreMetadata</code>.
      * </p>
      * </li>
@@ -462,8 +467,9 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>KmsKeyId</code>: Specifies the AWS KMS key that is used to encrypt the restored file system. You can
-     * specify a key from another AWS account provided that key it is properly shared with your account via AWS KMS.
+     * <code>KmsKeyId</code>: Specifies the Amazon Web Services KMS key that is used to encrypt the restored file
+     * system. You can specify a key from another Amazon Web Services account provided that key it is properly shared
+     * with your account via Amazon Web Services KMS.
      * </p>
      * </li>
      * <li>
@@ -484,7 +490,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>ItemsToRestore </code>: An array of one to five strings where each string is a file path. Use
+     * <code>ItemsToRestore</code>: An array of one to five strings where each string is a file path. Use
      * <code>ItemsToRestore</code> to restore specific files or directories rather than the entire file system. This
      * parameter is optional. For example, <code>"itemsToRestore":"[\"/my.test\"]"</code>.
      * </p>
@@ -506,8 +512,8 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by AWS Backup.
-     *        Returned in <code>GetRecoveryPointRestoreMetadata</code>.
+     *        <code>file-system-id</code>: The ID of the Amazon EFS file system that is backed up by Backup. Returned in
+     *        <code>GetRecoveryPointRestoreMetadata</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -518,9 +524,9 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KmsKeyId</code>: Specifies the AWS KMS key that is used to encrypt the restored file system. You can
-     *        specify a key from another AWS account provided that key it is properly shared with your account via AWS
-     *        KMS.
+     *        <code>KmsKeyId</code>: Specifies the Amazon Web Services KMS key that is used to encrypt the restored file
+     *        system. You can specify a key from another Amazon Web Services account provided that key it is properly
+     *        shared with your account via Amazon Web Services KMS.
      *        </p>
      *        </li>
      *        <li>
@@ -542,7 +548,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ItemsToRestore </code>: An array of one to five strings where each string is a file path. Use
+     *        <code>ItemsToRestore</code>: An array of one to five strings where each string is a file path. Use
      *        <code>ItemsToRestore</code> to restore specific files or directories rather than the entire file system.
      *        This parameter is optional. For example, <code>"itemsToRestore":"[\"/my.test\"]"</code>.
      *        </p>
@@ -585,13 +591,13 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the target recovery point; for
-     * example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
+     * The Amazon Resource Name (ARN) of the IAM role that Backup uses to create the target recovery point; for example,
+     * <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * </p>
      * 
      * @param iamRoleArn
-     *        The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the target recovery point;
-     *        for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
+     *        The Amazon Resource Name (ARN) of the IAM role that Backup uses to create the target recovery point; for
+     *        example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
      */
 
     public void setIamRoleArn(String iamRoleArn) {
@@ -600,12 +606,12 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the target recovery point; for
-     * example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
+     * The Amazon Resource Name (ARN) of the IAM role that Backup uses to create the target recovery point; for example,
+     * <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the target recovery point;
-     *         for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
+     * @return The Amazon Resource Name (ARN) of the IAM role that Backup uses to create the target recovery point; for
+     *         example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
      */
 
     public String getIamRoleArn() {
@@ -614,13 +620,13 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the target recovery point; for
-     * example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
+     * The Amazon Resource Name (ARN) of the IAM role that Backup uses to create the target recovery point; for example,
+     * <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * </p>
      * 
      * @param iamRoleArn
-     *        The Amazon Resource Name (ARN) of the IAM role that AWS Backup uses to create the target recovery point;
-     *        for example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
+     *        The Amazon Resource Name (ARN) of the IAM role that Backup uses to create the target recovery point; for
+     *        example, <code>arn:aws:iam::123456789012:role/S3Access</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -631,11 +637,15 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartRestoreJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartRestoreJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      * 
      * @param idempotencyToken
-     *        A customer chosen string that can be used to distinguish between calls to <code>StartRestoreJob</code>.
+     *        A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     *        <code>StartRestoreJob</code>. Retrying a successful request with the same idempotency token results in a
+     *        success message with no action taken.
      */
 
     public void setIdempotencyToken(String idempotencyToken) {
@@ -644,10 +654,14 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartRestoreJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartRestoreJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      * 
-     * @return A customer chosen string that can be used to distinguish between calls to <code>StartRestoreJob</code>.
+     * @return A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     *         <code>StartRestoreJob</code>. Retrying a successful request with the same idempotency token results in a
+     *         success message with no action taken.
      */
 
     public String getIdempotencyToken() {
@@ -656,11 +670,15 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartRestoreJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartRestoreJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      * 
      * @param idempotencyToken
-     *        A customer chosen string that can be used to distinguish between calls to <code>StartRestoreJob</code>.
+     *        A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     *        <code>StartRestoreJob</code>. Retrying a successful request with the same idempotency token results in a
+     *        success message with no action taken.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -706,7 +724,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -746,7 +764,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Storage Gateway</code> for AWS Storage Gateway
+     *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      */
@@ -792,7 +810,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -831,7 +849,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Storage Gateway</code> for AWS Storage Gateway
+     *         <code>Storage Gateway</code> for Storage Gateway
      *         </p>
      *         </li>
      */
@@ -877,7 +895,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -917,7 +935,7 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Storage Gateway</code> for AWS Storage Gateway
+     *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

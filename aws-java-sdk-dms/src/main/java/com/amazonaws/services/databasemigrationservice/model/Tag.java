@@ -61,6 +61,12 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String value;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) string that uniquely identifies the resource for which the tag is created.
+     * </p>
+     */
+    private String resourceArn;
 
     /**
      * <p>
@@ -173,6 +179,46 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) string that uniquely identifies the resource for which the tag is created.
+     * </p>
+     * 
+     * @param resourceArn
+     *        The Amazon Resource Name (ARN) string that uniquely identifies the resource for which the tag is created.
+     */
+
+    public void setResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) string that uniquely identifies the resource for which the tag is created.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) string that uniquely identifies the resource for which the tag is created.
+     */
+
+    public String getResourceArn() {
+        return this.resourceArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) string that uniquely identifies the resource for which the tag is created.
+     * </p>
+     * 
+     * @param resourceArn
+     *        The Amazon Resource Name (ARN) string that uniquely identifies the resource for which the tag is created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Tag withResourceArn(String resourceArn) {
+        setResourceArn(resourceArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -187,7 +233,9 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
         if (getKey() != null)
             sb.append("Key: ").append(getKey()).append(",");
         if (getValue() != null)
-            sb.append("Value: ").append(getValue());
+            sb.append("Value: ").append(getValue()).append(",");
+        if (getResourceArn() != null)
+            sb.append("ResourceArn: ").append(getResourceArn());
         sb.append("}");
         return sb.toString();
     }
@@ -210,6 +258,10 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getValue() != null && other.getValue().equals(this.getValue()) == false)
             return false;
+        if (other.getResourceArn() == null ^ this.getResourceArn() == null)
+            return false;
+        if (other.getResourceArn() != null && other.getResourceArn().equals(this.getResourceArn()) == false)
+            return false;
         return true;
     }
 
@@ -220,6 +272,7 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getKey() == null) ? 0 : getKey().hashCode());
         hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());
+        hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
         return hashCode;
     }
 

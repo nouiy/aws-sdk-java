@@ -159,7 +159,7 @@ public class GetEventTypesResult extends com.amazonaws.AmazonWebServiceResult<co
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEventTypes() != null)
-            sb.append("EventTypes: ").append(getEventTypes()).append(",");
+            sb.append("EventTypes: ").append("***Sensitive Data Redacted***").append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken());
         sb.append("}");

@@ -39,6 +39,8 @@ public class CrossRegionCopyRuleMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CopyTags").build();
     private static final MarshallingInfo<StructuredPojo> RETAINRULE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RetainRule").build();
+    private static final MarshallingInfo<StructuredPojo> DEPRECATERULE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeprecateRule").build();
 
     private static final CrossRegionCopyRuleMarshaller instance = new CrossRegionCopyRuleMarshaller();
 
@@ -62,6 +64,7 @@ public class CrossRegionCopyRuleMarshaller {
             protocolMarshaller.marshall(crossRegionCopyRule.getCmkArn(), CMKARN_BINDING);
             protocolMarshaller.marshall(crossRegionCopyRule.getCopyTags(), COPYTAGS_BINDING);
             protocolMarshaller.marshall(crossRegionCopyRule.getRetainRule(), RETAINRULE_BINDING);
+            protocolMarshaller.marshall(crossRegionCopyRule.getDeprecateRule(), DEPRECATERULE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

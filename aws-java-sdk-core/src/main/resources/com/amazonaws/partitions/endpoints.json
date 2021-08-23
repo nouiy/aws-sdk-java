@@ -7812,6 +7812,12 @@
           "cn-northwest-1" : { }
         }
       },
+      "emr-containers" : {
+        "endpoints" : {
+          "cn-north-1" : { },
+          "cn-northwest-1" : { }
+        }
+      },
       "es" : {
         "endpoints" : {
           "cn-north-1" : { },
@@ -7825,6 +7831,15 @@
         }
       },
       "firehose" : {
+        "endpoints" : {
+          "cn-north-1" : { },
+          "cn-northwest-1" : { }
+        }
+      },
+      "fms" : {
+        "defaults" : {
+          "protocols" : [ "https" ]
+        },
         "endpoints" : {
           "cn-north-1" : { },
           "cn-northwest-1" : { }

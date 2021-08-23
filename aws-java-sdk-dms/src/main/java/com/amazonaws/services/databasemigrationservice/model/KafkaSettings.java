@@ -134,8 +134,8 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
     private String sslClientKeyPassword;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the private Certification Authority (CA) cert that DMS uses to securely
-     * connect to your Kafka target endpoint.
+     * The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that DMS uses to securely connect
+     * to your Kafka target endpoint.
      * </p>
      */
     private String sslCaCertificateArn;
@@ -155,8 +155,10 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
     private String saslPassword;
     /**
      * <p>
-     * If this attribute is Y, it allows hexadecimal values that don't have the <code>0x</code> prefix when migrated to
-     * a Kafka target. If this attribute is N, all hexadecimal values include this prefix when migrated to Kafka.
+     * Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal format.
+     * For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an
+     * Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to enable migration of RAW
+     * data type columns without adding the '0x' prefix.
      * </p>
      */
     private Boolean noHexPrefix;
@@ -984,12 +986,12 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the private Certification Authority (CA) cert that DMS uses to securely
-     * connect to your Kafka target endpoint.
+     * The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that DMS uses to securely connect
+     * to your Kafka target endpoint.
      * </p>
      * 
      * @param sslCaCertificateArn
-     *        The Amazon Resource Name (ARN) for the private Certification Authority (CA) cert that DMS uses to securely
+     *        The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that DMS uses to securely
      *        connect to your Kafka target endpoint.
      */
 
@@ -999,12 +1001,12 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the private Certification Authority (CA) cert that DMS uses to securely
-     * connect to your Kafka target endpoint.
+     * The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that DMS uses to securely connect
+     * to your Kafka target endpoint.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the private Certification Authority (CA) cert that DMS uses to
-     *         securely connect to your Kafka target endpoint.
+     * @return The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that DMS uses to securely
+     *         connect to your Kafka target endpoint.
      */
 
     public String getSslCaCertificateArn() {
@@ -1013,12 +1015,12 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the private Certification Authority (CA) cert that DMS uses to securely
-     * connect to your Kafka target endpoint.
+     * The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that DMS uses to securely connect
+     * to your Kafka target endpoint.
      * </p>
      * 
      * @param sslCaCertificateArn
-     *        The Amazon Resource Name (ARN) for the private Certification Authority (CA) cert that DMS uses to securely
+     *        The Amazon Resource Name (ARN) for the private certificate authority (CA) cert that DMS uses to securely
      *        connect to your Kafka target endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1122,14 +1124,17 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If this attribute is Y, it allows hexadecimal values that don't have the <code>0x</code> prefix when migrated to
-     * a Kafka target. If this attribute is N, all hexadecimal values include this prefix when migrated to Kafka.
+     * Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal format.
+     * For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an
+     * Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to enable migration of RAW
+     * data type columns without adding the '0x' prefix.
      * </p>
      * 
      * @param noHexPrefix
-     *        If this attribute is Y, it allows hexadecimal values that don't have the <code>0x</code> prefix when
-     *        migrated to a Kafka target. If this attribute is N, all hexadecimal values include this prefix when
-     *        migrated to Kafka.
+     *        Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal
+     *        format. For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format
+     *        moving from an Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to
+     *        enable migration of RAW data type columns without adding the '0x' prefix.
      */
 
     public void setNoHexPrefix(Boolean noHexPrefix) {
@@ -1138,13 +1143,16 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If this attribute is Y, it allows hexadecimal values that don't have the <code>0x</code> prefix when migrated to
-     * a Kafka target. If this attribute is N, all hexadecimal values include this prefix when migrated to Kafka.
+     * Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal format.
+     * For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an
+     * Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to enable migration of RAW
+     * data type columns without adding the '0x' prefix.
      * </p>
      * 
-     * @return If this attribute is Y, it allows hexadecimal values that don't have the <code>0x</code> prefix when
-     *         migrated to a Kafka target. If this attribute is N, all hexadecimal values include this prefix when
-     *         migrated to Kafka.
+     * @return Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal
+     *         format. For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format
+     *         moving from an Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to
+     *         enable migration of RAW data type columns without adding the '0x' prefix.
      */
 
     public Boolean getNoHexPrefix() {
@@ -1153,14 +1161,17 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If this attribute is Y, it allows hexadecimal values that don't have the <code>0x</code> prefix when migrated to
-     * a Kafka target. If this attribute is N, all hexadecimal values include this prefix when migrated to Kafka.
+     * Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal format.
+     * For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an
+     * Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to enable migration of RAW
+     * data type columns without adding the '0x' prefix.
      * </p>
      * 
      * @param noHexPrefix
-     *        If this attribute is Y, it allows hexadecimal values that don't have the <code>0x</code> prefix when
-     *        migrated to a Kafka target. If this attribute is N, all hexadecimal values include this prefix when
-     *        migrated to Kafka.
+     *        Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal
+     *        format. For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format
+     *        moving from an Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to
+     *        enable migration of RAW data type columns without adding the '0x' prefix.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1171,13 +1182,16 @@ public class KafkaSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If this attribute is Y, it allows hexadecimal values that don't have the <code>0x</code> prefix when migrated to
-     * a Kafka target. If this attribute is N, all hexadecimal values include this prefix when migrated to Kafka.
+     * Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal format.
+     * For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format moving from an
+     * Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to enable migration of RAW
+     * data type columns without adding the '0x' prefix.
      * </p>
      * 
-     * @return If this attribute is Y, it allows hexadecimal values that don't have the <code>0x</code> prefix when
-     *         migrated to a Kafka target. If this attribute is N, all hexadecimal values include this prefix when
-     *         migrated to Kafka.
+     * @return Set this optional parameter to <code>true</code> to avoid adding a '0x' prefix to raw data in hexadecimal
+     *         format. For example, by default, DMS adds a '0x' prefix to the LOB column type in hexadecimal format
+     *         moving from an Oracle source to a Kafka target. Use the <code>NoHexPrefix</code> endpoint setting to
+     *         enable migration of RAW data type columns without adding the '0x' prefix.
      */
 
     public Boolean isNoHexPrefix() {

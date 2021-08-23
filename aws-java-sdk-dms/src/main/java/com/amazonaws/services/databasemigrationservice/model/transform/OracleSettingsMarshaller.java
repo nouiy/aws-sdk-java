@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.databasemigrationservice.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class OracleSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ArchivedLogDestId").build();
     private static final MarshallingInfo<Integer> ADDITIONALARCHIVEDLOGDESTID_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdditionalArchivedLogDestId").build();
+    private static final MarshallingInfo<List> EXTRAARCHIVEDLOGDESTIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExtraArchivedLogDestIds").build();
     private static final MarshallingInfo<Boolean> ALLOWSELECTNESTEDTABLES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AllowSelectNestedTables").build();
     private static final MarshallingInfo<Integer> PARALLELASMREADTHREADS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -125,6 +128,7 @@ public class OracleSettingsMarshaller {
             protocolMarshaller.marshall(oracleSettings.getAddSupplementalLogging(), ADDSUPPLEMENTALLOGGING_BINDING);
             protocolMarshaller.marshall(oracleSettings.getArchivedLogDestId(), ARCHIVEDLOGDESTID_BINDING);
             protocolMarshaller.marshall(oracleSettings.getAdditionalArchivedLogDestId(), ADDITIONALARCHIVEDLOGDESTID_BINDING);
+            protocolMarshaller.marshall(oracleSettings.getExtraArchivedLogDestIds(), EXTRAARCHIVEDLOGDESTIDS_BINDING);
             protocolMarshaller.marshall(oracleSettings.getAllowSelectNestedTables(), ALLOWSELECTNESTEDTABLES_BINDING);
             protocolMarshaller.marshall(oracleSettings.getParallelAsmReadThreads(), PARALLELASMREADTHREADS_BINDING);
             protocolMarshaller.marshall(oracleSettings.getReadAheadBlocks(), READAHEADBLOCKS_BINDING);

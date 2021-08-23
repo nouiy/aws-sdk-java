@@ -45,6 +45,8 @@ public class RecoveryPointByBackupVaultMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IamRoleArn").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Status").build();
+    private static final MarshallingInfo<String> STATUSMESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StatusMessage").build();
     private static final MarshallingInfo<java.util.Date> CREATIONDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationDate").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> COMPLETIONDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -87,6 +89,7 @@ public class RecoveryPointByBackupVaultMarshaller {
             protocolMarshaller.marshall(recoveryPointByBackupVault.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(recoveryPointByBackupVault.getIamRoleArn(), IAMROLEARN_BINDING);
             protocolMarshaller.marshall(recoveryPointByBackupVault.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(recoveryPointByBackupVault.getStatusMessage(), STATUSMESSAGE_BINDING);
             protocolMarshaller.marshall(recoveryPointByBackupVault.getCreationDate(), CREATIONDATE_BINDING);
             protocolMarshaller.marshall(recoveryPointByBackupVault.getCompletionDate(), COMPLETIONDATE_BINDING);
             protocolMarshaller.marshall(recoveryPointByBackupVault.getBackupSizeInBytes(), BACKUPSIZEINBYTES_BINDING);

@@ -84,6 +84,10 @@ public class DescribeRecoveryPointResultJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     describeRecoveryPointResult.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("StatusMessage", targetDepth)) {
+                    context.nextToken();
+                    describeRecoveryPointResult.setStatusMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreationDate", targetDepth)) {
                     context.nextToken();
                     describeRecoveryPointResult.setCreationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

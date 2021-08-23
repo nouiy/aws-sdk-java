@@ -32,11 +32,12 @@ public class DescribeAccountAttributesResult extends com.amazonaws.AmazonWebServ
     private java.util.List<AccountQuota> accountQuotas;
     /**
      * <p>
-     * A unique DMS identifier for an account in a particular Region. The value of this identifier has the following
-     * format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS uses this
-     * identifier to name the default Amazon S3 bucket for storing task assessment reports in a given Region. The format
-     * of this S3 bucket name is the following: <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code>
-     * Here is an example name for this default S3 bucket: <code>dms-111122223333-c44445555666</code>.
+     * A unique DMS identifier for an account in a particular Amazon Web Services Region. The value of this identifier
+     * has the following format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS
+     * uses this identifier to name the default Amazon S3 bucket for storing task assessment reports in a given Amazon
+     * Web Services Region. The format of this S3 bucket name is the following:
+     * <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name for this default S3
+     * bucket: <code>dms-111122223333-c44445555666</code>.
      * </p>
      * <note>
      * <p>
@@ -118,11 +119,12 @@ public class DescribeAccountAttributesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A unique DMS identifier for an account in a particular Region. The value of this identifier has the following
-     * format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS uses this
-     * identifier to name the default Amazon S3 bucket for storing task assessment reports in a given Region. The format
-     * of this S3 bucket name is the following: <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code>
-     * Here is an example name for this default S3 bucket: <code>dms-111122223333-c44445555666</code>.
+     * A unique DMS identifier for an account in a particular Amazon Web Services Region. The value of this identifier
+     * has the following format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS
+     * uses this identifier to name the default Amazon S3 bucket for storing task assessment reports in a given Amazon
+     * Web Services Region. The format of this S3 bucket name is the following:
+     * <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name for this default S3
+     * bucket: <code>dms-111122223333-c44445555666</code>.
      * </p>
      * <note>
      * <p>
@@ -131,12 +133,12 @@ public class DescribeAccountAttributesResult extends com.amazonaws.AmazonWebServ
      * </note>
      * 
      * @param uniqueAccountIdentifier
-     *        A unique DMS identifier for an account in a particular Region. The value of this identifier has the
-     *        following format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS
-     *        uses this identifier to name the default Amazon S3 bucket for storing task assessment reports in a given
-     *        Region. The format of this S3 bucket name is the following:
-     *        <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name for this
-     *        default S3 bucket: <code>dms-111122223333-c44445555666</code>.</p> <note>
+     *        A unique DMS identifier for an account in a particular Amazon Web Services Region. The value of this
+     *        identifier has the following format: <code>c99999999999</code>. DMS uses this identifier to name
+     *        artifacts. For example, DMS uses this identifier to name the default Amazon S3 bucket for storing task
+     *        assessment reports in a given Amazon Web Services Region. The format of this S3 bucket name is the
+     *        following: <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name
+     *        for this default S3 bucket: <code>dms-111122223333-c44445555666</code>.</p> <note>
      *        <p>
      *        DMS supports the <code>UniqueAccountIdentifier</code> parameter in versions 3.1.4 and later.
      *        </p>
@@ -148,11 +150,12 @@ public class DescribeAccountAttributesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A unique DMS identifier for an account in a particular Region. The value of this identifier has the following
-     * format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS uses this
-     * identifier to name the default Amazon S3 bucket for storing task assessment reports in a given Region. The format
-     * of this S3 bucket name is the following: <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code>
-     * Here is an example name for this default S3 bucket: <code>dms-111122223333-c44445555666</code>.
+     * A unique DMS identifier for an account in a particular Amazon Web Services Region. The value of this identifier
+     * has the following format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS
+     * uses this identifier to name the default Amazon S3 bucket for storing task assessment reports in a given Amazon
+     * Web Services Region. The format of this S3 bucket name is the following:
+     * <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name for this default S3
+     * bucket: <code>dms-111122223333-c44445555666</code>.
      * </p>
      * <note>
      * <p>
@@ -160,12 +163,12 @@ public class DescribeAccountAttributesResult extends com.amazonaws.AmazonWebServ
      * </p>
      * </note>
      * 
-     * @return A unique DMS identifier for an account in a particular Region. The value of this identifier has the
-     *         following format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS
-     *         uses this identifier to name the default Amazon S3 bucket for storing task assessment reports in a given
-     *         Region. The format of this S3 bucket name is the following:
-     *         <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name for this
-     *         default S3 bucket: <code>dms-111122223333-c44445555666</code>.</p> <note>
+     * @return A unique DMS identifier for an account in a particular Amazon Web Services Region. The value of this
+     *         identifier has the following format: <code>c99999999999</code>. DMS uses this identifier to name
+     *         artifacts. For example, DMS uses this identifier to name the default Amazon S3 bucket for storing task
+     *         assessment reports in a given Amazon Web Services Region. The format of this S3 bucket name is the
+     *         following: <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name
+     *         for this default S3 bucket: <code>dms-111122223333-c44445555666</code>.</p> <note>
      *         <p>
      *         DMS supports the <code>UniqueAccountIdentifier</code> parameter in versions 3.1.4 and later.
      *         </p>
@@ -177,11 +180,12 @@ public class DescribeAccountAttributesResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A unique DMS identifier for an account in a particular Region. The value of this identifier has the following
-     * format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS uses this
-     * identifier to name the default Amazon S3 bucket for storing task assessment reports in a given Region. The format
-     * of this S3 bucket name is the following: <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code>
-     * Here is an example name for this default S3 bucket: <code>dms-111122223333-c44445555666</code>.
+     * A unique DMS identifier for an account in a particular Amazon Web Services Region. The value of this identifier
+     * has the following format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS
+     * uses this identifier to name the default Amazon S3 bucket for storing task assessment reports in a given Amazon
+     * Web Services Region. The format of this S3 bucket name is the following:
+     * <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name for this default S3
+     * bucket: <code>dms-111122223333-c44445555666</code>.
      * </p>
      * <note>
      * <p>
@@ -190,12 +194,12 @@ public class DescribeAccountAttributesResult extends com.amazonaws.AmazonWebServ
      * </note>
      * 
      * @param uniqueAccountIdentifier
-     *        A unique DMS identifier for an account in a particular Region. The value of this identifier has the
-     *        following format: <code>c99999999999</code>. DMS uses this identifier to name artifacts. For example, DMS
-     *        uses this identifier to name the default Amazon S3 bucket for storing task assessment reports in a given
-     *        Region. The format of this S3 bucket name is the following:
-     *        <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name for this
-     *        default S3 bucket: <code>dms-111122223333-c44445555666</code>.</p> <note>
+     *        A unique DMS identifier for an account in a particular Amazon Web Services Region. The value of this
+     *        identifier has the following format: <code>c99999999999</code>. DMS uses this identifier to name
+     *        artifacts. For example, DMS uses this identifier to name the default Amazon S3 bucket for storing task
+     *        assessment reports in a given Amazon Web Services Region. The format of this S3 bucket name is the
+     *        following: <code>dms-<i>AccountNumber</i>-<i>UniqueAccountIdentifier</i>.</code> Here is an example name
+     *        for this default S3 bucket: <code>dms-111122223333-c44445555666</code>.</p> <note>
      *        <p>
      *        DMS supports the <code>UniqueAccountIdentifier</code> parameter in versions 3.1.4 and later.
      *        </p>

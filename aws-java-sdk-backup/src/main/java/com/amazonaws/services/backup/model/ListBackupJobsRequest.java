@@ -54,8 +54,8 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Returns only backup jobs that will be stored in the specified backup vault. Backup vaults are identified by names
-     * that are unique to the account used to create them and the AWS Region where they are created. They consist of
-     * lowercase letters, numbers, and hyphens.
+     * that are unique to the account used to create them and the Amazon Web Services Region where they are created.
+     * They consist of lowercase letters, numbers, and hyphens.
      * </p>
      */
     private String byBackupVaultName;
@@ -108,7 +108,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -119,7 +119,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * The account ID to list the jobs from. Returns only backup jobs associated with the specified account ID.
      * </p>
      * <p>
-     * If used from an AWS Organizations management account, passing <code>*</code> returns all jobs across the
+     * If used from an Organizations management account, passing <code>*</code> returns all jobs across the
      * organization.
      * </p>
      */
@@ -319,14 +319,14 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Returns only backup jobs that will be stored in the specified backup vault. Backup vaults are identified by names
-     * that are unique to the account used to create them and the AWS Region where they are created. They consist of
-     * lowercase letters, numbers, and hyphens.
+     * that are unique to the account used to create them and the Amazon Web Services Region where they are created.
+     * They consist of lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param byBackupVaultName
      *        Returns only backup jobs that will be stored in the specified backup vault. Backup vaults are identified
-     *        by names that are unique to the account used to create them and the AWS Region where they are created.
-     *        They consist of lowercase letters, numbers, and hyphens.
+     *        by names that are unique to the account used to create them and the Amazon Web Services Region where they
+     *        are created. They consist of lowercase letters, numbers, and hyphens.
      */
 
     public void setByBackupVaultName(String byBackupVaultName) {
@@ -336,13 +336,13 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Returns only backup jobs that will be stored in the specified backup vault. Backup vaults are identified by names
-     * that are unique to the account used to create them and the AWS Region where they are created. They consist of
-     * lowercase letters, numbers, and hyphens.
+     * that are unique to the account used to create them and the Amazon Web Services Region where they are created.
+     * They consist of lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @return Returns only backup jobs that will be stored in the specified backup vault. Backup vaults are identified
-     *         by names that are unique to the account used to create them and the AWS Region where they are created.
-     *         They consist of lowercase letters, numbers, and hyphens.
+     *         by names that are unique to the account used to create them and the Amazon Web Services Region where they
+     *         are created. They consist of lowercase letters, numbers, and hyphens.
      */
 
     public String getByBackupVaultName() {
@@ -352,14 +352,14 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * Returns only backup jobs that will be stored in the specified backup vault. Backup vaults are identified by names
-     * that are unique to the account used to create them and the AWS Region where they are created. They consist of
-     * lowercase letters, numbers, and hyphens.
+     * that are unique to the account used to create them and the Amazon Web Services Region where they are created.
+     * They consist of lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param byBackupVaultName
      *        Returns only backup jobs that will be stored in the specified backup vault. Backup vaults are identified
-     *        by names that are unique to the account used to create them and the AWS Region where they are created.
-     *        They consist of lowercase letters, numbers, and hyphens.
+     *        by names that are unique to the account used to create them and the Amazon Web Services Region where they
+     *        are created. They consist of lowercase letters, numbers, and hyphens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -485,7 +485,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -525,7 +525,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Storage Gateway</code> for AWS Storage Gateway
+     *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      */
@@ -571,7 +571,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -610,7 +610,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Storage Gateway</code> for AWS Storage Gateway
+     *         <code>Storage Gateway</code> for Storage Gateway
      *         </p>
      *         </li>
      */
@@ -656,7 +656,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for AWS Storage Gateway
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * </ul>
@@ -696,7 +696,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Storage Gateway</code> for AWS Storage Gateway
+     *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -712,7 +712,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * The account ID to list the jobs from. Returns only backup jobs associated with the specified account ID.
      * </p>
      * <p>
-     * If used from an AWS Organizations management account, passing <code>*</code> returns all jobs across the
+     * If used from an Organizations management account, passing <code>*</code> returns all jobs across the
      * organization.
      * </p>
      * 
@@ -720,7 +720,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        The account ID to list the jobs from. Returns only backup jobs associated with the specified account
      *        ID.</p>
      *        <p>
-     *        If used from an AWS Organizations management account, passing <code>*</code> returns all jobs across the
+     *        If used from an Organizations management account, passing <code>*</code> returns all jobs across the
      *        organization.
      */
 
@@ -733,14 +733,14 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * The account ID to list the jobs from. Returns only backup jobs associated with the specified account ID.
      * </p>
      * <p>
-     * If used from an AWS Organizations management account, passing <code>*</code> returns all jobs across the
+     * If used from an Organizations management account, passing <code>*</code> returns all jobs across the
      * organization.
      * </p>
      * 
      * @return The account ID to list the jobs from. Returns only backup jobs associated with the specified account
      *         ID.</p>
      *         <p>
-     *         If used from an AWS Organizations management account, passing <code>*</code> returns all jobs across the
+     *         If used from an Organizations management account, passing <code>*</code> returns all jobs across the
      *         organization.
      */
 
@@ -753,7 +753,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      * The account ID to list the jobs from. Returns only backup jobs associated with the specified account ID.
      * </p>
      * <p>
-     * If used from an AWS Organizations management account, passing <code>*</code> returns all jobs across the
+     * If used from an Organizations management account, passing <code>*</code> returns all jobs across the
      * organization.
      * </p>
      * 
@@ -761,7 +761,7 @@ public class ListBackupJobsRequest extends com.amazonaws.AmazonWebServiceRequest
      *        The account ID to list the jobs from. Returns only backup jobs associated with the specified account
      *        ID.</p>
      *        <p>
-     *        If used from an AWS Organizations management account, passing <code>*</code> returns all jobs across the
+     *        If used from an Organizations management account, passing <code>*</code> returns all jobs across the
      *        organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

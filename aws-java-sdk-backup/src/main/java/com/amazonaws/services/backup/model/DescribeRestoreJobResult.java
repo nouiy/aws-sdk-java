@@ -60,7 +60,7 @@ public class DescribeRestoreJobResult extends com.amazonaws.AmazonWebServiceResu
     private java.util.Date completionDate;
     /**
      * <p>
-     * Status code specifying the state of the job that is initiated by AWS Backup to restore a recovery point.
+     * Status code specifying the state of the job that is initiated by Backup to restore a recovery point.
      * </p>
      */
     private String status;
@@ -341,11 +341,11 @@ public class DescribeRestoreJobResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Status code specifying the state of the job that is initiated by AWS Backup to restore a recovery point.
+     * Status code specifying the state of the job that is initiated by Backup to restore a recovery point.
      * </p>
      * 
      * @param status
-     *        Status code specifying the state of the job that is initiated by AWS Backup to restore a recovery point.
+     *        Status code specifying the state of the job that is initiated by Backup to restore a recovery point.
      * @see RestoreJobStatus
      */
 
@@ -355,10 +355,10 @@ public class DescribeRestoreJobResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Status code specifying the state of the job that is initiated by AWS Backup to restore a recovery point.
+     * Status code specifying the state of the job that is initiated by Backup to restore a recovery point.
      * </p>
      * 
-     * @return Status code specifying the state of the job that is initiated by AWS Backup to restore a recovery point.
+     * @return Status code specifying the state of the job that is initiated by Backup to restore a recovery point.
      * @see RestoreJobStatus
      */
 
@@ -368,11 +368,11 @@ public class DescribeRestoreJobResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Status code specifying the state of the job that is initiated by AWS Backup to restore a recovery point.
+     * Status code specifying the state of the job that is initiated by Backup to restore a recovery point.
      * </p>
      * 
      * @param status
-     *        Status code specifying the state of the job that is initiated by AWS Backup to restore a recovery point.
+     *        Status code specifying the state of the job that is initiated by Backup to restore a recovery point.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RestoreJobStatus
      */
@@ -384,11 +384,11 @@ public class DescribeRestoreJobResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Status code specifying the state of the job that is initiated by AWS Backup to restore a recovery point.
+     * Status code specifying the state of the job that is initiated by Backup to restore a recovery point.
      * </p>
      * 
      * @param status
-     *        Status code specifying the state of the job that is initiated by AWS Backup to restore a recovery point.
+     *        Status code specifying the state of the job that is initiated by Backup to restore a recovery point.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RestoreJobStatus
      */

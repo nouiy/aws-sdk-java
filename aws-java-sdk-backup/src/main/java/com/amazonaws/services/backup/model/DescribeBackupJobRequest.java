@@ -27,18 +27,18 @@ public class DescribeBackupJobRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      */
     private String backupJobId;
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      * 
      * @param backupJobId
-     *        Uniquely identifies a request to AWS Backup to back up a resource.
+     *        Uniquely identifies a request to Backup to back up a resource.
      */
 
     public void setBackupJobId(String backupJobId) {
@@ -47,10 +47,10 @@ public class DescribeBackupJobRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      * 
-     * @return Uniquely identifies a request to AWS Backup to back up a resource.
+     * @return Uniquely identifies a request to Backup to back up a resource.
      */
 
     public String getBackupJobId() {
@@ -59,11 +59,11 @@ public class DescribeBackupJobRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Uniquely identifies a request to AWS Backup to back up a resource.
+     * Uniquely identifies a request to Backup to back up a resource.
      * </p>
      * 
      * @param backupJobId
-     *        Uniquely identifies a request to AWS Backup to back up a resource.
+     *        Uniquely identifies a request to Backup to back up a resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

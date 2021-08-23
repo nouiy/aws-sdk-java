@@ -31,9 +31,9 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies an object containing resource type and backup options. The only supported resource type is Amazon EC2
-     * instances with Windows VSS. For an CloudFormation example, see the <a
+     * instances with Windows Volume Shadow Copy Service (VSS). For a CloudFormation example, see the <a
      * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/integrate-cloudformation-with-aws-backup.html"
-     * >sample CloudFormation template to enable Windows VSS</a> in the <i>AWS Backup User Guide</i>.
+     * >sample CloudFormation template to enable Windows VSS</a> in the <i>Backup User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>EC2</code>.
@@ -48,12 +48,12 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
      * Valid values:
      * </p>
      * <p>
-     * Set to <code>"WindowsVSS":"enabled"</code> to enable the WindowsVSS backup option and create a VSS Windows
-     * backup.
+     * Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and create a
+     * Windows VSS backup.
      * </p>
      * <p>
-     * Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The WindowsVSS option is not enabled by
-     * default.
+     * Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The <code>WindowsVSS</code> option is not
+     * enabled by default.
      * </p>
      * <p>
      * If you specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
@@ -69,9 +69,9 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies an object containing resource type and backup options. The only supported resource type is Amazon EC2
-     * instances with Windows VSS. For an CloudFormation example, see the <a
+     * instances with Windows Volume Shadow Copy Service (VSS). For a CloudFormation example, see the <a
      * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/integrate-cloudformation-with-aws-backup.html"
-     * >sample CloudFormation template to enable Windows VSS</a> in the <i>AWS Backup User Guide</i>.
+     * >sample CloudFormation template to enable Windows VSS</a> in the <i>Backup User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>EC2</code>.
@@ -79,9 +79,10 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
      * 
      * @param resourceType
      *        Specifies an object containing resource type and backup options. The only supported resource type is
-     *        Amazon EC2 instances with Windows VSS. For an CloudFormation example, see the <a href=
+     *        Amazon EC2 instances with Windows Volume Shadow Copy Service (VSS). For a CloudFormation example, see the
+     *        <a href=
      *        "https://docs.aws.amazon.com/aws-backup/latest/devguide/integrate-cloudformation-with-aws-backup.html"
-     *        >sample CloudFormation template to enable Windows VSS</a> in the <i>AWS Backup User Guide</i>.</p>
+     *        >sample CloudFormation template to enable Windows VSS</a> in the <i>Backup User Guide</i>.</p>
      *        <p>
      *        Valid values: <code>EC2</code>.
      */
@@ -93,18 +94,19 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies an object containing resource type and backup options. The only supported resource type is Amazon EC2
-     * instances with Windows VSS. For an CloudFormation example, see the <a
+     * instances with Windows Volume Shadow Copy Service (VSS). For a CloudFormation example, see the <a
      * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/integrate-cloudformation-with-aws-backup.html"
-     * >sample CloudFormation template to enable Windows VSS</a> in the <i>AWS Backup User Guide</i>.
+     * >sample CloudFormation template to enable Windows VSS</a> in the <i>Backup User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>EC2</code>.
      * </p>
      * 
      * @return Specifies an object containing resource type and backup options. The only supported resource type is
-     *         Amazon EC2 instances with Windows VSS. For an CloudFormation example, see the <a href=
+     *         Amazon EC2 instances with Windows Volume Shadow Copy Service (VSS). For a CloudFormation example, see the
+     *         <a href=
      *         "https://docs.aws.amazon.com/aws-backup/latest/devguide/integrate-cloudformation-with-aws-backup.html"
-     *         >sample CloudFormation template to enable Windows VSS</a> in the <i>AWS Backup User Guide</i>.</p>
+     *         >sample CloudFormation template to enable Windows VSS</a> in the <i>Backup User Guide</i>.</p>
      *         <p>
      *         Valid values: <code>EC2</code>.
      */
@@ -116,9 +118,9 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
     /**
      * <p>
      * Specifies an object containing resource type and backup options. The only supported resource type is Amazon EC2
-     * instances with Windows VSS. For an CloudFormation example, see the <a
+     * instances with Windows Volume Shadow Copy Service (VSS). For a CloudFormation example, see the <a
      * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/integrate-cloudformation-with-aws-backup.html"
-     * >sample CloudFormation template to enable Windows VSS</a> in the <i>AWS Backup User Guide</i>.
+     * >sample CloudFormation template to enable Windows VSS</a> in the <i>Backup User Guide</i>.
      * </p>
      * <p>
      * Valid values: <code>EC2</code>.
@@ -126,9 +128,10 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
      * 
      * @param resourceType
      *        Specifies an object containing resource type and backup options. The only supported resource type is
-     *        Amazon EC2 instances with Windows VSS. For an CloudFormation example, see the <a href=
+     *        Amazon EC2 instances with Windows Volume Shadow Copy Service (VSS). For a CloudFormation example, see the
+     *        <a href=
      *        "https://docs.aws.amazon.com/aws-backup/latest/devguide/integrate-cloudformation-with-aws-backup.html"
-     *        >sample CloudFormation template to enable Windows VSS</a> in the <i>AWS Backup User Guide</i>.</p>
+     *        >sample CloudFormation template to enable Windows VSS</a> in the <i>Backup User Guide</i>.</p>
      *        <p>
      *        Valid values: <code>EC2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -147,12 +150,12 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
      * Valid values:
      * </p>
      * <p>
-     * Set to <code>"WindowsVSS":"enabled"</code> to enable the WindowsVSS backup option and create a VSS Windows
-     * backup.
+     * Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and create a
+     * Windows VSS backup.
      * </p>
      * <p>
-     * Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The WindowsVSS option is not enabled by
-     * default.
+     * Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The <code>WindowsVSS</code> option is not
+     * enabled by default.
      * </p>
      * <p>
      * If you specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
@@ -169,12 +172,12 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
      *         Valid values:
      *         </p>
      *         <p>
-     *         Set to <code>"WindowsVSS":"enabled"</code> to enable the WindowsVSS backup option and create a VSS
-     *         Windows backup.
+     *         Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and create
+     *         a Windows VSS backup.
      *         </p>
      *         <p>
-     *         Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The WindowsVSS option is not
-     *         enabled by default.
+     *         Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The <code>WindowsVSS</code>
+     *         option is not enabled by default.
      *         </p>
      *         <p>
      *         If you specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
@@ -197,12 +200,12 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
      * Valid values:
      * </p>
      * <p>
-     * Set to <code>"WindowsVSS":"enabled"</code> to enable the WindowsVSS backup option and create a VSS Windows
-     * backup.
+     * Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and create a
+     * Windows VSS backup.
      * </p>
      * <p>
-     * Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The WindowsVSS option is not enabled by
-     * default.
+     * Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The <code>WindowsVSS</code> option is not
+     * enabled by default.
      * </p>
      * <p>
      * If you specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
@@ -220,12 +223,12 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
      *        Valid values:
      *        </p>
      *        <p>
-     *        Set to <code>"WindowsVSS":"enabled"</code> to enable the WindowsVSS backup option and create a VSS Windows
-     *        backup.
+     *        Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and create
+     *        a Windows VSS backup.
      *        </p>
      *        <p>
-     *        Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The WindowsVSS option is not
-     *        enabled by default.
+     *        Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The <code>WindowsVSS</code> option
+     *        is not enabled by default.
      *        </p>
      *        <p>
      *        If you specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
@@ -248,12 +251,12 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
      * Valid values:
      * </p>
      * <p>
-     * Set to <code>"WindowsVSS":"enabled"</code> to enable the WindowsVSS backup option and create a VSS Windows
-     * backup.
+     * Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and create a
+     * Windows VSS backup.
      * </p>
      * <p>
-     * Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The WindowsVSS option is not enabled by
-     * default.
+     * Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The <code>WindowsVSS</code> option is not
+     * enabled by default.
      * </p>
      * <p>
      * If you specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.
@@ -271,12 +274,12 @@ public class AdvancedBackupSetting implements Serializable, Cloneable, Structure
      *        Valid values:
      *        </p>
      *        <p>
-     *        Set to <code>"WindowsVSS":"enabled"</code> to enable the WindowsVSS backup option and create a VSS Windows
-     *        backup.
+     *        Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and create
+     *        a Windows VSS backup.
      *        </p>
      *        <p>
-     *        Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The WindowsVSS option is not
-     *        enabled by default.
+     *        Set to <code>"WindowsVSS":"disabled"</code> to create a regular backup. The <code>WindowsVSS</code> option
+     *        is not enabled by default.
      *        </p>
      *        <p>
      *        If you specify an invalid option, you get an <code>InvalidParameterValueException</code> exception.

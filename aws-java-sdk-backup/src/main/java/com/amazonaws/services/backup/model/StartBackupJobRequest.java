@@ -28,8 +28,8 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      */
     private String backupVaultName;
@@ -49,7 +49,9 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     private String iamRoleArn;
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartBackupJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartBackupJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      */
     private String idempotencyToken;
@@ -70,8 +72,8 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     private Long completeWindowMinutes;
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
-     * will transition and expire backups automatically according to the lifecycle that you define.
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will
+     * transition and expire backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
@@ -92,12 +94,13 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     private java.util.Map<String, String> recoveryPointTags;
     /**
      * <p>
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs.
+     * Specifies the backup option for a selected resource. This option is only available for Windows Volume Shadow Copy
+     * Service (VSS) backup jobs.
      * </p>
      * <p>
-     * Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a VSS
-     * Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. The WindowsVSS option is not enabled
-     * by default.
+     * Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and
+     * create a Windows VSS backup. Set to <code>"WindowsVSS""disabled"</code> to create a regular backup. The
+     * <code>WindowsVSS</code> option is not enabled by default.
      * </p>
      */
     private java.util.Map<String, String> backupOptions;
@@ -105,14 +108,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      */
 
     public void setBackupVaultName(String backupVaultName) {
@@ -122,13 +125,13 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @return The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *         unique to the account used to create them and the AWS Region where they are created. They consist of
-     *         lowercase letters, numbers, and hyphens.
+     *         unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *         consist of lowercase letters, numbers, and hyphens.
      */
 
     public String getBackupVaultName() {
@@ -138,14 +141,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The name of a logical container where backups are stored. Backup vaults are identified by names that are unique
-     * to the account used to create them and the AWS Region where they are created. They consist of lowercase letters,
-     * numbers, and hyphens.
+     * to the account used to create them and the Amazon Web Services Region where they are created. They consist of
+     * lowercase letters, numbers, and hyphens.
      * </p>
      * 
      * @param backupVaultName
      *        The name of a logical container where backups are stored. Backup vaults are identified by names that are
-     *        unique to the account used to create them and the AWS Region where they are created. They consist of
-     *        lowercase letters, numbers, and hyphens.
+     *        unique to the account used to create them and the Amazon Web Services Region where they are created. They
+     *        consist of lowercase letters, numbers, and hyphens.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -248,11 +251,15 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartBackupJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartBackupJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      * 
      * @param idempotencyToken
-     *        A customer chosen string that can be used to distinguish between calls to <code>StartBackupJob</code>.
+     *        A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     *        <code>StartBackupJob</code>. Retrying a successful request with the same idempotency token results in a
+     *        success message with no action taken.
      */
 
     public void setIdempotencyToken(String idempotencyToken) {
@@ -261,10 +268,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartBackupJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartBackupJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      * 
-     * @return A customer chosen string that can be used to distinguish between calls to <code>StartBackupJob</code>.
+     * @return A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     *         <code>StartBackupJob</code>. Retrying a successful request with the same idempotency token results in a
+     *         success message with no action taken.
      */
 
     public String getIdempotencyToken() {
@@ -273,11 +284,15 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A customer chosen string that can be used to distinguish between calls to <code>StartBackupJob</code>.
+     * A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     * <code>StartBackupJob</code>. Retrying a successful request with the same idempotency token results in a success
+     * message with no action taken.
      * </p>
      * 
      * @param idempotencyToken
-     *        A customer chosen string that can be used to distinguish between calls to <code>StartBackupJob</code>.
+     *        A customer-chosen string that you can use to distinguish between otherwise identical calls to
+     *        <code>StartBackupJob</code>. Retrying a successful request with the same idempotency token results in a
+     *        success message with no action taken.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -389,8 +404,8 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
-     * will transition and expire backups automatically according to the lifecycle that you define.
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will
+     * transition and expire backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
@@ -402,7 +417,7 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param lifecycle
-     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *        Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
@@ -420,8 +435,8 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
-     * will transition and expire backups automatically according to the lifecycle that you define.
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will
+     * transition and expire backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
@@ -432,7 +447,7 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * Only Amazon EFS file system backups can be transitioned to cold storage.
      * </p>
      * 
-     * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *         Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
      *         <p>
      *         Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
@@ -450,8 +465,8 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
-     * will transition and expire backups automatically according to the lifecycle that you define.
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup will
+     * transition and expire backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
@@ -463,7 +478,7 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param lifecycle
-     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *        Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
@@ -557,20 +572,21 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs.
+     * Specifies the backup option for a selected resource. This option is only available for Windows Volume Shadow Copy
+     * Service (VSS) backup jobs.
      * </p>
      * <p>
-     * Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a VSS
-     * Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. The WindowsVSS option is not enabled
-     * by default.
+     * Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and
+     * create a Windows VSS backup. Set to <code>"WindowsVSS""disabled"</code> to create a regular backup. The
+     * <code>WindowsVSS</code> option is not enabled by default.
      * </p>
      * 
-     * @return Specifies the backup option for a selected resource. This option is only available for Windows VSS backup
-     *         jobs.</p>
+     * @return Specifies the backup option for a selected resource. This option is only available for Windows Volume
+     *         Shadow Copy Service (VSS) backup jobs.</p>
      *         <p>
-     *         Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a
-     *         VSS Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. The WindowsVSS option is
-     *         not enabled by default.
+     *         Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup
+     *         option and create a Windows VSS backup. Set to <code>"WindowsVSS""disabled"</code> to create a regular
+     *         backup. The <code>WindowsVSS</code> option is not enabled by default.
      */
 
     public java.util.Map<String, String> getBackupOptions() {
@@ -579,21 +595,22 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs.
+     * Specifies the backup option for a selected resource. This option is only available for Windows Volume Shadow Copy
+     * Service (VSS) backup jobs.
      * </p>
      * <p>
-     * Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a VSS
-     * Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. The WindowsVSS option is not enabled
-     * by default.
+     * Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and
+     * create a Windows VSS backup. Set to <code>"WindowsVSS""disabled"</code> to create a regular backup. The
+     * <code>WindowsVSS</code> option is not enabled by default.
      * </p>
      * 
      * @param backupOptions
-     *        Specifies the backup option for a selected resource. This option is only available for Windows VSS backup
-     *        jobs.</p>
+     *        Specifies the backup option for a selected resource. This option is only available for Windows Volume
+     *        Shadow Copy Service (VSS) backup jobs.</p>
      *        <p>
-     *        Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a
-     *        VSS Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. The WindowsVSS option is
-     *        not enabled by default.
+     *        Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup
+     *        option and create a Windows VSS backup. Set to <code>"WindowsVSS""disabled"</code> to create a regular
+     *        backup. The <code>WindowsVSS</code> option is not enabled by default.
      */
 
     public void setBackupOptions(java.util.Map<String, String> backupOptions) {
@@ -602,21 +619,22 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs.
+     * Specifies the backup option for a selected resource. This option is only available for Windows Volume Shadow Copy
+     * Service (VSS) backup jobs.
      * </p>
      * <p>
-     * Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a VSS
-     * Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. The WindowsVSS option is not enabled
-     * by default.
+     * Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup option and
+     * create a Windows VSS backup. Set to <code>"WindowsVSS""disabled"</code> to create a regular backup. The
+     * <code>WindowsVSS</code> option is not enabled by default.
      * </p>
      * 
      * @param backupOptions
-     *        Specifies the backup option for a selected resource. This option is only available for Windows VSS backup
-     *        jobs.</p>
+     *        Specifies the backup option for a selected resource. This option is only available for Windows Volume
+     *        Shadow Copy Service (VSS) backup jobs.</p>
      *        <p>
-     *        Valid values: Set to <code>"WindowsVSS”:“enabled"</code> to enable WindowsVSS backup option and create a
-     *        VSS Windows backup. Set to “WindowsVSS”:”disabled” to create a regular backup. The WindowsVSS option is
-     *        not enabled by default.
+     *        Valid values: Set to <code>"WindowsVSS":"enabled"</code> to enable the <code>WindowsVSS</code> backup
+     *        option and create a Windows VSS backup. Set to <code>"WindowsVSS""disabled"</code> to create a regular
+     *        backup. The <code>WindowsVSS</code> option is not enabled by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

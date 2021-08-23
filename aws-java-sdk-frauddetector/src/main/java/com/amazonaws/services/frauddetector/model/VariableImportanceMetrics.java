@@ -33,7 +33,7 @@ public class VariableImportanceMetrics implements Serializable, Cloneable, Struc
      * List of variable metrics.
      * </p>
      */
-    private java.util.List<LogitMetric> logitMetrics;
+    private java.util.List<LogOddsMetric> logOddsMetrics;
 
     /**
      * <p>
@@ -43,8 +43,8 @@ public class VariableImportanceMetrics implements Serializable, Cloneable, Struc
      * @return List of variable metrics.
      */
 
-    public java.util.List<LogitMetric> getLogitMetrics() {
-        return logitMetrics;
+    public java.util.List<LogOddsMetric> getLogOddsMetrics() {
+        return logOddsMetrics;
     }
 
     /**
@@ -52,17 +52,17 @@ public class VariableImportanceMetrics implements Serializable, Cloneable, Struc
      * List of variable metrics.
      * </p>
      * 
-     * @param logitMetrics
+     * @param logOddsMetrics
      *        List of variable metrics.
      */
 
-    public void setLogitMetrics(java.util.Collection<LogitMetric> logitMetrics) {
-        if (logitMetrics == null) {
-            this.logitMetrics = null;
+    public void setLogOddsMetrics(java.util.Collection<LogOddsMetric> logOddsMetrics) {
+        if (logOddsMetrics == null) {
+            this.logOddsMetrics = null;
             return;
         }
 
-        this.logitMetrics = new java.util.ArrayList<LogitMetric>(logitMetrics);
+        this.logOddsMetrics = new java.util.ArrayList<LogOddsMetric>(logOddsMetrics);
     }
 
     /**
@@ -71,21 +71,21 @@ public class VariableImportanceMetrics implements Serializable, Cloneable, Struc
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setLogitMetrics(java.util.Collection)} or {@link #withLogitMetrics(java.util.Collection)} if you want to
-     * override the existing values.
+     * {@link #setLogOddsMetrics(java.util.Collection)} or {@link #withLogOddsMetrics(java.util.Collection)} if you want
+     * to override the existing values.
      * </p>
      * 
-     * @param logitMetrics
+     * @param logOddsMetrics
      *        List of variable metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public VariableImportanceMetrics withLogitMetrics(LogitMetric... logitMetrics) {
-        if (this.logitMetrics == null) {
-            setLogitMetrics(new java.util.ArrayList<LogitMetric>(logitMetrics.length));
+    public VariableImportanceMetrics withLogOddsMetrics(LogOddsMetric... logOddsMetrics) {
+        if (this.logOddsMetrics == null) {
+            setLogOddsMetrics(new java.util.ArrayList<LogOddsMetric>(logOddsMetrics.length));
         }
-        for (LogitMetric ele : logitMetrics) {
-            this.logitMetrics.add(ele);
+        for (LogOddsMetric ele : logOddsMetrics) {
+            this.logOddsMetrics.add(ele);
         }
         return this;
     }
@@ -95,13 +95,13 @@ public class VariableImportanceMetrics implements Serializable, Cloneable, Struc
      * List of variable metrics.
      * </p>
      * 
-     * @param logitMetrics
+     * @param logOddsMetrics
      *        List of variable metrics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public VariableImportanceMetrics withLogitMetrics(java.util.Collection<LogitMetric> logitMetrics) {
-        setLogitMetrics(logitMetrics);
+    public VariableImportanceMetrics withLogOddsMetrics(java.util.Collection<LogOddsMetric> logOddsMetrics) {
+        setLogOddsMetrics(logOddsMetrics);
         return this;
     }
 
@@ -117,8 +117,8 @@ public class VariableImportanceMetrics implements Serializable, Cloneable, Struc
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getLogitMetrics() != null)
-            sb.append("LogitMetrics: ").append(getLogitMetrics());
+        if (getLogOddsMetrics() != null)
+            sb.append("LogOddsMetrics: ").append(getLogOddsMetrics());
         sb.append("}");
         return sb.toString();
     }
@@ -133,9 +133,9 @@ public class VariableImportanceMetrics implements Serializable, Cloneable, Struc
         if (obj instanceof VariableImportanceMetrics == false)
             return false;
         VariableImportanceMetrics other = (VariableImportanceMetrics) obj;
-        if (other.getLogitMetrics() == null ^ this.getLogitMetrics() == null)
+        if (other.getLogOddsMetrics() == null ^ this.getLogOddsMetrics() == null)
             return false;
-        if (other.getLogitMetrics() != null && other.getLogitMetrics().equals(this.getLogitMetrics()) == false)
+        if (other.getLogOddsMetrics() != null && other.getLogOddsMetrics().equals(this.getLogOddsMetrics()) == false)
             return false;
         return true;
     }
@@ -145,7 +145,7 @@ public class VariableImportanceMetrics implements Serializable, Cloneable, Struc
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getLogitMetrics() == null) ? 0 : getLogitMetrics().hashCode());
+        hashCode = prime * hashCode + ((getLogOddsMetrics() == null) ? 0 : getLogOddsMetrics().hashCode());
         return hashCode;
     }
 

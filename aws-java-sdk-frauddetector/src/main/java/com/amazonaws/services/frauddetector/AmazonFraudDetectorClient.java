@@ -94,6 +94,9 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.frauddetector.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceUnavailableException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.frauddetector.model.transform.ResourceUnavailableExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.frauddetector.model.transform.ValidationExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.frauddetector.model.AmazonFraudDetectorException.class));
@@ -284,9 +287,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -352,12 +358,15 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating a specified value is not allowed.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @sample AmazonFraudDetector.CreateBatchPredictionJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/CreateBatchPredictionJob"
      *      target="_top">AWS API Documentation</a>
@@ -418,7 +427,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -487,6 +497,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating a specified value is not allowed.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -549,11 +561,14 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @sample AmazonFraudDetector.CreateModelVersion
@@ -744,9 +759,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -908,7 +926,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -1030,6 +1049,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         </li>
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -1192,6 +1213,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating a specified value is not allowed.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -1378,6 +1401,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
      *         </p>
      *         </li>
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @sample AmazonFraudDetector.DeleteLabel
@@ -1470,6 +1495,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating a specified value is not allowed.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -1545,6 +1572,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws ConflictException
      *         An exception indicating there was a conflict during a delete operation. The following delete operations
      *         can cause a conflict exception:</p>
@@ -1913,7 +1942,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -1981,9 +2011,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -2051,9 +2084,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -2117,7 +2153,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -2188,7 +2225,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -2259,9 +2297,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -2325,7 +2366,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -2357,6 +2399,9 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
      *         </p>
      *         </li>
+     * @throws ResourceUnavailableException
+     *         An exception indicating that the attached customer-owned (external) model threw an exception when Amazon
+     *         Fraud Detector invoked the model.
      * @sample AmazonFraudDetector.GetEventPrediction
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/GetEventPrediction"
      *      target="_top">AWS API Documentation</a>
@@ -2419,9 +2464,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -2488,7 +2536,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -2554,9 +2603,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @param getKMSEncryptionKeyRequest
      * @return Result of the GetKMSEncryptionKey operation returned by the service.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -2623,9 +2675,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -2688,9 +2743,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -2745,9 +2803,9 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
 
     /**
      * <p>
-     * Gets one or more models. Gets all models for the AWS account if no model type and no model id provided. Gets all
-     * models for the AWS account and model type, if the model type is specified but model id is not provided. Gets a
-     * specific model if (model type, model id) tuple is specified.
+     * Gets one or more models. Gets all models for the Amazon Web Services account if no model type and no model id
+     * provided. Gets all models for the Amazon Web Services account and model type, if the model type is specified but
+     * model id is not provided. Gets a specific model if (model type, model id) tuple is specified.
      * </p>
      * <p>
      * This is a paginated API. If you provide a null <code>maxResults</code>, this action retrieves a maximum of 10
@@ -2761,9 +2819,12 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -2829,7 +2890,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -2903,7 +2965,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -2974,7 +3037,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -3043,7 +3107,10 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -3113,6 +3180,29 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.PutDetector
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutDetector" target="_top">AWS API
      *      Documentation</a>
@@ -3174,10 +3264,35 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating a specified value is not allowed.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.PutEntityType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutEntityType" target="_top">AWS
      *      API Documentation</a>
@@ -3241,10 +3356,35 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating a specified value is not allowed.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.PutEventType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutEventType" target="_top">AWS API
      *      Documentation</a>
@@ -3311,6 +3451,29 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.PutExternalModel
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutExternalModel" target="_top">AWS
      *      API Documentation</a>
@@ -3370,13 +3533,39 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.PutKMSEncryptionKey
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutKMSEncryptionKey"
      *      target="_top">AWS API Documentation</a>
@@ -3437,10 +3626,35 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating a specified value is not allowed.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.PutLabel
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutLabel" target="_top">AWS API
      *      Documentation</a>
@@ -3506,6 +3720,29 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.PutOutcome
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/PutOutcome" target="_top">AWS API
      *      Documentation</a>
@@ -3564,7 +3801,10 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -3627,7 +3867,10 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
@@ -3692,7 +3935,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -3701,6 +3945,29 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.UpdateDetectorVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateDetectorVersion"
      *      target="_top">AWS API Documentation</a>
@@ -3768,6 +4035,29 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.UpdateDetectorVersionMetadata
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateDetectorVersionMetadata"
      *      target="_top">AWS API Documentation</a>
@@ -3830,7 +4120,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -3839,6 +4130,29 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.UpdateDetectorVersionStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateDetectorVersionStatus"
      *      target="_top">AWS API Documentation</a>
@@ -3899,13 +4213,39 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.UpdateModel
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateModel" target="_top">AWS API
      *      Documentation</a>
@@ -3967,13 +4307,39 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.UpdateModelVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateModelVersion"
      *      target="_top">AWS API Documentation</a>
@@ -4047,13 +4413,39 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
+     * @throws ThrottlingException
+     *         An exception indicating a throttling error.
      * @throws AccessDeniedException
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.UpdateModelVersionStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateModelVersionStatus"
      *      target="_top">AWS API Documentation</a>
@@ -4114,7 +4506,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -4123,6 +4516,29 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.UpdateRuleMetadata
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateRuleMetadata"
      *      target="_top">AWS API Documentation</a>
@@ -4182,7 +4598,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -4191,6 +4608,29 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.UpdateRuleVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateRuleVersion"
      *      target="_top">AWS API Documentation</a>
@@ -4249,7 +4689,8 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      * @throws ValidationException
      *         An exception indicating a specified value is not allowed.
      * @throws ResourceNotFoundException
-     *         An exception indicating the specified resource was not found.
+     *         An exception indicating the specified resource was not found. This can occur if you submit a request,
+     *         such as <code>CreateBatchPredictionJob</code>, but the detector name or version does not exist.
      * @throws InternalServerException
      *         An exception indicating an internal server error.
      * @throws ThrottlingException
@@ -4258,6 +4699,29 @@ public class AmazonFraudDetectorClient extends AmazonWebServiceClient implements
      *         An exception indicating Amazon Fraud Detector does not have the needed permissions. This can occur if you
      *         submit a request, such as <code>PutExternalModel</code>, that specifies a role that is not in your
      *         account.
+     * @throws ConflictException
+     *         An exception indicating there was a conflict during a delete operation. The following delete operations
+     *         can cause a conflict exception:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         DeleteDetector: A conflict exception will occur if the detector has associated <code>Rules</code> or
+     *         <code>DetectorVersions</code>. You can only delete a detector if it has no <code>Rules</code> or
+     *         <code>DetectorVersions</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteDetectorVersion: A conflict exception will occur if the <code>DetectorVersion</code> status is
+     *         <code>ACTIVE</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         DeleteRule: A conflict exception will occur if the <code>RuleVersion</code> is in use by an associated
+     *         <code>ACTIVE</code> or <code>INACTIVE DetectorVersion</code>.
+     *         </p>
+     *         </li>
      * @sample AmazonFraudDetector.UpdateVariable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/frauddetector-2019-11-15/UpdateVariable" target="_top">AWS
      *      API Documentation</a>

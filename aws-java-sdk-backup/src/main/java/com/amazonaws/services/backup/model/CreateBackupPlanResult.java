@@ -53,8 +53,8 @@ public class CreateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
     private String versionId;
     /**
      * <p>
-     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows VSS
-     * backup jobs.
+     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows
+     * Volume Shadow Copy Service (VSS) backup jobs.
      * </p>
      */
     private java.util.List<AdvancedBackupSetting> advancedBackupSettings;
@@ -245,12 +245,12 @@ public class CreateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows VSS
-     * backup jobs.
+     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows
+     * Volume Shadow Copy Service (VSS) backup jobs.
      * </p>
      * 
      * @return A list of <code>BackupOptions</code> settings for a resource type. This option is only available for
-     *         Windows VSS backup jobs.
+     *         Windows Volume Shadow Copy Service (VSS) backup jobs.
      */
 
     public java.util.List<AdvancedBackupSetting> getAdvancedBackupSettings() {
@@ -259,13 +259,13 @@ public class CreateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows VSS
-     * backup jobs.
+     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows
+     * Volume Shadow Copy Service (VSS) backup jobs.
      * </p>
      * 
      * @param advancedBackupSettings
      *        A list of <code>BackupOptions</code> settings for a resource type. This option is only available for
-     *        Windows VSS backup jobs.
+     *        Windows Volume Shadow Copy Service (VSS) backup jobs.
      */
 
     public void setAdvancedBackupSettings(java.util.Collection<AdvancedBackupSetting> advancedBackupSettings) {
@@ -279,8 +279,8 @@ public class CreateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows VSS
-     * backup jobs.
+     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows
+     * Volume Shadow Copy Service (VSS) backup jobs.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -290,7 +290,7 @@ public class CreateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
      * 
      * @param advancedBackupSettings
      *        A list of <code>BackupOptions</code> settings for a resource type. This option is only available for
-     *        Windows VSS backup jobs.
+     *        Windows Volume Shadow Copy Service (VSS) backup jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -306,13 +306,13 @@ public class CreateBackupPlanResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows VSS
-     * backup jobs.
+     * A list of <code>BackupOptions</code> settings for a resource type. This option is only available for Windows
+     * Volume Shadow Copy Service (VSS) backup jobs.
      * </p>
      * 
      * @param advancedBackupSettings
      *        A list of <code>BackupOptions</code> settings for a resource type. This option is only available for
-     *        Windows VSS backup jobs.
+     *        Windows Volume Shadow Copy Service (VSS) backup jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

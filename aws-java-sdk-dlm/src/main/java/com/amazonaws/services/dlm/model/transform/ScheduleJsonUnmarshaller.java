@@ -92,6 +92,10 @@ public class ScheduleJsonUnmarshaller implements Unmarshaller<Schedule, JsonUnma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("DeprecateRule", targetDepth)) {
+                    context.nextToken();
+                    schedule.setDeprecateRule(DeprecateRuleJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

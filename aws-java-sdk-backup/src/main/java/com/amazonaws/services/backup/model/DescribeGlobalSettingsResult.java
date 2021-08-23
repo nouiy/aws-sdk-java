@@ -25,25 +25,25 @@ public class DescribeGlobalSettingsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of resources along with the opt-in preferences for the account.
+     * The status of the flag <code>isCrossAccountBackupEnabled</code>.
      * </p>
      */
     private java.util.Map<String, String> globalSettings;
     /**
      * <p>
-     * The date and time that the global settings were last updated. This update is in Unix format and Coordinated
-     * Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to milliseconds. For example, the
-     * value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * The date and time that the flag <code>isCrossAccountBackupEnabled</code> was last updated. This update is in Unix
+     * format and Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to
+     * milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
      * </p>
      */
     private java.util.Date lastUpdateTime;
 
     /**
      * <p>
-     * A list of resources along with the opt-in preferences for the account.
+     * The status of the flag <code>isCrossAccountBackupEnabled</code>.
      * </p>
      * 
-     * @return A list of resources along with the opt-in preferences for the account.
+     * @return The status of the flag <code>isCrossAccountBackupEnabled</code>.
      */
 
     public java.util.Map<String, String> getGlobalSettings() {
@@ -52,11 +52,11 @@ public class DescribeGlobalSettingsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of resources along with the opt-in preferences for the account.
+     * The status of the flag <code>isCrossAccountBackupEnabled</code>.
      * </p>
      * 
      * @param globalSettings
-     *        A list of resources along with the opt-in preferences for the account.
+     *        The status of the flag <code>isCrossAccountBackupEnabled</code>.
      */
 
     public void setGlobalSettings(java.util.Map<String, String> globalSettings) {
@@ -65,11 +65,11 @@ public class DescribeGlobalSettingsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of resources along with the opt-in preferences for the account.
+     * The status of the flag <code>isCrossAccountBackupEnabled</code>.
      * </p>
      * 
      * @param globalSettings
-     *        A list of resources along with the opt-in preferences for the account.
+     *        The status of the flag <code>isCrossAccountBackupEnabled</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,15 +108,16 @@ public class DescribeGlobalSettingsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The date and time that the global settings were last updated. This update is in Unix format and Coordinated
-     * Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to milliseconds. For example, the
-     * value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * The date and time that the flag <code>isCrossAccountBackupEnabled</code> was last updated. This update is in Unix
+     * format and Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to
+     * milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
      * </p>
      * 
      * @param lastUpdateTime
-     *        The date and time that the global settings were last updated. This update is in Unix format and
-     *        Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to milliseconds.
-     *        For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     *        The date and time that the flag <code>isCrossAccountBackupEnabled</code> was last updated. This update is
+     *        in Unix format and Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate
+     *        to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087
+     *        AM.
      */
 
     public void setLastUpdateTime(java.util.Date lastUpdateTime) {
@@ -125,14 +126,15 @@ public class DescribeGlobalSettingsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The date and time that the global settings were last updated. This update is in Unix format and Coordinated
-     * Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to milliseconds. For example, the
-     * value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * The date and time that the flag <code>isCrossAccountBackupEnabled</code> was last updated. This update is in Unix
+     * format and Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to
+     * milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
      * </p>
      * 
-     * @return The date and time that the global settings were last updated. This update is in Unix format and
-     *         Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to milliseconds.
-     *         For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * @return The date and time that the flag <code>isCrossAccountBackupEnabled</code> was last updated. This update is
+     *         in Unix format and Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate
+     *         to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087
+     *         AM.
      */
 
     public java.util.Date getLastUpdateTime() {
@@ -141,15 +143,16 @@ public class DescribeGlobalSettingsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The date and time that the global settings were last updated. This update is in Unix format and Coordinated
-     * Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to milliseconds. For example, the
-     * value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     * The date and time that the flag <code>isCrossAccountBackupEnabled</code> was last updated. This update is in Unix
+     * format and Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to
+     * milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
      * </p>
      * 
      * @param lastUpdateTime
-     *        The date and time that the global settings were last updated. This update is in Unix format and
-     *        Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate to milliseconds.
-     *        For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
+     *        The date and time that the flag <code>isCrossAccountBackupEnabled</code> was last updated. This update is
+     *        in Unix format and Coordinated Universal Time (UTC). The value of <code>LastUpdateTime</code> is accurate
+     *        to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087
+     *        AM.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,7 +25,7 @@ public class ListProtectedResourcesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of resources successfully backed up by AWS Backup including the time the resource was saved, an Amazon
+     * An array of resources successfully backed up by Backup including the time the resource was saved, an Amazon
      * Resource Name (ARN) of the resource, and a resource type.
      * </p>
      */
@@ -41,11 +41,11 @@ public class ListProtectedResourcesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of resources successfully backed up by AWS Backup including the time the resource was saved, an Amazon
+     * An array of resources successfully backed up by Backup including the time the resource was saved, an Amazon
      * Resource Name (ARN) of the resource, and a resource type.
      * </p>
      * 
-     * @return An array of resources successfully backed up by AWS Backup including the time the resource was saved, an
+     * @return An array of resources successfully backed up by Backup including the time the resource was saved, an
      *         Amazon Resource Name (ARN) of the resource, and a resource type.
      */
 
@@ -55,12 +55,12 @@ public class ListProtectedResourcesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of resources successfully backed up by AWS Backup including the time the resource was saved, an Amazon
+     * An array of resources successfully backed up by Backup including the time the resource was saved, an Amazon
      * Resource Name (ARN) of the resource, and a resource type.
      * </p>
      * 
      * @param results
-     *        An array of resources successfully backed up by AWS Backup including the time the resource was saved, an
+     *        An array of resources successfully backed up by Backup including the time the resource was saved, an
      *        Amazon Resource Name (ARN) of the resource, and a resource type.
      */
 
@@ -75,7 +75,7 @@ public class ListProtectedResourcesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of resources successfully backed up by AWS Backup including the time the resource was saved, an Amazon
+     * An array of resources successfully backed up by Backup including the time the resource was saved, an Amazon
      * Resource Name (ARN) of the resource, and a resource type.
      * </p>
      * <p>
@@ -85,7 +85,7 @@ public class ListProtectedResourcesResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param results
-     *        An array of resources successfully backed up by AWS Backup including the time the resource was saved, an
+     *        An array of resources successfully backed up by Backup including the time the resource was saved, an
      *        Amazon Resource Name (ARN) of the resource, and a resource type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -102,12 +102,12 @@ public class ListProtectedResourcesResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An array of resources successfully backed up by AWS Backup including the time the resource was saved, an Amazon
+     * An array of resources successfully backed up by Backup including the time the resource was saved, an Amazon
      * Resource Name (ARN) of the resource, and a resource type.
      * </p>
      * 
      * @param results
-     *        An array of resources successfully backed up by AWS Backup including the time the resource was saved, an
+     *        An array of resources successfully backed up by Backup including the time the resource was saved, an
      *        Amazon Resource Name (ARN) of the resource, and a resource type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

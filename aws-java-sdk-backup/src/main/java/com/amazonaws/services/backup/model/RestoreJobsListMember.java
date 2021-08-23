@@ -65,7 +65,7 @@ public class RestoreJobsListMember implements Serializable, Cloneable, Structure
     private java.util.Date completionDate;
     /**
      * <p>
-     * A status code specifying the state of the job initiated by AWS Backup to restore a recovery point.
+     * A status code specifying the state of the job initiated by Backup to restore a recovery point.
      * </p>
      */
     private String status;
@@ -110,8 +110,8 @@ public class RestoreJobsListMember implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The resource type of the listed restore jobs; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
-     * an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource
-     * type is Amazon EC2.
+     * an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service (VSS)
+     * backups, the only supported resource type is Amazon EC2.
      * </p>
      */
     private String resourceType;
@@ -348,11 +348,11 @@ public class RestoreJobsListMember implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A status code specifying the state of the job initiated by AWS Backup to restore a recovery point.
+     * A status code specifying the state of the job initiated by Backup to restore a recovery point.
      * </p>
      * 
      * @param status
-     *        A status code specifying the state of the job initiated by AWS Backup to restore a recovery point.
+     *        A status code specifying the state of the job initiated by Backup to restore a recovery point.
      * @see RestoreJobStatus
      */
 
@@ -362,10 +362,10 @@ public class RestoreJobsListMember implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A status code specifying the state of the job initiated by AWS Backup to restore a recovery point.
+     * A status code specifying the state of the job initiated by Backup to restore a recovery point.
      * </p>
      * 
-     * @return A status code specifying the state of the job initiated by AWS Backup to restore a recovery point.
+     * @return A status code specifying the state of the job initiated by Backup to restore a recovery point.
      * @see RestoreJobStatus
      */
 
@@ -375,11 +375,11 @@ public class RestoreJobsListMember implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A status code specifying the state of the job initiated by AWS Backup to restore a recovery point.
+     * A status code specifying the state of the job initiated by Backup to restore a recovery point.
      * </p>
      * 
      * @param status
-     *        A status code specifying the state of the job initiated by AWS Backup to restore a recovery point.
+     *        A status code specifying the state of the job initiated by Backup to restore a recovery point.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RestoreJobStatus
      */
@@ -391,11 +391,11 @@ public class RestoreJobsListMember implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * A status code specifying the state of the job initiated by AWS Backup to restore a recovery point.
+     * A status code specifying the state of the job initiated by Backup to restore a recovery point.
      * </p>
      * 
      * @param status
-     *        A status code specifying the state of the job initiated by AWS Backup to restore a recovery point.
+     *        A status code specifying the state of the job initiated by Backup to restore a recovery point.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RestoreJobStatus
      */
@@ -660,14 +660,14 @@ public class RestoreJobsListMember implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The resource type of the listed restore jobs; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
-     * an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource
-     * type is Amazon EC2.
+     * an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service (VSS)
+     * backups, the only supported resource type is Amazon EC2.
      * </p>
      * 
      * @param resourceType
      *        The resource type of the listed restore jobs; for example, an Amazon Elastic Block Store (Amazon EBS)
-     *        volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     *        supported resource type is Amazon EC2.
+     *        volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy
+     *        Service (VSS) backups, the only supported resource type is Amazon EC2.
      */
 
     public void setResourceType(String resourceType) {
@@ -677,13 +677,13 @@ public class RestoreJobsListMember implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The resource type of the listed restore jobs; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
-     * an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource
-     * type is Amazon EC2.
+     * an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service (VSS)
+     * backups, the only supported resource type is Amazon EC2.
      * </p>
      * 
      * @return The resource type of the listed restore jobs; for example, an Amazon Elastic Block Store (Amazon EBS)
-     *         volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     *         supported resource type is Amazon EC2.
+     *         volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy
+     *         Service (VSS) backups, the only supported resource type is Amazon EC2.
      */
 
     public String getResourceType() {
@@ -693,14 +693,14 @@ public class RestoreJobsListMember implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The resource type of the listed restore jobs; for example, an Amazon Elastic Block Store (Amazon EBS) volume or
-     * an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only supported resource
-     * type is Amazon EC2.
+     * an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy Service (VSS)
+     * backups, the only supported resource type is Amazon EC2.
      * </p>
      * 
      * @param resourceType
      *        The resource type of the listed restore jobs; for example, an Amazon Elastic Block Store (Amazon EBS)
-     *        volume or an Amazon Relational Database Service (Amazon RDS) database. For VSS Windows backups, the only
-     *        supported resource type is Amazon EC2.
+     *        volume or an Amazon Relational Database Service (Amazon RDS) database. For Windows Volume Shadow Copy
+     *        Service (VSS) backups, the only supported resource type is Amazon EC2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

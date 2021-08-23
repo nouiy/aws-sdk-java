@@ -49,7 +49,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * An Amazon Resource Name (ARN) that uniquely identifies the source vault where the resource was originally backed
      * up in; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:BackupVault</code>. If the recovery is
-     * restored to the same AWS account or Region, this value will be <code>null</code>.
+     * restored to the same Amazon Web Services account or Region, this value will be <code>null</code>.
      * </p>
      */
     private String sourceBackupVaultArn;
@@ -61,8 +61,8 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
     private String resourceArn;
     /**
      * <p>
-     * The type of AWS resource to save as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS)
-     * volume or an Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to save as a recovery point; for example, an Amazon Elastic Block Store
+     * (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      */
     private String resourceType;
@@ -84,13 +84,26 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A status code specifying the state of the recovery point.
      * </p>
-     * <note>
      * <p>
-     * A partial status indicates that the recovery point was not successfully re-created and must be retried.
+     * <code>PARTIAL</code> status indicates Backup could not create the recovery point before the backup window closed.
+     * To increase your backup plan window using the API, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html">UpdateBackupPlan</a>. You
+     * can also increase your backup plan window using the Console by choosing and editing your backup plan.
      * </p>
-     * </note>
+     * <p>
+     * <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention period, but Backup lacks
+     * permission or is otherwise unable to delete it. To manually delete these recovery points, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups"> Step 3:
+     * Delete the recovery points</a> in the <i>Clean up resources</i> section of <i>Getting started</i>.
+     * </p>
      */
     private String status;
+    /**
+     * <p>
+     * A status message explaining the reason for the recovery point deletion failure.
+     * </p>
+     */
+    private String statusMessage;
     /**
      * <p>
      * The date and time that a recovery point is created, in Unix format and Coordinated Universal Time (UTC). The
@@ -122,7 +135,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
     private CalculatedLifecycle calculatedLifecycle;
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup
      * transitions and expires backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
@@ -312,13 +325,14 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * An Amazon Resource Name (ARN) that uniquely identifies the source vault where the resource was originally backed
      * up in; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:BackupVault</code>. If the recovery is
-     * restored to the same AWS account or Region, this value will be <code>null</code>.
+     * restored to the same Amazon Web Services account or Region, this value will be <code>null</code>.
      * </p>
      * 
      * @param sourceBackupVaultArn
      *        An Amazon Resource Name (ARN) that uniquely identifies the source vault where the resource was originally
      *        backed up in; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:BackupVault</code>. If the
-     *        recovery is restored to the same AWS account or Region, this value will be <code>null</code>.
+     *        recovery is restored to the same Amazon Web Services account or Region, this value will be
+     *        <code>null</code>.
      */
 
     public void setSourceBackupVaultArn(String sourceBackupVaultArn) {
@@ -329,12 +343,13 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * An Amazon Resource Name (ARN) that uniquely identifies the source vault where the resource was originally backed
      * up in; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:BackupVault</code>. If the recovery is
-     * restored to the same AWS account or Region, this value will be <code>null</code>.
+     * restored to the same Amazon Web Services account or Region, this value will be <code>null</code>.
      * </p>
      * 
      * @return An Amazon Resource Name (ARN) that uniquely identifies the source vault where the resource was originally
      *         backed up in; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:BackupVault</code>. If the
-     *         recovery is restored to the same AWS account or Region, this value will be <code>null</code>.
+     *         recovery is restored to the same Amazon Web Services account or Region, this value will be
+     *         <code>null</code>.
      */
 
     public String getSourceBackupVaultArn() {
@@ -345,13 +360,14 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * An Amazon Resource Name (ARN) that uniquely identifies the source vault where the resource was originally backed
      * up in; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:BackupVault</code>. If the recovery is
-     * restored to the same AWS account or Region, this value will be <code>null</code>.
+     * restored to the same Amazon Web Services account or Region, this value will be <code>null</code>.
      * </p>
      * 
      * @param sourceBackupVaultArn
      *        An Amazon Resource Name (ARN) that uniquely identifies the source vault where the resource was originally
      *        backed up in; for example, <code>arn:aws:backup:us-east-1:123456789012:vault:BackupVault</code>. If the
-     *        recovery is restored to the same AWS account or Region, this value will be <code>null</code>.
+     *        recovery is restored to the same Amazon Web Services account or Region, this value will be
+     *        <code>null</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -402,13 +418,13 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The type of AWS resource to save as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS)
-     * volume or an Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to save as a recovery point; for example, an Amazon Elastic Block Store
+     * (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource to save as a recovery point; for example, an Amazon Elastic Block Store (Amazon
-     *        EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
+     *        The type of Amazon Web Services resource to save as a recovery point; for example, an Amazon Elastic Block
+     *        Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      */
 
     public void setResourceType(String resourceType) {
@@ -417,12 +433,12 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The type of AWS resource to save as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS)
-     * volume or an Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to save as a recovery point; for example, an Amazon Elastic Block Store
+     * (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
-     * @return The type of AWS resource to save as a recovery point; for example, an Amazon Elastic Block Store (Amazon
-     *         EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
+     * @return The type of Amazon Web Services resource to save as a recovery point; for example, an Amazon Elastic
+     *         Block Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      */
 
     public String getResourceType() {
@@ -431,13 +447,13 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The type of AWS resource to save as a recovery point; for example, an Amazon Elastic Block Store (Amazon EBS)
-     * volume or an Amazon Relational Database Service (Amazon RDS) database.
+     * The type of Amazon Web Services resource to save as a recovery point; for example, an Amazon Elastic Block Store
+     * (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource to save as a recovery point; for example, an Amazon Elastic Block Store (Amazon
-     *        EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
+     *        The type of Amazon Web Services resource to save as a recovery point; for example, an Amazon Elastic Block
+     *        Store (Amazon EBS) volume or an Amazon Relational Database Service (Amazon RDS) database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -545,17 +561,34 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A status code specifying the state of the recovery point.
      * </p>
-     * <note>
      * <p>
-     * A partial status indicates that the recovery point was not successfully re-created and must be retried.
+     * <code>PARTIAL</code> status indicates Backup could not create the recovery point before the backup window closed.
+     * To increase your backup plan window using the API, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html">UpdateBackupPlan</a>. You
+     * can also increase your backup plan window using the Console by choosing and editing your backup plan.
      * </p>
-     * </note>
+     * <p>
+     * <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention period, but Backup lacks
+     * permission or is otherwise unable to delete it. To manually delete these recovery points, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups"> Step 3:
+     * Delete the recovery points</a> in the <i>Clean up resources</i> section of <i>Getting started</i>.
+     * </p>
      * 
      * @param status
-     *        A status code specifying the state of the recovery point.</p> <note>
+     *        A status code specifying the state of the recovery point.</p>
      *        <p>
-     *        A partial status indicates that the recovery point was not successfully re-created and must be retried.
+     *        <code>PARTIAL</code> status indicates Backup could not create the recovery point before the backup window
+     *        closed. To increase your backup plan window using the API, see <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html"
+     *        >UpdateBackupPlan</a>. You can also increase your backup plan window using the Console by choosing and
+     *        editing your backup plan.
      *        </p>
+     *        <p>
+     *        <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention period, but
+     *        Backup lacks permission or is otherwise unable to delete it. To manually delete these recovery points, see
+     *        <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups">
+     *        Step 3: Delete the recovery points</a> in the <i>Clean up resources</i> section of <i>Getting started</i>.
      * @see RecoveryPointStatus
      */
 
@@ -567,16 +600,34 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A status code specifying the state of the recovery point.
      * </p>
-     * <note>
      * <p>
-     * A partial status indicates that the recovery point was not successfully re-created and must be retried.
+     * <code>PARTIAL</code> status indicates Backup could not create the recovery point before the backup window closed.
+     * To increase your backup plan window using the API, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html">UpdateBackupPlan</a>. You
+     * can also increase your backup plan window using the Console by choosing and editing your backup plan.
      * </p>
-     * </note>
+     * <p>
+     * <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention period, but Backup lacks
+     * permission or is otherwise unable to delete it. To manually delete these recovery points, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups"> Step 3:
+     * Delete the recovery points</a> in the <i>Clean up resources</i> section of <i>Getting started</i>.
+     * </p>
      * 
-     * @return A status code specifying the state of the recovery point.</p> <note>
+     * @return A status code specifying the state of the recovery point.</p>
      *         <p>
-     *         A partial status indicates that the recovery point was not successfully re-created and must be retried.
+     *         <code>PARTIAL</code> status indicates Backup could not create the recovery point before the backup window
+     *         closed. To increase your backup plan window using the API, see <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html"
+     *         >UpdateBackupPlan</a>. You can also increase your backup plan window using the Console by choosing and
+     *         editing your backup plan.
      *         </p>
+     *         <p>
+     *         <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention period, but
+     *         Backup lacks permission or is otherwise unable to delete it. To manually delete these recovery points,
+     *         see <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups">
+     *         Step 3: Delete the recovery points</a> in the <i>Clean up resources</i> section of <i>Getting
+     *         started</i>.
      * @see RecoveryPointStatus
      */
 
@@ -588,17 +639,34 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A status code specifying the state of the recovery point.
      * </p>
-     * <note>
      * <p>
-     * A partial status indicates that the recovery point was not successfully re-created and must be retried.
+     * <code>PARTIAL</code> status indicates Backup could not create the recovery point before the backup window closed.
+     * To increase your backup plan window using the API, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html">UpdateBackupPlan</a>. You
+     * can also increase your backup plan window using the Console by choosing and editing your backup plan.
      * </p>
-     * </note>
+     * <p>
+     * <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention period, but Backup lacks
+     * permission or is otherwise unable to delete it. To manually delete these recovery points, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups"> Step 3:
+     * Delete the recovery points</a> in the <i>Clean up resources</i> section of <i>Getting started</i>.
+     * </p>
      * 
      * @param status
-     *        A status code specifying the state of the recovery point.</p> <note>
+     *        A status code specifying the state of the recovery point.</p>
      *        <p>
-     *        A partial status indicates that the recovery point was not successfully re-created and must be retried.
+     *        <code>PARTIAL</code> status indicates Backup could not create the recovery point before the backup window
+     *        closed. To increase your backup plan window using the API, see <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html"
+     *        >UpdateBackupPlan</a>. You can also increase your backup plan window using the Console by choosing and
+     *        editing your backup plan.
      *        </p>
+     *        <p>
+     *        <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention period, but
+     *        Backup lacks permission or is otherwise unable to delete it. To manually delete these recovery points, see
+     *        <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups">
+     *        Step 3: Delete the recovery points</a> in the <i>Clean up resources</i> section of <i>Getting started</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecoveryPointStatus
      */
@@ -612,23 +680,80 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * <p>
      * A status code specifying the state of the recovery point.
      * </p>
-     * <note>
      * <p>
-     * A partial status indicates that the recovery point was not successfully re-created and must be retried.
+     * <code>PARTIAL</code> status indicates Backup could not create the recovery point before the backup window closed.
+     * To increase your backup plan window using the API, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html">UpdateBackupPlan</a>. You
+     * can also increase your backup plan window using the Console by choosing and editing your backup plan.
      * </p>
-     * </note>
+     * <p>
+     * <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention period, but Backup lacks
+     * permission or is otherwise unable to delete it. To manually delete these recovery points, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups"> Step 3:
+     * Delete the recovery points</a> in the <i>Clean up resources</i> section of <i>Getting started</i>.
+     * </p>
      * 
      * @param status
-     *        A status code specifying the state of the recovery point.</p> <note>
+     *        A status code specifying the state of the recovery point.</p>
      *        <p>
-     *        A partial status indicates that the recovery point was not successfully re-created and must be retried.
+     *        <code>PARTIAL</code> status indicates Backup could not create the recovery point before the backup window
+     *        closed. To increase your backup plan window using the API, see <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/API_UpdateBackupPlan.html"
+     *        >UpdateBackupPlan</a>. You can also increase your backup plan window using the Console by choosing and
+     *        editing your backup plan.
      *        </p>
+     *        <p>
+     *        <code>EXPIRED</code> status indicates that the recovery point has exceeded its retention period, but
+     *        Backup lacks permission or is otherwise unable to delete it. To manually delete these recovery points, see
+     *        <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/gs-cleanup-resources.html#cleanup-backups">
+     *        Step 3: Delete the recovery points</a> in the <i>Clean up resources</i> section of <i>Getting started</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RecoveryPointStatus
      */
 
     public DescribeRecoveryPointResult withStatus(RecoveryPointStatus status) {
         this.status = status.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A status message explaining the reason for the recovery point deletion failure.
+     * </p>
+     * 
+     * @param statusMessage
+     *        A status message explaining the reason for the recovery point deletion failure.
+     */
+
+    public void setStatusMessage(String statusMessage) {
+        this.statusMessage = statusMessage;
+    }
+
+    /**
+     * <p>
+     * A status message explaining the reason for the recovery point deletion failure.
+     * </p>
+     * 
+     * @return A status message explaining the reason for the recovery point deletion failure.
+     */
+
+    public String getStatusMessage() {
+        return this.statusMessage;
+    }
+
+    /**
+     * <p>
+     * A status message explaining the reason for the recovery point deletion failure.
+     * </p>
+     * 
+     * @param statusMessage
+     *        A status message explaining the reason for the recovery point deletion failure.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeRecoveryPointResult withStatusMessage(String statusMessage) {
+        setStatusMessage(statusMessage);
         return this;
     }
 
@@ -824,7 +949,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup
      * transitions and expires backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
@@ -837,7 +962,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param lifecycle
-     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *        Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups that are transitioned to cold storage must be stored in cold storage for a minimum of 90 days.
@@ -855,7 +980,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup
      * transitions and expires backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
@@ -867,7 +992,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * Only Amazon EFS file system backups can be transitioned to cold storage.
      * </p>
      * 
-     * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *         Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
      *         <p>
      *         Backups that are transitioned to cold storage must be stored in cold storage for a minimum of 90 days.
@@ -885,7 +1010,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS Backup
+     * The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. Backup
      * transitions and expires backups automatically according to the lifecycle that you define.
      * </p>
      * <p>
@@ -898,7 +1023,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param lifecycle
-     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires. AWS
+     *        The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *        Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups that are transitioned to cold storage must be stored in cold storage for a minimum of 90 days.
@@ -1167,6 +1292,8 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
             sb.append("IamRoleArn: ").append(getIamRoleArn()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
+        if (getStatusMessage() != null)
+            sb.append("StatusMessage: ").append(getStatusMessage()).append(",");
         if (getCreationDate() != null)
             sb.append("CreationDate: ").append(getCreationDate()).append(",");
         if (getCompletionDate() != null)
@@ -1235,6 +1362,10 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getStatusMessage() == null ^ this.getStatusMessage() == null)
+            return false;
+        if (other.getStatusMessage() != null && other.getStatusMessage().equals(this.getStatusMessage()) == false)
+            return false;
         if (other.getCreationDate() == null ^ this.getCreationDate() == null)
             return false;
         if (other.getCreationDate() != null && other.getCreationDate().equals(this.getCreationDate()) == false)
@@ -1288,6 +1419,7 @@ public class DescribeRecoveryPointResult extends com.amazonaws.AmazonWebServiceR
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getIamRoleArn() == null) ? 0 : getIamRoleArn().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getStatusMessage() == null) ? 0 : getStatusMessage().hashCode());
         hashCode = prime * hashCode + ((getCreationDate() == null) ? 0 : getCreationDate().hashCode());
         hashCode = prime * hashCode + ((getCompletionDate() == null) ? 0 : getCompletionDate().hashCode());
         hashCode = prime * hashCode + ((getBackupSizeInBytes() == null) ? 0 : getBackupSizeInBytes().hashCode());

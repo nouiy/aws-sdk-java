@@ -30,7 +30,7 @@ public class EventSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the event. Currently only managed AWS CloudWatch Events rules are supported.
+     * The source of the event. Currently only managed CloudWatch Events rules are supported.
      * </p>
      */
     private String type;
@@ -43,11 +43,11 @@ public class EventSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the event. Currently only managed AWS CloudWatch Events rules are supported.
+     * The source of the event. Currently only managed CloudWatch Events rules are supported.
      * </p>
      * 
      * @param type
-     *        The source of the event. Currently only managed AWS CloudWatch Events rules are supported.
+     *        The source of the event. Currently only managed CloudWatch Events rules are supported.
      * @see EventSourceValues
      */
 
@@ -57,10 +57,10 @@ public class EventSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the event. Currently only managed AWS CloudWatch Events rules are supported.
+     * The source of the event. Currently only managed CloudWatch Events rules are supported.
      * </p>
      * 
-     * @return The source of the event. Currently only managed AWS CloudWatch Events rules are supported.
+     * @return The source of the event. Currently only managed CloudWatch Events rules are supported.
      * @see EventSourceValues
      */
 
@@ -70,11 +70,11 @@ public class EventSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the event. Currently only managed AWS CloudWatch Events rules are supported.
+     * The source of the event. Currently only managed CloudWatch Events rules are supported.
      * </p>
      * 
      * @param type
-     *        The source of the event. Currently only managed AWS CloudWatch Events rules are supported.
+     *        The source of the event. Currently only managed CloudWatch Events rules are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventSourceValues
      */
@@ -86,11 +86,11 @@ public class EventSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the event. Currently only managed AWS CloudWatch Events rules are supported.
+     * The source of the event. Currently only managed CloudWatch Events rules are supported.
      * </p>
      * 
      * @param type
-     *        The source of the event. Currently only managed AWS CloudWatch Events rules are supported.
+     *        The source of the event. Currently only managed CloudWatch Events rules are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventSourceValues
      */

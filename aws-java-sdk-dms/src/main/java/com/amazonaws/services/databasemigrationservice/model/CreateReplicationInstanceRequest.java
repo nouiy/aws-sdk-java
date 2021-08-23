@@ -83,7 +83,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Availability Zone where the replication instance will be created. The default value is a random,
-     * system-chosen Availability Zone in the endpoint's Region, for example: <code>us-east-1d</code>
+     * system-chosen Availability Zone in the endpoint's Amazon Web Services Region, for example:
+     * <code>us-east-1d</code>
      * </p>
      */
     private String availabilityZone;
@@ -101,8 +102,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * Default: A 30-minute window selected at random from an 8-hour block of time per Region, occurring on a random day
-     * of the week.
+     * Default: A 30-minute window selected at random from an 8-hour block of time per Amazon Web Services Region,
+     * occurring on a random day of the week.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -153,8 +154,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      */
     private String kmsKeyId;
@@ -564,12 +565,14 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Availability Zone where the replication instance will be created. The default value is a random,
-     * system-chosen Availability Zone in the endpoint's Region, for example: <code>us-east-1d</code>
+     * system-chosen Availability Zone in the endpoint's Amazon Web Services Region, for example:
+     * <code>us-east-1d</code>
      * </p>
      * 
      * @param availabilityZone
      *        The Availability Zone where the replication instance will be created. The default value is a random,
-     *        system-chosen Availability Zone in the endpoint's Region, for example: <code>us-east-1d</code>
+     *        system-chosen Availability Zone in the endpoint's Amazon Web Services Region, for example:
+     *        <code>us-east-1d</code>
      */
 
     public void setAvailabilityZone(String availabilityZone) {
@@ -579,11 +582,13 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Availability Zone where the replication instance will be created. The default value is a random,
-     * system-chosen Availability Zone in the endpoint's Region, for example: <code>us-east-1d</code>
+     * system-chosen Availability Zone in the endpoint's Amazon Web Services Region, for example:
+     * <code>us-east-1d</code>
      * </p>
      * 
      * @return The Availability Zone where the replication instance will be created. The default value is a random,
-     *         system-chosen Availability Zone in the endpoint's Region, for example: <code>us-east-1d</code>
+     *         system-chosen Availability Zone in the endpoint's Amazon Web Services Region, for example:
+     *         <code>us-east-1d</code>
      */
 
     public String getAvailabilityZone() {
@@ -593,12 +598,14 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The Availability Zone where the replication instance will be created. The default value is a random,
-     * system-chosen Availability Zone in the endpoint's Region, for example: <code>us-east-1d</code>
+     * system-chosen Availability Zone in the endpoint's Amazon Web Services Region, for example:
+     * <code>us-east-1d</code>
      * </p>
      * 
      * @param availabilityZone
      *        The Availability Zone where the replication instance will be created. The default value is a random,
-     *        system-chosen Availability Zone in the endpoint's Region, for example: <code>us-east-1d</code>
+     *        system-chosen Availability Zone in the endpoint's Amazon Web Services Region, for example:
+     *        <code>us-east-1d</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -655,8 +662,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * Default: A 30-minute window selected at random from an 8-hour block of time per Region, occurring on a random day
-     * of the week.
+     * Default: A 30-minute window selected at random from an 8-hour block of time per Amazon Web Services Region,
+     * occurring on a random day of the week.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -671,8 +678,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      *        Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *        </p>
      *        <p>
-     *        Default: A 30-minute window selected at random from an 8-hour block of time per Region, occurring on a
-     *        random day of the week.
+     *        Default: A 30-minute window selected at random from an 8-hour block of time per Amazon Web Services
+     *        Region, occurring on a random day of the week.
      *        </p>
      *        <p>
      *        Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -693,8 +700,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * Default: A 30-minute window selected at random from an 8-hour block of time per Region, occurring on a random day
-     * of the week.
+     * Default: A 30-minute window selected at random from an 8-hour block of time per Amazon Web Services Region,
+     * occurring on a random day of the week.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -708,8 +715,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      *         Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *         </p>
      *         <p>
-     *         Default: A 30-minute window selected at random from an 8-hour block of time per Region, occurring on a
-     *         random day of the week.
+     *         Default: A 30-minute window selected at random from an 8-hour block of time per Amazon Web Services
+     *         Region, occurring on a random day of the week.
      *         </p>
      *         <p>
      *         Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -730,8 +737,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      * </p>
      * <p>
-     * Default: A 30-minute window selected at random from an 8-hour block of time per Region, occurring on a random day
-     * of the week.
+     * Default: A 30-minute window selected at random from an 8-hour block of time per Amazon Web Services Region,
+     * occurring on a random day of the week.
      * </p>
      * <p>
      * Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -746,8 +753,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      *        Format: <code>ddd:hh24:mi-ddd:hh24:mi</code>
      *        </p>
      *        <p>
-     *        Default: A 30-minute window selected at random from an 8-hour block of time per Region, occurring on a
-     *        random day of the week.
+     *        Default: A 30-minute window selected at random from an 8-hour block of time per Amazon Web Services
+     *        Region, occurring on a random day of the week.
      *        </p>
      *        <p>
      *        Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun
@@ -1041,8 +1048,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
@@ -1052,8 +1059,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      *        encryption key.
      *        </p>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Region.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Region.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1068,8 +1075,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @return An KMS key identifier that is used to encrypt the data on the replication instance.</p>
@@ -1078,8 +1085,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      *         encryption key.
      *         </p>
      *         <p>
-     *         KMS creates the default encryption key for your account. Your account has a different default encryption
-     *         key for each Region.
+     *         KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *         account has a different default encryption key for each Amazon Web Services Region.
      */
 
     public String getKmsKeyId() {
@@ -1094,8 +1101,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      * If you don't specify a value for the <code>KmsKeyId</code> parameter, then DMS uses your default encryption key.
      * </p>
      * <p>
-     * KMS creates the default encryption key for your account. Your account has a different default encryption key for
-     * each Region.
+     * KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services account has
+     * a different default encryption key for each Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
@@ -1105,8 +1112,8 @@ public class CreateReplicationInstanceRequest extends com.amazonaws.AmazonWebSer
      *        encryption key.
      *        </p>
      *        <p>
-     *        KMS creates the default encryption key for your account. Your account has a different default encryption
-     *        key for each Region.
+     *        KMS creates the default encryption key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default encryption key for each Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -43,6 +43,11 @@ public class ListRecoveryPointsByResourceRequest extends com.amazonaws.AmazonWeb
      * <p>
      * The maximum number of items to be returned.
      * </p>
+     * <note>
+     * <p>
+     * Amazon RDS requires a value of at least 20.
+     * </p>
+     * </note>
      */
     private Integer maxResults;
 
@@ -142,9 +147,17 @@ public class ListRecoveryPointsByResourceRequest extends com.amazonaws.AmazonWeb
      * <p>
      * The maximum number of items to be returned.
      * </p>
+     * <note>
+     * <p>
+     * Amazon RDS requires a value of at least 20.
+     * </p>
+     * </note>
      * 
      * @param maxResults
-     *        The maximum number of items to be returned.
+     *        The maximum number of items to be returned.</p> <note>
+     *        <p>
+     *        Amazon RDS requires a value of at least 20.
+     *        </p>
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -155,8 +168,16 @@ public class ListRecoveryPointsByResourceRequest extends com.amazonaws.AmazonWeb
      * <p>
      * The maximum number of items to be returned.
      * </p>
+     * <note>
+     * <p>
+     * Amazon RDS requires a value of at least 20.
+     * </p>
+     * </note>
      * 
-     * @return The maximum number of items to be returned.
+     * @return The maximum number of items to be returned.</p> <note>
+     *         <p>
+     *         Amazon RDS requires a value of at least 20.
+     *         </p>
      */
 
     public Integer getMaxResults() {
@@ -167,9 +188,17 @@ public class ListRecoveryPointsByResourceRequest extends com.amazonaws.AmazonWeb
      * <p>
      * The maximum number of items to be returned.
      * </p>
+     * <note>
+     * <p>
+     * Amazon RDS requires a value of at least 20.
+     * </p>
+     * </note>
      * 
      * @param maxResults
-     *        The maximum number of items to be returned.
+     *        The maximum number of items to be returned.</p> <note>
+     *        <p>
+     *        Amazon RDS requires a value of at least 20.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

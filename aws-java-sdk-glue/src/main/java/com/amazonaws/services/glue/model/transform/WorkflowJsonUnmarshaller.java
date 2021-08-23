@@ -81,6 +81,10 @@ public class WorkflowJsonUnmarshaller implements Unmarshaller<Workflow, JsonUnma
                     context.nextToken();
                     workflow.setMaxConcurrentRuns(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("BlueprintDetails", targetDepth)) {
+                    context.nextToken();
+                    workflow.setBlueprintDetails(BlueprintDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

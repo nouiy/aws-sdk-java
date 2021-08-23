@@ -72,6 +72,10 @@ public class CrossRegionCopyRuleJsonUnmarshaller implements Unmarshaller<CrossRe
                     context.nextToken();
                     crossRegionCopyRule.setRetainRule(CrossRegionCopyRetainRuleJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DeprecateRule", targetDepth)) {
+                    context.nextToken();
+                    crossRegionCopyRule.setDeprecateRule(CrossRegionCopyDeprecateRuleJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies a rule for sharing snapshots across AWS accounts.
+ * Specifies a rule for sharing snapshots across Amazon Web Services accounts.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dlm-2018-01-12/ShareRule" target="_top">AWS API
@@ -30,13 +30,14 @@ public class ShareRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IDs of the AWS accounts with which to share the snapshots.
+     * The IDs of the Amazon Web Services accounts with which to share the snapshots.
      * </p>
      */
     private java.util.List<String> targetAccounts;
     /**
      * <p>
-     * The period after which snapshots that are shared with other AWS accounts are automatically unshared.
+     * The period after which snapshots that are shared with other Amazon Web Services accounts are automatically
+     * unshared.
      * </p>
      */
     private Integer unshareInterval;
@@ -49,10 +50,10 @@ public class ShareRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IDs of the AWS accounts with which to share the snapshots.
+     * The IDs of the Amazon Web Services accounts with which to share the snapshots.
      * </p>
      * 
-     * @return The IDs of the AWS accounts with which to share the snapshots.
+     * @return The IDs of the Amazon Web Services accounts with which to share the snapshots.
      */
 
     public java.util.List<String> getTargetAccounts() {
@@ -61,11 +62,11 @@ public class ShareRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IDs of the AWS accounts with which to share the snapshots.
+     * The IDs of the Amazon Web Services accounts with which to share the snapshots.
      * </p>
      * 
      * @param targetAccounts
-     *        The IDs of the AWS accounts with which to share the snapshots.
+     *        The IDs of the Amazon Web Services accounts with which to share the snapshots.
      */
 
     public void setTargetAccounts(java.util.Collection<String> targetAccounts) {
@@ -79,7 +80,7 @@ public class ShareRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IDs of the AWS accounts with which to share the snapshots.
+     * The IDs of the Amazon Web Services accounts with which to share the snapshots.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -88,7 +89,7 @@ public class ShareRule implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param targetAccounts
-     *        The IDs of the AWS accounts with which to share the snapshots.
+     *        The IDs of the Amazon Web Services accounts with which to share the snapshots.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,11 +105,11 @@ public class ShareRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IDs of the AWS accounts with which to share the snapshots.
+     * The IDs of the Amazon Web Services accounts with which to share the snapshots.
      * </p>
      * 
      * @param targetAccounts
-     *        The IDs of the AWS accounts with which to share the snapshots.
+     *        The IDs of the Amazon Web Services accounts with which to share the snapshots.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,11 +120,13 @@ public class ShareRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The period after which snapshots that are shared with other AWS accounts are automatically unshared.
+     * The period after which snapshots that are shared with other Amazon Web Services accounts are automatically
+     * unshared.
      * </p>
      * 
      * @param unshareInterval
-     *        The period after which snapshots that are shared with other AWS accounts are automatically unshared.
+     *        The period after which snapshots that are shared with other Amazon Web Services accounts are automatically
+     *        unshared.
      */
 
     public void setUnshareInterval(Integer unshareInterval) {
@@ -132,10 +135,12 @@ public class ShareRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The period after which snapshots that are shared with other AWS accounts are automatically unshared.
+     * The period after which snapshots that are shared with other Amazon Web Services accounts are automatically
+     * unshared.
      * </p>
      * 
-     * @return The period after which snapshots that are shared with other AWS accounts are automatically unshared.
+     * @return The period after which snapshots that are shared with other Amazon Web Services accounts are
+     *         automatically unshared.
      */
 
     public Integer getUnshareInterval() {
@@ -144,11 +149,13 @@ public class ShareRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The period after which snapshots that are shared with other AWS accounts are automatically unshared.
+     * The period after which snapshots that are shared with other Amazon Web Services accounts are automatically
+     * unshared.
      * </p>
      * 
      * @param unshareInterval
-     *        The period after which snapshots that are shared with other AWS accounts are automatically unshared.
+     *        The period after which snapshots that are shared with other Amazon Web Services accounts are automatically
+     *        unshared.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

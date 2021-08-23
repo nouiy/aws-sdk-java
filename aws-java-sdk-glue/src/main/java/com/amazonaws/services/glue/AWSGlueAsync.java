@@ -214,6 +214,37 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
+     * Retrieves information about a list of blueprints.
+     * </p>
+     * 
+     * @param batchGetBlueprintsRequest
+     * @return A Java Future containing the result of the BatchGetBlueprints operation returned by the service.
+     * @sample AWSGlueAsync.BatchGetBlueprints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetBlueprints" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetBlueprintsResult> batchGetBlueprintsAsync(BatchGetBlueprintsRequest batchGetBlueprintsRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a list of blueprints.
+     * </p>
+     * 
+     * @param batchGetBlueprintsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the BatchGetBlueprints operation returned by the service.
+     * @sample AWSGlueAsyncHandler.BatchGetBlueprints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetBlueprints" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<BatchGetBlueprintsResult> batchGetBlueprintsAsync(BatchGetBlueprintsRequest batchGetBlueprintsRequest,
+            com.amazonaws.handlers.AsyncHandler<BatchGetBlueprintsRequest, BatchGetBlueprintsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of resource metadata for a given list of crawler names. After calling the
      * <code>ListCrawlers</code> operation, you can call this operation to access the data to which you have been
      * granted permissions. This operation supports all IAM permissions, including permission conditions that uses tags.
@@ -553,6 +584,37 @@ public interface AWSGlueAsync extends AWSGlue {
     java.util.concurrent.Future<CheckSchemaVersionValidityResult> checkSchemaVersionValidityAsync(
             CheckSchemaVersionValidityRequest checkSchemaVersionValidityRequest,
             com.amazonaws.handlers.AsyncHandler<CheckSchemaVersionValidityRequest, CheckSchemaVersionValidityResult> asyncHandler);
+
+    /**
+     * <p>
+     * Registers a blueprint with Glue.
+     * </p>
+     * 
+     * @param createBlueprintRequest
+     * @return A Java Future containing the result of the CreateBlueprint operation returned by the service.
+     * @sample AWSGlueAsync.CreateBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBlueprintResult> createBlueprintAsync(CreateBlueprintRequest createBlueprintRequest);
+
+    /**
+     * <p>
+     * Registers a blueprint with Glue.
+     * </p>
+     * 
+     * @param createBlueprintRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateBlueprint operation returned by the service.
+     * @sample AWSGlueAsyncHandler.CreateBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBlueprintResult> createBlueprintAsync(CreateBlueprintRequest createBlueprintRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateBlueprintRequest, CreateBlueprintResult> asyncHandler);
 
     /**
      * <p>
@@ -1146,6 +1208,37 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<CreateWorkflowResult> createWorkflowAsync(CreateWorkflowRequest createWorkflowRequest,
             com.amazonaws.handlers.AsyncHandler<CreateWorkflowRequest, CreateWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes an existing blueprint.
+     * </p>
+     * 
+     * @param deleteBlueprintRequest
+     * @return A Java Future containing the result of the DeleteBlueprint operation returned by the service.
+     * @sample AWSGlueAsync.DeleteBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBlueprintResult> deleteBlueprintAsync(DeleteBlueprintRequest deleteBlueprintRequest);
+
+    /**
+     * <p>
+     * Deletes an existing blueprint.
+     * </p>
+     * 
+     * @param deleteBlueprintRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteBlueprint operation returned by the service.
+     * @sample AWSGlueAsyncHandler.DeleteBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBlueprintResult> deleteBlueprintAsync(DeleteBlueprintRequest deleteBlueprintRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteBlueprintRequest, DeleteBlueprintResult> asyncHandler);
 
     /**
      * <p>
@@ -1925,6 +2018,99 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<DeleteWorkflowResult> deleteWorkflowAsync(DeleteWorkflowRequest deleteWorkflowRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteWorkflowRequest, DeleteWorkflowResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the details of a blueprint.
+     * </p>
+     * 
+     * @param getBlueprintRequest
+     * @return A Java Future containing the result of the GetBlueprint operation returned by the service.
+     * @sample AWSGlueAsync.GetBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetBlueprintResult> getBlueprintAsync(GetBlueprintRequest getBlueprintRequest);
+
+    /**
+     * <p>
+     * Retrieves the details of a blueprint.
+     * </p>
+     * 
+     * @param getBlueprintRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetBlueprint operation returned by the service.
+     * @sample AWSGlueAsyncHandler.GetBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetBlueprintResult> getBlueprintAsync(GetBlueprintRequest getBlueprintRequest,
+            com.amazonaws.handlers.AsyncHandler<GetBlueprintRequest, GetBlueprintResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the details of a blueprint run.
+     * </p>
+     * 
+     * @param getBlueprintRunRequest
+     * @return A Java Future containing the result of the GetBlueprintRun operation returned by the service.
+     * @sample AWSGlueAsync.GetBlueprintRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetBlueprintRunResult> getBlueprintRunAsync(GetBlueprintRunRequest getBlueprintRunRequest);
+
+    /**
+     * <p>
+     * Retrieves the details of a blueprint run.
+     * </p>
+     * 
+     * @param getBlueprintRunRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetBlueprintRun operation returned by the service.
+     * @sample AWSGlueAsyncHandler.GetBlueprintRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetBlueprintRunResult> getBlueprintRunAsync(GetBlueprintRunRequest getBlueprintRunRequest,
+            com.amazonaws.handlers.AsyncHandler<GetBlueprintRunRequest, GetBlueprintRunResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the details of blueprint runs for a specified blueprint.
+     * </p>
+     * 
+     * @param getBlueprintRunsRequest
+     * @return A Java Future containing the result of the GetBlueprintRuns operation returned by the service.
+     * @sample AWSGlueAsync.GetBlueprintRuns
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRuns" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetBlueprintRunsResult> getBlueprintRunsAsync(GetBlueprintRunsRequest getBlueprintRunsRequest);
+
+    /**
+     * <p>
+     * Retrieves the details of blueprint runs for a specified blueprint.
+     * </p>
+     * 
+     * @param getBlueprintRunsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetBlueprintRuns operation returned by the service.
+     * @sample AWSGlueAsyncHandler.GetBlueprintRuns
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetBlueprintRuns" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetBlueprintRunsResult> getBlueprintRunsAsync(GetBlueprintRunsRequest getBlueprintRunsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetBlueprintRunsRequest, GetBlueprintRunsResult> asyncHandler);
 
     /**
      * <p>
@@ -3679,6 +3865,37 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
+     * Lists all the blueprint names in an account.
+     * </p>
+     * 
+     * @param listBlueprintsRequest
+     * @return A Java Future containing the result of the ListBlueprints operation returned by the service.
+     * @sample AWSGlueAsync.ListBlueprints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListBlueprints" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListBlueprintsResult> listBlueprintsAsync(ListBlueprintsRequest listBlueprintsRequest);
+
+    /**
+     * <p>
+     * Lists all the blueprint names in an account.
+     * </p>
+     * 
+     * @param listBlueprintsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListBlueprints operation returned by the service.
+     * @sample AWSGlueAsyncHandler.ListBlueprints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/ListBlueprints" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListBlueprintsResult> listBlueprintsAsync(ListBlueprintsRequest listBlueprintsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListBlueprintsRequest, ListBlueprintsResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves the names of all crawler resources in this Amazon Web Services account, or the resources with the
      * specified tag. This operation allows you to see which resources are available in your account, and their names.
      * </p>
@@ -4398,6 +4615,37 @@ public interface AWSGlueAsync extends AWSGlue {
 
     /**
      * <p>
+     * Starts a new run of the specified blueprint.
+     * </p>
+     * 
+     * @param startBlueprintRunRequest
+     * @return A Java Future containing the result of the StartBlueprintRun operation returned by the service.
+     * @sample AWSGlueAsync.StartBlueprintRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartBlueprintRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartBlueprintRunResult> startBlueprintRunAsync(StartBlueprintRunRequest startBlueprintRunRequest);
+
+    /**
+     * <p>
+     * Starts a new run of the specified blueprint.
+     * </p>
+     * 
+     * @param startBlueprintRunRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartBlueprintRun operation returned by the service.
+     * @sample AWSGlueAsyncHandler.StartBlueprintRun
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/StartBlueprintRun" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<StartBlueprintRunResult> startBlueprintRunAsync(StartBlueprintRunRequest startBlueprintRunRequest,
+            com.amazonaws.handlers.AsyncHandler<StartBlueprintRunRequest, StartBlueprintRunResult> asyncHandler);
+
+    /**
+     * <p>
      * Starts a crawl using the specified crawler, regardless of what is scheduled. If the crawler is already running,
      * returns a <a href=
      * "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-exceptions.html#aws-glue-api-exceptions-CrawlerRunningException"
@@ -4980,6 +5228,37 @@ public interface AWSGlueAsync extends AWSGlue {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a registered blueprint.
+     * </p>
+     * 
+     * @param updateBlueprintRequest
+     * @return A Java Future containing the result of the UpdateBlueprint operation returned by the service.
+     * @sample AWSGlueAsync.UpdateBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateBlueprintResult> updateBlueprintAsync(UpdateBlueprintRequest updateBlueprintRequest);
+
+    /**
+     * <p>
+     * Updates a registered blueprint.
+     * </p>
+     * 
+     * @param updateBlueprintRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateBlueprint operation returned by the service.
+     * @sample AWSGlueAsyncHandler.UpdateBlueprint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateBlueprint" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateBlueprintResult> updateBlueprintAsync(UpdateBlueprintRequest updateBlueprintRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateBlueprintRequest, UpdateBlueprintResult> asyncHandler);
 
     /**
      * <p>

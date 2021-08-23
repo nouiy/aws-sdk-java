@@ -106,19 +106,19 @@ public interface AmazonApiGateway {
      * @param createApiKeyRequest
      *        Request to create an <a>ApiKey</a> resource.
      * @return Result of the CreateApiKey operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws LimitExceededException
-     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateApiKey
      */
     CreateApiKeyResult createApiKey(CreateApiKeyRequest createApiKeyRequest);
@@ -136,12 +136,14 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateAuthorizer
@@ -156,15 +158,17 @@ public interface AmazonApiGateway {
      * @param createBasePathMappingRequest
      *        Requests API Gateway to create a new <a>BasePathMapping</a> resource.
      * @return Result of the CreateBasePathMapping operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateBasePathMapping
@@ -179,17 +183,17 @@ public interface AmazonApiGateway {
      * @param createDeploymentRequest
      *        Requests API Gateway to create a <a>Deployment</a> resource.
      * @return Result of the CreateDeployment operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws ServiceUnavailableException
@@ -208,12 +212,12 @@ public interface AmazonApiGateway {
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateDocumentationPart
@@ -229,12 +233,12 @@ public interface AmazonApiGateway {
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateDocumentationVersion
@@ -249,13 +253,15 @@ public interface AmazonApiGateway {
      * @param createDomainNameRequest
      *        A request to create a new domain name.
      * @return Result of the CreateDomainName operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateDomainName
@@ -273,14 +279,14 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateModel
@@ -298,12 +304,14 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateRequestValidator
@@ -343,13 +351,15 @@ public interface AmazonApiGateway {
      * @param createRestApiRequest
      *        The POST Request to add a new <a>RestApi</a> resource to your collection.
      * @return Result of the CreateRestApi operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws LimitExceededException
-     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateRestApi
@@ -394,16 +404,16 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws LimitExceededException
-     *         The request exceeded the rate limit. Retry after the specified time period.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @sample AmazonApiGateway.CreateUsagePlan
      */
     CreateUsagePlanResult createUsagePlan(CreateUsagePlanRequest createUsagePlanRequest);
@@ -421,10 +431,12 @@ public interface AmazonApiGateway {
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateUsagePlanKey
@@ -443,11 +455,15 @@ public interface AmazonApiGateway {
      *        typically takes 2-4 minutes to complete and become operational. The caller must have permissions to create
      *        and update VPC Endpoint services.
      * @return Result of the CreateVpcLink operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.CreateVpcLink
@@ -462,10 +478,15 @@ public interface AmazonApiGateway {
      * @param deleteApiKeyRequest
      *        A request to delete the <a>ApiKey</a> resource.
      * @return Result of the DeleteApiKey operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteApiKey
@@ -482,17 +503,17 @@ public interface AmazonApiGateway {
      * @param deleteAuthorizerRequest
      *        Request to delete an existing <a>Authorizer</a> resource.
      * @return Result of the DeleteAuthorizer operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteAuthorizer
      */
     DeleteAuthorizerResult deleteAuthorizer(DeleteAuthorizerRequest deleteAuthorizerRequest);
@@ -505,15 +526,15 @@ public interface AmazonApiGateway {
      * @param deleteBasePathMappingRequest
      *        A request to delete the <a>BasePathMapping</a> resource.
      * @return Result of the DeleteBasePathMapping operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteBasePathMapping
@@ -528,15 +549,17 @@ public interface AmazonApiGateway {
      * @param deleteClientCertificateRequest
      *        A request to delete the <a>ClientCertificate</a> resource.
      * @return Result of the DeleteClientCertificate operation returned by the service.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws BadRequestException
-     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
-     *         accompanying error message for details.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @sample AmazonApiGateway.DeleteClientCertificate
      */
     DeleteClientCertificateResult deleteClientCertificate(DeleteClientCertificateRequest deleteClientCertificateRequest);
@@ -550,13 +573,17 @@ public interface AmazonApiGateway {
      * @param deleteDeploymentRequest
      *        Requests API Gateway to delete a <a>Deployment</a> resource.
      * @return Result of the DeleteDeployment operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteDeployment
@@ -567,17 +594,17 @@ public interface AmazonApiGateway {
      * @param deleteDocumentationPartRequest
      *        Deletes an existing documentation part of an API.
      * @return Result of the DeleteDocumentationPart operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteDocumentationPart
      */
     DeleteDocumentationPartResult deleteDocumentationPart(DeleteDocumentationPartRequest deleteDocumentationPartRequest);
@@ -586,15 +613,15 @@ public interface AmazonApiGateway {
      * @param deleteDocumentationVersionRequest
      *        Deletes an existing documentation version of an API.
      * @return Result of the DeleteDocumentationVersion operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteDocumentationVersion
@@ -609,15 +636,17 @@ public interface AmazonApiGateway {
      * @param deleteDomainNameRequest
      *        A request to delete the <a>DomainName</a> resource.
      * @return Result of the DeleteDomainName operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteDomainName
      */
     DeleteDomainNameResult deleteDomainName(DeleteDomainNameRequest deleteDomainNameRequest);
@@ -632,17 +661,17 @@ public interface AmazonApiGateway {
      *        Clears any customization of a <a>GatewayResponse</a> of a specified response type on the given
      *        <a>RestApi</a> and resets it with the default settings.
      * @return Result of the DeleteGatewayResponse operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteGatewayResponse
      */
     DeleteGatewayResponseResult deleteGatewayResponse(DeleteGatewayResponseRequest deleteGatewayResponseRequest);
@@ -655,14 +684,17 @@ public interface AmazonApiGateway {
      * @param deleteIntegrationRequest
      *        Represents a delete integration request.
      * @return Result of the DeleteIntegration operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteIntegration
      */
     DeleteIntegrationResult deleteIntegration(DeleteIntegrationRequest deleteIntegrationRequest);
@@ -675,17 +707,17 @@ public interface AmazonApiGateway {
      * @param deleteIntegrationResponseRequest
      *        Represents a delete integration response request.
      * @return Result of the DeleteIntegrationResponse operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteIntegrationResponse
      */
     DeleteIntegrationResponseResult deleteIntegrationResponse(DeleteIntegrationResponseRequest deleteIntegrationResponseRequest);
@@ -741,17 +773,17 @@ public interface AmazonApiGateway {
      * @param deleteModelRequest
      *        Request to delete an existing model in an existing <a>RestApi</a> resource.
      * @return Result of the DeleteModel operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteModel
      */
     DeleteModelResult deleteModel(DeleteModelRequest deleteModelRequest);
@@ -764,17 +796,17 @@ public interface AmazonApiGateway {
      * @param deleteRequestValidatorRequest
      *        Deletes a specified <a>RequestValidator</a> of a given <a>RestApi</a>.
      * @return Result of the DeleteRequestValidator operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteRequestValidator
      */
     DeleteRequestValidatorResult deleteRequestValidator(DeleteRequestValidatorRequest deleteRequestValidatorRequest);
@@ -810,15 +842,17 @@ public interface AmazonApiGateway {
      * @param deleteRestApiRequest
      *        Request to delete the specified API from your collection.
      * @return Result of the DeleteRestApi operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteRestApi
      */
     DeleteRestApiResult deleteRestApi(DeleteRestApiRequest deleteRestApiRequest);
@@ -831,15 +865,19 @@ public interface AmazonApiGateway {
      * @param deleteStageRequest
      *        Requests API Gateway to delete a <a>Stage</a> resource.
      * @return Result of the DeleteStage operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteStage
      */
     DeleteStageResult deleteStage(DeleteStageRequest deleteStageRequest);
@@ -852,15 +890,17 @@ public interface AmazonApiGateway {
      * @param deleteUsagePlanRequest
      *        The DELETE request to delete a usage plan of a given plan Id.
      * @return Result of the DeleteUsagePlan operation returned by the service.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws BadRequestException
-     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
-     *         accompanying error message for details.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @sample AmazonApiGateway.DeleteUsagePlan
      */
     DeleteUsagePlanResult deleteUsagePlan(DeleteUsagePlanRequest deleteUsagePlanRequest);
@@ -879,10 +919,10 @@ public interface AmazonApiGateway {
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteUsagePlanKey
@@ -897,15 +937,17 @@ public interface AmazonApiGateway {
      * @param deleteVpcLinkRequest
      *        Deletes an existing <a>VpcLink</a> of a specified identifier.
      * @return Result of the DeleteVpcLink operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.DeleteVpcLink
      */
     DeleteVpcLinkResult deleteVpcLink(DeleteVpcLinkRequest deleteVpcLinkRequest);
@@ -918,13 +960,17 @@ public interface AmazonApiGateway {
      * @param flushStageAuthorizersCacheRequest
      *        Request to flush authorizer cache entries on a specified stage.
      * @return Result of the FlushStageAuthorizersCache operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.FlushStageAuthorizersCache
@@ -939,13 +985,17 @@ public interface AmazonApiGateway {
      * @param flushStageCacheRequest
      *        Requests API Gateway to flush a stage's cache.
      * @return Result of the FlushStageCache operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.FlushStageCache
@@ -960,12 +1010,17 @@ public interface AmazonApiGateway {
      * @param generateClientCertificateRequest
      *        A request to generate a <a>ClientCertificate</a> resource.
      * @return Result of the GenerateClientCertificate operation returned by the service.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws LimitExceededException
-     *         The request exceeded the rate limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GenerateClientCertificate
      */
     GenerateClientCertificateResult generateClientCertificate(GenerateClientCertificateRequest generateClientCertificateRequest);
@@ -978,10 +1033,13 @@ public interface AmazonApiGateway {
      * @param getAccountRequest
      *        Requests API Gateway to get information about the current <a>Account</a> resource.
      * @return Result of the GetAccount operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetAccount
@@ -996,10 +1054,13 @@ public interface AmazonApiGateway {
      * @param getApiKeyRequest
      *        A request to get information about the current <a>ApiKey</a> resource.
      * @return Result of the GetApiKey operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetApiKey
@@ -1017,6 +1078,8 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
@@ -1035,10 +1098,13 @@ public interface AmazonApiGateway {
      * @param getAuthorizerRequest
      *        Request to describe an existing <a>Authorizer</a> resource.
      * @return Result of the GetAuthorizer operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetAuthorizer
@@ -1058,10 +1124,10 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetAuthorizers
@@ -1076,10 +1142,13 @@ public interface AmazonApiGateway {
      * @param getBasePathMappingRequest
      *        Request to describe a <a>BasePathMapping</a> resource.
      * @return Result of the GetBasePathMapping operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetBasePathMapping
@@ -1094,10 +1163,13 @@ public interface AmazonApiGateway {
      * @param getBasePathMappingsRequest
      *        A request to get information about a collection of <a>BasePathMapping</a> resources.
      * @return Result of the GetBasePathMappings operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetBasePathMappings
@@ -1112,10 +1184,13 @@ public interface AmazonApiGateway {
      * @param getClientCertificateRequest
      *        A request to get information about the current <a>ClientCertificate</a> resource.
      * @return Result of the GetClientCertificate operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetClientCertificate
@@ -1133,6 +1208,8 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
@@ -1149,10 +1226,13 @@ public interface AmazonApiGateway {
      * @param getDeploymentRequest
      *        Requests API Gateway to get information about a <a>Deployment</a> resource.
      * @return Result of the GetDeployment operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws ServiceUnavailableException
@@ -1190,10 +1270,13 @@ public interface AmazonApiGateway {
      * @param getDocumentationPartRequest
      *        Gets a specified documentation part of a given API.
      * @return Result of the GetDocumentationPart operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetDocumentationPart
@@ -1208,10 +1291,10 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetDocumentationParts
@@ -1257,13 +1340,13 @@ public interface AmazonApiGateway {
      * @param getDomainNameRequest
      *        Request to get the name of a <a>DomainName</a> resource.
      * @return Result of the GetDomainName operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws ServiceUnavailableException
-     *         The requested service is not available. For details see the accompanying error message. Retry after the
-     *         specified time period.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetDomainName
@@ -1281,6 +1364,8 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
@@ -1297,15 +1382,17 @@ public interface AmazonApiGateway {
      * @param getExportRequest
      *        Request a new export of a <a>RestApi</a> for a particular <a>Stage</a>.
      * @return Result of the GetExport operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetExport
@@ -1320,10 +1407,13 @@ public interface AmazonApiGateway {
      * @param getGatewayResponseRequest
      *        Gets a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.
      * @return Result of the GetGatewayResponse operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetGatewayResponse
@@ -1345,10 +1435,10 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetGatewayResponses
@@ -1363,10 +1453,13 @@ public interface AmazonApiGateway {
      * @param getIntegrationRequest
      *        Represents a request to get the integration configuration.
      * @return Result of the GetIntegration operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetIntegration
@@ -1381,10 +1474,13 @@ public interface AmazonApiGateway {
      * @param getIntegrationResponseRequest
      *        Represents a get integration response request.
      * @return Result of the GetIntegrationResponse operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetIntegrationResponse
@@ -1435,10 +1531,13 @@ public interface AmazonApiGateway {
      * @param getModelRequest
      *        Request to list information about a model in an existing <a>RestApi</a> resource.
      * @return Result of the GetModel operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetModel
@@ -1495,10 +1594,13 @@ public interface AmazonApiGateway {
      * @param getRequestValidatorRequest
      *        Gets a <a>RequestValidator</a> of a given <a>RestApi</a>.
      * @return Result of the GetRequestValidator operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetRequestValidator
@@ -1516,10 +1618,10 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetRequestValidators
@@ -1573,10 +1675,13 @@ public interface AmazonApiGateway {
      * @param getRestApiRequest
      *        The GET request to list an existing <a>RestApi</a> defined for your collection.
      * @return Result of the GetRestApi operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetRestApi
@@ -1594,6 +1699,8 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
@@ -1610,15 +1717,17 @@ public interface AmazonApiGateway {
      * @param getSdkRequest
      *        Request a new generated client SDK for a <a>RestApi</a> and <a>Stage</a>.
      * @return Result of the GetSdk operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetSdk
@@ -1629,10 +1738,13 @@ public interface AmazonApiGateway {
      * @param getSdkTypeRequest
      *        Get an <a>SdkType</a> instance.
      * @return Result of the GetSdkType operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetSdkType
@@ -1643,6 +1755,11 @@ public interface AmazonApiGateway {
      * @param getSdkTypesRequest
      *        Get the <a>SdkTypes</a> collection.
      * @return Result of the GetSdkTypes operation returned by the service.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
@@ -1659,10 +1776,17 @@ public interface AmazonApiGateway {
      * @param getStageRequest
      *        Requests API Gateway to get information about a <a>Stage</a> resource.
      * @return Result of the GetStage operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetStage
@@ -1677,10 +1801,17 @@ public interface AmazonApiGateway {
      * @param getStagesRequest
      *        Requests API Gateway to get information about one or more <a>Stage</a> resources.
      * @return Result of the GetStages operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetStages
@@ -1698,14 +1829,12 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws LimitExceededException
-     *         The request exceeded the rate limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetTags
      */
     GetTagsResult getTags(GetTagsRequest getTagsRequest);
@@ -1742,10 +1871,10 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetUsagePlan
@@ -1763,10 +1892,10 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetUsagePlanKey
@@ -1784,10 +1913,10 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetUsagePlanKeys
@@ -1805,14 +1934,12 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @sample AmazonApiGateway.GetUsagePlans
      */
     GetUsagePlansResult getUsagePlans(GetUsagePlansRequest getUsagePlansRequest);
@@ -1825,10 +1952,13 @@ public interface AmazonApiGateway {
      * @param getVpcLinkRequest
      *        Gets a specified VPC link under the caller's account in a region.
      * @return Result of the GetVpcLink operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.GetVpcLink
@@ -1846,6 +1976,8 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
@@ -1862,19 +1994,19 @@ public interface AmazonApiGateway {
      * @param importApiKeysRequest
      *        The POST request to import API keys from an external source, such as a CSV-formatted file.
      * @return Result of the ImportApiKeys operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws LimitExceededException
-     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.ImportApiKeys
      */
     ImportApiKeysResult importApiKeys(ImportApiKeysRequest importApiKeysRequest);
@@ -1883,15 +2015,17 @@ public interface AmazonApiGateway {
      * @param importDocumentationPartsRequest
      *        Import documentation parts from an external (e.g., OpenAPI) definition file.
      * @return Result of the ImportDocumentationParts operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.ImportDocumentationParts
@@ -1906,17 +2040,19 @@ public interface AmazonApiGateway {
      * @param importRestApiRequest
      *        A POST request to import an API to API Gateway using an input of an API definition file.
      * @return Result of the ImportRestApi operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws LimitExceededException
-     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.ImportRestApi
      */
     ImportRestApiResult importRestApi(ImportRestApiRequest importRestApiRequest);
@@ -1934,12 +2070,14 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.PutGatewayResponse
@@ -1954,15 +2092,17 @@ public interface AmazonApiGateway {
      * @param putIntegrationRequest
      *        Sets up a method's integration.
      * @return Result of the PutIntegration operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.PutIntegration
@@ -1977,19 +2117,19 @@ public interface AmazonApiGateway {
      * @param putIntegrationResponseRequest
      *        Represents a put integration response request.
      * @return Result of the PutIntegrationResponse operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws LimitExceededException
-     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.PutIntegrationResponse
      */
     PutIntegrationResponseResult putIntegrationResponse(PutIntegrationResponseRequest putIntegrationResponseRequest);
@@ -2054,19 +2194,19 @@ public interface AmazonApiGateway {
      * @param putRestApiRequest
      *        A PUT request to update an existing API, with external API definitions specified as the request body.
      * @return Result of the PutRestApi operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws BadRequestException
-     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
-     *         accompanying error message for details.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @sample AmazonApiGateway.PutRestApi
      */
     PutRestApiResult putRestApi(PutRestApiRequest putRestApiRequest);
@@ -2082,16 +2222,16 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws LimitExceededException
-     *         The request exceeded the rate limit. Retry after the specified time period.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @sample AmazonApiGateway.TagResource
      */
     TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
@@ -2156,14 +2296,16 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @sample AmazonApiGateway.UntagResource
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
@@ -2176,13 +2318,17 @@ public interface AmazonApiGateway {
      * @param updateAccountRequest
      *        Requests API Gateway to change information about the current <a>Account</a> resource.
      * @return Result of the UpdateAccount operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
      * @throws NotFoundException
      *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateAccount
@@ -2197,17 +2343,19 @@ public interface AmazonApiGateway {
      * @param updateApiKeyRequest
      *        A request to change information about an <a>ApiKey</a> resource.
      * @return Result of the UpdateApiKey operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateApiKey
      */
     UpdateApiKeyResult updateApiKey(UpdateApiKeyRequest updateApiKeyRequest);
@@ -2222,13 +2370,17 @@ public interface AmazonApiGateway {
      * @param updateAuthorizerRequest
      *        Request to update an existing <a>Authorizer</a> resource.
      * @return Result of the UpdateAuthorizer operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateAuthorizer
@@ -2243,15 +2395,17 @@ public interface AmazonApiGateway {
      * @param updateBasePathMappingRequest
      *        A request to change information about the <a>BasePathMapping</a> resource.
      * @return Result of the UpdateBasePathMapping operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateBasePathMapping
@@ -2266,15 +2420,19 @@ public interface AmazonApiGateway {
      * @param updateClientCertificateRequest
      *        A request to change information about an <a>ClientCertificate</a> resource.
      * @return Result of the UpdateClientCertificate operation returned by the service.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws BadRequestException
-     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
-     *         accompanying error message for details.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @sample AmazonApiGateway.UpdateClientCertificate
      */
     UpdateClientCertificateResult updateClientCertificate(UpdateClientCertificateRequest updateClientCertificateRequest);
@@ -2287,13 +2445,17 @@ public interface AmazonApiGateway {
      * @param updateDeploymentRequest
      *        Requests API Gateway to change information about a <a>Deployment</a> resource.
      * @return Result of the UpdateDeployment operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws ServiceUnavailableException
@@ -2310,14 +2472,14 @@ public interface AmazonApiGateway {
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws LimitExceededException
      *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateDocumentationPart
@@ -2328,15 +2490,17 @@ public interface AmazonApiGateway {
      * @param updateDocumentationVersionRequest
      *        Updates an existing documentation version of an API.
      * @return Result of the UpdateDocumentationVersion operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateDocumentationVersion
@@ -2351,15 +2515,17 @@ public interface AmazonApiGateway {
      * @param updateDomainNameRequest
      *        A request to change information about the <a>DomainName</a> resource.
      * @return Result of the UpdateDomainName operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateDomainName
@@ -2374,13 +2540,17 @@ public interface AmazonApiGateway {
      * @param updateGatewayResponseRequest
      *        Updates a <a>GatewayResponse</a> of a specified response type on the given <a>RestApi</a>.
      * @return Result of the UpdateGatewayResponse operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateGatewayResponse
@@ -2395,17 +2565,19 @@ public interface AmazonApiGateway {
      * @param updateIntegrationRequest
      *        Represents an update integration request.
      * @return Result of the UpdateIntegration operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
-     * @throws TooManyRequestsException
-     *         The request has reached its throttling limit. Retry after the specified time period.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
+     * @throws TooManyRequestsException
+     *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateIntegration
      */
     UpdateIntegrationResult updateIntegration(UpdateIntegrationRequest updateIntegrationRequest);
@@ -2418,15 +2590,17 @@ public interface AmazonApiGateway {
      * @param updateIntegrationResponseRequest
      *        Represents an update integration response request.
      * @return Result of the UpdateIntegrationResponse operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateIntegrationResponse
@@ -2489,15 +2663,17 @@ public interface AmazonApiGateway {
      * @param updateModelRequest
      *        Request to update an existing model in an existing <a>RestApi</a> resource.
      * @return Result of the UpdateModel operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateModel
@@ -2512,13 +2688,17 @@ public interface AmazonApiGateway {
      * @param updateRequestValidatorRequest
      *        Updates a <a>RequestValidator</a> of a given <a>RestApi</a>.
      * @return Result of the UpdateRequestValidator operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateRequestValidator
@@ -2556,15 +2736,17 @@ public interface AmazonApiGateway {
      * @param updateRestApiRequest
      *        Request to update an existing <a>RestApi</a> resource in your collection.
      * @return Result of the UpdateRestApi operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateRestApi
@@ -2579,15 +2761,17 @@ public interface AmazonApiGateway {
      * @param updateStageRequest
      *        Requests API Gateway to change information about a <a>Stage</a> resource.
      * @return Result of the UpdateStage operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateStage
@@ -2603,15 +2787,19 @@ public interface AmazonApiGateway {
      *        The PATCH request to grant a temporary extension to the remaining quota of a usage plan associated with a
      *        specified API key.
      * @return Result of the UpdateUsage operation returned by the service.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws BadRequestException
-     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
-     *         accompanying error message for details.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @sample AmazonApiGateway.UpdateUsage
      */
     UpdateUsageResult updateUsage(UpdateUsageRequest updateUsageRequest);
@@ -2624,17 +2812,19 @@ public interface AmazonApiGateway {
      * @param updateUsagePlanRequest
      *        The PATCH request to update a usage plan of a given plan Id.
      * @return Result of the UpdateUsagePlan operation returned by the service.
+     * @throws BadRequestException
+     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
+     *         accompanying error message for details.
+     * @throws ConflictException
+     *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws UnauthorizedException
      *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
-     * @throws BadRequestException
-     *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
-     *         accompanying error message for details.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
-     * @throws ConflictException
-     *         The request configuration has conflicts. For details, see the accompanying error message.
      * @sample AmazonApiGateway.UpdateUsagePlan
      */
     UpdateUsagePlanResult updateUsagePlan(UpdateUsagePlanRequest updateUsagePlanRequest);
@@ -2647,15 +2837,17 @@ public interface AmazonApiGateway {
      * @param updateVpcLinkRequest
      *        Updates an existing <a>VpcLink</a> of a specified identifier.
      * @return Result of the UpdateVpcLink operation returned by the service.
-     * @throws UnauthorizedException
-     *         The request is denied because the caller has insufficient permissions.
-     * @throws NotFoundException
-     *         The requested resource is not found. Make sure that the request URI is correct.
      * @throws BadRequestException
      *         The submitted request is not valid, for example, the input is incomplete or incorrect. See the
      *         accompanying error message for details.
      * @throws ConflictException
      *         The request configuration has conflicts. For details, see the accompanying error message.
+     * @throws LimitExceededException
+     *         The request exceeded the rate limit. Retry after the specified time period.
+     * @throws NotFoundException
+     *         The requested resource is not found. Make sure that the request URI is correct.
+     * @throws UnauthorizedException
+     *         The request is denied because the caller has insufficient permissions.
      * @throws TooManyRequestsException
      *         The request has reached its throttling limit. Retry after the specified time period.
      * @sample AmazonApiGateway.UpdateVpcLink

@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * AWS Backup is already performing an action on this recovery point. It can't perform the action you requested until
- * the first action finishes. Try again later.
+ * Backup is already performing an action on this recovery point. It can't perform the action you requested until the
+ * first action finishes. Try again later.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

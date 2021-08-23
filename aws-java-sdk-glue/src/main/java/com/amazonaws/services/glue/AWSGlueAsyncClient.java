@@ -240,6 +240,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<BatchGetBlueprintsResult> batchGetBlueprintsAsync(BatchGetBlueprintsRequest request) {
+
+        return batchGetBlueprintsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchGetBlueprintsResult> batchGetBlueprintsAsync(final BatchGetBlueprintsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchGetBlueprintsRequest, BatchGetBlueprintsResult> asyncHandler) {
+        final BatchGetBlueprintsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchGetBlueprintsResult>() {
+            @Override
+            public BatchGetBlueprintsResult call() throws Exception {
+                BatchGetBlueprintsResult result = null;
+
+                try {
+                    result = executeBatchGetBlueprints(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchGetCrawlersResult> batchGetCrawlersAsync(BatchGetCrawlersRequest request) {
 
         return batchGetCrawlersAsync(request, null);
@@ -554,6 +587,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeCheckSchemaVersionValidity(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBlueprintResult> createBlueprintAsync(CreateBlueprintRequest request) {
+
+        return createBlueprintAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBlueprintResult> createBlueprintAsync(final CreateBlueprintRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateBlueprintRequest, CreateBlueprintResult> asyncHandler) {
+        final CreateBlueprintRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateBlueprintResult>() {
+            @Override
+            public CreateBlueprintResult call() throws Exception {
+                CreateBlueprintResult result = null;
+
+                try {
+                    result = executeCreateBlueprint(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1115,6 +1181,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeCreateWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBlueprintResult> deleteBlueprintAsync(DeleteBlueprintRequest request) {
+
+        return deleteBlueprintAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBlueprintResult> deleteBlueprintAsync(final DeleteBlueprintRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteBlueprintRequest, DeleteBlueprintResult> asyncHandler) {
+        final DeleteBlueprintRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteBlueprintResult>() {
+            @Override
+            public DeleteBlueprintResult call() throws Exception {
+                DeleteBlueprintResult result = null;
+
+                try {
+                    result = executeDeleteBlueprint(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1811,6 +1910,105 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeDeleteWorkflow(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintResult> getBlueprintAsync(GetBlueprintRequest request) {
+
+        return getBlueprintAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintResult> getBlueprintAsync(final GetBlueprintRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetBlueprintRequest, GetBlueprintResult> asyncHandler) {
+        final GetBlueprintRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetBlueprintResult>() {
+            @Override
+            public GetBlueprintResult call() throws Exception {
+                GetBlueprintResult result = null;
+
+                try {
+                    result = executeGetBlueprint(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintRunResult> getBlueprintRunAsync(GetBlueprintRunRequest request) {
+
+        return getBlueprintRunAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintRunResult> getBlueprintRunAsync(final GetBlueprintRunRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetBlueprintRunRequest, GetBlueprintRunResult> asyncHandler) {
+        final GetBlueprintRunRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetBlueprintRunResult>() {
+            @Override
+            public GetBlueprintRunResult call() throws Exception {
+                GetBlueprintRunResult result = null;
+
+                try {
+                    result = executeGetBlueprintRun(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintRunsResult> getBlueprintRunsAsync(GetBlueprintRunsRequest request) {
+
+        return getBlueprintRunsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBlueprintRunsResult> getBlueprintRunsAsync(final GetBlueprintRunsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetBlueprintRunsRequest, GetBlueprintRunsResult> asyncHandler) {
+        final GetBlueprintRunsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetBlueprintRunsResult>() {
+            @Override
+            public GetBlueprintRunsResult call() throws Exception {
+                GetBlueprintRunsResult result = null;
+
+                try {
+                    result = executeGetBlueprintRuns(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3580,6 +3778,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<ListBlueprintsResult> listBlueprintsAsync(ListBlueprintsRequest request) {
+
+        return listBlueprintsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBlueprintsResult> listBlueprintsAsync(final ListBlueprintsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBlueprintsRequest, ListBlueprintsResult> asyncHandler) {
+        final ListBlueprintsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBlueprintsResult>() {
+            @Override
+            public ListBlueprintsResult call() throws Exception {
+                ListBlueprintsResult result = null;
+
+                try {
+                    result = executeListBlueprints(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListCrawlersResult> listCrawlersAsync(ListCrawlersRequest request) {
 
         return listCrawlersAsync(request, null);
@@ -4209,6 +4440,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<StartBlueprintRunResult> startBlueprintRunAsync(StartBlueprintRunRequest request) {
+
+        return startBlueprintRunAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartBlueprintRunResult> startBlueprintRunAsync(final StartBlueprintRunRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartBlueprintRunRequest, StartBlueprintRunResult> asyncHandler) {
+        final StartBlueprintRunRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartBlueprintRunResult>() {
+            @Override
+            public StartBlueprintRunResult call() throws Exception {
+                StartBlueprintRunResult result = null;
+
+                try {
+                    result = executeStartBlueprintRun(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartCrawlerResult> startCrawlerAsync(StartCrawlerRequest request) {
 
         return startCrawlerAsync(request, null);
@@ -4690,6 +4954,39 @@ public class AWSGlueAsyncClient extends AWSGlueClient implements AWSGlueAsync {
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBlueprintResult> updateBlueprintAsync(UpdateBlueprintRequest request) {
+
+        return updateBlueprintAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBlueprintResult> updateBlueprintAsync(final UpdateBlueprintRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateBlueprintRequest, UpdateBlueprintResult> asyncHandler) {
+        final UpdateBlueprintRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateBlueprintResult>() {
+            @Override
+            public UpdateBlueprintResult call() throws Exception {
+                UpdateBlueprintResult result = null;
+
+                try {
+                    result = executeUpdateBlueprint(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
