@@ -58,8 +58,9 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     /** Entropy encoding mode. Use CABAC (must be in Main or High profile) or CAVLC. */
     private String entropyEncoding;
     /**
-     * Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force field
-     * (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+     * The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert use PAFF
+     * encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and create separate
+     * interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding for interlaced outputs.
      */
     private String fieldEncoding;
     /**
@@ -152,7 +153,10 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
      * = GOP size + Min-I-interval - 1
      */
     private Integer minIInterval;
-    /** Number of B-frames between reference frames. */
+    /**
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     */
     private Integer numberBFramesBetweenReferenceFrames;
     /**
      * Number of reference frames to use. The encoder may use more than requested if using B-frames and/or interlaced
@@ -667,12 +671,15 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force field
-     * (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+     * The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert use PAFF
+     * encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and create separate
+     * interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding for interlaced outputs.
      * 
      * @param fieldEncoding
-     *        Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force
-     *        field (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+     *        The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert
+     *        use PAFF encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and
+     *        create separate interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding
+     *        for interlaced outputs.
      * @see H264FieldEncoding
      */
 
@@ -681,11 +688,14 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force field
-     * (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+     * The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert use PAFF
+     * encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and create separate
+     * interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding for interlaced outputs.
      * 
-     * @return Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force
-     *         field (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+     * @return The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert
+     *         use PAFF encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and
+     *         create separate interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding
+     *         for interlaced outputs.
      * @see H264FieldEncoding
      */
 
@@ -694,12 +704,15 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force field
-     * (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+     * The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert use PAFF
+     * encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and create separate
+     * interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding for interlaced outputs.
      * 
      * @param fieldEncoding
-     *        Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force
-     *        field (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+     *        The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert
+     *        use PAFF encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and
+     *        create separate interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding
+     *        for interlaced outputs.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see H264FieldEncoding
      */
@@ -710,12 +723,15 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force field
-     * (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+     * The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert use PAFF
+     * encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and create separate
+     * interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding for interlaced outputs.
      * 
      * @param fieldEncoding
-     *        Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force
-     *        field (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+     *        The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert
+     *        use PAFF encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and
+     *        create separate interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding
+     *        for interlaced outputs.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see H264FieldEncoding
      */
@@ -1636,10 +1652,12 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Number of B-frames between reference frames.
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * 
      * @param numberBFramesBetweenReferenceFrames
-     *        Number of B-frames between reference frames.
+     *        Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
+     *        values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      */
 
     public void setNumberBFramesBetweenReferenceFrames(Integer numberBFramesBetweenReferenceFrames) {
@@ -1647,9 +1665,11 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Number of B-frames between reference frames.
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * 
-     * @return Number of B-frames between reference frames.
+     * @return Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
+     *         values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      */
 
     public Integer getNumberBFramesBetweenReferenceFrames() {
@@ -1657,10 +1677,12 @@ public class H264Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Number of B-frames between reference frames.
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * 
      * @param numberBFramesBetweenReferenceFrames
-     *        Number of B-frames between reference frames.
+     *        Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
+     *        values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

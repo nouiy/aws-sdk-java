@@ -15,8 +15,8 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert the GOP Size
- * into a frame count at run time.
+ * Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder measures GOP size
+ * in frames.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum Mpeg2GopSizeUnits {

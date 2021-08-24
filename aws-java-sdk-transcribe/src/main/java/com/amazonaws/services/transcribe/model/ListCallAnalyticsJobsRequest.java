@@ -48,8 +48,8 @@ public class ListCallAnalyticsJobsRequest extends com.amazonaws.AmazonWebService
     private String nextToken;
     /**
      * <p>
-     * The maximum number of call analytics jobs to return in the response. If there are fewer results in the list, this
-     * response contains only the actual results.
+     * The maximum number of call analytics jobs to return in each page of results. If there are fewer results than the
+     * value you specify, only the actual results are returned. If you do not specify a value, the default of 5 is used.
      * </p>
      */
     private Integer maxResults;
@@ -220,13 +220,14 @@ public class ListCallAnalyticsJobsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The maximum number of call analytics jobs to return in the response. If there are fewer results in the list, this
-     * response contains only the actual results.
+     * The maximum number of call analytics jobs to return in each page of results. If there are fewer results than the
+     * value you specify, only the actual results are returned. If you do not specify a value, the default of 5 is used.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of call analytics jobs to return in the response. If there are fewer results in the
-     *        list, this response contains only the actual results.
+     *        The maximum number of call analytics jobs to return in each page of results. If there are fewer results
+     *        than the value you specify, only the actual results are returned. If you do not specify a value, the
+     *        default of 5 is used.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -235,12 +236,13 @@ public class ListCallAnalyticsJobsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The maximum number of call analytics jobs to return in the response. If there are fewer results in the list, this
-     * response contains only the actual results.
+     * The maximum number of call analytics jobs to return in each page of results. If there are fewer results than the
+     * value you specify, only the actual results are returned. If you do not specify a value, the default of 5 is used.
      * </p>
      * 
-     * @return The maximum number of call analytics jobs to return in the response. If there are fewer results in the
-     *         list, this response contains only the actual results.
+     * @return The maximum number of call analytics jobs to return in each page of results. If there are fewer results
+     *         than the value you specify, only the actual results are returned. If you do not specify a value, the
+     *         default of 5 is used.
      */
 
     public Integer getMaxResults() {
@@ -249,13 +251,14 @@ public class ListCallAnalyticsJobsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The maximum number of call analytics jobs to return in the response. If there are fewer results in the list, this
-     * response contains only the actual results.
+     * The maximum number of call analytics jobs to return in each page of results. If there are fewer results than the
+     * value you specify, only the actual results are returned. If you do not specify a value, the default of 5 is used.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of call analytics jobs to return in the response. If there are fewer results in the
-     *        list, this response contains only the actual results.
+     *        The maximum number of call analytics jobs to return in each page of results. If there are fewer results
+     *        than the value you specify, only the actual results are returned. If you do not specify a value, the
+     *        default of 5 is used.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

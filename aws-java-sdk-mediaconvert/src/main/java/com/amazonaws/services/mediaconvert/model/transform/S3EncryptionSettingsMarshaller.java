@@ -29,6 +29,8 @@ public class S3EncryptionSettingsMarshaller {
 
     private static final MarshallingInfo<String> ENCRYPTIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("encryptionType").build();
+    private static final MarshallingInfo<String> KMSENCRYPTIONCONTEXT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("kmsEncryptionContext").build();
     private static final MarshallingInfo<String> KMSKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("kmsKeyArn").build();
 
@@ -49,6 +51,7 @@ public class S3EncryptionSettingsMarshaller {
 
         try {
             protocolMarshaller.marshall(s3EncryptionSettings.getEncryptionType(), ENCRYPTIONTYPE_BINDING);
+            protocolMarshaller.marshall(s3EncryptionSettings.getKmsEncryptionContext(), KMSENCRYPTIONCONTEXT_BINDING);
             protocolMarshaller.marshall(s3EncryptionSettings.getKmsKeyArn(), KMSKEYARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

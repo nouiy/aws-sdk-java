@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.transcribe.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class CreateMedicalVocabularyRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageCode").build();
     private static final MarshallingInfo<String> VOCABULARYFILEURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VocabularyFileUri").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final CreateMedicalVocabularyRequestMarshaller instance = new CreateMedicalVocabularyRequestMarshaller();
 
@@ -53,6 +56,7 @@ public class CreateMedicalVocabularyRequestMarshaller {
             protocolMarshaller.marshall(createMedicalVocabularyRequest.getVocabularyName(), VOCABULARYNAME_BINDING);
             protocolMarshaller.marshall(createMedicalVocabularyRequest.getLanguageCode(), LANGUAGECODE_BINDING);
             protocolMarshaller.marshall(createMedicalVocabularyRequest.getVocabularyFileUri(), VOCABULARYFILEURI_BINDING);
+            protocolMarshaller.marshall(createMedicalVocabularyRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

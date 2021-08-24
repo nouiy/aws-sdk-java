@@ -28,8 +28,8 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The name of the call analytics job. You can't use the string "." or ".." by themselves as the job name. The name
-     * must also be unique within an AWS account. If you try to create a call analytics job with the same name as a
-     * previous call analytics job, you get a <code>ConflictException</code> error.
+     * must also be unique within an Amazon Web Services account. If you try to create a call analytics job with the
+     * same name as a previous call analytics job, you get a <code>ConflictException</code> error.
      * </p>
      */
     private String callAnalyticsJobName;
@@ -73,19 +73,20 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ul>
      * <p>
-     * You can specify an AWS Key Management Service key to encrypt the output of our analytics job using the
-     * <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses the
-     * default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3 bucket.
+     * You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of our analytics
+     * job using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe
+     * uses the default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3
+     * bucket.
      * </p>
      */
     private String outputLocation;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the output of the call
-     * analytics job. The user calling the operation must have permission to use the specified KMS key.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service key used to encrypt the output
+     * of the call analytics job. The user calling the operation must have permission to use the specified KMS key.
      * </p>
      * <p>
-     * You use either of the following to identify an AWS KMS key in the current account:
+     * You use either of the following to identify an Amazon Web Services KMS key in the current account:
      * </p>
      * <ul>
      * <li>
@@ -151,14 +152,14 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The name of the call analytics job. You can't use the string "." or ".." by themselves as the job name. The name
-     * must also be unique within an AWS account. If you try to create a call analytics job with the same name as a
-     * previous call analytics job, you get a <code>ConflictException</code> error.
+     * must also be unique within an Amazon Web Services account. If you try to create a call analytics job with the
+     * same name as a previous call analytics job, you get a <code>ConflictException</code> error.
      * </p>
      * 
      * @param callAnalyticsJobName
      *        The name of the call analytics job. You can't use the string "." or ".." by themselves as the job name.
-     *        The name must also be unique within an AWS account. If you try to create a call analytics job with the
-     *        same name as a previous call analytics job, you get a <code>ConflictException</code> error.
+     *        The name must also be unique within an Amazon Web Services account. If you try to create a call analytics
+     *        job with the same name as a previous call analytics job, you get a <code>ConflictException</code> error.
      */
 
     public void setCallAnalyticsJobName(String callAnalyticsJobName) {
@@ -168,13 +169,13 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The name of the call analytics job. You can't use the string "." or ".." by themselves as the job name. The name
-     * must also be unique within an AWS account. If you try to create a call analytics job with the same name as a
-     * previous call analytics job, you get a <code>ConflictException</code> error.
+     * must also be unique within an Amazon Web Services account. If you try to create a call analytics job with the
+     * same name as a previous call analytics job, you get a <code>ConflictException</code> error.
      * </p>
      * 
      * @return The name of the call analytics job. You can't use the string "." or ".." by themselves as the job name.
-     *         The name must also be unique within an AWS account. If you try to create a call analytics job with the
-     *         same name as a previous call analytics job, you get a <code>ConflictException</code> error.
+     *         The name must also be unique within an Amazon Web Services account. If you try to create a call analytics
+     *         job with the same name as a previous call analytics job, you get a <code>ConflictException</code> error.
      */
 
     public String getCallAnalyticsJobName() {
@@ -184,14 +185,14 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The name of the call analytics job. You can't use the string "." or ".." by themselves as the job name. The name
-     * must also be unique within an AWS account. If you try to create a call analytics job with the same name as a
-     * previous call analytics job, you get a <code>ConflictException</code> error.
+     * must also be unique within an Amazon Web Services account. If you try to create a call analytics job with the
+     * same name as a previous call analytics job, you get a <code>ConflictException</code> error.
      * </p>
      * 
      * @param callAnalyticsJobName
      *        The name of the call analytics job. You can't use the string "." or ".." by themselves as the job name.
-     *        The name must also be unique within an AWS account. If you try to create a call analytics job with the
-     *        same name as a previous call analytics job, you get a <code>ConflictException</code> error.
+     *        The name must also be unique within an Amazon Web Services account. If you try to create a call analytics
+     *        job with the same name as a previous call analytics job, you get a <code>ConflictException</code> error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,9 +265,10 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ul>
      * <p>
-     * You can specify an AWS Key Management Service key to encrypt the output of our analytics job using the
-     * <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses the
-     * default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3 bucket.
+     * You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of our analytics
+     * job using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe
+     * uses the default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3
+     * bucket.
      * </p>
      * 
      * @param outputLocation
@@ -305,10 +307,10 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        </ul>
      *        <p>
-     *        You can specify an AWS Key Management Service key to encrypt the output of our analytics job using the
-     *        <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses
-     *        the default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3
-     *        bucket.
+     *        You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of our
+     *        analytics job using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key,
+     *        Amazon Transcribe uses the default Amazon S3 key for server-side encryption of the analytics job output
+     *        that is placed in your S3 bucket.
      */
 
     public void setOutputLocation(String outputLocation) {
@@ -353,9 +355,10 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ul>
      * <p>
-     * You can specify an AWS Key Management Service key to encrypt the output of our analytics job using the
-     * <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses the
-     * default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3 bucket.
+     * You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of our analytics
+     * job using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe
+     * uses the default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3
+     * bucket.
      * </p>
      * 
      * @return The Amazon S3 location where the output of the call analytics job is stored. You can provide the
@@ -393,10 +396,10 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      *         </li>
      *         </ul>
      *         <p>
-     *         You can specify an AWS Key Management Service key to encrypt the output of our analytics job using the
-     *         <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses
-     *         the default Amazon S3 key for server-side encryption of the analytics job output that is placed in your
-     *         S3 bucket.
+     *         You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of our
+     *         analytics job using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key,
+     *         Amazon Transcribe uses the default Amazon S3 key for server-side encryption of the analytics job output
+     *         that is placed in your S3 bucket.
      */
 
     public String getOutputLocation() {
@@ -441,9 +444,10 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </li>
      * </ul>
      * <p>
-     * You can specify an AWS Key Management Service key to encrypt the output of our analytics job using the
-     * <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses the
-     * default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3 bucket.
+     * You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of our analytics
+     * job using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe
+     * uses the default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3
+     * bucket.
      * </p>
      * 
      * @param outputLocation
@@ -482,10 +486,10 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      *        </li>
      *        </ul>
      *        <p>
-     *        You can specify an AWS Key Management Service key to encrypt the output of our analytics job using the
-     *        <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key, Amazon Transcribe uses
-     *        the default Amazon S3 key for server-side encryption of the analytics job output that is placed in your S3
-     *        bucket.
+     *        You can specify an Amazon Web Services Key Management Service (KMS) key to encrypt the output of our
+     *        analytics job using the <code>OutputEncryptionKMSKeyId</code> parameter. If you don't specify a KMS key,
+     *        Amazon Transcribe uses the default Amazon S3 key for server-side encryption of the analytics job output
+     *        that is placed in your S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -496,11 +500,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the output of the call
-     * analytics job. The user calling the operation must have permission to use the specified KMS key.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service key used to encrypt the output
+     * of the call analytics job. The user calling the operation must have permission to use the specified KMS key.
      * </p>
      * <p>
-     * You use either of the following to identify an AWS KMS key in the current account:
+     * You use either of the following to identify an Amazon Web Services KMS key in the current account:
      * </p>
      * <ul>
      * <li>
@@ -540,10 +544,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param outputEncryptionKMSKeyId
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the output of the
-     *        call analytics job. The user calling the operation must have permission to use the specified KMS key.</p>
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service key used to encrypt the
+     *        output of the call analytics job. The user calling the operation must have permission to use the specified
+     *        KMS key.</p>
      *        <p>
-     *        You use either of the following to identify an AWS KMS key in the current account:
+     *        You use either of the following to identify an Amazon Web Services KMS key in the current account:
      *        </p>
      *        <ul>
      *        <li>
@@ -588,11 +593,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the output of the call
-     * analytics job. The user calling the operation must have permission to use the specified KMS key.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service key used to encrypt the output
+     * of the call analytics job. The user calling the operation must have permission to use the specified KMS key.
      * </p>
      * <p>
-     * You use either of the following to identify an AWS KMS key in the current account:
+     * You use either of the following to identify an Amazon Web Services KMS key in the current account:
      * </p>
      * <ul>
      * <li>
@@ -631,10 +636,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * <code>OutputLocation</code> parameter.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the output of the
-     *         call analytics job. The user calling the operation must have permission to use the specified KMS key.</p>
+     * @return The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service key used to encrypt the
+     *         output of the call analytics job. The user calling the operation must have permission to use the
+     *         specified KMS key.</p>
      *         <p>
-     *         You use either of the following to identify an AWS KMS key in the current account:
+     *         You use either of the following to identify an Amazon Web Services KMS key in the current account:
      *         </p>
      *         <ul>
      *         <li>
@@ -679,11 +685,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the output of the call
-     * analytics job. The user calling the operation must have permission to use the specified KMS key.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service key used to encrypt the output
+     * of the call analytics job. The user calling the operation must have permission to use the specified KMS key.
      * </p>
      * <p>
-     * You use either of the following to identify an AWS KMS key in the current account:
+     * You use either of the following to identify an Amazon Web Services KMS key in the current account:
      * </p>
      * <ul>
      * <li>
@@ -723,10 +729,11 @@ public class StartCallAnalyticsJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param outputEncryptionKMSKeyId
-     *        The Amazon Resource Name (ARN) of the AWS Key Management Service key used to encrypt the output of the
-     *        call analytics job. The user calling the operation must have permission to use the specified KMS key.</p>
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Key Management Service key used to encrypt the
+     *        output of the call analytics job. The user calling the operation must have permission to use the specified
+     *        KMS key.</p>
      *        <p>
-     *        You use either of the following to identify an AWS KMS key in the current account:
+     *        You use either of the following to identify an Amazon Web Services KMS key in the current account:
      *        </p>
      *        <ul>
      *        <li>

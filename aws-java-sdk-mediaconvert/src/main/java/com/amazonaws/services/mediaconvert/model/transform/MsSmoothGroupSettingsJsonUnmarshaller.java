@@ -75,6 +75,10 @@ public class MsSmoothGroupSettingsJsonUnmarshaller implements Unmarshaller<MsSmo
                     context.nextToken();
                     msSmoothGroupSettings.setFragmentLength(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("fragmentLengthControl", targetDepth)) {
+                    context.nextToken();
+                    msSmoothGroupSettings.setFragmentLengthControl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("manifestEncoding", targetDepth)) {
                     context.nextToken();
                     msSmoothGroupSettings.setManifestEncoding(context.getUnmarshaller(String.class).unmarshall(context));

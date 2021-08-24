@@ -65,6 +65,12 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
      */
     private String bufferModel;
     /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     */
+    private String dataPTSControl;
+    /**
      * Use these settings to insert a DVB Network Information Table (NIT) in the transport stream of this output. When
      * you work directly in your JSON job specification, include this object only when your job has a transport stream
      * output and the container settings contain the object M2tsSettings.
@@ -589,6 +595,73 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
 
     public M2tsSettings withBufferModel(M2tsBufferModel bufferModel) {
         this.bufferModel = bufferModel.toString();
+        return this;
+    }
+
+    /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * 
+     * @param dataPTSControl
+     *        If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp
+     *        (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data
+     *        packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * @see M2tsDataPtsControl
+     */
+
+    public void setDataPTSControl(String dataPTSControl) {
+        this.dataPTSControl = dataPTSControl;
+    }
+
+    /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * 
+     * @return If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp
+     *         (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data
+     *         packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * @see M2tsDataPtsControl
+     */
+
+    public String getDataPTSControl() {
+        return this.dataPTSControl;
+    }
+
+    /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * 
+     * @param dataPTSControl
+     *        If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp
+     *        (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data
+     *        packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see M2tsDataPtsControl
+     */
+
+    public M2tsSettings withDataPTSControl(String dataPTSControl) {
+        setDataPTSControl(dataPTSControl);
+        return this;
+    }
+
+    /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * 
+     * @param dataPTSControl
+     *        If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp
+     *        (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data
+     *        packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see M2tsDataPtsControl
+     */
+
+    public M2tsSettings withDataPTSControl(M2tsDataPtsControl dataPTSControl) {
+        this.dataPTSControl = dataPTSControl.toString();
         return this;
     }
 
@@ -2183,6 +2256,8 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
             sb.append("Bitrate: ").append(getBitrate()).append(",");
         if (getBufferModel() != null)
             sb.append("BufferModel: ").append(getBufferModel()).append(",");
+        if (getDataPTSControl() != null)
+            sb.append("DataPTSControl: ").append(getDataPTSControl()).append(",");
         if (getDvbNitSettings() != null)
             sb.append("DvbNitSettings: ").append(getDvbNitSettings()).append(",");
         if (getDvbSdtSettings() != null)
@@ -2282,6 +2357,10 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
         if (other.getBufferModel() == null ^ this.getBufferModel() == null)
             return false;
         if (other.getBufferModel() != null && other.getBufferModel().equals(this.getBufferModel()) == false)
+            return false;
+        if (other.getDataPTSControl() == null ^ this.getDataPTSControl() == null)
+            return false;
+        if (other.getDataPTSControl() != null && other.getDataPTSControl().equals(this.getDataPTSControl()) == false)
             return false;
         if (other.getDvbNitSettings() == null ^ this.getDvbNitSettings() == null)
             return false;
@@ -2421,6 +2500,7 @@ public class M2tsSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAudioPids() == null) ? 0 : getAudioPids().hashCode());
         hashCode = prime * hashCode + ((getBitrate() == null) ? 0 : getBitrate().hashCode());
         hashCode = prime * hashCode + ((getBufferModel() == null) ? 0 : getBufferModel().hashCode());
+        hashCode = prime * hashCode + ((getDataPTSControl() == null) ? 0 : getDataPTSControl().hashCode());
         hashCode = prime * hashCode + ((getDvbNitSettings() == null) ? 0 : getDvbNitSettings().hashCode());
         hashCode = prime * hashCode + ((getDvbSdtSettings() == null) ? 0 : getDvbSdtSettings().hashCode());
         hashCode = prime * hashCode + ((getDvbSubPids() == null) ? 0 : getDvbSubPids().hashCode());

@@ -62,6 +62,10 @@ public class M3u8SettingsJsonUnmarshaller implements Unmarshaller<M3u8Settings, 
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("dataPTSControl", targetDepth)) {
+                    context.nextToken();
+                    m3u8Settings.setDataPTSControl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("maxPcrInterval", targetDepth)) {
                     context.nextToken();
                     m3u8Settings.setMaxPcrInterval(context.getUnmarshaller(Integer.class).unmarshall(context));

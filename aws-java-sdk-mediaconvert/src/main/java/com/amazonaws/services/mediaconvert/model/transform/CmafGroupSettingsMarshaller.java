@@ -62,6 +62,8 @@ public class CmafGroupSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("segmentControl").build();
     private static final MarshallingInfo<Integer> SEGMENTLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("segmentLength").build();
+    private static final MarshallingInfo<String> SEGMENTLENGTHCONTROL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("segmentLengthControl").build();
     private static final MarshallingInfo<String> STREAMINFRESOLUTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("streamInfResolution").build();
     private static final MarshallingInfo<String> TARGETDURATIONCOMPATIBILITYMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -106,6 +108,7 @@ public class CmafGroupSettingsMarshaller {
             protocolMarshaller.marshall(cmafGroupSettings.getPtsOffsetHandlingForBFrames(), PTSOFFSETHANDLINGFORBFRAMES_BINDING);
             protocolMarshaller.marshall(cmafGroupSettings.getSegmentControl(), SEGMENTCONTROL_BINDING);
             protocolMarshaller.marshall(cmafGroupSettings.getSegmentLength(), SEGMENTLENGTH_BINDING);
+            protocolMarshaller.marshall(cmafGroupSettings.getSegmentLengthControl(), SEGMENTLENGTHCONTROL_BINDING);
             protocolMarshaller.marshall(cmafGroupSettings.getStreamInfResolution(), STREAMINFRESOLUTION_BINDING);
             protocolMarshaller.marshall(cmafGroupSettings.getTargetDurationCompatibilityMode(), TARGETDURATIONCOMPATIBILITYMODE_BINDING);
             protocolMarshaller.marshall(cmafGroupSettings.getWriteDashManifest(), WRITEDASHMANIFEST_BINDING);

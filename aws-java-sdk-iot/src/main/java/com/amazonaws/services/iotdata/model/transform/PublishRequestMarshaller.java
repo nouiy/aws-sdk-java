@@ -31,6 +31,8 @@ public class PublishRequestMarshaller {
             .marshallLocationName("topic").build();
     private static final MarshallingInfo<Integer> QOS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.QUERY_PARAM)
             .marshallLocationName("qos").build();
+    private static final MarshallingInfo<Boolean> RETAIN_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("retain").build();
     private static final MarshallingInfo<java.nio.ByteBuffer> PAYLOAD_BINDING = MarshallingInfo.builder(MarshallingType.BYTE_BUFFER)
             .marshallLocation(MarshallLocation.PAYLOAD).isExplicitPayloadMember(true).isBinary(true).build();
 
@@ -52,6 +54,7 @@ public class PublishRequestMarshaller {
         try {
             protocolMarshaller.marshall(publishRequest.getTopic(), TOPIC_BINDING);
             protocolMarshaller.marshall(publishRequest.getQos(), QOS_BINDING);
+            protocolMarshaller.marshall(publishRequest.getRetain(), RETAIN_BINDING);
             protocolMarshaller.marshall(publishRequest.getPayload(), PAYLOAD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

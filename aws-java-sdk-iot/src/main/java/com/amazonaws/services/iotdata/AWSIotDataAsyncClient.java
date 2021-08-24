@@ -30,22 +30,22 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
- * <fullname>AWS IoT</fullname>
+ * <fullname>IoT data</fullname>
  * <p>
- * AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors,
- * actuators, embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and
+ * IoT data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ * embedded devices, or smart appliances) and the Amazon Web Services cloud. It implements a broker for applications and
  * things to publish messages over HTTP (Publish) and retrieve, update, and delete shadows. A shadow is a persistent
- * representation of your things and their state in the AWS cloud.
+ * representation of your things and their state in the Amazon Web Services cloud.
  * </p>
  * <p>
- * Find the endpoint address for actions in the AWS IoT data plane by running this CLI command:
+ * Find the endpoint address for actions in IoT data by running this CLI command:
  * </p>
  * <p>
  * <code>aws iot describe-endpoint --endpoint-type iot:Data-ATS</code>
  * </p>
  * <p>
- * The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">AWS
- * Signature Version 4</a> to sign requests is: <i>iotdevicegateway</i>.
+ * The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Amazon Web
+ * ServicesSignature Version 4</a> to sign requests is: <i>iotdevicegateway</i>.
  * </p>
  */
 @ThreadSafe
@@ -305,6 +305,39 @@ public class AWSIotDataAsyncClient extends AWSIotDataClient implements AWSIotDat
     }
 
     @Override
+    public java.util.concurrent.Future<GetRetainedMessageResult> getRetainedMessageAsync(GetRetainedMessageRequest request) {
+
+        return getRetainedMessageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRetainedMessageResult> getRetainedMessageAsync(final GetRetainedMessageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRetainedMessageRequest, GetRetainedMessageResult> asyncHandler) {
+        final GetRetainedMessageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRetainedMessageResult>() {
+            @Override
+            public GetRetainedMessageResult call() throws Exception {
+                GetRetainedMessageResult result = null;
+
+                try {
+                    result = executeGetRetainedMessage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetThingShadowResult> getThingShadowAsync(GetThingShadowRequest request) {
 
         return getThingShadowAsync(request, null);
@@ -355,6 +388,39 @@ public class AWSIotDataAsyncClient extends AWSIotDataClient implements AWSIotDat
 
                 try {
                     result = executeListNamedShadowsForThing(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRetainedMessagesResult> listRetainedMessagesAsync(ListRetainedMessagesRequest request) {
+
+        return listRetainedMessagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRetainedMessagesResult> listRetainedMessagesAsync(final ListRetainedMessagesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRetainedMessagesRequest, ListRetainedMessagesResult> asyncHandler) {
+        final ListRetainedMessagesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRetainedMessagesResult>() {
+            @Override
+            public ListRetainedMessagesResult call() throws Exception {
+                ListRetainedMessagesResult result = null;
+
+                try {
+                    result = executeListRetainedMessages(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

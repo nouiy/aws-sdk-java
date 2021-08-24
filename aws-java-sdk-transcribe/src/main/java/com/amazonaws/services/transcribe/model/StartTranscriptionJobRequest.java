@@ -39,7 +39,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      */
     private String languageCode;
@@ -200,10 +200,16 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      */
     private java.util.List<String> languageOptions;
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe transcription job.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -266,14 +272,14 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      * 
      * @param languageCode
      *        The language code for the language used in the input media file.</p>
      *        <p>
      *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
-     *        sample rate of 16000 Hz or higher.
+     *        sample rate of 16,000 Hz or higher.
      * @see LanguageCode
      */
 
@@ -287,13 +293,13 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      * 
      * @return The language code for the language used in the input media file.</p>
      *         <p>
      *         To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
-     *         sample rate of 16000 Hz or higher.
+     *         sample rate of 16,000 Hz or higher.
      * @see LanguageCode
      */
 
@@ -307,14 +313,14 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      * 
      * @param languageCode
      *        The language code for the language used in the input media file.</p>
      *        <p>
      *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
-     *        sample rate of 16000 Hz or higher.
+     *        sample rate of 16,000 Hz or higher.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -330,14 +336,14 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      * 
      * @param languageCode
      *        The language code for the language used in the input media file.</p>
      *        <p>
      *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
-     *        sample rate of 16000 Hz or higher.
+     *        sample rate of 16,000 Hz or higher.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -1336,7 +1342,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      * 
      * @return An object containing a list of languages that might be present in your collection of audio files.
@@ -1344,7 +1350,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *         list.</p>
      *         <p>
      *         To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
-     *         sample rate of 16000 Hz or higher.
+     *         sample rate of 16,000 Hz or higher.
      * @see LanguageCode
      */
 
@@ -1359,7 +1365,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      * 
      * @param languageOptions
@@ -1368,7 +1374,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        list.</p>
      *        <p>
      *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
-     *        sample rate of 16000 Hz or higher.
+     *        sample rate of 16,000 Hz or higher.
      * @see LanguageCode
      */
 
@@ -1388,7 +1394,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1402,7 +1408,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        list.</p>
      *        <p>
      *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
-     *        sample rate of 16000 Hz or higher.
+     *        sample rate of 16,000 Hz or higher.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -1424,7 +1430,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      * 
      * @param languageOptions
@@ -1433,7 +1439,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        list.</p>
      *        <p>
      *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
-     *        sample rate of 16000 Hz or higher.
+     *        sample rate of 16,000 Hz or higher.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -1450,7 +1456,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a sample rate
-     * of 16000 Hz or higher.
+     * of 16,000 Hz or higher.
      * </p>
      * 
      * @param languageOptions
@@ -1459,7 +1465,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
      *        list.</p>
      *        <p>
      *        To transcribe speech in Modern Standard Arabic (ar-SA), your audio or video file must be encoded at a
-     *        sample rate of 16000 Hz or higher.
+     *        sample rate of 16,000 Hz or higher.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -1474,6 +1480,76 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
         } else {
             getLanguageOptions().addAll(languageOptionsCopy);
         }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe transcription job.
+     * </p>
+     * 
+     * @return Add tags to an Amazon Transcribe transcription job.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe transcription job.
+     * </p>
+     * 
+     * @param tags
+     *        Add tags to an Amazon Transcribe transcription job.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe transcription job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        Add tags to an Amazon Transcribe transcription job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTranscriptionJobRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe transcription job.
+     * </p>
+     * 
+     * @param tags
+     *        Add tags to an Amazon Transcribe transcription job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTranscriptionJobRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
         return this;
     }
 
@@ -1516,7 +1592,9 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
         if (getIdentifyLanguage() != null)
             sb.append("IdentifyLanguage: ").append(getIdentifyLanguage()).append(",");
         if (getLanguageOptions() != null)
-            sb.append("LanguageOptions: ").append(getLanguageOptions());
+            sb.append("LanguageOptions: ").append(getLanguageOptions()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -1587,6 +1665,10 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getLanguageOptions() != null && other.getLanguageOptions().equals(this.getLanguageOptions()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -1609,6 +1691,7 @@ public class StartTranscriptionJobRequest extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getContentRedaction() == null) ? 0 : getContentRedaction().hashCode());
         hashCode = prime * hashCode + ((getIdentifyLanguage() == null) ? 0 : getIdentifyLanguage().hashCode());
         hashCode = prime * hashCode + ((getLanguageOptions() == null) ? 0 : getLanguageOptions().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

@@ -69,6 +69,13 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String vocabularyFilterFileUri;
+    /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary filter at the
+     * time you create this new vocabulary filter.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -409,6 +416,84 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary filter at the
+     * time you create this new vocabulary filter.
+     * </p>
+     * 
+     * @return Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary filter
+     *         at the time you create this new vocabulary filter.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary filter at the
+     * time you create this new vocabulary filter.
+     * </p>
+     * 
+     * @param tags
+     *        Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary filter
+     *        at the time you create this new vocabulary filter.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary filter at the
+     * time you create this new vocabulary filter.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary filter
+     *        at the time you create this new vocabulary filter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateVocabularyFilterRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary filter at the
+     * time you create this new vocabulary filter.
+     * </p>
+     * 
+     * @param tags
+     *        Adds one or more tags, each in the form of a key:value pair, to a new Amazon Transcribe vocabulary filter
+     *        at the time you create this new vocabulary filter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateVocabularyFilterRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -427,7 +512,9 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
         if (getWords() != null)
             sb.append("Words: ").append(getWords()).append(",");
         if (getVocabularyFilterFileUri() != null)
-            sb.append("VocabularyFilterFileUri: ").append(getVocabularyFilterFileUri());
+            sb.append("VocabularyFilterFileUri: ").append(getVocabularyFilterFileUri()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -458,6 +545,10 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getVocabularyFilterFileUri() != null && other.getVocabularyFilterFileUri().equals(this.getVocabularyFilterFileUri()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -470,6 +561,7 @@ public class CreateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getLanguageCode() == null) ? 0 : getLanguageCode().hashCode());
         hashCode = prime * hashCode + ((getWords() == null) ? 0 : getWords().hashCode());
         hashCode = prime * hashCode + ((getVocabularyFilterFileUri() == null) ? 0 : getVocabularyFilterFileUri().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

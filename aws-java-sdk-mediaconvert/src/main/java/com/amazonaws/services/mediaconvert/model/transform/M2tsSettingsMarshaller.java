@@ -40,6 +40,8 @@ public class M2tsSettingsMarshaller {
             .marshallLocationName("bitrate").build();
     private static final MarshallingInfo<String> BUFFERMODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("bufferModel").build();
+    private static final MarshallingInfo<String> DATAPTSCONTROL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dataPTSControl").build();
     private static final MarshallingInfo<StructuredPojo> DVBNITSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dvbNitSettings").build();
     private static final MarshallingInfo<StructuredPojo> DVBSDTSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -125,6 +127,7 @@ public class M2tsSettingsMarshaller {
             protocolMarshaller.marshall(m2tsSettings.getAudioPids(), AUDIOPIDS_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getBitrate(), BITRATE_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getBufferModel(), BUFFERMODEL_BINDING);
+            protocolMarshaller.marshall(m2tsSettings.getDataPTSControl(), DATAPTSCONTROL_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getDvbNitSettings(), DVBNITSETTINGS_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getDvbSdtSettings(), DVBSDTSETTINGS_BINDING);
             protocolMarshaller.marshall(m2tsSettings.getDvbSubPids(), DVBSUBPIDS_BINDING);

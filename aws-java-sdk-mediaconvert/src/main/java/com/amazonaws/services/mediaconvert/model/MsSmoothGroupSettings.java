@@ -51,10 +51,19 @@ public class MsSmoothGroupSettings implements Serializable, Cloneable, Structure
     /** If you are using DRM, set DRM System (MsSmoothEncryptionSettings) to specify the value SpekeKeyProvider. */
     private MsSmoothEncryptionSettings encryption;
     /**
-     * Use Fragment length (FragmentLength) to specify the mp4 fragment sizes in seconds. Fragment length must be
-     * compatible with GOP size and frame rate.
+     * Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
      */
     private Integer fragmentLength;
+    /**
+     * Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     */
+    private String fragmentLengthControl;
     /**
      * Use Manifest encoding (MsSmoothManifestEncoding) to specify the encoding format for the server and client
      * manifest. Valid options are utf8 and utf16.
@@ -320,12 +329,16 @@ public class MsSmoothGroupSettings implements Serializable, Cloneable, Structure
     }
 
     /**
-     * Use Fragment length (FragmentLength) to specify the mp4 fragment sizes in seconds. Fragment length must be
-     * compatible with GOP size and frame rate.
+     * Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
      * 
      * @param fragmentLength
-     *        Use Fragment length (FragmentLength) to specify the mp4 fragment sizes in seconds. Fragment length must be
-     *        compatible with GOP size and frame rate.
+     *        Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Fragment length (FragmentLength). This
+     *        might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the
+     *        segment lengths to match the next GOP boundary.
      */
 
     public void setFragmentLength(Integer fragmentLength) {
@@ -333,11 +346,15 @@ public class MsSmoothGroupSettings implements Serializable, Cloneable, Structure
     }
 
     /**
-     * Use Fragment length (FragmentLength) to specify the mp4 fragment sizes in seconds. Fragment length must be
-     * compatible with GOP size and frame rate.
+     * Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
      * 
-     * @return Use Fragment length (FragmentLength) to specify the mp4 fragment sizes in seconds. Fragment length must
-     *         be compatible with GOP size and frame rate.
+     * @return Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the
+     *         encoder use the exact length that you specify with the setting Fragment length (FragmentLength). This
+     *         might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the
+     *         segment lengths to match the next GOP boundary.
      */
 
     public Integer getFragmentLength() {
@@ -345,17 +362,96 @@ public class MsSmoothGroupSettings implements Serializable, Cloneable, Structure
     }
 
     /**
-     * Use Fragment length (FragmentLength) to specify the mp4 fragment sizes in seconds. Fragment length must be
-     * compatible with GOP size and frame rate.
+     * Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
      * 
      * @param fragmentLength
-     *        Use Fragment length (FragmentLength) to specify the mp4 fragment sizes in seconds. Fragment length must be
-     *        compatible with GOP size and frame rate.
+     *        Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Fragment length (FragmentLength). This
+     *        might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the
+     *        segment lengths to match the next GOP boundary.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public MsSmoothGroupSettings withFragmentLength(Integer fragmentLength) {
         setFragmentLength(fragmentLength);
+        return this;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param fragmentLengthControl
+     *        Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Fragment length (FragmentLength). This
+     *        might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the
+     *        segment lengths to match the next GOP boundary.
+     * @see MsSmoothFragmentLengthControl
+     */
+
+    public void setFragmentLengthControl(String fragmentLengthControl) {
+        this.fragmentLengthControl = fragmentLengthControl;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @return Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the
+     *         encoder use the exact length that you specify with the setting Fragment length (FragmentLength). This
+     *         might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the
+     *         segment lengths to match the next GOP boundary.
+     * @see MsSmoothFragmentLengthControl
+     */
+
+    public String getFragmentLengthControl() {
+        return this.fragmentLengthControl;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param fragmentLengthControl
+     *        Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Fragment length (FragmentLength). This
+     *        might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the
+     *        segment lengths to match the next GOP boundary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MsSmoothFragmentLengthControl
+     */
+
+    public MsSmoothGroupSettings withFragmentLengthControl(String fragmentLengthControl) {
+        setFragmentLengthControl(fragmentLengthControl);
+        return this;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Fragment length (FragmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param fragmentLengthControl
+     *        Specify how you want MediaConvert to determine the fragment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Fragment length (FragmentLength). This
+     *        might result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the
+     *        segment lengths to match the next GOP boundary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MsSmoothFragmentLengthControl
+     */
+
+    public MsSmoothGroupSettings withFragmentLengthControl(MsSmoothFragmentLengthControl fragmentLengthControl) {
+        this.fragmentLengthControl = fragmentLengthControl.toString();
         return this;
     }
 
@@ -442,6 +538,8 @@ public class MsSmoothGroupSettings implements Serializable, Cloneable, Structure
             sb.append("Encryption: ").append(getEncryption()).append(",");
         if (getFragmentLength() != null)
             sb.append("FragmentLength: ").append(getFragmentLength()).append(",");
+        if (getFragmentLengthControl() != null)
+            sb.append("FragmentLengthControl: ").append(getFragmentLengthControl()).append(",");
         if (getManifestEncoding() != null)
             sb.append("ManifestEncoding: ").append(getManifestEncoding());
         sb.append("}");
@@ -482,6 +580,10 @@ public class MsSmoothGroupSettings implements Serializable, Cloneable, Structure
             return false;
         if (other.getFragmentLength() != null && other.getFragmentLength().equals(this.getFragmentLength()) == false)
             return false;
+        if (other.getFragmentLengthControl() == null ^ this.getFragmentLengthControl() == null)
+            return false;
+        if (other.getFragmentLengthControl() != null && other.getFragmentLengthControl().equals(this.getFragmentLengthControl()) == false)
+            return false;
         if (other.getManifestEncoding() == null ^ this.getManifestEncoding() == null)
             return false;
         if (other.getManifestEncoding() != null && other.getManifestEncoding().equals(this.getManifestEncoding()) == false)
@@ -500,6 +602,7 @@ public class MsSmoothGroupSettings implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getDestinationSettings() == null) ? 0 : getDestinationSettings().hashCode());
         hashCode = prime * hashCode + ((getEncryption() == null) ? 0 : getEncryption().hashCode());
         hashCode = prime * hashCode + ((getFragmentLength() == null) ? 0 : getFragmentLength().hashCode());
+        hashCode = prime * hashCode + ((getFragmentLengthControl() == null) ? 0 : getFragmentLengthControl().hashCode());
         hashCode = prime * hashCode + ((getManifestEncoding() == null) ? 0 : getManifestEncoding().hashCode());
         return hashCode;
     }

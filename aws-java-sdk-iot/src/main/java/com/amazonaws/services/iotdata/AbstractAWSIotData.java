@@ -43,12 +43,22 @@ public class AbstractAWSIotData implements AWSIotData {
     }
 
     @Override
+    public GetRetainedMessageResult getRetainedMessage(GetRetainedMessageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetThingShadowResult getThingShadow(GetThingShadowRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListNamedShadowsForThingResult listNamedShadowsForThing(ListNamedShadowsForThingRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRetainedMessagesResult listRetainedMessages(ListRetainedMessagesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

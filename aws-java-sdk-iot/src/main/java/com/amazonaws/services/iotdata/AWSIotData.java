@@ -26,22 +26,22 @@ import com.amazonaws.services.iotdata.model.*;
  * {@link com.amazonaws.services.iotdata.AbstractAWSIotData} instead.
  * </p>
  * <p>
- * <fullname>AWS IoT</fullname>
+ * <fullname>IoT data</fullname>
  * <p>
- * AWS IoT-Data enables secure, bi-directional communication between Internet-connected things (such as sensors,
- * actuators, embedded devices, or smart appliances) and the AWS cloud. It implements a broker for applications and
+ * IoT data enables secure, bi-directional communication between Internet-connected things (such as sensors, actuators,
+ * embedded devices, or smart appliances) and the Amazon Web Services cloud. It implements a broker for applications and
  * things to publish messages over HTTP (Publish) and retrieve, update, and delete shadows. A shadow is a persistent
- * representation of your things and their state in the AWS cloud.
+ * representation of your things and their state in the Amazon Web Services cloud.
  * </p>
  * <p>
- * Find the endpoint address for actions in the AWS IoT data plane by running this CLI command:
+ * Find the endpoint address for actions in IoT data by running this CLI command:
  * </p>
  * <p>
  * <code>aws iot describe-endpoint --endpoint-type iot:Data-ATS</code>
  * </p>
  * <p>
- * The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">AWS
- * Signature Version 4</a> to sign requests is: <i>iotdevicegateway</i>.
+ * The service name used by <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Amazon Web
+ * ServicesSignature Version 4</a> to sign requests is: <i>iotdevicegateway</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -112,9 +112,14 @@ public interface AWSIotData {
      * Deletes the shadow for the specified thing.
      * </p>
      * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >DeleteThingShadow</a> action.
+     * </p>
+     * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_DeleteThingShadow.html">DeleteThingShadow</a> in
-     * the AWS IoT Developer Guide.
+     * the IoT Developer Guide.
      * </p>
      * 
      * @param deleteThingShadowRequest
@@ -142,12 +147,57 @@ public interface AWSIotData {
 
     /**
      * <p>
+     * Gets the details of a single retained message for the specified topic.
+     * </p>
+     * <p>
+     * This action returns the message payload of the retained message, which can incur messaging costs. To list only
+     * the topic names of the retained messages, call <a
+     * href="/iot/latest/developerguide/API_iotdata_ListRetainedMessages.html">ListRetainedMessages</a>.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions"
+     * >GetRetainedMessage</a> action.
+     * </p>
+     * <p>
+     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
+     * Core pricing - Messaging</a>.
+     * </p>
+     * 
+     * @param getRetainedMessageRequest
+     *        The input for the GetRetainedMessage operation.
+     * @return Result of the GetRetainedMessage operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws UnauthorizedException
+     *         You are not authorized to perform this operation.
+     * @throws ServiceUnavailableException
+     *         The service is temporarily unavailable.
+     * @throws InternalFailureException
+     *         An unexpected error has occurred.
+     * @throws MethodNotAllowedException
+     *         The specified combination of HTTP verb and URI is not supported.
+     * @sample AWSIotData.GetRetainedMessage
+     */
+    GetRetainedMessageResult getRetainedMessage(GetRetainedMessageRequest getRetainedMessageRequest);
+
+    /**
+     * <p>
      * Gets the shadow for the specified thing.
      * </p>
      * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetThingShadow</a> action.
+     * </p>
+     * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a> in the AWS
-     * IoT Developer Guide.
+     * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_GetThingShadow.html">GetThingShadow</a> in the IoT
+     * Developer Guide.
      * </p>
      * 
      * @param getThingShadowRequest
@@ -177,6 +227,11 @@ public interface AWSIotData {
      * <p>
      * Lists the shadows for the specified thing.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListNamedShadowsForThing</a> action.
+     * </p>
      * 
      * @param listNamedShadowsForThingRequest
      * @return Result of the ListNamedShadowsForThing operation returned by the service.
@@ -200,11 +255,62 @@ public interface AWSIotData {
 
     /**
      * <p>
-     * Publishes state information.
+     * Lists summary information about the retained messages stored for the account.
      * </p>
      * <p>
-     * For more information, see <a href="http://docs.aws.amazon.com/iot/latest/developerguide/protocols.html#http">HTTP
-     * Protocol</a> in the AWS IoT Developer Guide.
+     * This action returns only the topic names of the retained messages. It doesn't return any message payloads.
+     * Although this action doesn't return a message payload, it can still incur messaging costs.
+     * </p>
+     * <p>
+     * To get the message payload of a retained message, call <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/API_iotdata_GetRetainedMessage.html"
+     * >GetRetainedMessage</a> with the topic name of the retained message.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions"
+     * >ListRetainedMessages</a> action.
+     * </p>
+     * <p>
+     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
+     * Core pricing - Messaging</a>.
+     * </p>
+     * 
+     * @param listRetainedMessagesRequest
+     * @return Result of the ListRetainedMessages operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws UnauthorizedException
+     *         You are not authorized to perform this operation.
+     * @throws ServiceUnavailableException
+     *         The service is temporarily unavailable.
+     * @throws InternalFailureException
+     *         An unexpected error has occurred.
+     * @throws MethodNotAllowedException
+     *         The specified combination of HTTP verb and URI is not supported.
+     * @sample AWSIotData.ListRetainedMessages
+     */
+    ListRetainedMessagesResult listRetainedMessages(ListRetainedMessagesRequest listRetainedMessagesRequest);
+
+    /**
+     * <p>
+     * Publishes an MQTT message.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >Publish</a> action.
+     * </p>
+     * <p>
+     * For more information about MQTT messages, see <a
+     * href="http://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html">MQTT Protocol</a> in the IoT Developer
+     * Guide.
+     * </p>
+     * <p>
+     * For more information about messaging costs, see <a href="http://aws.amazon.com/iot-core/pricing/#Messaging">IoT
+     * Core pricing - Messaging</a>.
      * </p>
      * 
      * @param publishRequest
@@ -227,9 +333,14 @@ public interface AWSIotData {
      * Updates the shadow for the specified thing.
      * </p>
      * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >UpdateThingShadow</a> action.
+     * </p>
+     * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/iot/latest/developerguide/API_UpdateThingShadow.html">UpdateThingShadow</a> in
-     * the AWS IoT Developer Guide.
+     * the IoT Developer Guide.
      * </p>
      * 
      * @param updateThingShadowRequest

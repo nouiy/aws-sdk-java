@@ -95,7 +95,7 @@ public interface AmazonTranscribe {
 
     /**
      * <p>
-     * Creates a new custom vocabulary that you can use to change how Amazon Transcribe Medical transcribes your audio
+     * Creates a new custom vocabulary that you can use to modify how Amazon Transcribe Medical transcribes your audio
      * file.
      * </p>
      * 
@@ -673,6 +673,30 @@ public interface AmazonTranscribe {
 
     /**
      * <p>
+     * Lists all tags associated with a given transcription job, vocabulary, or resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/ListTagsForResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
      * Lists transcription jobs with the specified status.
      * </p>
      * 
@@ -813,6 +837,58 @@ public interface AmazonTranscribe {
      *      target="_top">AWS API Documentation</a>
      */
     StartTranscriptionJobResult startTranscriptionJob(StartTranscriptionJobRequest startTranscriptionJobRequest);
+
+    /**
+     * <p>
+     * Tags a Amazon Transcribe resource with the given list of tags.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws ConflictException
+     *         There is already a resource with that name.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/TagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Removes specified tags from a specified Amazon Transcribe resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws LimitExceededException
+     *         Either you have sent too many requests or your input file is too long. Wait before you resend your
+     *         request, or use a smaller file and resend the request.
+     * @throws BadRequestException
+     *         Your request didn't pass one or more validation tests. For example, if the entity that you're trying to
+     *         delete doesn't exist or if it is in a non-terminal state (for example, it's "in progress"). See the
+     *         exception <code>Message</code> field for more information.
+     * @throws ConflictException
+     *         There is already a resource with that name.
+     * @throws NotFoundException
+     *         We can't find the requested resource. Check the name and try your request again.
+     * @throws InternalFailureException
+     *         There was an internal error. Check the error message and try your request again.
+     * @sample AmazonTranscribe.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transcribe-2017-10-26/UntagResource" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * <p>

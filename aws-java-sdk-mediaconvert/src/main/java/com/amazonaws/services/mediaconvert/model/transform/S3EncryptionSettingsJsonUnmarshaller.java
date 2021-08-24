@@ -52,6 +52,10 @@ public class S3EncryptionSettingsJsonUnmarshaller implements Unmarshaller<S3Encr
                     context.nextToken();
                     s3EncryptionSettings.setEncryptionType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("kmsEncryptionContext", targetDepth)) {
+                    context.nextToken();
+                    s3EncryptionSettings.setKmsEncryptionContext(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("kmsKeyArn", targetDepth)) {
                     context.nextToken();
                     s3EncryptionSettings.setKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));

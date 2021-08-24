@@ -72,16 +72,16 @@ public class MedicalTranscriptionJobSummary implements Serializable, Cloneable, 
     private String failureReason;
     /**
      * <p>
-     * Indicates the location of the transcription job's output.
-     * </p>
-     * <p>
-     * The <code>CUSTOMER_BUCKET</code> is the S3 location provided in the <code>OutputBucketName</code> field when the
+     * Indicates the location of the transcription job's output. This field must be the path of an S3 bucket; if you
+     * don't already have an S3 bucket, one is created based on the path you add.
      * </p>
      */
     private String outputLocationType;
     /**
      * <p>
-     * The medical specialty of the transcription job. <code>Primary care</code> is the only valid value.
+     * The medical specialty of the transcription job. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
      */
     private String specialty;
@@ -420,17 +420,13 @@ public class MedicalTranscriptionJobSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Indicates the location of the transcription job's output.
-     * </p>
-     * <p>
-     * The <code>CUSTOMER_BUCKET</code> is the S3 location provided in the <code>OutputBucketName</code> field when the
+     * Indicates the location of the transcription job's output. This field must be the path of an S3 bucket; if you
+     * don't already have an S3 bucket, one is created based on the path you add.
      * </p>
      * 
      * @param outputLocationType
-     *        Indicates the location of the transcription job's output.</p>
-     *        <p>
-     *        The <code>CUSTOMER_BUCKET</code> is the S3 location provided in the <code>OutputBucketName</code> field
-     *        when the
+     *        Indicates the location of the transcription job's output. This field must be the path of an S3 bucket; if
+     *        you don't already have an S3 bucket, one is created based on the path you add.
      * @see OutputLocationType
      */
 
@@ -440,16 +436,12 @@ public class MedicalTranscriptionJobSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Indicates the location of the transcription job's output.
-     * </p>
-     * <p>
-     * The <code>CUSTOMER_BUCKET</code> is the S3 location provided in the <code>OutputBucketName</code> field when the
+     * Indicates the location of the transcription job's output. This field must be the path of an S3 bucket; if you
+     * don't already have an S3 bucket, one is created based on the path you add.
      * </p>
      * 
-     * @return Indicates the location of the transcription job's output.</p>
-     *         <p>
-     *         The <code>CUSTOMER_BUCKET</code> is the S3 location provided in the <code>OutputBucketName</code> field
-     *         when the
+     * @return Indicates the location of the transcription job's output. This field must be the path of an S3 bucket; if
+     *         you don't already have an S3 bucket, one is created based on the path you add.
      * @see OutputLocationType
      */
 
@@ -459,17 +451,13 @@ public class MedicalTranscriptionJobSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Indicates the location of the transcription job's output.
-     * </p>
-     * <p>
-     * The <code>CUSTOMER_BUCKET</code> is the S3 location provided in the <code>OutputBucketName</code> field when the
+     * Indicates the location of the transcription job's output. This field must be the path of an S3 bucket; if you
+     * don't already have an S3 bucket, one is created based on the path you add.
      * </p>
      * 
      * @param outputLocationType
-     *        Indicates the location of the transcription job's output.</p>
-     *        <p>
-     *        The <code>CUSTOMER_BUCKET</code> is the S3 location provided in the <code>OutputBucketName</code> field
-     *        when the
+     *        Indicates the location of the transcription job's output. This field must be the path of an S3 bucket; if
+     *        you don't already have an S3 bucket, one is created based on the path you add.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OutputLocationType
      */
@@ -481,17 +469,13 @@ public class MedicalTranscriptionJobSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * Indicates the location of the transcription job's output.
-     * </p>
-     * <p>
-     * The <code>CUSTOMER_BUCKET</code> is the S3 location provided in the <code>OutputBucketName</code> field when the
+     * Indicates the location of the transcription job's output. This field must be the path of an S3 bucket; if you
+     * don't already have an S3 bucket, one is created based on the path you add.
      * </p>
      * 
      * @param outputLocationType
-     *        Indicates the location of the transcription job's output.</p>
-     *        <p>
-     *        The <code>CUSTOMER_BUCKET</code> is the S3 location provided in the <code>OutputBucketName</code> field
-     *        when the
+     *        Indicates the location of the transcription job's output. This field must be the path of an S3 bucket; if
+     *        you don't already have an S3 bucket, one is created based on the path you add.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OutputLocationType
      */
@@ -503,11 +487,15 @@ public class MedicalTranscriptionJobSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The medical specialty of the transcription job. <code>Primary care</code> is the only valid value.
+     * The medical specialty of the transcription job. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
      * 
      * @param specialty
-     *        The medical specialty of the transcription job. <code>Primary care</code> is the only valid value.
+     *        The medical specialty of the transcription job. Refer to <a
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing
+     *        a medical conversation</a>for a list of supported specialties.
      * @see Specialty
      */
 
@@ -517,10 +505,14 @@ public class MedicalTranscriptionJobSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The medical specialty of the transcription job. <code>Primary care</code> is the only valid value.
+     * The medical specialty of the transcription job. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
      * 
-     * @return The medical specialty of the transcription job. <code>Primary care</code> is the only valid value.
+     * @return The medical specialty of the transcription job. Refer to <a
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing
+     *         a medical conversation</a>for a list of supported specialties.
      * @see Specialty
      */
 
@@ -530,11 +522,15 @@ public class MedicalTranscriptionJobSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The medical specialty of the transcription job. <code>Primary care</code> is the only valid value.
+     * The medical specialty of the transcription job. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
      * 
      * @param specialty
-     *        The medical specialty of the transcription job. <code>Primary care</code> is the only valid value.
+     *        The medical specialty of the transcription job. Refer to <a
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing
+     *        a medical conversation</a>for a list of supported specialties.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Specialty
      */
@@ -546,11 +542,15 @@ public class MedicalTranscriptionJobSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The medical specialty of the transcription job. <code>Primary care</code> is the only valid value.
+     * The medical specialty of the transcription job. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
      * 
      * @param specialty
-     *        The medical specialty of the transcription job. <code>Primary care</code> is the only valid value.
+     *        The medical specialty of the transcription job. Refer to <a
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing
+     *        a medical conversation</a>for a list of supported specialties.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Specialty
      */

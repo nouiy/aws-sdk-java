@@ -60,10 +60,9 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
     /** DRM settings. */
     private CmafEncryptionSettings encryption;
     /**
-     * Length of fragments to generate (in seconds). Fragment length must be compatible with GOP size and Framerate.
-     * Note that fragments will end on the next keyframe after this number of seconds, so actual fragment length may be
-     * longer. When Emit Single File is checked, the fragmentation is internal to a single output file and it does not
-     * cause the creation of many output files as in other output types.
+     * Specify the length, in whole seconds, of the mp4 fragments. When you don't specify a value, MediaConvert defaults
+     * to 2. Related setting: Use Fragment length control (FragmentLengthControl) to specify whether the encoder
+     * enforces this value strictly.
      */
     private Integer fragmentLength;
     /**
@@ -119,14 +118,19 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
      */
     private String segmentControl;
     /**
-     * Use this setting to specify the length, in seconds, of each individual CMAF segment. This value applies to the
-     * whole package; that is, to every output in the output group. Note that segments end on the first keyframe after
-     * this number of seconds, so the actual segment length might be slightly longer. If you set Segment control
-     * (CmafSegmentControl) to single file, the service puts the content of each output in a single file that has
-     * metadata that marks these segments. If you set it to segmented files, the service creates multiple files for each
-     * output, each with the content of one segment.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (CmafSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      */
     private Integer segmentLength;
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     */
+    private String segmentLengthControl;
     /** Include or exclude RESOLUTION attribute for video in EXT-X-STREAM-INF tag of variant manifest. */
     private String streamInfResolution;
     /**
@@ -517,16 +521,14 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Length of fragments to generate (in seconds). Fragment length must be compatible with GOP size and Framerate.
-     * Note that fragments will end on the next keyframe after this number of seconds, so actual fragment length may be
-     * longer. When Emit Single File is checked, the fragmentation is internal to a single output file and it does not
-     * cause the creation of many output files as in other output types.
+     * Specify the length, in whole seconds, of the mp4 fragments. When you don't specify a value, MediaConvert defaults
+     * to 2. Related setting: Use Fragment length control (FragmentLengthControl) to specify whether the encoder
+     * enforces this value strictly.
      * 
      * @param fragmentLength
-     *        Length of fragments to generate (in seconds). Fragment length must be compatible with GOP size and
-     *        Framerate. Note that fragments will end on the next keyframe after this number of seconds, so actual
-     *        fragment length may be longer. When Emit Single File is checked, the fragmentation is internal to a single
-     *        output file and it does not cause the creation of many output files as in other output types.
+     *        Specify the length, in whole seconds, of the mp4 fragments. When you don't specify a value, MediaConvert
+     *        defaults to 2. Related setting: Use Fragment length control (FragmentLengthControl) to specify whether the
+     *        encoder enforces this value strictly.
      */
 
     public void setFragmentLength(Integer fragmentLength) {
@@ -534,15 +536,13 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Length of fragments to generate (in seconds). Fragment length must be compatible with GOP size and Framerate.
-     * Note that fragments will end on the next keyframe after this number of seconds, so actual fragment length may be
-     * longer. When Emit Single File is checked, the fragmentation is internal to a single output file and it does not
-     * cause the creation of many output files as in other output types.
+     * Specify the length, in whole seconds, of the mp4 fragments. When you don't specify a value, MediaConvert defaults
+     * to 2. Related setting: Use Fragment length control (FragmentLengthControl) to specify whether the encoder
+     * enforces this value strictly.
      * 
-     * @return Length of fragments to generate (in seconds). Fragment length must be compatible with GOP size and
-     *         Framerate. Note that fragments will end on the next keyframe after this number of seconds, so actual
-     *         fragment length may be longer. When Emit Single File is checked, the fragmentation is internal to a
-     *         single output file and it does not cause the creation of many output files as in other output types.
+     * @return Specify the length, in whole seconds, of the mp4 fragments. When you don't specify a value, MediaConvert
+     *         defaults to 2. Related setting: Use Fragment length control (FragmentLengthControl) to specify whether
+     *         the encoder enforces this value strictly.
      */
 
     public Integer getFragmentLength() {
@@ -550,16 +550,14 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Length of fragments to generate (in seconds). Fragment length must be compatible with GOP size and Framerate.
-     * Note that fragments will end on the next keyframe after this number of seconds, so actual fragment length may be
-     * longer. When Emit Single File is checked, the fragmentation is internal to a single output file and it does not
-     * cause the creation of many output files as in other output types.
+     * Specify the length, in whole seconds, of the mp4 fragments. When you don't specify a value, MediaConvert defaults
+     * to 2. Related setting: Use Fragment length control (FragmentLengthControl) to specify whether the encoder
+     * enforces this value strictly.
      * 
      * @param fragmentLength
-     *        Length of fragments to generate (in seconds). Fragment length must be compatible with GOP size and
-     *        Framerate. Note that fragments will end on the next keyframe after this number of seconds, so actual
-     *        fragment length may be longer. When Emit Single File is checked, the fragmentation is internal to a single
-     *        output file and it does not cause the creation of many output files as in other output types.
+     *        Specify the length, in whole seconds, of the mp4 fragments. When you don't specify a value, MediaConvert
+     *        defaults to 2. Related setting: Use Fragment length control (FragmentLengthControl) to specify whether the
+     *        encoder enforces this value strictly.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1138,20 +1136,17 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Use this setting to specify the length, in seconds, of each individual CMAF segment. This value applies to the
-     * whole package; that is, to every output in the output group. Note that segments end on the first keyframe after
-     * this number of seconds, so the actual segment length might be slightly longer. If you set Segment control
-     * (CmafSegmentControl) to single file, the service puts the content of each output in a single file that has
-     * metadata that marks these segments. If you set it to segmented files, the service creates multiple files for each
-     * output, each with the content of one segment.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (CmafSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      * 
      * @param segmentLength
-     *        Use this setting to specify the length, in seconds, of each individual CMAF segment. This value applies to
-     *        the whole package; that is, to every output in the output group. Note that segments end on the first
-     *        keyframe after this number of seconds, so the actual segment length might be slightly longer. If you set
-     *        Segment control (CmafSegmentControl) to single file, the service puts the content of each output in a
-     *        single file that has metadata that marks these segments. If you set it to segmented files, the service
-     *        creates multiple files for each output, each with the content of one segment.
+     *        Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert
+     *        defaults to 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the
+     *        encoder enforces this value strictly. Use Segment control (CmafSegmentControl) to specify whether
+     *        MediaConvert creates separate segment files or one content file that has metadata to mark the segment
+     *        boundaries.
      */
 
     public void setSegmentLength(Integer segmentLength) {
@@ -1159,19 +1154,16 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Use this setting to specify the length, in seconds, of each individual CMAF segment. This value applies to the
-     * whole package; that is, to every output in the output group. Note that segments end on the first keyframe after
-     * this number of seconds, so the actual segment length might be slightly longer. If you set Segment control
-     * (CmafSegmentControl) to single file, the service puts the content of each output in a single file that has
-     * metadata that marks these segments. If you set it to segmented files, the service creates multiple files for each
-     * output, each with the content of one segment.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (CmafSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      * 
-     * @return Use this setting to specify the length, in seconds, of each individual CMAF segment. This value applies
-     *         to the whole package; that is, to every output in the output group. Note that segments end on the first
-     *         keyframe after this number of seconds, so the actual segment length might be slightly longer. If you set
-     *         Segment control (CmafSegmentControl) to single file, the service puts the content of each output in a
-     *         single file that has metadata that marks these segments. If you set it to segmented files, the service
-     *         creates multiple files for each output, each with the content of one segment.
+     * @return Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert
+     *         defaults to 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether
+     *         the encoder enforces this value strictly. Use Segment control (CmafSegmentControl) to specify whether
+     *         MediaConvert creates separate segment files or one content file that has metadata to mark the segment
+     *         boundaries.
      */
 
     public Integer getSegmentLength() {
@@ -1179,25 +1171,97 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
-     * Use this setting to specify the length, in seconds, of each individual CMAF segment. This value applies to the
-     * whole package; that is, to every output in the output group. Note that segments end on the first keyframe after
-     * this number of seconds, so the actual segment length might be slightly longer. If you set Segment control
-     * (CmafSegmentControl) to single file, the service puts the content of each output in a single file that has
-     * metadata that marks these segments. If you set it to segmented files, the service creates multiple files for each
-     * output, each with the content of one segment.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (CmafSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      * 
      * @param segmentLength
-     *        Use this setting to specify the length, in seconds, of each individual CMAF segment. This value applies to
-     *        the whole package; that is, to every output in the output group. Note that segments end on the first
-     *        keyframe after this number of seconds, so the actual segment length might be slightly longer. If you set
-     *        Segment control (CmafSegmentControl) to single file, the service puts the content of each output in a
-     *        single file that has metadata that marks these segments. If you set it to segmented files, the service
-     *        creates multiple files for each output, each with the content of one segment.
+     *        Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert
+     *        defaults to 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the
+     *        encoder enforces this value strictly. Use Segment control (CmafSegmentControl) to specify whether
+     *        MediaConvert creates separate segment files or one content file that has metadata to mark the segment
+     *        boundaries.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CmafGroupSettings withSegmentLength(Integer segmentLength) {
         setSegmentLength(segmentLength);
+        return this;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param segmentLengthControl
+     *        Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *        result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *        lengths to match the next GOP boundary.
+     * @see CmafSegmentLengthControl
+     */
+
+    public void setSegmentLengthControl(String segmentLengthControl) {
+        this.segmentLengthControl = segmentLengthControl;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @return Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *         encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *         result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *         lengths to match the next GOP boundary.
+     * @see CmafSegmentLengthControl
+     */
+
+    public String getSegmentLengthControl() {
+        return this.segmentLengthControl;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param segmentLengthControl
+     *        Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *        result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *        lengths to match the next GOP boundary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CmafSegmentLengthControl
+     */
+
+    public CmafGroupSettings withSegmentLengthControl(String segmentLengthControl) {
+        setSegmentLengthControl(segmentLengthControl);
+        return this;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param segmentLengthControl
+     *        Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *        result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *        lengths to match the next GOP boundary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CmafSegmentLengthControl
+     */
+
+    public CmafGroupSettings withSegmentLengthControl(CmafSegmentLengthControl segmentLengthControl) {
+        this.segmentLengthControl = segmentLengthControl.toString();
         return this;
     }
 
@@ -1574,6 +1638,8 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
             sb.append("SegmentControl: ").append(getSegmentControl()).append(",");
         if (getSegmentLength() != null)
             sb.append("SegmentLength: ").append(getSegmentLength()).append(",");
+        if (getSegmentLengthControl() != null)
+            sb.append("SegmentLengthControl: ").append(getSegmentLengthControl()).append(",");
         if (getStreamInfResolution() != null)
             sb.append("StreamInfResolution: ").append(getStreamInfResolution()).append(",");
         if (getTargetDurationCompatibilityMode() != null)
@@ -1666,6 +1732,10 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getSegmentLength() != null && other.getSegmentLength().equals(this.getSegmentLength()) == false)
             return false;
+        if (other.getSegmentLengthControl() == null ^ this.getSegmentLengthControl() == null)
+            return false;
+        if (other.getSegmentLengthControl() != null && other.getSegmentLengthControl().equals(this.getSegmentLengthControl()) == false)
+            return false;
         if (other.getStreamInfResolution() == null ^ this.getStreamInfResolution() == null)
             return false;
         if (other.getStreamInfResolution() != null && other.getStreamInfResolution().equals(this.getStreamInfResolution()) == false)
@@ -1713,6 +1783,7 @@ public class CmafGroupSettings implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getPtsOffsetHandlingForBFrames() == null) ? 0 : getPtsOffsetHandlingForBFrames().hashCode());
         hashCode = prime * hashCode + ((getSegmentControl() == null) ? 0 : getSegmentControl().hashCode());
         hashCode = prime * hashCode + ((getSegmentLength() == null) ? 0 : getSegmentLength().hashCode());
+        hashCode = prime * hashCode + ((getSegmentLengthControl() == null) ? 0 : getSegmentLengthControl().hashCode());
         hashCode = prime * hashCode + ((getStreamInfResolution() == null) ? 0 : getStreamInfResolution().hashCode());
         hashCode = prime * hashCode + ((getTargetDurationCompatibilityMode() == null) ? 0 : getTargetDurationCompatibilityMode().hashCode());
         hashCode = prime * hashCode + ((getWriteDashManifest() == null) ? 0 : getWriteDashManifest().hashCode());

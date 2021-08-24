@@ -36,6 +36,8 @@ public class CreateVocabularyRequestMarshaller {
             .marshallLocationName("Phrases").build();
     private static final MarshallingInfo<String> VOCABULARYFILEURI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VocabularyFileUri").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final CreateVocabularyRequestMarshaller instance = new CreateVocabularyRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class CreateVocabularyRequestMarshaller {
             protocolMarshaller.marshall(createVocabularyRequest.getLanguageCode(), LANGUAGECODE_BINDING);
             protocolMarshaller.marshall(createVocabularyRequest.getPhrases(), PHRASES_BINDING);
             protocolMarshaller.marshall(createVocabularyRequest.getVocabularyFileUri(), VOCABULARYFILEURI_BINDING);
+            protocolMarshaller.marshall(createVocabularyRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

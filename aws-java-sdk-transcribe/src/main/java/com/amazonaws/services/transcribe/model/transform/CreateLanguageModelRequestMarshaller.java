@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.transcribe.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -35,6 +36,8 @@ public class CreateLanguageModelRequestMarshaller {
             .marshallLocationName("ModelName").build();
     private static final MarshallingInfo<StructuredPojo> INPUTDATACONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InputDataConfig").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final CreateLanguageModelRequestMarshaller instance = new CreateLanguageModelRequestMarshaller();
 
@@ -56,6 +59,7 @@ public class CreateLanguageModelRequestMarshaller {
             protocolMarshaller.marshall(createLanguageModelRequest.getBaseModelName(), BASEMODELNAME_BINDING);
             protocolMarshaller.marshall(createLanguageModelRequest.getModelName(), MODELNAME_BINDING);
             protocolMarshaller.marshall(createLanguageModelRequest.getInputDataConfig(), INPUTDATACONFIG_BINDING);
+            protocolMarshaller.marshall(createLanguageModelRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

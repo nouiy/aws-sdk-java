@@ -128,10 +128,19 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
      */
     private String segmentControl;
     /**
-     * Length of MPEG-2 Transport Stream segments to create (in seconds). Note that segments will end on the next
-     * keyframe after this number of seconds, so actual segment length may be longer.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (HlsSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      */
     private Integer segmentLength;
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     */
+    private String segmentLengthControl;
     /**
      * Number of segments to write to a subdirectory before starting a new one. directoryStructure must be
      * SINGLE_DIRECTORY for this setting to have an effect.
@@ -1411,12 +1420,17 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Length of MPEG-2 Transport Stream segments to create (in seconds). Note that segments will end on the next
-     * keyframe after this number of seconds, so actual segment length may be longer.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (HlsSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      * 
      * @param segmentLength
-     *        Length of MPEG-2 Transport Stream segments to create (in seconds). Note that segments will end on the next
-     *        keyframe after this number of seconds, so actual segment length may be longer.
+     *        Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert
+     *        defaults to 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the
+     *        encoder enforces this value strictly. Use Segment control (HlsSegmentControl) to specify whether
+     *        MediaConvert creates separate segment files or one content file that has metadata to mark the segment
+     *        boundaries.
      */
 
     public void setSegmentLength(Integer segmentLength) {
@@ -1424,11 +1438,16 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Length of MPEG-2 Transport Stream segments to create (in seconds). Note that segments will end on the next
-     * keyframe after this number of seconds, so actual segment length may be longer.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (HlsSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      * 
-     * @return Length of MPEG-2 Transport Stream segments to create (in seconds). Note that segments will end on the
-     *         next keyframe after this number of seconds, so actual segment length may be longer.
+     * @return Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert
+     *         defaults to 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether
+     *         the encoder enforces this value strictly. Use Segment control (HlsSegmentControl) to specify whether
+     *         MediaConvert creates separate segment files or one content file that has metadata to mark the segment
+     *         boundaries.
      */
 
     public Integer getSegmentLength() {
@@ -1436,17 +1455,97 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Length of MPEG-2 Transport Stream segments to create (in seconds). Note that segments will end on the next
-     * keyframe after this number of seconds, so actual segment length may be longer.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (HlsSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      * 
      * @param segmentLength
-     *        Length of MPEG-2 Transport Stream segments to create (in seconds). Note that segments will end on the next
-     *        keyframe after this number of seconds, so actual segment length may be longer.
+     *        Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert
+     *        defaults to 10. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the
+     *        encoder enforces this value strictly. Use Segment control (HlsSegmentControl) to specify whether
+     *        MediaConvert creates separate segment files or one content file that has metadata to mark the segment
+     *        boundaries.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public HlsGroupSettings withSegmentLength(Integer segmentLength) {
         setSegmentLength(segmentLength);
+        return this;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param segmentLengthControl
+     *        Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *        result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *        lengths to match the next GOP boundary.
+     * @see HlsSegmentLengthControl
+     */
+
+    public void setSegmentLengthControl(String segmentLengthControl) {
+        this.segmentLengthControl = segmentLengthControl;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @return Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *         encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *         result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *         lengths to match the next GOP boundary.
+     * @see HlsSegmentLengthControl
+     */
+
+    public String getSegmentLengthControl() {
+        return this.segmentLengthControl;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param segmentLengthControl
+     *        Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *        result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *        lengths to match the next GOP boundary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HlsSegmentLengthControl
+     */
+
+    public HlsGroupSettings withSegmentLengthControl(String segmentLengthControl) {
+        setSegmentLengthControl(segmentLengthControl);
+        return this;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param segmentLengthControl
+     *        Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *        result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *        lengths to match the next GOP boundary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HlsSegmentLengthControl
+     */
+
+    public HlsGroupSettings withSegmentLengthControl(HlsSegmentLengthControl segmentLengthControl) {
+        this.segmentLengthControl = segmentLengthControl.toString();
         return this;
     }
 
@@ -1807,6 +1906,8 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
             sb.append("SegmentControl: ").append(getSegmentControl()).append(",");
         if (getSegmentLength() != null)
             sb.append("SegmentLength: ").append(getSegmentLength()).append(",");
+        if (getSegmentLengthControl() != null)
+            sb.append("SegmentLengthControl: ").append(getSegmentLengthControl()).append(",");
         if (getSegmentsPerSubdirectory() != null)
             sb.append("SegmentsPerSubdirectory: ").append(getSegmentsPerSubdirectory()).append(",");
         if (getStreamInfResolution() != null)
@@ -1921,6 +2022,10 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getSegmentLength() != null && other.getSegmentLength().equals(this.getSegmentLength()) == false)
             return false;
+        if (other.getSegmentLengthControl() == null ^ this.getSegmentLengthControl() == null)
+            return false;
+        if (other.getSegmentLengthControl() != null && other.getSegmentLengthControl().equals(this.getSegmentLengthControl()) == false)
+            return false;
         if (other.getSegmentsPerSubdirectory() == null ^ this.getSegmentsPerSubdirectory() == null)
             return false;
         if (other.getSegmentsPerSubdirectory() != null && other.getSegmentsPerSubdirectory().equals(this.getSegmentsPerSubdirectory()) == false)
@@ -1976,6 +2081,7 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getProgramDateTimePeriod() == null) ? 0 : getProgramDateTimePeriod().hashCode());
         hashCode = prime * hashCode + ((getSegmentControl() == null) ? 0 : getSegmentControl().hashCode());
         hashCode = prime * hashCode + ((getSegmentLength() == null) ? 0 : getSegmentLength().hashCode());
+        hashCode = prime * hashCode + ((getSegmentLengthControl() == null) ? 0 : getSegmentLengthControl().hashCode());
         hashCode = prime * hashCode + ((getSegmentsPerSubdirectory() == null) ? 0 : getSegmentsPerSubdirectory().hashCode());
         hashCode = prime * hashCode + ((getStreamInfResolution() == null) ? 0 : getStreamInfResolution().hashCode());
         hashCode = prime * hashCode + ((getTargetDurationCompatibilityMode() == null) ? 0 : getTargetDurationCompatibilityMode().hashCode());

@@ -564,7 +564,7 @@ public class Parameter implements Serializable, Cloneable, StructuredPojo {
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getValue() != null)
-            sb.append("Value: ").append(getValue()).append(",");
+            sb.append("Value: ").append("***Sensitive Data Redacted***").append(",");
         if (getVersion() != null)
             sb.append("Version: ").append(getVersion()).append(",");
         if (getSelector() != null)

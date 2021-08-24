@@ -841,7 +841,7 @@ public class ParameterHistory implements Serializable, Cloneable, StructuredPojo
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getValue() != null)
-            sb.append("Value: ").append(getValue()).append(",");
+            sb.append("Value: ").append("***Sensitive Data Redacted***").append(",");
         if (getAllowedPattern() != null)
             sb.append("AllowedPattern: ").append(getAllowedPattern()).append(",");
         if (getVersion() != null)

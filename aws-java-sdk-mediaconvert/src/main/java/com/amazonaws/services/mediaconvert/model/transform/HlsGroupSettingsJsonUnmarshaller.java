@@ -143,6 +143,10 @@ public class HlsGroupSettingsJsonUnmarshaller implements Unmarshaller<HlsGroupSe
                     context.nextToken();
                     hlsGroupSettings.setSegmentLength(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("segmentLengthControl", targetDepth)) {
+                    context.nextToken();
+                    hlsGroupSettings.setSegmentLengthControl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("segmentsPerSubdirectory", targetDepth)) {
                     context.nextToken();
                     hlsGroupSettings.setSegmentsPerSubdirectory(context.getUnmarshaller(Integer.class).unmarshall(context));

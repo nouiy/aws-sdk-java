@@ -2928,7 +2928,7 @@ public class PutParameterRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getValue() != null)
-            sb.append("Value: ").append(getValue()).append(",");
+            sb.append("Value: ").append("***Sensitive Data Redacted***").append(",");
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getKeyId() != null)

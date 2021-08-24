@@ -89,11 +89,15 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
      * segmenting.
      */
     private Integer gopClosedCadence;
-    /** GOP Length (keyframe interval) in frames or seconds. Must be greater than zero. */
+    /**
+     * Specify the interval between keyframes, in seconds or frames, for this output. Default: 12 Related settings: When
+     * you specify the GOP size in seconds, set GOP mode control (GopSizeUnits) to Specified, seconds (SECONDS). The
+     * default value for GOP mode control (GopSizeUnits) is Frames (FRAMES).
+     */
     private Double gopSize;
     /**
-     * Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder measures GOP
+     * size in frames.
      */
     private String gopSizeUnits;
     /** Percentage of the buffer that should initially be filled (HRD buffer model). */
@@ -127,7 +131,10 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
      * = GOP size + Min-I-interval - 1
      */
     private Integer minIInterval;
-    /** Number of B-frames between reference frames. */
+    /**
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     */
     private Integer numberBFramesBetweenReferenceFrames;
     /**
      * Optional. Specify how the service determines the pixel aspect ratio (PAR) for this output. The default behavior,
@@ -888,10 +895,14 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     * Specify the interval between keyframes, in seconds or frames, for this output. Default: 12 Related settings: When
+     * you specify the GOP size in seconds, set GOP mode control (GopSizeUnits) to Specified, seconds (SECONDS). The
+     * default value for GOP mode control (GopSizeUnits) is Frames (FRAMES).
      * 
      * @param gopSize
-     *        GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     *        Specify the interval between keyframes, in seconds or frames, for this output. Default: 12 Related
+     *        settings: When you specify the GOP size in seconds, set GOP mode control (GopSizeUnits) to Specified,
+     *        seconds (SECONDS). The default value for GOP mode control (GopSizeUnits) is Frames (FRAMES).
      */
 
     public void setGopSize(Double gopSize) {
@@ -899,9 +910,13 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     * Specify the interval between keyframes, in seconds or frames, for this output. Default: 12 Related settings: When
+     * you specify the GOP size in seconds, set GOP mode control (GopSizeUnits) to Specified, seconds (SECONDS). The
+     * default value for GOP mode control (GopSizeUnits) is Frames (FRAMES).
      * 
-     * @return GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     * @return Specify the interval between keyframes, in seconds or frames, for this output. Default: 12 Related
+     *         settings: When you specify the GOP size in seconds, set GOP mode control (GopSizeUnits) to Specified,
+     *         seconds (SECONDS). The default value for GOP mode control (GopSizeUnits) is Frames (FRAMES).
      */
 
     public Double getGopSize() {
@@ -909,10 +924,14 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     * Specify the interval between keyframes, in seconds or frames, for this output. Default: 12 Related settings: When
+     * you specify the GOP size in seconds, set GOP mode control (GopSizeUnits) to Specified, seconds (SECONDS). The
+     * default value for GOP mode control (GopSizeUnits) is Frames (FRAMES).
      * 
      * @param gopSize
-     *        GOP Length (keyframe interval) in frames or seconds. Must be greater than zero.
+     *        Specify the interval between keyframes, in seconds or frames, for this output. Default: 12 Related
+     *        settings: When you specify the GOP size in seconds, set GOP mode control (GopSizeUnits) to Specified,
+     *        seconds (SECONDS). The default value for GOP mode control (GopSizeUnits) is Frames (FRAMES).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -922,12 +941,12 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder measures GOP
+     * size in frames.
      * 
      * @param gopSizeUnits
-     *        Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert
-     *        the GOP Size into a frame count at run time.
+     *        Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder
+     *        measures GOP size in frames.
      * @see Mpeg2GopSizeUnits
      */
 
@@ -936,11 +955,11 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder measures GOP
+     * size in frames.
      * 
-     * @return Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert
-     *         the GOP Size into a frame count at run time.
+     * @return Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder
+     *         measures GOP size in frames.
      * @see Mpeg2GopSizeUnits
      */
 
@@ -949,12 +968,12 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder measures GOP
+     * size in frames.
      * 
      * @param gopSizeUnits
-     *        Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert
-     *        the GOP Size into a frame count at run time.
+     *        Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder
+     *        measures GOP size in frames.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Mpeg2GopSizeUnits
      */
@@ -965,12 +984,12 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert the GOP
-     * Size into a frame count at run time.
+     * Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder measures GOP
+     * size in frames.
      * 
      * @param gopSizeUnits
-     *        Indicates if the GOP Size in MPEG2 is specified in frames or seconds. If seconds the system will convert
-     *        the GOP Size into a frame count at run time.
+     *        Specify the units for GOP size (GopSize). If you don't specify a value here, by default the encoder
+     *        measures GOP size in frames.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Mpeg2GopSizeUnits
      */
@@ -1319,10 +1338,12 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Number of B-frames between reference frames.
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * 
      * @param numberBFramesBetweenReferenceFrames
-     *        Number of B-frames between reference frames.
+     *        Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
+     *        values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      */
 
     public void setNumberBFramesBetweenReferenceFrames(Integer numberBFramesBetweenReferenceFrames) {
@@ -1330,9 +1351,11 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Number of B-frames between reference frames.
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * 
-     * @return Number of B-frames between reference frames.
+     * @return Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
+     *         values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      */
 
     public Integer getNumberBFramesBetweenReferenceFrames() {
@@ -1340,10 +1363,12 @@ public class Mpeg2Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Number of B-frames between reference frames.
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * 
      * @param numberBFramesBetweenReferenceFrames
-     *        Number of B-frames between reference frames.
+     *        Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
+     *        values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

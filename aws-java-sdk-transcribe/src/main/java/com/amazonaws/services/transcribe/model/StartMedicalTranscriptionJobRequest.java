@@ -172,10 +172,16 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * <p>
      * The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations between two or more
      * speakers, e.g., a conversations between doctors and patients. <code>DICTATION</code> refers to single-speaker
-     * dictated speech, e.g., for clinical notes.
+     * dictated speech, such as clinical notes.
      * </p>
      */
     private String type;
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe medical transcription job.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -1180,13 +1186,13 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * <p>
      * The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations between two or more
      * speakers, e.g., a conversations between doctors and patients. <code>DICTATION</code> refers to single-speaker
-     * dictated speech, e.g., for clinical notes.
+     * dictated speech, such as clinical notes.
      * </p>
      * 
      * @param type
      *        The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations between two or
      *        more speakers, e.g., a conversations between doctors and patients. <code>DICTATION</code> refers to
-     *        single-speaker dictated speech, e.g., for clinical notes.
+     *        single-speaker dictated speech, such as clinical notes.
      * @see Type
      */
 
@@ -1198,12 +1204,12 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * <p>
      * The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations between two or more
      * speakers, e.g., a conversations between doctors and patients. <code>DICTATION</code> refers to single-speaker
-     * dictated speech, e.g., for clinical notes.
+     * dictated speech, such as clinical notes.
      * </p>
      * 
      * @return The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations between two or
      *         more speakers, e.g., a conversations between doctors and patients. <code>DICTATION</code> refers to
-     *         single-speaker dictated speech, e.g., for clinical notes.
+     *         single-speaker dictated speech, such as clinical notes.
      * @see Type
      */
 
@@ -1215,13 +1221,13 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * <p>
      * The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations between two or more
      * speakers, e.g., a conversations between doctors and patients. <code>DICTATION</code> refers to single-speaker
-     * dictated speech, e.g., for clinical notes.
+     * dictated speech, such as clinical notes.
      * </p>
      * 
      * @param type
      *        The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations between two or
      *        more speakers, e.g., a conversations between doctors and patients. <code>DICTATION</code> refers to
-     *        single-speaker dictated speech, e.g., for clinical notes.
+     *        single-speaker dictated speech, such as clinical notes.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Type
      */
@@ -1235,19 +1241,89 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
      * <p>
      * The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations between two or more
      * speakers, e.g., a conversations between doctors and patients. <code>DICTATION</code> refers to single-speaker
-     * dictated speech, e.g., for clinical notes.
+     * dictated speech, such as clinical notes.
      * </p>
      * 
      * @param type
      *        The type of speech in the input audio. <code>CONVERSATION</code> refers to conversations between two or
      *        more speakers, e.g., a conversations between doctors and patients. <code>DICTATION</code> refers to
-     *        single-speaker dictated speech, e.g., for clinical notes.
+     *        single-speaker dictated speech, such as clinical notes.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Type
      */
 
     public StartMedicalTranscriptionJobRequest withType(Type type) {
         this.type = type.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe medical transcription job.
+     * </p>
+     * 
+     * @return Add tags to an Amazon Transcribe medical transcription job.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe medical transcription job.
+     * </p>
+     * 
+     * @param tags
+     *        Add tags to an Amazon Transcribe medical transcription job.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe medical transcription job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        Add tags to an Amazon Transcribe medical transcription job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartMedicalTranscriptionJobRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Add tags to an Amazon Transcribe medical transcription job.
+     * </p>
+     * 
+     * @param tags
+     *        Add tags to an Amazon Transcribe medical transcription job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartMedicalTranscriptionJobRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
         return this;
     }
 
@@ -1286,7 +1362,9 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
         if (getSpecialty() != null)
             sb.append("Specialty: ").append(getSpecialty()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -1349,6 +1427,10 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -1369,6 +1451,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
         hashCode = prime * hashCode + ((getContentIdentificationType() == null) ? 0 : getContentIdentificationType().hashCode());
         hashCode = prime * hashCode + ((getSpecialty() == null) ? 0 : getSpecialty().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

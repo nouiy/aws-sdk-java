@@ -38,6 +38,15 @@ public class S3EncryptionSettings implements Serializable, Cloneable, Structured
      */
     private String encryptionType;
     /**
+     * Optionally, specify the encryption context that you want to use alongside your KMS key. AWS KMS uses this
+     * encryption context as additional authenticated data (AAD) to support authenticated encryption. This value must be
+     * a base64-encoded UTF-8 string holding JSON which represents a string-string map. To use this setting, you must
+     * also set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS (SERVER_SIDE_ENCRYPTION_KMS). For more
+     * information about encryption context, see:
+     * https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context.
+     */
+    private String kmsEncryptionContext;
+    /**
      * Optionally, specify the customer master key (CMK) that you want to use to encrypt the data key that AWS uses to
      * encrypt your output content. Enter the Amazon Resource Name (ARN) of the CMK. To use this setting, you must also
      * set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS (SERVER_SIDE_ENCRYPTION_KMS). If you set
@@ -154,6 +163,70 @@ public class S3EncryptionSettings implements Serializable, Cloneable, Structured
     }
 
     /**
+     * Optionally, specify the encryption context that you want to use alongside your KMS key. AWS KMS uses this
+     * encryption context as additional authenticated data (AAD) to support authenticated encryption. This value must be
+     * a base64-encoded UTF-8 string holding JSON which represents a string-string map. To use this setting, you must
+     * also set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS (SERVER_SIDE_ENCRYPTION_KMS). For more
+     * information about encryption context, see:
+     * https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context.
+     * 
+     * @param kmsEncryptionContext
+     *        Optionally, specify the encryption context that you want to use alongside your KMS key. AWS KMS uses this
+     *        encryption context as additional authenticated data (AAD) to support authenticated encryption. This value
+     *        must be a base64-encoded UTF-8 string holding JSON which represents a string-string map. To use this
+     *        setting, you must also set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS
+     *        (SERVER_SIDE_ENCRYPTION_KMS). For more information about encryption context, see:
+     *        https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context.
+     */
+
+    public void setKmsEncryptionContext(String kmsEncryptionContext) {
+        this.kmsEncryptionContext = kmsEncryptionContext;
+    }
+
+    /**
+     * Optionally, specify the encryption context that you want to use alongside your KMS key. AWS KMS uses this
+     * encryption context as additional authenticated data (AAD) to support authenticated encryption. This value must be
+     * a base64-encoded UTF-8 string holding JSON which represents a string-string map. To use this setting, you must
+     * also set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS (SERVER_SIDE_ENCRYPTION_KMS). For more
+     * information about encryption context, see:
+     * https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context.
+     * 
+     * @return Optionally, specify the encryption context that you want to use alongside your KMS key. AWS KMS uses this
+     *         encryption context as additional authenticated data (AAD) to support authenticated encryption. This value
+     *         must be a base64-encoded UTF-8 string holding JSON which represents a string-string map. To use this
+     *         setting, you must also set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS
+     *         (SERVER_SIDE_ENCRYPTION_KMS). For more information about encryption context, see:
+     *         https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context.
+     */
+
+    public String getKmsEncryptionContext() {
+        return this.kmsEncryptionContext;
+    }
+
+    /**
+     * Optionally, specify the encryption context that you want to use alongside your KMS key. AWS KMS uses this
+     * encryption context as additional authenticated data (AAD) to support authenticated encryption. This value must be
+     * a base64-encoded UTF-8 string holding JSON which represents a string-string map. To use this setting, you must
+     * also set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS (SERVER_SIDE_ENCRYPTION_KMS). For more
+     * information about encryption context, see:
+     * https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context.
+     * 
+     * @param kmsEncryptionContext
+     *        Optionally, specify the encryption context that you want to use alongside your KMS key. AWS KMS uses this
+     *        encryption context as additional authenticated data (AAD) to support authenticated encryption. This value
+     *        must be a base64-encoded UTF-8 string holding JSON which represents a string-string map. To use this
+     *        setting, you must also set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS
+     *        (SERVER_SIDE_ENCRYPTION_KMS). For more information about encryption context, see:
+     *        https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3EncryptionSettings withKmsEncryptionContext(String kmsEncryptionContext) {
+        setKmsEncryptionContext(kmsEncryptionContext);
+        return this;
+    }
+
+    /**
      * Optionally, specify the customer master key (CMK) that you want to use to encrypt the data key that AWS uses to
      * encrypt your output content. Enter the Amazon Resource Name (ARN) of the CMK. To use this setting, you must also
      * set Server-side encryption (S3ServerSideEncryptionType) to AWS KMS (SERVER_SIDE_ENCRYPTION_KMS). If you set
@@ -225,6 +298,8 @@ public class S3EncryptionSettings implements Serializable, Cloneable, Structured
         sb.append("{");
         if (getEncryptionType() != null)
             sb.append("EncryptionType: ").append(getEncryptionType()).append(",");
+        if (getKmsEncryptionContext() != null)
+            sb.append("KmsEncryptionContext: ").append(getKmsEncryptionContext()).append(",");
         if (getKmsKeyArn() != null)
             sb.append("KmsKeyArn: ").append(getKmsKeyArn());
         sb.append("}");
@@ -245,6 +320,10 @@ public class S3EncryptionSettings implements Serializable, Cloneable, Structured
             return false;
         if (other.getEncryptionType() != null && other.getEncryptionType().equals(this.getEncryptionType()) == false)
             return false;
+        if (other.getKmsEncryptionContext() == null ^ this.getKmsEncryptionContext() == null)
+            return false;
+        if (other.getKmsEncryptionContext() != null && other.getKmsEncryptionContext().equals(this.getKmsEncryptionContext()) == false)
+            return false;
         if (other.getKmsKeyArn() == null ^ this.getKmsKeyArn() == null)
             return false;
         if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
@@ -258,6 +337,7 @@ public class S3EncryptionSettings implements Serializable, Cloneable, Structured
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEncryptionType() == null) ? 0 : getEncryptionType().hashCode());
+        hashCode = prime * hashCode + ((getKmsEncryptionContext() == null) ? 0 : getKmsEncryptionContext().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
         return hashCode;
     }

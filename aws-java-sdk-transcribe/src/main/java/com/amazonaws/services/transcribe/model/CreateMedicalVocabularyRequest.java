@@ -68,6 +68,13 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String vocabularyFileUri;
+    /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new medical vocabulary at the time you create
+     * this new vocabulary.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -360,6 +367,84 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new medical vocabulary at the time you create
+     * this new vocabulary.
+     * </p>
+     * 
+     * @return Adds one or more tags, each in the form of a key:value pair, to a new medical vocabulary at the time you
+     *         create this new vocabulary.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new medical vocabulary at the time you create
+     * this new vocabulary.
+     * </p>
+     * 
+     * @param tags
+     *        Adds one or more tags, each in the form of a key:value pair, to a new medical vocabulary at the time you
+     *        create this new vocabulary.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new medical vocabulary at the time you create
+     * this new vocabulary.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        Adds one or more tags, each in the form of a key:value pair, to a new medical vocabulary at the time you
+     *        create this new vocabulary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMedicalVocabularyRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Adds one or more tags, each in the form of a key:value pair, to a new medical vocabulary at the time you create
+     * this new vocabulary.
+     * </p>
+     * 
+     * @param tags
+     *        Adds one or more tags, each in the form of a key:value pair, to a new medical vocabulary at the time you
+     *        create this new vocabulary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateMedicalVocabularyRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -376,7 +461,9 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
         if (getLanguageCode() != null)
             sb.append("LanguageCode: ").append(getLanguageCode()).append(",");
         if (getVocabularyFileUri() != null)
-            sb.append("VocabularyFileUri: ").append(getVocabularyFileUri());
+            sb.append("VocabularyFileUri: ").append(getVocabularyFileUri()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -403,6 +490,10 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getVocabularyFileUri() != null && other.getVocabularyFileUri().equals(this.getVocabularyFileUri()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -414,6 +505,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getVocabularyName() == null) ? 0 : getVocabularyName().hashCode());
         hashCode = prime * hashCode + ((getLanguageCode() == null) ? 0 : getLanguageCode().hashCode());
         hashCode = prime * hashCode + ((getVocabularyFileUri() == null) ? 0 : getVocabularyFileUri().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

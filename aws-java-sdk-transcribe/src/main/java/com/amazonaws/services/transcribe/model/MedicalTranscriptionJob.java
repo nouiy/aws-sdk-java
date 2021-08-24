@@ -117,7 +117,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <li>
      * <p>
      * <code>Invalid sample rate for audio file</code>- The sample rate specified in the
-     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and 48000
+     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and 48,000
      * Hertz.
      * </p>
      * </li>
@@ -163,17 +163,10 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
     private String contentIdentificationType;
     /**
      * <p>
-     * The medical specialty of any clinicians providing a dictation or having a conversation. <code>PRIMARYCARE</code>
-     * is the only available setting for this object. This specialty enables you to generate transcriptions for the
-     * following medical fields:
+     * The medical specialty of any clinicians providing a dictation or having a conversation. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Family Medicine
-     * </p>
-     * </li>
-     * </ul>
      */
     private String specialty;
     /**
@@ -185,6 +178,12 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * </p>
      */
     private String type;
+    /**
+     * <p>
+     * A key:value pair assigned to a given medical transcription job.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -706,7 +705,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <li>
      * <p>
      * <code>Invalid sample rate for audio file</code>- The sample rate specified in the
-     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and 48000
+     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and 48,000
      * Hertz.
      * </p>
      * </li>
@@ -759,8 +758,8 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *        <li>
      *        <p>
      *        <code>Invalid sample rate for audio file</code>- The sample rate specified in the
-     *        <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and
-     *        48000 Hertz.
+     *        <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and
+     *        48,000 Hertz.
      *        </p>
      *        </li>
      *        <li>
@@ -817,7 +816,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <li>
      * <p>
      * <code>Invalid sample rate for audio file</code>- The sample rate specified in the
-     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and 48000
+     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and 48,000
      * Hertz.
      * </p>
      * </li>
@@ -869,8 +868,8 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *         <li>
      *         <p>
      *         <code>Invalid sample rate for audio file</code>- The sample rate specified in the
-     *         <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and
-     *         48000 Hertz.
+     *         <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and
+     *         48,000 Hertz.
      *         </p>
      *         </li>
      *         <li>
@@ -927,7 +926,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <li>
      * <p>
      * <code>Invalid sample rate for audio file</code>- The sample rate specified in the
-     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and 48000
+     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and 48,000
      * Hertz.
      * </p>
      * </li>
@@ -980,8 +979,8 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *        <li>
      *        <p>
      *        <code>Invalid sample rate for audio file</code>- The sample rate specified in the
-     *        <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and
-     *        48000 Hertz.
+     *        <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and
+     *        48,000 Hertz.
      *        </p>
      *        </li>
      *        <li>
@@ -1132,28 +1131,15 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The medical specialty of any clinicians providing a dictation or having a conversation. <code>PRIMARYCARE</code>
-     * is the only available setting for this object. This specialty enables you to generate transcriptions for the
-     * following medical fields:
+     * The medical specialty of any clinicians providing a dictation or having a conversation. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Family Medicine
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param specialty
-     *        The medical specialty of any clinicians providing a dictation or having a conversation.
-     *        <code>PRIMARYCARE</code> is the only available setting for this object. This specialty enables you to
-     *        generate transcriptions for the following medical fields:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Family Medicine
-     *        </p>
-     *        </li>
+     *        The medical specialty of any clinicians providing a dictation or having a conversation. Refer to <a
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing
+     *        a medical conversation</a>for a list of supported specialties.
      * @see Specialty
      */
 
@@ -1163,27 +1149,14 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The medical specialty of any clinicians providing a dictation or having a conversation. <code>PRIMARYCARE</code>
-     * is the only available setting for this object. This specialty enables you to generate transcriptions for the
-     * following medical fields:
+     * The medical specialty of any clinicians providing a dictation or having a conversation. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Family Medicine
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return The medical specialty of any clinicians providing a dictation or having a conversation.
-     *         <code>PRIMARYCARE</code> is the only available setting for this object. This specialty enables you to
-     *         generate transcriptions for the following medical fields:</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         Family Medicine
-     *         </p>
-     *         </li>
+     * @return The medical specialty of any clinicians providing a dictation or having a conversation. Refer to <a
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing
+     *         a medical conversation</a>for a list of supported specialties.
      * @see Specialty
      */
 
@@ -1193,28 +1166,15 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The medical specialty of any clinicians providing a dictation or having a conversation. <code>PRIMARYCARE</code>
-     * is the only available setting for this object. This specialty enables you to generate transcriptions for the
-     * following medical fields:
+     * The medical specialty of any clinicians providing a dictation or having a conversation. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Family Medicine
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param specialty
-     *        The medical specialty of any clinicians providing a dictation or having a conversation.
-     *        <code>PRIMARYCARE</code> is the only available setting for this object. This specialty enables you to
-     *        generate transcriptions for the following medical fields:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Family Medicine
-     *        </p>
-     *        </li>
+     *        The medical specialty of any clinicians providing a dictation or having a conversation. Refer to <a
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing
+     *        a medical conversation</a>for a list of supported specialties.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Specialty
      */
@@ -1226,28 +1186,15 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The medical specialty of any clinicians providing a dictation or having a conversation. <code>PRIMARYCARE</code>
-     * is the only available setting for this object. This specialty enables you to generate transcriptions for the
-     * following medical fields:
+     * The medical specialty of any clinicians providing a dictation or having a conversation. Refer to <a
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing a
+     * medical conversation</a>for a list of supported specialties.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Family Medicine
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param specialty
-     *        The medical specialty of any clinicians providing a dictation or having a conversation.
-     *        <code>PRIMARYCARE</code> is the only available setting for this object. This specialty enables you to
-     *        generate transcriptions for the following medical fields:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Family Medicine
-     *        </p>
-     *        </li>
+     *        The medical specialty of any clinicians providing a dictation or having a conversation. Refer to <a
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/transcribe-medical-conversation.html">Transcribing
+     *        a medical conversation</a>for a list of supported specialties.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Specialty
      */
@@ -1345,6 +1292,76 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * A key:value pair assigned to a given medical transcription job.
+     * </p>
+     * 
+     * @return A key:value pair assigned to a given medical transcription job.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A key:value pair assigned to a given medical transcription job.
+     * </p>
+     * 
+     * @param tags
+     *        A key:value pair assigned to a given medical transcription job.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * A key:value pair assigned to a given medical transcription job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        A key:value pair assigned to a given medical transcription job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MedicalTranscriptionJob withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A key:value pair assigned to a given medical transcription job.
+     * </p>
+     * 
+     * @param tags
+     *        A key:value pair assigned to a given medical transcription job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MedicalTranscriptionJob withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1385,7 +1402,9 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
         if (getSpecialty() != null)
             sb.append("Specialty: ").append(getSpecialty()).append(",");
         if (getType() != null)
-            sb.append("Type: ").append(getType());
+            sb.append("Type: ").append(getType()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -1460,6 +1479,10 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -1483,6 +1506,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getContentIdentificationType() == null) ? 0 : getContentIdentificationType().hashCode());
         hashCode = prime * hashCode + ((getSpecialty() == null) ? 0 : getSpecialty().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

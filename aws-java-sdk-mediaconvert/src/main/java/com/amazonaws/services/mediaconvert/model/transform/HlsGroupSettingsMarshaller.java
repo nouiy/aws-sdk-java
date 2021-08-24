@@ -72,6 +72,8 @@ public class HlsGroupSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("segmentControl").build();
     private static final MarshallingInfo<Integer> SEGMENTLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("segmentLength").build();
+    private static final MarshallingInfo<String> SEGMENTLENGTHCONTROL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("segmentLengthControl").build();
     private static final MarshallingInfo<Integer> SEGMENTSPERSUBDIRECTORY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("segmentsPerSubdirectory").build();
     private static final MarshallingInfo<String> STREAMINFRESOLUTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -123,6 +125,7 @@ public class HlsGroupSettingsMarshaller {
             protocolMarshaller.marshall(hlsGroupSettings.getProgramDateTimePeriod(), PROGRAMDATETIMEPERIOD_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getSegmentControl(), SEGMENTCONTROL_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getSegmentLength(), SEGMENTLENGTH_BINDING);
+            protocolMarshaller.marshall(hlsGroupSettings.getSegmentLengthControl(), SEGMENTLENGTHCONTROL_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getSegmentsPerSubdirectory(), SEGMENTSPERSUBDIRECTORY_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getStreamInfResolution(), STREAMINFRESOLUTION_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getTargetDurationCompatibilityMode(), TARGETDURATIONCOMPATIBILITYMODE_BINDING);

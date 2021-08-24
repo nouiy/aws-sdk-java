@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.transcribe.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -57,6 +58,8 @@ public class MedicalTranscriptionJobMarshaller {
             .marshallLocationName("Specialty").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Type").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final MedicalTranscriptionJobMarshaller instance = new MedicalTranscriptionJobMarshaller();
 
@@ -89,6 +92,7 @@ public class MedicalTranscriptionJobMarshaller {
             protocolMarshaller.marshall(medicalTranscriptionJob.getContentIdentificationType(), CONTENTIDENTIFICATIONTYPE_BINDING);
             protocolMarshaller.marshall(medicalTranscriptionJob.getSpecialty(), SPECIALTY_BINDING);
             protocolMarshaller.marshall(medicalTranscriptionJob.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(medicalTranscriptionJob.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -116,11 +116,19 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
      */
     private String segmentControl;
     /**
-     * Length of mpd segments to create (in seconds). Note that segments will end on the next keyframe after this number
-     * of seconds, so actual segment length may be longer. When Emit Single File is checked, the segmentation is
-     * internal to a single output file and it does not cause the creation of many output files as in other output types.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 30. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (DashIsoSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      */
     private Integer segmentLength;
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     */
+    private String segmentLengthControl;
     /**
      * If you get an HTTP error in the 400 range when you play back your DASH output, enable this setting and run your
      * transcoding job again. When you enable this setting, the service writes precise segment durations in the DASH
@@ -1019,15 +1027,17 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
     }
 
     /**
-     * Length of mpd segments to create (in seconds). Note that segments will end on the next keyframe after this number
-     * of seconds, so actual segment length may be longer. When Emit Single File is checked, the segmentation is
-     * internal to a single output file and it does not cause the creation of many output files as in other output types.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 30. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (DashIsoSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      * 
      * @param segmentLength
-     *        Length of mpd segments to create (in seconds). Note that segments will end on the next keyframe after this
-     *        number of seconds, so actual segment length may be longer. When Emit Single File is checked, the
-     *        segmentation is internal to a single output file and it does not cause the creation of many output files
-     *        as in other output types.
+     *        Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert
+     *        defaults to 30. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the
+     *        encoder enforces this value strictly. Use Segment control (DashIsoSegmentControl) to specify whether
+     *        MediaConvert creates separate segment files or one content file that has metadata to mark the segment
+     *        boundaries.
      */
 
     public void setSegmentLength(Integer segmentLength) {
@@ -1035,14 +1045,16 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
     }
 
     /**
-     * Length of mpd segments to create (in seconds). Note that segments will end on the next keyframe after this number
-     * of seconds, so actual segment length may be longer. When Emit Single File is checked, the segmentation is
-     * internal to a single output file and it does not cause the creation of many output files as in other output types.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 30. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (DashIsoSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      * 
-     * @return Length of mpd segments to create (in seconds). Note that segments will end on the next keyframe after
-     *         this number of seconds, so actual segment length may be longer. When Emit Single File is checked, the
-     *         segmentation is internal to a single output file and it does not cause the creation of many output files
-     *         as in other output types.
+     * @return Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert
+     *         defaults to 30. Related settings: Use Segment length control (SegmentLengthControl) to specify whether
+     *         the encoder enforces this value strictly. Use Segment control (DashIsoSegmentControl) to specify whether
+     *         MediaConvert creates separate segment files or one content file that has metadata to mark the segment
+     *         boundaries.
      */
 
     public Integer getSegmentLength() {
@@ -1050,20 +1062,97 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
     }
 
     /**
-     * Length of mpd segments to create (in seconds). Note that segments will end on the next keyframe after this number
-     * of seconds, so actual segment length may be longer. When Emit Single File is checked, the segmentation is
-     * internal to a single output file and it does not cause the creation of many output files as in other output types.
+     * Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert defaults to
+     * 30. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the encoder enforces
+     * this value strictly. Use Segment control (DashIsoSegmentControl) to specify whether MediaConvert creates separate
+     * segment files or one content file that has metadata to mark the segment boundaries.
      * 
      * @param segmentLength
-     *        Length of mpd segments to create (in seconds). Note that segments will end on the next keyframe after this
-     *        number of seconds, so actual segment length may be longer. When Emit Single File is checked, the
-     *        segmentation is internal to a single output file and it does not cause the creation of many output files
-     *        as in other output types.
+     *        Specify the length, in whole seconds, of each segment. When you don't specify a value, MediaConvert
+     *        defaults to 30. Related settings: Use Segment length control (SegmentLengthControl) to specify whether the
+     *        encoder enforces this value strictly. Use Segment control (DashIsoSegmentControl) to specify whether
+     *        MediaConvert creates separate segment files or one content file that has metadata to mark the segment
+     *        boundaries.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public DashIsoGroupSettings withSegmentLength(Integer segmentLength) {
         setSegmentLength(segmentLength);
+        return this;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param segmentLengthControl
+     *        Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *        result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *        lengths to match the next GOP boundary.
+     * @see DashIsoSegmentLengthControl
+     */
+
+    public void setSegmentLengthControl(String segmentLengthControl) {
+        this.segmentLengthControl = segmentLengthControl;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @return Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *         encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *         result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *         lengths to match the next GOP boundary.
+     * @see DashIsoSegmentLengthControl
+     */
+
+    public String getSegmentLengthControl() {
+        return this.segmentLengthControl;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param segmentLengthControl
+     *        Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *        result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *        lengths to match the next GOP boundary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DashIsoSegmentLengthControl
+     */
+
+    public DashIsoGroupSettings withSegmentLengthControl(String segmentLengthControl) {
+        setSegmentLengthControl(segmentLengthControl);
+        return this;
+    }
+
+    /**
+     * Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the encoder use
+     * the exact length that you specify with the setting Segment length (SegmentLength). This might result in extra
+     * I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment lengths to match the next
+     * GOP boundary.
+     * 
+     * @param segmentLengthControl
+     *        Specify how you want MediaConvert to determine the segment length. Choose Exact (EXACT) to have the
+     *        encoder use the exact length that you specify with the setting Segment length (SegmentLength). This might
+     *        result in extra I-frames. Choose Multiple of GOP (GOP_MULTIPLE) to have the encoder round up the segment
+     *        lengths to match the next GOP boundary.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DashIsoSegmentLengthControl
+     */
+
+    public DashIsoGroupSettings withSegmentLengthControl(DashIsoSegmentLengthControl segmentLengthControl) {
+        this.segmentLengthControl = segmentLengthControl.toString();
         return this;
     }
 
@@ -1192,6 +1281,8 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
             sb.append("SegmentControl: ").append(getSegmentControl()).append(",");
         if (getSegmentLength() != null)
             sb.append("SegmentLength: ").append(getSegmentLength()).append(",");
+        if (getSegmentLengthControl() != null)
+            sb.append("SegmentLengthControl: ").append(getSegmentLengthControl()).append(",");
         if (getWriteSegmentTimelineInRepresentation() != null)
             sb.append("WriteSegmentTimelineInRepresentation: ").append(getWriteSegmentTimelineInRepresentation());
         sb.append("}");
@@ -1269,6 +1360,10 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
             return false;
         if (other.getSegmentLength() != null && other.getSegmentLength().equals(this.getSegmentLength()) == false)
             return false;
+        if (other.getSegmentLengthControl() == null ^ this.getSegmentLengthControl() == null)
+            return false;
+        if (other.getSegmentLengthControl() != null && other.getSegmentLengthControl().equals(this.getSegmentLengthControl()) == false)
+            return false;
         if (other.getWriteSegmentTimelineInRepresentation() == null ^ this.getWriteSegmentTimelineInRepresentation() == null)
             return false;
         if (other.getWriteSegmentTimelineInRepresentation() != null
@@ -1297,6 +1392,7 @@ public class DashIsoGroupSettings implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getPtsOffsetHandlingForBFrames() == null) ? 0 : getPtsOffsetHandlingForBFrames().hashCode());
         hashCode = prime * hashCode + ((getSegmentControl() == null) ? 0 : getSegmentControl().hashCode());
         hashCode = prime * hashCode + ((getSegmentLength() == null) ? 0 : getSegmentLength().hashCode());
+        hashCode = prime * hashCode + ((getSegmentLengthControl() == null) ? 0 : getSegmentLengthControl().hashCode());
         hashCode = prime * hashCode + ((getWriteSegmentTimelineInRepresentation() == null) ? 0 : getWriteSegmentTimelineInRepresentation().hashCode());
         return hashCode;
     }

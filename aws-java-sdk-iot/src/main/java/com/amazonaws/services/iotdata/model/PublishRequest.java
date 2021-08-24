@@ -39,7 +39,26 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
     private Integer qos;
     /**
      * <p>
-     * The state information, in JSON format.
+     * A Boolean value that determines whether to set the RETAIN flag when the message is published.
+     * </p>
+     * <p>
+     * Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.
+     * </p>
+     * <p>
+     * Valid values: <code>true</code> | <code>false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     */
+    private Boolean retain;
+    /**
+     * <p>
+     * The message body. MQTT accepts text, binary, and empty (null) message payloads.
+     * </p>
+     * <p>
+     * Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message identified
+     * by <b>topic</b> from IoT Core.
      * </p>
      */
     private java.nio.ByteBuffer payload;
@@ -126,7 +145,131 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The state information, in JSON format.
+     * A Boolean value that determines whether to set the RETAIN flag when the message is published.
+     * </p>
+     * <p>
+     * Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.
+     * </p>
+     * <p>
+     * Valid values: <code>true</code> | <code>false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     * 
+     * @param retain
+     *        A Boolean value that determines whether to set the RETAIN flag when the message is published.</p>
+     *        <p>
+     *        Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.
+     *        </p>
+     *        <p>
+     *        Valid values: <code>true</code> | <code>false</code>
+     *        </p>
+     *        <p>
+     *        Default value: <code>false</code>
+     */
+
+    public void setRetain(Boolean retain) {
+        this.retain = retain;
+    }
+
+    /**
+     * <p>
+     * A Boolean value that determines whether to set the RETAIN flag when the message is published.
+     * </p>
+     * <p>
+     * Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.
+     * </p>
+     * <p>
+     * Valid values: <code>true</code> | <code>false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     * 
+     * @return A Boolean value that determines whether to set the RETAIN flag when the message is published.</p>
+     *         <p>
+     *         Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.
+     *         </p>
+     *         <p>
+     *         Valid values: <code>true</code> | <code>false</code>
+     *         </p>
+     *         <p>
+     *         Default value: <code>false</code>
+     */
+
+    public Boolean getRetain() {
+        return this.retain;
+    }
+
+    /**
+     * <p>
+     * A Boolean value that determines whether to set the RETAIN flag when the message is published.
+     * </p>
+     * <p>
+     * Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.
+     * </p>
+     * <p>
+     * Valid values: <code>true</code> | <code>false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     * 
+     * @param retain
+     *        A Boolean value that determines whether to set the RETAIN flag when the message is published.</p>
+     *        <p>
+     *        Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.
+     *        </p>
+     *        <p>
+     *        Valid values: <code>true</code> | <code>false</code>
+     *        </p>
+     *        <p>
+     *        Default value: <code>false</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PublishRequest withRetain(Boolean retain) {
+        setRetain(retain);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A Boolean value that determines whether to set the RETAIN flag when the message is published.
+     * </p>
+     * <p>
+     * Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.
+     * </p>
+     * <p>
+     * Valid values: <code>true</code> | <code>false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     * 
+     * @return A Boolean value that determines whether to set the RETAIN flag when the message is published.</p>
+     *         <p>
+     *         Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.
+     *         </p>
+     *         <p>
+     *         Valid values: <code>true</code> | <code>false</code>
+     *         </p>
+     *         <p>
+     *         Default value: <code>false</code>
+     */
+
+    public Boolean isRetain() {
+        return this.retain;
+    }
+
+    /**
+     * <p>
+     * The message body. MQTT accepts text, binary, and empty (null) message payloads.
+     * </p>
+     * <p>
+     * Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message identified
+     * by <b>topic</b> from IoT Core.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -140,7 +283,10 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * 
      * @param payload
-     *        The state information, in JSON format.
+     *        The message body. MQTT accepts text, binary, and empty (null) message payloads.</p>
+     *        <p>
+     *        Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message
+     *        identified by <b>topic</b> from IoT Core.
      */
 
     public void setPayload(java.nio.ByteBuffer payload) {
@@ -149,7 +295,11 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The state information, in JSON format.
+     * The message body. MQTT accepts text, binary, and empty (null) message payloads.
+     * </p>
+     * <p>
+     * Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message identified
+     * by <b>topic</b> from IoT Core.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -159,7 +309,10 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * {@code position}.
      * </p>
      * 
-     * @return The state information, in JSON format.
+     * @return The message body. MQTT accepts text, binary, and empty (null) message payloads.</p>
+     *         <p>
+     *         Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message
+     *         identified by <b>topic</b> from IoT Core.
      */
 
     public java.nio.ByteBuffer getPayload() {
@@ -168,7 +321,11 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
     /**
      * <p>
-     * The state information, in JSON format.
+     * The message body. MQTT accepts text, binary, and empty (null) message payloads.
+     * </p>
+     * <p>
+     * Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message identified
+     * by <b>topic</b> from IoT Core.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -182,7 +339,10 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * 
      * @param payload
-     *        The state information, in JSON format.
+     *        The message body. MQTT accepts text, binary, and empty (null) message payloads.</p>
+     *        <p>
+     *        Publishing an empty (null) payload with <b>retain</b> = <code>true</code> deletes the retained message
+     *        identified by <b>topic</b> from IoT Core.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -207,6 +367,8 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
             sb.append("Topic: ").append(getTopic()).append(",");
         if (getQos() != null)
             sb.append("Qos: ").append(getQos()).append(",");
+        if (getRetain() != null)
+            sb.append("Retain: ").append(getRetain()).append(",");
         if (getPayload() != null)
             sb.append("Payload: ").append(getPayload());
         sb.append("}");
@@ -231,6 +393,10 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
             return false;
         if (other.getQos() != null && other.getQos().equals(this.getQos()) == false)
             return false;
+        if (other.getRetain() == null ^ this.getRetain() == null)
+            return false;
+        if (other.getRetain() != null && other.getRetain().equals(this.getRetain()) == false)
+            return false;
         if (other.getPayload() == null ^ this.getPayload() == null)
             return false;
         if (other.getPayload() != null && other.getPayload().equals(this.getPayload()) == false)
@@ -245,6 +411,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
 
         hashCode = prime * hashCode + ((getTopic() == null) ? 0 : getTopic().hashCode());
         hashCode = prime * hashCode + ((getQos() == null) ? 0 : getQos().hashCode());
+        hashCode = prime * hashCode + ((getRetain() == null) ? 0 : getRetain().hashCode());
         hashCode = prime * hashCode + ((getPayload() == null) ? 0 : getPayload().hashCode());
         return hashCode;
     }

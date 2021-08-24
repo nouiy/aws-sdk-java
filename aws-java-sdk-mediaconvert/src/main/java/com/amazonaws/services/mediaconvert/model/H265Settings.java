@@ -143,7 +143,10 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
      * = GOP size + Min-I-interval - 1
      */
     private Integer minIInterval;
-    /** Number of B-frames between reference frames. */
+    /**
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
+     */
     private Integer numberBFramesBetweenReferenceFrames;
     /**
      * Number of reference frames to use. The encoder may use more than requested if using B-frames and/or interlaced
@@ -1520,10 +1523,12 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Number of B-frames between reference frames.
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * 
      * @param numberBFramesBetweenReferenceFrames
-     *        Number of B-frames between reference frames.
+     *        Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
+     *        values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      */
 
     public void setNumberBFramesBetweenReferenceFrames(Integer numberBFramesBetweenReferenceFrames) {
@@ -1531,9 +1536,11 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Number of B-frames between reference frames.
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * 
-     * @return Number of B-frames between reference frames.
+     * @return Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
+     *         values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      */
 
     public Integer getNumberBFramesBetweenReferenceFrames() {
@@ -1541,10 +1548,12 @@ public class H265Settings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Number of B-frames between reference frames.
+     * Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid values are
+     * whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * 
      * @param numberBFramesBetweenReferenceFrames
-     *        Number of B-frames between reference frames.
+     *        Specify the number of B-frames that MediaConvert puts between reference frames in this output. Valid
+     *        values are whole numbers from 0 through 7. When you don't specify a value, MediaConvert defaults to 2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

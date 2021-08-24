@@ -40,6 +40,8 @@ public class MsSmoothGroupSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("encryption").build();
     private static final MarshallingInfo<Integer> FRAGMENTLENGTH_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fragmentLength").build();
+    private static final MarshallingInfo<String> FRAGMENTLENGTHCONTROL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fragmentLengthControl").build();
     private static final MarshallingInfo<String> MANIFESTENCODING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("manifestEncoding").build();
 
@@ -65,6 +67,7 @@ public class MsSmoothGroupSettingsMarshaller {
             protocolMarshaller.marshall(msSmoothGroupSettings.getDestinationSettings(), DESTINATIONSETTINGS_BINDING);
             protocolMarshaller.marshall(msSmoothGroupSettings.getEncryption(), ENCRYPTION_BINDING);
             protocolMarshaller.marshall(msSmoothGroupSettings.getFragmentLength(), FRAGMENTLENGTH_BINDING);
+            protocolMarshaller.marshall(msSmoothGroupSettings.getFragmentLengthControl(), FRAGMENTLENGTHCONTROL_BINDING);
             protocolMarshaller.marshall(msSmoothGroupSettings.getManifestEncoding(), MANIFESTENCODING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

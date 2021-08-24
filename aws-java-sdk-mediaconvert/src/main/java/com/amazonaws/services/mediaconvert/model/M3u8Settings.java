@@ -47,6 +47,12 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
      */
     private java.util.List<Integer> audioPids;
     /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     */
+    private String dataPTSControl;
+    /**
      * Specify the maximum time, in milliseconds, between Program Clock References (PCRs) inserted into the transport
      * stream.
      */
@@ -319,6 +325,73 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
 
     public M3u8Settings withAudioPids(java.util.Collection<Integer> audioPids) {
         setAudioPids(audioPids);
+        return this;
+    }
+
+    /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * 
+     * @param dataPTSControl
+     *        If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp
+     *        (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data
+     *        packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * @see M3u8DataPtsControl
+     */
+
+    public void setDataPTSControl(String dataPTSControl) {
+        this.dataPTSControl = dataPTSControl;
+    }
+
+    /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * 
+     * @return If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp
+     *         (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data
+     *         packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * @see M3u8DataPtsControl
+     */
+
+    public String getDataPTSControl() {
+        return this.dataPTSControl;
+    }
+
+    /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * 
+     * @param dataPTSControl
+     *        If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp
+     *        (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data
+     *        packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see M3u8DataPtsControl
+     */
+
+    public M3u8Settings withDataPTSControl(String dataPTSControl) {
+        setDataPTSControl(dataPTSControl);
+        return this;
+    }
+
+    /**
+     * If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp (PTS)
+     * values greater than or equal to the first video packet PTS (MediaConvert drops captions and data packets with
+     * lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * 
+     * @param dataPTSControl
+     *        If you select ALIGN_TO_VIDEO, MediaConvert writes captions and data packets with Presentation Timestamp
+     *        (PTS) values greater than or equal to the first video packet PTS (MediaConvert drops captions and data
+     *        packets with lesser PTS values). Keep the default value (AUTO) to allow all PTS values.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see M3u8DataPtsControl
+     */
+
+    public M3u8Settings withDataPTSControl(M3u8DataPtsControl dataPTSControl) {
+        this.dataPTSControl = dataPTSControl.toString();
         return this;
     }
 
@@ -998,6 +1071,8 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
             sb.append("AudioFramesPerPes: ").append(getAudioFramesPerPes()).append(",");
         if (getAudioPids() != null)
             sb.append("AudioPids: ").append(getAudioPids()).append(",");
+        if (getDataPTSControl() != null)
+            sb.append("DataPTSControl: ").append(getDataPTSControl()).append(",");
         if (getMaxPcrInterval() != null)
             sb.append("MaxPcrInterval: ").append(getMaxPcrInterval()).append(",");
         if (getNielsenId3() != null)
@@ -1053,6 +1128,10 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
         if (other.getAudioPids() == null ^ this.getAudioPids() == null)
             return false;
         if (other.getAudioPids() != null && other.getAudioPids().equals(this.getAudioPids()) == false)
+            return false;
+        if (other.getDataPTSControl() == null ^ this.getDataPTSControl() == null)
+            return false;
+        if (other.getDataPTSControl() != null && other.getDataPTSControl().equals(this.getDataPTSControl()) == false)
             return false;
         if (other.getMaxPcrInterval() == null ^ this.getMaxPcrInterval() == null)
             return false;
@@ -1125,6 +1204,7 @@ public class M3u8Settings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAudioDuration() == null) ? 0 : getAudioDuration().hashCode());
         hashCode = prime * hashCode + ((getAudioFramesPerPes() == null) ? 0 : getAudioFramesPerPes().hashCode());
         hashCode = prime * hashCode + ((getAudioPids() == null) ? 0 : getAudioPids().hashCode());
+        hashCode = prime * hashCode + ((getDataPTSControl() == null) ? 0 : getDataPTSControl().hashCode());
         hashCode = prime * hashCode + ((getMaxPcrInterval() == null) ? 0 : getMaxPcrInterval().hashCode());
         hashCode = prime * hashCode + ((getNielsenId3() == null) ? 0 : getNielsenId3().hashCode());
         hashCode = prime * hashCode + ((getPatInterval() == null) ? 0 : getPatInterval().hashCode());

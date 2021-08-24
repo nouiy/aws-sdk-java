@@ -1,3 +1,24 @@
+# __1.12.54__ __2021-08-24__
+## __AWS Elemental MediaConvert__
+  - ### Features
+    - AWS Elemental MediaConvert SDK has added MBAFF encoding support for AVC video and the ability to pass encryption context from the job settings to S3.
+
+## __AWS IoT Data Plane__
+  - ### Features
+    - Updated Publish with support for new Retain flag and added two new API operations: GetRetainedMessage, ListRetainedMessages.
+
+## __Amazon Polly__
+  - ### Features
+    - Amazon Polly adds new New Zealand English voice - Aria. Aria is available as Neural voice only.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - Updated Parameter Store property for logging improvements.
+
+## __Amazon Transcribe Service__
+  - ### Features
+    - This release adds support for feature tagging with Amazon Transcribe batch jobs.
+
 # __1.12.53__ __2021-08-23__
 ## __AWS Backup__
   - ### Features

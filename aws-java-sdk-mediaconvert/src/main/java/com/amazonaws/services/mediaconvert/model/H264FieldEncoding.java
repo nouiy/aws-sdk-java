@@ -15,14 +15,16 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * Keep the default value, PAFF, to have MediaConvert use PAFF encoding for interlaced outputs. Choose Force field
- * (FORCE_FIELD) to disable PAFF encoding and create separate interlaced fields.
+ * The video encoding method for your MPEG-4 AVC output. Keep the default value, PAFF, to have MediaConvert use PAFF
+ * encoding for interlaced outputs. Choose Force field (FORCE_FIELD) to disable PAFF encoding and create separate
+ * interlaced fields. Choose MBAFF to disable PAFF and have MediaConvert use MBAFF encoding for interlaced outputs.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum H264FieldEncoding {
 
     PAFF("PAFF"),
-    FORCE_FIELD("FORCE_FIELD");
+    FORCE_FIELD("FORCE_FIELD"),
+    MBAFF("MBAFF");
 
     private String value;
 

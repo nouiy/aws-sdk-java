@@ -111,6 +111,10 @@ public class DashIsoGroupSettingsJsonUnmarshaller implements Unmarshaller<DashIs
                     context.nextToken();
                     dashIsoGroupSettings.setSegmentLength(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("segmentLengthControl", targetDepth)) {
+                    context.nextToken();
+                    dashIsoGroupSettings.setSegmentLengthControl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("writeSegmentTimelineInRepresentation", targetDepth)) {
                     context.nextToken();
                     dashIsoGroupSettings.setWriteSegmentTimelineInRepresentation(context.getUnmarshaller(String.class).unmarshall(context));

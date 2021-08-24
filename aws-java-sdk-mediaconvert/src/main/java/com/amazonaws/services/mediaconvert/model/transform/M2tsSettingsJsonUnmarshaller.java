@@ -74,6 +74,10 @@ public class M2tsSettingsJsonUnmarshaller implements Unmarshaller<M2tsSettings, 
                     context.nextToken();
                     m2tsSettings.setBufferModel(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("dataPTSControl", targetDepth)) {
+                    context.nextToken();
+                    m2tsSettings.setDataPTSControl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("dvbNitSettings", targetDepth)) {
                     context.nextToken();
                     m2tsSettings.setDvbNitSettings(DvbNitSettingsJsonUnmarshaller.getInstance().unmarshall(context));

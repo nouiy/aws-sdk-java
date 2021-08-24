@@ -72,7 +72,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
     private Transcript transcript;
     /**
      * <p>
-     * A timestamp that shows with the job was started processing.
+     * A timestamp that shows when the job started processing.
      * </p>
      */
     private java.util.Date startTime;
@@ -113,7 +113,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <li>
      * <p>
      * <code>Invalid sample rate for audio file</code> - The sample rate specified in the
-     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and 48000
+     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and 48,000
      * Hertz.
      * </p>
      * </li>
@@ -189,6 +189,12 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private Float identifiedLanguageScore;
+    /**
+     * <p>
+     * A key:value pair assigned to a given transcription job.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
@@ -529,11 +535,11 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A timestamp that shows with the job was started processing.
+     * A timestamp that shows when the job started processing.
      * </p>
      * 
      * @param startTime
-     *        A timestamp that shows with the job was started processing.
+     *        A timestamp that shows when the job started processing.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -542,10 +548,10 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A timestamp that shows with the job was started processing.
+     * A timestamp that shows when the job started processing.
      * </p>
      * 
-     * @return A timestamp that shows with the job was started processing.
+     * @return A timestamp that shows when the job started processing.
      */
 
     public java.util.Date getStartTime() {
@@ -554,11 +560,11 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A timestamp that shows with the job was started processing.
+     * A timestamp that shows when the job started processing.
      * </p>
      * 
      * @param startTime
-     *        A timestamp that shows with the job was started processing.
+     *        A timestamp that shows when the job started processing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -672,7 +678,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <li>
      * <p>
      * <code>Invalid sample rate for audio file</code> - The sample rate specified in the
-     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and 48000
+     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and 48,000
      * Hertz.
      * </p>
      * </li>
@@ -725,8 +731,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *        <li>
      *        <p>
      *        <code>Invalid sample rate for audio file</code> - The sample rate specified in the
-     *        <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and
-     *        48000 Hertz.
+     *        <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and
+     *        48,000 Hertz.
      *        </p>
      *        </li>
      *        <li>
@@ -783,7 +789,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <li>
      * <p>
      * <code>Invalid sample rate for audio file</code> - The sample rate specified in the
-     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and 48000
+     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and 48,000
      * Hertz.
      * </p>
      * </li>
@@ -835,8 +841,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *         <li>
      *         <p>
      *         <code>Invalid sample rate for audio file</code> - The sample rate specified in the
-     *         <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and
-     *         48000 Hertz.
+     *         <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and
+     *         48,000 Hertz.
      *         </p>
      *         </li>
      *         <li>
@@ -893,7 +899,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <li>
      * <p>
      * <code>Invalid sample rate for audio file</code> - The sample rate specified in the
-     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and 48000
+     * <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and 48,000
      * Hertz.
      * </p>
      * </li>
@@ -946,8 +952,8 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      *        <li>
      *        <p>
      *        <code>Invalid sample rate for audio file</code> - The sample rate specified in the
-     *        <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8000 and
-     *        48000 Hertz.
+     *        <code>MediaSampleRateHertz</code> of the request isn't valid. The sample rate must be between 8,000 and
+     *        48,000 Hertz.
      *        </p>
      *        </li>
      *        <li>
@@ -1363,6 +1369,76 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * A key:value pair assigned to a given transcription job.
+     * </p>
+     * 
+     * @return A key:value pair assigned to a given transcription job.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * A key:value pair assigned to a given transcription job.
+     * </p>
+     * 
+     * @param tags
+     *        A key:value pair assigned to a given transcription job.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * A key:value pair assigned to a given transcription job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        A key:value pair assigned to a given transcription job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranscriptionJob withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A key:value pair assigned to a given transcription job.
+     * </p>
+     * 
+     * @param tags
+     *        A key:value pair assigned to a given transcription job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranscriptionJob withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1409,7 +1485,9 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
         if (getLanguageOptions() != null)
             sb.append("LanguageOptions: ").append(getLanguageOptions()).append(",");
         if (getIdentifiedLanguageScore() != null)
-            sb.append("IdentifiedLanguageScore: ").append(getIdentifiedLanguageScore());
+            sb.append("IdentifiedLanguageScore: ").append(getIdentifiedLanguageScore()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -1496,6 +1574,10 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getIdentifiedLanguageScore() != null && other.getIdentifiedLanguageScore().equals(this.getIdentifiedLanguageScore()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -1522,6 +1604,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getIdentifyLanguage() == null) ? 0 : getIdentifyLanguage().hashCode());
         hashCode = prime * hashCode + ((getLanguageOptions() == null) ? 0 : getLanguageOptions().hashCode());
         hashCode = prime * hashCode + ((getIdentifiedLanguageScore() == null) ? 0 : getIdentifiedLanguageScore().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

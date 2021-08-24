@@ -158,6 +158,11 @@ public class AbstractAmazonTranscribe implements AmazonTranscribe {
     }
 
     @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListTranscriptionJobsResult listTranscriptionJobs(ListTranscriptionJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -184,6 +189,16 @@ public class AbstractAmazonTranscribe implements AmazonTranscribe {
 
     @Override
     public StartTranscriptionJobResult startTranscriptionJob(StartTranscriptionJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
