@@ -37,15 +37,16 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
     private String subdirectory;
     /**
      * <p>
-     * The ARN of the Amazon S3 bucket. If the bucket is on an AWS Outpost, this must be an access point ARN.
+     * The ARN of the Amazon S3 bucket. If the bucket is on an Amazon Web Services Outpost, this must be an access point
+     * ARN.
      * </p>
      */
     private String s3BucketArn;
     /**
      * <p>
      * The Amazon S3 storage class that you want to store your files in when this location is used as a task
-     * destination. For buckets in AWS Regions, the storage class defaults to Standard. For buckets on AWS Outposts, the
-     * storage class defaults to AWS S3 Outposts.
+     * destination. For buckets in Amazon Web Services Regions, the storage class defaults to Standard. For buckets on
+     * Outposts, the storage class defaults to Amazon Web Services S3 Outposts.
      * </p>
      * <p>
      * For more information about S3 storage classes, see <a href="http://aws.amazon.com/s3/storage-classes/">Amazon S3
@@ -60,10 +61,11 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
     private S3Config s3Config;
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, specify the Amazon Resource Names (ARNs) of the DataSync agents
-     * deployed on your Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, specify the Amazon Resource Names (ARNs) of the
+     * DataSync agents deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web
+     * Services Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      */
     private java.util.List<String> agentArns;
@@ -123,11 +125,13 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN of the Amazon S3 bucket. If the bucket is on an AWS Outpost, this must be an access point ARN.
+     * The ARN of the Amazon S3 bucket. If the bucket is on an Amazon Web Services Outpost, this must be an access point
+     * ARN.
      * </p>
      * 
      * @param s3BucketArn
-     *        The ARN of the Amazon S3 bucket. If the bucket is on an AWS Outpost, this must be an access point ARN.
+     *        The ARN of the Amazon S3 bucket. If the bucket is on an Amazon Web Services Outpost, this must be an
+     *        access point ARN.
      */
 
     public void setS3BucketArn(String s3BucketArn) {
@@ -136,10 +140,12 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN of the Amazon S3 bucket. If the bucket is on an AWS Outpost, this must be an access point ARN.
+     * The ARN of the Amazon S3 bucket. If the bucket is on an Amazon Web Services Outpost, this must be an access point
+     * ARN.
      * </p>
      * 
-     * @return The ARN of the Amazon S3 bucket. If the bucket is on an AWS Outpost, this must be an access point ARN.
+     * @return The ARN of the Amazon S3 bucket. If the bucket is on an Amazon Web Services Outpost, this must be an
+     *         access point ARN.
      */
 
     public String getS3BucketArn() {
@@ -148,11 +154,13 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ARN of the Amazon S3 bucket. If the bucket is on an AWS Outpost, this must be an access point ARN.
+     * The ARN of the Amazon S3 bucket. If the bucket is on an Amazon Web Services Outpost, this must be an access point
+     * ARN.
      * </p>
      * 
      * @param s3BucketArn
-     *        The ARN of the Amazon S3 bucket. If the bucket is on an AWS Outpost, this must be an access point ARN.
+     *        The ARN of the Amazon S3 bucket. If the bucket is on an Amazon Web Services Outpost, this must be an
+     *        access point ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -164,8 +172,8 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The Amazon S3 storage class that you want to store your files in when this location is used as a task
-     * destination. For buckets in AWS Regions, the storage class defaults to Standard. For buckets on AWS Outposts, the
-     * storage class defaults to AWS S3 Outposts.
+     * destination. For buckets in Amazon Web Services Regions, the storage class defaults to Standard. For buckets on
+     * Outposts, the storage class defaults to Amazon Web Services S3 Outposts.
      * </p>
      * <p>
      * For more information about S3 storage classes, see <a href="http://aws.amazon.com/s3/storage-classes/">Amazon S3
@@ -177,8 +185,8 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param s3StorageClass
      *        The Amazon S3 storage class that you want to store your files in when this location is used as a task
-     *        destination. For buckets in AWS Regions, the storage class defaults to Standard. For buckets on AWS
-     *        Outposts, the storage class defaults to AWS S3 Outposts.</p>
+     *        destination. For buckets in Amazon Web Services Regions, the storage class defaults to Standard. For
+     *        buckets on Outposts, the storage class defaults to Amazon Web Services S3 Outposts.</p>
      *        <p>
      *        For more information about S3 storage classes, see <a
      *        href="http://aws.amazon.com/s3/storage-classes/">Amazon S3 Storage Classes</a>. Some storage classes have
@@ -195,8 +203,8 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The Amazon S3 storage class that you want to store your files in when this location is used as a task
-     * destination. For buckets in AWS Regions, the storage class defaults to Standard. For buckets on AWS Outposts, the
-     * storage class defaults to AWS S3 Outposts.
+     * destination. For buckets in Amazon Web Services Regions, the storage class defaults to Standard. For buckets on
+     * Outposts, the storage class defaults to Amazon Web Services S3 Outposts.
      * </p>
      * <p>
      * For more information about S3 storage classes, see <a href="http://aws.amazon.com/s3/storage-classes/">Amazon S3
@@ -207,8 +215,8 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @return The Amazon S3 storage class that you want to store your files in when this location is used as a task
-     *         destination. For buckets in AWS Regions, the storage class defaults to Standard. For buckets on AWS
-     *         Outposts, the storage class defaults to AWS S3 Outposts.</p>
+     *         destination. For buckets in Amazon Web Services Regions, the storage class defaults to Standard. For
+     *         buckets on Outposts, the storage class defaults to Amazon Web Services S3 Outposts.</p>
      *         <p>
      *         For more information about S3 storage classes, see <a
      *         href="http://aws.amazon.com/s3/storage-classes/">Amazon S3 Storage Classes</a>. Some storage classes have
@@ -225,8 +233,8 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The Amazon S3 storage class that you want to store your files in when this location is used as a task
-     * destination. For buckets in AWS Regions, the storage class defaults to Standard. For buckets on AWS Outposts, the
-     * storage class defaults to AWS S3 Outposts.
+     * destination. For buckets in Amazon Web Services Regions, the storage class defaults to Standard. For buckets on
+     * Outposts, the storage class defaults to Amazon Web Services S3 Outposts.
      * </p>
      * <p>
      * For more information about S3 storage classes, see <a href="http://aws.amazon.com/s3/storage-classes/">Amazon S3
@@ -238,8 +246,8 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param s3StorageClass
      *        The Amazon S3 storage class that you want to store your files in when this location is used as a task
-     *        destination. For buckets in AWS Regions, the storage class defaults to Standard. For buckets on AWS
-     *        Outposts, the storage class defaults to AWS S3 Outposts.</p>
+     *        destination. For buckets in Amazon Web Services Regions, the storage class defaults to Standard. For
+     *        buckets on Outposts, the storage class defaults to Amazon Web Services S3 Outposts.</p>
      *        <p>
      *        For more information about S3 storage classes, see <a
      *        href="http://aws.amazon.com/s3/storage-classes/">Amazon S3 Storage Classes</a>. Some storage classes have
@@ -258,8 +266,8 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The Amazon S3 storage class that you want to store your files in when this location is used as a task
-     * destination. For buckets in AWS Regions, the storage class defaults to Standard. For buckets on AWS Outposts, the
-     * storage class defaults to AWS S3 Outposts.
+     * destination. For buckets in Amazon Web Services Regions, the storage class defaults to Standard. For buckets on
+     * Outposts, the storage class defaults to Amazon Web Services S3 Outposts.
      * </p>
      * <p>
      * For more information about S3 storage classes, see <a href="http://aws.amazon.com/s3/storage-classes/">Amazon S3
@@ -271,8 +279,8 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param s3StorageClass
      *        The Amazon S3 storage class that you want to store your files in when this location is used as a task
-     *        destination. For buckets in AWS Regions, the storage class defaults to Standard. For buckets on AWS
-     *        Outposts, the storage class defaults to AWS S3 Outposts.</p>
+     *        destination. For buckets in Amazon Web Services Regions, the storage class defaults to Standard. For
+     *        buckets on Outposts, the storage class defaults to Amazon Web Services S3 Outposts.</p>
      *        <p>
      *        For more information about S3 storage classes, see <a
      *        href="http://aws.amazon.com/s3/storage-classes/">Amazon S3 Storage Classes</a>. Some storage classes have
@@ -316,17 +324,18 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, specify the Amazon Resource Names (ARNs) of the DataSync agents
-     * deployed on your Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, specify the Amazon Resource Names (ARNs) of the
+     * DataSync agents deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web
+     * Services Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      * 
-     * @return If you are using DataSync on an AWS Outpost, specify the Amazon Resource Names (ARNs) of the DataSync
-     *         agents deployed on your Outpost. For more information about launching a DataSync agent on an AWS Outpost,
-     *         see <a
+     * @return If you are using DataSync on an Amazon Web Services Outpost, specify the Amazon Resource Names (ARNs) of
+     *         the DataSync agents deployed on your Outpost. For more information about launching a DataSync agent on an
+     *         Amazon Web Services Outpost, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy
-     *         your DataSync agent on AWS Outposts</a>.
+     *         your DataSync agent on Outposts</a>.
      */
 
     public java.util.List<String> getAgentArns() {
@@ -335,18 +344,19 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, specify the Amazon Resource Names (ARNs) of the DataSync agents
-     * deployed on your Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, specify the Amazon Resource Names (ARNs) of the
+     * DataSync agents deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web
+     * Services Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      * 
      * @param agentArns
-     *        If you are using DataSync on an AWS Outpost, specify the Amazon Resource Names (ARNs) of the DataSync
-     *        agents deployed on your Outpost. For more information about launching a DataSync agent on an AWS Outpost,
-     *        see <a
+     *        If you are using DataSync on an Amazon Web Services Outpost, specify the Amazon Resource Names (ARNs) of
+     *        the DataSync agents deployed on your Outpost. For more information about launching a DataSync agent on an
+     *        Amazon Web Services Outpost, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     *        DataSync agent on AWS Outposts</a>.
+     *        DataSync agent on Outposts</a>.
      */
 
     public void setAgentArns(java.util.Collection<String> agentArns) {
@@ -360,10 +370,11 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, specify the Amazon Resource Names (ARNs) of the DataSync agents
-     * deployed on your Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, specify the Amazon Resource Names (ARNs) of the
+     * DataSync agents deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web
+     * Services Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -372,11 +383,11 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param agentArns
-     *        If you are using DataSync on an AWS Outpost, specify the Amazon Resource Names (ARNs) of the DataSync
-     *        agents deployed on your Outpost. For more information about launching a DataSync agent on an AWS Outpost,
-     *        see <a
+     *        If you are using DataSync on an Amazon Web Services Outpost, specify the Amazon Resource Names (ARNs) of
+     *        the DataSync agents deployed on your Outpost. For more information about launching a DataSync agent on an
+     *        Amazon Web Services Outpost, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     *        DataSync agent on AWS Outposts</a>.
+     *        DataSync agent on Outposts</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -392,18 +403,19 @@ public class CreateLocationS3Request extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, specify the Amazon Resource Names (ARNs) of the DataSync agents
-     * deployed on your Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, specify the Amazon Resource Names (ARNs) of the
+     * DataSync agents deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web
+     * Services Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      * 
      * @param agentArns
-     *        If you are using DataSync on an AWS Outpost, specify the Amazon Resource Names (ARNs) of the DataSync
-     *        agents deployed on your Outpost. For more information about launching a DataSync agent on an AWS Outpost,
-     *        see <a
+     *        If you are using DataSync on an Amazon Web Services Outpost, specify the Amazon Resource Names (ARNs) of
+     *        the DataSync agents deployed on your Outpost. For more information about launching a DataSync agent on an
+     *        Amazon Web Services Outpost, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     *        DataSync agent on AWS Outposts</a>.
+     *        DataSync agent on Outposts</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

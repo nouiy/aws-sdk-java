@@ -71,8 +71,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Some storage classes have specific behaviors that can affect your S3 storage cost. For detailed information, see
      * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes">
-     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      */
     private String overwriteMode;
@@ -81,7 +80,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
      * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
      * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so AWS DataSync can only do this on a best-effort basis.
+     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
      * </p>
      * <p>
      * Default value: BEST_EFFORT.
@@ -168,8 +167,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * preserved. This option can affect your storage cost. If your task deletes objects, you might incur minimum
      * storage duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
      * Default value: PRESERVE.
@@ -184,13 +182,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
     private String preserveDeletedFiles;
     /**
      * <p>
-     * A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the
+     * A value that determines whether DataSync should preserve the metadata of block and character devices in the
      * source file system, and re-create the files with that device name and metadata on the destination. DataSync does
      * not copy the contents of such devices, only the name and metadata.
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
+     * DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
      * end-of-file (EOF) marker.
      * </p>
      * </note>
@@ -224,15 +222,15 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can preserve extant permissions of a source location.
+     * DataSync can preserve extant permissions of a source location.
      * </p>
      * </note>
      */
     private String posixPermissions;
     /**
      * <p>
-     * A value that limits the bandwidth used by AWS DataSync. For example, if you want AWS DataSync to use a maximum of
-     * 1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
+     * A value that limits the bandwidth used by DataSync. For example, if you want DataSync to use a maximum of 1 MB,
+     * set this value to <code>1048576</code> (<code>=1024*1024</code>).
      * </p>
      */
     private Long bytesPerSecond;
@@ -547,8 +545,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Some storage classes have specific behaviors that can affect your S3 storage cost. For detailed information, see
      * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes">
-     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * 
      * @param overwriteMode
@@ -560,7 +557,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        Some storage classes have specific behaviors that can affect your S3 storage cost. For detailed
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
+     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *        Guide</i>.
      * @see OverwriteMode
      */
@@ -579,8 +576,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Some storage classes have specific behaviors that can affect your S3 storage cost. For detailed information, see
      * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes">
-     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * 
      * @return A value that determines whether files at the destination should be overwritten or preserved when copying
@@ -591,7 +587,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         Some storage classes have specific behaviors that can affect your S3 storage cost. For detailed
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *         >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
+     *         >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *         Guide</i>.
      * @see OverwriteMode
      */
@@ -610,8 +606,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Some storage classes have specific behaviors that can affect your S3 storage cost. For detailed information, see
      * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes">
-     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * 
      * @param overwriteMode
@@ -623,7 +618,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        Some storage classes have specific behaviors that can affect your S3 storage cost. For detailed
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
+     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *        Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OverwriteMode
@@ -644,8 +639,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Some storage classes have specific behaviors that can affect your S3 storage cost. For detailed information, see
      * <a href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes">
-     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * 
      * @param overwriteMode
@@ -657,7 +651,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        Some storage classes have specific behaviors that can affect your S3 storage cost. For detailed
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
+     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *        Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OverwriteMode
@@ -673,7 +667,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
      * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
      * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so AWS DataSync can only do this on a best-effort basis.
+     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
      * </p>
      * <p>
      * Default value: BEST_EFFORT.
@@ -697,7 +691,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        A file metadata value that shows the last time a file was accessed (that is, when the file was read or
      *        written to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original
      *        <code>Atime</code> attribute on all source files (that is, the version before the PREPARING phase).
-     *        However, <code>Atime</code>'s behavior is not fully standard across platforms, so AWS DataSync can only do
+     *        However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do
      *        this on a best-effort basis. </p>
      *        <p>
      *        Default value: BEST_EFFORT.
@@ -727,7 +721,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
      * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
      * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so AWS DataSync can only do this on a best-effort basis.
+     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
      * </p>
      * <p>
      * Default value: BEST_EFFORT.
@@ -750,8 +744,8 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * @return A file metadata value that shows the last time a file was accessed (that is, when the file was read or
      *         written to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original
      *         <code>Atime</code> attribute on all source files (that is, the version before the PREPARING phase).
-     *         However, <code>Atime</code>'s behavior is not fully standard across platforms, so AWS DataSync can only
-     *         do this on a best-effort basis. </p>
+     *         However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do
+     *         this on a best-effort basis. </p>
      *         <p>
      *         Default value: BEST_EFFORT.
      *         </p>
@@ -780,7 +774,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
      * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
      * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so AWS DataSync can only do this on a best-effort basis.
+     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
      * </p>
      * <p>
      * Default value: BEST_EFFORT.
@@ -804,7 +798,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        A file metadata value that shows the last time a file was accessed (that is, when the file was read or
      *        written to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original
      *        <code>Atime</code> attribute on all source files (that is, the version before the PREPARING phase).
-     *        However, <code>Atime</code>'s behavior is not fully standard across platforms, so AWS DataSync can only do
+     *        However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do
      *        this on a best-effort basis. </p>
      *        <p>
      *        Default value: BEST_EFFORT.
@@ -836,7 +830,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written
      * to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original <code>Atime</code>
      * attribute on all source files (that is, the version before the PREPARING phase). However, <code>Atime</code>'s
-     * behavior is not fully standard across platforms, so AWS DataSync can only do this on a best-effort basis.
+     * behavior is not fully standard across platforms, so DataSync can only do this on a best-effort basis.
      * </p>
      * <p>
      * Default value: BEST_EFFORT.
@@ -860,7 +854,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        A file metadata value that shows the last time a file was accessed (that is, when the file was read or
      *        written to). If you set <code>Atime</code> to BEST_EFFORT, DataSync attempts to preserve the original
      *        <code>Atime</code> attribute on all source files (that is, the version before the PREPARING phase).
-     *        However, <code>Atime</code>'s behavior is not fully standard across platforms, so AWS DataSync can only do
+     *        However, <code>Atime</code>'s behavior is not fully standard across platforms, so DataSync can only do
      *        this on a best-effort basis. </p>
      *        <p>
      *        Default value: BEST_EFFORT.
@@ -1398,8 +1392,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * preserved. This option can affect your storage cost. If your task deletes objects, you might incur minimum
      * storage duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
      * Default value: PRESERVE.
@@ -1416,7 +1409,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        be preserved. This option can affect your storage cost. If your task deletes objects, you might incur
      *        minimum storage duration charges for certain storage classes. For detailed information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
+     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *        Guide</i>.</p>
      *        <p>
      *        Default value: PRESERVE.
@@ -1439,8 +1432,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * preserved. This option can affect your storage cost. If your task deletes objects, you might incur minimum
      * storage duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
      * Default value: PRESERVE.
@@ -1456,7 +1448,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         be preserved. This option can affect your storage cost. If your task deletes objects, you might incur
      *         minimum storage duration charges for certain storage classes. For detailed information, see <a href=
      *         "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *         >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
+     *         >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *         Guide</i>.</p>
      *         <p>
      *         Default value: PRESERVE.
@@ -1479,8 +1471,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * preserved. This option can affect your storage cost. If your task deletes objects, you might incur minimum
      * storage duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
      * Default value: PRESERVE.
@@ -1497,7 +1488,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        be preserved. This option can affect your storage cost. If your task deletes objects, you might incur
      *        minimum storage duration charges for certain storage classes. For detailed information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
+     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *        Guide</i>.</p>
      *        <p>
      *        Default value: PRESERVE.
@@ -1522,8 +1513,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * preserved. This option can affect your storage cost. If your task deletes objects, you might incur minimum
      * storage duration charges for certain storage classes. For detailed information, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
-     * Guide</i>.
+     * >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User Guide</i>.
      * </p>
      * <p>
      * Default value: PRESERVE.
@@ -1540,7 +1530,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        be preserved. This option can affect your storage cost. If your task deletes objects, you might incur
      *        minimum storage duration charges for certain storage classes. For detailed information, see <a href=
      *        "https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes"
-     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>AWS DataSync User
+     *        >Considerations when working with Amazon S3 storage classes in DataSync </a> in the <i>DataSync User
      *        Guide</i>.</p>
      *        <p>
      *        Default value: PRESERVE.
@@ -1561,13 +1551,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the
+     * A value that determines whether DataSync should preserve the metadata of block and character devices in the
      * source file system, and re-create the files with that device name and metadata on the destination. DataSync does
      * not copy the contents of such devices, only the name and metadata.
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
+     * DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
      * end-of-file (EOF) marker.
      * </p>
      * </note>
@@ -1582,12 +1572,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param preserveDevices
-     *        A value that determines whether AWS DataSync should preserve the metadata of block and character devices
-     *        in the source file system, and re-create the files with that device name and metadata on the destination.
+     *        A value that determines whether DataSync should preserve the metadata of block and character devices in
+     *        the source file system, and re-create the files with that device name and metadata on the destination.
      *        DataSync does not copy the contents of such devices, only the name and metadata. </p> <note>
      *        <p>
-     *        AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return
-     *        an end-of-file (EOF) marker.
+     *        DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
+     *        end-of-file (EOF) marker.
      *        </p>
      *        </note>
      *        <p>
@@ -1608,13 +1598,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the
+     * A value that determines whether DataSync should preserve the metadata of block and character devices in the
      * source file system, and re-create the files with that device name and metadata on the destination. DataSync does
      * not copy the contents of such devices, only the name and metadata.
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
+     * DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
      * end-of-file (EOF) marker.
      * </p>
      * </note>
@@ -1628,12 +1618,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * PRESERVE: Preserve character and block device metadata. This option isn't currently supported for Amazon EFS.
      * </p>
      * 
-     * @return A value that determines whether AWS DataSync should preserve the metadata of block and character devices
-     *         in the source file system, and re-create the files with that device name and metadata on the destination.
+     * @return A value that determines whether DataSync should preserve the metadata of block and character devices in
+     *         the source file system, and re-create the files with that device name and metadata on the destination.
      *         DataSync does not copy the contents of such devices, only the name and metadata. </p> <note>
      *         <p>
-     *         AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't
-     *         return an end-of-file (EOF) marker.
+     *         DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
+     *         end-of-file (EOF) marker.
      *         </p>
      *         </note>
      *         <p>
@@ -1654,13 +1644,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the
+     * A value that determines whether DataSync should preserve the metadata of block and character devices in the
      * source file system, and re-create the files with that device name and metadata on the destination. DataSync does
      * not copy the contents of such devices, only the name and metadata.
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
+     * DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
      * end-of-file (EOF) marker.
      * </p>
      * </note>
@@ -1675,12 +1665,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param preserveDevices
-     *        A value that determines whether AWS DataSync should preserve the metadata of block and character devices
-     *        in the source file system, and re-create the files with that device name and metadata on the destination.
+     *        A value that determines whether DataSync should preserve the metadata of block and character devices in
+     *        the source file system, and re-create the files with that device name and metadata on the destination.
      *        DataSync does not copy the contents of such devices, only the name and metadata. </p> <note>
      *        <p>
-     *        AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return
-     *        an end-of-file (EOF) marker.
+     *        DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
+     *        end-of-file (EOF) marker.
      *        </p>
      *        </note>
      *        <p>
@@ -1703,13 +1693,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the
+     * A value that determines whether DataSync should preserve the metadata of block and character devices in the
      * source file system, and re-create the files with that device name and metadata on the destination. DataSync does
      * not copy the contents of such devices, only the name and metadata.
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
+     * DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
      * end-of-file (EOF) marker.
      * </p>
      * </note>
@@ -1724,12 +1714,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param preserveDevices
-     *        A value that determines whether AWS DataSync should preserve the metadata of block and character devices
-     *        in the source file system, and re-create the files with that device name and metadata on the destination.
+     *        A value that determines whether DataSync should preserve the metadata of block and character devices in
+     *        the source file system, and re-create the files with that device name and metadata on the destination.
      *        DataSync does not copy the contents of such devices, only the name and metadata. </p> <note>
      *        <p>
-     *        AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return
-     *        an end-of-file (EOF) marker.
+     *        DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an
+     *        end-of-file (EOF) marker.
      *        </p>
      *        </note>
      *        <p>
@@ -1769,7 +1759,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can preserve extant permissions of a source location.
+     * DataSync can preserve extant permissions of a source location.
      * </p>
      * </note>
      * 
@@ -1790,7 +1780,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        AWS DataSync can preserve extant permissions of a source location.
+     *        DataSync can preserve extant permissions of a source location.
      *        </p>
      * @see PosixPermissions
      */
@@ -1818,7 +1808,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can preserve extant permissions of a source location.
+     * DataSync can preserve extant permissions of a source location.
      * </p>
      * </note>
      * 
@@ -1838,7 +1828,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         <note>
      *         <p>
-     *         AWS DataSync can preserve extant permissions of a source location.
+     *         DataSync can preserve extant permissions of a source location.
      *         </p>
      * @see PosixPermissions
      */
@@ -1866,7 +1856,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can preserve extant permissions of a source location.
+     * DataSync can preserve extant permissions of a source location.
      * </p>
      * </note>
      * 
@@ -1887,7 +1877,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        AWS DataSync can preserve extant permissions of a source location.
+     *        DataSync can preserve extant permissions of a source location.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PosixPermissions
@@ -1917,7 +1907,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * AWS DataSync can preserve extant permissions of a source location.
+     * DataSync can preserve extant permissions of a source location.
      * </p>
      * </note>
      * 
@@ -1938,7 +1928,7 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        <note>
      *        <p>
-     *        AWS DataSync can preserve extant permissions of a source location.
+     *        DataSync can preserve extant permissions of a source location.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PosixPermissions
@@ -1951,13 +1941,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that limits the bandwidth used by AWS DataSync. For example, if you want AWS DataSync to use a maximum of
-     * 1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
+     * A value that limits the bandwidth used by DataSync. For example, if you want DataSync to use a maximum of 1 MB,
+     * set this value to <code>1048576</code> (<code>=1024*1024</code>).
      * </p>
      * 
      * @param bytesPerSecond
-     *        A value that limits the bandwidth used by AWS DataSync. For example, if you want AWS DataSync to use a
-     *        maximum of 1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
+     *        A value that limits the bandwidth used by DataSync. For example, if you want DataSync to use a maximum of
+     *        1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
      */
 
     public void setBytesPerSecond(Long bytesPerSecond) {
@@ -1966,12 +1956,12 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that limits the bandwidth used by AWS DataSync. For example, if you want AWS DataSync to use a maximum of
-     * 1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
+     * A value that limits the bandwidth used by DataSync. For example, if you want DataSync to use a maximum of 1 MB,
+     * set this value to <code>1048576</code> (<code>=1024*1024</code>).
      * </p>
      * 
-     * @return A value that limits the bandwidth used by AWS DataSync. For example, if you want AWS DataSync to use a
-     *         maximum of 1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
+     * @return A value that limits the bandwidth used by DataSync. For example, if you want DataSync to use a maximum of
+     *         1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
      */
 
     public Long getBytesPerSecond() {
@@ -1980,13 +1970,13 @@ public class Options implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that limits the bandwidth used by AWS DataSync. For example, if you want AWS DataSync to use a maximum of
-     * 1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
+     * A value that limits the bandwidth used by DataSync. For example, if you want DataSync to use a maximum of 1 MB,
+     * set this value to <code>1048576</code> (<code>=1024*1024</code>).
      * </p>
      * 
      * @param bytesPerSecond
-     *        A value that limits the bandwidth used by AWS DataSync. For example, if you want AWS DataSync to use a
-     *        maximum of 1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
+     *        A value that limits the bandwidth used by DataSync. For example, if you want DataSync to use a maximum of
+     *        1 MB, set this value to <code>1048576</code> (<code>=1024*1024</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

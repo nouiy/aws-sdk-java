@@ -37,7 +37,7 @@ public class UnassignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceR
     private com.amazonaws.internal.SdkInternalList<String> unassignedIpv6Addresses;
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that have been unassigned from the network interface.
+     * The IPv4 prefixes that have been unassigned from the network interface.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> unassignedIpv6Prefixes;
@@ -157,10 +157,10 @@ public class UnassignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that have been unassigned from the network interface.
+     * The IPv4 prefixes that have been unassigned from the network interface.
      * </p>
      * 
-     * @return The IPv4 Prefix Delegation prefixes that have been unassigned from the network interface.
+     * @return The IPv4 prefixes that have been unassigned from the network interface.
      */
 
     public java.util.List<String> getUnassignedIpv6Prefixes() {
@@ -172,11 +172,11 @@ public class UnassignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that have been unassigned from the network interface.
+     * The IPv4 prefixes that have been unassigned from the network interface.
      * </p>
      * 
      * @param unassignedIpv6Prefixes
-     *        The IPv4 Prefix Delegation prefixes that have been unassigned from the network interface.
+     *        The IPv4 prefixes that have been unassigned from the network interface.
      */
 
     public void setUnassignedIpv6Prefixes(java.util.Collection<String> unassignedIpv6Prefixes) {
@@ -190,7 +190,7 @@ public class UnassignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that have been unassigned from the network interface.
+     * The IPv4 prefixes that have been unassigned from the network interface.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -199,7 +199,7 @@ public class UnassignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param unassignedIpv6Prefixes
-     *        The IPv4 Prefix Delegation prefixes that have been unassigned from the network interface.
+     *        The IPv4 prefixes that have been unassigned from the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,11 +215,11 @@ public class UnassignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that have been unassigned from the network interface.
+     * The IPv4 prefixes that have been unassigned from the network interface.
      * </p>
      * 
      * @param unassignedIpv6Prefixes
-     *        The IPv4 Prefix Delegation prefixes that have been unassigned from the network interface.
+     *        The IPv4 prefixes that have been unassigned from the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -574,8 +574,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * You can optionally use Prefix Delegation on the network interface. You must specify either the IPV6 Prefix
      * Delegation prefixes, or the IPv6 Prefix Delegation count. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param assignIpv6AddressesRequest
@@ -601,8 +601,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * You can optionally use Prefix Delegation on the network interface. You must specify either the IPV6 Prefix
      * Delegation prefixes, or the IPv6 Prefix Delegation count. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param assignIpv6AddressesRequest
@@ -646,8 +646,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * You can optionally use Prefix Delegation on the network interface. You must specify either the IPv4 Prefix
      * Delegation prefixes, or the IPv4 Prefix Delegation count. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param assignPrivateIpAddressesRequest
@@ -687,8 +687,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * You can optionally use Prefix Delegation on the network interface. You must specify either the IPv4 Prefix
      * Delegation prefixes, or the IPv4 Prefix Delegation count. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param assignPrivateIpAddressesRequest
@@ -1220,6 +1220,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
             com.amazonaws.handlers.AsyncHandler<AssociateTransitGatewayRouteTableRequest, AssociateTransitGatewayRouteTableResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
+     * your account manager.
+     * </p>
+     * </note>
      * <p>
      * Associates a branch network interface with a trunk network interface.
      * </p>
@@ -1229,10 +1235,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * >create-network-interface</a> command and set <code>--interface-type</code> to <code>trunk</code>. You must also
      * create a network interface for each branch network interface that you want to associate with the trunk network
      * interface.
-     * </p>
-     * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/eni-trunking.html">
-     * Network interface trunking</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param associateTrunkInterfaceRequest
@@ -1244,6 +1246,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<AssociateTrunkInterfaceResult> associateTrunkInterfaceAsync(AssociateTrunkInterfaceRequest associateTrunkInterfaceRequest);
 
     /**
+     * <note>
+     * <p>
+     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
+     * your account manager.
+     * </p>
+     * </note>
      * <p>
      * Associates a branch network interface with a trunk network interface.
      * </p>
@@ -1253,10 +1261,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * >create-network-interface</a> command and set <code>--interface-type</code> to <code>trunk</code>. You must also
      * create a network interface for each branch network interface that you want to associate with the trunk network
      * interface.
-     * </p>
-     * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/eni-trunking.html">
-     * Network interface trunking</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param associateTrunkInterfaceRequest
@@ -13667,6 +13671,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
             com.amazonaws.handlers.AsyncHandler<DescribeTransitGatewaysRequest, DescribeTransitGatewaysResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
+     * your account manager.
+     * </p>
+     * </note>
      * <p>
      * Describes one or more network interface trunk associations.
      * </p>
@@ -13682,6 +13692,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
             DescribeTrunkInterfaceAssociationsRequest describeTrunkInterfaceAssociationsRequest);
 
     /**
+     * <note>
+     * <p>
+     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
+     * your account manager.
+     * </p>
+     * </note>
      * <p>
      * Describes one or more network interface trunk associations.
      * </p>
@@ -15498,6 +15514,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
             com.amazonaws.handlers.AsyncHandler<DisassociateTransitGatewayRouteTableRequest, DisassociateTransitGatewayRouteTableResult> asyncHandler);
 
     /**
+     * <note>
+     * <p>
+     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
+     * your account manager.
+     * </p>
+     * </note>
      * <p>
      * Removes an association between a branch network interface with a trunk network interface.
      * </p>
@@ -15512,6 +15534,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
             DisassociateTrunkInterfaceRequest disassociateTrunkInterfaceRequest);
 
     /**
+     * <note>
+     * <p>
+     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
+     * your account manager.
+     * </p>
+     * </note>
      * <p>
      * Removes an association between a branch network interface with a trunk network interface.
      * </p>

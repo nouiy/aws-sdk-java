@@ -34,6 +34,8 @@ public class StartTaskExecutionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OverrideOptions").build();
     private static final MarshallingInfo<List> INCLUDES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Includes").build();
+    private static final MarshallingInfo<List> EXCLUDES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Excludes").build();
 
     private static final StartTaskExecutionRequestMarshaller instance = new StartTaskExecutionRequestMarshaller();
 
@@ -54,6 +56,7 @@ public class StartTaskExecutionRequestMarshaller {
             protocolMarshaller.marshall(startTaskExecutionRequest.getTaskArn(), TASKARN_BINDING);
             protocolMarshaller.marshall(startTaskExecutionRequest.getOverrideOptions(), OVERRIDEOPTIONS_BINDING);
             protocolMarshaller.marshall(startTaskExecutionRequest.getIncludes(), INCLUDES_BINDING);
+            protocolMarshaller.marshall(startTaskExecutionRequest.getExcludes(), EXCLUDES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

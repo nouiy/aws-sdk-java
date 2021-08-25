@@ -43,8 +43,8 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
      * The status of the task execution.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide.</i>
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide.</i>
      * </p>
      */
     private String status;
@@ -107,7 +107,7 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
     private Long filesTransferred;
     /**
      * <p>
-     * The number of logical bytes written to the destination AWS storage resource.
+     * The number of logical bytes written to the destination Amazon Web Services storage resource.
      * </p>
      */
     private Long bytesWritten;
@@ -205,15 +205,15 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
      * The status of the task execution.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide.</i>
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide.</i>
      * </p>
      * 
      * @param status
      *        The status of the task execution. </p>
      *        <p>
-     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS
-     *        DataSync User Guide.</i>
+     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync
+     *        User Guide.</i>
      * @see TaskExecutionStatus
      */
 
@@ -226,14 +226,14 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
      * The status of the task execution.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide.</i>
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide.</i>
      * </p>
      * 
      * @return The status of the task execution. </p>
      *         <p>
-     *         For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS
-     *         DataSync User Guide.</i>
+     *         For detailed information about task execution statuses, see Understanding Task Statuses in the
+     *         <i>DataSync User Guide.</i>
      * @see TaskExecutionStatus
      */
 
@@ -246,15 +246,15 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
      * The status of the task execution.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide.</i>
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide.</i>
      * </p>
      * 
      * @param status
      *        The status of the task execution. </p>
      *        <p>
-     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS
-     *        DataSync User Guide.</i>
+     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync
+     *        User Guide.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskExecutionStatus
      */
@@ -269,15 +269,15 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
      * The status of the task execution.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide.</i>
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide.</i>
      * </p>
      * 
      * @param status
      *        The status of the task execution. </p>
      *        <p>
-     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS
-     *        DataSync User Guide.</i>
+     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync
+     *        User Guide.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskExecutionStatus
      */
@@ -734,11 +734,11 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The number of logical bytes written to the destination AWS storage resource.
+     * The number of logical bytes written to the destination Amazon Web Services storage resource.
      * </p>
      * 
      * @param bytesWritten
-     *        The number of logical bytes written to the destination AWS storage resource.
+     *        The number of logical bytes written to the destination Amazon Web Services storage resource.
      */
 
     public void setBytesWritten(Long bytesWritten) {
@@ -747,10 +747,10 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The number of logical bytes written to the destination AWS storage resource.
+     * The number of logical bytes written to the destination Amazon Web Services storage resource.
      * </p>
      * 
-     * @return The number of logical bytes written to the destination AWS storage resource.
+     * @return The number of logical bytes written to the destination Amazon Web Services storage resource.
      */
 
     public Long getBytesWritten() {
@@ -759,11 +759,11 @@ public class DescribeTaskExecutionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The number of logical bytes written to the destination AWS storage resource.
+     * The number of logical bytes written to the destination Amazon Web Services storage resource.
      * </p>
      * 
      * @param bytesWritten
-     *        The number of logical bytes written to the destination AWS storage resource.
+     *        The number of logical bytes written to the destination Amazon Web Services storage resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

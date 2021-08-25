@@ -36,7 +36,7 @@ public class CreateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String sourceLocationArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS storage resource's location.
+     * The Amazon Resource Name (ARN) of an Amazon Web Services storage resource's location.
      * </p>
      */
     private String destinationLocationArn;
@@ -92,6 +92,14 @@ public class CreateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private java.util.List<TagListEntry> tags;
+    /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     */
+    private java.util.List<FilterRule> includes;
 
     /**
      * <p>
@@ -135,11 +143,11 @@ public class CreateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS storage resource's location.
+     * The Amazon Resource Name (ARN) of an Amazon Web Services storage resource's location.
      * </p>
      * 
      * @param destinationLocationArn
-     *        The Amazon Resource Name (ARN) of an AWS storage resource's location.
+     *        The Amazon Resource Name (ARN) of an Amazon Web Services storage resource's location.
      */
 
     public void setDestinationLocationArn(String destinationLocationArn) {
@@ -148,10 +156,10 @@ public class CreateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS storage resource's location.
+     * The Amazon Resource Name (ARN) of an Amazon Web Services storage resource's location.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an AWS storage resource's location.
+     * @return The Amazon Resource Name (ARN) of an Amazon Web Services storage resource's location.
      */
 
     public String getDestinationLocationArn() {
@@ -160,11 +168,11 @@ public class CreateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS storage resource's location.
+     * The Amazon Resource Name (ARN) of an Amazon Web Services storage resource's location.
      * </p>
      * 
      * @param destinationLocationArn
-     *        The Amazon Resource Name (ARN) of an AWS storage resource's location.
+     *        The Amazon Resource Name (ARN) of an Amazon Web Services storage resource's location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -576,6 +584,92 @@ public class CreateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     * 
+     * @return A list of filter rules that determines which files to include when running a task. The pattern should
+     *         contain a single filter string that consists of the patterns to include. The patterns are delimited by
+     *         "|" (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     */
+
+    public java.util.List<FilterRule> getIncludes() {
+        return includes;
+    }
+
+    /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     * 
+     * @param includes
+     *        A list of filter rules that determines which files to include when running a task. The pattern should
+     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
+     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     */
+
+    public void setIncludes(java.util.Collection<FilterRule> includes) {
+        if (includes == null) {
+            this.includes = null;
+            return;
+        }
+
+        this.includes = new java.util.ArrayList<FilterRule>(includes);
+    }
+
+    /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setIncludes(java.util.Collection)} or {@link #withIncludes(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param includes
+     *        A list of filter rules that determines which files to include when running a task. The pattern should
+     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
+     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTaskRequest withIncludes(FilterRule... includes) {
+        if (this.includes == null) {
+            setIncludes(new java.util.ArrayList<FilterRule>(includes.length));
+        }
+        for (FilterRule ele : includes) {
+            this.includes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     * 
+     * @param includes
+     *        A list of filter rules that determines which files to include when running a task. The pattern should
+     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
+     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTaskRequest withIncludes(java.util.Collection<FilterRule> includes) {
+        setIncludes(includes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -602,7 +696,9 @@ public class CreateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getSchedule() != null)
             sb.append("Schedule: ").append(getSchedule()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getIncludes() != null)
+            sb.append("Includes: ").append(getIncludes());
         sb.append("}");
         return sb.toString();
     }
@@ -649,6 +745,10 @@ public class CreateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getIncludes() == null ^ this.getIncludes() == null)
+            return false;
+        if (other.getIncludes() != null && other.getIncludes().equals(this.getIncludes()) == false)
+            return false;
         return true;
     }
 
@@ -665,6 +765,7 @@ public class CreateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
         hashCode = prime * hashCode + ((getExcludes() == null) ? 0 : getExcludes().hashCode());
         hashCode = prime * hashCode + ((getSchedule() == null) ? 0 : getSchedule().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getIncludes() == null) ? 0 : getIncludes().hashCode());
         return hashCode;
     }
 

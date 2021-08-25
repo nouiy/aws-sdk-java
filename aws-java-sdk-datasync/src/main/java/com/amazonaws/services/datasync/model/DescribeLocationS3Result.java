@@ -53,10 +53,11 @@ public class DescribeLocationS3Result extends com.amazonaws.AmazonWebServiceResu
     private S3Config s3Config;
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, the Amazon Resource Name (ARNs) of the EC2 agents deployed on your
-     * Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, the Amazon Resource Name (ARNs) of the EC2 agents
+     * deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web Services
+     * Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      */
     private java.util.List<String> agentArns;
@@ -274,16 +275,18 @@ public class DescribeLocationS3Result extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, the Amazon Resource Name (ARNs) of the EC2 agents deployed on your
-     * Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, the Amazon Resource Name (ARNs) of the EC2 agents
+     * deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web Services
+     * Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      * 
-     * @return If you are using DataSync on an AWS Outpost, the Amazon Resource Name (ARNs) of the EC2 agents deployed
-     *         on your Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * @return If you are using DataSync on an Amazon Web Services Outpost, the Amazon Resource Name (ARNs) of the EC2
+     *         agents deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web
+     *         Services Outpost, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy
-     *         your DataSync agent on AWS Outposts</a>.
+     *         your DataSync agent on Outposts</a>.
      */
 
     public java.util.List<String> getAgentArns() {
@@ -292,17 +295,19 @@ public class DescribeLocationS3Result extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, the Amazon Resource Name (ARNs) of the EC2 agents deployed on your
-     * Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, the Amazon Resource Name (ARNs) of the EC2 agents
+     * deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web Services
+     * Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      * 
      * @param agentArns
-     *        If you are using DataSync on an AWS Outpost, the Amazon Resource Name (ARNs) of the EC2 agents deployed on
-     *        your Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     *        If you are using DataSync on an Amazon Web Services Outpost, the Amazon Resource Name (ARNs) of the EC2
+     *        agents deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web
+     *        Services Outpost, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     *        DataSync agent on AWS Outposts</a>.
+     *        DataSync agent on Outposts</a>.
      */
 
     public void setAgentArns(java.util.Collection<String> agentArns) {
@@ -316,10 +321,11 @@ public class DescribeLocationS3Result extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, the Amazon Resource Name (ARNs) of the EC2 agents deployed on your
-     * Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, the Amazon Resource Name (ARNs) of the EC2 agents
+     * deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web Services
+     * Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -328,10 +334,11 @@ public class DescribeLocationS3Result extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param agentArns
-     *        If you are using DataSync on an AWS Outpost, the Amazon Resource Name (ARNs) of the EC2 agents deployed on
-     *        your Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     *        If you are using DataSync on an Amazon Web Services Outpost, the Amazon Resource Name (ARNs) of the EC2
+     *        agents deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web
+     *        Services Outpost, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     *        DataSync agent on AWS Outposts</a>.
+     *        DataSync agent on Outposts</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -347,17 +354,19 @@ public class DescribeLocationS3Result extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * If you are using DataSync on an AWS Outpost, the Amazon Resource Name (ARNs) of the EC2 agents deployed on your
-     * Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     * If you are using DataSync on an Amazon Web Services Outpost, the Amazon Resource Name (ARNs) of the EC2 agents
+     * deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web Services
+     * Outpost, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     * DataSync agent on AWS Outposts</a>.
+     * DataSync agent on Outposts</a>.
      * </p>
      * 
      * @param agentArns
-     *        If you are using DataSync on an AWS Outpost, the Amazon Resource Name (ARNs) of the EC2 agents deployed on
-     *        your Outpost. For more information about launching a DataSync agent on an AWS Outpost, see <a
+     *        If you are using DataSync on an Amazon Web Services Outpost, the Amazon Resource Name (ARNs) of the EC2
+     *        agents deployed on your Outpost. For more information about launching a DataSync agent on an Amazon Web
+     *        Services Outpost, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#outposts-agent">Deploy your
-     *        DataSync agent on AWS Outposts</a>.
+     *        DataSync agent on Outposts</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

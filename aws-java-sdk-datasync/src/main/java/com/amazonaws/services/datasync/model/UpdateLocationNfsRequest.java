@@ -49,9 +49,9 @@ public class UpdateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * agent to read the files. For the agent to access directories, you must additionally enable all execute access.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <p>
      * For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red Hat
@@ -122,9 +122,9 @@ public class UpdateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * agent to read the files. For the agent to access directories, you must additionally enable all execute access.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <p>
      * For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red Hat
@@ -150,9 +150,9 @@ public class UpdateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        enable all execute access.
      *        </p>
      *        <p>
-     *        If you are copying data to or from your AWS Snowcone device, see <a
+     *        If you are copying data to or from your Snowcone device, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *        Server on AWS Snowcone</a> for more information.
+     *        Server on Snowcone</a> for more information.
      *        </p>
      *        <p>
      *        For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red
@@ -181,9 +181,9 @@ public class UpdateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * agent to read the files. For the agent to access directories, you must additionally enable all execute access.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <p>
      * For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red Hat
@@ -208,9 +208,9 @@ public class UpdateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      *         enable all execute access.
      *         </p>
      *         <p>
-     *         If you are copying data to or from your AWS Snowcone device, see <a
+     *         If you are copying data to or from your Snowcone device, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *         Server on AWS Snowcone</a> for more information.
+     *         Server on Snowcone</a> for more information.
      *         </p>
      *         <p>
      *         For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red
@@ -239,9 +239,9 @@ public class UpdateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * agent to read the files. For the agent to access directories, you must additionally enable all execute access.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <p>
      * For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red Hat
@@ -267,9 +267,9 @@ public class UpdateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        enable all execute access.
      *        </p>
      *        <p>
-     *        If you are copying data to or from your AWS Snowcone device, see <a
+     *        If you are copying data to or from your Snowcone device, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *        Server on AWS Snowcone</a> for more information.
+     *        Server on Snowcone</a> for more information.
      *        </p>
      *        <p>
      *        For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red

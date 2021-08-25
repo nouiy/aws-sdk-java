@@ -50,14 +50,14 @@ import com.amazonaws.services.datasync.model.transform.*;
  * Client for accessing DataSync. All service calls made using this client are blocking, and will not return until the
  * service call completes.
  * <p>
- * <fullname>AWS DataSync</fullname>
+ * <fullname>DataSync</fullname>
  * <p>
- * AWS DataSync is a managed data transfer service that makes it simpler for you to automate moving data between
- * on-premises storage and Amazon Simple Storage Service (Amazon S3) or Amazon Elastic File System (Amazon EFS).
+ * DataSync is a managed data transfer service that makes it simpler for you to automate moving data between on-premises
+ * storage and Amazon Simple Storage Service (Amazon S3) or Amazon Elastic File System (Amazon EFS).
  * </p>
  * <p>
- * This API interface reference for AWS DataSync contains documentation for a programming interface that you can use to
- * manage AWS DataSync.
+ * This API interface reference for DataSync contains documentation for a programming interface that you can use to
+ * manage DataSync.
  * </p>
  */
 @ThreadSafe
@@ -145,7 +145,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * are transferred to the destination might be incomplete or inconsistent with the source files. However, if you
      * start a new task execution on the same task and you allow the task execution to complete, file content on the
      * destination is complete and consistent. This applies to other unexpected failures that interrupt a task
-     * execution. In all of these cases, AWS DataSync successfully complete the transfer when you start the next task
+     * execution. In all of these cases, DataSync successfully complete the transfer when you start the next task
      * execution.
      * </p>
      * 
@@ -155,7 +155,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.CancelTaskExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CancelTaskExecution" target="_top">AWS
      *      API Documentation</a>
@@ -206,10 +206,10 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Activates an AWS DataSync agent that you have deployed on your host. The activation process associates your agent
-     * with your account. In the activation process, you specify information such as the AWS Region that you want to
-     * activate the agent in. You activate the agent in the AWS Region where your target locations (in Amazon S3 or
-     * Amazon EFS) reside. Your tasks are created in this AWS Region.
+     * Activates an DataSync agent that you have deployed on your host. The activation process associates your agent
+     * with your account. In the activation process, you specify information such as the Amazon Web Services Region that
+     * you want to activate the agent in. You activate the agent in the Amazon Web Services Region where your target
+     * locations (in Amazon S3 or Amazon EFS) reside. Your tasks are created in this Amazon Web Services Region.
      * </p>
      * <p>
      * You can activate the agent in a VPC (virtual private cloud) or provide the agent access to a VPC endpoint so you
@@ -221,8 +221,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * must be AVAILABLE for the task to run.
      * </p>
      * <p>
-     * Agents are automatically updated by AWS on a regular basis, using a mechanism that ensures minimal interruption
-     * to your tasks.
+     * Agents are automatically updated by Amazon Web Services on a regular basis, using a mechanism that ensures
+     * minimal interruption to your tasks.
      * </p>
      * <p/>
      * 
@@ -232,7 +232,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.CreateAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateAgent" target="_top">AWS API
      *      Documentation</a>
@@ -292,7 +292,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.CreateLocationEfs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationEfs" target="_top">AWS API
      *      Documentation</a>
@@ -351,7 +351,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.CreateLocationFsxWindows
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationFsxWindows"
      *      target="_top">AWS API Documentation</a>
@@ -413,7 +413,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.CreateLocationNfs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationNfs" target="_top">AWS API
      *      Documentation</a>
@@ -476,7 +476,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.CreateLocationObjectStorage
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationObjectStorage"
      *      target="_top">AWS API Documentation</a>
@@ -532,9 +532,9 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * Creates an endpoint for an Amazon S3 bucket.
      * </p>
      * <p>
-     * For more information, see
-     * https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli in the
-     * <i>AWS DataSync User Guide</i>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-locations-cli.html#create-location-s3-cli"
+     * >Create an Amazon S3 location</a> in the <i>DataSync User Guide</i>.
      * </p>
      * 
      * @param createLocationS3Request
@@ -543,7 +543,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.CreateLocationS3
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationS3" target="_top">AWS API
      *      Documentation</a>
@@ -603,7 +603,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.CreateLocationSmb
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationSmb" target="_top">AWS API
      *      Documentation</a>
@@ -663,19 +663,19 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * transfer.
      * </p>
      * <p>
-     * When you create a task that transfers data between AWS services in different AWS Regions, one of the two
-     * locations that you specify must reside in the Region where DataSync is being used. The other location must be
-     * specified in a different Region.
+     * When you create a task that transfers data between Amazon Web Services services in different Amazon Web Services
+     * Regions, one of the two locations that you specify must reside in the Region where DataSync is being used. The
+     * other location must be specified in a different Region.
      * </p>
      * <p>
-     * You can transfer data between commercial AWS Regions except for China, or between AWS GovCloud (US-East and
-     * US-West) Regions.
+     * You can transfer data between commercial Amazon Web Services Regions except for China, or between Amazon Web
+     * Services GovCloud (US) Regions.
      * </p>
      * <important>
      * <p>
-     * When you use DataSync to copy files or objects between AWS Regions, you pay for data transfer between Regions.
-     * This is billed as data transfer OUT from your source Region to your destination Region. For more information, see
-     * <a href="http://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer">Data Transfer pricing</a>.
+     * When you use DataSync to copy files or objects between Amazon Web Services Regions, you pay for data transfer
+     * between Regions. This is billed as data transfer OUT from your source Region to your destination Region. For more
+     * information, see <a href="http://aws.amazon.com/ec2/pricing/on-demand/#Data_Transfer">Data Transfer pricing</a>.
      * </p>
      * </important>
      * 
@@ -685,7 +685,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.CreateTask
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateTask" target="_top">AWS API
      *      Documentation</a>
@@ -737,8 +737,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
     /**
      * <p>
      * Deletes an agent. To specify which agent to delete, use the Amazon Resource Name (ARN) of the agent in your
-     * request. The operation disassociates the agent from your AWS account. However, it doesn't delete the agent
-     * virtual machine (VM) from your on-premises environment.
+     * request. The operation disassociates the agent from your Amazon Web Services account. However, it doesn't delete
+     * the agent virtual machine (VM) from your on-premises environment.
      * </p>
      * 
      * @param deleteAgentRequest
@@ -747,7 +747,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DeleteAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DeleteAgent" target="_top">AWS API
      *      Documentation</a>
@@ -798,7 +798,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Deletes the configuration of a location used by AWS DataSync.
+     * Deletes the configuration of a location used by DataSync.
      * </p>
      * 
      * @param deleteLocationRequest
@@ -807,7 +807,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DeleteLocation
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DeleteLocation" target="_top">AWS API
      *      Documentation</a>
@@ -867,7 +867,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DeleteTask
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DeleteTask" target="_top">AWS API
      *      Documentation</a>
@@ -929,7 +929,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DescribeAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeAgent" target="_top">AWS API
      *      Documentation</a>
@@ -989,7 +989,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DescribeLocationEfs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationEfs" target="_top">AWS
      *      API Documentation</a>
@@ -1048,7 +1048,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DescribeLocationFsxWindows
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationFsxWindows"
      *      target="_top">AWS API Documentation</a>
@@ -1110,7 +1110,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DescribeLocationNfs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationNfs" target="_top">AWS
      *      API Documentation</a>
@@ -1173,7 +1173,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DescribeLocationObjectStorage
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationObjectStorage"
      *      target="_top">AWS API Documentation</a>
@@ -1235,7 +1235,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DescribeLocationS3
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationS3" target="_top">AWS
      *      API Documentation</a>
@@ -1295,7 +1295,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DescribeLocationSmb
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationSmb" target="_top">AWS
      *      API Documentation</a>
@@ -1355,7 +1355,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DescribeTask
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeTask" target="_top">AWS API
      *      Documentation</a>
@@ -1415,7 +1415,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.DescribeTaskExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeTaskExecution" target="_top">AWS
      *      API Documentation</a>
@@ -1467,8 +1467,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Returns a list of agents owned by an AWS account in the AWS Region specified in the request. The returned list is
-     * ordered by agent Amazon Resource Name (ARN).
+     * Returns a list of agents owned by an Amazon Web Services account in the Amazon Web Services Region specified in
+     * the request. The returned list is ordered by agent Amazon Resource Name (ARN).
      * </p>
      * <p>
      * By default, this operation returns a maximum of 100 agents. This operation supports pagination that enables you
@@ -1486,7 +1486,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.ListAgents
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListAgents" target="_top">AWS API
      *      Documentation</a>
@@ -1551,7 +1551,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.ListLocations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListLocations" target="_top">AWS API
      *      Documentation</a>
@@ -1611,7 +1611,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListTagsForResource" target="_top">AWS
      *      API Documentation</a>
@@ -1671,7 +1671,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.ListTaskExecutions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListTaskExecutions" target="_top">AWS
      *      API Documentation</a>
@@ -1731,7 +1731,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.ListTasks
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/ListTasks" target="_top">AWS API
      *      Documentation</a>
@@ -1790,8 +1790,8 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * VERIFYING | SUCCESS/FAILURE.
      * </p>
      * <p>
-     * For detailed information, see the Task Execution section in the Components and Terminology topic in the <i>AWS
-     * DataSync User Guide</i>.
+     * For detailed information, see the Task Execution section in the Components and Terminology topic in the
+     * <i>DataSync User Guide</i>.
      * </p>
      * 
      * @param startTaskExecutionRequest
@@ -1800,7 +1800,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.StartTaskExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/StartTaskExecution" target="_top">AWS
      *      API Documentation</a>
@@ -1851,7 +1851,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Applies a key-value pair to an AWS resource.
+     * Applies a key-value pair to an Amazon Web Services resource.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1860,7 +1860,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -1911,7 +1911,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
-     * Removes a tag from an AWS resource.
+     * Removes a tag from an Amazon Web Services resource.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1920,7 +1920,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UntagResource" target="_top">AWS API
      *      Documentation</a>
@@ -1980,7 +1980,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.UpdateAgent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateAgent" target="_top">AWS API
      *      Documentation</a>
@@ -2042,7 +2042,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.UpdateLocationNfs
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateLocationNfs" target="_top">AWS API
      *      Documentation</a>
@@ -2104,7 +2104,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.UpdateLocationObjectStorage
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateLocationObjectStorage"
      *      target="_top">AWS API Documentation</a>
@@ -2168,7 +2168,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.UpdateLocationSmb
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateLocationSmb" target="_top">AWS API
      *      Documentation</a>
@@ -2228,7 +2228,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.UpdateTask
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateTask" target="_top">AWS API
      *      Documentation</a>
@@ -2300,7 +2300,7 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
      * @throws InvalidRequestException
      *         This exception is thrown when the client submits a malformed request.
      * @throws InternalException
-     *         This exception is thrown when an error occurs in the AWS DataSync service.
+     *         This exception is thrown when an error occurs in the DataSync service.
      * @sample AWSDataSync.UpdateTaskExecution
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateTaskExecution" target="_top">AWS
      *      API Documentation</a>

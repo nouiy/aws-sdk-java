@@ -33,7 +33,7 @@ public class CreateArchiveRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String archiveName;
     /**
      * <p>
-     * The ARN of the event source associated with the archive.
+     * The ARN of the event bus that sends events to the archive.
      * </p>
      */
     private String eventSourceArn;
@@ -98,11 +98,11 @@ public class CreateArchiveRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the event source associated with the archive.
+     * The ARN of the event bus that sends events to the archive.
      * </p>
      * 
      * @param eventSourceArn
-     *        The ARN of the event source associated with the archive.
+     *        The ARN of the event bus that sends events to the archive.
      */
 
     public void setEventSourceArn(String eventSourceArn) {
@@ -111,10 +111,10 @@ public class CreateArchiveRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the event source associated with the archive.
+     * The ARN of the event bus that sends events to the archive.
      * </p>
      * 
-     * @return The ARN of the event source associated with the archive.
+     * @return The ARN of the event bus that sends events to the archive.
      */
 
     public String getEventSourceArn() {
@@ -123,11 +123,11 @@ public class CreateArchiveRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the event source associated with the archive.
+     * The ARN of the event bus that sends events to the archive.
      * </p>
      * 
      * @param eventSourceArn
-     *        The ARN of the event source associated with the archive.
+     *        The ARN of the event bus that sends events to the archive.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -47,6 +47,8 @@ public class PolicyMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExcludeResourceTags").build();
     private static final MarshallingInfo<Boolean> REMEDIATIONENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RemediationEnabled").build();
+    private static final MarshallingInfo<Boolean> DELETEUNUSEDFMMANAGEDRESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DeleteUnusedFMManagedResources").build();
     private static final MarshallingInfo<Map> INCLUDEMAP_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("IncludeMap").build();
     private static final MarshallingInfo<Map> EXCLUDEMAP_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -77,6 +79,7 @@ public class PolicyMarshaller {
             protocolMarshaller.marshall(policy.getResourceTags(), RESOURCETAGS_BINDING);
             protocolMarshaller.marshall(policy.getExcludeResourceTags(), EXCLUDERESOURCETAGS_BINDING);
             protocolMarshaller.marshall(policy.getRemediationEnabled(), REMEDIATIONENABLED_BINDING);
+            protocolMarshaller.marshall(policy.getDeleteUnusedFMManagedResources(), DELETEUNUSEDFMMANAGEDRESOURCES_BINDING);
             protocolMarshaller.marshall(policy.getIncludeMap(), INCLUDEMAP_BINDING);
             protocolMarshaller.marshall(policy.getExcludeMap(), EXCLUDEMAP_BINDING);
         } catch (Exception e) {

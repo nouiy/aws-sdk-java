@@ -37,7 +37,7 @@ public class AssignPrivateIpAddressesResult extends com.amazonaws.AmazonWebServi
     private com.amazonaws.internal.SdkInternalList<AssignedPrivateIpAddress> assignedPrivateIpAddresses;
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv4PrefixSpecification> assignedIpv4Prefixes;
@@ -157,10 +157,10 @@ public class AssignPrivateIpAddressesResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      * 
-     * @return The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * @return The IPv4 prefixes that are assigned to the network interface.
      */
 
     public java.util.List<Ipv4PrefixSpecification> getAssignedIpv4Prefixes() {
@@ -172,11 +172,11 @@ public class AssignPrivateIpAddressesResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      * 
      * @param assignedIpv4Prefixes
-     *        The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv4 prefixes that are assigned to the network interface.
      */
 
     public void setAssignedIpv4Prefixes(java.util.Collection<Ipv4PrefixSpecification> assignedIpv4Prefixes) {
@@ -190,7 +190,7 @@ public class AssignPrivateIpAddressesResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -199,7 +199,7 @@ public class AssignPrivateIpAddressesResult extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param assignedIpv4Prefixes
-     *        The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv4 prefixes that are assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,11 +215,11 @@ public class AssignPrivateIpAddressesResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      * 
      * @param assignedIpv4Prefixes
-     *        The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv4 prefixes that are assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

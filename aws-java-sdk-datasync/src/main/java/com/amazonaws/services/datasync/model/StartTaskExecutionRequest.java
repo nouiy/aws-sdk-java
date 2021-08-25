@@ -46,6 +46,14 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private java.util.List<FilterRule> includes;
+    /**
+     * <p>
+     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
+     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
+     * </p>
+     */
+    private java.util.List<FilterRule> excludes;
 
     /**
      * <p>
@@ -212,6 +220,92 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
+     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
+     * </p>
+     * 
+     * @return A list of filter rules that determines which files to exclude from a task. The list should contain a
+     *         single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that
+     *         is, a pipe), for example, <code>"/folder1|/folder2"</code>.
+     */
+
+    public java.util.List<FilterRule> getExcludes() {
+        return excludes;
+    }
+
+    /**
+     * <p>
+     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
+     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
+     * </p>
+     * 
+     * @param excludes
+     *        A list of filter rules that determines which files to exclude from a task. The list should contain a
+     *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>.
+     */
+
+    public void setExcludes(java.util.Collection<FilterRule> excludes) {
+        if (excludes == null) {
+            this.excludes = null;
+            return;
+        }
+
+        this.excludes = new java.util.ArrayList<FilterRule>(excludes);
+    }
+
+    /**
+     * <p>
+     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
+     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setExcludes(java.util.Collection)} or {@link #withExcludes(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param excludes
+     *        A list of filter rules that determines which files to exclude from a task. The list should contain a
+     *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTaskExecutionRequest withExcludes(FilterRule... excludes) {
+        if (this.excludes == null) {
+            setExcludes(new java.util.ArrayList<FilterRule>(excludes.length));
+        }
+        for (FilterRule ele : excludes) {
+            this.excludes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
+     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
+     * </p>
+     * 
+     * @param excludes
+     *        A list of filter rules that determines which files to exclude from a task. The list should contain a
+     *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTaskExecutionRequest withExcludes(java.util.Collection<FilterRule> excludes) {
+        setExcludes(excludes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -228,7 +322,9 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
         if (getOverrideOptions() != null)
             sb.append("OverrideOptions: ").append(getOverrideOptions()).append(",");
         if (getIncludes() != null)
-            sb.append("Includes: ").append(getIncludes());
+            sb.append("Includes: ").append(getIncludes()).append(",");
+        if (getExcludes() != null)
+            sb.append("Excludes: ").append(getExcludes());
         sb.append("}");
         return sb.toString();
     }
@@ -255,6 +351,10 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getIncludes() != null && other.getIncludes().equals(this.getIncludes()) == false)
             return false;
+        if (other.getExcludes() == null ^ this.getExcludes() == null)
+            return false;
+        if (other.getExcludes() != null && other.getExcludes().equals(this.getExcludes()) == false)
+            return false;
         return true;
     }
 
@@ -266,6 +366,7 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getTaskArn() == null) ? 0 : getTaskArn().hashCode());
         hashCode = prime * hashCode + ((getOverrideOptions() == null) ? 0 : getOverrideOptions().hashCode());
         hashCode = prime * hashCode + ((getIncludes() == null) ? 0 : getIncludes().hashCode());
+        hashCode = prime * hashCode + ((getExcludes() == null) ? 0 : getExcludes().hashCode());
         return hashCode;
     }
 

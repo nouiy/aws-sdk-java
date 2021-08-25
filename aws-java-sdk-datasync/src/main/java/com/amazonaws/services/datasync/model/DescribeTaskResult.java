@@ -37,8 +37,8 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * The status of the task that was described.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide</i>.
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide</i>.
      * </p>
      */
     private String status;
@@ -62,7 +62,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
     private String sourceLocationArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS storage resource's location.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services storage resource's location.
      * </p>
      */
     private String destinationLocationArn;
@@ -122,8 +122,8 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
     private TaskSchedule schedule;
     /**
      * <p>
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
-     * troubleshoot issues.
+     * Errors that DataSync encountered during execution of the task. You can use this error code to help troubleshoot
+     * issues.
      * </p>
      */
     private String errorCode;
@@ -140,6 +140,14 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      */
     private java.util.Date creationTime;
+    /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     */
+    private java.util.List<FilterRule> includes;
 
     /**
      * <p>
@@ -186,15 +194,15 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * The status of the task that was described.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide</i>.
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide</i>.
      * </p>
      * 
      * @param status
      *        The status of the task that was described.</p>
      *        <p>
-     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS
-     *        DataSync User Guide</i>.
+     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync
+     *        User Guide</i>.
      * @see TaskStatus
      */
 
@@ -207,14 +215,14 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * The status of the task that was described.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide</i>.
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide</i>.
      * </p>
      * 
      * @return The status of the task that was described.</p>
      *         <p>
-     *         For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS
-     *         DataSync User Guide</i>.
+     *         For detailed information about task execution statuses, see Understanding Task Statuses in the
+     *         <i>DataSync User Guide</i>.
      * @see TaskStatus
      */
 
@@ -227,15 +235,15 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * The status of the task that was described.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide</i>.
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide</i>.
      * </p>
      * 
      * @param status
      *        The status of the task that was described.</p>
      *        <p>
-     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS
-     *        DataSync User Guide</i>.
+     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync
+     *        User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskStatus
      */
@@ -250,15 +258,15 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * The status of the task that was described.
      * </p>
      * <p>
-     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS DataSync
-     * User Guide</i>.
+     * For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync User
+     * Guide</i>.
      * </p>
      * 
      * @param status
      *        The status of the task that was described.</p>
      *        <p>
-     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>AWS
-     *        DataSync User Guide</i>.
+     *        For detailed information about task execution statuses, see Understanding Task Statuses in the <i>DataSync
+     *        User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TaskStatus
      */
@@ -390,11 +398,11 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS storage resource's location.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services storage resource's location.
      * </p>
      * 
      * @param destinationLocationArn
-     *        The Amazon Resource Name (ARN) of the AWS storage resource's location.
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services storage resource's location.
      */
 
     public void setDestinationLocationArn(String destinationLocationArn) {
@@ -403,10 +411,10 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS storage resource's location.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services storage resource's location.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS storage resource's location.
+     * @return The Amazon Resource Name (ARN) of the Amazon Web Services storage resource's location.
      */
 
     public String getDestinationLocationArn() {
@@ -415,11 +423,11 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS storage resource's location.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services storage resource's location.
      * </p>
      * 
      * @param destinationLocationArn
-     *        The Amazon Resource Name (ARN) of the AWS storage resource's location.
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services storage resource's location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -872,12 +880,12 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
-     * troubleshoot issues.
+     * Errors that DataSync encountered during execution of the task. You can use this error code to help troubleshoot
+     * issues.
      * </p>
      * 
      * @param errorCode
-     *        Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
+     *        Errors that DataSync encountered during execution of the task. You can use this error code to help
      *        troubleshoot issues.
      */
 
@@ -887,11 +895,11 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
-     * troubleshoot issues.
+     * Errors that DataSync encountered during execution of the task. You can use this error code to help troubleshoot
+     * issues.
      * </p>
      * 
-     * @return Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
+     * @return Errors that DataSync encountered during execution of the task. You can use this error code to help
      *         troubleshoot issues.
      */
 
@@ -901,12 +909,12 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
-     * troubleshoot issues.
+     * Errors that DataSync encountered during execution of the task. You can use this error code to help troubleshoot
+     * issues.
      * </p>
      * 
      * @param errorCode
-     *        Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
+     *        Errors that DataSync encountered during execution of the task. You can use this error code to help
      *        troubleshoot issues.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1003,6 +1011,92 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     * 
+     * @return A list of filter rules that determines which files to include when running a task. The pattern should
+     *         contain a single filter string that consists of the patterns to include. The patterns are delimited by
+     *         "|" (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     */
+
+    public java.util.List<FilterRule> getIncludes() {
+        return includes;
+    }
+
+    /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     * 
+     * @param includes
+     *        A list of filter rules that determines which files to include when running a task. The pattern should
+     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
+     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     */
+
+    public void setIncludes(java.util.Collection<FilterRule> includes) {
+        if (includes == null) {
+            this.includes = null;
+            return;
+        }
+
+        this.includes = new java.util.ArrayList<FilterRule>(includes);
+    }
+
+    /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setIncludes(java.util.Collection)} or {@link #withIncludes(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param includes
+     *        A list of filter rules that determines which files to include when running a task. The pattern should
+     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
+     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeTaskResult withIncludes(FilterRule... includes) {
+        if (this.includes == null) {
+            setIncludes(new java.util.ArrayList<FilterRule>(includes.length));
+        }
+        for (FilterRule ele : includes) {
+            this.includes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
+     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
+     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * </p>
+     * 
+     * @param includes
+     *        A list of filter rules that determines which files to include when running a task. The pattern should
+     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
+     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeTaskResult withIncludes(java.util.Collection<FilterRule> includes) {
+        setIncludes(includes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1043,7 +1137,9 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
         if (getErrorDetail() != null)
             sb.append("ErrorDetail: ").append(getErrorDetail()).append(",");
         if (getCreationTime() != null)
-            sb.append("CreationTime: ").append(getCreationTime());
+            sb.append("CreationTime: ").append(getCreationTime()).append(",");
+        if (getIncludes() != null)
+            sb.append("Includes: ").append(getIncludes());
         sb.append("}");
         return sb.toString();
     }
@@ -1119,6 +1215,10 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
             return false;
+        if (other.getIncludes() == null ^ this.getIncludes() == null)
+            return false;
+        if (other.getIncludes() != null && other.getIncludes().equals(this.getIncludes()) == false)
+            return false;
         return true;
     }
 
@@ -1142,6 +1242,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getErrorCode() == null) ? 0 : getErrorCode().hashCode());
         hashCode = prime * hashCode + ((getErrorDetail() == null) ? 0 : getErrorDetail().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
+        hashCode = prime * hashCode + ((getIncludes() == null) ? 0 : getIncludes().hashCode());
         return hashCode;
     }
 

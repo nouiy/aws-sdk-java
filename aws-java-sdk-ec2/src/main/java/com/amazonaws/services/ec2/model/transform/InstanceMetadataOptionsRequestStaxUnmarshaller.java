@@ -57,6 +57,11 @@ public class InstanceMetadataOptionsRequestStaxUnmarshaller implements Unmarshal
                     instanceMetadataOptionsRequest.setHttpEndpoint(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("HttpProtocolIpv6", targetDepth)) {
+                    instanceMetadataOptionsRequest.setHttpProtocolIpv6(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return instanceMetadataOptionsRequest;

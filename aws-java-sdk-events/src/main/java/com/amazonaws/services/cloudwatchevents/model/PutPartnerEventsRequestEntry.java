@@ -36,14 +36,14 @@ public class PutPartnerEventsRequestEntry implements Serializable, Cloneable, St
     private java.util.Date time;
     /**
      * <p>
-     * The event source that is generating the evntry.
+     * The event source that is generating the entry.
      * </p>
      */
     private String source;
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      */
     private java.util.List<String> resources;
@@ -102,11 +102,11 @@ public class PutPartnerEventsRequestEntry implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The event source that is generating the evntry.
+     * The event source that is generating the entry.
      * </p>
      * 
      * @param source
-     *        The event source that is generating the evntry.
+     *        The event source that is generating the entry.
      */
 
     public void setSource(String source) {
@@ -115,10 +115,10 @@ public class PutPartnerEventsRequestEntry implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The event source that is generating the evntry.
+     * The event source that is generating the entry.
      * </p>
      * 
-     * @return The event source that is generating the evntry.
+     * @return The event source that is generating the entry.
      */
 
     public String getSource() {
@@ -127,11 +127,11 @@ public class PutPartnerEventsRequestEntry implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * The event source that is generating the evntry.
+     * The event source that is generating the entry.
      * </p>
      * 
      * @param source
-     *        The event source that is generating the evntry.
+     *        The event source that is generating the entry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,12 +142,12 @@ public class PutPartnerEventsRequestEntry implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      * 
-     * @return AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     *         including zero, may be present.
+     * @return Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily
+     *         concerns. Any number, including zero, may be present.
      */
 
     public java.util.List<String> getResources() {
@@ -156,13 +156,13 @@ public class PutPartnerEventsRequestEntry implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      * 
      * @param resources
-     *        AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     *        including zero, may be present.
+     *        Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily
+     *        concerns. Any number, including zero, may be present.
      */
 
     public void setResources(java.util.Collection<String> resources) {
@@ -176,8 +176,8 @@ public class PutPartnerEventsRequestEntry implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -186,8 +186,8 @@ public class PutPartnerEventsRequestEntry implements Serializable, Cloneable, St
      * </p>
      * 
      * @param resources
-     *        AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     *        including zero, may be present.
+     *        Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily
+     *        concerns. Any number, including zero, may be present.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -203,13 +203,13 @@ public class PutPartnerEventsRequestEntry implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     * including zero, may be present.
+     * Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any
+     * number, including zero, may be present.
      * </p>
      * 
      * @param resources
-     *        AWS resources, identified by Amazon Resource Name (ARN), which the event primarily concerns. Any number,
-     *        including zero, may be present.
+     *        Amazon Web Services resources, identified by Amazon Resource Name (ARN), which the event primarily
+     *        concerns. Any number, including zero, may be present.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

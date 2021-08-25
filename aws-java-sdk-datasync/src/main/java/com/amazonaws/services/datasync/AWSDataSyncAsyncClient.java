@@ -25,14 +25,14 @@ import java.util.concurrent.ExecutorService;
  * the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive notification when
  * an asynchronous operation completes.
  * <p>
- * <fullname>AWS DataSync</fullname>
+ * <fullname>DataSync</fullname>
  * <p>
- * AWS DataSync is a managed data transfer service that makes it simpler for you to automate moving data between
- * on-premises storage and Amazon Simple Storage Service (Amazon S3) or Amazon Elastic File System (Amazon EFS).
+ * DataSync is a managed data transfer service that makes it simpler for you to automate moving data between on-premises
+ * storage and Amazon Simple Storage Service (Amazon S3) or Amazon Elastic File System (Amazon EFS).
  * </p>
  * <p>
- * This API interface reference for AWS DataSync contains documentation for a programming interface that you can use to
- * manage AWS DataSync.
+ * This API interface reference for DataSync contains documentation for a programming interface that you can use to
+ * manage DataSync.
  * </p>
  */
 @ThreadSafe

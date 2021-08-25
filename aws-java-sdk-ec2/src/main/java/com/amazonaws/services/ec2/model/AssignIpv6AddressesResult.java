@@ -32,7 +32,7 @@ public class AssignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceRes
     private com.amazonaws.internal.SdkInternalList<String> assignedIpv6Addresses;
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> assignedIpv6Prefixes;
@@ -126,10 +126,10 @@ public class AssignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      * 
-     * @return The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * @return The IPv6 prefixes that are assigned to the network interface.
      */
 
     public java.util.List<String> getAssignedIpv6Prefixes() {
@@ -141,11 +141,11 @@ public class AssignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      * 
      * @param assignedIpv6Prefixes
-     *        The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv6 prefixes that are assigned to the network interface.
      */
 
     public void setAssignedIpv6Prefixes(java.util.Collection<String> assignedIpv6Prefixes) {
@@ -159,7 +159,7 @@ public class AssignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -168,7 +168,7 @@ public class AssignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param assignedIpv6Prefixes
-     *        The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv6 prefixes that are assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,11 +184,11 @@ public class AssignIpv6AddressesResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      * 
      * @param assignedIpv6Prefixes
-     *        The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv6 prefixes that are assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

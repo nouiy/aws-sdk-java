@@ -31,7 +31,7 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A subdirectory in the location’s path. This subdirectory in the EFS file system is used to read data from the EFS
-     * source location or write data to the EFS destination. By default, AWS DataSync uses the root directory.
+     * source location or write data to the EFS destination. By default, DataSync uses the root directory.
      * </p>
      * <note>
      * <p>
@@ -89,7 +89,7 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A subdirectory in the location’s path. This subdirectory in the EFS file system is used to read data from the EFS
-     * source location or write data to the EFS destination. By default, AWS DataSync uses the root directory.
+     * source location or write data to the EFS destination. By default, DataSync uses the root directory.
      * </p>
      * <note>
      * <p>
@@ -99,7 +99,7 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param subdirectory
      *        A subdirectory in the location’s path. This subdirectory in the EFS file system is used to read data from
-     *        the EFS source location or write data to the EFS destination. By default, AWS DataSync uses the root
+     *        the EFS source location or write data to the EFS destination. By default, DataSync uses the root
      *        directory.</p> <note>
      *        <p>
      *        <code>Subdirectory</code> must be specified with forward slashes. For example,
@@ -114,7 +114,7 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A subdirectory in the location’s path. This subdirectory in the EFS file system is used to read data from the EFS
-     * source location or write data to the EFS destination. By default, AWS DataSync uses the root directory.
+     * source location or write data to the EFS destination. By default, DataSync uses the root directory.
      * </p>
      * <note>
      * <p>
@@ -123,7 +123,7 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * </note>
      * 
      * @return A subdirectory in the location’s path. This subdirectory in the EFS file system is used to read data from
-     *         the EFS source location or write data to the EFS destination. By default, AWS DataSync uses the root
+     *         the EFS source location or write data to the EFS destination. By default, DataSync uses the root
      *         directory.</p> <note>
      *         <p>
      *         <code>Subdirectory</code> must be specified with forward slashes. For example,
@@ -138,7 +138,7 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A subdirectory in the location’s path. This subdirectory in the EFS file system is used to read data from the EFS
-     * source location or write data to the EFS destination. By default, AWS DataSync uses the root directory.
+     * source location or write data to the EFS destination. By default, DataSync uses the root directory.
      * </p>
      * <note>
      * <p>
@@ -148,7 +148,7 @@ public class CreateLocationEfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param subdirectory
      *        A subdirectory in the location’s path. This subdirectory in the EFS file system is used to read data from
-     *        the EFS source location or write data to the EFS destination. By default, AWS DataSync uses the root
+     *        the EFS source location or write data to the EFS destination. By default, DataSync uses the root
      *        directory.</p> <note>
      *        <p>
      *        <code>Subdirectory</code> must be specified with forward slashes. For example,

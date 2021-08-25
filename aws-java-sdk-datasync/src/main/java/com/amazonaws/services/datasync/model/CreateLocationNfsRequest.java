@@ -46,9 +46,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * the files. For the agent to access directories, you must additionally enable all execute access.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <p>
      * For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red Hat
@@ -62,9 +62,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * agent that is installed on-premises uses this host name to mount the NFS server in a network.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <note>
      * <p>
@@ -78,9 +78,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * Contains a list of Amazon Resource Names (ARNs) of agents that are used to connect to an NFS server.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      */
     private OnPremConfig onPremConfig;
@@ -116,9 +116,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * the files. For the agent to access directories, you must additionally enable all execute access.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <p>
      * For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red Hat
@@ -144,9 +144,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        execute access.
      *        </p>
      *        <p>
-     *        If you are copying data to or from your AWS Snowcone device, see <a
+     *        If you are copying data to or from your Snowcone device, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *        Server on AWS Snowcone</a> for more information.
+     *        Server on Snowcone</a> for more information.
      *        </p>
      *        <p>
      *        For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red
@@ -175,9 +175,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * the files. For the agent to access directories, you must additionally enable all execute access.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <p>
      * For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red Hat
@@ -202,9 +202,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      *         all execute access.
      *         </p>
      *         <p>
-     *         If you are copying data to or from your AWS Snowcone device, see <a
+     *         If you are copying data to or from your Snowcone device, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *         Server on AWS Snowcone</a> for more information.
+     *         Server on Snowcone</a> for more information.
      *         </p>
      *         <p>
      *         For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red
@@ -233,9 +233,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * the files. For the agent to access directories, you must additionally enable all execute access.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <p>
      * For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red Hat
@@ -261,9 +261,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        execute access.
      *        </p>
      *        <p>
-     *        If you are copying data to or from your AWS Snowcone device, see <a
+     *        If you are copying data to or from your Snowcone device, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *        Server on AWS Snowcone</a> for more information.
+     *        Server on Snowcone</a> for more information.
      *        </p>
      *        <p>
      *        For information about NFS export configuration, see 18.7. The /etc/exports Configuration File in the Red
@@ -282,9 +282,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * agent that is installed on-premises uses this host name to mount the NFS server in a network.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <note>
      * <p>
@@ -297,9 +297,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        server. An agent that is installed on-premises uses this host name to mount the NFS server in a network.
      *        </p>
      *        <p>
-     *        If you are copying data to or from your AWS Snowcone device, see <a
+     *        If you are copying data to or from your Snowcone device, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *        Server on AWS Snowcone</a> for more information.
+     *        Server on Snowcone</a> for more information.
      *        </p>
      *        <note>
      *        <p>
@@ -317,9 +317,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * agent that is installed on-premises uses this host name to mount the NFS server in a network.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <note>
      * <p>
@@ -331,9 +331,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      *         server. An agent that is installed on-premises uses this host name to mount the NFS server in a network.
      *         </p>
      *         <p>
-     *         If you are copying data to or from your AWS Snowcone device, see <a
+     *         If you are copying data to or from your Snowcone device, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *         Server on AWS Snowcone</a> for more information.
+     *         Server on Snowcone</a> for more information.
      *         </p>
      *         <note>
      *         <p>
@@ -351,9 +351,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * agent that is installed on-premises uses this host name to mount the NFS server in a network.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * <note>
      * <p>
@@ -366,9 +366,9 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      *        server. An agent that is installed on-premises uses this host name to mount the NFS server in a network.
      *        </p>
      *        <p>
-     *        If you are copying data to or from your AWS Snowcone device, see <a
+     *        If you are copying data to or from your Snowcone device, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *        Server on AWS Snowcone</a> for more information.
+     *        Server on Snowcone</a> for more information.
      *        </p>
      *        <note>
      *        <p>
@@ -387,17 +387,17 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * Contains a list of Amazon Resource Names (ARNs) of agents that are used to connect to an NFS server.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * 
      * @param onPremConfig
      *        Contains a list of Amazon Resource Names (ARNs) of agents that are used to connect to an NFS server. </p>
      *        <p>
-     *        If you are copying data to or from your AWS Snowcone device, see <a
+     *        If you are copying data to or from your Snowcone device, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *        Server on AWS Snowcone</a> for more information.
+     *        Server on Snowcone</a> for more information.
      */
 
     public void setOnPremConfig(OnPremConfig onPremConfig) {
@@ -409,16 +409,16 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * Contains a list of Amazon Resource Names (ARNs) of agents that are used to connect to an NFS server.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * 
      * @return Contains a list of Amazon Resource Names (ARNs) of agents that are used to connect to an NFS server. </p>
      *         <p>
-     *         If you are copying data to or from your AWS Snowcone device, see <a
+     *         If you are copying data to or from your Snowcone device, see <a
      *         href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *         Server on AWS Snowcone</a> for more information.
+     *         Server on Snowcone</a> for more information.
      */
 
     public OnPremConfig getOnPremConfig() {
@@ -430,17 +430,17 @@ public class CreateLocationNfsRequest extends com.amazonaws.AmazonWebServiceRequ
      * Contains a list of Amazon Resource Names (ARNs) of agents that are used to connect to an NFS server.
      * </p>
      * <p>
-     * If you are copying data to or from your AWS Snowcone device, see <a
+     * If you are copying data to or from your Snowcone device, see <a
      * href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS Server
-     * on AWS Snowcone</a> for more information.
+     * on Snowcone</a> for more information.
      * </p>
      * 
      * @param onPremConfig
      *        Contains a list of Amazon Resource Names (ARNs) of agents that are used to connect to an NFS server. </p>
      *        <p>
-     *        If you are copying data to or from your AWS Snowcone device, see <a
+     *        If you are copying data to or from your Snowcone device, see <a
      *        href="https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone">NFS
-     *        Server on AWS Snowcone</a> for more information.
+     *        Server on Snowcone</a> for more information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

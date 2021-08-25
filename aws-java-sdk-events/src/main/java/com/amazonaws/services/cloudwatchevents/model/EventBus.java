@@ -20,9 +20,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * An event bus receives events from a source and routes them to rules associated with that event bus. Your account's
- * default event bus receives events from AWS services. A custom event bus can receive events from your custom
- * applications and services. A partner event bus receives events from an event source created by an SaaS partner. These
- * events come from the partners services or applications.
+ * default event bus receives events from Amazon Web Services services. A custom event bus can receive events from your
+ * custom applications and services. A partner event bus receives events from an event source created by an SaaS
+ * partner. These events come from the partners services or applications.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/events-2015-10-07/EventBus" target="_top">AWS API
@@ -45,7 +45,8 @@ public class EventBus implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * The permissions policy of the event bus, describing which other AWS accounts can write events to this event bus.
+     * The permissions policy of the event bus, describing which other Amazon Web Services accounts can write events to
+     * this event bus.
      * </p>
      */
     private String policy;
@@ -132,12 +133,13 @@ public class EventBus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The permissions policy of the event bus, describing which other AWS accounts can write events to this event bus.
+     * The permissions policy of the event bus, describing which other Amazon Web Services accounts can write events to
+     * this event bus.
      * </p>
      * 
      * @param policy
-     *        The permissions policy of the event bus, describing which other AWS accounts can write events to this
-     *        event bus.
+     *        The permissions policy of the event bus, describing which other Amazon Web Services accounts can write
+     *        events to this event bus.
      */
 
     public void setPolicy(String policy) {
@@ -146,11 +148,12 @@ public class EventBus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The permissions policy of the event bus, describing which other AWS accounts can write events to this event bus.
+     * The permissions policy of the event bus, describing which other Amazon Web Services accounts can write events to
+     * this event bus.
      * </p>
      * 
-     * @return The permissions policy of the event bus, describing which other AWS accounts can write events to this
-     *         event bus.
+     * @return The permissions policy of the event bus, describing which other Amazon Web Services accounts can write
+     *         events to this event bus.
      */
 
     public String getPolicy() {
@@ -159,12 +162,13 @@ public class EventBus implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The permissions policy of the event bus, describing which other AWS accounts can write events to this event bus.
+     * The permissions policy of the event bus, describing which other Amazon Web Services accounts can write events to
+     * this event bus.
      * </p>
      * 
      * @param policy
-     *        The permissions policy of the event bus, describing which other AWS accounts can write events to this
-     *        event bus.
+     *        The permissions policy of the event bus, describing which other Amazon Web Services accounts can write
+     *        events to this event bus.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

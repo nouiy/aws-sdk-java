@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Describes the IPv4 Prefix Delegation option for a network interface.
+ * Describes the IPv4 prefix option for a network interface.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/Ipv4PrefixSpecificationRequest" target="_top">AWS
@@ -28,24 +28,24 @@ public class Ipv4PrefixSpecificationRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefix. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * The IPv4 prefix. For information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
     private String ipv4Prefix;
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefix. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * The IPv4 prefix. For information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param ipv4Prefix
-     *        The IPv4 Prefix Delegation prefix. For information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        The IPv4 prefix. For information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to
+     *        Amazon EC2 network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public void setIpv4Prefix(String ipv4Prefix) {
@@ -54,14 +54,14 @@ public class Ipv4PrefixSpecificationRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefix. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * The IPv4 prefix. For information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
-     * @return The IPv4 Prefix Delegation prefix. For information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in
-     *         the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * @return The IPv4 prefix. For information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to
+     *         Amazon EC2 network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public String getIpv4Prefix() {
@@ -70,15 +70,15 @@ public class Ipv4PrefixSpecificationRequest implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefix. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * The IPv4 prefix. For information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param ipv4Prefix
-     *        The IPv4 Prefix Delegation prefix. For information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in
-     *        the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        The IPv4 prefix. For information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to
+     *        Amazon EC2 network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

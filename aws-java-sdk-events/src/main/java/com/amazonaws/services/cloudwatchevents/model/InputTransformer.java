@@ -39,7 +39,7 @@ public class InputTransformer implements Serializable, Cloneable, StructuredPojo
      * many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
      * </p>
      * <p>
-     * The keys cannot start with "AWS."
+     * The keys cannot start with "Amazon Web Services."
      * </p>
      */
     private java.util.Map<String, String> inputPathsMap;
@@ -128,7 +128,7 @@ public class InputTransformer implements Serializable, Cloneable, StructuredPojo
      * many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
      * </p>
      * <p>
-     * The keys cannot start with "AWS."
+     * The keys cannot start with "Amazon Web Services."
      * </p>
      * 
      * @return Map of JSON paths to be extracted from the event. You can then insert these in the template in
@@ -138,7 +138,7 @@ public class InputTransformer implements Serializable, Cloneable, StructuredPojo
      *         have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
      *         </p>
      *         <p>
-     *         The keys cannot start with "AWS."
+     *         The keys cannot start with "Amazon Web Services."
      */
 
     public java.util.Map<String, String> getInputPathsMap() {
@@ -155,7 +155,7 @@ public class InputTransformer implements Serializable, Cloneable, StructuredPojo
      * many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
      * </p>
      * <p>
-     * The keys cannot start with "AWS."
+     * The keys cannot start with "Amazon Web Services."
      * </p>
      * 
      * @param inputPathsMap
@@ -166,7 +166,7 @@ public class InputTransformer implements Serializable, Cloneable, StructuredPojo
      *        have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
      *        </p>
      *        <p>
-     *        The keys cannot start with "AWS."
+     *        The keys cannot start with "Amazon Web Services."
      */
 
     public void setInputPathsMap(java.util.Map<String, String> inputPathsMap) {
@@ -183,7 +183,7 @@ public class InputTransformer implements Serializable, Cloneable, StructuredPojo
      * many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
      * </p>
      * <p>
-     * The keys cannot start with "AWS."
+     * The keys cannot start with "Amazon Web Services."
      * </p>
      * 
      * @param inputPathsMap
@@ -194,7 +194,7 @@ public class InputTransformer implements Serializable, Cloneable, StructuredPojo
      *        have as many as 100 key-value pairs. You must use JSON dot notation, not bracket notation.
      *        </p>
      *        <p>
-     *        The keys cannot start with "AWS."
+     *        The keys cannot start with "Amazon Web Services."
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

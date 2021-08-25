@@ -86,28 +86,28 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
     private Integer secondaryPrivateIpAddressCount;
     /**
      * <p>
-     * One or moreIPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv4PrefixSpecificationRequest> ipv4Prefixes;
     /**
      * <p>
-     * The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv4 Prefixes</code> option.
      * </p>
      */
     private Integer ipv4PrefixCount;
     /**
      * <p>
-     * One or moreIPv6 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv6PrefixSpecificationRequest> ipv6Prefixes;
     /**
      * <p>
-     * The number of IPv6 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv6 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv6Prefixes</code> option.
      * </p>
      */
@@ -615,12 +615,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * One or moreIPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
-     * @return One or moreIPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *         if you use the <code>Ipv4PrefixCount</code> option.
+     * @return One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     *         <code>Ipv4PrefixCount</code> option.
      */
 
     public java.util.List<Ipv4PrefixSpecificationRequest> getIpv4Prefixes() {
@@ -632,13 +632,13 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * One or moreIPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or moreIPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *        if you use the <code>Ipv4PrefixCount</code> option.
+     *        One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     *        <code>Ipv4PrefixCount</code> option.
      */
 
     public void setIpv4Prefixes(java.util.Collection<Ipv4PrefixSpecificationRequest> ipv4Prefixes) {
@@ -652,8 +652,8 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * One or moreIPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -662,8 +662,8 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or moreIPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *        if you use the <code>Ipv4PrefixCount</code> option.
+     *        One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     *        <code>Ipv4PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -679,13 +679,13 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * One or moreIPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or moreIPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *        if you use the <code>Ipv4PrefixCount</code> option.
+     *        One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     *        <code>Ipv4PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -696,12 +696,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv4 Prefixes</code> option.
      * </p>
      * 
      * @param ipv4PrefixCount
-     *        The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You
+     *        The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You
      *        cannot use this option if you use the <code>Ipv4 Prefixes</code> option.
      */
 
@@ -711,12 +711,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv4 Prefixes</code> option.
      * </p>
      * 
-     * @return The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface.
-     *         You cannot use this option if you use the <code>Ipv4 Prefixes</code> option.
+     * @return The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You
+     *         cannot use this option if you use the <code>Ipv4 Prefixes</code> option.
      */
 
     public Integer getIpv4PrefixCount() {
@@ -725,12 +725,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv4 Prefixes</code> option.
      * </p>
      * 
      * @param ipv4PrefixCount
-     *        The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You
+     *        The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You
      *        cannot use this option if you use the <code>Ipv4 Prefixes</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -742,12 +742,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * One or moreIPv6 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * 
-     * @return One or moreIPv6 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *         if you use the <code>Ipv6PrefixCount</code> option.
+     * @return One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the
+     *         <code>Ipv6PrefixCount</code> option.
      */
 
     public java.util.List<Ipv6PrefixSpecificationRequest> getIpv6Prefixes() {
@@ -759,13 +759,13 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * One or moreIPv6 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or moreIPv6 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *        if you use the <code>Ipv6PrefixCount</code> option.
+     *        One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the
+     *        <code>Ipv6PrefixCount</code> option.
      */
 
     public void setIpv6Prefixes(java.util.Collection<Ipv6PrefixSpecificationRequest> ipv6Prefixes) {
@@ -779,8 +779,8 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * One or moreIPv6 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -789,8 +789,8 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or moreIPv6 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *        if you use the <code>Ipv6PrefixCount</code> option.
+     *        One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the
+     *        <code>Ipv6PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -806,13 +806,13 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * One or moreIPv6 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv6PrefixCount</code> option.
+     * One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv6PrefixCount</code> option.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        One or moreIPv6 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *        if you use the <code>Ipv6PrefixCount</code> option.
+     *        One or more IPv6 prefixes assigned to the network interface. You cannot use this option if you use the
+     *        <code>Ipv6PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -823,12 +823,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The number of IPv6 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv6 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv6Prefixes</code> option.
      * </p>
      * 
      * @param ipv6PrefixCount
-     *        The number of IPv6 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You
+     *        The number of IPv6 prefixes that Amazon Web Services automatically assigns to the network interface. You
      *        cannot use this option if you use the <code>Ipv6Prefixes</code> option.
      */
 
@@ -838,12 +838,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The number of IPv6 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv6 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv6Prefixes</code> option.
      * </p>
      * 
-     * @return The number of IPv6 Prefix Delegation prefixes that AWS automatically assigns to the network interface.
-     *         You cannot use this option if you use the <code>Ipv6Prefixes</code> option.
+     * @return The number of IPv6 prefixes that Amazon Web Services automatically assigns to the network interface. You
+     *         cannot use this option if you use the <code>Ipv6Prefixes</code> option.
      */
 
     public Integer getIpv6PrefixCount() {
@@ -852,12 +852,12 @@ public class CreateNetworkInterfaceRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The number of IPv6 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv6 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv6Prefixes</code> option.
      * </p>
      * 
      * @param ipv6PrefixCount
-     *        The number of IPv6 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You
+     *        The number of IPv6 prefixes that Amazon Web Services automatically assigns to the network interface. You
      *        cannot use this option if you use the <code>Ipv6Prefixes</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -1787,11 +1787,6 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * EC2 Image Builder
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * Amazon EC2 <code>RebootInstances</code> API call
      * </p>
      * </li>
@@ -2024,11 +2019,6 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * <li>
      * <p>
      * Amazon EC2 <code>CreateSnapshot</code> API call
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * EC2 Image Builder
      * </p>
      * </li>
      * <li>

@@ -69,8 +69,8 @@ public class DescribeRuleResult extends com.amazonaws.AmazonWebServiceResult<com
     private String roleArn;
     /**
      * <p>
-     * If this is a managed rule, created by an AWS service on your behalf, this field displays the principal name of
-     * the AWS service that created the rule.
+     * If this is a managed rule, created by an Amazon Web Services service on your behalf, this field displays the
+     * principal name of the Amazon Web Services service that created the rule.
      * </p>
      */
     private String managedBy;
@@ -417,13 +417,13 @@ public class DescribeRuleResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * If this is a managed rule, created by an AWS service on your behalf, this field displays the principal name of
-     * the AWS service that created the rule.
+     * If this is a managed rule, created by an Amazon Web Services service on your behalf, this field displays the
+     * principal name of the Amazon Web Services service that created the rule.
      * </p>
      * 
      * @param managedBy
-     *        If this is a managed rule, created by an AWS service on your behalf, this field displays the principal
-     *        name of the AWS service that created the rule.
+     *        If this is a managed rule, created by an Amazon Web Services service on your behalf, this field displays
+     *        the principal name of the Amazon Web Services service that created the rule.
      */
 
     public void setManagedBy(String managedBy) {
@@ -432,12 +432,12 @@ public class DescribeRuleResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * If this is a managed rule, created by an AWS service on your behalf, this field displays the principal name of
-     * the AWS service that created the rule.
+     * If this is a managed rule, created by an Amazon Web Services service on your behalf, this field displays the
+     * principal name of the Amazon Web Services service that created the rule.
      * </p>
      * 
-     * @return If this is a managed rule, created by an AWS service on your behalf, this field displays the principal
-     *         name of the AWS service that created the rule.
+     * @return If this is a managed rule, created by an Amazon Web Services service on your behalf, this field displays
+     *         the principal name of the Amazon Web Services service that created the rule.
      */
 
     public String getManagedBy() {
@@ -446,13 +446,13 @@ public class DescribeRuleResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * If this is a managed rule, created by an AWS service on your behalf, this field displays the principal name of
-     * the AWS service that created the rule.
+     * If this is a managed rule, created by an Amazon Web Services service on your behalf, this field displays the
+     * principal name of the Amazon Web Services service that created the rule.
      * </p>
      * 
      * @param managedBy
-     *        If this is a managed rule, created by an AWS service on your behalf, this field displays the principal
-     *        name of the AWS service that created the rule.
+     *        If this is a managed rule, created by an Amazon Web Services service on your behalf, this field displays
+     *        the principal name of the Amazon Web Services service that created the rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

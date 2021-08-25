@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This exception is thrown when an error occurs in the AWS DataSync service.
+ * This exception is thrown when an error occurs in the DataSync service.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

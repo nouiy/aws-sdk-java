@@ -31,8 +31,7 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Your agent activation key. You can get the activation key either by sending an HTTP GET request with redirects
-     * that enable you to get the agent IP address (port 80). Alternatively, you can get it from the AWS DataSync
-     * console.
+     * that enable you to get the agent IP address (port 80). Alternatively, you can get it from the DataSync console.
      * </p>
      * <p>
      * The redirect URL returned in the response provides you the activation key for your agent in the query string
@@ -40,7 +39,7 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
      * are merely defaults. The arguments you pass to this API call determine the actual configuration of your agent.
      * </p>
      * <p>
-     * For more information, see Activating an Agent in the <i>AWS DataSync User Guide.</i>
+     * For more information, see Activating an Agent in the <i>DataSync User Guide.</i>
      * </p>
      */
     private String activationKey;
@@ -98,8 +97,7 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Your agent activation key. You can get the activation key either by sending an HTTP GET request with redirects
-     * that enable you to get the agent IP address (port 80). Alternatively, you can get it from the AWS DataSync
-     * console.
+     * that enable you to get the agent IP address (port 80). Alternatively, you can get it from the DataSync console.
      * </p>
      * <p>
      * The redirect URL returned in the response provides you the activation key for your agent in the query string
@@ -107,13 +105,13 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
      * are merely defaults. The arguments you pass to this API call determine the actual configuration of your agent.
      * </p>
      * <p>
-     * For more information, see Activating an Agent in the <i>AWS DataSync User Guide.</i>
+     * For more information, see Activating an Agent in the <i>DataSync User Guide.</i>
      * </p>
      * 
      * @param activationKey
      *        Your agent activation key. You can get the activation key either by sending an HTTP GET request with
      *        redirects that enable you to get the agent IP address (port 80). Alternatively, you can get it from the
-     *        AWS DataSync console.</p>
+     *        DataSync console.</p>
      *        <p>
      *        The redirect URL returned in the response provides you the activation key for your agent in the query
      *        string parameter <code>activationKey</code>. It might also include other activation-related parameters;
@@ -121,7 +119,7 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        configuration of your agent.
      *        </p>
      *        <p>
-     *        For more information, see Activating an Agent in the <i>AWS DataSync User Guide.</i>
+     *        For more information, see Activating an Agent in the <i>DataSync User Guide.</i>
      */
 
     public void setActivationKey(String activationKey) {
@@ -131,8 +129,7 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Your agent activation key. You can get the activation key either by sending an HTTP GET request with redirects
-     * that enable you to get the agent IP address (port 80). Alternatively, you can get it from the AWS DataSync
-     * console.
+     * that enable you to get the agent IP address (port 80). Alternatively, you can get it from the DataSync console.
      * </p>
      * <p>
      * The redirect URL returned in the response provides you the activation key for your agent in the query string
@@ -140,12 +137,12 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
      * are merely defaults. The arguments you pass to this API call determine the actual configuration of your agent.
      * </p>
      * <p>
-     * For more information, see Activating an Agent in the <i>AWS DataSync User Guide.</i>
+     * For more information, see Activating an Agent in the <i>DataSync User Guide.</i>
      * </p>
      * 
      * @return Your agent activation key. You can get the activation key either by sending an HTTP GET request with
      *         redirects that enable you to get the agent IP address (port 80). Alternatively, you can get it from the
-     *         AWS DataSync console.</p>
+     *         DataSync console.</p>
      *         <p>
      *         The redirect URL returned in the response provides you the activation key for your agent in the query
      *         string parameter <code>activationKey</code>. It might also include other activation-related parameters;
@@ -153,7 +150,7 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         configuration of your agent.
      *         </p>
      *         <p>
-     *         For more information, see Activating an Agent in the <i>AWS DataSync User Guide.</i>
+     *         For more information, see Activating an Agent in the <i>DataSync User Guide.</i>
      */
 
     public String getActivationKey() {
@@ -163,8 +160,7 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Your agent activation key. You can get the activation key either by sending an HTTP GET request with redirects
-     * that enable you to get the agent IP address (port 80). Alternatively, you can get it from the AWS DataSync
-     * console.
+     * that enable you to get the agent IP address (port 80). Alternatively, you can get it from the DataSync console.
      * </p>
      * <p>
      * The redirect URL returned in the response provides you the activation key for your agent in the query string
@@ -172,13 +168,13 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
      * are merely defaults. The arguments you pass to this API call determine the actual configuration of your agent.
      * </p>
      * <p>
-     * For more information, see Activating an Agent in the <i>AWS DataSync User Guide.</i>
+     * For more information, see Activating an Agent in the <i>DataSync User Guide.</i>
      * </p>
      * 
      * @param activationKey
      *        Your agent activation key. You can get the activation key either by sending an HTTP GET request with
      *        redirects that enable you to get the agent IP address (port 80). Alternatively, you can get it from the
-     *        AWS DataSync console.</p>
+     *        DataSync console.</p>
      *        <p>
      *        The redirect URL returned in the response provides you the activation key for your agent in the query
      *        string parameter <code>activationKey</code>. It might also include other activation-related parameters;
@@ -186,7 +182,7 @@ public class CreateAgentRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        configuration of your agent.
      *        </p>
      *        <p>
-     *        For more information, see Activating an Agent in the <i>AWS DataSync User Guide.</i>
+     *        For more information, see Activating an Agent in the <i>DataSync User Guide.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

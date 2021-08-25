@@ -32,7 +32,7 @@ public class TaskSchedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination
+     * A cron expression that specifies when DataSync initiates a scheduled transfer from a source to a destination
      * location.
      * </p>
      */
@@ -40,12 +40,12 @@ public class TaskSchedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination
+     * A cron expression that specifies when DataSync initiates a scheduled transfer from a source to a destination
      * location.
      * </p>
      * 
      * @param scheduleExpression
-     *        A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a
+     *        A cron expression that specifies when DataSync initiates a scheduled transfer from a source to a
      *        destination location.
      */
 
@@ -55,11 +55,11 @@ public class TaskSchedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination
+     * A cron expression that specifies when DataSync initiates a scheduled transfer from a source to a destination
      * location.
      * </p>
      * 
-     * @return A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a
+     * @return A cron expression that specifies when DataSync initiates a scheduled transfer from a source to a
      *         destination location.
      */
 
@@ -69,12 +69,12 @@ public class TaskSchedule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a destination
+     * A cron expression that specifies when DataSync initiates a scheduled transfer from a source to a destination
      * location.
      * </p>
      * 
      * @param scheduleExpression
-     *        A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a source to a
+     *        A cron expression that specifies when DataSync initiates a scheduled transfer from a source to a
      *        destination location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

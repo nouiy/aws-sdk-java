@@ -633,6 +633,10 @@ public class RunInstancesRequestMarshaller implements Marshaller<Request<RunInst
             if (metadataOptions.getHttpEndpoint() != null) {
                 request.addParameter("MetadataOptions.HttpEndpoint", StringUtils.fromString(metadataOptions.getHttpEndpoint()));
             }
+
+            if (metadataOptions.getHttpProtocolIpv6() != null) {
+                request.addParameter("MetadataOptions.HttpProtocolIpv6", StringUtils.fromString(metadataOptions.getHttpProtocolIpv6()));
+            }
         }
 
         EnclaveOptionsRequest enclaveOptions = runInstancesRequest.getEnclaveOptions();

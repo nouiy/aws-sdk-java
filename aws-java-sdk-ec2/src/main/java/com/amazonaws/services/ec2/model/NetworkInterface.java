@@ -112,13 +112,13 @@ public class NetworkInterface implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<NetworkInterfacePrivateIpAddress> privateIpAddresses;
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv4PrefixSpecification> ipv4Prefixes;
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Ipv6PrefixSpecification> ipv6Prefixes;
@@ -859,10 +859,10 @@ public class NetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      * 
-     * @return The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * @return The IPv4 prefixes that are assigned to the network interface.
      */
 
     public java.util.List<Ipv4PrefixSpecification> getIpv4Prefixes() {
@@ -874,11 +874,11 @@ public class NetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv4 prefixes that are assigned to the network interface.
      */
 
     public void setIpv4Prefixes(java.util.Collection<Ipv4PrefixSpecification> ipv4Prefixes) {
@@ -892,7 +892,7 @@ public class NetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -901,7 +901,7 @@ public class NetworkInterface implements Serializable, Cloneable {
      * </p>
      * 
      * @param ipv4Prefixes
-     *        The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv4 prefixes that are assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -917,11 +917,11 @@ public class NetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv4 prefixes that are assigned to the network interface.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        The IPv4 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv4 prefixes that are assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -932,10 +932,10 @@ public class NetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      * 
-     * @return The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * @return The IPv6 prefixes that are assigned to the network interface.
      */
 
     public java.util.List<Ipv6PrefixSpecification> getIpv6Prefixes() {
@@ -947,11 +947,11 @@ public class NetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv6 prefixes that are assigned to the network interface.
      */
 
     public void setIpv6Prefixes(java.util.Collection<Ipv6PrefixSpecification> ipv6Prefixes) {
@@ -965,7 +965,7 @@ public class NetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -974,7 +974,7 @@ public class NetworkInterface implements Serializable, Cloneable {
      * </p>
      * 
      * @param ipv6Prefixes
-     *        The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv6 prefixes that are assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -990,11 +990,11 @@ public class NetworkInterface implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     * The IPv6 prefixes that are assigned to the network interface.
      * </p>
      * 
      * @param ipv6Prefixes
-     *        The IPv6 Prefix Delegation prefixes that are assigned to the network interface.
+     *        The IPv6 prefixes that are assigned to the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

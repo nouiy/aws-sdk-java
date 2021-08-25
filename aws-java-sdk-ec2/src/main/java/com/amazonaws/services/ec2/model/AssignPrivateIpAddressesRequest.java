@@ -60,14 +60,14 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
     private Integer secondaryPrivateIpAddressCount;
     /**
      * <p>
-     * One or more IPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> ipv4Prefixes;
     /**
      * <p>
-     * The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv4 Prefixes</code> option.
      * </p>
      */
@@ -326,12 +326,12 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * One or more IPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
-     * @return One or more IPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *         if you use the <code>Ipv4PrefixCount</code> option.
+     * @return One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     *         <code>Ipv4PrefixCount</code> option.
      */
 
     public java.util.List<String> getIpv4Prefixes() {
@@ -343,13 +343,13 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * One or more IPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *        if you use the <code>Ipv4PrefixCount</code> option.
+     *        One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     *        <code>Ipv4PrefixCount</code> option.
      */
 
     public void setIpv4Prefixes(java.util.Collection<String> ipv4Prefixes) {
@@ -363,8 +363,8 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * One or more IPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -373,8 +373,8 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *        if you use the <code>Ipv4PrefixCount</code> option.
+     *        One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     *        <code>Ipv4PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -390,13 +390,13 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * One or more IPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option if you
-     * use the <code>Ipv4PrefixCount</code> option.
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     * <code>Ipv4PrefixCount</code> option.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        One or more IPv4 Prefix Delegation prefixes assigned to the network interface. You cannot use this option
-     *        if you use the <code>Ipv4PrefixCount</code> option.
+     *        One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the
+     *        <code>Ipv4PrefixCount</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -407,12 +407,12 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv4 Prefixes</code> option.
      * </p>
      * 
      * @param ipv4PrefixCount
-     *        The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You
+     *        The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You
      *        cannot use this option if you use the <code>Ipv4 Prefixes</code> option.
      */
 
@@ -422,12 +422,12 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv4 Prefixes</code> option.
      * </p>
      * 
-     * @return The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface.
-     *         You cannot use this option if you use the <code>Ipv4 Prefixes</code> option.
+     * @return The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You
+     *         cannot use this option if you use the <code>Ipv4 Prefixes</code> option.
      */
 
     public Integer getIpv4PrefixCount() {
@@ -436,12 +436,12 @@ public class AssignPrivateIpAddressesRequest extends AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You cannot
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot
      * use this option if you use the <code>Ipv4 Prefixes</code> option.
      * </p>
      * 
      * @param ipv4PrefixCount
-     *        The number of IPv4 Prefix Delegation prefixes that AWS automatically assigns to the network interface. You
+     *        The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You
      *        cannot use this option if you use the <code>Ipv4 Prefixes</code> option.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

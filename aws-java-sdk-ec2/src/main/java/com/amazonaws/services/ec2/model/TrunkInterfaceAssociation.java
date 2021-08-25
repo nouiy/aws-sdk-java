@@ -16,6 +16,12 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
+ * <note>
+ * <p>
+ * Currently available in <b>limited preview only</b>. If you are interested in using this feature, contact your account
+ * manager.
+ * </p>
+ * </note>
  * <p>
  * Information about an association between a branch network interface with a trunk network interface.
  * </p>
@@ -64,7 +70,7 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
     private Integer greKey;
     /**
      * <p>
-     * The tags.
+     * The tags for the trunk interface associaton.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
@@ -330,10 +336,10 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags.
+     * The tags for the trunk interface associaton.
      * </p>
      * 
-     * @return The tags.
+     * @return The tags for the trunk interface associaton.
      */
 
     public java.util.List<Tag> getTags() {
@@ -345,11 +351,11 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags.
+     * The tags for the trunk interface associaton.
      * </p>
      * 
      * @param tags
-     *        The tags.
+     *        The tags for the trunk interface associaton.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -363,7 +369,7 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags.
+     * The tags for the trunk interface associaton.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -372,7 +378,7 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
      * </p>
      * 
      * @param tags
-     *        The tags.
+     *        The tags for the trunk interface associaton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -388,11 +394,11 @@ public class TrunkInterfaceAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The tags.
+     * The tags for the trunk interface associaton.
      * </p>
      * 
      * @param tags
-     *        The tags.
+     *        The tags for the trunk interface associaton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

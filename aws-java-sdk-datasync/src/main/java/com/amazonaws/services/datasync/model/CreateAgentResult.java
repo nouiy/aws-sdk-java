@@ -29,7 +29,7 @@ public class CreateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the agent. Use the <code>ListAgents</code> operation to return a list of agents
-     * for your account and AWS Region.
+     * for your account and Amazon Web Services Region.
      * </p>
      */
     private String agentArn;
@@ -37,12 +37,12 @@ public class CreateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the agent. Use the <code>ListAgents</code> operation to return a list of agents
-     * for your account and AWS Region.
+     * for your account and Amazon Web Services Region.
      * </p>
      * 
      * @param agentArn
      *        The Amazon Resource Name (ARN) of the agent. Use the <code>ListAgents</code> operation to return a list of
-     *        agents for your account and AWS Region.
+     *        agents for your account and Amazon Web Services Region.
      */
 
     public void setAgentArn(String agentArn) {
@@ -52,11 +52,11 @@ public class CreateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the agent. Use the <code>ListAgents</code> operation to return a list of agents
-     * for your account and AWS Region.
+     * for your account and Amazon Web Services Region.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the agent. Use the <code>ListAgents</code> operation to return a list
-     *         of agents for your account and AWS Region.
+     *         of agents for your account and Amazon Web Services Region.
      */
 
     public String getAgentArn() {
@@ -66,12 +66,12 @@ public class CreateAgentResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the agent. Use the <code>ListAgents</code> operation to return a list of agents
-     * for your account and AWS Region.
+     * for your account and Amazon Web Services Region.
      * </p>
      * 
      * @param agentArn
      *        The Amazon Resource Name (ARN) of the agent. Use the <code>ListAgents</code> operation to return a list of
-     *        agents for your account and AWS Region.
+     *        agents for your account and Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

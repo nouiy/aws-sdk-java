@@ -88,6 +88,10 @@ public class PolicyJsonUnmarshaller implements Unmarshaller<Policy, JsonUnmarsha
                     context.nextToken();
                     policy.setRemediationEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("DeleteUnusedFMManagedResources", targetDepth)) {
+                    context.nextToken();
+                    policy.setDeleteUnusedFMManagedResources(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("IncludeMap", targetDepth)) {
                     context.nextToken();
                     policy.setIncludeMap(new MapUnmarshaller<String, java.util.List<String>>(context.getUnmarshaller(String.class),

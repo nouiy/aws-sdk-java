@@ -72,6 +72,12 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * </note>
      */
     private String httpEndpoint;
+    /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     */
+    private String httpProtocolIpv6;
 
     /**
      * <p>
@@ -426,6 +432,65 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     * 
+     * @param httpProtocolIpv6
+     *        Enables or disables the IPv6 endpoint for the instance metadata service.
+     * @see InstanceMetadataProtocolState
+     */
+
+    public void setHttpProtocolIpv6(String httpProtocolIpv6) {
+        this.httpProtocolIpv6 = httpProtocolIpv6;
+    }
+
+    /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     * 
+     * @return Enables or disables the IPv6 endpoint for the instance metadata service.
+     * @see InstanceMetadataProtocolState
+     */
+
+    public String getHttpProtocolIpv6() {
+        return this.httpProtocolIpv6;
+    }
+
+    /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     * 
+     * @param httpProtocolIpv6
+     *        Enables or disables the IPv6 endpoint for the instance metadata service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceMetadataProtocolState
+     */
+
+    public ModifyInstanceMetadataOptionsRequest withHttpProtocolIpv6(String httpProtocolIpv6) {
+        setHttpProtocolIpv6(httpProtocolIpv6);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables or disables the IPv6 endpoint for the instance metadata service.
+     * </p>
+     * 
+     * @param httpProtocolIpv6
+     *        Enables or disables the IPv6 endpoint for the instance metadata service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceMetadataProtocolState
+     */
+
+    public ModifyInstanceMetadataOptionsRequest withHttpProtocolIpv6(InstanceMetadataProtocolState httpProtocolIpv6) {
+        this.httpProtocolIpv6 = httpProtocolIpv6.toString();
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -455,7 +520,9 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
         if (getHttpPutResponseHopLimit() != null)
             sb.append("HttpPutResponseHopLimit: ").append(getHttpPutResponseHopLimit()).append(",");
         if (getHttpEndpoint() != null)
-            sb.append("HttpEndpoint: ").append(getHttpEndpoint());
+            sb.append("HttpEndpoint: ").append(getHttpEndpoint()).append(",");
+        if (getHttpProtocolIpv6() != null)
+            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6());
         sb.append("}");
         return sb.toString();
     }
@@ -486,6 +553,10 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
             return false;
         if (other.getHttpEndpoint() != null && other.getHttpEndpoint().equals(this.getHttpEndpoint()) == false)
             return false;
+        if (other.getHttpProtocolIpv6() == null ^ this.getHttpProtocolIpv6() == null)
+            return false;
+        if (other.getHttpProtocolIpv6() != null && other.getHttpProtocolIpv6().equals(this.getHttpProtocolIpv6()) == false)
+            return false;
         return true;
     }
 
@@ -498,6 +569,7 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
         hashCode = prime * hashCode + ((getHttpTokens() == null) ? 0 : getHttpTokens().hashCode());
         hashCode = prime * hashCode + ((getHttpPutResponseHopLimit() == null) ? 0 : getHttpPutResponseHopLimit().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpoint() == null) ? 0 : getHttpEndpoint().hashCode());
+        hashCode = prime * hashCode + ((getHttpProtocolIpv6() == null) ? 0 : getHttpProtocolIpv6().hashCode());
         return hashCode;
     }
 

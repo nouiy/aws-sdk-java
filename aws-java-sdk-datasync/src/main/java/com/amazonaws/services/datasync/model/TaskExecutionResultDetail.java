@@ -31,7 +31,7 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the PREPARING phase.
+     * The total time in milliseconds that DataSync spent in the PREPARING phase.
      * </p>
      */
     private Long prepareDuration;
@@ -43,14 +43,14 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
     private String prepareStatus;
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync took to transfer the file from the source to the destination
+     * The total time in milliseconds that DataSync took to transfer the file from the source to the destination
      * location.
      * </p>
      */
     private Long totalDuration;
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the TRANSFERRING phase.
+     * The total time in milliseconds that DataSync spent in the TRANSFERRING phase.
      * </p>
      */
     private Long transferDuration;
@@ -62,7 +62,7 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
     private String transferStatus;
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the VERIFYING phase.
+     * The total time in milliseconds that DataSync spent in the VERIFYING phase.
      * </p>
      */
     private Long verifyDuration;
@@ -74,8 +74,8 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
     private String verifyStatus;
     /**
      * <p>
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
-     * troubleshoot issues.
+     * Errors that DataSync encountered during execution of the task. You can use this error code to help troubleshoot
+     * issues.
      * </p>
      */
     private String errorCode;
@@ -89,11 +89,11 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the PREPARING phase.
+     * The total time in milliseconds that DataSync spent in the PREPARING phase.
      * </p>
      * 
      * @param prepareDuration
-     *        The total time in milliseconds that AWS DataSync spent in the PREPARING phase.
+     *        The total time in milliseconds that DataSync spent in the PREPARING phase.
      */
 
     public void setPrepareDuration(Long prepareDuration) {
@@ -102,10 +102,10 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the PREPARING phase.
+     * The total time in milliseconds that DataSync spent in the PREPARING phase.
      * </p>
      * 
-     * @return The total time in milliseconds that AWS DataSync spent in the PREPARING phase.
+     * @return The total time in milliseconds that DataSync spent in the PREPARING phase.
      */
 
     public Long getPrepareDuration() {
@@ -114,11 +114,11 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the PREPARING phase.
+     * The total time in milliseconds that DataSync spent in the PREPARING phase.
      * </p>
      * 
      * @param prepareDuration
-     *        The total time in milliseconds that AWS DataSync spent in the PREPARING phase.
+     *        The total time in milliseconds that DataSync spent in the PREPARING phase.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -188,13 +188,13 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync took to transfer the file from the source to the destination
+     * The total time in milliseconds that DataSync took to transfer the file from the source to the destination
      * location.
      * </p>
      * 
      * @param totalDuration
-     *        The total time in milliseconds that AWS DataSync took to transfer the file from the source to the
-     *        destination location.
+     *        The total time in milliseconds that DataSync took to transfer the file from the source to the destination
+     *        location.
      */
 
     public void setTotalDuration(Long totalDuration) {
@@ -203,12 +203,12 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync took to transfer the file from the source to the destination
+     * The total time in milliseconds that DataSync took to transfer the file from the source to the destination
      * location.
      * </p>
      * 
-     * @return The total time in milliseconds that AWS DataSync took to transfer the file from the source to the
-     *         destination location.
+     * @return The total time in milliseconds that DataSync took to transfer the file from the source to the destination
+     *         location.
      */
 
     public Long getTotalDuration() {
@@ -217,13 +217,13 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync took to transfer the file from the source to the destination
+     * The total time in milliseconds that DataSync took to transfer the file from the source to the destination
      * location.
      * </p>
      * 
      * @param totalDuration
-     *        The total time in milliseconds that AWS DataSync took to transfer the file from the source to the
-     *        destination location.
+     *        The total time in milliseconds that DataSync took to transfer the file from the source to the destination
+     *        location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -234,11 +234,11 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the TRANSFERRING phase.
+     * The total time in milliseconds that DataSync spent in the TRANSFERRING phase.
      * </p>
      * 
      * @param transferDuration
-     *        The total time in milliseconds that AWS DataSync spent in the TRANSFERRING phase.
+     *        The total time in milliseconds that DataSync spent in the TRANSFERRING phase.
      */
 
     public void setTransferDuration(Long transferDuration) {
@@ -247,10 +247,10 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the TRANSFERRING phase.
+     * The total time in milliseconds that DataSync spent in the TRANSFERRING phase.
      * </p>
      * 
-     * @return The total time in milliseconds that AWS DataSync spent in the TRANSFERRING phase.
+     * @return The total time in milliseconds that DataSync spent in the TRANSFERRING phase.
      */
 
     public Long getTransferDuration() {
@@ -259,11 +259,11 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the TRANSFERRING phase.
+     * The total time in milliseconds that DataSync spent in the TRANSFERRING phase.
      * </p>
      * 
      * @param transferDuration
-     *        The total time in milliseconds that AWS DataSync spent in the TRANSFERRING phase.
+     *        The total time in milliseconds that DataSync spent in the TRANSFERRING phase.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -333,11 +333,11 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the VERIFYING phase.
+     * The total time in milliseconds that DataSync spent in the VERIFYING phase.
      * </p>
      * 
      * @param verifyDuration
-     *        The total time in milliseconds that AWS DataSync spent in the VERIFYING phase.
+     *        The total time in milliseconds that DataSync spent in the VERIFYING phase.
      */
 
     public void setVerifyDuration(Long verifyDuration) {
@@ -346,10 +346,10 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the VERIFYING phase.
+     * The total time in milliseconds that DataSync spent in the VERIFYING phase.
      * </p>
      * 
-     * @return The total time in milliseconds that AWS DataSync spent in the VERIFYING phase.
+     * @return The total time in milliseconds that DataSync spent in the VERIFYING phase.
      */
 
     public Long getVerifyDuration() {
@@ -358,11 +358,11 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The total time in milliseconds that AWS DataSync spent in the VERIFYING phase.
+     * The total time in milliseconds that DataSync spent in the VERIFYING phase.
      * </p>
      * 
      * @param verifyDuration
-     *        The total time in milliseconds that AWS DataSync spent in the VERIFYING phase.
+     *        The total time in milliseconds that DataSync spent in the VERIFYING phase.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -432,12 +432,12 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
-     * troubleshoot issues.
+     * Errors that DataSync encountered during execution of the task. You can use this error code to help troubleshoot
+     * issues.
      * </p>
      * 
      * @param errorCode
-     *        Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
+     *        Errors that DataSync encountered during execution of the task. You can use this error code to help
      *        troubleshoot issues.
      */
 
@@ -447,11 +447,11 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
-     * troubleshoot issues.
+     * Errors that DataSync encountered during execution of the task. You can use this error code to help troubleshoot
+     * issues.
      * </p>
      * 
-     * @return Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
+     * @return Errors that DataSync encountered during execution of the task. You can use this error code to help
      *         troubleshoot issues.
      */
 
@@ -461,12 +461,12 @@ public class TaskExecutionResultDetail implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
-     * troubleshoot issues.
+     * Errors that DataSync encountered during execution of the task. You can use this error code to help troubleshoot
+     * issues.
      * </p>
      * 
      * @param errorCode
-     *        Errors that AWS DataSync encountered during execution of the task. You can use this error code to help
+     *        Errors that DataSync encountered during execution of the task. You can use this error code to help
      *        troubleshoot issues.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

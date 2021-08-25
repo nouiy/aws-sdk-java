@@ -972,8 +972,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * You can optionally use Prefix Delegation on the network interface. You must specify either the IPV6 Prefix
      * Delegation prefixes, or the IPv6 Prefix Delegation count. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param assignIpv6AddressesRequest
@@ -1055,8 +1055,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * You can optionally use Prefix Delegation on the network interface. You must specify either the IPv4 Prefix
      * Delegation prefixes, or the IPv4 Prefix Delegation count. For information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-delegation">Prefix Delegation</a> in the
-     * <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-prefix-eni.html"> Assigning prefixes to Amazon EC2
+     * network interfaces</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param assignPrivateIpAddressesRequest
@@ -1769,6 +1769,12 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     }
 
     /**
+     * <note>
+     * <p>
+     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
+     * your account manager.
+     * </p>
+     * </note>
      * <p>
      * Associates a branch network interface with a trunk network interface.
      * </p>
@@ -1778,10 +1784,6 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * >create-network-interface</a> command and set <code>--interface-type</code> to <code>trunk</code>. You must also
      * create a network interface for each branch network interface that you want to associate with the trunk network
      * interface.
-     * </p>
-     * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/eni-trunking.html">
-     * Network interface trunking</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param associateTrunkInterfaceRequest
@@ -18084,6 +18086,12 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     }
 
     /**
+     * <note>
+     * <p>
+     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
+     * your account manager.
+     * </p>
+     * </note>
      * <p>
      * Describes one or more network interface trunk associations.
      * </p>
@@ -20577,6 +20585,12 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
     }
 
     /**
+     * <note>
+     * <p>
+     * This API action is currently in <b>limited preview only</b>. If you are interested in using this feature, contact
+     * your account manager.
+     * </p>
+     * </note>
      * <p>
      * Removes an association between a branch network interface with a trunk network interface.
      * </p>

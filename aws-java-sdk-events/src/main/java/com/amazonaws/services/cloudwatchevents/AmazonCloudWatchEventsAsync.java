@@ -26,21 +26,21 @@ import com.amazonaws.services.cloudwatchevents.model.*;
  * </p>
  * <p>
  * <p>
- * Amazon EventBridge helps you to respond to state changes in your AWS resources. When your resources change state,
- * they automatically send events into an event stream. You can create rules that match selected events in the stream
- * and route them to targets to take action. You can also use rules to take action on a predetermined schedule. For
- * example, you can configure rules to:
+ * Amazon EventBridge helps you to respond to state changes in your Amazon Web Services resources. When your resources
+ * change state, they automatically send events to an event stream. You can create rules that match selected events in
+ * the stream and route them to targets to take action. You can also use rules to take action on a predetermined
+ * schedule. For example, you can configure rules to:
  * </p>
  * <ul>
  * <li>
  * <p>
- * Automatically invoke an AWS Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
+ * Automatically invoke an Lambda function to update DNS entries when an event notifies you that Amazon EC2 instance
  * enters the running state.
  * </p>
  * </li>
  * <li>
  * <p>
- * Direct specific API records from AWS CloudTrail to an Amazon Kinesis data stream for detailed analysis of potential
+ * Direct specific API records from CloudTrail to an Amazon Kinesis data stream for detailed analysis of potential
  * security or availability risks.
  * </p>
  * </li>
@@ -260,19 +260,21 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * Called by an SaaS partner to create a partner event source. This operation is not used by AWS customers.
+     * Called by an SaaS partner to create a partner event source. This operation is not used by Amazon Web Services
+     * customers.
      * </p>
      * <p>
-     * Each partner event source can be used by one AWS account to create a matching partner event bus in that AWS
-     * account. A SaaS partner must create one partner event source for each AWS account that wants to receive those
-     * event types.
+     * Each partner event source can be used by one Amazon Web Services account to create a matching partner event bus
+     * in that Amazon Web Services account. A SaaS partner must create one partner event source for each Amazon Web
+     * Services account that wants to receive those event types.
      * </p>
      * <p>
      * A partner event source creates events based on resources within the SaaS partner's service or application.
      * </p>
      * <p>
-     * An AWS account that creates a partner event bus that matches the partner event source can use that event bus to
-     * receive events from the partner, and then process them using AWS Events rules and targets.
+     * An Amazon Web Services account that creates a partner event bus that matches the partner event source can use
+     * that event bus to receive events from the partner, and then process them using Amazon Web Services Events rules
+     * and targets.
      * </p>
      * <p>
      * Partner event source names follow this format:
@@ -281,11 +283,11 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * <code> <i>partner_name</i>/<i>event_namespace</i>/<i>event_name</i> </code>
      * </p>
      * <p>
-     * <i>partner_name</i> is determined during partner registration and identifies the partner to AWS customers.
-     * <i>event_namespace</i> is determined by the partner and is a way for the partner to categorize their events.
-     * <i>event_name</i> is determined by the partner, and should uniquely identify an event-generating resource within
-     * the partner system. The combination of <i>event_namespace</i> and <i>event_name</i> should help AWS customers
-     * decide whether to create an event bus to receive these events.
+     * <i>partner_name</i> is determined during partner registration and identifies the partner to Amazon Web Services
+     * customers. <i>event_namespace</i> is determined by the partner and is a way for the partner to categorize their
+     * events. <i>event_name</i> is determined by the partner, and should uniquely identify an event-generating resource
+     * within the partner system. The combination of <i>event_namespace</i> and <i>event_name</i> should help Amazon Web
+     * Services customers decide whether to create an event bus to receive these events.
      * </p>
      * 
      * @param createPartnerEventSourceRequest
@@ -298,19 +300,21 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * Called by an SaaS partner to create a partner event source. This operation is not used by AWS customers.
+     * Called by an SaaS partner to create a partner event source. This operation is not used by Amazon Web Services
+     * customers.
      * </p>
      * <p>
-     * Each partner event source can be used by one AWS account to create a matching partner event bus in that AWS
-     * account. A SaaS partner must create one partner event source for each AWS account that wants to receive those
-     * event types.
+     * Each partner event source can be used by one Amazon Web Services account to create a matching partner event bus
+     * in that Amazon Web Services account. A SaaS partner must create one partner event source for each Amazon Web
+     * Services account that wants to receive those event types.
      * </p>
      * <p>
      * A partner event source creates events based on resources within the SaaS partner's service or application.
      * </p>
      * <p>
-     * An AWS account that creates a partner event bus that matches the partner event source can use that event bus to
-     * receive events from the partner, and then process them using AWS Events rules and targets.
+     * An Amazon Web Services account that creates a partner event bus that matches the partner event source can use
+     * that event bus to receive events from the partner, and then process them using Amazon Web Services Events rules
+     * and targets.
      * </p>
      * <p>
      * Partner event source names follow this format:
@@ -319,11 +323,11 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * <code> <i>partner_name</i>/<i>event_namespace</i>/<i>event_name</i> </code>
      * </p>
      * <p>
-     * <i>partner_name</i> is determined during partner registration and identifies the partner to AWS customers.
-     * <i>event_namespace</i> is determined by the partner and is a way for the partner to categorize their events.
-     * <i>event_name</i> is determined by the partner, and should uniquely identify an event-generating resource within
-     * the partner system. The combination of <i>event_namespace</i> and <i>event_name</i> should help AWS customers
-     * decide whether to create an event bus to receive these events.
+     * <i>partner_name</i> is determined during partner registration and identifies the partner to Amazon Web Services
+     * customers. <i>event_namespace</i> is determined by the partner and is a way for the partner to categorize their
+     * events. <i>event_name</i> is determined by the partner, and should uniquely identify an event-generating resource
+     * within the partner system. The combination of <i>event_namespace</i> and <i>event_name</i> should help Amazon Web
+     * Services customers decide whether to create an event bus to receive these events.
      * </p>
      * 
      * @param createPartnerEventSourceRequest
@@ -349,7 +353,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * for more than two weeks, it is deleted.
      * </p>
      * <p>
-     * To activate a deactivated partner event source, use <a>ActivateEventSource</a>.
+     * To activate a deactivated partner event source, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ActivateEventSource.html"
+     * >ActivateEventSource</a>.
      * </p>
      * 
      * @param deactivateEventSourceRequest
@@ -370,7 +376,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * for more than two weeks, it is deleted.
      * </p>
      * <p>
-     * To activate a deactivated partner event source, use <a>ActivateEventSource</a>.
+     * To activate a deactivated partner event source, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ActivateEventSource.html"
+     * >ActivateEventSource</a>.
      * </p>
      * 
      * @param deactivateEventSourceRequest
@@ -547,12 +555,12 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * This operation is used by SaaS partners to delete a partner event source. This operation is not used by AWS
-     * customers.
+     * This operation is used by SaaS partners to delete a partner event source. This operation is not used by Amazon
+     * Web Services customers.
      * </p>
      * <p>
-     * When you delete an event source, the status of the corresponding partner event bus in the AWS customer account
-     * becomes DELETED.
+     * When you delete an event source, the status of the corresponding partner event bus in the Amazon Web Services
+     * customer account becomes DELETED.
      * </p>
      * <p/>
      * 
@@ -566,12 +574,12 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * This operation is used by SaaS partners to delete a partner event source. This operation is not used by AWS
-     * customers.
+     * This operation is used by SaaS partners to delete a partner event source. This operation is not used by Amazon
+     * Web Services customers.
      * </p>
      * <p>
-     * When you delete an event source, the status of the corresponding partner event bus in the AWS customer account
-     * becomes DELETED.
+     * When you delete an event source, the status of the corresponding partner event bus in the Amazon Web Services
+     * customer account becomes DELETED.
      * </p>
      * <p/>
      * 
@@ -593,7 +601,8 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * Deletes the specified rule.
      * </p>
      * <p>
-     * Before you can delete the rule, you must remove all targets, using <a>RemoveTargets</a>.
+     * Before you can delete the rule, you must remove all targets, using <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemoveTargets.html">RemoveTargets</a>.
      * </p>
      * <p>
      * When you delete a rule, incoming events might continue to match to the deleted rule. Allow a short period of time
@@ -604,10 +613,10 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * non-existent custom eventbus, <code>ResourceNotFoundException</code> is returned.
      * </p>
      * <p>
-     * Managed rules are rules created and managed by another AWS service on your behalf. These rules are created by
-     * those other AWS services to support functionality in those services. You can delete these rules using the
-     * <code>Force</code> option, but you should do so only if you are sure the other service is not still using that
-     * rule.
+     * Managed rules are rules created and managed by another Amazon Web Services service on your behalf. These rules
+     * are created by those other Amazon Web Services services to support functionality in those services. You can
+     * delete these rules using the <code>Force</code> option, but you should do so only if you are sure the other
+     * service is not still using that rule.
      * </p>
      * 
      * @param deleteRuleRequest
@@ -623,7 +632,8 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * Deletes the specified rule.
      * </p>
      * <p>
-     * Before you can delete the rule, you must remove all targets, using <a>RemoveTargets</a>.
+     * Before you can delete the rule, you must remove all targets, using <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemoveTargets.html">RemoveTargets</a>.
      * </p>
      * <p>
      * When you delete a rule, incoming events might continue to match to the deleted rule. Allow a short period of time
@@ -634,10 +644,10 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * non-existent custom eventbus, <code>ResourceNotFoundException</code> is returned.
      * </p>
      * <p>
-     * Managed rules are rules created and managed by another AWS service on your behalf. These rules are created by
-     * those other AWS services to support functionality in those services. You can delete these rules using the
-     * <code>Force</code> option, but you should do so only if you are sure the other service is not still using that
-     * rule.
+     * Managed rules are rules created and managed by another Amazon Web Services service on your behalf. These rules
+     * are created by those other Amazon Web Services services to support functionality in those services. You can
+     * delete these rules using the <code>Force</code> option, but you should do so only if you are sure the other
+     * service is not still using that rule.
      * </p>
      * 
      * @param deleteRuleRequest
@@ -748,15 +758,17 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * Displays details about an event bus in your account. This can include the external AWS accounts that are
-     * permitted to write events to your default event bus, and the associated policy. For custom event buses and
-     * partner event buses, it displays the name, ARN, policy, state, and creation time.
+     * Displays details about an event bus in your account. This can include the external Amazon Web Services accounts
+     * that are permitted to write events to your default event bus, and the associated policy. For custom event buses
+     * and partner event buses, it displays the name, ARN, policy, state, and creation time.
      * </p>
      * <p>
-     * To enable your account to receive events from other accounts on its default event bus, use <a>PutPermission</a>.
+     * To enable your account to receive events from other accounts on its default event bus, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutPermission.html">PutPermission</a>.
      * </p>
      * <p>
-     * For more information about partner event buses, see <a>CreateEventBus</a>.
+     * For more information about partner event buses, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html">CreateEventBus</a>.
      * </p>
      * 
      * @param describeEventBusRequest
@@ -769,15 +781,17 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * Displays details about an event bus in your account. This can include the external AWS accounts that are
-     * permitted to write events to your default event bus, and the associated policy. For custom event buses and
-     * partner event buses, it displays the name, ARN, policy, state, and creation time.
+     * Displays details about an event bus in your account. This can include the external Amazon Web Services accounts
+     * that are permitted to write events to your default event bus, and the associated policy. For custom event buses
+     * and partner event buses, it displays the name, ARN, policy, state, and creation time.
      * </p>
      * <p>
-     * To enable your account to receive events from other accounts on its default event bus, use <a>PutPermission</a>.
+     * To enable your account to receive events from other accounts on its default event bus, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutPermission.html">PutPermission</a>.
      * </p>
      * <p>
-     * For more information about partner event buses, see <a>CreateEventBus</a>.
+     * For more information about partner event buses, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html">CreateEventBus</a>.
      * </p>
      * 
      * @param describeEventBusRequest
@@ -826,9 +840,10 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * An SaaS partner can use this operation to list details about a partner event source that they have created. AWS
-     * customers do not use this operation. Instead, AWS customers can use <a>DescribeEventSource</a> to see details
-     * about a partner event source that is shared with them.
+     * An SaaS partner can use this operation to list details about a partner event source that they have created.
+     * Amazon Web Services customers do not use this operation. Instead, Amazon Web Services customers can use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeEventSource.html"
+     * >DescribeEventSource</a> to see details about a partner event source that is shared with them.
      * </p>
      * 
      * @param describePartnerEventSourceRequest
@@ -842,9 +857,10 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * An SaaS partner can use this operation to list details about a partner event source that they have created. AWS
-     * customers do not use this operation. Instead, AWS customers can use <a>DescribeEventSource</a> to see details
-     * about a partner event source that is shared with them.
+     * An SaaS partner can use this operation to list details about a partner event source that they have created.
+     * Amazon Web Services customers do not use this operation. Instead, Amazon Web Services customers can use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeEventSource.html"
+     * >DescribeEventSource</a> to see details about a partner event source that is shared with them.
      * </p>
      * 
      * @param describePartnerEventSourceRequest
@@ -909,8 +925,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * Describes the specified rule.
      * </p>
      * <p>
-     * DescribeRule does not list the targets of a rule. To see the targets associated with a rule, use
-     * <a>ListTargetsByRule</a>.
+     * DescribeRule does not list the targets of a rule. To see the targets associated with a rule, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListTargetsByRule.html"
+     * >ListTargetsByRule</a>.
      * </p>
      * 
      * @param describeRuleRequest
@@ -926,8 +943,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * Describes the specified rule.
      * </p>
      * <p>
-     * DescribeRule does not list the targets of a rule. To see the targets associated with a rule, use
-     * <a>ListTargetsByRule</a>.
+     * DescribeRule does not list the targets of a rule. To see the targets associated with a rule, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListTargetsByRule.html"
+     * >ListTargetsByRule</a>.
      * </p>
      * 
      * @param describeRuleRequest
@@ -1153,8 +1171,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * You can use this to see all the partner event sources that have been shared with your AWS account. For more
-     * information about partner event sources, see <a>CreateEventBus</a>.
+     * You can use this to see all the partner event sources that have been shared with your Amazon Web Services
+     * account. For more information about partner event sources, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html">CreateEventBus</a>.
      * </p>
      * 
      * @param listEventSourcesRequest
@@ -1167,8 +1186,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * You can use this to see all the partner event sources that have been shared with your AWS account. For more
-     * information about partner event sources, see <a>CreateEventBus</a>.
+     * You can use this to see all the partner event sources that have been shared with your Amazon Web Services
+     * account. For more information about partner event sources, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html">CreateEventBus</a>.
      * </p>
      * 
      * @param listEventSourcesRequest
@@ -1186,8 +1206,8 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * An SaaS partner can use this operation to display the AWS account ID that a particular partner event source name
-     * is associated with. This operation is not used by AWS customers.
+     * An SaaS partner can use this operation to display the Amazon Web Services account ID that a particular partner
+     * event source name is associated with. This operation is not used by Amazon Web Services customers.
      * </p>
      * 
      * @param listPartnerEventSourceAccountsRequest
@@ -1202,8 +1222,8 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * An SaaS partner can use this operation to display the AWS account ID that a particular partner event source name
-     * is associated with. This operation is not used by AWS customers.
+     * An SaaS partner can use this operation to display the Amazon Web Services account ID that a particular partner
+     * event source name is associated with. This operation is not used by Amazon Web Services customers.
      * </p>
      * 
      * @param listPartnerEventSourceAccountsRequest
@@ -1224,7 +1244,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
     /**
      * <p>
      * An SaaS partner can use this operation to list all the partner event source names that they have created. This
-     * operation is not used by AWS customers.
+     * operation is not used by Amazon Web Services customers.
      * </p>
      * 
      * @param listPartnerEventSourcesRequest
@@ -1238,7 +1258,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
     /**
      * <p>
      * An SaaS partner can use this operation to list all the partner event source names that they have created. This
-     * operation is not used by AWS customers.
+     * operation is not used by Amazon Web Services customers.
      * </p>
      * 
      * @param listPartnerEventSourcesRequest
@@ -1326,8 +1346,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * the rule names.
      * </p>
      * <p>
-     * ListRules does not list the targets of a rule. To see the targets associated with a rule, use
-     * <a>ListTargetsByRule</a>.
+     * ListRules does not list the targets of a rule. To see the targets associated with a rule, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListTargetsByRule.html"
+     * >ListTargetsByRule</a>.
      * </p>
      * 
      * @param listRulesRequest
@@ -1344,8 +1365,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * the rule names.
      * </p>
      * <p>
-     * ListRules does not list the targets of a rule. To see the targets associated with a rule, use
-     * <a>ListTargetsByRule</a>.
+     * ListRules does not list the targets of a rule. To see the targets associated with a rule, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListTargetsByRule.html"
+     * >ListTargetsByRule</a>.
      * </p>
      * 
      * @param listRulesRequest
@@ -1456,8 +1478,8 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * This is used by SaaS partners to write events to a customer's partner event bus. AWS customers do not use this
-     * operation.
+     * This is used by SaaS partners to write events to a customer's partner event bus. Amazon Web Services customers do
+     * not use this operation.
      * </p>
      * 
      * @param putPartnerEventsRequest
@@ -1470,8 +1492,8 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * This is used by SaaS partners to write events to a customer's partner event bus. AWS customers do not use this
-     * operation.
+     * This is used by SaaS partners to write events to a customer's partner event bus. Amazon Web Services customers do
+     * not use this operation.
      * </p>
      * 
      * @param putPartnerEventsRequest
@@ -1489,29 +1511,31 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * Running <code>PutPermission</code> permits the specified AWS account or AWS organization to put events to the
-     * specified <i>event bus</i>. Amazon EventBridge (CloudWatch Events) rules in your account are triggered by these
-     * events arriving to an event bus in your account.
+     * Running <code>PutPermission</code> permits the specified Amazon Web Services account or Amazon Web Services
+     * organization to put events to the specified <i>event bus</i>. Amazon EventBridge (CloudWatch Events) rules in
+     * your account are triggered by these events arriving to an event bus in your account.
      * </p>
      * <p>
      * For another account to send events to your account, that external account must have an EventBridge rule with your
      * account's event bus as a target.
      * </p>
      * <p>
-     * To enable multiple AWS accounts to put events to your event bus, run <code>PutPermission</code> once for each of
-     * these accounts. Or, if all the accounts are members of the same AWS organization, you can run
-     * <code>PutPermission</code> once specifying <code>Principal</code> as "*" and specifying the AWS organization ID
-     * in <code>Condition</code>, to grant permissions to all accounts in that organization.
+     * To enable multiple Amazon Web Services accounts to put events to your event bus, run <code>PutPermission</code>
+     * once for each of these accounts. Or, if all the accounts are members of the same Amazon Web Services
+     * organization, you can run <code>PutPermission</code> once specifying <code>Principal</code> as "*" and specifying
+     * the Amazon Web Services organization ID in <code>Condition</code>, to grant permissions to all accounts in that
+     * organization.
      * </p>
      * <p>
      * If you grant permissions using an organization, then accounts in that organization must specify a
      * <code>RoleArn</code> with proper permissions when they use <code>PutTarget</code> to add your account's event bus
      * as a target. For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html"
-     * >Sending and Receiving Events Between AWS Accounts</a> in the <i>Amazon EventBridge User Guide</i>.
+     * >Sending and Receiving Events Between Amazon Web Services Accounts</a> in the <i>Amazon EventBridge User
+     * Guide</i>.
      * </p>
      * <p>
-     * The permission policy on the default event bus cannot exceed 10 KB in size.
+     * The permission policy on the event bus cannot exceed 10 KB in size.
      * </p>
      * 
      * @param putPermissionRequest
@@ -1524,29 +1548,31 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * Running <code>PutPermission</code> permits the specified AWS account or AWS organization to put events to the
-     * specified <i>event bus</i>. Amazon EventBridge (CloudWatch Events) rules in your account are triggered by these
-     * events arriving to an event bus in your account.
+     * Running <code>PutPermission</code> permits the specified Amazon Web Services account or Amazon Web Services
+     * organization to put events to the specified <i>event bus</i>. Amazon EventBridge (CloudWatch Events) rules in
+     * your account are triggered by these events arriving to an event bus in your account.
      * </p>
      * <p>
      * For another account to send events to your account, that external account must have an EventBridge rule with your
      * account's event bus as a target.
      * </p>
      * <p>
-     * To enable multiple AWS accounts to put events to your event bus, run <code>PutPermission</code> once for each of
-     * these accounts. Or, if all the accounts are members of the same AWS organization, you can run
-     * <code>PutPermission</code> once specifying <code>Principal</code> as "*" and specifying the AWS organization ID
-     * in <code>Condition</code>, to grant permissions to all accounts in that organization.
+     * To enable multiple Amazon Web Services accounts to put events to your event bus, run <code>PutPermission</code>
+     * once for each of these accounts. Or, if all the accounts are members of the same Amazon Web Services
+     * organization, you can run <code>PutPermission</code> once specifying <code>Principal</code> as "*" and specifying
+     * the Amazon Web Services organization ID in <code>Condition</code>, to grant permissions to all accounts in that
+     * organization.
      * </p>
      * <p>
      * If you grant permissions using an organization, then accounts in that organization must specify a
      * <code>RoleArn</code> with proper permissions when they use <code>PutTarget</code> to add your account's event bus
      * as a target. For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html"
-     * >Sending and Receiving Events Between AWS Accounts</a> in the <i>Amazon EventBridge User Guide</i>.
+     * >Sending and Receiving Events Between Amazon Web Services Accounts</a> in the <i>Amazon EventBridge User
+     * Guide</i>.
      * </p>
      * <p>
-     * The permission policy on the default event bus cannot exceed 10 KB in size.
+     * The permission policy on the event bus cannot exceed 10 KB in size.
      * </p>
      * 
      * @param putPermissionRequest
@@ -1565,13 +1591,15 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
     /**
      * <p>
      * Creates or updates the specified rule. Rules are enabled by default, or based on value of the state. You can
-     * disable a rule using <a>DisableRule</a>.
+     * disable a rule using <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DisableRule.html">DisableRule</a>.
      * </p>
      * <p>
-     * A single rule watches for events from a single event bus. Events generated by AWS services go to your account's
-     * default event bus. Events generated by SaaS partner services or applications go to the matching partner event
-     * bus. If you have custom applications or services, you can specify whether their events go to your default event
-     * bus or a custom event bus that you have created. For more information, see <a>CreateEventBus</a>.
+     * A single rule watches for events from a single event bus. Events generated by Amazon Web Services services go to
+     * your account's default event bus. Events generated by SaaS partner services or applications go to the matching
+     * partner event bus. If you have custom applications or services, you can specify whether their events go to your
+     * default event bus or a custom event bus that you have created. For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html">CreateEventBus</a>.
      * </p>
      * <p>
      * If you are updating an existing rule, the rule is replaced with what you specify in this <code>PutRule</code>
@@ -1596,12 +1624,14 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </p>
      * <p>
      * If you are updating an existing rule, any tags you specify in the <code>PutRule</code> operation are ignored. To
-     * update the tags of an existing rule, use <a>TagResource</a> and <a>UntagResource</a>.
+     * update the tags of an existing rule, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_TagResource.html">TagResource</a> and <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UntagResource.html">UntagResource</a>.
      * </p>
      * <p>
-     * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, EventBridge
-     * uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event
-     * patterns so that they match the ARN syntax in the event you want to match.
+     * Most services in Amazon Web Services treat : or / as the same character in Amazon Resource Names (ARNs). However,
+     * EventBridge uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when
+     * creating event patterns so that they match the ARN syntax in the event you want to match.
      * </p>
      * <p>
      * In EventBridge, it is possible to create rules that lead to infinite loops, where a rule is fired repeatedly. For
@@ -1631,13 +1661,15 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
     /**
      * <p>
      * Creates or updates the specified rule. Rules are enabled by default, or based on value of the state. You can
-     * disable a rule using <a>DisableRule</a>.
+     * disable a rule using <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DisableRule.html">DisableRule</a>.
      * </p>
      * <p>
-     * A single rule watches for events from a single event bus. Events generated by AWS services go to your account's
-     * default event bus. Events generated by SaaS partner services or applications go to the matching partner event
-     * bus. If you have custom applications or services, you can specify whether their events go to your default event
-     * bus or a custom event bus that you have created. For more information, see <a>CreateEventBus</a>.
+     * A single rule watches for events from a single event bus. Events generated by Amazon Web Services services go to
+     * your account's default event bus. Events generated by SaaS partner services or applications go to the matching
+     * partner event bus. If you have custom applications or services, you can specify whether their events go to your
+     * default event bus or a custom event bus that you have created. For more information, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html">CreateEventBus</a>.
      * </p>
      * <p>
      * If you are updating an existing rule, the rule is replaced with what you specify in this <code>PutRule</code>
@@ -1662,12 +1694,14 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </p>
      * <p>
      * If you are updating an existing rule, any tags you specify in the <code>PutRule</code> operation are ignored. To
-     * update the tags of an existing rule, use <a>TagResource</a> and <a>UntagResource</a>.
+     * update the tags of an existing rule, use <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_TagResource.html">TagResource</a> and <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UntagResource.html">UntagResource</a>.
      * </p>
      * <p>
-     * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, EventBridge
-     * uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event
-     * patterns so that they match the ARN syntax in the event you want to match.
+     * Most services in Amazon Web Services treat : or / as the same character in Amazon Resource Names (ARNs). However,
+     * EventBridge uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when
+     * creating event patterns so that they match the ARN syntax in the event you want to match.
      * </p>
      * <p>
      * In EventBridge, it is possible to create rules that lead to infinite loops, where a rule is fired repeatedly. For
@@ -1728,7 +1762,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * <li>
      * <p>
-     * AWS Batch job queue
+     * Batch job queue
      * </p>
      * </li>
      * <li>
@@ -1743,7 +1777,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * <li>
      * <p>
-     * CodePineline
+     * CodePipeline
      * </p>
      * </li>
      * <li>
@@ -1773,7 +1807,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * <li>
      * <p>
-     * Event bus in a different AWS account or Region.
+     * Event bus in a different Amazon Web Services account or Region.
      * </p>
      * <p>
      * You can use an event bus in the US East (N. Virginia) us-east-1, US West (Oregon) us-west-2, or Europe (Ireland)
@@ -1797,7 +1831,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * <li>
      * <p>
-     * AWS Lambda function
+     * Lambda function
      * </p>
      * </li>
      * <li>
@@ -1837,7 +1871,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * </ul>
      * <p>
-     * Creating rules with built-in targets is supported only in the AWS Management Console. The built-in targets are
+     * Creating rules with built-in targets is supported only in the Management Console. The built-in targets are
      * <code>EC2 CreateSnapshot API call</code>, <code>EC2 RebootInstances API call</code>,
      * <code>EC2 StopInstances API call</code>, and <code>EC2 TerminateInstances API call</code>.
      * </p>
@@ -1848,27 +1882,26 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * <code>RunCommandParameters</code> field.
      * </p>
      * <p>
-     * To be able to make API calls against the resources that you own, Amazon EventBridge (CloudWatch Events) needs the
-     * appropriate permissions. For AWS Lambda and Amazon SNS resources, EventBridge relies on resource-based policies.
-     * For EC2 instances, Kinesis data streams, AWS Step Functions state machines and API Gateway REST APIs, EventBridge
-     * relies on IAM roles that you specify in the <code>RoleARN</code> argument in <code>PutTargets</code>. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html"
-     * >Authentication and Access Control</a> in the <i>Amazon EventBridge User Guide</i>.
+     * To be able to make API calls against the resources that you own, Amazon EventBridge needs the appropriate
+     * permissions. For Lambda and Amazon SNS resources, EventBridge relies on resource-based policies. For EC2
+     * instances, Kinesis Data Streams, Step Functions state machines and API Gateway REST APIs, EventBridge relies on
+     * IAM roles that you specify in the <code>RoleARN</code> argument in <code>PutTargets</code>. For more information,
+     * see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html">
+     * Authentication and Access Control</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      * <p>
-     * If another AWS account is in the same region and has granted you permission (using <code>PutPermission</code>),
-     * you can send events to that account. Set that account's event bus as a target of the rules in your account. To
-     * send the matched events to the other account, specify that account's event bus as the <code>Arn</code> value when
-     * you run <code>PutTargets</code>. If your account sends events to another account, your account is charged for
-     * each sent event. Each event sent to another account is charged as a custom event. The account receiving the event
-     * is not charged. For more information, see <a href="https://aws.amazon.com/eventbridge/pricing/">Amazon
-     * EventBridge (CloudWatch Events) Pricing</a>.
+     * If another Amazon Web Services account is in the same region and has granted you permission (using
+     * <code>PutPermission</code>), you can send events to that account. Set that account's event bus as a target of the
+     * rules in your account. To send the matched events to the other account, specify that account's event bus as the
+     * <code>Arn</code> value when you run <code>PutTargets</code>. If your account sends events to another account,
+     * your account is charged for each sent event. Each event sent to another account is charged as a custom event. The
+     * account receiving the event is not charged. For more information, see <a
+     * href="http://aws.amazon.com/eventbridge/pricing/">Amazon EventBridge Pricing</a>.
      * </p>
      * <note>
      * <p>
      * <code>Input</code>, <code>InputPath</code>, and <code>InputTransformer</code> are not available with
-     * <code>PutTarget</code> if the target is an event bus of a different AWS account.
+     * <code>PutTarget</code> if the target is an event bus of a different Amazon Web Services account.
      * </p>
      * </note>
      * <p>
@@ -1876,10 +1909,12 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * account through an organization instead of directly by the account ID, then you must specify a
      * <code>RoleArn</code> with proper permissions in the <code>Target</code> structure. For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html">
-     * Sending and Receiving Events Between AWS Accounts</a> in the <i>Amazon EventBridge User Guide</i>.
+     * Sending and Receiving Events Between Amazon Web Services Accounts</a> in the <i>Amazon EventBridge User
+     * Guide</i>.
      * </p>
      * <p>
-     * For more information about enabling cross-account events, see <a>PutPermission</a>.
+     * For more information about enabling cross-account events, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutPermission.html">PutPermission</a>.
      * </p>
      * <p>
      * <b>Input</b>, <b>InputPath</b>, and <b>InputTransformer</b> are mutually exclusive and optional parameters of a
@@ -1963,7 +1998,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * <li>
      * <p>
-     * AWS Batch job queue
+     * Batch job queue
      * </p>
      * </li>
      * <li>
@@ -1978,7 +2013,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * <li>
      * <p>
-     * CodePineline
+     * CodePipeline
      * </p>
      * </li>
      * <li>
@@ -2008,7 +2043,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * <li>
      * <p>
-     * Event bus in a different AWS account or Region.
+     * Event bus in a different Amazon Web Services account or Region.
      * </p>
      * <p>
      * You can use an event bus in the US East (N. Virginia) us-east-1, US West (Oregon) us-west-2, or Europe (Ireland)
@@ -2032,7 +2067,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * <li>
      * <p>
-     * AWS Lambda function
+     * Lambda function
      * </p>
      * </li>
      * <li>
@@ -2072,7 +2107,7 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * </li>
      * </ul>
      * <p>
-     * Creating rules with built-in targets is supported only in the AWS Management Console. The built-in targets are
+     * Creating rules with built-in targets is supported only in the Management Console. The built-in targets are
      * <code>EC2 CreateSnapshot API call</code>, <code>EC2 RebootInstances API call</code>,
      * <code>EC2 StopInstances API call</code>, and <code>EC2 TerminateInstances API call</code>.
      * </p>
@@ -2083,27 +2118,26 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * <code>RunCommandParameters</code> field.
      * </p>
      * <p>
-     * To be able to make API calls against the resources that you own, Amazon EventBridge (CloudWatch Events) needs the
-     * appropriate permissions. For AWS Lambda and Amazon SNS resources, EventBridge relies on resource-based policies.
-     * For EC2 instances, Kinesis data streams, AWS Step Functions state machines and API Gateway REST APIs, EventBridge
-     * relies on IAM roles that you specify in the <code>RoleARN</code> argument in <code>PutTargets</code>. For more
-     * information, see <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html"
-     * >Authentication and Access Control</a> in the <i>Amazon EventBridge User Guide</i>.
+     * To be able to make API calls against the resources that you own, Amazon EventBridge needs the appropriate
+     * permissions. For Lambda and Amazon SNS resources, EventBridge relies on resource-based policies. For EC2
+     * instances, Kinesis Data Streams, Step Functions state machines and API Gateway REST APIs, EventBridge relies on
+     * IAM roles that you specify in the <code>RoleARN</code> argument in <code>PutTargets</code>. For more information,
+     * see <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html">
+     * Authentication and Access Control</a> in the <i>Amazon EventBridge User Guide</i>.
      * </p>
      * <p>
-     * If another AWS account is in the same region and has granted you permission (using <code>PutPermission</code>),
-     * you can send events to that account. Set that account's event bus as a target of the rules in your account. To
-     * send the matched events to the other account, specify that account's event bus as the <code>Arn</code> value when
-     * you run <code>PutTargets</code>. If your account sends events to another account, your account is charged for
-     * each sent event. Each event sent to another account is charged as a custom event. The account receiving the event
-     * is not charged. For more information, see <a href="https://aws.amazon.com/eventbridge/pricing/">Amazon
-     * EventBridge (CloudWatch Events) Pricing</a>.
+     * If another Amazon Web Services account is in the same region and has granted you permission (using
+     * <code>PutPermission</code>), you can send events to that account. Set that account's event bus as a target of the
+     * rules in your account. To send the matched events to the other account, specify that account's event bus as the
+     * <code>Arn</code> value when you run <code>PutTargets</code>. If your account sends events to another account,
+     * your account is charged for each sent event. Each event sent to another account is charged as a custom event. The
+     * account receiving the event is not charged. For more information, see <a
+     * href="http://aws.amazon.com/eventbridge/pricing/">Amazon EventBridge Pricing</a>.
      * </p>
      * <note>
      * <p>
      * <code>Input</code>, <code>InputPath</code>, and <code>InputTransformer</code> are not available with
-     * <code>PutTarget</code> if the target is an event bus of a different AWS account.
+     * <code>PutTarget</code> if the target is an event bus of a different Amazon Web Services account.
      * </p>
      * </note>
      * <p>
@@ -2111,10 +2145,12 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * account through an organization instead of directly by the account ID, then you must specify a
      * <code>RoleArn</code> with proper permissions in the <code>Target</code> structure. For more information, see <a
      * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html">
-     * Sending and Receiving Events Between AWS Accounts</a> in the <i>Amazon EventBridge User Guide</i>.
+     * Sending and Receiving Events Between Amazon Web Services Accounts</a> in the <i>Amazon EventBridge User
+     * Guide</i>.
      * </p>
      * <p>
-     * For more information about enabling cross-account events, see <a>PutPermission</a>.
+     * For more information about enabling cross-account events, see <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutPermission.html">PutPermission</a>.
      * </p>
      * <p>
      * <b>Input</b>, <b>InputPath</b>, and <b>InputTransformer</b> are mutually exclusive and optional parameters of a
@@ -2176,10 +2212,12 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * Revokes the permission of another AWS account to be able to put events to the specified event bus. Specify the
-     * account to revoke by the <code>StatementId</code> value that you associated with the account when you granted it
-     * permission with <code>PutPermission</code>. You can find the <code>StatementId</code> by using
-     * <a>DescribeEventBus</a>.
+     * Revokes the permission of another Amazon Web Services account to be able to put events to the specified event
+     * bus. Specify the account to revoke by the <code>StatementId</code> value that you associated with the account
+     * when you granted it permission with <code>PutPermission</code>. You can find the <code>StatementId</code> by
+     * using <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeEventBus.html">DescribeEventBus
+     * </a>.
      * </p>
      * 
      * @param removePermissionRequest
@@ -2192,10 +2230,12 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
 
     /**
      * <p>
-     * Revokes the permission of another AWS account to be able to put events to the specified event bus. Specify the
-     * account to revoke by the <code>StatementId</code> value that you associated with the account when you granted it
-     * permission with <code>PutPermission</code>. You can find the <code>StatementId</code> by using
-     * <a>DescribeEventBus</a>.
+     * Revokes the permission of another Amazon Web Services account to be able to put events to the specified event
+     * bus. Specify the account to revoke by the <code>StatementId</code> value that you associated with the account
+     * when you granted it permission with <code>PutPermission</code>. You can find the <code>StatementId</code> by
+     * using <a
+     * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeEventBus.html">DescribeEventBus
+     * </a>.
      * </p>
      * 
      * @param removePermissionRequest
@@ -2312,7 +2352,8 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * access or change only resources with certain tag values. In EventBridge, rules and event buses can be tagged.
      * </p>
      * <p>
-     * Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of characters.
+     * Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
+     * characters.
      * </p>
      * <p>
      * You can use the <code>TagResource</code> action with a resource that already has tags. If you specify a new tag
@@ -2339,7 +2380,8 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * access or change only resources with certain tag values. In EventBridge, rules and event buses can be tagged.
      * </p>
      * <p>
-     * Tags don't have any semantic meaning to AWS and are interpreted strictly as strings of characters.
+     * Tags don't have any semantic meaning to Amazon Web Services and are interpreted strictly as strings of
+     * characters.
      * </p>
      * <p>
      * You can use the <code>TagResource</code> action with a resource that already has tags. If you specify a new tag
@@ -2369,9 +2411,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * Tests whether the specified event pattern matches the provided event.
      * </p>
      * <p>
-     * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, EventBridge
-     * uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event
-     * patterns so that they match the ARN syntax in the event you want to match.
+     * Most services in Amazon Web Services treat : or / as the same character in Amazon Resource Names (ARNs). However,
+     * EventBridge uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when
+     * creating event patterns so that they match the ARN syntax in the event you want to match.
      * </p>
      * 
      * @param testEventPatternRequest
@@ -2387,9 +2429,9 @@ public interface AmazonCloudWatchEventsAsync extends AmazonCloudWatchEvents {
      * Tests whether the specified event pattern matches the provided event.
      * </p>
      * <p>
-     * Most services in AWS treat : or / as the same character in Amazon Resource Names (ARNs). However, EventBridge
-     * uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when creating event
-     * patterns so that they match the ARN syntax in the event you want to match.
+     * Most services in Amazon Web Services treat : or / as the same character in Amazon Resource Names (ARNs). However,
+     * EventBridge uses an exact match in event patterns and rules. Be sure to use the correct ARN characters when
+     * creating event patterns so that they match the ARN syntax in the event you want to match.
      * </p>
      * 
      * @param testEventPatternRequest

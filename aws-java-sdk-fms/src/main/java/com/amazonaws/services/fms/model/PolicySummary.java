@@ -74,6 +74,15 @@ public class PolicySummary implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Boolean remediationEnabled;
+    /**
+     * <p>
+     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
+     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
+     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
+     * policies.
+     * </p>
+     */
+    private Boolean deleteUnusedFMManagedResources;
 
     /**
      * <p>
@@ -409,6 +418,82 @@ public class PolicySummary implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
+     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
+     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
+     * policies.
+     * </p>
+     * 
+     * @param deleteUnusedFMManagedResources
+     *        Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
+     *        security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager
+     *        doesn't delete unused Firewall Manager managed resources. This option is not available for Shield Advanced
+     *        or WAF Classic policies.
+     */
+
+    public void setDeleteUnusedFMManagedResources(Boolean deleteUnusedFMManagedResources) {
+        this.deleteUnusedFMManagedResources = deleteUnusedFMManagedResources;
+    }
+
+    /**
+     * <p>
+     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
+     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
+     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
+     * policies.
+     * </p>
+     * 
+     * @return Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
+     *         security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager
+     *         doesn't delete unused Firewall Manager managed resources. This option is not available for Shield
+     *         Advanced or WAF Classic policies.
+     */
+
+    public Boolean getDeleteUnusedFMManagedResources() {
+        return this.deleteUnusedFMManagedResources;
+    }
+
+    /**
+     * <p>
+     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
+     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
+     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
+     * policies.
+     * </p>
+     * 
+     * @param deleteUnusedFMManagedResources
+     *        Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
+     *        security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager
+     *        doesn't delete unused Firewall Manager managed resources. This option is not available for Shield Advanced
+     *        or WAF Classic policies.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PolicySummary withDeleteUnusedFMManagedResources(Boolean deleteUnusedFMManagedResources) {
+        setDeleteUnusedFMManagedResources(deleteUnusedFMManagedResources);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
+     * security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager doesn't
+     * delete unused Firewall Manager managed resources. This option is not available for Shield Advanced or WAF Classic
+     * policies.
+     * </p>
+     * 
+     * @return Indicates whether Firewall Manager should delete Firewall Manager managed resources, such as web ACLs and
+     *         security groups, when they are not in use by the Firewall Manager policy. By default, Firewall Manager
+     *         doesn't delete unused Firewall Manager managed resources. This option is not available for Shield
+     *         Advanced or WAF Classic policies.
+     */
+
+    public Boolean isDeleteUnusedFMManagedResources() {
+        return this.deleteUnusedFMManagedResources;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -431,7 +516,9 @@ public class PolicySummary implements Serializable, Cloneable, StructuredPojo {
         if (getSecurityServiceType() != null)
             sb.append("SecurityServiceType: ").append(getSecurityServiceType()).append(",");
         if (getRemediationEnabled() != null)
-            sb.append("RemediationEnabled: ").append(getRemediationEnabled());
+            sb.append("RemediationEnabled: ").append(getRemediationEnabled()).append(",");
+        if (getDeleteUnusedFMManagedResources() != null)
+            sb.append("DeleteUnusedFMManagedResources: ").append(getDeleteUnusedFMManagedResources());
         sb.append("}");
         return sb.toString();
     }
@@ -470,6 +557,11 @@ public class PolicySummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRemediationEnabled() != null && other.getRemediationEnabled().equals(this.getRemediationEnabled()) == false)
             return false;
+        if (other.getDeleteUnusedFMManagedResources() == null ^ this.getDeleteUnusedFMManagedResources() == null)
+            return false;
+        if (other.getDeleteUnusedFMManagedResources() != null
+                && other.getDeleteUnusedFMManagedResources().equals(this.getDeleteUnusedFMManagedResources()) == false)
+            return false;
         return true;
     }
 
@@ -484,6 +576,7 @@ public class PolicySummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         hashCode = prime * hashCode + ((getSecurityServiceType() == null) ? 0 : getSecurityServiceType().hashCode());
         hashCode = prime * hashCode + ((getRemediationEnabled() == null) ? 0 : getRemediationEnabled().hashCode());
+        hashCode = prime * hashCode + ((getDeleteUnusedFMManagedResources() == null) ? 0 : getDeleteUnusedFMManagedResources().hashCode());
         return hashCode;
     }
 

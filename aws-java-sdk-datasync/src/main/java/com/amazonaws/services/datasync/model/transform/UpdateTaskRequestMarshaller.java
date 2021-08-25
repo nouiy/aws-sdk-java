@@ -40,6 +40,8 @@ public class UpdateTaskRequestMarshaller {
             .marshallLocationName("Name").build();
     private static final MarshallingInfo<String> CLOUDWATCHLOGGROUPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CloudWatchLogGroupArn").build();
+    private static final MarshallingInfo<List> INCLUDES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Includes").build();
 
     private static final UpdateTaskRequestMarshaller instance = new UpdateTaskRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class UpdateTaskRequestMarshaller {
             protocolMarshaller.marshall(updateTaskRequest.getSchedule(), SCHEDULE_BINDING);
             protocolMarshaller.marshall(updateTaskRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateTaskRequest.getCloudWatchLogGroupArn(), CLOUDWATCHLOGGROUPARN_BINDING);
+            protocolMarshaller.marshall(updateTaskRequest.getIncludes(), INCLUDES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

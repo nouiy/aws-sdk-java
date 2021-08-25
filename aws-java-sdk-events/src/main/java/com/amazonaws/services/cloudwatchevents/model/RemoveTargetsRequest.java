@@ -45,10 +45,10 @@ public class RemoveTargetsRequest extends com.amazonaws.AmazonWebServiceRequest 
     private java.util.List<String> ids;
     /**
      * <p>
-     * If this is a managed rule, created by an AWS service on your behalf, you must specify <code>Force</code> as
-     * <code>True</code> to remove targets. This parameter is ignored for rules that are not managed rules. You can
-     * check whether a rule is a managed rule by using <code>DescribeRule</code> or <code>ListRules</code> and checking
-     * the <code>ManagedBy</code> field of the response.
+     * If this is a managed rule, created by an Amazon Web Services service on your behalf, you must specify
+     * <code>Force</code> as <code>True</code> to remove targets. This parameter is ignored for rules that are not
+     * managed rules. You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
+     * <code>ListRules</code> and checking the <code>ManagedBy</code> field of the response.
      * </p>
      */
     private Boolean force;
@@ -208,16 +208,16 @@ public class RemoveTargetsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * If this is a managed rule, created by an AWS service on your behalf, you must specify <code>Force</code> as
-     * <code>True</code> to remove targets. This parameter is ignored for rules that are not managed rules. You can
-     * check whether a rule is a managed rule by using <code>DescribeRule</code> or <code>ListRules</code> and checking
-     * the <code>ManagedBy</code> field of the response.
+     * If this is a managed rule, created by an Amazon Web Services service on your behalf, you must specify
+     * <code>Force</code> as <code>True</code> to remove targets. This parameter is ignored for rules that are not
+     * managed rules. You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
+     * <code>ListRules</code> and checking the <code>ManagedBy</code> field of the response.
      * </p>
      * 
      * @param force
-     *        If this is a managed rule, created by an AWS service on your behalf, you must specify <code>Force</code>
-     *        as <code>True</code> to remove targets. This parameter is ignored for rules that are not managed rules.
-     *        You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
+     *        If this is a managed rule, created by an Amazon Web Services service on your behalf, you must specify
+     *        <code>Force</code> as <code>True</code> to remove targets. This parameter is ignored for rules that are
+     *        not managed rules. You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
      *        <code>ListRules</code> and checking the <code>ManagedBy</code> field of the response.
      */
 
@@ -227,15 +227,15 @@ public class RemoveTargetsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * If this is a managed rule, created by an AWS service on your behalf, you must specify <code>Force</code> as
-     * <code>True</code> to remove targets. This parameter is ignored for rules that are not managed rules. You can
-     * check whether a rule is a managed rule by using <code>DescribeRule</code> or <code>ListRules</code> and checking
-     * the <code>ManagedBy</code> field of the response.
+     * If this is a managed rule, created by an Amazon Web Services service on your behalf, you must specify
+     * <code>Force</code> as <code>True</code> to remove targets. This parameter is ignored for rules that are not
+     * managed rules. You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
+     * <code>ListRules</code> and checking the <code>ManagedBy</code> field of the response.
      * </p>
      * 
-     * @return If this is a managed rule, created by an AWS service on your behalf, you must specify <code>Force</code>
-     *         as <code>True</code> to remove targets. This parameter is ignored for rules that are not managed rules.
-     *         You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
+     * @return If this is a managed rule, created by an Amazon Web Services service on your behalf, you must specify
+     *         <code>Force</code> as <code>True</code> to remove targets. This parameter is ignored for rules that are
+     *         not managed rules. You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
      *         <code>ListRules</code> and checking the <code>ManagedBy</code> field of the response.
      */
 
@@ -245,16 +245,16 @@ public class RemoveTargetsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * If this is a managed rule, created by an AWS service on your behalf, you must specify <code>Force</code> as
-     * <code>True</code> to remove targets. This parameter is ignored for rules that are not managed rules. You can
-     * check whether a rule is a managed rule by using <code>DescribeRule</code> or <code>ListRules</code> and checking
-     * the <code>ManagedBy</code> field of the response.
+     * If this is a managed rule, created by an Amazon Web Services service on your behalf, you must specify
+     * <code>Force</code> as <code>True</code> to remove targets. This parameter is ignored for rules that are not
+     * managed rules. You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
+     * <code>ListRules</code> and checking the <code>ManagedBy</code> field of the response.
      * </p>
      * 
      * @param force
-     *        If this is a managed rule, created by an AWS service on your behalf, you must specify <code>Force</code>
-     *        as <code>True</code> to remove targets. This parameter is ignored for rules that are not managed rules.
-     *        You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
+     *        If this is a managed rule, created by an Amazon Web Services service on your behalf, you must specify
+     *        <code>Force</code> as <code>True</code> to remove targets. This parameter is ignored for rules that are
+     *        not managed rules. You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
      *        <code>ListRules</code> and checking the <code>ManagedBy</code> field of the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -266,15 +266,15 @@ public class RemoveTargetsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * If this is a managed rule, created by an AWS service on your behalf, you must specify <code>Force</code> as
-     * <code>True</code> to remove targets. This parameter is ignored for rules that are not managed rules. You can
-     * check whether a rule is a managed rule by using <code>DescribeRule</code> or <code>ListRules</code> and checking
-     * the <code>ManagedBy</code> field of the response.
+     * If this is a managed rule, created by an Amazon Web Services service on your behalf, you must specify
+     * <code>Force</code> as <code>True</code> to remove targets. This parameter is ignored for rules that are not
+     * managed rules. You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
+     * <code>ListRules</code> and checking the <code>ManagedBy</code> field of the response.
      * </p>
      * 
-     * @return If this is a managed rule, created by an AWS service on your behalf, you must specify <code>Force</code>
-     *         as <code>True</code> to remove targets. This parameter is ignored for rules that are not managed rules.
-     *         You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
+     * @return If this is a managed rule, created by an Amazon Web Services service on your behalf, you must specify
+     *         <code>Force</code> as <code>True</code> to remove targets. This parameter is ignored for rules that are
+     *         not managed rules. You can check whether a rule is a managed rule by using <code>DescribeRule</code> or
      *         <code>ListRules</code> and checking the <code>ManagedBy</code> field of the response.
      */
 

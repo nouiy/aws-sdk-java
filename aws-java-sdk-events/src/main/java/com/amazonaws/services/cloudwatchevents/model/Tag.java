@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A key-value pair associated with an AWS resource. In EventBridge, rules and event buses support tagging.
+ * A key-value pair associated with an Amazon Web Services resource. In EventBridge, rules and event buses support
+ * tagging.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/events-2015-10-07/Tag" target="_top">AWS API Documentation</a>

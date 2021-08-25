@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Describes the IPv6 Prefix Delegation.
+ * Describes the IPv6 prefix.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/Ipv6PrefixSpecification" target="_top">AWS API
@@ -28,18 +28,18 @@ public class Ipv6PrefixSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefix.
+     * The IPv6 prefix.
      * </p>
      */
     private String ipv6Prefix;
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefix.
+     * The IPv6 prefix.
      * </p>
      * 
      * @param ipv6Prefix
-     *        The IPv6 Prefix Delegation prefix.
+     *        The IPv6 prefix.
      */
 
     public void setIpv6Prefix(String ipv6Prefix) {
@@ -48,10 +48,10 @@ public class Ipv6PrefixSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefix.
+     * The IPv6 prefix.
      * </p>
      * 
-     * @return The IPv6 Prefix Delegation prefix.
+     * @return The IPv6 prefix.
      */
 
     public String getIpv6Prefix() {
@@ -60,11 +60,11 @@ public class Ipv6PrefixSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 Prefix Delegation prefix.
+     * The IPv6 prefix.
      * </p>
      * 
      * @param ipv6Prefix
-     *        The IPv6 Prefix Delegation prefix.
+     *        The IPv6 prefix.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

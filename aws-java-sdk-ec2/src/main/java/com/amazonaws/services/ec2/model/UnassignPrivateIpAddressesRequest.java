@@ -43,7 +43,7 @@ public class UnassignPrivateIpAddressesRequest extends AmazonWebServiceRequest i
     private com.amazonaws.internal.SdkInternalList<String> privateIpAddresses;
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes to unassign from the network interface.
+     * The IPv4 prefixes to unassign from the network interface.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> ipv4Prefixes;
@@ -171,10 +171,10 @@ public class UnassignPrivateIpAddressesRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes to unassign from the network interface.
+     * The IPv4 prefixes to unassign from the network interface.
      * </p>
      * 
-     * @return The IPv4 Prefix Delegation prefixes to unassign from the network interface.
+     * @return The IPv4 prefixes to unassign from the network interface.
      */
 
     public java.util.List<String> getIpv4Prefixes() {
@@ -186,11 +186,11 @@ public class UnassignPrivateIpAddressesRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes to unassign from the network interface.
+     * The IPv4 prefixes to unassign from the network interface.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        The IPv4 Prefix Delegation prefixes to unassign from the network interface.
+     *        The IPv4 prefixes to unassign from the network interface.
      */
 
     public void setIpv4Prefixes(java.util.Collection<String> ipv4Prefixes) {
@@ -204,7 +204,7 @@ public class UnassignPrivateIpAddressesRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes to unassign from the network interface.
+     * The IPv4 prefixes to unassign from the network interface.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -213,7 +213,7 @@ public class UnassignPrivateIpAddressesRequest extends AmazonWebServiceRequest i
      * </p>
      * 
      * @param ipv4Prefixes
-     *        The IPv4 Prefix Delegation prefixes to unassign from the network interface.
+     *        The IPv4 prefixes to unassign from the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,11 +229,11 @@ public class UnassignPrivateIpAddressesRequest extends AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IPv4 Prefix Delegation prefixes to unassign from the network interface.
+     * The IPv4 prefixes to unassign from the network interface.
      * </p>
      * 
      * @param ipv4Prefixes
-     *        The IPv4 Prefix Delegation prefixes to unassign from the network interface.
+     *        The IPv4 prefixes to unassign from the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

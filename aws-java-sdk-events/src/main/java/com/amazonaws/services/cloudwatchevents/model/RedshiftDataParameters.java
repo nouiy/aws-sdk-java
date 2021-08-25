@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * These are custom parameters to be used when the target is a Redshift cluster to invoke the Redshift Data API
- * ExecuteStatement based on EventBridge events.
+ * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift
+ * Data API ExecuteStatement based on EventBridge events.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/events-2015-10-07/RedshiftDataParameters" target="_top">AWS API
@@ -31,8 +31,8 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using AWS Secrets
-     * Manager.
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Amazon Web
+     * Services Secrets Manager.
      * </p>
      */
     private String secretManagerArn;
@@ -69,13 +69,13 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using AWS Secrets
-     * Manager.
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Amazon Web
+     * Services Secrets Manager.
      * </p>
      * 
      * @param secretManagerArn
-     *        The name or ARN of the secret that enables access to the database. Required when authenticating using AWS
-     *        Secrets Manager.
+     *        The name or ARN of the secret that enables access to the database. Required when authenticating using
+     *        Amazon Web Services Secrets Manager.
      */
 
     public void setSecretManagerArn(String secretManagerArn) {
@@ -84,12 +84,12 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using AWS Secrets
-     * Manager.
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Amazon Web
+     * Services Secrets Manager.
      * </p>
      * 
-     * @return The name or ARN of the secret that enables access to the database. Required when authenticating using AWS
-     *         Secrets Manager.
+     * @return The name or ARN of the secret that enables access to the database. Required when authenticating using
+     *         Amazon Web Services Secrets Manager.
      */
 
     public String getSecretManagerArn() {
@@ -98,13 +98,13 @@ public class RedshiftDataParameters implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name or ARN of the secret that enables access to the database. Required when authenticating using AWS Secrets
-     * Manager.
+     * The name or ARN of the secret that enables access to the database. Required when authenticating using Amazon Web
+     * Services Secrets Manager.
      * </p>
      * 
      * @param secretManagerArn
-     *        The name or ARN of the secret that enables access to the database. Required when authenticating using AWS
-     *        Secrets Manager.
+     *        The name or ARN of the secret that enables access to the database. Required when authenticating using
+     *        Amazon Web Services Secrets Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -21,7 +21,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The task placement strategy for a task or service. To learn more, see <a
  * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html">Task Placement
- * Strategies</a> in the Amazon Elastic Container Service Developer Guide.
+ * Strategies</a> in the Amazon Elastic Container Service Service Developer Guide.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/events-2015-10-07/PlacementStrategy" target="_top">AWS API

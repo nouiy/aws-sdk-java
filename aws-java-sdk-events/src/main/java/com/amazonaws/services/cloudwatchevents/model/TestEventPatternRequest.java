@@ -36,8 +36,8 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The event, in JSON format, to test against the event pattern. The JSON must follow the format specified in <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">AWS Events</a>, and the following
-     * fields are mandatory:
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">Amazon Web Services Events</a>,
+     * and the following fields are mandatory:
      * </p>
      * <ul>
      * <li>
@@ -134,8 +134,8 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The event, in JSON format, to test against the event pattern. The JSON must follow the format specified in <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">AWS Events</a>, and the following
-     * fields are mandatory:
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">Amazon Web Services Events</a>,
+     * and the following fields are mandatory:
      * </p>
      * <ul>
      * <li>
@@ -177,8 +177,8 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param event
      *        The event, in JSON format, to test against the event pattern. The JSON must follow the format specified in
-     *        <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">AWS Events</a>, and the
-     *        following fields are mandatory:</p>
+     *        <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">Amazon Web Services
+     *        Events</a>, and the following fields are mandatory:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -224,8 +224,8 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The event, in JSON format, to test against the event pattern. The JSON must follow the format specified in <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">AWS Events</a>, and the following
-     * fields are mandatory:
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">Amazon Web Services Events</a>,
+     * and the following fields are mandatory:
      * </p>
      * <ul>
      * <li>
@@ -266,8 +266,8 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
      * </ul>
      * 
      * @return The event, in JSON format, to test against the event pattern. The JSON must follow the format specified
-     *         in <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">AWS Events</a>, and
-     *         the following fields are mandatory:</p>
+     *         in <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">Amazon Web Services
+     *         Events</a>, and the following fields are mandatory:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -313,8 +313,8 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The event, in JSON format, to test against the event pattern. The JSON must follow the format specified in <a
-     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">AWS Events</a>, and the following
-     * fields are mandatory:
+     * href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">Amazon Web Services Events</a>,
+     * and the following fields are mandatory:
      * </p>
      * <ul>
      * <li>
@@ -356,8 +356,8 @@ public class TestEventPatternRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param event
      *        The event, in JSON format, to test against the event pattern. The JSON must follow the format specified in
-     *        <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">AWS Events</a>, and the
-     *        following fields are mandatory:</p>
+     *        <a href="https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html">Amazon Web Services
+     *        Events</a>, and the following fields are mandatory:</p>
      *        <ul>
      *        <li>
      *        <p>

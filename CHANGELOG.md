@@ -1,3 +1,24 @@
+# __1.12.55__ __2021-08-25__
+## __AWS DataSync__
+  - ### Features
+    - Added include filters to CreateTask and UpdateTask, and added exclude filters to StartTaskExecution, giving customers more granular control over how DataSync transfers files, folders, and objects.
+
+## __Amazon CloudWatch Events__
+  - ### Features
+    - AWS CWEvents adds an enum of EXTERNAL for EcsParameters LaunchType for PutTargets API
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Support added for IMDS IPv6 endpoint
+
+## __Amazon EventBridge__
+  - ### Features
+    - AWS EventBridge adds an enum of EXTERNAL for EcsParameters LaunchType for PutTargets API
+
+## __Firewall Management Service__
+  - ### Features
+    - AWS Firewall Manager now supports triggering resource cleanup workflow when account or resource goes out of policy scope for AWS WAF, Security group, AWS Network Firewall, and Amazon Route 53 Resolver DNS Firewall policies.
+
 # __1.12.54__ __2021-08-24__
 ## __AWS Elemental MediaConvert__
   - ### Features
