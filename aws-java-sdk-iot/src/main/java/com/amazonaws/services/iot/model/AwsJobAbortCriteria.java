@@ -42,7 +42,8 @@ public class AwsJobAbortCriteria implements Serializable, Cloneable, StructuredP
      * The minimum percentage of job execution failures that must occur to initiate the job abort.
      * </p>
      * <p>
-     * AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).
+     * Amazon Web Services IoT Core supports up to two digits after the decimal (for example, 10.9 and 10.99, but not
+     * 10.999).
      * </p>
      */
     private Double thresholdPercentage;
@@ -176,13 +177,15 @@ public class AwsJobAbortCriteria implements Serializable, Cloneable, StructuredP
      * The minimum percentage of job execution failures that must occur to initiate the job abort.
      * </p>
      * <p>
-     * AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).
+     * Amazon Web Services IoT Core supports up to two digits after the decimal (for example, 10.9 and 10.99, but not
+     * 10.999).
      * </p>
      * 
      * @param thresholdPercentage
      *        The minimum percentage of job execution failures that must occur to initiate the job abort.</p>
      *        <p>
-     *        AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).
+     *        Amazon Web Services IoT Core supports up to two digits after the decimal (for example, 10.9 and 10.99, but
+     *        not 10.999).
      */
 
     public void setThresholdPercentage(Double thresholdPercentage) {
@@ -194,12 +197,14 @@ public class AwsJobAbortCriteria implements Serializable, Cloneable, StructuredP
      * The minimum percentage of job execution failures that must occur to initiate the job abort.
      * </p>
      * <p>
-     * AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).
+     * Amazon Web Services IoT Core supports up to two digits after the decimal (for example, 10.9 and 10.99, but not
+     * 10.999).
      * </p>
      * 
      * @return The minimum percentage of job execution failures that must occur to initiate the job abort.</p>
      *         <p>
-     *         AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).
+     *         Amazon Web Services IoT Core supports up to two digits after the decimal (for example, 10.9 and 10.99,
+     *         but not 10.999).
      */
 
     public Double getThresholdPercentage() {
@@ -211,13 +216,15 @@ public class AwsJobAbortCriteria implements Serializable, Cloneable, StructuredP
      * The minimum percentage of job execution failures that must occur to initiate the job abort.
      * </p>
      * <p>
-     * AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).
+     * Amazon Web Services IoT Core supports up to two digits after the decimal (for example, 10.9 and 10.99, but not
+     * 10.999).
      * </p>
      * 
      * @param thresholdPercentage
      *        The minimum percentage of job execution failures that must occur to initiate the job abort.</p>
      *        <p>
-     *        AWS IoT supports up to two digits after the decimal (for example, 10.9 and 10.99, but not 10.999).
+     *        Amazon Web Services IoT Core supports up to two digits after the decimal (for example, 10.9 and 10.99, but
+     *        not 10.999).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

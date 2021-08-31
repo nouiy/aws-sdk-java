@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an action to send data from an MQTT message that triggered the rule to AWS IoT SiteWise asset properties.
+ * Describes an action to send data from an MQTT message that triggered the rule to IoT SiteWise asset properties.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -33,7 +33,7 @@ public class IotSiteWiseAction implements Serializable, Cloneable, StructuredPoj
     private java.util.List<PutAssetPropertyValueEntry> putAssetPropertyValueEntries;
     /**
      * <p>
-     * The ARN of the role that grants AWS IoT permission to send an asset property value to AWS IoTSiteWise. (
+     * The ARN of the role that grants IoT permission to send an asset property value to IoT SiteWise. (
      * <code>"Action": "iotsitewise:BatchPutAssetPropertyValue"</code>). The trust policy can restrict access to
      * specific asset hierarchy paths.
      * </p>
@@ -112,13 +112,13 @@ public class IotSiteWiseAction implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ARN of the role that grants AWS IoT permission to send an asset property value to AWS IoTSiteWise. (
+     * The ARN of the role that grants IoT permission to send an asset property value to IoT SiteWise. (
      * <code>"Action": "iotsitewise:BatchPutAssetPropertyValue"</code>). The trust policy can restrict access to
      * specific asset hierarchy paths.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the role that grants AWS IoT permission to send an asset property value to AWS IoTSiteWise. (
+     *        The ARN of the role that grants IoT permission to send an asset property value to IoT SiteWise. (
      *        <code>"Action": "iotsitewise:BatchPutAssetPropertyValue"</code>). The trust policy can restrict access to
      *        specific asset hierarchy paths.
      */
@@ -129,12 +129,12 @@ public class IotSiteWiseAction implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ARN of the role that grants AWS IoT permission to send an asset property value to AWS IoTSiteWise. (
+     * The ARN of the role that grants IoT permission to send an asset property value to IoT SiteWise. (
      * <code>"Action": "iotsitewise:BatchPutAssetPropertyValue"</code>). The trust policy can restrict access to
      * specific asset hierarchy paths.
      * </p>
      * 
-     * @return The ARN of the role that grants AWS IoT permission to send an asset property value to AWS IoTSiteWise. (
+     * @return The ARN of the role that grants IoT permission to send an asset property value to IoT SiteWise. (
      *         <code>"Action": "iotsitewise:BatchPutAssetPropertyValue"</code>). The trust policy can restrict access to
      *         specific asset hierarchy paths.
      */
@@ -145,13 +145,13 @@ public class IotSiteWiseAction implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The ARN of the role that grants AWS IoT permission to send an asset property value to AWS IoTSiteWise. (
+     * The ARN of the role that grants IoT permission to send an asset property value to IoT SiteWise. (
      * <code>"Action": "iotsitewise:BatchPutAssetPropertyValue"</code>). The trust policy can restrict access to
      * specific asset hierarchy paths.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the role that grants AWS IoT permission to send an asset property value to AWS IoTSiteWise. (
+     *        The ARN of the role that grants IoT permission to send an asset property value to IoT SiteWise. (
      *        <code>"Action": "iotsitewise:BatchPutAssetPropertyValue"</code>). The trust policy can restrict access to
      *        specific asset hierarchy paths.
      * @return Returns a reference to this object so that method calls can be chained together.

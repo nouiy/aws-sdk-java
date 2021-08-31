@@ -345,6 +345,19 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<CreateFleetMetricResult> createFleetMetricAsync(CreateFleetMetricRequest request) {
+
+        return createFleetMetricAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateFleetMetricResult> createFleetMetricAsync(CreateFleetMetricRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateFleetMetricRequest, CreateFleetMetricResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateJobResult> createJobAsync(CreateJobRequest request) {
 
         return createJobAsync(request, null);
@@ -721,6 +734,19 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     @Override
     public java.util.concurrent.Future<DeleteDynamicThingGroupResult> deleteDynamicThingGroupAsync(DeleteDynamicThingGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteDynamicThingGroupRequest, DeleteDynamicThingGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFleetMetricResult> deleteFleetMetricAsync(DeleteFleetMetricRequest request) {
+
+        return deleteFleetMetricAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteFleetMetricResult> deleteFleetMetricAsync(DeleteFleetMetricRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteFleetMetricRequest, DeleteFleetMetricResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1215,6 +1241,19 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeFleetMetricResult> describeFleetMetricAsync(DescribeFleetMetricRequest request) {
+
+        return describeFleetMetricAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeFleetMetricResult> describeFleetMetricAsync(DescribeFleetMetricRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeFleetMetricRequest, DescribeFleetMetricResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeIndexResult> describeIndexAsync(DescribeIndexRequest request) {
 
         return describeIndexAsync(request, null);
@@ -1502,6 +1541,19 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     public java.util.concurrent.Future<GetBehaviorModelTrainingSummariesResult> getBehaviorModelTrainingSummariesAsync(
             GetBehaviorModelTrainingSummariesRequest request,
             com.amazonaws.handlers.AsyncHandler<GetBehaviorModelTrainingSummariesRequest, GetBehaviorModelTrainingSummariesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBucketsAggregationResult> getBucketsAggregationAsync(GetBucketsAggregationRequest request) {
+
+        return getBucketsAggregationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBucketsAggregationResult> getBucketsAggregationAsync(GetBucketsAggregationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetBucketsAggregationRequest, GetBucketsAggregationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1913,6 +1965,19 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     @Override
     public java.util.concurrent.Future<ListDomainConfigurationsResult> listDomainConfigurationsAsync(ListDomainConfigurationsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListDomainConfigurationsRequest, ListDomainConfigurationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFleetMetricsResult> listFleetMetricsAsync(ListFleetMetricsRequest request) {
+
+        return listFleetMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListFleetMetricsResult> listFleetMetricsAsync(ListFleetMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListFleetMetricsRequest, ListFleetMetricsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2850,6 +2915,19 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     @Override
     public java.util.concurrent.Future<UpdateEventConfigurationsResult> updateEventConfigurationsAsync(UpdateEventConfigurationsRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateEventConfigurationsRequest, UpdateEventConfigurationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFleetMetricResult> updateFleetMetricAsync(UpdateFleetMetricRequest request) {
+
+        return updateFleetMetricAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateFleetMetricResult> updateFleetMetricAsync(UpdateFleetMetricRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateFleetMetricRequest, UpdateFleetMetricResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

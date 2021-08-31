@@ -35,7 +35,7 @@ public class DeleteOTAUpdateRequest extends com.amazonaws.AmazonWebServiceReques
     private Boolean deleteStream;
     /**
      * <p>
-     * When true, deletes the AWS job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
+     * When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
      * job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is false.
      * </p>
      */
@@ -143,12 +143,12 @@ public class DeleteOTAUpdateRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * When true, deletes the AWS job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
+     * When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
      * job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is false.
      * </p>
      * 
      * @param forceDeleteAWSJob
-     *        When true, deletes the AWS job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if
+     *        When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if
      *        the job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is
      *        false.
      */
@@ -159,11 +159,11 @@ public class DeleteOTAUpdateRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * When true, deletes the AWS job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
+     * When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
      * job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is false.
      * </p>
      * 
-     * @return When true, deletes the AWS job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise,
+     * @return When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise,
      *         if the job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is
      *         false.
      */
@@ -174,12 +174,12 @@ public class DeleteOTAUpdateRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * When true, deletes the AWS job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
+     * When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
      * job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is false.
      * </p>
      * 
      * @param forceDeleteAWSJob
-     *        When true, deletes the AWS job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if
+     *        When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if
      *        the job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is
      *        false.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -192,11 +192,11 @@ public class DeleteOTAUpdateRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * When true, deletes the AWS job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
+     * When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise, if the
      * job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is false.
      * </p>
      * 
-     * @return When true, deletes the AWS job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise,
+     * @return When true, deletes the IoT job created by the OTAUpdate process even if it is "IN_PROGRESS". Otherwise,
      *         if the job is not in a terminal state ("COMPLETED" or "CANCELED") an exception will occur. The default is
      *         false.
      */

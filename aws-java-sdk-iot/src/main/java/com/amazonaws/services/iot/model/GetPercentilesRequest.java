@@ -28,7 +28,7 @@ public class GetPercentilesRequest extends com.amazonaws.AmazonWebServiceRequest
     private String indexName;
     /**
      * <p>
-     * The query string.
+     * The search query string.
      * </p>
      */
     private String queryString;
@@ -93,11 +93,11 @@ public class GetPercentilesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The query string.
+     * The search query string.
      * </p>
      * 
      * @param queryString
-     *        The query string.
+     *        The search query string.
      */
 
     public void setQueryString(String queryString) {
@@ -106,10 +106,10 @@ public class GetPercentilesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The query string.
+     * The search query string.
      * </p>
      * 
-     * @return The query string.
+     * @return The search query string.
      */
 
     public String getQueryString() {
@@ -118,11 +118,11 @@ public class GetPercentilesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The query string.
+     * The search query string.
      * </p>
      * 
      * @param queryString
-     *        The query string.
+     *        The search query string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

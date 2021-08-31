@@ -69,7 +69,7 @@ public class StreamInfo implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastUpdatedAt;
     /**
      * <p>
-     * An IAM role AWS IoT assumes to access your S3 files.
+     * An IAM role IoT assumes to access your S3 files.
      * </p>
      */
     private String roleArn;
@@ -386,11 +386,11 @@ public class StreamInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An IAM role AWS IoT assumes to access your S3 files.
+     * An IAM role IoT assumes to access your S3 files.
      * </p>
      * 
      * @param roleArn
-     *        An IAM role AWS IoT assumes to access your S3 files.
+     *        An IAM role IoT assumes to access your S3 files.
      */
 
     public void setRoleArn(String roleArn) {
@@ -399,10 +399,10 @@ public class StreamInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An IAM role AWS IoT assumes to access your S3 files.
+     * An IAM role IoT assumes to access your S3 files.
      * </p>
      * 
-     * @return An IAM role AWS IoT assumes to access your S3 files.
+     * @return An IAM role IoT assumes to access your S3 files.
      */
 
     public String getRoleArn() {
@@ -411,11 +411,11 @@ public class StreamInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An IAM role AWS IoT assumes to access your S3 files.
+     * An IAM role IoT assumes to access your S3 files.
      * </p>
      * 
      * @param roleArn
-     *        An IAM role AWS IoT assumes to access your S3 files.
+     *        An IAM role IoT assumes to access your S3 files.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

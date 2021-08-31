@@ -29,7 +29,7 @@ public class GetStatisticsRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The query used to search. You can specify "*" for the query string to get the count of all indexed things in your
-     * AWS account.
+     * Amazon Web Services account.
      * </p>
      */
     private String queryString;
@@ -89,12 +89,12 @@ public class GetStatisticsRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The query used to search. You can specify "*" for the query string to get the count of all indexed things in your
-     * AWS account.
+     * Amazon Web Services account.
      * </p>
      * 
      * @param queryString
      *        The query used to search. You can specify "*" for the query string to get the count of all indexed things
-     *        in your AWS account.
+     *        in your Amazon Web Services account.
      */
 
     public void setQueryString(String queryString) {
@@ -104,11 +104,11 @@ public class GetStatisticsRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The query used to search. You can specify "*" for the query string to get the count of all indexed things in your
-     * AWS account.
+     * Amazon Web Services account.
      * </p>
      * 
      * @return The query used to search. You can specify "*" for the query string to get the count of all indexed things
-     *         in your AWS account.
+     *         in your Amazon Web Services account.
      */
 
     public String getQueryString() {
@@ -118,12 +118,12 @@ public class GetStatisticsRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The query used to search. You can specify "*" for the query string to get the count of all indexed things in your
-     * AWS account.
+     * Amazon Web Services account.
      * </p>
      * 
      * @param queryString
      *        The query used to search. You can specify "*" for the query string to get the count of all indexed things
-     *        in your AWS account.
+     *        in your Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

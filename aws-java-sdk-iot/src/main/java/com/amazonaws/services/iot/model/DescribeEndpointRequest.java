@@ -46,14 +46,14 @@ public class DescribeEndpointRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * <code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.
+     * <code>iot:CredentialProvider</code> - Returns an IoT credentials provider API endpoint.
      * </p>
      * </li>
      * </ul>
      * <ul>
      * <li>
      * <p>
-     * <code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.
+     * <code>iot:Jobs</code> - Returns an IoT device management Jobs API endpoint.
      * </p>
      * </li>
      * </ul>
@@ -85,14 +85,14 @@ public class DescribeEndpointRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * <code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.
+     * <code>iot:CredentialProvider</code> - Returns an IoT credentials provider API endpoint.
      * </p>
      * </li>
      * </ul>
      * <ul>
      * <li>
      * <p>
-     * <code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.
+     * <code>iot:Jobs</code> - Returns an IoT device management Jobs API endpoint.
      * </p>
      * </li>
      * </ul>
@@ -120,14 +120,14 @@ public class DescribeEndpointRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.
+     *        <code>iot:CredentialProvider</code> - Returns an IoT credentials provider API endpoint.
      *        </p>
      *        </li>
      *        </ul>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.
+     *        <code>iot:Jobs</code> - Returns an IoT device management Jobs API endpoint.
      *        </p>
      *        </li>
      *        </ul>
@@ -161,14 +161,14 @@ public class DescribeEndpointRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * <code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.
+     * <code>iot:CredentialProvider</code> - Returns an IoT credentials provider API endpoint.
      * </p>
      * </li>
      * </ul>
      * <ul>
      * <li>
      * <p>
-     * <code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.
+     * <code>iot:Jobs</code> - Returns an IoT device management Jobs API endpoint.
      * </p>
      * </li>
      * </ul>
@@ -195,14 +195,14 @@ public class DescribeEndpointRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.
+     *         <code>iot:CredentialProvider</code> - Returns an IoT credentials provider API endpoint.
      *         </p>
      *         </li>
      *         </ul>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.
+     *         <code>iot:Jobs</code> - Returns an IoT device management Jobs API endpoint.
      *         </p>
      *         </li>
      *         </ul>
@@ -236,14 +236,14 @@ public class DescribeEndpointRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * <code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.
+     * <code>iot:CredentialProvider</code> - Returns an IoT credentials provider API endpoint.
      * </p>
      * </li>
      * </ul>
      * <ul>
      * <li>
      * <p>
-     * <code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.
+     * <code>iot:Jobs</code> - Returns an IoT device management Jobs API endpoint.
      * </p>
      * </li>
      * </ul>
@@ -271,14 +271,14 @@ public class DescribeEndpointRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>iot:CredentialProvider</code> - Returns an AWS IoT credentials provider API endpoint.
+     *        <code>iot:CredentialProvider</code> - Returns an IoT credentials provider API endpoint.
      *        </p>
      *        </li>
      *        </ul>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>iot:Jobs</code> - Returns an AWS IoT device management Jobs API endpoint.
+     *        <code>iot:Jobs</code> - Returns an IoT device management Jobs API endpoint.
      *        </p>
      *        </li>
      *        </ul>

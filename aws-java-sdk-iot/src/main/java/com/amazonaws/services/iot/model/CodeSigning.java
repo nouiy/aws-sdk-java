@@ -27,7 +27,7 @@ public class CodeSigning implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWSSignerJob which was created to sign the file.
+     * The ID of the <code>AWSSignerJob</code> which was created to sign the file.
      * </p>
      */
     private String awsSignerJobId;
@@ -46,11 +46,11 @@ public class CodeSigning implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWSSignerJob which was created to sign the file.
+     * The ID of the <code>AWSSignerJob</code> which was created to sign the file.
      * </p>
      * 
      * @param awsSignerJobId
-     *        The ID of the AWSSignerJob which was created to sign the file.
+     *        The ID of the <code>AWSSignerJob</code> which was created to sign the file.
      */
 
     public void setAwsSignerJobId(String awsSignerJobId) {
@@ -59,10 +59,10 @@ public class CodeSigning implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWSSignerJob which was created to sign the file.
+     * The ID of the <code>AWSSignerJob</code> which was created to sign the file.
      * </p>
      * 
-     * @return The ID of the AWSSignerJob which was created to sign the file.
+     * @return The ID of the <code>AWSSignerJob</code> which was created to sign the file.
      */
 
     public String getAwsSignerJobId() {
@@ -71,11 +71,11 @@ public class CodeSigning implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWSSignerJob which was created to sign the file.
+     * The ID of the <code>AWSSignerJob</code> which was created to sign the file.
      * </p>
      * 
      * @param awsSignerJobId
-     *        The ID of the AWSSignerJob which was created to sign the file.
+     *        The ID of the <code>AWSSignerJob</code> which was created to sign the file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

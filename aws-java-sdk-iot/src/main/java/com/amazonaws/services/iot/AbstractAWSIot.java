@@ -159,6 +159,11 @@ public class AbstractAWSIot implements AWSIot {
     }
 
     @Override
+    public CreateFleetMetricResult createFleetMetric(CreateFleetMetricRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateJobResult createJob(CreateJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -300,6 +305,11 @@ public class AbstractAWSIot implements AWSIot {
 
     @Override
     public DeleteDynamicThingGroupResult deleteDynamicThingGroup(DeleteDynamicThingGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteFleetMetricResult deleteFleetMetric(DeleteFleetMetricRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -489,6 +499,11 @@ public class AbstractAWSIot implements AWSIot {
     }
 
     @Override
+    public DescribeFleetMetricResult describeFleetMetric(DescribeFleetMetricRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeIndexResult describeIndex(DescribeIndexRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -596,6 +611,11 @@ public class AbstractAWSIot implements AWSIot {
 
     @Override
     public GetBehaviorModelTrainingSummariesResult getBehaviorModelTrainingSummaries(GetBehaviorModelTrainingSummariesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetBucketsAggregationResult getBucketsAggregation(GetBucketsAggregationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -751,6 +771,11 @@ public class AbstractAWSIot implements AWSIot {
 
     @Override
     public ListDomainConfigurationsResult listDomainConfigurations(ListDomainConfigurationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListFleetMetricsResult listFleetMetrics(ListFleetMetricsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -1108,6 +1133,11 @@ public class AbstractAWSIot implements AWSIot {
 
     @Override
     public UpdateEventConfigurationsResult updateEventConfigurations(UpdateEventConfigurationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateFleetMetricResult updateFleetMetric(UpdateFleetMetricRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

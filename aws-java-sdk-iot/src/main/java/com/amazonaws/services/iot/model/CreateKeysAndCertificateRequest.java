@@ -21,6 +21,11 @@ import com.amazonaws.AmazonWebServiceRequest;
  * <p>
  * The input for the CreateKeysAndCertificate operation.
  * </p>
+ * <p>
+ * Requires permission to access the <a href=
+ * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+ * >CreateKeysAndCertificateRequest</a> action.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class CreateKeysAndCertificateRequest extends com.amazonaws.AmazonWebServiceRequest implements Serializable, Cloneable {

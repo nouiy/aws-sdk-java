@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Sends message data to an AWS IoT Analytics channel.
+ * Sends message data to an IoT Analytics channel.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -45,7 +45,7 @@ public class IotAnalyticsAction implements Serializable, Cloneable, StructuredPo
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
      * element is delivered as a separate message when passed by <a
      * href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html">
-     * <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more than 100
+     * <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than 100
      * messages.
      * </p>
      */
@@ -146,7 +146,7 @@ public class IotAnalyticsAction implements Serializable, Cloneable, StructuredPo
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
      * element is delivered as a separate message when passed by <a
      * href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html">
-     * <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more than 100
+     * <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than 100
      * messages.
      * </p>
      * 
@@ -156,8 +156,8 @@ public class IotAnalyticsAction implements Serializable, Cloneable, StructuredPo
      *        When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each
      *        Array element is delivered as a separate message when passed by <a
      *        href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html">
-     *        <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more
-     *        than 100 messages.
+     *        <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than
+     *        100 messages.
      */
 
     public void setBatchMode(Boolean batchMode) {
@@ -172,7 +172,7 @@ public class IotAnalyticsAction implements Serializable, Cloneable, StructuredPo
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
      * element is delivered as a separate message when passed by <a
      * href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html">
-     * <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more than 100
+     * <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than 100
      * messages.
      * </p>
      * 
@@ -181,8 +181,8 @@ public class IotAnalyticsAction implements Serializable, Cloneable, StructuredPo
      *         When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each
      *         Array element is delivered as a separate message when passed by <a
      *         href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html">
-     *         <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more
-     *         than 100 messages.
+     *         <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than
+     *         100 messages.
      */
 
     public Boolean getBatchMode() {
@@ -197,7 +197,7 @@ public class IotAnalyticsAction implements Serializable, Cloneable, StructuredPo
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
      * element is delivered as a separate message when passed by <a
      * href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html">
-     * <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more than 100
+     * <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than 100
      * messages.
      * </p>
      * 
@@ -207,8 +207,8 @@ public class IotAnalyticsAction implements Serializable, Cloneable, StructuredPo
      *        When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each
      *        Array element is delivered as a separate message when passed by <a
      *        href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html">
-     *        <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more
-     *        than 100 messages.
+     *        <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than
+     *        100 messages.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -225,7 +225,7 @@ public class IotAnalyticsAction implements Serializable, Cloneable, StructuredPo
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
      * element is delivered as a separate message when passed by <a
      * href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html">
-     * <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more than 100
+     * <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than 100
      * messages.
      * </p>
      * 
@@ -234,8 +234,8 @@ public class IotAnalyticsAction implements Serializable, Cloneable, StructuredPo
      *         When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each
      *         Array element is delivered as a separate message when passed by <a
      *         href="https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_BatchPutMessage.html">
-     *         <code>BatchPutMessage</code> </a> to the AWS IoT Analytics channel. The resulting array can't have more
-     *         than 100 messages.
+     *         <code>BatchPutMessage</code> </a> to the IoT Analytics channel. The resulting array can't have more than
+     *         100 messages.
      */
 
     public Boolean isBatchMode() {

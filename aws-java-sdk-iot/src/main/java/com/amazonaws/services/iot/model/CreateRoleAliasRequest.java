@@ -34,7 +34,7 @@ public class CreateRoleAliasRequest extends com.amazonaws.AmazonWebServiceReques
     private String roleArn;
     /**
      * <p>
-     * How long (in seconds) the credentials will be valid.
+     * How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      * </p>
      */
     private Integer credentialDurationSeconds;
@@ -141,11 +141,11 @@ public class CreateRoleAliasRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * How long (in seconds) the credentials will be valid.
+     * How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      * </p>
      * 
      * @param credentialDurationSeconds
-     *        How long (in seconds) the credentials will be valid.
+     *        How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      */
 
     public void setCredentialDurationSeconds(Integer credentialDurationSeconds) {
@@ -154,10 +154,10 @@ public class CreateRoleAliasRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * How long (in seconds) the credentials will be valid.
+     * How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      * </p>
      * 
-     * @return How long (in seconds) the credentials will be valid.
+     * @return How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      */
 
     public Integer getCredentialDurationSeconds() {
@@ -166,11 +166,11 @@ public class CreateRoleAliasRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * How long (in seconds) the credentials will be valid.
+     * How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      * </p>
      * 
      * @param credentialDurationSeconds
-     *        How long (in seconds) the credentials will be valid.
+     *        How long (in seconds) the credentials will be valid. The default value is 3,600 seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

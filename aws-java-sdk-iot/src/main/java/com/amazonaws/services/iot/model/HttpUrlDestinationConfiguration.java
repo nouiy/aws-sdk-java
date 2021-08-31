@@ -27,18 +27,18 @@ public class HttpUrlDestinationConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The URL AWS IoT uses to confirm ownership of or access to the topic rule destination URL.
+     * The URL IoT uses to confirm ownership of or access to the topic rule destination URL.
      * </p>
      */
     private String confirmationUrl;
 
     /**
      * <p>
-     * The URL AWS IoT uses to confirm ownership of or access to the topic rule destination URL.
+     * The URL IoT uses to confirm ownership of or access to the topic rule destination URL.
      * </p>
      * 
      * @param confirmationUrl
-     *        The URL AWS IoT uses to confirm ownership of or access to the topic rule destination URL.
+     *        The URL IoT uses to confirm ownership of or access to the topic rule destination URL.
      */
 
     public void setConfirmationUrl(String confirmationUrl) {
@@ -47,10 +47,10 @@ public class HttpUrlDestinationConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The URL AWS IoT uses to confirm ownership of or access to the topic rule destination URL.
+     * The URL IoT uses to confirm ownership of or access to the topic rule destination URL.
      * </p>
      * 
-     * @return The URL AWS IoT uses to confirm ownership of or access to the topic rule destination URL.
+     * @return The URL IoT uses to confirm ownership of or access to the topic rule destination URL.
      */
 
     public String getConfirmationUrl() {
@@ -59,11 +59,11 @@ public class HttpUrlDestinationConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The URL AWS IoT uses to confirm ownership of or access to the topic rule destination URL.
+     * The URL IoT uses to confirm ownership of or access to the topic rule destination URL.
      * </p>
      * 
      * @param confirmationUrl
-     *        The URL AWS IoT uses to confirm ownership of or access to the topic rule destination URL.
+     *        The URL IoT uses to confirm ownership of or access to the topic rule destination URL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

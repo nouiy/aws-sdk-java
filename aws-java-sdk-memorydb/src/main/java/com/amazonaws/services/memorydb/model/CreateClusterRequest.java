@@ -51,20 +51,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String description;
     /**
      * <p>
-     * The number of shards the cluster will contain.
-     * </p>
-     * <p>
-     * Clusters can have up to 500 shards, with your data partitioned across the shards. For example, you can choose to
-     * configure a 500 node cluster that ranges between 83 shards (one primary and 5 replicas per shard) and 500 shards
-     * (single primary and no replicas). Make sure there are enough available IP addresses to accommodate the increase.
-     * Common pitfalls include the subnets in the subnet group have too small a CIDR range or the subnets are shared and
-     * heavily used by other clusters.
+     * The number of shards the cluster will contain. The default value is 1.
      * </p>
      */
     private Integer numShards;
     /**
      * <p>
-     * The number of replicas to apply to each shard. The limit is 5.
+     * The number of replicas to apply to each shard. The default value is 1. The maximum is 5.
      * </p>
      */
     private Integer numReplicasPerShard;
@@ -336,24 +329,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of shards the cluster will contain.
-     * </p>
-     * <p>
-     * Clusters can have up to 500 shards, with your data partitioned across the shards. For example, you can choose to
-     * configure a 500 node cluster that ranges between 83 shards (one primary and 5 replicas per shard) and 500 shards
-     * (single primary and no replicas). Make sure there are enough available IP addresses to accommodate the increase.
-     * Common pitfalls include the subnets in the subnet group have too small a CIDR range or the subnets are shared and
-     * heavily used by other clusters.
+     * The number of shards the cluster will contain. The default value is 1.
      * </p>
      * 
      * @param numShards
-     *        The number of shards the cluster will contain.</p>
-     *        <p>
-     *        Clusters can have up to 500 shards, with your data partitioned across the shards. For example, you can
-     *        choose to configure a 500 node cluster that ranges between 83 shards (one primary and 5 replicas per
-     *        shard) and 500 shards (single primary and no replicas). Make sure there are enough available IP addresses
-     *        to accommodate the increase. Common pitfalls include the subnets in the subnet group have too small a CIDR
-     *        range or the subnets are shared and heavily used by other clusters.
+     *        The number of shards the cluster will contain. The default value is 1.
      */
 
     public void setNumShards(Integer numShards) {
@@ -362,23 +342,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of shards the cluster will contain.
-     * </p>
-     * <p>
-     * Clusters can have up to 500 shards, with your data partitioned across the shards. For example, you can choose to
-     * configure a 500 node cluster that ranges between 83 shards (one primary and 5 replicas per shard) and 500 shards
-     * (single primary and no replicas). Make sure there are enough available IP addresses to accommodate the increase.
-     * Common pitfalls include the subnets in the subnet group have too small a CIDR range or the subnets are shared and
-     * heavily used by other clusters.
+     * The number of shards the cluster will contain. The default value is 1.
      * </p>
      * 
-     * @return The number of shards the cluster will contain.</p>
-     *         <p>
-     *         Clusters can have up to 500 shards, with your data partitioned across the shards. For example, you can
-     *         choose to configure a 500 node cluster that ranges between 83 shards (one primary and 5 replicas per
-     *         shard) and 500 shards (single primary and no replicas). Make sure there are enough available IP addresses
-     *         to accommodate the increase. Common pitfalls include the subnets in the subnet group have too small a
-     *         CIDR range or the subnets are shared and heavily used by other clusters.
+     * @return The number of shards the cluster will contain. The default value is 1.
      */
 
     public Integer getNumShards() {
@@ -387,24 +354,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of shards the cluster will contain.
-     * </p>
-     * <p>
-     * Clusters can have up to 500 shards, with your data partitioned across the shards. For example, you can choose to
-     * configure a 500 node cluster that ranges between 83 shards (one primary and 5 replicas per shard) and 500 shards
-     * (single primary and no replicas). Make sure there are enough available IP addresses to accommodate the increase.
-     * Common pitfalls include the subnets in the subnet group have too small a CIDR range or the subnets are shared and
-     * heavily used by other clusters.
+     * The number of shards the cluster will contain. The default value is 1.
      * </p>
      * 
      * @param numShards
-     *        The number of shards the cluster will contain.</p>
-     *        <p>
-     *        Clusters can have up to 500 shards, with your data partitioned across the shards. For example, you can
-     *        choose to configure a 500 node cluster that ranges between 83 shards (one primary and 5 replicas per
-     *        shard) and 500 shards (single primary and no replicas). Make sure there are enough available IP addresses
-     *        to accommodate the increase. Common pitfalls include the subnets in the subnet group have too small a CIDR
-     *        range or the subnets are shared and heavily used by other clusters.
+     *        The number of shards the cluster will contain. The default value is 1.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -415,11 +369,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of replicas to apply to each shard. The limit is 5.
+     * The number of replicas to apply to each shard. The default value is 1. The maximum is 5.
      * </p>
      * 
      * @param numReplicasPerShard
-     *        The number of replicas to apply to each shard. The limit is 5.
+     *        The number of replicas to apply to each shard. The default value is 1. The maximum is 5.
      */
 
     public void setNumReplicasPerShard(Integer numReplicasPerShard) {
@@ -428,10 +382,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of replicas to apply to each shard. The limit is 5.
+     * The number of replicas to apply to each shard. The default value is 1. The maximum is 5.
      * </p>
      * 
-     * @return The number of replicas to apply to each shard. The limit is 5.
+     * @return The number of replicas to apply to each shard. The default value is 1. The maximum is 5.
      */
 
     public Integer getNumReplicasPerShard() {
@@ -440,11 +394,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The number of replicas to apply to each shard. The limit is 5.
+     * The number of replicas to apply to each shard. The default value is 1. The maximum is 5.
      * </p>
      * 
      * @param numReplicasPerShard
-     *        The number of replicas to apply to each shard. The limit is 5.
+     *        The number of replicas to apply to each shard. The default value is 1. The maximum is 5.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

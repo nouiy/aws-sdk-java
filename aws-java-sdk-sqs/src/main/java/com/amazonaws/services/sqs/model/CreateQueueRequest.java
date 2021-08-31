@@ -95,11 +95,23 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
+     * <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An integer from
+     * 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see <a
+     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
+     * >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following attributes apply only to <a
+     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html"
+     * >dead-letter queues:</a>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
      * <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue functionality of
-     * the source queue as a JSON object. For more information about the redrive policy and dead-letter queues, see <a
-     * href
-     * ="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
-     * Amazon SQS Dead-Letter Queues</a> in the <i>Amazon SQS Developer Guide</i>.
+     * the source queue as a JSON object. The parameters are as follows:
      * </p>
      * <ul>
      * <li>
@@ -116,21 +128,57 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RedriveAllowPolicy</code> – The string that includes the parameters for the permissions for the dead-letter
+     * queue redrive permission and which source queues can specify dead-letter queues as a JSON object. The parameters
+     * are as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>redrivePermission</code> – The permission type that defines which source queues can specify the current
+     * queue as the dead-letter queue. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>allowAll</code> – (Default) Any source queues in this Amazon Web Services account in the same Region can
+     * specify this queue as the dead-letter queue.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>denyAll</code> – No source queues can specify this queue as the dead-letter queue.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>byQueue</code> – Only queues specified by the <code>sourceQueueArns</code> parameter can specify this queue
+     * as the dead-letter queue.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <code>sourceQueueArns</code> – The Amazon Resource Names (ARN)s of the source queues that can specify this queue
+     * as the dead-letter queue and redrive messages. You can specify this parameter only when the
+     * <code>redrivePermission</code> parameter is set to <code>byQueue</code>. You can specify up to 10 source queue
+     * ARNs. To allow more than 10 source queues to specify dead-letter queues, set the <code>redrivePermission</code>
+     * parameter to <code>allowAll</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * <note>
      * <p>
      * The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter queue of a standard
      * queue must also be a standard queue.
      * </p>
-     * </note></li>
-     * <li>
-     * <p>
-     * <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An integer from
-     * 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see <a
-     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
-     * >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
-     * </p>
-     * </li>
-     * </ul>
+     * </note>
      * <p>
      * The following attributes apply only to <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html"
@@ -570,11 +618,23 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
+     * <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An integer from
+     * 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see <a
+     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
+     * >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following attributes apply only to <a
+     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html"
+     * >dead-letter queues:</a>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
      * <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue functionality of
-     * the source queue as a JSON object. For more information about the redrive policy and dead-letter queues, see <a
-     * href
-     * ="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
-     * Amazon SQS Dead-Letter Queues</a> in the <i>Amazon SQS Developer Guide</i>.
+     * the source queue as a JSON object. The parameters are as follows:
      * </p>
      * <ul>
      * <li>
@@ -591,21 +651,57 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RedriveAllowPolicy</code> – The string that includes the parameters for the permissions for the dead-letter
+     * queue redrive permission and which source queues can specify dead-letter queues as a JSON object. The parameters
+     * are as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>redrivePermission</code> – The permission type that defines which source queues can specify the current
+     * queue as the dead-letter queue. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>allowAll</code> – (Default) Any source queues in this Amazon Web Services account in the same Region can
+     * specify this queue as the dead-letter queue.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>denyAll</code> – No source queues can specify this queue as the dead-letter queue.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>byQueue</code> – Only queues specified by the <code>sourceQueueArns</code> parameter can specify this queue
+     * as the dead-letter queue.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <code>sourceQueueArns</code> – The Amazon Resource Names (ARN)s of the source queues that can specify this queue
+     * as the dead-letter queue and redrive messages. You can specify this parameter only when the
+     * <code>redrivePermission</code> parameter is set to <code>byQueue</code>. You can specify up to 10 source queue
+     * ARNs. To allow more than 10 source queues to specify dead-letter queues, set the <code>redrivePermission</code>
+     * parameter to <code>allowAll</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * <note>
      * <p>
      * The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter queue of a standard
      * queue must also be a standard queue.
      * </p>
-     * </note></li>
-     * <li>
-     * <p>
-     * <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An integer from
-     * 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see <a
-     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
-     * >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
-     * </p>
-     * </li>
-     * </ul>
+     * </note>
      * <p>
      * The following attributes apply only to <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html"
@@ -800,11 +896,24 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </li>
      *         <li>
      *         <p>
-     *         <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue
-     *         functionality of the source queue as a JSON object. For more information about the redrive policy and
-     *         dead-letter queues, see <a href=
+     *         <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An
+     *         integer from 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see
+     *         <a href=
+     *         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
+     *         >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         The following attributes apply only to <a href=
      *         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html"
-     *         >Using Amazon SQS Dead-Letter Queues</a> in the <i>Amazon SQS Developer Guide</i>.
+     *         >dead-letter queues:</a>
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue
+     *         functionality of the source queue as a JSON object. The parameters are as follows:
      *         </p>
      *         <ul>
      *         <li>
@@ -821,22 +930,57 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </p>
      *         </li>
      *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>RedriveAllowPolicy</code> – The string that includes the parameters for the permissions for the
+     *         dead-letter queue redrive permission and which source queues can specify dead-letter queues as a JSON
+     *         object. The parameters are as follows:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>redrivePermission</code> – The permission type that defines which source queues can specify the
+     *         current queue as the dead-letter queue. Valid values are:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>allowAll</code> – (Default) Any source queues in this Amazon Web Services account in the same
+     *         Region can specify this queue as the dead-letter queue.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>denyAll</code> – No source queues can specify this queue as the dead-letter queue.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>byQueue</code> – Only queues specified by the <code>sourceQueueArns</code> parameter can specify
+     *         this queue as the dead-letter queue.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>sourceQueueArns</code> – The Amazon Resource Names (ARN)s of the source queues that can specify
+     *         this queue as the dead-letter queue and redrive messages. You can specify this parameter only when the
+     *         <code>redrivePermission</code> parameter is set to <code>byQueue</code>. You can specify up to 10 source
+     *         queue ARNs. To allow more than 10 source queues to specify dead-letter queues, set the
+     *         <code>redrivePermission</code> parameter to <code>allowAll</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         </ul>
      *         <note>
      *         <p>
      *         The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter queue of a
      *         standard queue must also be a standard queue.
      *         </p>
-     *         </note></li>
-     *         <li>
-     *         <p>
-     *         <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An
-     *         integer from 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see
-     *         <a href=
-     *         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
-     *         >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
-     *         </p>
-     *         </li>
-     *         </ul>
+     *         </note>
      *         <p>
      *         The following attributes apply only to <a href=
      *         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html"
@@ -1041,11 +1185,23 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
+     * <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An integer from
+     * 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see <a
+     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
+     * >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following attributes apply only to <a
+     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html"
+     * >dead-letter queues:</a>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
      * <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue functionality of
-     * the source queue as a JSON object. For more information about the redrive policy and dead-letter queues, see <a
-     * href
-     * ="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
-     * Amazon SQS Dead-Letter Queues</a> in the <i>Amazon SQS Developer Guide</i>.
+     * the source queue as a JSON object. The parameters are as follows:
      * </p>
      * <ul>
      * <li>
@@ -1062,21 +1218,57 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RedriveAllowPolicy</code> – The string that includes the parameters for the permissions for the dead-letter
+     * queue redrive permission and which source queues can specify dead-letter queues as a JSON object. The parameters
+     * are as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>redrivePermission</code> – The permission type that defines which source queues can specify the current
+     * queue as the dead-letter queue. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>allowAll</code> – (Default) Any source queues in this Amazon Web Services account in the same Region can
+     * specify this queue as the dead-letter queue.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>denyAll</code> – No source queues can specify this queue as the dead-letter queue.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>byQueue</code> – Only queues specified by the <code>sourceQueueArns</code> parameter can specify this queue
+     * as the dead-letter queue.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <code>sourceQueueArns</code> – The Amazon Resource Names (ARN)s of the source queues that can specify this queue
+     * as the dead-letter queue and redrive messages. You can specify this parameter only when the
+     * <code>redrivePermission</code> parameter is set to <code>byQueue</code>. You can specify up to 10 source queue
+     * ARNs. To allow more than 10 source queues to specify dead-letter queues, set the <code>redrivePermission</code>
+     * parameter to <code>allowAll</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * <note>
      * <p>
      * The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter queue of a standard
      * queue must also be a standard queue.
      * </p>
-     * </note></li>
-     * <li>
-     * <p>
-     * <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An integer from
-     * 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see <a
-     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
-     * >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
-     * </p>
-     * </li>
-     * </ul>
+     * </note>
      * <p>
      * The following attributes apply only to <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html"
@@ -1272,11 +1464,24 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue
-     *        functionality of the source queue as a JSON object. For more information about the redrive policy and
-     *        dead-letter queues, see <a href=
+     *        <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An
+     *        integer from 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see
+     *        <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
+     *        >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The following attributes apply only to <a href=
      *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html"
-     *        >Using Amazon SQS Dead-Letter Queues</a> in the <i>Amazon SQS Developer Guide</i>.
+     *        >dead-letter queues:</a>
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue
+     *        functionality of the source queue as a JSON object. The parameters are as follows:
      *        </p>
      *        <ul>
      *        <li>
@@ -1293,22 +1498,57 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        </li>
      *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>RedriveAllowPolicy</code> – The string that includes the parameters for the permissions for the
+     *        dead-letter queue redrive permission and which source queues can specify dead-letter queues as a JSON
+     *        object. The parameters are as follows:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>redrivePermission</code> – The permission type that defines which source queues can specify the
+     *        current queue as the dead-letter queue. Valid values are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>allowAll</code> – (Default) Any source queues in this Amazon Web Services account in the same Region
+     *        can specify this queue as the dead-letter queue.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>denyAll</code> – No source queues can specify this queue as the dead-letter queue.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>byQueue</code> – Only queues specified by the <code>sourceQueueArns</code> parameter can specify
+     *        this queue as the dead-letter queue.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>sourceQueueArns</code> – The Amazon Resource Names (ARN)s of the source queues that can specify this
+     *        queue as the dead-letter queue and redrive messages. You can specify this parameter only when the
+     *        <code>redrivePermission</code> parameter is set to <code>byQueue</code>. You can specify up to 10 source
+     *        queue ARNs. To allow more than 10 source queues to specify dead-letter queues, set the
+     *        <code>redrivePermission</code> parameter to <code>allowAll</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        </ul>
      *        <note>
      *        <p>
      *        The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter queue of a
      *        standard queue must also be a standard queue.
      *        </p>
-     *        </note></li>
-     *        <li>
-     *        <p>
-     *        <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An
-     *        integer from 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see
-     *        <a href=
-     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
-     *        >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
-     *        </p>
-     *        </li>
-     *        </ul>
+     *        </note>
      *        <p>
      *        The following attributes apply only to <a href=
      *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html"
@@ -1509,11 +1749,23 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
+     * <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An integer from
+     * 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see <a
+     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
+     * >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * The following attributes apply only to <a
+     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html"
+     * >dead-letter queues:</a>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
      * <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue functionality of
-     * the source queue as a JSON object. For more information about the redrive policy and dead-letter queues, see <a
-     * href
-     * ="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html">Using
-     * Amazon SQS Dead-Letter Queues</a> in the <i>Amazon SQS Developer Guide</i>.
+     * the source queue as a JSON object. The parameters are as follows:
      * </p>
      * <ul>
      * <li>
@@ -1530,21 +1782,57 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * </li>
      * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RedriveAllowPolicy</code> – The string that includes the parameters for the permissions for the dead-letter
+     * queue redrive permission and which source queues can specify dead-letter queues as a JSON object. The parameters
+     * are as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>redrivePermission</code> – The permission type that defines which source queues can specify the current
+     * queue as the dead-letter queue. Valid values are:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>allowAll</code> – (Default) Any source queues in this Amazon Web Services account in the same Region can
+     * specify this queue as the dead-letter queue.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>denyAll</code> – No source queues can specify this queue as the dead-letter queue.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>byQueue</code> – Only queues specified by the <code>sourceQueueArns</code> parameter can specify this queue
+     * as the dead-letter queue.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * <code>sourceQueueArns</code> – The Amazon Resource Names (ARN)s of the source queues that can specify this queue
+     * as the dead-letter queue and redrive messages. You can specify this parameter only when the
+     * <code>redrivePermission</code> parameter is set to <code>byQueue</code>. You can specify up to 10 source queue
+     * ARNs. To allow more than 10 source queues to specify dead-letter queues, set the <code>redrivePermission</code>
+     * parameter to <code>allowAll</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
      * <note>
      * <p>
      * The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter queue of a standard
      * queue must also be a standard queue.
      * </p>
-     * </note></li>
-     * <li>
-     * <p>
-     * <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An integer from
-     * 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see <a
-     * href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
-     * >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
-     * </p>
-     * </li>
-     * </ul>
+     * </note>
      * <p>
      * The following attributes apply only to <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html"
@@ -1740,11 +2028,24 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue
-     *        functionality of the source queue as a JSON object. For more information about the redrive policy and
-     *        dead-letter queues, see <a href=
+     *        <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An
+     *        integer from 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see
+     *        <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
+     *        >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        The following attributes apply only to <a href=
      *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html"
-     *        >Using Amazon SQS Dead-Letter Queues</a> in the <i>Amazon SQS Developer Guide</i>.
+     *        >dead-letter queues:</a>
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>RedrivePolicy</code> – The string that includes the parameters for the dead-letter queue
+     *        functionality of the source queue as a JSON object. The parameters are as follows:
      *        </p>
      *        <ul>
      *        <li>
@@ -1761,22 +2062,57 @@ public class CreateQueueRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        </li>
      *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>RedriveAllowPolicy</code> – The string that includes the parameters for the permissions for the
+     *        dead-letter queue redrive permission and which source queues can specify dead-letter queues as a JSON
+     *        object. The parameters are as follows:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>redrivePermission</code> – The permission type that defines which source queues can specify the
+     *        current queue as the dead-letter queue. Valid values are:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>allowAll</code> – (Default) Any source queues in this Amazon Web Services account in the same Region
+     *        can specify this queue as the dead-letter queue.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>denyAll</code> – No source queues can specify this queue as the dead-letter queue.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>byQueue</code> – Only queues specified by the <code>sourceQueueArns</code> parameter can specify
+     *        this queue as the dead-letter queue.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>sourceQueueArns</code> – The Amazon Resource Names (ARN)s of the source queues that can specify this
+     *        queue as the dead-letter queue and redrive messages. You can specify this parameter only when the
+     *        <code>redrivePermission</code> parameter is set to <code>byQueue</code>. You can specify up to 10 source
+     *        queue ARNs. To allow more than 10 source queues to specify dead-letter queues, set the
+     *        <code>redrivePermission</code> parameter to <code>allowAll</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        </ul>
      *        <note>
      *        <p>
      *        The dead-letter queue of a FIFO queue must also be a FIFO queue. Similarly, the dead-letter queue of a
      *        standard queue must also be a standard queue.
      *        </p>
-     *        </note></li>
-     *        <li>
-     *        <p>
-     *        <code>VisibilityTimeout</code> – The visibility timeout for the queue, in seconds. Valid values: An
-     *        integer from 0 to 43,200 (12 hours). Default: 30. For more information about the visibility timeout, see
-     *        <a href=
-     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html"
-     *        >Visibility Timeout</a> in the <i>Amazon SQS Developer Guide</i>.
-     *        </p>
-     *        </li>
-     *        </ul>
+     *        </note>
      *        <p>
      *        The following attributes apply only to <a href=
      *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html"

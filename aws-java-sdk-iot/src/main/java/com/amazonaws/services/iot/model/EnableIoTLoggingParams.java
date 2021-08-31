@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Parameters used when defining a mitigation action that enable AWS IoT logging.
+ * Parameters used when defining a mitigation action that enable Amazon Web Services IoT Core logging.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

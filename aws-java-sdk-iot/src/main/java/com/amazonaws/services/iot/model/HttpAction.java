@@ -35,10 +35,10 @@ public class HttpAction implements Serializable, Cloneable, StructuredPojo {
     private String url;
     /**
      * <p>
-     * The URL to which AWS IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the
-     * endpoint URL. If you do not specify a confirmation URL AWS IoT uses the endpoint URL as the confirmation URL. If
-     * you use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that
-     * match each possible value of the substitution template before traffic is allowed to your endpoint URL.
+     * The URL to which IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the
+     * endpoint URL. If you do not specify a confirmation URL IoT uses the endpoint URL as the confirmation URL. If you
+     * use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that match
+     * each possible value of the substitution template before traffic is allowed to your endpoint URL.
      * </p>
      */
     private String confirmationUrl;
@@ -109,18 +109,18 @@ public class HttpAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL to which AWS IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the
-     * endpoint URL. If you do not specify a confirmation URL AWS IoT uses the endpoint URL as the confirmation URL. If
-     * you use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that
-     * match each possible value of the substitution template before traffic is allowed to your endpoint URL.
+     * The URL to which IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the
+     * endpoint URL. If you do not specify a confirmation URL IoT uses the endpoint URL as the confirmation URL. If you
+     * use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that match
+     * each possible value of the substitution template before traffic is allowed to your endpoint URL.
      * </p>
      * 
      * @param confirmationUrl
-     *        The URL to which AWS IoT sends a confirmation message. The value of the confirmation URL must be a prefix
-     *        of the endpoint URL. If you do not specify a confirmation URL AWS IoT uses the endpoint URL as the
-     *        confirmation URL. If you use substitution templates in the confirmationUrl, you must create and enable
-     *        topic rule destinations that match each possible value of the substitution template before traffic is
-     *        allowed to your endpoint URL.
+     *        The URL to which IoT sends a confirmation message. The value of the confirmation URL must be a prefix of
+     *        the endpoint URL. If you do not specify a confirmation URL IoT uses the endpoint URL as the confirmation
+     *        URL. If you use substitution templates in the confirmationUrl, you must create and enable topic rule
+     *        destinations that match each possible value of the substitution template before traffic is allowed to your
+     *        endpoint URL.
      */
 
     public void setConfirmationUrl(String confirmationUrl) {
@@ -129,17 +129,17 @@ public class HttpAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL to which AWS IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the
-     * endpoint URL. If you do not specify a confirmation URL AWS IoT uses the endpoint URL as the confirmation URL. If
-     * you use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that
-     * match each possible value of the substitution template before traffic is allowed to your endpoint URL.
+     * The URL to which IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the
+     * endpoint URL. If you do not specify a confirmation URL IoT uses the endpoint URL as the confirmation URL. If you
+     * use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that match
+     * each possible value of the substitution template before traffic is allowed to your endpoint URL.
      * </p>
      * 
-     * @return The URL to which AWS IoT sends a confirmation message. The value of the confirmation URL must be a prefix
-     *         of the endpoint URL. If you do not specify a confirmation URL AWS IoT uses the endpoint URL as the
-     *         confirmation URL. If you use substitution templates in the confirmationUrl, you must create and enable
-     *         topic rule destinations that match each possible value of the substitution template before traffic is
-     *         allowed to your endpoint URL.
+     * @return The URL to which IoT sends a confirmation message. The value of the confirmation URL must be a prefix of
+     *         the endpoint URL. If you do not specify a confirmation URL IoT uses the endpoint URL as the confirmation
+     *         URL. If you use substitution templates in the confirmationUrl, you must create and enable topic rule
+     *         destinations that match each possible value of the substitution template before traffic is allowed to
+     *         your endpoint URL.
      */
 
     public String getConfirmationUrl() {
@@ -148,18 +148,18 @@ public class HttpAction implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL to which AWS IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the
-     * endpoint URL. If you do not specify a confirmation URL AWS IoT uses the endpoint URL as the confirmation URL. If
-     * you use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that
-     * match each possible value of the substitution template before traffic is allowed to your endpoint URL.
+     * The URL to which IoT sends a confirmation message. The value of the confirmation URL must be a prefix of the
+     * endpoint URL. If you do not specify a confirmation URL IoT uses the endpoint URL as the confirmation URL. If you
+     * use substitution templates in the confirmationUrl, you must create and enable topic rule destinations that match
+     * each possible value of the substitution template before traffic is allowed to your endpoint URL.
      * </p>
      * 
      * @param confirmationUrl
-     *        The URL to which AWS IoT sends a confirmation message. The value of the confirmation URL must be a prefix
-     *        of the endpoint URL. If you do not specify a confirmation URL AWS IoT uses the endpoint URL as the
-     *        confirmation URL. If you use substitution templates in the confirmationUrl, you must create and enable
-     *        topic rule destinations that match each possible value of the substitution template before traffic is
-     *        allowed to your endpoint URL.
+     *        The URL to which IoT sends a confirmation message. The value of the confirmation URL must be a prefix of
+     *        the endpoint URL. If you do not specify a confirmation URL IoT uses the endpoint URL as the confirmation
+     *        URL. If you use substitution templates in the confirmationUrl, you must create and enable topic rule
+     *        destinations that match each possible value of the substitution template before traffic is allowed to your
+     *        endpoint URL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

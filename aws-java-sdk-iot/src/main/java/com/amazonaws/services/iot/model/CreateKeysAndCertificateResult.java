@@ -31,8 +31,7 @@ public class CreateKeysAndCertificateResult extends com.amazonaws.AmazonWebServi
     private String certificateArn;
     /**
      * <p>
-     * The ID of the certificate. AWS IoT issues a default subject name for the certificate (for example, AWS IoT
-     * Certificate).
+     * The ID of the certificate. IoT issues a default subject name for the certificate (for example, IoT Certificate).
      * </p>
      */
     private String certificateId;
@@ -91,12 +90,11 @@ public class CreateKeysAndCertificateResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the certificate. AWS IoT issues a default subject name for the certificate (for example, AWS IoT
-     * Certificate).
+     * The ID of the certificate. IoT issues a default subject name for the certificate (for example, IoT Certificate).
      * </p>
      * 
      * @param certificateId
-     *        The ID of the certificate. AWS IoT issues a default subject name for the certificate (for example, AWS IoT
+     *        The ID of the certificate. IoT issues a default subject name for the certificate (for example, IoT
      *        Certificate).
      */
 
@@ -106,12 +104,11 @@ public class CreateKeysAndCertificateResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the certificate. AWS IoT issues a default subject name for the certificate (for example, AWS IoT
-     * Certificate).
+     * The ID of the certificate. IoT issues a default subject name for the certificate (for example, IoT Certificate).
      * </p>
      * 
-     * @return The ID of the certificate. AWS IoT issues a default subject name for the certificate (for example, AWS
-     *         IoT Certificate).
+     * @return The ID of the certificate. IoT issues a default subject name for the certificate (for example, IoT
+     *         Certificate).
      */
 
     public String getCertificateId() {
@@ -120,12 +117,11 @@ public class CreateKeysAndCertificateResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the certificate. AWS IoT issues a default subject name for the certificate (for example, AWS IoT
-     * Certificate).
+     * The ID of the certificate. IoT issues a default subject name for the certificate (for example, IoT Certificate).
      * </p>
      * 
      * @param certificateId
-     *        The ID of the certificate. AWS IoT issues a default subject name for the certificate (for example, AWS IoT
+     *        The ID of the certificate. IoT issues a default subject name for the certificate (for example, IoT
      *        Certificate).
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -38,7 +38,7 @@ public class CreateDynamicThingGroupRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * Currently one index is supported: "AWS_Things".
+     * Currently one index is supported: <code>AWS_Things</code>.
      * </p>
      * </note>
      */
@@ -158,14 +158,14 @@ public class CreateDynamicThingGroupRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * Currently one index is supported: "AWS_Things".
+     * Currently one index is supported: <code>AWS_Things</code>.
      * </p>
      * </note>
      * 
      * @param indexName
      *        The dynamic thing group index name.</p> <note>
      *        <p>
-     *        Currently one index is supported: "AWS_Things".
+     *        Currently one index is supported: <code>AWS_Things</code>.
      *        </p>
      */
 
@@ -179,13 +179,13 @@ public class CreateDynamicThingGroupRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * Currently one index is supported: "AWS_Things".
+     * Currently one index is supported: <code>AWS_Things</code>.
      * </p>
      * </note>
      * 
      * @return The dynamic thing group index name.</p> <note>
      *         <p>
-     *         Currently one index is supported: "AWS_Things".
+     *         Currently one index is supported: <code>AWS_Things</code>.
      *         </p>
      */
 
@@ -199,14 +199,14 @@ public class CreateDynamicThingGroupRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <note>
      * <p>
-     * Currently one index is supported: "AWS_Things".
+     * Currently one index is supported: <code>AWS_Things</code>.
      * </p>
      * </note>
      * 
      * @param indexName
      *        The dynamic thing group index name.</p> <note>
      *        <p>
-     *        Currently one index is supported: "AWS_Things".
+     *        Currently one index is supported: <code>AWS_Things</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

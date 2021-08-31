@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Sends an input to an AWS IoT Events detector.
+ * Sends an input to an IoT Events detector.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,7 +27,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the AWS IoT Events input.
+     * The name of the IoT Events input.
      * </p>
      */
     private String inputName;
@@ -41,7 +41,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * Assign a value to this property to ensure that only one input (message) with a given <code>messageId</code> will
-     * be processed by an AWS IoT Events detector.
+     * be processed by an IoT Events detector.
      * </p>
      */
     private String messageId;
@@ -54,7 +54,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
-     * element is treated as a separate message when it's sent to AWS IoT Events by calling <a
+     * element is treated as a separate message when it's sent to IoT Events by calling <a
      * href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html">
      * <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.
      * </p>
@@ -62,7 +62,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
     private Boolean batchMode;
     /**
      * <p>
-     * The ARN of the role that grants AWS IoT permission to send an input to an AWS IoT Events detector.
+     * The ARN of the role that grants IoT permission to send an input to an IoT Events detector.
      * ("Action":"iotevents:BatchPutMessage").
      * </p>
      */
@@ -70,11 +70,11 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the AWS IoT Events input.
+     * The name of the IoT Events input.
      * </p>
      * 
      * @param inputName
-     *        The name of the AWS IoT Events input.
+     *        The name of the IoT Events input.
      */
 
     public void setInputName(String inputName) {
@@ -83,10 +83,10 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the AWS IoT Events input.
+     * The name of the IoT Events input.
      * </p>
      * 
-     * @return The name of the AWS IoT Events input.
+     * @return The name of the IoT Events input.
      */
 
     public String getInputName() {
@@ -95,11 +95,11 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the AWS IoT Events input.
+     * The name of the IoT Events input.
      * </p>
      * 
      * @param inputName
-     *        The name of the AWS IoT Events input.
+     *        The name of the IoT Events input.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,7 +118,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * Assign a value to this property to ensure that only one input (message) with a given <code>messageId</code> will
-     * be processed by an AWS IoT Events detector.
+     * be processed by an IoT Events detector.
      * </p>
      * 
      * @param messageId
@@ -129,7 +129,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      *        </p>
      *        <p>
      *        Assign a value to this property to ensure that only one input (message) with a given
-     *        <code>messageId</code> will be processed by an AWS IoT Events detector.
+     *        <code>messageId</code> will be processed by an IoT Events detector.
      */
 
     public void setMessageId(String messageId) {
@@ -146,7 +146,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * Assign a value to this property to ensure that only one input (message) with a given <code>messageId</code> will
-     * be processed by an AWS IoT Events detector.
+     * be processed by an IoT Events detector.
      * </p>
      * 
      * @return The ID of the message. The default <code>messageId</code> is a new UUID value.</p>
@@ -156,7 +156,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      *         </p>
      *         <p>
      *         Assign a value to this property to ensure that only one input (message) with a given
-     *         <code>messageId</code> will be processed by an AWS IoT Events detector.
+     *         <code>messageId</code> will be processed by an IoT Events detector.
      */
 
     public String getMessageId() {
@@ -173,7 +173,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * Assign a value to this property to ensure that only one input (message) with a given <code>messageId</code> will
-     * be processed by an AWS IoT Events detector.
+     * be processed by an IoT Events detector.
      * </p>
      * 
      * @param messageId
@@ -184,7 +184,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      *        </p>
      *        <p>
      *        Assign a value to this property to ensure that only one input (message) with a given
-     *        <code>messageId</code> will be processed by an AWS IoT Events detector.
+     *        <code>messageId</code> will be processed by an IoT Events detector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -202,7 +202,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
-     * element is treated as a separate message when it's sent to AWS IoT Events by calling <a
+     * element is treated as a separate message when it's sent to IoT Events by calling <a
      * href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html">
      * <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.
      * </p>
@@ -214,7 +214,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      *        </p>
      *        <p>
      *        When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each
-     *        Array element is treated as a separate message when it's sent to AWS IoT Events by calling <a
+     *        Array element is treated as a separate message when it's sent to IoT Events by calling <a
      *        href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html">
      *        <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.
      */
@@ -232,7 +232,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
-     * element is treated as a separate message when it's sent to AWS IoT Events by calling <a
+     * element is treated as a separate message when it's sent to IoT Events by calling <a
      * href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html">
      * <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.
      * </p>
@@ -243,7 +243,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      *         </p>
      *         <p>
      *         When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each
-     *         Array element is treated as a separate message when it's sent to AWS IoT Events by calling <a href=
+     *         Array element is treated as a separate message when it's sent to IoT Events by calling <a href=
      *         "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html">
      *         <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.
      */
@@ -261,7 +261,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
-     * element is treated as a separate message when it's sent to AWS IoT Events by calling <a
+     * element is treated as a separate message when it's sent to IoT Events by calling <a
      * href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html">
      * <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.
      * </p>
@@ -273,7 +273,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      *        </p>
      *        <p>
      *        When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each
-     *        Array element is treated as a separate message when it's sent to AWS IoT Events by calling <a
+     *        Array element is treated as a separate message when it's sent to IoT Events by calling <a
      *        href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html">
      *        <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -293,7 +293,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each Array
-     * element is treated as a separate message when it's sent to AWS IoT Events by calling <a
+     * element is treated as a separate message when it's sent to IoT Events by calling <a
      * href="https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html">
      * <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.
      * </p>
@@ -304,7 +304,7 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
      *         </p>
      *         <p>
      *         When <code>batchMode</code> is <code>true</code> and the rule SQL statement evaluates to an Array, each
-     *         Array element is treated as a separate message when it's sent to AWS IoT Events by calling <a href=
+     *         Array element is treated as a separate message when it's sent to IoT Events by calling <a href=
      *         "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html">
      *         <code>BatchPutMessage</code> </a>. The resulting array can't have more than 10 messages.
      */
@@ -315,12 +315,12 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the role that grants AWS IoT permission to send an input to an AWS IoT Events detector.
+     * The ARN of the role that grants IoT permission to send an input to an IoT Events detector.
      * ("Action":"iotevents:BatchPutMessage").
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the role that grants AWS IoT permission to send an input to an AWS IoT Events detector.
+     *        The ARN of the role that grants IoT permission to send an input to an IoT Events detector.
      *        ("Action":"iotevents:BatchPutMessage").
      */
 
@@ -330,11 +330,11 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the role that grants AWS IoT permission to send an input to an AWS IoT Events detector.
+     * The ARN of the role that grants IoT permission to send an input to an IoT Events detector.
      * ("Action":"iotevents:BatchPutMessage").
      * </p>
      * 
-     * @return The ARN of the role that grants AWS IoT permission to send an input to an AWS IoT Events detector.
+     * @return The ARN of the role that grants IoT permission to send an input to an IoT Events detector.
      *         ("Action":"iotevents:BatchPutMessage").
      */
 
@@ -344,12 +344,12 @@ public class IotEventsAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN of the role that grants AWS IoT permission to send an input to an AWS IoT Events detector.
+     * The ARN of the role that grants IoT permission to send an input to an IoT Events detector.
      * ("Action":"iotevents:BatchPutMessage").
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the role that grants AWS IoT permission to send an input to an AWS IoT Events detector.
+     *        The ARN of the role that grants IoT permission to send an input to an IoT Events detector.
      *        ("Action":"iotevents:BatchPutMessage").
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -22,7 +22,7 @@ public class UpdateAccountAuditConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role that grants permission to AWS IoT to access information about your
+     * The Amazon Resource Name (ARN) of the role that grants permission to IoT to access information about your
      * devices, policies, certificates, and other items as required when performing an audit.
      * </p>
      */
@@ -56,13 +56,13 @@ public class UpdateAccountAuditConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role that grants permission to AWS IoT to access information about your
+     * The Amazon Resource Name (ARN) of the role that grants permission to IoT to access information about your
      * devices, policies, certificates, and other items as required when performing an audit.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the role that grants permission to AWS IoT to access information about
-     *        your devices, policies, certificates, and other items as required when performing an audit.
+     *        The Amazon Resource Name (ARN) of the role that grants permission to IoT to access information about your
+     *        devices, policies, certificates, and other items as required when performing an audit.
      */
 
     public void setRoleArn(String roleArn) {
@@ -71,12 +71,12 @@ public class UpdateAccountAuditConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role that grants permission to AWS IoT to access information about your
+     * The Amazon Resource Name (ARN) of the role that grants permission to IoT to access information about your
      * devices, policies, certificates, and other items as required when performing an audit.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the role that grants permission to AWS IoT to access information about
-     *         your devices, policies, certificates, and other items as required when performing an audit.
+     * @return The Amazon Resource Name (ARN) of the role that grants permission to IoT to access information about your
+     *         devices, policies, certificates, and other items as required when performing an audit.
      */
 
     public String getRoleArn() {
@@ -85,13 +85,13 @@ public class UpdateAccountAuditConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role that grants permission to AWS IoT to access information about your
+     * The Amazon Resource Name (ARN) of the role that grants permission to IoT to access information about your
      * devices, policies, certificates, and other items as required when performing an audit.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the role that grants permission to AWS IoT to access information about
-     *        your devices, policies, certificates, and other items as required when performing an audit.
+     *        The Amazon Resource Name (ARN) of the role that grants permission to IoT to access information about your
+     *        devices, policies, certificates, and other items as required when performing an audit.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

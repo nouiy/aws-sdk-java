@@ -43,7 +43,7 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The Amazon S3 bucket to which the snapshot is exported. This parameter is used only when exporting a snapshot for
      * external access. When using this parameter to export a snapshot, be sure MemoryDB has the needed permissions to
      * this S3 bucket. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant MemoryDB
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant MemoryDB
      * Access to Your Amazon S3 Bucket</a>.
      * </p>
      */
@@ -153,7 +153,7 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The Amazon S3 bucket to which the snapshot is exported. This parameter is used only when exporting a snapshot for
      * external access. When using this parameter to export a snapshot, be sure MemoryDB has the needed permissions to
      * this S3 bucket. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant MemoryDB
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant MemoryDB
      * Access to Your Amazon S3 Bucket</a>.
      * </p>
      * 
@@ -161,7 +161,7 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        The Amazon S3 bucket to which the snapshot is exported. This parameter is used only when exporting a
      *        snapshot for external access. When using this parameter to export a snapshot, be sure MemoryDB has the
      *        needed permissions to this S3 bucket. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant
+     *        href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant
      *        MemoryDB Access to Your Amazon S3 Bucket</a>.
      */
 
@@ -174,14 +174,14 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The Amazon S3 bucket to which the snapshot is exported. This parameter is used only when exporting a snapshot for
      * external access. When using this parameter to export a snapshot, be sure MemoryDB has the needed permissions to
      * this S3 bucket. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant MemoryDB
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant MemoryDB
      * Access to Your Amazon S3 Bucket</a>.
      * </p>
      * 
      * @return The Amazon S3 bucket to which the snapshot is exported. This parameter is used only when exporting a
      *         snapshot for external access. When using this parameter to export a snapshot, be sure MemoryDB has the
      *         needed permissions to this S3 bucket. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant
+     *         href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant
      *         MemoryDB Access to Your Amazon S3 Bucket</a>.
      */
 
@@ -194,7 +194,7 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The Amazon S3 bucket to which the snapshot is exported. This parameter is used only when exporting a snapshot for
      * external access. When using this parameter to export a snapshot, be sure MemoryDB has the needed permissions to
      * this S3 bucket. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant MemoryDB
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant MemoryDB
      * Access to Your Amazon S3 Bucket</a>.
      * </p>
      * 
@@ -202,7 +202,7 @@ public class CopySnapshotRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        The Amazon S3 bucket to which the snapshot is exported. This parameter is used only when exporting a
      *        snapshot for external access. When using this parameter to export a snapshot, be sure MemoryDB has the
      *        needed permissions to this S3 bucket. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant
+     *        href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/snapshots-exporting.html">Step 2: Grant
      *        MemoryDB Access to Your Amazon S3 Bucket</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

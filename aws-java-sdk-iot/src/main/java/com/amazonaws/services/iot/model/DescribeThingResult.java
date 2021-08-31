@@ -31,7 +31,7 @@ public class DescribeThingResult extends com.amazonaws.AmazonWebServiceResult<co
      * the Device Shadow service.
      * </p>
      * <p>
-     * This lets you better organize your AWS IoT fleet without removing the flexibility of the underlying device
+     * This lets you better organize your IoT fleet without removing the flexibility of the underlying device
      * certificate model or shadows.
      * </p>
      */
@@ -93,7 +93,7 @@ public class DescribeThingResult extends com.amazonaws.AmazonWebServiceResult<co
      * the Device Shadow service.
      * </p>
      * <p>
-     * This lets you better organize your AWS IoT fleet without removing the flexibility of the underlying device
+     * This lets you better organize your IoT fleet without removing the flexibility of the underlying device
      * certificate model or shadows.
      * </p>
      * 
@@ -103,7 +103,7 @@ public class DescribeThingResult extends com.amazonaws.AmazonWebServiceResult<co
      *        certificates, or shadow state, we recommend that you choose a thing name and use it as the MQTT client ID
      *        for the registry and the Device Shadow service.</p>
      *        <p>
-     *        This lets you better organize your AWS IoT fleet without removing the flexibility of the underlying device
+     *        This lets you better organize your IoT fleet without removing the flexibility of the underlying device
      *        certificate model or shadows.
      */
 
@@ -119,7 +119,7 @@ public class DescribeThingResult extends com.amazonaws.AmazonWebServiceResult<co
      * the Device Shadow service.
      * </p>
      * <p>
-     * This lets you better organize your AWS IoT fleet without removing the flexibility of the underlying device
+     * This lets you better organize your IoT fleet without removing the flexibility of the underlying device
      * certificate model or shadows.
      * </p>
      * 
@@ -128,8 +128,8 @@ public class DescribeThingResult extends com.amazonaws.AmazonWebServiceResult<co
      *         certificates, or shadow state, we recommend that you choose a thing name and use it as the MQTT client ID
      *         for the registry and the Device Shadow service.</p>
      *         <p>
-     *         This lets you better organize your AWS IoT fleet without removing the flexibility of the underlying
-     *         device certificate model or shadows.
+     *         This lets you better organize your IoT fleet without removing the flexibility of the underlying device
+     *         certificate model or shadows.
      */
 
     public String getDefaultClientId() {
@@ -144,7 +144,7 @@ public class DescribeThingResult extends com.amazonaws.AmazonWebServiceResult<co
      * the Device Shadow service.
      * </p>
      * <p>
-     * This lets you better organize your AWS IoT fleet without removing the flexibility of the underlying device
+     * This lets you better organize your IoT fleet without removing the flexibility of the underlying device
      * certificate model or shadows.
      * </p>
      * 
@@ -154,7 +154,7 @@ public class DescribeThingResult extends com.amazonaws.AmazonWebServiceResult<co
      *        certificates, or shadow state, we recommend that you choose a thing name and use it as the MQTT client ID
      *        for the registry and the Device Shadow service.</p>
      *        <p>
-     *        This lets you better organize your AWS IoT fleet without removing the flexibility of the underlying device
+     *        This lets you better organize your IoT fleet without removing the flexibility of the underlying device
      *        certificate model or shadows.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

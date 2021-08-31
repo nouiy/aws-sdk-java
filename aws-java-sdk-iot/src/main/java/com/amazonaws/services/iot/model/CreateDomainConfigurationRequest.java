@@ -34,15 +34,15 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
     private String domainName;
     /**
      * <p>
-     * The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake. Currently you can
-     * specify only one certificate ARN. This value is not required for AWS-managed domains.
+     * The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can specify
+     * only one certificate ARN. This value is not required for Amazon Web Services-managed domains.
      * </p>
      */
     private java.util.List<String> serverCertificateArns;
     /**
      * <p>
      * The certificate used to validate the server certificate and prove domain name ownership. This certificate must be
-     * signed by a public certificate authority. This value is not required for AWS-managed domains.
+     * signed by a public certificate authority. This value is not required for Amazon Web Services-managed domains.
      * </p>
      */
     private String validationCertificateArn;
@@ -58,7 +58,7 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <note>
      * <p>
-     * AWS IoT Core currently supports only the <code>DATA</code> service type.
+     * Amazon Web Services IoT Core currently supports only the <code>DATA</code> service type.
      * </p>
      * </note>
      */
@@ -163,12 +163,12 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake. Currently you can
-     * specify only one certificate ARN. This value is not required for AWS-managed domains.
+     * The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can specify
+     * only one certificate ARN. This value is not required for Amazon Web Services-managed domains.
      * </p>
      * 
-     * @return The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake. Currently you
-     *         can specify only one certificate ARN. This value is not required for AWS-managed domains.
+     * @return The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can
+     *         specify only one certificate ARN. This value is not required for Amazon Web Services-managed domains.
      */
 
     public java.util.List<String> getServerCertificateArns() {
@@ -177,13 +177,13 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake. Currently you can
-     * specify only one certificate ARN. This value is not required for AWS-managed domains.
+     * The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can specify
+     * only one certificate ARN. This value is not required for Amazon Web Services-managed domains.
      * </p>
      * 
      * @param serverCertificateArns
-     *        The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake. Currently you can
-     *        specify only one certificate ARN. This value is not required for AWS-managed domains.
+     *        The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can
+     *        specify only one certificate ARN. This value is not required for Amazon Web Services-managed domains.
      */
 
     public void setServerCertificateArns(java.util.Collection<String> serverCertificateArns) {
@@ -197,8 +197,8 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake. Currently you can
-     * specify only one certificate ARN. This value is not required for AWS-managed domains.
+     * The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can specify
+     * only one certificate ARN. This value is not required for Amazon Web Services-managed domains.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -207,8 +207,8 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param serverCertificateArns
-     *        The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake. Currently you can
-     *        specify only one certificate ARN. This value is not required for AWS-managed domains.
+     *        The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can
+     *        specify only one certificate ARN. This value is not required for Amazon Web Services-managed domains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,13 +224,13 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake. Currently you can
-     * specify only one certificate ARN. This value is not required for AWS-managed domains.
+     * The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can specify
+     * only one certificate ARN. This value is not required for Amazon Web Services-managed domains.
      * </p>
      * 
      * @param serverCertificateArns
-     *        The ARNs of the certificates that AWS IoT passes to the device during the TLS handshake. Currently you can
-     *        specify only one certificate ARN. This value is not required for AWS-managed domains.
+     *        The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can
+     *        specify only one certificate ARN. This value is not required for Amazon Web Services-managed domains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -242,12 +242,13 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The certificate used to validate the server certificate and prove domain name ownership. This certificate must be
-     * signed by a public certificate authority. This value is not required for AWS-managed domains.
+     * signed by a public certificate authority. This value is not required for Amazon Web Services-managed domains.
      * </p>
      * 
      * @param validationCertificateArn
      *        The certificate used to validate the server certificate and prove domain name ownership. This certificate
-     *        must be signed by a public certificate authority. This value is not required for AWS-managed domains.
+     *        must be signed by a public certificate authority. This value is not required for Amazon Web
+     *        Services-managed domains.
      */
 
     public void setValidationCertificateArn(String validationCertificateArn) {
@@ -257,11 +258,12 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The certificate used to validate the server certificate and prove domain name ownership. This certificate must be
-     * signed by a public certificate authority. This value is not required for AWS-managed domains.
+     * signed by a public certificate authority. This value is not required for Amazon Web Services-managed domains.
      * </p>
      * 
      * @return The certificate used to validate the server certificate and prove domain name ownership. This certificate
-     *         must be signed by a public certificate authority. This value is not required for AWS-managed domains.
+     *         must be signed by a public certificate authority. This value is not required for Amazon Web
+     *         Services-managed domains.
      */
 
     public String getValidationCertificateArn() {
@@ -271,12 +273,13 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * The certificate used to validate the server certificate and prove domain name ownership. This certificate must be
-     * signed by a public certificate authority. This value is not required for AWS-managed domains.
+     * signed by a public certificate authority. This value is not required for Amazon Web Services-managed domains.
      * </p>
      * 
      * @param validationCertificateArn
      *        The certificate used to validate the server certificate and prove domain name ownership. This certificate
-     *        must be signed by a public certificate authority. This value is not required for AWS-managed domains.
+     *        must be signed by a public certificate authority. This value is not required for Amazon Web
+     *        Services-managed domains.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,14 +334,14 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <note>
      * <p>
-     * AWS IoT Core currently supports only the <code>DATA</code> service type.
+     * Amazon Web Services IoT Core currently supports only the <code>DATA</code> service type.
      * </p>
      * </note>
      * 
      * @param serviceType
      *        The type of service delivered by the endpoint.</p> <note>
      *        <p>
-     *        AWS IoT Core currently supports only the <code>DATA</code> service type.
+     *        Amazon Web Services IoT Core currently supports only the <code>DATA</code> service type.
      *        </p>
      * @see ServiceType
      */
@@ -353,13 +356,13 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <note>
      * <p>
-     * AWS IoT Core currently supports only the <code>DATA</code> service type.
+     * Amazon Web Services IoT Core currently supports only the <code>DATA</code> service type.
      * </p>
      * </note>
      * 
      * @return The type of service delivered by the endpoint.</p> <note>
      *         <p>
-     *         AWS IoT Core currently supports only the <code>DATA</code> service type.
+     *         Amazon Web Services IoT Core currently supports only the <code>DATA</code> service type.
      *         </p>
      * @see ServiceType
      */
@@ -374,14 +377,14 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <note>
      * <p>
-     * AWS IoT Core currently supports only the <code>DATA</code> service type.
+     * Amazon Web Services IoT Core currently supports only the <code>DATA</code> service type.
      * </p>
      * </note>
      * 
      * @param serviceType
      *        The type of service delivered by the endpoint.</p> <note>
      *        <p>
-     *        AWS IoT Core currently supports only the <code>DATA</code> service type.
+     *        Amazon Web Services IoT Core currently supports only the <code>DATA</code> service type.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType
@@ -398,14 +401,14 @@ public class CreateDomainConfigurationRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * <note>
      * <p>
-     * AWS IoT Core currently supports only the <code>DATA</code> service type.
+     * Amazon Web Services IoT Core currently supports only the <code>DATA</code> service type.
      * </p>
      * </note>
      * 
      * @param serviceType
      *        The type of service delivered by the endpoint.</p> <note>
      *        <p>
-     *        AWS IoT Core currently supports only the <code>DATA</code> service type.
+     *        Amazon Web Services IoT Core currently supports only the <code>DATA</code> service type.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ServiceType

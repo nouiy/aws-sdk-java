@@ -103,13 +103,13 @@ public class OTAUpdateInfo implements Serializable, Cloneable, StructuredPojo {
     private String otaUpdateStatus;
     /**
      * <p>
-     * The AWS IoT job ID associated with the OTA update.
+     * The IoT job ID associated with the OTA update.
      * </p>
      */
     private String awsIotJobId;
     /**
      * <p>
-     * The AWS IoT job ARN associated with the OTA update.
+     * The IoT job ARN associated with the OTA update.
      * </p>
      */
     private String awsIotJobArn;
@@ -802,11 +802,11 @@ public class OTAUpdateInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS IoT job ID associated with the OTA update.
+     * The IoT job ID associated with the OTA update.
      * </p>
      * 
      * @param awsIotJobId
-     *        The AWS IoT job ID associated with the OTA update.
+     *        The IoT job ID associated with the OTA update.
      */
 
     public void setAwsIotJobId(String awsIotJobId) {
@@ -815,10 +815,10 @@ public class OTAUpdateInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS IoT job ID associated with the OTA update.
+     * The IoT job ID associated with the OTA update.
      * </p>
      * 
-     * @return The AWS IoT job ID associated with the OTA update.
+     * @return The IoT job ID associated with the OTA update.
      */
 
     public String getAwsIotJobId() {
@@ -827,11 +827,11 @@ public class OTAUpdateInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS IoT job ID associated with the OTA update.
+     * The IoT job ID associated with the OTA update.
      * </p>
      * 
      * @param awsIotJobId
-     *        The AWS IoT job ID associated with the OTA update.
+     *        The IoT job ID associated with the OTA update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -842,11 +842,11 @@ public class OTAUpdateInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS IoT job ARN associated with the OTA update.
+     * The IoT job ARN associated with the OTA update.
      * </p>
      * 
      * @param awsIotJobArn
-     *        The AWS IoT job ARN associated with the OTA update.
+     *        The IoT job ARN associated with the OTA update.
      */
 
     public void setAwsIotJobArn(String awsIotJobArn) {
@@ -855,10 +855,10 @@ public class OTAUpdateInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS IoT job ARN associated with the OTA update.
+     * The IoT job ARN associated with the OTA update.
      * </p>
      * 
-     * @return The AWS IoT job ARN associated with the OTA update.
+     * @return The IoT job ARN associated with the OTA update.
      */
 
     public String getAwsIotJobArn() {
@@ -867,11 +867,11 @@ public class OTAUpdateInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS IoT job ARN associated with the OTA update.
+     * The IoT job ARN associated with the OTA update.
      * </p>
      * 
      * @param awsIotJobArn
-     *        The AWS IoT job ARN associated with the OTA update.
+     *        The IoT job ARN associated with the OTA update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

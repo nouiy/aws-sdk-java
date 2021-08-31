@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an AWS IoT policy.
+ * Describes an IoT policy.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -50,8 +50,8 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * Each custom metric must have a unique client request token. If you try to create a new custom metric that already
-     * exists with a different token, an exception occurs. If you omit this value, AWS SDKs will automatically generate
-     * a unique client request.
+     * exists with a different token, an exception occurs. If you omit this value, Amazon Web Services SDKs will
+     * automatically generate a unique client request.
      * </p>
      */
     private String clientRequestToken;
@@ -288,14 +288,14 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * Each custom metric must have a unique client request token. If you try to create a new custom metric that already
-     * exists with a different token, an exception occurs. If you omit this value, AWS SDKs will automatically generate
-     * a unique client request.
+     * exists with a different token, an exception occurs. If you omit this value, Amazon Web Services SDKs will
+     * automatically generate a unique client request.
      * </p>
      * 
      * @param clientRequestToken
      *        Each custom metric must have a unique client request token. If you try to create a new custom metric that
-     *        already exists with a different token, an exception occurs. If you omit this value, AWS SDKs will
-     *        automatically generate a unique client request.
+     *        already exists with a different token, an exception occurs. If you omit this value, Amazon Web Services
+     *        SDKs will automatically generate a unique client request.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -305,13 +305,13 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * Each custom metric must have a unique client request token. If you try to create a new custom metric that already
-     * exists with a different token, an exception occurs. If you omit this value, AWS SDKs will automatically generate
-     * a unique client request.
+     * exists with a different token, an exception occurs. If you omit this value, Amazon Web Services SDKs will
+     * automatically generate a unique client request.
      * </p>
      * 
      * @return Each custom metric must have a unique client request token. If you try to create a new custom metric that
-     *         already exists with a different token, an exception occurs. If you omit this value, AWS SDKs will
-     *         automatically generate a unique client request.
+     *         already exists with a different token, an exception occurs. If you omit this value, Amazon Web Services
+     *         SDKs will automatically generate a unique client request.
      */
 
     public String getClientRequestToken() {
@@ -321,14 +321,14 @@ public class CreateCustomMetricRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * Each custom metric must have a unique client request token. If you try to create a new custom metric that already
-     * exists with a different token, an exception occurs. If you omit this value, AWS SDKs will automatically generate
-     * a unique client request.
+     * exists with a different token, an exception occurs. If you omit this value, Amazon Web Services SDKs will
+     * automatically generate a unique client request.
      * </p>
      * 
      * @param clientRequestToken
      *        Each custom metric must have a unique client request token. If you try to create a new custom metric that
-     *        already exists with a different token, an exception occurs. If you omit this value, AWS SDKs will
-     *        automatically generate a unique client request.
+     *        already exists with a different token, an exception occurs. If you omit this value, Amazon Web Services
+     *        SDKs will automatically generate a unique client request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,7 +28,7 @@ public class GetCardinalityRequest extends com.amazonaws.AmazonWebServiceRequest
     private String indexName;
     /**
      * <p>
-     * The search query.
+     * The search query string.
      * </p>
      */
     private String queryString;
@@ -87,11 +87,11 @@ public class GetCardinalityRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The search query.
+     * The search query string.
      * </p>
      * 
      * @param queryString
-     *        The search query.
+     *        The search query string.
      */
 
     public void setQueryString(String queryString) {
@@ -100,10 +100,10 @@ public class GetCardinalityRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The search query.
+     * The search query string.
      * </p>
      * 
-     * @return The search query.
+     * @return The search query string.
      */
 
     public String getQueryString() {
@@ -112,11 +112,11 @@ public class GetCardinalityRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The search query.
+     * The search query string.
      * </p>
      * 
      * @param queryString
-     *        The search query.
+     *        The search query string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

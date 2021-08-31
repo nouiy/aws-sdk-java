@@ -56,8 +56,8 @@ public class ThingIndexingConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing, thingIndexMode
-     * must not be set to OFF.
+     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing,
+     * <i>thingIndexMode</i> must not be set to OFF.
      * </p>
      * </li>
      * <li>
@@ -279,8 +279,8 @@ public class ThingIndexingConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing, thingIndexMode
-     * must not be set to OFF.
+     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing,
+     * <i>thingIndexMode</i> must not be set to OFF.
      * </p>
      * </li>
      * <li>
@@ -296,7 +296,7 @@ public class ThingIndexingConfiguration implements Serializable, Cloneable, Stru
      *        <li>
      *        <p>
      *        STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing,
-     *        thingIndexMode must not be set to OFF.
+     *        <i>thingIndexMode</i> must not be set to OFF.
      *        </p>
      *        </li>
      *        <li>
@@ -318,8 +318,8 @@ public class ThingIndexingConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing, thingIndexMode
-     * must not be set to OFF.
+     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing,
+     * <i>thingIndexMode</i> must not be set to OFF.
      * </p>
      * </li>
      * <li>
@@ -334,7 +334,7 @@ public class ThingIndexingConfiguration implements Serializable, Cloneable, Stru
      *         <li>
      *         <p>
      *         STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing,
-     *         thingIndexMode must not be set to OFF.
+     *         <i>thingIndexMode</i> must not be set to OFF.
      *         </p>
      *         </li>
      *         <li>
@@ -356,8 +356,8 @@ public class ThingIndexingConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing, thingIndexMode
-     * must not be set to OFF.
+     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing,
+     * <i>thingIndexMode</i> must not be set to OFF.
      * </p>
      * </li>
      * <li>
@@ -373,7 +373,7 @@ public class ThingIndexingConfiguration implements Serializable, Cloneable, Stru
      *        <li>
      *        <p>
      *        STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing,
-     *        thingIndexMode must not be set to OFF.
+     *        <i>thingIndexMode</i> must not be set to OFF.
      *        </p>
      *        </li>
      *        <li>
@@ -397,8 +397,8 @@ public class ThingIndexingConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing, thingIndexMode
-     * must not be set to OFF.
+     * STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing,
+     * <i>thingIndexMode</i> must not be set to OFF.
      * </p>
      * </li>
      * <li>
@@ -414,7 +414,7 @@ public class ThingIndexingConfiguration implements Serializable, Cloneable, Stru
      *        <li>
      *        <p>
      *        STATUS – Your thing index contains connectivity status. To enable thing connectivity indexing,
-     *        thingIndexMode must not be set to OFF.
+     *        <i>thingIndexMode</i> must not be set to OFF.
      *        </p>
      *        </li>
      *        <li>

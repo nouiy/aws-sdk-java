@@ -75,7 +75,7 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
     private java.util.Date lastModifiedDate;
     /**
      * <p>
-     * Specifies whether AWS IoT validates the token signature in an authorization request.
+     * Specifies whether IoT validates the token signature in an authorization request.
      * </p>
      */
     private Boolean signingDisabled;
@@ -449,11 +449,11 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies whether AWS IoT validates the token signature in an authorization request.
+     * Specifies whether IoT validates the token signature in an authorization request.
      * </p>
      * 
      * @param signingDisabled
-     *        Specifies whether AWS IoT validates the token signature in an authorization request.
+     *        Specifies whether IoT validates the token signature in an authorization request.
      */
 
     public void setSigningDisabled(Boolean signingDisabled) {
@@ -462,10 +462,10 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies whether AWS IoT validates the token signature in an authorization request.
+     * Specifies whether IoT validates the token signature in an authorization request.
      * </p>
      * 
-     * @return Specifies whether AWS IoT validates the token signature in an authorization request.
+     * @return Specifies whether IoT validates the token signature in an authorization request.
      */
 
     public Boolean getSigningDisabled() {
@@ -474,11 +474,11 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies whether AWS IoT validates the token signature in an authorization request.
+     * Specifies whether IoT validates the token signature in an authorization request.
      * </p>
      * 
      * @param signingDisabled
-     *        Specifies whether AWS IoT validates the token signature in an authorization request.
+     *        Specifies whether IoT validates the token signature in an authorization request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -489,10 +489,10 @@ public class AuthorizerDescription implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Specifies whether AWS IoT validates the token signature in an authorization request.
+     * Specifies whether IoT validates the token signature in an authorization request.
      * </p>
      * 
-     * @return Specifies whether AWS IoT validates the token signature in an authorization request.
+     * @return Specifies whether IoT validates the token signature in an authorization request.
      */
 
     public Boolean isSigningDisabled() {

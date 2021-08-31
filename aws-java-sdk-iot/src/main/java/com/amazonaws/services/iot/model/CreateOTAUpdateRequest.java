@@ -89,8 +89,8 @@ public class CreateOTAUpdateRequest extends com.amazonaws.AmazonWebServiceReques
     private java.util.List<OTAUpdateFile> files;
     /**
      * <p>
-     * The IAM role that grants AWS IoT access to the Amazon S3, AWS IoT jobs and AWS Code Signing resources to create
-     * an OTA update job.
+     * The IAM role that grants Amazon Web Services IoT Core access to the Amazon S3, IoT jobs and Amazon Web Services
+     * Code Signing resources to create an OTA update job.
      * </p>
      */
     private String roleArn;
@@ -700,13 +700,13 @@ public class CreateOTAUpdateRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The IAM role that grants AWS IoT access to the Amazon S3, AWS IoT jobs and AWS Code Signing resources to create
-     * an OTA update job.
+     * The IAM role that grants Amazon Web Services IoT Core access to the Amazon S3, IoT jobs and Amazon Web Services
+     * Code Signing resources to create an OTA update job.
      * </p>
      * 
      * @param roleArn
-     *        The IAM role that grants AWS IoT access to the Amazon S3, AWS IoT jobs and AWS Code Signing resources to
-     *        create an OTA update job.
+     *        The IAM role that grants Amazon Web Services IoT Core access to the Amazon S3, IoT jobs and Amazon Web
+     *        Services Code Signing resources to create an OTA update job.
      */
 
     public void setRoleArn(String roleArn) {
@@ -715,12 +715,12 @@ public class CreateOTAUpdateRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The IAM role that grants AWS IoT access to the Amazon S3, AWS IoT jobs and AWS Code Signing resources to create
-     * an OTA update job.
+     * The IAM role that grants Amazon Web Services IoT Core access to the Amazon S3, IoT jobs and Amazon Web Services
+     * Code Signing resources to create an OTA update job.
      * </p>
      * 
-     * @return The IAM role that grants AWS IoT access to the Amazon S3, AWS IoT jobs and AWS Code Signing resources to
-     *         create an OTA update job.
+     * @return The IAM role that grants Amazon Web Services IoT Core access to the Amazon S3, IoT jobs and Amazon Web
+     *         Services Code Signing resources to create an OTA update job.
      */
 
     public String getRoleArn() {
@@ -729,13 +729,13 @@ public class CreateOTAUpdateRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The IAM role that grants AWS IoT access to the Amazon S3, AWS IoT jobs and AWS Code Signing resources to create
-     * an OTA update job.
+     * The IAM role that grants Amazon Web Services IoT Core access to the Amazon S3, IoT jobs and Amazon Web Services
+     * Code Signing resources to create an OTA update job.
      * </p>
      * 
      * @param roleArn
-     *        The IAM role that grants AWS IoT access to the Amazon S3, AWS IoT jobs and AWS Code Signing resources to
-     *        create an OTA update job.
+     *        The IAM role that grants Amazon Web Services IoT Core access to the Amazon S3, IoT jobs and Amazon Web
+     *        Services Code Signing resources to create an OTA update job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

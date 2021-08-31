@@ -83,7 +83,8 @@ public enum VoiceId {
     Vitoria("Vitoria"),
     Zeina("Zeina"),
     Zhiyu("Zhiyu"),
-    Aria("Aria");
+    Aria("Aria"),
+    Ayanda("Ayanda");
 
     private String value;
 

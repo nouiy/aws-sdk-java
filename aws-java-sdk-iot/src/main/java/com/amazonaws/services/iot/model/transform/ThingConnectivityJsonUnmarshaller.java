@@ -56,6 +56,10 @@ public class ThingConnectivityJsonUnmarshaller implements Unmarshaller<ThingConn
                     context.nextToken();
                     thingConnectivity.setTimestamp(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("disconnectReason", targetDepth)) {
+                    context.nextToken();
+                    thingConnectivity.setDisconnectReason(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

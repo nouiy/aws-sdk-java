@@ -49,7 +49,8 @@ public enum LanguageCode {
     RuRU("ru-RU"),
     SvSE("sv-SE"),
     TrTR("tr-TR"),
-    EnNZ("en-NZ");
+    EnNZ("en-NZ"),
+    EnZA("en-ZA");
 
     private String value;
 

@@ -26,11 +26,10 @@ import com.amazonaws.services.memorydb.model.*;
  * </p>
  * <p>
  * <p>
- * Amazon MemoryDB for Redis is a fully managed, Redis-compatible, in-memory database that delivers ultra-fast
- * performance and Multi-AZ durability for modern applications built using microservices architectures. MemoryDB stores
- * the entire database in-memory, enabling low latency and high throughput data access. It is compatible with Redis, a
- * popular open source data store, enabling you to leverage Redis’ flexible and friendly data structures, APIs, and
- * commands.
+ * MemoryDB for Redis is a fully managed, Redis-compatible, in-memory database that delivers ultra-fast performance and
+ * Multi-AZ durability for modern applications built using microservices architectures. MemoryDB stores the entire
+ * database in-memory, enabling low latency and high throughput data access. It is compatible with Redis, a popular open
+ * source data store, enabling you to leverage Redis’ flexible and friendly data structures, APIs, and commands.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -40,8 +39,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * <p>
      * Apply the service update to a list of clusters supplied. For more information on service updates and applying
      * them, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/managing-updates.html#applying-updates">Applying
-     * the service updates</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/managing-updates.html#applying-updates">Applying the
+     * service updates</a>.
      * </p>
      * 
      * @param batchUpdateClusterRequest
@@ -56,8 +55,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * <p>
      * Apply the service update to a list of clusters supplied. For more information on service updates and applying
      * them, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/managing-updates.html#applying-updates">Applying
-     * the service updates</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/managing-updates.html#applying-updates">Applying the
+     * service updates</a>.
      * </p>
      * 
      * @param batchUpdateClusterRequest
@@ -107,8 +106,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
     /**
      * <p>
      * Creates an Access Control List. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Clusters.ACLs.html">Authenticating users with
-     * Access Contol Lists (ACLs)</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/clusters.acls.html">Authenticating users with Access
+     * Contol Lists (ACLs)</a>.
      * </p>
      * 
      * @param createACLRequest
@@ -122,8 +121,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
     /**
      * <p>
      * Creates an Access Control List. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Clusters.ACLs.html">Authenticating users with
-     * Access Contol Lists (ACLs)</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/clusters.acls.html">Authenticating users with Access
+     * Contol Lists (ACLs)</a>.
      * </p>
      * 
      * @param createACLRequest
@@ -174,8 +173,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * <p>
      * Creates a new MemoryDB parameter group. A parameter group is a collection of parameters and their values that are
      * applied to all of the nodes in any cluster. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/ParameterGroups.html">Configuring engine
-     * parameters using parameter groups</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/parametergroups.html">Configuring engine parameters
+     * using parameter groups</a>.
      * </p>
      * 
      * @param createParameterGroupRequest
@@ -190,8 +189,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * <p>
      * Creates a new MemoryDB parameter group. A parameter group is a collection of parameters and their values that are
      * applied to all of the nodes in any cluster. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/ParameterGroups.html">Configuring engine
-     * parameters using parameter groups</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/parametergroups.html">Configuring engine parameters
+     * using parameter groups</a>.
      * </p>
      * 
      * @param createParameterGroupRequest
@@ -244,8 +243,7 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * your clusters running in an Amazon Virtual Private Cloud (VPC) environment. When you create a cluster in an
      * Amazon VPC, you must specify a subnet group. MemoryDB uses that subnet group to choose a subnet and IP addresses
      * within that subnet to associate with your nodes. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/SubnetGroups.html">Subnets and subnet
-     * groups</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/subnetgroups.html">Subnets and subnet groups</a>.
      * </p>
      * 
      * @param createSubnetGroupRequest
@@ -262,8 +260,7 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * your clusters running in an Amazon Virtual Private Cloud (VPC) environment. When you create a cluster in an
      * Amazon VPC, you must specify a subnet group. MemoryDB uses that subnet group to choose a subnet and IP addresses
      * within that subnet to associate with your nodes. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/SubnetGroups.html">Subnets and subnet
-     * groups</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/subnetgroups.html">Subnets and subnet groups</a>.
      * </p>
      * 
      * @param createSubnetGroupRequest
@@ -282,8 +279,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
     /**
      * <p>
      * Creates a MemoryDB user. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Clusters.ACLs.html">Authenticating users with
-     * Access Contol Lists (ACLs)</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/clusters.acls.html">Authenticating users with Access
+     * Contol Lists (ACLs)</a>.
      * </p>
      * 
      * @param createUserRequest
@@ -297,8 +294,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
     /**
      * <p>
      * Creates a MemoryDB user. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Clusters.ACLs.html">Authenticating users with
-     * Access Contol Lists (ACLs)</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/clusters.acls.html">Authenticating users with Access
+     * Contol Lists (ACLs)</a>.
      * </p>
      * 
      * @param createUserRequest
@@ -318,8 +315,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * <p>
      * Deletes an Access Control List. The ACL must first be disassociated from the cluster before it can be deleted.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Clusters.ACLs.html">Authenticating users with
-     * Access Contol Lists (ACLs)</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/clusters.acls.html">Authenticating users with Access
+     * Contol Lists (ACLs)</a>.
      * </p>
      * 
      * @param deleteACLRequest
@@ -334,8 +331,8 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * <p>
      * Deletes an Access Control List. The ACL must first be disassociated from the cluster before it can be deleted.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Clusters.ACLs.html">Authenticating users with
-     * Access Contol Lists (ACLs)</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/clusters.acls.html">Authenticating users with Access
+     * Contol Lists (ACLs)</a>.
      * </p>
      * 
      * @param deleteACLRequest
@@ -906,7 +903,7 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * <p>
      * Lists all tags currently on a named resource. A tag is a key-value pair where the key and value are
      * case-sensitive. You can use tags to categorize and track your MemoryDB resources. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Tagging-Resources.html">Tagging your MemoryDB
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/Tagging-Resources.html">Tagging your MemoryDB
      * resources</a>
      * </p>
      * 
@@ -922,7 +919,7 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * <p>
      * Lists all tags currently on a named resource. A tag is a key-value pair where the key and value are
      * case-sensitive. You can use tags to categorize and track your MemoryDB resources. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Tagging-Resources.html">Tagging your MemoryDB
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/Tagging-Resources.html">Tagging your MemoryDB
      * resources</a>
      * </p>
      * 
@@ -979,15 +976,15 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track
      * all your MemoryDB resources. When you add or remove tags on clusters, those actions will be replicated to all
      * nodes in the cluster. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/IAM.ResourceLevelPermissions.html"
-     * >Resource-level permissions</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/iam.resourcelevelpermissions.html">Resource-level
+     * permissions</a>.
      * </p>
      * <p>
      * For example, you can use cost-allocation tags to your MemoryDB resources, Amazon generates a cost allocation
      * report as a comma-separated value (CSV) file with your usage and costs aggregated by your tags. You can apply
      * tags that represent business categories (such as cost centers, application names, or owners) to organize your
      * costs across multiple services. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Tagging.html">Using Cost Allocation Tags</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/tagging.html">Using Cost Allocation Tags</a>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1003,15 +1000,15 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
      * A tag is a key-value pair where the key and value are case-sensitive. You can use tags to categorize and track
      * all your MemoryDB resources. When you add or remove tags on clusters, those actions will be replicated to all
      * nodes in the cluster. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/IAM.ResourceLevelPermissions.html"
-     * >Resource-level permissions</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/iam.resourcelevelpermissions.html">Resource-level
+     * permissions</a>.
      * </p>
      * <p>
      * For example, you can use cost-allocation tags to your MemoryDB resources, Amazon generates a cost allocation
      * report as a comma-separated value (CSV) file with your usage and costs aggregated by your tags. You can apply
      * tags that represent business categories (such as cost centers, application names, or owners) to organize your
      * costs across multiple services. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/Tagging.html">Using Cost Allocation Tags</a>.
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/tagging.html">Using Cost Allocation Tags</a>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1158,7 +1155,7 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
     /**
      * <p>
      * Updates a subnet group. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/SubnetGroups.Modifying.html">Updating a subnet
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/ubnetGroups.Modifying.html">Updating a subnet
      * group</a>
      * </p>
      * 
@@ -1173,7 +1170,7 @@ public interface AmazonMemoryDBAsync extends AmazonMemoryDB {
     /**
      * <p>
      * Updates a subnet group. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonMemoryDB/latest/devguide/SubnetGroups.Modifying.html">Updating a subnet
+     * href="https://docs.aws.amazon.com/MemoryDB/latest/devguide/ubnetGroups.Modifying.html">Updating a subnet
      * group</a>
      * </p>
      * 

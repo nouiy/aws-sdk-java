@@ -21,7 +21,7 @@ public class DescribeAccountAuditConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies,
+     * The ARN of the role that grants permission to IoT to access information about your devices, policies,
      * certificates, and other items as required when performing an audit.
      * </p>
      * <p>
@@ -44,7 +44,7 @@ public class DescribeAccountAuditConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies,
+     * The ARN of the role that grants permission to IoT to access information about your devices, policies,
      * certificates, and other items as required when performing an audit.
      * </p>
      * <p>
@@ -52,7 +52,7 @@ public class DescribeAccountAuditConfigurationResult extends com.amazonaws.Amazo
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the role that grants permission to AWS IoT to access information about your devices, policies,
+     *        The ARN of the role that grants permission to IoT to access information about your devices, policies,
      *        certificates, and other items as required when performing an audit.</p>
      *        <p>
      *        On the first call to <code>UpdateAccountAuditConfiguration</code>, this parameter is required.
@@ -64,14 +64,14 @@ public class DescribeAccountAuditConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies,
+     * The ARN of the role that grants permission to IoT to access information about your devices, policies,
      * certificates, and other items as required when performing an audit.
      * </p>
      * <p>
      * On the first call to <code>UpdateAccountAuditConfiguration</code>, this parameter is required.
      * </p>
      * 
-     * @return The ARN of the role that grants permission to AWS IoT to access information about your devices, policies,
+     * @return The ARN of the role that grants permission to IoT to access information about your devices, policies,
      *         certificates, and other items as required when performing an audit.</p>
      *         <p>
      *         On the first call to <code>UpdateAccountAuditConfiguration</code>, this parameter is required.
@@ -83,7 +83,7 @@ public class DescribeAccountAuditConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The ARN of the role that grants permission to AWS IoT to access information about your devices, policies,
+     * The ARN of the role that grants permission to IoT to access information about your devices, policies,
      * certificates, and other items as required when performing an audit.
      * </p>
      * <p>
@@ -91,7 +91,7 @@ public class DescribeAccountAuditConfigurationResult extends com.amazonaws.Amazo
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the role that grants permission to AWS IoT to access information about your devices, policies,
+     *        The ARN of the role that grants permission to IoT to access information about your devices, policies,
      *        certificates, and other items as required when performing an audit.</p>
      *        <p>
      *        On the first call to <code>UpdateAccountAuditConfiguration</code>, this parameter is required.

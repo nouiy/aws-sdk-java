@@ -53,7 +53,8 @@ public class MitigationActionParams implements Serializable, Cloneable, Structur
     private ReplaceDefaultPolicyVersionParams replaceDefaultPolicyVersionParams;
     /**
      * <p>
-     * Parameters to define a mitigation action that enables AWS IoT logging at a specified level of detail.
+     * Parameters to define a mitigation action that enables Amazon Web Services IoT Core logging at a specified level
+     * of detail.
      * </p>
      */
     private EnableIoTLoggingParams enableIoTLoggingParams;
@@ -233,11 +234,13 @@ public class MitigationActionParams implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Parameters to define a mitigation action that enables AWS IoT logging at a specified level of detail.
+     * Parameters to define a mitigation action that enables Amazon Web Services IoT Core logging at a specified level
+     * of detail.
      * </p>
      * 
      * @param enableIoTLoggingParams
-     *        Parameters to define a mitigation action that enables AWS IoT logging at a specified level of detail.
+     *        Parameters to define a mitigation action that enables Amazon Web Services IoT Core logging at a specified
+     *        level of detail.
      */
 
     public void setEnableIoTLoggingParams(EnableIoTLoggingParams enableIoTLoggingParams) {
@@ -246,10 +249,12 @@ public class MitigationActionParams implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Parameters to define a mitigation action that enables AWS IoT logging at a specified level of detail.
+     * Parameters to define a mitigation action that enables Amazon Web Services IoT Core logging at a specified level
+     * of detail.
      * </p>
      * 
-     * @return Parameters to define a mitigation action that enables AWS IoT logging at a specified level of detail.
+     * @return Parameters to define a mitigation action that enables Amazon Web Services IoT Core logging at a specified
+     *         level of detail.
      */
 
     public EnableIoTLoggingParams getEnableIoTLoggingParams() {
@@ -258,11 +263,13 @@ public class MitigationActionParams implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Parameters to define a mitigation action that enables AWS IoT logging at a specified level of detail.
+     * Parameters to define a mitigation action that enables Amazon Web Services IoT Core logging at a specified level
+     * of detail.
      * </p>
      * 
      * @param enableIoTLoggingParams
-     *        Parameters to define a mitigation action that enables AWS IoT logging at a specified level of detail.
+     *        Parameters to define a mitigation action that enables Amazon Web Services IoT Core logging at a specified
+     *        level of detail.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

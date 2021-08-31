@@ -140,8 +140,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <li>
      * <p>
      * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
-     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
-     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * instance is different. For example, the recommended instance type might use an Arm CPU architecture and the
+     * current instance type might use a different one, such as x86. Before migrating, you should consider recompiling
      * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
      * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
      * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
@@ -448,8 +448,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <li>
      * <p>
      * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
-     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
-     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * instance is different. For example, the recommended instance type might use an Arm CPU architecture and the
+     * current instance type might use a different one, such as x86. Before migrating, you should consider recompiling
      * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
      * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
      * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
@@ -547,8 +547,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *         <li>
      *         <p>
      *         <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
-     *         current instance is different. For example, the recommended instance type might use an x86 CPU
-     *         architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *         current instance is different. For example, the recommended instance type might use an Arm CPU
+     *         architecture and the current instance type might use a different one, such as x86. Before migrating, you
      *         should consider recompiling the software on your instance for the new architecture. Alternatively, you
      *         might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
      *         about the CPU architecture for each instance type, see <a
@@ -653,8 +653,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <li>
      * <p>
      * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
-     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
-     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * instance is different. For example, the recommended instance type might use an Arm CPU architecture and the
+     * current instance type might use a different one, such as x86. Before migrating, you should consider recompiling
      * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
      * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
      * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
@@ -752,8 +752,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        <li>
      *        <p>
      *        <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
-     *        current instance is different. For example, the recommended instance type might use an x86 CPU
-     *        architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *        current instance is different. For example, the recommended instance type might use an Arm CPU
+     *        architecture and the current instance type might use a different one, such as x86. Before migrating, you
      *        should consider recompiling the software on your instance for the new architecture. Alternatively, you
      *        might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
      *        about the CPU architecture for each instance type, see <a
@@ -863,8 +863,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <li>
      * <p>
      * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
-     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
-     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * instance is different. For example, the recommended instance type might use an Arm CPU architecture and the
+     * current instance type might use a different one, such as x86. Before migrating, you should consider recompiling
      * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
      * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
      * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
@@ -967,8 +967,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        <li>
      *        <p>
      *        <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
-     *        current instance is different. For example, the recommended instance type might use an x86 CPU
-     *        architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *        current instance is different. For example, the recommended instance type might use an Arm CPU
+     *        architecture and the current instance type might use a different one, such as x86. Before migrating, you
      *        should consider recompiling the software on your instance for the new architecture. Alternatively, you
      *        might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
      *        about the CPU architecture for each instance type, see <a
@@ -1080,8 +1080,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <li>
      * <p>
      * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
-     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
-     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * instance is different. For example, the recommended instance type might use an Arm CPU architecture and the
+     * current instance type might use a different one, such as x86. Before migrating, you should consider recompiling
      * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
      * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
      * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
@@ -1179,8 +1179,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        <li>
      *        <p>
      *        <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
-     *        current instance is different. For example, the recommended instance type might use an x86 CPU
-     *        architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *        current instance is different. For example, the recommended instance type might use an Arm CPU
+     *        architecture and the current instance type might use a different one, such as x86. Before migrating, you
      *        should consider recompiling the software on your instance for the new architecture. Alternatively, you
      *        might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
      *        about the CPU architecture for each instance type, see <a
@@ -1287,8 +1287,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      * <li>
      * <p>
      * <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the current
-     * instance is different. For example, the recommended instance type might use an x86 CPU architecture and the
-     * current instance type might use a different one, such as ARM. Before migrating, you should consider recompiling
+     * instance is different. For example, the recommended instance type might use an Arm CPU architecture and the
+     * current instance type might use a different one, such as x86. Before migrating, you should consider recompiling
      * the software on your instance for the new architecture. Alternatively, you might switch to an Amazon Machine
      * Image (AMI) that supports the new architecture. For more information about the CPU architecture for each instance
      * type, see <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a>.
@@ -1386,8 +1386,8 @@ public class InstanceRecommendationOption implements Serializable, Cloneable, St
      *        <li>
      *        <p>
      *        <b> <code>Architecture</code> </b> — The CPU architecture between the recommended instance type and the
-     *        current instance is different. For example, the recommended instance type might use an x86 CPU
-     *        architecture and the current instance type might use a different one, such as ARM. Before migrating, you
+     *        current instance is different. For example, the recommended instance type might use an Arm CPU
+     *        architecture and the current instance type might use a different one, such as x86. Before migrating, you
      *        should consider recompiling the software on your instance for the new architecture. Alternatively, you
      *        might switch to an Amazon Machine Image (AMI) that supports the new architecture. For more information
      *        about the CPU architecture for each instance type, see <a

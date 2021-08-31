@@ -57,13 +57,13 @@ public class CertificateDescription implements Serializable, Cloneable, Structur
     private String certificatePem;
     /**
      * <p>
-     * The ID of the AWS account that owns the certificate.
+     * The ID of the Amazon Web Services account that owns the certificate.
      * </p>
      */
     private String ownedBy;
     /**
      * <p>
-     * The ID of the AWS account of the previous owner of the certificate.
+     * The ID of the Amazon Web Services account of the previous owner of the certificate.
      * </p>
      */
     private String previousOwnedBy;
@@ -345,11 +345,11 @@ public class CertificateDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the AWS account that owns the certificate.
+     * The ID of the Amazon Web Services account that owns the certificate.
      * </p>
      * 
      * @param ownedBy
-     *        The ID of the AWS account that owns the certificate.
+     *        The ID of the Amazon Web Services account that owns the certificate.
      */
 
     public void setOwnedBy(String ownedBy) {
@@ -358,10 +358,10 @@ public class CertificateDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the AWS account that owns the certificate.
+     * The ID of the Amazon Web Services account that owns the certificate.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the certificate.
+     * @return The ID of the Amazon Web Services account that owns the certificate.
      */
 
     public String getOwnedBy() {
@@ -370,11 +370,11 @@ public class CertificateDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the AWS account that owns the certificate.
+     * The ID of the Amazon Web Services account that owns the certificate.
      * </p>
      * 
      * @param ownedBy
-     *        The ID of the AWS account that owns the certificate.
+     *        The ID of the Amazon Web Services account that owns the certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -385,11 +385,11 @@ public class CertificateDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the AWS account of the previous owner of the certificate.
+     * The ID of the Amazon Web Services account of the previous owner of the certificate.
      * </p>
      * 
      * @param previousOwnedBy
-     *        The ID of the AWS account of the previous owner of the certificate.
+     *        The ID of the Amazon Web Services account of the previous owner of the certificate.
      */
 
     public void setPreviousOwnedBy(String previousOwnedBy) {
@@ -398,10 +398,10 @@ public class CertificateDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the AWS account of the previous owner of the certificate.
+     * The ID of the Amazon Web Services account of the previous owner of the certificate.
      * </p>
      * 
-     * @return The ID of the AWS account of the previous owner of the certificate.
+     * @return The ID of the Amazon Web Services account of the previous owner of the certificate.
      */
 
     public String getPreviousOwnedBy() {
@@ -410,11 +410,11 @@ public class CertificateDescription implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the AWS account of the previous owner of the certificate.
+     * The ID of the Amazon Web Services account of the previous owner of the certificate.
      * </p>
      * 
      * @param previousOwnedBy
-     *        The ID of the AWS account of the previous owner of the certificate.
+     *        The ID of the Amazon Web Services account of the previous owner of the certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

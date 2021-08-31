@@ -106,15 +106,14 @@ public class Index implements QueryApi, ScanApi {
             String filterExpression, Map<String, String> nameMap,
             Map<String, Object> valueMap) {
         return queryDelegate.query(hashKey, rangeKeyCondition,
-                projectionExpression, filterExpression, nameMap, valueMap);
+                                   filterExpression, projectionExpression, nameMap, valueMap);
     }
 
     @Beta
     public ItemCollection<QueryOutcome> query(KeyAttribute hashKey,
             RangeKeyCondition rangeKeyCondition, QueryExpressionSpec queryExpressions) {
         return queryDelegate.query(hashKey, rangeKeyCondition,
-                queryExpressions.getProjectionExpression(),
-                queryExpressions.getFilterExpression(),
+                queryExpressions.getFilterExpression(), queryExpressions.getProjectionExpression(),
                 queryExpressions.getNameMap(), queryExpressions.getValueMap());
     }
 

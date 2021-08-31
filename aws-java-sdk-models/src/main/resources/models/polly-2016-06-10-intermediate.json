@@ -3329,6 +3329,9 @@
       }, {
         "name" : "EnNZ",
         "value" : "en-NZ"
+      }, {
+        "name" : "EnZA",
+        "value" : "en-ZA"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.LanguageCode",
@@ -15962,6 +15965,9 @@
       }, {
         "name" : "Aria",
         "value" : "Aria"
+      }, {
+        "name" : "Ayanda",
+        "value" : "Ayanda"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.polly.enum.VoiceId",

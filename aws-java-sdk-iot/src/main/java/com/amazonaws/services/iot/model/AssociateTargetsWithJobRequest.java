@@ -43,8 +43,8 @@ public class AssociateTargetsWithJobRequest extends com.amazonaws.AmazonWebServi
      * The namespace used to indicate that a job is a customer-managed job.
      * </p>
      * <p>
-     * When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain
-     * the value in the following format.
+     * When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics
+     * that contain the value in the following format.
      * </p>
      * <p>
      * <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code>
@@ -212,8 +212,8 @@ public class AssociateTargetsWithJobRequest extends com.amazonaws.AmazonWebServi
      * The namespace used to indicate that a job is a customer-managed job.
      * </p>
      * <p>
-     * When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain
-     * the value in the following format.
+     * When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics
+     * that contain the value in the following format.
      * </p>
      * <p>
      * <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code>
@@ -227,8 +227,8 @@ public class AssociateTargetsWithJobRequest extends com.amazonaws.AmazonWebServi
      * @param namespaceId
      *        The namespace used to indicate that a job is a customer-managed job.</p>
      *        <p>
-     *        When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that
-     *        contain the value in the following format.
+     *        When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT
+     *        topics that contain the value in the following format.
      *        </p>
      *        <p>
      *        <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code>
@@ -248,8 +248,8 @@ public class AssociateTargetsWithJobRequest extends com.amazonaws.AmazonWebServi
      * The namespace used to indicate that a job is a customer-managed job.
      * </p>
      * <p>
-     * When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain
-     * the value in the following format.
+     * When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics
+     * that contain the value in the following format.
      * </p>
      * <p>
      * <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code>
@@ -262,8 +262,8 @@ public class AssociateTargetsWithJobRequest extends com.amazonaws.AmazonWebServi
      * 
      * @return The namespace used to indicate that a job is a customer-managed job.</p>
      *         <p>
-     *         When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that
-     *         contain the value in the following format.
+     *         When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to
+     *         MQTT topics that contain the value in the following format.
      *         </p>
      *         <p>
      *         <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code>
@@ -283,8 +283,8 @@ public class AssociateTargetsWithJobRequest extends com.amazonaws.AmazonWebServi
      * The namespace used to indicate that a job is a customer-managed job.
      * </p>
      * <p>
-     * When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that contain
-     * the value in the following format.
+     * When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics
+     * that contain the value in the following format.
      * </p>
      * <p>
      * <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code>
@@ -298,8 +298,8 @@ public class AssociateTargetsWithJobRequest extends com.amazonaws.AmazonWebServi
      * @param namespaceId
      *        The namespace used to indicate that a job is a customer-managed job.</p>
      *        <p>
-     *        When you specify a value for this parameter, AWS IoT Core sends jobs notifications to MQTT topics that
-     *        contain the value in the following format.
+     *        When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT
+     *        topics that contain the value in the following format.
      *        </p>
      *        <p>
      *        <code>$aws/things/<i>THING_NAME</i>/jobs/<i>JOB_ID</i>/notify-namespace-<i>NAMESPACE_ID</i>/</code>

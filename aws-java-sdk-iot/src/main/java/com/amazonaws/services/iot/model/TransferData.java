@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Data used to transfer a certificate to an AWS account.
+ * Data used to transfer a certificate to an Amazon Web Services account.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

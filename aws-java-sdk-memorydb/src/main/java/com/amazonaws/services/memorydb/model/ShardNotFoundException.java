@@ -15,7 +15,7 @@ package com.amazonaws.services.memorydb.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p/>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ShardNotFoundException extends com.amazonaws.services.memorydb.model.AmazonMemoryDBException {

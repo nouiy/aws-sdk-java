@@ -112,19 +112,19 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
     private SalesforceAction salesforce;
     /**
      * <p>
-     * Sends message data to an AWS IoT Analytics channel.
+     * Sends message data to an IoT Analytics channel.
      * </p>
      */
     private IotAnalyticsAction iotAnalytics;
     /**
      * <p>
-     * Sends an input to an AWS IoT Events detector.
+     * Sends an input to an IoT Events detector.
      * </p>
      */
     private IotEventsAction iotEvents;
     /**
      * <p>
-     * Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise asset properties.
+     * Sends data from the MQTT message that triggered the rule to IoT SiteWise asset properties.
      * </p>
      */
     private IotSiteWiseAction iotSiteWise;
@@ -724,11 +724,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Sends message data to an AWS IoT Analytics channel.
+     * Sends message data to an IoT Analytics channel.
      * </p>
      * 
      * @param iotAnalytics
-     *        Sends message data to an AWS IoT Analytics channel.
+     *        Sends message data to an IoT Analytics channel.
      */
 
     public void setIotAnalytics(IotAnalyticsAction iotAnalytics) {
@@ -737,10 +737,10 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Sends message data to an AWS IoT Analytics channel.
+     * Sends message data to an IoT Analytics channel.
      * </p>
      * 
-     * @return Sends message data to an AWS IoT Analytics channel.
+     * @return Sends message data to an IoT Analytics channel.
      */
 
     public IotAnalyticsAction getIotAnalytics() {
@@ -749,11 +749,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Sends message data to an AWS IoT Analytics channel.
+     * Sends message data to an IoT Analytics channel.
      * </p>
      * 
      * @param iotAnalytics
-     *        Sends message data to an AWS IoT Analytics channel.
+     *        Sends message data to an IoT Analytics channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -764,11 +764,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Sends an input to an AWS IoT Events detector.
+     * Sends an input to an IoT Events detector.
      * </p>
      * 
      * @param iotEvents
-     *        Sends an input to an AWS IoT Events detector.
+     *        Sends an input to an IoT Events detector.
      */
 
     public void setIotEvents(IotEventsAction iotEvents) {
@@ -777,10 +777,10 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Sends an input to an AWS IoT Events detector.
+     * Sends an input to an IoT Events detector.
      * </p>
      * 
-     * @return Sends an input to an AWS IoT Events detector.
+     * @return Sends an input to an IoT Events detector.
      */
 
     public IotEventsAction getIotEvents() {
@@ -789,11 +789,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Sends an input to an AWS IoT Events detector.
+     * Sends an input to an IoT Events detector.
      * </p>
      * 
      * @param iotEvents
-     *        Sends an input to an AWS IoT Events detector.
+     *        Sends an input to an IoT Events detector.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -804,11 +804,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise asset properties.
+     * Sends data from the MQTT message that triggered the rule to IoT SiteWise asset properties.
      * </p>
      * 
      * @param iotSiteWise
-     *        Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise asset properties.
+     *        Sends data from the MQTT message that triggered the rule to IoT SiteWise asset properties.
      */
 
     public void setIotSiteWise(IotSiteWiseAction iotSiteWise) {
@@ -817,10 +817,10 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise asset properties.
+     * Sends data from the MQTT message that triggered the rule to IoT SiteWise asset properties.
      * </p>
      * 
-     * @return Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise asset properties.
+     * @return Sends data from the MQTT message that triggered the rule to IoT SiteWise asset properties.
      */
 
     public IotSiteWiseAction getIotSiteWise() {
@@ -829,11 +829,11 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise asset properties.
+     * Sends data from the MQTT message that triggered the rule to IoT SiteWise asset properties.
      * </p>
      * 
      * @param iotSiteWise
-     *        Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise asset properties.
+     *        Sends data from the MQTT message that triggered the rule to IoT SiteWise asset properties.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -34,7 +34,7 @@ public class PutAssetPropertyValueEntry implements Serializable, Cloneable, Stru
     private String entryId;
     /**
      * <p>
-     * The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
+     * The ID of the IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
      * <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.
      * </p>
      */
@@ -109,12 +109,12 @@ public class PutAssetPropertyValueEntry implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
+     * The ID of the IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
      * <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.
      * </p>
      * 
      * @param assetId
-     *        The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
+     *        The ID of the IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
      *        <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.
      */
 
@@ -124,11 +124,11 @@ public class PutAssetPropertyValueEntry implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
+     * The ID of the IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
      * <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.
      * </p>
      * 
-     * @return The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
+     * @return The ID of the IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
      *         <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.
      */
 
@@ -138,12 +138,12 @@ public class PutAssetPropertyValueEntry implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
+     * The ID of the IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
      * <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.
      * </p>
      * 
      * @param assetId
-     *        The ID of the AWS IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
+     *        The ID of the IoT SiteWise asset. You must specify either a <code>propertyAlias</code> or both an
      *        <code>aliasId</code> and a <code>propertyId</code>. Accepts substitution templates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

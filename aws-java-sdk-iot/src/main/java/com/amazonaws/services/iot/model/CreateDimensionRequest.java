@@ -49,8 +49,8 @@ public class CreateDimensionRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Each dimension must have a unique client request token. If you try to create a new dimension with the same token
-     * as a dimension that already exists, an exception occurs. If you omit this value, AWS SDKs will automatically
-     * generate a unique client request.
+     * as a dimension that already exists, an exception occurs. If you omit this value, Amazon Web Services SDKs will
+     * automatically generate a unique client request.
      * </p>
      */
     private String clientRequestToken;
@@ -311,14 +311,14 @@ public class CreateDimensionRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Each dimension must have a unique client request token. If you try to create a new dimension with the same token
-     * as a dimension that already exists, an exception occurs. If you omit this value, AWS SDKs will automatically
-     * generate a unique client request.
+     * as a dimension that already exists, an exception occurs. If you omit this value, Amazon Web Services SDKs will
+     * automatically generate a unique client request.
      * </p>
      * 
      * @param clientRequestToken
      *        Each dimension must have a unique client request token. If you try to create a new dimension with the same
-     *        token as a dimension that already exists, an exception occurs. If you omit this value, AWS SDKs will
-     *        automatically generate a unique client request.
+     *        token as a dimension that already exists, an exception occurs. If you omit this value, Amazon Web Services
+     *        SDKs will automatically generate a unique client request.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -328,13 +328,13 @@ public class CreateDimensionRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Each dimension must have a unique client request token. If you try to create a new dimension with the same token
-     * as a dimension that already exists, an exception occurs. If you omit this value, AWS SDKs will automatically
-     * generate a unique client request.
+     * as a dimension that already exists, an exception occurs. If you omit this value, Amazon Web Services SDKs will
+     * automatically generate a unique client request.
      * </p>
      * 
      * @return Each dimension must have a unique client request token. If you try to create a new dimension with the
-     *         same token as a dimension that already exists, an exception occurs. If you omit this value, AWS SDKs will
-     *         automatically generate a unique client request.
+     *         same token as a dimension that already exists, an exception occurs. If you omit this value, Amazon Web
+     *         Services SDKs will automatically generate a unique client request.
      */
 
     public String getClientRequestToken() {
@@ -344,14 +344,14 @@ public class CreateDimensionRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * Each dimension must have a unique client request token. If you try to create a new dimension with the same token
-     * as a dimension that already exists, an exception occurs. If you omit this value, AWS SDKs will automatically
-     * generate a unique client request.
+     * as a dimension that already exists, an exception occurs. If you omit this value, Amazon Web Services SDKs will
+     * automatically generate a unique client request.
      * </p>
      * 
      * @param clientRequestToken
      *        Each dimension must have a unique client request token. If you try to create a new dimension with the same
-     *        token as a dimension that already exists, an exception occurs. If you omit this value, AWS SDKs will
-     *        automatically generate a unique client request.
+     *        token as a dimension that already exists, an exception occurs. If you omit this value, Amazon Web Services
+     *        SDKs will automatically generate a unique client request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
