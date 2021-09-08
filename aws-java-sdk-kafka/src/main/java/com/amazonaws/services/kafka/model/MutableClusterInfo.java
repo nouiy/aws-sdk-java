@@ -65,7 +65,12 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String kafkaVersion;
-
+    /**
+     * <p>
+     * You can configure your MSK cluster to send broker logs to different destination types. This is a container for
+     * the configuration details related to broker logs.
+     * </p>
+     */
     private LoggingInfo loggingInfo;
     /**
      * <p>
@@ -73,6 +78,18 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String instanceType;
+    /**
+     * <p>
+     * Includes all client authentication information.
+     * </p>
+     */
+    private ClientAuthentication clientAuthentication;
+    /**
+     * <p>
+     * Includes all encryption-related information.
+     * </p>
+     */
+    private EncryptionInfo encryptionInfo;
 
     /**
      * <p>
@@ -405,7 +422,16 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * You can configure your MSK cluster to send broker logs to different destination types. This is a container for
+     * the configuration details related to broker logs.
+     * </p>
+     * 
      * @param loggingInfo
+     *        <p>
+     *        You can configure your MSK cluster to send broker logs to different destination types. This is a container
+     *        for the configuration details related to broker logs.
+     *        </p>
      */
 
     public void setLoggingInfo(LoggingInfo loggingInfo) {
@@ -413,7 +439,15 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * You can configure your MSK cluster to send broker logs to different destination types. This is a container for
+     * the configuration details related to broker logs.
+     * </p>
+     * 
+     * @return <p>
+     *         You can configure your MSK cluster to send broker logs to different destination types. This is a
+     *         container for the configuration details related to broker logs.
+     *         </p>
      */
 
     public LoggingInfo getLoggingInfo() {
@@ -421,7 +455,16 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * You can configure your MSK cluster to send broker logs to different destination types. This is a container for
+     * the configuration details related to broker logs.
+     * </p>
+     * 
      * @param loggingInfo
+     *        <p>
+     *        You can configure your MSK cluster to send broker logs to different destination types. This is a container
+     *        for the configuration details related to broker logs.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -477,6 +520,98 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Includes all client authentication information.
+     * </p>
+     * 
+     * @param clientAuthentication
+     *        <p>
+     *        Includes all client authentication information.
+     *        </p>
+     */
+
+    public void setClientAuthentication(ClientAuthentication clientAuthentication) {
+        this.clientAuthentication = clientAuthentication;
+    }
+
+    /**
+     * <p>
+     * Includes all client authentication information.
+     * </p>
+     * 
+     * @return <p>
+     *         Includes all client authentication information.
+     *         </p>
+     */
+
+    public ClientAuthentication getClientAuthentication() {
+        return this.clientAuthentication;
+    }
+
+    /**
+     * <p>
+     * Includes all client authentication information.
+     * </p>
+     * 
+     * @param clientAuthentication
+     *        <p>
+     *        Includes all client authentication information.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MutableClusterInfo withClientAuthentication(ClientAuthentication clientAuthentication) {
+        setClientAuthentication(clientAuthentication);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Includes all encryption-related information.
+     * </p>
+     * 
+     * @param encryptionInfo
+     *        <p>
+     *        Includes all encryption-related information.
+     *        </p>
+     */
+
+    public void setEncryptionInfo(EncryptionInfo encryptionInfo) {
+        this.encryptionInfo = encryptionInfo;
+    }
+
+    /**
+     * <p>
+     * Includes all encryption-related information.
+     * </p>
+     * 
+     * @return <p>
+     *         Includes all encryption-related information.
+     *         </p>
+     */
+
+    public EncryptionInfo getEncryptionInfo() {
+        return this.encryptionInfo;
+    }
+
+    /**
+     * <p>
+     * Includes all encryption-related information.
+     * </p>
+     * 
+     * @param encryptionInfo
+     *        <p>
+     *        Includes all encryption-related information.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MutableClusterInfo withEncryptionInfo(EncryptionInfo encryptionInfo) {
+        setEncryptionInfo(encryptionInfo);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -503,7 +638,11 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
         if (getLoggingInfo() != null)
             sb.append("LoggingInfo: ").append(getLoggingInfo()).append(",");
         if (getInstanceType() != null)
-            sb.append("InstanceType: ").append(getInstanceType());
+            sb.append("InstanceType: ").append(getInstanceType()).append(",");
+        if (getClientAuthentication() != null)
+            sb.append("ClientAuthentication: ").append(getClientAuthentication()).append(",");
+        if (getEncryptionInfo() != null)
+            sb.append("EncryptionInfo: ").append(getEncryptionInfo());
         sb.append("}");
         return sb.toString();
     }
@@ -550,6 +689,14 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getInstanceType() != null && other.getInstanceType().equals(this.getInstanceType()) == false)
             return false;
+        if (other.getClientAuthentication() == null ^ this.getClientAuthentication() == null)
+            return false;
+        if (other.getClientAuthentication() != null && other.getClientAuthentication().equals(this.getClientAuthentication()) == false)
+            return false;
+        if (other.getEncryptionInfo() == null ^ this.getEncryptionInfo() == null)
+            return false;
+        if (other.getEncryptionInfo() != null && other.getEncryptionInfo().equals(this.getEncryptionInfo()) == false)
+            return false;
         return true;
     }
 
@@ -566,6 +713,8 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getKafkaVersion() == null) ? 0 : getKafkaVersion().hashCode());
         hashCode = prime * hashCode + ((getLoggingInfo() == null) ? 0 : getLoggingInfo().hashCode());
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
+        hashCode = prime * hashCode + ((getClientAuthentication() == null) ? 0 : getClientAuthentication().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionInfo() == null) ? 0 : getEncryptionInfo().hashCode());
         return hashCode;
     }
 

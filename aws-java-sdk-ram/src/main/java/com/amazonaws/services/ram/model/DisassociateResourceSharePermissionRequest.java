@@ -33,7 +33,7 @@ public class DisassociateResourceSharePermissionRequest extends com.amazonaws.Am
     private String resourceShareArn;
     /**
      * <p>
-     * The ARN of the permission to disassociate from the resource share.
+     * The Amazon Resource Name (ARN) of the permission to disassociate from the resource share.
      * </p>
      */
     private String permissionArn;
@@ -86,11 +86,11 @@ public class DisassociateResourceSharePermissionRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The ARN of the permission to disassociate from the resource share.
+     * The Amazon Resource Name (ARN) of the permission to disassociate from the resource share.
      * </p>
      * 
      * @param permissionArn
-     *        The ARN of the permission to disassociate from the resource share.
+     *        The Amazon Resource Name (ARN) of the permission to disassociate from the resource share.
      */
 
     public void setPermissionArn(String permissionArn) {
@@ -99,10 +99,10 @@ public class DisassociateResourceSharePermissionRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The ARN of the permission to disassociate from the resource share.
+     * The Amazon Resource Name (ARN) of the permission to disassociate from the resource share.
      * </p>
      * 
-     * @return The ARN of the permission to disassociate from the resource share.
+     * @return The Amazon Resource Name (ARN) of the permission to disassociate from the resource share.
      */
 
     public String getPermissionArn() {
@@ -111,11 +111,11 @@ public class DisassociateResourceSharePermissionRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * The ARN of the permission to disassociate from the resource share.
+     * The Amazon Resource Name (ARN) of the permission to disassociate from the resource share.
      * </p>
      * 
      * @param permissionArn
-     *        The ARN of the permission to disassociate from the resource share.
+     *        The Amazon Resource Name (ARN) of the permission to disassociate from the resource share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

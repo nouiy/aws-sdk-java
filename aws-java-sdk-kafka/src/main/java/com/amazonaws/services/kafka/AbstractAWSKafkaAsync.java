@@ -416,4 +416,17 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateSecurityResult> updateSecurityAsync(UpdateSecurityRequest request) {
+
+        return updateSecurityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSecurityResult> updateSecurityAsync(UpdateSecurityRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateSecurityRequest, UpdateSecurityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

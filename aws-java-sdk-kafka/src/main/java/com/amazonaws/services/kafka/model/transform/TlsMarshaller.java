@@ -30,6 +30,8 @@ public class TlsMarshaller {
 
     private static final MarshallingInfo<List> CERTIFICATEAUTHORITYARNLIST_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("certificateAuthorityArnList").build();
+    private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("enabled").build();
 
     private static final TlsMarshaller instance = new TlsMarshaller();
 
@@ -48,6 +50,7 @@ public class TlsMarshaller {
 
         try {
             protocolMarshaller.marshall(tls.getCertificateAuthorityArnList(), CERTIFICATEAUTHORITYARNLIST_BINDING);
+            protocolMarshaller.marshall(tls.getEnabled(), ENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -33,15 +33,48 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
     private String resourceShareArn;
     /**
      * <p>
-     * The Amazon Resource Names (ARN) of the resources.
+     * The Amazon Resource Names (ARNs) of the resources.
      * </p>
      */
     private java.util.List<String> resourceArns;
     /**
      * <p>
-     * The principals to associate with the resource share. The possible values are IDs of AWS accounts, and the ARNs of
-     * organizational units (OU) or organizations from AWS Organizations.
+     * The principals to associate with the resource share. The possible values are:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services account ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Amazon Resource Name (ARN) of an organization in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organizational unit (OU) in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM role
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM user
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Not all resource types can be shared with IAM roles and IAM users. For more information, see <a href=
+     * "https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"
+     * >Sharing with IAM roles and IAM users</a> in the <i>Resource Access Manager User Guide</i>.
+     * </p>
+     * </note>
      */
     private java.util.List<String> principals;
     /**
@@ -93,10 +126,10 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Names (ARN) of the resources.
+     * The Amazon Resource Names (ARNs) of the resources.
      * </p>
      * 
-     * @return The Amazon Resource Names (ARN) of the resources.
+     * @return The Amazon Resource Names (ARNs) of the resources.
      */
 
     public java.util.List<String> getResourceArns() {
@@ -105,11 +138,11 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Names (ARN) of the resources.
+     * The Amazon Resource Names (ARNs) of the resources.
      * </p>
      * 
      * @param resourceArns
-     *        The Amazon Resource Names (ARN) of the resources.
+     *        The Amazon Resource Names (ARNs) of the resources.
      */
 
     public void setResourceArns(java.util.Collection<String> resourceArns) {
@@ -123,7 +156,7 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Names (ARN) of the resources.
+     * The Amazon Resource Names (ARNs) of the resources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -132,7 +165,7 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param resourceArns
-     *        The Amazon Resource Names (ARN) of the resources.
+     *        The Amazon Resource Names (ARNs) of the resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -148,11 +181,11 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Names (ARN) of the resources.
+     * The Amazon Resource Names (ARNs) of the resources.
      * </p>
      * 
      * @param resourceArns
-     *        The Amazon Resource Names (ARN) of the resources.
+     *        The Amazon Resource Names (ARNs) of the resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -163,12 +196,77 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The principals to associate with the resource share. The possible values are IDs of AWS accounts, and the ARNs of
-     * organizational units (OU) or organizations from AWS Organizations.
+     * The principals to associate with the resource share. The possible values are:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services account ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Amazon Resource Name (ARN) of an organization in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organizational unit (OU) in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM role
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM user
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Not all resource types can be shared with IAM roles and IAM users. For more information, see <a href=
+     * "https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"
+     * >Sharing with IAM roles and IAM users</a> in the <i>Resource Access Manager User Guide</i>.
+     * </p>
+     * </note>
      * 
-     * @return The principals to associate with the resource share. The possible values are IDs of AWS accounts, and the
-     *         ARNs of organizational units (OU) or organizations from AWS Organizations.
+     * @return The principals to associate with the resource share. The possible values are:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         An Amazon Web Services account ID
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An Amazon Resource Name (ARN) of an organization in Organizations
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An ARN of an organizational unit (OU) in Organizations
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An ARN of an IAM role
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An ARN of an IAM user
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <note>
+     *         <p>
+     *         Not all resource types can be shared with IAM roles and IAM users. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"
+     *         >Sharing with IAM roles and IAM users</a> in the <i>Resource Access Manager User Guide</i>.
+     *         </p>
      */
 
     public java.util.List<String> getPrincipals() {
@@ -177,13 +275,78 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The principals to associate with the resource share. The possible values are IDs of AWS accounts, and the ARNs of
-     * organizational units (OU) or organizations from AWS Organizations.
+     * The principals to associate with the resource share. The possible values are:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services account ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Amazon Resource Name (ARN) of an organization in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organizational unit (OU) in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM role
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM user
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Not all resource types can be shared with IAM roles and IAM users. For more information, see <a href=
+     * "https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"
+     * >Sharing with IAM roles and IAM users</a> in the <i>Resource Access Manager User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param principals
-     *        The principals to associate with the resource share. The possible values are IDs of AWS accounts, and the
-     *        ARNs of organizational units (OU) or organizations from AWS Organizations.
+     *        The principals to associate with the resource share. The possible values are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        An Amazon Web Services account ID
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An Amazon Resource Name (ARN) of an organization in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an organizational unit (OU) in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM role
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM user
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Not all resource types can be shared with IAM roles and IAM users. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"
+     *        >Sharing with IAM roles and IAM users</a> in the <i>Resource Access Manager User Guide</i>.
+     *        </p>
      */
 
     public void setPrincipals(java.util.Collection<String> principals) {
@@ -197,9 +360,42 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The principals to associate with the resource share. The possible values are IDs of AWS accounts, and the ARNs of
-     * organizational units (OU) or organizations from AWS Organizations.
+     * The principals to associate with the resource share. The possible values are:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services account ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Amazon Resource Name (ARN) of an organization in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organizational unit (OU) in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM role
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM user
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Not all resource types can be shared with IAM roles and IAM users. For more information, see <a href=
+     * "https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"
+     * >Sharing with IAM roles and IAM users</a> in the <i>Resource Access Manager User Guide</i>.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setPrincipals(java.util.Collection)} or {@link #withPrincipals(java.util.Collection)} if you want to
@@ -207,8 +403,40 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param principals
-     *        The principals to associate with the resource share. The possible values are IDs of AWS accounts, and the
-     *        ARNs of organizational units (OU) or organizations from AWS Organizations.
+     *        The principals to associate with the resource share. The possible values are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        An Amazon Web Services account ID
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An Amazon Resource Name (ARN) of an organization in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an organizational unit (OU) in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM role
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM user
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Not all resource types can be shared with IAM roles and IAM users. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"
+     *        >Sharing with IAM roles and IAM users</a> in the <i>Resource Access Manager User Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,13 +452,78 @@ public class AssociateResourceShareRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The principals to associate with the resource share. The possible values are IDs of AWS accounts, and the ARNs of
-     * organizational units (OU) or organizations from AWS Organizations.
+     * The principals to associate with the resource share. The possible values are:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services account ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An Amazon Resource Name (ARN) of an organization in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organizational unit (OU) in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM role
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM user
+     * </p>
+     * </li>
+     * </ul>
+     * <note>
+     * <p>
+     * Not all resource types can be shared with IAM roles and IAM users. For more information, see <a href=
+     * "https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"
+     * >Sharing with IAM roles and IAM users</a> in the <i>Resource Access Manager User Guide</i>.
+     * </p>
+     * </note>
      * 
      * @param principals
-     *        The principals to associate with the resource share. The possible values are IDs of AWS accounts, and the
-     *        ARNs of organizational units (OU) or organizations from AWS Organizations.
+     *        The principals to associate with the resource share. The possible values are:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        An Amazon Web Services account ID
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An Amazon Resource Name (ARN) of an organization in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an organizational unit (OU) in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM role
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM user
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <note>
+     *        <p>
+     *        Not all resource types can be shared with IAM roles and IAM users. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types"
+     *        >Sharing with IAM roles and IAM users</a> in the <i>Resource Access Manager User Guide</i>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.64-SNAPSHOT</version>
+    <version>1.12.64</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,12 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-opensearch</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-memorydb</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -1790,6 +1796,10 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>Amazon OpenSearch</title>
+                                  <packages>com.amazonaws.services.opensearch*</packages>
+                              </group>
                               <group>
                                   <title>Amazon MemoryDB</title>
                                   <packages>com.amazonaws.services.memorydb*</packages>

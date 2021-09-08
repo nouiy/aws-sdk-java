@@ -82,6 +82,14 @@ public class MutableClusterInfoJsonUnmarshaller implements Unmarshaller<MutableC
                     context.nextToken();
                     mutableClusterInfo.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("clientAuthentication", targetDepth)) {
+                    context.nextToken();
+                    mutableClusterInfo.setClientAuthentication(ClientAuthenticationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("encryptionInfo", targetDepth)) {
+                    context.nextToken();
+                    mutableClusterInfo.setEncryptionInfo(EncryptionInfoJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

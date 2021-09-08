@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the shareable resource types and the AWS services to which they belong.
+ * Information about the shareable resource types and the Amazon Web Services services to which they belong.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/ServiceNameAndResourceType" target="_top">AWS API
@@ -36,7 +36,7 @@ public class ServiceNameAndResourceType implements Serializable, Cloneable, Stru
     private String resourceType;
     /**
      * <p>
-     * The name of the AWS services to which the resources belong.
+     * The name of the Amazon Web Services services to which the resources belong.
      * </p>
      */
     private String serviceName;
@@ -83,11 +83,11 @@ public class ServiceNameAndResourceType implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The name of the AWS services to which the resources belong.
+     * The name of the Amazon Web Services services to which the resources belong.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS services to which the resources belong.
+     *        The name of the Amazon Web Services services to which the resources belong.
      */
 
     public void setServiceName(String serviceName) {
@@ -96,10 +96,10 @@ public class ServiceNameAndResourceType implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The name of the AWS services to which the resources belong.
+     * The name of the Amazon Web Services services to which the resources belong.
      * </p>
      * 
-     * @return The name of the AWS services to which the resources belong.
+     * @return The name of the Amazon Web Services services to which the resources belong.
      */
 
     public String getServiceName() {
@@ -108,11 +108,11 @@ public class ServiceNameAndResourceType implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The name of the AWS services to which the resources belong.
+     * The name of the Amazon Web Services services to which the resources belong.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS services to which the resources belong.
+     *        The name of the Amazon Web Services services to which the resources belong.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

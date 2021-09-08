@@ -997,4 +997,37 @@ public interface AWSKafkaAsync extends AWSKafka {
     java.util.concurrent.Future<UpdateMonitoringResult> updateMonitoringAsync(UpdateMonitoringRequest updateMonitoringRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateMonitoringRequest, UpdateMonitoringResult> asyncHandler);
 
+    /**
+     * <p>
+     * Updates the security settings for the cluster. You can use this operation to specify encryption and
+     * authentication on existing clusters.
+     * </p>
+     * 
+     * @param updateSecurityRequest
+     * @return A Java Future containing the result of the UpdateSecurity operation returned by the service.
+     * @sample AWSKafkaAsync.UpdateSecurity
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateSecurity" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSecurityResult> updateSecurityAsync(UpdateSecurityRequest updateSecurityRequest);
+
+    /**
+     * <p>
+     * Updates the security settings for the cluster. You can use this operation to specify encryption and
+     * authentication on existing clusters.
+     * </p>
+     * 
+     * @param updateSecurityRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSecurity operation returned by the service.
+     * @sample AWSKafkaAsyncHandler.UpdateSecurity
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateSecurity" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSecurityResult> updateSecurityAsync(UpdateSecurityRequest updateSecurityRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSecurityRequest, UpdateSecurityResult> asyncHandler);
+
 }

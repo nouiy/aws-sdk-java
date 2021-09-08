@@ -1099,6 +1099,48 @@ public interface AWSKafka {
     UpdateMonitoringResult updateMonitoring(UpdateMonitoringRequest updateMonitoringRequest);
 
     /**
+     * <p>
+     * Updates the security settings for the cluster. You can use this operation to specify encryption and
+     * authentication on existing clusters.
+     * </p>
+     * 
+     * @param updateSecurityRequest
+     * @return Result of the UpdateSecurity operation returned by the service.
+     * @throws BadRequestException
+     *         <p>
+     *         The request isn't valid because the input is incorrect. Correct your input and then submit it again.
+     *         </p>
+     * @throws UnauthorizedException
+     *         <p>
+     *         The request is not authorized. The provided credentials couldn't be validated.
+     *         </p>
+     * @throws InternalServerErrorException
+     *         <p>
+     *         There was an unexpected internal server error. Retrying your request might resolve the issue.
+     *         </p>
+     * @throws ForbiddenException
+     *         <p>
+     *         Access forbidden. Check your credentials and then retry your request.
+     *         </p>
+     * @throws NotFoundException
+     *         <p>
+     *         The resource could not be found due to incorrect input. Correct the input, then retry the request.
+     *         </p>
+     * @throws ServiceUnavailableException
+     *         <p>
+     *         The service cannot complete the request.
+     *         </p>
+     * @throws TooManyRequestsException
+     *         <p>
+     *         The request throughput limit was exceeded.
+     *         </p>
+     * @sample AWSKafka.UpdateSecurity
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateSecurity" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateSecurityResult updateSecurity(UpdateSecurityRequest updateSecurityRequest);
+
+    /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and
      * callers are not expected to call it, but can if they want to explicitly release any open resources. Once a client
      * has been shutdown, it should not be used to make any more requests.

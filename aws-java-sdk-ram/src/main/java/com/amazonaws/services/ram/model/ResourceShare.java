@@ -42,13 +42,13 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The ID of the AWS account that owns the resource share.
+     * The ID of the Amazon Web Services account that owns the resource share.
      * </p>
      */
     private String owningAccountId;
     /**
      * <p>
-     * Indicates whether principals outside your AWS organization can be associated with a resource share.
+     * Indicates whether principals outside your organization in Organizations can be associated with a resource share.
      * </p>
      */
     private Boolean allowExternalPrincipals;
@@ -89,9 +89,9 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an AWS Identity and Access
-     * Management (AWS IAM) policy attached to a resource. These resource shares are visible only to the AWS account
-     * that created it. They cannot be modified in AWS RAM.
+     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an Amazon Web Services
+     * Identity and Access Management (Amazon Web Services IAM) policy attached to a resource. These resource shares are
+     * visible only to the Amazon Web Services account that created it. They cannot be modified in RAM.
      * </p>
      * </li>
      * <li>
@@ -102,8 +102,8 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>STANDARD</code> - Indicates that the resource share was created in AWS RAM using the console or APIs. These
-     * resource shares are visible to all principals. They can be modified in AWS RAM.
+     * <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs. These
+     * resource shares are visible to all principals. They can be modified in RAM.
      * </p>
      * </li>
      * </ul>
@@ -192,11 +192,11 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the resource share.
+     * The ID of the Amazon Web Services account that owns the resource share.
      * </p>
      * 
      * @param owningAccountId
-     *        The ID of the AWS account that owns the resource share.
+     *        The ID of the Amazon Web Services account that owns the resource share.
      */
 
     public void setOwningAccountId(String owningAccountId) {
@@ -205,10 +205,10 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the resource share.
+     * The ID of the Amazon Web Services account that owns the resource share.
      * </p>
      * 
-     * @return The ID of the AWS account that owns the resource share.
+     * @return The ID of the Amazon Web Services account that owns the resource share.
      */
 
     public String getOwningAccountId() {
@@ -217,11 +217,11 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS account that owns the resource share.
+     * The ID of the Amazon Web Services account that owns the resource share.
      * </p>
      * 
      * @param owningAccountId
-     *        The ID of the AWS account that owns the resource share.
+     *        The ID of the Amazon Web Services account that owns the resource share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -232,11 +232,12 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether principals outside your AWS organization can be associated with a resource share.
+     * Indicates whether principals outside your organization in Organizations can be associated with a resource share.
      * </p>
      * 
      * @param allowExternalPrincipals
-     *        Indicates whether principals outside your AWS organization can be associated with a resource share.
+     *        Indicates whether principals outside your organization in Organizations can be associated with a resource
+     *        share.
      */
 
     public void setAllowExternalPrincipals(Boolean allowExternalPrincipals) {
@@ -245,10 +246,11 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether principals outside your AWS organization can be associated with a resource share.
+     * Indicates whether principals outside your organization in Organizations can be associated with a resource share.
      * </p>
      * 
-     * @return Indicates whether principals outside your AWS organization can be associated with a resource share.
+     * @return Indicates whether principals outside your organization in Organizations can be associated with a resource
+     *         share.
      */
 
     public Boolean getAllowExternalPrincipals() {
@@ -257,11 +259,12 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether principals outside your AWS organization can be associated with a resource share.
+     * Indicates whether principals outside your organization in Organizations can be associated with a resource share.
      * </p>
      * 
      * @param allowExternalPrincipals
-     *        Indicates whether principals outside your AWS organization can be associated with a resource share.
+     *        Indicates whether principals outside your organization in Organizations can be associated with a resource
+     *        share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -272,10 +275,11 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether principals outside your AWS organization can be associated with a resource share.
+     * Indicates whether principals outside your organization in Organizations can be associated with a resource share.
      * </p>
      * 
-     * @return Indicates whether principals outside your AWS organization can be associated with a resource share.
+     * @return Indicates whether principals outside your organization in Organizations can be associated with a resource
+     *         share.
      */
 
     public Boolean isAllowExternalPrincipals() {
@@ -538,9 +542,9 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an AWS Identity and Access
-     * Management (AWS IAM) policy attached to a resource. These resource shares are visible only to the AWS account
-     * that created it. They cannot be modified in AWS RAM.
+     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an Amazon Web Services
+     * Identity and Access Management (Amazon Web Services IAM) policy attached to a resource. These resource shares are
+     * visible only to the Amazon Web Services account that created it. They cannot be modified in RAM.
      * </p>
      * </li>
      * <li>
@@ -551,8 +555,8 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>STANDARD</code> - Indicates that the resource share was created in AWS RAM using the console or APIs. These
-     * resource shares are visible to all principals. They can be modified in AWS RAM.
+     * <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs. These
+     * resource shares are visible to all principals. They can be modified in RAM.
      * </p>
      * </li>
      * </ul>
@@ -562,9 +566,10 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an AWS Identity and
-     *        Access Management (AWS IAM) policy attached to a resource. These resource shares are visible only to the
-     *        AWS account that created it. They cannot be modified in AWS RAM.
+     *        <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an Amazon Web
+     *        Services Identity and Access Management (Amazon Web Services IAM) policy attached to a resource. These
+     *        resource shares are visible only to the Amazon Web Services account that created it. They cannot be
+     *        modified in RAM.
      *        </p>
      *        </li>
      *        <li>
@@ -575,8 +580,8 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STANDARD</code> - Indicates that the resource share was created in AWS RAM using the console or
-     *        APIs. These resource shares are visible to all principals. They can be modified in AWS RAM.
+     *        <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs.
+     *        These resource shares are visible to all principals. They can be modified in RAM.
      *        </p>
      *        </li>
      * @see ResourceShareFeatureSet
@@ -593,9 +598,9 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an AWS Identity and Access
-     * Management (AWS IAM) policy attached to a resource. These resource shares are visible only to the AWS account
-     * that created it. They cannot be modified in AWS RAM.
+     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an Amazon Web Services
+     * Identity and Access Management (Amazon Web Services IAM) policy attached to a resource. These resource shares are
+     * visible only to the Amazon Web Services account that created it. They cannot be modified in RAM.
      * </p>
      * </li>
      * <li>
@@ -606,8 +611,8 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>STANDARD</code> - Indicates that the resource share was created in AWS RAM using the console or APIs. These
-     * resource shares are visible to all principals. They can be modified in AWS RAM.
+     * <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs. These
+     * resource shares are visible to all principals. They can be modified in RAM.
      * </p>
      * </li>
      * </ul>
@@ -616,9 +621,10 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an AWS Identity and
-     *         Access Management (AWS IAM) policy attached to a resource. These resource shares are visible only to the
-     *         AWS account that created it. They cannot be modified in AWS RAM.
+     *         <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an Amazon Web
+     *         Services Identity and Access Management (Amazon Web Services IAM) policy attached to a resource. These
+     *         resource shares are visible only to the Amazon Web Services account that created it. They cannot be
+     *         modified in RAM.
      *         </p>
      *         </li>
      *         <li>
@@ -629,8 +635,8 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>STANDARD</code> - Indicates that the resource share was created in AWS RAM using the console or
-     *         APIs. These resource shares are visible to all principals. They can be modified in AWS RAM.
+     *         <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs.
+     *         These resource shares are visible to all principals. They can be modified in RAM.
      *         </p>
      *         </li>
      * @see ResourceShareFeatureSet
@@ -647,9 +653,9 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an AWS Identity and Access
-     * Management (AWS IAM) policy attached to a resource. These resource shares are visible only to the AWS account
-     * that created it. They cannot be modified in AWS RAM.
+     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an Amazon Web Services
+     * Identity and Access Management (Amazon Web Services IAM) policy attached to a resource. These resource shares are
+     * visible only to the Amazon Web Services account that created it. They cannot be modified in RAM.
      * </p>
      * </li>
      * <li>
@@ -660,8 +666,8 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>STANDARD</code> - Indicates that the resource share was created in AWS RAM using the console or APIs. These
-     * resource shares are visible to all principals. They can be modified in AWS RAM.
+     * <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs. These
+     * resource shares are visible to all principals. They can be modified in RAM.
      * </p>
      * </li>
      * </ul>
@@ -671,9 +677,10 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an AWS Identity and
-     *        Access Management (AWS IAM) policy attached to a resource. These resource shares are visible only to the
-     *        AWS account that created it. They cannot be modified in AWS RAM.
+     *        <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an Amazon Web
+     *        Services Identity and Access Management (Amazon Web Services IAM) policy attached to a resource. These
+     *        resource shares are visible only to the Amazon Web Services account that created it. They cannot be
+     *        modified in RAM.
      *        </p>
      *        </li>
      *        <li>
@@ -684,8 +691,8 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STANDARD</code> - Indicates that the resource share was created in AWS RAM using the console or
-     *        APIs. These resource shares are visible to all principals. They can be modified in AWS RAM.
+     *        <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs.
+     *        These resource shares are visible to all principals. They can be modified in RAM.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -704,9 +711,9 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an AWS Identity and Access
-     * Management (AWS IAM) policy attached to a resource. These resource shares are visible only to the AWS account
-     * that created it. They cannot be modified in AWS RAM.
+     * <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an Amazon Web Services
+     * Identity and Access Management (Amazon Web Services IAM) policy attached to a resource. These resource shares are
+     * visible only to the Amazon Web Services account that created it. They cannot be modified in RAM.
      * </p>
      * </li>
      * <li>
@@ -717,8 +724,8 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>STANDARD</code> - Indicates that the resource share was created in AWS RAM using the console or APIs. These
-     * resource shares are visible to all principals. They can be modified in AWS RAM.
+     * <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs. These
+     * resource shares are visible to all principals. They can be modified in RAM.
      * </p>
      * </li>
      * </ul>
@@ -728,9 +735,10 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an AWS Identity and
-     *        Access Management (AWS IAM) policy attached to a resource. These resource shares are visible only to the
-     *        AWS account that created it. They cannot be modified in AWS RAM.
+     *        <code>CREATED_FROM_POLICY</code> - Indicates that the resource share was created from an Amazon Web
+     *        Services Identity and Access Management (Amazon Web Services IAM) policy attached to a resource. These
+     *        resource shares are visible only to the Amazon Web Services account that created it. They cannot be
+     *        modified in RAM.
      *        </p>
      *        </li>
      *        <li>
@@ -741,8 +749,8 @@ public class ResourceShare implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STANDARD</code> - Indicates that the resource share was created in AWS RAM using the console or
-     *        APIs. These resource shares are visible to all principals. They can be modified in AWS RAM.
+     *        <code>STANDARD</code> - Indicates that the resource share was created in RAM using the console or APIs.
+     *        These resource shares are visible to all principals. They can be modified in RAM.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

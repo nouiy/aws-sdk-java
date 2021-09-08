@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about an AWS RAM permission.
+ * Information about an RAM permission.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/ResourceSharePermissionDetail" target="_top">AWS
@@ -30,7 +30,7 @@ public class ResourceSharePermissionDetail implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      */
     private String arn;
@@ -87,11 +87,11 @@ public class ResourceSharePermissionDetail implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      * 
      * @param arn
-     *        The ARN of the permission.
+     *        The Amazon Resource Name (ARN) of the permission.
      */
 
     public void setArn(String arn) {
@@ -100,10 +100,10 @@ public class ResourceSharePermissionDetail implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      * 
-     * @return The ARN of the permission.
+     * @return The Amazon Resource Name (ARN) of the permission.
      */
 
     public String getArn() {
@@ -112,11 +112,11 @@ public class ResourceSharePermissionDetail implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      * 
      * @param arn
-     *        The ARN of the permission.
+     *        The Amazon Resource Name (ARN) of the permission.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

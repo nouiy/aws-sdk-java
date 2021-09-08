@@ -27,7 +27,7 @@ public class GetPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      */
     private String permissionArn;
@@ -40,11 +40,11 @@ public class GetPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      * 
      * @param permissionArn
-     *        The ARN of the permission.
+     *        The Amazon Resource Name (ARN) of the permission.
      */
 
     public void setPermissionArn(String permissionArn) {
@@ -53,10 +53,10 @@ public class GetPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      * 
-     * @return The ARN of the permission.
+     * @return The Amazon Resource Name (ARN) of the permission.
      */
 
     public String getPermissionArn() {
@@ -65,11 +65,11 @@ public class GetPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      * 
      * @param permissionArn
-     *        The ARN of the permission.
+     *        The Amazon Resource Name (ARN) of the permission.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

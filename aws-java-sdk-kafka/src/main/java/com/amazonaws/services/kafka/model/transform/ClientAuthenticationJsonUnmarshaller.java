@@ -56,6 +56,10 @@ public class ClientAuthenticationJsonUnmarshaller implements Unmarshaller<Client
                     context.nextToken();
                     clientAuthentication.setTls(TlsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("unauthenticated", targetDepth)) {
+                    context.nextToken();
+                    clientAuthentication.setUnauthenticated(UnauthenticatedJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -2485,6 +2485,90 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
     }
 
     /**
+     * <p>
+     * Updates the security settings for the cluster. You can use this operation to specify encryption and
+     * authentication on existing clusters.
+     * </p>
+     * 
+     * @param updateSecurityRequest
+     * @return Result of the UpdateSecurity operation returned by the service.
+     * @throws BadRequestException
+     *         <p>
+     *         The request isn't valid because the input is incorrect. Correct your input and then submit it again.
+     *         </p>
+     * @throws UnauthorizedException
+     *         <p>
+     *         The request is not authorized. The provided credentials couldn't be validated.
+     *         </p>
+     * @throws InternalServerErrorException
+     *         <p>
+     *         There was an unexpected internal server error. Retrying your request might resolve the issue.
+     *         </p>
+     * @throws ForbiddenException
+     *         <p>
+     *         Access forbidden. Check your credentials and then retry your request.
+     *         </p>
+     * @throws NotFoundException
+     *         <p>
+     *         The resource could not be found due to incorrect input. Correct the input, then retry the request.
+     *         </p>
+     * @throws ServiceUnavailableException
+     *         <p>
+     *         The service cannot complete the request.
+     *         </p>
+     * @throws TooManyRequestsException
+     *         <p>
+     *         The request throughput limit was exceeded.
+     *         </p>
+     * @sample AWSKafka.UpdateSecurity
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateSecurity" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateSecurityResult updateSecurity(UpdateSecurityRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSecurity(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSecurityResult executeUpdateSecurity(UpdateSecurityRequest updateSecurityRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSecurityRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSecurityRequest> request = null;
+        Response<UpdateSecurityResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSecurityRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateSecurityRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kafka");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSecurity");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSecurityResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateSecurityResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * Returns additional metadata for a previously executed successful, request, typically used for debugging issues
      * where a service isn't acting as expected. This data isn't considered part of the result data returned by an
      * operation, so it's available through this separate, diagnostic interface.

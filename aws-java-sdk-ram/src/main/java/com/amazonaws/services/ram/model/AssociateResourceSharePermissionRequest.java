@@ -33,7 +33,7 @@ public class AssociateResourceSharePermissionRequest extends com.amazonaws.Amazo
     private String resourceShareArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS RAM permissions to associate with the resource share.
+     * The Amazon Resource Name (ARN) of the RAM permission to associate with the resource share.
      * </p>
      */
     private String permissionArn;
@@ -53,7 +53,7 @@ public class AssociateResourceSharePermissionRequest extends com.amazonaws.Amazo
     private String clientToken;
     /**
      * <p>
-     * The version of the AWS RAM permissions to associate with the resource share.
+     * The version of the RAM permissions to associate with the resource share.
      * </p>
      */
     private Integer permissionVersion;
@@ -100,11 +100,11 @@ public class AssociateResourceSharePermissionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS RAM permissions to associate with the resource share.
+     * The Amazon Resource Name (ARN) of the RAM permission to associate with the resource share.
      * </p>
      * 
      * @param permissionArn
-     *        The Amazon Resource Name (ARN) of the AWS RAM permissions to associate with the resource share.
+     *        The Amazon Resource Name (ARN) of the RAM permission to associate with the resource share.
      */
 
     public void setPermissionArn(String permissionArn) {
@@ -113,10 +113,10 @@ public class AssociateResourceSharePermissionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS RAM permissions to associate with the resource share.
+     * The Amazon Resource Name (ARN) of the RAM permission to associate with the resource share.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS RAM permissions to associate with the resource share.
+     * @return The Amazon Resource Name (ARN) of the RAM permission to associate with the resource share.
      */
 
     public String getPermissionArn() {
@@ -125,11 +125,11 @@ public class AssociateResourceSharePermissionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS RAM permissions to associate with the resource share.
+     * The Amazon Resource Name (ARN) of the RAM permission to associate with the resource share.
      * </p>
      * 
      * @param permissionArn
-     *        The Amazon Resource Name (ARN) of the AWS RAM permissions to associate with the resource share.
+     *        The Amazon Resource Name (ARN) of the RAM permission to associate with the resource share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -248,11 +248,11 @@ public class AssociateResourceSharePermissionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The version of the AWS RAM permissions to associate with the resource share.
+     * The version of the RAM permissions to associate with the resource share.
      * </p>
      * 
      * @param permissionVersion
-     *        The version of the AWS RAM permissions to associate with the resource share.
+     *        The version of the RAM permissions to associate with the resource share.
      */
 
     public void setPermissionVersion(Integer permissionVersion) {
@@ -261,10 +261,10 @@ public class AssociateResourceSharePermissionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The version of the AWS RAM permissions to associate with the resource share.
+     * The version of the RAM permissions to associate with the resource share.
      * </p>
      * 
-     * @return The version of the AWS RAM permissions to associate with the resource share.
+     * @return The version of the RAM permissions to associate with the resource share.
      */
 
     public Integer getPermissionVersion() {
@@ -273,11 +273,11 @@ public class AssociateResourceSharePermissionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The version of the AWS RAM permissions to associate with the resource share.
+     * The version of the RAM permissions to associate with the resource share.
      * </p>
      * 
      * @param permissionVersion
-     *        The version of the AWS RAM permissions to associate with the resource share.
+     *        The version of the RAM permissions to associate with the resource share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

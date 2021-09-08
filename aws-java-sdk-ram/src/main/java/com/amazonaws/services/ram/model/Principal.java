@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a principal for use with AWS Resource Access Manager.
+ * Describes a principal for use with Resource Access Manager.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ram-2018-01-04/Principal" target="_top">AWS API
@@ -54,8 +54,8 @@ public class Principal implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastUpdatedTime;
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      */
     private Boolean external;
@@ -222,13 +222,13 @@ public class Principal implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      * 
      * @param external
-     *        Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the
-     *        resource share.
+     *        Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web
+     *        Services account that owns the resource share.
      */
 
     public void setExternal(Boolean external) {
@@ -237,12 +237,12 @@ public class Principal implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      * 
-     * @return Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the
-     *         resource share.
+     * @return Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web
+     *         Services account that owns the resource share.
      */
 
     public Boolean getExternal() {
@@ -251,13 +251,13 @@ public class Principal implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      * 
      * @param external
-     *        Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the
-     *        resource share.
+     *        Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web
+     *        Services account that owns the resource share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -268,12 +268,12 @@ public class Principal implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      * 
-     * @return Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the
-     *         resource share.
+     * @return Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web
+     *         Services account that owns the resource share.
      */
 
     public Boolean isExternal() {

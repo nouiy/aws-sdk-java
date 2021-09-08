@@ -27,7 +27,7 @@ public class GetResourceSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARNs of the resource shares.
+     * The Amazon Resource Names (ARNs) of the resource shares.
      * </p>
      */
     private java.util.List<String> resourceShareArns;
@@ -70,17 +70,17 @@ public class GetResourceSharesRequest extends com.amazonaws.AmazonWebServiceRequ
     private Integer maxResults;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS RAM permission that is associated with the resource share.
+     * The Amazon Resource Name (ARN) of the RAM permission that is associated with the resource share.
      * </p>
      */
     private String permissionArn;
 
     /**
      * <p>
-     * The ARNs of the resource shares.
+     * The Amazon Resource Names (ARNs) of the resource shares.
      * </p>
      * 
-     * @return The ARNs of the resource shares.
+     * @return The Amazon Resource Names (ARNs) of the resource shares.
      */
 
     public java.util.List<String> getResourceShareArns() {
@@ -89,11 +89,11 @@ public class GetResourceSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARNs of the resource shares.
+     * The Amazon Resource Names (ARNs) of the resource shares.
      * </p>
      * 
      * @param resourceShareArns
-     *        The ARNs of the resource shares.
+     *        The Amazon Resource Names (ARNs) of the resource shares.
      */
 
     public void setResourceShareArns(java.util.Collection<String> resourceShareArns) {
@@ -107,7 +107,7 @@ public class GetResourceSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARNs of the resource shares.
+     * The Amazon Resource Names (ARNs) of the resource shares.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -116,7 +116,7 @@ public class GetResourceSharesRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @param resourceShareArns
-     *        The ARNs of the resource shares.
+     *        The Amazon Resource Names (ARNs) of the resource shares.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,11 +132,11 @@ public class GetResourceSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARNs of the resource shares.
+     * The Amazon Resource Names (ARNs) of the resource shares.
      * </p>
      * 
      * @param resourceShareArns
-     *        The ARNs of the resource shares.
+     *        The Amazon Resource Names (ARNs) of the resource shares.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -461,11 +461,11 @@ public class GetResourceSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS RAM permission that is associated with the resource share.
+     * The Amazon Resource Name (ARN) of the RAM permission that is associated with the resource share.
      * </p>
      * 
      * @param permissionArn
-     *        The Amazon Resource Name (ARN) of the AWS RAM permission that is associated with the resource share.
+     *        The Amazon Resource Name (ARN) of the RAM permission that is associated with the resource share.
      */
 
     public void setPermissionArn(String permissionArn) {
@@ -474,10 +474,10 @@ public class GetResourceSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS RAM permission that is associated with the resource share.
+     * The Amazon Resource Name (ARN) of the RAM permission that is associated with the resource share.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS RAM permission that is associated with the resource share.
+     * @return The Amazon Resource Name (ARN) of the RAM permission that is associated with the resource share.
      */
 
     public String getPermissionArn() {
@@ -486,11 +486,11 @@ public class GetResourceSharesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS RAM permission that is associated with the resource share.
+     * The Amazon Resource Name (ARN) of the RAM permission that is associated with the resource share.
      * </p>
      * 
      * @param permissionArn
-     *        The Amazon Resource Name (ARN) of the AWS RAM permission that is associated with the resource share.
+     *        The Amazon Resource Name (ARN) of the RAM permission that is associated with the resource share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

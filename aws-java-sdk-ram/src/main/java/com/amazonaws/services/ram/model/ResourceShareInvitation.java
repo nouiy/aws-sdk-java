@@ -48,13 +48,13 @@ public class ResourceShareInvitation implements Serializable, Cloneable, Structu
     private String resourceShareArn;
     /**
      * <p>
-     * The ID of the AWS account that sent the invitation.
+     * The ID of the Amazon Web Services account that sent the invitation.
      * </p>
      */
     private String senderAccountId;
     /**
      * <p>
-     * The ID of the AWS account that received the invitation.
+     * The ID of the Amazon Web Services account that received the invitation.
      * </p>
      */
     private String receiverAccountId;
@@ -208,11 +208,11 @@ public class ResourceShareInvitation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The ID of the AWS account that sent the invitation.
+     * The ID of the Amazon Web Services account that sent the invitation.
      * </p>
      * 
      * @param senderAccountId
-     *        The ID of the AWS account that sent the invitation.
+     *        The ID of the Amazon Web Services account that sent the invitation.
      */
 
     public void setSenderAccountId(String senderAccountId) {
@@ -221,10 +221,10 @@ public class ResourceShareInvitation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The ID of the AWS account that sent the invitation.
+     * The ID of the Amazon Web Services account that sent the invitation.
      * </p>
      * 
-     * @return The ID of the AWS account that sent the invitation.
+     * @return The ID of the Amazon Web Services account that sent the invitation.
      */
 
     public String getSenderAccountId() {
@@ -233,11 +233,11 @@ public class ResourceShareInvitation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The ID of the AWS account that sent the invitation.
+     * The ID of the Amazon Web Services account that sent the invitation.
      * </p>
      * 
      * @param senderAccountId
-     *        The ID of the AWS account that sent the invitation.
+     *        The ID of the Amazon Web Services account that sent the invitation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -248,11 +248,11 @@ public class ResourceShareInvitation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The ID of the AWS account that received the invitation.
+     * The ID of the Amazon Web Services account that received the invitation.
      * </p>
      * 
      * @param receiverAccountId
-     *        The ID of the AWS account that received the invitation.
+     *        The ID of the Amazon Web Services account that received the invitation.
      */
 
     public void setReceiverAccountId(String receiverAccountId) {
@@ -261,10 +261,10 @@ public class ResourceShareInvitation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The ID of the AWS account that received the invitation.
+     * The ID of the Amazon Web Services account that received the invitation.
      * </p>
      * 
-     * @return The ID of the AWS account that received the invitation.
+     * @return The ID of the Amazon Web Services account that received the invitation.
      */
 
     public String getReceiverAccountId() {
@@ -273,11 +273,11 @@ public class ResourceShareInvitation implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The ID of the AWS account that received the invitation.
+     * The ID of the Amazon Web Services account that received the invitation.
      * </p>
      * 
      * @param receiverAccountId
-     *        The ID of the AWS account that received the invitation.
+     *        The ID of the Amazon Web Services account that received the invitation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -42,9 +42,36 @@ public class ResourceShareAssociation implements Serializable, Cloneable, Struct
     private String resourceShareName;
     /**
      * <p>
-     * The associated entity. For resource associations, this is the ARN of the resource. For principal associations,
-     * this is the ID of an AWS account or the ARN of an OU or organization from AWS Organizations.
+     * The associated entity. For resource associations, this is the Amazon Resource Name (ARN) of the resource. For
+     * principal associations, this is one of the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services account ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organization in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organizational unit (OU) in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM role
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM user
+     * </p>
+     * </li>
+     * </ul>
      */
     private String associatedEntity;
     /**
@@ -79,8 +106,8 @@ public class ResourceShareAssociation implements Serializable, Cloneable, Struct
     private java.util.Date lastUpdatedTime;
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      */
     private Boolean external;
@@ -167,13 +194,66 @@ public class ResourceShareAssociation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The associated entity. For resource associations, this is the ARN of the resource. For principal associations,
-     * this is the ID of an AWS account or the ARN of an OU or organization from AWS Organizations.
+     * The associated entity. For resource associations, this is the Amazon Resource Name (ARN) of the resource. For
+     * principal associations, this is one of the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services account ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organization in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organizational unit (OU) in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM role
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM user
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param associatedEntity
-     *        The associated entity. For resource associations, this is the ARN of the resource. For principal
-     *        associations, this is the ID of an AWS account or the ARN of an OU or organization from AWS Organizations.
+     *        The associated entity. For resource associations, this is the Amazon Resource Name (ARN) of the resource.
+     *        For principal associations, this is one of the following:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        An Amazon Web Services account ID
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an organization in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an organizational unit (OU) in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM role
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM user
+     *        </p>
+     *        </li>
      */
 
     public void setAssociatedEntity(String associatedEntity) {
@@ -182,13 +262,65 @@ public class ResourceShareAssociation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The associated entity. For resource associations, this is the ARN of the resource. For principal associations,
-     * this is the ID of an AWS account or the ARN of an OU or organization from AWS Organizations.
+     * The associated entity. For resource associations, this is the Amazon Resource Name (ARN) of the resource. For
+     * principal associations, this is one of the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services account ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organization in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organizational unit (OU) in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM role
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM user
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The associated entity. For resource associations, this is the ARN of the resource. For principal
-     *         associations, this is the ID of an AWS account or the ARN of an OU or organization from AWS
-     *         Organizations.
+     * @return The associated entity. For resource associations, this is the Amazon Resource Name (ARN) of the resource.
+     *         For principal associations, this is one of the following:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         An Amazon Web Services account ID
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An ARN of an organization in Organizations
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An ARN of an organizational unit (OU) in Organizations
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An ARN of an IAM role
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         An ARN of an IAM user
+     *         </p>
+     *         </li>
      */
 
     public String getAssociatedEntity() {
@@ -197,13 +329,66 @@ public class ResourceShareAssociation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The associated entity. For resource associations, this is the ARN of the resource. For principal associations,
-     * this is the ID of an AWS account or the ARN of an OU or organization from AWS Organizations.
+     * The associated entity. For resource associations, this is the Amazon Resource Name (ARN) of the resource. For
+     * principal associations, this is one of the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * An Amazon Web Services account ID
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organization in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an organizational unit (OU) in Organizations
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM role
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * An ARN of an IAM user
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param associatedEntity
-     *        The associated entity. For resource associations, this is the ARN of the resource. For principal
-     *        associations, this is the ID of an AWS account or the ARN of an OU or organization from AWS Organizations.
+     *        The associated entity. For resource associations, this is the Amazon Resource Name (ARN) of the resource.
+     *        For principal associations, this is one of the following:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        An Amazon Web Services account ID
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an organization in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an organizational unit (OU) in Organizations
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM role
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        An ARN of an IAM user
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -452,13 +637,13 @@ public class ResourceShareAssociation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      * 
      * @param external
-     *        Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the
-     *        resource share.
+     *        Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web
+     *        Services account that owns the resource share.
      */
 
     public void setExternal(Boolean external) {
@@ -467,12 +652,12 @@ public class ResourceShareAssociation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      * 
-     * @return Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the
-     *         resource share.
+     * @return Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web
+     *         Services account that owns the resource share.
      */
 
     public Boolean getExternal() {
@@ -481,13 +666,13 @@ public class ResourceShareAssociation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      * 
      * @param external
-     *        Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the
-     *        resource share.
+     *        Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web
+     *        Services account that owns the resource share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -498,12 +683,12 @@ public class ResourceShareAssociation implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the resource
-     * share.
+     * Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web Services
+     * account that owns the resource share.
      * </p>
      * 
-     * @return Indicates whether the principal belongs to the same AWS organization as the AWS account that owns the
-     *         resource share.
+     * @return Indicates whether the principal belongs to the same organization in Organizations as the Amazon Web
+     *         Services account that owns the resource share.
      */
 
     public Boolean isExternal() {

@@ -25,7 +25,7 @@ public class ListResourceTypesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The shareable resource types supported by AWS RAM.
+     * The shareable resource types supported by RAM.
      * </p>
      */
     private java.util.List<ServiceNameAndResourceType> resourceTypes;
@@ -39,10 +39,10 @@ public class ListResourceTypesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The shareable resource types supported by AWS RAM.
+     * The shareable resource types supported by RAM.
      * </p>
      * 
-     * @return The shareable resource types supported by AWS RAM.
+     * @return The shareable resource types supported by RAM.
      */
 
     public java.util.List<ServiceNameAndResourceType> getResourceTypes() {
@@ -51,11 +51,11 @@ public class ListResourceTypesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The shareable resource types supported by AWS RAM.
+     * The shareable resource types supported by RAM.
      * </p>
      * 
      * @param resourceTypes
-     *        The shareable resource types supported by AWS RAM.
+     *        The shareable resource types supported by RAM.
      */
 
     public void setResourceTypes(java.util.Collection<ServiceNameAndResourceType> resourceTypes) {
@@ -69,7 +69,7 @@ public class ListResourceTypesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The shareable resource types supported by AWS RAM.
+     * The shareable resource types supported by RAM.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class ListResourceTypesResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      * 
      * @param resourceTypes
-     *        The shareable resource types supported by AWS RAM.
+     *        The shareable resource types supported by RAM.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class ListResourceTypesResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The shareable resource types supported by AWS RAM.
+     * The shareable resource types supported by RAM.
      * </p>
      * 
      * @param resourceTypes
-     *        The shareable resource types supported by AWS RAM.
+     *        The shareable resource types supported by RAM.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

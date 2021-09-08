@@ -31,6 +31,8 @@ public class ClientAuthenticationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sasl").build();
     private static final MarshallingInfo<StructuredPojo> TLS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("tls").build();
+    private static final MarshallingInfo<StructuredPojo> UNAUTHENTICATED_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("unauthenticated").build();
 
     private static final ClientAuthenticationMarshaller instance = new ClientAuthenticationMarshaller();
 
@@ -50,6 +52,7 @@ public class ClientAuthenticationMarshaller {
         try {
             protocolMarshaller.marshall(clientAuthentication.getSasl(), SASL_BINDING);
             protocolMarshaller.marshall(clientAuthentication.getTls(), TLS_BINDING);
+            protocolMarshaller.marshall(clientAuthentication.getUnauthenticated(), UNAUTHENTICATED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

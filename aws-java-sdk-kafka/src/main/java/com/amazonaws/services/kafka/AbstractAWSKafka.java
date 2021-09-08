@@ -178,6 +178,11 @@ public class AbstractAWSKafka implements AWSKafka {
     }
 
     @Override
+    public UpdateSecurityResult updateSecurity(UpdateSecurityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public void shutdown() {
         throw new java.lang.UnsupportedOperationException();
     }

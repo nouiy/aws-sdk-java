@@ -30,7 +30,7 @@ public class ResourceSharePermissionSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      */
     private String arn;
@@ -85,11 +85,11 @@ public class ResourceSharePermissionSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      * 
      * @param arn
-     *        The ARN of the permission.
+     *        The Amazon Resource Name (ARN) of the permission.
      */
 
     public void setArn(String arn) {
@@ -98,10 +98,10 @@ public class ResourceSharePermissionSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      * 
-     * @return The ARN of the permission.
+     * @return The Amazon Resource Name (ARN) of the permission.
      */
 
     public String getArn() {
@@ -110,11 +110,11 @@ public class ResourceSharePermissionSummary implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the permission.
+     * The Amazon Resource Name (ARN) of the permission.
      * </p>
      * 
      * @param arn
-     *        The ARN of the permission.
+     *        The Amazon Resource Name (ARN) of the permission.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

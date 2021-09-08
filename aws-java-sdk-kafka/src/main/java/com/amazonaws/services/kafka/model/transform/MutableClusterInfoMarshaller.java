@@ -44,6 +44,10 @@ public class MutableClusterInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("loggingInfo").build();
     private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceType").build();
+    private static final MarshallingInfo<StructuredPojo> CLIENTAUTHENTICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientAuthentication").build();
+    private static final MarshallingInfo<StructuredPojo> ENCRYPTIONINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("encryptionInfo").build();
 
     private static final MutableClusterInfoMarshaller instance = new MutableClusterInfoMarshaller();
 
@@ -69,6 +73,8 @@ public class MutableClusterInfoMarshaller {
             protocolMarshaller.marshall(mutableClusterInfo.getKafkaVersion(), KAFKAVERSION_BINDING);
             protocolMarshaller.marshall(mutableClusterInfo.getLoggingInfo(), LOGGINGINFO_BINDING);
             protocolMarshaller.marshall(mutableClusterInfo.getInstanceType(), INSTANCETYPE_BINDING);
+            protocolMarshaller.marshall(mutableClusterInfo.getClientAuthentication(), CLIENTAUTHENTICATION_BINDING);
+            protocolMarshaller.marshall(mutableClusterInfo.getEncryptionInfo(), ENCRYPTIONINFO_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

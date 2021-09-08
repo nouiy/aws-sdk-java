@@ -47,7 +47,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     private String resourceShareArn;
     /**
      * <p>
-     * The ARN of the resource group. This value is returned only if the resource is a resource group.
+     * The Amazon Resource Name (ARN) of the resource group. This value is returned only if the resource is a resource
+     * group.
      * </p>
      */
     private String resourceGroupArn;
@@ -198,11 +199,13 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the resource group. This value is returned only if the resource is a resource group.
+     * The Amazon Resource Name (ARN) of the resource group. This value is returned only if the resource is a resource
+     * group.
      * </p>
      * 
      * @param resourceGroupArn
-     *        The ARN of the resource group. This value is returned only if the resource is a resource group.
+     *        The Amazon Resource Name (ARN) of the resource group. This value is returned only if the resource is a
+     *        resource group.
      */
 
     public void setResourceGroupArn(String resourceGroupArn) {
@@ -211,10 +214,12 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the resource group. This value is returned only if the resource is a resource group.
+     * The Amazon Resource Name (ARN) of the resource group. This value is returned only if the resource is a resource
+     * group.
      * </p>
      * 
-     * @return The ARN of the resource group. This value is returned only if the resource is a resource group.
+     * @return The Amazon Resource Name (ARN) of the resource group. This value is returned only if the resource is a
+     *         resource group.
      */
 
     public String getResourceGroupArn() {
@@ -223,11 +228,13 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the resource group. This value is returned only if the resource is a resource group.
+     * The Amazon Resource Name (ARN) of the resource group. This value is returned only if the resource is a resource
+     * group.
      * </p>
      * 
      * @param resourceGroupArn
-     *        The ARN of the resource group. This value is returned only if the resource is a resource group.
+     *        The Amazon Resource Name (ARN) of the resource group. This value is returned only if the resource is a
+     *        resource group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

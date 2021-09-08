@@ -54,6 +54,10 @@ public class TlsJsonUnmarshaller implements Unmarshaller<Tls, JsonUnmarshallerCo
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("enabled", targetDepth)) {
+                    context.nextToken();
+                    tls.setEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

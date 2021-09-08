@@ -27,18 +27,18 @@ public class PromoteResourceShareCreatedFromPolicyRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ARN of the resource share to promote.
+     * The Amazon Resource Name (ARN) of the resource share to promote.
      * </p>
      */
     private String resourceShareArn;
 
     /**
      * <p>
-     * The ARN of the resource share to promote.
+     * The Amazon Resource Name (ARN) of the resource share to promote.
      * </p>
      * 
      * @param resourceShareArn
-     *        The ARN of the resource share to promote.
+     *        The Amazon Resource Name (ARN) of the resource share to promote.
      */
 
     public void setResourceShareArn(String resourceShareArn) {
@@ -47,10 +47,10 @@ public class PromoteResourceShareCreatedFromPolicyRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ARN of the resource share to promote.
+     * The Amazon Resource Name (ARN) of the resource share to promote.
      * </p>
      * 
-     * @return The ARN of the resource share to promote.
+     * @return The Amazon Resource Name (ARN) of the resource share to promote.
      */
 
     public String getResourceShareArn() {
@@ -59,11 +59,11 @@ public class PromoteResourceShareCreatedFromPolicyRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The ARN of the resource share to promote.
+     * The Amazon Resource Name (ARN) of the resource share to promote.
      * </p>
      * 
      * @param resourceShareArn
-     *        The ARN of the resource share to promote.
+     *        The Amazon Resource Name (ARN) of the resource share to promote.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
