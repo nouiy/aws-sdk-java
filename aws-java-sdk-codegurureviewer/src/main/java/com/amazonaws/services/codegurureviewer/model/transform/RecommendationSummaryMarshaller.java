@@ -39,6 +39,10 @@ public class RecommendationSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> RECOMMENDATIONCATEGORY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecommendationCategory").build();
+    private static final MarshallingInfo<StructuredPojo> RULEMETADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RuleMetadata").build();
+    private static final MarshallingInfo<String> SEVERITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Severity").build();
 
     private static final RecommendationSummaryMarshaller instance = new RecommendationSummaryMarshaller();
 
@@ -62,6 +66,8 @@ public class RecommendationSummaryMarshaller {
             protocolMarshaller.marshall(recommendationSummary.getEndLine(), ENDLINE_BINDING);
             protocolMarshaller.marshall(recommendationSummary.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(recommendationSummary.getRecommendationCategory(), RECOMMENDATIONCATEGORY_BINDING);
+            protocolMarshaller.marshall(recommendationSummary.getRuleMetadata(), RULEMETADATA_BINDING);
+            protocolMarshaller.marshall(recommendationSummary.getSeverity(), SEVERITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about an associated AWS CodeCommit repository or an associated repository that is managed by AWS CodeStar
- * Connections (for example, Bitbucket). This <code>Repository</code> object is not used if your source code is in an
- * associated GitHub repository.
+ * Information about an associated Amazon Web Services CodeCommit repository or an associated repository that is managed
+ * by Amazon Web Services CodeStar Connections (for example, Bitbucket). This <code>Repository</code> object is not used
+ * if your source code is in an associated GitHub repository.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/codeguru-reviewer-2019-09-19/Repository" target="_top">AWS API
@@ -32,7 +32,7 @@ public class Repository implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about an AWS CodeCommit repository.
+     * Information about an Amazon Web Services CodeCommit repository.
      * </p>
      */
     private CodeCommitRepository codeCommit;
@@ -53,11 +53,11 @@ public class Repository implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about an AWS CodeCommit repository.
+     * Information about an Amazon Web Services CodeCommit repository.
      * </p>
      * 
      * @param codeCommit
-     *        Information about an AWS CodeCommit repository.
+     *        Information about an Amazon Web Services CodeCommit repository.
      */
 
     public void setCodeCommit(CodeCommitRepository codeCommit) {
@@ -66,10 +66,10 @@ public class Repository implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about an AWS CodeCommit repository.
+     * Information about an Amazon Web Services CodeCommit repository.
      * </p>
      * 
-     * @return Information about an AWS CodeCommit repository.
+     * @return Information about an Amazon Web Services CodeCommit repository.
      */
 
     public CodeCommitRepository getCodeCommit() {
@@ -78,11 +78,11 @@ public class Repository implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about an AWS CodeCommit repository.
+     * Information about an Amazon Web Services CodeCommit repository.
      * </p>
      * 
      * @param codeCommit
-     *        Information about an AWS CodeCommit repository.
+     *        Information about an Amazon Web Services CodeCommit repository.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -647,7 +647,8 @@ public class AmazonLookoutEquipmentClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Provides information on a specified dataset such as the schema location, status, and so on.
+     * Provides a JSON description of the data that is in each time series dataset, including names, column names, and
+     * data types.
      * </p>
      * 
      * @param describeDatasetRequest
@@ -782,8 +783,8 @@ public class AmazonLookoutEquipmentClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Provides overall information about a specific ML model, including model name and ARN, dataset, training and
-     * evaluation information, status, and so on.
+     * Provides a JSON containing the overall information about a specific ML model, including model name and ARN,
+     * dataset, training and evaluation information, status, and so on.
      * </p>
      * 
      * @param describeModelRequest

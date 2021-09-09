@@ -50,9 +50,10 @@ public class CodeReviewSummary implements Serializable, Cloneable, StructuredPoj
     private String repositoryName;
     /**
      * <p>
-     * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that
-     * owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for
-     * the account that owns the repository. For an S3 repository, it can be the username or AWS account ID.
+     * The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services
+     * account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket
+     * repository, this is the username for the account that owns the repository. For an S3 repository, it can be the
+     * username or Amazon Web Services account ID.
      * </p>
      */
     private String owner;
@@ -260,16 +261,17 @@ public class CodeReviewSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that
-     * owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for
-     * the account that owns the repository. For an S3 repository, it can be the username or AWS account ID.
+     * The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services
+     * account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket
+     * repository, this is the username for the account that owns the repository. For an S3 repository, it can be the
+     * username or Amazon Web Services account ID.
      * </p>
      * 
      * @param owner
-     *        The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account
-     *        that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the
-     *        username for the account that owns the repository. For an S3 repository, it can be the username or AWS
-     *        account ID.
+     *        The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web
+     *        Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or
+     *        Bitbucket repository, this is the username for the account that owns the repository. For an S3 repository,
+     *        it can be the username or Amazon Web Services account ID.
      */
 
     public void setOwner(String owner) {
@@ -278,15 +280,16 @@ public class CodeReviewSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that
-     * owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for
-     * the account that owns the repository. For an S3 repository, it can be the username or AWS account ID.
+     * The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services
+     * account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket
+     * repository, this is the username for the account that owns the repository. For an S3 repository, it can be the
+     * username or Amazon Web Services account ID.
      * </p>
      * 
-     * @return The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account
-     *         that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the
-     *         username for the account that owns the repository. For an S3 repository, it can be the username or AWS
-     *         account ID.
+     * @return The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web
+     *         Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or
+     *         Bitbucket repository, this is the username for the account that owns the repository. For an S3
+     *         repository, it can be the username or Amazon Web Services account ID.
      */
 
     public String getOwner() {
@@ -295,16 +298,17 @@ public class CodeReviewSummary implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that
-     * owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for
-     * the account that owns the repository. For an S3 repository, it can be the username or AWS account ID.
+     * The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services
+     * account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket
+     * repository, this is the username for the account that owns the repository. For an S3 repository, it can be the
+     * username or Amazon Web Services account ID.
      * </p>
      * 
      * @param owner
-     *        The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account
-     *        that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the
-     *        username for the account that owns the repository. For an S3 repository, it can be the username or AWS
-     *        account ID.
+     *        The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web
+     *        Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or
+     *        Bitbucket repository, this is the username for the account that owns the repository. For an S3 repository,
+     *        it can be the username or Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

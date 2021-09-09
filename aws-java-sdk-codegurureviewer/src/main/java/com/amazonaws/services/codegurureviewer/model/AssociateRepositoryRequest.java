@@ -67,13 +67,13 @@ public class AssociateRepositoryRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * The encryption option for this repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for this repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The ID of the AWS KMS key that is associated with this respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with this respository association.
      * </p>
      * </li>
      * </ul>
@@ -334,13 +334,13 @@ public class AssociateRepositoryRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * The encryption option for this repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for this repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The ID of the AWS KMS key that is associated with this respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with this respository association.
      * </p>
      * </li>
      * </ul>
@@ -350,13 +350,14 @@ public class AssociateRepositoryRequest extends com.amazonaws.AmazonWebServiceRe
      *        <ul>
      *        <li>
      *        <p>
-     *        The encryption option for this repository association. It is either owned by AWS Key Management Service
-     *        (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     *        The encryption option for this repository association. It is either owned by Amazon Web Services Key
+     *        Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *        <code>CUSTOMER_MANAGED_CMK</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The ID of the AWS KMS key that is associated with this respository association.
+     *        The ID of the Amazon Web Services KMS key that is associated with this respository association.
      *        </p>
      *        </li>
      */
@@ -372,13 +373,13 @@ public class AssociateRepositoryRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * The encryption option for this repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for this repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The ID of the AWS KMS key that is associated with this respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with this respository association.
      * </p>
      * </li>
      * </ul>
@@ -387,13 +388,14 @@ public class AssociateRepositoryRequest extends com.amazonaws.AmazonWebServiceRe
      *         <ul>
      *         <li>
      *         <p>
-     *         The encryption option for this repository association. It is either owned by AWS Key Management Service
-     *         (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     *         The encryption option for this repository association. It is either owned by Amazon Web Services Key
+     *         Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *         <code>CUSTOMER_MANAGED_CMK</code>).
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         The ID of the AWS KMS key that is associated with this respository association.
+     *         The ID of the Amazon Web Services KMS key that is associated with this respository association.
      *         </p>
      *         </li>
      */
@@ -409,13 +411,13 @@ public class AssociateRepositoryRequest extends com.amazonaws.AmazonWebServiceRe
      * <ul>
      * <li>
      * <p>
-     * The encryption option for this repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for this repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The ID of the AWS KMS key that is associated with this respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with this respository association.
      * </p>
      * </li>
      * </ul>
@@ -425,13 +427,14 @@ public class AssociateRepositoryRequest extends com.amazonaws.AmazonWebServiceRe
      *        <ul>
      *        <li>
      *        <p>
-     *        The encryption option for this repository association. It is either owned by AWS Key Management Service
-     *        (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     *        The encryption option for this repository association. It is either owned by Amazon Web Services Key
+     *        Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *        <code>CUSTOMER_MANAGED_CMK</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The ID of the AWS KMS key that is associated with this respository association.
+     *        The ID of the Amazon Web Services KMS key that is associated with this respository association.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

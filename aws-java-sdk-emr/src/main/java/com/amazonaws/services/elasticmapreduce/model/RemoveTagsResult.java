@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This output indicates the result of removing tags from a resource.
+ * This output indicates the result of removing tags from the resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveTags" target="_top">AWS API

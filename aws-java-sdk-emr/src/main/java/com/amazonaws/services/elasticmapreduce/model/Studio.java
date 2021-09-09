@@ -54,7 +54,7 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * Specifies whether the Amazon EMR Studio authenticates users using single sign-on (SSO) or IAM.
+     * Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      */
     private String authMode;
@@ -78,7 +78,8 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
     private String serviceRole;
     /**
      * <p>
-     * The name of the IAM role assumed by users logged in to the Amazon EMR Studio.
+     * The name of the IAM role assumed by users logged in to the Amazon EMR Studio. A Studio only requires a
+     * <code>UserRole</code> when you use IAM authentication.
      * </p>
      */
     private String userRole;
@@ -114,6 +115,19 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String defaultS3Location;
+    /**
+     * <p>
+     * Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint
+     * for authentication when logging in to a Studio with the Studio URL.
+     * </p>
+     */
+    private String idpAuthUrl;
+    /**
+     * <p>
+     * The name of your identity provider's <code>RelayState</code> parameter.
+     * </p>
+     */
+    private String idpRelayStateParameterName;
     /**
      * <p>
      * A list of tags associated with the Amazon EMR Studio.
@@ -283,11 +297,11 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the Amazon EMR Studio authenticates users using single sign-on (SSO) or IAM.
+     * Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      * 
      * @param authMode
-     *        Specifies whether the Amazon EMR Studio authenticates users using single sign-on (SSO) or IAM.
+     *        Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.
      * @see AuthMode
      */
 
@@ -297,10 +311,10 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the Amazon EMR Studio authenticates users using single sign-on (SSO) or IAM.
+     * Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      * 
-     * @return Specifies whether the Amazon EMR Studio authenticates users using single sign-on (SSO) or IAM.
+     * @return Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.
      * @see AuthMode
      */
 
@@ -310,11 +324,11 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the Amazon EMR Studio authenticates users using single sign-on (SSO) or IAM.
+     * Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      * 
      * @param authMode
-     *        Specifies whether the Amazon EMR Studio authenticates users using single sign-on (SSO) or IAM.
+     *        Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthMode
      */
@@ -326,11 +340,11 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the Amazon EMR Studio authenticates users using single sign-on (SSO) or IAM.
+     * Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      * 
      * @param authMode
-     *        Specifies whether the Amazon EMR Studio authenticates users using single sign-on (SSO) or IAM.
+     *        Specifies whether the Amazon EMR Studio authenticates users using IAM or Amazon Web Services SSO.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthMode
      */
@@ -495,11 +509,13 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the IAM role assumed by users logged in to the Amazon EMR Studio.
+     * The name of the IAM role assumed by users logged in to the Amazon EMR Studio. A Studio only requires a
+     * <code>UserRole</code> when you use IAM authentication.
      * </p>
      * 
      * @param userRole
-     *        The name of the IAM role assumed by users logged in to the Amazon EMR Studio.
+     *        The name of the IAM role assumed by users logged in to the Amazon EMR Studio. A Studio only requires a
+     *        <code>UserRole</code> when you use IAM authentication.
      */
 
     public void setUserRole(String userRole) {
@@ -508,10 +524,12 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the IAM role assumed by users logged in to the Amazon EMR Studio.
+     * The name of the IAM role assumed by users logged in to the Amazon EMR Studio. A Studio only requires a
+     * <code>UserRole</code> when you use IAM authentication.
      * </p>
      * 
-     * @return The name of the IAM role assumed by users logged in to the Amazon EMR Studio.
+     * @return The name of the IAM role assumed by users logged in to the Amazon EMR Studio. A Studio only requires a
+     *         <code>UserRole</code> when you use IAM authentication.
      */
 
     public String getUserRole() {
@@ -520,11 +538,13 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the IAM role assumed by users logged in to the Amazon EMR Studio.
+     * The name of the IAM role assumed by users logged in to the Amazon EMR Studio. A Studio only requires a
+     * <code>UserRole</code> when you use IAM authentication.
      * </p>
      * 
      * @param userRole
-     *        The name of the IAM role assumed by users logged in to the Amazon EMR Studio.
+     *        The name of the IAM role assumed by users logged in to the Amazon EMR Studio. A Studio only requires a
+     *        <code>UserRole</code> when you use IAM authentication.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -747,6 +767,92 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint
+     * for authentication when logging in to a Studio with the Studio URL.
+     * </p>
+     * 
+     * @param idpAuthUrl
+     *        Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this
+     *        endpoint for authentication when logging in to a Studio with the Studio URL.
+     */
+
+    public void setIdpAuthUrl(String idpAuthUrl) {
+        this.idpAuthUrl = idpAuthUrl;
+    }
+
+    /**
+     * <p>
+     * Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint
+     * for authentication when logging in to a Studio with the Studio URL.
+     * </p>
+     * 
+     * @return Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this
+     *         endpoint for authentication when logging in to a Studio with the Studio URL.
+     */
+
+    public String getIdpAuthUrl() {
+        return this.idpAuthUrl;
+    }
+
+    /**
+     * <p>
+     * Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this endpoint
+     * for authentication when logging in to a Studio with the Studio URL.
+     * </p>
+     * 
+     * @param idpAuthUrl
+     *        Your identity provider's authentication endpoint. Amazon EMR Studio redirects federated users to this
+     *        endpoint for authentication when logging in to a Studio with the Studio URL.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Studio withIdpAuthUrl(String idpAuthUrl) {
+        setIdpAuthUrl(idpAuthUrl);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of your identity provider's <code>RelayState</code> parameter.
+     * </p>
+     * 
+     * @param idpRelayStateParameterName
+     *        The name of your identity provider's <code>RelayState</code> parameter.
+     */
+
+    public void setIdpRelayStateParameterName(String idpRelayStateParameterName) {
+        this.idpRelayStateParameterName = idpRelayStateParameterName;
+    }
+
+    /**
+     * <p>
+     * The name of your identity provider's <code>RelayState</code> parameter.
+     * </p>
+     * 
+     * @return The name of your identity provider's <code>RelayState</code> parameter.
+     */
+
+    public String getIdpRelayStateParameterName() {
+        return this.idpRelayStateParameterName;
+    }
+
+    /**
+     * <p>
+     * The name of your identity provider's <code>RelayState</code> parameter.
+     * </p>
+     * 
+     * @param idpRelayStateParameterName
+     *        The name of your identity provider's <code>RelayState</code> parameter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Studio withIdpRelayStateParameterName(String idpRelayStateParameterName) {
+        setIdpRelayStateParameterName(idpRelayStateParameterName);
+        return this;
+    }
+
+    /**
+     * <p>
      * A list of tags associated with the Amazon EMR Studio.
      * </p>
      * 
@@ -858,6 +964,10 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getDefaultS3Location() != null)
             sb.append("DefaultS3Location: ").append(getDefaultS3Location()).append(",");
+        if (getIdpAuthUrl() != null)
+            sb.append("IdpAuthUrl: ").append(getIdpAuthUrl()).append(",");
+        if (getIdpRelayStateParameterName() != null)
+            sb.append("IdpRelayStateParameterName: ").append(getIdpRelayStateParameterName()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -930,6 +1040,14 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDefaultS3Location() != null && other.getDefaultS3Location().equals(this.getDefaultS3Location()) == false)
             return false;
+        if (other.getIdpAuthUrl() == null ^ this.getIdpAuthUrl() == null)
+            return false;
+        if (other.getIdpAuthUrl() != null && other.getIdpAuthUrl().equals(this.getIdpAuthUrl()) == false)
+            return false;
+        if (other.getIdpRelayStateParameterName() == null ^ this.getIdpRelayStateParameterName() == null)
+            return false;
+        if (other.getIdpRelayStateParameterName() != null && other.getIdpRelayStateParameterName().equals(this.getIdpRelayStateParameterName()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -956,6 +1074,8 @@ public class Studio implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getUrl() == null) ? 0 : getUrl().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getDefaultS3Location() == null) ? 0 : getDefaultS3Location().hashCode());
+        hashCode = prime * hashCode + ((getIdpAuthUrl() == null) ? 0 : getIdpAuthUrl().hashCode());
+        hashCode = prime * hashCode + ((getIdpRelayStateParameterName() == null) ? 0 : getIdpRelayStateParameterName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

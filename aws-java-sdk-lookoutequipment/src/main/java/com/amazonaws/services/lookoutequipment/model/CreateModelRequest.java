@@ -107,8 +107,7 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     private DataPreProcessingConfiguration dataPreProcessingConfiguration;
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt model data by Amazon Lookout for
-     * Equipment.
+     * Provides the identifier of the KMS key used to encrypt model data by Amazon Lookout for Equipment.
      * </p>
      */
     private String serverSideKmsKeyId;
@@ -118,6 +117,13 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * Indicates that the asset associated with this sensor has been shut off. As long as this condition is met, Lookout
+     * for Equipment will not use data from this asset for training, evaluation, or inference.
+     * </p>
+     */
+    private String offCondition;
 
     /**
      * <p>
@@ -642,13 +648,11 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt model data by Amazon Lookout for
-     * Equipment.
+     * Provides the identifier of the KMS key used to encrypt model data by Amazon Lookout for Equipment.
      * </p>
      * 
      * @param serverSideKmsKeyId
-     *        Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt model data by Amazon
-     *        Lookout for Equipment.
+     *        Provides the identifier of the KMS key used to encrypt model data by Amazon Lookout for Equipment.
      */
 
     public void setServerSideKmsKeyId(String serverSideKmsKeyId) {
@@ -657,12 +661,10 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt model data by Amazon Lookout for
-     * Equipment.
+     * Provides the identifier of the KMS key used to encrypt model data by Amazon Lookout for Equipment.
      * </p>
      * 
-     * @return Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt model data by Amazon
-     *         Lookout for Equipment.
+     * @return Provides the identifier of the KMS key used to encrypt model data by Amazon Lookout for Equipment.
      */
 
     public String getServerSideKmsKeyId() {
@@ -671,13 +673,11 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt model data by Amazon Lookout for
-     * Equipment.
+     * Provides the identifier of the KMS key used to encrypt model data by Amazon Lookout for Equipment.
      * </p>
      * 
      * @param serverSideKmsKeyId
-     *        Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt model data by Amazon
-     *        Lookout for Equipment.
+     *        Provides the identifier of the KMS key used to encrypt model data by Amazon Lookout for Equipment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -757,6 +757,52 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Indicates that the asset associated with this sensor has been shut off. As long as this condition is met, Lookout
+     * for Equipment will not use data from this asset for training, evaluation, or inference.
+     * </p>
+     * 
+     * @param offCondition
+     *        Indicates that the asset associated with this sensor has been shut off. As long as this condition is met,
+     *        Lookout for Equipment will not use data from this asset for training, evaluation, or inference.
+     */
+
+    public void setOffCondition(String offCondition) {
+        this.offCondition = offCondition;
+    }
+
+    /**
+     * <p>
+     * Indicates that the asset associated with this sensor has been shut off. As long as this condition is met, Lookout
+     * for Equipment will not use data from this asset for training, evaluation, or inference.
+     * </p>
+     * 
+     * @return Indicates that the asset associated with this sensor has been shut off. As long as this condition is met,
+     *         Lookout for Equipment will not use data from this asset for training, evaluation, or inference.
+     */
+
+    public String getOffCondition() {
+        return this.offCondition;
+    }
+
+    /**
+     * <p>
+     * Indicates that the asset associated with this sensor has been shut off. As long as this condition is met, Lookout
+     * for Equipment will not use data from this asset for training, evaluation, or inference.
+     * </p>
+     * 
+     * @param offCondition
+     *        Indicates that the asset associated with this sensor has been shut off. As long as this condition is met,
+     *        Lookout for Equipment will not use data from this asset for training, evaluation, or inference.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelRequest withOffCondition(String offCondition) {
+        setOffCondition(offCondition);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -793,7 +839,9 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getServerSideKmsKeyId() != null)
             sb.append("ServerSideKmsKeyId: ").append(getServerSideKmsKeyId()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getOffCondition() != null)
+            sb.append("OffCondition: ").append(getOffCondition());
         sb.append("}");
         return sb.toString();
     }
@@ -861,6 +909,10 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getOffCondition() == null ^ this.getOffCondition() == null)
+            return false;
+        if (other.getOffCondition() != null && other.getOffCondition().equals(this.getOffCondition()) == false)
+            return false;
         return true;
     }
 
@@ -882,6 +934,7 @@ public class CreateModelRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getDataPreProcessingConfiguration() == null) ? 0 : getDataPreProcessingConfiguration().hashCode());
         hashCode = prime * hashCode + ((getServerSideKmsKeyId() == null) ? 0 : getServerSideKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getOffCondition() == null) ? 0 : getOffCondition().hashCode());
         return hashCode;
     }
 

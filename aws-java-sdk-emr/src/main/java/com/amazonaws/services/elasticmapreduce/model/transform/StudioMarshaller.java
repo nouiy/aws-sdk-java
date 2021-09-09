@@ -56,6 +56,10 @@ public class StudioMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> DEFAULTS3LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultS3Location").build();
+    private static final MarshallingInfo<String> IDPAUTHURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdpAuthUrl").build();
+    private static final MarshallingInfo<String> IDPRELAYSTATEPARAMETERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdpRelayStateParameterName").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -89,6 +93,8 @@ public class StudioMarshaller {
             protocolMarshaller.marshall(studio.getUrl(), URL_BINDING);
             protocolMarshaller.marshall(studio.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(studio.getDefaultS3Location(), DEFAULTS3LOCATION_BINDING);
+            protocolMarshaller.marshall(studio.getIdpAuthUrl(), IDPAUTHURL_BINDING);
+            protocolMarshaller.marshall(studio.getIdpRelayStateParameterName(), IDPRELAYSTATEPARAMETERNAME_BINDING);
             protocolMarshaller.marshall(studio.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

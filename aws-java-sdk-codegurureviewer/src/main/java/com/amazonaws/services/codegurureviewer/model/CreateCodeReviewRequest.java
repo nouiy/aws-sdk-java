@@ -27,7 +27,7 @@ public class CreateCodeReviewRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the code review. The name of each code review in your AWS account must be unique.
+     * The name of the code review. The name of each code review in your Amazon Web Services account must be unique.
      * </p>
      */
     private String name;
@@ -63,11 +63,12 @@ public class CreateCodeReviewRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the code review. The name of each code review in your AWS account must be unique.
+     * The name of the code review. The name of each code review in your Amazon Web Services account must be unique.
      * </p>
      * 
      * @param name
-     *        The name of the code review. The name of each code review in your AWS account must be unique.
+     *        The name of the code review. The name of each code review in your Amazon Web Services account must be
+     *        unique.
      */
 
     public void setName(String name) {
@@ -76,10 +77,11 @@ public class CreateCodeReviewRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the code review. The name of each code review in your AWS account must be unique.
+     * The name of the code review. The name of each code review in your Amazon Web Services account must be unique.
      * </p>
      * 
-     * @return The name of the code review. The name of each code review in your AWS account must be unique.
+     * @return The name of the code review. The name of each code review in your Amazon Web Services account must be
+     *         unique.
      */
 
     public String getName() {
@@ -88,11 +90,12 @@ public class CreateCodeReviewRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the code review. The name of each code review in your AWS account must be unique.
+     * The name of the code review. The name of each code review in your Amazon Web Services account must be unique.
      * </p>
      * 
      * @param name
-     *        The name of the code review. The name of each code review in your AWS account must be unique.
+     *        The name of the code review. The name of each code review in your Amazon Web Services account must be
+     *        unique.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

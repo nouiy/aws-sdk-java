@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * &gt; Specifies configuration information for the input data for the inference, including S3 location of input data..
+ * Specifies configuration information for the input data for the inference, including S3 location of input data..
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutequipment-2020-12-15/InferenceInputConfiguration"
@@ -42,7 +42,7 @@ public class InferenceInputConfiguration implements Serializable, Cloneable, Str
     private String inputTimeZoneOffset;
     /**
      * <p>
-     * &gt; Specifies configuration information for the input data for the inference, including timestamp format and
+     * Specifies configuration information for the input data for the inference, including timestamp format and
      * delimiter.
      * </p>
      */
@@ -133,13 +133,13 @@ public class InferenceInputConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * &gt; Specifies configuration information for the input data for the inference, including timestamp format and
+     * Specifies configuration information for the input data for the inference, including timestamp format and
      * delimiter.
      * </p>
      * 
      * @param inferenceInputNameConfiguration
-     *        &gt; Specifies configuration information for the input data for the inference, including timestamp format
-     *        and delimiter.
+     *        Specifies configuration information for the input data for the inference, including timestamp format and
+     *        delimiter.
      */
 
     public void setInferenceInputNameConfiguration(InferenceInputNameConfiguration inferenceInputNameConfiguration) {
@@ -148,12 +148,12 @@ public class InferenceInputConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * &gt; Specifies configuration information for the input data for the inference, including timestamp format and
+     * Specifies configuration information for the input data for the inference, including timestamp format and
      * delimiter.
      * </p>
      * 
-     * @return &gt; Specifies configuration information for the input data for the inference, including timestamp format
-     *         and delimiter.
+     * @return Specifies configuration information for the input data for the inference, including timestamp format and
+     *         delimiter.
      */
 
     public InferenceInputNameConfiguration getInferenceInputNameConfiguration() {
@@ -162,13 +162,13 @@ public class InferenceInputConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * &gt; Specifies configuration information for the input data for the inference, including timestamp format and
+     * Specifies configuration information for the input data for the inference, including timestamp format and
      * delimiter.
      * </p>
      * 
      * @param inferenceInputNameConfiguration
-     *        &gt; Specifies configuration information for the input data for the inference, including timestamp format
-     *        and delimiter.
+     *        Specifies configuration information for the input data for the inference, including timestamp format and
+     *        delimiter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

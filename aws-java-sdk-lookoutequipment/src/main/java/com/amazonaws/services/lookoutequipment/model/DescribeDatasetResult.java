@@ -62,8 +62,7 @@ public class DescribeDatasetResult extends com.amazonaws.AmazonWebServiceResult<
     private String schema;
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt dataset data by Amazon Lookout
-     * for Equipment.
+     * Provides the identifier of the KMS key used to encrypt dataset data by Amazon Lookout for Equipment.
      * </p>
      */
     private String serverSideKmsKeyId;
@@ -361,13 +360,11 @@ public class DescribeDatasetResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt dataset data by Amazon Lookout
-     * for Equipment.
+     * Provides the identifier of the KMS key used to encrypt dataset data by Amazon Lookout for Equipment.
      * </p>
      * 
      * @param serverSideKmsKeyId
-     *        Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt dataset data by Amazon
-     *        Lookout for Equipment.
+     *        Provides the identifier of the KMS key used to encrypt dataset data by Amazon Lookout for Equipment.
      */
 
     public void setServerSideKmsKeyId(String serverSideKmsKeyId) {
@@ -376,12 +373,10 @@ public class DescribeDatasetResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt dataset data by Amazon Lookout
-     * for Equipment.
+     * Provides the identifier of the KMS key used to encrypt dataset data by Amazon Lookout for Equipment.
      * </p>
      * 
-     * @return Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt dataset data by Amazon
-     *         Lookout for Equipment.
+     * @return Provides the identifier of the KMS key used to encrypt dataset data by Amazon Lookout for Equipment.
      */
 
     public String getServerSideKmsKeyId() {
@@ -390,13 +385,11 @@ public class DescribeDatasetResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt dataset data by Amazon Lookout
-     * for Equipment.
+     * Provides the identifier of the KMS key used to encrypt dataset data by Amazon Lookout for Equipment.
      * </p>
      * 
      * @param serverSideKmsKeyId
-     *        Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt dataset data by Amazon
-     *        Lookout for Equipment.
+     *        Provides the identifier of the KMS key used to encrypt dataset data by Amazon Lookout for Equipment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -37,6 +37,8 @@ public class StudioSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Description").build();
     private static final MarshallingInfo<String> URL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Url").build();
+    private static final MarshallingInfo<String> AUTHMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("AuthMode").build();
     private static final MarshallingInfo<java.util.Date> CREATIONTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
 
@@ -61,6 +63,7 @@ public class StudioSummaryMarshaller {
             protocolMarshaller.marshall(studioSummary.getVpcId(), VPCID_BINDING);
             protocolMarshaller.marshall(studioSummary.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(studioSummary.getUrl(), URL_BINDING);
+            protocolMarshaller.marshall(studioSummary.getAuthMode(), AUTHMODE_BINDING);
             protocolMarshaller.marshall(studioSummary.getCreationTime(), CREATIONTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

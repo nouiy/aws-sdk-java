@@ -106,6 +106,14 @@ public class StudioJsonUnmarshaller implements Unmarshaller<Studio, JsonUnmarsha
                     context.nextToken();
                     studio.setDefaultS3Location(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("IdpAuthUrl", targetDepth)) {
+                    context.nextToken();
+                    studio.setIdpAuthUrl(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("IdpRelayStateParameterName", targetDepth)) {
+                    context.nextToken();
+                    studio.setIdpRelayStateParameterName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     studio.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())

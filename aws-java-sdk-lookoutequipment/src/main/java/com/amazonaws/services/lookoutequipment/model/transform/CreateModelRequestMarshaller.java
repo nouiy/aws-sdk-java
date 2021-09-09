@@ -57,6 +57,8 @@ public class CreateModelRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServerSideKmsKeyId").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<String> OFFCONDITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OffCondition").build();
 
     private static final CreateModelRequestMarshaller instance = new CreateModelRequestMarshaller();
 
@@ -87,6 +89,7 @@ public class CreateModelRequestMarshaller {
             protocolMarshaller.marshall(createModelRequest.getDataPreProcessingConfiguration(), DATAPREPROCESSINGCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createModelRequest.getServerSideKmsKeyId(), SERVERSIDEKMSKEYID_BINDING);
             protocolMarshaller.marshall(createModelRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createModelRequest.getOffCondition(), OFFCONDITION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -72,6 +72,14 @@ public class RecommendationSummaryJsonUnmarshaller implements Unmarshaller<Recom
                     context.nextToken();
                     recommendationSummary.setRecommendationCategory(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("RuleMetadata", targetDepth)) {
+                    context.nextToken();
+                    recommendationSummary.setRuleMetadata(RuleMetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("Severity", targetDepth)) {
+                    context.nextToken();
+                    recommendationSummary.setSeverity(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

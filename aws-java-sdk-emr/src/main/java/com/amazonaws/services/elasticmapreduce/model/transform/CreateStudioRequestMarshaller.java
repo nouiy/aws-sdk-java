@@ -48,6 +48,10 @@ public class CreateStudioRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EngineSecurityGroupId").build();
     private static final MarshallingInfo<String> DEFAULTS3LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultS3Location").build();
+    private static final MarshallingInfo<String> IDPAUTHURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdpAuthUrl").build();
+    private static final MarshallingInfo<String> IDPRELAYSTATEPARAMETERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdpRelayStateParameterName").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -77,6 +81,8 @@ public class CreateStudioRequestMarshaller {
             protocolMarshaller.marshall(createStudioRequest.getWorkspaceSecurityGroupId(), WORKSPACESECURITYGROUPID_BINDING);
             protocolMarshaller.marshall(createStudioRequest.getEngineSecurityGroupId(), ENGINESECURITYGROUPID_BINDING);
             protocolMarshaller.marshall(createStudioRequest.getDefaultS3Location(), DEFAULTS3LOCATION_BINDING);
+            protocolMarshaller.marshall(createStudioRequest.getIdpAuthUrl(), IDPAUTHURL_BINDING);
+            protocolMarshaller.marshall(createStudioRequest.getIdpRelayStateParameterName(), IDPRELAYSTATEPARAMETERNAME_BINDING);
             protocolMarshaller.marshall(createStudioRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

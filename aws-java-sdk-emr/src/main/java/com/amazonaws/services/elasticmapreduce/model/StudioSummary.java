@@ -61,6 +61,12 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
     private String url;
     /**
      * <p>
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * </p>
+     */
+    private String authMode;
+    /**
+     * <p>
      * The time when the Amazon EMR Studio was created.
      * </p>
      */
@@ -268,6 +274,65 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * </p>
+     * 
+     * @param authMode
+     *        Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * @see AuthMode
+     */
+
+    public void setAuthMode(String authMode) {
+        this.authMode = authMode;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * </p>
+     * 
+     * @return Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * @see AuthMode
+     */
+
+    public String getAuthMode() {
+        return this.authMode;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * </p>
+     * 
+     * @param authMode
+     *        Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AuthMode
+     */
+
+    public StudioSummary withAuthMode(String authMode) {
+        setAuthMode(authMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * </p>
+     * 
+     * @param authMode
+     *        Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AuthMode
+     */
+
+    public StudioSummary withAuthMode(AuthMode authMode) {
+        this.authMode = authMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The time when the Amazon EMR Studio was created.
      * </p>
      * 
@@ -328,6 +393,8 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
             sb.append("Description: ").append(getDescription()).append(",");
         if (getUrl() != null)
             sb.append("Url: ").append(getUrl()).append(",");
+        if (getAuthMode() != null)
+            sb.append("AuthMode: ").append(getAuthMode()).append(",");
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime());
         sb.append("}");
@@ -364,6 +431,10 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getUrl() != null && other.getUrl().equals(this.getUrl()) == false)
             return false;
+        if (other.getAuthMode() == null ^ this.getAuthMode() == null)
+            return false;
+        if (other.getAuthMode() != null && other.getAuthMode().equals(this.getAuthMode()) == false)
+            return false;
         if (other.getCreationTime() == null ^ this.getCreationTime() == null)
             return false;
         if (other.getCreationTime() != null && other.getCreationTime().equals(this.getCreationTime()) == false)
@@ -381,6 +452,7 @@ public class StudioSummary implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getUrl() == null) ? 0 : getUrl().hashCode());
+        hashCode = prime * hashCode + ((getAuthMode() == null) ? 0 : getAuthMode().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         return hashCode;
     }

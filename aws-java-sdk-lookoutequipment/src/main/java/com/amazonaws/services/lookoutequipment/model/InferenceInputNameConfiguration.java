@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * &gt;&gt; Specifies configuration information for the input data for the inference, including timestamp format and
- * delimiter.
+ * Specifies configuration information for the input data for the inference, including timestamp format and delimiter.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutequipment-2020-12-15/InferenceInputNameConfiguration"

@@ -68,6 +68,10 @@ public class StudioSummaryJsonUnmarshaller implements Unmarshaller<StudioSummary
                     context.nextToken();
                     studioSummary.setUrl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AuthMode", targetDepth)) {
+                    context.nextToken();
+                    studioSummary.setAuthMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreationTime", targetDepth)) {
                     context.nextToken();
                     studioSummary.setCreationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

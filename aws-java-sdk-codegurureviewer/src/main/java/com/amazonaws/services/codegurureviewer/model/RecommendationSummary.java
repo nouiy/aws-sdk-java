@@ -67,6 +67,20 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
      * </p>
      */
     private String recommendationCategory;
+    /**
+     * <p>
+     * Metadata about a rule. Rule metadata includes an ID, a name, a list of tags, and a short and long description.
+     * CodeGuru Reviewer uses rules to analyze code. A rule's recommendation is included in analysis results if code is
+     * detected that violates the rule.
+     * </p>
+     */
+    private RuleMetadata ruleMetadata;
+    /**
+     * <p>
+     * The severity of the issue in the code that generated this recommendation.
+     * </p>
+     */
+    private String severity;
 
     /**
      * <p>
@@ -346,6 +360,117 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Metadata about a rule. Rule metadata includes an ID, a name, a list of tags, and a short and long description.
+     * CodeGuru Reviewer uses rules to analyze code. A rule's recommendation is included in analysis results if code is
+     * detected that violates the rule.
+     * </p>
+     * 
+     * @param ruleMetadata
+     *        Metadata about a rule. Rule metadata includes an ID, a name, a list of tags, and a short and long
+     *        description. CodeGuru Reviewer uses rules to analyze code. A rule's recommendation is included in analysis
+     *        results if code is detected that violates the rule.
+     */
+
+    public void setRuleMetadata(RuleMetadata ruleMetadata) {
+        this.ruleMetadata = ruleMetadata;
+    }
+
+    /**
+     * <p>
+     * Metadata about a rule. Rule metadata includes an ID, a name, a list of tags, and a short and long description.
+     * CodeGuru Reviewer uses rules to analyze code. A rule's recommendation is included in analysis results if code is
+     * detected that violates the rule.
+     * </p>
+     * 
+     * @return Metadata about a rule. Rule metadata includes an ID, a name, a list of tags, and a short and long
+     *         description. CodeGuru Reviewer uses rules to analyze code. A rule's recommendation is included in
+     *         analysis results if code is detected that violates the rule.
+     */
+
+    public RuleMetadata getRuleMetadata() {
+        return this.ruleMetadata;
+    }
+
+    /**
+     * <p>
+     * Metadata about a rule. Rule metadata includes an ID, a name, a list of tags, and a short and long description.
+     * CodeGuru Reviewer uses rules to analyze code. A rule's recommendation is included in analysis results if code is
+     * detected that violates the rule.
+     * </p>
+     * 
+     * @param ruleMetadata
+     *        Metadata about a rule. Rule metadata includes an ID, a name, a list of tags, and a short and long
+     *        description. CodeGuru Reviewer uses rules to analyze code. A rule's recommendation is included in analysis
+     *        results if code is detected that violates the rule.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommendationSummary withRuleMetadata(RuleMetadata ruleMetadata) {
+        setRuleMetadata(ruleMetadata);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The severity of the issue in the code that generated this recommendation.
+     * </p>
+     * 
+     * @param severity
+     *        The severity of the issue in the code that generated this recommendation.
+     * @see Severity
+     */
+
+    public void setSeverity(String severity) {
+        this.severity = severity;
+    }
+
+    /**
+     * <p>
+     * The severity of the issue in the code that generated this recommendation.
+     * </p>
+     * 
+     * @return The severity of the issue in the code that generated this recommendation.
+     * @see Severity
+     */
+
+    public String getSeverity() {
+        return this.severity;
+    }
+
+    /**
+     * <p>
+     * The severity of the issue in the code that generated this recommendation.
+     * </p>
+     * 
+     * @param severity
+     *        The severity of the issue in the code that generated this recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Severity
+     */
+
+    public RecommendationSummary withSeverity(String severity) {
+        setSeverity(severity);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The severity of the issue in the code that generated this recommendation.
+     * </p>
+     * 
+     * @param severity
+     *        The severity of the issue in the code that generated this recommendation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Severity
+     */
+
+    public RecommendationSummary withSeverity(Severity severity) {
+        this.severity = severity.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -368,7 +493,11 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
         if (getDescription() != null)
             sb.append("Description: ").append(getDescription()).append(",");
         if (getRecommendationCategory() != null)
-            sb.append("RecommendationCategory: ").append(getRecommendationCategory());
+            sb.append("RecommendationCategory: ").append(getRecommendationCategory()).append(",");
+        if (getRuleMetadata() != null)
+            sb.append("RuleMetadata: ").append(getRuleMetadata()).append(",");
+        if (getSeverity() != null)
+            sb.append("Severity: ").append(getSeverity());
         sb.append("}");
         return sb.toString();
     }
@@ -407,6 +536,14 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
             return false;
         if (other.getRecommendationCategory() != null && other.getRecommendationCategory().equals(this.getRecommendationCategory()) == false)
             return false;
+        if (other.getRuleMetadata() == null ^ this.getRuleMetadata() == null)
+            return false;
+        if (other.getRuleMetadata() != null && other.getRuleMetadata().equals(this.getRuleMetadata()) == false)
+            return false;
+        if (other.getSeverity() == null ^ this.getSeverity() == null)
+            return false;
+        if (other.getSeverity() != null && other.getSeverity().equals(this.getSeverity()) == false)
+            return false;
         return true;
     }
 
@@ -421,6 +558,8 @@ public class RecommendationSummary implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getEndLine() == null) ? 0 : getEndLine().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getRecommendationCategory() == null) ? 0 : getRecommendationCategory().hashCode());
+        hashCode = prime * hashCode + ((getRuleMetadata() == null) ? 0 : getRuleMetadata().hashCode());
+        hashCode = prime * hashCode + ((getSeverity() == null) ? 0 : getSeverity().hashCode());
         return hashCode;
     }
 

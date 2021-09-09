@@ -150,8 +150,7 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
-     * behalf.
+     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
      * </p>
      */
     private String serviceRole;
@@ -1235,13 +1234,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
-     * behalf.
+     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on
-     *        your behalf.
+     *        The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
      */
 
     public void setServiceRole(String serviceRole) {
@@ -1250,12 +1247,10 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
-     * behalf.
+     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
      * </p>
      * 
-     * @return The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on
-     *         your behalf.
+     * @return The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
      */
 
     public String getServiceRole() {
@@ -1264,13 +1259,11 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
-     * behalf.
+     * The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on
-     *        your behalf.
+     *        The IAM role that Amazon EMR assumes in order to access Amazon Web Services resources on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

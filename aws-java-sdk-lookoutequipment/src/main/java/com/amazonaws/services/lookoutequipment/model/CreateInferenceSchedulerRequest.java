@@ -79,8 +79,7 @@ public class CreateInferenceSchedulerRequest extends com.amazonaws.AmazonWebServ
     private String roleArn;
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt inference scheduler data by
-     * Amazon Lookout for Equipment.
+     * Provides the identifier of the KMS key used to encrypt inference scheduler data by Amazon Lookout for Equipment.
      * </p>
      */
     private String serverSideKmsKeyId;
@@ -472,13 +471,12 @@ public class CreateInferenceSchedulerRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt inference scheduler data by
-     * Amazon Lookout for Equipment.
+     * Provides the identifier of the KMS key used to encrypt inference scheduler data by Amazon Lookout for Equipment.
      * </p>
      * 
      * @param serverSideKmsKeyId
-     *        Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt inference scheduler data
-     *        by Amazon Lookout for Equipment.
+     *        Provides the identifier of the KMS key used to encrypt inference scheduler data by Amazon Lookout for
+     *        Equipment.
      */
 
     public void setServerSideKmsKeyId(String serverSideKmsKeyId) {
@@ -487,12 +485,11 @@ public class CreateInferenceSchedulerRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt inference scheduler data by
-     * Amazon Lookout for Equipment.
+     * Provides the identifier of the KMS key used to encrypt inference scheduler data by Amazon Lookout for Equipment.
      * </p>
      * 
-     * @return Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt inference scheduler data
-     *         by Amazon Lookout for Equipment.
+     * @return Provides the identifier of the KMS key used to encrypt inference scheduler data by Amazon Lookout for
+     *         Equipment.
      */
 
     public String getServerSideKmsKeyId() {
@@ -501,13 +498,12 @@ public class CreateInferenceSchedulerRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt inference scheduler data by
-     * Amazon Lookout for Equipment.
+     * Provides the identifier of the KMS key used to encrypt inference scheduler data by Amazon Lookout for Equipment.
      * </p>
      * 
      * @param serverSideKmsKeyId
-     *        Provides the identifier of the AWS KMS customer master key (CMK) used to encrypt inference scheduler data
-     *        by Amazon Lookout for Equipment.
+     *        Provides the identifier of the KMS key used to encrypt inference scheduler data by Amazon Lookout for
+     *        Equipment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -44,11 +44,11 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
     private String associationArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection. Its format is
+     * The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is
      * <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html">
-     * <code>Connection</code> </a> in the <i>AWS CodeStar Connections API Reference</i>.
+     * <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>.
      * </p>
      */
     private String connectionArn;
@@ -60,9 +60,10 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
     private String name;
     /**
      * <p>
-     * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that
-     * owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for
-     * the account that owns the repository. For an S3 repository, it can be the username or AWS account ID.
+     * The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services
+     * account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket
+     * repository, this is the username for the account that owns the repository. For an S3 repository, it can be the
+     * username or Amazon Web Services account ID.
      * </p>
      */
     private String owner;
@@ -156,13 +157,13 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * The encryption option for this repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for this repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The ID of the AWS KMS key that is associated with this respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with this respository association.
      * </p>
      * </li>
      * </ul>
@@ -253,19 +254,19 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection. Its format is
+     * The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is
      * <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html">
-     * <code>Connection</code> </a> in the <i>AWS CodeStar Connections API Reference</i>.
+     * <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>.
      * </p>
      * 
      * @param connectionArn
-     *        The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection. Its format is
+     *        The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is
      *        <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html">
-     *        <code>Connection</code> </a> in the <i>AWS CodeStar Connections API Reference</i>.
+     *        <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>.
      */
 
     public void setConnectionArn(String connectionArn) {
@@ -274,18 +275,18 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection. Its format is
+     * The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is
      * <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html">
-     * <code>Connection</code> </a> in the <i>AWS CodeStar Connections API Reference</i>.
+     * <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection. Its format is
+     * @return The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is
      *         <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html">
-     *         <code>Connection</code> </a> in the <i>AWS CodeStar Connections API Reference</i>.
+     *         <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>.
      */
 
     public String getConnectionArn() {
@@ -294,19 +295,19 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection. Its format is
+     * The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is
      * <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html">
-     * <code>Connection</code> </a> in the <i>AWS CodeStar Connections API Reference</i>.
+     * <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>.
      * </p>
      * 
      * @param connectionArn
-     *        The Amazon Resource Name (ARN) of an AWS CodeStar Connections connection. Its format is
+     *        The Amazon Resource Name (ARN) of an Amazon Web Services CodeStar Connections connection. Its format is
      *        <code>arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id</code>. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html">
-     *        <code>Connection</code> </a> in the <i>AWS CodeStar Connections API Reference</i>.
+     *        <code>Connection</code> </a> in the <i>Amazon Web Services CodeStar Connections API Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,16 +358,17 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that
-     * owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for
-     * the account that owns the repository. For an S3 repository, it can be the username or AWS account ID.
+     * The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services
+     * account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket
+     * repository, this is the username for the account that owns the repository. For an S3 repository, it can be the
+     * username or Amazon Web Services account ID.
      * </p>
      * 
      * @param owner
-     *        The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account
-     *        that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the
-     *        username for the account that owns the repository. For an S3 repository, it can be the username or AWS
-     *        account ID.
+     *        The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web
+     *        Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or
+     *        Bitbucket repository, this is the username for the account that owns the repository. For an S3 repository,
+     *        it can be the username or Amazon Web Services account ID.
      */
 
     public void setOwner(String owner) {
@@ -375,15 +377,16 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that
-     * owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for
-     * the account that owns the repository. For an S3 repository, it can be the username or AWS account ID.
+     * The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services
+     * account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket
+     * repository, this is the username for the account that owns the repository. For an S3 repository, it can be the
+     * username or Amazon Web Services account ID.
      * </p>
      * 
-     * @return The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account
-     *         that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the
-     *         username for the account that owns the repository. For an S3 repository, it can be the username or AWS
-     *         account ID.
+     * @return The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web
+     *         Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or
+     *         Bitbucket repository, this is the username for the account that owns the repository. For an S3
+     *         repository, it can be the username or Amazon Web Services account ID.
      */
 
     public String getOwner() {
@@ -392,16 +395,17 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account that
-     * owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the username for
-     * the account that owns the repository. For an S3 repository, it can be the username or AWS account ID.
+     * The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web Services
+     * account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket
+     * repository, this is the username for the account that owns the repository. For an S3 repository, it can be the
+     * username or Amazon Web Services account ID.
      * </p>
      * 
      * @param owner
-     *        The owner of the repository. For an AWS CodeCommit repository, this is the AWS account ID of the account
-     *        that owns the repository. For a GitHub, GitHub Enterprise Server, or Bitbucket repository, this is the
-     *        username for the account that owns the repository. For an S3 repository, it can be the username or AWS
-     *        account ID.
+     *        The owner of the repository. For an Amazon Web Services CodeCommit repository, this is the Amazon Web
+     *        Services account ID of the account that owns the repository. For a GitHub, GitHub Enterprise Server, or
+     *        Bitbucket repository, this is the username for the account that owns the repository. For an S3 repository,
+     *        it can be the username or Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1092,13 +1096,13 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * The encryption option for this repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for this repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The ID of the AWS KMS key that is associated with this respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with this respository association.
      * </p>
      * </li>
      * </ul>
@@ -1108,13 +1112,14 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        The encryption option for this repository association. It is either owned by AWS Key Management Service
-     *        (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     *        The encryption option for this repository association. It is either owned by Amazon Web Services Key
+     *        Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *        <code>CUSTOMER_MANAGED_CMK</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The ID of the AWS KMS key that is associated with this respository association.
+     *        The ID of the Amazon Web Services KMS key that is associated with this respository association.
      *        </p>
      *        </li>
      */
@@ -1130,13 +1135,13 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * The encryption option for this repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for this repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The ID of the AWS KMS key that is associated with this respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with this respository association.
      * </p>
      * </li>
      * </ul>
@@ -1145,13 +1150,14 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
      *         <ul>
      *         <li>
      *         <p>
-     *         The encryption option for this repository association. It is either owned by AWS Key Management Service
-     *         (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     *         The encryption option for this repository association. It is either owned by Amazon Web Services Key
+     *         Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *         <code>CUSTOMER_MANAGED_CMK</code>).
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         The ID of the AWS KMS key that is associated with this respository association.
+     *         The ID of the Amazon Web Services KMS key that is associated with this respository association.
      *         </p>
      *         </li>
      */
@@ -1167,13 +1173,13 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
      * <ul>
      * <li>
      * <p>
-     * The encryption option for this repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for this repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * The ID of the AWS KMS key that is associated with this respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with this respository association.
      * </p>
      * </li>
      * </ul>
@@ -1183,13 +1189,14 @@ public class RepositoryAssociation implements Serializable, Cloneable, Structure
      *        <ul>
      *        <li>
      *        <p>
-     *        The encryption option for this repository association. It is either owned by AWS Key Management Service
-     *        (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     *        The encryption option for this repository association. It is either owned by Amazon Web Services Key
+     *        Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *        <code>CUSTOMER_MANAGED_CMK</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        The ID of the AWS KMS key that is associated with this respository association.
+     *        The ID of the Amazon Web Services KMS key that is associated with this respository association.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

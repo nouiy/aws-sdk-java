@@ -39,8 +39,7 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String description;
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio currently
-     * only supports SSO authentication.
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      */
     private String authMode;
@@ -60,15 +59,16 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
     private com.amazonaws.internal.SdkInternalList<String> subnetIds;
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR Studio
-     * to interoperate with other Amazon Web Services services.
+     * The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to
+     * interoperate with other Amazon Web Services services.
      * </p>
      */
     private String serviceRole;
     /**
      * <p>
-     * The IAM user role that will be assumed by users and groups logged in to an Amazon EMR Studio. The permissions
-     * attached to this IAM role can be scoped down for each user or group using session policies.
+     * The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a
+     * <code>UserRole</code> when you use Amazon Web Services SSO authentication. The permissions attached to the
+     * <code>UserRole</code> can be scoped down for each user or group using session policies.
      * </p>
      */
     private String userRole;
@@ -93,6 +93,23 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String defaultS3Location;
+    /**
+     * <p>
+     * The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM authentication
+     * and want to let federated users log in to a Studio with the Studio URL and credentials from your IdP. Amazon EMR
+     * Studio redirects users to this endpoint to enter credentials.
+     * </p>
+     */
+    private String idpAuthUrl;
+    /**
+     * <p>
+     * The name that your identity provider (IdP) uses for its <code>RelayState</code> parameter. For example,
+     * <code>RelayState</code> or <code>TargetSource</code>. Specify this value when you use IAM authentication and want
+     * to let federated users log in to a Studio using the Studio URL. The <code>RelayState</code> parameter differs by
+     * IdP.
+     * </p>
+     */
+    private String idpRelayStateParameterName;
     /**
      * <p>
      * A list of tags to associate with the Amazon EMR Studio. Tags are user-defined key-value pairs that consist of a
@@ -184,13 +201,11 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio currently
-     * only supports SSO authentication.
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      * 
      * @param authMode
-     *        Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio
-     *        currently only supports SSO authentication.
+     *        Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
      * @see AuthMode
      */
 
@@ -200,12 +215,10 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio currently
-     * only supports SSO authentication.
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      * 
-     * @return Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio
-     *         currently only supports SSO authentication.
+     * @return Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
      * @see AuthMode
      */
 
@@ -215,13 +228,11 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio currently
-     * only supports SSO authentication.
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      * 
      * @param authMode
-     *        Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio
-     *        currently only supports SSO authentication.
+     *        Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthMode
      */
@@ -233,13 +244,11 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio currently
-     * only supports SSO authentication.
+     * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
      * </p>
      * 
      * @param authMode
-     *        Specifies whether the Studio authenticates users using single sign-on (SSO) or IAM. Amazon EMR Studio
-     *        currently only supports SSO authentication.
+     *        Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthMode
      */
@@ -380,13 +389,13 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR Studio
-     * to interoperate with other Amazon Web Services services.
+     * The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to
+     * interoperate with other Amazon Web Services services.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR
-     *        Studio to interoperate with other Amazon Web Services services.
+     *        The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to
+     *        interoperate with other Amazon Web Services services.
      */
 
     public void setServiceRole(String serviceRole) {
@@ -395,12 +404,12 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR Studio
-     * to interoperate with other Amazon Web Services services.
+     * The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to
+     * interoperate with other Amazon Web Services services.
      * </p>
      * 
-     * @return The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon
-     *         EMR Studio to interoperate with other Amazon Web Services services.
+     * @return The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to
+     *         interoperate with other Amazon Web Services services.
      */
 
     public String getServiceRole() {
@@ -409,13 +418,13 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR Studio
-     * to interoperate with other Amazon Web Services services.
+     * The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to
+     * interoperate with other Amazon Web Services services.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR
-     *        Studio to interoperate with other Amazon Web Services services.
+     *        The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to
+     *        interoperate with other Amazon Web Services services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -426,13 +435,15 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IAM user role that will be assumed by users and groups logged in to an Amazon EMR Studio. The permissions
-     * attached to this IAM role can be scoped down for each user or group using session policies.
+     * The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a
+     * <code>UserRole</code> when you use Amazon Web Services SSO authentication. The permissions attached to the
+     * <code>UserRole</code> can be scoped down for each user or group using session policies.
      * </p>
      * 
      * @param userRole
-     *        The IAM user role that will be assumed by users and groups logged in to an Amazon EMR Studio. The
-     *        permissions attached to this IAM role can be scoped down for each user or group using session policies.
+     *        The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a
+     *        <code>UserRole</code> when you use Amazon Web Services SSO authentication. The permissions attached to the
+     *        <code>UserRole</code> can be scoped down for each user or group using session policies.
      */
 
     public void setUserRole(String userRole) {
@@ -441,12 +452,14 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IAM user role that will be assumed by users and groups logged in to an Amazon EMR Studio. The permissions
-     * attached to this IAM role can be scoped down for each user or group using session policies.
+     * The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a
+     * <code>UserRole</code> when you use Amazon Web Services SSO authentication. The permissions attached to the
+     * <code>UserRole</code> can be scoped down for each user or group using session policies.
      * </p>
      * 
-     * @return The IAM user role that will be assumed by users and groups logged in to an Amazon EMR Studio. The
-     *         permissions attached to this IAM role can be scoped down for each user or group using session policies.
+     * @return The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a
+     *         <code>UserRole</code> when you use Amazon Web Services SSO authentication. The permissions attached to
+     *         the <code>UserRole</code> can be scoped down for each user or group using session policies.
      */
 
     public String getUserRole() {
@@ -455,13 +468,15 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The IAM user role that will be assumed by users and groups logged in to an Amazon EMR Studio. The permissions
-     * attached to this IAM role can be scoped down for each user or group using session policies.
+     * The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a
+     * <code>UserRole</code> when you use Amazon Web Services SSO authentication. The permissions attached to the
+     * <code>UserRole</code> can be scoped down for each user or group using session policies.
      * </p>
      * 
      * @param userRole
-     *        The IAM user role that will be assumed by users and groups logged in to an Amazon EMR Studio. The
-     *        permissions attached to this IAM role can be scoped down for each user or group using session policies.
+     *        The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a
+     *        <code>UserRole</code> when you use Amazon Web Services SSO authentication. The permissions attached to the
+     *        <code>UserRole</code> can be scoped down for each user or group using session policies.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -611,6 +626,116 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
+     * The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM authentication
+     * and want to let federated users log in to a Studio with the Studio URL and credentials from your IdP. Amazon EMR
+     * Studio redirects users to this endpoint to enter credentials.
+     * </p>
+     * 
+     * @param idpAuthUrl
+     *        The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM
+     *        authentication and want to let federated users log in to a Studio with the Studio URL and credentials from
+     *        your IdP. Amazon EMR Studio redirects users to this endpoint to enter credentials.
+     */
+
+    public void setIdpAuthUrl(String idpAuthUrl) {
+        this.idpAuthUrl = idpAuthUrl;
+    }
+
+    /**
+     * <p>
+     * The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM authentication
+     * and want to let federated users log in to a Studio with the Studio URL and credentials from your IdP. Amazon EMR
+     * Studio redirects users to this endpoint to enter credentials.
+     * </p>
+     * 
+     * @return The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM
+     *         authentication and want to let federated users log in to a Studio with the Studio URL and credentials
+     *         from your IdP. Amazon EMR Studio redirects users to this endpoint to enter credentials.
+     */
+
+    public String getIdpAuthUrl() {
+        return this.idpAuthUrl;
+    }
+
+    /**
+     * <p>
+     * The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM authentication
+     * and want to let federated users log in to a Studio with the Studio URL and credentials from your IdP. Amazon EMR
+     * Studio redirects users to this endpoint to enter credentials.
+     * </p>
+     * 
+     * @param idpAuthUrl
+     *        The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM
+     *        authentication and want to let federated users log in to a Studio with the Studio URL and credentials from
+     *        your IdP. Amazon EMR Studio redirects users to this endpoint to enter credentials.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateStudioRequest withIdpAuthUrl(String idpAuthUrl) {
+        setIdpAuthUrl(idpAuthUrl);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name that your identity provider (IdP) uses for its <code>RelayState</code> parameter. For example,
+     * <code>RelayState</code> or <code>TargetSource</code>. Specify this value when you use IAM authentication and want
+     * to let federated users log in to a Studio using the Studio URL. The <code>RelayState</code> parameter differs by
+     * IdP.
+     * </p>
+     * 
+     * @param idpRelayStateParameterName
+     *        The name that your identity provider (IdP) uses for its <code>RelayState</code> parameter. For example,
+     *        <code>RelayState</code> or <code>TargetSource</code>. Specify this value when you use IAM authentication
+     *        and want to let federated users log in to a Studio using the Studio URL. The <code>RelayState</code>
+     *        parameter differs by IdP.
+     */
+
+    public void setIdpRelayStateParameterName(String idpRelayStateParameterName) {
+        this.idpRelayStateParameterName = idpRelayStateParameterName;
+    }
+
+    /**
+     * <p>
+     * The name that your identity provider (IdP) uses for its <code>RelayState</code> parameter. For example,
+     * <code>RelayState</code> or <code>TargetSource</code>. Specify this value when you use IAM authentication and want
+     * to let federated users log in to a Studio using the Studio URL. The <code>RelayState</code> parameter differs by
+     * IdP.
+     * </p>
+     * 
+     * @return The name that your identity provider (IdP) uses for its <code>RelayState</code> parameter. For example,
+     *         <code>RelayState</code> or <code>TargetSource</code>. Specify this value when you use IAM authentication
+     *         and want to let federated users log in to a Studio using the Studio URL. The <code>RelayState</code>
+     *         parameter differs by IdP.
+     */
+
+    public String getIdpRelayStateParameterName() {
+        return this.idpRelayStateParameterName;
+    }
+
+    /**
+     * <p>
+     * The name that your identity provider (IdP) uses for its <code>RelayState</code> parameter. For example,
+     * <code>RelayState</code> or <code>TargetSource</code>. Specify this value when you use IAM authentication and want
+     * to let federated users log in to a Studio using the Studio URL. The <code>RelayState</code> parameter differs by
+     * IdP.
+     * </p>
+     * 
+     * @param idpRelayStateParameterName
+     *        The name that your identity provider (IdP) uses for its <code>RelayState</code> parameter. For example,
+     *        <code>RelayState</code> or <code>TargetSource</code>. Specify this value when you use IAM authentication
+     *        and want to let federated users log in to a Studio using the Studio URL. The <code>RelayState</code>
+     *        parameter differs by IdP.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateStudioRequest withIdpRelayStateParameterName(String idpRelayStateParameterName) {
+        setIdpRelayStateParameterName(idpRelayStateParameterName);
+        return this;
+    }
+
+    /**
+     * <p>
      * A list of tags to associate with the Amazon EMR Studio. Tags are user-defined key-value pairs that consist of a
      * required key string with a maximum of 128 characters, and an optional value string with a maximum of 256
      * characters.
@@ -730,6 +855,10 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
             sb.append("EngineSecurityGroupId: ").append(getEngineSecurityGroupId()).append(",");
         if (getDefaultS3Location() != null)
             sb.append("DefaultS3Location: ").append(getDefaultS3Location()).append(",");
+        if (getIdpAuthUrl() != null)
+            sb.append("IdpAuthUrl: ").append(getIdpAuthUrl()).append(",");
+        if (getIdpRelayStateParameterName() != null)
+            sb.append("IdpRelayStateParameterName: ").append(getIdpRelayStateParameterName()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -786,6 +915,14 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getDefaultS3Location() != null && other.getDefaultS3Location().equals(this.getDefaultS3Location()) == false)
             return false;
+        if (other.getIdpAuthUrl() == null ^ this.getIdpAuthUrl() == null)
+            return false;
+        if (other.getIdpAuthUrl() != null && other.getIdpAuthUrl().equals(this.getIdpAuthUrl()) == false)
+            return false;
+        if (other.getIdpRelayStateParameterName() == null ^ this.getIdpRelayStateParameterName() == null)
+            return false;
+        if (other.getIdpRelayStateParameterName() != null && other.getIdpRelayStateParameterName().equals(this.getIdpRelayStateParameterName()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -808,6 +945,8 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getWorkspaceSecurityGroupId() == null) ? 0 : getWorkspaceSecurityGroupId().hashCode());
         hashCode = prime * hashCode + ((getEngineSecurityGroupId() == null) ? 0 : getEngineSecurityGroupId().hashCode());
         hashCode = prime * hashCode + ((getDefaultS3Location() == null) ? 0 : getDefaultS3Location().hashCode());
+        hashCode = prime * hashCode + ((getIdpAuthUrl() == null) ? 0 : getIdpAuthUrl().hashCode());
+        hashCode = prime * hashCode + ((getIdpRelayStateParameterName() == null) ? 0 : getIdpRelayStateParameterName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

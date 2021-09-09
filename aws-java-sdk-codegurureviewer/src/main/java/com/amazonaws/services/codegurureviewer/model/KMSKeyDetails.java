@@ -24,13 +24,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <ul>
  * <li>
  * <p>
- * The encryption option for a repository association. It is either owned by AWS Key Management Service (KMS) (
- * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+ * The encryption option for a repository association. It is either owned by Amazon Web Services Key Management Service
+ * (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
  * </p>
  * </li>
  * <li>
  * <p>
- * The ID of the AWS KMS key that is associated with a respository association.
+ * The ID of the Amazon Web Services KMS key that is associated with a respository association.
  * </p>
  * </li>
  * </ul>
@@ -43,25 +43,25 @@ public class KMSKeyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS KMS key that is associated with a respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with a respository association.
      * </p>
      */
     private String kMSKeyId;
     /**
      * <p>
-     * The encryption option for a repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for a repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      */
     private String encryptionOption;
 
     /**
      * <p>
-     * The ID of the AWS KMS key that is associated with a respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with a respository association.
      * </p>
      * 
      * @param kMSKeyId
-     *        The ID of the AWS KMS key that is associated with a respository association.
+     *        The ID of the Amazon Web Services KMS key that is associated with a respository association.
      */
 
     public void setKMSKeyId(String kMSKeyId) {
@@ -70,10 +70,10 @@ public class KMSKeyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS KMS key that is associated with a respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with a respository association.
      * </p>
      * 
-     * @return The ID of the AWS KMS key that is associated with a respository association.
+     * @return The ID of the Amazon Web Services KMS key that is associated with a respository association.
      */
 
     public String getKMSKeyId() {
@@ -82,11 +82,11 @@ public class KMSKeyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS KMS key that is associated with a respository association.
+     * The ID of the Amazon Web Services KMS key that is associated with a respository association.
      * </p>
      * 
      * @param kMSKeyId
-     *        The ID of the AWS KMS key that is associated with a respository association.
+     *        The ID of the Amazon Web Services KMS key that is associated with a respository association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,13 +97,14 @@ public class KMSKeyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The encryption option for a repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for a repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * 
      * @param encryptionOption
-     *        The encryption option for a repository association. It is either owned by AWS Key Management Service (KMS)
-     *        (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     *        The encryption option for a repository association. It is either owned by Amazon Web Services Key
+     *        Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *        <code>CUSTOMER_MANAGED_CMK</code>).
      * @see EncryptionOption
      */
 
@@ -113,12 +114,13 @@ public class KMSKeyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The encryption option for a repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for a repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * 
-     * @return The encryption option for a repository association. It is either owned by AWS Key Management Service
-     *         (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * @return The encryption option for a repository association. It is either owned by Amazon Web Services Key
+     *         Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *         <code>CUSTOMER_MANAGED_CMK</code>).
      * @see EncryptionOption
      */
 
@@ -128,13 +130,14 @@ public class KMSKeyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The encryption option for a repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for a repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * 
      * @param encryptionOption
-     *        The encryption option for a repository association. It is either owned by AWS Key Management Service (KMS)
-     *        (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     *        The encryption option for a repository association. It is either owned by Amazon Web Services Key
+     *        Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *        <code>CUSTOMER_MANAGED_CMK</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionOption
      */
@@ -146,13 +149,14 @@ public class KMSKeyDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The encryption option for a repository association. It is either owned by AWS Key Management Service (KMS) (
-     * <code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     * The encryption option for a repository association. It is either owned by Amazon Web Services Key Management
+     * Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
      * </p>
      * 
      * @param encryptionOption
-     *        The encryption option for a repository association. It is either owned by AWS Key Management Service (KMS)
-     *        (<code>AWS_OWNED_CMK</code>) or customer managed (<code>CUSTOMER_MANAGED_CMK</code>).
+     *        The encryption option for a repository association. It is either owned by Amazon Web Services Key
+     *        Management Service (KMS) (<code>AWS_OWNED_CMK</code>) or customer managed (
+     *        <code>CUSTOMER_MANAGED_CMK</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionOption
      */

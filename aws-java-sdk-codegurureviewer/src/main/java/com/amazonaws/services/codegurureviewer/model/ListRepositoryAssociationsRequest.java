@@ -98,9 +98,9 @@ public class ListRepositoryAssociationsRequest extends com.amazonaws.AmazonWebSe
     private java.util.List<String> names;
     /**
      * <p>
-     * List of owners to use as a filter. For AWS CodeCommit, it is the name of the CodeCommit account that was used to
-     * associate the repository. For other repository source providers, such as Bitbucket and GitHub Enterprise Server,
-     * this is name of the account that was used to associate the repository.
+     * List of owners to use as a filter. For Amazon Web Services CodeCommit, it is the name of the CodeCommit account
+     * that was used to associate the repository. For other repository source providers, such as Bitbucket and GitHub
+     * Enterprise Server, this is name of the account that was used to associate the repository.
      * </p>
      */
     private java.util.List<String> owners;
@@ -945,14 +945,15 @@ public class ListRepositoryAssociationsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * List of owners to use as a filter. For AWS CodeCommit, it is the name of the CodeCommit account that was used to
-     * associate the repository. For other repository source providers, such as Bitbucket and GitHub Enterprise Server,
-     * this is name of the account that was used to associate the repository.
+     * List of owners to use as a filter. For Amazon Web Services CodeCommit, it is the name of the CodeCommit account
+     * that was used to associate the repository. For other repository source providers, such as Bitbucket and GitHub
+     * Enterprise Server, this is name of the account that was used to associate the repository.
      * </p>
      * 
-     * @return List of owners to use as a filter. For AWS CodeCommit, it is the name of the CodeCommit account that was
-     *         used to associate the repository. For other repository source providers, such as Bitbucket and GitHub
-     *         Enterprise Server, this is name of the account that was used to associate the repository.
+     * @return List of owners to use as a filter. For Amazon Web Services CodeCommit, it is the name of the CodeCommit
+     *         account that was used to associate the repository. For other repository source providers, such as
+     *         Bitbucket and GitHub Enterprise Server, this is name of the account that was used to associate the
+     *         repository.
      */
 
     public java.util.List<String> getOwners() {
@@ -961,15 +962,16 @@ public class ListRepositoryAssociationsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * List of owners to use as a filter. For AWS CodeCommit, it is the name of the CodeCommit account that was used to
-     * associate the repository. For other repository source providers, such as Bitbucket and GitHub Enterprise Server,
-     * this is name of the account that was used to associate the repository.
+     * List of owners to use as a filter. For Amazon Web Services CodeCommit, it is the name of the CodeCommit account
+     * that was used to associate the repository. For other repository source providers, such as Bitbucket and GitHub
+     * Enterprise Server, this is name of the account that was used to associate the repository.
      * </p>
      * 
      * @param owners
-     *        List of owners to use as a filter. For AWS CodeCommit, it is the name of the CodeCommit account that was
-     *        used to associate the repository. For other repository source providers, such as Bitbucket and GitHub
-     *        Enterprise Server, this is name of the account that was used to associate the repository.
+     *        List of owners to use as a filter. For Amazon Web Services CodeCommit, it is the name of the CodeCommit
+     *        account that was used to associate the repository. For other repository source providers, such as
+     *        Bitbucket and GitHub Enterprise Server, this is name of the account that was used to associate the
+     *        repository.
      */
 
     public void setOwners(java.util.Collection<String> owners) {
@@ -983,9 +985,9 @@ public class ListRepositoryAssociationsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * List of owners to use as a filter. For AWS CodeCommit, it is the name of the CodeCommit account that was used to
-     * associate the repository. For other repository source providers, such as Bitbucket and GitHub Enterprise Server,
-     * this is name of the account that was used to associate the repository.
+     * List of owners to use as a filter. For Amazon Web Services CodeCommit, it is the name of the CodeCommit account
+     * that was used to associate the repository. For other repository source providers, such as Bitbucket and GitHub
+     * Enterprise Server, this is name of the account that was used to associate the repository.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -994,9 +996,10 @@ public class ListRepositoryAssociationsRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param owners
-     *        List of owners to use as a filter. For AWS CodeCommit, it is the name of the CodeCommit account that was
-     *        used to associate the repository. For other repository source providers, such as Bitbucket and GitHub
-     *        Enterprise Server, this is name of the account that was used to associate the repository.
+     *        List of owners to use as a filter. For Amazon Web Services CodeCommit, it is the name of the CodeCommit
+     *        account that was used to associate the repository. For other repository source providers, such as
+     *        Bitbucket and GitHub Enterprise Server, this is name of the account that was used to associate the
+     *        repository.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1012,15 +1015,16 @@ public class ListRepositoryAssociationsRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * List of owners to use as a filter. For AWS CodeCommit, it is the name of the CodeCommit account that was used to
-     * associate the repository. For other repository source providers, such as Bitbucket and GitHub Enterprise Server,
-     * this is name of the account that was used to associate the repository.
+     * List of owners to use as a filter. For Amazon Web Services CodeCommit, it is the name of the CodeCommit account
+     * that was used to associate the repository. For other repository source providers, such as Bitbucket and GitHub
+     * Enterprise Server, this is name of the account that was used to associate the repository.
      * </p>
      * 
      * @param owners
-     *        List of owners to use as a filter. For AWS CodeCommit, it is the name of the CodeCommit account that was
-     *        used to associate the repository. For other repository source providers, such as Bitbucket and GitHub
-     *        Enterprise Server, this is name of the account that was used to associate the repository.
+     *        List of owners to use as a filter. For Amazon Web Services CodeCommit, it is the name of the CodeCommit
+     *        account that was used to associate the repository. For other repository source providers, such as
+     *        Bitbucket and GitHub Enterprise Server, this is name of the account that was used to associate the
+     *        repository.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
