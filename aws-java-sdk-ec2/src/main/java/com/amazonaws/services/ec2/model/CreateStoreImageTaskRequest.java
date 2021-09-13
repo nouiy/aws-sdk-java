@@ -34,14 +34,14 @@ public class CreateStoreImageTaskRequest extends AmazonWebServiceRequest impleme
     private String imageId;
     /**
      * <p>
-     * The name of the S3 bucket in which the AMI object will be stored. The bucket must be in the Region in which the
-     * request is being made. The AMI object appears in the bucket only after the upload task has completed.
+     * The name of the Amazon S3 bucket in which the AMI object will be stored. The bucket must be in the Region in
+     * which the request is being made. The AMI object appears in the bucket only after the upload task has completed.
      * </p>
      */
     private String bucket;
     /**
      * <p>
-     * The tags to apply to the AMI object that will be stored in the S3 bucket.
+     * The tags to apply to the AMI object that will be stored in the Amazon S3 bucket.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<S3ObjectTag> s3ObjectTags;
@@ -88,13 +88,13 @@ public class CreateStoreImageTaskRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the S3 bucket in which the AMI object will be stored. The bucket must be in the Region in which the
-     * request is being made. The AMI object appears in the bucket only after the upload task has completed.
+     * The name of the Amazon S3 bucket in which the AMI object will be stored. The bucket must be in the Region in
+     * which the request is being made. The AMI object appears in the bucket only after the upload task has completed.
      * </p>
      * 
      * @param bucket
-     *        The name of the S3 bucket in which the AMI object will be stored. The bucket must be in the Region in
-     *        which the request is being made. The AMI object appears in the bucket only after the upload task has
+     *        The name of the Amazon S3 bucket in which the AMI object will be stored. The bucket must be in the Region
+     *        in which the request is being made. The AMI object appears in the bucket only after the upload task has
      *        completed.
      */
 
@@ -104,12 +104,12 @@ public class CreateStoreImageTaskRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the S3 bucket in which the AMI object will be stored. The bucket must be in the Region in which the
-     * request is being made. The AMI object appears in the bucket only after the upload task has completed.
+     * The name of the Amazon S3 bucket in which the AMI object will be stored. The bucket must be in the Region in
+     * which the request is being made. The AMI object appears in the bucket only after the upload task has completed.
      * </p>
      * 
-     * @return The name of the S3 bucket in which the AMI object will be stored. The bucket must be in the Region in
-     *         which the request is being made. The AMI object appears in the bucket only after the upload task has
+     * @return The name of the Amazon S3 bucket in which the AMI object will be stored. The bucket must be in the Region
+     *         in which the request is being made. The AMI object appears in the bucket only after the upload task has
      *         completed.
      */
 
@@ -119,13 +119,13 @@ public class CreateStoreImageTaskRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The name of the S3 bucket in which the AMI object will be stored. The bucket must be in the Region in which the
-     * request is being made. The AMI object appears in the bucket only after the upload task has completed.
+     * The name of the Amazon S3 bucket in which the AMI object will be stored. The bucket must be in the Region in
+     * which the request is being made. The AMI object appears in the bucket only after the upload task has completed.
      * </p>
      * 
      * @param bucket
-     *        The name of the S3 bucket in which the AMI object will be stored. The bucket must be in the Region in
-     *        which the request is being made. The AMI object appears in the bucket only after the upload task has
+     *        The name of the Amazon S3 bucket in which the AMI object will be stored. The bucket must be in the Region
+     *        in which the request is being made. The AMI object appears in the bucket only after the upload task has
      *        completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -137,10 +137,10 @@ public class CreateStoreImageTaskRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The tags to apply to the AMI object that will be stored in the S3 bucket.
+     * The tags to apply to the AMI object that will be stored in the Amazon S3 bucket.
      * </p>
      * 
-     * @return The tags to apply to the AMI object that will be stored in the S3 bucket.
+     * @return The tags to apply to the AMI object that will be stored in the Amazon S3 bucket.
      */
 
     public java.util.List<S3ObjectTag> getS3ObjectTags() {
@@ -152,11 +152,11 @@ public class CreateStoreImageTaskRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The tags to apply to the AMI object that will be stored in the S3 bucket.
+     * The tags to apply to the AMI object that will be stored in the Amazon S3 bucket.
      * </p>
      * 
      * @param s3ObjectTags
-     *        The tags to apply to the AMI object that will be stored in the S3 bucket.
+     *        The tags to apply to the AMI object that will be stored in the Amazon S3 bucket.
      */
 
     public void setS3ObjectTags(java.util.Collection<S3ObjectTag> s3ObjectTags) {
@@ -170,7 +170,7 @@ public class CreateStoreImageTaskRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The tags to apply to the AMI object that will be stored in the S3 bucket.
+     * The tags to apply to the AMI object that will be stored in the Amazon S3 bucket.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -179,7 +179,7 @@ public class CreateStoreImageTaskRequest extends AmazonWebServiceRequest impleme
      * </p>
      * 
      * @param s3ObjectTags
-     *        The tags to apply to the AMI object that will be stored in the S3 bucket.
+     *        The tags to apply to the AMI object that will be stored in the Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,11 +195,11 @@ public class CreateStoreImageTaskRequest extends AmazonWebServiceRequest impleme
 
     /**
      * <p>
-     * The tags to apply to the AMI object that will be stored in the S3 bucket.
+     * The tags to apply to the AMI object that will be stored in the Amazon S3 bucket.
      * </p>
      * 
      * @param s3ObjectTags
-     *        The tags to apply to the AMI object that will be stored in the S3 bucket.
+     *        The tags to apply to the AMI object that will be stored in the Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -57,8 +57,10 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the
-     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image. When
-     * this option is used, file system integrity on the created image can't be guaranteed.
+     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image.
+     * Without a reboot, the AMI will be crash consistent (all the volumes are snapshotted at the same time), but not
+     * application consistent (all the operating system buffers are not flushed to disk before the snapshots are
+     * created).
      * </p>
      */
     private Boolean noReboot;
@@ -74,7 +76,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      * </li>
      * <li>
      * <p>
-     * To tag the snapshots that are created of the root volume and of other EBS volumes that are attached to the
+     * To tag the snapshots that are created of the root volume and of other Amazon EBS volumes that are attached to the
      * instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is applied to all
      * of the snapshots that are created.
      * </p>
@@ -339,14 +341,18 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the
-     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image. When
-     * this option is used, file system integrity on the created image can't be guaranteed.
+     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image.
+     * Without a reboot, the AMI will be crash consistent (all the volumes are snapshotted at the same time), but not
+     * application consistent (all the operating system buffers are not flushed to disk before the snapshots are
+     * created).
      * </p>
      * 
      * @param noReboot
      *        By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the
      *        <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image.
-     *        When this option is used, file system integrity on the created image can't be guaranteed.
+     *        Without a reboot, the AMI will be crash consistent (all the volumes are snapshotted at the same time), but
+     *        not application consistent (all the operating system buffers are not flushed to disk before the snapshots
+     *        are created).
      */
 
     public void setNoReboot(Boolean noReboot) {
@@ -356,13 +362,17 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the
-     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image. When
-     * this option is used, file system integrity on the created image can't be guaranteed.
+     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image.
+     * Without a reboot, the AMI will be crash consistent (all the volumes are snapshotted at the same time), but not
+     * application consistent (all the operating system buffers are not flushed to disk before the snapshots are
+     * created).
      * </p>
      * 
      * @return By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the
      *         <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the
-     *         image. When this option is used, file system integrity on the created image can't be guaranteed.
+     *         image. Without a reboot, the AMI will be crash consistent (all the volumes are snapshotted at the same
+     *         time), but not application consistent (all the operating system buffers are not flushed to disk before
+     *         the snapshots are created).
      */
 
     public Boolean getNoReboot() {
@@ -372,14 +382,18 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the
-     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image. When
-     * this option is used, file system integrity on the created image can't be guaranteed.
+     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image.
+     * Without a reboot, the AMI will be crash consistent (all the volumes are snapshotted at the same time), but not
+     * application consistent (all the operating system buffers are not flushed to disk before the snapshots are
+     * created).
      * </p>
      * 
      * @param noReboot
      *        By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the
      *        <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image.
-     *        When this option is used, file system integrity on the created image can't be guaranteed.
+     *        Without a reboot, the AMI will be crash consistent (all the volumes are snapshotted at the same time), but
+     *        not application consistent (all the operating system buffers are not flushed to disk before the snapshots
+     *        are created).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -391,13 +405,17 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
     /**
      * <p>
      * By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the
-     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image. When
-     * this option is used, file system integrity on the created image can't be guaranteed.
+     * <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the image.
+     * Without a reboot, the AMI will be crash consistent (all the volumes are snapshotted at the same time), but not
+     * application consistent (all the operating system buffers are not flushed to disk before the snapshots are
+     * created).
      * </p>
      * 
      * @return By default, Amazon EC2 attempts to shut down and reboot the instance before creating the image. If the
      *         <code>No Reboot</code> option is set, Amazon EC2 doesn't shut down the instance before creating the
-     *         image. When this option is used, file system integrity on the created image can't be guaranteed.
+     *         image. Without a reboot, the AMI will be crash consistent (all the volumes are snapshotted at the same
+     *         time), but not application consistent (all the operating system buffers are not flushed to disk before
+     *         the snapshots are created).
      */
 
     public Boolean isNoReboot() {
@@ -416,7 +434,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      * </li>
      * <li>
      * <p>
-     * To tag the snapshots that are created of the root volume and of other EBS volumes that are attached to the
+     * To tag the snapshots that are created of the root volume and of other Amazon EBS volumes that are attached to the
      * instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is applied to all
      * of the snapshots that are created.
      * </p>
@@ -439,9 +457,9 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      *         </li>
      *         <li>
      *         <p>
-     *         To tag the snapshots that are created of the root volume and of other EBS volumes that are attached to
-     *         the instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is
-     *         applied to all of the snapshots that are created.
+     *         To tag the snapshots that are created of the root volume and of other Amazon EBS volumes that are
+     *         attached to the instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same
+     *         tag is applied to all of the snapshots that are created.
      *         </p>
      *         </li>
      *         </ul>
@@ -472,7 +490,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      * </li>
      * <li>
      * <p>
-     * To tag the snapshots that are created of the root volume and of other EBS volumes that are attached to the
+     * To tag the snapshots that are created of the root volume and of other Amazon EBS volumes that are attached to the
      * instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is applied to all
      * of the snapshots that are created.
      * </p>
@@ -496,9 +514,9 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      *        </li>
      *        <li>
      *        <p>
-     *        To tag the snapshots that are created of the root volume and of other EBS volumes that are attached to the
-     *        instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is applied
-     *        to all of the snapshots that are created.
+     *        To tag the snapshots that are created of the root volume and of other Amazon EBS volumes that are attached
+     *        to the instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is
+     *        applied to all of the snapshots that are created.
      *        </p>
      *        </li>
      *        </ul>
@@ -531,7 +549,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      * </li>
      * <li>
      * <p>
-     * To tag the snapshots that are created of the root volume and of other EBS volumes that are attached to the
+     * To tag the snapshots that are created of the root volume and of other Amazon EBS volumes that are attached to the
      * instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is applied to all
      * of the snapshots that are created.
      * </p>
@@ -560,9 +578,9 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      *        </li>
      *        <li>
      *        <p>
-     *        To tag the snapshots that are created of the root volume and of other EBS volumes that are attached to the
-     *        instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is applied
-     *        to all of the snapshots that are created.
+     *        To tag the snapshots that are created of the root volume and of other Amazon EBS volumes that are attached
+     *        to the instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is
+     *        applied to all of the snapshots that are created.
      *        </p>
      *        </li>
      *        </ul>
@@ -597,7 +615,7 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      * </li>
      * <li>
      * <p>
-     * To tag the snapshots that are created of the root volume and of other EBS volumes that are attached to the
+     * To tag the snapshots that are created of the root volume and of other Amazon EBS volumes that are attached to the
      * instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is applied to all
      * of the snapshots that are created.
      * </p>
@@ -621,9 +639,9 @@ public class CreateImageRequest extends AmazonWebServiceRequest implements Seria
      *        </li>
      *        <li>
      *        <p>
-     *        To tag the snapshots that are created of the root volume and of other EBS volumes that are attached to the
-     *        instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is applied
-     *        to all of the snapshots that are created.
+     *        To tag the snapshots that are created of the root volume and of other Amazon EBS volumes that are attached
+     *        to the instance, the value for <code>ResourceType</code> must be <code>snapshot</code>. The same tag is
+     *        applied to all of the snapshots that are created.
      *        </p>
      *        </li>
      *        </ul>

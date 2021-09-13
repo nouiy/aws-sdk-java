@@ -28,7 +28,7 @@ public class CreateRestoreImageTaskRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The name of the S3 bucket that contains the stored AMI object.
+     * The name of the Amazon S3 bucket that contains the stored AMI object.
      * </p>
      */
     private String bucket;
@@ -67,11 +67,11 @@ public class CreateRestoreImageTaskRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The name of the S3 bucket that contains the stored AMI object.
+     * The name of the Amazon S3 bucket that contains the stored AMI object.
      * </p>
      * 
      * @param bucket
-     *        The name of the S3 bucket that contains the stored AMI object.
+     *        The name of the Amazon S3 bucket that contains the stored AMI object.
      */
 
     public void setBucket(String bucket) {
@@ -80,10 +80,10 @@ public class CreateRestoreImageTaskRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The name of the S3 bucket that contains the stored AMI object.
+     * The name of the Amazon S3 bucket that contains the stored AMI object.
      * </p>
      * 
-     * @return The name of the S3 bucket that contains the stored AMI object.
+     * @return The name of the Amazon S3 bucket that contains the stored AMI object.
      */
 
     public String getBucket() {
@@ -92,11 +92,11 @@ public class CreateRestoreImageTaskRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The name of the S3 bucket that contains the stored AMI object.
+     * The name of the Amazon S3 bucket that contains the stored AMI object.
      * </p>
      * 
      * @param bucket
-     *        The name of the S3 bucket that contains the stored AMI object.
+     *        The name of the Amazon S3 bucket that contains the stored AMI object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

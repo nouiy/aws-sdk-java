@@ -61,6 +61,10 @@ public class ModifyManagedPrefixListRequest extends AmazonWebServiceRequest impl
      * The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and modify the
      * size of a prefix list at the same time.
      * </p>
+     * <p>
+     * If any of the resources that reference the prefix list cannot support the new maximum size, the modify operation
+     * fails. Check the state message for the IDs of the first ten resources that do not support the new maximum size.
+     * </p>
      */
     private Integer maxEntries;
 
@@ -335,10 +339,18 @@ public class ModifyManagedPrefixListRequest extends AmazonWebServiceRequest impl
      * The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and modify the
      * size of a prefix list at the same time.
      * </p>
+     * <p>
+     * If any of the resources that reference the prefix list cannot support the new maximum size, the modify operation
+     * fails. Check the state message for the IDs of the first ten resources that do not support the new maximum size.
+     * </p>
      * 
      * @param maxEntries
      *        The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and
-     *        modify the size of a prefix list at the same time.
+     *        modify the size of a prefix list at the same time.</p>
+     *        <p>
+     *        If any of the resources that reference the prefix list cannot support the new maximum size, the modify
+     *        operation fails. Check the state message for the IDs of the first ten resources that do not support the
+     *        new maximum size.
      */
 
     public void setMaxEntries(Integer maxEntries) {
@@ -350,9 +362,17 @@ public class ModifyManagedPrefixListRequest extends AmazonWebServiceRequest impl
      * The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and modify the
      * size of a prefix list at the same time.
      * </p>
+     * <p>
+     * If any of the resources that reference the prefix list cannot support the new maximum size, the modify operation
+     * fails. Check the state message for the IDs of the first ten resources that do not support the new maximum size.
+     * </p>
      * 
      * @return The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and
-     *         modify the size of a prefix list at the same time.
+     *         modify the size of a prefix list at the same time.</p>
+     *         <p>
+     *         If any of the resources that reference the prefix list cannot support the new maximum size, the modify
+     *         operation fails. Check the state message for the IDs of the first ten resources that do not support the
+     *         new maximum size.
      */
 
     public Integer getMaxEntries() {
@@ -364,10 +384,18 @@ public class ModifyManagedPrefixListRequest extends AmazonWebServiceRequest impl
      * The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and modify the
      * size of a prefix list at the same time.
      * </p>
+     * <p>
+     * If any of the resources that reference the prefix list cannot support the new maximum size, the modify operation
+     * fails. Check the state message for the IDs of the first ten resources that do not support the new maximum size.
+     * </p>
      * 
      * @param maxEntries
      *        The maximum number of entries for the prefix list. You cannot modify the entries of a prefix list and
-     *        modify the size of a prefix list at the same time.
+     *        modify the size of a prefix list at the same time.</p>
+     *        <p>
+     *        If any of the resources that reference the prefix list cannot support the new maximum size, the modify
+     *        operation fails. Check the state message for the IDs of the first ten resources that do not support the
+     *        new maximum size.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

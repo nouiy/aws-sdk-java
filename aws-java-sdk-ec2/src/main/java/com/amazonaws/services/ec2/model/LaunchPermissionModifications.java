@@ -28,23 +28,23 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID to add to the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to add to the list of launch permissions for the AMI.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<LaunchPermission> add;
     /**
      * <p>
-     * The AWS account ID to remove from the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to remove from the list of launch permissions for the AMI.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<LaunchPermission> remove;
 
     /**
      * <p>
-     * The AWS account ID to add to the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to add to the list of launch permissions for the AMI.
      * </p>
      * 
-     * @return The AWS account ID to add to the list of launch permissions for the AMI.
+     * @return The Amazon Web Services account ID to add to the list of launch permissions for the AMI.
      */
 
     public java.util.List<LaunchPermission> getAdd() {
@@ -56,11 +56,11 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID to add to the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to add to the list of launch permissions for the AMI.
      * </p>
      * 
      * @param add
-     *        The AWS account ID to add to the list of launch permissions for the AMI.
+     *        The Amazon Web Services account ID to add to the list of launch permissions for the AMI.
      */
 
     public void setAdd(java.util.Collection<LaunchPermission> add) {
@@ -74,7 +74,7 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID to add to the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to add to the list of launch permissions for the AMI.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,7 +83,7 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
      * </p>
      * 
      * @param add
-     *        The AWS account ID to add to the list of launch permissions for the AMI.
+     *        The Amazon Web Services account ID to add to the list of launch permissions for the AMI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,11 +99,11 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID to add to the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to add to the list of launch permissions for the AMI.
      * </p>
      * 
      * @param add
-     *        The AWS account ID to add to the list of launch permissions for the AMI.
+     *        The Amazon Web Services account ID to add to the list of launch permissions for the AMI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,10 +114,10 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID to remove from the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to remove from the list of launch permissions for the AMI.
      * </p>
      * 
-     * @return The AWS account ID to remove from the list of launch permissions for the AMI.
+     * @return The Amazon Web Services account ID to remove from the list of launch permissions for the AMI.
      */
 
     public java.util.List<LaunchPermission> getRemove() {
@@ -129,11 +129,11 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID to remove from the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to remove from the list of launch permissions for the AMI.
      * </p>
      * 
      * @param remove
-     *        The AWS account ID to remove from the list of launch permissions for the AMI.
+     *        The Amazon Web Services account ID to remove from the list of launch permissions for the AMI.
      */
 
     public void setRemove(java.util.Collection<LaunchPermission> remove) {
@@ -147,7 +147,7 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID to remove from the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to remove from the list of launch permissions for the AMI.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -156,7 +156,7 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
      * </p>
      * 
      * @param remove
-     *        The AWS account ID to remove from the list of launch permissions for the AMI.
+     *        The Amazon Web Services account ID to remove from the list of launch permissions for the AMI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,11 +172,11 @@ public class LaunchPermissionModifications implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID to remove from the list of launch permissions for the AMI.
+     * The Amazon Web Services account ID to remove from the list of launch permissions for the AMI.
      * </p>
      * 
      * @param remove
-     *        The AWS account ID to remove from the list of launch permissions for the AMI.
+     *        The Amazon Web Services account ID to remove from the list of launch permissions for the AMI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -40,7 +40,8 @@ public class ThingConnectivity implements Serializable, Cloneable, StructuredPoj
     private Long timestamp;
     /**
      * <p>
-     * The reason why the client is disconnected.
+     * The reason why the client is disconnected. If the thing has been disconnected for approximately an hour, the
+     * <code>disconnectReason</code> value might be missing.
      * </p>
      */
     private String disconnectReason;
@@ -145,11 +146,13 @@ public class ThingConnectivity implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The reason why the client is disconnected.
+     * The reason why the client is disconnected. If the thing has been disconnected for approximately an hour, the
+     * <code>disconnectReason</code> value might be missing.
      * </p>
      * 
      * @param disconnectReason
-     *        The reason why the client is disconnected.
+     *        The reason why the client is disconnected. If the thing has been disconnected for approximately an hour,
+     *        the <code>disconnectReason</code> value might be missing.
      */
 
     public void setDisconnectReason(String disconnectReason) {
@@ -158,10 +161,12 @@ public class ThingConnectivity implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The reason why the client is disconnected.
+     * The reason why the client is disconnected. If the thing has been disconnected for approximately an hour, the
+     * <code>disconnectReason</code> value might be missing.
      * </p>
      * 
-     * @return The reason why the client is disconnected.
+     * @return The reason why the client is disconnected. If the thing has been disconnected for approximately an hour,
+     *         the <code>disconnectReason</code> value might be missing.
      */
 
     public String getDisconnectReason() {
@@ -170,11 +175,13 @@ public class ThingConnectivity implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The reason why the client is disconnected.
+     * The reason why the client is disconnected. If the thing has been disconnected for approximately an hour, the
+     * <code>disconnectReason</code> value might be missing.
      * </p>
      * 
      * @param disconnectReason
-     *        The reason why the client is disconnected.
+     *        The reason why the client is disconnected. If the thing has been disconnected for approximately an hour,
+     *        the <code>disconnectReason</code> value might be missing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

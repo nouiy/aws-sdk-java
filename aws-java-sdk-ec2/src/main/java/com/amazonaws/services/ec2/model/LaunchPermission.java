@@ -34,7 +34,7 @@ public class LaunchPermission implements Serializable, Cloneable {
     private String group;
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * <p>
      * Constraints: Up to 10 000 account IDs can be specified in a single request.
@@ -117,14 +117,14 @@ public class LaunchPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * <p>
      * Constraints: Up to 10 000 account IDs can be specified in a single request.
      * </p>
      * 
      * @param userId
-     *        The AWS account ID.</p>
+     *        The Amazon Web Services account ID.</p>
      *        <p>
      *        Constraints: Up to 10 000 account IDs can be specified in a single request.
      */
@@ -135,13 +135,13 @@ public class LaunchPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * <p>
      * Constraints: Up to 10 000 account IDs can be specified in a single request.
      * </p>
      * 
-     * @return The AWS account ID.</p>
+     * @return The Amazon Web Services account ID.</p>
      *         <p>
      *         Constraints: Up to 10 000 account IDs can be specified in a single request.
      */
@@ -152,14 +152,14 @@ public class LaunchPermission implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * <p>
      * Constraints: Up to 10 000 account IDs can be specified in a single request.
      * </p>
      * 
      * @param userId
-     *        The AWS account ID.</p>
+     *        The Amazon Web Services account ID.</p>
      *        <p>
      *        Constraints: Up to 10 000 account IDs can be specified in a single request.
      * @return Returns a reference to this object so that method calls can be chained together.

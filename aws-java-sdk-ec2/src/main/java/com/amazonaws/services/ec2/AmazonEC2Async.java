@@ -2243,9 +2243,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Initiates the copy of an AMI. You can copy an AMI from one Region to another, or from a Region to an AWS Outpost.
-     * You can't copy an AMI from an Outpost to a Region, from one Outpost to another, or within the same Outpost. To
-     * copy an AMI to another partition, see <a
+     * Initiates the copy of an AMI. You can copy an AMI from one Region to another, or from a Region to an Outpost. You
+     * can't copy an AMI from an Outpost to a Region, from one Outpost to another, or within the same Outpost. To copy
+     * an AMI to another partition, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateStoreImageTask.html"
      * >CreateStoreImageTask</a>.
      * </p>
@@ -2280,9 +2280,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Initiates the copy of an AMI. You can copy an AMI from one Region to another, or from a Region to an AWS Outpost.
-     * You can't copy an AMI from an Outpost to a Region, from one Outpost to another, or within the same Outpost. To
-     * copy an AMI to another partition, see <a
+     * Initiates the copy of an AMI. You can copy an AMI from one Region to another, or from a Region to an Outpost. You
+     * can't copy an AMI from an Outpost to a Region, from one Outpost to another, or within the same Outpost. To copy
+     * an AMI to another partition, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateStoreImageTask.html"
      * >CreateStoreImageTask</a>.
      * </p>
@@ -3140,9 +3140,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or stopped.
      * </p>
      * <p>
-     * If you customized your instance with instance store volumes or EBS volumes in addition to the root device volume,
-     * the new AMI contains block device mapping information for those volumes. When you launch an instance from this
-     * new AMI, the instance automatically launches with those additional volumes.
+     * If you customized your instance with instance store volumes or Amazon EBS volumes in addition to the root device
+     * volume, the new AMI contains block device mapping information for those volumes. When you launch an instance from
+     * this new AMI, the instance automatically launches with those additional volumes.
      * </p>
      * <p>
      * For more information, see <a
@@ -3163,9 +3163,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or stopped.
      * </p>
      * <p>
-     * If you customized your instance with instance store volumes or EBS volumes in addition to the root device volume,
-     * the new AMI contains block device mapping information for those volumes. When you launch an instance from this
-     * new AMI, the instance automatically launches with those additional volumes.
+     * If you customized your instance with instance store volumes or Amazon EBS volumes in addition to the root device
+     * volume, the new AMI contains block device mapping information for those volumes. When you launch an instance from
+     * this new AMI, the instance automatically launches with those additional volumes.
      * </p>
      * <p>
      * For more information, see <a
@@ -3612,10 +3612,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Creates a managed prefix list. You can specify one or more entries for the prefix list. Each entry consists of a
      * CIDR block and an optional description.
      * </p>
-     * <p>
-     * You must specify the maximum number of entries for the prefix list. The maximum number of entries cannot be
-     * changed later.
-     * </p>
      * 
      * @param createManagedPrefixListRequest
      * @return A Java Future containing the result of the CreateManagedPrefixList operation returned by the service.
@@ -3629,10 +3625,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Creates a managed prefix list. You can specify one or more entries for the prefix list. Each entry consists of a
      * CIDR block and an optional description.
-     * </p>
-     * <p>
-     * You must specify the maximum number of entries for the prefix list. The maximum number of entries cannot be
-     * changed later.
      * </p>
      * 
      * @param createManagedPrefixListRequest
@@ -4135,19 +4127,19 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Starts a task that restores an AMI from an S3 object that was previously created by using <a
+     * Starts a task that restores an AMI from an Amazon S3 object that was previously created by using <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateStoreImageTask.html"
      * >CreateStoreImageTask</a>.
      * </p>
      * <p>
      * To use this API, you must have the required permissions. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html#ami-s3-permissions">Permissions
-     * for storing and restoring AMIs using S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * for storing and restoring AMIs using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html">Store and restore an AMI using
-     * S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param createRestoreImageTaskRequest
@@ -4160,19 +4152,19 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Starts a task that restores an AMI from an S3 object that was previously created by using <a
+     * Starts a task that restores an AMI from an Amazon S3 object that was previously created by using <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateStoreImageTask.html"
      * >CreateStoreImageTask</a>.
      * </p>
      * <p>
      * To use this API, you must have the required permissions. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html#ami-s3-permissions">Permissions
-     * for storing and restoring AMIs using S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * for storing and restoring AMIs using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html">Store and restore an AMI using
-     * S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param createRestoreImageTaskRequest
@@ -4604,17 +4596,17 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Stores an AMI as a single object in an S3 bucket.
+     * Stores an AMI as a single object in an Amazon S3 bucket.
      * </p>
      * <p>
      * To use this API, you must have the required permissions. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html#ami-s3-permissions">Permissions
-     * for storing and restoring AMIs using S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * for storing and restoring AMIs using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html">Store and restore an AMI using
-     * S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param createStoreImageTaskRequest
@@ -4627,17 +4619,17 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Stores an AMI as a single object in an S3 bucket.
+     * Stores an AMI as a single object in an Amazon S3 bucket.
      * </p>
      * <p>
      * To use this API, you must have the required permissions. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html#ami-s3-permissions">Permissions
-     * for storing and restoring AMIs using S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * for storing and restoring AMIs using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html">Store and restore an AMI using
-     * S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param createStoreImageTaskRequest
@@ -10199,7 +10191,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * The images available to you include public images, private images that you own, and private images owned by other
-     * AWS accounts for which you have explicit launch permissions.
+     * Amazon Web Services accounts for which you have explicit launch permissions.
      * </p>
      * <p>
      * Recently deregistered images appear in the returned results for a short interval and then return empty results.
@@ -10221,7 +10213,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * The images available to you include public images, private images that you own, and private images owned by other
-     * AWS accounts for which you have explicit launch permissions.
+     * Amazon Web Services accounts for which you have explicit launch permissions.
      * </p>
      * <p>
      * Recently deregistered images appear in the returned results for a short interval and then return empty results.
@@ -13117,12 +13109,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * To use this API, you must have the required permissions. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html#ami-s3-permissions">Permissions
-     * for storing and restoring AMIs using S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * for storing and restoring AMIs using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html">Store and restore an AMI using
-     * S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param describeStoreImageTasksRequest
@@ -13149,12 +13141,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * To use this API, you must have the required permissions. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html#ami-s3-permissions">Permissions
-     * for storing and restoring AMIs using S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * for storing and restoring AMIs using Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-store-restore.html">Store and restore an AMI using
-     * S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * Amazon S3</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param describeStoreImageTasksRequest
@@ -18090,11 +18082,10 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Modifies the specified attribute of the specified AMI. You can specify only one attribute at a time. You can use
      * the <code>Attribute</code> parameter to specify the attribute or one of the following parameters:
-     * <code>Description</code>, <code>LaunchPermission</code>, or <code>ProductCode</code>.
+     * <code>Description</code> or <code>LaunchPermission</code>.
      * </p>
      * <p>
-     * AWS Marketplace product codes cannot be modified. Images with an AWS Marketplace product code cannot be made
-     * public.
+     * Images with an Amazon Web Services Marketplace product code cannot be made public.
      * </p>
      * <p>
      * To enable the SriovNetSupport enhanced networking attribute of an image, enable SriovNetSupport on an instance
@@ -18114,11 +18105,10 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Modifies the specified attribute of the specified AMI. You can specify only one attribute at a time. You can use
      * the <code>Attribute</code> parameter to specify the attribute or one of the following parameters:
-     * <code>Description</code>, <code>LaunchPermission</code>, or <code>ProductCode</code>.
+     * <code>Description</code> or <code>LaunchPermission</code>.
      * </p>
      * <p>
-     * AWS Marketplace product codes cannot be modified. Images with an AWS Marketplace product code cannot be made
-     * public.
+     * Images with an Amazon Web Services Marketplace product code cannot be made public.
      * </p>
      * <p>
      * To enable the SriovNetSupport enhanced networking attribute of an image, enable SriovNetSupport on an instance
@@ -20267,20 +20257,20 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot"
      * >Create a Linux AMI from a snapshot</a> and <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use encryption with EBS-backed
-     * AMIs</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use encryption with Amazon
+     * EBS-backed AMIs</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * <b>AWS Marketplace product codes</b>
+     * <b>Amazon Web Services Marketplace product codes</b>
      * </p>
      * <p>
-     * If any snapshots have AWS Marketplace product codes, they are copied to the new AMI.
+     * If any snapshots have Amazon Web Services Marketplace product codes, they are copied to the new AMI.
      * </p>
      * <p>
      * Windows and some Linux distributions, such as Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server
-     * (SLES), use the EC2 billing product code associated with an AMI to verify the subscription status for package
-     * updates. To create a new AMI for operating systems that require a billing product code, instead of registering
-     * the AMI, do the following to preserve the billing product code association:
+     * (SLES), use the Amazon EC2 billing product code associated with an AMI to verify the subscription status for
+     * package updates. To create a new AMI for operating systems that require a billing product code, instead of
+     * registering the AMI, do the following to preserve the billing product code association:
      * </p>
      * <ol>
      * <li>
@@ -20304,8 +20294,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * billing product code, make sure that the Reserved Instance has the matching billing product code. If you purchase
      * a Reserved Instance without the matching billing product code, the Reserved Instance will not be applied to the
      * On-Demand Instance. For information about how to obtain the platform details and billing information of an AMI,
-     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining billing
-     * information</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI
+     * billing</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param registerImageRequest
@@ -20348,20 +20338,20 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot"
      * >Create a Linux AMI from a snapshot</a> and <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use encryption with EBS-backed
-     * AMIs</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html">Use encryption with Amazon
+     * EBS-backed AMIs</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * <p>
-     * <b>AWS Marketplace product codes</b>
+     * <b>Amazon Web Services Marketplace product codes</b>
      * </p>
      * <p>
-     * If any snapshots have AWS Marketplace product codes, they are copied to the new AMI.
+     * If any snapshots have Amazon Web Services Marketplace product codes, they are copied to the new AMI.
      * </p>
      * <p>
      * Windows and some Linux distributions, such as Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server
-     * (SLES), use the EC2 billing product code associated with an AMI to verify the subscription status for package
-     * updates. To create a new AMI for operating systems that require a billing product code, instead of registering
-     * the AMI, do the following to preserve the billing product code association:
+     * (SLES), use the Amazon EC2 billing product code associated with an AMI to verify the subscription status for
+     * package updates. To create a new AMI for operating systems that require a billing product code, instead of
+     * registering the AMI, do the following to preserve the billing product code association:
      * </p>
      * <ol>
      * <li>
@@ -20385,8 +20375,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * billing product code, make sure that the Reserved Instance has the matching billing product code. If you purchase
      * a Reserved Instance without the matching billing product code, the Reserved Instance will not be applied to the
      * On-Demand Instance. For information about how to obtain the platform details and billing information of an AMI,
-     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining billing
-     * information</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI
+     * billing</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param registerImageRequest
@@ -21409,11 +21399,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Resets an attribute of an AMI to its default value.
      * </p>
-     * <note>
-     * <p>
-     * The productCodes attribute can't be reset.
-     * </p>
-     * </note>
      * 
      * @param resetImageAttributeRequest
      *        Contains the parameters for ResetImageAttribute.
@@ -21428,11 +21413,6 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Resets an attribute of an AMI to its default value.
      * </p>
-     * <note>
-     * <p>
-     * The productCodes attribute can't be reset.
-     * </p>
-     * </note>
      * 
      * @param resetImageAttributeRequest
      *        Contains the parameters for ResetImageAttribute.
@@ -22258,6 +22238,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * Performing this operation on an instance that uses an instance store as its root device returns an error.
      * </p>
      * <p>
+     * If you attempt to start a T3 instance with <code>host</code> tenancy and the <code>unlimted</code> CPU credit
+     * option, the request fails. The <code>unlimited</code> CPU credit option is not supported on Dedicated Hosts.
+     * Before you start the instance, either change its CPU credit option to <code>standard</code>, or change its
+     * tenancy to <code>default</code> or <code>dedicated</code>.
+     * </p>
+     * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stopping
      * instances</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
@@ -22287,6 +22273,12 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * Performing this operation on an instance that uses an instance store as its root device returns an error.
+     * </p>
+     * <p>
+     * If you attempt to start a T3 instance with <code>host</code> tenancy and the <code>unlimted</code> CPU credit
+     * option, the request fails. The <code>unlimited</code> CPU credit option is not supported on Dedicated Hosts.
+     * Before you start the instance, either change its CPU credit option to <code>standard</code>, or change its
+     * tenancy to <code>default</code> or <code>dedicated</code>.
      * </p>
      * <p>
      * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stopping

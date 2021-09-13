@@ -70,7 +70,7 @@ public class Image implements Serializable, Cloneable {
     private String kernelId;
     /**
      * <p>
-     * The AWS account ID of the image owner.
+     * The ID of the Amazon Web Services account that owns the image.
      * </p>
      */
     private String ownerId;
@@ -83,8 +83,8 @@ public class Image implements Serializable, Cloneable {
     /**
      * <p>
      * The platform details associated with the billing code of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining Billing
-     * Information</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI billing</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      */
     private String platformDetails;
@@ -93,11 +93,14 @@ public class Image implements Serializable, Cloneable {
      * The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      * <code>usageOperation</code> corresponds to the <a
      * href="https://docs.aws.amazon.com/cur/latest/userguide/Lineitem-columns.html#Lineitem-details-O-Operation"
-     * >lineitem/Operation</a> column on your AWS Cost and Usage Report and in the <a
-     * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">AWS Price List API</a>.
-     * For the list of <code>UsageOperation</code> codes, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html#billing-info">Platform Details
-     * and Usage Operation Billing Codes</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >lineitem/Operation</a> column on your Amazon Web Services Cost and Usage Report and in the <a
+     * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">Amazon Web Services Price
+     * List API</a>. You can view these fields on the <b>Instances</b> or <b>AMIs</b> pages in the Amazon EC2 console,
+     * or in the responses that are returned by the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a> command
+     * in the Amazon EC2 API, or the <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html">describe-images</a> command in
+     * the CLI.
      * </p>
      */
     private String usageOperation;
@@ -146,8 +149,8 @@ public class Image implements Serializable, Cloneable {
     private String hypervisor;
     /**
      * <p>
-     * The AWS account alias (for example, <code>amazon</code>, <code>self</code>) or the AWS account ID of the AMI
-     * owner.
+     * The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon Web
+     * Services account ID of the AMI owner.
      * </p>
      */
     private String imageOwnerAlias;
@@ -165,7 +168,7 @@ public class Image implements Serializable, Cloneable {
     private String rootDeviceName;
     /**
      * <p>
-     * The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     * The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * </p>
      */
     private String rootDeviceType;
@@ -582,11 +585,11 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the image owner.
+     * The ID of the Amazon Web Services account that owns the image.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the image owner.
+     *        The ID of the Amazon Web Services account that owns the image.
      */
 
     public void setOwnerId(String ownerId) {
@@ -595,10 +598,10 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the image owner.
+     * The ID of the Amazon Web Services account that owns the image.
      * </p>
      * 
-     * @return The AWS account ID of the image owner.
+     * @return The ID of the Amazon Web Services account that owns the image.
      */
 
     public String getOwnerId() {
@@ -607,11 +610,11 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the image owner.
+     * The ID of the Amazon Web Services account that owns the image.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the image owner.
+     *        The ID of the Amazon Web Services account that owns the image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -696,14 +699,14 @@ public class Image implements Serializable, Cloneable {
     /**
      * <p>
      * The platform details associated with the billing code of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining Billing
-     * Information</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI billing</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param platformDetails
      *        The platform details associated with the billing code of the AMI. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining Billing
-     *        Information</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI
+     *        billing</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public void setPlatformDetails(String platformDetails) {
@@ -713,13 +716,13 @@ public class Image implements Serializable, Cloneable {
     /**
      * <p>
      * The platform details associated with the billing code of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining Billing
-     * Information</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI billing</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @return The platform details associated with the billing code of the AMI. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining Billing
-     *         Information</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI
+     *         billing</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      */
 
     public String getPlatformDetails() {
@@ -729,14 +732,14 @@ public class Image implements Serializable, Cloneable {
     /**
      * <p>
      * The platform details associated with the billing code of the AMI. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining Billing
-     * Information</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI billing</a> in
+     * the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param platformDetails
      *        The platform details associated with the billing code of the AMI. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Obtaining Billing
-     *        Information</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html">Understanding AMI
+     *        billing</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -750,22 +753,28 @@ public class Image implements Serializable, Cloneable {
      * The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      * <code>usageOperation</code> corresponds to the <a
      * href="https://docs.aws.amazon.com/cur/latest/userguide/Lineitem-columns.html#Lineitem-details-O-Operation"
-     * >lineitem/Operation</a> column on your AWS Cost and Usage Report and in the <a
-     * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">AWS Price List API</a>.
-     * For the list of <code>UsageOperation</code> codes, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html#billing-info">Platform Details
-     * and Usage Operation Billing Codes</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >lineitem/Operation</a> column on your Amazon Web Services Cost and Usage Report and in the <a
+     * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">Amazon Web Services Price
+     * List API</a>. You can view these fields on the <b>Instances</b> or <b>AMIs</b> pages in the Amazon EC2 console,
+     * or in the responses that are returned by the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a> command
+     * in the Amazon EC2 API, or the <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html">describe-images</a> command in
+     * the CLI.
      * </p>
      * 
      * @param usageOperation
      *        The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      *        <code>usageOperation</code> corresponds to the <a
      *        href="https://docs.aws.amazon.com/cur/latest/userguide/Lineitem-columns.html#Lineitem-details-O-Operation"
-     *        >lineitem/Operation</a> column on your AWS Cost and Usage Report and in the <a
-     *        href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">AWS Price List
-     *        API</a>. For the list of <code>UsageOperation</code> codes, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html#billing-info">Platform
-     *        Details and Usage Operation Billing Codes</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        >lineitem/Operation</a> column on your Amazon Web Services Cost and Usage Report and in the <a
+     *        href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">Amazon Web Services
+     *        Price List API</a>. You can view these fields on the <b>Instances</b> or <b>AMIs</b> pages in the Amazon
+     *        EC2 console, or in the responses that are returned by the <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a>
+     *        command in the Amazon EC2 API, or the <a
+     *        href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html">describe-images</a>
+     *        command in the CLI.
      */
 
     public void setUsageOperation(String usageOperation) {
@@ -777,21 +786,27 @@ public class Image implements Serializable, Cloneable {
      * The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      * <code>usageOperation</code> corresponds to the <a
      * href="https://docs.aws.amazon.com/cur/latest/userguide/Lineitem-columns.html#Lineitem-details-O-Operation"
-     * >lineitem/Operation</a> column on your AWS Cost and Usage Report and in the <a
-     * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">AWS Price List API</a>.
-     * For the list of <code>UsageOperation</code> codes, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html#billing-info">Platform Details
-     * and Usage Operation Billing Codes</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >lineitem/Operation</a> column on your Amazon Web Services Cost and Usage Report and in the <a
+     * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">Amazon Web Services Price
+     * List API</a>. You can view these fields on the <b>Instances</b> or <b>AMIs</b> pages in the Amazon EC2 console,
+     * or in the responses that are returned by the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a> command
+     * in the Amazon EC2 API, or the <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html">describe-images</a> command in
+     * the CLI.
      * </p>
      * 
      * @return The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      *         <code>usageOperation</code> corresponds to the <a
      *         href="https://docs.aws.amazon.com/cur/latest/userguide/Lineitem-columns.html#Lineitem-details-O-Operation"
-     *         >lineitem/Operation</a> column on your AWS Cost and Usage Report and in the <a
-     *         href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">AWS Price List
-     *         API</a>. For the list of <code>UsageOperation</code> codes, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html#billing-info">Platform
-     *         Details and Usage Operation Billing Codes</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         >lineitem/Operation</a> column on your Amazon Web Services Cost and Usage Report and in the <a
+     *         href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">Amazon Web
+     *         Services Price List API</a>. You can view these fields on the <b>Instances</b> or <b>AMIs</b> pages in
+     *         the Amazon EC2 console, or in the responses that are returned by the <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a>
+     *         command in the Amazon EC2 API, or the <a
+     *         href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html">describe-images</a>
+     *         command in the CLI.
      */
 
     public String getUsageOperation() {
@@ -803,22 +818,28 @@ public class Image implements Serializable, Cloneable {
      * The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      * <code>usageOperation</code> corresponds to the <a
      * href="https://docs.aws.amazon.com/cur/latest/userguide/Lineitem-columns.html#Lineitem-details-O-Operation"
-     * >lineitem/Operation</a> column on your AWS Cost and Usage Report and in the <a
-     * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">AWS Price List API</a>.
-     * For the list of <code>UsageOperation</code> codes, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html#billing-info">Platform Details
-     * and Usage Operation Billing Codes</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     * >lineitem/Operation</a> column on your Amazon Web Services Cost and Usage Report and in the <a
+     * href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">Amazon Web Services Price
+     * List API</a>. You can view these fields on the <b>Instances</b> or <b>AMIs</b> pages in the Amazon EC2 console,
+     * or in the responses that are returned by the <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a> command
+     * in the Amazon EC2 API, or the <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html">describe-images</a> command in
+     * the CLI.
      * </p>
      * 
      * @param usageOperation
      *        The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
      *        <code>usageOperation</code> corresponds to the <a
      *        href="https://docs.aws.amazon.com/cur/latest/userguide/Lineitem-columns.html#Lineitem-details-O-Operation"
-     *        >lineitem/Operation</a> column on your AWS Cost and Usage Report and in the <a
-     *        href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">AWS Price List
-     *        API</a>. For the list of <code>UsageOperation</code> codes, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-billing-info.html#billing-info">Platform
-     *        Details and Usage Operation Billing Codes</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        >lineitem/Operation</a> column on your Amazon Web Services Cost and Usage Report and in the <a
+     *        href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/price-changes.html">Amazon Web Services
+     *        Price List API</a>. You can view these fields on the <b>Instances</b> or <b>AMIs</b> pages in the Amazon
+     *        EC2 console, or in the responses that are returned by the <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImages.html">DescribeImages</a>
+     *        command in the Amazon EC2 API, or the <a
+     *        href="https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-images.html">describe-images</a>
+     *        command in the CLI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1263,13 +1284,13 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account alias (for example, <code>amazon</code>, <code>self</code>) or the AWS account ID of the AMI
-     * owner.
+     * The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon Web
+     * Services account ID of the AMI owner.
      * </p>
      * 
      * @param imageOwnerAlias
-     *        The AWS account alias (for example, <code>amazon</code>, <code>self</code>) or the AWS account ID of the
-     *        AMI owner.
+     *        The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon
+     *        Web Services account ID of the AMI owner.
      */
 
     public void setImageOwnerAlias(String imageOwnerAlias) {
@@ -1278,12 +1299,12 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account alias (for example, <code>amazon</code>, <code>self</code>) or the AWS account ID of the AMI
-     * owner.
+     * The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon Web
+     * Services account ID of the AMI owner.
      * </p>
      * 
-     * @return The AWS account alias (for example, <code>amazon</code>, <code>self</code>) or the AWS account ID of the
-     *         AMI owner.
+     * @return The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon
+     *         Web Services account ID of the AMI owner.
      */
 
     public String getImageOwnerAlias() {
@@ -1292,13 +1313,13 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account alias (for example, <code>amazon</code>, <code>self</code>) or the AWS account ID of the AMI
-     * owner.
+     * The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon Web
+     * Services account ID of the AMI owner.
      * </p>
      * 
      * @param imageOwnerAlias
-     *        The AWS account alias (for example, <code>amazon</code>, <code>self</code>) or the AWS account ID of the
-     *        AMI owner.
+     *        The Amazon Web Services account alias (for example, <code>amazon</code>, <code>self</code>) or the Amazon
+     *        Web Services account ID of the AMI owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1389,11 +1410,11 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     * The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * </p>
      * 
      * @param rootDeviceType
-     *        The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     *        The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * @see DeviceType
      */
 
@@ -1403,10 +1424,11 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     * The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * </p>
      * 
-     * @return The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     * @return The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store
+     *         volume.
      * @see DeviceType
      */
 
@@ -1416,11 +1438,11 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     * The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * </p>
      * 
      * @param rootDeviceType
-     *        The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     *        The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeviceType
      */
@@ -1432,11 +1454,11 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     * The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * </p>
      * 
      * @param rootDeviceType
-     *        The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     *        The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * @see DeviceType
      */
 
@@ -1446,11 +1468,11 @@ public class Image implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     * The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * </p>
      * 
      * @param rootDeviceType
-     *        The type of root device used by the AMI. The AMI can use an EBS volume or an instance store volume.
+     *        The type of root device used by the AMI. The AMI can use an Amazon EBS volume or an instance store volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeviceType
      */

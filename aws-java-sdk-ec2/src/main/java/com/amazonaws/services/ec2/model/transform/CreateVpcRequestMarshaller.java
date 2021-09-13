@@ -40,6 +40,10 @@ public class CreateVpcRequestMarshaller implements Marshaller<Request<CreateVpcR
         request.addParameter("Version", "2016-11-15");
         request.setHttpMethod(HttpMethodName.POST);
 
+        if (createVpcRequest.getCidrBlock() != null) {
+            request.addParameter("CidrBlock", StringUtils.fromString(createVpcRequest.getCidrBlock()));
+        }
+
         if (createVpcRequest.getAmazonProvidedIpv6CidrBlock() != null) {
             request.addParameter("AmazonProvidedIpv6CidrBlock", StringUtils.fromBoolean(createVpcRequest.getAmazonProvidedIpv6CidrBlock()));
         }
@@ -93,10 +97,6 @@ public class CreateVpcRequestMarshaller implements Marshaller<Request<CreateVpcR
                 }
                 tagSpecificationsListIndex++;
             }
-        }
-
-        if (createVpcRequest.getCidrBlock() != null) {
-            request.addParameter("CidrBlock", StringUtils.fromString(createVpcRequest.getCidrBlock()));
         }
 
         return request;

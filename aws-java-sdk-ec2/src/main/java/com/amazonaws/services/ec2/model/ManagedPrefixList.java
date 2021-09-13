@@ -40,7 +40,7 @@ public class ManagedPrefixList implements Serializable, Cloneable {
     private String addressFamily;
     /**
      * <p>
-     * The state of the prefix list.
+     * The current state of the prefix list.
      * </p>
      */
     private String state;
@@ -169,11 +169,11 @@ public class ManagedPrefixList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the prefix list.
+     * The current state of the prefix list.
      * </p>
      * 
      * @param state
-     *        The state of the prefix list.
+     *        The current state of the prefix list.
      * @see PrefixListState
      */
 
@@ -183,10 +183,10 @@ public class ManagedPrefixList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the prefix list.
+     * The current state of the prefix list.
      * </p>
      * 
-     * @return The state of the prefix list.
+     * @return The current state of the prefix list.
      * @see PrefixListState
      */
 
@@ -196,11 +196,11 @@ public class ManagedPrefixList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the prefix list.
+     * The current state of the prefix list.
      * </p>
      * 
      * @param state
-     *        The state of the prefix list.
+     *        The current state of the prefix list.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PrefixListState
      */
@@ -212,11 +212,11 @@ public class ManagedPrefixList implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The state of the prefix list.
+     * The current state of the prefix list.
      * </p>
      * 
      * @param state
-     *        The state of the prefix list.
+     *        The current state of the prefix list.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PrefixListState
      */

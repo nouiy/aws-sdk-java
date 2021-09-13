@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The tags to apply to the AMI object that will be stored in the S3 bucket. For more information, see <a
+ * The tags to apply to the AMI object that will be stored in the Amazon S3 bucket. For more information, see <a
  * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-tagging.html">Categorizing your storage using
  * tags</a> in the <i>Amazon Simple Storage Service User Guide</i>.
  * </p>

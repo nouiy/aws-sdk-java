@@ -102,6 +102,13 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Write data to an Amazon Elasticsearch Service domain.
      * </p>
+     * <note>
+     * <p>
+     * This action is deprecated. Use the <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
+     * instead.
+     * </p>
+     * </note>
      */
     private ElasticsearchAction elasticsearch;
     /**
@@ -155,6 +162,12 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private KafkaAction kafka;
+    /**
+     * <p>
+     * Write data to an Amazon OpenSearch Service domain.
+     * </p>
+     */
+    private OpenSearchAction openSearch;
 
     /**
      * <p>
@@ -646,9 +659,21 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Write data to an Amazon Elasticsearch Service domain.
      * </p>
+     * <note>
+     * <p>
+     * This action is deprecated. Use the <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
+     * instead.
+     * </p>
+     * </note>
      * 
      * @param elasticsearch
-     *        Write data to an Amazon Elasticsearch Service domain.
+     *        Write data to an Amazon Elasticsearch Service domain.</p> <note>
+     *        <p>
+     *        This action is deprecated. Use the <a
+     *        href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
+     *        instead.
+     *        </p>
      */
 
     public void setElasticsearch(ElasticsearchAction elasticsearch) {
@@ -659,8 +684,20 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Write data to an Amazon Elasticsearch Service domain.
      * </p>
+     * <note>
+     * <p>
+     * This action is deprecated. Use the <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
+     * instead.
+     * </p>
+     * </note>
      * 
-     * @return Write data to an Amazon Elasticsearch Service domain.
+     * @return Write data to an Amazon Elasticsearch Service domain.</p> <note>
+     *         <p>
+     *         This action is deprecated. Use the <a
+     *         href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch
+     *         action</a> instead.
+     *         </p>
      */
 
     public ElasticsearchAction getElasticsearch() {
@@ -671,9 +708,21 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Write data to an Amazon Elasticsearch Service domain.
      * </p>
+     * <note>
+     * <p>
+     * This action is deprecated. Use the <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
+     * instead.
+     * </p>
+     * </note>
      * 
      * @param elasticsearch
-     *        Write data to an Amazon Elasticsearch Service domain.
+     *        Write data to an Amazon Elasticsearch Service domain.</p> <note>
+     *        <p>
+     *        This action is deprecated. Use the <a
+     *        href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
+     *        instead.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1024,6 +1073,46 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Write data to an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param openSearch
+     *        Write data to an Amazon OpenSearch Service domain.
+     */
+
+    public void setOpenSearch(OpenSearchAction openSearch) {
+        this.openSearch = openSearch;
+    }
+
+    /**
+     * <p>
+     * Write data to an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @return Write data to an Amazon OpenSearch Service domain.
+     */
+
+    public OpenSearchAction getOpenSearch() {
+        return this.openSearch;
+    }
+
+    /**
+     * <p>
+     * Write data to an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param openSearch
+     *        Write data to an Amazon OpenSearch Service domain.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Action withOpenSearch(OpenSearchAction openSearch) {
+        setOpenSearch(openSearch);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1076,7 +1165,9 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
         if (getHttp() != null)
             sb.append("Http: ").append(getHttp()).append(",");
         if (getKafka() != null)
-            sb.append("Kafka: ").append(getKafka());
+            sb.append("Kafka: ").append(getKafka()).append(",");
+        if (getOpenSearch() != null)
+            sb.append("OpenSearch: ").append(getOpenSearch());
         sb.append("}");
         return sb.toString();
     }
@@ -1175,6 +1266,10 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getKafka() != null && other.getKafka().equals(this.getKafka()) == false)
             return false;
+        if (other.getOpenSearch() == null ^ this.getOpenSearch() == null)
+            return false;
+        if (other.getOpenSearch() != null && other.getOpenSearch().equals(this.getOpenSearch()) == false)
+            return false;
         return true;
     }
 
@@ -1204,6 +1299,7 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTimestream() == null) ? 0 : getTimestream().hashCode());
         hashCode = prime * hashCode + ((getHttp() == null) ? 0 : getHttp().hashCode());
         hashCode = prime * hashCode + ((getKafka() == null) ? 0 : getKafka().hashCode());
+        hashCode = prime * hashCode + ((getOpenSearch() == null) ? 0 : getOpenSearch().hashCode());
         return hashCode;
     }
 

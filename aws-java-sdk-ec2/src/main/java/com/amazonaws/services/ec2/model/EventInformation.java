@@ -106,12 +106,6 @@ public class EventInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>price_update</code> - The price for a launch configuration was adjusted because it was too high. This
-     * change is permanent.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>submitted</code> - The EC2 Fleet or Spot Fleet request is being evaluated and Amazon EC2 is preparing to
      * launch the target number of Spot Instances.
      * </p>
@@ -278,12 +272,6 @@ public class EventInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>price_update</code> - The price for a launch configuration was adjusted because it was too high. This
-     * change is permanent.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>submitted</code> - The EC2 Fleet or Spot Fleet request is being evaluated and Amazon EC2 is preparing to
      * launch the target number of Spot Instances.
      * </p>
@@ -398,12 +386,6 @@ public class EventInformation implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>price_update</code> - The price for a launch configuration was adjusted because it was too high.
-     *        This change is permanent.
      *        </p>
      *        </li>
      *        <li>
@@ -530,12 +512,6 @@ public class EventInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>price_update</code> - The price for a launch configuration was adjusted because it was too high. This
-     * change is permanent.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>submitted</code> - The EC2 Fleet or Spot Fleet request is being evaluated and Amazon EC2 is preparing to
      * launch the target number of Spot Instances.
      * </p>
@@ -649,12 +625,6 @@ public class EventInformation implements Serializable, Cloneable {
      *         <li>
      *         <p>
      *         <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>price_update</code> - The price for a launch configuration was adjusted because it was too high.
-     *         This change is permanent.
      *         </p>
      *         </li>
      *         <li>
@@ -781,12 +751,6 @@ public class EventInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>price_update</code> - The price for a launch configuration was adjusted because it was too high. This
-     * change is permanent.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>submitted</code> - The EC2 Fleet or Spot Fleet request is being evaluated and Amazon EC2 is preparing to
      * launch the target number of Spot Instances.
      * </p>
@@ -901,12 +865,6 @@ public class EventInformation implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        <code>modify_succeeded</code> - The EC2 Fleet or Spot Fleet request was modified.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>price_update</code> - The price for a launch configuration was adjusted because it was too high.
-     *        This change is permanent.
      *        </p>
      *        </li>
      *        <li>

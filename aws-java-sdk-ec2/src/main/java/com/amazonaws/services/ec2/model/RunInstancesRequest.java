@@ -340,6 +340,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * Default: <code>standard</code> (T2 instances) or <code>unlimited</code> (T3/T3a instances)
      * </p>
+     * <p>
+     * For T3 instances with <code>host</code> tenancy, only <code>standard</code> is supported.
+     * </p>
      */
     private CreditSpecificationRequest creditSpecification;
     /**
@@ -2821,6 +2824,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * Default: <code>standard</code> (T2 instances) or <code>unlimited</code> (T3/T3a instances)
      * </p>
+     * <p>
+     * For T3 instances with <code>host</code> tenancy, only <code>standard</code> is supported.
+     * </p>
      * 
      * @param creditSpecification
      *        The credit option for CPU usage of the burstable performance instance. Valid values are
@@ -2831,6 +2837,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *        performance instances</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        Default: <code>standard</code> (T2 instances) or <code>unlimited</code> (T3/T3a instances)
+     *        </p>
+     *        <p>
+     *        For T3 instances with <code>host</code> tenancy, only <code>standard</code> is supported.
      */
 
     public void setCreditSpecification(CreditSpecificationRequest creditSpecification) {
@@ -2849,6 +2858,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * Default: <code>standard</code> (T2 instances) or <code>unlimited</code> (T3/T3a instances)
      * </p>
+     * <p>
+     * For T3 instances with <code>host</code> tenancy, only <code>standard</code> is supported.
+     * </p>
      * 
      * @return The credit option for CPU usage of the burstable performance instance. Valid values are
      *         <code>standard</code> and <code>unlimited</code>. To change this attribute after launch, use <a
@@ -2858,6 +2870,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *         performance instances</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *         <p>
      *         Default: <code>standard</code> (T2 instances) or <code>unlimited</code> (T3/T3a instances)
+     *         </p>
+     *         <p>
+     *         For T3 instances with <code>host</code> tenancy, only <code>standard</code> is supported.
      */
 
     public CreditSpecificationRequest getCreditSpecification() {
@@ -2876,6 +2891,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * Default: <code>standard</code> (T2 instances) or <code>unlimited</code> (T3/T3a instances)
      * </p>
+     * <p>
+     * For T3 instances with <code>host</code> tenancy, only <code>standard</code> is supported.
+     * </p>
      * 
      * @param creditSpecification
      *        The credit option for CPU usage of the burstable performance instance. Valid values are
@@ -2886,6 +2904,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      *        performance instances</a> in the <i>Amazon EC2 User Guide</i>.</p>
      *        <p>
      *        Default: <code>standard</code> (T2 instances) or <code>unlimited</code> (T3/T3a instances)
+     *        </p>
+     *        <p>
+     *        For T3 instances with <code>host</code> tenancy, only <code>standard</code> is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1,3 +1,12 @@
+# __1.12.67__ __2021-09-13__
+## __AWS IoT__
+  - ### Features
+    - AWS IoT Rules Engine adds OpenSearch action. The OpenSearch rule action lets you stream data from IoT sensors and applications to Amazon OpenSearch Service which is a successor to Amazon Elasticsearch Service.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Adds support for T3 instances on Amazon EC2 Dedicated Hosts.
+
 # __1.12.66__ __2021-09-10__
 ## __AWS CloudFormation__
   - ### Features

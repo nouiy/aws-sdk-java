@@ -52,8 +52,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * The block device mapping entries.
      * </p>
      * <p>
-     * If you specify an EBS volume using the ID of an EBS snapshot, you can't specify the encryption state of the
-     * volume.
+     * If you specify an Amazon EBS volume using the ID of an Amazon EBS snapshot, you can't specify the encryption
+     * state of the volume.
      * </p>
      * <p>
      * If you create an AMI on an Outpost, then all backing snapshots must be on the same Outpost or in the Region of
@@ -100,7 +100,7 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     /**
      * <p>
      * The billing product codes. Your account must be authorized to specify billing product codes. Otherwise, you can
-     * use the AWS Marketplace to bill for the use of an AMI.
+     * use the Amazon Web Services Marketplace to bill for the use of an AMI.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> billingProducts;
@@ -347,8 +347,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * The block device mapping entries.
      * </p>
      * <p>
-     * If you specify an EBS volume using the ID of an EBS snapshot, you can't specify the encryption state of the
-     * volume.
+     * If you specify an Amazon EBS volume using the ID of an Amazon EBS snapshot, you can't specify the encryption
+     * state of the volume.
      * </p>
      * <p>
      * If you create an AMI on an Outpost, then all backing snapshots must be on the same Outpost or in the Region of
@@ -360,8 +360,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * 
      * @return The block device mapping entries.</p>
      *         <p>
-     *         If you specify an EBS volume using the ID of an EBS snapshot, you can't specify the encryption state of
-     *         the volume.
+     *         If you specify an Amazon EBS volume using the ID of an Amazon EBS snapshot, you can't specify the
+     *         encryption state of the volume.
      *         </p>
      *         <p>
      *         If you create an AMI on an Outpost, then all backing snapshots must be on the same Outpost or in the
@@ -383,8 +383,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * The block device mapping entries.
      * </p>
      * <p>
-     * If you specify an EBS volume using the ID of an EBS snapshot, you can't specify the encryption state of the
-     * volume.
+     * If you specify an Amazon EBS volume using the ID of an Amazon EBS snapshot, you can't specify the encryption
+     * state of the volume.
      * </p>
      * <p>
      * If you create an AMI on an Outpost, then all backing snapshots must be on the same Outpost or in the Region of
@@ -397,8 +397,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * @param blockDeviceMappings
      *        The block device mapping entries.</p>
      *        <p>
-     *        If you specify an EBS volume using the ID of an EBS snapshot, you can't specify the encryption state of
-     *        the volume.
+     *        If you specify an Amazon EBS volume using the ID of an Amazon EBS snapshot, you can't specify the
+     *        encryption state of the volume.
      *        </p>
      *        <p>
      *        If you create an AMI on an Outpost, then all backing snapshots must be on the same Outpost or in the
@@ -422,8 +422,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * The block device mapping entries.
      * </p>
      * <p>
-     * If you specify an EBS volume using the ID of an EBS snapshot, you can't specify the encryption state of the
-     * volume.
+     * If you specify an Amazon EBS volume using the ID of an Amazon EBS snapshot, you can't specify the encryption
+     * state of the volume.
      * </p>
      * <p>
      * If you create an AMI on an Outpost, then all backing snapshots must be on the same Outpost or in the Region of
@@ -441,8 +441,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * @param blockDeviceMappings
      *        The block device mapping entries.</p>
      *        <p>
-     *        If you specify an EBS volume using the ID of an EBS snapshot, you can't specify the encryption state of
-     *        the volume.
+     *        If you specify an Amazon EBS volume using the ID of an Amazon EBS snapshot, you can't specify the
+     *        encryption state of the volume.
      *        </p>
      *        <p>
      *        If you create an AMI on an Outpost, then all backing snapshots must be on the same Outpost or in the
@@ -468,8 +468,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * The block device mapping entries.
      * </p>
      * <p>
-     * If you specify an EBS volume using the ID of an EBS snapshot, you can't specify the encryption state of the
-     * volume.
+     * If you specify an Amazon EBS volume using the ID of an Amazon EBS snapshot, you can't specify the encryption
+     * state of the volume.
      * </p>
      * <p>
      * If you create an AMI on an Outpost, then all backing snapshots must be on the same Outpost or in the Region of
@@ -482,8 +482,8 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * @param blockDeviceMappings
      *        The block device mapping entries.</p>
      *        <p>
-     *        If you specify an EBS volume using the ID of an EBS snapshot, you can't specify the encryption state of
-     *        the volume.
+     *        If you specify an Amazon EBS volume using the ID of an Amazon EBS snapshot, you can't specify the
+     *        encryption state of the volume.
      *        </p>
      *        <p>
      *        If you create an AMI on an Outpost, then all backing snapshots must be on the same Outpost or in the
@@ -731,11 +731,11 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     /**
      * <p>
      * The billing product codes. Your account must be authorized to specify billing product codes. Otherwise, you can
-     * use the AWS Marketplace to bill for the use of an AMI.
+     * use the Amazon Web Services Marketplace to bill for the use of an AMI.
      * </p>
      * 
      * @return The billing product codes. Your account must be authorized to specify billing product codes. Otherwise,
-     *         you can use the AWS Marketplace to bill for the use of an AMI.
+     *         you can use the Amazon Web Services Marketplace to bill for the use of an AMI.
      */
 
     public java.util.List<String> getBillingProducts() {
@@ -748,12 +748,12 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     /**
      * <p>
      * The billing product codes. Your account must be authorized to specify billing product codes. Otherwise, you can
-     * use the AWS Marketplace to bill for the use of an AMI.
+     * use the Amazon Web Services Marketplace to bill for the use of an AMI.
      * </p>
      * 
      * @param billingProducts
      *        The billing product codes. Your account must be authorized to specify billing product codes. Otherwise,
-     *        you can use the AWS Marketplace to bill for the use of an AMI.
+     *        you can use the Amazon Web Services Marketplace to bill for the use of an AMI.
      */
 
     public void setBillingProducts(java.util.Collection<String> billingProducts) {
@@ -768,7 +768,7 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     /**
      * <p>
      * The billing product codes. Your account must be authorized to specify billing product codes. Otherwise, you can
-     * use the AWS Marketplace to bill for the use of an AMI.
+     * use the Amazon Web Services Marketplace to bill for the use of an AMI.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -778,7 +778,7 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
      * 
      * @param billingProducts
      *        The billing product codes. Your account must be authorized to specify billing product codes. Otherwise,
-     *        you can use the AWS Marketplace to bill for the use of an AMI.
+     *        you can use the Amazon Web Services Marketplace to bill for the use of an AMI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -795,12 +795,12 @@ public class RegisterImageRequest extends AmazonWebServiceRequest implements Ser
     /**
      * <p>
      * The billing product codes. Your account must be authorized to specify billing product codes. Otherwise, you can
-     * use the AWS Marketplace to bill for the use of an AMI.
+     * use the Amazon Web Services Marketplace to bill for the use of an AMI.
      * </p>
      * 
      * @param billingProducts
      *        The billing product codes. Your account must be authorized to specify billing product codes. Otherwise,
-     *        you can use the AWS Marketplace to bill for the use of an AMI.
+     *        you can use the Amazon Web Services Marketplace to bill for the use of an AMI.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

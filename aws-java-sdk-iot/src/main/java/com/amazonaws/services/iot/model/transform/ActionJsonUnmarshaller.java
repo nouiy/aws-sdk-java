@@ -132,6 +132,10 @@ public class ActionJsonUnmarshaller implements Unmarshaller<Action, JsonUnmarsha
                     context.nextToken();
                     action.setKafka(KafkaActionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("openSearch", targetDepth)) {
+                    context.nextToken();
+                    action.setOpenSearch(OpenSearchActionJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

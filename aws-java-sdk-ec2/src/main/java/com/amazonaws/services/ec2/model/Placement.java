@@ -89,6 +89,9 @@ public class Placement implements Serializable, Cloneable {
      * This parameter is not supported by <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
      * </p>
+     * <p>
+     * T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code> tenancy.
+     * </p>
      */
     private String tenancy;
     /**
@@ -480,6 +483,9 @@ public class Placement implements Serializable, Cloneable {
      * This parameter is not supported by <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
      * </p>
+     * <p>
+     * T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code> tenancy.
+     * </p>
      * 
      * @param tenancy
      *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
@@ -490,6 +496,10 @@ public class Placement implements Serializable, Cloneable {
      *        <p>
      *        This parameter is not supported by <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
+     *        </p>
+     *        <p>
+     *        T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code>
+     *        tenancy.
      * @see Tenancy
      */
 
@@ -507,6 +517,9 @@ public class Placement implements Serializable, Cloneable {
      * This parameter is not supported by <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
      * </p>
+     * <p>
+     * T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code> tenancy.
+     * </p>
      * 
      * @return The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
      *         <code>dedicated</code> runs on single-tenant hardware. The <code>host</code> tenancy is not supported for
@@ -516,6 +529,10 @@ public class Placement implements Serializable, Cloneable {
      *         <p>
      *         This parameter is not supported by <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
+     *         </p>
+     *         <p>
+     *         T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code>
+     *         tenancy.
      * @see Tenancy
      */
 
@@ -533,6 +550,9 @@ public class Placement implements Serializable, Cloneable {
      * This parameter is not supported by <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
      * </p>
+     * <p>
+     * T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code> tenancy.
+     * </p>
      * 
      * @param tenancy
      *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
@@ -543,6 +563,10 @@ public class Placement implements Serializable, Cloneable {
      *        <p>
      *        This parameter is not supported by <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
+     *        </p>
+     *        <p>
+     *        T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code>
+     *        tenancy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Tenancy
      */
@@ -562,6 +586,9 @@ public class Placement implements Serializable, Cloneable {
      * This parameter is not supported by <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
      * </p>
+     * <p>
+     * T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code> tenancy.
+     * </p>
      * 
      * @param tenancy
      *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
@@ -572,6 +599,10 @@ public class Placement implements Serializable, Cloneable {
      *        <p>
      *        This parameter is not supported by <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
+     *        </p>
+     *        <p>
+     *        T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code>
+     *        tenancy.
      * @see Tenancy
      */
 
@@ -589,6 +620,9 @@ public class Placement implements Serializable, Cloneable {
      * This parameter is not supported by <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
      * </p>
+     * <p>
+     * T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code> tenancy.
+     * </p>
      * 
      * @param tenancy
      *        The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of
@@ -599,6 +633,10 @@ public class Placement implements Serializable, Cloneable {
      *        <p>
      *        This parameter is not supported by <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
+     *        </p>
+     *        <p>
+     *        T3 instances that use the <code>unlimited</code> CPU credit option do not support <code>host</code>
+     *        tenancy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Tenancy
      */

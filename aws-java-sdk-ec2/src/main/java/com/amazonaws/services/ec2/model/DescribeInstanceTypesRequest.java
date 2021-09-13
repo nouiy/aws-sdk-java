@@ -199,7 +199,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <li>
      * <p>
      * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
-     * encrypts in-transit traffic between instances.
+     * encrypts in-transit traffic between instances (<code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -591,7 +591,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <li>
      * <p>
      * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
-     * encrypts in-transit traffic between instances.
+     * encrypts in-transit traffic between instances (<code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -846,7 +846,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *         <li>
      *         <p>
      *         <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type
-     *         automatically encrypts in-transit traffic between instances.
+     *         automatically encrypts in-transit traffic between instances (<code>true</code> | <code>false</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -1112,7 +1112,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <li>
      * <p>
      * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
-     * encrypts in-transit traffic between instances.
+     * encrypts in-transit traffic between instances (<code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -1367,7 +1367,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <li>
      *        <p>
      *        <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type
-     *        automatically encrypts in-transit traffic between instances.
+     *        automatically encrypts in-transit traffic between instances (<code>true</code> | <code>false</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -1635,7 +1635,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <li>
      * <p>
      * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
-     * encrypts in-transit traffic between instances.
+     * encrypts in-transit traffic between instances (<code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -1895,7 +1895,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <li>
      *        <p>
      *        <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type
-     *        automatically encrypts in-transit traffic between instances.
+     *        automatically encrypts in-transit traffic between instances (<code>true</code> | <code>false</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -2165,7 +2165,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * <li>
      * <p>
      * <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type automatically
-     * encrypts in-transit traffic between instances.
+     * encrypts in-transit traffic between instances (<code>true</code> | <code>false</code>).
      * </p>
      * </li>
      * <li>
@@ -2420,7 +2420,7 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        <li>
      *        <p>
      *        <code>network-info.encryption-in-transit-supported</code> - Indicates whether the instance type
-     *        automatically encrypts in-transit traffic between instances.
+     *        automatically encrypts in-transit traffic between instances (<code>true</code> | <code>false</code>).
      *        </p>
      *        </li>
      *        <li>

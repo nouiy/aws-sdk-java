@@ -34,10 +34,8 @@ public class ModifyCapacityReservationRequest extends AmazonWebServiceRequest im
     private String capacityReservationId;
     /**
      * <p>
-     * The number of instances for which to reserve capacity.
-     * </p>
-     * <p>
-     * Valid range: 1 - 1000
+     * The number of instances for which to reserve capacity. The number of instances can't be increased or decreased by
+     * more than <code>1000</code> in a single request.
      * </p>
      */
     private Integer instanceCount;
@@ -127,16 +125,13 @@ public class ModifyCapacityReservationRequest extends AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The number of instances for which to reserve capacity.
-     * </p>
-     * <p>
-     * Valid range: 1 - 1000
+     * The number of instances for which to reserve capacity. The number of instances can't be increased or decreased by
+     * more than <code>1000</code> in a single request.
      * </p>
      * 
      * @param instanceCount
-     *        The number of instances for which to reserve capacity.</p>
-     *        <p>
-     *        Valid range: 1 - 1000
+     *        The number of instances for which to reserve capacity. The number of instances can't be increased or
+     *        decreased by more than <code>1000</code> in a single request.
      */
 
     public void setInstanceCount(Integer instanceCount) {
@@ -145,15 +140,12 @@ public class ModifyCapacityReservationRequest extends AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The number of instances for which to reserve capacity.
-     * </p>
-     * <p>
-     * Valid range: 1 - 1000
+     * The number of instances for which to reserve capacity. The number of instances can't be increased or decreased by
+     * more than <code>1000</code> in a single request.
      * </p>
      * 
-     * @return The number of instances for which to reserve capacity.</p>
-     *         <p>
-     *         Valid range: 1 - 1000
+     * @return The number of instances for which to reserve capacity. The number of instances can't be increased or
+     *         decreased by more than <code>1000</code> in a single request.
      */
 
     public Integer getInstanceCount() {
@@ -162,16 +154,13 @@ public class ModifyCapacityReservationRequest extends AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The number of instances for which to reserve capacity.
-     * </p>
-     * <p>
-     * Valid range: 1 - 1000
+     * The number of instances for which to reserve capacity. The number of instances can't be increased or decreased by
+     * more than <code>1000</code> in a single request.
      * </p>
      * 
      * @param instanceCount
-     *        The number of instances for which to reserve capacity.</p>
-     *        <p>
-     *        Valid range: 1 - 1000
+     *        The number of instances for which to reserve capacity. The number of instances can't be increased or
+     *        decreased by more than <code>1000</code> in a single request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
