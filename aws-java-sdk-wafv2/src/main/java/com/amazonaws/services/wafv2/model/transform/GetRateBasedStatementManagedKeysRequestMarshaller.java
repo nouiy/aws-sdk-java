@@ -33,6 +33,8 @@ public class GetRateBasedStatementManagedKeysRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WebACLName").build();
     private static final MarshallingInfo<String> WEBACLID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("WebACLId").build();
+    private static final MarshallingInfo<String> RULEGROUPRULENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RuleGroupRuleName").build();
     private static final MarshallingInfo<String> RULENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("RuleName").build();
 
@@ -55,6 +57,7 @@ public class GetRateBasedStatementManagedKeysRequestMarshaller {
             protocolMarshaller.marshall(getRateBasedStatementManagedKeysRequest.getScope(), SCOPE_BINDING);
             protocolMarshaller.marshall(getRateBasedStatementManagedKeysRequest.getWebACLName(), WEBACLNAME_BINDING);
             protocolMarshaller.marshall(getRateBasedStatementManagedKeysRequest.getWebACLId(), WEBACLID_BINDING);
+            protocolMarshaller.marshall(getRateBasedStatementManagedKeysRequest.getRuleGroupRuleName(), RULEGROUPRULENAME_BINDING);
             protocolMarshaller.marshall(getRateBasedStatementManagedKeysRequest.getRuleName(), RULENAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

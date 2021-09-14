@@ -1170,6 +1170,8 @@ public interface AmazonChime {
      *         The client exceeded its request rate limit.
      * @throws UnauthorizedClientException
      *         The client is not currently authorized to make the request.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation.
      * @throws ServiceUnavailableException
      *         The service is currently unavailable.
      * @throws ServiceFailureException
@@ -4925,7 +4927,7 @@ public interface AmazonChime {
 
     /**
      * <p>
-     * Start transcription for the specified <code>meetingId</code>.
+     * Starts transcription for the specified <code>meetingId</code>.
      * </p>
      * 
      * @param startMeetingTranscriptionRequest

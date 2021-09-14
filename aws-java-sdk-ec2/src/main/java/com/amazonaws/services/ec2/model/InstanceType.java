@@ -436,7 +436,10 @@ public enum InstanceType {
     X2gd8xlarge("x2gd.8xlarge"),
     X2gd12xlarge("x2gd.12xlarge"),
     X2gd16xlarge("x2gd.16xlarge"),
-    X2gdMetal("x2gd.metal");
+    X2gdMetal("x2gd.metal"),
+    Vt13xlarge("vt1.3xlarge"),
+    Vt16xlarge("vt1.6xlarge"),
+    Vt124xlarge("vt1.24xlarge");
 
     private String value;
 

@@ -68,7 +68,7 @@ public class DescribeEdgePackagingJobResult extends com.amazonaws.AmazonWebServi
     private EdgeOutputConfig outputConfig;
     /**
      * <p>
-     * The CMK to use when encrypting the EBS volume the job run on.
+     * The Amazon Web Services KMS key to use when encrypting the EBS volume the job run on.
      * </p>
      */
     private String resourceKey;
@@ -406,11 +406,11 @@ public class DescribeEdgePackagingJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The CMK to use when encrypting the EBS volume the job run on.
+     * The Amazon Web Services KMS key to use when encrypting the EBS volume the job run on.
      * </p>
      * 
      * @param resourceKey
-     *        The CMK to use when encrypting the EBS volume the job run on.
+     *        The Amazon Web Services KMS key to use when encrypting the EBS volume the job run on.
      */
 
     public void setResourceKey(String resourceKey) {
@@ -419,10 +419,10 @@ public class DescribeEdgePackagingJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The CMK to use when encrypting the EBS volume the job run on.
+     * The Amazon Web Services KMS key to use when encrypting the EBS volume the job run on.
      * </p>
      * 
-     * @return The CMK to use when encrypting the EBS volume the job run on.
+     * @return The Amazon Web Services KMS key to use when encrypting the EBS volume the job run on.
      */
 
     public String getResourceKey() {
@@ -431,11 +431,11 @@ public class DescribeEdgePackagingJobResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The CMK to use when encrypting the EBS volume the job run on.
+     * The Amazon Web Services KMS key to use when encrypting the EBS volume the job run on.
      * </p>
      * 
      * @param resourceKey
-     *        The CMK to use when encrypting the EBS volume the job run on.
+     *        The Amazon Web Services KMS key to use when encrypting the EBS volume the job run on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

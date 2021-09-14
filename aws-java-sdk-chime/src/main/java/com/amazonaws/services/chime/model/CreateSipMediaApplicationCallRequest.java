@@ -43,6 +43,12 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
      * </p>
      */
     private String sipMediaApplicationId;
+    /**
+     * <p>
+     * The SIP headers added to an outbound call leg.
+     * </p>
+     */
+    private java.util.Map<String, String> sipHeaders;
 
     /**
      * <p>
@@ -168,6 +174,74 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
     }
 
     /**
+     * <p>
+     * The SIP headers added to an outbound call leg.
+     * </p>
+     * 
+     * @return The SIP headers added to an outbound call leg.
+     */
+
+    public java.util.Map<String, String> getSipHeaders() {
+        return sipHeaders;
+    }
+
+    /**
+     * <p>
+     * The SIP headers added to an outbound call leg.
+     * </p>
+     * 
+     * @param sipHeaders
+     *        The SIP headers added to an outbound call leg.
+     */
+
+    public void setSipHeaders(java.util.Map<String, String> sipHeaders) {
+        this.sipHeaders = sipHeaders;
+    }
+
+    /**
+     * <p>
+     * The SIP headers added to an outbound call leg.
+     * </p>
+     * 
+     * @param sipHeaders
+     *        The SIP headers added to an outbound call leg.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSipMediaApplicationCallRequest withSipHeaders(java.util.Map<String, String> sipHeaders) {
+        setSipHeaders(sipHeaders);
+        return this;
+    }
+
+    /**
+     * Add a single SipHeaders entry
+     *
+     * @see CreateSipMediaApplicationCallRequest#withSipHeaders
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSipMediaApplicationCallRequest addSipHeadersEntry(String key, String value) {
+        if (null == this.sipHeaders) {
+            this.sipHeaders = new java.util.HashMap<String, String>();
+        }
+        if (this.sipHeaders.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.sipHeaders.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into SipHeaders.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSipMediaApplicationCallRequest clearSipHeadersEntries() {
+        this.sipHeaders = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +258,9 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
         if (getToPhoneNumber() != null)
             sb.append("ToPhoneNumber: ").append("***Sensitive Data Redacted***").append(",");
         if (getSipMediaApplicationId() != null)
-            sb.append("SipMediaApplicationId: ").append(getSipMediaApplicationId());
+            sb.append("SipMediaApplicationId: ").append(getSipMediaApplicationId()).append(",");
+        if (getSipHeaders() != null)
+            sb.append("SipHeaders: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +287,10 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
             return false;
         if (other.getSipMediaApplicationId() != null && other.getSipMediaApplicationId().equals(this.getSipMediaApplicationId()) == false)
             return false;
+        if (other.getSipHeaders() == null ^ this.getSipHeaders() == null)
+            return false;
+        if (other.getSipHeaders() != null && other.getSipHeaders().equals(this.getSipHeaders()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +302,7 @@ public class CreateSipMediaApplicationCallRequest extends com.amazonaws.AmazonWe
         hashCode = prime * hashCode + ((getFromPhoneNumber() == null) ? 0 : getFromPhoneNumber().hashCode());
         hashCode = prime * hashCode + ((getToPhoneNumber() == null) ? 0 : getToPhoneNumber().hashCode());
         hashCode = prime * hashCode + ((getSipMediaApplicationId() == null) ? 0 : getSipMediaApplicationId().hashCode());
+        hashCode = prime * hashCode + ((getSipHeaders() == null) ? 0 : getSipHeaders().hashCode());
         return hashCode;
     }
 

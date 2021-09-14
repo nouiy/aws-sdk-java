@@ -56,6 +56,10 @@ public class InputDataConfigJsonUnmarshaller implements Unmarshaller<InputDataCo
                     context.nextToken();
                     inputDataConfig.setInputFormat(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DocumentReaderConfig", targetDepth)) {
+                    context.nextToken();
+                    inputDataConfig.setDocumentReaderConfig(DocumentReaderConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

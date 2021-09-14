@@ -6195,7 +6195,7 @@ public interface AmazonChimeAsync extends AmazonChime {
 
     /**
      * <p>
-     * Start transcription for the specified <code>meetingId</code>.
+     * Starts transcription for the specified <code>meetingId</code>.
      * </p>
      * 
      * @param startMeetingTranscriptionRequest
@@ -6209,7 +6209,7 @@ public interface AmazonChimeAsync extends AmazonChime {
 
     /**
      * <p>
-     * Start transcription for the specified <code>meetingId</code>.
+     * Starts transcription for the specified <code>meetingId</code>.
      * </p>
      * 
      * @param startMeetingTranscriptionRequest

@@ -24,6 +24,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * temporary block on requests from an IP address that is sending excessive requests.
  * </p>
  * <p>
+ * WAF tracks and manages web requests separately for each instance of a rate-based rule that you use. For example, if
+ * you provide the same rate-based rule settings in two web ACLs, each of the two rule statements represents a separate
+ * instance of the rate-based rule and gets its own tracking and management by WAF. If you define a rate-based rule
+ * inside a rule group, and then use that rule group in multiple places, each use creates a separate instance of the
+ * rate-based rule that gets its own tracking and management by WAF.
+ * </p>
+ * <p>
  * When the rule action triggers, WAF blocks additional requests from the IP address until the request rate falls below
  * the limit.
  * </p>
@@ -52,8 +59,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * affected by this rule.
  * </p>
  * <p>
- * You cannot nest a <code>RateBasedStatement</code>, for example for use inside a <code>NotStatement</code> or
- * <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+ * You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a
+ * <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a web
+ * ACL and inside a rule group.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/RateBasedStatement" target="_top">AWS API

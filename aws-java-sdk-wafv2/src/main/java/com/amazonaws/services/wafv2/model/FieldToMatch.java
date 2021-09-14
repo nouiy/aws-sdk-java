@@ -24,6 +24,18 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * component in <code>FieldToMatch</code> for each rule statement that requires it. To inspect more than one component
  * of a web request, create a separate rule statement for each component.
  * </p>
+ * <p>
+ * JSON specification for a <code>QueryString</code> field to match:
+ * </p>
+ * <p>
+ * <code> "FieldToMatch": { "QueryString": {} }</code>
+ * </p>
+ * <p>
+ * Example JSON for a <code>Method</code> field to match specification:
+ * </p>
+ * <p>
+ * <code> "FieldToMatch": { "Method": { "Name": "DELETE" } }</code>
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/FieldToMatch" target="_top">AWS API
  *      Documentation</a>

@@ -29,7 +29,8 @@ public enum ResourceType {
     ModelPackageGroup("ModelPackageGroup"),
     Pipeline("Pipeline"),
     PipelineExecution("PipelineExecution"),
-    FeatureGroup("FeatureGroup");
+    FeatureGroup("FeatureGroup"),
+    Project("Project");
 
     private String value;
 

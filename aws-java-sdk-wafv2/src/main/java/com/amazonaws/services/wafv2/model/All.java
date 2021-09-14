@@ -25,6 +25,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * This is used only to indicate the web request component for WAF to inspect, in the <a>FieldToMatch</a> specification.
  * </p>
+ * <p>
+ * JSON specification: <code>"All": {}</code>
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/All" target="_top">AWS API Documentation</a>
  */

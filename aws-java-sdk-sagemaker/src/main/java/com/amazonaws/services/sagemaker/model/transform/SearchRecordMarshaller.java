@@ -47,6 +47,8 @@ public class SearchRecordMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineExecution").build();
     private static final MarshallingInfo<StructuredPojo> FEATUREGROUP_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FeatureGroup").build();
+    private static final MarshallingInfo<StructuredPojo> PROJECT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Project").build();
 
     private static final SearchRecordMarshaller instance = new SearchRecordMarshaller();
 
@@ -74,6 +76,7 @@ public class SearchRecordMarshaller {
             protocolMarshaller.marshall(searchRecord.getPipeline(), PIPELINE_BINDING);
             protocolMarshaller.marshall(searchRecord.getPipelineExecution(), PIPELINEEXECUTION_BINDING);
             protocolMarshaller.marshall(searchRecord.getFeatureGroup(), FEATUREGROUP_BINDING);
+            protocolMarshaller.marshall(searchRecord.getProject(), PROJECT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

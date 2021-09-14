@@ -37,7 +37,7 @@ public class TranscriptionConfiguration implements Serializable, Cloneable, Stru
     private EngineTranscribeSettings engineTranscribeSettings;
     /**
      * <p>
-     * The transcription configuration settings passed to Amazon Transcribe.
+     * The transcription configuration settings passed to Amazon Transcribe Medical.
      * </p>
      */
     private EngineTranscribeMedicalSettings engineTranscribeMedicalSettings;
@@ -84,11 +84,11 @@ public class TranscriptionConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The transcription configuration settings passed to Amazon Transcribe.
+     * The transcription configuration settings passed to Amazon Transcribe Medical.
      * </p>
      * 
      * @param engineTranscribeMedicalSettings
-     *        The transcription configuration settings passed to Amazon Transcribe.
+     *        The transcription configuration settings passed to Amazon Transcribe Medical.
      */
 
     public void setEngineTranscribeMedicalSettings(EngineTranscribeMedicalSettings engineTranscribeMedicalSettings) {
@@ -97,10 +97,10 @@ public class TranscriptionConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The transcription configuration settings passed to Amazon Transcribe.
+     * The transcription configuration settings passed to Amazon Transcribe Medical.
      * </p>
      * 
-     * @return The transcription configuration settings passed to Amazon Transcribe.
+     * @return The transcription configuration settings passed to Amazon Transcribe Medical.
      */
 
     public EngineTranscribeMedicalSettings getEngineTranscribeMedicalSettings() {
@@ -109,11 +109,11 @@ public class TranscriptionConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The transcription configuration settings passed to Amazon Transcribe.
+     * The transcription configuration settings passed to Amazon Transcribe Medical.
      * </p>
      * 
      * @param engineTranscribeMedicalSettings
-     *        The transcription configuration settings passed to Amazon Transcribe.
+     *        The transcription configuration settings passed to Amazon Transcribe Medical.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.chime.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +35,8 @@ public class CreateSipMediaApplicationCallRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ToPhoneNumber").build();
     private static final MarshallingInfo<String> SIPMEDIAAPPLICATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("sipMediaApplicationId").build();
+    private static final MarshallingInfo<Map> SIPHEADERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SipHeaders").build();
 
     private static final CreateSipMediaApplicationCallRequestMarshaller instance = new CreateSipMediaApplicationCallRequestMarshaller();
 
@@ -53,6 +57,7 @@ public class CreateSipMediaApplicationCallRequestMarshaller {
             protocolMarshaller.marshall(createSipMediaApplicationCallRequest.getFromPhoneNumber(), FROMPHONENUMBER_BINDING);
             protocolMarshaller.marshall(createSipMediaApplicationCallRequest.getToPhoneNumber(), TOPHONENUMBER_BINDING);
             protocolMarshaller.marshall(createSipMediaApplicationCallRequest.getSipMediaApplicationId(), SIPMEDIAAPPLICATIONID_BINDING);
+            protocolMarshaller.marshall(createSipMediaApplicationCallRequest.getSipHeaders(), SIPHEADERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

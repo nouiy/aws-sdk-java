@@ -48,7 +48,7 @@ public class ResourceSpec implements Serializable, Cloneable, StructuredPojo {
     private String instanceType;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * </p>
      */
     private String lifecycleConfigArn;
@@ -194,11 +194,11 @@ public class ResourceSpec implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * </p>
      * 
      * @param lifecycleConfigArn
-     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      */
 
     public void setLifecycleConfigArn(String lifecycleConfigArn) {
@@ -207,10 +207,10 @@ public class ResourceSpec implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * @return The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      */
 
     public String getLifecycleConfigArn() {
@@ -219,11 +219,11 @@ public class ResourceSpec implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * </p>
      * 
      * @param lifecycleConfigArn
-     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

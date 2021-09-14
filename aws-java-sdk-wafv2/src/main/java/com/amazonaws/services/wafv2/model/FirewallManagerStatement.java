@@ -48,8 +48,8 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
      * </p>
      * <p>
      * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     * <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within
-     * a rule.
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      */
     private RuleGroupReferenceStatement ruleGroupReferenceStatement;
@@ -137,8 +137,8 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
      * </p>
      * <p>
      * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     * <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within
-     * a rule.
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      * 
      * @param ruleGroupReferenceStatement
@@ -146,8 +146,8 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
      *        group with your rules, then provide the ARN of the rule group in this statement.</p>
      *        <p>
      *        You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     *        <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
-     *        within a rule.
+     *        <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement
+     *        at the top level inside a web ACL.
      */
 
     public void setRuleGroupReferenceStatement(RuleGroupReferenceStatement ruleGroupReferenceStatement) {
@@ -161,16 +161,16 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
      * </p>
      * <p>
      * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     * <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within
-     * a rule.
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      * 
      * @return A rule statement used to run the rules that are defined in a <a>RuleGroup</a>. To use this, create a rule
      *         group with your rules, then provide the ARN of the rule group in this statement.</p>
      *         <p>
      *         You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     *         <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
-     *         within a rule.
+     *         <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement
+     *         at the top level inside a web ACL.
      */
 
     public RuleGroupReferenceStatement getRuleGroupReferenceStatement() {
@@ -184,8 +184,8 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
      * </p>
      * <p>
      * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     * <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within
-     * a rule.
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      * 
      * @param ruleGroupReferenceStatement
@@ -193,8 +193,8 @@ public class FirewallManagerStatement implements Serializable, Cloneable, Struct
      *        group with your rules, then provide the ARN of the rule group in this statement.</p>
      *        <p>
      *        You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     *        <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
-     *        within a rule.
+     *        <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement
+     *        at the top level inside a web ACL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

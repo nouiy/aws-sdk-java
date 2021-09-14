@@ -1,3 +1,28 @@
+# __1.12.68__ __2021-09-14__
+## __AWS WAFV2__
+  - ### Features
+    - This release adds support for including rate based rules in a rule group.
+
+## __Amazon Chime__
+  - ### Features
+    - Adds support for SipHeaders parameter for CreateSipMediaApplicationCall.
+
+## __Amazon Comprehend__
+  - ### Features
+    - Amazon Comprehend now allows you to train and run PDF and Word documents for custom entity recognition. With PDF and Word formats, you can extract information from documents containing headers, lists and tables.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds support for vt1 3xlarge, 6xlarge and 24xlarge instances powered by Xilinx Alveo U30 Media Accelerators for video transcoding workloads
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release adds support for "Project Search"
+
+## __Amazon Transcribe Streaming Service__
+  - ### Features
+    - Amazon Transcribe now supports PII Identification and Redaction for streaming transcription.
+
 # __1.12.67__ __2021-09-13__
 ## __AWS IoT__
   - ### Features

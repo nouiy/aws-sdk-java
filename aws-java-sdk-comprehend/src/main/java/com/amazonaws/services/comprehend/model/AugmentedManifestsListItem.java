@@ -51,6 +51,39 @@ public class AugmentedManifestsListItem implements Serializable, Cloneable, Stru
      * </p>
      */
     private java.util.List<String> attributeNames;
+    /**
+     * <p>
+     * The S3 prefix to the annotation files that are referred in the augmented manifest file.
+     * </p>
+     */
+    private String annotationDataS3Uri;
+    /**
+     * <p>
+     * The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+     * </p>
+     */
+    private String sourceDocumentsS3Uri;
+    /**
+     * <p>
+     * The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is
+     * PlainTextDocument.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For
+     * training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and
+     * TXT.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String documentType;
 
     /**
      * <p>
@@ -239,6 +272,265 @@ public class AugmentedManifestsListItem implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The S3 prefix to the annotation files that are referred in the augmented manifest file.
+     * </p>
+     * 
+     * @param annotationDataS3Uri
+     *        The S3 prefix to the annotation files that are referred in the augmented manifest file.
+     */
+
+    public void setAnnotationDataS3Uri(String annotationDataS3Uri) {
+        this.annotationDataS3Uri = annotationDataS3Uri;
+    }
+
+    /**
+     * <p>
+     * The S3 prefix to the annotation files that are referred in the augmented manifest file.
+     * </p>
+     * 
+     * @return The S3 prefix to the annotation files that are referred in the augmented manifest file.
+     */
+
+    public String getAnnotationDataS3Uri() {
+        return this.annotationDataS3Uri;
+    }
+
+    /**
+     * <p>
+     * The S3 prefix to the annotation files that are referred in the augmented manifest file.
+     * </p>
+     * 
+     * @param annotationDataS3Uri
+     *        The S3 prefix to the annotation files that are referred in the augmented manifest file.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AugmentedManifestsListItem withAnnotationDataS3Uri(String annotationDataS3Uri) {
+        setAnnotationDataS3Uri(annotationDataS3Uri);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+     * </p>
+     * 
+     * @param sourceDocumentsS3Uri
+     *        The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+     */
+
+    public void setSourceDocumentsS3Uri(String sourceDocumentsS3Uri) {
+        this.sourceDocumentsS3Uri = sourceDocumentsS3Uri;
+    }
+
+    /**
+     * <p>
+     * The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+     * </p>
+     * 
+     * @return The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+     */
+
+    public String getSourceDocumentsS3Uri() {
+        return this.sourceDocumentsS3Uri;
+    }
+
+    /**
+     * <p>
+     * The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+     * </p>
+     * 
+     * @param sourceDocumentsS3Uri
+     *        The S3 prefix to the source files (PDFs) that are referred to in the augmented manifest file.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AugmentedManifestsListItem withSourceDocumentsS3Uri(String sourceDocumentsS3Uri) {
+        setSourceDocumentsS3Uri(sourceDocumentsS3Uri);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is
+     * PlainTextDocument.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For
+     * training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and
+     * TXT.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param documentType
+     *        The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the
+     *        default is PlainTextDocument. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in
+     *        UTF-8.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF.
+     *        For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support
+     *        PDFs, DOCX and TXT.
+     *        </p>
+     *        </li>
+     * @see AugmentedManifestsDocumentTypeFormat
+     */
+
+    public void setDocumentType(String documentType) {
+        this.documentType = documentType;
+    }
+
+    /**
+     * <p>
+     * The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is
+     * PlainTextDocument.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For
+     * training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and
+     * TXT.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the
+     *         default is PlainTextDocument. </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in
+     *         UTF-8.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF.
+     *         For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support
+     *         PDFs, DOCX and TXT.
+     *         </p>
+     *         </li>
+     * @see AugmentedManifestsDocumentTypeFormat
+     */
+
+    public String getDocumentType() {
+        return this.documentType;
+    }
+
+    /**
+     * <p>
+     * The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is
+     * PlainTextDocument.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For
+     * training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and
+     * TXT.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param documentType
+     *        The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the
+     *        default is PlainTextDocument. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in
+     *        UTF-8.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF.
+     *        For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support
+     *        PDFs, DOCX and TXT.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AugmentedManifestsDocumentTypeFormat
+     */
+
+    public AugmentedManifestsListItem withDocumentType(String documentType) {
+        setDocumentType(documentType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the default is
+     * PlainTextDocument.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in UTF-8.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF. For
+     * training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support PDFs, DOCX and
+     * TXT.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param documentType
+     *        The type of augmented manifest. PlainTextDocument or SemiStructuredDocument. If you don't specify, the
+     *        default is PlainTextDocument. </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PLAIN_TEXT_DOCUMENT</code> A document type that represents any unicode text that is encoded in
+     *        UTF-8.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SEMI_STRUCTURED_DOCUMENT</code> A document type with positional and structural context, like a PDF.
+     *        For training with Amazon Comprehend, only PDFs are supported. For inference, Amazon Comprehend support
+     *        PDFs, DOCX and TXT.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AugmentedManifestsDocumentTypeFormat
+     */
+
+    public AugmentedManifestsListItem withDocumentType(AugmentedManifestsDocumentTypeFormat documentType) {
+        this.documentType = documentType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -253,7 +545,13 @@ public class AugmentedManifestsListItem implements Serializable, Cloneable, Stru
         if (getS3Uri() != null)
             sb.append("S3Uri: ").append(getS3Uri()).append(",");
         if (getAttributeNames() != null)
-            sb.append("AttributeNames: ").append(getAttributeNames());
+            sb.append("AttributeNames: ").append(getAttributeNames()).append(",");
+        if (getAnnotationDataS3Uri() != null)
+            sb.append("AnnotationDataS3Uri: ").append(getAnnotationDataS3Uri()).append(",");
+        if (getSourceDocumentsS3Uri() != null)
+            sb.append("SourceDocumentsS3Uri: ").append(getSourceDocumentsS3Uri()).append(",");
+        if (getDocumentType() != null)
+            sb.append("DocumentType: ").append(getDocumentType());
         sb.append("}");
         return sb.toString();
     }
@@ -276,6 +574,18 @@ public class AugmentedManifestsListItem implements Serializable, Cloneable, Stru
             return false;
         if (other.getAttributeNames() != null && other.getAttributeNames().equals(this.getAttributeNames()) == false)
             return false;
+        if (other.getAnnotationDataS3Uri() == null ^ this.getAnnotationDataS3Uri() == null)
+            return false;
+        if (other.getAnnotationDataS3Uri() != null && other.getAnnotationDataS3Uri().equals(this.getAnnotationDataS3Uri()) == false)
+            return false;
+        if (other.getSourceDocumentsS3Uri() == null ^ this.getSourceDocumentsS3Uri() == null)
+            return false;
+        if (other.getSourceDocumentsS3Uri() != null && other.getSourceDocumentsS3Uri().equals(this.getSourceDocumentsS3Uri()) == false)
+            return false;
+        if (other.getDocumentType() == null ^ this.getDocumentType() == null)
+            return false;
+        if (other.getDocumentType() != null && other.getDocumentType().equals(this.getDocumentType()) == false)
+            return false;
         return true;
     }
 
@@ -286,6 +596,9 @@ public class AugmentedManifestsListItem implements Serializable, Cloneable, Stru
 
         hashCode = prime * hashCode + ((getS3Uri() == null) ? 0 : getS3Uri().hashCode());
         hashCode = prime * hashCode + ((getAttributeNames() == null) ? 0 : getAttributeNames().hashCode());
+        hashCode = prime * hashCode + ((getAnnotationDataS3Uri() == null) ? 0 : getAnnotationDataS3Uri().hashCode());
+        hashCode = prime * hashCode + ((getSourceDocumentsS3Uri() == null) ? 0 : getSourceDocumentsS3Uri().hashCode());
+        hashCode = prime * hashCode + ((getDocumentType() == null) ? 0 : getDocumentType().hashCode());
         return hashCode;
     }
 

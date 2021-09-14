@@ -88,6 +88,10 @@ public class SearchRecordJsonUnmarshaller implements Unmarshaller<SearchRecord, 
                     context.nextToken();
                     searchRecord.setFeatureGroup(FeatureGroupJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Project", targetDepth)) {
+                    context.nextToken();
+                    searchRecord.setProject(ProjectJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

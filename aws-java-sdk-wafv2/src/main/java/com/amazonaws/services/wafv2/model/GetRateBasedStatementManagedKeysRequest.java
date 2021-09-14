@@ -62,7 +62,16 @@ public class GetRateBasedStatementManagedKeysRequest extends com.amazonaws.Amazo
     private String webACLId;
     /**
      * <p>
-     * The name of the rate-based rule to get the keys for.
+     * The name of the rule group reference statement in your web ACL. This is required only when you have the
+     * rate-based rule nested inside a rule group.
+     * </p>
+     */
+    private String ruleGroupRuleName;
+    /**
+     * <p>
+     * The name of the rate-based rule to get the keys for. If you have the rule defined inside a rule group that you're
+     * using in your web ACL, also provide the name of the rule group reference statement in the request parameter
+     * <code>RuleGroupRuleName</code>.
      * </p>
      */
     private String ruleName;
@@ -346,11 +355,61 @@ public class GetRateBasedStatementManagedKeysRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The name of the rate-based rule to get the keys for.
+     * The name of the rule group reference statement in your web ACL. This is required only when you have the
+     * rate-based rule nested inside a rule group.
+     * </p>
+     * 
+     * @param ruleGroupRuleName
+     *        The name of the rule group reference statement in your web ACL. This is required only when you have the
+     *        rate-based rule nested inside a rule group.
+     */
+
+    public void setRuleGroupRuleName(String ruleGroupRuleName) {
+        this.ruleGroupRuleName = ruleGroupRuleName;
+    }
+
+    /**
+     * <p>
+     * The name of the rule group reference statement in your web ACL. This is required only when you have the
+     * rate-based rule nested inside a rule group.
+     * </p>
+     * 
+     * @return The name of the rule group reference statement in your web ACL. This is required only when you have the
+     *         rate-based rule nested inside a rule group.
+     */
+
+    public String getRuleGroupRuleName() {
+        return this.ruleGroupRuleName;
+    }
+
+    /**
+     * <p>
+     * The name of the rule group reference statement in your web ACL. This is required only when you have the
+     * rate-based rule nested inside a rule group.
+     * </p>
+     * 
+     * @param ruleGroupRuleName
+     *        The name of the rule group reference statement in your web ACL. This is required only when you have the
+     *        rate-based rule nested inside a rule group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRateBasedStatementManagedKeysRequest withRuleGroupRuleName(String ruleGroupRuleName) {
+        setRuleGroupRuleName(ruleGroupRuleName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the rate-based rule to get the keys for. If you have the rule defined inside a rule group that you're
+     * using in your web ACL, also provide the name of the rule group reference statement in the request parameter
+     * <code>RuleGroupRuleName</code>.
      * </p>
      * 
      * @param ruleName
-     *        The name of the rate-based rule to get the keys for.
+     *        The name of the rate-based rule to get the keys for. If you have the rule defined inside a rule group that
+     *        you're using in your web ACL, also provide the name of the rule group reference statement in the request
+     *        parameter <code>RuleGroupRuleName</code>.
      */
 
     public void setRuleName(String ruleName) {
@@ -359,10 +418,14 @@ public class GetRateBasedStatementManagedKeysRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The name of the rate-based rule to get the keys for.
+     * The name of the rate-based rule to get the keys for. If you have the rule defined inside a rule group that you're
+     * using in your web ACL, also provide the name of the rule group reference statement in the request parameter
+     * <code>RuleGroupRuleName</code>.
      * </p>
      * 
-     * @return The name of the rate-based rule to get the keys for.
+     * @return The name of the rate-based rule to get the keys for. If you have the rule defined inside a rule group
+     *         that you're using in your web ACL, also provide the name of the rule group reference statement in the
+     *         request parameter <code>RuleGroupRuleName</code>.
      */
 
     public String getRuleName() {
@@ -371,11 +434,15 @@ public class GetRateBasedStatementManagedKeysRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The name of the rate-based rule to get the keys for.
+     * The name of the rate-based rule to get the keys for. If you have the rule defined inside a rule group that you're
+     * using in your web ACL, also provide the name of the rule group reference statement in the request parameter
+     * <code>RuleGroupRuleName</code>.
      * </p>
      * 
      * @param ruleName
-     *        The name of the rate-based rule to get the keys for.
+     *        The name of the rate-based rule to get the keys for. If you have the rule defined inside a rule group that
+     *        you're using in your web ACL, also provide the name of the rule group reference statement in the request
+     *        parameter <code>RuleGroupRuleName</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -402,6 +469,8 @@ public class GetRateBasedStatementManagedKeysRequest extends com.amazonaws.Amazo
             sb.append("WebACLName: ").append(getWebACLName()).append(",");
         if (getWebACLId() != null)
             sb.append("WebACLId: ").append(getWebACLId()).append(",");
+        if (getRuleGroupRuleName() != null)
+            sb.append("RuleGroupRuleName: ").append(getRuleGroupRuleName()).append(",");
         if (getRuleName() != null)
             sb.append("RuleName: ").append(getRuleName());
         sb.append("}");
@@ -430,6 +499,10 @@ public class GetRateBasedStatementManagedKeysRequest extends com.amazonaws.Amazo
             return false;
         if (other.getWebACLId() != null && other.getWebACLId().equals(this.getWebACLId()) == false)
             return false;
+        if (other.getRuleGroupRuleName() == null ^ this.getRuleGroupRuleName() == null)
+            return false;
+        if (other.getRuleGroupRuleName() != null && other.getRuleGroupRuleName().equals(this.getRuleGroupRuleName()) == false)
+            return false;
         if (other.getRuleName() == null ^ this.getRuleName() == null)
             return false;
         if (other.getRuleName() != null && other.getRuleName().equals(this.getRuleName()) == false)
@@ -445,6 +518,7 @@ public class GetRateBasedStatementManagedKeysRequest extends com.amazonaws.Amazo
         hashCode = prime * hashCode + ((getScope() == null) ? 0 : getScope().hashCode());
         hashCode = prime * hashCode + ((getWebACLName() == null) ? 0 : getWebACLName().hashCode());
         hashCode = prime * hashCode + ((getWebACLId() == null) ? 0 : getWebACLId().hashCode());
+        hashCode = prime * hashCode + ((getRuleGroupRuleName() == null) ? 0 : getRuleGroupRuleName().hashCode());
         hashCode = prime * hashCode + ((getRuleName() == null) ? 0 : getRuleName().hashCode());
         return hashCode;
     }

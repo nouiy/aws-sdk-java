@@ -64,6 +64,12 @@ public class SearchRecord implements Serializable, Cloneable, StructuredPojo {
     private PipelineExecution pipelineExecution;
 
     private FeatureGroup featureGroup;
+    /**
+     * <p>
+     * The properties of a project.
+     * </p>
+     */
+    private Project project;
 
     /**
      * <p>
@@ -382,6 +388,46 @@ public class SearchRecord implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The properties of a project.
+     * </p>
+     * 
+     * @param project
+     *        The properties of a project.
+     */
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
+    /**
+     * <p>
+     * The properties of a project.
+     * </p>
+     * 
+     * @return The properties of a project.
+     */
+
+    public Project getProject() {
+        return this.project;
+    }
+
+    /**
+     * <p>
+     * The properties of a project.
+     * </p>
+     * 
+     * @param project
+     *        The properties of a project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SearchRecord withProject(Project project) {
+        setProject(project);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -412,7 +458,9 @@ public class SearchRecord implements Serializable, Cloneable, StructuredPojo {
         if (getPipelineExecution() != null)
             sb.append("PipelineExecution: ").append(getPipelineExecution()).append(",");
         if (getFeatureGroup() != null)
-            sb.append("FeatureGroup: ").append(getFeatureGroup());
+            sb.append("FeatureGroup: ").append(getFeatureGroup()).append(",");
+        if (getProject() != null)
+            sb.append("Project: ").append(getProject());
         sb.append("}");
         return sb.toString();
     }
@@ -467,6 +515,10 @@ public class SearchRecord implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getFeatureGroup() != null && other.getFeatureGroup().equals(this.getFeatureGroup()) == false)
             return false;
+        if (other.getProject() == null ^ this.getProject() == null)
+            return false;
+        if (other.getProject() != null && other.getProject().equals(this.getProject()) == false)
+            return false;
         return true;
     }
 
@@ -485,6 +537,7 @@ public class SearchRecord implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPipeline() == null) ? 0 : getPipeline().hashCode());
         hashCode = prime * hashCode + ((getPipelineExecution() == null) ? 0 : getPipelineExecution().hashCode());
         hashCode = prime * hashCode + ((getFeatureGroup() == null) ? 0 : getFeatureGroup().hashCode());
+        hashCode = prime * hashCode + ((getProject() == null) ? 0 : getProject().hashCode());
         return hashCode;
     }
 

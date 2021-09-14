@@ -26,6 +26,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Use the specifications in this object to indicate which parts of the JSON body to inspect using the rule's inspection
  * criteria. WAF inspects only the parts of the JSON that result from the matches that you indicate.
  * </p>
+ * <p>
+ * Example JSON: <code>"JsonBody": { "MatchPattern": { "All": {} }, "MatchScope": "ALL" }</code>
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/JsonBody" target="_top">AWS API
  *      Documentation</a>

@@ -64,7 +64,7 @@ public class CreateEdgePackagingJobRequest extends com.amazonaws.AmazonWebServic
     private EdgeOutputConfig outputConfig;
     /**
      * <p>
-     * The CMK to use when encrypting the EBS volume the edge packaging job runs on.
+     * The Amazon Web Services KMS key to use when encrypting the EBS volume the edge packaging job runs on.
      * </p>
      */
     private String resourceKey;
@@ -323,11 +323,11 @@ public class CreateEdgePackagingJobRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The CMK to use when encrypting the EBS volume the edge packaging job runs on.
+     * The Amazon Web Services KMS key to use when encrypting the EBS volume the edge packaging job runs on.
      * </p>
      * 
      * @param resourceKey
-     *        The CMK to use when encrypting the EBS volume the edge packaging job runs on.
+     *        The Amazon Web Services KMS key to use when encrypting the EBS volume the edge packaging job runs on.
      */
 
     public void setResourceKey(String resourceKey) {
@@ -336,10 +336,10 @@ public class CreateEdgePackagingJobRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The CMK to use when encrypting the EBS volume the edge packaging job runs on.
+     * The Amazon Web Services KMS key to use when encrypting the EBS volume the edge packaging job runs on.
      * </p>
      * 
-     * @return The CMK to use when encrypting the EBS volume the edge packaging job runs on.
+     * @return The Amazon Web Services KMS key to use when encrypting the EBS volume the edge packaging job runs on.
      */
 
     public String getResourceKey() {
@@ -348,11 +348,11 @@ public class CreateEdgePackagingJobRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The CMK to use when encrypting the EBS volume the edge packaging job runs on.
+     * The Amazon Web Services KMS key to use when encrypting the EBS volume the edge packaging job runs on.
      * </p>
      * 
      * @param resourceKey
-     *        The CMK to use when encrypting the EBS volume the edge packaging job runs on.
+     *        The Amazon Web Services KMS key to use when encrypting the EBS volume the edge packaging job runs on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

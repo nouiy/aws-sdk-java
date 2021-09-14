@@ -45,12 +45,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>HEADER</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
-     * You must use one of the following values: <code>URI</code>, <code>QUERY_STRING</code>, <code>HEADER</code>, or
-     * <code>METHOD</code>.
+     * You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
+     * <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
      * </p>
      * </note>
      */
@@ -186,21 +186,21 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>HEADER</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
-     * You must use one of the following values: <code>URI</code>, <code>QUERY_STRING</code>, <code>HEADER</code>, or
-     * <code>METHOD</code>.
+     * You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
+     * <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
      * </p>
      * </note>
      * 
      * @return The parts of the request that you want to keep out of the logs. For example, if you redact the
-     *         <code>HEADER</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>. </p>
-     *         <note>
+     *         <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     *         </p> <note>
      *         <p>
-     *         You must use one of the following values: <code>URI</code>, <code>QUERY_STRING</code>,
-     *         <code>HEADER</code>, or <code>METHOD</code>.
+     *         You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
+     *         <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
      *         </p>
      */
 
@@ -211,22 +211,22 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>HEADER</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
-     * You must use one of the following values: <code>URI</code>, <code>QUERY_STRING</code>, <code>HEADER</code>, or
-     * <code>METHOD</code>.
+     * You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
+     * <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
      * </p>
      * </note>
      * 
      * @param redactedFields
      *        The parts of the request that you want to keep out of the logs. For example, if you redact the
-     *        <code>HEADER</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>. </p>
-     *        <note>
+     *        <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     *        </p> <note>
      *        <p>
-     *        You must use one of the following values: <code>URI</code>, <code>QUERY_STRING</code>, <code>HEADER</code>
-     *        , or <code>METHOD</code>.
+     *        You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
+     *        <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
      *        </p>
      */
 
@@ -242,12 +242,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>HEADER</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
-     * You must use one of the following values: <code>URI</code>, <code>QUERY_STRING</code>, <code>HEADER</code>, or
-     * <code>METHOD</code>.
+     * You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
+     * <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
      * </p>
      * </note>
      * <p>
@@ -258,11 +258,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
      * 
      * @param redactedFields
      *        The parts of the request that you want to keep out of the logs. For example, if you redact the
-     *        <code>HEADER</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>. </p>
-     *        <note>
+     *        <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     *        </p> <note>
      *        <p>
-     *        You must use one of the following values: <code>URI</code>, <code>QUERY_STRING</code>, <code>HEADER</code>
-     *        , or <code>METHOD</code>.
+     *        You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
+     *        <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -280,22 +280,22 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>HEADER</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
-     * You must use one of the following values: <code>URI</code>, <code>QUERY_STRING</code>, <code>HEADER</code>, or
-     * <code>METHOD</code>.
+     * You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
+     * <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
      * </p>
      * </note>
      * 
      * @param redactedFields
      *        The parts of the request that you want to keep out of the logs. For example, if you redact the
-     *        <code>HEADER</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>. </p>
-     *        <note>
+     *        <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     *        </p> <note>
      *        <p>
-     *        You must use one of the following values: <code>URI</code>, <code>QUERY_STRING</code>, <code>HEADER</code>
-     *        , or <code>METHOD</code>.
+     *        You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
+     *        <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

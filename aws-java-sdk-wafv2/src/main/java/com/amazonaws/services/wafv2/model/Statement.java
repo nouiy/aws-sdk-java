@@ -87,8 +87,8 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     * <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within
-     * a rule.
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      */
     private RuleGroupReferenceStatement ruleGroupReferenceStatement;
@@ -126,6 +126,13 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * to put a temporary block on requests from an IP address that is sending excessive requests.
      * </p>
      * <p>
+     * WAF tracks and manages web requests separately for each instance of a rate-based rule that you use. For example,
+     * if you provide the same rate-based rule settings in two web ACLs, each of the two rule statements represents a
+     * separate instance of the rate-based rule and gets its own tracking and management by WAF. If you define a
+     * rate-based rule inside a rule group, and then use that rule group in multiple places, each use creates a separate
+     * instance of the rate-based rule that gets its own tracking and management by WAF.
+     * </p>
+     * <p>
      * When the rule action triggers, WAF blocks additional requests from the IP address until the request rate falls
      * below the limit.
      * </p>
@@ -154,8 +161,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * are not affected by this rule.
      * </p>
      * <p>
-     * You cannot nest a <code>RateBasedStatement</code>, for example for use inside a <code>NotStatement</code> or
-     * <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     * You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a
+     * web ACL and inside a rule group.
      * </p>
      */
     private RateBasedStatement rateBasedStatement;
@@ -543,8 +551,8 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     * <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within
-     * a rule.
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      * 
      * @param ruleGroupReferenceStatement
@@ -552,8 +560,8 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        group with your rules, then provide the ARN of the rule group in this statement.</p>
      *        <p>
      *        You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     *        <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
-     *        within a rule.
+     *        <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement
+     *        at the top level inside a web ACL.
      */
 
     public void setRuleGroupReferenceStatement(RuleGroupReferenceStatement ruleGroupReferenceStatement) {
@@ -567,16 +575,16 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     * <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within
-     * a rule.
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      * 
      * @return A rule statement used to run the rules that are defined in a <a>RuleGroup</a>. To use this, create a rule
      *         group with your rules, then provide the ARN of the rule group in this statement.</p>
      *         <p>
      *         You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     *         <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
-     *         within a rule.
+     *         <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement
+     *         at the top level inside a web ACL.
      */
 
     public RuleGroupReferenceStatement getRuleGroupReferenceStatement() {
@@ -590,8 +598,8 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     * <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement within
-     * a rule.
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement at the
+     * top level inside a web ACL.
      * </p>
      * 
      * @param ruleGroupReferenceStatement
@@ -599,8 +607,8 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        group with your rules, then provide the ARN of the rule group in this statement.</p>
      *        <p>
      *        You cannot nest a <code>RuleGroupReferenceStatement</code>, for example for use inside a
-     *        <code>NotStatement</code> or <code>OrStatement</code>. It can only be referenced as a top-level statement
-     *        within a rule.
+     *        <code>NotStatement</code> or <code>OrStatement</code>. You can only use a rule group reference statement
+     *        at the top level inside a web ACL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -783,6 +791,13 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * to put a temporary block on requests from an IP address that is sending excessive requests.
      * </p>
      * <p>
+     * WAF tracks and manages web requests separately for each instance of a rate-based rule that you use. For example,
+     * if you provide the same rate-based rule settings in two web ACLs, each of the two rule statements represents a
+     * separate instance of the rate-based rule and gets its own tracking and management by WAF. If you define a
+     * rate-based rule inside a rule group, and then use that rule group in multiple places, each use creates a separate
+     * instance of the rate-based rule that gets its own tracking and management by WAF.
+     * </p>
+     * <p>
      * When the rule action triggers, WAF blocks additional requests from the IP address until the request rate falls
      * below the limit.
      * </p>
@@ -811,15 +826,23 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * are not affected by this rule.
      * </p>
      * <p>
-     * You cannot nest a <code>RateBasedStatement</code>, for example for use inside a <code>NotStatement</code> or
-     * <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     * You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a
+     * web ACL and inside a rule group.
      * </p>
      * 
      * @param rateBasedStatement
      *        A rate-based rule tracks the rate of requests for each originating IP address, and triggers the rule
      *        action when the rate exceeds a limit that you specify on the number of requests in any 5-minute time span.
      *        You can use this to put a temporary block on requests from an IP address that is sending excessive
-     *        requests.</p>
+     *        requests. </p>
+     *        <p>
+     *        WAF tracks and manages web requests separately for each instance of a rate-based rule that you use. For
+     *        example, if you provide the same rate-based rule settings in two web ACLs, each of the two rule statements
+     *        represents a separate instance of the rate-based rule and gets its own tracking and management by WAF. If
+     *        you define a rate-based rule inside a rule group, and then use that rule group in multiple places, each
+     *        use creates a separate instance of the rate-based rule that gets its own tracking and management by WAF.
+     *        </p>
      *        <p>
      *        When the rule action triggers, WAF blocks additional requests from the IP address until the request rate
      *        falls below the limit.
@@ -849,8 +872,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        the rate limit and are not affected by this rule.
      *        </p>
      *        <p>
-     *        You cannot nest a <code>RateBasedStatement</code>, for example for use inside a <code>NotStatement</code>
-     *        or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     *        You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a
+     *        <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code>
+     *        inside a web ACL and inside a rule group.
      */
 
     public void setRateBasedStatement(RateBasedStatement rateBasedStatement) {
@@ -862,6 +886,13 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * A rate-based rule tracks the rate of requests for each originating IP address, and triggers the rule action when
      * the rate exceeds a limit that you specify on the number of requests in any 5-minute time span. You can use this
      * to put a temporary block on requests from an IP address that is sending excessive requests.
+     * </p>
+     * <p>
+     * WAF tracks and manages web requests separately for each instance of a rate-based rule that you use. For example,
+     * if you provide the same rate-based rule settings in two web ACLs, each of the two rule statements represents a
+     * separate instance of the rate-based rule and gets its own tracking and management by WAF. If you define a
+     * rate-based rule inside a rule group, and then use that rule group in multiple places, each use creates a separate
+     * instance of the rate-based rule that gets its own tracking and management by WAF.
      * </p>
      * <p>
      * When the rule action triggers, WAF blocks additional requests from the IP address until the request rate falls
@@ -892,14 +923,23 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * are not affected by this rule.
      * </p>
      * <p>
-     * You cannot nest a <code>RateBasedStatement</code>, for example for use inside a <code>NotStatement</code> or
-     * <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     * You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a
+     * web ACL and inside a rule group.
      * </p>
      * 
      * @return A rate-based rule tracks the rate of requests for each originating IP address, and triggers the rule
      *         action when the rate exceeds a limit that you specify on the number of requests in any 5-minute time
      *         span. You can use this to put a temporary block on requests from an IP address that is sending excessive
-     *         requests.</p>
+     *         requests. </p>
+     *         <p>
+     *         WAF tracks and manages web requests separately for each instance of a rate-based rule that you use. For
+     *         example, if you provide the same rate-based rule settings in two web ACLs, each of the two rule
+     *         statements represents a separate instance of the rate-based rule and gets its own tracking and management
+     *         by WAF. If you define a rate-based rule inside a rule group, and then use that rule group in multiple
+     *         places, each use creates a separate instance of the rate-based rule that gets its own tracking and
+     *         management by WAF.
+     *         </p>
      *         <p>
      *         When the rule action triggers, WAF blocks additional requests from the IP address until the request rate
      *         falls below the limit.
@@ -929,8 +969,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *         counted towards the rate limit and are not affected by this rule.
      *         </p>
      *         <p>
-     *         You cannot nest a <code>RateBasedStatement</code>, for example for use inside a <code>NotStatement</code>
-     *         or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     *         You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a
+     *         <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code>
+     *         inside a web ACL and inside a rule group.
      */
 
     public RateBasedStatement getRateBasedStatement() {
@@ -942,6 +983,13 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * A rate-based rule tracks the rate of requests for each originating IP address, and triggers the rule action when
      * the rate exceeds a limit that you specify on the number of requests in any 5-minute time span. You can use this
      * to put a temporary block on requests from an IP address that is sending excessive requests.
+     * </p>
+     * <p>
+     * WAF tracks and manages web requests separately for each instance of a rate-based rule that you use. For example,
+     * if you provide the same rate-based rule settings in two web ACLs, each of the two rule statements represents a
+     * separate instance of the rate-based rule and gets its own tracking and management by WAF. If you define a
+     * rate-based rule inside a rule group, and then use that rule group in multiple places, each use creates a separate
+     * instance of the rate-based rule that gets its own tracking and management by WAF.
      * </p>
      * <p>
      * When the rule action triggers, WAF blocks additional requests from the IP address until the request rate falls
@@ -972,15 +1020,23 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * are not affected by this rule.
      * </p>
      * <p>
-     * You cannot nest a <code>RateBasedStatement</code>, for example for use inside a <code>NotStatement</code> or
-     * <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     * You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a
+     * <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code> inside a
+     * web ACL and inside a rule group.
      * </p>
      * 
      * @param rateBasedStatement
      *        A rate-based rule tracks the rate of requests for each originating IP address, and triggers the rule
      *        action when the rate exceeds a limit that you specify on the number of requests in any 5-minute time span.
      *        You can use this to put a temporary block on requests from an IP address that is sending excessive
-     *        requests.</p>
+     *        requests. </p>
+     *        <p>
+     *        WAF tracks and manages web requests separately for each instance of a rate-based rule that you use. For
+     *        example, if you provide the same rate-based rule settings in two web ACLs, each of the two rule statements
+     *        represents a separate instance of the rate-based rule and gets its own tracking and management by WAF. If
+     *        you define a rate-based rule inside a rule group, and then use that rule group in multiple places, each
+     *        use creates a separate instance of the rate-based rule that gets its own tracking and management by WAF.
+     *        </p>
      *        <p>
      *        When the rule action triggers, WAF blocks additional requests from the IP address until the request rate
      *        falls below the limit.
@@ -1010,8 +1066,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      *        the rate limit and are not affected by this rule.
      *        </p>
      *        <p>
-     *        You cannot nest a <code>RateBasedStatement</code>, for example for use inside a <code>NotStatement</code>
-     *        or <code>OrStatement</code>. It can only be referenced as a top-level statement within a rule.
+     *        You cannot nest a <code>RateBasedStatement</code> inside another statement, for example inside a
+     *        <code>NotStatement</code> or <code>OrStatement</code>. You can define a <code>RateBasedStatement</code>
+     *        inside a web ACL and inside a rule group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

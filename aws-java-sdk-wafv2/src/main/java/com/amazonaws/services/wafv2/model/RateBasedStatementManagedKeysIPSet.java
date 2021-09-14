@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The set of IP addresses that are currently blocked for a rate-based statement.
+ * The set of IP addresses that are currently blocked for a <a>RateBasedStatement</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/RateBasedStatementManagedKeysIPSet"

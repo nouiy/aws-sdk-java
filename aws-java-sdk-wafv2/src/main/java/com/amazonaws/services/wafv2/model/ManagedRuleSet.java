@@ -19,13 +19,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A set of rules that is managed by Amazon Web Services and Marketplace sellers to provide versioned managed rule
- * groups for customers of WAF.
+ * A set of rules that is managed by Amazon Web Services and Amazon Web Services Marketplace sellers to provide
+ * versioned managed rule groups for customers of WAF.
  * </p>
  * <note>
  * <p>
- * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Marketplace
- * sellers.
+ * This is intended for use only by vendors of managed rule sets. Vendors are Amazon Web Services and Amazon Web
+ * Services Marketplace sellers.
  * </p>
  * <p>
  * Vendors, you can use the managed rule set APIs to provide controlled rollout of your versioned managed rule group

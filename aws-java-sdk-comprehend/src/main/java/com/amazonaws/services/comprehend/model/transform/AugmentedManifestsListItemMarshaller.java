@@ -32,6 +32,12 @@ public class AugmentedManifestsListItemMarshaller {
             .marshallLocationName("S3Uri").build();
     private static final MarshallingInfo<List> ATTRIBUTENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttributeNames").build();
+    private static final MarshallingInfo<String> ANNOTATIONDATAS3URI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnnotationDataS3Uri").build();
+    private static final MarshallingInfo<String> SOURCEDOCUMENTSS3URI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceDocumentsS3Uri").build();
+    private static final MarshallingInfo<String> DOCUMENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DocumentType").build();
 
     private static final AugmentedManifestsListItemMarshaller instance = new AugmentedManifestsListItemMarshaller();
 
@@ -51,6 +57,9 @@ public class AugmentedManifestsListItemMarshaller {
         try {
             protocolMarshaller.marshall(augmentedManifestsListItem.getS3Uri(), S3URI_BINDING);
             protocolMarshaller.marshall(augmentedManifestsListItem.getAttributeNames(), ATTRIBUTENAMES_BINDING);
+            protocolMarshaller.marshall(augmentedManifestsListItem.getAnnotationDataS3Uri(), ANNOTATIONDATAS3URI_BINDING);
+            protocolMarshaller.marshall(augmentedManifestsListItem.getSourceDocumentsS3Uri(), SOURCEDOCUMENTSS3URI_BINDING);
+            protocolMarshaller.marshall(augmentedManifestsListItem.getDocumentType(), DOCUMENTTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -43,7 +43,7 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
     private java.util.List<CustomImage> customImages;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user profile or domain.
      * </p>
      */
     private java.util.List<String> lifecycleConfigArns;
@@ -166,10 +166,11 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user profile or domain.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * @return The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user profile or
+     *         domain.
      */
 
     public java.util.List<String> getLifecycleConfigArns() {
@@ -178,11 +179,11 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user profile or domain.
      * </p>
      * 
      * @param lifecycleConfigArns
-     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user profile or domain.
      */
 
     public void setLifecycleConfigArns(java.util.Collection<String> lifecycleConfigArns) {
@@ -196,7 +197,7 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user profile or domain.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -205,7 +206,7 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param lifecycleConfigArns
-     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user profile or domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,11 +222,11 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user profile or domain.
      * </p>
      * 
      * @param lifecycleConfigArns
-     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the the user profile or domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
