@@ -164,6 +164,12 @@ public class DocumentClassifierProperties implements Serializable, Cloneable, St
      * </ul>
      */
     private String modelKmsKeyId;
+    /**
+     * <p>
+     * The version name that you assigned to the document classifier.
+     * </p>
+     */
+    private String versionName;
 
     /**
      * <p>
@@ -1105,6 +1111,46 @@ public class DocumentClassifierProperties implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * The version name that you assigned to the document classifier.
+     * </p>
+     * 
+     * @param versionName
+     *        The version name that you assigned to the document classifier.
+     */
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
+
+    /**
+     * <p>
+     * The version name that you assigned to the document classifier.
+     * </p>
+     * 
+     * @return The version name that you assigned to the document classifier.
+     */
+
+    public String getVersionName() {
+        return this.versionName;
+    }
+
+    /**
+     * <p>
+     * The version name that you assigned to the document classifier.
+     * </p>
+     * 
+     * @param versionName
+     *        The version name that you assigned to the document classifier.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DocumentClassifierProperties withVersionName(String versionName) {
+        setVersionName(versionName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1147,7 +1193,9 @@ public class DocumentClassifierProperties implements Serializable, Cloneable, St
         if (getMode() != null)
             sb.append("Mode: ").append(getMode()).append(",");
         if (getModelKmsKeyId() != null)
-            sb.append("ModelKmsKeyId: ").append(getModelKmsKeyId());
+            sb.append("ModelKmsKeyId: ").append(getModelKmsKeyId()).append(",");
+        if (getVersionName() != null)
+            sb.append("VersionName: ").append(getVersionName());
         sb.append("}");
         return sb.toString();
     }
@@ -1226,6 +1274,10 @@ public class DocumentClassifierProperties implements Serializable, Cloneable, St
             return false;
         if (other.getModelKmsKeyId() != null && other.getModelKmsKeyId().equals(this.getModelKmsKeyId()) == false)
             return false;
+        if (other.getVersionName() == null ^ this.getVersionName() == null)
+            return false;
+        if (other.getVersionName() != null && other.getVersionName().equals(this.getVersionName()) == false)
+            return false;
         return true;
     }
 
@@ -1250,6 +1302,7 @@ public class DocumentClassifierProperties implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
         hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         hashCode = prime * hashCode + ((getModelKmsKeyId() == null) ? 0 : getModelKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getVersionName() == null) ? 0 : getVersionName().hashCode());
         return hashCode;
     }
 

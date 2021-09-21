@@ -65,8 +65,8 @@ public class TunnelOption implements Serializable, Cloneable {
     private Integer phase2LifetimeSeconds;
     /**
      * <p>
-     * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN connection
-     * performs an IKE rekey.
+     * The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services side of
+     * the VPN connection performs an IKE rekey.
      * </p>
      */
     private Integer rekeyMarginTimeSeconds;
@@ -392,13 +392,13 @@ public class TunnelOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN connection
-     * performs an IKE rekey.
+     * The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services side of
+     * the VPN connection performs an IKE rekey.
      * </p>
      * 
      * @param rekeyMarginTimeSeconds
-     *        The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN
-     *        connection performs an IKE rekey.
+     *        The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services
+     *        side of the VPN connection performs an IKE rekey.
      */
 
     public void setRekeyMarginTimeSeconds(Integer rekeyMarginTimeSeconds) {
@@ -407,12 +407,12 @@ public class TunnelOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN connection
-     * performs an IKE rekey.
+     * The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services side of
+     * the VPN connection performs an IKE rekey.
      * </p>
      * 
-     * @return The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN
-     *         connection performs an IKE rekey.
+     * @return The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services
+     *         side of the VPN connection performs an IKE rekey.
      */
 
     public Integer getRekeyMarginTimeSeconds() {
@@ -421,13 +421,13 @@ public class TunnelOption implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN connection
-     * performs an IKE rekey.
+     * The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services side of
+     * the VPN connection performs an IKE rekey.
      * </p>
      * 
      * @param rekeyMarginTimeSeconds
-     *        The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN
-     *        connection performs an IKE rekey.
+     *        The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services
+     *        side of the VPN connection performs an IKE rekey.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

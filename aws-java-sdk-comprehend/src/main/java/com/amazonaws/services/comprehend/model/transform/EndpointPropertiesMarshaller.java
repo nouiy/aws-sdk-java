@@ -35,6 +35,8 @@ public class EndpointPropertiesMarshaller {
             .marshallLocationName("Message").build();
     private static final MarshallingInfo<String> MODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ModelArn").build();
+    private static final MarshallingInfo<String> DESIREDMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredModelArn").build();
     private static final MarshallingInfo<Integer> DESIREDINFERENCEUNITS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredInferenceUnits").build();
     private static final MarshallingInfo<Integer> CURRENTINFERENCEUNITS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -45,6 +47,8 @@ public class EndpointPropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> DATAACCESSROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataAccessRoleArn").build();
+    private static final MarshallingInfo<String> DESIREDDATAACCESSROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredDataAccessRoleArn").build();
 
     private static final EndpointPropertiesMarshaller instance = new EndpointPropertiesMarshaller();
 
@@ -66,11 +70,13 @@ public class EndpointPropertiesMarshaller {
             protocolMarshaller.marshall(endpointProperties.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(endpointProperties.getMessage(), MESSAGE_BINDING);
             protocolMarshaller.marshall(endpointProperties.getModelArn(), MODELARN_BINDING);
+            protocolMarshaller.marshall(endpointProperties.getDesiredModelArn(), DESIREDMODELARN_BINDING);
             protocolMarshaller.marshall(endpointProperties.getDesiredInferenceUnits(), DESIREDINFERENCEUNITS_BINDING);
             protocolMarshaller.marshall(endpointProperties.getCurrentInferenceUnits(), CURRENTINFERENCEUNITS_BINDING);
             protocolMarshaller.marshall(endpointProperties.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(endpointProperties.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
             protocolMarshaller.marshall(endpointProperties.getDataAccessRoleArn(), DATAACCESSROLEARN_BINDING);
+            protocolMarshaller.marshall(endpointProperties.getDesiredDataAccessRoleArn(), DESIREDDATAACCESSROLEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

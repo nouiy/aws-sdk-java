@@ -2283,6 +2283,70 @@ public class AmazonComprehendClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
+     * Gets a list of summaries of the document classifiers that you have created
+     * </p>
+     * 
+     * @param listDocumentClassifierSummariesRequest
+     * @return Result of the ListDocumentClassifierSummaries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws TooManyRequestsException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.ListDocumentClassifierSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListDocumentClassifierSummaries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListDocumentClassifierSummariesResult listDocumentClassifierSummaries(ListDocumentClassifierSummariesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListDocumentClassifierSummaries(request);
+    }
+
+    @SdkInternalApi
+    final ListDocumentClassifierSummariesResult executeListDocumentClassifierSummaries(
+            ListDocumentClassifierSummariesRequest listDocumentClassifierSummariesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listDocumentClassifierSummariesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListDocumentClassifierSummariesRequest> request = null;
+        Response<ListDocumentClassifierSummariesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListDocumentClassifierSummariesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listDocumentClassifierSummariesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Comprehend");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListDocumentClassifierSummaries");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListDocumentClassifierSummariesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListDocumentClassifierSummariesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets a list of the document classifiers that you have created.
      * </p>
      * 
@@ -2528,6 +2592,69 @@ public class AmazonComprehendClient extends AmazonWebServiceClient implements Am
             HttpResponseHandler<AmazonWebServiceResponse<ListEntitiesDetectionJobsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListEntitiesDetectionJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets a list of summaries for the entity recognizers that you have created.
+     * </p>
+     * 
+     * @param listEntityRecognizerSummariesRequest
+     * @return Result of the ListEntityRecognizerSummaries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws TooManyRequestsException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.ListEntityRecognizerSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListEntityRecognizerSummaries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListEntityRecognizerSummariesResult listEntityRecognizerSummaries(ListEntityRecognizerSummariesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListEntityRecognizerSummaries(request);
+    }
+
+    @SdkInternalApi
+    final ListEntityRecognizerSummariesResult executeListEntityRecognizerSummaries(ListEntityRecognizerSummariesRequest listEntityRecognizerSummariesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listEntityRecognizerSummariesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListEntityRecognizerSummariesRequest> request = null;
+        Response<ListEntityRecognizerSummariesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListEntityRecognizerSummariesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listEntityRecognizerSummariesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Comprehend");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListEntityRecognizerSummaries");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListEntityRecognizerSummariesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListEntityRecognizerSummariesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

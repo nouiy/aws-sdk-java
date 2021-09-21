@@ -37,6 +37,12 @@ public class DocumentClassifierFilter implements Serializable, Cloneable, Struct
     private String status;
     /**
      * <p>
+     * The name that you assigned to the document classifier
+     * </p>
+     */
+    private String documentClassifierName;
+    /**
+     * <p>
      * Filters the list of classifiers based on the time that the classifier was submitted for processing. Returns only
      * classifiers submitted before the specified time. Classifiers are returned in ascending order, oldest to newest.
      * </p>
@@ -106,6 +112,46 @@ public class DocumentClassifierFilter implements Serializable, Cloneable, Struct
 
     public DocumentClassifierFilter withStatus(ModelStatus status) {
         this.status = status.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name that you assigned to the document classifier
+     * </p>
+     * 
+     * @param documentClassifierName
+     *        The name that you assigned to the document classifier
+     */
+
+    public void setDocumentClassifierName(String documentClassifierName) {
+        this.documentClassifierName = documentClassifierName;
+    }
+
+    /**
+     * <p>
+     * The name that you assigned to the document classifier
+     * </p>
+     * 
+     * @return The name that you assigned to the document classifier
+     */
+
+    public String getDocumentClassifierName() {
+        return this.documentClassifierName;
+    }
+
+    /**
+     * <p>
+     * The name that you assigned to the document classifier
+     * </p>
+     * 
+     * @param documentClassifierName
+     *        The name that you assigned to the document classifier
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DocumentClassifierFilter withDocumentClassifierName(String documentClassifierName) {
+        setDocumentClassifierName(documentClassifierName);
         return this;
     }
 
@@ -221,6 +267,8 @@ public class DocumentClassifierFilter implements Serializable, Cloneable, Struct
         sb.append("{");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
+        if (getDocumentClassifierName() != null)
+            sb.append("DocumentClassifierName: ").append(getDocumentClassifierName()).append(",");
         if (getSubmitTimeBefore() != null)
             sb.append("SubmitTimeBefore: ").append(getSubmitTimeBefore()).append(",");
         if (getSubmitTimeAfter() != null)
@@ -243,6 +291,10 @@ public class DocumentClassifierFilter implements Serializable, Cloneable, Struct
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getDocumentClassifierName() == null ^ this.getDocumentClassifierName() == null)
+            return false;
+        if (other.getDocumentClassifierName() != null && other.getDocumentClassifierName().equals(this.getDocumentClassifierName()) == false)
+            return false;
         if (other.getSubmitTimeBefore() == null ^ this.getSubmitTimeBefore() == null)
             return false;
         if (other.getSubmitTimeBefore() != null && other.getSubmitTimeBefore().equals(this.getSubmitTimeBefore()) == false)
@@ -260,6 +312,7 @@ public class DocumentClassifierFilter implements Serializable, Cloneable, Struct
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getDocumentClassifierName() == null) ? 0 : getDocumentClassifierName().hashCode());
         hashCode = prime * hashCode + ((getSubmitTimeBefore() == null) ? 0 : getSubmitTimeBefore().hashCode());
         hashCode = prime * hashCode + ((getSubmitTimeAfter() == null) ? 0 : getSubmitTimeAfter().hashCode());
         return hashCode;

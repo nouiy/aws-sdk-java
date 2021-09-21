@@ -832,6 +832,8 @@ public class AmazonECRClient extends AmazonWebServiceClient implements AmazonECR
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws RegistryPolicyNotFoundException
      *         The registry doesn't have an associated registry policy.
+     * @throws ValidationException
+     *         There was an exception validating this request.
      * @sample AmazonECR.DeleteRegistryPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeleteRegistryPolicy" target="_top">AWS API
      *      Documentation</a>
@@ -1003,6 +1005,74 @@ public class AmazonECRClient extends AmazonWebServiceClient implements AmazonECR
             HttpResponseHandler<AmazonWebServiceResponse<DeleteRepositoryPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeleteRepositoryPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the replication status for a specified image.
+     * </p>
+     * 
+     * @param describeImageReplicationStatusRequest
+     * @return Result of the DescribeImageReplicationStatus operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ImageNotFoundException
+     *         The image requested does not exist in the specified repository.
+     * @throws RepositoryNotFoundException
+     *         The specified repository could not be found. Check the spelling of the specified repository and ensure
+     *         that you are performing operations on the correct registry.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @sample AmazonECR.DescribeImageReplicationStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeImageReplicationStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeImageReplicationStatusResult describeImageReplicationStatus(DescribeImageReplicationStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeImageReplicationStatus(request);
+    }
+
+    @SdkInternalApi
+    final DescribeImageReplicationStatusResult executeDescribeImageReplicationStatus(DescribeImageReplicationStatusRequest describeImageReplicationStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeImageReplicationStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeImageReplicationStatusRequest> request = null;
+        Response<DescribeImageReplicationStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeImageReplicationStatusRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeImageReplicationStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "ECR");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeImageReplicationStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeImageReplicationStatusResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeImageReplicationStatusResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1568,6 +1638,8 @@ public class AmazonECRClient extends AmazonWebServiceClient implements AmazonECR
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws RegistryPolicyNotFoundException
      *         The registry doesn't have an associated registry policy.
+     * @throws ValidationException
+     *         There was an exception validating this request.
      * @sample AmazonECR.GetRegistryPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetRegistryPolicy" target="_top">AWS API
      *      Documentation</a>
@@ -2187,6 +2259,8 @@ public class AmazonECRClient extends AmazonWebServiceClient implements AmazonECR
      *         These errors are usually caused by a server-side issue.
      * @throws InvalidParameterException
      *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ValidationException
+     *         There was an exception validating this request.
      * @sample AmazonECR.PutRegistryPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutRegistryPolicy" target="_top">AWS API
      *      Documentation</a>

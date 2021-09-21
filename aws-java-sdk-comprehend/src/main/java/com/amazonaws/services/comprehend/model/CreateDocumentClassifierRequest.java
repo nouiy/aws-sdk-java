@@ -33,6 +33,14 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
     private String documentClassifierName;
     /**
      * <p>
+     * The version name given to the newly created classifier. Version names can have a maximum of 256 characters.
+     * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
+     * models with the same classifier name in the account/AWS Region.
+     * </p>
+     */
+    private String versionName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the AWS Identity and Management (IAM) role that grants Amazon Comprehend read
      * access to your input data.
      * </p>
@@ -168,6 +176,58 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
 
     public CreateDocumentClassifierRequest withDocumentClassifierName(String documentClassifierName) {
         setDocumentClassifierName(documentClassifierName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The version name given to the newly created classifier. Version names can have a maximum of 256 characters.
+     * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
+     * models with the same classifier name in the account/AWS Region.
+     * </p>
+     * 
+     * @param versionName
+     *        The version name given to the newly created classifier. Version names can have a maximum of 256
+     *        characters. Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be
+     *        unique among all models with the same classifier name in the account/AWS Region.
+     */
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
+
+    /**
+     * <p>
+     * The version name given to the newly created classifier. Version names can have a maximum of 256 characters.
+     * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
+     * models with the same classifier name in the account/AWS Region.
+     * </p>
+     * 
+     * @return The version name given to the newly created classifier. Version names can have a maximum of 256
+     *         characters. Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must
+     *         be unique among all models with the same classifier name in the account/AWS Region.
+     */
+
+    public String getVersionName() {
+        return this.versionName;
+    }
+
+    /**
+     * <p>
+     * The version name given to the newly created classifier. Version names can have a maximum of 256 characters.
+     * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
+     * models with the same classifier name in the account/AWS Region.
+     * </p>
+     * 
+     * @param versionName
+     *        The version name given to the newly created classifier. Version names can have a maximum of 256
+     *        characters. Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be
+     *        unique among all models with the same classifier name in the account/AWS Region.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDocumentClassifierRequest withVersionName(String versionName) {
+        setVersionName(versionName);
         return this;
     }
 
@@ -898,6 +958,8 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
         sb.append("{");
         if (getDocumentClassifierName() != null)
             sb.append("DocumentClassifierName: ").append(getDocumentClassifierName()).append(",");
+        if (getVersionName() != null)
+            sb.append("VersionName: ").append(getVersionName()).append(",");
         if (getDataAccessRoleArn() != null)
             sb.append("DataAccessRoleArn: ").append(getDataAccessRoleArn()).append(",");
         if (getTags() != null)
@@ -935,6 +997,10 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
         if (other.getDocumentClassifierName() == null ^ this.getDocumentClassifierName() == null)
             return false;
         if (other.getDocumentClassifierName() != null && other.getDocumentClassifierName().equals(this.getDocumentClassifierName()) == false)
+            return false;
+        if (other.getVersionName() == null ^ this.getVersionName() == null)
+            return false;
+        if (other.getVersionName() != null && other.getVersionName().equals(this.getVersionName()) == false)
             return false;
         if (other.getDataAccessRoleArn() == null ^ this.getDataAccessRoleArn() == null)
             return false;
@@ -985,6 +1051,7 @@ public class CreateDocumentClassifierRequest extends com.amazonaws.AmazonWebServ
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDocumentClassifierName() == null) ? 0 : getDocumentClassifierName().hashCode());
+        hashCode = prime * hashCode + ((getVersionName() == null) ? 0 : getVersionName().hashCode());
         hashCode = prime * hashCode + ((getDataAccessRoleArn() == null) ? 0 : getDataAccessRoleArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getInputDataConfig() == null) ? 0 : getInputDataConfig().hashCode());

@@ -563,6 +563,40 @@ public class AmazonECRAsyncClient extends AmazonECRClient implements AmazonECRAs
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeImageReplicationStatusResult> describeImageReplicationStatusAsync(DescribeImageReplicationStatusRequest request) {
+
+        return describeImageReplicationStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeImageReplicationStatusResult> describeImageReplicationStatusAsync(
+            final DescribeImageReplicationStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeImageReplicationStatusRequest, DescribeImageReplicationStatusResult> asyncHandler) {
+        final DescribeImageReplicationStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeImageReplicationStatusResult>() {
+            @Override
+            public DescribeImageReplicationStatusResult call() throws Exception {
+                DescribeImageReplicationStatusResult result = null;
+
+                try {
+                    result = executeDescribeImageReplicationStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeImageScanFindingsResult> describeImageScanFindingsAsync(DescribeImageScanFindingsRequest request) {
 
         return describeImageScanFindingsAsync(request, null);

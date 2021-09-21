@@ -52,6 +52,10 @@ public class AugmentedManifestsListItemJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     augmentedManifestsListItem.setS3Uri(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Split", targetDepth)) {
+                    context.nextToken();
+                    augmentedManifestsListItem.setSplit(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("AttributeNames", targetDepth)) {
                     context.nextToken();
                     augmentedManifestsListItem.setAttributeNames(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

@@ -2094,6 +2094,16 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public GetVpnConnectionDeviceSampleConfigurationResult getVpnConnectionDeviceSampleConfiguration(GetVpnConnectionDeviceSampleConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetVpnConnectionDeviceTypesResult getVpnConnectionDeviceTypes(GetVpnConnectionDeviceTypesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportClientVpnClientCertificateRevocationListResult importClientVpnClientCertificateRevocationList(
             ImportClientVpnClientCertificateRevocationListRequest request) {
         throw new java.lang.UnsupportedOperationException();

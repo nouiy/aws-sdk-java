@@ -29,6 +29,8 @@ public class EntityRecognizerFilterMarshaller {
 
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Status").build();
+    private static final MarshallingInfo<String> RECOGNIZERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecognizerName").build();
     private static final MarshallingInfo<java.util.Date> SUBMITTIMEBEFORE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubmitTimeBefore").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> SUBMITTIMEAFTER_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -51,6 +53,7 @@ public class EntityRecognizerFilterMarshaller {
 
         try {
             protocolMarshaller.marshall(entityRecognizerFilter.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(entityRecognizerFilter.getRecognizerName(), RECOGNIZERNAME_BINDING);
             protocolMarshaller.marshall(entityRecognizerFilter.getSubmitTimeBefore(), SUBMITTIMEBEFORE_BINDING);
             protocolMarshaller.marshall(entityRecognizerFilter.getSubmitTimeAfter(), SUBMITTIMEAFTER_BINDING);
         } catch (Exception e) {

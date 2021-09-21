@@ -33,11 +33,23 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     private String endpointArn;
     /**
      * <p>
+     * The ARN of the new model to use when updating an existing endpoint.
+     * </p>
+     */
+    private String desiredModelArn;
+    /**
+     * <p>
      * The desired number of inference units to be used by the model using this endpoint. Each inference unit represents
      * of a throughput of 100 characters per second.
      * </p>
      */
     private Integer desiredInferenceUnits;
+    /**
+     * <p>
+     * Data access role ARN to use in case the new model is encrypted with a customer CMK.
+     * </p>
+     */
+    private String desiredDataAccessRoleArn;
 
     /**
      * <p>
@@ -76,6 +88,46 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     public UpdateEndpointRequest withEndpointArn(String endpointArn) {
         setEndpointArn(endpointArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the new model to use when updating an existing endpoint.
+     * </p>
+     * 
+     * @param desiredModelArn
+     *        The ARN of the new model to use when updating an existing endpoint.
+     */
+
+    public void setDesiredModelArn(String desiredModelArn) {
+        this.desiredModelArn = desiredModelArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the new model to use when updating an existing endpoint.
+     * </p>
+     * 
+     * @return The ARN of the new model to use when updating an existing endpoint.
+     */
+
+    public String getDesiredModelArn() {
+        return this.desiredModelArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the new model to use when updating an existing endpoint.
+     * </p>
+     * 
+     * @param desiredModelArn
+     *        The ARN of the new model to use when updating an existing endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEndpointRequest withDesiredModelArn(String desiredModelArn) {
+        setDesiredModelArn(desiredModelArn);
         return this;
     }
 
@@ -126,6 +178,46 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Data access role ARN to use in case the new model is encrypted with a customer CMK.
+     * </p>
+     * 
+     * @param desiredDataAccessRoleArn
+     *        Data access role ARN to use in case the new model is encrypted with a customer CMK.
+     */
+
+    public void setDesiredDataAccessRoleArn(String desiredDataAccessRoleArn) {
+        this.desiredDataAccessRoleArn = desiredDataAccessRoleArn;
+    }
+
+    /**
+     * <p>
+     * Data access role ARN to use in case the new model is encrypted with a customer CMK.
+     * </p>
+     * 
+     * @return Data access role ARN to use in case the new model is encrypted with a customer CMK.
+     */
+
+    public String getDesiredDataAccessRoleArn() {
+        return this.desiredDataAccessRoleArn;
+    }
+
+    /**
+     * <p>
+     * Data access role ARN to use in case the new model is encrypted with a customer CMK.
+     * </p>
+     * 
+     * @param desiredDataAccessRoleArn
+     *        Data access role ARN to use in case the new model is encrypted with a customer CMK.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEndpointRequest withDesiredDataAccessRoleArn(String desiredDataAccessRoleArn) {
+        setDesiredDataAccessRoleArn(desiredDataAccessRoleArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -139,8 +231,12 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
         sb.append("{");
         if (getEndpointArn() != null)
             sb.append("EndpointArn: ").append(getEndpointArn()).append(",");
+        if (getDesiredModelArn() != null)
+            sb.append("DesiredModelArn: ").append(getDesiredModelArn()).append(",");
         if (getDesiredInferenceUnits() != null)
-            sb.append("DesiredInferenceUnits: ").append(getDesiredInferenceUnits());
+            sb.append("DesiredInferenceUnits: ").append(getDesiredInferenceUnits()).append(",");
+        if (getDesiredDataAccessRoleArn() != null)
+            sb.append("DesiredDataAccessRoleArn: ").append(getDesiredDataAccessRoleArn());
         sb.append("}");
         return sb.toString();
     }
@@ -159,9 +255,17 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getEndpointArn() != null && other.getEndpointArn().equals(this.getEndpointArn()) == false)
             return false;
+        if (other.getDesiredModelArn() == null ^ this.getDesiredModelArn() == null)
+            return false;
+        if (other.getDesiredModelArn() != null && other.getDesiredModelArn().equals(this.getDesiredModelArn()) == false)
+            return false;
         if (other.getDesiredInferenceUnits() == null ^ this.getDesiredInferenceUnits() == null)
             return false;
         if (other.getDesiredInferenceUnits() != null && other.getDesiredInferenceUnits().equals(this.getDesiredInferenceUnits()) == false)
+            return false;
+        if (other.getDesiredDataAccessRoleArn() == null ^ this.getDesiredDataAccessRoleArn() == null)
+            return false;
+        if (other.getDesiredDataAccessRoleArn() != null && other.getDesiredDataAccessRoleArn().equals(this.getDesiredDataAccessRoleArn()) == false)
             return false;
         return true;
     }
@@ -172,7 +276,9 @@ public class UpdateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEndpointArn() == null) ? 0 : getEndpointArn().hashCode());
+        hashCode = prime * hashCode + ((getDesiredModelArn() == null) ? 0 : getDesiredModelArn().hashCode());
         hashCode = prime * hashCode + ((getDesiredInferenceUnits() == null) ? 0 : getDesiredInferenceUnits().hashCode());
+        hashCode = prime * hashCode + ((getDesiredDataAccessRoleArn() == null) ? 0 : getDesiredDataAccessRoleArn().hashCode());
         return hashCode;
     }
 

@@ -1110,6 +1110,41 @@ public class AmazonComprehendAsyncClient extends AmazonComprehendClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<ListDocumentClassifierSummariesResult> listDocumentClassifierSummariesAsync(
+            ListDocumentClassifierSummariesRequest request) {
+
+        return listDocumentClassifierSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDocumentClassifierSummariesResult> listDocumentClassifierSummariesAsync(
+            final ListDocumentClassifierSummariesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListDocumentClassifierSummariesRequest, ListDocumentClassifierSummariesResult> asyncHandler) {
+        final ListDocumentClassifierSummariesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListDocumentClassifierSummariesResult>() {
+            @Override
+            public ListDocumentClassifierSummariesResult call() throws Exception {
+                ListDocumentClassifierSummariesResult result = null;
+
+                try {
+                    result = executeListDocumentClassifierSummaries(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListDocumentClassifiersResult> listDocumentClassifiersAsync(ListDocumentClassifiersRequest request) {
 
         return listDocumentClassifiersAsync(request, null);
@@ -1228,6 +1263,40 @@ public class AmazonComprehendAsyncClient extends AmazonComprehendClient implemen
 
                 try {
                     result = executeListEntitiesDetectionJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntityRecognizerSummariesResult> listEntityRecognizerSummariesAsync(ListEntityRecognizerSummariesRequest request) {
+
+        return listEntityRecognizerSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntityRecognizerSummariesResult> listEntityRecognizerSummariesAsync(
+            final ListEntityRecognizerSummariesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEntityRecognizerSummariesRequest, ListEntityRecognizerSummariesResult> asyncHandler) {
+        final ListEntityRecognizerSummariesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEntityRecognizerSummariesResult>() {
+            @Override
+            public ListEntityRecognizerSummariesResult call() throws Exception {
+                ListEntityRecognizerSummariesResult result = null;
+
+                try {
+                    result = executeListEntityRecognizerSummaries(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

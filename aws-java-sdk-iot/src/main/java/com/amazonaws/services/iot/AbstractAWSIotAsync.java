@@ -2459,6 +2459,21 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<PutVerificationStateOnViolationResult> putVerificationStateOnViolationAsync(
+            PutVerificationStateOnViolationRequest request) {
+
+        return putVerificationStateOnViolationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutVerificationStateOnViolationResult> putVerificationStateOnViolationAsync(
+            PutVerificationStateOnViolationRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutVerificationStateOnViolationRequest, PutVerificationStateOnViolationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<RegisterCACertificateResult> registerCACertificateAsync(RegisterCACertificateRequest request) {
 
         return registerCACertificateAsync(request, null);

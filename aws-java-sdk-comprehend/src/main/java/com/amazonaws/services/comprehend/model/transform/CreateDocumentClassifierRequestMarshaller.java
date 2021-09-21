@@ -32,6 +32,8 @@ public class CreateDocumentClassifierRequestMarshaller {
 
     private static final MarshallingInfo<String> DOCUMENTCLASSIFIERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DocumentClassifierName").build();
+    private static final MarshallingInfo<String> VERSIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VersionName").build();
     private static final MarshallingInfo<String> DATAACCESSROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataAccessRoleArn").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -71,6 +73,7 @@ public class CreateDocumentClassifierRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createDocumentClassifierRequest.getDocumentClassifierName(), DOCUMENTCLASSIFIERNAME_BINDING);
+            protocolMarshaller.marshall(createDocumentClassifierRequest.getVersionName(), VERSIONNAME_BINDING);
             protocolMarshaller.marshall(createDocumentClassifierRequest.getDataAccessRoleArn(), DATAACCESSROLEARN_BINDING);
             protocolMarshaller.marshall(createDocumentClassifierRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createDocumentClassifierRequest.getInputDataConfig(), INPUTDATACONFIG_BINDING);

@@ -30,6 +30,8 @@ public class AugmentedManifestsListItemMarshaller {
 
     private static final MarshallingInfo<String> S3URI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("S3Uri").build();
+    private static final MarshallingInfo<String> SPLIT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Split").build();
     private static final MarshallingInfo<List> ATTRIBUTENAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AttributeNames").build();
     private static final MarshallingInfo<String> ANNOTATIONDATAS3URI_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -56,6 +58,7 @@ public class AugmentedManifestsListItemMarshaller {
 
         try {
             protocolMarshaller.marshall(augmentedManifestsListItem.getS3Uri(), S3URI_BINDING);
+            protocolMarshaller.marshall(augmentedManifestsListItem.getSplit(), SPLIT_BINDING);
             protocolMarshaller.marshall(augmentedManifestsListItem.getAttributeNames(), ATTRIBUTENAMES_BINDING);
             protocolMarshaller.marshall(augmentedManifestsListItem.getAnnotationDataS3Uri(), ANNOTATIONDATAS3URI_BINDING);
             protocolMarshaller.marshall(augmentedManifestsListItem.getSourceDocumentsS3Uri(), SOURCEDOCUMENTSS3URI_BINDING);

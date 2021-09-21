@@ -30,23 +30,20 @@ public class ReplicationConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects representing the replication rules for a replication configuration. A replication
-     * configuration may contain only one replication rule but the rule may contain one or more replication
-     * destinations.
+     * An array of objects representing the replication destinations and repository filters for a replication
+     * configuration.
      * </p>
      */
     private java.util.List<ReplicationRule> rules;
 
     /**
      * <p>
-     * An array of objects representing the replication rules for a replication configuration. A replication
-     * configuration may contain only one replication rule but the rule may contain one or more replication
-     * destinations.
+     * An array of objects representing the replication destinations and repository filters for a replication
+     * configuration.
      * </p>
      * 
-     * @return An array of objects representing the replication rules for a replication configuration. A replication
-     *         configuration may contain only one replication rule but the rule may contain one or more replication
-     *         destinations.
+     * @return An array of objects representing the replication destinations and repository filters for a replication
+     *         configuration.
      */
 
     public java.util.List<ReplicationRule> getRules() {
@@ -55,15 +52,13 @@ public class ReplicationConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects representing the replication rules for a replication configuration. A replication
-     * configuration may contain only one replication rule but the rule may contain one or more replication
-     * destinations.
+     * An array of objects representing the replication destinations and repository filters for a replication
+     * configuration.
      * </p>
      * 
      * @param rules
-     *        An array of objects representing the replication rules for a replication configuration. A replication
-     *        configuration may contain only one replication rule but the rule may contain one or more replication
-     *        destinations.
+     *        An array of objects representing the replication destinations and repository filters for a replication
+     *        configuration.
      */
 
     public void setRules(java.util.Collection<ReplicationRule> rules) {
@@ -77,9 +72,8 @@ public class ReplicationConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects representing the replication rules for a replication configuration. A replication
-     * configuration may contain only one replication rule but the rule may contain one or more replication
-     * destinations.
+     * An array of objects representing the replication destinations and repository filters for a replication
+     * configuration.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -88,9 +82,8 @@ public class ReplicationConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param rules
-     *        An array of objects representing the replication rules for a replication configuration. A replication
-     *        configuration may contain only one replication rule but the rule may contain one or more replication
-     *        destinations.
+     *        An array of objects representing the replication destinations and repository filters for a replication
+     *        configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,15 +99,13 @@ public class ReplicationConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * An array of objects representing the replication rules for a replication configuration. A replication
-     * configuration may contain only one replication rule but the rule may contain one or more replication
-     * destinations.
+     * An array of objects representing the replication destinations and repository filters for a replication
+     * configuration.
      * </p>
      * 
      * @param rules
-     *        An array of objects representing the replication rules for a replication configuration. A replication
-     *        configuration may contain only one replication rule but the rule may contain one or more replication
-     *        destinations.
+     *        An array of objects representing the replication destinations and repository filters for a replication
+     *        configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

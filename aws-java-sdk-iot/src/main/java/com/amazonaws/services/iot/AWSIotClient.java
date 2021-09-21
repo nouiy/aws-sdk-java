@@ -13375,6 +13375,68 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
 
     /**
      * <p>
+     * Set a verification state and provide a description of that verification state on a violation (detect alarm).
+     * </p>
+     * 
+     * @param putVerificationStateOnViolationRequest
+     * @return Result of the PutVerificationStateOnViolation operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws InternalFailureException
+     *         An unexpected error has occurred.
+     * @sample AWSIot.PutVerificationStateOnViolation
+     */
+    @Override
+    public PutVerificationStateOnViolationResult putVerificationStateOnViolation(PutVerificationStateOnViolationRequest request) {
+        request = beforeClientExecution(request);
+        return executePutVerificationStateOnViolation(request);
+    }
+
+    @SdkInternalApi
+    final PutVerificationStateOnViolationResult executePutVerificationStateOnViolation(
+            PutVerificationStateOnViolationRequest putVerificationStateOnViolationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putVerificationStateOnViolationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutVerificationStateOnViolationRequest> request = null;
+        Response<PutVerificationStateOnViolationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutVerificationStateOnViolationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putVerificationStateOnViolationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoT");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutVerificationStateOnViolation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutVerificationStateOnViolationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutVerificationStateOnViolationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Registers a CA certificate with IoT. This CA certificate can then be used to sign device certificates, which can
      * be then registered with IoT. You can register up to 10 CA certificates per Amazon Web Services account that have
      * the same subject field. This enables you to have up to 10 certificate authorities sign your device certificates.

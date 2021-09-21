@@ -72,6 +72,14 @@ public class ActiveViolationJsonUnmarshaller implements Unmarshaller<ActiveViola
                     context.nextToken();
                     activeViolation.setViolationEventAdditionalInfo(ViolationEventAdditionalInfoJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("verificationState", targetDepth)) {
+                    context.nextToken();
+                    activeViolation.setVerificationState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("verificationStateDescription", targetDepth)) {
+                    context.nextToken();
+                    activeViolation.setVerificationStateDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("lastViolationTime", targetDepth)) {
                     context.nextToken();
                     activeViolation.setLastViolationTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

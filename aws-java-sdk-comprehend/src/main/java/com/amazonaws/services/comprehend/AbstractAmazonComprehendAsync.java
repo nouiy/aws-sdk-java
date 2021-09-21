@@ -437,6 +437,21 @@ public class AbstractAmazonComprehendAsync extends AbstractAmazonComprehend impl
     }
 
     @Override
+    public java.util.concurrent.Future<ListDocumentClassifierSummariesResult> listDocumentClassifierSummariesAsync(
+            ListDocumentClassifierSummariesRequest request) {
+
+        return listDocumentClassifierSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDocumentClassifierSummariesResult> listDocumentClassifierSummariesAsync(
+            ListDocumentClassifierSummariesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListDocumentClassifierSummariesRequest, ListDocumentClassifierSummariesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListDocumentClassifiersResult> listDocumentClassifiersAsync(ListDocumentClassifiersRequest request) {
 
         return listDocumentClassifiersAsync(request, null);
@@ -486,6 +501,19 @@ public class AbstractAmazonComprehendAsync extends AbstractAmazonComprehend impl
     @Override
     public java.util.concurrent.Future<ListEntitiesDetectionJobsResult> listEntitiesDetectionJobsAsync(ListEntitiesDetectionJobsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListEntitiesDetectionJobsRequest, ListEntitiesDetectionJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntityRecognizerSummariesResult> listEntityRecognizerSummariesAsync(ListEntityRecognizerSummariesRequest request) {
+
+        return listEntityRecognizerSummariesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEntityRecognizerSummariesResult> listEntityRecognizerSummariesAsync(ListEntityRecognizerSummariesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEntityRecognizerSummariesRequest, ListEntityRecognizerSummariesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

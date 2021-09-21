@@ -52,6 +52,10 @@ public class EntityRecognizerFilterJsonUnmarshaller implements Unmarshaller<Enti
                     context.nextToken();
                     entityRecognizerFilter.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("RecognizerName", targetDepth)) {
+                    context.nextToken();
+                    entityRecognizerFilter.setRecognizerName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("SubmitTimeBefore", targetDepth)) {
                     context.nextToken();
                     entityRecognizerFilter.setSubmitTimeBefore(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

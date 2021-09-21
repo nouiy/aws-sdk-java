@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object with identifying information for an Amazon ECR image.
+ * An object with identifying information for an image in an Amazon ECR repository.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/ImageIdentifier" target="_top">AWS API

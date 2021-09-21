@@ -58,6 +58,12 @@ public class ListViolationEventsRequest extends com.amazonaws.AmazonWebServiceRe
     private Boolean listSuppressedAlerts;
     /**
      * <p>
+     * The verification state of the violation (detect alarm).
+     * </p>
+     */
+    private String verificationState;
+    /**
+     * <p>
      * The token for the next set of results.
      * </p>
      */
@@ -342,6 +348,65 @@ public class ListViolationEventsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
+     * The verification state of the violation (detect alarm).
+     * </p>
+     * 
+     * @param verificationState
+     *        The verification state of the violation (detect alarm).
+     * @see VerificationState
+     */
+
+    public void setVerificationState(String verificationState) {
+        this.verificationState = verificationState;
+    }
+
+    /**
+     * <p>
+     * The verification state of the violation (detect alarm).
+     * </p>
+     * 
+     * @return The verification state of the violation (detect alarm).
+     * @see VerificationState
+     */
+
+    public String getVerificationState() {
+        return this.verificationState;
+    }
+
+    /**
+     * <p>
+     * The verification state of the violation (detect alarm).
+     * </p>
+     * 
+     * @param verificationState
+     *        The verification state of the violation (detect alarm).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VerificationState
+     */
+
+    public ListViolationEventsRequest withVerificationState(String verificationState) {
+        setVerificationState(verificationState);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The verification state of the violation (detect alarm).
+     * </p>
+     * 
+     * @param verificationState
+     *        The verification state of the violation (detect alarm).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VerificationState
+     */
+
+    public ListViolationEventsRequest withVerificationState(VerificationState verificationState) {
+        this.verificationState = verificationState.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The token for the next set of results.
      * </p>
      * 
@@ -444,6 +509,8 @@ public class ListViolationEventsRequest extends com.amazonaws.AmazonWebServiceRe
             sb.append("BehaviorCriteriaType: ").append(getBehaviorCriteriaType()).append(",");
         if (getListSuppressedAlerts() != null)
             sb.append("ListSuppressedAlerts: ").append(getListSuppressedAlerts()).append(",");
+        if (getVerificationState() != null)
+            sb.append("VerificationState: ").append(getVerificationState()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
@@ -486,6 +553,10 @@ public class ListViolationEventsRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getListSuppressedAlerts() != null && other.getListSuppressedAlerts().equals(this.getListSuppressedAlerts()) == false)
             return false;
+        if (other.getVerificationState() == null ^ this.getVerificationState() == null)
+            return false;
+        if (other.getVerificationState() != null && other.getVerificationState().equals(this.getVerificationState()) == false)
+            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
@@ -508,6 +579,7 @@ public class ListViolationEventsRequest extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getSecurityProfileName() == null) ? 0 : getSecurityProfileName().hashCode());
         hashCode = prime * hashCode + ((getBehaviorCriteriaType() == null) ? 0 : getBehaviorCriteriaType().hashCode());
         hashCode = prime * hashCode + ((getListSuppressedAlerts() == null) ? 0 : getListSuppressedAlerts().hashCode());
+        hashCode = prime * hashCode + ((getVerificationState() == null) ? 0 : getVerificationState().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;

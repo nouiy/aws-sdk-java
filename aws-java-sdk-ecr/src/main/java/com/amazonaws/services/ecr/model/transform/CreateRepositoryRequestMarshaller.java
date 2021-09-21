@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class CreateRepositoryRequestMarshaller {
 
+    private static final MarshallingInfo<String> REGISTRYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("registryId").build();
     private static final MarshallingInfo<String> REPOSITORYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("repositoryName").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -55,6 +57,7 @@ public class CreateRepositoryRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(createRepositoryRequest.getRegistryId(), REGISTRYID_BINDING);
             protocolMarshaller.marshall(createRepositoryRequest.getRepositoryName(), REPOSITORYNAME_BINDING);
             protocolMarshaller.marshall(createRepositoryRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createRepositoryRequest.getImageTagMutability(), IMAGETAGMUTABILITY_BINDING);

@@ -32,6 +32,8 @@ public class DocumentClassifierInputDataConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataFormat").build();
     private static final MarshallingInfo<String> S3URI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("S3Uri").build();
+    private static final MarshallingInfo<String> TESTS3URI_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("TestS3Uri").build();
     private static final MarshallingInfo<String> LABELDELIMITER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LabelDelimiter").build();
     private static final MarshallingInfo<List> AUGMENTEDMANIFESTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -55,6 +57,7 @@ public class DocumentClassifierInputDataConfigMarshaller {
         try {
             protocolMarshaller.marshall(documentClassifierInputDataConfig.getDataFormat(), DATAFORMAT_BINDING);
             protocolMarshaller.marshall(documentClassifierInputDataConfig.getS3Uri(), S3URI_BINDING);
+            protocolMarshaller.marshall(documentClassifierInputDataConfig.getTestS3Uri(), TESTS3URI_BINDING);
             protocolMarshaller.marshall(documentClassifierInputDataConfig.getLabelDelimiter(), LABELDELIMITER_BINDING);
             protocolMarshaller.marshall(documentClassifierInputDataConfig.getAugmentedManifests(), AUGMENTEDMANIFESTS_BINDING);
         } catch (Exception e) {

@@ -1117,6 +1117,41 @@ public interface AmazonComprehendAsync extends AmazonComprehend {
 
     /**
      * <p>
+     * Gets a list of summaries of the document classifiers that you have created
+     * </p>
+     * 
+     * @param listDocumentClassifierSummariesRequest
+     * @return A Java Future containing the result of the ListDocumentClassifierSummaries operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsync.ListDocumentClassifierSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListDocumentClassifierSummaries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDocumentClassifierSummariesResult> listDocumentClassifierSummariesAsync(
+            ListDocumentClassifierSummariesRequest listDocumentClassifierSummariesRequest);
+
+    /**
+     * <p>
+     * Gets a list of summaries of the document classifiers that you have created
+     * </p>
+     * 
+     * @param listDocumentClassifierSummariesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListDocumentClassifierSummaries operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsyncHandler.ListDocumentClassifierSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListDocumentClassifierSummaries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDocumentClassifierSummariesResult> listDocumentClassifierSummariesAsync(
+            ListDocumentClassifierSummariesRequest listDocumentClassifierSummariesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListDocumentClassifierSummariesRequest, ListDocumentClassifierSummariesResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets a list of the document classifiers that you have created.
      * </p>
      * 
@@ -1244,6 +1279,41 @@ public interface AmazonComprehendAsync extends AmazonComprehend {
     java.util.concurrent.Future<ListEntitiesDetectionJobsResult> listEntitiesDetectionJobsAsync(
             ListEntitiesDetectionJobsRequest listEntitiesDetectionJobsRequest,
             com.amazonaws.handlers.AsyncHandler<ListEntitiesDetectionJobsRequest, ListEntitiesDetectionJobsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets a list of summaries for the entity recognizers that you have created.
+     * </p>
+     * 
+     * @param listEntityRecognizerSummariesRequest
+     * @return A Java Future containing the result of the ListEntityRecognizerSummaries operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsync.ListEntityRecognizerSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListEntityRecognizerSummaries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEntityRecognizerSummariesResult> listEntityRecognizerSummariesAsync(
+            ListEntityRecognizerSummariesRequest listEntityRecognizerSummariesRequest);
+
+    /**
+     * <p>
+     * Gets a list of summaries for the entity recognizers that you have created.
+     * </p>
+     * 
+     * @param listEntityRecognizerSummariesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEntityRecognizerSummaries operation returned by the
+     *         service.
+     * @sample AmazonComprehendAsyncHandler.ListEntityRecognizerSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListEntityRecognizerSummaries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEntityRecognizerSummariesResult> listEntityRecognizerSummariesAsync(
+            ListEntityRecognizerSummariesRequest listEntityRecognizerSummariesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEntityRecognizerSummariesRequest, ListEntityRecognizerSummariesResult> asyncHandler);
 
     /**
      * <p>

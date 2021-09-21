@@ -30,6 +30,8 @@ public class ReplicationRuleMarshaller {
 
     private static final MarshallingInfo<List> DESTINATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("destinations").build();
+    private static final MarshallingInfo<List> REPOSITORYFILTERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("repositoryFilters").build();
 
     private static final ReplicationRuleMarshaller instance = new ReplicationRuleMarshaller();
 
@@ -48,6 +50,7 @@ public class ReplicationRuleMarshaller {
 
         try {
             protocolMarshaller.marshall(replicationRule.getDestinations(), DESTINATIONS_BINDING);
+            protocolMarshaller.marshall(replicationRule.getRepositoryFilters(), REPOSITORYFILTERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

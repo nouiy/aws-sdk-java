@@ -100,13 +100,13 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
     private CloudwatchLogsAction cloudwatchLogs;
     /**
      * <p>
-     * Write data to an Amazon Elasticsearch Service domain.
+     * Write data to an Amazon OpenSearch Service domain.
      * </p>
      * <note>
      * <p>
-     * This action is deprecated. Use the <a
-     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
-     * instead.
+     * The <code>Elasticsearch</code> action can only be used by existing rule actions. To create a new rule action or
+     * to update an existing rule action, use the <code>OpenSearch</code> rule action instead. For more information, see
+     * <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearchAction</a>.
      * </p>
      * </note>
      */
@@ -657,22 +657,23 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Write data to an Amazon Elasticsearch Service domain.
+     * Write data to an Amazon OpenSearch Service domain.
      * </p>
      * <note>
      * <p>
-     * This action is deprecated. Use the <a
-     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
-     * instead.
+     * The <code>Elasticsearch</code> action can only be used by existing rule actions. To create a new rule action or
+     * to update an existing rule action, use the <code>OpenSearch</code> rule action instead. For more information, see
+     * <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearchAction</a>.
      * </p>
      * </note>
      * 
      * @param elasticsearch
-     *        Write data to an Amazon Elasticsearch Service domain.</p> <note>
+     *        Write data to an Amazon OpenSearch Service domain.</p> <note>
      *        <p>
-     *        This action is deprecated. Use the <a
-     *        href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
-     *        instead.
+     *        The <code>Elasticsearch</code> action can only be used by existing rule actions. To create a new rule
+     *        action or to update an existing rule action, use the <code>OpenSearch</code> rule action instead. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearchAction</a>.
      *        </p>
      */
 
@@ -682,21 +683,23 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Write data to an Amazon Elasticsearch Service domain.
+     * Write data to an Amazon OpenSearch Service domain.
      * </p>
      * <note>
      * <p>
-     * This action is deprecated. Use the <a
-     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
-     * instead.
+     * The <code>Elasticsearch</code> action can only be used by existing rule actions. To create a new rule action or
+     * to update an existing rule action, use the <code>OpenSearch</code> rule action instead. For more information, see
+     * <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearchAction</a>.
      * </p>
      * </note>
      * 
-     * @return Write data to an Amazon Elasticsearch Service domain.</p> <note>
+     * @return Write data to an Amazon OpenSearch Service domain.</p> <note>
      *         <p>
-     *         This action is deprecated. Use the <a
-     *         href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch
-     *         action</a> instead.
+     *         The <code>Elasticsearch</code> action can only be used by existing rule actions. To create a new rule
+     *         action or to update an existing rule action, use the <code>OpenSearch</code> rule action instead. For
+     *         more information, see <a
+     *         href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html"
+     *         >OpenSearchAction</a>.
      *         </p>
      */
 
@@ -706,22 +709,23 @@ public class Action implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Write data to an Amazon Elasticsearch Service domain.
+     * Write data to an Amazon OpenSearch Service domain.
      * </p>
      * <note>
      * <p>
-     * This action is deprecated. Use the <a
-     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
-     * instead.
+     * The <code>Elasticsearch</code> action can only be used by existing rule actions. To create a new rule action or
+     * to update an existing rule action, use the <code>OpenSearch</code> rule action instead. For more information, see
+     * <a href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearchAction</a>.
      * </p>
      * </note>
      * 
      * @param elasticsearch
-     *        Write data to an Amazon Elasticsearch Service domain.</p> <note>
+     *        Write data to an Amazon OpenSearch Service domain.</p> <note>
      *        <p>
-     *        This action is deprecated. Use the <a
-     *        href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearch action</a>
-     *        instead.
+     *        The <code>Elasticsearch</code> action can only be used by existing rule actions. To create a new rule
+     *        action or to update an existing rule action, use the <code>OpenSearch</code> rule action instead. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html">OpenSearchAction</a>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

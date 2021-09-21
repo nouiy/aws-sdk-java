@@ -6394,6 +6394,41 @@ public class AWSIotAsyncClient extends AWSIotClient implements AWSIotAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<PutVerificationStateOnViolationResult> putVerificationStateOnViolationAsync(
+            PutVerificationStateOnViolationRequest request) {
+
+        return putVerificationStateOnViolationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutVerificationStateOnViolationResult> putVerificationStateOnViolationAsync(
+            final PutVerificationStateOnViolationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutVerificationStateOnViolationRequest, PutVerificationStateOnViolationResult> asyncHandler) {
+        final PutVerificationStateOnViolationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutVerificationStateOnViolationResult>() {
+            @Override
+            public PutVerificationStateOnViolationResult call() throws Exception {
+                PutVerificationStateOnViolationResult result = null;
+
+                try {
+                    result = executePutVerificationStateOnViolation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<RegisterCACertificateResult> registerCACertificateAsync(RegisterCACertificateRequest request) {
 
         return registerCACertificateAsync(request, null);

@@ -72,7 +72,7 @@ public class VpnConnectionOptionsSpecification implements Serializable, Cloneabl
     private String localIpv4NetworkCidr;
     /**
      * <p>
-     * The IPv4 CIDR on the AWS side of the VPN connection.
+     * The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * <p>
      * Default: <code>0.0.0.0/0</code>
@@ -90,7 +90,7 @@ public class VpnConnectionOptionsSpecification implements Serializable, Cloneabl
     private String localIpv6NetworkCidr;
     /**
      * <p>
-     * The IPv6 CIDR on the AWS side of the VPN connection.
+     * The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * <p>
      * Default: <code>::/0</code>
@@ -467,14 +467,14 @@ public class VpnConnectionOptionsSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The IPv4 CIDR on the AWS side of the VPN connection.
+     * The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * <p>
      * Default: <code>0.0.0.0/0</code>
      * </p>
      * 
      * @param remoteIpv4NetworkCidr
-     *        The IPv4 CIDR on the AWS side of the VPN connection.</p>
+     *        The IPv4 CIDR on the Amazon Web Services side of the VPN connection.</p>
      *        <p>
      *        Default: <code>0.0.0.0/0</code>
      */
@@ -485,13 +485,13 @@ public class VpnConnectionOptionsSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The IPv4 CIDR on the AWS side of the VPN connection.
+     * The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * <p>
      * Default: <code>0.0.0.0/0</code>
      * </p>
      * 
-     * @return The IPv4 CIDR on the AWS side of the VPN connection.</p>
+     * @return The IPv4 CIDR on the Amazon Web Services side of the VPN connection.</p>
      *         <p>
      *         Default: <code>0.0.0.0/0</code>
      */
@@ -502,14 +502,14 @@ public class VpnConnectionOptionsSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The IPv4 CIDR on the AWS side of the VPN connection.
+     * The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * <p>
      * Default: <code>0.0.0.0/0</code>
      * </p>
      * 
      * @param remoteIpv4NetworkCidr
-     *        The IPv4 CIDR on the AWS side of the VPN connection.</p>
+     *        The IPv4 CIDR on the Amazon Web Services side of the VPN connection.</p>
      *        <p>
      *        Default: <code>0.0.0.0/0</code>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -577,14 +577,14 @@ public class VpnConnectionOptionsSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The IPv6 CIDR on the AWS side of the VPN connection.
+     * The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * <p>
      * Default: <code>::/0</code>
      * </p>
      * 
      * @param remoteIpv6NetworkCidr
-     *        The IPv6 CIDR on the AWS side of the VPN connection.</p>
+     *        The IPv6 CIDR on the Amazon Web Services side of the VPN connection.</p>
      *        <p>
      *        Default: <code>::/0</code>
      */
@@ -595,13 +595,13 @@ public class VpnConnectionOptionsSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The IPv6 CIDR on the AWS side of the VPN connection.
+     * The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * <p>
      * Default: <code>::/0</code>
      * </p>
      * 
-     * @return The IPv6 CIDR on the AWS side of the VPN connection.</p>
+     * @return The IPv6 CIDR on the Amazon Web Services side of the VPN connection.</p>
      *         <p>
      *         Default: <code>::/0</code>
      */
@@ -612,14 +612,14 @@ public class VpnConnectionOptionsSpecification implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The IPv6 CIDR on the AWS side of the VPN connection.
+     * The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * <p>
      * Default: <code>::/0</code>
      * </p>
      * 
      * @param remoteIpv6NetworkCidr
-     *        The IPv6 CIDR on the AWS side of the VPN connection.</p>
+     *        The IPv6 CIDR on the Amazon Web Services side of the VPN connection.</p>
      *        <p>
      *        Default: <code>::/0</code>
      * @return Returns a reference to this object so that method calls can be chained together.

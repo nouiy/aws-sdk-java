@@ -44,6 +44,14 @@ public class SearchLocalGatewayRoutesRequestMarshaller implements Marshaller<Req
             request.addParameter("LocalGatewayRouteTableId", StringUtils.fromString(searchLocalGatewayRoutesRequest.getLocalGatewayRouteTableId()));
         }
 
+        if (searchLocalGatewayRoutesRequest.getMaxResults() != null) {
+            request.addParameter("MaxResults", StringUtils.fromInteger(searchLocalGatewayRoutesRequest.getMaxResults()));
+        }
+
+        if (searchLocalGatewayRoutesRequest.getNextToken() != null) {
+            request.addParameter("NextToken", StringUtils.fromString(searchLocalGatewayRoutesRequest.getNextToken()));
+        }
+
         com.amazonaws.internal.SdkInternalList<Filter> searchLocalGatewayRoutesRequestFiltersList = (com.amazonaws.internal.SdkInternalList<Filter>) searchLocalGatewayRoutesRequest
                 .getFilters();
         if (!searchLocalGatewayRoutesRequestFiltersList.isEmpty() || !searchLocalGatewayRoutesRequestFiltersList.isAutoConstruct()) {
@@ -70,14 +78,6 @@ public class SearchLocalGatewayRoutesRequestMarshaller implements Marshaller<Req
                 }
                 filtersListIndex++;
             }
-        }
-
-        if (searchLocalGatewayRoutesRequest.getMaxResults() != null) {
-            request.addParameter("MaxResults", StringUtils.fromInteger(searchLocalGatewayRoutesRequest.getMaxResults()));
-        }
-
-        if (searchLocalGatewayRoutesRequest.getNextToken() != null) {
-            request.addParameter("NextToken", StringUtils.fromString(searchLocalGatewayRoutesRequest.getNextToken()));
         }
 
         return request;

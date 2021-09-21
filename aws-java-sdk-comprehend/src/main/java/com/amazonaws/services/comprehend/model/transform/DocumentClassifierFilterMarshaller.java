@@ -29,6 +29,8 @@ public class DocumentClassifierFilterMarshaller {
 
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Status").build();
+    private static final MarshallingInfo<String> DOCUMENTCLASSIFIERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DocumentClassifierName").build();
     private static final MarshallingInfo<java.util.Date> SUBMITTIMEBEFORE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SubmitTimeBefore").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> SUBMITTIMEAFTER_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -51,6 +53,7 @@ public class DocumentClassifierFilterMarshaller {
 
         try {
             protocolMarshaller.marshall(documentClassifierFilter.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(documentClassifierFilter.getDocumentClassifierName(), DOCUMENTCLASSIFIERNAME_BINDING);
             protocolMarshaller.marshall(documentClassifierFilter.getSubmitTimeBefore(), SUBMITTIMEBEFORE_BINDING);
             protocolMarshaller.marshall(documentClassifierFilter.getSubmitTimeAfter(), SUBMITTIMEAFTER_BINDING);
         } catch (Exception e) {

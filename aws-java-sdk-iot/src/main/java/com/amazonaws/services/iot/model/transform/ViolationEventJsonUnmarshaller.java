@@ -76,6 +76,14 @@ public class ViolationEventJsonUnmarshaller implements Unmarshaller<ViolationEve
                     context.nextToken();
                     violationEvent.setViolationEventType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("verificationState", targetDepth)) {
+                    context.nextToken();
+                    violationEvent.setVerificationState(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("verificationStateDescription", targetDepth)) {
+                    context.nextToken();
+                    violationEvent.setVerificationStateDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("violationEventTime", targetDepth)) {
                     context.nextToken();
                     violationEvent.setViolationEventTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

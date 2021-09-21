@@ -64,6 +64,10 @@ public class EndpointPropertiesJsonUnmarshaller implements Unmarshaller<Endpoint
                     context.nextToken();
                     endpointProperties.setModelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DesiredModelArn", targetDepth)) {
+                    context.nextToken();
+                    endpointProperties.setDesiredModelArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("DesiredInferenceUnits", targetDepth)) {
                     context.nextToken();
                     endpointProperties.setDesiredInferenceUnits(context.getUnmarshaller(Integer.class).unmarshall(context));
@@ -83,6 +87,10 @@ public class EndpointPropertiesJsonUnmarshaller implements Unmarshaller<Endpoint
                 if (context.testExpression("DataAccessRoleArn", targetDepth)) {
                     context.nextToken();
                     endpointProperties.setDataAccessRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("DesiredDataAccessRoleArn", targetDepth)) {
+                    context.nextToken();
+                    endpointProperties.setDesiredDataAccessRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

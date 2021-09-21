@@ -13457,6 +13457,74 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<GetVpnConnectionDeviceSampleConfigurationResult> getVpnConnectionDeviceSampleConfigurationAsync(
+            GetVpnConnectionDeviceSampleConfigurationRequest request) {
+
+        return getVpnConnectionDeviceSampleConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVpnConnectionDeviceSampleConfigurationResult> getVpnConnectionDeviceSampleConfigurationAsync(
+            final GetVpnConnectionDeviceSampleConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetVpnConnectionDeviceSampleConfigurationRequest, GetVpnConnectionDeviceSampleConfigurationResult> asyncHandler) {
+        final GetVpnConnectionDeviceSampleConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetVpnConnectionDeviceSampleConfigurationResult>() {
+            @Override
+            public GetVpnConnectionDeviceSampleConfigurationResult call() throws Exception {
+                GetVpnConnectionDeviceSampleConfigurationResult result = null;
+
+                try {
+                    result = executeGetVpnConnectionDeviceSampleConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVpnConnectionDeviceTypesResult> getVpnConnectionDeviceTypesAsync(GetVpnConnectionDeviceTypesRequest request) {
+
+        return getVpnConnectionDeviceTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVpnConnectionDeviceTypesResult> getVpnConnectionDeviceTypesAsync(final GetVpnConnectionDeviceTypesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetVpnConnectionDeviceTypesRequest, GetVpnConnectionDeviceTypesResult> asyncHandler) {
+        final GetVpnConnectionDeviceTypesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetVpnConnectionDeviceTypesResult>() {
+            @Override
+            public GetVpnConnectionDeviceTypesResult call() throws Exception {
+                GetVpnConnectionDeviceTypesResult result = null;
+
+                try {
+                    result = executeGetVpnConnectionDeviceTypes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportClientVpnClientCertificateRevocationListResult> importClientVpnClientCertificateRevocationListAsync(
             ImportClientVpnClientCertificateRevocationListRequest request) {
 

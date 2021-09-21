@@ -32,6 +32,8 @@ public class CreateEntityRecognizerRequestMarshaller {
 
     private static final MarshallingInfo<String> RECOGNIZERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecognizerName").build();
+    private static final MarshallingInfo<String> VERSIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VersionName").build();
     private static final MarshallingInfo<String> DATAACCESSROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataAccessRoleArn").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -67,6 +69,7 @@ public class CreateEntityRecognizerRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(createEntityRecognizerRequest.getRecognizerName(), RECOGNIZERNAME_BINDING);
+            protocolMarshaller.marshall(createEntityRecognizerRequest.getVersionName(), VERSIONNAME_BINDING);
             protocolMarshaller.marshall(createEntityRecognizerRequest.getDataAccessRoleArn(), DATAACCESSROLEARN_BINDING);
             protocolMarshaller.marshall(createEntityRecognizerRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createEntityRecognizerRequest.getInputDataConfig(), INPUTDATACONFIG_BINDING);

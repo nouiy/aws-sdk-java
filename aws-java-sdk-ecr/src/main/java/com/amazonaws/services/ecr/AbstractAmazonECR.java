@@ -84,6 +84,11 @@ public class AbstractAmazonECR implements AmazonECR {
     }
 
     @Override
+    public DescribeImageReplicationStatusResult describeImageReplicationStatus(DescribeImageReplicationStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeImageScanFindingsResult describeImageScanFindings(DescribeImageScanFindingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

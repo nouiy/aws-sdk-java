@@ -52,6 +52,10 @@ public class DocumentClassifierFilterJsonUnmarshaller implements Unmarshaller<Do
                     context.nextToken();
                     documentClassifierFilter.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DocumentClassifierName", targetDepth)) {
+                    context.nextToken();
+                    documentClassifierFilter.setDocumentClassifierName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("SubmitTimeBefore", targetDepth)) {
                     context.nextToken();
                     documentClassifierFilter.setSubmitTimeBefore(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

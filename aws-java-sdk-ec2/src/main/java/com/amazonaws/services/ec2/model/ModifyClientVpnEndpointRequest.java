@@ -34,8 +34,8 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
     private String clientVpnEndpointId;
     /**
      * <p>
-     * The ARN of the server certificate to be used. The server certificate must be provisioned in AWS Certificate
-     * Manager (ACM).
+     * The ARN of the server certificate to be used. The server certificate must be provisioned in Certificate Manager
+     * (ACM).
      * </p>
      */
     private String serverCertificateArn;
@@ -102,8 +102,8 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      */
     private Boolean splitTunnel;
@@ -174,13 +174,13 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The ARN of the server certificate to be used. The server certificate must be provisioned in AWS Certificate
-     * Manager (ACM).
+     * The ARN of the server certificate to be used. The server certificate must be provisioned in Certificate Manager
+     * (ACM).
      * </p>
      * 
      * @param serverCertificateArn
-     *        The ARN of the server certificate to be used. The server certificate must be provisioned in AWS
-     *        Certificate Manager (ACM).
+     *        The ARN of the server certificate to be used. The server certificate must be provisioned in Certificate
+     *        Manager (ACM).
      */
 
     public void setServerCertificateArn(String serverCertificateArn) {
@@ -189,12 +189,12 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The ARN of the server certificate to be used. The server certificate must be provisioned in AWS Certificate
-     * Manager (ACM).
+     * The ARN of the server certificate to be used. The server certificate must be provisioned in Certificate Manager
+     * (ACM).
      * </p>
      * 
-     * @return The ARN of the server certificate to be used. The server certificate must be provisioned in AWS
-     *         Certificate Manager (ACM).
+     * @return The ARN of the server certificate to be used. The server certificate must be provisioned in Certificate
+     *         Manager (ACM).
      */
 
     public String getServerCertificateArn() {
@@ -203,13 +203,13 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The ARN of the server certificate to be used. The server certificate must be provisioned in AWS Certificate
-     * Manager (ACM).
+     * The ARN of the server certificate to be used. The server certificate must be provisioned in Certificate Manager
+     * (ACM).
      * </p>
      * 
      * @param serverCertificateArn
-     *        The ARN of the server certificate to be used. The server certificate must be provisioned in AWS
-     *        Certificate Manager (ACM).
+     *        The ARN of the server certificate to be used. The server certificate must be provisioned in Certificate
+     *        Manager (ACM).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -576,16 +576,16 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
      * @param splitTunnel
      *        Indicates whether the VPN is split-tunnel.</p>
      *        <p>
      *        For information about split-tunnel VPN endpoints, see <a
-     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *        Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client
+     *        VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      */
 
     public void setSplitTunnel(Boolean splitTunnel) {
@@ -598,15 +598,15 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
      * @return Indicates whether the VPN is split-tunnel.</p>
      *         <p>
      *         For information about split-tunnel VPN endpoints, see <a
-     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *         Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client
+     *         VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      */
 
     public Boolean getSplitTunnel() {
@@ -619,16 +619,16 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
      * @param splitTunnel
      *        Indicates whether the VPN is split-tunnel.</p>
      *        <p>
      *        For information about split-tunnel VPN endpoints, see <a
-     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *        Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client
+     *        VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -643,15 +643,15 @@ public class ModifyClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
      * @return Indicates whether the VPN is split-tunnel.</p>
      *         <p>
      *         For information about split-tunnel VPN endpoints, see <a
-     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *         Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client
+     *         VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      */
 
     public Boolean isSplitTunnel() {

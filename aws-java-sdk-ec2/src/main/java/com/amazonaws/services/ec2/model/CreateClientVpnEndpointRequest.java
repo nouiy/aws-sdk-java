@@ -38,7 +38,7 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * The ARN of the server certificate. For more information, see the <a
-     * href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager User Guide</a>.
+     * href="https://docs.aws.amazon.com/acm/latest/userguide/">Certificate Manager User Guide</a>.
      * </p>
      */
     private String serverCertificateArn;
@@ -116,15 +116,15 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
     private String description;
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled on the Client VPN endpoint.
      * </p>
      * <p>
      * By default, split-tunnel on a VPN endpoint is disabled.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      */
     private Boolean splitTunnel;
@@ -132,8 +132,8 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     * Idempotency</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * idempotency</a>.
      * </p>
      */
     private String clientToken;
@@ -234,12 +234,12 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * The ARN of the server certificate. For more information, see the <a
-     * href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager User Guide</a>.
+     * href="https://docs.aws.amazon.com/acm/latest/userguide/">Certificate Manager User Guide</a>.
      * </p>
      * 
      * @param serverCertificateArn
      *        The ARN of the server certificate. For more information, see the <a
-     *        href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager User Guide</a>.
+     *        href="https://docs.aws.amazon.com/acm/latest/userguide/">Certificate Manager User Guide</a>.
      */
 
     public void setServerCertificateArn(String serverCertificateArn) {
@@ -249,11 +249,11 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * The ARN of the server certificate. For more information, see the <a
-     * href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager User Guide</a>.
+     * href="https://docs.aws.amazon.com/acm/latest/userguide/">Certificate Manager User Guide</a>.
      * </p>
      * 
      * @return The ARN of the server certificate. For more information, see the <a
-     *         href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager User Guide</a>.
+     *         href="https://docs.aws.amazon.com/acm/latest/userguide/">Certificate Manager User Guide</a>.
      */
 
     public String getServerCertificateArn() {
@@ -263,12 +263,12 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
     /**
      * <p>
      * The ARN of the server certificate. For more information, see the <a
-     * href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager User Guide</a>.
+     * href="https://docs.aws.amazon.com/acm/latest/userguide/">Certificate Manager User Guide</a>.
      * </p>
      * 
      * @param serverCertificateArn
      *        The ARN of the server certificate. For more information, see the <a
-     *        href="https://docs.aws.amazon.com/acm/latest/userguide/">AWS Certificate Manager User Guide</a>.
+     *        href="https://docs.aws.amazon.com/acm/latest/userguide/">Certificate Manager User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -822,26 +822,26 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled on the Client VPN endpoint.
      * </p>
      * <p>
      * By default, split-tunnel on a VPN endpoint is disabled.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
      * @param splitTunnel
-     *        Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.</p>
+     *        Indicates whether split-tunnel is enabled on the Client VPN endpoint.</p>
      *        <p>
      *        By default, split-tunnel on a VPN endpoint is disabled.
      *        </p>
      *        <p>
      *        For information about split-tunnel VPN endpoints, see <a
-     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *        Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client
+     *        VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      */
 
     public void setSplitTunnel(Boolean splitTunnel) {
@@ -850,25 +850,25 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled on the Client VPN endpoint.
      * </p>
      * <p>
      * By default, split-tunnel on a VPN endpoint is disabled.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
-     * @return Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.</p>
+     * @return Indicates whether split-tunnel is enabled on the Client VPN endpoint.</p>
      *         <p>
      *         By default, split-tunnel on a VPN endpoint is disabled.
      *         </p>
      *         <p>
      *         For information about split-tunnel VPN endpoints, see <a
-     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *         Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client
+     *         VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      */
 
     public Boolean getSplitTunnel() {
@@ -877,26 +877,26 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled on the Client VPN endpoint.
      * </p>
      * <p>
      * By default, split-tunnel on a VPN endpoint is disabled.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
      * @param splitTunnel
-     *        Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.</p>
+     *        Indicates whether split-tunnel is enabled on the Client VPN endpoint.</p>
      *        <p>
      *        By default, split-tunnel on a VPN endpoint is disabled.
      *        </p>
      *        <p>
      *        For information about split-tunnel VPN endpoints, see <a
-     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *        Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client
+     *        VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -907,25 +907,25 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled on the Client VPN endpoint.
      * </p>
      * <p>
      * By default, split-tunnel on a VPN endpoint is disabled.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
-     * @return Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.</p>
+     * @return Indicates whether split-tunnel is enabled on the Client VPN endpoint.</p>
      *         <p>
      *         By default, split-tunnel on a VPN endpoint is disabled.
      *         </p>
      *         <p>
      *         For information about split-tunnel VPN endpoints, see <a
-     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *         Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-tunnel Client
+     *         VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      */
 
     public Boolean isSplitTunnel() {
@@ -936,15 +936,15 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     * Idempotency</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     *        idempotency</a>.
      */
 
     public void setClientToken(String clientToken) {
@@ -955,14 +955,14 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     * Idempotency</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * idempotency</a>.
      * </p>
      * 
      * @return Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     *         Idempotency</a>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     *         idempotency</a>.
      */
 
     public String getClientToken() {
@@ -973,15 +973,15 @@ public class CreateClientVpnEndpointRequest extends AmazonWebServiceRequest impl
      * <p>
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      * information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     * Idempotency</a>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     * idempotency</a>.
      * </p>
      * 
      * @param clientToken
      *        Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more
      *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to Ensure
-     *        Idempotency</a>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html">How to ensure
+     *        idempotency</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -34,7 +34,7 @@ public class ClientConnectOptions implements Serializable, Cloneable {
     private Boolean enabled;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function used for connection authorization.
+     * The Amazon Resource Name (ARN) of the Lambda function used for connection authorization.
      * </p>
      */
     private String lambdaFunctionArn;
@@ -93,11 +93,11 @@ public class ClientConnectOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function used for connection authorization.
+     * The Amazon Resource Name (ARN) of the Lambda function used for connection authorization.
      * </p>
      * 
      * @param lambdaFunctionArn
-     *        The Amazon Resource Name (ARN) of the AWS Lambda function used for connection authorization.
+     *        The Amazon Resource Name (ARN) of the Lambda function used for connection authorization.
      */
 
     public void setLambdaFunctionArn(String lambdaFunctionArn) {
@@ -106,10 +106,10 @@ public class ClientConnectOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function used for connection authorization.
+     * The Amazon Resource Name (ARN) of the Lambda function used for connection authorization.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Lambda function used for connection authorization.
+     * @return The Amazon Resource Name (ARN) of the Lambda function used for connection authorization.
      */
 
     public String getLambdaFunctionArn() {
@@ -118,11 +118,11 @@ public class ClientConnectOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Lambda function used for connection authorization.
+     * The Amazon Resource Name (ARN) of the Lambda function used for connection authorization.
      * </p>
      * 
      * @param lambdaFunctionArn
-     *        The Amazon Resource Name (ARN) of the AWS Lambda function used for connection authorization.
+     *        The Amazon Resource Name (ARN) of the Lambda function used for connection authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

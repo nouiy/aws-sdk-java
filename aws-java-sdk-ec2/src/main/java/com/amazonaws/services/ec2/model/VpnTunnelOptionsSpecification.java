@@ -122,8 +122,8 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
     private Integer phase2LifetimeSeconds;
     /**
      * <p>
-     * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN connection
-     * performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
+     * The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services side of
+     * the VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
      * <code>RekeyFuzzPercentage</code>.
      * </p>
      * <p>
@@ -254,8 +254,8 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
     /**
      * <p>
      * The action to take when the establishing the tunnel for the VPN connection. By default, your customer gateway
-     * device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for AWS to initiate
-     * the IKE negotiation.
+     * device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for Amazon Web
+     * Services to initiate the IKE negotiation.
      * </p>
      * <p>
      * Valid Values: <code>add</code> | <code>start</code>
@@ -837,8 +837,8 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN connection
-     * performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
+     * The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services side of
+     * the VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
      * <code>RekeyFuzzPercentage</code>.
      * </p>
      * <p>
@@ -849,9 +849,9 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * </p>
      * 
      * @param rekeyMarginTimeSeconds
-     *        The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN
-     *        connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
-     *        <code>RekeyFuzzPercentage</code>.</p>
+     *        The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services
+     *        side of the VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based
+     *        on the value for <code>RekeyFuzzPercentage</code>.</p>
      *        <p>
      *        Constraints: A value between 60 and half of <code>Phase2LifetimeSeconds</code>.
      *        </p>
@@ -865,8 +865,8 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN connection
-     * performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
+     * The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services side of
+     * the VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
      * <code>RekeyFuzzPercentage</code>.
      * </p>
      * <p>
@@ -876,9 +876,9 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * Default: <code>540</code>
      * </p>
      * 
-     * @return The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN
-     *         connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
-     *         <code>RekeyFuzzPercentage</code>.</p>
+     * @return The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services
+     *         side of the VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based
+     *         on the value for <code>RekeyFuzzPercentage</code>.</p>
      *         <p>
      *         Constraints: A value between 60 and half of <code>Phase2LifetimeSeconds</code>.
      *         </p>
@@ -892,8 +892,8 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN connection
-     * performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
+     * The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services side of
+     * the VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
      * <code>RekeyFuzzPercentage</code>.
      * </p>
      * <p>
@@ -904,9 +904,9 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * </p>
      * 
      * @param rekeyMarginTimeSeconds
-     *        The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the VPN
-     *        connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for
-     *        <code>RekeyFuzzPercentage</code>.</p>
+     *        The margin time, in seconds, before the phase 2 lifetime expires, during which the Amazon Web Services
+     *        side of the VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based
+     *        on the value for <code>RekeyFuzzPercentage</code>.</p>
      *        <p>
      *        Constraints: A value between 60 and half of <code>Phase2LifetimeSeconds</code>.
      *        </p>
@@ -1930,8 +1930,8 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
     /**
      * <p>
      * The action to take when the establishing the tunnel for the VPN connection. By default, your customer gateway
-     * device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for AWS to initiate
-     * the IKE negotiation.
+     * device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for Amazon Web
+     * Services to initiate the IKE negotiation.
      * </p>
      * <p>
      * Valid Values: <code>add</code> | <code>start</code>
@@ -1943,7 +1943,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * @param startupAction
      *        The action to take when the establishing the tunnel for the VPN connection. By default, your customer
      *        gateway device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for
-     *        AWS to initiate the IKE negotiation.</p>
+     *        Amazon Web Services to initiate the IKE negotiation.</p>
      *        <p>
      *        Valid Values: <code>add</code> | <code>start</code>
      *        </p>
@@ -1958,8 +1958,8 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
     /**
      * <p>
      * The action to take when the establishing the tunnel for the VPN connection. By default, your customer gateway
-     * device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for AWS to initiate
-     * the IKE negotiation.
+     * device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for Amazon Web
+     * Services to initiate the IKE negotiation.
      * </p>
      * <p>
      * Valid Values: <code>add</code> | <code>start</code>
@@ -1970,7 +1970,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * 
      * @return The action to take when the establishing the tunnel for the VPN connection. By default, your customer
      *         gateway device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for
-     *         AWS to initiate the IKE negotiation.</p>
+     *         Amazon Web Services to initiate the IKE negotiation.</p>
      *         <p>
      *         Valid Values: <code>add</code> | <code>start</code>
      *         </p>
@@ -1985,8 +1985,8 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
     /**
      * <p>
      * The action to take when the establishing the tunnel for the VPN connection. By default, your customer gateway
-     * device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for AWS to initiate
-     * the IKE negotiation.
+     * device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for Amazon Web
+     * Services to initiate the IKE negotiation.
      * </p>
      * <p>
      * Valid Values: <code>add</code> | <code>start</code>
@@ -1998,7 +1998,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * @param startupAction
      *        The action to take when the establishing the tunnel for the VPN connection. By default, your customer
      *        gateway device must initiate the IKE negotiation and bring up the tunnel. Specify <code>start</code> for
-     *        AWS to initiate the IKE negotiation.</p>
+     *        Amazon Web Services to initiate the IKE negotiation.</p>
      *        <p>
      *        Valid Values: <code>add</code> | <code>start</code>
      *        </p>

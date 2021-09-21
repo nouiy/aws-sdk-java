@@ -34,6 +34,14 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
     private String recognizerName;
     /**
      * <p>
+     * The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
+     * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
+     * models with the same recognizer name in the account/ AWS Region.
+     * </p>
+     */
+    private String versionName;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the AWS Identity and Management (IAM) role that grants Amazon Comprehend read
      * access to your input data.
      * </p>
@@ -163,6 +171,58 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
 
     public CreateEntityRecognizerRequest withRecognizerName(String recognizerName) {
         setRecognizerName(recognizerName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
+     * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
+     * models with the same recognizer name in the account/ AWS Region.
+     * </p>
+     * 
+     * @param versionName
+     *        The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
+     *        Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique
+     *        among all models with the same recognizer name in the account/ AWS Region.
+     */
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
+
+    /**
+     * <p>
+     * The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
+     * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
+     * models with the same recognizer name in the account/ AWS Region.
+     * </p>
+     * 
+     * @return The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
+     *         Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique
+     *         among all models with the same recognizer name in the account/ AWS Region.
+     */
+
+    public String getVersionName() {
+        return this.versionName;
+    }
+
+    /**
+     * <p>
+     * The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
+     * Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique among all
+     * models with the same recognizer name in the account/ AWS Region.
+     * </p>
+     * 
+     * @param versionName
+     *        The version name given to the newly created recognizer. Version names can be a maximum of 256 characters.
+     *        Alphanumeric characters, hyphens (-) and underscores (_) are allowed. The version name must be unique
+     *        among all models with the same recognizer name in the account/ AWS Region.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEntityRecognizerRequest withVersionName(String versionName) {
+        setVersionName(versionName);
         return this;
     }
 
@@ -772,6 +832,8 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
         sb.append("{");
         if (getRecognizerName() != null)
             sb.append("RecognizerName: ").append(getRecognizerName()).append(",");
+        if (getVersionName() != null)
+            sb.append("VersionName: ").append(getVersionName()).append(",");
         if (getDataAccessRoleArn() != null)
             sb.append("DataAccessRoleArn: ").append(getDataAccessRoleArn()).append(",");
         if (getTags() != null)
@@ -805,6 +867,10 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
         if (other.getRecognizerName() == null ^ this.getRecognizerName() == null)
             return false;
         if (other.getRecognizerName() != null && other.getRecognizerName().equals(this.getRecognizerName()) == false)
+            return false;
+        if (other.getVersionName() == null ^ this.getVersionName() == null)
+            return false;
+        if (other.getVersionName() != null && other.getVersionName().equals(this.getVersionName()) == false)
             return false;
         if (other.getDataAccessRoleArn() == null ^ this.getDataAccessRoleArn() == null)
             return false;
@@ -847,6 +913,7 @@ public class CreateEntityRecognizerRequest extends com.amazonaws.AmazonWebServic
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getRecognizerName() == null) ? 0 : getRecognizerName().hashCode());
+        hashCode = prime * hashCode + ((getVersionName() == null) ? 0 : getVersionName().hashCode());
         hashCode = prime * hashCode + ((getDataAccessRoleArn() == null) ? 0 : getDataAccessRoleArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getInputDataConfig() == null) ? 0 : getInputDataConfig().hashCode());

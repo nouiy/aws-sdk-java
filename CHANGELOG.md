@@ -1,3 +1,24 @@
+# __1.12.71__ __2021-09-21__
+## __AWS IoT__
+  - ### Features
+    - This release adds support for verifying, viewing and filtering AWS IoT Device Defender detect violations with four verification states.
+
+## __Amazon Comprehend__
+  - ### Features
+    - Amazon Comprehend now supports versioning of custom models, improved training with ONE_DOC_PER_FILE text documents for custom entity recognition, ability to provide specific test sets during training, and live migration to new model endpoints.
+
+## __Amazon EC2 Container Registry__
+  - ### Features
+    - This release adds additional support for repository replication
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This update adds support for downloading configuration templates using new APIs (GetVpnConnectionDeviceTypes and GetVpnConnectionDeviceSampleConfiguration) and Internet Key Exchange version 2 (IKEv2) parameters for many popular CGW devices.
+
+## __Managed Streaming for Kafka__
+  - ### Features
+    - Added StateInfo to ClusterInfo
+
 # __1.12.70__ __2021-09-17__
 ## __AWS Database Migration Service__
   - ### Features

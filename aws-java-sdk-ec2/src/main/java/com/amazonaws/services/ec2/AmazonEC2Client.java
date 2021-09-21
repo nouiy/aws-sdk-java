@@ -2188,8 +2188,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Attaches a virtual private gateway to a VPC. You can attach one virtual private gateway to one VPC at a time.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site
-     * VPN</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web
+     * Services Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * 
      * @param attachVpnGatewayRequest
@@ -2248,7 +2248,7 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Adds an ingress authorization rule to a Client VPN endpoint. Ingress authorization rules act as firewall rules
      * that grant access to networks. You must configure ingress authorization rules to enable clients to access
-     * resources in AWS or on-premises networks.
+     * resources in Amazon Web Services or on-premises networks.
      * </p>
      * 
      * @param authorizeClientVpnIngressRequest
@@ -3531,10 +3531,11 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Provides information to AWS about your VPN customer gateway device. The customer gateway is the appliance at your
-     * end of the VPN connection. (The device on the AWS side of the VPN connection is the virtual private gateway.) You
-     * must provide the internet-routable IP address of the customer gateway's external interface. The IP address must
-     * be static and can be behind a device performing network address translation (NAT).
+     * Provides information to Amazon Web Services about your VPN customer gateway device. The customer gateway is the
+     * appliance at your end of the VPN connection. (The device on the Amazon Web Services side of the VPN connection is
+     * the virtual private gateway.) You must provide the internet-routable IP address of the customer gateway's
+     * external interface. The IP address must be static and can be behind a device performing network address
+     * translation (NAT).
      * </p>
      * <p>
      * For devices that use Border Gateway Protocol (BGP), you can also provide the device's BGP Autonomous System
@@ -3569,8 +3570,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * </ul>
      * </note>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site
-     * VPN</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web
+     * Services Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * <important>
      * <p>
@@ -7475,8 +7476,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * This is an idempotent operation. If you perform the operation more than once, Amazon EC2 doesn't return an error.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site
-     * VPN</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web
+     * Services Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * 
      * @param createVpnConnectionRequest
@@ -7538,8 +7539,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * customer gateway.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site
-     * VPN</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web
+     * Services Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * 
      * @param createVpnConnectionRouteRequest
@@ -7600,8 +7601,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * connection. You can create a virtual private gateway before creating the VPC itself.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site
-     * VPN</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web
+     * Services Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * 
      * @param createVpnGatewayRequest
@@ -10814,8 +10815,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * with the new VPN connection ID.
      * </p>
      * <p>
-     * For certificate-based authentication, delete all AWS Certificate Manager (ACM) private certificates used for the
-     * AWS-side tunnel endpoints for the VPN connection before deleting the VPN connection.
+     * For certificate-based authentication, delete all Certificate Manager (ACM) private certificates used for the
+     * Amazon Web Services-side tunnel endpoints for the VPN connection before deleting the VPN connection.
      * </p>
      * 
      * @param deleteVpnConnectionRequest
@@ -12376,8 +12377,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Describes one or more of your VPN customer gateways.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site
-     * VPN</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web
+     * Services Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * 
      * @param describeCustomerGatewaysRequest
@@ -19109,8 +19110,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Describes one or more of your VPN connections.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site
-     * VPN</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web
+     * Services Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * 
      * @param describeVpnConnectionsRequest
@@ -19175,8 +19176,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Describes one or more of your virtual private gateways.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">AWS Site-to-Site
-     * VPN</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html">Amazon Web
+     * Services Site-to-Site VPN</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * 
      * @param describeVpnGatewaysRequest
@@ -22965,6 +22966,124 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Download an AWS-provided sample configuration file to be used with the customer gateway device specified for your
+     * Site-to-Site VPN connection.
+     * </p>
+     * 
+     * @param getVpnConnectionDeviceSampleConfigurationRequest
+     * @return Result of the GetVpnConnectionDeviceSampleConfiguration operation returned by the service.
+     * @sample AmazonEC2.GetVpnConnectionDeviceSampleConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetVpnConnectionDeviceSampleConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetVpnConnectionDeviceSampleConfigurationResult getVpnConnectionDeviceSampleConfiguration(GetVpnConnectionDeviceSampleConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetVpnConnectionDeviceSampleConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final GetVpnConnectionDeviceSampleConfigurationResult executeGetVpnConnectionDeviceSampleConfiguration(
+            GetVpnConnectionDeviceSampleConfigurationRequest getVpnConnectionDeviceSampleConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getVpnConnectionDeviceSampleConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetVpnConnectionDeviceSampleConfigurationRequest> request = null;
+        Response<GetVpnConnectionDeviceSampleConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetVpnConnectionDeviceSampleConfigurationRequestMarshaller().marshall(super
+                        .beforeMarshalling(getVpnConnectionDeviceSampleConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetVpnConnectionDeviceSampleConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetVpnConnectionDeviceSampleConfigurationResult> responseHandler = new StaxResponseHandler<GetVpnConnectionDeviceSampleConfigurationResult>(
+                    new GetVpnConnectionDeviceSampleConfigurationResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Obtain a list of customer gateway devices for which sample configuration files can be provided. The request has
+     * no additional parameters. You can also see the list of device types with sample configuration files available
+     * under <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/your-cgw.html">Your customer gateway device</a> in
+     * the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
+     * </p>
+     * 
+     * @param getVpnConnectionDeviceTypesRequest
+     * @return Result of the GetVpnConnectionDeviceTypes operation returned by the service.
+     * @sample AmazonEC2.GetVpnConnectionDeviceTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetVpnConnectionDeviceTypes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetVpnConnectionDeviceTypesResult getVpnConnectionDeviceTypes(GetVpnConnectionDeviceTypesRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetVpnConnectionDeviceTypes(request);
+    }
+
+    @SdkInternalApi
+    final GetVpnConnectionDeviceTypesResult executeGetVpnConnectionDeviceTypes(GetVpnConnectionDeviceTypesRequest getVpnConnectionDeviceTypesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getVpnConnectionDeviceTypesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetVpnConnectionDeviceTypesRequest> request = null;
+        Response<GetVpnConnectionDeviceTypesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetVpnConnectionDeviceTypesRequestMarshaller().marshall(super.beforeMarshalling(getVpnConnectionDeviceTypesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetVpnConnectionDeviceTypes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetVpnConnectionDeviceTypesResult> responseHandler = new StaxResponseHandler<GetVpnConnectionDeviceTypesResult>(
+                    new GetVpnConnectionDeviceTypesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Uploads a client certificate revocation list to the specified Client VPN endpoint. Uploading a client certificate
      * revocation list overwrites the existing client certificate revocation list.
      * </p>
@@ -26116,8 +26235,8 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Modifies the customer gateway or the target gateway of an AWS Site-to-Site VPN connection. To modify the target
-     * gateway, the following migration options are available:
+     * Modifies the customer gateway or the target gateway of an Amazon Web Services Site-to-Site VPN connection. To
+     * modify the target gateway, the following migration options are available:
      * </p>
      * <ul>
      * <li>
@@ -26159,20 +26278,21 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * After you migrate to the new gateway, you might need to modify your VPC route table. Use <a>CreateRoute</a> and
      * <a>DeleteRoute</a> to make the changes described in <a
-     * href="https://docs.aws.amazon.com/vpn/latest/s2svpn/modify-vpn-target.html#step-update-routing">VPN Gateway
-     * Target Modification Required VPC Route Table Updates</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/s2svpn/modify-vpn-target.html#step-update-routing">Update VPC route
+     * tables</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * <p>
      * When the new gateway is a transit gateway, modify the transit gateway route table to allow traffic between the
-     * VPC and the AWS Site-to-Site VPN connection. Use <a>CreateTransitGatewayRoute</a> to add the routes.
+     * VPC and the Amazon Web Services Site-to-Site VPN connection. Use <a>CreateTransitGatewayRoute</a> to add the
+     * routes.
      * </p>
      * <p>
      * If you deleted VPN static routes, you must add the static routes to the transit gateway route table.
      * </p>
      * <p>
-     * After you perform this operation, the AWS VPN endpoint's IP addresses on the AWS side and the tunnel options
-     * remain intact. Your AWS Site-to-Site VPN connection will be temporarily unavailable for a brief period while we
-     * provision the new endpoints.
+     * After you perform this operation, the VPN endpoint's IP addresses on the Amazon Web Services side and the tunnel
+     * options remain intact. Your Amazon Web Services Site-to-Site VPN connection will be temporarily unavailable for a
+     * brief period while we provision the new endpoints.
      * </p>
      * 
      * @param modifyVpnConnectionRequest
@@ -26231,9 +26351,9 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * Modifies the connection options for your Site-to-Site VPN connection.
      * </p>
      * <p>
-     * When you modify the VPN connection options, the VPN endpoint IP addresses on the AWS side do not change, and the
-     * tunnel options do not change. Your VPN connection will be temporarily unavailable for a brief period while the
-     * VPN connection is updated.
+     * When you modify the VPN connection options, the VPN endpoint IP addresses on the Amazon Web Services side do not
+     * change, and the tunnel options do not change. Your VPN connection will be temporarily unavailable for a brief
+     * period while the VPN connection is updated.
      * </p>
      * 
      * @param modifyVpnConnectionOptionsRequest
@@ -26345,10 +26465,10 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Modifies the options for a VPN tunnel in an AWS Site-to-Site VPN connection. You can modify multiple options for
-     * a tunnel in a single request, but you can only modify one tunnel at a time. For more information, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPNTunnels.html">Site-to-Site VPN Tunnel Options for Your
-     * Site-to-Site VPN Connection</a> in the <i>AWS Site-to-Site VPN User Guide</i>.
+     * Modifies the options for a VPN tunnel in an Amazon Web Services Site-to-Site VPN connection. You can modify
+     * multiple options for a tunnel in a single request, but you can only modify one tunnel at a time. For more
+     * information, see <a href="https://docs.aws.amazon.com/vpn/latest/s2svpn/VPNTunnels.html">Site-to-Site VPN tunnel
+     * options for your Site-to-Site VPN connection</a> in the <i>Amazon Web Services Site-to-Site VPN User Guide</i>.
      * </p>
      * 
      * @param modifyVpnTunnelOptionsRequest

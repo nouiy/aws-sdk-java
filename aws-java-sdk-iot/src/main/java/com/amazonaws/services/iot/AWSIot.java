@@ -5238,6 +5238,23 @@ public interface AWSIot {
 
     /**
      * <p>
+     * Set a verification state and provide a description of that verification state on a violation (detect alarm).
+     * </p>
+     * 
+     * @param putVerificationStateOnViolationRequest
+     * @return Result of the PutVerificationStateOnViolation operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws InternalFailureException
+     *         An unexpected error has occurred.
+     * @sample AWSIot.PutVerificationStateOnViolation
+     */
+    PutVerificationStateOnViolationResult putVerificationStateOnViolation(PutVerificationStateOnViolationRequest putVerificationStateOnViolationRequest);
+
+    /**
+     * <p>
      * Registers a CA certificate with IoT. This CA certificate can then be used to sign device certificates, which can
      * be then registered with IoT. You can register up to 10 CA certificates per Amazon Web Services account that have
      * the same subject field. This enables you to have up to 10 certificate authorities sign your device certificates.

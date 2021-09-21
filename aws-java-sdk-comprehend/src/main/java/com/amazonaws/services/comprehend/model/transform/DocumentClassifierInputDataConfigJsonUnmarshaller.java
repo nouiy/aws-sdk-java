@@ -56,6 +56,10 @@ public class DocumentClassifierInputDataConfigJsonUnmarshaller implements Unmars
                     context.nextToken();
                     documentClassifierInputDataConfig.setS3Uri(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("TestS3Uri", targetDepth)) {
+                    context.nextToken();
+                    documentClassifierInputDataConfig.setTestS3Uri(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("LabelDelimiter", targetDepth)) {
                     context.nextToken();
                     documentClassifierInputDataConfig.setLabelDelimiter(context.getUnmarshaller(String.class).unmarshall(context));

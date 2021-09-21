@@ -301,6 +301,8 @@ public interface AmazonECR {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws RegistryPolicyNotFoundException
      *         The registry doesn't have an associated registry policy.
+     * @throws ValidationException
+     *         There was an exception validating this request.
      * @sample AmazonECR.DeleteRegistryPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DeleteRegistryPolicy" target="_top">AWS API
      *      Documentation</a>
@@ -354,6 +356,30 @@ public interface AmazonECR {
      *      Documentation</a>
      */
     DeleteRepositoryPolicyResult deleteRepositoryPolicy(DeleteRepositoryPolicyRequest deleteRepositoryPolicyRequest);
+
+    /**
+     * <p>
+     * Returns the replication status for a specified image.
+     * </p>
+     * 
+     * @param describeImageReplicationStatusRequest
+     * @return Result of the DescribeImageReplicationStatus operation returned by the service.
+     * @throws ServerException
+     *         These errors are usually caused by a server-side issue.
+     * @throws InvalidParameterException
+     *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ImageNotFoundException
+     *         The image requested does not exist in the specified repository.
+     * @throws RepositoryNotFoundException
+     *         The specified repository could not be found. Check the spelling of the specified repository and ensure
+     *         that you are performing operations on the correct registry.
+     * @throws ValidationException
+     *         There was an exception validating this request.
+     * @sample AmazonECR.DescribeImageReplicationStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeImageReplicationStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeImageReplicationStatusResult describeImageReplicationStatus(DescribeImageReplicationStatusRequest describeImageReplicationStatusRequest);
 
     /**
      * <p>
@@ -568,6 +594,8 @@ public interface AmazonECR {
      *         The specified parameter is invalid. Review the available parameters for the API request.
      * @throws RegistryPolicyNotFoundException
      *         The registry doesn't have an associated registry policy.
+     * @throws ValidationException
+     *         There was an exception validating this request.
      * @sample AmazonECR.GetRegistryPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/GetRegistryPolicy" target="_top">AWS API
      *      Documentation</a>
@@ -806,6 +834,8 @@ public interface AmazonECR {
      *         These errors are usually caused by a server-side issue.
      * @throws InvalidParameterException
      *         The specified parameter is invalid. Review the available parameters for the API request.
+     * @throws ValidationException
+     *         There was an exception validating this request.
      * @sample AmazonECR.PutRegistryPolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/PutRegistryPolicy" target="_top">AWS API
      *      Documentation</a>

@@ -6050,6 +6050,34 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<GetVpnConnectionDeviceSampleConfigurationResult> getVpnConnectionDeviceSampleConfigurationAsync(
+            GetVpnConnectionDeviceSampleConfigurationRequest request) {
+
+        return getVpnConnectionDeviceSampleConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVpnConnectionDeviceSampleConfigurationResult> getVpnConnectionDeviceSampleConfigurationAsync(
+            GetVpnConnectionDeviceSampleConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetVpnConnectionDeviceSampleConfigurationRequest, GetVpnConnectionDeviceSampleConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVpnConnectionDeviceTypesResult> getVpnConnectionDeviceTypesAsync(GetVpnConnectionDeviceTypesRequest request) {
+
+        return getVpnConnectionDeviceTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetVpnConnectionDeviceTypesResult> getVpnConnectionDeviceTypesAsync(GetVpnConnectionDeviceTypesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetVpnConnectionDeviceTypesRequest, GetVpnConnectionDeviceTypesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportClientVpnClientCertificateRevocationListResult> importClientVpnClientCertificateRevocationListAsync(
             ImportClientVpnClientCertificateRevocationListRequest request) {
 

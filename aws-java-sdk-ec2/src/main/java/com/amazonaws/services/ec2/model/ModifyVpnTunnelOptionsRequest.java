@@ -28,7 +28,7 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The ID of the AWS Site-to-Site VPN connection.
+     * The ID of the Amazon Web Services Site-to-Site VPN connection.
      * </p>
      */
     private String vpnConnectionId;
@@ -47,11 +47,11 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The ID of the AWS Site-to-Site VPN connection.
+     * The ID of the Amazon Web Services Site-to-Site VPN connection.
      * </p>
      * 
      * @param vpnConnectionId
-     *        The ID of the AWS Site-to-Site VPN connection.
+     *        The ID of the Amazon Web Services Site-to-Site VPN connection.
      */
 
     public void setVpnConnectionId(String vpnConnectionId) {
@@ -60,10 +60,10 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The ID of the AWS Site-to-Site VPN connection.
+     * The ID of the Amazon Web Services Site-to-Site VPN connection.
      * </p>
      * 
-     * @return The ID of the AWS Site-to-Site VPN connection.
+     * @return The ID of the Amazon Web Services Site-to-Site VPN connection.
      */
 
     public String getVpnConnectionId() {
@@ -72,11 +72,11 @@ public class ModifyVpnTunnelOptionsRequest extends AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * The ID of the AWS Site-to-Site VPN connection.
+     * The ID of the Amazon Web Services Site-to-Site VPN connection.
      * </p>
      * 
      * @param vpnConnectionId
-     *        The ID of the AWS Site-to-Site VPN connection.
+     *        The ID of the Amazon Web Services Site-to-Site VPN connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

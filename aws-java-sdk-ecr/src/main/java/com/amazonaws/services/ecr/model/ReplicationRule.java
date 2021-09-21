@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An array of objects representing the replication destinations for a replication configuration. A replication
- * configuration may contain only one replication rule but the rule may contain one or more replication destinations.
+ * An array of objects representing the replication destinations and repository filters for a replication configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/ReplicationRule" target="_top">AWS API
@@ -31,17 +30,24 @@ public class ReplicationRule implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of objects representing the details of a replication destination.
+     * An array of objects representing the destination for a replication rule.
      * </p>
      */
     private java.util.List<ReplicationDestination> destinations;
+    /**
+     * <p>
+     * An array of objects representing the filters for a replication rule. Specifying a repository filter for a
+     * replication rule provides a method for controlling which repositories in a private registry are replicated.
+     * </p>
+     */
+    private java.util.List<RepositoryFilter> repositoryFilters;
 
     /**
      * <p>
-     * An array of objects representing the details of a replication destination.
+     * An array of objects representing the destination for a replication rule.
      * </p>
      * 
-     * @return An array of objects representing the details of a replication destination.
+     * @return An array of objects representing the destination for a replication rule.
      */
 
     public java.util.List<ReplicationDestination> getDestinations() {
@@ -50,11 +56,11 @@ public class ReplicationRule implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of objects representing the details of a replication destination.
+     * An array of objects representing the destination for a replication rule.
      * </p>
      * 
      * @param destinations
-     *        An array of objects representing the details of a replication destination.
+     *        An array of objects representing the destination for a replication rule.
      */
 
     public void setDestinations(java.util.Collection<ReplicationDestination> destinations) {
@@ -68,7 +74,7 @@ public class ReplicationRule implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of objects representing the details of a replication destination.
+     * An array of objects representing the destination for a replication rule.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +83,7 @@ public class ReplicationRule implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param destinations
-     *        An array of objects representing the details of a replication destination.
+     *        An array of objects representing the destination for a replication rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,16 +99,98 @@ public class ReplicationRule implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of objects representing the details of a replication destination.
+     * An array of objects representing the destination for a replication rule.
      * </p>
      * 
      * @param destinations
-     *        An array of objects representing the details of a replication destination.
+     *        An array of objects representing the destination for a replication rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ReplicationRule withDestinations(java.util.Collection<ReplicationDestination> destinations) {
         setDestinations(destinations);
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of objects representing the filters for a replication rule. Specifying a repository filter for a
+     * replication rule provides a method for controlling which repositories in a private registry are replicated.
+     * </p>
+     * 
+     * @return An array of objects representing the filters for a replication rule. Specifying a repository filter for a
+     *         replication rule provides a method for controlling which repositories in a private registry are
+     *         replicated.
+     */
+
+    public java.util.List<RepositoryFilter> getRepositoryFilters() {
+        return repositoryFilters;
+    }
+
+    /**
+     * <p>
+     * An array of objects representing the filters for a replication rule. Specifying a repository filter for a
+     * replication rule provides a method for controlling which repositories in a private registry are replicated.
+     * </p>
+     * 
+     * @param repositoryFilters
+     *        An array of objects representing the filters for a replication rule. Specifying a repository filter for a
+     *        replication rule provides a method for controlling which repositories in a private registry are
+     *        replicated.
+     */
+
+    public void setRepositoryFilters(java.util.Collection<RepositoryFilter> repositoryFilters) {
+        if (repositoryFilters == null) {
+            this.repositoryFilters = null;
+            return;
+        }
+
+        this.repositoryFilters = new java.util.ArrayList<RepositoryFilter>(repositoryFilters);
+    }
+
+    /**
+     * <p>
+     * An array of objects representing the filters for a replication rule. Specifying a repository filter for a
+     * replication rule provides a method for controlling which repositories in a private registry are replicated.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setRepositoryFilters(java.util.Collection)} or {@link #withRepositoryFilters(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param repositoryFilters
+     *        An array of objects representing the filters for a replication rule. Specifying a repository filter for a
+     *        replication rule provides a method for controlling which repositories in a private registry are
+     *        replicated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReplicationRule withRepositoryFilters(RepositoryFilter... repositoryFilters) {
+        if (this.repositoryFilters == null) {
+            setRepositoryFilters(new java.util.ArrayList<RepositoryFilter>(repositoryFilters.length));
+        }
+        for (RepositoryFilter ele : repositoryFilters) {
+            this.repositoryFilters.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array of objects representing the filters for a replication rule. Specifying a repository filter for a
+     * replication rule provides a method for controlling which repositories in a private registry are replicated.
+     * </p>
+     * 
+     * @param repositoryFilters
+     *        An array of objects representing the filters for a replication rule. Specifying a repository filter for a
+     *        replication rule provides a method for controlling which repositories in a private registry are
+     *        replicated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReplicationRule withRepositoryFilters(java.util.Collection<RepositoryFilter> repositoryFilters) {
+        setRepositoryFilters(repositoryFilters);
         return this;
     }
 
@@ -119,7 +207,9 @@ public class ReplicationRule implements Serializable, Cloneable, StructuredPojo 
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDestinations() != null)
-            sb.append("Destinations: ").append(getDestinations());
+            sb.append("Destinations: ").append(getDestinations()).append(",");
+        if (getRepositoryFilters() != null)
+            sb.append("RepositoryFilters: ").append(getRepositoryFilters());
         sb.append("}");
         return sb.toString();
     }
@@ -138,6 +228,10 @@ public class ReplicationRule implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getDestinations() != null && other.getDestinations().equals(this.getDestinations()) == false)
             return false;
+        if (other.getRepositoryFilters() == null ^ this.getRepositoryFilters() == null)
+            return false;
+        if (other.getRepositoryFilters() != null && other.getRepositoryFilters().equals(this.getRepositoryFilters()) == false)
+            return false;
         return true;
     }
 
@@ -147,6 +241,7 @@ public class ReplicationRule implements Serializable, Cloneable, StructuredPojo 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDestinations() == null) ? 0 : getDestinations().hashCode());
+        hashCode = prime * hashCode + ((getRepositoryFilters() == null) ? 0 : getRepositoryFilters().hashCode());
         return hashCode;
     }
 

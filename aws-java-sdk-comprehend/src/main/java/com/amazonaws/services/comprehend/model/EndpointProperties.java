@@ -55,6 +55,13 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
     private String modelArn;
     /**
      * <p>
+     * ARN of the new model to use for updating an existing endpoint. This ARN is going to be different from the model
+     * ARN when the update is in progress
+     * </p>
+     */
+    private String desiredModelArn;
+    /**
+     * <p>
      * The desired number of inference units to be used by the model using this endpoint. Each inference unit represents
      * of a throughput of 100 characters per second.
      * </p>
@@ -85,6 +92,12 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String dataAccessRoleArn;
+    /**
+     * <p>
+     * Data access role ARN to use in case the new model is encrypted with a customer KMS key.
+     * </p>
+     */
+    private String desiredDataAccessRoleArn;
 
     /**
      * <p>
@@ -274,6 +287,52 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
 
     public EndpointProperties withModelArn(String modelArn) {
         setModelArn(modelArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * ARN of the new model to use for updating an existing endpoint. This ARN is going to be different from the model
+     * ARN when the update is in progress
+     * </p>
+     * 
+     * @param desiredModelArn
+     *        ARN of the new model to use for updating an existing endpoint. This ARN is going to be different from the
+     *        model ARN when the update is in progress
+     */
+
+    public void setDesiredModelArn(String desiredModelArn) {
+        this.desiredModelArn = desiredModelArn;
+    }
+
+    /**
+     * <p>
+     * ARN of the new model to use for updating an existing endpoint. This ARN is going to be different from the model
+     * ARN when the update is in progress
+     * </p>
+     * 
+     * @return ARN of the new model to use for updating an existing endpoint. This ARN is going to be different from the
+     *         model ARN when the update is in progress
+     */
+
+    public String getDesiredModelArn() {
+        return this.desiredModelArn;
+    }
+
+    /**
+     * <p>
+     * ARN of the new model to use for updating an existing endpoint. This ARN is going to be different from the model
+     * ARN when the update is in progress
+     * </p>
+     * 
+     * @param desiredModelArn
+     *        ARN of the new model to use for updating an existing endpoint. This ARN is going to be different from the
+     *        model ARN when the update is in progress
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EndpointProperties withDesiredModelArn(String desiredModelArn) {
+        setDesiredModelArn(desiredModelArn);
         return this;
     }
 
@@ -490,6 +549,46 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Data access role ARN to use in case the new model is encrypted with a customer KMS key.
+     * </p>
+     * 
+     * @param desiredDataAccessRoleArn
+     *        Data access role ARN to use in case the new model is encrypted with a customer KMS key.
+     */
+
+    public void setDesiredDataAccessRoleArn(String desiredDataAccessRoleArn) {
+        this.desiredDataAccessRoleArn = desiredDataAccessRoleArn;
+    }
+
+    /**
+     * <p>
+     * Data access role ARN to use in case the new model is encrypted with a customer KMS key.
+     * </p>
+     * 
+     * @return Data access role ARN to use in case the new model is encrypted with a customer KMS key.
+     */
+
+    public String getDesiredDataAccessRoleArn() {
+        return this.desiredDataAccessRoleArn;
+    }
+
+    /**
+     * <p>
+     * Data access role ARN to use in case the new model is encrypted with a customer KMS key.
+     * </p>
+     * 
+     * @param desiredDataAccessRoleArn
+     *        Data access role ARN to use in case the new model is encrypted with a customer KMS key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EndpointProperties withDesiredDataAccessRoleArn(String desiredDataAccessRoleArn) {
+        setDesiredDataAccessRoleArn(desiredDataAccessRoleArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -509,6 +608,8 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
             sb.append("Message: ").append(getMessage()).append(",");
         if (getModelArn() != null)
             sb.append("ModelArn: ").append(getModelArn()).append(",");
+        if (getDesiredModelArn() != null)
+            sb.append("DesiredModelArn: ").append(getDesiredModelArn()).append(",");
         if (getDesiredInferenceUnits() != null)
             sb.append("DesiredInferenceUnits: ").append(getDesiredInferenceUnits()).append(",");
         if (getCurrentInferenceUnits() != null)
@@ -518,7 +619,9 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
         if (getDataAccessRoleArn() != null)
-            sb.append("DataAccessRoleArn: ").append(getDataAccessRoleArn());
+            sb.append("DataAccessRoleArn: ").append(getDataAccessRoleArn()).append(",");
+        if (getDesiredDataAccessRoleArn() != null)
+            sb.append("DesiredDataAccessRoleArn: ").append(getDesiredDataAccessRoleArn());
         sb.append("}");
         return sb.toString();
     }
@@ -549,6 +652,10 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getModelArn() != null && other.getModelArn().equals(this.getModelArn()) == false)
             return false;
+        if (other.getDesiredModelArn() == null ^ this.getDesiredModelArn() == null)
+            return false;
+        if (other.getDesiredModelArn() != null && other.getDesiredModelArn().equals(this.getDesiredModelArn()) == false)
+            return false;
         if (other.getDesiredInferenceUnits() == null ^ this.getDesiredInferenceUnits() == null)
             return false;
         if (other.getDesiredInferenceUnits() != null && other.getDesiredInferenceUnits().equals(this.getDesiredInferenceUnits()) == false)
@@ -569,6 +676,10 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getDataAccessRoleArn() != null && other.getDataAccessRoleArn().equals(this.getDataAccessRoleArn()) == false)
             return false;
+        if (other.getDesiredDataAccessRoleArn() == null ^ this.getDesiredDataAccessRoleArn() == null)
+            return false;
+        if (other.getDesiredDataAccessRoleArn() != null && other.getDesiredDataAccessRoleArn().equals(this.getDesiredDataAccessRoleArn()) == false)
+            return false;
         return true;
     }
 
@@ -581,11 +692,13 @@ public class EndpointProperties implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         hashCode = prime * hashCode + ((getModelArn() == null) ? 0 : getModelArn().hashCode());
+        hashCode = prime * hashCode + ((getDesiredModelArn() == null) ? 0 : getDesiredModelArn().hashCode());
         hashCode = prime * hashCode + ((getDesiredInferenceUnits() == null) ? 0 : getDesiredInferenceUnits().hashCode());
         hashCode = prime * hashCode + ((getCurrentInferenceUnits() == null) ? 0 : getCurrentInferenceUnits().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getDataAccessRoleArn() == null) ? 0 : getDataAccessRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getDesiredDataAccessRoleArn() == null) ? 0 : getDesiredDataAccessRoleArn().hashCode());
         return hashCode;
     }
 

@@ -29,8 +29,12 @@ public class UpdateEndpointRequestMarshaller {
 
     private static final MarshallingInfo<String> ENDPOINTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointArn").build();
+    private static final MarshallingInfo<String> DESIREDMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredModelArn").build();
     private static final MarshallingInfo<Integer> DESIREDINFERENCEUNITS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredInferenceUnits").build();
+    private static final MarshallingInfo<String> DESIREDDATAACCESSROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DesiredDataAccessRoleArn").build();
 
     private static final UpdateEndpointRequestMarshaller instance = new UpdateEndpointRequestMarshaller();
 
@@ -49,7 +53,9 @@ public class UpdateEndpointRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateEndpointRequest.getEndpointArn(), ENDPOINTARN_BINDING);
+            protocolMarshaller.marshall(updateEndpointRequest.getDesiredModelArn(), DESIREDMODELARN_BINDING);
             protocolMarshaller.marshall(updateEndpointRequest.getDesiredInferenceUnits(), DESIREDINFERENCEUNITS_BINDING);
+            protocolMarshaller.marshall(updateEndpointRequest.getDesiredDataAccessRoleArn(), DESIREDDATAACCESSROLEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

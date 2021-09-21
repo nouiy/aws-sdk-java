@@ -47,7 +47,7 @@ public class VpnConnectionOptions implements Serializable, Cloneable {
     private String localIpv4NetworkCidr;
     /**
      * <p>
-     * The IPv4 CIDR on the AWS side of the VPN connection.
+     * The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      */
     private String remoteIpv4NetworkCidr;
@@ -59,7 +59,7 @@ public class VpnConnectionOptions implements Serializable, Cloneable {
     private String localIpv6NetworkCidr;
     /**
      * <p>
-     * The IPv6 CIDR on the AWS side of the VPN connection.
+     * The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      */
     private String remoteIpv6NetworkCidr;
@@ -230,11 +230,11 @@ public class VpnConnectionOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 CIDR on the AWS side of the VPN connection.
+     * The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * 
      * @param remoteIpv4NetworkCidr
-     *        The IPv4 CIDR on the AWS side of the VPN connection.
+     *        The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      */
 
     public void setRemoteIpv4NetworkCidr(String remoteIpv4NetworkCidr) {
@@ -243,10 +243,10 @@ public class VpnConnectionOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 CIDR on the AWS side of the VPN connection.
+     * The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * 
-     * @return The IPv4 CIDR on the AWS side of the VPN connection.
+     * @return The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      */
 
     public String getRemoteIpv4NetworkCidr() {
@@ -255,11 +255,11 @@ public class VpnConnectionOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv4 CIDR on the AWS side of the VPN connection.
+     * The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * 
      * @param remoteIpv4NetworkCidr
-     *        The IPv4 CIDR on the AWS side of the VPN connection.
+     *        The IPv4 CIDR on the Amazon Web Services side of the VPN connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -310,11 +310,11 @@ public class VpnConnectionOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 CIDR on the AWS side of the VPN connection.
+     * The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * 
      * @param remoteIpv6NetworkCidr
-     *        The IPv6 CIDR on the AWS side of the VPN connection.
+     *        The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      */
 
     public void setRemoteIpv6NetworkCidr(String remoteIpv6NetworkCidr) {
@@ -323,10 +323,10 @@ public class VpnConnectionOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 CIDR on the AWS side of the VPN connection.
+     * The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * 
-     * @return The IPv6 CIDR on the AWS side of the VPN connection.
+     * @return The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      */
 
     public String getRemoteIpv6NetworkCidr() {
@@ -335,11 +335,11 @@ public class VpnConnectionOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The IPv6 CIDR on the AWS side of the VPN connection.
+     * The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      * </p>
      * 
      * @param remoteIpv6NetworkCidr
-     *        The IPv6 CIDR on the AWS side of the VPN connection.
+     *        The IPv6 CIDR on the Amazon Web Services side of the VPN connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

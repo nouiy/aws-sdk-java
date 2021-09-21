@@ -962,6 +962,11 @@ public class AbstractAWSIot implements AWSIot {
     }
 
     @Override
+    public PutVerificationStateOnViolationResult putVerificationStateOnViolation(PutVerificationStateOnViolationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public RegisterCACertificateResult registerCACertificate(RegisterCACertificateRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -54,6 +54,12 @@ public class ReplicationRuleJsonUnmarshaller implements Unmarshaller<Replication
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("repositoryFilters", targetDepth)) {
+                    context.nextToken();
+                    replicationRule.setRepositoryFilters(new ListUnmarshaller<RepositoryFilter>(RepositoryFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

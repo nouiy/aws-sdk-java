@@ -816,6 +816,25 @@ public interface AmazonComprehend {
 
     /**
      * <p>
+     * Gets a list of summaries of the document classifiers that you have created
+     * </p>
+     * 
+     * @param listDocumentClassifierSummariesRequest
+     * @return Result of the ListDocumentClassifierSummaries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws TooManyRequestsException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.ListDocumentClassifierSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListDocumentClassifierSummaries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListDocumentClassifierSummariesResult listDocumentClassifierSummaries(ListDocumentClassifierSummariesRequest listDocumentClassifierSummariesRequest);
+
+    /**
+     * <p>
      * Gets a list of the document classifiers that you have created.
      * </p>
      * 
@@ -895,6 +914,25 @@ public interface AmazonComprehend {
      *      target="_top">AWS API Documentation</a>
      */
     ListEntitiesDetectionJobsResult listEntitiesDetectionJobs(ListEntitiesDetectionJobsRequest listEntitiesDetectionJobsRequest);
+
+    /**
+     * <p>
+     * Gets a list of summaries for the entity recognizers that you have created.
+     * </p>
+     * 
+     * @param listEntityRecognizerSummariesRequest
+     * @return Result of the ListEntityRecognizerSummaries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws TooManyRequestsException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.ListEntityRecognizerSummaries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ListEntityRecognizerSummaries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListEntityRecognizerSummariesResult listEntityRecognizerSummaries(ListEntityRecognizerSummariesRequest listEntityRecognizerSummariesRequest);
 
     /**
      * <p>

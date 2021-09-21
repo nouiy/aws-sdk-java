@@ -145,6 +145,12 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
      * </ul>
      */
     private String modelKmsKeyId;
+    /**
+     * <p>
+     * The version name you assigned to the entity recognizer.
+     * </p>
+     */
+    private String versionName;
 
     /**
      * <p>
@@ -939,6 +945,46 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The version name you assigned to the entity recognizer.
+     * </p>
+     * 
+     * @param versionName
+     *        The version name you assigned to the entity recognizer.
+     */
+
+    public void setVersionName(String versionName) {
+        this.versionName = versionName;
+    }
+
+    /**
+     * <p>
+     * The version name you assigned to the entity recognizer.
+     * </p>
+     * 
+     * @return The version name you assigned to the entity recognizer.
+     */
+
+    public String getVersionName() {
+        return this.versionName;
+    }
+
+    /**
+     * <p>
+     * The version name you assigned to the entity recognizer.
+     * </p>
+     * 
+     * @param versionName
+     *        The version name you assigned to the entity recognizer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EntityRecognizerProperties withVersionName(String versionName) {
+        setVersionName(versionName);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -977,7 +1023,9 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
         if (getVpcConfig() != null)
             sb.append("VpcConfig: ").append(getVpcConfig()).append(",");
         if (getModelKmsKeyId() != null)
-            sb.append("ModelKmsKeyId: ").append(getModelKmsKeyId());
+            sb.append("ModelKmsKeyId: ").append(getModelKmsKeyId()).append(",");
+        if (getVersionName() != null)
+            sb.append("VersionName: ").append(getVersionName());
         sb.append("}");
         return sb.toString();
     }
@@ -1048,6 +1096,10 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
             return false;
         if (other.getModelKmsKeyId() != null && other.getModelKmsKeyId().equals(this.getModelKmsKeyId()) == false)
             return false;
+        if (other.getVersionName() == null ^ this.getVersionName() == null)
+            return false;
+        if (other.getVersionName() != null && other.getVersionName().equals(this.getVersionName()) == false)
+            return false;
         return true;
     }
 
@@ -1070,6 +1122,7 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getVolumeKmsKeyId() == null) ? 0 : getVolumeKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
         hashCode = prime * hashCode + ((getModelKmsKeyId() == null) ? 0 : getModelKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getVersionName() == null) ? 0 : getVersionName().hashCode());
         return hashCode;
     }
 

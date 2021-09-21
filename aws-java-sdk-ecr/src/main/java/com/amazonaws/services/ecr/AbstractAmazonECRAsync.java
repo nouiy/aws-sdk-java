@@ -144,6 +144,19 @@ public class AbstractAmazonECRAsync extends AbstractAmazonECR implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeImageReplicationStatusResult> describeImageReplicationStatusAsync(DescribeImageReplicationStatusRequest request) {
+
+        return describeImageReplicationStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeImageReplicationStatusResult> describeImageReplicationStatusAsync(DescribeImageReplicationStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeImageReplicationStatusRequest, DescribeImageReplicationStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeImageScanFindingsResult> describeImageScanFindingsAsync(DescribeImageScanFindingsRequest request) {
 
         return describeImageScanFindingsAsync(request, null);

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An array of objects representing the details of a replication destination.
+ * An array of objects representing the destination for a replication rule.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/ReplicationDestination" target="_top">AWS API
@@ -30,24 +30,25 @@ public class ReplicationDestination implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A Region to replicate to.
+     * The Region to replicate to.
      * </p>
      */
     private String region;
     /**
      * <p>
-     * The account ID of the destination registry to replicate to.
+     * The Amazon Web Services account ID of the Amazon ECR private registry to replicate to. When configuring
+     * cross-Region replication within your own registry, specify your own account ID.
      * </p>
      */
     private String registryId;
 
     /**
      * <p>
-     * A Region to replicate to.
+     * The Region to replicate to.
      * </p>
      * 
      * @param region
-     *        A Region to replicate to.
+     *        The Region to replicate to.
      */
 
     public void setRegion(String region) {
@@ -56,10 +57,10 @@ public class ReplicationDestination implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A Region to replicate to.
+     * The Region to replicate to.
      * </p>
      * 
-     * @return A Region to replicate to.
+     * @return The Region to replicate to.
      */
 
     public String getRegion() {
@@ -68,11 +69,11 @@ public class ReplicationDestination implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A Region to replicate to.
+     * The Region to replicate to.
      * </p>
      * 
      * @param region
-     *        A Region to replicate to.
+     *        The Region to replicate to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +84,13 @@ public class ReplicationDestination implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The account ID of the destination registry to replicate to.
+     * The Amazon Web Services account ID of the Amazon ECR private registry to replicate to. When configuring
+     * cross-Region replication within your own registry, specify your own account ID.
      * </p>
      * 
      * @param registryId
-     *        The account ID of the destination registry to replicate to.
+     *        The Amazon Web Services account ID of the Amazon ECR private registry to replicate to. When configuring
+     *        cross-Region replication within your own registry, specify your own account ID.
      */
 
     public void setRegistryId(String registryId) {
@@ -96,10 +99,12 @@ public class ReplicationDestination implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The account ID of the destination registry to replicate to.
+     * The Amazon Web Services account ID of the Amazon ECR private registry to replicate to. When configuring
+     * cross-Region replication within your own registry, specify your own account ID.
      * </p>
      * 
-     * @return The account ID of the destination registry to replicate to.
+     * @return The Amazon Web Services account ID of the Amazon ECR private registry to replicate to. When configuring
+     *         cross-Region replication within your own registry, specify your own account ID.
      */
 
     public String getRegistryId() {
@@ -108,11 +113,13 @@ public class ReplicationDestination implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The account ID of the destination registry to replicate to.
+     * The Amazon Web Services account ID of the Amazon ECR private registry to replicate to. When configuring
+     * cross-Region replication within your own registry, specify your own account ID.
      * </p>
      * 
      * @param registryId
-     *        The account ID of the destination registry to replicate to.
+     *        The Amazon Web Services account ID of the Amazon ECR private registry to replicate to. When configuring
+     *        cross-Region replication within your own registry, specify your own account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

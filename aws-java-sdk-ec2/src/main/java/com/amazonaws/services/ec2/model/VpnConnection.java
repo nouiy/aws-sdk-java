@@ -43,8 +43,8 @@ public class VpnConnection implements Serializable, Cloneable {
     private String customerGatewayId;
     /**
      * <p>
-     * The category of the VPN connection. A value of <code>VPN</code> indicates an AWS VPN connection. A value of
-     * <code>VPN-Classic</code> indicates an AWS Classic VPN connection.
+     * The category of the VPN connection. A value of <code>VPN</code> indicates an Amazon Web Services VPN connection.
+     * A value of <code>VPN-Classic</code> indicates an Amazon Web Services Classic VPN connection.
      * </p>
      */
     private String category;
@@ -68,7 +68,7 @@ public class VpnConnection implements Serializable, Cloneable {
     private String vpnConnectionId;
     /**
      * <p>
-     * The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * </p>
      */
     private String vpnGatewayId;
@@ -203,13 +203,13 @@ public class VpnConnection implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The category of the VPN connection. A value of <code>VPN</code> indicates an AWS VPN connection. A value of
-     * <code>VPN-Classic</code> indicates an AWS Classic VPN connection.
+     * The category of the VPN connection. A value of <code>VPN</code> indicates an Amazon Web Services VPN connection.
+     * A value of <code>VPN-Classic</code> indicates an Amazon Web Services Classic VPN connection.
      * </p>
      * 
      * @param category
-     *        The category of the VPN connection. A value of <code>VPN</code> indicates an AWS VPN connection. A value
-     *        of <code>VPN-Classic</code> indicates an AWS Classic VPN connection.
+     *        The category of the VPN connection. A value of <code>VPN</code> indicates an Amazon Web Services VPN
+     *        connection. A value of <code>VPN-Classic</code> indicates an Amazon Web Services Classic VPN connection.
      */
 
     public void setCategory(String category) {
@@ -218,12 +218,12 @@ public class VpnConnection implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The category of the VPN connection. A value of <code>VPN</code> indicates an AWS VPN connection. A value of
-     * <code>VPN-Classic</code> indicates an AWS Classic VPN connection.
+     * The category of the VPN connection. A value of <code>VPN</code> indicates an Amazon Web Services VPN connection.
+     * A value of <code>VPN-Classic</code> indicates an Amazon Web Services Classic VPN connection.
      * </p>
      * 
-     * @return The category of the VPN connection. A value of <code>VPN</code> indicates an AWS VPN connection. A value
-     *         of <code>VPN-Classic</code> indicates an AWS Classic VPN connection.
+     * @return The category of the VPN connection. A value of <code>VPN</code> indicates an Amazon Web Services VPN
+     *         connection. A value of <code>VPN-Classic</code> indicates an Amazon Web Services Classic VPN connection.
      */
 
     public String getCategory() {
@@ -232,13 +232,13 @@ public class VpnConnection implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The category of the VPN connection. A value of <code>VPN</code> indicates an AWS VPN connection. A value of
-     * <code>VPN-Classic</code> indicates an AWS Classic VPN connection.
+     * The category of the VPN connection. A value of <code>VPN</code> indicates an Amazon Web Services VPN connection.
+     * A value of <code>VPN-Classic</code> indicates an Amazon Web Services Classic VPN connection.
      * </p>
      * 
      * @param category
-     *        The category of the VPN connection. A value of <code>VPN</code> indicates an AWS VPN connection. A value
-     *        of <code>VPN-Classic</code> indicates an AWS Classic VPN connection.
+     *        The category of the VPN connection. A value of <code>VPN</code> indicates an Amazon Web Services VPN
+     *        connection. A value of <code>VPN-Classic</code> indicates an Amazon Web Services Classic VPN connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -435,11 +435,11 @@ public class VpnConnection implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * </p>
      * 
      * @param vpnGatewayId
-     *        The ID of the virtual private gateway at the AWS side of the VPN connection.
+     *        The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      */
 
     public void setVpnGatewayId(String vpnGatewayId) {
@@ -448,10 +448,10 @@ public class VpnConnection implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * </p>
      * 
-     * @return The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * @return The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      */
 
     public String getVpnGatewayId() {
@@ -460,11 +460,11 @@ public class VpnConnection implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * </p>
      * 
      * @param vpnGatewayId
-     *        The ID of the virtual private gateway at the AWS side of the VPN connection.
+     *        The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

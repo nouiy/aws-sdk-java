@@ -76,12 +76,12 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> dnsServers;
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled in the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled in the Client VPN endpoint.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      */
     private Boolean splitTunnel;
@@ -514,20 +514,20 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled in the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled in the Client VPN endpoint.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
      * @param splitTunnel
-     *        Indicates whether split-tunnel is enabled in the AWS Client VPN endpoint.</p>
+     *        Indicates whether split-tunnel is enabled in the Client VPN endpoint.</p>
      *        <p>
      *        For information about split-tunnel VPN endpoints, see <a
-     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *        Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel Client
+     *        VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      */
 
     public void setSplitTunnel(Boolean splitTunnel) {
@@ -536,19 +536,19 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled in the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled in the Client VPN endpoint.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
-     * @return Indicates whether split-tunnel is enabled in the AWS Client VPN endpoint.</p>
+     * @return Indicates whether split-tunnel is enabled in the Client VPN endpoint.</p>
      *         <p>
      *         For information about split-tunnel VPN endpoints, see <a
-     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *         Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel Client
+     *         VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      */
 
     public Boolean getSplitTunnel() {
@@ -557,20 +557,20 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled in the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled in the Client VPN endpoint.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
      * @param splitTunnel
-     *        Indicates whether split-tunnel is enabled in the AWS Client VPN endpoint.</p>
+     *        Indicates whether split-tunnel is enabled in the Client VPN endpoint.</p>
      *        <p>
      *        For information about split-tunnel VPN endpoints, see <a
-     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *        Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *        href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel Client
+     *        VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -581,19 +581,19 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether split-tunnel is enabled in the AWS Client VPN endpoint.
+     * Indicates whether split-tunnel is enabled in the Client VPN endpoint.
      * </p>
      * <p>
      * For information about split-tunnel VPN endpoints, see <a
-     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS Client VPN
-     * Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     * href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel Client VPN
+     * endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      * </p>
      * 
-     * @return Indicates whether split-tunnel is enabled in the AWS Client VPN endpoint.</p>
+     * @return Indicates whether split-tunnel is enabled in the Client VPN endpoint.</p>
      *         <p>
      *         For information about split-tunnel VPN endpoints, see <a
-     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel AWS
-     *         Client VPN Endpoint</a> in the <i>AWS Client VPN Administrator Guide</i>.
+     *         href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html">Split-Tunnel Client
+     *         VPN endpoint</a> in the <i>Client VPN Administrator Guide</i>.
      */
 
     public Boolean isSplitTunnel() {

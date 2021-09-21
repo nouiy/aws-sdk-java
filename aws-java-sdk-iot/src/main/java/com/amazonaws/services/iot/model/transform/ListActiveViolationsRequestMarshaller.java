@@ -35,6 +35,8 @@ public class ListActiveViolationsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("behaviorCriteriaType").build();
     private static final MarshallingInfo<Boolean> LISTSUPPRESSEDALERTS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("listSuppressedAlerts").build();
+    private static final MarshallingInfo<String> VERIFICATIONSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("verificationState").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -60,6 +62,7 @@ public class ListActiveViolationsRequestMarshaller {
             protocolMarshaller.marshall(listActiveViolationsRequest.getSecurityProfileName(), SECURITYPROFILENAME_BINDING);
             protocolMarshaller.marshall(listActiveViolationsRequest.getBehaviorCriteriaType(), BEHAVIORCRITERIATYPE_BINDING);
             protocolMarshaller.marshall(listActiveViolationsRequest.getListSuppressedAlerts(), LISTSUPPRESSEDALERTS_BINDING);
+            protocolMarshaller.marshall(listActiveViolationsRequest.getVerificationState(), VERIFICATIONSTATE_BINDING);
             protocolMarshaller.marshall(listActiveViolationsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listActiveViolationsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {

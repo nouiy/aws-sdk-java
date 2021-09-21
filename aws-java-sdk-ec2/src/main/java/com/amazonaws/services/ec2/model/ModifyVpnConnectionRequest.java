@@ -45,7 +45,7 @@ public class ModifyVpnConnectionRequest extends AmazonWebServiceRequest implemen
     private String customerGatewayId;
     /**
      * <p>
-     * The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * </p>
      */
     private String vpnGatewayId;
@@ -172,11 +172,11 @@ public class ModifyVpnConnectionRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * </p>
      * 
      * @param vpnGatewayId
-     *        The ID of the virtual private gateway at the AWS side of the VPN connection.
+     *        The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      */
 
     public void setVpnGatewayId(String vpnGatewayId) {
@@ -185,10 +185,10 @@ public class ModifyVpnConnectionRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * </p>
      * 
-     * @return The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * @return The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      */
 
     public String getVpnGatewayId() {
@@ -197,11 +197,11 @@ public class ModifyVpnConnectionRequest extends AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The ID of the virtual private gateway at the AWS side of the VPN connection.
+     * The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * </p>
      * 
      * @param vpnGatewayId
-     *        The ID of the virtual private gateway at the AWS side of the VPN connection.
+     *        The ID of the virtual private gateway at the Amazon Web Services side of the VPN connection.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

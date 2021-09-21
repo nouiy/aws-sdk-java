@@ -403,6 +403,41 @@ public interface AmazonECRAsync extends AmazonECR {
 
     /**
      * <p>
+     * Returns the replication status for a specified image.
+     * </p>
+     * 
+     * @param describeImageReplicationStatusRequest
+     * @return A Java Future containing the result of the DescribeImageReplicationStatus operation returned by the
+     *         service.
+     * @sample AmazonECRAsync.DescribeImageReplicationStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeImageReplicationStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeImageReplicationStatusResult> describeImageReplicationStatusAsync(
+            DescribeImageReplicationStatusRequest describeImageReplicationStatusRequest);
+
+    /**
+     * <p>
+     * Returns the replication status for a specified image.
+     * </p>
+     * 
+     * @param describeImageReplicationStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeImageReplicationStatus operation returned by the
+     *         service.
+     * @sample AmazonECRAsyncHandler.DescribeImageReplicationStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecr-2015-09-21/DescribeImageReplicationStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeImageReplicationStatusResult> describeImageReplicationStatusAsync(
+            DescribeImageReplicationStatusRequest describeImageReplicationStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeImageReplicationStatusRequest, DescribeImageReplicationStatusResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the scan findings for the specified image.
      * </p>
      * 

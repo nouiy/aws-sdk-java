@@ -7527,6 +7527,37 @@ public interface AWSIotAsync extends AWSIot {
 
     /**
      * <p>
+     * Set a verification state and provide a description of that verification state on a violation (detect alarm).
+     * </p>
+     * 
+     * @param putVerificationStateOnViolationRequest
+     * @return A Java Future containing the result of the PutVerificationStateOnViolation operation returned by the
+     *         service.
+     * @sample AWSIotAsync.PutVerificationStateOnViolation
+     */
+    java.util.concurrent.Future<PutVerificationStateOnViolationResult> putVerificationStateOnViolationAsync(
+            PutVerificationStateOnViolationRequest putVerificationStateOnViolationRequest);
+
+    /**
+     * <p>
+     * Set a verification state and provide a description of that verification state on a violation (detect alarm).
+     * </p>
+     * 
+     * @param putVerificationStateOnViolationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutVerificationStateOnViolation operation returned by the
+     *         service.
+     * @sample AWSIotAsyncHandler.PutVerificationStateOnViolation
+     */
+    java.util.concurrent.Future<PutVerificationStateOnViolationResult> putVerificationStateOnViolationAsync(
+            PutVerificationStateOnViolationRequest putVerificationStateOnViolationRequest,
+            com.amazonaws.handlers.AsyncHandler<PutVerificationStateOnViolationRequest, PutVerificationStateOnViolationResult> asyncHandler);
+
+    /**
+     * <p>
      * Registers a CA certificate with IoT. This CA certificate can then be used to sign device certificates, which can
      * be then registered with IoT. You can register up to 10 CA certificates per Amazon Web Services account that have
      * the same subject field. This enables you to have up to 10 certificate authorities sign your device certificates.

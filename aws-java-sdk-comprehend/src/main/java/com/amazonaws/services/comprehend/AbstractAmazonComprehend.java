@@ -183,6 +183,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
     }
 
     @Override
+    public ListDocumentClassifierSummariesResult listDocumentClassifierSummaries(ListDocumentClassifierSummariesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListDocumentClassifiersResult listDocumentClassifiers(ListDocumentClassifiersRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -199,6 +204,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
 
     @Override
     public ListEntitiesDetectionJobsResult listEntitiesDetectionJobs(ListEntitiesDetectionJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEntityRecognizerSummariesResult listEntityRecognizerSummaries(ListEntityRecognizerSummariesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

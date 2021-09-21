@@ -27,6 +27,13 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
+     * The AWS account ID associated with the registry to create the repository. If you do not specify a registry, the
+     * default registry is assumed.
+     * </p>
+     */
+    private String registryId;
+    /**
+     * <p>
      * The name to use for the repository. The repository name may be specified on its own (such as
      * <code>nginx-web-app</code>) or it can be prepended with a namespace to group the repository into a category (such
      * as <code>project-a/nginx-web-app</code>).
@@ -63,6 +70,52 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
+
+    /**
+     * <p>
+     * The AWS account ID associated with the registry to create the repository. If you do not specify a registry, the
+     * default registry is assumed.
+     * </p>
+     * 
+     * @param registryId
+     *        The AWS account ID associated with the registry to create the repository. If you do not specify a
+     *        registry, the default registry is assumed.
+     */
+
+    public void setRegistryId(String registryId) {
+        this.registryId = registryId;
+    }
+
+    /**
+     * <p>
+     * The AWS account ID associated with the registry to create the repository. If you do not specify a registry, the
+     * default registry is assumed.
+     * </p>
+     * 
+     * @return The AWS account ID associated with the registry to create the repository. If you do not specify a
+     *         registry, the default registry is assumed.
+     */
+
+    public String getRegistryId() {
+        return this.registryId;
+    }
+
+    /**
+     * <p>
+     * The AWS account ID associated with the registry to create the repository. If you do not specify a registry, the
+     * default registry is assumed.
+     * </p>
+     * 
+     * @param registryId
+     *        The AWS account ID associated with the registry to create the repository. If you do not specify a
+     *        registry, the default registry is assumed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRepositoryRequest withRegistryId(String registryId) {
+        setRegistryId(registryId);
+        return this;
+    }
 
     /**
      * <p>
@@ -385,6 +438,8 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getRegistryId() != null)
+            sb.append("RegistryId: ").append(getRegistryId()).append(",");
         if (getRepositoryName() != null)
             sb.append("RepositoryName: ").append(getRepositoryName()).append(",");
         if (getTags() != null)
@@ -409,6 +464,10 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
         if (obj instanceof CreateRepositoryRequest == false)
             return false;
         CreateRepositoryRequest other = (CreateRepositoryRequest) obj;
+        if (other.getRegistryId() == null ^ this.getRegistryId() == null)
+            return false;
+        if (other.getRegistryId() != null && other.getRegistryId().equals(this.getRegistryId()) == false)
+            return false;
         if (other.getRepositoryName() == null ^ this.getRepositoryName() == null)
             return false;
         if (other.getRepositoryName() != null && other.getRepositoryName().equals(this.getRepositoryName()) == false)
@@ -437,6 +496,7 @@ public class CreateRepositoryRequest extends com.amazonaws.AmazonWebServiceReque
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getRegistryId() == null) ? 0 : getRegistryId().hashCode());
         hashCode = prime * hashCode + ((getRepositoryName() == null) ? 0 : getRepositoryName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getImageTagMutability() == null) ? 0 : getImageTagMutability().hashCode());
