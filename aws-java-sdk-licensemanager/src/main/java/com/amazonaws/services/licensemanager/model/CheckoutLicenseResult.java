@@ -65,6 +65,12 @@ public class CheckoutLicenseResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      */
     private String expiration;
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the checkout license.
+     * </p>
+     */
+    private String licenseArn;
 
     /**
      * <p>
@@ -396,6 +402,46 @@ public class CheckoutLicenseResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p>
+     * Amazon Resource Name (ARN) of the checkout license.
+     * </p>
+     * 
+     * @param licenseArn
+     *        Amazon Resource Name (ARN) of the checkout license.
+     */
+
+    public void setLicenseArn(String licenseArn) {
+        this.licenseArn = licenseArn;
+    }
+
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the checkout license.
+     * </p>
+     * 
+     * @return Amazon Resource Name (ARN) of the checkout license.
+     */
+
+    public String getLicenseArn() {
+        return this.licenseArn;
+    }
+
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the checkout license.
+     * </p>
+     * 
+     * @param licenseArn
+     *        Amazon Resource Name (ARN) of the checkout license.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CheckoutLicenseResult withLicenseArn(String licenseArn) {
+        setLicenseArn(licenseArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -420,7 +466,9 @@ public class CheckoutLicenseResult extends com.amazonaws.AmazonWebServiceResult<
         if (getIssuedAt() != null)
             sb.append("IssuedAt: ").append(getIssuedAt()).append(",");
         if (getExpiration() != null)
-            sb.append("Expiration: ").append(getExpiration());
+            sb.append("Expiration: ").append(getExpiration()).append(",");
+        if (getLicenseArn() != null)
+            sb.append("LicenseArn: ").append(getLicenseArn());
         sb.append("}");
         return sb.toString();
     }
@@ -463,6 +511,10 @@ public class CheckoutLicenseResult extends com.amazonaws.AmazonWebServiceResult<
             return false;
         if (other.getExpiration() != null && other.getExpiration().equals(this.getExpiration()) == false)
             return false;
+        if (other.getLicenseArn() == null ^ this.getLicenseArn() == null)
+            return false;
+        if (other.getLicenseArn() != null && other.getLicenseArn().equals(this.getLicenseArn()) == false)
+            return false;
         return true;
     }
 
@@ -478,6 +530,7 @@ public class CheckoutLicenseResult extends com.amazonaws.AmazonWebServiceResult<
         hashCode = prime * hashCode + ((getNodeId() == null) ? 0 : getNodeId().hashCode());
         hashCode = prime * hashCode + ((getIssuedAt() == null) ? 0 : getIssuedAt().hashCode());
         hashCode = prime * hashCode + ((getExpiration() == null) ? 0 : getExpiration().hashCode());
+        hashCode = prime * hashCode + ((getLicenseArn() == null) ? 0 : getLicenseArn().hashCode());
         return hashCode;
     }
 

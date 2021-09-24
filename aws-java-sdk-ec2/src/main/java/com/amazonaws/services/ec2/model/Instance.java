@@ -310,7 +310,7 @@ public class Instance implements Serializable, Cloneable {
     private HibernationOptions hibernationOptions;
     /**
      * <p>
-     * The license configurations.
+     * The license configurations for the instance.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<LicenseConfiguration> licenses;
@@ -334,6 +334,28 @@ public class Instance implements Serializable, Cloneable {
      * </p>
      */
     private String bootMode;
+    /**
+     * <p>
+     * The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     */
+    private String platformDetails;
+    /**
+     * <p>
+     * The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     */
+    private String usageOperation;
+    /**
+     * <p>
+     * The time that the usage operation was last updated.
+     * </p>
+     */
+    private java.util.Date usageOperationUpdateTime;
 
     /**
      * <p>
@@ -2727,10 +2749,10 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The license configurations.
+     * The license configurations for the instance.
      * </p>
      * 
-     * @return The license configurations.
+     * @return The license configurations for the instance.
      */
 
     public java.util.List<LicenseConfiguration> getLicenses() {
@@ -2742,11 +2764,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The license configurations.
+     * The license configurations for the instance.
      * </p>
      * 
      * @param licenses
-     *        The license configurations.
+     *        The license configurations for the instance.
      */
 
     public void setLicenses(java.util.Collection<LicenseConfiguration> licenses) {
@@ -2760,7 +2782,7 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The license configurations.
+     * The license configurations for the instance.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2769,7 +2791,7 @@ public class Instance implements Serializable, Cloneable {
      * </p>
      * 
      * @param licenses
-     *        The license configurations.
+     *        The license configurations for the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2785,11 +2807,11 @@ public class Instance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The license configurations.
+     * The license configurations for the instance.
      * </p>
      * 
      * @param licenses
-     *        The license configurations.
+     *        The license configurations for the instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2972,6 +2994,150 @@ public class Instance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param platformDetails
+     *        The platform details value for the instance. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
+     *        information fields</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public void setPlatformDetails(String platformDetails) {
+        this.platformDetails = platformDetails;
+    }
+
+    /**
+     * <p>
+     * The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @return The platform details value for the instance. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
+     *         information fields</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public String getPlatformDetails() {
+        return this.platformDetails;
+    }
+
+    /**
+     * <p>
+     * The platform details value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param platformDetails
+     *        The platform details value for the instance. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
+     *        information fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withPlatformDetails(String platformDetails) {
+        setPlatformDetails(platformDetails);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param usageOperation
+     *        The usage operation value for the instance. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
+     *        information fields</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public void setUsageOperation(String usageOperation) {
+        this.usageOperation = usageOperation;
+    }
+
+    /**
+     * <p>
+     * The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @return The usage operation value for the instance. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
+     *         information fields</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public String getUsageOperation() {
+        return this.usageOperation;
+    }
+
+    /**
+     * <p>
+     * The usage operation value for the instance. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing information
+     * fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param usageOperation
+     *        The usage operation value for the instance. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/billing-info-fields.html">AMI billing
+     *        information fields</a> in the <i>Amazon EC2 User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withUsageOperation(String usageOperation) {
+        setUsageOperation(usageOperation);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time that the usage operation was last updated.
+     * </p>
+     * 
+     * @param usageOperationUpdateTime
+     *        The time that the usage operation was last updated.
+     */
+
+    public void setUsageOperationUpdateTime(java.util.Date usageOperationUpdateTime) {
+        this.usageOperationUpdateTime = usageOperationUpdateTime;
+    }
+
+    /**
+     * <p>
+     * The time that the usage operation was last updated.
+     * </p>
+     * 
+     * @return The time that the usage operation was last updated.
+     */
+
+    public java.util.Date getUsageOperationUpdateTime() {
+        return this.usageOperationUpdateTime;
+    }
+
+    /**
+     * <p>
+     * The time that the usage operation was last updated.
+     * </p>
+     * 
+     * @param usageOperationUpdateTime
+     *        The time that the usage operation was last updated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withUsageOperationUpdateTime(java.util.Date usageOperationUpdateTime) {
+        setUsageOperationUpdateTime(usageOperationUpdateTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3080,7 +3246,13 @@ public class Instance implements Serializable, Cloneable {
         if (getEnclaveOptions() != null)
             sb.append("EnclaveOptions: ").append(getEnclaveOptions()).append(",");
         if (getBootMode() != null)
-            sb.append("BootMode: ").append(getBootMode());
+            sb.append("BootMode: ").append(getBootMode()).append(",");
+        if (getPlatformDetails() != null)
+            sb.append("PlatformDetails: ").append(getPlatformDetails()).append(",");
+        if (getUsageOperation() != null)
+            sb.append("UsageOperation: ").append(getUsageOperation()).append(",");
+        if (getUsageOperationUpdateTime() != null)
+            sb.append("UsageOperationUpdateTime: ").append(getUsageOperationUpdateTime());
         sb.append("}");
         return sb.toString();
     }
@@ -3293,6 +3465,18 @@ public class Instance implements Serializable, Cloneable {
             return false;
         if (other.getBootMode() != null && other.getBootMode().equals(this.getBootMode()) == false)
             return false;
+        if (other.getPlatformDetails() == null ^ this.getPlatformDetails() == null)
+            return false;
+        if (other.getPlatformDetails() != null && other.getPlatformDetails().equals(this.getPlatformDetails()) == false)
+            return false;
+        if (other.getUsageOperation() == null ^ this.getUsageOperation() == null)
+            return false;
+        if (other.getUsageOperation() != null && other.getUsageOperation().equals(this.getUsageOperation()) == false)
+            return false;
+        if (other.getUsageOperationUpdateTime() == null ^ this.getUsageOperationUpdateTime() == null)
+            return false;
+        if (other.getUsageOperationUpdateTime() != null && other.getUsageOperationUpdateTime().equals(this.getUsageOperationUpdateTime()) == false)
+            return false;
         return true;
     }
 
@@ -3350,6 +3534,9 @@ public class Instance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getMetadataOptions() == null) ? 0 : getMetadataOptions().hashCode());
         hashCode = prime * hashCode + ((getEnclaveOptions() == null) ? 0 : getEnclaveOptions().hashCode());
         hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
+        hashCode = prime * hashCode + ((getPlatformDetails() == null) ? 0 : getPlatformDetails().hashCode());
+        hashCode = prime * hashCode + ((getUsageOperation() == null) ? 0 : getUsageOperation().hashCode());
+        hashCode = prime * hashCode + ((getUsageOperationUpdateTime() == null) ? 0 : getUsageOperationUpdateTime().hashCode());
         return hashCode;
     }
 

@@ -78,6 +78,10 @@ public class CheckoutLicenseResultJsonUnmarshaller implements Unmarshaller<Check
                     context.nextToken();
                     checkoutLicenseResult.setExpiration(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LicenseArn", targetDepth)) {
+                    context.nextToken();
+                    checkoutLicenseResult.setLicenseArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

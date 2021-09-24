@@ -8114,8 +8114,7 @@ public interface AmazonEC2 {
      * </li>
      * <li>
      * <p>
-     * Change the instance tenancy of an instance from <code>host</code> to <code>dedicated</code>, or from
-     * <code>dedicated</code> to <code>host</code>.
+     * Change the instance tenancy of an instance.
      * </p>
      * </li>
      * <li>

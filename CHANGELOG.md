@@ -1,3 +1,12 @@
+# __1.12.74__ __2021-09-24__
+## __AWS License Manager__
+  - ### Features
+    - AWS License Manager now allows customers to get the LicenseArn in the Checkout API Response.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - DescribeInstances now returns Platform Details, Usage Operation, and Usage Operation Update Time.
+
 # __1.12.73__ __2021-09-23__
 ## __AWS AppSync__
   - ### Features
