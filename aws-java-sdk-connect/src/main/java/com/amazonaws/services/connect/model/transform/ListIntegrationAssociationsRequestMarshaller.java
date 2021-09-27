@@ -29,6 +29,8 @@ public class ListIntegrationAssociationsRequestMarshaller {
 
     private static final MarshallingInfo<String> INSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("InstanceId").build();
+    private static final MarshallingInfo<String> INTEGRATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("integrationType").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -51,6 +53,7 @@ public class ListIntegrationAssociationsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(listIntegrationAssociationsRequest.getInstanceId(), INSTANCEID_BINDING);
+            protocolMarshaller.marshall(listIntegrationAssociationsRequest.getIntegrationType(), INTEGRATIONTYPE_BINDING);
             protocolMarshaller.marshall(listIntegrationAssociationsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listIntegrationAssociationsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {

@@ -87,8 +87,8 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * Indicates whether health checks are enabled. If the target type is <code>lambda</code>, health checks are
-     * disabled by default but can be enabled. If the target type is <code>instance</code> or <code>ip</code>, health
-     * checks are always enabled and cannot be disabled.
+     * disabled by default but can be enabled. If the target type is <code>instance</code>, <code>ip</code>, or
+     * <code>alb</code>, health checks are always enabled and cannot be disabled.
      * </p>
      */
     private Boolean healthCheckEnabled;
@@ -167,6 +167,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <li>
      * <p>
      * <code>lambda</code> - Register a single Lambda function as a target.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>alb</code> - Register a single Application Load Balancer as a target.
      * </p>
      * </li>
      * </ul>
@@ -652,14 +657,14 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * Indicates whether health checks are enabled. If the target type is <code>lambda</code>, health checks are
-     * disabled by default but can be enabled. If the target type is <code>instance</code> or <code>ip</code>, health
-     * checks are always enabled and cannot be disabled.
+     * disabled by default but can be enabled. If the target type is <code>instance</code>, <code>ip</code>, or
+     * <code>alb</code>, health checks are always enabled and cannot be disabled.
      * </p>
      * 
      * @param healthCheckEnabled
      *        Indicates whether health checks are enabled. If the target type is <code>lambda</code>, health checks are
-     *        disabled by default but can be enabled. If the target type is <code>instance</code> or <code>ip</code>,
-     *        health checks are always enabled and cannot be disabled.
+     *        disabled by default but can be enabled. If the target type is <code>instance</code>, <code>ip</code>, or
+     *        <code>alb</code>, health checks are always enabled and cannot be disabled.
      */
 
     public void setHealthCheckEnabled(Boolean healthCheckEnabled) {
@@ -669,13 +674,13 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * Indicates whether health checks are enabled. If the target type is <code>lambda</code>, health checks are
-     * disabled by default but can be enabled. If the target type is <code>instance</code> or <code>ip</code>, health
-     * checks are always enabled and cannot be disabled.
+     * disabled by default but can be enabled. If the target type is <code>instance</code>, <code>ip</code>, or
+     * <code>alb</code>, health checks are always enabled and cannot be disabled.
      * </p>
      * 
      * @return Indicates whether health checks are enabled. If the target type is <code>lambda</code>, health checks are
-     *         disabled by default but can be enabled. If the target type is <code>instance</code> or <code>ip</code>,
-     *         health checks are always enabled and cannot be disabled.
+     *         disabled by default but can be enabled. If the target type is <code>instance</code>, <code>ip</code>, or
+     *         <code>alb</code>, health checks are always enabled and cannot be disabled.
      */
 
     public Boolean getHealthCheckEnabled() {
@@ -685,14 +690,14 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * Indicates whether health checks are enabled. If the target type is <code>lambda</code>, health checks are
-     * disabled by default but can be enabled. If the target type is <code>instance</code> or <code>ip</code>, health
-     * checks are always enabled and cannot be disabled.
+     * disabled by default but can be enabled. If the target type is <code>instance</code>, <code>ip</code>, or
+     * <code>alb</code>, health checks are always enabled and cannot be disabled.
      * </p>
      * 
      * @param healthCheckEnabled
      *        Indicates whether health checks are enabled. If the target type is <code>lambda</code>, health checks are
-     *        disabled by default but can be enabled. If the target type is <code>instance</code> or <code>ip</code>,
-     *        health checks are always enabled and cannot be disabled.
+     *        disabled by default but can be enabled. If the target type is <code>instance</code>, <code>ip</code>, or
+     *        <code>alb</code>, health checks are always enabled and cannot be disabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -704,13 +709,13 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * Indicates whether health checks are enabled. If the target type is <code>lambda</code>, health checks are
-     * disabled by default but can be enabled. If the target type is <code>instance</code> or <code>ip</code>, health
-     * checks are always enabled and cannot be disabled.
+     * disabled by default but can be enabled. If the target type is <code>instance</code>, <code>ip</code>, or
+     * <code>alb</code>, health checks are always enabled and cannot be disabled.
      * </p>
      * 
      * @return Indicates whether health checks are enabled. If the target type is <code>lambda</code>, health checks are
-     *         disabled by default but can be enabled. If the target type is <code>instance</code> or <code>ip</code>,
-     *         health checks are always enabled and cannot be disabled.
+     *         disabled by default but can be enabled. If the target type is <code>instance</code>, <code>ip</code>, or
+     *         <code>alb</code>, health checks are always enabled and cannot be disabled.
      */
 
     public Boolean isHealthCheckEnabled() {
@@ -1089,6 +1094,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>lambda</code> - Register a single Lambda function as a target.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>alb</code> - Register a single Application Load Balancer as a target.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param targetType
@@ -1110,6 +1120,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <li>
      *        <p>
      *        <code>lambda</code> - Register a single Lambda function as a target.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>alb</code> - Register a single Application Load Balancer as a target.
      *        </p>
      *        </li>
      * @see TargetTypeEnum
@@ -1142,6 +1157,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>lambda</code> - Register a single Lambda function as a target.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>alb</code> - Register a single Application Load Balancer as a target.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The type of target that you must specify when registering targets with this target group. You can't
@@ -1163,6 +1183,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      *         <li>
      *         <p>
      *         <code>lambda</code> - Register a single Lambda function as a target.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>alb</code> - Register a single Application Load Balancer as a target.
      *         </p>
      *         </li>
      * @see TargetTypeEnum
@@ -1195,6 +1220,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>lambda</code> - Register a single Lambda function as a target.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>alb</code> - Register a single Application Load Balancer as a target.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param targetType
@@ -1216,6 +1246,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <li>
      *        <p>
      *        <code>lambda</code> - Register a single Lambda function as a target.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>alb</code> - Register a single Application Load Balancer as a target.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1250,6 +1285,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>lambda</code> - Register a single Lambda function as a target.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>alb</code> - Register a single Application Load Balancer as a target.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param targetType
@@ -1271,6 +1311,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <li>
      *        <p>
      *        <code>lambda</code> - Register a single Lambda function as a target.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>alb</code> - Register a single Application Load Balancer as a target.
      *        </p>
      *        </li>
      * @see TargetTypeEnum
@@ -1303,6 +1348,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      * <code>lambda</code> - Register a single Lambda function as a target.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>alb</code> - Register a single Application Load Balancer as a target.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param targetType
@@ -1324,6 +1374,11 @@ public class CreateTargetGroupRequest extends com.amazonaws.AmazonWebServiceRequ
      *        <li>
      *        <p>
      *        <code>lambda</code> - Register a single Lambda function as a target.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>alb</code> - Register a single Application Load Balancer as a target.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

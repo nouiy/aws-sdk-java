@@ -36,8 +36,13 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
     private String encryptionType;
     /**
      * <p>
-     * The identifier of the encryption key.
+     * The full ARN of the encryption key.
      * </p>
+     * <note>
+     * <p>
+     * Be sure to provide the full ARN of the encryption key, not just the ID.
+     * </p>
+     * </note>
      */
     private String keyId;
 
@@ -102,11 +107,19 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the encryption key.
+     * The full ARN of the encryption key.
      * </p>
+     * <note>
+     * <p>
+     * Be sure to provide the full ARN of the encryption key, not just the ID.
+     * </p>
+     * </note>
      * 
      * @param keyId
-     *        The identifier of the encryption key.
+     *        The full ARN of the encryption key. </p> <note>
+     *        <p>
+     *        Be sure to provide the full ARN of the encryption key, not just the ID.
+     *        </p>
      */
 
     public void setKeyId(String keyId) {
@@ -115,10 +128,18 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the encryption key.
+     * The full ARN of the encryption key.
      * </p>
+     * <note>
+     * <p>
+     * Be sure to provide the full ARN of the encryption key, not just the ID.
+     * </p>
+     * </note>
      * 
-     * @return The identifier of the encryption key.
+     * @return The full ARN of the encryption key. </p> <note>
+     *         <p>
+     *         Be sure to provide the full ARN of the encryption key, not just the ID.
+     *         </p>
      */
 
     public String getKeyId() {
@@ -127,11 +148,19 @@ public class EncryptionConfig implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier of the encryption key.
+     * The full ARN of the encryption key.
      * </p>
+     * <note>
+     * <p>
+     * Be sure to provide the full ARN of the encryption key, not just the ID.
+     * </p>
+     * </note>
      * 
      * @param keyId
-     *        The identifier of the encryption key.
+     *        The full ARN of the encryption key. </p> <note>
+     *        <p>
+     *        Be sure to provide the full ARN of the encryption key, not just the ID.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

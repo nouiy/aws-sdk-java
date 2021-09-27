@@ -45,19 +45,19 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
     private String integrationArn;
     /**
      * <p>
-     * The URL for the external application.
+     * The URL for the external application. This field is only required for the EVENT integration type.
      * </p>
      */
     private String sourceApplicationUrl;
     /**
      * <p>
-     * The name of the external application.
+     * The name of the external application. This field is only required for the EVENT integration type.
      * </p>
      */
     private String sourceApplicationName;
     /**
      * <p>
-     * The type of the data source.
+     * The type of the data source. This field is only required for the EVENT integration type.
      * </p>
      */
     private String sourceType;
@@ -209,11 +209,11 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The URL for the external application.
+     * The URL for the external application. This field is only required for the EVENT integration type.
      * </p>
      * 
      * @param sourceApplicationUrl
-     *        The URL for the external application.
+     *        The URL for the external application. This field is only required for the EVENT integration type.
      */
 
     public void setSourceApplicationUrl(String sourceApplicationUrl) {
@@ -222,10 +222,10 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The URL for the external application.
+     * The URL for the external application. This field is only required for the EVENT integration type.
      * </p>
      * 
-     * @return The URL for the external application.
+     * @return The URL for the external application. This field is only required for the EVENT integration type.
      */
 
     public String getSourceApplicationUrl() {
@@ -234,11 +234,11 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The URL for the external application.
+     * The URL for the external application. This field is only required for the EVENT integration type.
      * </p>
      * 
      * @param sourceApplicationUrl
-     *        The URL for the external application.
+     *        The URL for the external application. This field is only required for the EVENT integration type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -249,11 +249,11 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of the external application.
+     * The name of the external application. This field is only required for the EVENT integration type.
      * </p>
      * 
      * @param sourceApplicationName
-     *        The name of the external application.
+     *        The name of the external application. This field is only required for the EVENT integration type.
      */
 
     public void setSourceApplicationName(String sourceApplicationName) {
@@ -262,10 +262,10 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of the external application.
+     * The name of the external application. This field is only required for the EVENT integration type.
      * </p>
      * 
-     * @return The name of the external application.
+     * @return The name of the external application. This field is only required for the EVENT integration type.
      */
 
     public String getSourceApplicationName() {
@@ -274,11 +274,11 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The name of the external application.
+     * The name of the external application. This field is only required for the EVENT integration type.
      * </p>
      * 
      * @param sourceApplicationName
-     *        The name of the external application.
+     *        The name of the external application. This field is only required for the EVENT integration type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -289,11 +289,11 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The type of the data source.
+     * The type of the data source. This field is only required for the EVENT integration type.
      * </p>
      * 
      * @param sourceType
-     *        The type of the data source.
+     *        The type of the data source. This field is only required for the EVENT integration type.
      * @see SourceType
      */
 
@@ -303,10 +303,10 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The type of the data source.
+     * The type of the data source. This field is only required for the EVENT integration type.
      * </p>
      * 
-     * @return The type of the data source.
+     * @return The type of the data source. This field is only required for the EVENT integration type.
      * @see SourceType
      */
 
@@ -316,11 +316,11 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The type of the data source.
+     * The type of the data source. This field is only required for the EVENT integration type.
      * </p>
      * 
      * @param sourceType
-     *        The type of the data source.
+     *        The type of the data source. This field is only required for the EVENT integration type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceType
      */
@@ -332,11 +332,11 @@ public class CreateIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The type of the data source.
+     * The type of the data source. This field is only required for the EVENT integration type.
      * </p>
      * 
      * @param sourceType
-     *        The type of the data source.
+     *        The type of the data source. This field is only required for the EVENT integration type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceType
      */

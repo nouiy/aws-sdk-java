@@ -20,7 +20,11 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum IntegrationType {
 
-    EVENT("EVENT");
+    EVENT("EVENT"),
+    VOICE_ID("VOICE_ID"),
+    PINPOINT_APP("PINPOINT_APP"),
+    WISDOM_ASSISTANT("WISDOM_ASSISTANT"),
+    WISDOM_KNOWLEDGE_BASE("WISDOM_KNOWLEDGE_BASE");
 
     private String value;
 

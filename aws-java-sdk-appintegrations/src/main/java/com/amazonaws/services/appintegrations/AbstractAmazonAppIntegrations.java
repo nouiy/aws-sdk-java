@@ -28,7 +28,17 @@ public class AbstractAmazonAppIntegrations implements AmazonAppIntegrations {
     }
 
     @Override
+    public CreateDataIntegrationResult createDataIntegration(CreateDataIntegrationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateEventIntegrationResult createEventIntegration(CreateEventIntegrationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteDataIntegrationResult deleteDataIntegration(DeleteDataIntegrationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -38,7 +48,22 @@ public class AbstractAmazonAppIntegrations implements AmazonAppIntegrations {
     }
 
     @Override
+    public GetDataIntegrationResult getDataIntegration(GetDataIntegrationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetEventIntegrationResult getEventIntegration(GetEventIntegrationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListDataIntegrationAssociationsResult listDataIntegrationAssociations(ListDataIntegrationAssociationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListDataIntegrationsResult listDataIntegrations(ListDataIntegrationsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -64,6 +89,11 @@ public class AbstractAmazonAppIntegrations implements AmazonAppIntegrations {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateDataIntegrationResult updateDataIntegration(UpdateDataIntegrationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -174,8 +174,11 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * Unit: SECONDS
      * </p>
      * <p>
-     * When you use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you get a
-     * response like this:
+     * When you use groupings, Unit says SECONDS and the Value is returned in SECONDS.
+     * </p>
+     * <p>
+     * When you do not use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you
+     * get a response like this:
      * </p>
      * <p>
      * <code>{ "Metric": { "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" }, "Value": 24113.0 </code>
@@ -592,8 +595,11 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * Unit: SECONDS
      * </p>
      * <p>
-     * When you use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you get a
-     * response like this:
+     * When you use groupings, Unit says SECONDS and the Value is returned in SECONDS.
+     * </p>
+     * <p>
+     * When you do not use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you
+     * get a response like this:
      * </p>
      * <p>
      * <code>{ "Metric": { "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" }, "Value": 24113.0 </code>
@@ -752,8 +758,11 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *         Unit: SECONDS
      *         </p>
      *         <p>
-     *         When you use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you
-     *         get a response like this:
+     *         When you use groupings, Unit says SECONDS and the Value is returned in SECONDS.
+     *         </p>
+     *         <p>
+     *         When you do not use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example,
+     *         if you get a response like this:
      *         </p>
      *         <p>
      *         <code>{ "Metric": { "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" }, "Value": 24113.0 </code>
@@ -919,8 +928,11 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * Unit: SECONDS
      * </p>
      * <p>
-     * When you use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you get a
-     * response like this:
+     * When you use groupings, Unit says SECONDS and the Value is returned in SECONDS.
+     * </p>
+     * <p>
+     * When you do not use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you
+     * get a response like this:
      * </p>
      * <p>
      * <code>{ "Metric": { "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" }, "Value": 24113.0 </code>
@@ -1080,8 +1092,11 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *        Unit: SECONDS
      *        </p>
      *        <p>
-     *        When you use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you
-     *        get a response like this:
+     *        When you use groupings, Unit says SECONDS and the Value is returned in SECONDS.
+     *        </p>
+     *        <p>
+     *        When you do not use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example,
+     *        if you get a response like this:
      *        </p>
      *        <p>
      *        <code>{ "Metric": { "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" }, "Value": 24113.0 </code>
@@ -1252,8 +1267,11 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * Unit: SECONDS
      * </p>
      * <p>
-     * When you use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you get a
-     * response like this:
+     * When you use groupings, Unit says SECONDS and the Value is returned in SECONDS.
+     * </p>
+     * <p>
+     * When you do not use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you
+     * get a response like this:
      * </p>
      * <p>
      * <code>{ "Metric": { "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" }, "Value": 24113.0 </code>
@@ -1418,8 +1436,11 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *        Unit: SECONDS
      *        </p>
      *        <p>
-     *        When you use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you
-     *        get a response like this:
+     *        When you use groupings, Unit says SECONDS and the Value is returned in SECONDS.
+     *        </p>
+     *        <p>
+     *        When you do not use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example,
+     *        if you get a response like this:
      *        </p>
      *        <p>
      *        <code>{ "Metric": { "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" }, "Value": 24113.0 </code>
@@ -1592,8 +1613,11 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      * Unit: SECONDS
      * </p>
      * <p>
-     * When you use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you get a
-     * response like this:
+     * When you use groupings, Unit says SECONDS and the Value is returned in SECONDS.
+     * </p>
+     * <p>
+     * When you do not use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you
+     * get a response like this:
      * </p>
      * <p>
      * <code>{ "Metric": { "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" }, "Value": 24113.0 </code>
@@ -1753,8 +1777,11 @@ public class GetCurrentMetricDataRequest extends com.amazonaws.AmazonWebServiceR
      *        Unit: SECONDS
      *        </p>
      *        <p>
-     *        When you use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example, if you
-     *        get a response like this:
+     *        When you use groupings, Unit says SECONDS and the Value is returned in SECONDS.
+     *        </p>
+     *        <p>
+     *        When you do not use groupings, Unit says SECONDS but the Value is returned in MILLISECONDS. For example,
+     *        if you get a response like this:
      *        </p>
      *        <p>
      *        <code>{ "Metric": { "Name": "OLDEST_CONTACT_AGE", "Unit": "SECONDS" }, "Value": 24113.0 </code>

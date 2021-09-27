@@ -47,6 +47,8 @@ public class ActivityMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SMS").build();
     private static final MarshallingInfo<StructuredPojo> WAIT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Wait").build();
+    private static final MarshallingInfo<StructuredPojo> CONTACTCENTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContactCenter").build();
 
     private static final ActivityMarshaller instance = new ActivityMarshaller();
 
@@ -74,6 +76,7 @@ public class ActivityMarshaller {
             protocolMarshaller.marshall(activity.getRandomSplit(), RANDOMSPLIT_BINDING);
             protocolMarshaller.marshall(activity.getSMS(), SMS_BINDING);
             protocolMarshaller.marshall(activity.getWait(), WAIT_BINDING);
+            protocolMarshaller.marshall(activity.getContactCenter(), CONTACTCENTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -31,6 +31,8 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
      * </p>
      */
     private String instanceId;
+    /** <p/> */
+    private String integrationType;
     /**
      * <p>
      * The token for the next set of results. Use the value returned in the previous response in the next request to
@@ -82,6 +84,54 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
 
     public ListIntegrationAssociationsRequest withInstanceId(String instanceId) {
         setInstanceId(instanceId);
+        return this;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param integrationType
+     * @see IntegrationType
+     */
+
+    public void setIntegrationType(String integrationType) {
+        this.integrationType = integrationType;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @return
+     * @see IntegrationType
+     */
+
+    public String getIntegrationType() {
+        return this.integrationType;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param integrationType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IntegrationType
+     */
+
+    public ListIntegrationAssociationsRequest withIntegrationType(String integrationType) {
+        setIntegrationType(integrationType);
+        return this;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param integrationType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IntegrationType
+     */
+
+    public ListIntegrationAssociationsRequest withIntegrationType(IntegrationType integrationType) {
+        this.integrationType = integrationType.toString();
         return this;
     }
 
@@ -185,6 +235,8 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
         sb.append("{");
         if (getInstanceId() != null)
             sb.append("InstanceId: ").append(getInstanceId()).append(",");
+        if (getIntegrationType() != null)
+            sb.append("IntegrationType: ").append(getIntegrationType()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
@@ -207,6 +259,10 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getInstanceId() != null && other.getInstanceId().equals(this.getInstanceId()) == false)
             return false;
+        if (other.getIntegrationType() == null ^ this.getIntegrationType() == null)
+            return false;
+        if (other.getIntegrationType() != null && other.getIntegrationType().equals(this.getIntegrationType()) == false)
+            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
@@ -224,6 +280,7 @@ public class ListIntegrationAssociationsRequest extends com.amazonaws.AmazonWebS
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getInstanceId() == null) ? 0 : getInstanceId().hashCode());
+        hashCode = prime * hashCode + ((getIntegrationType() == null) ? 0 : getIntegrationType().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;

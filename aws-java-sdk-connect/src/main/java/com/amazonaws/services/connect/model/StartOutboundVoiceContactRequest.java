@@ -83,6 +83,26 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private java.util.Map<String, String> attributes;
+    /**
+     * <p>
+     * Configuration of the answering machine detection for this outbound call.
+     * </p>
+     */
+    private AnswerMachineDetectionConfig answerMachineDetectionConfig;
+    /**
+     * <p>
+     * The campaign identifier of the outbound communication.
+     * </p>
+     */
+    private String campaignId;
+    /**
+     * <p>
+     * Denotes the class of traffic. Calls with different traffic types are handled differently by Amazon Connect. The
+     * default value is <code>GENERAL</code>. Use <code>CAMPAIGN</code> if <code>EnableAnswerMachineDetection</code> is
+     * set to <code>true</code>. For all other cases, use <code>GENERAL</code>.
+     * </p>
+     */
+    private String trafficType;
 
     /**
      * <p>
@@ -483,6 +503,165 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * Configuration of the answering machine detection for this outbound call.
+     * </p>
+     * 
+     * @param answerMachineDetectionConfig
+     *        Configuration of the answering machine detection for this outbound call.
+     */
+
+    public void setAnswerMachineDetectionConfig(AnswerMachineDetectionConfig answerMachineDetectionConfig) {
+        this.answerMachineDetectionConfig = answerMachineDetectionConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration of the answering machine detection for this outbound call.
+     * </p>
+     * 
+     * @return Configuration of the answering machine detection for this outbound call.
+     */
+
+    public AnswerMachineDetectionConfig getAnswerMachineDetectionConfig() {
+        return this.answerMachineDetectionConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration of the answering machine detection for this outbound call.
+     * </p>
+     * 
+     * @param answerMachineDetectionConfig
+     *        Configuration of the answering machine detection for this outbound call.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartOutboundVoiceContactRequest withAnswerMachineDetectionConfig(AnswerMachineDetectionConfig answerMachineDetectionConfig) {
+        setAnswerMachineDetectionConfig(answerMachineDetectionConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The campaign identifier of the outbound communication.
+     * </p>
+     * 
+     * @param campaignId
+     *        The campaign identifier of the outbound communication.
+     */
+
+    public void setCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+    }
+
+    /**
+     * <p>
+     * The campaign identifier of the outbound communication.
+     * </p>
+     * 
+     * @return The campaign identifier of the outbound communication.
+     */
+
+    public String getCampaignId() {
+        return this.campaignId;
+    }
+
+    /**
+     * <p>
+     * The campaign identifier of the outbound communication.
+     * </p>
+     * 
+     * @param campaignId
+     *        The campaign identifier of the outbound communication.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartOutboundVoiceContactRequest withCampaignId(String campaignId) {
+        setCampaignId(campaignId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Denotes the class of traffic. Calls with different traffic types are handled differently by Amazon Connect. The
+     * default value is <code>GENERAL</code>. Use <code>CAMPAIGN</code> if <code>EnableAnswerMachineDetection</code> is
+     * set to <code>true</code>. For all other cases, use <code>GENERAL</code>.
+     * </p>
+     * 
+     * @param trafficType
+     *        Denotes the class of traffic. Calls with different traffic types are handled differently by Amazon
+     *        Connect. The default value is <code>GENERAL</code>. Use <code>CAMPAIGN</code> if
+     *        <code>EnableAnswerMachineDetection</code> is set to <code>true</code>. For all other cases, use
+     *        <code>GENERAL</code>.
+     * @see TrafficType
+     */
+
+    public void setTrafficType(String trafficType) {
+        this.trafficType = trafficType;
+    }
+
+    /**
+     * <p>
+     * Denotes the class of traffic. Calls with different traffic types are handled differently by Amazon Connect. The
+     * default value is <code>GENERAL</code>. Use <code>CAMPAIGN</code> if <code>EnableAnswerMachineDetection</code> is
+     * set to <code>true</code>. For all other cases, use <code>GENERAL</code>.
+     * </p>
+     * 
+     * @return Denotes the class of traffic. Calls with different traffic types are handled differently by Amazon
+     *         Connect. The default value is <code>GENERAL</code>. Use <code>CAMPAIGN</code> if
+     *         <code>EnableAnswerMachineDetection</code> is set to <code>true</code>. For all other cases, use
+     *         <code>GENERAL</code>.
+     * @see TrafficType
+     */
+
+    public String getTrafficType() {
+        return this.trafficType;
+    }
+
+    /**
+     * <p>
+     * Denotes the class of traffic. Calls with different traffic types are handled differently by Amazon Connect. The
+     * default value is <code>GENERAL</code>. Use <code>CAMPAIGN</code> if <code>EnableAnswerMachineDetection</code> is
+     * set to <code>true</code>. For all other cases, use <code>GENERAL</code>.
+     * </p>
+     * 
+     * @param trafficType
+     *        Denotes the class of traffic. Calls with different traffic types are handled differently by Amazon
+     *        Connect. The default value is <code>GENERAL</code>. Use <code>CAMPAIGN</code> if
+     *        <code>EnableAnswerMachineDetection</code> is set to <code>true</code>. For all other cases, use
+     *        <code>GENERAL</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TrafficType
+     */
+
+    public StartOutboundVoiceContactRequest withTrafficType(String trafficType) {
+        setTrafficType(trafficType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Denotes the class of traffic. Calls with different traffic types are handled differently by Amazon Connect. The
+     * default value is <code>GENERAL</code>. Use <code>CAMPAIGN</code> if <code>EnableAnswerMachineDetection</code> is
+     * set to <code>true</code>. For all other cases, use <code>GENERAL</code>.
+     * </p>
+     * 
+     * @param trafficType
+     *        Denotes the class of traffic. Calls with different traffic types are handled differently by Amazon
+     *        Connect. The default value is <code>GENERAL</code>. Use <code>CAMPAIGN</code> if
+     *        <code>EnableAnswerMachineDetection</code> is set to <code>true</code>. For all other cases, use
+     *        <code>GENERAL</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TrafficType
+     */
+
+    public StartOutboundVoiceContactRequest withTrafficType(TrafficType trafficType) {
+        this.trafficType = trafficType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -507,7 +686,13 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
         if (getQueueId() != null)
             sb.append("QueueId: ").append(getQueueId()).append(",");
         if (getAttributes() != null)
-            sb.append("Attributes: ").append(getAttributes());
+            sb.append("Attributes: ").append(getAttributes()).append(",");
+        if (getAnswerMachineDetectionConfig() != null)
+            sb.append("AnswerMachineDetectionConfig: ").append(getAnswerMachineDetectionConfig()).append(",");
+        if (getCampaignId() != null)
+            sb.append("CampaignId: ").append(getCampaignId()).append(",");
+        if (getTrafficType() != null)
+            sb.append("TrafficType: ").append(getTrafficType());
         sb.append("}");
         return sb.toString();
     }
@@ -550,6 +735,18 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getAttributes() != null && other.getAttributes().equals(this.getAttributes()) == false)
             return false;
+        if (other.getAnswerMachineDetectionConfig() == null ^ this.getAnswerMachineDetectionConfig() == null)
+            return false;
+        if (other.getAnswerMachineDetectionConfig() != null && other.getAnswerMachineDetectionConfig().equals(this.getAnswerMachineDetectionConfig()) == false)
+            return false;
+        if (other.getCampaignId() == null ^ this.getCampaignId() == null)
+            return false;
+        if (other.getCampaignId() != null && other.getCampaignId().equals(this.getCampaignId()) == false)
+            return false;
+        if (other.getTrafficType() == null ^ this.getTrafficType() == null)
+            return false;
+        if (other.getTrafficType() != null && other.getTrafficType().equals(this.getTrafficType()) == false)
+            return false;
         return true;
     }
 
@@ -565,6 +762,9 @@ public class StartOutboundVoiceContactRequest extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getSourcePhoneNumber() == null) ? 0 : getSourcePhoneNumber().hashCode());
         hashCode = prime * hashCode + ((getQueueId() == null) ? 0 : getQueueId().hashCode());
         hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
+        hashCode = prime * hashCode + ((getAnswerMachineDetectionConfig() == null) ? 0 : getAnswerMachineDetectionConfig().hashCode());
+        hashCode = prime * hashCode + ((getCampaignId() == null) ? 0 : getCampaignId().hashCode());
+        hashCode = prime * hashCode + ((getTrafficType() == null) ? 0 : getTrafficType().hashCode());
         return hashCode;
     }
 

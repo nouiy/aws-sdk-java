@@ -28,6 +28,19 @@ public class AbstractAmazonAppIntegrationsAsync extends AbstractAmazonAppIntegra
     }
 
     @Override
+    public java.util.concurrent.Future<CreateDataIntegrationResult> createDataIntegrationAsync(CreateDataIntegrationRequest request) {
+
+        return createDataIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDataIntegrationResult> createDataIntegrationAsync(CreateDataIntegrationRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateDataIntegrationRequest, CreateDataIntegrationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateEventIntegrationResult> createEventIntegrationAsync(CreateEventIntegrationRequest request) {
 
         return createEventIntegrationAsync(request, null);
@@ -36,6 +49,19 @@ public class AbstractAmazonAppIntegrationsAsync extends AbstractAmazonAppIntegra
     @Override
     public java.util.concurrent.Future<CreateEventIntegrationResult> createEventIntegrationAsync(CreateEventIntegrationRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateEventIntegrationRequest, CreateEventIntegrationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataIntegrationResult> deleteDataIntegrationAsync(DeleteDataIntegrationRequest request) {
+
+        return deleteDataIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataIntegrationResult> deleteDataIntegrationAsync(DeleteDataIntegrationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteDataIntegrationRequest, DeleteDataIntegrationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -54,6 +80,19 @@ public class AbstractAmazonAppIntegrationsAsync extends AbstractAmazonAppIntegra
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataIntegrationResult> getDataIntegrationAsync(GetDataIntegrationRequest request) {
+
+        return getDataIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataIntegrationResult> getDataIntegrationAsync(GetDataIntegrationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetDataIntegrationRequest, GetDataIntegrationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEventIntegrationResult> getEventIntegrationAsync(GetEventIntegrationRequest request) {
 
         return getEventIntegrationAsync(request, null);
@@ -62,6 +101,34 @@ public class AbstractAmazonAppIntegrationsAsync extends AbstractAmazonAppIntegra
     @Override
     public java.util.concurrent.Future<GetEventIntegrationResult> getEventIntegrationAsync(GetEventIntegrationRequest request,
             com.amazonaws.handlers.AsyncHandler<GetEventIntegrationRequest, GetEventIntegrationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataIntegrationAssociationsResult> listDataIntegrationAssociationsAsync(
+            ListDataIntegrationAssociationsRequest request) {
+
+        return listDataIntegrationAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataIntegrationAssociationsResult> listDataIntegrationAssociationsAsync(
+            ListDataIntegrationAssociationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListDataIntegrationAssociationsRequest, ListDataIntegrationAssociationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataIntegrationsResult> listDataIntegrationsAsync(ListDataIntegrationsRequest request) {
+
+        return listDataIntegrationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataIntegrationsResult> listDataIntegrationsAsync(ListDataIntegrationsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListDataIntegrationsRequest, ListDataIntegrationsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -129,6 +196,19 @@ public class AbstractAmazonAppIntegrationsAsync extends AbstractAmazonAppIntegra
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDataIntegrationResult> updateDataIntegrationAsync(UpdateDataIntegrationRequest request) {
+
+        return updateDataIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDataIntegrationResult> updateDataIntegrationAsync(UpdateDataIntegrationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateDataIntegrationRequest, UpdateDataIntegrationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

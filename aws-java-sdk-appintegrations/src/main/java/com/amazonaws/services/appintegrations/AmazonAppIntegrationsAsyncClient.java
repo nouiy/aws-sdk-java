@@ -30,8 +30,9 @@ import java.util.concurrent.ExecutorService;
  * </p>
  * <p>
  * For information about how you can use external applications with Amazon Connect, see <a
- * href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built integrations</a> in the
- * <i>Amazon Connect Administrator Guide</i>.
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built integrations</a> and <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-wisdom.html">Deliver information to agents
+ * using Amazon Connect Wisdom</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
  */
 @ThreadSafe
@@ -81,6 +82,39 @@ public class AmazonAppIntegrationsAsyncClient extends AmazonAppIntegrationsClien
     }
 
     @Override
+    public java.util.concurrent.Future<CreateDataIntegrationResult> createDataIntegrationAsync(CreateDataIntegrationRequest request) {
+
+        return createDataIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDataIntegrationResult> createDataIntegrationAsync(final CreateDataIntegrationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateDataIntegrationRequest, CreateDataIntegrationResult> asyncHandler) {
+        final CreateDataIntegrationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateDataIntegrationResult>() {
+            @Override
+            public CreateDataIntegrationResult call() throws Exception {
+                CreateDataIntegrationResult result = null;
+
+                try {
+                    result = executeCreateDataIntegration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateEventIntegrationResult> createEventIntegrationAsync(CreateEventIntegrationRequest request) {
 
         return createEventIntegrationAsync(request, null);
@@ -98,6 +132,39 @@ public class AmazonAppIntegrationsAsyncClient extends AmazonAppIntegrationsClien
 
                 try {
                     result = executeCreateEventIntegration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataIntegrationResult> deleteDataIntegrationAsync(DeleteDataIntegrationRequest request) {
+
+        return deleteDataIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataIntegrationResult> deleteDataIntegrationAsync(final DeleteDataIntegrationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteDataIntegrationRequest, DeleteDataIntegrationResult> asyncHandler) {
+        final DeleteDataIntegrationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteDataIntegrationResult>() {
+            @Override
+            public DeleteDataIntegrationResult call() throws Exception {
+                DeleteDataIntegrationResult result = null;
+
+                try {
+                    result = executeDeleteDataIntegration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -147,6 +214,39 @@ public class AmazonAppIntegrationsAsyncClient extends AmazonAppIntegrationsClien
     }
 
     @Override
+    public java.util.concurrent.Future<GetDataIntegrationResult> getDataIntegrationAsync(GetDataIntegrationRequest request) {
+
+        return getDataIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDataIntegrationResult> getDataIntegrationAsync(final GetDataIntegrationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDataIntegrationRequest, GetDataIntegrationResult> asyncHandler) {
+        final GetDataIntegrationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDataIntegrationResult>() {
+            @Override
+            public GetDataIntegrationResult call() throws Exception {
+                GetDataIntegrationResult result = null;
+
+                try {
+                    result = executeGetDataIntegration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetEventIntegrationResult> getEventIntegrationAsync(GetEventIntegrationRequest request) {
 
         return getEventIntegrationAsync(request, null);
@@ -164,6 +264,74 @@ public class AmazonAppIntegrationsAsyncClient extends AmazonAppIntegrationsClien
 
                 try {
                     result = executeGetEventIntegration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataIntegrationAssociationsResult> listDataIntegrationAssociationsAsync(
+            ListDataIntegrationAssociationsRequest request) {
+
+        return listDataIntegrationAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataIntegrationAssociationsResult> listDataIntegrationAssociationsAsync(
+            final ListDataIntegrationAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListDataIntegrationAssociationsRequest, ListDataIntegrationAssociationsResult> asyncHandler) {
+        final ListDataIntegrationAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListDataIntegrationAssociationsResult>() {
+            @Override
+            public ListDataIntegrationAssociationsResult call() throws Exception {
+                ListDataIntegrationAssociationsResult result = null;
+
+                try {
+                    result = executeListDataIntegrationAssociations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataIntegrationsResult> listDataIntegrationsAsync(ListDataIntegrationsRequest request) {
+
+        return listDataIntegrationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataIntegrationsResult> listDataIntegrationsAsync(final ListDataIntegrationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListDataIntegrationsRequest, ListDataIntegrationsResult> asyncHandler) {
+        final ListDataIntegrationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListDataIntegrationsResult>() {
+            @Override
+            public ListDataIntegrationsResult call() throws Exception {
+                ListDataIntegrationsResult result = null;
+
+                try {
+                    result = executeListDataIntegrations(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -331,6 +499,39 @@ public class AmazonAppIntegrationsAsyncClient extends AmazonAppIntegrationsClien
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDataIntegrationResult> updateDataIntegrationAsync(UpdateDataIntegrationRequest request) {
+
+        return updateDataIntegrationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDataIntegrationResult> updateDataIntegrationAsync(final UpdateDataIntegrationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateDataIntegrationRequest, UpdateDataIntegrationResult> asyncHandler) {
+        final UpdateDataIntegrationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateDataIntegrationResult>() {
+            @Override
+            public UpdateDataIntegrationResult call() throws Exception {
+                UpdateDataIntegrationResult result = null;
+
+                try {
+                    result = executeUpdateDataIntegration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

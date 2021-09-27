@@ -94,6 +94,12 @@ public class Activity implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private WaitActivity wait;
+    /**
+     * <p>
+     * The settings for a connect activity. This type of activity initiates a contact center call to participants.
+     * </p>
+     */
+    private ContactCenterActivity contactCenter;
 
     /**
      * <p>
@@ -538,6 +544,49 @@ public class Activity implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The settings for a connect activity. This type of activity initiates a contact center call to participants.
+     * </p>
+     * 
+     * @param contactCenter
+     *        The settings for a connect activity. This type of activity initiates a contact center call to
+     *        participants.
+     */
+
+    public void setContactCenter(ContactCenterActivity contactCenter) {
+        this.contactCenter = contactCenter;
+    }
+
+    /**
+     * <p>
+     * The settings for a connect activity. This type of activity initiates a contact center call to participants.
+     * </p>
+     * 
+     * @return The settings for a connect activity. This type of activity initiates a contact center call to
+     *         participants.
+     */
+
+    public ContactCenterActivity getContactCenter() {
+        return this.contactCenter;
+    }
+
+    /**
+     * <p>
+     * The settings for a connect activity. This type of activity initiates a contact center call to participants.
+     * </p>
+     * 
+     * @param contactCenter
+     *        The settings for a connect activity. This type of activity initiates a contact center call to
+     *        participants.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Activity withContactCenter(ContactCenterActivity contactCenter) {
+        setContactCenter(contactCenter);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -568,7 +617,9 @@ public class Activity implements Serializable, Cloneable, StructuredPojo {
         if (getSMS() != null)
             sb.append("SMS: ").append(getSMS()).append(",");
         if (getWait() != null)
-            sb.append("Wait: ").append(getWait());
+            sb.append("Wait: ").append(getWait()).append(",");
+        if (getContactCenter() != null)
+            sb.append("ContactCenter: ").append(getContactCenter());
         sb.append("}");
         return sb.toString();
     }
@@ -623,6 +674,10 @@ public class Activity implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getWait() != null && other.getWait().equals(this.getWait()) == false)
             return false;
+        if (other.getContactCenter() == null ^ this.getContactCenter() == null)
+            return false;
+        if (other.getContactCenter() != null && other.getContactCenter().equals(this.getContactCenter()) == false)
+            return false;
         return true;
     }
 
@@ -641,6 +696,7 @@ public class Activity implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRandomSplit() == null) ? 0 : getRandomSplit().hashCode());
         hashCode = prime * hashCode + ((getSMS() == null) ? 0 : getSMS().hashCode());
         hashCode = prime * hashCode + ((getWait() == null) ? 0 : getWait().hashCode());
+        hashCode = prime * hashCode + ((getContactCenter() == null) ? 0 : getContactCenter().hashCode());
         return hashCode;
     }
 

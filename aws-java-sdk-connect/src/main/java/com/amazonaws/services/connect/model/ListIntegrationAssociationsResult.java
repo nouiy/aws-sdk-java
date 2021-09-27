@@ -25,7 +25,7 @@ public class ListIntegrationAssociationsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The AppIntegration associations.
+     * The associations.
      * </p>
      */
     private java.util.List<IntegrationAssociationSummary> integrationAssociationSummaryList;
@@ -38,10 +38,10 @@ public class ListIntegrationAssociationsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The AppIntegration associations.
+     * The associations.
      * </p>
      * 
-     * @return The AppIntegration associations.
+     * @return The associations.
      */
 
     public java.util.List<IntegrationAssociationSummary> getIntegrationAssociationSummaryList() {
@@ -50,11 +50,11 @@ public class ListIntegrationAssociationsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The AppIntegration associations.
+     * The associations.
      * </p>
      * 
      * @param integrationAssociationSummaryList
-     *        The AppIntegration associations.
+     *        The associations.
      */
 
     public void setIntegrationAssociationSummaryList(java.util.Collection<IntegrationAssociationSummary> integrationAssociationSummaryList) {
@@ -68,7 +68,7 @@ public class ListIntegrationAssociationsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The AppIntegration associations.
+     * The associations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListIntegrationAssociationsResult extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param integrationAssociationSummaryList
-     *        The AppIntegration associations.
+     *        The associations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListIntegrationAssociationsResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The AppIntegration associations.
+     * The associations.
      * </p>
      * 
      * @param integrationAssociationSummaryList
-     *        The AppIntegration associations.
+     *        The associations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

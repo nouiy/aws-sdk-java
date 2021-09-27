@@ -25,7 +25,7 @@ public class CreateIntegrationAssociationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier for the association.
+     * The identifier for the integration association.
      * </p>
      */
     private String integrationAssociationId;
@@ -38,11 +38,11 @@ public class CreateIntegrationAssociationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier for the association.
+     * The identifier for the integration association.
      * </p>
      * 
      * @param integrationAssociationId
-     *        The identifier for the association.
+     *        The identifier for the integration association.
      */
 
     public void setIntegrationAssociationId(String integrationAssociationId) {
@@ -51,10 +51,10 @@ public class CreateIntegrationAssociationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier for the association.
+     * The identifier for the integration association.
      * </p>
      * 
-     * @return The identifier for the association.
+     * @return The identifier for the integration association.
      */
 
     public String getIntegrationAssociationId() {
@@ -63,11 +63,11 @@ public class CreateIntegrationAssociationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The identifier for the association.
+     * The identifier for the integration association.
      * </p>
      * 
      * @param integrationAssociationId
-     *        The identifier for the association.
+     *        The identifier for the integration association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

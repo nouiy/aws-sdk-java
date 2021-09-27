@@ -30,14 +30,16 @@ public class TargetDescription implements Serializable, Cloneable {
      * <p>
      * The ID of the target. If the target type of the target group is <code>instance</code>, specify an instance ID. If
      * the target type is <code>ip</code>, specify an IP address. If the target type is <code>lambda</code>, specify the
-     * ARN of the Lambda function.
+     * ARN of the Lambda function. If the target type is <code>alb</code>, specify the ARN of the Application Load
+     * Balancer target.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The port on which the target is listening. If the target group protocol is GENEVE, the supported port is 6081.
-     * Not used if the target is a Lambda function.
+     * The port on which the target is listening. If the target group protocol is GENEVE, the supported port is 6081. If
+     * the target type is <code>alb</code>, the targeted Application Load Balancer must have at least one listener whose
+     * port matches the target group port. Not used if the target is a Lambda function.
      * </p>
      */
     private Integer port;
@@ -47,7 +49,8 @@ public class TargetDescription implements Serializable, Cloneable {
      * balancer nodes in the specified Availability Zone or from all enabled Availability Zones for the load balancer.
      * </p>
      * <p>
-     * This parameter is not supported if the target type of the target group is <code>instance</code>.
+     * This parameter is not supported if the target type of the target group is <code>instance</code> or
+     * <code>alb</code>.
      * </p>
      * <p>
      * If the target type is <code>ip</code> and the IP address is in a subnet of the VPC for the target group, the
@@ -69,13 +72,15 @@ public class TargetDescription implements Serializable, Cloneable {
      * <p>
      * The ID of the target. If the target type of the target group is <code>instance</code>, specify an instance ID. If
      * the target type is <code>ip</code>, specify an IP address. If the target type is <code>lambda</code>, specify the
-     * ARN of the Lambda function.
+     * ARN of the Lambda function. If the target type is <code>alb</code>, specify the ARN of the Application Load
+     * Balancer target.
      * </p>
      * 
      * @param id
      *        The ID of the target. If the target type of the target group is <code>instance</code>, specify an instance
      *        ID. If the target type is <code>ip</code>, specify an IP address. If the target type is
-     *        <code>lambda</code>, specify the ARN of the Lambda function.
+     *        <code>lambda</code>, specify the ARN of the Lambda function. If the target type is <code>alb</code>,
+     *        specify the ARN of the Application Load Balancer target.
      */
 
     public void setId(String id) {
@@ -86,12 +91,14 @@ public class TargetDescription implements Serializable, Cloneable {
      * <p>
      * The ID of the target. If the target type of the target group is <code>instance</code>, specify an instance ID. If
      * the target type is <code>ip</code>, specify an IP address. If the target type is <code>lambda</code>, specify the
-     * ARN of the Lambda function.
+     * ARN of the Lambda function. If the target type is <code>alb</code>, specify the ARN of the Application Load
+     * Balancer target.
      * </p>
      * 
      * @return The ID of the target. If the target type of the target group is <code>instance</code>, specify an
      *         instance ID. If the target type is <code>ip</code>, specify an IP address. If the target type is
-     *         <code>lambda</code>, specify the ARN of the Lambda function.
+     *         <code>lambda</code>, specify the ARN of the Lambda function. If the target type is <code>alb</code>,
+     *         specify the ARN of the Application Load Balancer target.
      */
 
     public String getId() {
@@ -102,13 +109,15 @@ public class TargetDescription implements Serializable, Cloneable {
      * <p>
      * The ID of the target. If the target type of the target group is <code>instance</code>, specify an instance ID. If
      * the target type is <code>ip</code>, specify an IP address. If the target type is <code>lambda</code>, specify the
-     * ARN of the Lambda function.
+     * ARN of the Lambda function. If the target type is <code>alb</code>, specify the ARN of the Application Load
+     * Balancer target.
      * </p>
      * 
      * @param id
      *        The ID of the target. If the target type of the target group is <code>instance</code>, specify an instance
      *        ID. If the target type is <code>ip</code>, specify an IP address. If the target type is
-     *        <code>lambda</code>, specify the ARN of the Lambda function.
+     *        <code>lambda</code>, specify the ARN of the Lambda function. If the target type is <code>alb</code>,
+     *        specify the ARN of the Application Load Balancer target.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -119,13 +128,15 @@ public class TargetDescription implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The port on which the target is listening. If the target group protocol is GENEVE, the supported port is 6081.
-     * Not used if the target is a Lambda function.
+     * The port on which the target is listening. If the target group protocol is GENEVE, the supported port is 6081. If
+     * the target type is <code>alb</code>, the targeted Application Load Balancer must have at least one listener whose
+     * port matches the target group port. Not used if the target is a Lambda function.
      * </p>
      * 
      * @param port
      *        The port on which the target is listening. If the target group protocol is GENEVE, the supported port is
-     *        6081. Not used if the target is a Lambda function.
+     *        6081. If the target type is <code>alb</code>, the targeted Application Load Balancer must have at least
+     *        one listener whose port matches the target group port. Not used if the target is a Lambda function.
      */
 
     public void setPort(Integer port) {
@@ -134,12 +145,14 @@ public class TargetDescription implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The port on which the target is listening. If the target group protocol is GENEVE, the supported port is 6081.
-     * Not used if the target is a Lambda function.
+     * The port on which the target is listening. If the target group protocol is GENEVE, the supported port is 6081. If
+     * the target type is <code>alb</code>, the targeted Application Load Balancer must have at least one listener whose
+     * port matches the target group port. Not used if the target is a Lambda function.
      * </p>
      * 
      * @return The port on which the target is listening. If the target group protocol is GENEVE, the supported port is
-     *         6081. Not used if the target is a Lambda function.
+     *         6081. If the target type is <code>alb</code>, the targeted Application Load Balancer must have at least
+     *         one listener whose port matches the target group port. Not used if the target is a Lambda function.
      */
 
     public Integer getPort() {
@@ -148,13 +161,15 @@ public class TargetDescription implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The port on which the target is listening. If the target group protocol is GENEVE, the supported port is 6081.
-     * Not used if the target is a Lambda function.
+     * The port on which the target is listening. If the target group protocol is GENEVE, the supported port is 6081. If
+     * the target type is <code>alb</code>, the targeted Application Load Balancer must have at least one listener whose
+     * port matches the target group port. Not used if the target is a Lambda function.
      * </p>
      * 
      * @param port
      *        The port on which the target is listening. If the target group protocol is GENEVE, the supported port is
-     *        6081. Not used if the target is a Lambda function.
+     *        6081. If the target type is <code>alb</code>, the targeted Application Load Balancer must have at least
+     *        one listener whose port matches the target group port. Not used if the target is a Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -169,7 +184,8 @@ public class TargetDescription implements Serializable, Cloneable {
      * balancer nodes in the specified Availability Zone or from all enabled Availability Zones for the load balancer.
      * </p>
      * <p>
-     * This parameter is not supported if the target type of the target group is <code>instance</code>.
+     * This parameter is not supported if the target type of the target group is <code>instance</code> or
+     * <code>alb</code>.
      * </p>
      * <p>
      * If the target type is <code>ip</code> and the IP address is in a subnet of the VPC for the target group, the
@@ -190,7 +206,8 @@ public class TargetDescription implements Serializable, Cloneable {
      *        load balancer nodes in the specified Availability Zone or from all enabled Availability Zones for the load
      *        balancer.</p>
      *        <p>
-     *        This parameter is not supported if the target type of the target group is <code>instance</code>.
+     *        This parameter is not supported if the target type of the target group is <code>instance</code> or
+     *        <code>alb</code>.
      *        </p>
      *        <p>
      *        If the target type is <code>ip</code> and the IP address is in a subnet of the VPC for the target group,
@@ -216,7 +233,8 @@ public class TargetDescription implements Serializable, Cloneable {
      * balancer nodes in the specified Availability Zone or from all enabled Availability Zones for the load balancer.
      * </p>
      * <p>
-     * This parameter is not supported if the target type of the target group is <code>instance</code>.
+     * This parameter is not supported if the target type of the target group is <code>instance</code> or
+     * <code>alb</code>.
      * </p>
      * <p>
      * If the target type is <code>ip</code> and the IP address is in a subnet of the VPC for the target group, the
@@ -236,7 +254,8 @@ public class TargetDescription implements Serializable, Cloneable {
      *         load balancer nodes in the specified Availability Zone or from all enabled Availability Zones for the
      *         load balancer.</p>
      *         <p>
-     *         This parameter is not supported if the target type of the target group is <code>instance</code>.
+     *         This parameter is not supported if the target type of the target group is <code>instance</code> or
+     *         <code>alb</code>.
      *         </p>
      *         <p>
      *         If the target type is <code>ip</code> and the IP address is in a subnet of the VPC for the target group,
@@ -262,7 +281,8 @@ public class TargetDescription implements Serializable, Cloneable {
      * balancer nodes in the specified Availability Zone or from all enabled Availability Zones for the load balancer.
      * </p>
      * <p>
-     * This parameter is not supported if the target type of the target group is <code>instance</code>.
+     * This parameter is not supported if the target type of the target group is <code>instance</code> or
+     * <code>alb</code>.
      * </p>
      * <p>
      * If the target type is <code>ip</code> and the IP address is in a subnet of the VPC for the target group, the
@@ -283,7 +303,8 @@ public class TargetDescription implements Serializable, Cloneable {
      *        load balancer nodes in the specified Availability Zone or from all enabled Availability Zones for the load
      *        balancer.</p>
      *        <p>
-     *        This parameter is not supported if the target type of the target group is <code>instance</code>.
+     *        This parameter is not supported if the target type of the target group is <code>instance</code> or
+     *        <code>alb</code>.
      *        </p>
      *        <p>
      *        If the target type is <code>ip</code> and the IP address is in a subnet of the VPC for the target group,

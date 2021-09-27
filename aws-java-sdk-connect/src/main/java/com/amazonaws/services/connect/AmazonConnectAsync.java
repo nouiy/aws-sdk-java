@@ -533,7 +533,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Create an AppIntegration association with an Amazon Connect instance.
+     * Creates an AWS resource association with an Amazon Connect instance.
      * </p>
      * 
      * @param createIntegrationAssociationRequest
@@ -548,7 +548,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Create an AppIntegration association with an Amazon Connect instance.
+     * Creates an AWS resource association with an Amazon Connect instance.
      * </p>
      * 
      * @param createIntegrationAssociationRequest
@@ -667,7 +667,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Creates a use case for an AppIntegration association.
+     * Creates a use case for an integration association.
      * </p>
      * 
      * @param createUseCaseRequest
@@ -680,7 +680,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Creates a use case for an AppIntegration association.
+     * Creates a use case for an integration association.
      * </p>
      * 
      * @param createUseCaseRequest
@@ -856,8 +856,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes an AppIntegration association from an Amazon Connect instance. The association must not have any use
-     * cases associated with it.
+     * Deletes an AWS resource association from an Amazon Connect instance. The association must not have any use cases
+     * associated with it.
      * </p>
      * 
      * @param deleteIntegrationAssociationRequest
@@ -872,8 +872,8 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes an AppIntegration association from an Amazon Connect instance. The association must not have any use
-     * cases associated with it.
+     * Deletes an AWS resource association from an Amazon Connect instance. The association must not have any use cases
+     * associated with it.
      * </p>
      * 
      * @param deleteIntegrationAssociationRequest
@@ -924,7 +924,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes a use case from an AppIntegration association.
+     * Deletes a use case from an integration association.
      * </p>
      * 
      * @param deleteUseCaseRequest
@@ -937,7 +937,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Deletes a use case from an AppIntegration association.
+     * Deletes a use case from an integration association.
      * </p>
      * 
      * @param deleteUseCaseRequest
@@ -2257,7 +2257,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Provides summary information about the AppIntegration associations for the specified Amazon Connect instance.
+     * Provides summary information about the AWS resource associations for the specified Amazon Connect instance.
      * </p>
      * 
      * @param listIntegrationAssociationsRequest
@@ -2271,7 +2271,7 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Provides summary information about the AppIntegration associations for the specified Amazon Connect instance.
+     * Provides summary information about the AWS resource associations for the specified Amazon Connect instance.
      * </p>
      * 
      * @param listIntegrationAssociationsRequest
@@ -2750,12 +2750,11 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Lists the use cases.
+     * Lists the use cases for the integration association.
      * </p>
      * 
      * @param listUseCasesRequest
-     *        Provides summary information about the use cases for the specified Amazon Connect AppIntegration
-     *        association.
+     *        Provides summary information about the use cases for the specified integration association.
      * @return A Java Future containing the result of the ListUseCases operation returned by the service.
      * @sample AmazonConnectAsync.ListUseCases
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/connect-2017-08-08/ListUseCases" target="_top">AWS API
@@ -2765,12 +2764,11 @@ public interface AmazonConnectAsync extends AmazonConnect {
 
     /**
      * <p>
-     * Lists the use cases.
+     * Lists the use cases for the integration association.
      * </p>
      * 
      * @param listUseCasesRequest
-     *        Provides summary information about the use cases for the specified Amazon Connect AppIntegration
-     *        association.
+     *        Provides summary information about the use cases for the specified integration association.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -3060,6 +3058,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
      * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>
+     * </note> <note>
+     * <p>
+     * Campaign calls are not allowed by default. Before you can make a call with <code>TrafficType</code> =
+     * <code>CAMPAIGN</code>, you must submit a service quota increase request. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
+     * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
      * </note>
      * 
      * @param startOutboundVoiceContactRequest
@@ -3088,6 +3093,13 @@ public interface AmazonConnectAsync extends AmazonConnect {
      * <p>
      * UK numbers with a 447 prefix are not allowed by default. Before you can dial these UK mobile numbers, you must
      * submit a service quota increase request. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
+     * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
+     * </p>
+     * </note> <note>
+     * <p>
+     * Campaign calls are not allowed by default. Before you can make a call with <code>TrafficType</code> =
+     * <code>CAMPAIGN</code>, you must submit a service quota increase request. For more information, see <a
      * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html">Amazon Connect
      * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
      * </p>

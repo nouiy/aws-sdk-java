@@ -450,6 +450,10 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
      *         The specified load balancer does not exist.
      * @throws TargetGroupNotFoundException
      *         The specified target group does not exist.
+     * @throws ListenerNotFoundException
+     *         The specified listener does not exist.
+     * @throws RuleNotFoundException
+     *         The specified rule does not exist.
      * @sample AmazonElasticLoadBalancing.AddTags
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/AddTags" target="_top">AWS
      *      API Documentation</a>
@@ -924,6 +928,8 @@ public class AmazonElasticLoadBalancingClient extends AmazonWebServiceClient imp
      * @return Result of the DeleteListener operation returned by the service.
      * @throws ListenerNotFoundException
      *         The specified listener does not exist.
+     * @throws ResourceInUseException
+     *         A specified resource is in use.
      * @sample AmazonElasticLoadBalancing.DeleteListener
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticloadbalancingv2-2015-12-01/DeleteListener"
      *      target="_top">AWS API Documentation</a>

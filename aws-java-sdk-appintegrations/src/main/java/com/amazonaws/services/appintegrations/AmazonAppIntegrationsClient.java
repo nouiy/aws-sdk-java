@@ -55,8 +55,9 @@ import com.amazonaws.services.appintegrations.model.transform.*;
  * </p>
  * <p>
  * For information about how you can use external applications with Amazon Connect, see <a
- * href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built integrations</a> in the
- * <i>Amazon Connect Administrator Guide</i>.
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built integrations</a> and <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-wisdom.html">Deliver information to agents
+ * using Amazon Connect Wisdom</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
  */
 @ThreadSafe
@@ -155,6 +156,80 @@ public class AmazonAppIntegrationsClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Creates and persists a DataIntegration resource.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <code>CreateDataIntegration</code> API.
+     * </p>
+     * </note>
+     * 
+     * @param createDataIntegrationRequest
+     * @return Result of the CreateDataIntegration operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ResourceQuotaExceededException
+     *         The allowed quota for the resource has been exceeded.
+     * @throws DuplicateResourceException
+     *         A resource with the specified name already exists.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.CreateDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/CreateDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateDataIntegrationResult createDataIntegration(CreateDataIntegrationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateDataIntegration(request);
+    }
+
+    @SdkInternalApi
+    final CreateDataIntegrationResult executeCreateDataIntegration(CreateDataIntegrationRequest createDataIntegrationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createDataIntegrationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateDataIntegrationRequest> request = null;
+        Response<CreateDataIntegrationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateDataIntegrationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createDataIntegrationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppIntegrations");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateDataIntegration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateDataIntegrationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new CreateDataIntegrationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an EventIntegration, given a specified name, description, and a reference to an Amazon EventBridge bus in
      * your account and a partner event source that pushes events to that bus. No objects are created in the your
      * account, only metadata that is persisted on the EventIntegration control plane.
@@ -213,6 +288,81 @@ public class AmazonAppIntegrationsClient extends AmazonWebServiceClient implemen
             HttpResponseHandler<AmazonWebServiceResponse<CreateEventIntegrationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new CreateEventIntegrationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the DataIntegration. Only DataIntegrations that don't have any DataIntegrationAssociations can be
+     * deleted. Deleting a DataIntegration also deletes the underlying Amazon AppFlow flow and service linked role.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param deleteDataIntegrationRequest
+     * @return Result of the DeleteDataIntegration operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.DeleteDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/DeleteDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteDataIntegrationResult deleteDataIntegration(DeleteDataIntegrationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteDataIntegration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteDataIntegrationResult executeDeleteDataIntegration(DeleteDataIntegrationRequest deleteDataIntegrationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteDataIntegrationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteDataIntegrationRequest> request = null;
+        Response<DeleteDataIntegrationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteDataIntegrationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteDataIntegrationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppIntegrations");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteDataIntegration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteDataIntegrationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DeleteDataIntegrationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -292,7 +442,80 @@ public class AmazonAppIntegrationsClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Return information about the event integration.
+     * Returns information about the DataIntegration.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param getDataIntegrationRequest
+     * @return Result of the GetDataIntegration operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.GetDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/GetDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetDataIntegrationResult getDataIntegration(GetDataIntegrationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDataIntegration(request);
+    }
+
+    @SdkInternalApi
+    final GetDataIntegrationResult executeGetDataIntegration(GetDataIntegrationRequest getDataIntegrationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDataIntegrationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDataIntegrationRequest> request = null;
+        Response<GetDataIntegrationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDataIntegrationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDataIntegrationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppIntegrations");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDataIntegration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDataIntegrationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDataIntegrationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information about the event integration.
      * </p>
      * 
      * @param getEventIntegrationRequest
@@ -345,6 +568,153 @@ public class AmazonAppIntegrationsClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<GetEventIntegrationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetEventIntegrationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a paginated list of DataIntegration associations in the account.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param listDataIntegrationAssociationsRequest
+     * @return Result of the ListDataIntegrationAssociations operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.ListDataIntegrationAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListDataIntegrationAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListDataIntegrationAssociationsResult listDataIntegrationAssociations(ListDataIntegrationAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListDataIntegrationAssociations(request);
+    }
+
+    @SdkInternalApi
+    final ListDataIntegrationAssociationsResult executeListDataIntegrationAssociations(
+            ListDataIntegrationAssociationsRequest listDataIntegrationAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listDataIntegrationAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListDataIntegrationAssociationsRequest> request = null;
+        Response<ListDataIntegrationAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListDataIntegrationAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listDataIntegrationAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppIntegrations");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListDataIntegrationAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListDataIntegrationAssociationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListDataIntegrationAssociationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns a paginated list of DataIntegrations in the account.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param listDataIntegrationsRequest
+     * @return Result of the ListDataIntegrations operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.ListDataIntegrations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListDataIntegrations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListDataIntegrationsResult listDataIntegrations(ListDataIntegrationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListDataIntegrations(request);
+    }
+
+    @SdkInternalApi
+    final ListDataIntegrationsResult executeListDataIntegrations(ListDataIntegrationsRequest listDataIntegrationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listDataIntegrationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListDataIntegrationsRequest> request = null;
+        Response<ListDataIntegrationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListDataIntegrationsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listDataIntegrationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppIntegrations");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListDataIntegrations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListDataIntegrationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListDataIntegrationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -666,6 +1036,80 @@ public class AmazonAppIntegrationsClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the description of a DataIntegration.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param updateDataIntegrationRequest
+     * @return Result of the UpdateDataIntegration operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.UpdateDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/UpdateDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateDataIntegrationResult updateDataIntegration(UpdateDataIntegrationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateDataIntegration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateDataIntegrationResult executeUpdateDataIntegration(UpdateDataIntegrationRequest updateDataIntegrationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateDataIntegrationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateDataIntegrationRequest> request = null;
+        Response<UpdateDataIntegrationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateDataIntegrationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateDataIntegrationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppIntegrations");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateDataIntegration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateDataIntegrationResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new UpdateDataIntegrationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

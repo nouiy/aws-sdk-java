@@ -31,8 +31,9 @@ import com.amazonaws.services.appintegrations.model.*;
  * </p>
  * <p>
  * For information about how you can use external applications with Amazon Connect, see <a
- * href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built integrations</a> in the
- * <i>Amazon Connect Administrator Guide</i>.
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built integrations</a> and <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-wisdom.html">Deliver information to agents
+ * using Amazon Connect Wisdom</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -45,6 +46,37 @@ public interface AmazonAppIntegrations {
      * @see RegionUtils#getRegionsForService(String)
      */
     String ENDPOINT_PREFIX = "app-integrations";
+
+    /**
+     * <p>
+     * Creates and persists a DataIntegration resource.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <code>CreateDataIntegration</code> API.
+     * </p>
+     * </note>
+     * 
+     * @param createDataIntegrationRequest
+     * @return Result of the CreateDataIntegration operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ResourceQuotaExceededException
+     *         The allowed quota for the resource has been exceeded.
+     * @throws DuplicateResourceException
+     *         A resource with the specified name already exists.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.CreateDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/CreateDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateDataIntegrationResult createDataIntegration(CreateDataIntegrationRequest createDataIntegrationRequest);
 
     /**
      * <p>
@@ -75,6 +107,38 @@ public interface AmazonAppIntegrations {
 
     /**
      * <p>
+     * Deletes the DataIntegration. Only DataIntegrations that don't have any DataIntegrationAssociations can be
+     * deleted. Deleting a DataIntegration also deletes the underlying Amazon AppFlow flow and service linked role.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param deleteDataIntegrationRequest
+     * @return Result of the DeleteDataIntegration operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.DeleteDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/DeleteDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteDataIntegrationResult deleteDataIntegration(DeleteDataIntegrationRequest deleteDataIntegrationRequest);
+
+    /**
+     * <p>
      * Deletes the specified existing event integration. If the event integration is associated with clients, the
      * request is rejected.
      * </p>
@@ -99,7 +163,38 @@ public interface AmazonAppIntegrations {
 
     /**
      * <p>
-     * Return information about the event integration.
+     * Returns information about the DataIntegration.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param getDataIntegrationRequest
+     * @return Result of the GetDataIntegration operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.GetDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/GetDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetDataIntegrationResult getDataIntegration(GetDataIntegrationRequest getDataIntegrationRequest);
+
+    /**
+     * <p>
+     * Returns information about the event integration.
      * </p>
      * 
      * @param getEventIntegrationRequest
@@ -119,6 +214,66 @@ public interface AmazonAppIntegrations {
      *      target="_top">AWS API Documentation</a>
      */
     GetEventIntegrationResult getEventIntegration(GetEventIntegrationRequest getEventIntegrationRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of DataIntegration associations in the account.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param listDataIntegrationAssociationsRequest
+     * @return Result of the ListDataIntegrationAssociations operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.ListDataIntegrationAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListDataIntegrationAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListDataIntegrationAssociationsResult listDataIntegrationAssociations(ListDataIntegrationAssociationsRequest listDataIntegrationAssociationsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of DataIntegrations in the account.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param listDataIntegrationsRequest
+     * @return Result of the ListDataIntegrations operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.ListDataIntegrations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListDataIntegrations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListDataIntegrationsResult listDataIntegrations(ListDataIntegrationsRequest listDataIntegrationsRequest);
 
     /**
      * <p>
@@ -226,6 +381,37 @@ public interface AmazonAppIntegrations {
      *      API Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates the description of a DataIntegration.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param updateDataIntegrationRequest
+     * @return Result of the UpdateDataIntegration operation returned by the service.
+     * @throws InternalServiceErrorException
+     *         Request processing failed due to an error or failure with the service.
+     * @throws ThrottlingException
+     *         The throttling limit has been exceeded.
+     * @throws ResourceNotFoundException
+     *         The specified resource was not found.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AmazonAppIntegrations.UpdateDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/UpdateDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateDataIntegrationResult updateDataIntegration(UpdateDataIntegrationRequest updateDataIntegrationRequest);
 
     /**
      * <p>

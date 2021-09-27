@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum UseCaseType {
 
-    RULES_EVALUATION("RULES_EVALUATION");
+    RULES_EVALUATION("RULES_EVALUATION"),
+    CONNECT_CAMPAIGNS("CONNECT_CAMPAIGNS");
 
     private String value;
 

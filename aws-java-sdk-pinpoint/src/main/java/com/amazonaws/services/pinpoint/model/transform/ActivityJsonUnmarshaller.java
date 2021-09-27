@@ -88,6 +88,10 @@ public class ActivityJsonUnmarshaller implements Unmarshaller<Activity, JsonUnma
                     context.nextToken();
                     activity.setWait(WaitActivityJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ContactCenter", targetDepth)) {
+                    context.nextToken();
+                    activity.setContactCenter(ContactCenterActivityJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

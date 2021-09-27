@@ -42,8 +42,8 @@ public class UseCase implements Serializable, Cloneable, StructuredPojo {
     private String useCaseArn;
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      */
     private String useCaseType;
@@ -130,13 +130,13 @@ public class UseCase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      * 
      * @param useCaseType
-     *        The type of use case to associate to the AppIntegration association. Each AppIntegration association can
-     *        have only one of each use case type.
+     *        The type of use case to associate to the integration association. Each integration association can have
+     *        only one of each use case type.
      * @see UseCaseType
      */
 
@@ -146,12 +146,12 @@ public class UseCase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      * 
-     * @return The type of use case to associate to the AppIntegration association. Each AppIntegration association can
-     *         have only one of each use case type.
+     * @return The type of use case to associate to the integration association. Each integration association can have
+     *         only one of each use case type.
      * @see UseCaseType
      */
 
@@ -161,13 +161,13 @@ public class UseCase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      * 
      * @param useCaseType
-     *        The type of use case to associate to the AppIntegration association. Each AppIntegration association can
-     *        have only one of each use case type.
+     *        The type of use case to associate to the integration association. Each integration association can have
+     *        only one of each use case type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UseCaseType
      */
@@ -179,13 +179,13 @@ public class UseCase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      * 
      * @param useCaseType
-     *        The type of use case to associate to the AppIntegration association. Each AppIntegration association can
-     *        have only one of each use case type.
+     *        The type of use case to associate to the integration association. Each integration association can have
+     *        only one of each use case type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UseCaseType
      */

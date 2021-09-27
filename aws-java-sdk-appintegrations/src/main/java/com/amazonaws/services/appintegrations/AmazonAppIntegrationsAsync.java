@@ -30,12 +30,56 @@ import com.amazonaws.services.appintegrations.model.*;
  * </p>
  * <p>
  * For information about how you can use external applications with Amazon Connect, see <a
- * href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built integrations</a> in the
- * <i>Amazon Connect Administrator Guide</i>.
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/crm.html">Set up pre-built integrations</a> and <a
+ * href="https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-wisdom.html">Deliver information to agents
+ * using Amazon Connect Wisdom</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonAppIntegrationsAsync extends AmazonAppIntegrations {
+
+    /**
+     * <p>
+     * Creates and persists a DataIntegration resource.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <code>CreateDataIntegration</code> API.
+     * </p>
+     * </note>
+     * 
+     * @param createDataIntegrationRequest
+     * @return A Java Future containing the result of the CreateDataIntegration operation returned by the service.
+     * @sample AmazonAppIntegrationsAsync.CreateDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/CreateDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataIntegrationResult> createDataIntegrationAsync(CreateDataIntegrationRequest createDataIntegrationRequest);
+
+    /**
+     * <p>
+     * Creates and persists a DataIntegration resource.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <code>CreateDataIntegration</code> API.
+     * </p>
+     * </note>
+     * 
+     * @param createDataIntegrationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateDataIntegration operation returned by the service.
+     * @sample AmazonAppIntegrationsAsyncHandler.CreateDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/CreateDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataIntegrationResult> createDataIntegrationAsync(CreateDataIntegrationRequest createDataIntegrationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateDataIntegrationRequest, CreateDataIntegrationResult> asyncHandler);
 
     /**
      * <p>
@@ -74,6 +118,55 @@ public interface AmazonAppIntegrationsAsync extends AmazonAppIntegrations {
 
     /**
      * <p>
+     * Deletes the DataIntegration. Only DataIntegrations that don't have any DataIntegrationAssociations can be
+     * deleted. Deleting a DataIntegration also deletes the underlying Amazon AppFlow flow and service linked role.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param deleteDataIntegrationRequest
+     * @return A Java Future containing the result of the DeleteDataIntegration operation returned by the service.
+     * @sample AmazonAppIntegrationsAsync.DeleteDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/DeleteDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDataIntegrationResult> deleteDataIntegrationAsync(DeleteDataIntegrationRequest deleteDataIntegrationRequest);
+
+    /**
+     * <p>
+     * Deletes the DataIntegration. Only DataIntegrations that don't have any DataIntegrationAssociations can be
+     * deleted. Deleting a DataIntegration also deletes the underlying Amazon AppFlow flow and service linked role.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param deleteDataIntegrationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDataIntegration operation returned by the service.
+     * @sample AmazonAppIntegrationsAsyncHandler.DeleteDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/DeleteDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDataIntegrationResult> deleteDataIntegrationAsync(DeleteDataIntegrationRequest deleteDataIntegrationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDataIntegrationRequest, DeleteDataIntegrationResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified existing event integration. If the event integration is associated with clients, the
      * request is rejected.
      * </p>
@@ -107,7 +200,54 @@ public interface AmazonAppIntegrationsAsync extends AmazonAppIntegrations {
 
     /**
      * <p>
-     * Return information about the event integration.
+     * Returns information about the DataIntegration.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param getDataIntegrationRequest
+     * @return A Java Future containing the result of the GetDataIntegration operation returned by the service.
+     * @sample AmazonAppIntegrationsAsync.GetDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/GetDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDataIntegrationResult> getDataIntegrationAsync(GetDataIntegrationRequest getDataIntegrationRequest);
+
+    /**
+     * <p>
+     * Returns information about the DataIntegration.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param getDataIntegrationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDataIntegration operation returned by the service.
+     * @sample AmazonAppIntegrationsAsyncHandler.GetDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/GetDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetDataIntegrationResult> getDataIntegrationAsync(GetDataIntegrationRequest getDataIntegrationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDataIntegrationRequest, GetDataIntegrationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information about the event integration.
      * </p>
      * 
      * @param getEventIntegrationRequest
@@ -120,7 +260,7 @@ public interface AmazonAppIntegrationsAsync extends AmazonAppIntegrations {
 
     /**
      * <p>
-     * Return information about the event integration.
+     * Returns information about the event integration.
      * </p>
      * 
      * @param getEventIntegrationRequest
@@ -135,6 +275,104 @@ public interface AmazonAppIntegrationsAsync extends AmazonAppIntegrations {
      */
     java.util.concurrent.Future<GetEventIntegrationResult> getEventIntegrationAsync(GetEventIntegrationRequest getEventIntegrationRequest,
             com.amazonaws.handlers.AsyncHandler<GetEventIntegrationRequest, GetEventIntegrationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of DataIntegration associations in the account.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param listDataIntegrationAssociationsRequest
+     * @return A Java Future containing the result of the ListDataIntegrationAssociations operation returned by the
+     *         service.
+     * @sample AmazonAppIntegrationsAsync.ListDataIntegrationAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListDataIntegrationAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDataIntegrationAssociationsResult> listDataIntegrationAssociationsAsync(
+            ListDataIntegrationAssociationsRequest listDataIntegrationAssociationsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of DataIntegration associations in the account.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param listDataIntegrationAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListDataIntegrationAssociations operation returned by the
+     *         service.
+     * @sample AmazonAppIntegrationsAsyncHandler.ListDataIntegrationAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListDataIntegrationAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDataIntegrationAssociationsResult> listDataIntegrationAssociationsAsync(
+            ListDataIntegrationAssociationsRequest listDataIntegrationAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListDataIntegrationAssociationsRequest, ListDataIntegrationAssociationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a paginated list of DataIntegrations in the account.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param listDataIntegrationsRequest
+     * @return A Java Future containing the result of the ListDataIntegrations operation returned by the service.
+     * @sample AmazonAppIntegrationsAsync.ListDataIntegrations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListDataIntegrations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDataIntegrationsResult> listDataIntegrationsAsync(ListDataIntegrationsRequest listDataIntegrationsRequest);
+
+    /**
+     * <p>
+     * Returns a paginated list of DataIntegrations in the account.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param listDataIntegrationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListDataIntegrations operation returned by the service.
+     * @sample AmazonAppIntegrationsAsyncHandler.ListDataIntegrations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/ListDataIntegrations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDataIntegrationsResult> listDataIntegrationsAsync(ListDataIntegrationsRequest listDataIntegrationsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListDataIntegrationsRequest, ListDataIntegrationsResult> asyncHandler);
 
     /**
      * <p>
@@ -294,6 +532,53 @@ public interface AmazonAppIntegrationsAsync extends AmazonAppIntegrations {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the description of a DataIntegration.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param updateDataIntegrationRequest
+     * @return A Java Future containing the result of the UpdateDataIntegration operation returned by the service.
+     * @sample AmazonAppIntegrationsAsync.UpdateDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/UpdateDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDataIntegrationResult> updateDataIntegrationAsync(UpdateDataIntegrationRequest updateDataIntegrationRequest);
+
+    /**
+     * <p>
+     * Updates the description of a DataIntegration.
+     * </p>
+     * <note>
+     * <p>
+     * You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a
+     * different DataIntegration, or recreate the DataIntegration using the <a
+     * href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html"
+     * >CreateDataIntegration</a> API.
+     * </p>
+     * </note>
+     * 
+     * @param updateDataIntegrationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateDataIntegration operation returned by the service.
+     * @sample AmazonAppIntegrationsAsyncHandler.UpdateDataIntegration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appintegrations-2020-07-29/UpdateDataIntegration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDataIntegrationResult> updateDataIntegrationAsync(UpdateDataIntegrationRequest updateDataIntegrationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateDataIntegrationRequest, UpdateDataIntegrationResult> asyncHandler);
 
     /**
      * <p>

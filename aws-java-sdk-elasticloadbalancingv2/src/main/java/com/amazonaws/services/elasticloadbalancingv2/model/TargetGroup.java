@@ -120,8 +120,9 @@ public class TargetGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The type of target that you must specify when registering targets with this target group. The possible values are
-     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address), or
-     * <code>lambda</code> (register a single Lambda function as a target).
+     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address),
+     * <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code> (register a single
+     * Application Load Balancer as a target).
      * </p>
      */
     private String targetType;
@@ -855,14 +856,16 @@ public class TargetGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The type of target that you must specify when registering targets with this target group. The possible values are
-     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address), or
-     * <code>lambda</code> (register a single Lambda function as a target).
+     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address),
+     * <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code> (register a single
+     * Application Load Balancer as a target).
      * </p>
      * 
      * @param targetType
      *        The type of target that you must specify when registering targets with this target group. The possible
      *        values are <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by
-     *        IP address), or <code>lambda</code> (register a single Lambda function as a target).
+     *        IP address), <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code>
+     *        (register a single Application Load Balancer as a target).
      * @see TargetTypeEnum
      */
 
@@ -873,13 +876,15 @@ public class TargetGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The type of target that you must specify when registering targets with this target group. The possible values are
-     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address), or
-     * <code>lambda</code> (register a single Lambda function as a target).
+     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address),
+     * <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code> (register a single
+     * Application Load Balancer as a target).
      * </p>
      * 
      * @return The type of target that you must specify when registering targets with this target group. The possible
      *         values are <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by
-     *         IP address), or <code>lambda</code> (register a single Lambda function as a target).
+     *         IP address), <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code>
+     *         (register a single Application Load Balancer as a target).
      * @see TargetTypeEnum
      */
 
@@ -890,14 +895,16 @@ public class TargetGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The type of target that you must specify when registering targets with this target group. The possible values are
-     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address), or
-     * <code>lambda</code> (register a single Lambda function as a target).
+     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address),
+     * <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code> (register a single
+     * Application Load Balancer as a target).
      * </p>
      * 
      * @param targetType
      *        The type of target that you must specify when registering targets with this target group. The possible
      *        values are <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by
-     *        IP address), or <code>lambda</code> (register a single Lambda function as a target).
+     *        IP address), <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code>
+     *        (register a single Application Load Balancer as a target).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetTypeEnum
      */
@@ -910,14 +917,16 @@ public class TargetGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The type of target that you must specify when registering targets with this target group. The possible values are
-     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address), or
-     * <code>lambda</code> (register a single Lambda function as a target).
+     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address),
+     * <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code> (register a single
+     * Application Load Balancer as a target).
      * </p>
      * 
      * @param targetType
      *        The type of target that you must specify when registering targets with this target group. The possible
      *        values are <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by
-     *        IP address), or <code>lambda</code> (register a single Lambda function as a target).
+     *        IP address), <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code>
+     *        (register a single Application Load Balancer as a target).
      * @see TargetTypeEnum
      */
 
@@ -928,14 +937,16 @@ public class TargetGroup implements Serializable, Cloneable {
     /**
      * <p>
      * The type of target that you must specify when registering targets with this target group. The possible values are
-     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address), or
-     * <code>lambda</code> (register a single Lambda function as a target).
+     * <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by IP address),
+     * <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code> (register a single
+     * Application Load Balancer as a target).
      * </p>
      * 
      * @param targetType
      *        The type of target that you must specify when registering targets with this target group. The possible
      *        values are <code>instance</code> (register targets by instance ID), <code>ip</code> (register targets by
-     *        IP address), or <code>lambda</code> (register a single Lambda function as a target).
+     *        IP address), <code>lambda</code> (register a single Lambda function as a target), or <code>alb</code>
+     *        (register a single Application Load Balancer as a target).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetTypeEnum
      */

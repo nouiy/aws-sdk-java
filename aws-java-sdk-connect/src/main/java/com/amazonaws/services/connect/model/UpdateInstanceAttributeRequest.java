@@ -35,6 +35,12 @@ public class UpdateInstanceAttributeRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * The type of attribute.
      * </p>
+     * <note>
+     * <p>
+     * Only allowlisted customers can consume USE_CUSTOM_TTS_VOICES. To access this feature, contact AWS Support for
+     * allowlisting.
+     * </p>
+     * </note>
      */
     private String attributeType;
     /**
@@ -88,9 +94,19 @@ public class UpdateInstanceAttributeRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * The type of attribute.
      * </p>
+     * <note>
+     * <p>
+     * Only allowlisted customers can consume USE_CUSTOM_TTS_VOICES. To access this feature, contact AWS Support for
+     * allowlisting.
+     * </p>
+     * </note>
      * 
      * @param attributeType
-     *        The type of attribute.
+     *        The type of attribute.</p> <note>
+     *        <p>
+     *        Only allowlisted customers can consume USE_CUSTOM_TTS_VOICES. To access this feature, contact AWS Support
+     *        for allowlisting.
+     *        </p>
      * @see InstanceAttributeType
      */
 
@@ -102,8 +118,18 @@ public class UpdateInstanceAttributeRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * The type of attribute.
      * </p>
+     * <note>
+     * <p>
+     * Only allowlisted customers can consume USE_CUSTOM_TTS_VOICES. To access this feature, contact AWS Support for
+     * allowlisting.
+     * </p>
+     * </note>
      * 
-     * @return The type of attribute.
+     * @return The type of attribute.</p> <note>
+     *         <p>
+     *         Only allowlisted customers can consume USE_CUSTOM_TTS_VOICES. To access this feature, contact AWS Support
+     *         for allowlisting.
+     *         </p>
      * @see InstanceAttributeType
      */
 
@@ -115,9 +141,19 @@ public class UpdateInstanceAttributeRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * The type of attribute.
      * </p>
+     * <note>
+     * <p>
+     * Only allowlisted customers can consume USE_CUSTOM_TTS_VOICES. To access this feature, contact AWS Support for
+     * allowlisting.
+     * </p>
+     * </note>
      * 
      * @param attributeType
-     *        The type of attribute.
+     *        The type of attribute.</p> <note>
+     *        <p>
+     *        Only allowlisted customers can consume USE_CUSTOM_TTS_VOICES. To access this feature, contact AWS Support
+     *        for allowlisting.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceAttributeType
      */
@@ -131,9 +167,19 @@ public class UpdateInstanceAttributeRequest extends com.amazonaws.AmazonWebServi
      * <p>
      * The type of attribute.
      * </p>
+     * <note>
+     * <p>
+     * Only allowlisted customers can consume USE_CUSTOM_TTS_VOICES. To access this feature, contact AWS Support for
+     * allowlisting.
+     * </p>
+     * </note>
      * 
      * @param attributeType
-     *        The type of attribute.
+     *        The type of attribute.</p> <note>
+     *        <p>
+     *        Only allowlisted customers can consume USE_CUSTOM_TTS_VOICES. To access this feature, contact AWS Support
+     *        for allowlisting.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceAttributeType
      */

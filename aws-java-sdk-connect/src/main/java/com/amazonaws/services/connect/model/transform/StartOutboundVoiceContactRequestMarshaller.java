@@ -46,6 +46,12 @@ public class StartOutboundVoiceContactRequestMarshaller {
             .marshallLocationName("QueueId").build();
     private static final MarshallingInfo<Map> ATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Attributes").build();
+    private static final MarshallingInfo<StructuredPojo> ANSWERMACHINEDETECTIONCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnswerMachineDetectionConfig").build();
+    private static final MarshallingInfo<String> CAMPAIGNID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CampaignId").build();
+    private static final MarshallingInfo<String> TRAFFICTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TrafficType").build();
 
     private static final StartOutboundVoiceContactRequestMarshaller instance = new StartOutboundVoiceContactRequestMarshaller();
 
@@ -70,6 +76,9 @@ public class StartOutboundVoiceContactRequestMarshaller {
             protocolMarshaller.marshall(startOutboundVoiceContactRequest.getSourcePhoneNumber(), SOURCEPHONENUMBER_BINDING);
             protocolMarshaller.marshall(startOutboundVoiceContactRequest.getQueueId(), QUEUEID_BINDING);
             protocolMarshaller.marshall(startOutboundVoiceContactRequest.getAttributes(), ATTRIBUTES_BINDING);
+            protocolMarshaller.marshall(startOutboundVoiceContactRequest.getAnswerMachineDetectionConfig(), ANSWERMACHINEDETECTIONCONFIG_BINDING);
+            protocolMarshaller.marshall(startOutboundVoiceContactRequest.getCampaignId(), CAMPAIGNID_BINDING);
+            protocolMarshaller.marshall(startOutboundVoiceContactRequest.getTrafficType(), TRAFFICTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

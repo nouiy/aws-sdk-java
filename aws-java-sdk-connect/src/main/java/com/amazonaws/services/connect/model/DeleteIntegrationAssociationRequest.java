@@ -33,7 +33,7 @@ public class DeleteIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
     private String instanceId;
     /**
      * <p>
-     * The identifier for the AppIntegration association.
+     * The identifier for the integration association.
      * </p>
      */
     private String integrationAssociationId;
@@ -80,11 +80,11 @@ public class DeleteIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier for the AppIntegration association.
+     * The identifier for the integration association.
      * </p>
      * 
      * @param integrationAssociationId
-     *        The identifier for the AppIntegration association.
+     *        The identifier for the integration association.
      */
 
     public void setIntegrationAssociationId(String integrationAssociationId) {
@@ -93,10 +93,10 @@ public class DeleteIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier for the AppIntegration association.
+     * The identifier for the integration association.
      * </p>
      * 
-     * @return The identifier for the AppIntegration association.
+     * @return The identifier for the integration association.
      */
 
     public String getIntegrationAssociationId() {
@@ -105,11 +105,11 @@ public class DeleteIntegrationAssociationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The identifier for the AppIntegration association.
+     * The identifier for the integration association.
      * </p>
      * 
      * @param integrationAssociationId
-     *        The identifier for the AppIntegration association.
+     *        The identifier for the integration association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

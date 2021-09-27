@@ -33,14 +33,14 @@ public class CreateUseCaseRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String instanceId;
     /**
      * <p>
-     * The identifier for the AppIntegration association.
+     * The identifier for the integration association.
      * </p>
      */
     private String integrationAssociationId;
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      */
     private String useCaseType;
@@ -93,11 +93,11 @@ public class CreateUseCaseRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the AppIntegration association.
+     * The identifier for the integration association.
      * </p>
      * 
      * @param integrationAssociationId
-     *        The identifier for the AppIntegration association.
+     *        The identifier for the integration association.
      */
 
     public void setIntegrationAssociationId(String integrationAssociationId) {
@@ -106,10 +106,10 @@ public class CreateUseCaseRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the AppIntegration association.
+     * The identifier for the integration association.
      * </p>
      * 
-     * @return The identifier for the AppIntegration association.
+     * @return The identifier for the integration association.
      */
 
     public String getIntegrationAssociationId() {
@@ -118,11 +118,11 @@ public class CreateUseCaseRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the AppIntegration association.
+     * The identifier for the integration association.
      * </p>
      * 
      * @param integrationAssociationId
-     *        The identifier for the AppIntegration association.
+     *        The identifier for the integration association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,13 +133,13 @@ public class CreateUseCaseRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      * 
      * @param useCaseType
-     *        The type of use case to associate to the AppIntegration association. Each AppIntegration association can
-     *        have only one of each use case type.
+     *        The type of use case to associate to the integration association. Each integration association can have
+     *        only one of each use case type.
      * @see UseCaseType
      */
 
@@ -149,12 +149,12 @@ public class CreateUseCaseRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      * 
-     * @return The type of use case to associate to the AppIntegration association. Each AppIntegration association can
-     *         have only one of each use case type.
+     * @return The type of use case to associate to the integration association. Each integration association can have
+     *         only one of each use case type.
      * @see UseCaseType
      */
 
@@ -164,13 +164,13 @@ public class CreateUseCaseRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      * 
      * @param useCaseType
-     *        The type of use case to associate to the AppIntegration association. Each AppIntegration association can
-     *        have only one of each use case type.
+     *        The type of use case to associate to the integration association. Each integration association can have
+     *        only one of each use case type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UseCaseType
      */
@@ -182,13 +182,13 @@ public class CreateUseCaseRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of use case to associate to the AppIntegration association. Each AppIntegration association can have
-     * only one of each use case type.
+     * The type of use case to associate to the integration association. Each integration association can have only one
+     * of each use case type.
      * </p>
      * 
      * @param useCaseType
-     *        The type of use case to associate to the AppIntegration association. Each AppIntegration association can
-     *        have only one of each use case type.
+     *        The type of use case to associate to the integration association. Each integration association can have
+     *        only one of each use case type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UseCaseType
      */
