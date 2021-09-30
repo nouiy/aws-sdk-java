@@ -52,6 +52,13 @@ public class RuleGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private RulesSource rulesSource;
+    /**
+     * <p>
+     * Additional options governing how Network Firewall handles stateful rules. The policies where you use your
+     * stateful rule group must have stateful rule options settings that are compatible with these settings.
+     * </p>
+     */
+    private StatefulRuleOptions statefulRuleOptions;
 
     /**
      * <p>
@@ -140,6 +147,52 @@ public class RuleGroup implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Additional options governing how Network Firewall handles stateful rules. The policies where you use your
+     * stateful rule group must have stateful rule options settings that are compatible with these settings.
+     * </p>
+     * 
+     * @param statefulRuleOptions
+     *        Additional options governing how Network Firewall handles stateful rules. The policies where you use your
+     *        stateful rule group must have stateful rule options settings that are compatible with these settings.
+     */
+
+    public void setStatefulRuleOptions(StatefulRuleOptions statefulRuleOptions) {
+        this.statefulRuleOptions = statefulRuleOptions;
+    }
+
+    /**
+     * <p>
+     * Additional options governing how Network Firewall handles stateful rules. The policies where you use your
+     * stateful rule group must have stateful rule options settings that are compatible with these settings.
+     * </p>
+     * 
+     * @return Additional options governing how Network Firewall handles stateful rules. The policies where you use your
+     *         stateful rule group must have stateful rule options settings that are compatible with these settings.
+     */
+
+    public StatefulRuleOptions getStatefulRuleOptions() {
+        return this.statefulRuleOptions;
+    }
+
+    /**
+     * <p>
+     * Additional options governing how Network Firewall handles stateful rules. The policies where you use your
+     * stateful rule group must have stateful rule options settings that are compatible with these settings.
+     * </p>
+     * 
+     * @param statefulRuleOptions
+     *        Additional options governing how Network Firewall handles stateful rules. The policies where you use your
+     *        stateful rule group must have stateful rule options settings that are compatible with these settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleGroup withStatefulRuleOptions(StatefulRuleOptions statefulRuleOptions) {
+        setStatefulRuleOptions(statefulRuleOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -154,7 +207,9 @@ public class RuleGroup implements Serializable, Cloneable, StructuredPojo {
         if (getRuleVariables() != null)
             sb.append("RuleVariables: ").append(getRuleVariables()).append(",");
         if (getRulesSource() != null)
-            sb.append("RulesSource: ").append(getRulesSource());
+            sb.append("RulesSource: ").append(getRulesSource()).append(",");
+        if (getStatefulRuleOptions() != null)
+            sb.append("StatefulRuleOptions: ").append(getStatefulRuleOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -177,6 +232,10 @@ public class RuleGroup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRulesSource() != null && other.getRulesSource().equals(this.getRulesSource()) == false)
             return false;
+        if (other.getStatefulRuleOptions() == null ^ this.getStatefulRuleOptions() == null)
+            return false;
+        if (other.getStatefulRuleOptions() != null && other.getStatefulRuleOptions().equals(this.getStatefulRuleOptions()) == false)
+            return false;
         return true;
     }
 
@@ -187,6 +246,7 @@ public class RuleGroup implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getRuleVariables() == null) ? 0 : getRuleVariables().hashCode());
         hashCode = prime * hashCode + ((getRulesSource() == null) ? 0 : getRulesSource().hashCode());
+        hashCode = prime * hashCode + ((getStatefulRuleOptions() == null) ? 0 : getStatefulRuleOptions().hashCode());
         return hashCode;
     }
 

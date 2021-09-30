@@ -15,7 +15,9 @@ package com.amazonaws.services.networkfirewall.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * Unable to change the resource because your account doesn't own it.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceOwnerCheckException extends com.amazonaws.services.networkfirewall.model.AWSNetworkFirewallException {

@@ -15,7 +15,9 @@ package com.amazonaws.services.networkfirewall.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The policy statement failed validation.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class InvalidResourcePolicyException extends com.amazonaws.services.networkfirewall.model.AWSNetworkFirewallException {

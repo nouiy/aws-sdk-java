@@ -72,6 +72,24 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the policy's stateless rules.
+     * </p>
+     */
+    private Integer consumedStatelessRuleCapacity;
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the policy's stateful rules.
+     * </p>
+     */
+    private Integer consumedStatefulRuleCapacity;
+    /**
+     * <p>
+     * The number of firewalls that are associated with this firewall policy.
+     * </p>
+     */
+    private Integer numberOfAssociations;
 
     /**
      * <p>
@@ -404,6 +422,126 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The number of capacity units currently consumed by the policy's stateless rules.
+     * </p>
+     * 
+     * @param consumedStatelessRuleCapacity
+     *        The number of capacity units currently consumed by the policy's stateless rules.
+     */
+
+    public void setConsumedStatelessRuleCapacity(Integer consumedStatelessRuleCapacity) {
+        this.consumedStatelessRuleCapacity = consumedStatelessRuleCapacity;
+    }
+
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the policy's stateless rules.
+     * </p>
+     * 
+     * @return The number of capacity units currently consumed by the policy's stateless rules.
+     */
+
+    public Integer getConsumedStatelessRuleCapacity() {
+        return this.consumedStatelessRuleCapacity;
+    }
+
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the policy's stateless rules.
+     * </p>
+     * 
+     * @param consumedStatelessRuleCapacity
+     *        The number of capacity units currently consumed by the policy's stateless rules.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FirewallPolicyResponse withConsumedStatelessRuleCapacity(Integer consumedStatelessRuleCapacity) {
+        setConsumedStatelessRuleCapacity(consumedStatelessRuleCapacity);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the policy's stateful rules.
+     * </p>
+     * 
+     * @param consumedStatefulRuleCapacity
+     *        The number of capacity units currently consumed by the policy's stateful rules.
+     */
+
+    public void setConsumedStatefulRuleCapacity(Integer consumedStatefulRuleCapacity) {
+        this.consumedStatefulRuleCapacity = consumedStatefulRuleCapacity;
+    }
+
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the policy's stateful rules.
+     * </p>
+     * 
+     * @return The number of capacity units currently consumed by the policy's stateful rules.
+     */
+
+    public Integer getConsumedStatefulRuleCapacity() {
+        return this.consumedStatefulRuleCapacity;
+    }
+
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the policy's stateful rules.
+     * </p>
+     * 
+     * @param consumedStatefulRuleCapacity
+     *        The number of capacity units currently consumed by the policy's stateful rules.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FirewallPolicyResponse withConsumedStatefulRuleCapacity(Integer consumedStatefulRuleCapacity) {
+        setConsumedStatefulRuleCapacity(consumedStatefulRuleCapacity);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of firewalls that are associated with this firewall policy.
+     * </p>
+     * 
+     * @param numberOfAssociations
+     *        The number of firewalls that are associated with this firewall policy.
+     */
+
+    public void setNumberOfAssociations(Integer numberOfAssociations) {
+        this.numberOfAssociations = numberOfAssociations;
+    }
+
+    /**
+     * <p>
+     * The number of firewalls that are associated with this firewall policy.
+     * </p>
+     * 
+     * @return The number of firewalls that are associated with this firewall policy.
+     */
+
+    public Integer getNumberOfAssociations() {
+        return this.numberOfAssociations;
+    }
+
+    /**
+     * <p>
+     * The number of firewalls that are associated with this firewall policy.
+     * </p>
+     * 
+     * @param numberOfAssociations
+     *        The number of firewalls that are associated with this firewall policy.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FirewallPolicyResponse withNumberOfAssociations(Integer numberOfAssociations) {
+        setNumberOfAssociations(numberOfAssociations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -426,7 +564,13 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
         if (getFirewallPolicyStatus() != null)
             sb.append("FirewallPolicyStatus: ").append(getFirewallPolicyStatus()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getConsumedStatelessRuleCapacity() != null)
+            sb.append("ConsumedStatelessRuleCapacity: ").append(getConsumedStatelessRuleCapacity()).append(",");
+        if (getConsumedStatefulRuleCapacity() != null)
+            sb.append("ConsumedStatefulRuleCapacity: ").append(getConsumedStatefulRuleCapacity()).append(",");
+        if (getNumberOfAssociations() != null)
+            sb.append("NumberOfAssociations: ").append(getNumberOfAssociations());
         sb.append("}");
         return sb.toString();
     }
@@ -465,6 +609,19 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getConsumedStatelessRuleCapacity() == null ^ this.getConsumedStatelessRuleCapacity() == null)
+            return false;
+        if (other.getConsumedStatelessRuleCapacity() != null
+                && other.getConsumedStatelessRuleCapacity().equals(this.getConsumedStatelessRuleCapacity()) == false)
+            return false;
+        if (other.getConsumedStatefulRuleCapacity() == null ^ this.getConsumedStatefulRuleCapacity() == null)
+            return false;
+        if (other.getConsumedStatefulRuleCapacity() != null && other.getConsumedStatefulRuleCapacity().equals(this.getConsumedStatefulRuleCapacity()) == false)
+            return false;
+        if (other.getNumberOfAssociations() == null ^ this.getNumberOfAssociations() == null)
+            return false;
+        if (other.getNumberOfAssociations() != null && other.getNumberOfAssociations().equals(this.getNumberOfAssociations()) == false)
+            return false;
         return true;
     }
 
@@ -479,6 +636,9 @@ public class FirewallPolicyResponse implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getFirewallPolicyStatus() == null) ? 0 : getFirewallPolicyStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getConsumedStatelessRuleCapacity() == null) ? 0 : getConsumedStatelessRuleCapacity().hashCode());
+        hashCode = prime * hashCode + ((getConsumedStatefulRuleCapacity() == null) ? 0 : getConsumedStatefulRuleCapacity().hashCode());
+        hashCode = prime * hashCode + ((getNumberOfAssociations() == null) ? 0 : getNumberOfAssociations().hashCode());
         return hashCode;
     }
 

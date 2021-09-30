@@ -93,9 +93,9 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
      * The total storage size, in bytes, of the buckets.
      * </p>
      * <p>
-     * If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the latest
-     * version of each object in those buckets. This value doesn't reflect the storage size of all versions of the
-     * objects in the buckets.
+     * If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the
+     * latest version of each object in those buckets. This value doesn't reflect the storage size of all versions of
+     * the objects in the buckets.
      * </p>
      */
     private Long sizeInBytes;
@@ -104,9 +104,9 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
      * The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the buckets.
      * </p>
      * <p>
-     * If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the latest
-     * version of each applicable object in those buckets. This value doesn't reflect the storage size of all versions
-     * of the applicable objects in the buckets.
+     * If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the
+     * latest version of each applicable object in those buckets. This value doesn't reflect the storage size of all
+     * versions of the applicable objects in the buckets.
      * </p>
      */
     private Long sizeInBytesCompressed;
@@ -557,16 +557,16 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
      * The total storage size, in bytes, of the buckets.
      * </p>
      * <p>
-     * If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the latest
-     * version of each object in those buckets. This value doesn't reflect the storage size of all versions of the
-     * objects in the buckets.
+     * If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the
+     * latest version of each object in those buckets. This value doesn't reflect the storage size of all versions of
+     * the objects in the buckets.
      * </p>
      * 
      * @param sizeInBytes
      *        The total storage size, in bytes, of the buckets.</p>
      *        <p>
-     *        If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the
-     *        latest version of each object in those buckets. This value doesn't reflect the storage size of all
+     *        If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of
+     *        the latest version of each object in those buckets. This value doesn't reflect the storage size of all
      *        versions of the objects in the buckets.
      */
 
@@ -579,15 +579,15 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
      * The total storage size, in bytes, of the buckets.
      * </p>
      * <p>
-     * If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the latest
-     * version of each object in those buckets. This value doesn't reflect the storage size of all versions of the
-     * objects in the buckets.
+     * If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the
+     * latest version of each object in those buckets. This value doesn't reflect the storage size of all versions of
+     * the objects in the buckets.
      * </p>
      * 
      * @return The total storage size, in bytes, of the buckets.</p>
      *         <p>
-     *         If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the
-     *         latest version of each object in those buckets. This value doesn't reflect the storage size of all
+     *         If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of
+     *         the latest version of each object in those buckets. This value doesn't reflect the storage size of all
      *         versions of the objects in the buckets.
      */
 
@@ -600,16 +600,16 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
      * The total storage size, in bytes, of the buckets.
      * </p>
      * <p>
-     * If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the latest
-     * version of each object in those buckets. This value doesn't reflect the storage size of all versions of the
-     * objects in the buckets.
+     * If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the
+     * latest version of each object in those buckets. This value doesn't reflect the storage size of all versions of
+     * the objects in the buckets.
      * </p>
      * 
      * @param sizeInBytes
      *        The total storage size, in bytes, of the buckets.</p>
      *        <p>
-     *        If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the
-     *        latest version of each object in those buckets. This value doesn't reflect the storage size of all
+     *        If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of
+     *        the latest version of each object in those buckets. This value doesn't reflect the storage size of all
      *        versions of the objects in the buckets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -624,18 +624,18 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
      * The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the buckets.
      * </p>
      * <p>
-     * If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the latest
-     * version of each applicable object in those buckets. This value doesn't reflect the storage size of all versions
-     * of the applicable objects in the buckets.
+     * If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the
+     * latest version of each applicable object in those buckets. This value doesn't reflect the storage size of all
+     * versions of the applicable objects in the buckets.
      * </p>
      * 
      * @param sizeInBytesCompressed
      *        The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the
      *        buckets.</p>
      *        <p>
-     *        If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the
-     *        latest version of each applicable object in those buckets. This value doesn't reflect the storage size of
-     *        all versions of the applicable objects in the buckets.
+     *        If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of
+     *        the latest version of each applicable object in those buckets. This value doesn't reflect the storage size
+     *        of all versions of the applicable objects in the buckets.
      */
 
     public void setSizeInBytesCompressed(Long sizeInBytesCompressed) {
@@ -647,17 +647,17 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
      * The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the buckets.
      * </p>
      * <p>
-     * If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the latest
-     * version of each applicable object in those buckets. This value doesn't reflect the storage size of all versions
-     * of the applicable objects in the buckets.
+     * If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the
+     * latest version of each applicable object in those buckets. This value doesn't reflect the storage size of all
+     * versions of the applicable objects in the buckets.
      * </p>
      * 
      * @return The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the
      *         buckets.</p>
      *         <p>
-     *         If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the
-     *         latest version of each applicable object in those buckets. This value doesn't reflect the storage size of
-     *         all versions of the applicable objects in the buckets.
+     *         If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of
+     *         the latest version of each applicable object in those buckets. This value doesn't reflect the storage
+     *         size of all versions of the applicable objects in the buckets.
      */
 
     public Long getSizeInBytesCompressed() {
@@ -669,18 +669,18 @@ public class GetBucketStatisticsResult extends com.amazonaws.AmazonWebServiceRes
      * The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the buckets.
      * </p>
      * <p>
-     * If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the latest
-     * version of each applicable object in those buckets. This value doesn't reflect the storage size of all versions
-     * of the applicable objects in the buckets.
+     * If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of the
+     * latest version of each applicable object in those buckets. This value doesn't reflect the storage size of all
+     * versions of the applicable objects in the buckets.
      * </p>
      * 
      * @param sizeInBytesCompressed
      *        The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the
      *        buckets.</p>
      *        <p>
-     *        If versioning is enabled for any of the buckets, Macie calculates this value based on the size of the
-     *        latest version of each applicable object in those buckets. This value doesn't reflect the storage size of
-     *        all versions of the applicable objects in the buckets.
+     *        If versioning is enabled for any of the buckets, Amazon Macie calculates this value based on the size of
+     *        the latest version of each applicable object in those buckets. This value doesn't reflect the storage size
+     *        of all versions of the applicable objects in the buckets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

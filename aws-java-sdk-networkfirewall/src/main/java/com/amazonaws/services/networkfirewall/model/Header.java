@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The 5-tuple criteria for AWS Network Firewall to use to inspect packet headers in stateful traffic flow inspection.
- * Traffic flows that match the criteria are a match for the corresponding <a>StatefulRule</a>.
+ * The basic rule criteria for AWS Network Firewall to use to inspect packet headers in stateful traffic flow
+ * inspection. Traffic flows that match the criteria are a match for the corresponding <a>StatefulRule</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/Header" target="_top">AWS API
@@ -70,7 +70,7 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The source port to inspect for. You can specify an individual port, for example <code>1994</code> and you can
-     * specify a port range, for example <code>1990-1994</code>. To match with any port, specify <code>ANY</code>.
+     * specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>.
      * </p>
      */
     private String sourcePort;
@@ -116,7 +116,7 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The destination port to inspect for. You can specify an individual port, for example <code>1994</code> and you
-     * can specify a port range, for example <code>1990-1994</code>. To match with any port, specify <code>ANY</code>.
+     * can specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>.
      * </p>
      */
     private String destinationPort;
@@ -381,12 +381,12 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The source port to inspect for. You can specify an individual port, for example <code>1994</code> and you can
-     * specify a port range, for example <code>1990-1994</code>. To match with any port, specify <code>ANY</code>.
+     * specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>.
      * </p>
      * 
      * @param sourcePort
      *        The source port to inspect for. You can specify an individual port, for example <code>1994</code> and you
-     *        can specify a port range, for example <code>1990-1994</code>. To match with any port, specify
+     *        can specify a port range, for example <code>1990:1994</code>. To match with any port, specify
      *        <code>ANY</code>.
      */
 
@@ -397,11 +397,11 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The source port to inspect for. You can specify an individual port, for example <code>1994</code> and you can
-     * specify a port range, for example <code>1990-1994</code>. To match with any port, specify <code>ANY</code>.
+     * specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>.
      * </p>
      * 
      * @return The source port to inspect for. You can specify an individual port, for example <code>1994</code> and you
-     *         can specify a port range, for example <code>1990-1994</code>. To match with any port, specify
+     *         can specify a port range, for example <code>1990:1994</code>. To match with any port, specify
      *         <code>ANY</code>.
      */
 
@@ -412,12 +412,12 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The source port to inspect for. You can specify an individual port, for example <code>1994</code> and you can
-     * specify a port range, for example <code>1990-1994</code>. To match with any port, specify <code>ANY</code>.
+     * specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>.
      * </p>
      * 
      * @param sourcePort
      *        The source port to inspect for. You can specify an individual port, for example <code>1994</code> and you
-     *        can specify a port range, for example <code>1990-1994</code>. To match with any port, specify
+     *        can specify a port range, for example <code>1990:1994</code>. To match with any port, specify
      *        <code>ANY</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -696,12 +696,12 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The destination port to inspect for. You can specify an individual port, for example <code>1994</code> and you
-     * can specify a port range, for example <code>1990-1994</code>. To match with any port, specify <code>ANY</code>.
+     * can specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>.
      * </p>
      * 
      * @param destinationPort
      *        The destination port to inspect for. You can specify an individual port, for example <code>1994</code> and
-     *        you can specify a port range, for example <code>1990-1994</code>. To match with any port, specify
+     *        you can specify a port range, for example <code>1990:1994</code>. To match with any port, specify
      *        <code>ANY</code>.
      */
 
@@ -712,11 +712,11 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The destination port to inspect for. You can specify an individual port, for example <code>1994</code> and you
-     * can specify a port range, for example <code>1990-1994</code>. To match with any port, specify <code>ANY</code>.
+     * can specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>.
      * </p>
      * 
      * @return The destination port to inspect for. You can specify an individual port, for example <code>1994</code>
-     *         and you can specify a port range, for example <code>1990-1994</code>. To match with any port, specify
+     *         and you can specify a port range, for example <code>1990:1994</code>. To match with any port, specify
      *         <code>ANY</code>.
      */
 
@@ -727,12 +727,12 @@ public class Header implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The destination port to inspect for. You can specify an individual port, for example <code>1994</code> and you
-     * can specify a port range, for example <code>1990-1994</code>. To match with any port, specify <code>ANY</code>.
+     * can specify a port range, for example <code>1990:1994</code>. To match with any port, specify <code>ANY</code>.
      * </p>
      * 
      * @param destinationPort
      *        The destination port to inspect for. You can specify an individual port, for example <code>1994</code> and
-     *        you can specify a port range, for example <code>1990-1994</code>. To match with any port, specify
+     *        you can specify a port range, for example <code>1990:1994</code>. To match with any port, specify
      *        <code>ANY</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

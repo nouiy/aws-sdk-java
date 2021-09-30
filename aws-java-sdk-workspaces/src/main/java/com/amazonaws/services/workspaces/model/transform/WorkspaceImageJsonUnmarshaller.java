@@ -88,6 +88,10 @@ public class WorkspaceImageJsonUnmarshaller implements Unmarshaller<WorkspaceIma
                     context.nextToken();
                     workspaceImage.setOwnerAccountId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Updates", targetDepth)) {
+                    context.nextToken();
+                    workspaceImage.setUpdates(UpdateResultJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

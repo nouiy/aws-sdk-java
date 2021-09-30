@@ -160,6 +160,39 @@ public class AWSDataExchangeAsyncClient extends AWSDataExchangeClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateEventActionResult> createEventActionAsync(CreateEventActionRequest request) {
+
+        return createEventActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEventActionResult> createEventActionAsync(final CreateEventActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateEventActionRequest, CreateEventActionResult> asyncHandler) {
+        final CreateEventActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateEventActionResult>() {
+            @Override
+            public CreateEventActionResult call() throws Exception {
+                CreateEventActionResult result = null;
+
+                try {
+                    result = executeCreateEventAction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateJobResult> createJobAsync(CreateJobRequest request) {
 
         return createJobAsync(request, null);
@@ -292,6 +325,39 @@ public class AWSDataExchangeAsyncClient extends AWSDataExchangeClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteEventActionResult> deleteEventActionAsync(DeleteEventActionRequest request) {
+
+        return deleteEventActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEventActionResult> deleteEventActionAsync(final DeleteEventActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEventActionRequest, DeleteEventActionResult> asyncHandler) {
+        final DeleteEventActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEventActionResult>() {
+            @Override
+            public DeleteEventActionResult call() throws Exception {
+                DeleteEventActionResult result = null;
+
+                try {
+                    result = executeDeleteEventAction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteRevisionResult> deleteRevisionAsync(DeleteRevisionRequest request) {
 
         return deleteRevisionAsync(request, null);
@@ -375,6 +441,39 @@ public class AWSDataExchangeAsyncClient extends AWSDataExchangeClient implements
 
                 try {
                     result = executeGetDataSet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventActionResult> getEventActionAsync(GetEventActionRequest request) {
+
+        return getEventActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventActionResult> getEventActionAsync(final GetEventActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEventActionRequest, GetEventActionResult> asyncHandler) {
+        final GetEventActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEventActionResult>() {
+            @Override
+            public GetEventActionResult call() throws Exception {
+                GetEventActionResult result = null;
+
+                try {
+                    result = executeGetEventAction(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -507,6 +606,39 @@ public class AWSDataExchangeAsyncClient extends AWSDataExchangeClient implements
 
                 try {
                     result = executeListDataSets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventActionsResult> listEventActionsAsync(ListEventActionsRequest request) {
+
+        return listEventActionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventActionsResult> listEventActionsAsync(final ListEventActionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEventActionsRequest, ListEventActionsResult> asyncHandler) {
+        final ListEventActionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEventActionsResult>() {
+            @Override
+            public ListEventActionsResult call() throws Exception {
+                ListEventActionsResult result = null;
+
+                try {
+                    result = executeListEventActions(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -771,6 +903,39 @@ public class AWSDataExchangeAsyncClient extends AWSDataExchangeClient implements
 
                 try {
                     result = executeUpdateDataSet(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventActionResult> updateEventActionAsync(UpdateEventActionRequest request) {
+
+        return updateEventActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventActionResult> updateEventActionAsync(final UpdateEventActionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateEventActionRequest, UpdateEventActionResult> asyncHandler) {
+        final UpdateEventActionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateEventActionResult>() {
+            @Override
+            public UpdateEventActionResult call() throws Exception {
+                UpdateEventActionResult result = null;
+
+                try {
+                    result = executeUpdateEventAction(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

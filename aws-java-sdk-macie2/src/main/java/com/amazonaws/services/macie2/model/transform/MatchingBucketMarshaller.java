@@ -35,6 +35,10 @@ public class MatchingBucketMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("classifiableObjectCount").build();
     private static final MarshallingInfo<Long> CLASSIFIABLESIZEINBYTES_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("classifiableSizeInBytes").build();
+    private static final MarshallingInfo<String> ERRORCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("errorCode").build();
+    private static final MarshallingInfo<String> ERRORMESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("errorMessage").build();
     private static final MarshallingInfo<StructuredPojo> JOBDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobDetails").build();
     private static final MarshallingInfo<Long> OBJECTCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
@@ -70,6 +74,8 @@ public class MatchingBucketMarshaller {
             protocolMarshaller.marshall(matchingBucket.getBucketName(), BUCKETNAME_BINDING);
             protocolMarshaller.marshall(matchingBucket.getClassifiableObjectCount(), CLASSIFIABLEOBJECTCOUNT_BINDING);
             protocolMarshaller.marshall(matchingBucket.getClassifiableSizeInBytes(), CLASSIFIABLESIZEINBYTES_BINDING);
+            protocolMarshaller.marshall(matchingBucket.getErrorCode(), ERRORCODE_BINDING);
+            protocolMarshaller.marshall(matchingBucket.getErrorMessage(), ERRORMESSAGE_BINDING);
             protocolMarshaller.marshall(matchingBucket.getJobDetails(), JOBDETAILS_BINDING);
             protocolMarshaller.marshall(matchingBucket.getObjectCount(), OBJECTCOUNT_BINDING);
             protocolMarshaller.marshall(matchingBucket.getObjectCountByEncryptionType(), OBJECTCOUNTBYENCRYPTIONTYPE_BINDING);

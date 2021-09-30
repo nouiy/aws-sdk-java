@@ -47,6 +47,8 @@ public class WorkspaceImageMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Created").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> OWNERACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OwnerAccountId").build();
+    private static final MarshallingInfo<StructuredPojo> UPDATES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Updates").build();
 
     private static final WorkspaceImageMarshaller instance = new WorkspaceImageMarshaller();
 
@@ -74,6 +76,7 @@ public class WorkspaceImageMarshaller {
             protocolMarshaller.marshall(workspaceImage.getErrorMessage(), ERRORMESSAGE_BINDING);
             protocolMarshaller.marshall(workspaceImage.getCreated(), CREATED_BINDING);
             protocolMarshaller.marshall(workspaceImage.getOwnerAccountId(), OWNERACCOUNTID_BINDING);
+            protocolMarshaller.marshall(workspaceImage.getUpdates(), UPDATES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

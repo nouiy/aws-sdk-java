@@ -32,24 +32,25 @@ public class ConnectionAliasPermission implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The identifier of the AWS account that the connection alias is shared with.
+     * The identifier of the Amazon Web Services account that the connection alias is shared with.
      * </p>
      */
     private String sharedAccountId;
     /**
      * <p>
-     * Indicates whether the specified AWS account is allowed to associate the connection alias with a directory.
+     * Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias with a
+     * directory.
      * </p>
      */
     private Boolean allowAssociation;
 
     /**
      * <p>
-     * The identifier of the AWS account that the connection alias is shared with.
+     * The identifier of the Amazon Web Services account that the connection alias is shared with.
      * </p>
      * 
      * @param sharedAccountId
-     *        The identifier of the AWS account that the connection alias is shared with.
+     *        The identifier of the Amazon Web Services account that the connection alias is shared with.
      */
 
     public void setSharedAccountId(String sharedAccountId) {
@@ -58,10 +59,10 @@ public class ConnectionAliasPermission implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The identifier of the AWS account that the connection alias is shared with.
+     * The identifier of the Amazon Web Services account that the connection alias is shared with.
      * </p>
      * 
-     * @return The identifier of the AWS account that the connection alias is shared with.
+     * @return The identifier of the Amazon Web Services account that the connection alias is shared with.
      */
 
     public String getSharedAccountId() {
@@ -70,11 +71,11 @@ public class ConnectionAliasPermission implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The identifier of the AWS account that the connection alias is shared with.
+     * The identifier of the Amazon Web Services account that the connection alias is shared with.
      * </p>
      * 
      * @param sharedAccountId
-     *        The identifier of the AWS account that the connection alias is shared with.
+     *        The identifier of the Amazon Web Services account that the connection alias is shared with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,11 +86,13 @@ public class ConnectionAliasPermission implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether the specified AWS account is allowed to associate the connection alias with a directory.
+     * Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias with a
+     * directory.
      * </p>
      * 
      * @param allowAssociation
-     *        Indicates whether the specified AWS account is allowed to associate the connection alias with a directory.
+     *        Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias
+     *        with a directory.
      */
 
     public void setAllowAssociation(Boolean allowAssociation) {
@@ -98,11 +101,12 @@ public class ConnectionAliasPermission implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether the specified AWS account is allowed to associate the connection alias with a directory.
+     * Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias with a
+     * directory.
      * </p>
      * 
-     * @return Indicates whether the specified AWS account is allowed to associate the connection alias with a
-     *         directory.
+     * @return Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias
+     *         with a directory.
      */
 
     public Boolean getAllowAssociation() {
@@ -111,11 +115,13 @@ public class ConnectionAliasPermission implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether the specified AWS account is allowed to associate the connection alias with a directory.
+     * Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias with a
+     * directory.
      * </p>
      * 
      * @param allowAssociation
-     *        Indicates whether the specified AWS account is allowed to associate the connection alias with a directory.
+     *        Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias
+     *        with a directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +132,12 @@ public class ConnectionAliasPermission implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether the specified AWS account is allowed to associate the connection alias with a directory.
+     * Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias with a
+     * directory.
      * </p>
      * 
-     * @return Indicates whether the specified AWS account is allowed to associate the connection alias with a
-     *         directory.
+     * @return Indicates whether the specified Amazon Web Services account is allowed to associate the connection alias
+     *         with a directory.
      */
 
     public Boolean isAllowAssociation() {

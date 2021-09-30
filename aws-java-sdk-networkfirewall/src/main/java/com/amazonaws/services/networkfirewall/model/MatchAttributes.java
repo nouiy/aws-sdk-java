@@ -50,7 +50,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      */
     private java.util.List<PortRange> sourcePorts;
@@ -61,7 +61,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      */
     private java.util.List<PortRange> destinationPorts;
@@ -243,14 +243,14 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      * 
      * @return The source ports to inspect for. If not specified, this matches with any source port. This setting is
      *         only used for protocols 6 (TCP) and 17 (UDP). </p>
      *         <p>
      *         You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for
-     *         example <code>1990-1994</code>.
+     *         example <code>1990:1994</code>.
      */
 
     public java.util.List<PortRange> getSourcePorts() {
@@ -264,7 +264,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      * 
      * @param sourcePorts
@@ -272,7 +272,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      *        used for protocols 6 (TCP) and 17 (UDP). </p>
      *        <p>
      *        You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for
-     *        example <code>1990-1994</code>.
+     *        example <code>1990:1994</code>.
      */
 
     public void setSourcePorts(java.util.Collection<PortRange> sourcePorts) {
@@ -291,7 +291,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -304,7 +304,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      *        used for protocols 6 (TCP) and 17 (UDP). </p>
      *        <p>
      *        You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for
-     *        example <code>1990-1994</code>.
+     *        example <code>1990:1994</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -325,7 +325,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      * 
      * @param sourcePorts
@@ -333,7 +333,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      *        used for protocols 6 (TCP) and 17 (UDP). </p>
      *        <p>
      *        You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for
-     *        example <code>1990-1994</code>.
+     *        example <code>1990:1994</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -349,14 +349,14 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      * 
      * @return The destination ports to inspect for. If not specified, this matches with any destination port. This
      *         setting is only used for protocols 6 (TCP) and 17 (UDP). </p>
      *         <p>
      *         You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for
-     *         example <code>1990-1994</code>.
+     *         example <code>1990:1994</code>.
      */
 
     public java.util.List<PortRange> getDestinationPorts() {
@@ -370,7 +370,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      * 
      * @param destinationPorts
@@ -378,7 +378,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      *        setting is only used for protocols 6 (TCP) and 17 (UDP). </p>
      *        <p>
      *        You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for
-     *        example <code>1990-1994</code>.
+     *        example <code>1990:1994</code>.
      */
 
     public void setDestinationPorts(java.util.Collection<PortRange> destinationPorts) {
@@ -397,7 +397,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -410,7 +410,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      *        setting is only used for protocols 6 (TCP) and 17 (UDP). </p>
      *        <p>
      *        You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for
-     *        example <code>1990-1994</code>.
+     *        example <code>1990:1994</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -431,7 +431,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * <p>
      * You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for example
-     * <code>1990-1994</code>.
+     * <code>1990:1994</code>.
      * </p>
      * 
      * @param destinationPorts
@@ -439,7 +439,7 @@ public class MatchAttributes implements Serializable, Cloneable, StructuredPojo 
      *        setting is only used for protocols 6 (TCP) and 17 (UDP). </p>
      *        <p>
      *        You can specify individual ports, for example <code>1994</code> and you can specify port ranges, for
-     *        example <code>1990-1994</code>.
+     *        example <code>1990:1994</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -90,6 +90,18 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the rule group rules.
+     * </p>
+     */
+    private Integer consumedCapacity;
+    /**
+     * <p>
+     * The number of firewall policies that use this rule group.
+     * </p>
+     */
+    private Integer numberOfAssociations;
 
     /**
      * <p>
@@ -551,6 +563,86 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * The number of capacity units currently consumed by the rule group rules.
+     * </p>
+     * 
+     * @param consumedCapacity
+     *        The number of capacity units currently consumed by the rule group rules.
+     */
+
+    public void setConsumedCapacity(Integer consumedCapacity) {
+        this.consumedCapacity = consumedCapacity;
+    }
+
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the rule group rules.
+     * </p>
+     * 
+     * @return The number of capacity units currently consumed by the rule group rules.
+     */
+
+    public Integer getConsumedCapacity() {
+        return this.consumedCapacity;
+    }
+
+    /**
+     * <p>
+     * The number of capacity units currently consumed by the rule group rules.
+     * </p>
+     * 
+     * @param consumedCapacity
+     *        The number of capacity units currently consumed by the rule group rules.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleGroupResponse withConsumedCapacity(Integer consumedCapacity) {
+        setConsumedCapacity(consumedCapacity);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of firewall policies that use this rule group.
+     * </p>
+     * 
+     * @param numberOfAssociations
+     *        The number of firewall policies that use this rule group.
+     */
+
+    public void setNumberOfAssociations(Integer numberOfAssociations) {
+        this.numberOfAssociations = numberOfAssociations;
+    }
+
+    /**
+     * <p>
+     * The number of firewall policies that use this rule group.
+     * </p>
+     * 
+     * @return The number of firewall policies that use this rule group.
+     */
+
+    public Integer getNumberOfAssociations() {
+        return this.numberOfAssociations;
+    }
+
+    /**
+     * <p>
+     * The number of firewall policies that use this rule group.
+     * </p>
+     * 
+     * @param numberOfAssociations
+     *        The number of firewall policies that use this rule group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RuleGroupResponse withNumberOfAssociations(Integer numberOfAssociations) {
+        setNumberOfAssociations(numberOfAssociations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -577,7 +669,11 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
         if (getRuleGroupStatus() != null)
             sb.append("RuleGroupStatus: ").append(getRuleGroupStatus()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getConsumedCapacity() != null)
+            sb.append("ConsumedCapacity: ").append(getConsumedCapacity()).append(",");
+        if (getNumberOfAssociations() != null)
+            sb.append("NumberOfAssociations: ").append(getNumberOfAssociations());
         sb.append("}");
         return sb.toString();
     }
@@ -624,6 +720,14 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getConsumedCapacity() == null ^ this.getConsumedCapacity() == null)
+            return false;
+        if (other.getConsumedCapacity() != null && other.getConsumedCapacity().equals(this.getConsumedCapacity()) == false)
+            return false;
+        if (other.getNumberOfAssociations() == null ^ this.getNumberOfAssociations() == null)
+            return false;
+        if (other.getNumberOfAssociations() != null && other.getNumberOfAssociations().equals(this.getNumberOfAssociations()) == false)
+            return false;
         return true;
     }
 
@@ -640,6 +744,8 @@ public class RuleGroupResponse implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getCapacity() == null) ? 0 : getCapacity().hashCode());
         hashCode = prime * hashCode + ((getRuleGroupStatus() == null) ? 0 : getRuleGroupStatus().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getConsumedCapacity() == null) ? 0 : getConsumedCapacity().hashCode());
+        hashCode = prime * hashCode + ((getNumberOfAssociations() == null) ? 0 : getNumberOfAssociations().hashCode());
         return hashCode;
     }
 

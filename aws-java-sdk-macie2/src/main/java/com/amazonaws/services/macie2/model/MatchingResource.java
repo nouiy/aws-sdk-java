@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides statistical data and other information about an Amazon Web Services resource that Amazon Macie monitors and
- * analyzes.
+ * analyzes for your account.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/MatchingResource" target="_top">AWS API

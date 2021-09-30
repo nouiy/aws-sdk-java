@@ -1153,6 +1153,73 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Deletes the mobile device access override for the given WorkMail organization, user, and device.
+     * </p>
+     * 
+     * @param deleteMobileDeviceAccessOverrideRequest
+     * @return Result of the DeleteMobileDeviceAccessOverride operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws EntityNotFoundException
+     *         The identifier supplied for the user, group, or resource does not exist in your organization.
+     * @sample AmazonWorkMail.DeleteMobileDeviceAccessOverride
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteMobileDeviceAccessOverride"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteMobileDeviceAccessOverrideResult deleteMobileDeviceAccessOverride(DeleteMobileDeviceAccessOverrideRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteMobileDeviceAccessOverride(request);
+    }
+
+    @SdkInternalApi
+    final DeleteMobileDeviceAccessOverrideResult executeDeleteMobileDeviceAccessOverride(
+            DeleteMobileDeviceAccessOverrideRequest deleteMobileDeviceAccessOverrideRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteMobileDeviceAccessOverrideRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteMobileDeviceAccessOverrideRequest> request = null;
+        Response<DeleteMobileDeviceAccessOverrideResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteMobileDeviceAccessOverrideRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteMobileDeviceAccessOverrideRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteMobileDeviceAccessOverride");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteMobileDeviceAccessOverrideResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteMobileDeviceAccessOverrideResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a mobile device access rule for the specified Amazon WorkMail organization.
      * </p>
      * 
@@ -2278,6 +2345,74 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Gets the mobile device access override for the given WorkMail organization, user, and device.
+     * </p>
+     * 
+     * @param getMobileDeviceAccessOverrideRequest
+     * @return Result of the GetMobileDeviceAccessOverride operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws EntityNotFoundException
+     *         The identifier supplied for the user, group, or resource does not exist in your organization.
+     * @throws ResourceNotFoundException
+     *         The resource cannot be found.
+     * @sample AmazonWorkMail.GetMobileDeviceAccessOverride
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/GetMobileDeviceAccessOverride"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetMobileDeviceAccessOverrideResult getMobileDeviceAccessOverride(GetMobileDeviceAccessOverrideRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetMobileDeviceAccessOverride(request);
+    }
+
+    @SdkInternalApi
+    final GetMobileDeviceAccessOverrideResult executeGetMobileDeviceAccessOverride(GetMobileDeviceAccessOverrideRequest getMobileDeviceAccessOverrideRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getMobileDeviceAccessOverrideRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetMobileDeviceAccessOverrideRequest> request = null;
+        Response<GetMobileDeviceAccessOverrideResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetMobileDeviceAccessOverrideRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getMobileDeviceAccessOverrideRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetMobileDeviceAccessOverride");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetMobileDeviceAccessOverrideResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetMobileDeviceAccessOverrideResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the access control rules for the specified organization.
      * </p>
      * 
@@ -2653,6 +2788,73 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
             HttpResponseHandler<AmazonWebServiceResponse<ListMailboxPermissionsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListMailboxPermissionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all the mobile device access overrides for any given combination of WorkMail organization, user, or device.
+     * </p>
+     * 
+     * @param listMobileDeviceAccessOverridesRequest
+     * @return Result of the ListMobileDeviceAccessOverrides operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws EntityNotFoundException
+     *         The identifier supplied for the user, group, or resource does not exist in your organization.
+     * @sample AmazonWorkMail.ListMobileDeviceAccessOverrides
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListMobileDeviceAccessOverrides"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListMobileDeviceAccessOverridesResult listMobileDeviceAccessOverrides(ListMobileDeviceAccessOverridesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListMobileDeviceAccessOverrides(request);
+    }
+
+    @SdkInternalApi
+    final ListMobileDeviceAccessOverridesResult executeListMobileDeviceAccessOverrides(
+            ListMobileDeviceAccessOverridesRequest listMobileDeviceAccessOverridesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listMobileDeviceAccessOverridesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListMobileDeviceAccessOverridesRequest> request = null;
+        Response<ListMobileDeviceAccessOverridesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListMobileDeviceAccessOverridesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listMobileDeviceAccessOverridesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListMobileDeviceAccessOverrides");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListMobileDeviceAccessOverridesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListMobileDeviceAccessOverridesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3160,6 +3362,75 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
             HttpResponseHandler<AmazonWebServiceResponse<PutMailboxPermissionsResult>> responseHandler = protocolFactory
                     .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                             new PutMailboxPermissionsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates or updates a mobile device access override for the given WorkMail organization, user, and device.
+     * </p>
+     * 
+     * @param putMobileDeviceAccessOverrideRequest
+     * @return Result of the PutMobileDeviceAccessOverride operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws EntityNotFoundException
+     *         The identifier supplied for the user, group, or resource does not exist in your organization.
+     * @throws EntityStateException
+     *         You are performing an operation on a user, group, or resource that isn't in the expected state, such as
+     *         trying to delete an active user.
+     * @sample AmazonWorkMail.PutMobileDeviceAccessOverride
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutMobileDeviceAccessOverride"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutMobileDeviceAccessOverrideResult putMobileDeviceAccessOverride(PutMobileDeviceAccessOverrideRequest request) {
+        request = beforeClientExecution(request);
+        return executePutMobileDeviceAccessOverride(request);
+    }
+
+    @SdkInternalApi
+    final PutMobileDeviceAccessOverrideResult executePutMobileDeviceAccessOverride(PutMobileDeviceAccessOverrideRequest putMobileDeviceAccessOverrideRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putMobileDeviceAccessOverrideRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutMobileDeviceAccessOverrideRequest> request = null;
+        Response<PutMobileDeviceAccessOverrideResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutMobileDeviceAccessOverrideRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putMobileDeviceAccessOverrideRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutMobileDeviceAccessOverride");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutMobileDeviceAccessOverrideResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutMobileDeviceAccessOverrideResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

@@ -31,8 +31,8 @@ public class BucketCriteriaAdditionalProperties implements Serializable, Cloneab
 
     /**
      * <p>
-     * The value for the property matches (equals) the specified value. If you specify multiple values, Macie uses OR
-     * logic to join the values.
+     * The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie
+     * uses OR logic to join the values.
      * </p>
      */
     private java.util.List<String> eq;
@@ -76,12 +76,12 @@ public class BucketCriteriaAdditionalProperties implements Serializable, Cloneab
 
     /**
      * <p>
-     * The value for the property matches (equals) the specified value. If you specify multiple values, Macie uses OR
-     * logic to join the values.
+     * The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie
+     * uses OR logic to join the values.
      * </p>
      * 
-     * @return The value for the property matches (equals) the specified value. If you specify multiple values, Macie
-     *         uses OR logic to join the values.
+     * @return The value for the property matches (equals) the specified value. If you specify multiple values, Amazon
+     *         Macie uses OR logic to join the values.
      */
 
     public java.util.List<String> getEq() {
@@ -90,13 +90,13 @@ public class BucketCriteriaAdditionalProperties implements Serializable, Cloneab
 
     /**
      * <p>
-     * The value for the property matches (equals) the specified value. If you specify multiple values, Macie uses OR
-     * logic to join the values.
+     * The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie
+     * uses OR logic to join the values.
      * </p>
      * 
      * @param eq
-     *        The value for the property matches (equals) the specified value. If you specify multiple values, Macie
-     *        uses OR logic to join the values.
+     *        The value for the property matches (equals) the specified value. If you specify multiple values, Amazon
+     *        Macie uses OR logic to join the values.
      */
 
     public void setEq(java.util.Collection<String> eq) {
@@ -110,8 +110,8 @@ public class BucketCriteriaAdditionalProperties implements Serializable, Cloneab
 
     /**
      * <p>
-     * The value for the property matches (equals) the specified value. If you specify multiple values, Macie uses OR
-     * logic to join the values.
+     * The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie
+     * uses OR logic to join the values.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -120,8 +120,8 @@ public class BucketCriteriaAdditionalProperties implements Serializable, Cloneab
      * </p>
      * 
      * @param eq
-     *        The value for the property matches (equals) the specified value. If you specify multiple values, Macie
-     *        uses OR logic to join the values.
+     *        The value for the property matches (equals) the specified value. If you specify multiple values, Amazon
+     *        Macie uses OR logic to join the values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -137,13 +137,13 @@ public class BucketCriteriaAdditionalProperties implements Serializable, Cloneab
 
     /**
      * <p>
-     * The value for the property matches (equals) the specified value. If you specify multiple values, Macie uses OR
-     * logic to join the values.
+     * The value for the property matches (equals) the specified value. If you specify multiple values, Amazon Macie
+     * uses OR logic to join the values.
      * </p>
      * 
      * @param eq
-     *        The value for the property matches (equals) the specified value. If you specify multiple values, Macie
-     *        uses OR logic to join the values.
+     *        The value for the property matches (equals) the specified value. If you specify multiple values, Amazon
+     *        Macie uses OR logic to join the values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

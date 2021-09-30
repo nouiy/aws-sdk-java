@@ -37,8 +37,8 @@ public class ServerSideEncryption implements Serializable, Cloneable, Structured
     private String encryptionType;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) or unique identifier (key ID) for the Key Management Service (KMS) customer master
-     * key (CMK) that's used to encrypt data in the bucket or the object. If an KMS CMK isn't used, this value is null.
+     * The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used to encrypt data in the
+     * bucket or the object. This value is null if an KMS key isn't used to encrypt the data.
      * </p>
      */
     private String kmsMasterKeyId;
@@ -116,14 +116,13 @@ public class ServerSideEncryption implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) or unique identifier (key ID) for the Key Management Service (KMS) customer master
-     * key (CMK) that's used to encrypt data in the bucket or the object. If an KMS CMK isn't used, this value is null.
+     * The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used to encrypt data in the
+     * bucket or the object. This value is null if an KMS key isn't used to encrypt the data.
      * </p>
      * 
      * @param kmsMasterKeyId
-     *        The Amazon Resource Name (ARN) or unique identifier (key ID) for the Key Management Service (KMS) customer
-     *        master key (CMK) that's used to encrypt data in the bucket or the object. If an KMS CMK isn't used, this
-     *        value is null.
+     *        The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used to encrypt data
+     *        in the bucket or the object. This value is null if an KMS key isn't used to encrypt the data.
      */
 
     public void setKmsMasterKeyId(String kmsMasterKeyId) {
@@ -132,13 +131,12 @@ public class ServerSideEncryption implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) or unique identifier (key ID) for the Key Management Service (KMS) customer master
-     * key (CMK) that's used to encrypt data in the bucket or the object. If an KMS CMK isn't used, this value is null.
+     * The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used to encrypt data in the
+     * bucket or the object. This value is null if an KMS key isn't used to encrypt the data.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) or unique identifier (key ID) for the Key Management Service (KMS)
-     *         customer master key (CMK) that's used to encrypt data in the bucket or the object. If an KMS CMK isn't
-     *         used, this value is null.
+     * @return The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used to encrypt data
+     *         in the bucket or the object. This value is null if an KMS key isn't used to encrypt the data.
      */
 
     public String getKmsMasterKeyId() {
@@ -147,14 +145,13 @@ public class ServerSideEncryption implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) or unique identifier (key ID) for the Key Management Service (KMS) customer master
-     * key (CMK) that's used to encrypt data in the bucket or the object. If an KMS CMK isn't used, this value is null.
+     * The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used to encrypt data in the
+     * bucket or the object. This value is null if an KMS key isn't used to encrypt the data.
      * </p>
      * 
      * @param kmsMasterKeyId
-     *        The Amazon Resource Name (ARN) or unique identifier (key ID) for the Key Management Service (KMS) customer
-     *        master key (CMK) that's used to encrypt data in the bucket or the object. If an KMS CMK isn't used, this
-     *        value is null.
+     *        The Amazon Resource Name (ARN) or unique identifier (key ID) for the KMS key that's used to encrypt data
+     *        in the bucket or the object. This value is null if an KMS key isn't used to encrypt the data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

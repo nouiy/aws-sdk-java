@@ -40,6 +40,12 @@ public class FirewallPolicyResponseMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FirewallPolicyStatus").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<Integer> CONSUMEDSTATELESSRULECAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConsumedStatelessRuleCapacity").build();
+    private static final MarshallingInfo<Integer> CONSUMEDSTATEFULRULECAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConsumedStatefulRuleCapacity").build();
+    private static final MarshallingInfo<Integer> NUMBEROFASSOCIATIONS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NumberOfAssociations").build();
 
     private static final FirewallPolicyResponseMarshaller instance = new FirewallPolicyResponseMarshaller();
 
@@ -63,6 +69,9 @@ public class FirewallPolicyResponseMarshaller {
             protocolMarshaller.marshall(firewallPolicyResponse.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(firewallPolicyResponse.getFirewallPolicyStatus(), FIREWALLPOLICYSTATUS_BINDING);
             protocolMarshaller.marshall(firewallPolicyResponse.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(firewallPolicyResponse.getConsumedStatelessRuleCapacity(), CONSUMEDSTATELESSRULECAPACITY_BINDING);
+            protocolMarshaller.marshall(firewallPolicyResponse.getConsumedStatefulRuleCapacity(), CONSUMEDSTATEFULRULECAPACITY_BINDING);
+            protocolMarshaller.marshall(firewallPolicyResponse.getNumberOfAssociations(), NUMBEROFASSOCIATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

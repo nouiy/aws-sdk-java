@@ -36,7 +36,7 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
     private String workspaceId;
     /**
      * <p>
-     * The identifier of the AWS Directory Service directory for the WorkSpace.
+     * The identifier of the Directory Service directory for the WorkSpace.
      * </p>
      */
     private String directoryId;
@@ -101,8 +101,8 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
     private String computerName;
     /**
      * <p>
-     * The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces
-     * does not support asymmetric CMKs.
+     * The symmetric KMS key used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support
+     * asymmetric KMS keys.
      * </p>
      */
     private String volumeEncryptionKey;
@@ -173,11 +173,11 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS Directory Service directory for the WorkSpace.
+     * The identifier of the Directory Service directory for the WorkSpace.
      * </p>
      * 
      * @param directoryId
-     *        The identifier of the AWS Directory Service directory for the WorkSpace.
+     *        The identifier of the Directory Service directory for the WorkSpace.
      */
 
     public void setDirectoryId(String directoryId) {
@@ -186,10 +186,10 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS Directory Service directory for the WorkSpace.
+     * The identifier of the Directory Service directory for the WorkSpace.
      * </p>
      * 
-     * @return The identifier of the AWS Directory Service directory for the WorkSpace.
+     * @return The identifier of the Directory Service directory for the WorkSpace.
      */
 
     public String getDirectoryId() {
@@ -198,11 +198,11 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS Directory Service directory for the WorkSpace.
+     * The identifier of the Directory Service directory for the WorkSpace.
      * </p>
      * 
      * @param directoryId
-     *        The identifier of the AWS Directory Service directory for the WorkSpace.
+     *        The identifier of the Directory Service directory for the WorkSpace.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -666,13 +666,13 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces
-     * does not support asymmetric CMKs.
+     * The symmetric KMS key used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support
+     * asymmetric KMS keys.
      * </p>
      * 
      * @param volumeEncryptionKey
-     *        The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon
-     *        WorkSpaces does not support asymmetric CMKs.
+     *        The symmetric KMS key used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support
+     *        asymmetric KMS keys.
      */
 
     public void setVolumeEncryptionKey(String volumeEncryptionKey) {
@@ -681,12 +681,12 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces
-     * does not support asymmetric CMKs.
+     * The symmetric KMS key used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support
+     * asymmetric KMS keys.
      * </p>
      * 
-     * @return The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon
-     *         WorkSpaces does not support asymmetric CMKs.
+     * @return The symmetric KMS key used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support
+     *         asymmetric KMS keys.
      */
 
     public String getVolumeEncryptionKey() {
@@ -695,13 +695,13 @@ public class Workspace implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces
-     * does not support asymmetric CMKs.
+     * The symmetric KMS key used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support
+     * asymmetric KMS keys.
      * </p>
      * 
      * @param volumeEncryptionKey
-     *        The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon
-     *        WorkSpaces does not support asymmetric CMKs.
+     *        The symmetric KMS key used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support
+     *        asymmetric KMS keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

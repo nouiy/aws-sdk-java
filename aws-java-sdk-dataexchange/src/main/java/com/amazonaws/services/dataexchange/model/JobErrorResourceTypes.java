@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum JobErrorResourceTypes {
 
     REVISION("REVISION"),
-    ASSET("ASSET");
+    ASSET("ASSET"),
+    DATA_SET("DATA_SET");
 
     private String value;
 

@@ -44,6 +44,10 @@ public class RuleGroupResponseMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RuleGroupStatus").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<Integer> CONSUMEDCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConsumedCapacity").build();
+    private static final MarshallingInfo<Integer> NUMBEROFASSOCIATIONS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NumberOfAssociations").build();
 
     private static final RuleGroupResponseMarshaller instance = new RuleGroupResponseMarshaller();
 
@@ -69,6 +73,8 @@ public class RuleGroupResponseMarshaller {
             protocolMarshaller.marshall(ruleGroupResponse.getCapacity(), CAPACITY_BINDING);
             protocolMarshaller.marshall(ruleGroupResponse.getRuleGroupStatus(), RULEGROUPSTATUS_BINDING);
             protocolMarshaller.marshall(ruleGroupResponse.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(ruleGroupResponse.getConsumedCapacity(), CONSUMEDCAPACITY_BINDING);
+            protocolMarshaller.marshall(ruleGroupResponse.getNumberOfAssociations(), NUMBEROFASSOCIATIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

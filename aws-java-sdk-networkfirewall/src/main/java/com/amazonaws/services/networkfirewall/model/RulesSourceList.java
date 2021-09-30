@@ -30,7 +30,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * variable to include the CIDR range of the deployment VPC plus the other CIDR ranges. For more information, see
  * <a>RuleVariables</a> in this guide and <a
  * href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/stateful-rule-groups-domain-names.html"
- * >Stateful domain list rule groups in AWS Network Firewall</a> in the <i>Network Firewall Developer Guide</i>
+ * >Stateful domain list rule groups in AWS Network Firewall</a> in the <i>Network Firewall Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/RulesSourceList" target="_top">AWS
@@ -62,7 +62,7 @@ public class RulesSourceList implements Serializable, Cloneable, StructuredPojo 
     private java.util.List<String> targets;
     /**
      * <p>
-     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      * <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * </p>
      */
@@ -266,11 +266,11 @@ public class RulesSourceList implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      * <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * </p>
      * 
-     * @return The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     * @return The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      *         <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * @see TargetType
      */
@@ -281,12 +281,12 @@ public class RulesSourceList implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      * <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * </p>
      * 
      * @param targetTypes
-     *        The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     *        The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      *        <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * @see TargetType
      */
@@ -302,7 +302,7 @@ public class RulesSourceList implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      * <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * </p>
      * <p>
@@ -312,7 +312,7 @@ public class RulesSourceList implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param targetTypes
-     *        The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     *        The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      *        <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetType
@@ -330,12 +330,12 @@ public class RulesSourceList implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      * <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * </p>
      * 
      * @param targetTypes
-     *        The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     *        The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      *        <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetType
@@ -348,12 +348,12 @@ public class RulesSourceList implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     * The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      * <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * </p>
      * 
      * @param targetTypes
-     *        The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specity
+     *        The protocols you want to inspect. Specify <code>TLS_SNI</code> for <code>HTTPS</code>. Specify
      *        <code>HTTP_HOST</code> for <code>HTTP</code>. You can specify either or both.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TargetType

@@ -56,6 +56,10 @@ public class RuleGroupJsonUnmarshaller implements Unmarshaller<RuleGroup, JsonUn
                     context.nextToken();
                     ruleGroup.setRulesSource(RulesSourceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("StatefulRuleOptions", targetDepth)) {
+                    context.nextToken();
+                    ruleGroup.setStatefulRuleOptions(StatefulRuleOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

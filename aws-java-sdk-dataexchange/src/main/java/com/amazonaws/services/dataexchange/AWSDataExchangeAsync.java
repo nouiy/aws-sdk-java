@@ -116,6 +116,39 @@ public interface AWSDataExchangeAsync extends AWSDataExchange {
 
     /**
      * <p>
+     * This operation creates an event action.
+     * </p>
+     * 
+     * @param createEventActionRequest
+     *        The request body for CreateEventAction.
+     * @return A Java Future containing the result of the CreateEventAction operation returned by the service.
+     * @sample AWSDataExchangeAsync.CreateEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEventActionResult> createEventActionAsync(CreateEventActionRequest createEventActionRequest);
+
+    /**
+     * <p>
+     * This operation creates an event action.
+     * </p>
+     * 
+     * @param createEventActionRequest
+     *        The request body for CreateEventAction.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateEventAction operation returned by the service.
+     * @sample AWSDataExchangeAsyncHandler.CreateEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateEventActionResult> createEventActionAsync(CreateEventActionRequest createEventActionRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateEventActionRequest, CreateEventActionResult> asyncHandler);
+
+    /**
+     * <p>
      * This operation creates a job.
      * </p>
      * 
@@ -244,6 +277,37 @@ public interface AWSDataExchangeAsync extends AWSDataExchange {
 
     /**
      * <p>
+     * This operation deletes the event action.
+     * </p>
+     * 
+     * @param deleteEventActionRequest
+     * @return A Java Future containing the result of the DeleteEventAction operation returned by the service.
+     * @sample AWSDataExchangeAsync.DeleteEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/DeleteEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEventActionResult> deleteEventActionAsync(DeleteEventActionRequest deleteEventActionRequest);
+
+    /**
+     * <p>
+     * This operation deletes the event action.
+     * </p>
+     * 
+     * @param deleteEventActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEventAction operation returned by the service.
+     * @sample AWSDataExchangeAsyncHandler.DeleteEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/DeleteEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEventActionResult> deleteEventActionAsync(DeleteEventActionRequest deleteEventActionRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEventActionRequest, DeleteEventActionResult> asyncHandler);
+
+    /**
+     * <p>
      * This operation deletes a revision.
      * </p>
      * 
@@ -334,6 +398,37 @@ public interface AWSDataExchangeAsync extends AWSDataExchange {
      */
     java.util.concurrent.Future<GetDataSetResult> getDataSetAsync(GetDataSetRequest getDataSetRequest,
             com.amazonaws.handlers.AsyncHandler<GetDataSetRequest, GetDataSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * This operation retrieves information about an event action.
+     * </p>
+     * 
+     * @param getEventActionRequest
+     * @return A Java Future containing the result of the GetEventAction operation returned by the service.
+     * @sample AWSDataExchangeAsync.GetEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/GetEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventActionResult> getEventActionAsync(GetEventActionRequest getEventActionRequest);
+
+    /**
+     * <p>
+     * This operation retrieves information about an event action.
+     * </p>
+     * 
+     * @param getEventActionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEventAction operation returned by the service.
+     * @sample AWSDataExchangeAsyncHandler.GetEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/GetEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEventActionResult> getEventActionAsync(GetEventActionRequest getEventActionRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEventActionRequest, GetEventActionResult> asyncHandler);
 
     /**
      * <p>
@@ -460,6 +555,37 @@ public interface AWSDataExchangeAsync extends AWSDataExchange {
      */
     java.util.concurrent.Future<ListDataSetsResult> listDataSetsAsync(ListDataSetsRequest listDataSetsRequest,
             com.amazonaws.handlers.AsyncHandler<ListDataSetsRequest, ListDataSetsResult> asyncHandler);
+
+    /**
+     * <p>
+     * This operation lists your event actions.
+     * </p>
+     * 
+     * @param listEventActionsRequest
+     * @return A Java Future containing the result of the ListEventActions operation returned by the service.
+     * @sample AWSDataExchangeAsync.ListEventActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ListEventActions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEventActionsResult> listEventActionsAsync(ListEventActionsRequest listEventActionsRequest);
+
+    /**
+     * <p>
+     * This operation lists your event actions.
+     * </p>
+     * 
+     * @param listEventActionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEventActions operation returned by the service.
+     * @sample AWSDataExchangeAsyncHandler.ListEventActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ListEventActions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEventActionsResult> listEventActionsAsync(ListEventActionsRequest listEventActionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEventActionsRequest, ListEventActionsResult> asyncHandler);
 
     /**
      * <p>
@@ -714,6 +840,39 @@ public interface AWSDataExchangeAsync extends AWSDataExchange {
      */
     java.util.concurrent.Future<UpdateDataSetResult> updateDataSetAsync(UpdateDataSetRequest updateDataSetRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDataSetRequest, UpdateDataSetResult> asyncHandler);
+
+    /**
+     * <p>
+     * This operation updates the event action.
+     * </p>
+     * 
+     * @param updateEventActionRequest
+     *        The request body for UpdateEventAction.
+     * @return A Java Future containing the result of the UpdateEventAction operation returned by the service.
+     * @sample AWSDataExchangeAsync.UpdateEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/UpdateEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEventActionResult> updateEventActionAsync(UpdateEventActionRequest updateEventActionRequest);
+
+    /**
+     * <p>
+     * This operation updates the event action.
+     * </p>
+     * 
+     * @param updateEventActionRequest
+     *        The request body for UpdateEventAction.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateEventAction operation returned by the service.
+     * @sample AWSDataExchangeAsyncHandler.UpdateEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/UpdateEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateEventActionResult> updateEventActionAsync(UpdateEventActionRequest updateEventActionRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateEventActionRequest, UpdateEventActionResult> asyncHandler);
 
     /**
      * <p>

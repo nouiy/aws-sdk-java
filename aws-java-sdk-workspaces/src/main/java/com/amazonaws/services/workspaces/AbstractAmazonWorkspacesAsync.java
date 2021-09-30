@@ -119,6 +119,19 @@ public class AbstractAmazonWorkspacesAsync extends AbstractAmazonWorkspaces impl
     }
 
     @Override
+    public java.util.concurrent.Future<CreateUpdatedWorkspaceImageResult> createUpdatedWorkspaceImageAsync(CreateUpdatedWorkspaceImageRequest request) {
+
+        return createUpdatedWorkspaceImageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateUpdatedWorkspaceImageResult> createUpdatedWorkspaceImageAsync(CreateUpdatedWorkspaceImageRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateUpdatedWorkspaceImageRequest, CreateUpdatedWorkspaceImageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateWorkspaceBundleResult> createWorkspaceBundleAsync(CreateWorkspaceBundleRequest request) {
 
         return createWorkspaceBundleAsync(request, null);

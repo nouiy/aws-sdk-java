@@ -31,6 +31,8 @@ public class RuleGroupMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RuleVariables").build();
     private static final MarshallingInfo<StructuredPojo> RULESSOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RulesSource").build();
+    private static final MarshallingInfo<StructuredPojo> STATEFULRULEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StatefulRuleOptions").build();
 
     private static final RuleGroupMarshaller instance = new RuleGroupMarshaller();
 
@@ -50,6 +52,7 @@ public class RuleGroupMarshaller {
         try {
             protocolMarshaller.marshall(ruleGroup.getRuleVariables(), RULEVARIABLES_BINDING);
             protocolMarshaller.marshall(ruleGroup.getRulesSource(), RULESSOURCE_BINDING);
+            protocolMarshaller.marshall(ruleGroup.getStatefulRuleOptions(), STATEFULRULEOPTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

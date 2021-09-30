@@ -82,6 +82,14 @@ public class RuleGroupResponseJsonUnmarshaller implements Unmarshaller<RuleGroup
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ConsumedCapacity", targetDepth)) {
+                    context.nextToken();
+                    ruleGroupResponse.setConsumedCapacity(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("NumberOfAssociations", targetDepth)) {
+                    context.nextToken();
+                    ruleGroupResponse.setNumberOfAssociations(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

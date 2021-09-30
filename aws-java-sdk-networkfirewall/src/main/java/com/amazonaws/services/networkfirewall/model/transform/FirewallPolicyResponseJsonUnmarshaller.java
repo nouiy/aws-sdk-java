@@ -74,6 +74,18 @@ public class FirewallPolicyResponseJsonUnmarshaller implements Unmarshaller<Fire
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ConsumedStatelessRuleCapacity", targetDepth)) {
+                    context.nextToken();
+                    firewallPolicyResponse.setConsumedStatelessRuleCapacity(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("ConsumedStatefulRuleCapacity", targetDepth)) {
+                    context.nextToken();
+                    firewallPolicyResponse.setConsumedStatefulRuleCapacity(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("NumberOfAssociations", targetDepth)) {
+                    context.nextToken();
+                    firewallPolicyResponse.setNumberOfAssociations(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

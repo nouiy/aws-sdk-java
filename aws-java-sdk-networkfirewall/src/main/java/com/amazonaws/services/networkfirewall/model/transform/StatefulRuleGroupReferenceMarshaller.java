@@ -29,6 +29,8 @@ public class StatefulRuleGroupReferenceMarshaller {
 
     private static final MarshallingInfo<String> RESOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceArn").build();
+    private static final MarshallingInfo<Integer> PRIORITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Priority").build();
 
     private static final StatefulRuleGroupReferenceMarshaller instance = new StatefulRuleGroupReferenceMarshaller();
 
@@ -47,6 +49,7 @@ public class StatefulRuleGroupReferenceMarshaller {
 
         try {
             protocolMarshaller.marshall(statefulRuleGroupReference.getResourceArn(), RESOURCEARN_BINDING);
+            protocolMarshaller.marshall(statefulRuleGroupReference.getPriority(), PRIORITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

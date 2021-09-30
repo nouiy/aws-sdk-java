@@ -32,7 +32,7 @@ public class DescribeWorkspaceImagePermissionsResult extends com.amazonaws.Amazo
     private String imageId;
     /**
      * <p>
-     * The identifiers of the AWS accounts that the image has been shared with.
+     * The identifiers of the Amazon Web Services accounts that the image has been shared with.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ImagePermission> imagePermissions;
@@ -86,10 +86,10 @@ public class DescribeWorkspaceImagePermissionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifiers of the AWS accounts that the image has been shared with.
+     * The identifiers of the Amazon Web Services accounts that the image has been shared with.
      * </p>
      * 
-     * @return The identifiers of the AWS accounts that the image has been shared with.
+     * @return The identifiers of the Amazon Web Services accounts that the image has been shared with.
      */
 
     public java.util.List<ImagePermission> getImagePermissions() {
@@ -101,11 +101,11 @@ public class DescribeWorkspaceImagePermissionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifiers of the AWS accounts that the image has been shared with.
+     * The identifiers of the Amazon Web Services accounts that the image has been shared with.
      * </p>
      * 
      * @param imagePermissions
-     *        The identifiers of the AWS accounts that the image has been shared with.
+     *        The identifiers of the Amazon Web Services accounts that the image has been shared with.
      */
 
     public void setImagePermissions(java.util.Collection<ImagePermission> imagePermissions) {
@@ -119,7 +119,7 @@ public class DescribeWorkspaceImagePermissionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifiers of the AWS accounts that the image has been shared with.
+     * The identifiers of the Amazon Web Services accounts that the image has been shared with.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -128,7 +128,7 @@ public class DescribeWorkspaceImagePermissionsResult extends com.amazonaws.Amazo
      * </p>
      * 
      * @param imagePermissions
-     *        The identifiers of the AWS accounts that the image has been shared with.
+     *        The identifiers of the Amazon Web Services accounts that the image has been shared with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,11 +144,11 @@ public class DescribeWorkspaceImagePermissionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifiers of the AWS accounts that the image has been shared with.
+     * The identifiers of the Amazon Web Services accounts that the image has been shared with.
      * </p>
      * 
      * @param imagePermissions
-     *        The identifiers of the AWS accounts that the image has been shared with.
+     *        The identifiers of the Amazon Web Services accounts that the image has been shared with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

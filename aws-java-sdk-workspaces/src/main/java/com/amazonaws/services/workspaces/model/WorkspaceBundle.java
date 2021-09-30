@@ -43,7 +43,7 @@ public class WorkspaceBundle implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The owner of the bundle. This is the account identifier of the owner, or <code>AMAZON</code> if the bundle is
-     * provided by AWS.
+     * provided by Amazon Web Services.
      * </p>
      */
     private String owner;
@@ -174,12 +174,12 @@ public class WorkspaceBundle implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The owner of the bundle. This is the account identifier of the owner, or <code>AMAZON</code> if the bundle is
-     * provided by AWS.
+     * provided by Amazon Web Services.
      * </p>
      * 
      * @param owner
      *        The owner of the bundle. This is the account identifier of the owner, or <code>AMAZON</code> if the bundle
-     *        is provided by AWS.
+     *        is provided by Amazon Web Services.
      */
 
     public void setOwner(String owner) {
@@ -189,11 +189,11 @@ public class WorkspaceBundle implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The owner of the bundle. This is the account identifier of the owner, or <code>AMAZON</code> if the bundle is
-     * provided by AWS.
+     * provided by Amazon Web Services.
      * </p>
      * 
      * @return The owner of the bundle. This is the account identifier of the owner, or <code>AMAZON</code> if the
-     *         bundle is provided by AWS.
+     *         bundle is provided by Amazon Web Services.
      */
 
     public String getOwner() {
@@ -203,12 +203,12 @@ public class WorkspaceBundle implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The owner of the bundle. This is the account identifier of the owner, or <code>AMAZON</code> if the bundle is
-     * provided by AWS.
+     * provided by Amazon Web Services.
      * </p>
      * 
      * @param owner
      *        The owner of the bundle. This is the account identifier of the owner, or <code>AMAZON</code> if the bundle
-     *        is provided by AWS.
+     *        is provided by Amazon Web Services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

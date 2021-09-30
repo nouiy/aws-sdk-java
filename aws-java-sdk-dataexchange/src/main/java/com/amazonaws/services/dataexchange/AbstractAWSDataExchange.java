@@ -38,6 +38,11 @@ public class AbstractAWSDataExchange implements AWSDataExchange {
     }
 
     @Override
+    public CreateEventActionResult createEventAction(CreateEventActionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateJobResult createJob(CreateJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -58,6 +63,11 @@ public class AbstractAWSDataExchange implements AWSDataExchange {
     }
 
     @Override
+    public DeleteEventActionResult deleteEventAction(DeleteEventActionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteRevisionResult deleteRevision(DeleteRevisionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +79,11 @@ public class AbstractAWSDataExchange implements AWSDataExchange {
 
     @Override
     public GetDataSetResult getDataSet(GetDataSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetEventActionResult getEventAction(GetEventActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -89,6 +104,11 @@ public class AbstractAWSDataExchange implements AWSDataExchange {
 
     @Override
     public ListDataSetsResult listDataSets(ListDataSetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEventActionsResult listEventActions(ListEventActionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -129,6 +149,11 @@ public class AbstractAWSDataExchange implements AWSDataExchange {
 
     @Override
     public UpdateDataSetResult updateDataSet(UpdateDataSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateEventActionResult updateEventAction(UpdateEventActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

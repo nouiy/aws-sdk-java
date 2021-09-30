@@ -38,7 +38,7 @@ public class ConnectionAliasAssociation implements Serializable, Cloneable, Stru
     private String associationStatus;
     /**
      * <p>
-     * The identifier of the AWS account that associated the connection alias with a directory.
+     * The identifier of the Amazon Web Services account that associated the connection alias with a directory.
      * </p>
      */
     private String associatedAccountId;
@@ -117,11 +117,11 @@ public class ConnectionAliasAssociation implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The identifier of the AWS account that associated the connection alias with a directory.
+     * The identifier of the Amazon Web Services account that associated the connection alias with a directory.
      * </p>
      * 
      * @param associatedAccountId
-     *        The identifier of the AWS account that associated the connection alias with a directory.
+     *        The identifier of the Amazon Web Services account that associated the connection alias with a directory.
      */
 
     public void setAssociatedAccountId(String associatedAccountId) {
@@ -130,10 +130,10 @@ public class ConnectionAliasAssociation implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The identifier of the AWS account that associated the connection alias with a directory.
+     * The identifier of the Amazon Web Services account that associated the connection alias with a directory.
      * </p>
      * 
-     * @return The identifier of the AWS account that associated the connection alias with a directory.
+     * @return The identifier of the Amazon Web Services account that associated the connection alias with a directory.
      */
 
     public String getAssociatedAccountId() {
@@ -142,11 +142,11 @@ public class ConnectionAliasAssociation implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The identifier of the AWS account that associated the connection alias with a directory.
+     * The identifier of the Amazon Web Services account that associated the connection alias with a directory.
      * </p>
      * 
      * @param associatedAccountId
-     *        The identifier of the AWS account that associated the connection alias with a directory.
+     *        The identifier of the Amazon Web Services account that associated the connection alias with a directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

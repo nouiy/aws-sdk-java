@@ -197,6 +197,21 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteMobileDeviceAccessOverrideResult> deleteMobileDeviceAccessOverrideAsync(
+            DeleteMobileDeviceAccessOverrideRequest request) {
+
+        return deleteMobileDeviceAccessOverrideAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteMobileDeviceAccessOverrideResult> deleteMobileDeviceAccessOverrideAsync(
+            DeleteMobileDeviceAccessOverrideRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteMobileDeviceAccessOverrideRequest, DeleteMobileDeviceAccessOverrideResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteMobileDeviceAccessRuleResult> deleteMobileDeviceAccessRuleAsync(DeleteMobileDeviceAccessRuleRequest request) {
 
         return deleteMobileDeviceAccessRuleAsync(request, null);
@@ -420,6 +435,19 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetMobileDeviceAccessOverrideResult> getMobileDeviceAccessOverrideAsync(GetMobileDeviceAccessOverrideRequest request) {
+
+        return getMobileDeviceAccessOverrideAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMobileDeviceAccessOverrideResult> getMobileDeviceAccessOverrideAsync(GetMobileDeviceAccessOverrideRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetMobileDeviceAccessOverrideRequest, GetMobileDeviceAccessOverrideResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAccessControlRulesResult> listAccessControlRulesAsync(ListAccessControlRulesRequest request) {
 
         return listAccessControlRulesAsync(request, null);
@@ -493,6 +521,21 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     @Override
     public java.util.concurrent.Future<ListMailboxPermissionsResult> listMailboxPermissionsAsync(ListMailboxPermissionsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListMailboxPermissionsRequest, ListMailboxPermissionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMobileDeviceAccessOverridesResult> listMobileDeviceAccessOverridesAsync(
+            ListMobileDeviceAccessOverridesRequest request) {
+
+        return listMobileDeviceAccessOverridesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMobileDeviceAccessOverridesResult> listMobileDeviceAccessOverridesAsync(
+            ListMobileDeviceAccessOverridesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListMobileDeviceAccessOverridesRequest, ListMobileDeviceAccessOverridesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -597,6 +640,19 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     @Override
     public java.util.concurrent.Future<PutMailboxPermissionsResult> putMailboxPermissionsAsync(PutMailboxPermissionsRequest request,
             com.amazonaws.handlers.AsyncHandler<PutMailboxPermissionsRequest, PutMailboxPermissionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutMobileDeviceAccessOverrideResult> putMobileDeviceAccessOverrideAsync(PutMobileDeviceAccessOverrideRequest request) {
+
+        return putMobileDeviceAccessOverrideAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutMobileDeviceAccessOverrideResult> putMobileDeviceAccessOverrideAsync(PutMobileDeviceAccessOverrideRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutMobileDeviceAccessOverrideRequest, PutMobileDeviceAccessOverrideResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

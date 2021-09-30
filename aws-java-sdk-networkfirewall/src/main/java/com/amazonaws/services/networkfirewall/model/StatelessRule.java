@@ -37,9 +37,9 @@ public class StatelessRule implements Serializable, Cloneable, StructuredPojo {
     private RuleDefinition ruleDefinition;
     /**
      * <p>
-     * A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a
-     * stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest priority
-     * setting. You must ensure that the priority settings are unique for the rule group.
+     * Indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule
+     * group. Network Firewall evaluates the rules in a rule group starting with the lowest priority setting. You must
+     * ensure that the priority settings are unique for the rule group.
      * </p>
      * <p>
      * Each stateless rule group uses exactly one <code>StatelessRulesAndCustomActions</code> object, and each
@@ -102,9 +102,9 @@ public class StatelessRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a
-     * stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest priority
-     * setting. You must ensure that the priority settings are unique for the rule group.
+     * Indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule
+     * group. Network Firewall evaluates the rules in a rule group starting with the lowest priority setting. You must
+     * ensure that the priority settings are unique for the rule group.
      * </p>
      * <p>
      * Each stateless rule group uses exactly one <code>StatelessRulesAndCustomActions</code> object, and each
@@ -118,8 +118,8 @@ public class StatelessRule implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param priority
-     *        A setting that indicates the order in which to run this rule relative to all of the rules that are defined
-     *        for a stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest
+     *        Indicates the order in which to run this rule relative to all of the rules that are defined for a
+     *        stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest
      *        priority setting. You must ensure that the priority settings are unique for the rule group. </p>
      *        <p>
      *        Each stateless rule group uses exactly one <code>StatelessRulesAndCustomActions</code> object, and each
@@ -138,9 +138,9 @@ public class StatelessRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a
-     * stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest priority
-     * setting. You must ensure that the priority settings are unique for the rule group.
+     * Indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule
+     * group. Network Firewall evaluates the rules in a rule group starting with the lowest priority setting. You must
+     * ensure that the priority settings are unique for the rule group.
      * </p>
      * <p>
      * Each stateless rule group uses exactly one <code>StatelessRulesAndCustomActions</code> object, and each
@@ -153,10 +153,9 @@ public class StatelessRule implements Serializable, Cloneable, StructuredPojo {
      * them so there's a wide range in between, for example use 100, 200, and so on.
      * </p>
      * 
-     * @return A setting that indicates the order in which to run this rule relative to all of the rules that are
-     *         defined for a stateless rule group. Network Firewall evaluates the rules in a rule group starting with
-     *         the lowest priority setting. You must ensure that the priority settings are unique for the rule group.
-     *         </p>
+     * @return Indicates the order in which to run this rule relative to all of the rules that are defined for a
+     *         stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest
+     *         priority setting. You must ensure that the priority settings are unique for the rule group. </p>
      *         <p>
      *         Each stateless rule group uses exactly one <code>StatelessRulesAndCustomActions</code> object, and each
      *         <code>StatelessRulesAndCustomActions</code> contains exactly one <code>StatelessRules</code> object. To
@@ -174,9 +173,9 @@ public class StatelessRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A setting that indicates the order in which to run this rule relative to all of the rules that are defined for a
-     * stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest priority
-     * setting. You must ensure that the priority settings are unique for the rule group.
+     * Indicates the order in which to run this rule relative to all of the rules that are defined for a stateless rule
+     * group. Network Firewall evaluates the rules in a rule group starting with the lowest priority setting. You must
+     * ensure that the priority settings are unique for the rule group.
      * </p>
      * <p>
      * Each stateless rule group uses exactly one <code>StatelessRulesAndCustomActions</code> object, and each
@@ -190,8 +189,8 @@ public class StatelessRule implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param priority
-     *        A setting that indicates the order in which to run this rule relative to all of the rules that are defined
-     *        for a stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest
+     *        Indicates the order in which to run this rule relative to all of the rules that are defined for a
+     *        stateless rule group. Network Firewall evaluates the rules in a rule group starting with the lowest
      *        priority setting. You must ensure that the priority settings are unique for the rule group. </p>
      *        <p>
      *        Each stateless rule group uses exactly one <code>StatelessRulesAndCustomActions</code> object, and each

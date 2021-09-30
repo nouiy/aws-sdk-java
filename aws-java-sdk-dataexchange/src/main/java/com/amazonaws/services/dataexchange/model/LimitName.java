@@ -31,7 +31,10 @@ public enum LimitName {
     ConcurrentInProgressJobsToImportAssetsFromAmazonS3("Concurrent in progress jobs to import assets from Amazon S3"),
     ConcurrentInProgressJobsToImportAssetsFromASignedURL("Concurrent in progress jobs to import assets from a signed URL"),
     ConcurrentInProgressJobsToExportAssetsToAmazonS3("Concurrent in progress jobs to export assets to Amazon S3"),
-    ConcurrentInProgressJobsToExportAssetsToASignedURL("Concurrent in progress jobs to export assets to a signed URL");
+    ConcurrentInProgressJobsToExportAssetsToASignedURL("Concurrent in progress jobs to export assets to a signed URL"),
+    ConcurrentInProgressJobsToExportRevisionsToAmazonS3("Concurrent in progress jobs to export revisions to Amazon S3"),
+    EventActionsPerAccount("Event actions per account"),
+    AutoExportEventActionsPerDataSet("Auto export event actions per data set");
 
     private String value;
 

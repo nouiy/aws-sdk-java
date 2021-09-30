@@ -81,17 +81,23 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
     private String errorMessage;
     /**
      * <p>
-     * The date when the image was created. If the image has been shared, the AWS account that the image has been shared
-     * with sees the original creation date of the image.
+     * The date when the image was created. If the image has been shared, the Amazon Web Services account that the image
+     * has been shared with sees the original creation date of the image.
      * </p>
      */
     private java.util.Date created;
     /**
      * <p>
-     * The identifier of the AWS account that owns the image.
+     * The identifier of the Amazon Web Services account that owns the image.
      * </p>
      */
     private String ownerAccountId;
+    /**
+     * <p>
+     * The updates (if any) that are available for the specified image.
+     * </p>
+     */
+    private UpdateResult updates;
 
     /**
      * <p>
@@ -477,13 +483,13 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date when the image was created. If the image has been shared, the AWS account that the image has been shared
-     * with sees the original creation date of the image.
+     * The date when the image was created. If the image has been shared, the Amazon Web Services account that the image
+     * has been shared with sees the original creation date of the image.
      * </p>
      * 
      * @param created
-     *        The date when the image was created. If the image has been shared, the AWS account that the image has been
-     *        shared with sees the original creation date of the image.
+     *        The date when the image was created. If the image has been shared, the Amazon Web Services account that
+     *        the image has been shared with sees the original creation date of the image.
      */
 
     public void setCreated(java.util.Date created) {
@@ -492,12 +498,12 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date when the image was created. If the image has been shared, the AWS account that the image has been shared
-     * with sees the original creation date of the image.
+     * The date when the image was created. If the image has been shared, the Amazon Web Services account that the image
+     * has been shared with sees the original creation date of the image.
      * </p>
      * 
-     * @return The date when the image was created. If the image has been shared, the AWS account that the image has
-     *         been shared with sees the original creation date of the image.
+     * @return The date when the image was created. If the image has been shared, the Amazon Web Services account that
+     *         the image has been shared with sees the original creation date of the image.
      */
 
     public java.util.Date getCreated() {
@@ -506,13 +512,13 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date when the image was created. If the image has been shared, the AWS account that the image has been shared
-     * with sees the original creation date of the image.
+     * The date when the image was created. If the image has been shared, the Amazon Web Services account that the image
+     * has been shared with sees the original creation date of the image.
      * </p>
      * 
      * @param created
-     *        The date when the image was created. If the image has been shared, the AWS account that the image has been
-     *        shared with sees the original creation date of the image.
+     *        The date when the image was created. If the image has been shared, the Amazon Web Services account that
+     *        the image has been shared with sees the original creation date of the image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -523,11 +529,11 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the image.
+     * The identifier of the Amazon Web Services account that owns the image.
      * </p>
      * 
      * @param ownerAccountId
-     *        The identifier of the AWS account that owns the image.
+     *        The identifier of the Amazon Web Services account that owns the image.
      */
 
     public void setOwnerAccountId(String ownerAccountId) {
@@ -536,10 +542,10 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the image.
+     * The identifier of the Amazon Web Services account that owns the image.
      * </p>
      * 
-     * @return The identifier of the AWS account that owns the image.
+     * @return The identifier of the Amazon Web Services account that owns the image.
      */
 
     public String getOwnerAccountId() {
@@ -548,16 +554,56 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the image.
+     * The identifier of the Amazon Web Services account that owns the image.
      * </p>
      * 
      * @param ownerAccountId
-     *        The identifier of the AWS account that owns the image.
+     *        The identifier of the Amazon Web Services account that owns the image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public WorkspaceImage withOwnerAccountId(String ownerAccountId) {
         setOwnerAccountId(ownerAccountId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The updates (if any) that are available for the specified image.
+     * </p>
+     * 
+     * @param updates
+     *        The updates (if any) that are available for the specified image.
+     */
+
+    public void setUpdates(UpdateResult updates) {
+        this.updates = updates;
+    }
+
+    /**
+     * <p>
+     * The updates (if any) that are available for the specified image.
+     * </p>
+     * 
+     * @return The updates (if any) that are available for the specified image.
+     */
+
+    public UpdateResult getUpdates() {
+        return this.updates;
+    }
+
+    /**
+     * <p>
+     * The updates (if any) that are available for the specified image.
+     * </p>
+     * 
+     * @param updates
+     *        The updates (if any) that are available for the specified image.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WorkspaceImage withUpdates(UpdateResult updates) {
+        setUpdates(updates);
         return this;
     }
 
@@ -592,7 +638,9 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
         if (getCreated() != null)
             sb.append("Created: ").append(getCreated()).append(",");
         if (getOwnerAccountId() != null)
-            sb.append("OwnerAccountId: ").append(getOwnerAccountId());
+            sb.append("OwnerAccountId: ").append(getOwnerAccountId()).append(",");
+        if (getUpdates() != null)
+            sb.append("Updates: ").append(getUpdates());
         sb.append("}");
         return sb.toString();
     }
@@ -647,6 +695,10 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getOwnerAccountId() != null && other.getOwnerAccountId().equals(this.getOwnerAccountId()) == false)
             return false;
+        if (other.getUpdates() == null ^ this.getUpdates() == null)
+            return false;
+        if (other.getUpdates() != null && other.getUpdates().equals(this.getUpdates()) == false)
+            return false;
         return true;
     }
 
@@ -665,6 +717,7 @@ public class WorkspaceImage implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getErrorMessage() == null) ? 0 : getErrorMessage().hashCode());
         hashCode = prime * hashCode + ((getCreated() == null) ? 0 : getCreated().hashCode());
         hashCode = prime * hashCode + ((getOwnerAccountId() == null) ? 0 : getOwnerAccountId().hashCode());
+        hashCode = prime * hashCode + ((getUpdates() == null) ? 0 : getUpdates().hashCode());
         return hashCode;
     }
 

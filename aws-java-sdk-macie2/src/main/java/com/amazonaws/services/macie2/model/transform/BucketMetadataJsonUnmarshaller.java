@@ -76,6 +76,14 @@ public class BucketMetadataJsonUnmarshaller implements Unmarshaller<BucketMetada
                     context.nextToken();
                     bucketMetadata.setClassifiableSizeInBytes(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("errorCode", targetDepth)) {
+                    context.nextToken();
+                    bucketMetadata.setErrorCode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("errorMessage", targetDepth)) {
+                    context.nextToken();
+                    bucketMetadata.setErrorMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("jobDetails", targetDepth)) {
                     context.nextToken();
                     bucketMetadata.setJobDetails(JobDetailsJsonUnmarshaller.getInstance().unmarshall(context));

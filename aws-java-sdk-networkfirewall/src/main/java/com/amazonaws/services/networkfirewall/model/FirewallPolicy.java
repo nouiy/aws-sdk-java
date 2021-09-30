@@ -86,11 +86,24 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<CustomAction> statelessCustomActions;
     /**
      * <p>
-     * References to the stateless rule groups that are used in the policy. These define the inspection criteria in
+     * References to the stateful rule groups that are used in the policy. These define the inspection criteria in
      * stateful rules.
      * </p>
      */
     private java.util.List<StatefulRuleGroupReference> statefulRuleGroupReferences;
+    /**
+     * <p>
+     * The default actions to take on a packet that doesn't match any stateful rules.
+     * </p>
+     */
+    private java.util.List<String> statefulDefaultActions;
+    /**
+     * <p>
+     * Additional options governing how Network Firewall handles stateful rules. The stateful rule groups that you use
+     * in your policy must have stateful rule options settings that are compatible with these settings.
+     * </p>
+     */
+    private StatefulEngineOptions statefulEngineOptions;
 
     /**
      * <p>
@@ -586,11 +599,11 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * References to the stateless rule groups that are used in the policy. These define the inspection criteria in
+     * References to the stateful rule groups that are used in the policy. These define the inspection criteria in
      * stateful rules.
      * </p>
      * 
-     * @return References to the stateless rule groups that are used in the policy. These define the inspection criteria
+     * @return References to the stateful rule groups that are used in the policy. These define the inspection criteria
      *         in stateful rules.
      */
 
@@ -600,12 +613,12 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * References to the stateless rule groups that are used in the policy. These define the inspection criteria in
+     * References to the stateful rule groups that are used in the policy. These define the inspection criteria in
      * stateful rules.
      * </p>
      * 
      * @param statefulRuleGroupReferences
-     *        References to the stateless rule groups that are used in the policy. These define the inspection criteria
+     *        References to the stateful rule groups that are used in the policy. These define the inspection criteria
      *        in stateful rules.
      */
 
@@ -620,7 +633,7 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * References to the stateless rule groups that are used in the policy. These define the inspection criteria in
+     * References to the stateful rule groups that are used in the policy. These define the inspection criteria in
      * stateful rules.
      * </p>
      * <p>
@@ -630,7 +643,7 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param statefulRuleGroupReferences
-     *        References to the stateless rule groups that are used in the policy. These define the inspection criteria
+     *        References to the stateful rule groups that are used in the policy. These define the inspection criteria
      *        in stateful rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -647,18 +660,134 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * References to the stateless rule groups that are used in the policy. These define the inspection criteria in
+     * References to the stateful rule groups that are used in the policy. These define the inspection criteria in
      * stateful rules.
      * </p>
      * 
      * @param statefulRuleGroupReferences
-     *        References to the stateless rule groups that are used in the policy. These define the inspection criteria
+     *        References to the stateful rule groups that are used in the policy. These define the inspection criteria
      *        in stateful rules.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public FirewallPolicy withStatefulRuleGroupReferences(java.util.Collection<StatefulRuleGroupReference> statefulRuleGroupReferences) {
         setStatefulRuleGroupReferences(statefulRuleGroupReferences);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The default actions to take on a packet that doesn't match any stateful rules.
+     * </p>
+     * 
+     * @return The default actions to take on a packet that doesn't match any stateful rules.
+     */
+
+    public java.util.List<String> getStatefulDefaultActions() {
+        return statefulDefaultActions;
+    }
+
+    /**
+     * <p>
+     * The default actions to take on a packet that doesn't match any stateful rules.
+     * </p>
+     * 
+     * @param statefulDefaultActions
+     *        The default actions to take on a packet that doesn't match any stateful rules.
+     */
+
+    public void setStatefulDefaultActions(java.util.Collection<String> statefulDefaultActions) {
+        if (statefulDefaultActions == null) {
+            this.statefulDefaultActions = null;
+            return;
+        }
+
+        this.statefulDefaultActions = new java.util.ArrayList<String>(statefulDefaultActions);
+    }
+
+    /**
+     * <p>
+     * The default actions to take on a packet that doesn't match any stateful rules.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setStatefulDefaultActions(java.util.Collection)} or
+     * {@link #withStatefulDefaultActions(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param statefulDefaultActions
+     *        The default actions to take on a packet that doesn't match any stateful rules.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FirewallPolicy withStatefulDefaultActions(String... statefulDefaultActions) {
+        if (this.statefulDefaultActions == null) {
+            setStatefulDefaultActions(new java.util.ArrayList<String>(statefulDefaultActions.length));
+        }
+        for (String ele : statefulDefaultActions) {
+            this.statefulDefaultActions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The default actions to take on a packet that doesn't match any stateful rules.
+     * </p>
+     * 
+     * @param statefulDefaultActions
+     *        The default actions to take on a packet that doesn't match any stateful rules.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FirewallPolicy withStatefulDefaultActions(java.util.Collection<String> statefulDefaultActions) {
+        setStatefulDefaultActions(statefulDefaultActions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Additional options governing how Network Firewall handles stateful rules. The stateful rule groups that you use
+     * in your policy must have stateful rule options settings that are compatible with these settings.
+     * </p>
+     * 
+     * @param statefulEngineOptions
+     *        Additional options governing how Network Firewall handles stateful rules. The stateful rule groups that
+     *        you use in your policy must have stateful rule options settings that are compatible with these settings.
+     */
+
+    public void setStatefulEngineOptions(StatefulEngineOptions statefulEngineOptions) {
+        this.statefulEngineOptions = statefulEngineOptions;
+    }
+
+    /**
+     * <p>
+     * Additional options governing how Network Firewall handles stateful rules. The stateful rule groups that you use
+     * in your policy must have stateful rule options settings that are compatible with these settings.
+     * </p>
+     * 
+     * @return Additional options governing how Network Firewall handles stateful rules. The stateful rule groups that
+     *         you use in your policy must have stateful rule options settings that are compatible with these settings.
+     */
+
+    public StatefulEngineOptions getStatefulEngineOptions() {
+        return this.statefulEngineOptions;
+    }
+
+    /**
+     * <p>
+     * Additional options governing how Network Firewall handles stateful rules. The stateful rule groups that you use
+     * in your policy must have stateful rule options settings that are compatible with these settings.
+     * </p>
+     * 
+     * @param statefulEngineOptions
+     *        Additional options governing how Network Firewall handles stateful rules. The stateful rule groups that
+     *        you use in your policy must have stateful rule options settings that are compatible with these settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FirewallPolicy withStatefulEngineOptions(StatefulEngineOptions statefulEngineOptions) {
+        setStatefulEngineOptions(statefulEngineOptions);
         return this;
     }
 
@@ -683,7 +812,11 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
         if (getStatelessCustomActions() != null)
             sb.append("StatelessCustomActions: ").append(getStatelessCustomActions()).append(",");
         if (getStatefulRuleGroupReferences() != null)
-            sb.append("StatefulRuleGroupReferences: ").append(getStatefulRuleGroupReferences());
+            sb.append("StatefulRuleGroupReferences: ").append(getStatefulRuleGroupReferences()).append(",");
+        if (getStatefulDefaultActions() != null)
+            sb.append("StatefulDefaultActions: ").append(getStatefulDefaultActions()).append(",");
+        if (getStatefulEngineOptions() != null)
+            sb.append("StatefulEngineOptions: ").append(getStatefulEngineOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -719,6 +852,14 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getStatefulRuleGroupReferences() != null && other.getStatefulRuleGroupReferences().equals(this.getStatefulRuleGroupReferences()) == false)
             return false;
+        if (other.getStatefulDefaultActions() == null ^ this.getStatefulDefaultActions() == null)
+            return false;
+        if (other.getStatefulDefaultActions() != null && other.getStatefulDefaultActions().equals(this.getStatefulDefaultActions()) == false)
+            return false;
+        if (other.getStatefulEngineOptions() == null ^ this.getStatefulEngineOptions() == null)
+            return false;
+        if (other.getStatefulEngineOptions() != null && other.getStatefulEngineOptions().equals(this.getStatefulEngineOptions()) == false)
+            return false;
         return true;
     }
 
@@ -732,6 +873,8 @@ public class FirewallPolicy implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStatelessFragmentDefaultActions() == null) ? 0 : getStatelessFragmentDefaultActions().hashCode());
         hashCode = prime * hashCode + ((getStatelessCustomActions() == null) ? 0 : getStatelessCustomActions().hashCode());
         hashCode = prime * hashCode + ((getStatefulRuleGroupReferences() == null) ? 0 : getStatefulRuleGroupReferences().hashCode());
+        hashCode = prime * hashCode + ((getStatefulDefaultActions() == null) ? 0 : getStatefulDefaultActions().hashCode());
+        hashCode = prime * hashCode + ((getStatefulEngineOptions() == null) ? 0 : getStatefulEngineOptions().hashCode());
         return hashCode;
     }
 

@@ -96,6 +96,12 @@ public class AWSDataExchangeClient extends AmazonWebServiceClient implements AWS
                     .withSupportsIon(false)
                     .withContentTypeOverride("")
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.dataexchange.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.dataexchange.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.dataexchange.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -108,14 +114,8 @@ public class AWSDataExchangeClient extends AmazonWebServiceClient implements AWS
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.dataexchange.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.dataexchange.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.dataexchange.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.dataexchange.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.dataexchange.model.AWSDataExchangeException.class));
 
     public static AWSDataExchangeClientBuilder builder() {
@@ -297,22 +297,88 @@ public class AWSDataExchangeClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * This operation creates a job.
+     * This operation creates an event action.
      * </p>
      * 
-     * @param createJobRequest
-     *        The request body for CreateJob.
-     * @return Result of the CreateJob operation returned by the service.
-     * @throws ResourceNotFoundException
-     *         404 response
+     * @param createEventActionRequest
+     *        The request body for CreateEventAction.
+     * @return Result of the CreateEventAction operation returned by the service.
      * @throws ThrottlingException
      *         429 response
      * @throws ValidationException
      *         400 response
      * @throws InternalServerException
      *         500 response
+     * @throws ServiceLimitExceededException
+     *         402 response
      * @throws AccessDeniedException
      *         403 response
+     * @sample AWSDataExchange.CreateEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateEventActionResult createEventAction(CreateEventActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateEventAction(request);
+    }
+
+    @SdkInternalApi
+    final CreateEventActionResult executeCreateEventAction(CreateEventActionRequest createEventActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createEventActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateEventActionRequest> request = null;
+        Response<CreateEventActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateEventActionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createEventActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataExchange");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateEventAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateEventActionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateEventActionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This operation creates a job.
+     * </p>
+     * 
+     * @param createJobRequest
+     *        The request body for CreateJob.
+     * @return Result of the CreateJob operation returned by the service.
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @throws AccessDeniedException
+     *         403 response
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
      * @sample AWSDataExchange.CreateJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateJob" target="_top">AWS API
      *      Documentation</a>
@@ -563,6 +629,69 @@ public class AWSDataExchangeClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * This operation deletes the event action.
+     * </p>
+     * 
+     * @param deleteEventActionRequest
+     * @return Result of the DeleteEventAction operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @sample AWSDataExchange.DeleteEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/DeleteEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteEventActionResult deleteEventAction(DeleteEventActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteEventAction(request);
+    }
+
+    @SdkInternalApi
+    final DeleteEventActionResult executeDeleteEventAction(DeleteEventActionRequest deleteEventActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteEventActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteEventActionRequest> request = null;
+        Response<DeleteEventActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteEventActionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteEventActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataExchange");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteEventAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteEventActionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteEventActionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * This operation deletes a revision.
      * </p>
      * 
@@ -744,6 +873,69 @@ public class AWSDataExchangeClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<GetDataSetResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDataSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This operation retrieves information about an event action.
+     * </p>
+     * 
+     * @param getEventActionRequest
+     * @return Result of the GetEventAction operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @sample AWSDataExchange.GetEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/GetEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetEventActionResult getEventAction(GetEventActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetEventAction(request);
+    }
+
+    @SdkInternalApi
+    final GetEventActionResult executeGetEventAction(GetEventActionRequest getEventActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getEventActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetEventActionRequest> request = null;
+        Response<GetEventActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetEventActionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getEventActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataExchange");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetEventAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetEventActionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetEventActionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -997,6 +1189,69 @@ public class AWSDataExchangeClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<ListDataSetsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListDataSetsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This operation lists your event actions.
+     * </p>
+     * 
+     * @param listEventActionsRequest
+     * @return Result of the ListEventActions operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @sample AWSDataExchange.ListEventActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ListEventActions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListEventActionsResult listEventActions(ListEventActionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListEventActions(request);
+    }
+
+    @SdkInternalApi
+    final ListEventActionsResult executeListEventActions(ListEventActionsRequest listEventActionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listEventActionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListEventActionsRequest> request = null;
+        Response<ListEventActionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListEventActionsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listEventActionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataExchange");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListEventActions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListEventActionsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListEventActionsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1490,6 +1745,72 @@ public class AWSDataExchangeClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateDataSetResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateDataSetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * This operation updates the event action.
+     * </p>
+     * 
+     * @param updateEventActionRequest
+     *        The request body for UpdateEventAction.
+     * @return Result of the UpdateEventAction operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @throws AccessDeniedException
+     *         403 response
+     * @sample AWSDataExchange.UpdateEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/UpdateEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateEventActionResult updateEventAction(UpdateEventActionRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateEventAction(request);
+    }
+
+    @SdkInternalApi
+    final UpdateEventActionResult executeUpdateEventAction(UpdateEventActionRequest updateEventActionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateEventActionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateEventActionRequest> request = null;
+        Response<UpdateEventActionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateEventActionRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateEventActionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataExchange");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateEventAction");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateEventActionResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateEventActionResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

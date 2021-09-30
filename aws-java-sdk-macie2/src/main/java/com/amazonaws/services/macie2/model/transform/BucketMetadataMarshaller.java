@@ -42,6 +42,10 @@ public class BucketMetadataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("classifiableObjectCount").build();
     private static final MarshallingInfo<Long> CLASSIFIABLESIZEINBYTES_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("classifiableSizeInBytes").build();
+    private static final MarshallingInfo<String> ERRORCODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("errorCode").build();
+    private static final MarshallingInfo<String> ERRORMESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("errorMessage").build();
     private static final MarshallingInfo<StructuredPojo> JOBDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobDetails").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATED_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -96,6 +100,8 @@ public class BucketMetadataMarshaller {
             protocolMarshaller.marshall(bucketMetadata.getBucketName(), BUCKETNAME_BINDING);
             protocolMarshaller.marshall(bucketMetadata.getClassifiableObjectCount(), CLASSIFIABLEOBJECTCOUNT_BINDING);
             protocolMarshaller.marshall(bucketMetadata.getClassifiableSizeInBytes(), CLASSIFIABLESIZEINBYTES_BINDING);
+            protocolMarshaller.marshall(bucketMetadata.getErrorCode(), ERRORCODE_BINDING);
+            protocolMarshaller.marshall(bucketMetadata.getErrorMessage(), ERRORMESSAGE_BINDING);
             protocolMarshaller.marshall(bucketMetadata.getJobDetails(), JOBDETAILS_BINDING);
             protocolMarshaller.marshall(bucketMetadata.getLastUpdated(), LASTUPDATED_BINDING);
             protocolMarshaller.marshall(bucketMetadata.getObjectCount(), OBJECTCOUNT_BINDING);

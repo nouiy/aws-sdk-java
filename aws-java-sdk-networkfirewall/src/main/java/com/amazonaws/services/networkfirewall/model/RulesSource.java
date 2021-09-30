@@ -48,8 +48,10 @@ public class RulesSource implements Serializable, Cloneable, StructuredPojo {
     private RulesSourceList rulesSourceList;
     /**
      * <p>
-     * The 5-tuple stateful inspection criteria. This contains an array of individual 5-tuple stateful rules to be used
-     * together in a stateful rule group.
+     * An array of individual stateful rules inspection criteria to be used together in a stateful rule group. Use this
+     * option to specify simple Suricata rules with protocol, source and destination, ports, direction, and rule
+     * options. For information about the Suricata <code>Rules</code> format, see <a
+     * href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>.
      * </p>
      */
     private java.util.List<StatefulRule> statefulRules;
@@ -172,12 +174,16 @@ public class RulesSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The 5-tuple stateful inspection criteria. This contains an array of individual 5-tuple stateful rules to be used
-     * together in a stateful rule group.
+     * An array of individual stateful rules inspection criteria to be used together in a stateful rule group. Use this
+     * option to specify simple Suricata rules with protocol, source and destination, ports, direction, and rule
+     * options. For information about the Suricata <code>Rules</code> format, see <a
+     * href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>.
      * </p>
      * 
-     * @return The 5-tuple stateful inspection criteria. This contains an array of individual 5-tuple stateful rules to
-     *         be used together in a stateful rule group.
+     * @return An array of individual stateful rules inspection criteria to be used together in a stateful rule group.
+     *         Use this option to specify simple Suricata rules with protocol, source and destination, ports, direction,
+     *         and rule options. For information about the Suricata <code>Rules</code> format, see <a
+     *         href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>.
      */
 
     public java.util.List<StatefulRule> getStatefulRules() {
@@ -186,13 +192,17 @@ public class RulesSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The 5-tuple stateful inspection criteria. This contains an array of individual 5-tuple stateful rules to be used
-     * together in a stateful rule group.
+     * An array of individual stateful rules inspection criteria to be used together in a stateful rule group. Use this
+     * option to specify simple Suricata rules with protocol, source and destination, ports, direction, and rule
+     * options. For information about the Suricata <code>Rules</code> format, see <a
+     * href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>.
      * </p>
      * 
      * @param statefulRules
-     *        The 5-tuple stateful inspection criteria. This contains an array of individual 5-tuple stateful rules to
-     *        be used together in a stateful rule group.
+     *        An array of individual stateful rules inspection criteria to be used together in a stateful rule group.
+     *        Use this option to specify simple Suricata rules with protocol, source and destination, ports, direction,
+     *        and rule options. For information about the Suricata <code>Rules</code> format, see <a
+     *        href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>.
      */
 
     public void setStatefulRules(java.util.Collection<StatefulRule> statefulRules) {
@@ -206,8 +216,10 @@ public class RulesSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The 5-tuple stateful inspection criteria. This contains an array of individual 5-tuple stateful rules to be used
-     * together in a stateful rule group.
+     * An array of individual stateful rules inspection criteria to be used together in a stateful rule group. Use this
+     * option to specify simple Suricata rules with protocol, source and destination, ports, direction, and rule
+     * options. For information about the Suricata <code>Rules</code> format, see <a
+     * href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -216,8 +228,10 @@ public class RulesSource implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param statefulRules
-     *        The 5-tuple stateful inspection criteria. This contains an array of individual 5-tuple stateful rules to
-     *        be used together in a stateful rule group.
+     *        An array of individual stateful rules inspection criteria to be used together in a stateful rule group.
+     *        Use this option to specify simple Suricata rules with protocol, source and destination, ports, direction,
+     *        and rule options. For information about the Suricata <code>Rules</code> format, see <a
+     *        href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,13 +247,17 @@ public class RulesSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The 5-tuple stateful inspection criteria. This contains an array of individual 5-tuple stateful rules to be used
-     * together in a stateful rule group.
+     * An array of individual stateful rules inspection criteria to be used together in a stateful rule group. Use this
+     * option to specify simple Suricata rules with protocol, source and destination, ports, direction, and rule
+     * options. For information about the Suricata <code>Rules</code> format, see <a
+     * href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>.
      * </p>
      * 
      * @param statefulRules
-     *        The 5-tuple stateful inspection criteria. This contains an array of individual 5-tuple stateful rules to
-     *        be used together in a stateful rule group.
+     *        An array of individual stateful rules inspection criteria to be used together in a stateful rule group.
+     *        Use this option to specify simple Suricata rules with protocol, source and destination, ports, direction,
+     *        and rule options. For information about the Suricata <code>Rules</code> format, see <a
+     *        href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules Format</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

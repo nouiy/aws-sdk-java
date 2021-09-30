@@ -108,22 +108,46 @@ public interface AWSDataExchange {
 
     /**
      * <p>
-     * This operation creates a job.
+     * This operation creates an event action.
      * </p>
      * 
-     * @param createJobRequest
-     *        The request body for CreateJob.
-     * @return Result of the CreateJob operation returned by the service.
-     * @throws ResourceNotFoundException
-     *         404 response
+     * @param createEventActionRequest
+     *        The request body for CreateEventAction.
+     * @return Result of the CreateEventAction operation returned by the service.
      * @throws ThrottlingException
      *         429 response
      * @throws ValidationException
      *         400 response
      * @throws InternalServerException
      *         500 response
+     * @throws ServiceLimitExceededException
+     *         402 response
      * @throws AccessDeniedException
      *         403 response
+     * @sample AWSDataExchange.CreateEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateEventActionResult createEventAction(CreateEventActionRequest createEventActionRequest);
+
+    /**
+     * <p>
+     * This operation creates a job.
+     * </p>
+     * 
+     * @param createJobRequest
+     *        The request body for CreateJob.
+     * @return Result of the CreateJob operation returned by the service.
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @throws AccessDeniedException
+     *         403 response
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
      * @sample AWSDataExchange.CreateJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/CreateJob" target="_top">AWS API
      *      Documentation</a>
@@ -206,6 +230,27 @@ public interface AWSDataExchange {
 
     /**
      * <p>
+     * This operation deletes the event action.
+     * </p>
+     * 
+     * @param deleteEventActionRequest
+     * @return Result of the DeleteEventAction operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @sample AWSDataExchange.DeleteEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/DeleteEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteEventActionResult deleteEventAction(DeleteEventActionRequest deleteEventActionRequest);
+
+    /**
+     * <p>
      * This operation deletes a revision.
      * </p>
      * 
@@ -270,6 +315,27 @@ public interface AWSDataExchange {
      *      Documentation</a>
      */
     GetDataSetResult getDataSet(GetDataSetRequest getDataSetRequest);
+
+    /**
+     * <p>
+     * This operation retrieves information about an event action.
+     * </p>
+     * 
+     * @param getEventActionRequest
+     * @return Result of the GetEventAction operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @sample AWSDataExchange.GetEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/GetEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    GetEventActionResult getEventAction(GetEventActionRequest getEventActionRequest);
 
     /**
      * <p>
@@ -355,6 +421,27 @@ public interface AWSDataExchange {
      *      Documentation</a>
      */
     ListDataSetsResult listDataSets(ListDataSetsRequest listDataSetsRequest);
+
+    /**
+     * <p>
+     * This operation lists your event actions.
+     * </p>
+     * 
+     * @param listEventActionsRequest
+     * @return Result of the ListEventActions operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @sample AWSDataExchange.ListEventActions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ListEventActions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListEventActionsResult listEventActions(ListEventActionsRequest listEventActionsRequest);
 
     /**
      * <p>
@@ -512,6 +599,30 @@ public interface AWSDataExchange {
      *      Documentation</a>
      */
     UpdateDataSetResult updateDataSet(UpdateDataSetRequest updateDataSetRequest);
+
+    /**
+     * <p>
+     * This operation updates the event action.
+     * </p>
+     * 
+     * @param updateEventActionRequest
+     *        The request body for UpdateEventAction.
+     * @return Result of the UpdateEventAction operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         404 response
+     * @throws ThrottlingException
+     *         429 response
+     * @throws ValidationException
+     *         400 response
+     * @throws InternalServerException
+     *         500 response
+     * @throws AccessDeniedException
+     *         403 response
+     * @sample AWSDataExchange.UpdateEventAction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/UpdateEventAction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateEventActionResult updateEventAction(UpdateEventActionRequest updateEventActionRequest);
 
     /**
      * <p>

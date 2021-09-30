@@ -491,6 +491,39 @@ public class AmazonWorkspacesAsyncClient extends AmazonWorkspacesClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateUpdatedWorkspaceImageResult> createUpdatedWorkspaceImageAsync(CreateUpdatedWorkspaceImageRequest request) {
+
+        return createUpdatedWorkspaceImageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateUpdatedWorkspaceImageResult> createUpdatedWorkspaceImageAsync(final CreateUpdatedWorkspaceImageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateUpdatedWorkspaceImageRequest, CreateUpdatedWorkspaceImageResult> asyncHandler) {
+        final CreateUpdatedWorkspaceImageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateUpdatedWorkspaceImageResult>() {
+            @Override
+            public CreateUpdatedWorkspaceImageResult call() throws Exception {
+                CreateUpdatedWorkspaceImageResult result = null;
+
+                try {
+                    result = executeCreateUpdatedWorkspaceImage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateWorkspaceBundleResult> createWorkspaceBundleAsync(CreateWorkspaceBundleRequest request) {
 
         return createWorkspaceBundleAsync(request, null);

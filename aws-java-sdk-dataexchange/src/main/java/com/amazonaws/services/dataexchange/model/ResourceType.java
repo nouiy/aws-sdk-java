@@ -23,7 +23,8 @@ public enum ResourceType {
     DATA_SET("DATA_SET"),
     REVISION("REVISION"),
     ASSET("ASSET"),
-    JOB("JOB");
+    JOB("JOB"),
+    EVENT_ACTION("EVENT_ACTION");
 
     private String value;
 

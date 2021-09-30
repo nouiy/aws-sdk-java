@@ -15,8 +15,9 @@
 
 package com.amazonaws.codegen.model.service;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import static com.amazonaws.codegen.internal.Utils.isStructure;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -29,12 +30,14 @@ public class Shape {
 
     private String documentation;
 
-    private List<String> required;
+    private List<String> required = Collections.emptyList();
 
     private List<String> enumValues;
 
     private String payload;
 
+    private boolean document;
+    
     private boolean flattened;
 
     private boolean exception;
@@ -138,6 +141,14 @@ public class Shape {
         this.payload = payload;
     }
 
+    public boolean isDocument() {
+        return isStructure(this) && document;
+    }
+
+    public void setDocument(boolean document) {
+        this.document = document;
+    }
+    
     public boolean isFlattened() {
         return flattened;
     }

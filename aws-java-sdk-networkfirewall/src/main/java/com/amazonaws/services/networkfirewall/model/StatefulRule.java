@@ -19,7 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A single 5-tuple stateful rule, for use in a stateful rule group.
+ * A single Suricata rules specification, for use in a stateful rule group. Use this option to specify a simple Suricata
+ * rule with protocol, source and destination, ports, direction, and rule options. For information about the Suricata
+ * <code>Rules</code> format, see <a href="https://suricata.readthedocs.io/en/suricata-5.0.0/rules/intro.html#">Rules
+ * Format</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/StatefulRule" target="_top">AWS API
@@ -65,11 +68,15 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
     private String action;
     /**
      * <p>
-     * The stateful 5-tuple inspection criteria for this rule, used to inspect traffic flows.
+     * The stateful inspection criteria for this rule, used to inspect traffic flows.
      * </p>
      */
     private Header header;
-    /** <p/> */
+    /**
+     * <p>
+     * Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.
+     * </p>
+     */
     private java.util.List<RuleOption> ruleOptions;
 
     /**
@@ -361,11 +368,11 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The stateful 5-tuple inspection criteria for this rule, used to inspect traffic flows.
+     * The stateful inspection criteria for this rule, used to inspect traffic flows.
      * </p>
      * 
      * @param header
-     *        The stateful 5-tuple inspection criteria for this rule, used to inspect traffic flows.
+     *        The stateful inspection criteria for this rule, used to inspect traffic flows.
      */
 
     public void setHeader(Header header) {
@@ -374,10 +381,10 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The stateful 5-tuple inspection criteria for this rule, used to inspect traffic flows.
+     * The stateful inspection criteria for this rule, used to inspect traffic flows.
      * </p>
      * 
-     * @return The stateful 5-tuple inspection criteria for this rule, used to inspect traffic flows.
+     * @return The stateful inspection criteria for this rule, used to inspect traffic flows.
      */
 
     public Header getHeader() {
@@ -386,11 +393,11 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The stateful 5-tuple inspection criteria for this rule, used to inspect traffic flows.
+     * The stateful inspection criteria for this rule, used to inspect traffic flows.
      * </p>
      * 
      * @param header
-     *        The stateful 5-tuple inspection criteria for this rule, used to inspect traffic flows.
+     *        The stateful inspection criteria for this rule, used to inspect traffic flows.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -400,9 +407,11 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.
+     * </p>
      * 
-     * @return
+     * @return Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.
      */
 
     public java.util.List<RuleOption> getRuleOptions() {
@@ -410,9 +419,12 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.
+     * </p>
      * 
      * @param ruleOptions
+     *        Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.
      */
 
     public void setRuleOptions(java.util.Collection<RuleOption> ruleOptions) {
@@ -425,7 +437,9 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setRuleOptions(java.util.Collection)} or {@link #withRuleOptions(java.util.Collection)} if you want to
@@ -433,6 +447,7 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param ruleOptions
+     *        Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -447,9 +462,12 @@ public class StatefulRule implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.
+     * </p>
      * 
      * @param ruleOptions
+     *        Additional options for the rule. These are the Suricata <code>RuleOptions</code> settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -93,6 +93,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
     }
 
     @Override
+    public DeleteMobileDeviceAccessOverrideResult deleteMobileDeviceAccessOverride(DeleteMobileDeviceAccessOverrideRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteMobileDeviceAccessRuleResult deleteMobileDeviceAccessRule(DeleteMobileDeviceAccessRuleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -178,6 +183,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
     }
 
     @Override
+    public GetMobileDeviceAccessOverrideResult getMobileDeviceAccessOverride(GetMobileDeviceAccessOverrideRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAccessControlRulesResult listAccessControlRules(ListAccessControlRulesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -204,6 +214,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
 
     @Override
     public ListMailboxPermissionsResult listMailboxPermissions(ListMailboxPermissionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListMobileDeviceAccessOverridesResult listMobileDeviceAccessOverrides(ListMobileDeviceAccessOverridesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -244,6 +259,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
 
     @Override
     public PutMailboxPermissionsResult putMailboxPermissions(PutMailboxPermissionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutMobileDeviceAccessOverrideResult putMobileDeviceAccessOverride(PutMobileDeviceAccessOverrideRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

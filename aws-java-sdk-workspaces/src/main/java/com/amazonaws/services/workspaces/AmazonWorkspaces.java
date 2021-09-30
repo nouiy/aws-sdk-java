@@ -189,19 +189,19 @@ public interface AmazonWorkspaces {
      * images, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/copy-custom-image.html"> Copy a
      * Custom WorkSpaces Image</a>.
      * </p>
-     * <note>
      * <p>
      * In the China (Ningxia) Region, you can copy images only within the same Region.
      * </p>
      * <p>
-     * In the AWS GovCloud (US-West) Region, to copy images to and from other AWS Regions, contact AWS Support.
+     * In Amazon Web Services GovCloud (US), to copy images to and from other Regions, contact Amazon Web Services
+     * Support.
      * </p>
-     * </note> <important>
+     * <important>
      * <p>
-     * Before copying a shared image, be sure to verify that it has been shared from the correct AWS account. To
-     * determine if an image has been shared and to see the AWS account ID that owns an image, use the <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeWorkspaceImages.html"
-     * >DescribeWorkSpaceImages</a> and <a
+     * Before copying a shared image, be sure to verify that it has been shared from the correct Amazon Web Services
+     * account. To determine if an image has been shared and to see the ID of the Amazon Web Services account that owns
+     * an image, use the <a href="https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeWorkspaceImages.html">
+     * DescribeWorkSpaceImages</a> and <a
      * href="https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeWorkspaceImagePermissions.html"
      * >DescribeWorkspaceImagePermissions</a> API operations.
      * </p>
@@ -309,6 +309,59 @@ public interface AmazonWorkspaces {
      *      Documentation</a>
      */
     CreateTagsResult createTags(CreateTagsRequest createTagsRequest);
+
+    /**
+     * <p>
+     * Creates a new updated WorkSpace image based on the specified source image. The new updated WorkSpace image has
+     * the latest drivers and other updates required by the Amazon WorkSpaces components.
+     * </p>
+     * <p>
+     * To determine which WorkSpace images need to be updated with the latest Amazon WorkSpaces requirements, use <a
+     * href="https://docs.aws.amazon.com/workspaces/latest/api/API_DescribeWorkspaceImages.html">
+     * DescribeWorkspaceImages</a>.
+     * </p>
+     * <note>
+     * <ul>
+     * <li>
+     * <p>
+     * Only Windows 10 WorkSpace images can be programmatically updated at this time.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Microsoft Windows updates and other application updates are not included in the update process.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The source WorkSpace image is not deleted. You can delete the source image after you've verified your new updated
+     * image and created a new bundle.
+     * </p>
+     * </li>
+     * </ul>
+     * </note>
+     * 
+     * @param createUpdatedWorkspaceImageRequest
+     * @return Result of the CreateUpdatedWorkspaceImage operation returned by the service.
+     * @throws ResourceLimitExceededException
+     *         Your resource limits have been exceeded.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource already exists.
+     * @throws ResourceNotFoundException
+     *         The resource could not be found.
+     * @throws OperationNotSupportedException
+     *         This operation is not supported.
+     * @throws InvalidResourceStateException
+     *         The state of the resource is not valid for this operation.
+     * @throws AccessDeniedException
+     *         The user is not authorized to access a resource.
+     * @throws InvalidParameterValuesException
+     *         One or more parameter values are not valid.
+     * @sample AmazonWorkspaces.CreateUpdatedWorkspaceImage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/CreateUpdatedWorkspaceImage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateUpdatedWorkspaceImageResult createUpdatedWorkspaceImage(CreateUpdatedWorkspaceImageRequest createUpdatedWorkspaceImageRequest);
 
     /**
      * <p>
@@ -495,7 +548,7 @@ public interface AmazonWorkspaces {
      * Simple AD and AD Connector are made available to you free of charge to use with WorkSpaces. If there are no
      * WorkSpaces being used with your Simple AD or AD Connector directory for 30 consecutive days, this directory will
      * be automatically deregistered for use with Amazon WorkSpaces, and you will be charged for this directory as per
-     * the <a href="http://aws.amazon.com/directoryservice/pricing/">AWS Directory Services pricing terms</a>.
+     * the <a href="http://aws.amazon.com/directoryservice/pricing/">Directory Service pricing terms</a>.
      * </p>
      * <p>
      * To delete empty directories, see <a
@@ -575,8 +628,8 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
-     * Describes the permissions that the owner of a connection alias has granted to another AWS account for the
-     * specified connection alias. For more information, see <a
+     * Describes the permissions that the owner of a connection alias has granted to another Amazon Web Services account
+     * for the specified connection alias. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region
      * Redirection for Amazon WorkSpaces</a>.
      * </p>
@@ -700,7 +753,8 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
-     * Describes the permissions that the owner of an image has granted to other AWS accounts for an image.
+     * Describes the permissions that the owner of an image has granted to other Amazon Web Services accounts for an
+     * image.
      * </p>
      * 
      * @param describeWorkspaceImagePermissionsRequest
@@ -799,7 +853,7 @@ public interface AmazonWorkspaces {
     /**
      * <p>
      * Disassociates a connection alias from a directory. Disassociating a connection alias disables cross-Region
-     * redirection between two directories in different AWS Regions. For more information, see <a
+     * redirection between two directories in different Regions. For more information, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html"> Cross-Region
      * Redirection for Amazon WorkSpaces</a>.
      * </p>
@@ -854,8 +908,8 @@ public interface AmazonWorkspaces {
     /**
      * <p>
      * Imports the specified Windows 10 Bring Your Own License (BYOL) image into Amazon WorkSpaces. The image must be an
-     * already licensed Amazon EC2 image that is in your AWS account, and you must own the image. For more information
-     * about creating BYOL images, see <a
+     * already licensed Amazon EC2 image that is in your Amazon Web Services account, and you must own the image. For
+     * more information about creating BYOL images, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.html"> Bring Your Own Windows
      * Desktop Licenses</a>.
      * </p>
@@ -886,8 +940,8 @@ public interface AmazonWorkspaces {
      * interface when you enable Bring Your Own License (BYOL).
      * </p>
      * <p>
-     * This operation can be run only by AWS accounts that are enabled for BYOL. If your account isn't enabled for BYOL,
-     * you'll receive an <code>AccessDeniedException</code> error.
+     * This operation can be run only by Amazon Web Services accounts that are enabled for BYOL. If your account isn't
+     * enabled for BYOL, you'll receive an <code>AccessDeniedException</code> error.
      * </p>
      * <p>
      * The management network interface is connected to a secure Amazon WorkSpaces management network. It is used for
@@ -1281,7 +1335,7 @@ public interface AmazonWorkspaces {
      * <important>
      * <p>
      * Terminating a WorkSpace is a permanent action and cannot be undone. The user's data is destroyed. If you need to
-     * archive any user data, contact AWS Support before terminating the WorkSpace.
+     * archive any user data, contact Amazon Web Services Support before terminating the WorkSpace.
      * </p>
      * </important>
      * <p>
@@ -1300,7 +1354,7 @@ public interface AmazonWorkspaces {
      * Simple AD and AD Connector are made available to you free of charge to use with WorkSpaces. If there are no
      * WorkSpaces being used with your Simple AD or AD Connector directory for 30 consecutive days, this directory will
      * be automatically deregistered for use with Amazon WorkSpaces, and you will be charged for this directory as per
-     * the <a href="http://aws.amazon.com/directoryservice/pricing/">AWS Directory Services pricing terms</a>.
+     * the <a href="http://aws.amazon.com/directoryservice/pricing/">Directory Service pricing terms</a>.
      * </p>
      * <p>
      * To delete empty directories, see <a
@@ -1425,21 +1479,20 @@ public interface AmazonWorkspaces {
 
     /**
      * <p>
-     * Shares or unshares an image with one account in the same AWS Region by specifying whether that account has
-     * permission to copy the image. If the copy image permission is granted, the image is shared with that account. If
-     * the copy image permission is revoked, the image is unshared with the account.
+     * Shares or unshares an image with one account in the same Amazon Web Services Region by specifying whether that
+     * account has permission to copy the image. If the copy image permission is granted, the image is shared with that
+     * account. If the copy image permission is revoked, the image is unshared with the account.
      * </p>
      * <p>
-     * After an image has been shared, the recipient account can copy the image to other AWS Regions as needed.
+     * After an image has been shared, the recipient account can copy the image to other Regions as needed.
      * </p>
-     * <note>
      * <p>
      * In the China (Ningxia) Region, you can copy images only within the same Region.
      * </p>
      * <p>
-     * In the AWS GovCloud (US-West) Region, to copy images to and from other AWS Regions, contact AWS Support.
+     * In Amazon Web Services GovCloud (US), to copy images to and from other Regions, contact Amazon Web Services
+     * Support.
      * </p>
-     * </note>
      * <p>
      * For more information about sharing images, see <a
      * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/share-custom-image.html"> Share or Unshare a
@@ -1454,8 +1507,9 @@ public interface AmazonWorkspaces {
      * </li>
      * <li>
      * <p>
-     * Sharing Bring Your Own License (BYOL) images across AWS accounts isn't supported at this time in the AWS GovCloud
-     * (US-West) Region. To share BYOL images across accounts in the AWS GovCloud (US-West) Region, contact AWS Support.
+     * Sharing Bring Your Own License (BYOL) images across Amazon Web Services accounts isn't supported at this time in
+     * Amazon Web Services GovCloud (US). To share BYOL images across accounts in Amazon Web Services GovCloud (US),
+     * contact Amazon Web Services Support.
      * </p>
      * </li>
      * </ul>

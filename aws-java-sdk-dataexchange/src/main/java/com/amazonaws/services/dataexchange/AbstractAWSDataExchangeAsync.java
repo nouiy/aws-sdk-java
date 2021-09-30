@@ -54,6 +54,19 @@ public class AbstractAWSDataExchangeAsync extends AbstractAWSDataExchange implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateEventActionResult> createEventActionAsync(CreateEventActionRequest request) {
+
+        return createEventActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateEventActionResult> createEventActionAsync(CreateEventActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateEventActionRequest, CreateEventActionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateJobResult> createJobAsync(CreateJobRequest request) {
 
         return createJobAsync(request, null);
@@ -106,6 +119,19 @@ public class AbstractAWSDataExchangeAsync extends AbstractAWSDataExchange implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteEventActionResult> deleteEventActionAsync(DeleteEventActionRequest request) {
+
+        return deleteEventActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEventActionResult> deleteEventActionAsync(DeleteEventActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteEventActionRequest, DeleteEventActionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteRevisionResult> deleteRevisionAsync(DeleteRevisionRequest request) {
 
         return deleteRevisionAsync(request, null);
@@ -140,6 +166,19 @@ public class AbstractAWSDataExchangeAsync extends AbstractAWSDataExchange implem
     @Override
     public java.util.concurrent.Future<GetDataSetResult> getDataSetAsync(GetDataSetRequest request,
             com.amazonaws.handlers.AsyncHandler<GetDataSetRequest, GetDataSetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventActionResult> getEventActionAsync(GetEventActionRequest request) {
+
+        return getEventActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEventActionResult> getEventActionAsync(GetEventActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEventActionRequest, GetEventActionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -192,6 +231,19 @@ public class AbstractAWSDataExchangeAsync extends AbstractAWSDataExchange implem
     @Override
     public java.util.concurrent.Future<ListDataSetsResult> listDataSetsAsync(ListDataSetsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListDataSetsRequest, ListDataSetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventActionsResult> listEventActionsAsync(ListEventActionsRequest request) {
+
+        return listEventActionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEventActionsResult> listEventActionsAsync(ListEventActionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEventActionsRequest, ListEventActionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -296,6 +348,19 @@ public class AbstractAWSDataExchangeAsync extends AbstractAWSDataExchange implem
     @Override
     public java.util.concurrent.Future<UpdateDataSetResult> updateDataSetAsync(UpdateDataSetRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateDataSetRequest, UpdateDataSetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventActionResult> updateEventActionAsync(UpdateEventActionRequest request) {
+
+        return updateEventActionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateEventActionResult> updateEventActionAsync(UpdateEventActionRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateEventActionRequest, UpdateEventActionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -24,6 +24,13 @@ public class ValidationException extends com.amazonaws.services.dataexchange.mod
     private static final long serialVersionUID = 1L;
 
     /**
+     * <p>
+     * The message that informs you about what the exception was.
+     * </p>
+     */
+    private String exceptionCause;
+
+    /**
      * Constructs a new ValidationException with the specified error message.
      *
      * @param message
@@ -31,6 +38,67 @@ public class ValidationException extends com.amazonaws.services.dataexchange.mod
      */
     public ValidationException(String message) {
         super(message);
+    }
+
+    /**
+     * <p>
+     * The message that informs you about what the exception was.
+     * </p>
+     * 
+     * @param exceptionCause
+     *        The message that informs you about what the exception was.
+     * @see ExceptionCause
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("ExceptionCause")
+    public void setExceptionCause(String exceptionCause) {
+        this.exceptionCause = exceptionCause;
+    }
+
+    /**
+     * <p>
+     * The message that informs you about what the exception was.
+     * </p>
+     * 
+     * @return The message that informs you about what the exception was.
+     * @see ExceptionCause
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("ExceptionCause")
+    public String getExceptionCause() {
+        return this.exceptionCause;
+    }
+
+    /**
+     * <p>
+     * The message that informs you about what the exception was.
+     * </p>
+     * 
+     * @param exceptionCause
+     *        The message that informs you about what the exception was.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExceptionCause
+     */
+
+    public ValidationException withExceptionCause(String exceptionCause) {
+        setExceptionCause(exceptionCause);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The message that informs you about what the exception was.
+     * </p>
+     * 
+     * @param exceptionCause
+     *        The message that informs you about what the exception was.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExceptionCause
+     */
+
+    public ValidationException withExceptionCause(ExceptionCause exceptionCause) {
+        this.exceptionCause = exceptionCause.toString();
+        return this;
     }
 
 }

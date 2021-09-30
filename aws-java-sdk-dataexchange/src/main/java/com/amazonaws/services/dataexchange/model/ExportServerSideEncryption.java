@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Encryption configuration of the export job. Includes the encryption type as well as the AWS KMS key. The KMS key is
- * only necessary if you chose the KMS encryption type.
+ * Encryption configuration of the export job. Includes the encryption type in addition to the AWS KMS key. The KMS key
+ * is only necessary if you chose the KMS encryption. type.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dataexchange-2017-07-25/ExportServerSideEncryption"
@@ -31,7 +31,7 @@ public class ExportServerSideEncryption implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
+     * The Amazon Resource Name (ARN) of the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
      * parameter is required if you choose aws:kms as an encryption type.
      * </p>
      */
@@ -45,13 +45,13 @@ public class ExportServerSideEncryption implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
+     * The Amazon Resource Name (ARN) of the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
      * parameter is required if you choose aws:kms as an encryption type.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the the AWS KMS key you want to use to encrypt the Amazon S3 objects.
-     *        This parameter is required if you choose aws:kms as an encryption type.
+     *        The Amazon Resource Name (ARN) of the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
+     *        parameter is required if you choose aws:kms as an encryption type.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -60,12 +60,12 @@ public class ExportServerSideEncryption implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
+     * The Amazon Resource Name (ARN) of the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
      * parameter is required if you choose aws:kms as an encryption type.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the the AWS KMS key you want to use to encrypt the Amazon S3 objects.
-     *         This parameter is required if you choose aws:kms as an encryption type.
+     * @return The Amazon Resource Name (ARN) of the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
+     *         parameter is required if you choose aws:kms as an encryption type.
      */
 
     public String getKmsKeyArn() {
@@ -74,13 +74,13 @@ public class ExportServerSideEncryption implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
+     * The Amazon Resource Name (ARN) of the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
      * parameter is required if you choose aws:kms as an encryption type.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the the AWS KMS key you want to use to encrypt the Amazon S3 objects.
-     *        This parameter is required if you choose aws:kms as an encryption type.
+     *        The Amazon Resource Name (ARN) of the AWS KMS key you want to use to encrypt the Amazon S3 objects. This
+     *        parameter is required if you choose aws:kms as an encryption type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

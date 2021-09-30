@@ -19,7 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information about an S3 bucket that Amazon Macie monitors and analyzes.
+ * Provides statistical data and other information about an S3 bucket that Amazon Macie monitors and analyzes for your
+ * account. If an error occurs when Macie attempts to retrieve and process information about the bucket or the bucket's
+ * objects, the value for most of these properties is null. Exceptions are accountId, bucketArn, bucketCreatedAt,
+ * bucketName, lastUpdated, and region. To identify the cause of the error, refer to the errorCode and errorMessage
+ * values.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/BucketMetadata" target="_top">AWS API
@@ -98,6 +102,23 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Long classifiableSizeInBytes;
+    /**
+     * <p>
+     * Specifies the error code for an error that prevented Amazon Macie from retrieving and processing information
+     * about the bucket and the bucket's objects. If this value is ACCESS_DENIED, Macie doesn't have permission to
+     * retrieve the information. For example, the bucket has a restrictive bucket policy and Amazon S3 denied the
+     * request. If this value is null, Macie was able to retrieve and process the information.
+     * </p>
+     */
+    private String errorCode;
+    /**
+     * <p>
+     * A brief description of the error (errorCode) that prevented Amazon Macie from retrieving and processing
+     * information about the bucket and the bucket's objects. This value is null if Macie was able to retrieve and
+     * process the information.
+     * </p>
+     */
+    private String errorMessage;
     /**
      * <p>
      * Specifies whether any one-time or recurring classification jobs are configured to analyze data in the bucket,
@@ -198,9 +219,9 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the bucket.
      * </p>
      * <p>
-     * If versioning is enabled for the bucket, Macie calculates this value based on the size of the latest version of
-     * each applicable object in the bucket. This value doesn't reflect the storage size of all versions of each
-     * applicable object in the bucket.
+     * If versioning is enabled for the bucket, Amazon Macie calculates this value based on the size of the latest
+     * version of each applicable object in the bucket. This value doesn't reflect the storage size of all versions of
+     * each applicable object in the bucket.
      * </p>
      */
     private Long sizeInBytesCompressed;
@@ -741,6 +762,142 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
 
     public BucketMetadata withClassifiableSizeInBytes(Long classifiableSizeInBytes) {
         setClassifiableSizeInBytes(classifiableSizeInBytes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the error code for an error that prevented Amazon Macie from retrieving and processing information
+     * about the bucket and the bucket's objects. If this value is ACCESS_DENIED, Macie doesn't have permission to
+     * retrieve the information. For example, the bucket has a restrictive bucket policy and Amazon S3 denied the
+     * request. If this value is null, Macie was able to retrieve and process the information.
+     * </p>
+     * 
+     * @param errorCode
+     *        Specifies the error code for an error that prevented Amazon Macie from retrieving and processing
+     *        information about the bucket and the bucket's objects. If this value is ACCESS_DENIED, Macie doesn't have
+     *        permission to retrieve the information. For example, the bucket has a restrictive bucket policy and Amazon
+     *        S3 denied the request. If this value is null, Macie was able to retrieve and process the information.
+     * @see BucketMetadataErrorCode
+     */
+
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    /**
+     * <p>
+     * Specifies the error code for an error that prevented Amazon Macie from retrieving and processing information
+     * about the bucket and the bucket's objects. If this value is ACCESS_DENIED, Macie doesn't have permission to
+     * retrieve the information. For example, the bucket has a restrictive bucket policy and Amazon S3 denied the
+     * request. If this value is null, Macie was able to retrieve and process the information.
+     * </p>
+     * 
+     * @return Specifies the error code for an error that prevented Amazon Macie from retrieving and processing
+     *         information about the bucket and the bucket's objects. If this value is ACCESS_DENIED, Macie doesn't have
+     *         permission to retrieve the information. For example, the bucket has a restrictive bucket policy and
+     *         Amazon S3 denied the request. If this value is null, Macie was able to retrieve and process the
+     *         information.
+     * @see BucketMetadataErrorCode
+     */
+
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * <p>
+     * Specifies the error code for an error that prevented Amazon Macie from retrieving and processing information
+     * about the bucket and the bucket's objects. If this value is ACCESS_DENIED, Macie doesn't have permission to
+     * retrieve the information. For example, the bucket has a restrictive bucket policy and Amazon S3 denied the
+     * request. If this value is null, Macie was able to retrieve and process the information.
+     * </p>
+     * 
+     * @param errorCode
+     *        Specifies the error code for an error that prevented Amazon Macie from retrieving and processing
+     *        information about the bucket and the bucket's objects. If this value is ACCESS_DENIED, Macie doesn't have
+     *        permission to retrieve the information. For example, the bucket has a restrictive bucket policy and Amazon
+     *        S3 denied the request. If this value is null, Macie was able to retrieve and process the information.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BucketMetadataErrorCode
+     */
+
+    public BucketMetadata withErrorCode(String errorCode) {
+        setErrorCode(errorCode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the error code for an error that prevented Amazon Macie from retrieving and processing information
+     * about the bucket and the bucket's objects. If this value is ACCESS_DENIED, Macie doesn't have permission to
+     * retrieve the information. For example, the bucket has a restrictive bucket policy and Amazon S3 denied the
+     * request. If this value is null, Macie was able to retrieve and process the information.
+     * </p>
+     * 
+     * @param errorCode
+     *        Specifies the error code for an error that prevented Amazon Macie from retrieving and processing
+     *        information about the bucket and the bucket's objects. If this value is ACCESS_DENIED, Macie doesn't have
+     *        permission to retrieve the information. For example, the bucket has a restrictive bucket policy and Amazon
+     *        S3 denied the request. If this value is null, Macie was able to retrieve and process the information.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BucketMetadataErrorCode
+     */
+
+    public BucketMetadata withErrorCode(BucketMetadataErrorCode errorCode) {
+        this.errorCode = errorCode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A brief description of the error (errorCode) that prevented Amazon Macie from retrieving and processing
+     * information about the bucket and the bucket's objects. This value is null if Macie was able to retrieve and
+     * process the information.
+     * </p>
+     * 
+     * @param errorMessage
+     *        A brief description of the error (errorCode) that prevented Amazon Macie from retrieving and processing
+     *        information about the bucket and the bucket's objects. This value is null if Macie was able to retrieve
+     *        and process the information.
+     */
+
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
+    /**
+     * <p>
+     * A brief description of the error (errorCode) that prevented Amazon Macie from retrieving and processing
+     * information about the bucket and the bucket's objects. This value is null if Macie was able to retrieve and
+     * process the information.
+     * </p>
+     * 
+     * @return A brief description of the error (errorCode) that prevented Amazon Macie from retrieving and processing
+     *         information about the bucket and the bucket's objects. This value is null if Macie was able to retrieve
+     *         and process the information.
+     */
+
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    /**
+     * <p>
+     * A brief description of the error (errorCode) that prevented Amazon Macie from retrieving and processing
+     * information about the bucket and the bucket's objects. This value is null if Macie was able to retrieve and
+     * process the information.
+     * </p>
+     * 
+     * @param errorMessage
+     *        A brief description of the error (errorCode) that prevented Amazon Macie from retrieving and processing
+     *        information about the bucket and the bucket's objects. This value is null if Macie was able to retrieve
+     *        and process the information.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BucketMetadata withErrorMessage(String errorMessage) {
+        setErrorMessage(errorMessage);
         return this;
     }
 
@@ -1431,17 +1588,17 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the bucket.
      * </p>
      * <p>
-     * If versioning is enabled for the bucket, Macie calculates this value based on the size of the latest version of
-     * each applicable object in the bucket. This value doesn't reflect the storage size of all versions of each
-     * applicable object in the bucket.
+     * If versioning is enabled for the bucket, Amazon Macie calculates this value based on the size of the latest
+     * version of each applicable object in the bucket. This value doesn't reflect the storage size of all versions of
+     * each applicable object in the bucket.
      * </p>
      * 
      * @param sizeInBytesCompressed
      *        The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the
      *        bucket.</p>
      *        <p>
-     *        If versioning is enabled for the bucket, Macie calculates this value based on the size of the latest
-     *        version of each applicable object in the bucket. This value doesn't reflect the storage size of all
+     *        If versioning is enabled for the bucket, Amazon Macie calculates this value based on the size of the
+     *        latest version of each applicable object in the bucket. This value doesn't reflect the storage size of all
      *        versions of each applicable object in the bucket.
      */
 
@@ -1454,17 +1611,17 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the bucket.
      * </p>
      * <p>
-     * If versioning is enabled for the bucket, Macie calculates this value based on the size of the latest version of
-     * each applicable object in the bucket. This value doesn't reflect the storage size of all versions of each
-     * applicable object in the bucket.
+     * If versioning is enabled for the bucket, Amazon Macie calculates this value based on the size of the latest
+     * version of each applicable object in the bucket. This value doesn't reflect the storage size of all versions of
+     * each applicable object in the bucket.
      * </p>
      * 
      * @return The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the
      *         bucket.</p>
      *         <p>
-     *         If versioning is enabled for the bucket, Macie calculates this value based on the size of the latest
-     *         version of each applicable object in the bucket. This value doesn't reflect the storage size of all
-     *         versions of each applicable object in the bucket.
+     *         If versioning is enabled for the bucket, Amazon Macie calculates this value based on the size of the
+     *         latest version of each applicable object in the bucket. This value doesn't reflect the storage size of
+     *         all versions of each applicable object in the bucket.
      */
 
     public Long getSizeInBytesCompressed() {
@@ -1476,17 +1633,17 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
      * The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the bucket.
      * </p>
      * <p>
-     * If versioning is enabled for the bucket, Macie calculates this value based on the size of the latest version of
-     * each applicable object in the bucket. This value doesn't reflect the storage size of all versions of each
-     * applicable object in the bucket.
+     * If versioning is enabled for the bucket, Amazon Macie calculates this value based on the size of the latest
+     * version of each applicable object in the bucket. This value doesn't reflect the storage size of all versions of
+     * each applicable object in the bucket.
      * </p>
      * 
      * @param sizeInBytesCompressed
      *        The total storage size, in bytes, of the objects that are compressed (.gz, .gzip, .zip) files in the
      *        bucket.</p>
      *        <p>
-     *        If versioning is enabled for the bucket, Macie calculates this value based on the size of the latest
-     *        version of each applicable object in the bucket. This value doesn't reflect the storage size of all
+     *        If versioning is enabled for the bucket, Amazon Macie calculates this value based on the size of the
+     *        latest version of each applicable object in the bucket. This value doesn't reflect the storage size of all
      *        versions of each applicable object in the bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1739,6 +1896,10 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
             sb.append("ClassifiableObjectCount: ").append(getClassifiableObjectCount()).append(",");
         if (getClassifiableSizeInBytes() != null)
             sb.append("ClassifiableSizeInBytes: ").append(getClassifiableSizeInBytes()).append(",");
+        if (getErrorCode() != null)
+            sb.append("ErrorCode: ").append(getErrorCode()).append(",");
+        if (getErrorMessage() != null)
+            sb.append("ErrorMessage: ").append(getErrorMessage()).append(",");
         if (getJobDetails() != null)
             sb.append("JobDetails: ").append(getJobDetails()).append(",");
         if (getLastUpdated() != null)
@@ -1811,6 +1972,14 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
         if (other.getClassifiableSizeInBytes() == null ^ this.getClassifiableSizeInBytes() == null)
             return false;
         if (other.getClassifiableSizeInBytes() != null && other.getClassifiableSizeInBytes().equals(this.getClassifiableSizeInBytes()) == false)
+            return false;
+        if (other.getErrorCode() == null ^ this.getErrorCode() == null)
+            return false;
+        if (other.getErrorCode() != null && other.getErrorCode().equals(this.getErrorCode()) == false)
+            return false;
+        if (other.getErrorMessage() == null ^ this.getErrorMessage() == null)
+            return false;
+        if (other.getErrorMessage() != null && other.getErrorMessage().equals(this.getErrorMessage()) == false)
             return false;
         if (other.getJobDetails() == null ^ this.getJobDetails() == null)
             return false;
@@ -1888,6 +2057,8 @@ public class BucketMetadata implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getBucketName() == null) ? 0 : getBucketName().hashCode());
         hashCode = prime * hashCode + ((getClassifiableObjectCount() == null) ? 0 : getClassifiableObjectCount().hashCode());
         hashCode = prime * hashCode + ((getClassifiableSizeInBytes() == null) ? 0 : getClassifiableSizeInBytes().hashCode());
+        hashCode = prime * hashCode + ((getErrorCode() == null) ? 0 : getErrorCode().hashCode());
+        hashCode = prime * hashCode + ((getErrorMessage() == null) ? 0 : getErrorMessage().hashCode());
         hashCode = prime * hashCode + ((getJobDetails() == null) ? 0 : getJobDetails().hashCode());
         hashCode = prime * hashCode + ((getLastUpdated() == null) ? 0 : getLastUpdated().hashCode());
         hashCode = prime * hashCode + ((getObjectCount() == null) ? 0 : getObjectCount().hashCode());

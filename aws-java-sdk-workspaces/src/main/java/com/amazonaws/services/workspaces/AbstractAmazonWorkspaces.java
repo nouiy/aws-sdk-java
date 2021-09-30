@@ -73,6 +73,11 @@ public class AbstractAmazonWorkspaces implements AmazonWorkspaces {
     }
 
     @Override
+    public CreateUpdatedWorkspaceImageResult createUpdatedWorkspaceImage(CreateUpdatedWorkspaceImageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateWorkspaceBundleResult createWorkspaceBundle(CreateWorkspaceBundleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

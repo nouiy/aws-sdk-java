@@ -530,6 +530,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
 
     /**
      * <p>
+     * Deletes the mobile device access override for the given WorkMail organization, user, and device.
+     * </p>
+     * 
+     * @param deleteMobileDeviceAccessOverrideRequest
+     * @return A Java Future containing the result of the DeleteMobileDeviceAccessOverride operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.DeleteMobileDeviceAccessOverride
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteMobileDeviceAccessOverride"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMobileDeviceAccessOverrideResult> deleteMobileDeviceAccessOverrideAsync(
+            DeleteMobileDeviceAccessOverrideRequest deleteMobileDeviceAccessOverrideRequest);
+
+    /**
+     * <p>
+     * Deletes the mobile device access override for the given WorkMail organization, user, and device.
+     * </p>
+     * 
+     * @param deleteMobileDeviceAccessOverrideRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteMobileDeviceAccessOverride operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.DeleteMobileDeviceAccessOverride
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteMobileDeviceAccessOverride"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteMobileDeviceAccessOverrideResult> deleteMobileDeviceAccessOverrideAsync(
+            DeleteMobileDeviceAccessOverrideRequest deleteMobileDeviceAccessOverrideRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteMobileDeviceAccessOverrideRequest, DeleteMobileDeviceAccessOverrideResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a mobile device access rule for the specified Amazon WorkMail organization.
      * </p>
      * 
@@ -1097,6 +1132,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
 
     /**
      * <p>
+     * Gets the mobile device access override for the given WorkMail organization, user, and device.
+     * </p>
+     * 
+     * @param getMobileDeviceAccessOverrideRequest
+     * @return A Java Future containing the result of the GetMobileDeviceAccessOverride operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.GetMobileDeviceAccessOverride
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/GetMobileDeviceAccessOverride"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMobileDeviceAccessOverrideResult> getMobileDeviceAccessOverrideAsync(
+            GetMobileDeviceAccessOverrideRequest getMobileDeviceAccessOverrideRequest);
+
+    /**
+     * <p>
+     * Gets the mobile device access override for the given WorkMail organization, user, and device.
+     * </p>
+     * 
+     * @param getMobileDeviceAccessOverrideRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMobileDeviceAccessOverride operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.GetMobileDeviceAccessOverride
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/GetMobileDeviceAccessOverride"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetMobileDeviceAccessOverrideResult> getMobileDeviceAccessOverrideAsync(
+            GetMobileDeviceAccessOverrideRequest getMobileDeviceAccessOverrideRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMobileDeviceAccessOverrideRequest, GetMobileDeviceAccessOverrideResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the access control rules for the specified organization.
      * </p>
      * 
@@ -1280,6 +1350,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      */
     java.util.concurrent.Future<ListMailboxPermissionsResult> listMailboxPermissionsAsync(ListMailboxPermissionsRequest listMailboxPermissionsRequest,
             com.amazonaws.handlers.AsyncHandler<ListMailboxPermissionsRequest, ListMailboxPermissionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all the mobile device access overrides for any given combination of WorkMail organization, user, or device.
+     * </p>
+     * 
+     * @param listMobileDeviceAccessOverridesRequest
+     * @return A Java Future containing the result of the ListMobileDeviceAccessOverrides operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.ListMobileDeviceAccessOverrides
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListMobileDeviceAccessOverrides"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMobileDeviceAccessOverridesResult> listMobileDeviceAccessOverridesAsync(
+            ListMobileDeviceAccessOverridesRequest listMobileDeviceAccessOverridesRequest);
+
+    /**
+     * <p>
+     * Lists all the mobile device access overrides for any given combination of WorkMail organization, user, or device.
+     * </p>
+     * 
+     * @param listMobileDeviceAccessOverridesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMobileDeviceAccessOverrides operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.ListMobileDeviceAccessOverrides
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListMobileDeviceAccessOverrides"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListMobileDeviceAccessOverridesResult> listMobileDeviceAccessOverridesAsync(
+            ListMobileDeviceAccessOverridesRequest listMobileDeviceAccessOverridesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMobileDeviceAccessOverridesRequest, ListMobileDeviceAccessOverridesResult> asyncHandler);
 
     /**
      * <p>
@@ -1536,6 +1641,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      */
     java.util.concurrent.Future<PutMailboxPermissionsResult> putMailboxPermissionsAsync(PutMailboxPermissionsRequest putMailboxPermissionsRequest,
             com.amazonaws.handlers.AsyncHandler<PutMailboxPermissionsRequest, PutMailboxPermissionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates or updates a mobile device access override for the given WorkMail organization, user, and device.
+     * </p>
+     * 
+     * @param putMobileDeviceAccessOverrideRequest
+     * @return A Java Future containing the result of the PutMobileDeviceAccessOverride operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.PutMobileDeviceAccessOverride
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutMobileDeviceAccessOverride"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutMobileDeviceAccessOverrideResult> putMobileDeviceAccessOverrideAsync(
+            PutMobileDeviceAccessOverrideRequest putMobileDeviceAccessOverrideRequest);
+
+    /**
+     * <p>
+     * Creates or updates a mobile device access override for the given WorkMail organization, user, and device.
+     * </p>
+     * 
+     * @param putMobileDeviceAccessOverrideRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutMobileDeviceAccessOverride operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.PutMobileDeviceAccessOverride
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutMobileDeviceAccessOverride"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutMobileDeviceAccessOverrideResult> putMobileDeviceAccessOverrideAsync(
+            PutMobileDeviceAccessOverrideRequest putMobileDeviceAccessOverrideRequest,
+            com.amazonaws.handlers.AsyncHandler<PutMobileDeviceAccessOverrideRequest, PutMobileDeviceAccessOverrideResult> asyncHandler);
 
     /**
      * <p>

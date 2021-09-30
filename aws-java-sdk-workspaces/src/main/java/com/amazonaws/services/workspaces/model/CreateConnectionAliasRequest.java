@@ -31,9 +31,9 @@ public class CreateConnectionAliasRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <important>
      * <p>
-     * After you create a connection string, it is always associated to your AWS account. You cannot recreate the same
-     * connection string with a different account, even if you delete all instances of it from the original account. The
-     * connection string is globally reserved for your account.
+     * After you create a connection string, it is always associated to your Amazon Web Services account. You cannot
+     * recreate the same connection string with a different account, even if you delete all instances of it from the
+     * original account. The connection string is globally reserved for your account.
      * </p>
      * </important>
      */
@@ -51,9 +51,9 @@ public class CreateConnectionAliasRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <important>
      * <p>
-     * After you create a connection string, it is always associated to your AWS account. You cannot recreate the same
-     * connection string with a different account, even if you delete all instances of it from the original account. The
-     * connection string is globally reserved for your account.
+     * After you create a connection string, it is always associated to your Amazon Web Services account. You cannot
+     * recreate the same connection string with a different account, even if you delete all instances of it from the
+     * original account. The connection string is globally reserved for your account.
      * </p>
      * </important>
      * 
@@ -61,9 +61,9 @@ public class CreateConnectionAliasRequest extends com.amazonaws.AmazonWebService
      *        A connection string in the form of a fully qualified domain name (FQDN), such as
      *        <code>www.example.com</code>.</p> <important>
      *        <p>
-     *        After you create a connection string, it is always associated to your AWS account. You cannot recreate the
-     *        same connection string with a different account, even if you delete all instances of it from the original
-     *        account. The connection string is globally reserved for your account.
+     *        After you create a connection string, it is always associated to your Amazon Web Services account. You
+     *        cannot recreate the same connection string with a different account, even if you delete all instances of
+     *        it from the original account. The connection string is globally reserved for your account.
      *        </p>
      */
 
@@ -77,18 +77,18 @@ public class CreateConnectionAliasRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <important>
      * <p>
-     * After you create a connection string, it is always associated to your AWS account. You cannot recreate the same
-     * connection string with a different account, even if you delete all instances of it from the original account. The
-     * connection string is globally reserved for your account.
+     * After you create a connection string, it is always associated to your Amazon Web Services account. You cannot
+     * recreate the same connection string with a different account, even if you delete all instances of it from the
+     * original account. The connection string is globally reserved for your account.
      * </p>
      * </important>
      * 
      * @return A connection string in the form of a fully qualified domain name (FQDN), such as
      *         <code>www.example.com</code>.</p> <important>
      *         <p>
-     *         After you create a connection string, it is always associated to your AWS account. You cannot recreate
-     *         the same connection string with a different account, even if you delete all instances of it from the
-     *         original account. The connection string is globally reserved for your account.
+     *         After you create a connection string, it is always associated to your Amazon Web Services account. You
+     *         cannot recreate the same connection string with a different account, even if you delete all instances of
+     *         it from the original account. The connection string is globally reserved for your account.
      *         </p>
      */
 
@@ -102,9 +102,9 @@ public class CreateConnectionAliasRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <important>
      * <p>
-     * After you create a connection string, it is always associated to your AWS account. You cannot recreate the same
-     * connection string with a different account, even if you delete all instances of it from the original account. The
-     * connection string is globally reserved for your account.
+     * After you create a connection string, it is always associated to your Amazon Web Services account. You cannot
+     * recreate the same connection string with a different account, even if you delete all instances of it from the
+     * original account. The connection string is globally reserved for your account.
      * </p>
      * </important>
      * 
@@ -112,9 +112,9 @@ public class CreateConnectionAliasRequest extends com.amazonaws.AmazonWebService
      *        A connection string in the form of a fully qualified domain name (FQDN), such as
      *        <code>www.example.com</code>.</p> <important>
      *        <p>
-     *        After you create a connection string, it is always associated to your AWS account. You cannot recreate the
-     *        same connection string with a different account, even if you delete all instances of it from the original
-     *        account. The connection string is globally reserved for your account.
+     *        After you create a connection string, it is always associated to your Amazon Web Services account. You
+     *        cannot recreate the same connection string with a different account, even if you delete all instances of
+     *        it from the original account. The connection string is globally reserved for your account.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

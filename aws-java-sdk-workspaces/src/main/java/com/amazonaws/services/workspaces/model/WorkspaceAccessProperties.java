@@ -32,21 +32,13 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use Windows clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use Windows clients to access their WorkSpaces.
      * </p>
      */
     private String deviceTypeWindows;
     /**
      * <p>
-     * Indicates whether users can use macOS clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use macOS clients to access their WorkSpaces.
      * </p>
      */
     private String deviceTypeOsx;
@@ -64,7 +56,7 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
     private String deviceTypeIos;
     /**
      * <p>
-     * Indicates whether users can use Android devices to access their WorkSpaces.
+     * Indicates whether users can use Android and Android-compatible Chrome OS devices to access their WorkSpaces.
      * </p>
      */
     private String deviceTypeAndroid;
@@ -89,19 +81,11 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use Windows clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use Windows clients to access their WorkSpaces.
      * </p>
      * 
      * @param deviceTypeWindows
-     *        Indicates whether users can use Windows clients to access their WorkSpaces. To restrict WorkSpaces access
-     *        to trusted devices (also known as managed devices) with valid certificates, specify a value of
-     *        <code>TRUST</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces
-     *        Access to Trusted Devices</a>.
+     *        Indicates whether users can use Windows clients to access their WorkSpaces.
      * @see AccessPropertyValue
      */
 
@@ -111,18 +95,10 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use Windows clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use Windows clients to access their WorkSpaces.
      * </p>
      * 
-     * @return Indicates whether users can use Windows clients to access their WorkSpaces. To restrict WorkSpaces access
-     *         to trusted devices (also known as managed devices) with valid certificates, specify a value of
-     *         <code>TRUST</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces
-     *         Access to Trusted Devices</a>.
+     * @return Indicates whether users can use Windows clients to access their WorkSpaces.
      * @see AccessPropertyValue
      */
 
@@ -132,19 +108,11 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use Windows clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use Windows clients to access their WorkSpaces.
      * </p>
      * 
      * @param deviceTypeWindows
-     *        Indicates whether users can use Windows clients to access their WorkSpaces. To restrict WorkSpaces access
-     *        to trusted devices (also known as managed devices) with valid certificates, specify a value of
-     *        <code>TRUST</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces
-     *        Access to Trusted Devices</a>.
+     *        Indicates whether users can use Windows clients to access their WorkSpaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessPropertyValue
      */
@@ -156,19 +124,11 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use Windows clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use Windows clients to access their WorkSpaces.
      * </p>
      * 
      * @param deviceTypeWindows
-     *        Indicates whether users can use Windows clients to access their WorkSpaces. To restrict WorkSpaces access
-     *        to trusted devices (also known as managed devices) with valid certificates, specify a value of
-     *        <code>TRUST</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces
-     *        Access to Trusted Devices</a>.
+     *        Indicates whether users can use Windows clients to access their WorkSpaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessPropertyValue
      */
@@ -180,19 +140,11 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use macOS clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use macOS clients to access their WorkSpaces.
      * </p>
      * 
      * @param deviceTypeOsx
-     *        Indicates whether users can use macOS clients to access their WorkSpaces. To restrict WorkSpaces access to
-     *        trusted devices (also known as managed devices) with valid certificates, specify a value of
-     *        <code>TRUST</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces
-     *        Access to Trusted Devices</a>.
+     *        Indicates whether users can use macOS clients to access their WorkSpaces.
      * @see AccessPropertyValue
      */
 
@@ -202,18 +154,10 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use macOS clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use macOS clients to access their WorkSpaces.
      * </p>
      * 
-     * @return Indicates whether users can use macOS clients to access their WorkSpaces. To restrict WorkSpaces access
-     *         to trusted devices (also known as managed devices) with valid certificates, specify a value of
-     *         <code>TRUST</code>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces
-     *         Access to Trusted Devices</a>.
+     * @return Indicates whether users can use macOS clients to access their WorkSpaces.
      * @see AccessPropertyValue
      */
 
@@ -223,19 +167,11 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use macOS clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use macOS clients to access their WorkSpaces.
      * </p>
      * 
      * @param deviceTypeOsx
-     *        Indicates whether users can use macOS clients to access their WorkSpaces. To restrict WorkSpaces access to
-     *        trusted devices (also known as managed devices) with valid certificates, specify a value of
-     *        <code>TRUST</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces
-     *        Access to Trusted Devices</a>.
+     *        Indicates whether users can use macOS clients to access their WorkSpaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessPropertyValue
      */
@@ -247,19 +183,11 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use macOS clients to access their WorkSpaces. To restrict WorkSpaces access to
-     * trusted devices (also known as managed devices) with valid certificates, specify a value of <code>TRUST</code>.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces Access
-     * to Trusted Devices</a>.
+     * Indicates whether users can use macOS clients to access their WorkSpaces.
      * </p>
      * 
      * @param deviceTypeOsx
-     *        Indicates whether users can use macOS clients to access their WorkSpaces. To restrict WorkSpaces access to
-     *        trusted devices (also known as managed devices) with valid certificates, specify a value of
-     *        <code>TRUST</code>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/workspaces/latest/adminguide/trusted-devices.html">Restrict WorkSpaces
-     *        Access to Trusted Devices</a>.
+     *        Indicates whether users can use macOS clients to access their WorkSpaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessPropertyValue
      */
@@ -389,11 +317,12 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use Android devices to access their WorkSpaces.
+     * Indicates whether users can use Android and Android-compatible Chrome OS devices to access their WorkSpaces.
      * </p>
      * 
      * @param deviceTypeAndroid
-     *        Indicates whether users can use Android devices to access their WorkSpaces.
+     *        Indicates whether users can use Android and Android-compatible Chrome OS devices to access their
+     *        WorkSpaces.
      * @see AccessPropertyValue
      */
 
@@ -403,10 +332,11 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use Android devices to access their WorkSpaces.
+     * Indicates whether users can use Android and Android-compatible Chrome OS devices to access their WorkSpaces.
      * </p>
      * 
-     * @return Indicates whether users can use Android devices to access their WorkSpaces.
+     * @return Indicates whether users can use Android and Android-compatible Chrome OS devices to access their
+     *         WorkSpaces.
      * @see AccessPropertyValue
      */
 
@@ -416,11 +346,12 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use Android devices to access their WorkSpaces.
+     * Indicates whether users can use Android and Android-compatible Chrome OS devices to access their WorkSpaces.
      * </p>
      * 
      * @param deviceTypeAndroid
-     *        Indicates whether users can use Android devices to access their WorkSpaces.
+     *        Indicates whether users can use Android and Android-compatible Chrome OS devices to access their
+     *        WorkSpaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessPropertyValue
      */
@@ -432,11 +363,12 @@ public class WorkspaceAccessProperties implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether users can use Android devices to access their WorkSpaces.
+     * Indicates whether users can use Android and Android-compatible Chrome OS devices to access their WorkSpaces.
      * </p>
      * 
      * @param deviceTypeAndroid
-     *        Indicates whether users can use Android devices to access their WorkSpaces.
+     *        Indicates whether users can use Android and Android-compatible Chrome OS devices to access their
+     *        WorkSpaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccessPropertyValue
      */

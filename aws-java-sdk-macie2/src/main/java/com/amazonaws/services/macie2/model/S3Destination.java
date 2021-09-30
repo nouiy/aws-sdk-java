@@ -44,9 +44,8 @@ public class S3Destination implements Serializable, Cloneable, StructuredPojo {
     private String keyPrefix;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK) to use for
-     * encryption of the results. This must be the ARN of an existing CMK that's in the same Amazon Web Services Region
-     * as the bucket.
+     * The Amazon Resource Name (ARN) of the KMS key to use for encryption of the results. This must be the ARN of an
+     * existing, symmetric, customer managed KMS key that's in the same Amazon Web Services Region as the bucket.
      * </p>
      */
     private String kmsKeyArn;
@@ -139,15 +138,14 @@ public class S3Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK) to use for
-     * encryption of the results. This must be the ARN of an existing CMK that's in the same Amazon Web Services Region
-     * as the bucket.
+     * The Amazon Resource Name (ARN) of the KMS key to use for encryption of the results. This must be the ARN of an
+     * existing, symmetric, customer managed KMS key that's in the same Amazon Web Services Region as the bucket.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK) to use for
-     *        encryption of the results. This must be the ARN of an existing CMK that's in the same Amazon Web Services
-     *        Region as the bucket.
+     *        The Amazon Resource Name (ARN) of the KMS key to use for encryption of the results. This must be the ARN
+     *        of an existing, symmetric, customer managed KMS key that's in the same Amazon Web Services Region as the
+     *        bucket.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -156,14 +154,13 @@ public class S3Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK) to use for
-     * encryption of the results. This must be the ARN of an existing CMK that's in the same Amazon Web Services Region
-     * as the bucket.
+     * The Amazon Resource Name (ARN) of the KMS key to use for encryption of the results. This must be the ARN of an
+     * existing, symmetric, customer managed KMS key that's in the same Amazon Web Services Region as the bucket.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK) to use for
-     *         encryption of the results. This must be the ARN of an existing CMK that's in the same Amazon Web Services
-     *         Region as the bucket.
+     * @return The Amazon Resource Name (ARN) of the KMS key to use for encryption of the results. This must be the ARN
+     *         of an existing, symmetric, customer managed KMS key that's in the same Amazon Web Services Region as the
+     *         bucket.
      */
 
     public String getKmsKeyArn() {
@@ -172,15 +169,14 @@ public class S3Destination implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK) to use for
-     * encryption of the results. This must be the ARN of an existing CMK that's in the same Amazon Web Services Region
-     * as the bucket.
+     * The Amazon Resource Name (ARN) of the KMS key to use for encryption of the results. This must be the ARN of an
+     * existing, symmetric, customer managed KMS key that's in the same Amazon Web Services Region as the bucket.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) customer master key (CMK) to use for
-     *        encryption of the results. This must be the ARN of an existing CMK that's in the same Amazon Web Services
-     *        Region as the bucket.
+     *        The Amazon Resource Name (ARN) of the KMS key to use for encryption of the results. This must be the ARN
+     *        of an existing, symmetric, customer managed KMS key that's in the same Amazon Web Services Region as the
+     *        bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

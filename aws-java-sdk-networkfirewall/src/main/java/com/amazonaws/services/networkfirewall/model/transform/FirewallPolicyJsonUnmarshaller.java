@@ -80,6 +80,16 @@ public class FirewallPolicyJsonUnmarshaller implements Unmarshaller<FirewallPoli
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("StatefulDefaultActions", targetDepth)) {
+                    context.nextToken();
+                    firewallPolicy.setStatefulDefaultActions(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("StatefulEngineOptions", targetDepth)) {
+                    context.nextToken();
+                    firewallPolicy.setStatefulEngineOptions(StatefulEngineOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

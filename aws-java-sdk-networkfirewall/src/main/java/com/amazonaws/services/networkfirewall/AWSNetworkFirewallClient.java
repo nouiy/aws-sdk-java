@@ -85,8 +85,8 @@ import com.amazonaws.services.networkfirewall.model.transform.*;
  * Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This
  * includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or AWS Direct
  * Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source intrusion detection
- * system (IDS) engine. For information about Suricata, see the <a href="https://suricata-ids.org/">Suricata
- * website</a>.
+ * system (IDS) engine. AWS Network Firewall supports Suricata version 5.0.2. For information about Suricata, see the <a
+ * href="https://suricata-ids.org/">Suricata website</a>.
  * </p>
  * <p>
  * You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a
@@ -950,6 +950,8 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      *         Unable to locate a resource using the parameters that you provided.
      * @throws ThrottlingException
      *         Unable to process the request due to throttling limitations.
+     * @throws InvalidResourcePolicyException
+     *         The policy statement failed validation.
      * @sample AWSNetworkFirewall.DeleteResourcePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/DeleteResourcePolicy"
      *      target="_top">AWS API Documentation</a>
@@ -1970,6 +1972,7 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * @throws ThrottlingException
      *         Unable to process the request due to throttling limitations.
      * @throws InvalidResourcePolicyException
+     *         The policy statement failed validation.
      * @sample AWSNetworkFirewall.PutResourcePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/PutResourcePolicy"
      *      target="_top">AWS API Documentation</a>
@@ -2222,6 +2225,7 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * @throws InvalidTokenException
      *         The token you provided is stale or isn't valid for the operation.
      * @throws ResourceOwnerCheckException
+     *         Unable to change the resource because your account doesn't own it.
      * @sample AWSNetworkFirewall.UpdateFirewallDeleteProtection
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateFirewallDeleteProtection"
      *      target="_top">AWS API Documentation</a>
@@ -2476,6 +2480,7 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * @throws InvalidTokenException
      *         The token you provided is stale or isn't valid for the operation.
      * @throws ResourceOwnerCheckException
+     *         Unable to change the resource because your account doesn't own it.
      * @sample AWSNetworkFirewall.UpdateFirewallPolicyChangeProtection
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateFirewallPolicyChangeProtection"
@@ -2771,6 +2776,7 @@ public class AWSNetworkFirewallClient extends AmazonWebServiceClient implements 
      * @throws InvalidTokenException
      *         The token you provided is stale or isn't valid for the operation.
      * @throws ResourceOwnerCheckException
+     *         Unable to change the resource because your account doesn't own it.
      * @sample AWSNetworkFirewall.UpdateSubnetChangeProtection
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/network-firewall-2020-11-12/UpdateSubnetChangeProtection"
      *      target="_top">AWS API Documentation</a>

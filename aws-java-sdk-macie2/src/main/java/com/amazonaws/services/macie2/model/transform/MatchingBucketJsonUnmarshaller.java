@@ -64,6 +64,14 @@ public class MatchingBucketJsonUnmarshaller implements Unmarshaller<MatchingBuck
                     context.nextToken();
                     matchingBucket.setClassifiableSizeInBytes(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("errorCode", targetDepth)) {
+                    context.nextToken();
+                    matchingBucket.setErrorCode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("errorMessage", targetDepth)) {
+                    context.nextToken();
+                    matchingBucket.setErrorMessage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("jobDetails", targetDepth)) {
                     context.nextToken();
                     matchingBucket.setJobDetails(JobDetailsJsonUnmarshaller.getInstance().unmarshall(context));

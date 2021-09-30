@@ -51,7 +51,7 @@ public class ConnectionAlias implements Serializable, Cloneable, StructuredPojo 
     private String state;
     /**
      * <p>
-     * The identifier of the AWS account that owns the connection alias.
+     * The identifier of the Amazon Web Services account that owns the connection alias.
      * </p>
      */
     private String ownerAccountId;
@@ -209,11 +209,11 @@ public class ConnectionAlias implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the connection alias.
+     * The identifier of the Amazon Web Services account that owns the connection alias.
      * </p>
      * 
      * @param ownerAccountId
-     *        The identifier of the AWS account that owns the connection alias.
+     *        The identifier of the Amazon Web Services account that owns the connection alias.
      */
 
     public void setOwnerAccountId(String ownerAccountId) {
@@ -222,10 +222,10 @@ public class ConnectionAlias implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the connection alias.
+     * The identifier of the Amazon Web Services account that owns the connection alias.
      * </p>
      * 
-     * @return The identifier of the AWS account that owns the connection alias.
+     * @return The identifier of the Amazon Web Services account that owns the connection alias.
      */
 
     public String getOwnerAccountId() {
@@ -234,11 +234,11 @@ public class ConnectionAlias implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the connection alias.
+     * The identifier of the Amazon Web Services account that owns the connection alias.
      * </p>
      * 
      * @param ownerAccountId
-     *        The identifier of the AWS account that owns the connection alias.
+     *        The identifier of the Amazon Web Services account that owns the connection alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

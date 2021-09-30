@@ -33,7 +33,7 @@ public class UpdateConnectionAliasPermissionRequest extends com.amazonaws.Amazon
     private String aliasId;
     /**
      * <p>
-     * Indicates whether to share or unshare the connection alias with the specified AWS account.
+     * Indicates whether to share or unshare the connection alias with the specified Amazon Web Services account.
      * </p>
      */
     private ConnectionAliasPermission connectionAliasPermission;
@@ -80,11 +80,11 @@ public class UpdateConnectionAliasPermissionRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether to share or unshare the connection alias with the specified AWS account.
+     * Indicates whether to share or unshare the connection alias with the specified Amazon Web Services account.
      * </p>
      * 
      * @param connectionAliasPermission
-     *        Indicates whether to share or unshare the connection alias with the specified AWS account.
+     *        Indicates whether to share or unshare the connection alias with the specified Amazon Web Services account.
      */
 
     public void setConnectionAliasPermission(ConnectionAliasPermission connectionAliasPermission) {
@@ -93,10 +93,11 @@ public class UpdateConnectionAliasPermissionRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether to share or unshare the connection alias with the specified AWS account.
+     * Indicates whether to share or unshare the connection alias with the specified Amazon Web Services account.
      * </p>
      * 
-     * @return Indicates whether to share or unshare the connection alias with the specified AWS account.
+     * @return Indicates whether to share or unshare the connection alias with the specified Amazon Web Services
+     *         account.
      */
 
     public ConnectionAliasPermission getConnectionAliasPermission() {
@@ -105,11 +106,11 @@ public class UpdateConnectionAliasPermissionRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Indicates whether to share or unshare the connection alias with the specified AWS account.
+     * Indicates whether to share or unshare the connection alias with the specified Amazon Web Services account.
      * </p>
      * 
      * @param connectionAliasPermission
-     *        Indicates whether to share or unshare the connection alias with the specified AWS account.
+     *        Indicates whether to share or unshare the connection alias with the specified Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

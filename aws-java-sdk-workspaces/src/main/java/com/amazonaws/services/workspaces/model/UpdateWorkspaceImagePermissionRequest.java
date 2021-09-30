@@ -39,11 +39,11 @@ public class UpdateWorkspaceImagePermissionRequest extends com.amazonaws.AmazonW
     private Boolean allowCopyImage;
     /**
      * <p>
-     * The identifier of the AWS account to share or unshare the image with.
+     * The identifier of the Amazon Web Services account to share or unshare the image with.
      * </p>
      * <important>
      * <p>
-     * Before sharing the image, confirm that you are sharing to the correct AWS account ID.
+     * Before sharing the image, confirm that you are sharing to the correct Amazon Web Services account ID.
      * </p>
      * </important>
      */
@@ -143,18 +143,18 @@ public class UpdateWorkspaceImagePermissionRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier of the AWS account to share or unshare the image with.
+     * The identifier of the Amazon Web Services account to share or unshare the image with.
      * </p>
      * <important>
      * <p>
-     * Before sharing the image, confirm that you are sharing to the correct AWS account ID.
+     * Before sharing the image, confirm that you are sharing to the correct Amazon Web Services account ID.
      * </p>
      * </important>
      * 
      * @param sharedAccountId
-     *        The identifier of the AWS account to share or unshare the image with.</p> <important>
+     *        The identifier of the Amazon Web Services account to share or unshare the image with.</p> <important>
      *        <p>
-     *        Before sharing the image, confirm that you are sharing to the correct AWS account ID.
+     *        Before sharing the image, confirm that you are sharing to the correct Amazon Web Services account ID.
      *        </p>
      */
 
@@ -164,17 +164,17 @@ public class UpdateWorkspaceImagePermissionRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier of the AWS account to share or unshare the image with.
+     * The identifier of the Amazon Web Services account to share or unshare the image with.
      * </p>
      * <important>
      * <p>
-     * Before sharing the image, confirm that you are sharing to the correct AWS account ID.
+     * Before sharing the image, confirm that you are sharing to the correct Amazon Web Services account ID.
      * </p>
      * </important>
      * 
-     * @return The identifier of the AWS account to share or unshare the image with.</p> <important>
+     * @return The identifier of the Amazon Web Services account to share or unshare the image with.</p> <important>
      *         <p>
-     *         Before sharing the image, confirm that you are sharing to the correct AWS account ID.
+     *         Before sharing the image, confirm that you are sharing to the correct Amazon Web Services account ID.
      *         </p>
      */
 
@@ -184,18 +184,18 @@ public class UpdateWorkspaceImagePermissionRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier of the AWS account to share or unshare the image with.
+     * The identifier of the Amazon Web Services account to share or unshare the image with.
      * </p>
      * <important>
      * <p>
-     * Before sharing the image, confirm that you are sharing to the correct AWS account ID.
+     * Before sharing the image, confirm that you are sharing to the correct Amazon Web Services account ID.
      * </p>
      * </important>
      * 
      * @param sharedAccountId
-     *        The identifier of the AWS account to share or unshare the image with.</p> <important>
+     *        The identifier of the Amazon Web Services account to share or unshare the image with.</p> <important>
      *        <p>
-     *        Before sharing the image, confirm that you are sharing to the correct AWS account ID.
+     *        Before sharing the image, confirm that you are sharing to the correct Amazon Web Services account ID.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

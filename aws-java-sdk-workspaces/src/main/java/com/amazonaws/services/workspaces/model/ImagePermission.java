@@ -19,9 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the AWS accounts that have been granted permission to use a shared image. For more information about
- * sharing images, see <a href="https://docs.aws.amazon.com/workspaces/latest/adminguide/share-custom-image.html"> Share
- * or Unshare a Custom WorkSpaces Image</a>.
+ * Describes the Amazon Web Services accounts that have been granted permission to use a shared image. For more
+ * information about sharing images, see <a
+ * href="https://docs.aws.amazon.com/workspaces/latest/adminguide/share-custom-image.html"> Share or Unshare a Custom
+ * WorkSpaces Image</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workspaces-2015-04-08/ImagePermission" target="_top">AWS API
@@ -32,18 +33,18 @@ public class ImagePermission implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier of the AWS account that an image has been shared with.
+     * The identifier of the Amazon Web Services account that an image has been shared with.
      * </p>
      */
     private String sharedAccountId;
 
     /**
      * <p>
-     * The identifier of the AWS account that an image has been shared with.
+     * The identifier of the Amazon Web Services account that an image has been shared with.
      * </p>
      * 
      * @param sharedAccountId
-     *        The identifier of the AWS account that an image has been shared with.
+     *        The identifier of the Amazon Web Services account that an image has been shared with.
      */
 
     public void setSharedAccountId(String sharedAccountId) {
@@ -52,10 +53,10 @@ public class ImagePermission implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier of the AWS account that an image has been shared with.
+     * The identifier of the Amazon Web Services account that an image has been shared with.
      * </p>
      * 
-     * @return The identifier of the AWS account that an image has been shared with.
+     * @return The identifier of the Amazon Web Services account that an image has been shared with.
      */
 
     public String getSharedAccountId() {
@@ -64,11 +65,11 @@ public class ImagePermission implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The identifier of the AWS account that an image has been shared with.
+     * The identifier of the Amazon Web Services account that an image has been shared with.
      * </p>
      * 
      * @param sharedAccountId
-     *        The identifier of the AWS account that an image has been shared with.
+     *        The identifier of the Amazon Web Services account that an image has been shared with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
