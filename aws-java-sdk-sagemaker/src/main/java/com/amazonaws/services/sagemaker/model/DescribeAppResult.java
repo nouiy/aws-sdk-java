@@ -67,7 +67,9 @@ public class DescribeAppResult extends com.amazonaws.AmazonWebServiceResult<com.
     private java.util.Date lastHealthCheckTimestamp;
     /**
      * <p>
-     * The timestamp of the last user's activity.
+     * The timestamp of the last user's activity. <code>LastUserActivityTimestamp</code> is also updated when SageMaker
+     * performs health checks without user activity. As a result, this value is set to the same value as
+     * <code>LastHealthCheckTimestamp</code>.
      * </p>
      */
     private java.util.Date lastUserActivityTimestamp;
@@ -410,11 +412,15 @@ public class DescribeAppResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp of the last user's activity.
+     * The timestamp of the last user's activity. <code>LastUserActivityTimestamp</code> is also updated when SageMaker
+     * performs health checks without user activity. As a result, this value is set to the same value as
+     * <code>LastHealthCheckTimestamp</code>.
      * </p>
      * 
      * @param lastUserActivityTimestamp
-     *        The timestamp of the last user's activity.
+     *        The timestamp of the last user's activity. <code>LastUserActivityTimestamp</code> is also updated when
+     *        SageMaker performs health checks without user activity. As a result, this value is set to the same value
+     *        as <code>LastHealthCheckTimestamp</code>.
      */
 
     public void setLastUserActivityTimestamp(java.util.Date lastUserActivityTimestamp) {
@@ -423,10 +429,14 @@ public class DescribeAppResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp of the last user's activity.
+     * The timestamp of the last user's activity. <code>LastUserActivityTimestamp</code> is also updated when SageMaker
+     * performs health checks without user activity. As a result, this value is set to the same value as
+     * <code>LastHealthCheckTimestamp</code>.
      * </p>
      * 
-     * @return The timestamp of the last user's activity.
+     * @return The timestamp of the last user's activity. <code>LastUserActivityTimestamp</code> is also updated when
+     *         SageMaker performs health checks without user activity. As a result, this value is set to the same value
+     *         as <code>LastHealthCheckTimestamp</code>.
      */
 
     public java.util.Date getLastUserActivityTimestamp() {
@@ -435,11 +445,15 @@ public class DescribeAppResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The timestamp of the last user's activity.
+     * The timestamp of the last user's activity. <code>LastUserActivityTimestamp</code> is also updated when SageMaker
+     * performs health checks without user activity. As a result, this value is set to the same value as
+     * <code>LastHealthCheckTimestamp</code>.
      * </p>
      * 
      * @param lastUserActivityTimestamp
-     *        The timestamp of the last user's activity.
+     *        The timestamp of the last user's activity. <code>LastUserActivityTimestamp</code> is also updated when
+     *        SageMaker performs health checks without user activity. As a result, this value is set to the same value
+     *        as <code>LastHealthCheckTimestamp</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

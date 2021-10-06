@@ -96,20 +96,29 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <dt>ATTRIBUTE_FILTER</dt>
      * <dd>
      * <p>
-     * All indexed content is searchable and displayable for all users. If there is an access control list, it is
-     * ignored. You can filter on user and group attributes.
+     * All indexed content is searchable and displayable for all users. If you want to filter search results on user
+     * context, you can use the attribute filters of <code>_user_id</code> and <code>_group_ids</code> or you can
+     * provide user and group information in <code>UserContext</code>.
      * </p>
      * </dd>
      * <dt>USER_TOKEN</dt>
      * <dd>
      * <p>
-     * Enables SSO and token-based user access control. All documents with no access control and all documents
-     * accessible to the user will be searchable and displayable.
+     * Enables token-based user access control to filter search results on user context. All documents with no access
+     * control and all documents accessible to the user will be searchable and displayable.
      * </p>
      * </dd>
      * </dl>
      */
     private String userContextPolicy;
+    /**
+     * <p>
+     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
+     * UserGroupResolutionConfiguration</a>.
+     * </p>
+     */
+    private UserGroupResolutionConfiguration userGroupResolutionConfiguration;
 
     /**
      * <p>
@@ -626,15 +635,16 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <dt>ATTRIBUTE_FILTER</dt>
      * <dd>
      * <p>
-     * All indexed content is searchable and displayable for all users. If there is an access control list, it is
-     * ignored. You can filter on user and group attributes.
+     * All indexed content is searchable and displayable for all users. If you want to filter search results on user
+     * context, you can use the attribute filters of <code>_user_id</code> and <code>_group_ids</code> or you can
+     * provide user and group information in <code>UserContext</code>.
      * </p>
      * </dd>
      * <dt>USER_TOKEN</dt>
      * <dd>
      * <p>
-     * Enables SSO and token-based user access control. All documents with no access control and all documents
-     * accessible to the user will be searchable and displayable.
+     * Enables token-based user access control to filter search results on user context. All documents with no access
+     * control and all documents accessible to the user will be searchable and displayable.
      * </p>
      * </dd>
      * </dl>
@@ -645,15 +655,16 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <dt>ATTRIBUTE_FILTER</dt>
      *        <dd>
      *        <p>
-     *        All indexed content is searchable and displayable for all users. If there is an access control list, it is
-     *        ignored. You can filter on user and group attributes.
+     *        All indexed content is searchable and displayable for all users. If you want to filter search results on
+     *        user context, you can use the attribute filters of <code>_user_id</code> and <code>_group_ids</code> or
+     *        you can provide user and group information in <code>UserContext</code>.
      *        </p>
      *        </dd>
      *        <dt>USER_TOKEN</dt>
      *        <dd>
      *        <p>
-     *        Enables SSO and token-based user access control. All documents with no access control and all documents
-     *        accessible to the user will be searchable and displayable.
+     *        Enables token-based user access control to filter search results on user context. All documents with no
+     *        access control and all documents accessible to the user will be searchable and displayable.
      *        </p>
      *        </dd>
      * @see UserContextPolicy
@@ -671,15 +682,16 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <dt>ATTRIBUTE_FILTER</dt>
      * <dd>
      * <p>
-     * All indexed content is searchable and displayable for all users. If there is an access control list, it is
-     * ignored. You can filter on user and group attributes.
+     * All indexed content is searchable and displayable for all users. If you want to filter search results on user
+     * context, you can use the attribute filters of <code>_user_id</code> and <code>_group_ids</code> or you can
+     * provide user and group information in <code>UserContext</code>.
      * </p>
      * </dd>
      * <dt>USER_TOKEN</dt>
      * <dd>
      * <p>
-     * Enables SSO and token-based user access control. All documents with no access control and all documents
-     * accessible to the user will be searchable and displayable.
+     * Enables token-based user access control to filter search results on user context. All documents with no access
+     * control and all documents accessible to the user will be searchable and displayable.
      * </p>
      * </dd>
      * </dl>
@@ -689,15 +701,16 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <dt>ATTRIBUTE_FILTER</dt>
      *         <dd>
      *         <p>
-     *         All indexed content is searchable and displayable for all users. If there is an access control list, it
-     *         is ignored. You can filter on user and group attributes.
+     *         All indexed content is searchable and displayable for all users. If you want to filter search results on
+     *         user context, you can use the attribute filters of <code>_user_id</code> and <code>_group_ids</code> or
+     *         you can provide user and group information in <code>UserContext</code>.
      *         </p>
      *         </dd>
      *         <dt>USER_TOKEN</dt>
      *         <dd>
      *         <p>
-     *         Enables SSO and token-based user access control. All documents with no access control and all documents
-     *         accessible to the user will be searchable and displayable.
+     *         Enables token-based user access control to filter search results on user context. All documents with no
+     *         access control and all documents accessible to the user will be searchable and displayable.
      *         </p>
      *         </dd>
      * @see UserContextPolicy
@@ -715,15 +728,16 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <dt>ATTRIBUTE_FILTER</dt>
      * <dd>
      * <p>
-     * All indexed content is searchable and displayable for all users. If there is an access control list, it is
-     * ignored. You can filter on user and group attributes.
+     * All indexed content is searchable and displayable for all users. If you want to filter search results on user
+     * context, you can use the attribute filters of <code>_user_id</code> and <code>_group_ids</code> or you can
+     * provide user and group information in <code>UserContext</code>.
      * </p>
      * </dd>
      * <dt>USER_TOKEN</dt>
      * <dd>
      * <p>
-     * Enables SSO and token-based user access control. All documents with no access control and all documents
-     * accessible to the user will be searchable and displayable.
+     * Enables token-based user access control to filter search results on user context. All documents with no access
+     * control and all documents accessible to the user will be searchable and displayable.
      * </p>
      * </dd>
      * </dl>
@@ -734,15 +748,16 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <dt>ATTRIBUTE_FILTER</dt>
      *        <dd>
      *        <p>
-     *        All indexed content is searchable and displayable for all users. If there is an access control list, it is
-     *        ignored. You can filter on user and group attributes.
+     *        All indexed content is searchable and displayable for all users. If you want to filter search results on
+     *        user context, you can use the attribute filters of <code>_user_id</code> and <code>_group_ids</code> or
+     *        you can provide user and group information in <code>UserContext</code>.
      *        </p>
      *        </dd>
      *        <dt>USER_TOKEN</dt>
      *        <dd>
      *        <p>
-     *        Enables SSO and token-based user access control. All documents with no access control and all documents
-     *        accessible to the user will be searchable and displayable.
+     *        Enables token-based user access control to filter search results on user context. All documents with no
+     *        access control and all documents accessible to the user will be searchable and displayable.
      *        </p>
      *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -762,15 +777,16 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <dt>ATTRIBUTE_FILTER</dt>
      * <dd>
      * <p>
-     * All indexed content is searchable and displayable for all users. If there is an access control list, it is
-     * ignored. You can filter on user and group attributes.
+     * All indexed content is searchable and displayable for all users. If you want to filter search results on user
+     * context, you can use the attribute filters of <code>_user_id</code> and <code>_group_ids</code> or you can
+     * provide user and group information in <code>UserContext</code>.
      * </p>
      * </dd>
      * <dt>USER_TOKEN</dt>
      * <dd>
      * <p>
-     * Enables SSO and token-based user access control. All documents with no access control and all documents
-     * accessible to the user will be searchable and displayable.
+     * Enables token-based user access control to filter search results on user context. All documents with no access
+     * control and all documents accessible to the user will be searchable and displayable.
      * </p>
      * </dd>
      * </dl>
@@ -781,15 +797,16 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <dt>ATTRIBUTE_FILTER</dt>
      *        <dd>
      *        <p>
-     *        All indexed content is searchable and displayable for all users. If there is an access control list, it is
-     *        ignored. You can filter on user and group attributes.
+     *        All indexed content is searchable and displayable for all users. If you want to filter search results on
+     *        user context, you can use the attribute filters of <code>_user_id</code> and <code>_group_ids</code> or
+     *        you can provide user and group information in <code>UserContext</code>.
      *        </p>
      *        </dd>
      *        <dt>USER_TOKEN</dt>
      *        <dd>
      *        <p>
-     *        Enables SSO and token-based user access control. All documents with no access control and all documents
-     *        accessible to the user will be searchable and displayable.
+     *        Enables token-based user access control to filter search results on user context. All documents with no
+     *        access control and all documents accessible to the user will be searchable and displayable.
      *        </p>
      *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -798,6 +815,61 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     public CreateIndexRequest withUserContextPolicy(UserContextPolicy userContextPolicy) {
         this.userContextPolicy = userContextPolicy.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
+     * UserGroupResolutionConfiguration</a>.
+     * </p>
+     * 
+     * @param userGroupResolutionConfiguration
+     *        Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To
+     *        configure this, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     *        >UserGroupResolutionConfiguration</a>.
+     */
+
+    public void setUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
+        this.userGroupResolutionConfiguration = userGroupResolutionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
+     * UserGroupResolutionConfiguration</a>.
+     * </p>
+     * 
+     * @return Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To
+     *         configure this, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     *         >UserGroupResolutionConfiguration</a>.
+     */
+
+    public UserGroupResolutionConfiguration getUserGroupResolutionConfiguration() {
+        return this.userGroupResolutionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
+     * UserGroupResolutionConfiguration</a>.
+     * </p>
+     * 
+     * @param userGroupResolutionConfiguration
+     *        Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To
+     *        configure this, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     *        >UserGroupResolutionConfiguration</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateIndexRequest withUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
+        setUserGroupResolutionConfiguration(userGroupResolutionConfiguration);
         return this;
     }
 
@@ -830,7 +902,9 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getUserTokenConfigurations() != null)
             sb.append("UserTokenConfigurations: ").append(getUserTokenConfigurations()).append(",");
         if (getUserContextPolicy() != null)
-            sb.append("UserContextPolicy: ").append(getUserContextPolicy());
+            sb.append("UserContextPolicy: ").append(getUserContextPolicy()).append(",");
+        if (getUserGroupResolutionConfiguration() != null)
+            sb.append("UserGroupResolutionConfiguration: ").append(getUserGroupResolutionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -882,6 +956,11 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getUserContextPolicy() != null && other.getUserContextPolicy().equals(this.getUserContextPolicy()) == false)
             return false;
+        if (other.getUserGroupResolutionConfiguration() == null ^ this.getUserGroupResolutionConfiguration() == null)
+            return false;
+        if (other.getUserGroupResolutionConfiguration() != null
+                && other.getUserGroupResolutionConfiguration().equals(this.getUserGroupResolutionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -899,6 +978,7 @@ public class CreateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getUserTokenConfigurations() == null) ? 0 : getUserTokenConfigurations().hashCode());
         hashCode = prime * hashCode + ((getUserContextPolicy() == null) ? 0 : getUserContextPolicy().hashCode());
+        hashCode = prime * hashCode + ((getUserGroupResolutionConfiguration() == null) ? 0 : getUserGroupResolutionConfiguration().hashCode());
         return hashCode;
     }
 

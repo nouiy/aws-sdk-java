@@ -31,10 +31,8 @@ public class ListDataSourceSyncJobsResult extends com.amazonaws.AmazonWebService
     private java.util.List<DataSourceSyncJob> history;
     /**
      * <p>
-     * The <code>GetDataSourceSyncJobHistory</code> operation returns a page of vocabularies at a time. The maximum size
-     * of the page is set by the <code>MaxResults</code> parameter. If there are more jobs in the list than the page
-     * size, Amazon Kendra returns the NextPage token. Include the token in the next request to the
-     * <code>GetDataSourceSyncJobHistory</code> operation to return in the next page of jobs.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of jobs.
      * </p>
      */
     private String nextToken;
@@ -111,17 +109,13 @@ public class ListDataSourceSyncJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The <code>GetDataSourceSyncJobHistory</code> operation returns a page of vocabularies at a time. The maximum size
-     * of the page is set by the <code>MaxResults</code> parameter. If there are more jobs in the list than the page
-     * size, Amazon Kendra returns the NextPage token. Include the token in the next request to the
-     * <code>GetDataSourceSyncJobHistory</code> operation to return in the next page of jobs.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of jobs.
      * </p>
      * 
      * @param nextToken
-     *        The <code>GetDataSourceSyncJobHistory</code> operation returns a page of vocabularies at a time. The
-     *        maximum size of the page is set by the <code>MaxResults</code> parameter. If there are more jobs in the
-     *        list than the page size, Amazon Kendra returns the NextPage token. Include the token in the next request
-     *        to the <code>GetDataSourceSyncJobHistory</code> operation to return in the next page of jobs.
+     *        If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
+     *        to retrieve the next set of jobs.
      */
 
     public void setNextToken(String nextToken) {
@@ -130,16 +124,12 @@ public class ListDataSourceSyncJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The <code>GetDataSourceSyncJobHistory</code> operation returns a page of vocabularies at a time. The maximum size
-     * of the page is set by the <code>MaxResults</code> parameter. If there are more jobs in the list than the page
-     * size, Amazon Kendra returns the NextPage token. Include the token in the next request to the
-     * <code>GetDataSourceSyncJobHistory</code> operation to return in the next page of jobs.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of jobs.
      * </p>
      * 
-     * @return The <code>GetDataSourceSyncJobHistory</code> operation returns a page of vocabularies at a time. The
-     *         maximum size of the page is set by the <code>MaxResults</code> parameter. If there are more jobs in the
-     *         list than the page size, Amazon Kendra returns the NextPage token. Include the token in the next request
-     *         to the <code>GetDataSourceSyncJobHistory</code> operation to return in the next page of jobs.
+     * @return If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
+     *         to retrieve the next set of jobs.
      */
 
     public String getNextToken() {
@@ -148,17 +138,13 @@ public class ListDataSourceSyncJobsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The <code>GetDataSourceSyncJobHistory</code> operation returns a page of vocabularies at a time. The maximum size
-     * of the page is set by the <code>MaxResults</code> parameter. If there are more jobs in the list than the page
-     * size, Amazon Kendra returns the NextPage token. Include the token in the next request to the
-     * <code>GetDataSourceSyncJobHistory</code> operation to return in the next page of jobs.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of jobs.
      * </p>
      * 
      * @param nextToken
-     *        The <code>GetDataSourceSyncJobHistory</code> operation returns a page of vocabularies at a time. The
-     *        maximum size of the page is set by the <code>MaxResults</code> parameter. If there are more jobs in the
-     *        list than the page size, Amazon Kendra returns the NextPage token. Include the token in the next request
-     *        to the <code>GetDataSourceSyncJobHistory</code> operation to return in the next page of jobs.
+     *        If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
+     *        to retrieve the next set of jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

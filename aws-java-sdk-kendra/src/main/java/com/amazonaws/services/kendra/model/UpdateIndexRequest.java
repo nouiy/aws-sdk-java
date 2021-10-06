@@ -74,10 +74,18 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
     private java.util.List<UserTokenConfiguration> userTokenConfigurations;
     /**
      * <p>
-     * The user user token context policy.
+     * The user context policy.
      * </p>
      */
     private String userContextPolicy;
+    /**
+     * <p>
+     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
+     * UserGroupResolutionConfiguration</a>.
+     * </p>
+     */
+    private UserGroupResolutionConfiguration userGroupResolutionConfiguration;
 
     /**
      * <p>
@@ -449,11 +457,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The user user token context policy.
+     * The user context policy.
      * </p>
      * 
      * @param userContextPolicy
-     *        The user user token context policy.
+     *        The user context policy.
      * @see UserContextPolicy
      */
 
@@ -463,10 +471,10 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The user user token context policy.
+     * The user context policy.
      * </p>
      * 
-     * @return The user user token context policy.
+     * @return The user context policy.
      * @see UserContextPolicy
      */
 
@@ -476,11 +484,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The user user token context policy.
+     * The user context policy.
      * </p>
      * 
      * @param userContextPolicy
-     *        The user user token context policy.
+     *        The user context policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UserContextPolicy
      */
@@ -492,17 +500,72 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The user user token context policy.
+     * The user context policy.
      * </p>
      * 
      * @param userContextPolicy
-     *        The user user token context policy.
+     *        The user context policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UserContextPolicy
      */
 
     public UpdateIndexRequest withUserContextPolicy(UserContextPolicy userContextPolicy) {
         this.userContextPolicy = userContextPolicy.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
+     * UserGroupResolutionConfiguration</a>.
+     * </p>
+     * 
+     * @param userGroupResolutionConfiguration
+     *        Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To
+     *        configure this, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     *        >UserGroupResolutionConfiguration</a>.
+     */
+
+    public void setUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
+        this.userGroupResolutionConfiguration = userGroupResolutionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
+     * UserGroupResolutionConfiguration</a>.
+     * </p>
+     * 
+     * @return Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To
+     *         configure this, see <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     *         >UserGroupResolutionConfiguration</a>.
+     */
+
+    public UserGroupResolutionConfiguration getUserGroupResolutionConfiguration() {
+        return this.userGroupResolutionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To configure this,
+     * see <a href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html">
+     * UserGroupResolutionConfiguration</a>.
+     * </p>
+     * 
+     * @param userGroupResolutionConfiguration
+     *        Enables fetching access levels of groups and users from an AWS Single Sign-On identity source. To
+     *        configure this, see <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UserGroupResolutionConfiguration.html"
+     *        >UserGroupResolutionConfiguration</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateIndexRequest withUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
+        setUserGroupResolutionConfiguration(userGroupResolutionConfiguration);
         return this;
     }
 
@@ -533,7 +596,9 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getUserTokenConfigurations() != null)
             sb.append("UserTokenConfigurations: ").append(getUserTokenConfigurations()).append(",");
         if (getUserContextPolicy() != null)
-            sb.append("UserContextPolicy: ").append(getUserContextPolicy());
+            sb.append("UserContextPolicy: ").append(getUserContextPolicy()).append(",");
+        if (getUserGroupResolutionConfiguration() != null)
+            sb.append("UserGroupResolutionConfiguration: ").append(getUserGroupResolutionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -581,6 +646,11 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getUserContextPolicy() != null && other.getUserContextPolicy().equals(this.getUserContextPolicy()) == false)
             return false;
+        if (other.getUserGroupResolutionConfiguration() == null ^ this.getUserGroupResolutionConfiguration() == null)
+            return false;
+        if (other.getUserGroupResolutionConfiguration() != null
+                && other.getUserGroupResolutionConfiguration().equals(this.getUserGroupResolutionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -597,6 +667,7 @@ public class UpdateIndexRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getCapacityUnits() == null) ? 0 : getCapacityUnits().hashCode());
         hashCode = prime * hashCode + ((getUserTokenConfigurations() == null) ? 0 : getUserTokenConfigurations().hashCode());
         hashCode = prime * hashCode + ((getUserContextPolicy() == null) ? 0 : getUserContextPolicy().hashCode());
+        hashCode = prime * hashCode + ((getUserGroupResolutionConfiguration() == null) ? 0 : getUserGroupResolutionConfiguration().hashCode());
         return hashCode;
     }
 

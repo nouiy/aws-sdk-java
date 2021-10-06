@@ -105,6 +105,18 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
     private String storageType;
 
     private String kmsKeyId;
+    /**
+     * <p>
+     * Sets the version for the Amazon FSx for Lustre file system you're creating from a backup. Valid values are
+     * <code>2.10</code> and <code>2.12</code>.
+     * </p>
+     * <p>
+     * You don't need to specify <code>FileSystemTypeVersion</code> because it will be applied using the backup's
+     * <code>FileSystemTypeVersion</code> setting. If you choose to specify <code>FileSystemTypeVersion</code> when
+     * creating from backup, the value must match the backup's <code>FileSystemTypeVersion</code> setting.
+     * </p>
+     */
+    private String fileSystemTypeVersion;
 
     /**
      * @param backupId
@@ -815,6 +827,80 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * Sets the version for the Amazon FSx for Lustre file system you're creating from a backup. Valid values are
+     * <code>2.10</code> and <code>2.12</code>.
+     * </p>
+     * <p>
+     * You don't need to specify <code>FileSystemTypeVersion</code> because it will be applied using the backup's
+     * <code>FileSystemTypeVersion</code> setting. If you choose to specify <code>FileSystemTypeVersion</code> when
+     * creating from backup, the value must match the backup's <code>FileSystemTypeVersion</code> setting.
+     * </p>
+     * 
+     * @param fileSystemTypeVersion
+     *        Sets the version for the Amazon FSx for Lustre file system you're creating from a backup. Valid values are
+     *        <code>2.10</code> and <code>2.12</code>.</p>
+     *        <p>
+     *        You don't need to specify <code>FileSystemTypeVersion</code> because it will be applied using the backup's
+     *        <code>FileSystemTypeVersion</code> setting. If you choose to specify <code>FileSystemTypeVersion</code>
+     *        when creating from backup, the value must match the backup's <code>FileSystemTypeVersion</code> setting.
+     */
+
+    public void setFileSystemTypeVersion(String fileSystemTypeVersion) {
+        this.fileSystemTypeVersion = fileSystemTypeVersion;
+    }
+
+    /**
+     * <p>
+     * Sets the version for the Amazon FSx for Lustre file system you're creating from a backup. Valid values are
+     * <code>2.10</code> and <code>2.12</code>.
+     * </p>
+     * <p>
+     * You don't need to specify <code>FileSystemTypeVersion</code> because it will be applied using the backup's
+     * <code>FileSystemTypeVersion</code> setting. If you choose to specify <code>FileSystemTypeVersion</code> when
+     * creating from backup, the value must match the backup's <code>FileSystemTypeVersion</code> setting.
+     * </p>
+     * 
+     * @return Sets the version for the Amazon FSx for Lustre file system you're creating from a backup. Valid values
+     *         are <code>2.10</code> and <code>2.12</code>.</p>
+     *         <p>
+     *         You don't need to specify <code>FileSystemTypeVersion</code> because it will be applied using the
+     *         backup's <code>FileSystemTypeVersion</code> setting. If you choose to specify
+     *         <code>FileSystemTypeVersion</code> when creating from backup, the value must match the backup's
+     *         <code>FileSystemTypeVersion</code> setting.
+     */
+
+    public String getFileSystemTypeVersion() {
+        return this.fileSystemTypeVersion;
+    }
+
+    /**
+     * <p>
+     * Sets the version for the Amazon FSx for Lustre file system you're creating from a backup. Valid values are
+     * <code>2.10</code> and <code>2.12</code>.
+     * </p>
+     * <p>
+     * You don't need to specify <code>FileSystemTypeVersion</code> because it will be applied using the backup's
+     * <code>FileSystemTypeVersion</code> setting. If you choose to specify <code>FileSystemTypeVersion</code> when
+     * creating from backup, the value must match the backup's <code>FileSystemTypeVersion</code> setting.
+     * </p>
+     * 
+     * @param fileSystemTypeVersion
+     *        Sets the version for the Amazon FSx for Lustre file system you're creating from a backup. Valid values are
+     *        <code>2.10</code> and <code>2.12</code>.</p>
+     *        <p>
+     *        You don't need to specify <code>FileSystemTypeVersion</code> because it will be applied using the backup's
+     *        <code>FileSystemTypeVersion</code> setting. If you choose to specify <code>FileSystemTypeVersion</code>
+     *        when creating from backup, the value must match the backup's <code>FileSystemTypeVersion</code> setting.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFileSystemFromBackupRequest withFileSystemTypeVersion(String fileSystemTypeVersion) {
+        setFileSystemTypeVersion(fileSystemTypeVersion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -843,7 +929,9 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
         if (getStorageType() != null)
             sb.append("StorageType: ").append(getStorageType()).append(",");
         if (getKmsKeyId() != null)
-            sb.append("KmsKeyId: ").append(getKmsKeyId());
+            sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
+        if (getFileSystemTypeVersion() != null)
+            sb.append("FileSystemTypeVersion: ").append(getFileSystemTypeVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -894,6 +982,10 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
+        if (other.getFileSystemTypeVersion() == null ^ this.getFileSystemTypeVersion() == null)
+            return false;
+        if (other.getFileSystemTypeVersion() != null && other.getFileSystemTypeVersion().equals(this.getFileSystemTypeVersion()) == false)
+            return false;
         return true;
     }
 
@@ -911,6 +1003,7 @@ public class CreateFileSystemFromBackupRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getLustreConfiguration() == null) ? 0 : getLustreConfiguration().hashCode());
         hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getFileSystemTypeVersion() == null) ? 0 : getFileSystemTypeVersion().hashCode());
         return hashCode;
     }
 

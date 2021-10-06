@@ -195,6 +195,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private OntapFileSystemConfiguration ontapConfiguration;
+    /**
+     * <p>
+     * The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * </p>
+     */
+    private String fileSystemTypeVersion;
 
     /**
      * <p>
@@ -1580,6 +1586,46 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * </p>
+     * 
+     * @param fileSystemTypeVersion
+     *        The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     */
+
+    public void setFileSystemTypeVersion(String fileSystemTypeVersion) {
+        this.fileSystemTypeVersion = fileSystemTypeVersion;
+    }
+
+    /**
+     * <p>
+     * The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * </p>
+     * 
+     * @return The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     */
+
+    public String getFileSystemTypeVersion() {
+        return this.fileSystemTypeVersion;
+    }
+
+    /**
+     * <p>
+     * The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * </p>
+     * 
+     * @param fileSystemTypeVersion
+     *        The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FileSystem withFileSystemTypeVersion(String fileSystemTypeVersion) {
+        setFileSystemTypeVersion(fileSystemTypeVersion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1628,7 +1674,9 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
         if (getAdministrativeActions() != null)
             sb.append("AdministrativeActions: ").append(getAdministrativeActions()).append(",");
         if (getOntapConfiguration() != null)
-            sb.append("OntapConfiguration: ").append(getOntapConfiguration());
+            sb.append("OntapConfiguration: ").append(getOntapConfiguration()).append(",");
+        if (getFileSystemTypeVersion() != null)
+            sb.append("FileSystemTypeVersion: ").append(getFileSystemTypeVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -1719,6 +1767,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getOntapConfiguration() != null && other.getOntapConfiguration().equals(this.getOntapConfiguration()) == false)
             return false;
+        if (other.getFileSystemTypeVersion() == null ^ this.getFileSystemTypeVersion() == null)
+            return false;
+        if (other.getFileSystemTypeVersion() != null && other.getFileSystemTypeVersion().equals(this.getFileSystemTypeVersion()) == false)
+            return false;
         return true;
     }
 
@@ -1746,6 +1798,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLustreConfiguration() == null) ? 0 : getLustreConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAdministrativeActions() == null) ? 0 : getAdministrativeActions().hashCode());
         hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getFileSystemTypeVersion() == null) ? 0 : getFileSystemTypeVersion().hashCode());
         return hashCode;
     }
 

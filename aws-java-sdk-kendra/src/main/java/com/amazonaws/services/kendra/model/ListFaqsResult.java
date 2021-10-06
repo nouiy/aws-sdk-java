@@ -25,10 +25,8 @@ public class ListFaqsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The <code>ListFaqs</code> operation returns a page of FAQs at a time. The maximum size of the page is set by the
-     * <code>MaxResults</code> parameter. If there are more jobs in the list than the page size, Amazon Kendra returns
-     * the <code>NextPage</code> token. Include the token in the next request to the <code>ListFaqs</code> operation to
-     * return the next page of FAQs.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of FAQs.
      * </p>
      */
     private String nextToken;
@@ -41,17 +39,13 @@ public class ListFaqsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The <code>ListFaqs</code> operation returns a page of FAQs at a time. The maximum size of the page is set by the
-     * <code>MaxResults</code> parameter. If there are more jobs in the list than the page size, Amazon Kendra returns
-     * the <code>NextPage</code> token. Include the token in the next request to the <code>ListFaqs</code> operation to
-     * return the next page of FAQs.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of FAQs.
      * </p>
      * 
      * @param nextToken
-     *        The <code>ListFaqs</code> operation returns a page of FAQs at a time. The maximum size of the page is set
-     *        by the <code>MaxResults</code> parameter. If there are more jobs in the list than the page size, Amazon
-     *        Kendra returns the <code>NextPage</code> token. Include the token in the next request to the
-     *        <code>ListFaqs</code> operation to return the next page of FAQs.
+     *        If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
+     *        to retrieve the next set of FAQs.
      */
 
     public void setNextToken(String nextToken) {
@@ -60,16 +54,12 @@ public class ListFaqsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The <code>ListFaqs</code> operation returns a page of FAQs at a time. The maximum size of the page is set by the
-     * <code>MaxResults</code> parameter. If there are more jobs in the list than the page size, Amazon Kendra returns
-     * the <code>NextPage</code> token. Include the token in the next request to the <code>ListFaqs</code> operation to
-     * return the next page of FAQs.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of FAQs.
      * </p>
      * 
-     * @return The <code>ListFaqs</code> operation returns a page of FAQs at a time. The maximum size of the page is set
-     *         by the <code>MaxResults</code> parameter. If there are more jobs in the list than the page size, Amazon
-     *         Kendra returns the <code>NextPage</code> token. Include the token in the next request to the
-     *         <code>ListFaqs</code> operation to return the next page of FAQs.
+     * @return If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
+     *         to retrieve the next set of FAQs.
      */
 
     public String getNextToken() {
@@ -78,17 +68,13 @@ public class ListFaqsResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The <code>ListFaqs</code> operation returns a page of FAQs at a time. The maximum size of the page is set by the
-     * <code>MaxResults</code> parameter. If there are more jobs in the list than the page size, Amazon Kendra returns
-     * the <code>NextPage</code> token. Include the token in the next request to the <code>ListFaqs</code> operation to
-     * return the next page of FAQs.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of FAQs.
      * </p>
      * 
      * @param nextToken
-     *        The <code>ListFaqs</code> operation returns a page of FAQs at a time. The maximum size of the page is set
-     *        by the <code>MaxResults</code> parameter. If there are more jobs in the list than the page size, Amazon
-     *        Kendra returns the <code>NextPage</code> token. Include the token in the next request to the
-     *        <code>ListFaqs</code> operation to return the next page of FAQs.
+     *        If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
+     *        to retrieve the next set of FAQs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

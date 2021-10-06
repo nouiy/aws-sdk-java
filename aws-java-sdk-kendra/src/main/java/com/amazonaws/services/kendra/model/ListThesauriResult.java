@@ -32,7 +32,7 @@ public class ListThesauriResult extends com.amazonaws.AmazonWebServiceResult<com
     private String nextToken;
     /**
      * <p>
-     * An array of summary information for one or more thesauruses.
+     * An array of summary information for a thesaurus or multiple thesauri.
      * </p>
      */
     private java.util.List<ThesaurusSummary> thesaurusSummaryItems;
@@ -85,10 +85,10 @@ public class ListThesauriResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * An array of summary information for one or more thesauruses.
+     * An array of summary information for a thesaurus or multiple thesauri.
      * </p>
      * 
-     * @return An array of summary information for one or more thesauruses.
+     * @return An array of summary information for a thesaurus or multiple thesauri.
      */
 
     public java.util.List<ThesaurusSummary> getThesaurusSummaryItems() {
@@ -97,11 +97,11 @@ public class ListThesauriResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * An array of summary information for one or more thesauruses.
+     * An array of summary information for a thesaurus or multiple thesauri.
      * </p>
      * 
      * @param thesaurusSummaryItems
-     *        An array of summary information for one or more thesauruses.
+     *        An array of summary information for a thesaurus or multiple thesauri.
      */
 
     public void setThesaurusSummaryItems(java.util.Collection<ThesaurusSummary> thesaurusSummaryItems) {
@@ -115,7 +115,7 @@ public class ListThesauriResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * An array of summary information for one or more thesauruses.
+     * An array of summary information for a thesaurus or multiple thesauri.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -124,7 +124,7 @@ public class ListThesauriResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param thesaurusSummaryItems
-     *        An array of summary information for one or more thesauruses.
+     *        An array of summary information for a thesaurus or multiple thesauri.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,11 +140,11 @@ public class ListThesauriResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * An array of summary information for one or more thesauruses.
+     * An array of summary information for a thesaurus or multiple thesauri.
      * </p>
      * 
      * @param thesaurusSummaryItems
-     *        An array of summary information for one or more thesauruses.
+     *        An array of summary information for a thesaurus or multiple thesauri.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

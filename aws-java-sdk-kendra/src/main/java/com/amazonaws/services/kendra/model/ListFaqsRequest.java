@@ -33,8 +33,8 @@ public class ListFaqsRequest extends com.amazonaws.AmazonWebServiceRequest imple
     private String indexId;
     /**
      * <p>
-     * If the result of the previous request to <code>ListFaqs</code> was truncated, include the <code>NextToken</code>
-     * to fetch the next set of FAQs.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of FAQs.
      * </p>
      */
     private String nextToken;
@@ -88,13 +88,13 @@ public class ListFaqsRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * If the result of the previous request to <code>ListFaqs</code> was truncated, include the <code>NextToken</code>
-     * to fetch the next set of FAQs.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of FAQs.
      * </p>
      * 
      * @param nextToken
-     *        If the result of the previous request to <code>ListFaqs</code> was truncated, include the
-     *        <code>NextToken</code> to fetch the next set of FAQs.
+     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *        pagination token in the response. You can use this pagination token to retrieve the next set of FAQs.
      */
 
     public void setNextToken(String nextToken) {
@@ -103,12 +103,12 @@ public class ListFaqsRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * If the result of the previous request to <code>ListFaqs</code> was truncated, include the <code>NextToken</code>
-     * to fetch the next set of FAQs.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of FAQs.
      * </p>
      * 
-     * @return If the result of the previous request to <code>ListFaqs</code> was truncated, include the
-     *         <code>NextToken</code> to fetch the next set of FAQs.
+     * @return If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *         pagination token in the response. You can use this pagination token to retrieve the next set of FAQs.
      */
 
     public String getNextToken() {
@@ -117,13 +117,13 @@ public class ListFaqsRequest extends com.amazonaws.AmazonWebServiceRequest imple
 
     /**
      * <p>
-     * If the result of the previous request to <code>ListFaqs</code> was truncated, include the <code>NextToken</code>
-     * to fetch the next set of FAQs.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of FAQs.
      * </p>
      * 
      * @param nextToken
-     *        If the result of the previous request to <code>ListFaqs</code> was truncated, include the
-     *        <code>NextToken</code> to fetch the next set of FAQs.
+     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *        pagination token in the response. You can use this pagination token to retrieve the next set of FAQs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

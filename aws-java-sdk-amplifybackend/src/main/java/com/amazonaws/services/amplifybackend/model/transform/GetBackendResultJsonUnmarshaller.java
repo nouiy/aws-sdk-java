@@ -48,6 +48,10 @@ public class GetBackendResultJsonUnmarshaller implements Unmarshaller<GetBackend
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("amplifyFeatureFlags", targetDepth)) {
+                    context.nextToken();
+                    getBackendResult.setAmplifyFeatureFlags(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("amplifyMetaConfig", targetDepth)) {
                     context.nextToken();
                     getBackendResult.setAmplifyMetaConfig(context.getUnmarshaller(String.class).unmarshall(context));

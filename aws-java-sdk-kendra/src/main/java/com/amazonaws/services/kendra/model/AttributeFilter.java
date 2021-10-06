@@ -45,8 +45,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <code>AttributeFilter</code> cannot have a depth of more than 2."
  * </p>
  * <p>
- * If you use more than 10 attribute filters, you receive a <code>ValidationException</code> exception with the message
- * "<code>AttributeFilter</code> cannot have a length of more than 10".
+ * If you use more than 10 attribute filters in a given list for <code>AndAllFilters</code> or <code>OrAllFilters</code>
+ * , you receive a <code>ValidationException</code> with the message "<code>AttributeFilter</code> cannot have a length
+ * of more than 10".
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AttributeFilter" target="_top">AWS API
@@ -96,28 +97,28 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a greater than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      */
     private DocumentAttribute greaterThan;
     /**
      * <p>
      * Performs a greater or equals than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      */
     private DocumentAttribute greaterThanOrEquals;
     /**
      * <p>
      * Performs a less than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      */
     private DocumentAttribute lessThan;
     /**
      * <p>
      * Performs a less than or equals operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      */
     private DocumentAttribute lessThanOrEquals;
@@ -437,12 +438,12 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a greater than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @param greaterThan
      *        Performs a greater than operation on two document attributes. Use with a document attribute of type
-     *        <code>Integer</code> or <code>Long</code>.
+     *        <code>Date</code> or <code>Long</code>.
      */
 
     public void setGreaterThan(DocumentAttribute greaterThan) {
@@ -452,11 +453,11 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a greater than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @return Performs a greater than operation on two document attributes. Use with a document attribute of type
-     *         <code>Integer</code> or <code>Long</code>.
+     *         <code>Date</code> or <code>Long</code>.
      */
 
     public DocumentAttribute getGreaterThan() {
@@ -466,12 +467,12 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a greater than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @param greaterThan
      *        Performs a greater than operation on two document attributes. Use with a document attribute of type
-     *        <code>Integer</code> or <code>Long</code>.
+     *        <code>Date</code> or <code>Long</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -483,12 +484,12 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a greater or equals than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @param greaterThanOrEquals
      *        Performs a greater or equals than operation on two document attributes. Use with a document attribute of
-     *        type <code>Integer</code> or <code>Long</code>.
+     *        type <code>Date</code> or <code>Long</code>.
      */
 
     public void setGreaterThanOrEquals(DocumentAttribute greaterThanOrEquals) {
@@ -498,11 +499,11 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a greater or equals than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @return Performs a greater or equals than operation on two document attributes. Use with a document attribute of
-     *         type <code>Integer</code> or <code>Long</code>.
+     *         type <code>Date</code> or <code>Long</code>.
      */
 
     public DocumentAttribute getGreaterThanOrEquals() {
@@ -512,12 +513,12 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a greater or equals than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @param greaterThanOrEquals
      *        Performs a greater or equals than operation on two document attributes. Use with a document attribute of
-     *        type <code>Integer</code> or <code>Long</code>.
+     *        type <code>Date</code> or <code>Long</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -529,12 +530,12 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a less than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @param lessThan
      *        Performs a less than operation on two document attributes. Use with a document attribute of type
-     *        <code>Integer</code> or <code>Long</code>.
+     *        <code>Date</code> or <code>Long</code>.
      */
 
     public void setLessThan(DocumentAttribute lessThan) {
@@ -544,11 +545,11 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a less than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @return Performs a less than operation on two document attributes. Use with a document attribute of type
-     *         <code>Integer</code> or <code>Long</code>.
+     *         <code>Date</code> or <code>Long</code>.
      */
 
     public DocumentAttribute getLessThan() {
@@ -558,12 +559,12 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a less than operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @param lessThan
      *        Performs a less than operation on two document attributes. Use with a document attribute of type
-     *        <code>Integer</code> or <code>Long</code>.
+     *        <code>Date</code> or <code>Long</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -575,12 +576,12 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a less than or equals operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @param lessThanOrEquals
      *        Performs a less than or equals operation on two document attributes. Use with a document attribute of type
-     *        <code>Integer</code> or <code>Long</code>.
+     *        <code>Date</code> or <code>Long</code>.
      */
 
     public void setLessThanOrEquals(DocumentAttribute lessThanOrEquals) {
@@ -590,11 +591,11 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a less than or equals operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @return Performs a less than or equals operation on two document attributes. Use with a document attribute of
-     *         type <code>Integer</code> or <code>Long</code>.
+     *         type <code>Date</code> or <code>Long</code>.
      */
 
     public DocumentAttribute getLessThanOrEquals() {
@@ -604,12 +605,12 @@ public class AttributeFilter implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Performs a less than or equals operation on two document attributes. Use with a document attribute of type
-     * <code>Integer</code> or <code>Long</code>.
+     * <code>Date</code> or <code>Long</code>.
      * </p>
      * 
      * @param lessThanOrEquals
      *        Performs a less than or equals operation on two document attributes. Use with a document attribute of type
-     *        <code>Integer</code> or <code>Long</code>.
+     *        <code>Date</code> or <code>Long</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

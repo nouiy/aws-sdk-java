@@ -39,8 +39,8 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
     private String indexId;
     /**
      * <p>
-     * If the result of the previous request to <code>GetDataSourceSyncJobHistory</code> was truncated, include the
-     * <code>NextToken</code> to fetch the next set of jobs.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of jobs.
      * </p>
      */
     private String nextToken;
@@ -147,13 +147,13 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If the result of the previous request to <code>GetDataSourceSyncJobHistory</code> was truncated, include the
-     * <code>NextToken</code> to fetch the next set of jobs.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of jobs.
      * </p>
      * 
      * @param nextToken
-     *        If the result of the previous request to <code>GetDataSourceSyncJobHistory</code> was truncated, include
-     *        the <code>NextToken</code> to fetch the next set of jobs.
+     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *        pagination token in the response. You can use this pagination token to retrieve the next set of jobs.
      */
 
     public void setNextToken(String nextToken) {
@@ -162,12 +162,12 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If the result of the previous request to <code>GetDataSourceSyncJobHistory</code> was truncated, include the
-     * <code>NextToken</code> to fetch the next set of jobs.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of jobs.
      * </p>
      * 
-     * @return If the result of the previous request to <code>GetDataSourceSyncJobHistory</code> was truncated, include
-     *         the <code>NextToken</code> to fetch the next set of jobs.
+     * @return If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *         pagination token in the response. You can use this pagination token to retrieve the next set of jobs.
      */
 
     public String getNextToken() {
@@ -176,13 +176,13 @@ public class ListDataSourceSyncJobsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * If the result of the previous request to <code>GetDataSourceSyncJobHistory</code> was truncated, include the
-     * <code>NextToken</code> to fetch the next set of jobs.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of jobs.
      * </p>
      * 
      * @param nextToken
-     *        If the result of the previous request to <code>GetDataSourceSyncJobHistory</code> was truncated, include
-     *        the <code>NextToken</code> to fetch the next set of jobs.
+     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *        pagination token in the response. You can use this pagination token to retrieve the next set of jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

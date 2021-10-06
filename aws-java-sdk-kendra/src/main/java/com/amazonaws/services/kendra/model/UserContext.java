@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information about the user context for a Amazon Kendra index.
+ * Provides information about the user context for an Amazon Kendra index.
  * </p>
  * <p>
  * This is used for filtering search results for different users based on their access to documents.
@@ -35,7 +35,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * User ID, the groups the user belongs to, and the data sources the groups can access
+ * User ID, the groups the user belongs to, and any data sources the groups can access.
  * </p>
  * </li>
  * </ul>

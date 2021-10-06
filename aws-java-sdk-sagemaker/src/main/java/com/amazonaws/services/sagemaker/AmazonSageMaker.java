@@ -548,8 +548,7 @@ public interface AmazonSageMaker {
      * <ul>
      * <li>
      * <p>
-     * Option 1: For a full Amazon SageMaker access, search and attach the <code>AmazonSageMakerFullAccess</code>
-     * policy.
+     * Option 1: For a full SageMaker access, search and attach the <code>AmazonSageMakerFullAccess</code> policy.
      * </p>
      * </li>
      * <li>
@@ -574,8 +573,8 @@ public interface AmazonSageMaker {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">Amazon SageMaker API
-     * Permissions: Actions, Permissions, and Resources Reference</a>.
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/api-permissions-reference.html">SageMaker API Permissions:
+     * Actions, Permissions, and Resources Reference</a>.
      * </p>
      * </li>
      * </ul>

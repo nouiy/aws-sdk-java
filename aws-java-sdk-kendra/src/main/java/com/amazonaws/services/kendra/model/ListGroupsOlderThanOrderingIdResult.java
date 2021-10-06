@@ -32,7 +32,8 @@ public class ListGroupsOlderThanOrderingIdResult extends com.amazonaws.AmazonWeb
     private java.util.List<GroupSummary> groupsSummaries;
     /**
      * <p>
-     * The next items in the list of groups that go beyond the maximum.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
      */
     private String nextToken;
@@ -113,11 +114,14 @@ public class ListGroupsOlderThanOrderingIdResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The next items in the list of groups that go beyond the maximum.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
      * 
      * @param nextToken
-     *        The next items in the list of groups that go beyond the maximum.
+     *        If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
+     *        to retrieve the next set of groups that are mapped to users before a given ordering or timestamp
+     *        identifier.
      */
 
     public void setNextToken(String nextToken) {
@@ -126,10 +130,13 @@ public class ListGroupsOlderThanOrderingIdResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The next items in the list of groups that go beyond the maximum.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
      * 
-     * @return The next items in the list of groups that go beyond the maximum.
+     * @return If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
+     *         to retrieve the next set of groups that are mapped to users before a given ordering or timestamp
+     *         identifier.
      */
 
     public String getNextToken() {
@@ -138,11 +145,14 @@ public class ListGroupsOlderThanOrderingIdResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The next items in the list of groups that go beyond the maximum.
+     * If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request to
+     * retrieve the next set of groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
      * 
      * @param nextToken
-     *        The next items in the list of groups that go beyond the maximum.
+     *        If the response is truncated, Amazon Kendra returns this token that you can use in the subsequent request
+     *        to retrieve the next set of groups that are mapped to users before a given ordering or timestamp
+     *        identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

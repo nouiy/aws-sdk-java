@@ -42,7 +42,7 @@ public class EndpointInput implements Serializable, Cloneable, StructuredPojo {
     private String localPath;
     /**
      * <p>
-     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transfering data for the
+     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transferring data for the
      * monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is useful for
      * small files that fit in memory. Defaults to <code>File</code>.
      * </p>
@@ -180,13 +180,13 @@ public class EndpointInput implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transfering data for the
+     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transferring data for the
      * monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is useful for
      * small files that fit in memory. Defaults to <code>File</code>.
      * </p>
      * 
      * @param s3InputMode
-     *        Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transfering data for the
+     *        Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transferring data for the
      *        monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is useful
      *        for small files that fit in memory. Defaults to <code>File</code>.
      * @see ProcessingS3InputMode
@@ -198,13 +198,13 @@ public class EndpointInput implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transfering data for the
+     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transferring data for the
      * monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is useful for
      * small files that fit in memory. Defaults to <code>File</code>.
      * </p>
      * 
-     * @return Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transfering data for the
-     *         monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is
+     * @return Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transferring data for
+     *         the monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is
      *         useful for small files that fit in memory. Defaults to <code>File</code>.
      * @see ProcessingS3InputMode
      */
@@ -215,13 +215,13 @@ public class EndpointInput implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transfering data for the
+     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transferring data for the
      * monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is useful for
      * small files that fit in memory. Defaults to <code>File</code>.
      * </p>
      * 
      * @param s3InputMode
-     *        Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transfering data for the
+     *        Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transferring data for the
      *        monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is useful
      *        for small files that fit in memory. Defaults to <code>File</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -235,13 +235,13 @@ public class EndpointInput implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transfering data for the
+     * Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transferring data for the
      * monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is useful for
      * small files that fit in memory. Defaults to <code>File</code>.
      * </p>
      * 
      * @param s3InputMode
-     *        Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transfering data for the
+     *        Whether the <code>Pipe</code> or <code>File</code> is used as the input mode for transferring data for the
      *        monitoring job. <code>Pipe</code> mode is recommended for large datasets. <code>File</code> mode is useful
      *        for small files that fit in memory. Defaults to <code>File</code>.
      * @return Returns a reference to this object so that method calls can be chained together.

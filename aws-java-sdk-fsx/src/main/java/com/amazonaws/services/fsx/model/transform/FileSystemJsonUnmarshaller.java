@@ -132,6 +132,10 @@ public class FileSystemJsonUnmarshaller implements Unmarshaller<FileSystem, Json
                     context.nextToken();
                     fileSystem.setOntapConfiguration(OntapFileSystemConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("FileSystemTypeVersion", targetDepth)) {
+                    context.nextToken();
+                    fileSystem.setFileSystemTypeVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

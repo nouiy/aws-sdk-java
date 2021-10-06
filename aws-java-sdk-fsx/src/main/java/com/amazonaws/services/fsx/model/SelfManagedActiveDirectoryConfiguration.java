@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration that Amazon FSx uses to join a Amazon FSx for Windows File Server file system or an ONTAP storage
- * virtual machine (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory. For more
+ * The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or an ONTAP storage virtual
+ * machine (SVM) to a self-managed (including on-premises) Microsoft Active Directory (AD) directory. For more
  * information, see <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html"> Using Amazon FSx
  * with your self-managed Microsoft Active Directory</a> or <a
  * href="https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html">Managing SVMs</a>.
@@ -80,7 +80,7 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
     private String password;
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      */
     private java.util.List<String> dnsIps;
@@ -380,10 +380,10 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      * 
-     * @return A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * @return A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      */
 
     public java.util.List<String> getDnsIps() {
@@ -392,11 +392,11 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      * 
      * @param dnsIps
-     *        A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     *        A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      */
 
     public void setDnsIps(java.util.Collection<String> dnsIps) {
@@ -410,7 +410,7 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -419,7 +419,7 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
      * </p>
      * 
      * @param dnsIps
-     *        A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     *        A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -435,11 +435,11 @@ public class SelfManagedActiveDirectoryConfiguration implements Serializable, Cl
 
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      * 
      * @param dnsIps
-     *        A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     *        A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

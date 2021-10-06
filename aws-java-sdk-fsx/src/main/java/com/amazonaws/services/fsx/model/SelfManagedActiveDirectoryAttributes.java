@@ -56,7 +56,7 @@ public class SelfManagedActiveDirectoryAttributes implements Serializable, Clone
     private String userName;
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      */
     private java.util.List<String> dnsIps;
@@ -232,10 +232,10 @@ public class SelfManagedActiveDirectoryAttributes implements Serializable, Clone
 
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      * 
-     * @return A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * @return A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      */
 
     public java.util.List<String> getDnsIps() {
@@ -244,11 +244,11 @@ public class SelfManagedActiveDirectoryAttributes implements Serializable, Clone
 
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      * 
      * @param dnsIps
-     *        A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     *        A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      */
 
     public void setDnsIps(java.util.Collection<String> dnsIps) {
@@ -262,7 +262,7 @@ public class SelfManagedActiveDirectoryAttributes implements Serializable, Clone
 
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -271,7 +271,7 @@ public class SelfManagedActiveDirectoryAttributes implements Serializable, Clone
      * </p>
      * 
      * @param dnsIps
-     *        A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     *        A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -287,11 +287,11 @@ public class SelfManagedActiveDirectoryAttributes implements Serializable, Clone
 
     /**
      * <p>
-     * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * </p>
      * 
      * @param dnsIps
-     *        A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory.
+     *        A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

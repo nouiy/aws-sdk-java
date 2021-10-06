@@ -36,13 +36,20 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
     private Integer maxCandidates;
     /**
      * <p>
-     * The maximum time, in seconds, a training job is allowed to run as part of an AutoML job.
+     * The maximum time, in seconds, that each training job is allowed to run as part of a hyperparameter tuning job.
+     * For more information, see the used by the action.
      * </p>
      */
     private Integer maxRuntimePerTrainingJobInSeconds;
     /**
      * <p>
      * The maximum runtime, in seconds, an AutoML job has to complete.
+     * </p>
+     * <p>
+     * If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
+     * gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
+     * best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model deployment,
+     * will not be completed.
      * </p>
      */
     private Integer maxAutoMLJobRuntimeInSeconds;
@@ -89,11 +96,13 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The maximum time, in seconds, a training job is allowed to run as part of an AutoML job.
+     * The maximum time, in seconds, that each training job is allowed to run as part of a hyperparameter tuning job.
+     * For more information, see the used by the action.
      * </p>
      * 
      * @param maxRuntimePerTrainingJobInSeconds
-     *        The maximum time, in seconds, a training job is allowed to run as part of an AutoML job.
+     *        The maximum time, in seconds, that each training job is allowed to run as part of a hyperparameter tuning
+     *        job. For more information, see the used by the action.
      */
 
     public void setMaxRuntimePerTrainingJobInSeconds(Integer maxRuntimePerTrainingJobInSeconds) {
@@ -102,10 +111,12 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The maximum time, in seconds, a training job is allowed to run as part of an AutoML job.
+     * The maximum time, in seconds, that each training job is allowed to run as part of a hyperparameter tuning job.
+     * For more information, see the used by the action.
      * </p>
      * 
-     * @return The maximum time, in seconds, a training job is allowed to run as part of an AutoML job.
+     * @return The maximum time, in seconds, that each training job is allowed to run as part of a hyperparameter tuning
+     *         job. For more information, see the used by the action.
      */
 
     public Integer getMaxRuntimePerTrainingJobInSeconds() {
@@ -114,11 +125,13 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The maximum time, in seconds, a training job is allowed to run as part of an AutoML job.
+     * The maximum time, in seconds, that each training job is allowed to run as part of a hyperparameter tuning job.
+     * For more information, see the used by the action.
      * </p>
      * 
      * @param maxRuntimePerTrainingJobInSeconds
-     *        The maximum time, in seconds, a training job is allowed to run as part of an AutoML job.
+     *        The maximum time, in seconds, that each training job is allowed to run as part of a hyperparameter tuning
+     *        job. For more information, see the used by the action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,9 +144,20 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * <p>
      * The maximum runtime, in seconds, an AutoML job has to complete.
      * </p>
+     * <p>
+     * If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
+     * gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
+     * best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model deployment,
+     * will not be completed.
+     * </p>
      * 
      * @param maxAutoMLJobRuntimeInSeconds
-     *        The maximum runtime, in seconds, an AutoML job has to complete.
+     *        The maximum runtime, in seconds, an AutoML job has to complete.</p>
+     *        <p>
+     *        If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
+     *        gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
+     *        best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model
+     *        deployment, will not be completed.
      */
 
     public void setMaxAutoMLJobRuntimeInSeconds(Integer maxAutoMLJobRuntimeInSeconds) {
@@ -144,8 +168,19 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * <p>
      * The maximum runtime, in seconds, an AutoML job has to complete.
      * </p>
+     * <p>
+     * If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
+     * gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
+     * best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model deployment,
+     * will not be completed.
+     * </p>
      * 
-     * @return The maximum runtime, in seconds, an AutoML job has to complete.
+     * @return The maximum runtime, in seconds, an AutoML job has to complete.</p>
+     *         <p>
+     *         If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is
+     *         ended gracefully. The AutoML job identifies the best model whose training was completed and marks it as
+     *         the best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model
+     *         deployment, will not be completed.
      */
 
     public Integer getMaxAutoMLJobRuntimeInSeconds() {
@@ -156,9 +191,20 @@ public class AutoMLJobCompletionCriteria implements Serializable, Cloneable, Str
      * <p>
      * The maximum runtime, in seconds, an AutoML job has to complete.
      * </p>
+     * <p>
+     * If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
+     * gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
+     * best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model deployment,
+     * will not be completed.
+     * </p>
      * 
      * @param maxAutoMLJobRuntimeInSeconds
-     *        The maximum runtime, in seconds, an AutoML job has to complete.
+     *        The maximum runtime, in seconds, an AutoML job has to complete.</p>
+     *        <p>
+     *        If an AutoML job exceeds the maximum runtime, the job is stopped automatically and its processing is ended
+     *        gracefully. The AutoML job identifies the best model whose training was completed and marks it as the
+     *        best-performing model. Any unfinished steps of the job, such as automatic one-click Autopilot model
+     *        deployment, will not be completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

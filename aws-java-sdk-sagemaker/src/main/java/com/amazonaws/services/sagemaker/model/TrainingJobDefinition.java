@@ -28,18 +28,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TrainingJobDefinition implements Serializable, Cloneable, StructuredPojo {
 
-    /**
-     * <p>
-     * The input mode used by the algorithm for the training job. For the input modes that Amazon SageMaker algorithms
-     * support, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * </p>
-     * <p>
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker downloads the training data from S3
-     * to the provisioned ML storage Volume, and mounts the directory to docker volume for training container. If an
-     * algorithm supports the <code>Pipe</code> input mode, Amazon SageMaker streams data directly from S3 to the
-     * container.
-     * </p>
-     */
     private String trainingInputMode;
     /**
      * <p>
@@ -80,26 +68,7 @@ public class TrainingJobDefinition implements Serializable, Cloneable, Structure
     private StoppingCondition stoppingCondition;
 
     /**
-     * <p>
-     * The input mode used by the algorithm for the training job. For the input modes that Amazon SageMaker algorithms
-     * support, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * </p>
-     * <p>
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker downloads the training data from S3
-     * to the provisioned ML storage Volume, and mounts the directory to docker volume for training container. If an
-     * algorithm supports the <code>Pipe</code> input mode, Amazon SageMaker streams data directly from S3 to the
-     * container.
-     * </p>
-     * 
      * @param trainingInputMode
-     *        The input mode used by the algorithm for the training job. For the input modes that Amazon SageMaker
-     *        algorithms support, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.</p>
-     *        <p>
-     *        If an algorithm supports the <code>File</code> input mode, Amazon SageMaker downloads the training data
-     *        from S3 to the provisioned ML storage Volume, and mounts the directory to docker volume for training
-     *        container. If an algorithm supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     *        directly from S3 to the container.
      * @see TrainingInputMode
      */
 
@@ -108,25 +77,7 @@ public class TrainingJobDefinition implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p>
-     * The input mode used by the algorithm for the training job. For the input modes that Amazon SageMaker algorithms
-     * support, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * </p>
-     * <p>
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker downloads the training data from S3
-     * to the provisioned ML storage Volume, and mounts the directory to docker volume for training container. If an
-     * algorithm supports the <code>Pipe</code> input mode, Amazon SageMaker streams data directly from S3 to the
-     * container.
-     * </p>
-     * 
-     * @return The input mode used by the algorithm for the training job. For the input modes that Amazon SageMaker
-     *         algorithms support, see <a
-     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.</p>
-     *         <p>
-     *         If an algorithm supports the <code>File</code> input mode, Amazon SageMaker downloads the training data
-     *         from S3 to the provisioned ML storage Volume, and mounts the directory to docker volume for training
-     *         container. If an algorithm supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     *         directly from S3 to the container.
+     * @return
      * @see TrainingInputMode
      */
 
@@ -135,26 +86,7 @@ public class TrainingJobDefinition implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p>
-     * The input mode used by the algorithm for the training job. For the input modes that Amazon SageMaker algorithms
-     * support, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * </p>
-     * <p>
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker downloads the training data from S3
-     * to the provisioned ML storage Volume, and mounts the directory to docker volume for training container. If an
-     * algorithm supports the <code>Pipe</code> input mode, Amazon SageMaker streams data directly from S3 to the
-     * container.
-     * </p>
-     * 
      * @param trainingInputMode
-     *        The input mode used by the algorithm for the training job. For the input modes that Amazon SageMaker
-     *        algorithms support, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.</p>
-     *        <p>
-     *        If an algorithm supports the <code>File</code> input mode, Amazon SageMaker downloads the training data
-     *        from S3 to the provisioned ML storage Volume, and mounts the directory to docker volume for training
-     *        container. If an algorithm supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     *        directly from S3 to the container.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TrainingInputMode
      */
@@ -165,26 +97,7 @@ public class TrainingJobDefinition implements Serializable, Cloneable, Structure
     }
 
     /**
-     * <p>
-     * The input mode used by the algorithm for the training job. For the input modes that Amazon SageMaker algorithms
-     * support, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.
-     * </p>
-     * <p>
-     * If an algorithm supports the <code>File</code> input mode, Amazon SageMaker downloads the training data from S3
-     * to the provisioned ML storage Volume, and mounts the directory to docker volume for training container. If an
-     * algorithm supports the <code>Pipe</code> input mode, Amazon SageMaker streams data directly from S3 to the
-     * container.
-     * </p>
-     * 
      * @param trainingInputMode
-     *        The input mode used by the algorithm for the training job. For the input modes that Amazon SageMaker
-     *        algorithms support, see <a
-     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html">Algorithms</a>.</p>
-     *        <p>
-     *        If an algorithm supports the <code>File</code> input mode, Amazon SageMaker downloads the training data
-     *        from S3 to the provisioned ML storage Volume, and mounts the directory to docker volume for training
-     *        container. If an algorithm supports the <code>Pipe</code> input mode, Amazon SageMaker streams data
-     *        directly from S3 to the container.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TrainingInputMode
      */

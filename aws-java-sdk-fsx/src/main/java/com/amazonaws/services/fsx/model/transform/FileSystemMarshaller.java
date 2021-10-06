@@ -66,6 +66,8 @@ public class FileSystemMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdministrativeActions").build();
     private static final MarshallingInfo<StructuredPojo> ONTAPCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OntapConfiguration").build();
+    private static final MarshallingInfo<String> FILESYSTEMTYPEVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FileSystemTypeVersion").build();
 
     private static final FileSystemMarshaller instance = new FileSystemMarshaller();
 
@@ -102,6 +104,7 @@ public class FileSystemMarshaller {
             protocolMarshaller.marshall(fileSystem.getLustreConfiguration(), LUSTRECONFIGURATION_BINDING);
             protocolMarshaller.marshall(fileSystem.getAdministrativeActions(), ADMINISTRATIVEACTIONS_BINDING);
             protocolMarshaller.marshall(fileSystem.getOntapConfiguration(), ONTAPCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(fileSystem.getFileSystemTypeVersion(), FILESYSTEMTYPEVERSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

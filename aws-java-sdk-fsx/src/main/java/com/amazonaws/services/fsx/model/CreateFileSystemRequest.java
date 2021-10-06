@@ -168,6 +168,28 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     private CreateFileSystemLustreConfiguration lustreConfiguration;
 
     private CreateFileSystemOntapConfiguration ontapConfiguration;
+    /**
+     * <p>
+     * Sets the version of the Amazon FSx for Lustre file system you're creating. Valid values are <code>2.10</code> and
+     * <code>2.12</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Set the value to <code>2.10</code> to create a Lustre 2.10 file system.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Set the value to <code>2.12</code> to create a Lustre 2.12 file system.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default value is <code>2.10</code>.
+     * </p>
+     */
+    private String fileSystemTypeVersion;
 
     /**
      * <p>
@@ -1287,6 +1309,139 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Sets the version of the Amazon FSx for Lustre file system you're creating. Valid values are <code>2.10</code> and
+     * <code>2.12</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Set the value to <code>2.10</code> to create a Lustre 2.10 file system.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Set the value to <code>2.12</code> to create a Lustre 2.12 file system.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default value is <code>2.10</code>.
+     * </p>
+     * 
+     * @param fileSystemTypeVersion
+     *        Sets the version of the Amazon FSx for Lustre file system you're creating. Valid values are
+     *        <code>2.10</code> and <code>2.12</code>.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Set the value to <code>2.10</code> to create a Lustre 2.10 file system.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Set the value to <code>2.12</code> to create a Lustre 2.12 file system.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default value is <code>2.10</code>.
+     */
+
+    public void setFileSystemTypeVersion(String fileSystemTypeVersion) {
+        this.fileSystemTypeVersion = fileSystemTypeVersion;
+    }
+
+    /**
+     * <p>
+     * Sets the version of the Amazon FSx for Lustre file system you're creating. Valid values are <code>2.10</code> and
+     * <code>2.12</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Set the value to <code>2.10</code> to create a Lustre 2.10 file system.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Set the value to <code>2.12</code> to create a Lustre 2.12 file system.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default value is <code>2.10</code>.
+     * </p>
+     * 
+     * @return Sets the version of the Amazon FSx for Lustre file system you're creating. Valid values are
+     *         <code>2.10</code> and <code>2.12</code>.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Set the value to <code>2.10</code> to create a Lustre 2.10 file system.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Set the value to <code>2.12</code> to create a Lustre 2.12 file system.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Default value is <code>2.10</code>.
+     */
+
+    public String getFileSystemTypeVersion() {
+        return this.fileSystemTypeVersion;
+    }
+
+    /**
+     * <p>
+     * Sets the version of the Amazon FSx for Lustre file system you're creating. Valid values are <code>2.10</code> and
+     * <code>2.12</code>.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Set the value to <code>2.10</code> to create a Lustre 2.10 file system.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Set the value to <code>2.12</code> to create a Lustre 2.12 file system.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Default value is <code>2.10</code>.
+     * </p>
+     * 
+     * @param fileSystemTypeVersion
+     *        Sets the version of the Amazon FSx for Lustre file system you're creating. Valid values are
+     *        <code>2.10</code> and <code>2.12</code>.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Set the value to <code>2.10</code> to create a Lustre 2.10 file system.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Set the value to <code>2.12</code> to create a Lustre 2.12 file system.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Default value is <code>2.10</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFileSystemRequest withFileSystemTypeVersion(String fileSystemTypeVersion) {
+        setFileSystemTypeVersion(fileSystemTypeVersion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1319,7 +1474,9 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         if (getLustreConfiguration() != null)
             sb.append("LustreConfiguration: ").append(getLustreConfiguration()).append(",");
         if (getOntapConfiguration() != null)
-            sb.append("OntapConfiguration: ").append(getOntapConfiguration());
+            sb.append("OntapConfiguration: ").append(getOntapConfiguration()).append(",");
+        if (getFileSystemTypeVersion() != null)
+            sb.append("FileSystemTypeVersion: ").append(getFileSystemTypeVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -1378,6 +1535,10 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getOntapConfiguration() != null && other.getOntapConfiguration().equals(this.getOntapConfiguration()) == false)
             return false;
+        if (other.getFileSystemTypeVersion() == null ^ this.getFileSystemTypeVersion() == null)
+            return false;
+        if (other.getFileSystemTypeVersion() != null && other.getFileSystemTypeVersion().equals(this.getFileSystemTypeVersion()) == false)
+            return false;
         return true;
     }
 
@@ -1397,6 +1558,7 @@ public class CreateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getWindowsConfiguration() == null) ? 0 : getWindowsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLustreConfiguration() == null) ? 0 : getLustreConfiguration().hashCode());
         hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getFileSystemTypeVersion() == null) ? 0 : getFileSystemTypeVersion().hashCode());
         return hashCode;
     }
 

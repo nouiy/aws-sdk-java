@@ -48,14 +48,15 @@ public class ListGroupsOlderThanOrderingIdRequest extends com.amazonaws.AmazonWe
     private Long orderingId;
     /**
      * <p>
-     * The next items in the list of groups that go beyond the maximum.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of groups that are
+     * mapped to users before a given ordering or timestamp identifier.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * The maximum results shown for a list of groups that are mapped to users before a given ordering or timestamp
-     * identifier.
+     * The maximum number of returned groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
      */
     private Integer maxResults;
@@ -200,11 +201,15 @@ public class ListGroupsOlderThanOrderingIdRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The next items in the list of groups that go beyond the maximum.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of groups that are
+     * mapped to users before a given ordering or timestamp identifier.
      * </p>
      * 
      * @param nextToken
-     *        The next items in the list of groups that go beyond the maximum.
+     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *        pagination token in the response. You can use this pagination token to retrieve the next set of groups
+     *        that are mapped to users before a given ordering or timestamp identifier.
      */
 
     public void setNextToken(String nextToken) {
@@ -213,10 +218,14 @@ public class ListGroupsOlderThanOrderingIdRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The next items in the list of groups that go beyond the maximum.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of groups that are
+     * mapped to users before a given ordering or timestamp identifier.
      * </p>
      * 
-     * @return The next items in the list of groups that go beyond the maximum.
+     * @return If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *         pagination token in the response. You can use this pagination token to retrieve the next set of groups
+     *         that are mapped to users before a given ordering or timestamp identifier.
      */
 
     public String getNextToken() {
@@ -225,11 +234,15 @@ public class ListGroupsOlderThanOrderingIdRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The next items in the list of groups that go beyond the maximum.
+     * If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     * pagination token in the response. You can use this pagination token to retrieve the next set of groups that are
+     * mapped to users before a given ordering or timestamp identifier.
      * </p>
      * 
      * @param nextToken
-     *        The next items in the list of groups that go beyond the maximum.
+     *        If the previous response was incomplete (because there is more data to retrieve), Amazon Kendra returns a
+     *        pagination token in the response. You can use this pagination token to retrieve the next set of groups
+     *        that are mapped to users before a given ordering or timestamp identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -240,13 +253,12 @@ public class ListGroupsOlderThanOrderingIdRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The maximum results shown for a list of groups that are mapped to users before a given ordering or timestamp
-     * identifier.
+     * The maximum number of returned groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
      * 
      * @param maxResults
-     *        The maximum results shown for a list of groups that are mapped to users before a given ordering or
-     *        timestamp identifier.
+     *        The maximum number of returned groups that are mapped to users before a given ordering or timestamp
+     *        identifier.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -255,12 +267,11 @@ public class ListGroupsOlderThanOrderingIdRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The maximum results shown for a list of groups that are mapped to users before a given ordering or timestamp
-     * identifier.
+     * The maximum number of returned groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
      * 
-     * @return The maximum results shown for a list of groups that are mapped to users before a given ordering or
-     *         timestamp identifier.
+     * @return The maximum number of returned groups that are mapped to users before a given ordering or timestamp
+     *         identifier.
      */
 
     public Integer getMaxResults() {
@@ -269,13 +280,12 @@ public class ListGroupsOlderThanOrderingIdRequest extends com.amazonaws.AmazonWe
 
     /**
      * <p>
-     * The maximum results shown for a list of groups that are mapped to users before a given ordering or timestamp
-     * identifier.
+     * The maximum number of returned groups that are mapped to users before a given ordering or timestamp identifier.
      * </p>
      * 
      * @param maxResults
-     *        The maximum results shown for a list of groups that are mapped to users before a given ordering or
-     *        timestamp identifier.
+     *        The maximum number of returned groups that are mapped to users before a given ordering or timestamp
+     *        identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

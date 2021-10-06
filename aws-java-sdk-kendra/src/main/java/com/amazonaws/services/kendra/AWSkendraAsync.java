@@ -222,11 +222,11 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Creates a data source that you use to with an Amazon Kendra index.
+     * Creates a data source that you want to use with an Amazon Kendra index.
      * </p>
      * <p>
      * You specify a name, data source connector type and description for your data source. You also specify
-     * configuration information such as document metadata (author, source URI, and so on) and user context information.
+     * configuration information for the data source connector.
      * </p>
      * <p>
      * <code>CreateDataSource</code> is a synchronous operation. The operation returns 200 if the data source was
@@ -243,11 +243,11 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Creates a data source that you use to with an Amazon Kendra index.
+     * Creates a data source that you want to use with an Amazon Kendra index.
      * </p>
      * <p>
      * You specify a name, data source connector type and description for your data source. You also specify
-     * configuration information such as document metadata (author, source URI, and so on) and user context information.
+     * configuration information for the data source connector.
      * </p>
      * <p>
      * <code>CreateDataSource</code> is a synchronous operation. The operation returns 200 if the data source was
@@ -1205,11 +1205,13 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Maps users to their groups. You can also map sub groups to groups. For example, the group
-     * "Company Intellectual Property Teams" includes sub groups "Research" and "Engineering". These sub groups include
-     * their own list of users or people who work in these teams. Only users who work in research and engineering, and
-     * therefore belong in the intellectual property group, can see top-secret company documents in their search
-     * results.
+     * Maps users to their groups so that you only need to provide the user ID when you issue the query.
+     * </p>
+     * <p>
+     * You can also map sub groups to groups. For example, the group "Company Intellectual Property Teams" includes sub
+     * groups "Research" and "Engineering". These sub groups include their own list of users or people who work in these
+     * teams. Only users who work in research and engineering, and therefore belong in the intellectual property group,
+     * can see top-secret company documents in their search results.
      * </p>
      * <p>
      * You map users to their groups when you want to filter search results for different users based on their group’s
@@ -1231,11 +1233,13 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Maps users to their groups. You can also map sub groups to groups. For example, the group
-     * "Company Intellectual Property Teams" includes sub groups "Research" and "Engineering". These sub groups include
-     * their own list of users or people who work in these teams. Only users who work in research and engineering, and
-     * therefore belong in the intellectual property group, can see top-secret company documents in their search
-     * results.
+     * Maps users to their groups so that you only need to provide the user ID when you issue the query.
+     * </p>
+     * <p>
+     * You can also map sub groups to groups. For example, the group "Company Intellectual Property Teams" includes sub
+     * groups "Research" and "Engineering". These sub groups include their own list of users or people who work in these
+     * teams. Only users who work in research and engineering, and therefore belong in the intellectual property group,
+     * can see top-secret company documents in their search results.
      * </p>
      * <p>
      * You map users to their groups when you want to filter search results for different users based on their group’s

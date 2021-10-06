@@ -62,7 +62,7 @@ public class DescribeQuerySuggestionsBlockListResult extends com.amazonaws.Amazo
     private String errorMessage;
     /**
      * <p>
-     * Shows the date-time a block list for query suggestions was last created.
+     * Shows the date-time a block list for query suggestions was created.
      * </p>
      */
     private java.util.Date createdAt;
@@ -370,11 +370,11 @@ public class DescribeQuerySuggestionsBlockListResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Shows the date-time a block list for query suggestions was last created.
+     * Shows the date-time a block list for query suggestions was created.
      * </p>
      * 
      * @param createdAt
-     *        Shows the date-time a block list for query suggestions was last created.
+     *        Shows the date-time a block list for query suggestions was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -383,10 +383,10 @@ public class DescribeQuerySuggestionsBlockListResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Shows the date-time a block list for query suggestions was last created.
+     * Shows the date-time a block list for query suggestions was created.
      * </p>
      * 
-     * @return Shows the date-time a block list for query suggestions was last created.
+     * @return Shows the date-time a block list for query suggestions was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -395,11 +395,11 @@ public class DescribeQuerySuggestionsBlockListResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Shows the date-time a block list for query suggestions was last created.
+     * Shows the date-time a block list for query suggestions was created.
      * </p>
      * 
      * @param createdAt
-     *        Shows the date-time a block list for query suggestions was last created.
+     *        Shows the date-time a block list for query suggestions was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

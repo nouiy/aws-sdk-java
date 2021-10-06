@@ -142,12 +142,15 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data cataolgue.
+     * A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data catalog.
      * </p>
      * </li>
      * <li>
      * <p>
-     * An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>.
+     * An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>. If KMS encryption key
+     * is not specified, by default we encrypt all data at rest using Amazon Web Services KMS key. By defining your <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for SSE, you
+     * can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      * </p>
      * </li>
      * </ul>
@@ -882,12 +885,15 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data cataolgue.
+     * A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data catalog.
      * </p>
      * </li>
      * <li>
      * <p>
-     * An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>.
+     * An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>. If KMS encryption key
+     * is not specified, by default we encrypt all data at rest using Amazon Web Services KMS key. By defining your <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for SSE, you
+     * can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      * </p>
      * </li>
      * </ul>
@@ -905,12 +911,16 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data cataolgue.
+     *        A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data catalog.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>.
+     *        An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>. If KMS
+     *        encryption key is not specified, by default we encrypt all data at rest using Amazon Web Services KMS key.
+     *        By defining your <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for SSE,
+     *        you can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      *        </p>
      *        </li>
      *        </ul>
@@ -934,12 +944,15 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data cataolgue.
+     * A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data catalog.
      * </p>
      * </li>
      * <li>
      * <p>
-     * An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>.
+     * An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>. If KMS encryption key
+     * is not specified, by default we encrypt all data at rest using Amazon Web Services KMS key. By defining your <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for SSE, you
+     * can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      * </p>
      * </li>
      * </ul>
@@ -956,12 +969,16 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *         </li>
      *         <li>
      *         <p>
-     *         A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data cataolgue.
+     *         A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data catalog.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>.
+     *         An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>. If KMS
+     *         encryption key is not specified, by default we encrypt all data at rest using Amazon Web Services KMS
+     *         key. By defining your <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for
+     *         SSE, you can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      *         </p>
      *         </li>
      *         </ul>
@@ -985,12 +1002,15 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * <li>
      * <p>
-     * A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data cataolgue.
+     * A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data catalog.
      * </p>
      * </li>
      * <li>
      * <p>
-     * An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>.
+     * An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>. If KMS encryption key
+     * is not specified, by default we encrypt all data at rest using Amazon Web Services KMS key. By defining your <a
+     * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for SSE, you
+     * can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      * </p>
      * </li>
      * </ul>
@@ -1008,12 +1028,16 @@ public class CreateFeatureGroupRequest extends com.amazonaws.AmazonWebServiceReq
      *        </li>
      *        <li>
      *        <p>
-     *        A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data cataolgue.
+     *        A configuration for an Amazon Web Services Glue or Amazon Web Services Hive data catalog.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>.
+     *        An KMS encryption key to encrypt the Amazon S3 location used for <code>OfflineStore</code>. If KMS
+     *        encryption key is not specified, by default we encrypt all data at rest using Amazon Web Services KMS key.
+     *        By defining your <a
+     *        href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-key.html">bucket-level key</a> for SSE,
+     *        you can reduce Amazon Web Services KMS requests costs by up to 99 percent.
      *        </p>
      *        </li>
      *        </ul>

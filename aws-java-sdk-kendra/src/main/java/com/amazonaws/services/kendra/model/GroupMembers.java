@@ -48,6 +48,12 @@ public class GroupMembers implements Serializable, Cloneable, StructuredPojo {
      * file that lists your users and sub groups for a group. Your sub groups can contain more than 1000 users, but the
      * list of sub groups that belong to a group (and/or users) must be no more than 1000.
      * </p>
+     * <p>
+     * You can download this <a href="https://docs.aws.amazon.com/kendra/latest/dg/samples/group_members.zip">example S3
+     * file</a> that uses the correct format for listing group members. Note, <code>dataSourceId</code> is optional. The
+     * value of <code>type</code> for a group is always <code>GROUP</code> and for a user it is always <code>USER</code>
+     * .
+     * </p>
      */
     private S3Path s3PathforGroupMembers;
 
@@ -205,11 +211,23 @@ public class GroupMembers implements Serializable, Cloneable, StructuredPojo {
      * file that lists your users and sub groups for a group. Your sub groups can contain more than 1000 users, but the
      * list of sub groups that belong to a group (and/or users) must be no more than 1000.
      * </p>
+     * <p>
+     * You can download this <a href="https://docs.aws.amazon.com/kendra/latest/dg/samples/group_members.zip">example S3
+     * file</a> that uses the correct format for listing group members. Note, <code>dataSourceId</code> is optional. The
+     * value of <code>type</code> for a group is always <code>GROUP</code> and for a user it is always <code>USER</code>
+     * .
+     * </p>
      * 
      * @param s3PathforGroupMembers
      *        If you have more than 1000 users and/or sub groups for a single group, you need to provide the path to the
      *        S3 file that lists your users and sub groups for a group. Your sub groups can contain more than 1000
-     *        users, but the list of sub groups that belong to a group (and/or users) must be no more than 1000.
+     *        users, but the list of sub groups that belong to a group (and/or users) must be no more than 1000.</p>
+     *        <p>
+     *        You can download this <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/samples/group_members.zip">example S3 file</a> that
+     *        uses the correct format for listing group members. Note, <code>dataSourceId</code> is optional. The value
+     *        of <code>type</code> for a group is always <code>GROUP</code> and for a user it is always
+     *        <code>USER</code>.
      */
 
     public void setS3PathforGroupMembers(S3Path s3PathforGroupMembers) {
@@ -222,10 +240,22 @@ public class GroupMembers implements Serializable, Cloneable, StructuredPojo {
      * file that lists your users and sub groups for a group. Your sub groups can contain more than 1000 users, but the
      * list of sub groups that belong to a group (and/or users) must be no more than 1000.
      * </p>
+     * <p>
+     * You can download this <a href="https://docs.aws.amazon.com/kendra/latest/dg/samples/group_members.zip">example S3
+     * file</a> that uses the correct format for listing group members. Note, <code>dataSourceId</code> is optional. The
+     * value of <code>type</code> for a group is always <code>GROUP</code> and for a user it is always <code>USER</code>
+     * .
+     * </p>
      * 
      * @return If you have more than 1000 users and/or sub groups for a single group, you need to provide the path to
      *         the S3 file that lists your users and sub groups for a group. Your sub groups can contain more than 1000
-     *         users, but the list of sub groups that belong to a group (and/or users) must be no more than 1000.
+     *         users, but the list of sub groups that belong to a group (and/or users) must be no more than 1000.</p>
+     *         <p>
+     *         You can download this <a
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/samples/group_members.zip">example S3 file</a> that
+     *         uses the correct format for listing group members. Note, <code>dataSourceId</code> is optional. The value
+     *         of <code>type</code> for a group is always <code>GROUP</code> and for a user it is always
+     *         <code>USER</code>.
      */
 
     public S3Path getS3PathforGroupMembers() {
@@ -238,11 +268,23 @@ public class GroupMembers implements Serializable, Cloneable, StructuredPojo {
      * file that lists your users and sub groups for a group. Your sub groups can contain more than 1000 users, but the
      * list of sub groups that belong to a group (and/or users) must be no more than 1000.
      * </p>
+     * <p>
+     * You can download this <a href="https://docs.aws.amazon.com/kendra/latest/dg/samples/group_members.zip">example S3
+     * file</a> that uses the correct format for listing group members. Note, <code>dataSourceId</code> is optional. The
+     * value of <code>type</code> for a group is always <code>GROUP</code> and for a user it is always <code>USER</code>
+     * .
+     * </p>
      * 
      * @param s3PathforGroupMembers
      *        If you have more than 1000 users and/or sub groups for a single group, you need to provide the path to the
      *        S3 file that lists your users and sub groups for a group. Your sub groups can contain more than 1000
-     *        users, but the list of sub groups that belong to a group (and/or users) must be no more than 1000.
+     *        users, but the list of sub groups that belong to a group (and/or users) must be no more than 1000.</p>
+     *        <p>
+     *        You can download this <a
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/samples/group_members.zip">example S3 file</a> that
+     *        uses the correct format for listing group members. Note, <code>dataSourceId</code> is optional. The value
+     *        of <code>type</code> for a group is always <code>GROUP</code> and for a user it is always
+     *        <code>USER</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

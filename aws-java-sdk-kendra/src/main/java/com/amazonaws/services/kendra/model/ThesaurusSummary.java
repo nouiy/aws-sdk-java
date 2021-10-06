@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An array of summary information for one or more thesauruses.
+ * An array of summary information for a thesaurus or multiple thesauri.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ThesaurusSummary" target="_top">AWS API

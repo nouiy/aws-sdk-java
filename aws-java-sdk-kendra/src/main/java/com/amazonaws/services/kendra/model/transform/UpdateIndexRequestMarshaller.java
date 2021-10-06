@@ -44,6 +44,8 @@ public class UpdateIndexRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UserTokenConfigurations").build();
     private static final MarshallingInfo<String> USERCONTEXTPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UserContextPolicy").build();
+    private static final MarshallingInfo<StructuredPojo> USERGROUPRESOLUTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UserGroupResolutionConfiguration").build();
 
     private static final UpdateIndexRequestMarshaller instance = new UpdateIndexRequestMarshaller();
 
@@ -69,6 +71,7 @@ public class UpdateIndexRequestMarshaller {
             protocolMarshaller.marshall(updateIndexRequest.getCapacityUnits(), CAPACITYUNITS_BINDING);
             protocolMarshaller.marshall(updateIndexRequest.getUserTokenConfigurations(), USERTOKENCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(updateIndexRequest.getUserContextPolicy(), USERCONTEXTPOLICY_BINDING);
+            protocolMarshaller.marshall(updateIndexRequest.getUserGroupResolutionConfiguration(), USERGROUPRESOLUTIONCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

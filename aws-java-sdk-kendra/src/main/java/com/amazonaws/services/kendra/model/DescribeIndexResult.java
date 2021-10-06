@@ -120,6 +120,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      */
     private String userContextPolicy;
+    /**
+     * <p>
+     * Shows whether you have enabled the configuration for fetching access levels of groups and users from an AWS
+     * Single Sign-On identity source.
+     * </p>
+     */
+    private UserGroupResolutionConfiguration userGroupResolutionConfiguration;
 
     /**
      * <p>
@@ -888,6 +895,52 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
     }
 
     /**
+     * <p>
+     * Shows whether you have enabled the configuration for fetching access levels of groups and users from an AWS
+     * Single Sign-On identity source.
+     * </p>
+     * 
+     * @param userGroupResolutionConfiguration
+     *        Shows whether you have enabled the configuration for fetching access levels of groups and users from an
+     *        AWS Single Sign-On identity source.
+     */
+
+    public void setUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
+        this.userGroupResolutionConfiguration = userGroupResolutionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Shows whether you have enabled the configuration for fetching access levels of groups and users from an AWS
+     * Single Sign-On identity source.
+     * </p>
+     * 
+     * @return Shows whether you have enabled the configuration for fetching access levels of groups and users from an
+     *         AWS Single Sign-On identity source.
+     */
+
+    public UserGroupResolutionConfiguration getUserGroupResolutionConfiguration() {
+        return this.userGroupResolutionConfiguration;
+    }
+
+    /**
+     * <p>
+     * Shows whether you have enabled the configuration for fetching access levels of groups and users from an AWS
+     * Single Sign-On identity source.
+     * </p>
+     * 
+     * @param userGroupResolutionConfiguration
+     *        Shows whether you have enabled the configuration for fetching access levels of groups and users from an
+     *        AWS Single Sign-On identity source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeIndexResult withUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
+        setUserGroupResolutionConfiguration(userGroupResolutionConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -928,7 +981,9 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
         if (getUserTokenConfigurations() != null)
             sb.append("UserTokenConfigurations: ").append(getUserTokenConfigurations()).append(",");
         if (getUserContextPolicy() != null)
-            sb.append("UserContextPolicy: ").append(getUserContextPolicy());
+            sb.append("UserContextPolicy: ").append(getUserContextPolicy()).append(",");
+        if (getUserGroupResolutionConfiguration() != null)
+            sb.append("UserGroupResolutionConfiguration: ").append(getUserGroupResolutionConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1005,6 +1060,11 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
             return false;
         if (other.getUserContextPolicy() != null && other.getUserContextPolicy().equals(this.getUserContextPolicy()) == false)
             return false;
+        if (other.getUserGroupResolutionConfiguration() == null ^ this.getUserGroupResolutionConfiguration() == null)
+            return false;
+        if (other.getUserGroupResolutionConfiguration() != null
+                && other.getUserGroupResolutionConfiguration().equals(this.getUserGroupResolutionConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1028,6 +1088,7 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
         hashCode = prime * hashCode + ((getCapacityUnits() == null) ? 0 : getCapacityUnits().hashCode());
         hashCode = prime * hashCode + ((getUserTokenConfigurations() == null) ? 0 : getUserTokenConfigurations().hashCode());
         hashCode = prime * hashCode + ((getUserContextPolicy() == null) ? 0 : getUserContextPolicy().hashCode());
+        hashCode = prime * hashCode + ((getUserGroupResolutionConfiguration() == null) ? 0 : getUserGroupResolutionConfiguration().hashCode());
         return hashCode;
     }
 

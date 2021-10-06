@@ -115,7 +115,7 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     private SortingConfiguration sortingConfiguration;
     /**
      * <p>
-     * The user context token.
+     * The user context token or user and group information.
      * </p>
      */
     private UserContext userContext;
@@ -836,11 +836,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The user context token.
+     * The user context token or user and group information.
      * </p>
      * 
      * @param userContext
-     *        The user context token.
+     *        The user context token or user and group information.
      */
 
     public void setUserContext(UserContext userContext) {
@@ -849,10 +849,10 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The user context token.
+     * The user context token or user and group information.
      * </p>
      * 
-     * @return The user context token.
+     * @return The user context token or user and group information.
      */
 
     public UserContext getUserContext() {
@@ -861,11 +861,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The user context token.
+     * The user context token or user and group information.
      * </p>
      * 
      * @param userContext
-     *        The user context token.
+     *        The user context token or user and group information.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

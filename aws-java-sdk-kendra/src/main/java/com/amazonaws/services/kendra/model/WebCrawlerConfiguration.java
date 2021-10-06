@@ -36,6 +36,10 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * You can include website subdomains. You can list up to 100 seed URLs and up to three sitemap URLs.
      * </p>
      * <p>
+     * You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure
+     * (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from crawling.
+     * </p>
+     * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra web
      * crawler to index your own webpages, or webpages that you have authorization to index.</i>
@@ -152,6 +156,10 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * You can include website subdomains. You can list up to 100 seed URLs and up to three sitemap URLs.
      * </p>
      * <p>
+     * You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure
+     * (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from crawling.
+     * </p>
+     * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra web
      * crawler to index your own webpages, or webpages that you have authorization to index.</i>
@@ -162,6 +170,11 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        crawl.</p>
      *        <p>
      *        You can include website subdomains. You can list up to 100 seed URLs and up to three sitemap URLs.
+     *        </p>
+     *        <p>
+     *        You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure
+     *        (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from
+     *        crawling.
      *        </p>
      *        <p>
      *        <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
@@ -181,6 +194,10 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * You can include website subdomains. You can list up to 100 seed URLs and up to three sitemap URLs.
      * </p>
      * <p>
+     * You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure
+     * (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from crawling.
+     * </p>
+     * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra web
      * crawler to index your own webpages, or webpages that you have authorization to index.</i>
@@ -190,6 +207,11 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *         crawl.</p>
      *         <p>
      *         You can include website subdomains. You can list up to 100 seed URLs and up to three sitemap URLs.
+     *         </p>
+     *         <p>
+     *         You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol
+     *         Secure (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked
+     *         from crawling.
      *         </p>
      *         <p>
      *         <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
@@ -209,6 +231,10 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      * You can include website subdomains. You can list up to 100 seed URLs and up to three sitemap URLs.
      * </p>
      * <p>
+     * You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure
+     * (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from crawling.
+     * </p>
+     * <p>
      * <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon
      * Acceptable Use Policy</a> and all other Amazon terms. Remember that you must only use the Amazon Kendra web
      * crawler to index your own webpages, or webpages that you have authorization to index.</i>
@@ -219,6 +245,11 @@ public class WebCrawlerConfiguration implements Serializable, Cloneable, Structu
      *        crawl.</p>
      *        <p>
      *        You can include website subdomains. You can list up to 100 seed URLs and up to three sitemap URLs.
+     *        </p>
+     *        <p>
+     *        You can only crawl websites that use the secure communication protocol, Hypertext Transfer Protocol Secure
+     *        (HTTPS). If you receive an error when crawling a website, it could be that the website is blocked from
+     *        crawling.
      *        </p>
      *        <p>
      *        <i>When selecting websites to index, you must adhere to the <a href="https://aws.amazon.com/aup/">Amazon

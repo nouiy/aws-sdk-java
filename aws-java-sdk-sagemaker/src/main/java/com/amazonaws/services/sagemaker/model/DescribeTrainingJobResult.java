@@ -365,8 +365,8 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * <p>
      * Multiply <code>BillableTimeInSeconds</code> by the number of instances (<code>InstanceCount</code>) in your
-     * training cluster to get the total compute time Amazon SageMaker will bill you if you run distributed training.
-     * The formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
+     * training cluster to get the total compute time SageMaker will bill you if you run distributed training. The
+     * formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
      * </p>
      * <p>
      * You can calculate the savings from using managed spot training using the formula
@@ -3071,8 +3071,8 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * <p>
      * Multiply <code>BillableTimeInSeconds</code> by the number of instances (<code>InstanceCount</code>) in your
-     * training cluster to get the total compute time Amazon SageMaker will bill you if you run distributed training.
-     * The formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
+     * training cluster to get the total compute time SageMaker will bill you if you run distributed training. The
+     * formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
      * </p>
      * <p>
      * You can calculate the savings from using managed spot training using the formula
@@ -3084,7 +3084,7 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
      *        The billable time in seconds. Billable time refers to the absolute wall-clock time.</p>
      *        <p>
      *        Multiply <code>BillableTimeInSeconds</code> by the number of instances (<code>InstanceCount</code>) in
-     *        your training cluster to get the total compute time Amazon SageMaker will bill you if you run distributed
+     *        your training cluster to get the total compute time SageMaker will bill you if you run distributed
      *        training. The formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
      *        </p>
      *        <p>
@@ -3104,8 +3104,8 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * <p>
      * Multiply <code>BillableTimeInSeconds</code> by the number of instances (<code>InstanceCount</code>) in your
-     * training cluster to get the total compute time Amazon SageMaker will bill you if you run distributed training.
-     * The formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
+     * training cluster to get the total compute time SageMaker will bill you if you run distributed training. The
+     * formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
      * </p>
      * <p>
      * You can calculate the savings from using managed spot training using the formula
@@ -3116,7 +3116,7 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
      * @return The billable time in seconds. Billable time refers to the absolute wall-clock time.</p>
      *         <p>
      *         Multiply <code>BillableTimeInSeconds</code> by the number of instances (<code>InstanceCount</code>) in
-     *         your training cluster to get the total compute time Amazon SageMaker will bill you if you run distributed
+     *         your training cluster to get the total compute time SageMaker will bill you if you run distributed
      *         training. The formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
      *         </p>
      *         <p>
@@ -3136,8 +3136,8 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * <p>
      * Multiply <code>BillableTimeInSeconds</code> by the number of instances (<code>InstanceCount</code>) in your
-     * training cluster to get the total compute time Amazon SageMaker will bill you if you run distributed training.
-     * The formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
+     * training cluster to get the total compute time SageMaker will bill you if you run distributed training. The
+     * formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
      * </p>
      * <p>
      * You can calculate the savings from using managed spot training using the formula
@@ -3149,7 +3149,7 @@ public class DescribeTrainingJobResult extends com.amazonaws.AmazonWebServiceRes
      *        The billable time in seconds. Billable time refers to the absolute wall-clock time.</p>
      *        <p>
      *        Multiply <code>BillableTimeInSeconds</code> by the number of instances (<code>InstanceCount</code>) in
-     *        your training cluster to get the total compute time Amazon SageMaker will bill you if you run distributed
+     *        your training cluster to get the total compute time SageMaker will bill you if you run distributed
      *        training. The formula is as follows: <code>BillableTimeInSeconds * InstanceCount</code> .
      *        </p>
      *        <p>

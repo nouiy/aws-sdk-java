@@ -25,6 +25,12 @@ public class GetBackendResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
+     * A stringified version of the cli.json file for your Amplify project.
+     * </p>
+     */
+    private String amplifyFeatureFlags;
+    /**
+     * <p>
      * A stringified version of the current configs for your Amplify project.
      * </p>
      */
@@ -59,6 +65,46 @@ public class GetBackendResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      */
     private String error;
+
+    /**
+     * <p>
+     * A stringified version of the cli.json file for your Amplify project.
+     * </p>
+     * 
+     * @param amplifyFeatureFlags
+     *        A stringified version of the cli.json file for your Amplify project.
+     */
+
+    public void setAmplifyFeatureFlags(String amplifyFeatureFlags) {
+        this.amplifyFeatureFlags = amplifyFeatureFlags;
+    }
+
+    /**
+     * <p>
+     * A stringified version of the cli.json file for your Amplify project.
+     * </p>
+     * 
+     * @return A stringified version of the cli.json file for your Amplify project.
+     */
+
+    public String getAmplifyFeatureFlags() {
+        return this.amplifyFeatureFlags;
+    }
+
+    /**
+     * <p>
+     * A stringified version of the cli.json file for your Amplify project.
+     * </p>
+     * 
+     * @param amplifyFeatureFlags
+     *        A stringified version of the cli.json file for your Amplify project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetBackendResult withAmplifyFeatureFlags(String amplifyFeatureFlags) {
+        setAmplifyFeatureFlags(amplifyFeatureFlags);
+        return this;
+    }
 
     /**
      * <p>
@@ -342,6 +388,8 @@ public class GetBackendResult extends com.amazonaws.AmazonWebServiceResult<com.a
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAmplifyFeatureFlags() != null)
+            sb.append("AmplifyFeatureFlags: ").append(getAmplifyFeatureFlags()).append(",");
         if (getAmplifyMetaConfig() != null)
             sb.append("AmplifyMetaConfig: ").append(getAmplifyMetaConfig()).append(",");
         if (getAppId() != null)
@@ -368,6 +416,10 @@ public class GetBackendResult extends com.amazonaws.AmazonWebServiceResult<com.a
         if (obj instanceof GetBackendResult == false)
             return false;
         GetBackendResult other = (GetBackendResult) obj;
+        if (other.getAmplifyFeatureFlags() == null ^ this.getAmplifyFeatureFlags() == null)
+            return false;
+        if (other.getAmplifyFeatureFlags() != null && other.getAmplifyFeatureFlags().equals(this.getAmplifyFeatureFlags()) == false)
+            return false;
         if (other.getAmplifyMetaConfig() == null ^ this.getAmplifyMetaConfig() == null)
             return false;
         if (other.getAmplifyMetaConfig() != null && other.getAmplifyMetaConfig().equals(this.getAmplifyMetaConfig()) == false)
@@ -400,6 +452,7 @@ public class GetBackendResult extends com.amazonaws.AmazonWebServiceResult<com.a
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAmplifyFeatureFlags() == null) ? 0 : getAmplifyFeatureFlags().hashCode());
         hashCode = prime * hashCode + ((getAmplifyMetaConfig() == null) ? 0 : getAmplifyMetaConfig().hashCode());
         hashCode = prime * hashCode + ((getAppId() == null) ? 0 : getAppId().hashCode());
         hashCode = prime * hashCode + ((getAppName() == null) ? 0 : getAppName().hashCode());
