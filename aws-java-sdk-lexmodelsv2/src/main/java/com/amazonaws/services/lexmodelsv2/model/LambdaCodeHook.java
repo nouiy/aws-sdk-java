@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies a Lambda function that verifies requests to a bot or fulfilles the user's request to a bot.
+ * Specifies a Lambda function that verifies requests to a bot or fulfills the user's request to a bot.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/LambdaCodeHook" target="_top">AWS API

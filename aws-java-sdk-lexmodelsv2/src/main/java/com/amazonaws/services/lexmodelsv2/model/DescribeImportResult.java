@@ -63,8 +63,7 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
     private String importStatus;
     /**
      * <p>
-     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the
-     * failture.
+     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the failure.
      * </p>
      */
     private java.util.List<String> failureReasons;
@@ -381,12 +380,11 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the
-     * failture.
+     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the failure.
      * </p>
      * 
      * @return If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the
-     *         failture.
+     *         failure.
      */
 
     public java.util.List<String> getFailureReasons() {
@@ -395,13 +393,12 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the
-     * failture.
+     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the failure.
      * </p>
      * 
      * @param failureReasons
      *        If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the
-     *        failture.
+     *        failure.
      */
 
     public void setFailureReasons(java.util.Collection<String> failureReasons) {
@@ -415,8 +412,7 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the
-     * failture.
+     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the failure.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -426,7 +422,7 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
      * 
      * @param failureReasons
      *        If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the
-     *        failture.
+     *        failure.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -442,13 +438,12 @@ public class DescribeImportResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the
-     * failture.
+     * If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the failure.
      * </p>
      * 
      * @param failureReasons
      *        If the <code>importStatus</code> field is <code>Failed</code>, this provides one or more reasons for the
-     *        failture.
+     *        failure.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

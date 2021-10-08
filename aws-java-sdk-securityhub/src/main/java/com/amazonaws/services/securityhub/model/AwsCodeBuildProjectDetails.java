@@ -40,6 +40,12 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
     private String encryptionKey;
     /**
      * <p>
+     * Information about the build artifacts for the CodeBuild project.
+     * </p>
+     */
+    private java.util.List<AwsCodeBuildProjectArtifactsDetails> artifacts;
+    /**
+     * <p>
      * Information about the build environment for this build project.
      * </p>
      */
@@ -63,6 +69,12 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
      * </p>
      */
     private String serviceRole;
+    /**
+     * <p>
+     * Information about logs for the build project.
+     * </p>
+     */
+    private AwsCodeBuildProjectLogsConfigDetails logsConfig;
     /**
      * <p>
      * Information about the VPC configuration that CodeBuild accesses.
@@ -128,6 +140,76 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     public AwsCodeBuildProjectDetails withEncryptionKey(String encryptionKey) {
         setEncryptionKey(encryptionKey);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the build artifacts for the CodeBuild project.
+     * </p>
+     * 
+     * @return Information about the build artifacts for the CodeBuild project.
+     */
+
+    public java.util.List<AwsCodeBuildProjectArtifactsDetails> getArtifacts() {
+        return artifacts;
+    }
+
+    /**
+     * <p>
+     * Information about the build artifacts for the CodeBuild project.
+     * </p>
+     * 
+     * @param artifacts
+     *        Information about the build artifacts for the CodeBuild project.
+     */
+
+    public void setArtifacts(java.util.Collection<AwsCodeBuildProjectArtifactsDetails> artifacts) {
+        if (artifacts == null) {
+            this.artifacts = null;
+            return;
+        }
+
+        this.artifacts = new java.util.ArrayList<AwsCodeBuildProjectArtifactsDetails>(artifacts);
+    }
+
+    /**
+     * <p>
+     * Information about the build artifacts for the CodeBuild project.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setArtifacts(java.util.Collection)} or {@link #withArtifacts(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param artifacts
+     *        Information about the build artifacts for the CodeBuild project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsCodeBuildProjectDetails withArtifacts(AwsCodeBuildProjectArtifactsDetails... artifacts) {
+        if (this.artifacts == null) {
+            setArtifacts(new java.util.ArrayList<AwsCodeBuildProjectArtifactsDetails>(artifacts.length));
+        }
+        for (AwsCodeBuildProjectArtifactsDetails ele : artifacts) {
+            this.artifacts.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the build artifacts for the CodeBuild project.
+     * </p>
+     * 
+     * @param artifacts
+     *        Information about the build artifacts for the CodeBuild project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsCodeBuildProjectDetails withArtifacts(java.util.Collection<AwsCodeBuildProjectArtifactsDetails> artifacts) {
+        setArtifacts(artifacts);
         return this;
     }
 
@@ -299,6 +381,46 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
+     * Information about logs for the build project.
+     * </p>
+     * 
+     * @param logsConfig
+     *        Information about logs for the build project.
+     */
+
+    public void setLogsConfig(AwsCodeBuildProjectLogsConfigDetails logsConfig) {
+        this.logsConfig = logsConfig;
+    }
+
+    /**
+     * <p>
+     * Information about logs for the build project.
+     * </p>
+     * 
+     * @return Information about logs for the build project.
+     */
+
+    public AwsCodeBuildProjectLogsConfigDetails getLogsConfig() {
+        return this.logsConfig;
+    }
+
+    /**
+     * <p>
+     * Information about logs for the build project.
+     * </p>
+     * 
+     * @param logsConfig
+     *        Information about logs for the build project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsCodeBuildProjectDetails withLogsConfig(AwsCodeBuildProjectLogsConfigDetails logsConfig) {
+        setLogsConfig(logsConfig);
+        return this;
+    }
+
+    /**
+     * <p>
      * Information about the VPC configuration that CodeBuild accesses.
      * </p>
      * 
@@ -351,6 +473,8 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
         sb.append("{");
         if (getEncryptionKey() != null)
             sb.append("EncryptionKey: ").append(getEncryptionKey()).append(",");
+        if (getArtifacts() != null)
+            sb.append("Artifacts: ").append(getArtifacts()).append(",");
         if (getEnvironment() != null)
             sb.append("Environment: ").append(getEnvironment()).append(",");
         if (getName() != null)
@@ -359,6 +483,8 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
             sb.append("Source: ").append(getSource()).append(",");
         if (getServiceRole() != null)
             sb.append("ServiceRole: ").append(getServiceRole()).append(",");
+        if (getLogsConfig() != null)
+            sb.append("LogsConfig: ").append(getLogsConfig()).append(",");
         if (getVpcConfig() != null)
             sb.append("VpcConfig: ").append(getVpcConfig());
         sb.append("}");
@@ -379,6 +505,10 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
             return false;
         if (other.getEncryptionKey() != null && other.getEncryptionKey().equals(this.getEncryptionKey()) == false)
             return false;
+        if (other.getArtifacts() == null ^ this.getArtifacts() == null)
+            return false;
+        if (other.getArtifacts() != null && other.getArtifacts().equals(this.getArtifacts()) == false)
+            return false;
         if (other.getEnvironment() == null ^ this.getEnvironment() == null)
             return false;
         if (other.getEnvironment() != null && other.getEnvironment().equals(this.getEnvironment()) == false)
@@ -395,6 +525,10 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
             return false;
         if (other.getServiceRole() != null && other.getServiceRole().equals(this.getServiceRole()) == false)
             return false;
+        if (other.getLogsConfig() == null ^ this.getLogsConfig() == null)
+            return false;
+        if (other.getLogsConfig() != null && other.getLogsConfig().equals(this.getLogsConfig()) == false)
+            return false;
         if (other.getVpcConfig() == null ^ this.getVpcConfig() == null)
             return false;
         if (other.getVpcConfig() != null && other.getVpcConfig().equals(this.getVpcConfig()) == false)
@@ -408,10 +542,12 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEncryptionKey() == null) ? 0 : getEncryptionKey().hashCode());
+        hashCode = prime * hashCode + ((getArtifacts() == null) ? 0 : getArtifacts().hashCode());
         hashCode = prime * hashCode + ((getEnvironment() == null) ? 0 : getEnvironment().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
         hashCode = prime * hashCode + ((getServiceRole() == null) ? 0 : getServiceRole().hashCode());
+        hashCode = prime * hashCode + ((getLogsConfig() == null) ? 0 : getLogsConfig().hashCode());
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
         return hashCode;
     }

@@ -50,8 +50,7 @@ public class IntentConfirmationSetting implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Specifies whether the intent's confirmation is sent to the user. When this field is false, confirmation and
-     * declination responses aren't sent and processing continues as if the responses aren't present. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * declination responses aren't sent. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      */
     private Boolean active;
@@ -178,14 +177,13 @@ public class IntentConfirmationSetting implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Specifies whether the intent's confirmation is sent to the user. When this field is false, confirmation and
-     * declination responses aren't sent and processing continues as if the responses aren't present. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * declination responses aren't sent. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @param active
      *        Specifies whether the intent's confirmation is sent to the user. When this field is false, confirmation
-     *        and declination responses aren't sent and processing continues as if the responses aren't present. If the
-     *        <code>active</code> field isn't specified, the default is true.
+     *        and declination responses aren't sent. If the <code>active</code> field isn't specified, the default is
+     *        true.
      */
 
     public void setActive(Boolean active) {
@@ -195,13 +193,12 @@ public class IntentConfirmationSetting implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Specifies whether the intent's confirmation is sent to the user. When this field is false, confirmation and
-     * declination responses aren't sent and processing continues as if the responses aren't present. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * declination responses aren't sent. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @return Specifies whether the intent's confirmation is sent to the user. When this field is false, confirmation
-     *         and declination responses aren't sent and processing continues as if the responses aren't present. If the
-     *         <code>active</code> field isn't specified, the default is true.
+     *         and declination responses aren't sent. If the <code>active</code> field isn't specified, the default is
+     *         true.
      */
 
     public Boolean getActive() {
@@ -211,14 +208,13 @@ public class IntentConfirmationSetting implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Specifies whether the intent's confirmation is sent to the user. When this field is false, confirmation and
-     * declination responses aren't sent and processing continues as if the responses aren't present. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * declination responses aren't sent. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @param active
      *        Specifies whether the intent's confirmation is sent to the user. When this field is false, confirmation
-     *        and declination responses aren't sent and processing continues as if the responses aren't present. If the
-     *        <code>active</code> field isn't specified, the default is true.
+     *        and declination responses aren't sent. If the <code>active</code> field isn't specified, the default is
+     *        true.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,13 +226,12 @@ public class IntentConfirmationSetting implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Specifies whether the intent's confirmation is sent to the user. When this field is false, confirmation and
-     * declination responses aren't sent and processing continues as if the responses aren't present. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * declination responses aren't sent. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @return Specifies whether the intent's confirmation is sent to the user. When this field is false, confirmation
-     *         and declination responses aren't sent and processing continues as if the responses aren't present. If the
-     *         <code>active</code> field isn't specified, the default is true.
+     *         and declination responses aren't sent. If the <code>active</code> field isn't specified, the default is
+     *         true.
      */
 
     public Boolean isActive() {

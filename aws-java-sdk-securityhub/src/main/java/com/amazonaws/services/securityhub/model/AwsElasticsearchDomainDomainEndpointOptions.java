@@ -37,7 +37,7 @@ public class AwsElasticsearchDomainDomainEndpointOptions implements Serializable
     private Boolean enforceHTTPS;
     /**
      * <p>
-     * The TLS security policy to apply to the HTTPS endpoint of the Elasticsearch domain.
+     * The TLS security policy to apply to the HTTPS endpoint of the OpenSearch domain.
      * </p>
      * <p>
      * Valid values:
@@ -111,7 +111,7 @@ public class AwsElasticsearchDomainDomainEndpointOptions implements Serializable
 
     /**
      * <p>
-     * The TLS security policy to apply to the HTTPS endpoint of the Elasticsearch domain.
+     * The TLS security policy to apply to the HTTPS endpoint of the OpenSearch domain.
      * </p>
      * <p>
      * Valid values:
@@ -130,7 +130,7 @@ public class AwsElasticsearchDomainDomainEndpointOptions implements Serializable
      * </ul>
      * 
      * @param tLSSecurityPolicy
-     *        The TLS security policy to apply to the HTTPS endpoint of the Elasticsearch domain.</p>
+     *        The TLS security policy to apply to the HTTPS endpoint of the OpenSearch domain.</p>
      *        <p>
      *        Valid values:
      *        </p>
@@ -153,7 +153,7 @@ public class AwsElasticsearchDomainDomainEndpointOptions implements Serializable
 
     /**
      * <p>
-     * The TLS security policy to apply to the HTTPS endpoint of the Elasticsearch domain.
+     * The TLS security policy to apply to the HTTPS endpoint of the OpenSearch domain.
      * </p>
      * <p>
      * Valid values:
@@ -171,7 +171,7 @@ public class AwsElasticsearchDomainDomainEndpointOptions implements Serializable
      * </li>
      * </ul>
      * 
-     * @return The TLS security policy to apply to the HTTPS endpoint of the Elasticsearch domain.</p>
+     * @return The TLS security policy to apply to the HTTPS endpoint of the OpenSearch domain.</p>
      *         <p>
      *         Valid values:
      *         </p>
@@ -194,7 +194,7 @@ public class AwsElasticsearchDomainDomainEndpointOptions implements Serializable
 
     /**
      * <p>
-     * The TLS security policy to apply to the HTTPS endpoint of the Elasticsearch domain.
+     * The TLS security policy to apply to the HTTPS endpoint of the OpenSearch domain.
      * </p>
      * <p>
      * Valid values:
@@ -213,7 +213,7 @@ public class AwsElasticsearchDomainDomainEndpointOptions implements Serializable
      * </ul>
      * 
      * @param tLSSecurityPolicy
-     *        The TLS security policy to apply to the HTTPS endpoint of the Elasticsearch domain.</p>
+     *        The TLS security policy to apply to the HTTPS endpoint of the OpenSearch domain.</p>
      *        <p>
      *        Valid values:
      *        </p>

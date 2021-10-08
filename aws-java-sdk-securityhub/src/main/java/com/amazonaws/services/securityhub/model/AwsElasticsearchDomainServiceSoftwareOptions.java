@@ -31,8 +31,8 @@ public class AwsElasticsearchDomainServiceSoftwareOptions implements Serializabl
 
     /**
      * <p>
-     * The epoch time when the deployment window closes for required updates. After this time, Amazon Elasticsearch
-     * Service schedules the software upgrade automatically.
+     * The epoch time when the deployment window closes for required updates. After this time, Amazon OpenSearch Service
+     * schedules the software upgrade automatically.
      * </p>
      */
     private String automatedUpdateDate;
@@ -75,13 +75,13 @@ public class AwsElasticsearchDomainServiceSoftwareOptions implements Serializabl
 
     /**
      * <p>
-     * The epoch time when the deployment window closes for required updates. After this time, Amazon Elasticsearch
-     * Service schedules the software upgrade automatically.
+     * The epoch time when the deployment window closes for required updates. After this time, Amazon OpenSearch Service
+     * schedules the software upgrade automatically.
      * </p>
      * 
      * @param automatedUpdateDate
-     *        The epoch time when the deployment window closes for required updates. After this time, Amazon
-     *        Elasticsearch Service schedules the software upgrade automatically.
+     *        The epoch time when the deployment window closes for required updates. After this time, Amazon OpenSearch
+     *        Service schedules the software upgrade automatically.
      */
 
     public void setAutomatedUpdateDate(String automatedUpdateDate) {
@@ -90,12 +90,12 @@ public class AwsElasticsearchDomainServiceSoftwareOptions implements Serializabl
 
     /**
      * <p>
-     * The epoch time when the deployment window closes for required updates. After this time, Amazon Elasticsearch
-     * Service schedules the software upgrade automatically.
+     * The epoch time when the deployment window closes for required updates. After this time, Amazon OpenSearch Service
+     * schedules the software upgrade automatically.
      * </p>
      * 
-     * @return The epoch time when the deployment window closes for required updates. After this time, Amazon
-     *         Elasticsearch Service schedules the software upgrade automatically.
+     * @return The epoch time when the deployment window closes for required updates. After this time, Amazon OpenSearch
+     *         Service schedules the software upgrade automatically.
      */
 
     public String getAutomatedUpdateDate() {
@@ -104,13 +104,13 @@ public class AwsElasticsearchDomainServiceSoftwareOptions implements Serializabl
 
     /**
      * <p>
-     * The epoch time when the deployment window closes for required updates. After this time, Amazon Elasticsearch
-     * Service schedules the software upgrade automatically.
+     * The epoch time when the deployment window closes for required updates. After this time, Amazon OpenSearch Service
+     * schedules the software upgrade automatically.
      * </p>
      * 
      * @param automatedUpdateDate
-     *        The epoch time when the deployment window closes for required updates. After this time, Amazon
-     *        Elasticsearch Service schedules the software upgrade automatically.
+     *        The epoch time when the deployment window closes for required updates. After this time, Amazon OpenSearch
+     *        Service schedules the software upgrade automatically.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

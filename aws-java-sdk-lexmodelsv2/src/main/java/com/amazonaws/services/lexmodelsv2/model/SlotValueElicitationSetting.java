@@ -31,7 +31,7 @@ public class SlotValueElicitationSetting implements Serializable, Cloneable, Str
     /**
      * <p>
      * A list of default values for a slot. Default values are used when Amazon Lex hasn't determined a value for a
-     * slot. You can specify default values from context variables, sesion attributes, and defined values.
+     * slot. You can specify default values from context variables, session attributes, and defined values.
      * </p>
      */
     private SlotDefaultValueSpecification defaultValueSpecification;
@@ -61,12 +61,12 @@ public class SlotValueElicitationSetting implements Serializable, Cloneable, Str
     /**
      * <p>
      * A list of default values for a slot. Default values are used when Amazon Lex hasn't determined a value for a
-     * slot. You can specify default values from context variables, sesion attributes, and defined values.
+     * slot. You can specify default values from context variables, session attributes, and defined values.
      * </p>
      * 
      * @param defaultValueSpecification
      *        A list of default values for a slot. Default values are used when Amazon Lex hasn't determined a value for
-     *        a slot. You can specify default values from context variables, sesion attributes, and defined values.
+     *        a slot. You can specify default values from context variables, session attributes, and defined values.
      */
 
     public void setDefaultValueSpecification(SlotDefaultValueSpecification defaultValueSpecification) {
@@ -76,11 +76,12 @@ public class SlotValueElicitationSetting implements Serializable, Cloneable, Str
     /**
      * <p>
      * A list of default values for a slot. Default values are used when Amazon Lex hasn't determined a value for a
-     * slot. You can specify default values from context variables, sesion attributes, and defined values.
+     * slot. You can specify default values from context variables, session attributes, and defined values.
      * </p>
      * 
      * @return A list of default values for a slot. Default values are used when Amazon Lex hasn't determined a value
-     *         for a slot. You can specify default values from context variables, sesion attributes, and defined values.
+     *         for a slot. You can specify default values from context variables, session attributes, and defined
+     *         values.
      */
 
     public SlotDefaultValueSpecification getDefaultValueSpecification() {
@@ -90,12 +91,12 @@ public class SlotValueElicitationSetting implements Serializable, Cloneable, Str
     /**
      * <p>
      * A list of default values for a slot. Default values are used when Amazon Lex hasn't determined a value for a
-     * slot. You can specify default values from context variables, sesion attributes, and defined values.
+     * slot. You can specify default values from context variables, session attributes, and defined values.
      * </p>
      * 
      * @param defaultValueSpecification
      *        A list of default values for a slot. Default values are used when Amazon Lex hasn't determined a value for
-     *        a slot. You can specify default values from context variables, sesion attributes, and defined values.
+     *        a slot. You can specify default values from context variables, session attributes, and defined values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

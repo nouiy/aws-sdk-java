@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.securityhub.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,10 @@ public class AwsCodeBuildProjectEnvironmentMarshaller {
 
     private static final MarshallingInfo<String> CERTIFICATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Certificate").build();
+    private static final MarshallingInfo<List> ENVIRONMENTVARIABLES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnvironmentVariables").build();
+    private static final MarshallingInfo<Boolean> PRIVILEGEDMODE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PrivilegedMode").build();
     private static final MarshallingInfo<String> IMAGEPULLCREDENTIALSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ImagePullCredentialsType").build();
     private static final MarshallingInfo<StructuredPojo> REGISTRYCREDENTIAL_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -53,6 +58,8 @@ public class AwsCodeBuildProjectEnvironmentMarshaller {
 
         try {
             protocolMarshaller.marshall(awsCodeBuildProjectEnvironment.getCertificate(), CERTIFICATE_BINDING);
+            protocolMarshaller.marshall(awsCodeBuildProjectEnvironment.getEnvironmentVariables(), ENVIRONMENTVARIABLES_BINDING);
+            protocolMarshaller.marshall(awsCodeBuildProjectEnvironment.getPrivilegedMode(), PRIVILEGEDMODE_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectEnvironment.getImagePullCredentialsType(), IMAGEPULLCREDENTIALSTYPE_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectEnvironment.getRegistryCredential(), REGISTRYCREDENTIAL_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectEnvironment.getType(), TYPE_BINDING);

@@ -52,6 +52,13 @@ public class AwsCodeBuildProjectDetailsJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     awsCodeBuildProjectDetails.setEncryptionKey(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Artifacts", targetDepth)) {
+                    context.nextToken();
+                    awsCodeBuildProjectDetails.setArtifacts(new ListUnmarshaller<AwsCodeBuildProjectArtifactsDetails>(
+                            AwsCodeBuildProjectArtifactsDetailsJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Environment", targetDepth)) {
                     context.nextToken();
                     awsCodeBuildProjectDetails.setEnvironment(AwsCodeBuildProjectEnvironmentJsonUnmarshaller.getInstance().unmarshall(context));
@@ -67,6 +74,10 @@ public class AwsCodeBuildProjectDetailsJsonUnmarshaller implements Unmarshaller<
                 if (context.testExpression("ServiceRole", targetDepth)) {
                     context.nextToken();
                     awsCodeBuildProjectDetails.setServiceRole(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("LogsConfig", targetDepth)) {
+                    context.nextToken();
+                    awsCodeBuildProjectDetails.setLogsConfig(AwsCodeBuildProjectLogsConfigDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
                 if (context.testExpression("VpcConfig", targetDepth)) {
                     context.nextToken();

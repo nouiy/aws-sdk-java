@@ -42,6 +42,12 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
     private String ownerName;
     /**
      * <p>
+     * The Amazon Web Services account identifier of the account that owns the S3 bucket.
+     * </p>
+     */
+    private String ownerAccountId;
+    /**
+     * <p>
      * Indicates when the S3 bucket was created.
      * </p>
      * <p>
@@ -171,6 +177,46 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
 
     public AwsS3BucketDetails withOwnerName(String ownerName) {
         setOwnerName(ownerName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account identifier of the account that owns the S3 bucket.
+     * </p>
+     * 
+     * @param ownerAccountId
+     *        The Amazon Web Services account identifier of the account that owns the S3 bucket.
+     */
+
+    public void setOwnerAccountId(String ownerAccountId) {
+        this.ownerAccountId = ownerAccountId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account identifier of the account that owns the S3 bucket.
+     * </p>
+     * 
+     * @return The Amazon Web Services account identifier of the account that owns the S3 bucket.
+     */
+
+    public String getOwnerAccountId() {
+        return this.ownerAccountId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account identifier of the account that owns the S3 bucket.
+     * </p>
+     * 
+     * @param ownerAccountId
+     *        The Amazon Web Services account identifier of the account that owns the S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsS3BucketDetails withOwnerAccountId(String ownerAccountId) {
+        setOwnerAccountId(ownerAccountId);
         return this;
     }
 
@@ -537,6 +583,8 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
             sb.append("OwnerId: ").append(getOwnerId()).append(",");
         if (getOwnerName() != null)
             sb.append("OwnerName: ").append(getOwnerName()).append(",");
+        if (getOwnerAccountId() != null)
+            sb.append("OwnerAccountId: ").append(getOwnerAccountId()).append(",");
         if (getCreatedAt() != null)
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getServerSideEncryptionConfiguration() != null)
@@ -574,6 +622,10 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
         if (other.getOwnerName() == null ^ this.getOwnerName() == null)
             return false;
         if (other.getOwnerName() != null && other.getOwnerName().equals(this.getOwnerName()) == false)
+            return false;
+        if (other.getOwnerAccountId() == null ^ this.getOwnerAccountId() == null)
+            return false;
+        if (other.getOwnerAccountId() != null && other.getOwnerAccountId().equals(this.getOwnerAccountId()) == false)
             return false;
         if (other.getCreatedAt() == null ^ this.getCreatedAt() == null)
             return false;
@@ -620,6 +672,7 @@ public class AwsS3BucketDetails implements Serializable, Cloneable, StructuredPo
 
         hashCode = prime * hashCode + ((getOwnerId() == null) ? 0 : getOwnerId().hashCode());
         hashCode = prime * hashCode + ((getOwnerName() == null) ? 0 : getOwnerName().hashCode());
+        hashCode = prime * hashCode + ((getOwnerAccountId() == null) ? 0 : getOwnerAccountId().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getServerSideEncryptionConfiguration() == null) ? 0 : getServerSideEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getBucketLifecycleConfiguration() == null) ? 0 : getBucketLifecycleConfiguration().hashCode());

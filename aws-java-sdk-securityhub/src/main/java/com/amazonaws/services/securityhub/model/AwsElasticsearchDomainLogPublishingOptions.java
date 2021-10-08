@@ -31,13 +31,13 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
 
     /**
      * <p>
-     * Configures the Elasticsearch index logs publishing.
+     * Configures the OpenSearch index logs publishing.
      * </p>
      */
     private AwsElasticsearchDomainLogPublishingOptionsLogConfig indexSlowLogs;
     /**
      * <p>
-     * Configures the Elasticsearch search slow log publishing.
+     * Configures the OpenSearch search slow log publishing.
      * </p>
      */
     private AwsElasticsearchDomainLogPublishingOptionsLogConfig searchSlowLogs;
@@ -46,11 +46,11 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
 
     /**
      * <p>
-     * Configures the Elasticsearch index logs publishing.
+     * Configures the OpenSearch index logs publishing.
      * </p>
      * 
      * @param indexSlowLogs
-     *        Configures the Elasticsearch index logs publishing.
+     *        Configures the OpenSearch index logs publishing.
      */
 
     public void setIndexSlowLogs(AwsElasticsearchDomainLogPublishingOptionsLogConfig indexSlowLogs) {
@@ -59,10 +59,10 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
 
     /**
      * <p>
-     * Configures the Elasticsearch index logs publishing.
+     * Configures the OpenSearch index logs publishing.
      * </p>
      * 
-     * @return Configures the Elasticsearch index logs publishing.
+     * @return Configures the OpenSearch index logs publishing.
      */
 
     public AwsElasticsearchDomainLogPublishingOptionsLogConfig getIndexSlowLogs() {
@@ -71,11 +71,11 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
 
     /**
      * <p>
-     * Configures the Elasticsearch index logs publishing.
+     * Configures the OpenSearch index logs publishing.
      * </p>
      * 
      * @param indexSlowLogs
-     *        Configures the Elasticsearch index logs publishing.
+     *        Configures the OpenSearch index logs publishing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +86,11 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
 
     /**
      * <p>
-     * Configures the Elasticsearch search slow log publishing.
+     * Configures the OpenSearch search slow log publishing.
      * </p>
      * 
      * @param searchSlowLogs
-     *        Configures the Elasticsearch search slow log publishing.
+     *        Configures the OpenSearch search slow log publishing.
      */
 
     public void setSearchSlowLogs(AwsElasticsearchDomainLogPublishingOptionsLogConfig searchSlowLogs) {
@@ -99,10 +99,10 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
 
     /**
      * <p>
-     * Configures the Elasticsearch search slow log publishing.
+     * Configures the OpenSearch search slow log publishing.
      * </p>
      * 
-     * @return Configures the Elasticsearch search slow log publishing.
+     * @return Configures the OpenSearch search slow log publishing.
      */
 
     public AwsElasticsearchDomainLogPublishingOptionsLogConfig getSearchSlowLogs() {
@@ -111,11 +111,11 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
 
     /**
      * <p>
-     * Configures the Elasticsearch search slow log publishing.
+     * Configures the OpenSearch search slow log publishing.
      * </p>
      * 
      * @param searchSlowLogs
-     *        Configures the Elasticsearch search slow log publishing.
+     *        Configures the OpenSearch search slow log publishing.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

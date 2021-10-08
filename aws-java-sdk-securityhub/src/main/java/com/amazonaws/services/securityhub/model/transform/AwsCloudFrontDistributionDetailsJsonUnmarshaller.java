@@ -86,6 +86,11 @@ public class AwsCloudFrontDistributionDetailsJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     awsCloudFrontDistributionDetails.setOriginGroups(AwsCloudFrontDistributionOriginGroupsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ViewerCertificate", targetDepth)) {
+                    context.nextToken();
+                    awsCloudFrontDistributionDetails.setViewerCertificate(AwsCloudFrontDistributionViewerCertificateJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
                 if (context.testExpression("Status", targetDepth)) {
                     context.nextToken();
                     awsCloudFrontDistributionDetails.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

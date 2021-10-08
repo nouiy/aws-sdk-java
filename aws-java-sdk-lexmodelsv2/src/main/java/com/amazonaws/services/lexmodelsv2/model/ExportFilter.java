@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Filtes the response form the operation
+ * Filters the response form the operation
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ExportFilter" target="_top">AWS API
@@ -36,7 +36,7 @@ public class ExportFilter implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The values to use to fileter the response.
+     * The values to use to filter the response.
      * </p>
      */
     private java.util.List<String> values;
@@ -110,10 +110,10 @@ public class ExportFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The values to use to fileter the response.
+     * The values to use to filter the response.
      * </p>
      * 
-     * @return The values to use to fileter the response.
+     * @return The values to use to filter the response.
      */
 
     public java.util.List<String> getValues() {
@@ -122,11 +122,11 @@ public class ExportFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The values to use to fileter the response.
+     * The values to use to filter the response.
      * </p>
      * 
      * @param values
-     *        The values to use to fileter the response.
+     *        The values to use to filter the response.
      */
 
     public void setValues(java.util.Collection<String> values) {
@@ -140,7 +140,7 @@ public class ExportFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The values to use to fileter the response.
+     * The values to use to filter the response.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -149,7 +149,7 @@ public class ExportFilter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param values
-     *        The values to use to fileter the response.
+     *        The values to use to filter the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,11 +165,11 @@ public class ExportFilter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The values to use to fileter the response.
+     * The values to use to filter the response.
      * </p>
      * 
      * @param values
-     *        The values to use to fileter the response.
+     *        The values to use to filter the response.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

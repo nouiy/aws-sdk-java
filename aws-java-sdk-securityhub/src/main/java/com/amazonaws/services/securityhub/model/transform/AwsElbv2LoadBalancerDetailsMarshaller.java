@@ -48,6 +48,8 @@ public class AwsElbv2LoadBalancerDetailsMarshaller {
             .marshallLocationName("Type").build();
     private static final MarshallingInfo<String> VPCID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("VpcId").build();
+    private static final MarshallingInfo<List> LOADBALANCERATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LoadBalancerAttributes").build();
 
     private static final AwsElbv2LoadBalancerDetailsMarshaller instance = new AwsElbv2LoadBalancerDetailsMarshaller();
 
@@ -75,6 +77,7 @@ public class AwsElbv2LoadBalancerDetailsMarshaller {
             protocolMarshaller.marshall(awsElbv2LoadBalancerDetails.getState(), STATE_BINDING);
             protocolMarshaller.marshall(awsElbv2LoadBalancerDetails.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(awsElbv2LoadBalancerDetails.getVpcId(), VPCID_BINDING);
+            protocolMarshaller.marshall(awsElbv2LoadBalancerDetails.getLoadBalancerAttributes(), LOADBALANCERATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

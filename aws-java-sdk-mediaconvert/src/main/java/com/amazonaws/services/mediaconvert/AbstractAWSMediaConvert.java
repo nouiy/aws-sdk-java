@@ -63,6 +63,11 @@ public class AbstractAWSMediaConvert implements AWSMediaConvert {
     }
 
     @Override
+    public DeletePolicyResult deletePolicy(DeletePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeletePresetResult deletePreset(DeletePresetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -89,6 +94,11 @@ public class AbstractAWSMediaConvert implements AWSMediaConvert {
 
     @Override
     public GetJobTemplateResult getJobTemplate(GetJobTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetPolicyResult getPolicy(GetPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -124,6 +134,11 @@ public class AbstractAWSMediaConvert implements AWSMediaConvert {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutPolicyResult putPolicy(PutPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -29,6 +29,10 @@ public class FulfillmentCodeHookSettingsMarshaller {
 
     private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("enabled").build();
+    private static final MarshallingInfo<StructuredPojo> POSTFULFILLMENTSTATUSSPECIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("postFulfillmentStatusSpecification").build();
+    private static final MarshallingInfo<StructuredPojo> FULFILLMENTUPDATESSPECIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("fulfillmentUpdatesSpecification").build();
 
     private static final FulfillmentCodeHookSettingsMarshaller instance = new FulfillmentCodeHookSettingsMarshaller();
 
@@ -47,6 +51,8 @@ public class FulfillmentCodeHookSettingsMarshaller {
 
         try {
             protocolMarshaller.marshall(fulfillmentCodeHookSettings.getEnabled(), ENABLED_BINDING);
+            protocolMarshaller.marshall(fulfillmentCodeHookSettings.getPostFulfillmentStatusSpecification(), POSTFULFILLMENTSTATUSSPECIFICATION_BINDING);
+            protocolMarshaller.marshall(fulfillmentCodeHookSettings.getFulfillmentUpdatesSpecification(), FULFILLMENTUPDATESSPECIFICATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

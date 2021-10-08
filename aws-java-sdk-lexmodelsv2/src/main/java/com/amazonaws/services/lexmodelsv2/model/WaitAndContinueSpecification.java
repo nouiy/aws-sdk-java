@@ -50,8 +50,7 @@ public class WaitAndContinueSpecification implements Serializable, Cloneable, St
     /**
      * <p>
      * Specifies whether the bot will wait for a user to respond. When this field is false, wait and continue responses
-     * for a slot aren't used and the bot expects an appropriate response within the configured timeout. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * for a slot aren't used. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      */
     private Boolean active;
@@ -185,14 +184,12 @@ public class WaitAndContinueSpecification implements Serializable, Cloneable, St
     /**
      * <p>
      * Specifies whether the bot will wait for a user to respond. When this field is false, wait and continue responses
-     * for a slot aren't used and the bot expects an appropriate response within the configured timeout. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * for a slot aren't used. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @param active
      *        Specifies whether the bot will wait for a user to respond. When this field is false, wait and continue
-     *        responses for a slot aren't used and the bot expects an appropriate response within the configured
-     *        timeout. If the <code>active</code> field isn't specified, the default is true.
+     *        responses for a slot aren't used. If the <code>active</code> field isn't specified, the default is true.
      */
 
     public void setActive(Boolean active) {
@@ -202,13 +199,11 @@ public class WaitAndContinueSpecification implements Serializable, Cloneable, St
     /**
      * <p>
      * Specifies whether the bot will wait for a user to respond. When this field is false, wait and continue responses
-     * for a slot aren't used and the bot expects an appropriate response within the configured timeout. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * for a slot aren't used. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @return Specifies whether the bot will wait for a user to respond. When this field is false, wait and continue
-     *         responses for a slot aren't used and the bot expects an appropriate response within the configured
-     *         timeout. If the <code>active</code> field isn't specified, the default is true.
+     *         responses for a slot aren't used. If the <code>active</code> field isn't specified, the default is true.
      */
 
     public Boolean getActive() {
@@ -218,14 +213,12 @@ public class WaitAndContinueSpecification implements Serializable, Cloneable, St
     /**
      * <p>
      * Specifies whether the bot will wait for a user to respond. When this field is false, wait and continue responses
-     * for a slot aren't used and the bot expects an appropriate response within the configured timeout. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * for a slot aren't used. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @param active
      *        Specifies whether the bot will wait for a user to respond. When this field is false, wait and continue
-     *        responses for a slot aren't used and the bot expects an appropriate response within the configured
-     *        timeout. If the <code>active</code> field isn't specified, the default is true.
+     *        responses for a slot aren't used. If the <code>active</code> field isn't specified, the default is true.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,13 +230,11 @@ public class WaitAndContinueSpecification implements Serializable, Cloneable, St
     /**
      * <p>
      * Specifies whether the bot will wait for a user to respond. When this field is false, wait and continue responses
-     * for a slot aren't used and the bot expects an appropriate response within the configured timeout. If the
-     * <code>active</code> field isn't specified, the default is true.
+     * for a slot aren't used. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @return Specifies whether the bot will wait for a user to respond. When this field is false, wait and continue
-     *         responses for a slot aren't used and the bot expects an appropriate response within the configured
-     *         timeout. If the <code>active</code> field isn't specified, the default is true.
+     *         responses for a slot aren't used. If the <code>active</code> field isn't specified, the default is true.
      */
 
     public Boolean isActive() {

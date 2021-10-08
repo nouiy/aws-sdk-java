@@ -37,8 +37,7 @@ public class IntentClosingSetting implements Serializable, Cloneable, Structured
     /**
      * <p>
      * Specifies whether an intent's closing response is used. When this field is false, the closing response isn't sent
-     * to the user and no closing input from the user is used. If the <code>active</code> field isn't specified, the
-     * default is true.
+     * to the user. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      */
     private Boolean active;
@@ -86,14 +85,12 @@ public class IntentClosingSetting implements Serializable, Cloneable, Structured
     /**
      * <p>
      * Specifies whether an intent's closing response is used. When this field is false, the closing response isn't sent
-     * to the user and no closing input from the user is used. If the <code>active</code> field isn't specified, the
-     * default is true.
+     * to the user. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @param active
      *        Specifies whether an intent's closing response is used. When this field is false, the closing response
-     *        isn't sent to the user and no closing input from the user is used. If the <code>active</code> field isn't
-     *        specified, the default is true.
+     *        isn't sent to the user. If the <code>active</code> field isn't specified, the default is true.
      */
 
     public void setActive(Boolean active) {
@@ -103,13 +100,11 @@ public class IntentClosingSetting implements Serializable, Cloneable, Structured
     /**
      * <p>
      * Specifies whether an intent's closing response is used. When this field is false, the closing response isn't sent
-     * to the user and no closing input from the user is used. If the <code>active</code> field isn't specified, the
-     * default is true.
+     * to the user. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @return Specifies whether an intent's closing response is used. When this field is false, the closing response
-     *         isn't sent to the user and no closing input from the user is used. If the <code>active</code> field isn't
-     *         specified, the default is true.
+     *         isn't sent to the user. If the <code>active</code> field isn't specified, the default is true.
      */
 
     public Boolean getActive() {
@@ -119,14 +114,12 @@ public class IntentClosingSetting implements Serializable, Cloneable, Structured
     /**
      * <p>
      * Specifies whether an intent's closing response is used. When this field is false, the closing response isn't sent
-     * to the user and no closing input from the user is used. If the <code>active</code> field isn't specified, the
-     * default is true.
+     * to the user. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @param active
      *        Specifies whether an intent's closing response is used. When this field is false, the closing response
-     *        isn't sent to the user and no closing input from the user is used. If the <code>active</code> field isn't
-     *        specified, the default is true.
+     *        isn't sent to the user. If the <code>active</code> field isn't specified, the default is true.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,13 +131,11 @@ public class IntentClosingSetting implements Serializable, Cloneable, Structured
     /**
      * <p>
      * Specifies whether an intent's closing response is used. When this field is false, the closing response isn't sent
-     * to the user and no closing input from the user is used. If the <code>active</code> field isn't specified, the
-     * default is true.
+     * to the user. If the <code>active</code> field isn't specified, the default is true.
      * </p>
      * 
      * @return Specifies whether an intent's closing response is used. When this field is false, the closing response
-     *         isn't sent to the user and no closing input from the user is used. If the <code>active</code> field isn't
-     *         specified, the default is true.
+     *         isn't sent to the user. If the <code>active</code> field isn't specified, the default is true.
      */
 
     public Boolean isActive() {

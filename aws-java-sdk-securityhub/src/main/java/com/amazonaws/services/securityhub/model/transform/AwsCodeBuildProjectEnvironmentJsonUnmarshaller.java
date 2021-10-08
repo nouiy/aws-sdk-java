@@ -52,6 +52,17 @@ public class AwsCodeBuildProjectEnvironmentJsonUnmarshaller implements Unmarshal
                     context.nextToken();
                     awsCodeBuildProjectEnvironment.setCertificate(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("EnvironmentVariables", targetDepth)) {
+                    context.nextToken();
+                    awsCodeBuildProjectEnvironment.setEnvironmentVariables(new ListUnmarshaller<AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails>(
+                            AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetailsJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("PrivilegedMode", targetDepth)) {
+                    context.nextToken();
+                    awsCodeBuildProjectEnvironment.setPrivilegedMode(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("ImagePullCredentialsType", targetDepth)) {
                     context.nextToken();
                     awsCodeBuildProjectEnvironment.setImagePullCredentialsType(context.getUnmarshaller(String.class).unmarshall(context));

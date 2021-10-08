@@ -60,7 +60,7 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
     private Integer maxResults;
     /**
      * <p>
-     * If the response from the <code>ListExports</code> operation contans more results that specified in the
+     * If the response from the <code>ListExports</code> operation contains more results that specified in the
      * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
      * <code>nextToken</code> parameter to return the next page of results.
      * </p>
@@ -319,13 +319,13 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * If the response from the <code>ListExports</code> operation contans more results that specified in the
+     * If the response from the <code>ListExports</code> operation contains more results that specified in the
      * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
      * <code>nextToken</code> parameter to return the next page of results.
      * </p>
      * 
      * @param nextToken
-     *        If the response from the <code>ListExports</code> operation contans more results that specified in the
+     *        If the response from the <code>ListExports</code> operation contains more results that specified in the
      *        <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
      *        <code>nextToken</code> parameter to return the next page of results.
      */
@@ -336,12 +336,12 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * If the response from the <code>ListExports</code> operation contans more results that specified in the
+     * If the response from the <code>ListExports</code> operation contains more results that specified in the
      * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
      * <code>nextToken</code> parameter to return the next page of results.
      * </p>
      * 
-     * @return If the response from the <code>ListExports</code> operation contans more results that specified in the
+     * @return If the response from the <code>ListExports</code> operation contains more results that specified in the
      *         <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
      *         <code>nextToken</code> parameter to return the next page of results.
      */
@@ -352,13 +352,13 @@ public class ListExportsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * If the response from the <code>ListExports</code> operation contans more results that specified in the
+     * If the response from the <code>ListExports</code> operation contains more results that specified in the
      * <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
      * <code>nextToken</code> parameter to return the next page of results.
      * </p>
      * 
      * @param nextToken
-     *        If the response from the <code>ListExports</code> operation contans more results that specified in the
+     *        If the response from the <code>ListExports</code> operation contains more results that specified in the
      *        <code>maxResults</code> parameter, a token is returned in the response. Use that token in the
      *        <code>nextToken</code> parameter to return the next page of results.
      * @return Returns a reference to this object so that method calls can be chained together.

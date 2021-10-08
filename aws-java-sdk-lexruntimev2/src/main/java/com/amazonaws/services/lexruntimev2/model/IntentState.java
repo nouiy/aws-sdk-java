@@ -24,7 +24,8 @@ public enum IntentState {
     Fulfilled("Fulfilled"),
     InProgress("InProgress"),
     ReadyForFulfillment("ReadyForFulfillment"),
-    Waiting("Waiting");
+    Waiting("Waiting"),
+    FulfillmentInProgress("FulfillmentInProgress");
 
     private String value;
 

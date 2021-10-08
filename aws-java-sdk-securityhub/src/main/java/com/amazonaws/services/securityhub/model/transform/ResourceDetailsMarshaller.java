@@ -133,6 +133,20 @@ public class ResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEc2VpnConnection").build();
     private static final MarshallingInfo<StructuredPojo> AWSECRCONTAINERIMAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEcrContainerImage").build();
+    private static final MarshallingInfo<StructuredPojo> AWSOPENSEARCHSERVICEDOMAIN_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsOpenSearchServiceDomain").build();
+    private static final MarshallingInfo<StructuredPojo> AWSEC2VPCENDPOINTSERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEc2VpcEndpointService").build();
+    private static final MarshallingInfo<StructuredPojo> AWSXRAYENCRYPTIONCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsXrayEncryptionConfig").build();
+    private static final MarshallingInfo<StructuredPojo> AWSWAFRATEBASEDRULE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsWafRateBasedRule").build();
+    private static final MarshallingInfo<StructuredPojo> AWSWAFREGIONALRATEBASEDRULE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsWafRegionalRateBasedRule").build();
+    private static final MarshallingInfo<StructuredPojo> AWSECRREPOSITORY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEcrRepository").build();
+    private static final MarshallingInfo<StructuredPojo> AWSEKSCLUSTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEksCluster").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -202,6 +216,13 @@ public class ResourceDetailsMarshaller {
             protocolMarshaller.marshall(resourceDetails.getAwsAutoScalingLaunchConfiguration(), AWSAUTOSCALINGLAUNCHCONFIGURATION_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsEc2VpnConnection(), AWSEC2VPNCONNECTION_BINDING);
             protocolMarshaller.marshall(resourceDetails.getAwsEcrContainerImage(), AWSECRCONTAINERIMAGE_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsOpenSearchServiceDomain(), AWSOPENSEARCHSERVICEDOMAIN_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEc2VpcEndpointService(), AWSEC2VPCENDPOINTSERVICE_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsXrayEncryptionConfig(), AWSXRAYENCRYPTIONCONFIG_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsWafRateBasedRule(), AWSWAFRATEBASEDRULE_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsWafRegionalRateBasedRule(), AWSWAFREGIONALRATEBASEDRULE_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEcrRepository(), AWSECRREPOSITORY_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEksCluster(), AWSEKSCLUSTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

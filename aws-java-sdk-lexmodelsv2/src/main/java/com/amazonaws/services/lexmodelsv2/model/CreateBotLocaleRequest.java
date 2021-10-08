@@ -62,7 +62,8 @@ public class CreateBotLocaleRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For example, suppose a bot is configured with the confidence threshold of 0.80 and the
      * <code>AMAZON.FallbackIntent</code>. Amazon Lex returns three alternative intents with the following confidence
-     * scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the PostText operation would be:
+     * scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the <code>RecognizeText</code>
+     * operation would be:
      * </p>
      * <ul>
      * <li>
@@ -283,7 +284,8 @@ public class CreateBotLocaleRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For example, suppose a bot is configured with the confidence threshold of 0.80 and the
      * <code>AMAZON.FallbackIntent</code>. Amazon Lex returns three alternative intents with the following confidence
-     * scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the PostText operation would be:
+     * scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the <code>RecognizeText</code>
+     * operation would be:
      * </p>
      * <ul>
      * <li>
@@ -316,8 +318,8 @@ public class CreateBotLocaleRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For example, suppose a bot is configured with the confidence threshold of 0.80 and the
      *        <code>AMAZON.FallbackIntent</code>. Amazon Lex returns three alternative intents with the following
-     *        confidence scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the PostText
-     *        operation would be:
+     *        confidence scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the
+     *        <code>RecognizeText</code> operation would be:
      *        </p>
      *        <ul>
      *        <li>
@@ -356,7 +358,8 @@ public class CreateBotLocaleRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For example, suppose a bot is configured with the confidence threshold of 0.80 and the
      * <code>AMAZON.FallbackIntent</code>. Amazon Lex returns three alternative intents with the following confidence
-     * scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the PostText operation would be:
+     * scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the <code>RecognizeText</code>
+     * operation would be:
      * </p>
      * <ul>
      * <li>
@@ -388,8 +391,8 @@ public class CreateBotLocaleRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For example, suppose a bot is configured with the confidence threshold of 0.80 and the
      *         <code>AMAZON.FallbackIntent</code>. Amazon Lex returns three alternative intents with the following
-     *         confidence scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the PostText
-     *         operation would be:
+     *         confidence scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the
+     *         <code>RecognizeText</code> operation would be:
      *         </p>
      *         <ul>
      *         <li>
@@ -428,7 +431,8 @@ public class CreateBotLocaleRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For example, suppose a bot is configured with the confidence threshold of 0.80 and the
      * <code>AMAZON.FallbackIntent</code>. Amazon Lex returns three alternative intents with the following confidence
-     * scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the PostText operation would be:
+     * scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the <code>RecognizeText</code>
+     * operation would be:
      * </p>
      * <ul>
      * <li>
@@ -461,8 +465,8 @@ public class CreateBotLocaleRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For example, suppose a bot is configured with the confidence threshold of 0.80 and the
      *        <code>AMAZON.FallbackIntent</code>. Amazon Lex returns three alternative intents with the following
-     *        confidence scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the PostText
-     *        operation would be:
+     *        confidence scores: IntentA (0.70), IntentB (0.60), IntentC (0.50). The response from the
+     *        <code>RecognizeText</code> operation would be:
      *        </p>
      *        <ul>
      *        <li>

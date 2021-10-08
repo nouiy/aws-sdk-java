@@ -714,14 +714,27 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      * </p>
      * <p>
      * Accounts that are managed using Organizations do not receive an invitation. They automatically become a member
-     * account in Security Hub, and Security Hub is automatically enabled for those accounts. Note that Security Hub
-     * cannot be enabled automatically for the organization management account. The organization management account must
-     * enable Security Hub before the administrator account enables it as a member account.
+     * account in Security Hub.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the organization account does not have Security Hub enabled, then Security Hub and the default standards are
+     * automatically enabled. Note that Security Hub cannot be enabled automatically for the organization management
+     * account. The organization management account must enable Security Hub before the administrator account enables it
+     * as a member account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For organization accounts that already have Security Hub enabled, Security Hub does not make any other changes to
+     * those accounts. It does not change their enabled standards or controls.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * A permissions policy is added that permits the administrator account to view the findings generated in the member
-     * account. When Security Hub is enabled in a member account, the member account findings are also visible to the
-     * administrator account.
+     * account.
      * </p>
      * <p>
      * To remove the association between the administrator and member accounts, use the
@@ -772,14 +785,27 @@ public interface AWSSecurityHubAsync extends AWSSecurityHub {
      * </p>
      * <p>
      * Accounts that are managed using Organizations do not receive an invitation. They automatically become a member
-     * account in Security Hub, and Security Hub is automatically enabled for those accounts. Note that Security Hub
-     * cannot be enabled automatically for the organization management account. The organization management account must
-     * enable Security Hub before the administrator account enables it as a member account.
+     * account in Security Hub.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the organization account does not have Security Hub enabled, then Security Hub and the default standards are
+     * automatically enabled. Note that Security Hub cannot be enabled automatically for the organization management
+     * account. The organization management account must enable Security Hub before the administrator account enables it
+     * as a member account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For organization accounts that already have Security Hub enabled, Security Hub does not make any other changes to
+     * those accounts. It does not change their enabled standards or controls.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * A permissions policy is added that permits the administrator account to view the findings generated in the member
-     * account. When Security Hub is enabled in a member account, the member account findings are also visible to the
-     * administrator account.
+     * account.
      * </p>
      * <p>
      * To remove the association between the administrator and member accounts, use the

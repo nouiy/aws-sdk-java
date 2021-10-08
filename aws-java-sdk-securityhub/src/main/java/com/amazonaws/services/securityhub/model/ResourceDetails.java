@@ -366,10 +366,52 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsEc2VpnConnectionDetails awsEc2VpnConnection;
     /**
      * <p>
-     * information about an Amazon ECR image.
+     * Information about an Amazon ECR image.
      * </p>
      */
     private AwsEcrContainerImageDetails awsEcrContainerImage;
+    /**
+     * <p>
+     * Details about an Amazon OpenSearch Service domain.
+     * </p>
+     */
+    private AwsOpenSearchServiceDomainDetails awsOpenSearchServiceDomain;
+    /**
+     * <p>
+     * Details about the service configuration for a VPC endpoint service.
+     * </p>
+     */
+    private AwsEc2VpcEndpointServiceDetails awsEc2VpcEndpointService;
+    /**
+     * <p>
+     * Information about the encryption configuration for X-Ray.
+     * </p>
+     */
+    private AwsXrayEncryptionConfigDetails awsXrayEncryptionConfig;
+    /**
+     * <p>
+     * Details about a rate-based rule for global resources.
+     * </p>
+     */
+    private AwsWafRateBasedRuleDetails awsWafRateBasedRule;
+    /**
+     * <p>
+     * Details about a rate-based rule for Regional resources.
+     * </p>
+     */
+    private AwsWafRegionalRateBasedRuleDetails awsWafRegionalRateBasedRule;
+    /**
+     * <p>
+     * Information about an Amazon Elastic Container Registry repository.
+     * </p>
+     */
+    private AwsEcrRepositoryDetails awsEcrRepository;
+    /**
+     * <p>
+     * Details about an Amazon EKS cluster.
+     * </p>
+     */
+    private AwsEksClusterDetails awsEksCluster;
 
     /**
      * <p>
@@ -2546,11 +2588,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * information about an Amazon ECR image.
+     * Information about an Amazon ECR image.
      * </p>
      * 
      * @param awsEcrContainerImage
-     *        information about an Amazon ECR image.
+     *        Information about an Amazon ECR image.
      */
 
     public void setAwsEcrContainerImage(AwsEcrContainerImageDetails awsEcrContainerImage) {
@@ -2559,10 +2601,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * information about an Amazon ECR image.
+     * Information about an Amazon ECR image.
      * </p>
      * 
-     * @return information about an Amazon ECR image.
+     * @return Information about an Amazon ECR image.
      */
 
     public AwsEcrContainerImageDetails getAwsEcrContainerImage() {
@@ -2571,16 +2613,296 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * information about an Amazon ECR image.
+     * Information about an Amazon ECR image.
      * </p>
      * 
      * @param awsEcrContainerImage
-     *        information about an Amazon ECR image.
+     *        Information about an Amazon ECR image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ResourceDetails withAwsEcrContainerImage(AwsEcrContainerImageDetails awsEcrContainerImage) {
         setAwsEcrContainerImage(awsEcrContainerImage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param awsOpenSearchServiceDomain
+     *        Details about an Amazon OpenSearch Service domain.
+     */
+
+    public void setAwsOpenSearchServiceDomain(AwsOpenSearchServiceDomainDetails awsOpenSearchServiceDomain) {
+        this.awsOpenSearchServiceDomain = awsOpenSearchServiceDomain;
+    }
+
+    /**
+     * <p>
+     * Details about an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @return Details about an Amazon OpenSearch Service domain.
+     */
+
+    public AwsOpenSearchServiceDomainDetails getAwsOpenSearchServiceDomain() {
+        return this.awsOpenSearchServiceDomain;
+    }
+
+    /**
+     * <p>
+     * Details about an Amazon OpenSearch Service domain.
+     * </p>
+     * 
+     * @param awsOpenSearchServiceDomain
+     *        Details about an Amazon OpenSearch Service domain.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsOpenSearchServiceDomain(AwsOpenSearchServiceDomainDetails awsOpenSearchServiceDomain) {
+        setAwsOpenSearchServiceDomain(awsOpenSearchServiceDomain);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about the service configuration for a VPC endpoint service.
+     * </p>
+     * 
+     * @param awsEc2VpcEndpointService
+     *        Details about the service configuration for a VPC endpoint service.
+     */
+
+    public void setAwsEc2VpcEndpointService(AwsEc2VpcEndpointServiceDetails awsEc2VpcEndpointService) {
+        this.awsEc2VpcEndpointService = awsEc2VpcEndpointService;
+    }
+
+    /**
+     * <p>
+     * Details about the service configuration for a VPC endpoint service.
+     * </p>
+     * 
+     * @return Details about the service configuration for a VPC endpoint service.
+     */
+
+    public AwsEc2VpcEndpointServiceDetails getAwsEc2VpcEndpointService() {
+        return this.awsEc2VpcEndpointService;
+    }
+
+    /**
+     * <p>
+     * Details about the service configuration for a VPC endpoint service.
+     * </p>
+     * 
+     * @param awsEc2VpcEndpointService
+     *        Details about the service configuration for a VPC endpoint service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEc2VpcEndpointService(AwsEc2VpcEndpointServiceDetails awsEc2VpcEndpointService) {
+        setAwsEc2VpcEndpointService(awsEc2VpcEndpointService);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the encryption configuration for X-Ray.
+     * </p>
+     * 
+     * @param awsXrayEncryptionConfig
+     *        Information about the encryption configuration for X-Ray.
+     */
+
+    public void setAwsXrayEncryptionConfig(AwsXrayEncryptionConfigDetails awsXrayEncryptionConfig) {
+        this.awsXrayEncryptionConfig = awsXrayEncryptionConfig;
+    }
+
+    /**
+     * <p>
+     * Information about the encryption configuration for X-Ray.
+     * </p>
+     * 
+     * @return Information about the encryption configuration for X-Ray.
+     */
+
+    public AwsXrayEncryptionConfigDetails getAwsXrayEncryptionConfig() {
+        return this.awsXrayEncryptionConfig;
+    }
+
+    /**
+     * <p>
+     * Information about the encryption configuration for X-Ray.
+     * </p>
+     * 
+     * @param awsXrayEncryptionConfig
+     *        Information about the encryption configuration for X-Ray.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsXrayEncryptionConfig(AwsXrayEncryptionConfigDetails awsXrayEncryptionConfig) {
+        setAwsXrayEncryptionConfig(awsXrayEncryptionConfig);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about a rate-based rule for global resources.
+     * </p>
+     * 
+     * @param awsWafRateBasedRule
+     *        Details about a rate-based rule for global resources.
+     */
+
+    public void setAwsWafRateBasedRule(AwsWafRateBasedRuleDetails awsWafRateBasedRule) {
+        this.awsWafRateBasedRule = awsWafRateBasedRule;
+    }
+
+    /**
+     * <p>
+     * Details about a rate-based rule for global resources.
+     * </p>
+     * 
+     * @return Details about a rate-based rule for global resources.
+     */
+
+    public AwsWafRateBasedRuleDetails getAwsWafRateBasedRule() {
+        return this.awsWafRateBasedRule;
+    }
+
+    /**
+     * <p>
+     * Details about a rate-based rule for global resources.
+     * </p>
+     * 
+     * @param awsWafRateBasedRule
+     *        Details about a rate-based rule for global resources.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsWafRateBasedRule(AwsWafRateBasedRuleDetails awsWafRateBasedRule) {
+        setAwsWafRateBasedRule(awsWafRateBasedRule);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about a rate-based rule for Regional resources.
+     * </p>
+     * 
+     * @param awsWafRegionalRateBasedRule
+     *        Details about a rate-based rule for Regional resources.
+     */
+
+    public void setAwsWafRegionalRateBasedRule(AwsWafRegionalRateBasedRuleDetails awsWafRegionalRateBasedRule) {
+        this.awsWafRegionalRateBasedRule = awsWafRegionalRateBasedRule;
+    }
+
+    /**
+     * <p>
+     * Details about a rate-based rule for Regional resources.
+     * </p>
+     * 
+     * @return Details about a rate-based rule for Regional resources.
+     */
+
+    public AwsWafRegionalRateBasedRuleDetails getAwsWafRegionalRateBasedRule() {
+        return this.awsWafRegionalRateBasedRule;
+    }
+
+    /**
+     * <p>
+     * Details about a rate-based rule for Regional resources.
+     * </p>
+     * 
+     * @param awsWafRegionalRateBasedRule
+     *        Details about a rate-based rule for Regional resources.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsWafRegionalRateBasedRule(AwsWafRegionalRateBasedRuleDetails awsWafRegionalRateBasedRule) {
+        setAwsWafRegionalRateBasedRule(awsWafRegionalRateBasedRule);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about an Amazon Elastic Container Registry repository.
+     * </p>
+     * 
+     * @param awsEcrRepository
+     *        Information about an Amazon Elastic Container Registry repository.
+     */
+
+    public void setAwsEcrRepository(AwsEcrRepositoryDetails awsEcrRepository) {
+        this.awsEcrRepository = awsEcrRepository;
+    }
+
+    /**
+     * <p>
+     * Information about an Amazon Elastic Container Registry repository.
+     * </p>
+     * 
+     * @return Information about an Amazon Elastic Container Registry repository.
+     */
+
+    public AwsEcrRepositoryDetails getAwsEcrRepository() {
+        return this.awsEcrRepository;
+    }
+
+    /**
+     * <p>
+     * Information about an Amazon Elastic Container Registry repository.
+     * </p>
+     * 
+     * @param awsEcrRepository
+     *        Information about an Amazon Elastic Container Registry repository.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEcrRepository(AwsEcrRepositoryDetails awsEcrRepository) {
+        setAwsEcrRepository(awsEcrRepository);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about an Amazon EKS cluster.
+     * </p>
+     * 
+     * @param awsEksCluster
+     *        Details about an Amazon EKS cluster.
+     */
+
+    public void setAwsEksCluster(AwsEksClusterDetails awsEksCluster) {
+        this.awsEksCluster = awsEksCluster;
+    }
+
+    /**
+     * <p>
+     * Details about an Amazon EKS cluster.
+     * </p>
+     * 
+     * @return Details about an Amazon EKS cluster.
+     */
+
+    public AwsEksClusterDetails getAwsEksCluster() {
+        return this.awsEksCluster;
+    }
+
+    /**
+     * <p>
+     * Details about an Amazon EKS cluster.
+     * </p>
+     * 
+     * @param awsEksCluster
+     *        Details about an Amazon EKS cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEksCluster(AwsEksClusterDetails awsEksCluster) {
+        setAwsEksCluster(awsEksCluster);
         return this;
     }
 
@@ -2699,7 +3021,21 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getAwsEc2VpnConnection() != null)
             sb.append("AwsEc2VpnConnection: ").append(getAwsEc2VpnConnection()).append(",");
         if (getAwsEcrContainerImage() != null)
-            sb.append("AwsEcrContainerImage: ").append(getAwsEcrContainerImage());
+            sb.append("AwsEcrContainerImage: ").append(getAwsEcrContainerImage()).append(",");
+        if (getAwsOpenSearchServiceDomain() != null)
+            sb.append("AwsOpenSearchServiceDomain: ").append(getAwsOpenSearchServiceDomain()).append(",");
+        if (getAwsEc2VpcEndpointService() != null)
+            sb.append("AwsEc2VpcEndpointService: ").append(getAwsEc2VpcEndpointService()).append(",");
+        if (getAwsXrayEncryptionConfig() != null)
+            sb.append("AwsXrayEncryptionConfig: ").append(getAwsXrayEncryptionConfig()).append(",");
+        if (getAwsWafRateBasedRule() != null)
+            sb.append("AwsWafRateBasedRule: ").append(getAwsWafRateBasedRule()).append(",");
+        if (getAwsWafRegionalRateBasedRule() != null)
+            sb.append("AwsWafRegionalRateBasedRule: ").append(getAwsWafRegionalRateBasedRule()).append(",");
+        if (getAwsEcrRepository() != null)
+            sb.append("AwsEcrRepository: ").append(getAwsEcrRepository()).append(",");
+        if (getAwsEksCluster() != null)
+            sb.append("AwsEksCluster: ").append(getAwsEksCluster());
         sb.append("}");
         return sb.toString();
     }
@@ -2927,6 +3263,34 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getAwsEcrContainerImage() != null && other.getAwsEcrContainerImage().equals(this.getAwsEcrContainerImage()) == false)
             return false;
+        if (other.getAwsOpenSearchServiceDomain() == null ^ this.getAwsOpenSearchServiceDomain() == null)
+            return false;
+        if (other.getAwsOpenSearchServiceDomain() != null && other.getAwsOpenSearchServiceDomain().equals(this.getAwsOpenSearchServiceDomain()) == false)
+            return false;
+        if (other.getAwsEc2VpcEndpointService() == null ^ this.getAwsEc2VpcEndpointService() == null)
+            return false;
+        if (other.getAwsEc2VpcEndpointService() != null && other.getAwsEc2VpcEndpointService().equals(this.getAwsEc2VpcEndpointService()) == false)
+            return false;
+        if (other.getAwsXrayEncryptionConfig() == null ^ this.getAwsXrayEncryptionConfig() == null)
+            return false;
+        if (other.getAwsXrayEncryptionConfig() != null && other.getAwsXrayEncryptionConfig().equals(this.getAwsXrayEncryptionConfig()) == false)
+            return false;
+        if (other.getAwsWafRateBasedRule() == null ^ this.getAwsWafRateBasedRule() == null)
+            return false;
+        if (other.getAwsWafRateBasedRule() != null && other.getAwsWafRateBasedRule().equals(this.getAwsWafRateBasedRule()) == false)
+            return false;
+        if (other.getAwsWafRegionalRateBasedRule() == null ^ this.getAwsWafRegionalRateBasedRule() == null)
+            return false;
+        if (other.getAwsWafRegionalRateBasedRule() != null && other.getAwsWafRegionalRateBasedRule().equals(this.getAwsWafRegionalRateBasedRule()) == false)
+            return false;
+        if (other.getAwsEcrRepository() == null ^ this.getAwsEcrRepository() == null)
+            return false;
+        if (other.getAwsEcrRepository() != null && other.getAwsEcrRepository().equals(this.getAwsEcrRepository()) == false)
+            return false;
+        if (other.getAwsEksCluster() == null ^ this.getAwsEksCluster() == null)
+            return false;
+        if (other.getAwsEksCluster() != null && other.getAwsEksCluster().equals(this.getAwsEksCluster()) == false)
+            return false;
         return true;
     }
 
@@ -2987,6 +3351,13 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAwsAutoScalingLaunchConfiguration() == null) ? 0 : getAwsAutoScalingLaunchConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAwsEc2VpnConnection() == null) ? 0 : getAwsEc2VpnConnection().hashCode());
         hashCode = prime * hashCode + ((getAwsEcrContainerImage() == null) ? 0 : getAwsEcrContainerImage().hashCode());
+        hashCode = prime * hashCode + ((getAwsOpenSearchServiceDomain() == null) ? 0 : getAwsOpenSearchServiceDomain().hashCode());
+        hashCode = prime * hashCode + ((getAwsEc2VpcEndpointService() == null) ? 0 : getAwsEc2VpcEndpointService().hashCode());
+        hashCode = prime * hashCode + ((getAwsXrayEncryptionConfig() == null) ? 0 : getAwsXrayEncryptionConfig().hashCode());
+        hashCode = prime * hashCode + ((getAwsWafRateBasedRule() == null) ? 0 : getAwsWafRateBasedRule().hashCode());
+        hashCode = prime * hashCode + ((getAwsWafRegionalRateBasedRule() == null) ? 0 : getAwsWafRegionalRateBasedRule().hashCode());
+        hashCode = prime * hashCode + ((getAwsEcrRepository() == null) ? 0 : getAwsEcrRepository().hashCode());
+        hashCode = prime * hashCode + ((getAwsEksCluster() == null) ? 0 : getAwsEksCluster().hashCode());
         return hashCode;
     }
 

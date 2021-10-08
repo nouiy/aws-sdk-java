@@ -52,6 +52,16 @@ public class FulfillmentCodeHookSettingsJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     fulfillmentCodeHookSettings.setEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("postFulfillmentStatusSpecification", targetDepth)) {
+                    context.nextToken();
+                    fulfillmentCodeHookSettings.setPostFulfillmentStatusSpecification(PostFulfillmentStatusSpecificationJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
+                if (context.testExpression("fulfillmentUpdatesSpecification", targetDepth)) {
+                    context.nextToken();
+                    fulfillmentCodeHookSettings.setFulfillmentUpdatesSpecification(FulfillmentUpdatesSpecificationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

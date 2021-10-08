@@ -1463,13 +1463,13 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <code>SecretBinary</code> value. You can also specify the staging labels that are initially attached to the new
      * version.
      * </p>
-     * <note>
      * <p>
-     * The Secrets Manager console uses only the <code>SecretString</code> field. To add binary data to a secret with
-     * the <code>SecretBinary</code> field you must use the Amazon Web Services CLI or one of the Amazon Web Services
-     * SDKs.
+     * We recommend you avoid calling <code>PutSecretValue</code> at a sustained rate of more than once every 10
+     * minutes. When you update the secret value, Secrets Manager creates a new version of the secret. Secrets Manager
+     * removes outdated versions when there are more than 100, but it does not remove versions created less than 24
+     * hours ago. If you call <code>PutSecretValue</code> more than once every 10 minutes, you create more versions than
+     * Secrets Manager removes, and you will reach the quota for secret versions.
      * </p>
-     * </note>
      * <ul>
      * <li>
      * <p>
@@ -1588,13 +1588,13 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
      * <code>SecretBinary</code> value. You can also specify the staging labels that are initially attached to the new
      * version.
      * </p>
-     * <note>
      * <p>
-     * The Secrets Manager console uses only the <code>SecretString</code> field. To add binary data to a secret with
-     * the <code>SecretBinary</code> field you must use the Amazon Web Services CLI or one of the Amazon Web Services
-     * SDKs.
+     * We recommend you avoid calling <code>PutSecretValue</code> at a sustained rate of more than once every 10
+     * minutes. When you update the secret value, Secrets Manager creates a new version of the secret. Secrets Manager
+     * removes outdated versions when there are more than 100, but it does not remove versions created less than 24
+     * hours ago. If you call <code>PutSecretValue</code> more than once every 10 minutes, you create more versions than
+     * Secrets Manager removes, and you will reach the quota for secret versions.
      * </p>
-     * </note>
      * <ul>
      * <li>
      * <p>
@@ -2382,12 +2382,20 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
 
     /**
      * <p>
-     * Modifies many of the details of the specified secret. If you include a <code>ClientRequestToken</code> and
-     * <i>either</i> <code>SecretString</code> or <code>SecretBinary</code> then it also creates a new version attached
-     * to the secret.
+     * Modifies many of the details of the specified secret.
      * </p>
      * <p>
-     * To modify the rotation configuration of a secret, use <a>RotateSecret</a> instead.
+     * To change the secret value, you can also use <a>PutSecretValue</a>.
+     * </p>
+     * <p>
+     * To change the rotation configuration of a secret, use <a>RotateSecret</a> instead.
+     * </p>
+     * <p>
+     * We recommend you avoid calling <code>UpdateSecret</code> at a sustained rate of more than once every 10 minutes.
+     * When you call <code>UpdateSecret</code> to update the secret value, Secrets Manager creates a new version of the
+     * secret. Secrets Manager removes outdated versions when there are more than 100, but it does not remove versions
+     * created less than 24 hours ago. If you update the secret value more than once every 10 minutes, you create more
+     * versions than Secrets Manager removes, and you will reach the quota for secret versions.
      * </p>
      * <note>
      * <p>
@@ -2500,12 +2508,20 @@ public interface AWSSecretsManagerAsync extends AWSSecretsManager {
 
     /**
      * <p>
-     * Modifies many of the details of the specified secret. If you include a <code>ClientRequestToken</code> and
-     * <i>either</i> <code>SecretString</code> or <code>SecretBinary</code> then it also creates a new version attached
-     * to the secret.
+     * Modifies many of the details of the specified secret.
      * </p>
      * <p>
-     * To modify the rotation configuration of a secret, use <a>RotateSecret</a> instead.
+     * To change the secret value, you can also use <a>PutSecretValue</a>.
+     * </p>
+     * <p>
+     * To change the rotation configuration of a secret, use <a>RotateSecret</a> instead.
+     * </p>
+     * <p>
+     * We recommend you avoid calling <code>UpdateSecret</code> at a sustained rate of more than once every 10 minutes.
+     * When you call <code>UpdateSecret</code> to update the secret value, Secrets Manager creates a new version of the
+     * secret. Secrets Manager removes outdated versions when there are more than 100, but it does not remove versions
+     * created less than 24 hours ago. If you update the secret value more than once every 10 minutes, you create more
+     * versions than Secrets Manager removes, and you will reach the quota for secret versions.
      * </p>
      * <note>
      * <p>

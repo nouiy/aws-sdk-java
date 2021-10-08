@@ -56,6 +56,10 @@ public class AwsS3BucketDetailsJsonUnmarshaller implements Unmarshaller<AwsS3Buc
                     context.nextToken();
                     awsS3BucketDetails.setOwnerName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("OwnerAccountId", targetDepth)) {
+                    context.nextToken();
+                    awsS3BucketDetails.setOwnerAccountId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("CreatedAt", targetDepth)) {
                     context.nextToken();
                     awsS3BucketDetails.setCreatedAt(context.getUnmarshaller(String.class).unmarshall(context));

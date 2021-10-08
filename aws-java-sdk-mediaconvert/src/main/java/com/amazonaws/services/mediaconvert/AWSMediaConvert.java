@@ -226,6 +226,32 @@ public interface AWSMediaConvert {
     DeleteJobTemplateResult deleteJobTemplate(DeleteJobTemplateRequest deleteJobTemplateRequest);
 
     /**
+     * Permanently delete a policy that you created.
+     * 
+     * @param deletePolicyRequest
+     * @return Result of the DeletePolicy operation returned by the service.
+     * @throws BadRequestException
+     *         The service can't process your request because of a problem in the request. Please check your request
+     *         form and syntax.
+     * @throws InternalServerErrorException
+     *         The service encountered an unexpected condition and can't fulfill your request.
+     * @throws ForbiddenException
+     *         You don't have permissions for this action with the credentials you sent.
+     * @throws NotFoundException
+     *         The resource you requested doesn't exist.
+     * @throws TooManyRequestsException
+     *         Too many requests have been sent in too short of a time. The service limits the rate at which it will
+     *         accept requests.
+     * @throws ConflictException
+     *         The service couldn't complete your request because there is a conflict with the current state of the
+     *         resource.
+     * @sample AWSMediaConvert.DeletePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/DeletePolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeletePolicyResult deletePolicy(DeletePolicyRequest deletePolicyRequest);
+
+    /**
      * Permanently delete a preset you have created.
      * 
      * @param deletePresetRequest
@@ -379,6 +405,32 @@ public interface AWSMediaConvert {
      *      API Documentation</a>
      */
     GetJobTemplateResult getJobTemplate(GetJobTemplateRequest getJobTemplateRequest);
+
+    /**
+     * Retrieve the JSON for your policy.
+     * 
+     * @param getPolicyRequest
+     * @return Result of the GetPolicy operation returned by the service.
+     * @throws BadRequestException
+     *         The service can't process your request because of a problem in the request. Please check your request
+     *         form and syntax.
+     * @throws InternalServerErrorException
+     *         The service encountered an unexpected condition and can't fulfill your request.
+     * @throws ForbiddenException
+     *         You don't have permissions for this action with the credentials you sent.
+     * @throws NotFoundException
+     *         The resource you requested doesn't exist.
+     * @throws TooManyRequestsException
+     *         Too many requests have been sent in too short of a time. The service limits the rate at which it will
+     *         accept requests.
+     * @throws ConflictException
+     *         The service couldn't complete your request because there is a conflict with the current state of the
+     *         resource.
+     * @sample AWSMediaConvert.GetPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/GetPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetPolicyResult getPolicy(GetPolicyRequest getPolicyRequest);
 
     /**
      * Retrieve the JSON for a specific preset.
@@ -566,6 +618,33 @@ public interface AWSMediaConvert {
      *      target="_top">AWS API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * Create or change your policy. For more information about policies, see the user guide at
+     * http://docs.aws.amazon.com/mediaconvert/latest/ug/what-is.html
+     * 
+     * @param putPolicyRequest
+     * @return Result of the PutPolicy operation returned by the service.
+     * @throws BadRequestException
+     *         The service can't process your request because of a problem in the request. Please check your request
+     *         form and syntax.
+     * @throws InternalServerErrorException
+     *         The service encountered an unexpected condition and can't fulfill your request.
+     * @throws ForbiddenException
+     *         You don't have permissions for this action with the credentials you sent.
+     * @throws NotFoundException
+     *         The resource you requested doesn't exist.
+     * @throws TooManyRequestsException
+     *         Too many requests have been sent in too short of a time. The service limits the rate at which it will
+     *         accept requests.
+     * @throws ConflictException
+     *         The service couldn't complete your request because there is a conflict with the current state of the
+     *         resource.
+     * @sample AWSMediaConvert.PutPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconvert-2017-08-29/PutPolicy" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PutPolicyResult putPolicy(PutPolicyRequest putPolicyRequest);
 
     /**
      * Add tags to a MediaConvert queue, preset, or job template. For information about tagging, see the User Guide at

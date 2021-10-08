@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about an Amazon Elasticsearch Service domain.
+ * Information about an Elasticsearch domain.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsElasticsearchDomainDetails"
@@ -78,13 +78,13 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
     private java.util.Map<String, String> endpoints;
     /**
      * <p>
-     * Elasticsearch version.
+     * OpenSearch version.
      * </p>
      */
     private String elasticsearchVersion;
     /**
      * <p>
-     * Information about an Elasticsearch cluster configuration.
+     * Information about an OpenSearch cluster configuration.
      * </p>
      */
     private AwsElasticsearchDomainElasticsearchClusterConfigDetails elasticsearchClusterConfig;
@@ -114,7 +114,7 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
     private AwsElasticsearchDomainServiceSoftwareOptions serviceSoftwareOptions;
     /**
      * <p>
-     * Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
+     * Information that OpenSearch derives based on <code>VPCOptions</code> for the domain.
      * </p>
      */
     private AwsElasticsearchDomainVPCOptions vPCOptions;
@@ -459,11 +459,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Elasticsearch version.
+     * OpenSearch version.
      * </p>
      * 
      * @param elasticsearchVersion
-     *        Elasticsearch version.
+     *        OpenSearch version.
      */
 
     public void setElasticsearchVersion(String elasticsearchVersion) {
@@ -472,10 +472,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Elasticsearch version.
+     * OpenSearch version.
      * </p>
      * 
-     * @return Elasticsearch version.
+     * @return OpenSearch version.
      */
 
     public String getElasticsearchVersion() {
@@ -484,11 +484,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Elasticsearch version.
+     * OpenSearch version.
      * </p>
      * 
      * @param elasticsearchVersion
-     *        Elasticsearch version.
+     *        OpenSearch version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -499,11 +499,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Information about an Elasticsearch cluster configuration.
+     * Information about an OpenSearch cluster configuration.
      * </p>
      * 
      * @param elasticsearchClusterConfig
-     *        Information about an Elasticsearch cluster configuration.
+     *        Information about an OpenSearch cluster configuration.
      */
 
     public void setElasticsearchClusterConfig(AwsElasticsearchDomainElasticsearchClusterConfigDetails elasticsearchClusterConfig) {
@@ -512,10 +512,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Information about an Elasticsearch cluster configuration.
+     * Information about an OpenSearch cluster configuration.
      * </p>
      * 
-     * @return Information about an Elasticsearch cluster configuration.
+     * @return Information about an OpenSearch cluster configuration.
      */
 
     public AwsElasticsearchDomainElasticsearchClusterConfigDetails getElasticsearchClusterConfig() {
@@ -524,11 +524,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Information about an Elasticsearch cluster configuration.
+     * Information about an OpenSearch cluster configuration.
      * </p>
      * 
      * @param elasticsearchClusterConfig
-     *        Information about an Elasticsearch cluster configuration.
+     *        Information about an OpenSearch cluster configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -699,11 +699,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
+     * Information that OpenSearch derives based on <code>VPCOptions</code> for the domain.
      * </p>
      * 
      * @param vPCOptions
-     *        Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
+     *        Information that OpenSearch derives based on <code>VPCOptions</code> for the domain.
      */
 
     public void setVPCOptions(AwsElasticsearchDomainVPCOptions vPCOptions) {
@@ -712,10 +712,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
+     * Information that OpenSearch derives based on <code>VPCOptions</code> for the domain.
      * </p>
      * 
-     * @return Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
+     * @return Information that OpenSearch derives based on <code>VPCOptions</code> for the domain.
      */
 
     public AwsElasticsearchDomainVPCOptions getVPCOptions() {
@@ -724,11 +724,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
+     * Information that OpenSearch derives based on <code>VPCOptions</code> for the domain.
      * </p>
      * 
      * @param vPCOptions
-     *        Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
+     *        Information that OpenSearch derives based on <code>VPCOptions</code> for the domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

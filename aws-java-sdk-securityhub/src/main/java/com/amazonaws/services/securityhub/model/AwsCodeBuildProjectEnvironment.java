@@ -36,6 +36,19 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
     private String certificate;
     /**
      * <p>
+     * A set of environment variables to make available to builds for the build project.
+     * </p>
+     */
+    private java.util.List<AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails> environmentVariables;
+    /**
+     * <p>
+     * Whether to allow the Docker daemon to run inside a Docker container. Set to <code>true</code> if the build
+     * project is used to build Docker images.
+     * </p>
+     */
+    private Boolean privilegedMode;
+    /**
+     * <p>
      * The type of credentials CodeBuild uses to pull images in your build.
      * </p>
      * <p>
@@ -132,6 +145,137 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
     public AwsCodeBuildProjectEnvironment withCertificate(String certificate) {
         setCertificate(certificate);
         return this;
+    }
+
+    /**
+     * <p>
+     * A set of environment variables to make available to builds for the build project.
+     * </p>
+     * 
+     * @return A set of environment variables to make available to builds for the build project.
+     */
+
+    public java.util.List<AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails> getEnvironmentVariables() {
+        return environmentVariables;
+    }
+
+    /**
+     * <p>
+     * A set of environment variables to make available to builds for the build project.
+     * </p>
+     * 
+     * @param environmentVariables
+     *        A set of environment variables to make available to builds for the build project.
+     */
+
+    public void setEnvironmentVariables(java.util.Collection<AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails> environmentVariables) {
+        if (environmentVariables == null) {
+            this.environmentVariables = null;
+            return;
+        }
+
+        this.environmentVariables = new java.util.ArrayList<AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails>(environmentVariables);
+    }
+
+    /**
+     * <p>
+     * A set of environment variables to make available to builds for the build project.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setEnvironmentVariables(java.util.Collection)} or {@link #withEnvironmentVariables(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param environmentVariables
+     *        A set of environment variables to make available to builds for the build project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsCodeBuildProjectEnvironment withEnvironmentVariables(AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails... environmentVariables) {
+        if (this.environmentVariables == null) {
+            setEnvironmentVariables(new java.util.ArrayList<AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails>(environmentVariables.length));
+        }
+        for (AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails ele : environmentVariables) {
+            this.environmentVariables.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A set of environment variables to make available to builds for the build project.
+     * </p>
+     * 
+     * @param environmentVariables
+     *        A set of environment variables to make available to builds for the build project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsCodeBuildProjectEnvironment withEnvironmentVariables(
+            java.util.Collection<AwsCodeBuildProjectEnvironmentEnvironmentVariablesDetails> environmentVariables) {
+        setEnvironmentVariables(environmentVariables);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether to allow the Docker daemon to run inside a Docker container. Set to <code>true</code> if the build
+     * project is used to build Docker images.
+     * </p>
+     * 
+     * @param privilegedMode
+     *        Whether to allow the Docker daemon to run inside a Docker container. Set to <code>true</code> if the build
+     *        project is used to build Docker images.
+     */
+
+    public void setPrivilegedMode(Boolean privilegedMode) {
+        this.privilegedMode = privilegedMode;
+    }
+
+    /**
+     * <p>
+     * Whether to allow the Docker daemon to run inside a Docker container. Set to <code>true</code> if the build
+     * project is used to build Docker images.
+     * </p>
+     * 
+     * @return Whether to allow the Docker daemon to run inside a Docker container. Set to <code>true</code> if the
+     *         build project is used to build Docker images.
+     */
+
+    public Boolean getPrivilegedMode() {
+        return this.privilegedMode;
+    }
+
+    /**
+     * <p>
+     * Whether to allow the Docker daemon to run inside a Docker container. Set to <code>true</code> if the build
+     * project is used to build Docker images.
+     * </p>
+     * 
+     * @param privilegedMode
+     *        Whether to allow the Docker daemon to run inside a Docker container. Set to <code>true</code> if the build
+     *        project is used to build Docker images.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsCodeBuildProjectEnvironment withPrivilegedMode(Boolean privilegedMode) {
+        setPrivilegedMode(privilegedMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether to allow the Docker daemon to run inside a Docker container. Set to <code>true</code> if the build
+     * project is used to build Docker images.
+     * </p>
+     * 
+     * @return Whether to allow the Docker daemon to run inside a Docker container. Set to <code>true</code> if the
+     *         build project is used to build Docker images.
+     */
+
+    public Boolean isPrivilegedMode() {
+        return this.privilegedMode;
     }
 
     /**
@@ -508,6 +652,10 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
         sb.append("{");
         if (getCertificate() != null)
             sb.append("Certificate: ").append(getCertificate()).append(",");
+        if (getEnvironmentVariables() != null)
+            sb.append("EnvironmentVariables: ").append(getEnvironmentVariables()).append(",");
+        if (getPrivilegedMode() != null)
+            sb.append("PrivilegedMode: ").append(getPrivilegedMode()).append(",");
         if (getImagePullCredentialsType() != null)
             sb.append("ImagePullCredentialsType: ").append(getImagePullCredentialsType()).append(",");
         if (getRegistryCredential() != null)
@@ -532,6 +680,14 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
             return false;
         if (other.getCertificate() != null && other.getCertificate().equals(this.getCertificate()) == false)
             return false;
+        if (other.getEnvironmentVariables() == null ^ this.getEnvironmentVariables() == null)
+            return false;
+        if (other.getEnvironmentVariables() != null && other.getEnvironmentVariables().equals(this.getEnvironmentVariables()) == false)
+            return false;
+        if (other.getPrivilegedMode() == null ^ this.getPrivilegedMode() == null)
+            return false;
+        if (other.getPrivilegedMode() != null && other.getPrivilegedMode().equals(this.getPrivilegedMode()) == false)
+            return false;
         if (other.getImagePullCredentialsType() == null ^ this.getImagePullCredentialsType() == null)
             return false;
         if (other.getImagePullCredentialsType() != null && other.getImagePullCredentialsType().equals(this.getImagePullCredentialsType()) == false)
@@ -553,6 +709,8 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getCertificate() == null) ? 0 : getCertificate().hashCode());
+        hashCode = prime * hashCode + ((getEnvironmentVariables() == null) ? 0 : getEnvironmentVariables().hashCode());
+        hashCode = prime * hashCode + ((getPrivilegedMode() == null) ? 0 : getPrivilegedMode().hashCode());
         hashCode = prime * hashCode + ((getImagePullCredentialsType() == null) ? 0 : getImagePullCredentialsType().hashCode());
         hashCode = prime * hashCode + ((getRegistryCredential() == null) ? 0 : getRegistryCredential().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());

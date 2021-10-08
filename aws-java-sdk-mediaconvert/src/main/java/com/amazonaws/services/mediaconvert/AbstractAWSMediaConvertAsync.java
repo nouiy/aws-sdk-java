@@ -119,6 +119,19 @@ public class AbstractAWSMediaConvertAsync extends AbstractAWSMediaConvert implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeletePolicyResult> deletePolicyAsync(DeletePolicyRequest request) {
+
+        return deletePolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePolicyResult> deletePolicyAsync(DeletePolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePolicyRequest, DeletePolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeletePresetResult> deletePresetAsync(DeletePresetRequest request) {
 
         return deletePresetAsync(request, null);
@@ -192,6 +205,19 @@ public class AbstractAWSMediaConvertAsync extends AbstractAWSMediaConvert implem
     @Override
     public java.util.concurrent.Future<GetJobTemplateResult> getJobTemplateAsync(GetJobTemplateRequest request,
             com.amazonaws.handlers.AsyncHandler<GetJobTemplateRequest, GetJobTemplateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPolicyResult> getPolicyAsync(GetPolicyRequest request) {
+
+        return getPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPolicyResult> getPolicyAsync(GetPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetPolicyRequest, GetPolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -283,6 +309,19 @@ public class AbstractAWSMediaConvertAsync extends AbstractAWSMediaConvert implem
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutPolicyResult> putPolicyAsync(PutPolicyRequest request) {
+
+        return putPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutPolicyResult> putPolicyAsync(PutPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutPolicyRequest, PutPolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

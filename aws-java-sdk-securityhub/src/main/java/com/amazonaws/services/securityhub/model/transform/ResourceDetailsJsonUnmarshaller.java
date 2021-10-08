@@ -259,6 +259,34 @@ public class ResourceDetailsJsonUnmarshaller implements Unmarshaller<ResourceDet
                     context.nextToken();
                     resourceDetails.setAwsEcrContainerImage(AwsEcrContainerImageDetailsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AwsOpenSearchServiceDomain", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsOpenSearchServiceDomain(AwsOpenSearchServiceDomainDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsEc2VpcEndpointService", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEc2VpcEndpointService(AwsEc2VpcEndpointServiceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsXrayEncryptionConfig", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsXrayEncryptionConfig(AwsXrayEncryptionConfigDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsWafRateBasedRule", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsWafRateBasedRule(AwsWafRateBasedRuleDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsWafRegionalRateBasedRule", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsWafRegionalRateBasedRule(AwsWafRegionalRateBasedRuleDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsEcrRepository", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEcrRepository(AwsEcrRepositoryDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsEksCluster", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEksCluster(AwsEksClusterDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

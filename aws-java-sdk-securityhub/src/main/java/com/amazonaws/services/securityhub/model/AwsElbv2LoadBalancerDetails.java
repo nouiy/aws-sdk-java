@@ -94,6 +94,12 @@ public class AwsElbv2LoadBalancerDetails implements Serializable, Cloneable, Str
      * </p>
      */
     private String vpcId;
+    /**
+     * <p>
+     * Attributes of the load balancer.
+     * </p>
+     */
+    private java.util.List<AwsElbv2LoadBalancerAttribute> loadBalancerAttributes;
 
     /**
      * <p>
@@ -589,6 +595,76 @@ public class AwsElbv2LoadBalancerDetails implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * Attributes of the load balancer.
+     * </p>
+     * 
+     * @return Attributes of the load balancer.
+     */
+
+    public java.util.List<AwsElbv2LoadBalancerAttribute> getLoadBalancerAttributes() {
+        return loadBalancerAttributes;
+    }
+
+    /**
+     * <p>
+     * Attributes of the load balancer.
+     * </p>
+     * 
+     * @param loadBalancerAttributes
+     *        Attributes of the load balancer.
+     */
+
+    public void setLoadBalancerAttributes(java.util.Collection<AwsElbv2LoadBalancerAttribute> loadBalancerAttributes) {
+        if (loadBalancerAttributes == null) {
+            this.loadBalancerAttributes = null;
+            return;
+        }
+
+        this.loadBalancerAttributes = new java.util.ArrayList<AwsElbv2LoadBalancerAttribute>(loadBalancerAttributes);
+    }
+
+    /**
+     * <p>
+     * Attributes of the load balancer.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLoadBalancerAttributes(java.util.Collection)} or
+     * {@link #withLoadBalancerAttributes(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param loadBalancerAttributes
+     *        Attributes of the load balancer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsElbv2LoadBalancerDetails withLoadBalancerAttributes(AwsElbv2LoadBalancerAttribute... loadBalancerAttributes) {
+        if (this.loadBalancerAttributes == null) {
+            setLoadBalancerAttributes(new java.util.ArrayList<AwsElbv2LoadBalancerAttribute>(loadBalancerAttributes.length));
+        }
+        for (AwsElbv2LoadBalancerAttribute ele : loadBalancerAttributes) {
+            this.loadBalancerAttributes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Attributes of the load balancer.
+     * </p>
+     * 
+     * @param loadBalancerAttributes
+     *        Attributes of the load balancer.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsElbv2LoadBalancerDetails withLoadBalancerAttributes(java.util.Collection<AwsElbv2LoadBalancerAttribute> loadBalancerAttributes) {
+        setLoadBalancerAttributes(loadBalancerAttributes);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -619,7 +695,9 @@ public class AwsElbv2LoadBalancerDetails implements Serializable, Cloneable, Str
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getVpcId() != null)
-            sb.append("VpcId: ").append(getVpcId());
+            sb.append("VpcId: ").append(getVpcId()).append(",");
+        if (getLoadBalancerAttributes() != null)
+            sb.append("LoadBalancerAttributes: ").append(getLoadBalancerAttributes());
         sb.append("}");
         return sb.toString();
     }
@@ -674,6 +752,10 @@ public class AwsElbv2LoadBalancerDetails implements Serializable, Cloneable, Str
             return false;
         if (other.getVpcId() != null && other.getVpcId().equals(this.getVpcId()) == false)
             return false;
+        if (other.getLoadBalancerAttributes() == null ^ this.getLoadBalancerAttributes() == null)
+            return false;
+        if (other.getLoadBalancerAttributes() != null && other.getLoadBalancerAttributes().equals(this.getLoadBalancerAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -692,6 +774,7 @@ public class AwsElbv2LoadBalancerDetails implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
+        hashCode = prime * hashCode + ((getLoadBalancerAttributes() == null) ? 0 : getLoadBalancerAttributes().hashCode());
         return hashCode;
     }
 

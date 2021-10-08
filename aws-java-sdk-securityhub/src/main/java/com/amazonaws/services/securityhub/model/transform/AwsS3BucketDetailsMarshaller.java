@@ -31,6 +31,8 @@ public class AwsS3BucketDetailsMarshaller {
             .marshallLocationName("OwnerId").build();
     private static final MarshallingInfo<String> OWNERNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("OwnerName").build();
+    private static final MarshallingInfo<String> OWNERACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OwnerAccountId").build();
     private static final MarshallingInfo<String> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("CreatedAt").build();
     private static final MarshallingInfo<StructuredPojo> SERVERSIDEENCRYPTIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -66,6 +68,7 @@ public class AwsS3BucketDetailsMarshaller {
         try {
             protocolMarshaller.marshall(awsS3BucketDetails.getOwnerId(), OWNERID_BINDING);
             protocolMarshaller.marshall(awsS3BucketDetails.getOwnerName(), OWNERNAME_BINDING);
+            protocolMarshaller.marshall(awsS3BucketDetails.getOwnerAccountId(), OWNERACCOUNTID_BINDING);
             protocolMarshaller.marshall(awsS3BucketDetails.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(awsS3BucketDetails.getServerSideEncryptionConfiguration(), SERVERSIDEENCRYPTIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(awsS3BucketDetails.getBucketLifecycleConfiguration(), BUCKETLIFECYCLECONFIGURATION_BINDING);

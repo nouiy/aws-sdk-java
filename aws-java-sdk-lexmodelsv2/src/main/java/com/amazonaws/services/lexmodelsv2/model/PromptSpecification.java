@@ -37,7 +37,7 @@ public class PromptSpecification implements Serializable, Cloneable, StructuredP
     private java.util.List<MessageGroup> messageGroups;
     /**
      * <p>
-     * The maximum number of times the bot tries to elicit a resonse from the user using this prompt.
+     * The maximum number of times the bot tries to elicit a response from the user using this prompt.
      * </p>
      */
     private Integer maxRetries;
@@ -128,11 +128,11 @@ public class PromptSpecification implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The maximum number of times the bot tries to elicit a resonse from the user using this prompt.
+     * The maximum number of times the bot tries to elicit a response from the user using this prompt.
      * </p>
      * 
      * @param maxRetries
-     *        The maximum number of times the bot tries to elicit a resonse from the user using this prompt.
+     *        The maximum number of times the bot tries to elicit a response from the user using this prompt.
      */
 
     public void setMaxRetries(Integer maxRetries) {
@@ -141,10 +141,10 @@ public class PromptSpecification implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The maximum number of times the bot tries to elicit a resonse from the user using this prompt.
+     * The maximum number of times the bot tries to elicit a response from the user using this prompt.
      * </p>
      * 
-     * @return The maximum number of times the bot tries to elicit a resonse from the user using this prompt.
+     * @return The maximum number of times the bot tries to elicit a response from the user using this prompt.
      */
 
     public Integer getMaxRetries() {
@@ -153,11 +153,11 @@ public class PromptSpecification implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The maximum number of times the bot tries to elicit a resonse from the user using this prompt.
+     * The maximum number of times the bot tries to elicit a response from the user using this prompt.
      * </p>
      * 
      * @param maxRetries
-     *        The maximum number of times the bot tries to elicit a resonse from the user using this prompt.
+     *        The maximum number of times the bot tries to elicit a response from the user using this prompt.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

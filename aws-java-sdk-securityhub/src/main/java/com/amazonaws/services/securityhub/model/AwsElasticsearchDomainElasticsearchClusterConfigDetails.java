@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * details about the configuration of an Elasticsearch cluster.
+ * details about the configuration of an OpenSearch cluster.
  * </p>
  * 
  * @see <a
@@ -71,7 +71,7 @@ public class AwsElasticsearchDomainElasticsearchClusterConfigDetails implements 
     private AwsElasticsearchDomainElasticsearchClusterConfigZoneAwarenessConfigDetails zoneAwarenessConfig;
     /**
      * <p>
-     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, Elasticsearch
+     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, OpenSearch
      * allocates the cluster's nodes and replica index shards across Availability Zones in the same Region. This
      * prevents data loss and minimizes downtime if a node or data center fails.
      * </p>
@@ -362,15 +362,15 @@ public class AwsElasticsearchDomainElasticsearchClusterConfigDetails implements 
 
     /**
      * <p>
-     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, Elasticsearch
+     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, OpenSearch
      * allocates the cluster's nodes and replica index shards across Availability Zones in the same Region. This
      * prevents data loss and minimizes downtime if a node or data center fails.
      * </p>
      * 
      * @param zoneAwarenessEnabled
-     *        Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled,
-     *        Elasticsearch allocates the cluster's nodes and replica index shards across Availability Zones in the same
-     *        Region. This prevents data loss and minimizes downtime if a node or data center fails.
+     *        Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, OpenSearch
+     *        allocates the cluster's nodes and replica index shards across Availability Zones in the same Region. This
+     *        prevents data loss and minimizes downtime if a node or data center fails.
      */
 
     public void setZoneAwarenessEnabled(Boolean zoneAwarenessEnabled) {
@@ -379,14 +379,14 @@ public class AwsElasticsearchDomainElasticsearchClusterConfigDetails implements 
 
     /**
      * <p>
-     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, Elasticsearch
+     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, OpenSearch
      * allocates the cluster's nodes and replica index shards across Availability Zones in the same Region. This
      * prevents data loss and minimizes downtime if a node or data center fails.
      * </p>
      * 
-     * @return Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled,
-     *         Elasticsearch allocates the cluster's nodes and replica index shards across Availability Zones in the
-     *         same Region. This prevents data loss and minimizes downtime if a node or data center fails.
+     * @return Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, OpenSearch
+     *         allocates the cluster's nodes and replica index shards across Availability Zones in the same Region. This
+     *         prevents data loss and minimizes downtime if a node or data center fails.
      */
 
     public Boolean getZoneAwarenessEnabled() {
@@ -395,15 +395,15 @@ public class AwsElasticsearchDomainElasticsearchClusterConfigDetails implements 
 
     /**
      * <p>
-     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, Elasticsearch
+     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, OpenSearch
      * allocates the cluster's nodes and replica index shards across Availability Zones in the same Region. This
      * prevents data loss and minimizes downtime if a node or data center fails.
      * </p>
      * 
      * @param zoneAwarenessEnabled
-     *        Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled,
-     *        Elasticsearch allocates the cluster's nodes and replica index shards across Availability Zones in the same
-     *        Region. This prevents data loss and minimizes downtime if a node or data center fails.
+     *        Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, OpenSearch
+     *        allocates the cluster's nodes and replica index shards across Availability Zones in the same Region. This
+     *        prevents data loss and minimizes downtime if a node or data center fails.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -414,14 +414,14 @@ public class AwsElasticsearchDomainElasticsearchClusterConfigDetails implements 
 
     /**
      * <p>
-     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, Elasticsearch
+     * Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, OpenSearch
      * allocates the cluster's nodes and replica index shards across Availability Zones in the same Region. This
      * prevents data loss and minimizes downtime if a node or data center fails.
      * </p>
      * 
-     * @return Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled,
-     *         Elasticsearch allocates the cluster's nodes and replica index shards across Availability Zones in the
-     *         same Region. This prevents data loss and minimizes downtime if a node or data center fails.
+     * @return Whether to enable zone awareness for the Elasticsearch domain. When zone awareness is enabled, OpenSearch
+     *         allocates the cluster's nodes and replica index shards across Availability Zones in the same Region. This
+     *         prevents data loss and minimizes downtime if a node or data center fails.
      */
 
     public Boolean isZoneAwarenessEnabled() {

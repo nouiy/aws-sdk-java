@@ -37,7 +37,7 @@ public class SlotTypeValue implements Serializable, Cloneable, StructuredPojo {
     private SampleValue sampleValue;
     /**
      * <p>
-     * Additional values releated to the slot type entry.
+     * Additional values related to the slot type entry.
      * </p>
      */
     private java.util.List<SampleValue> synonyms;
@@ -84,10 +84,10 @@ public class SlotTypeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Additional values releated to the slot type entry.
+     * Additional values related to the slot type entry.
      * </p>
      * 
-     * @return Additional values releated to the slot type entry.
+     * @return Additional values related to the slot type entry.
      */
 
     public java.util.List<SampleValue> getSynonyms() {
@@ -96,11 +96,11 @@ public class SlotTypeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Additional values releated to the slot type entry.
+     * Additional values related to the slot type entry.
      * </p>
      * 
      * @param synonyms
-     *        Additional values releated to the slot type entry.
+     *        Additional values related to the slot type entry.
      */
 
     public void setSynonyms(java.util.Collection<SampleValue> synonyms) {
@@ -114,7 +114,7 @@ public class SlotTypeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Additional values releated to the slot type entry.
+     * Additional values related to the slot type entry.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -123,7 +123,7 @@ public class SlotTypeValue implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param synonyms
-     *        Additional values releated to the slot type entry.
+     *        Additional values related to the slot type entry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -139,11 +139,11 @@ public class SlotTypeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Additional values releated to the slot type entry.
+     * Additional values related to the slot type entry.
      * </p>
      * 
      * @param synonyms
-     *        Additional values releated to the slot type entry.
+     *        Additional values related to the slot type entry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

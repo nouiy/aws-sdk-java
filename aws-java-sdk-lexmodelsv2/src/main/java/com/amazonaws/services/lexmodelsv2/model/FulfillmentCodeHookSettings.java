@@ -34,6 +34,20 @@ public class FulfillmentCodeHookSettings implements Serializable, Cloneable, Str
      * </p>
      */
     private Boolean enabled;
+    /**
+     * <p>
+     * Provides settings for messages sent to the user for after the Lambda fulfillment function completes.
+     * Post-fulfillment messages can be sent for both streaming and non-streaming conversations.
+     * </p>
+     */
+    private PostFulfillmentStatusSpecification postFulfillmentStatusSpecification;
+    /**
+     * <p>
+     * Provides settings for update messages sent to the user for long-running Lambda fulfillment functions. Fulfillment
+     * updates can be used only with streaming conversations.
+     * </p>
+     */
+    private FulfillmentUpdatesSpecification fulfillmentUpdatesSpecification;
 
     /**
      * <p>
@@ -88,6 +102,98 @@ public class FulfillmentCodeHookSettings implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * Provides settings for messages sent to the user for after the Lambda fulfillment function completes.
+     * Post-fulfillment messages can be sent for both streaming and non-streaming conversations.
+     * </p>
+     * 
+     * @param postFulfillmentStatusSpecification
+     *        Provides settings for messages sent to the user for after the Lambda fulfillment function completes.
+     *        Post-fulfillment messages can be sent for both streaming and non-streaming conversations.
+     */
+
+    public void setPostFulfillmentStatusSpecification(PostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
+        this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
+    }
+
+    /**
+     * <p>
+     * Provides settings for messages sent to the user for after the Lambda fulfillment function completes.
+     * Post-fulfillment messages can be sent for both streaming and non-streaming conversations.
+     * </p>
+     * 
+     * @return Provides settings for messages sent to the user for after the Lambda fulfillment function completes.
+     *         Post-fulfillment messages can be sent for both streaming and non-streaming conversations.
+     */
+
+    public PostFulfillmentStatusSpecification getPostFulfillmentStatusSpecification() {
+        return this.postFulfillmentStatusSpecification;
+    }
+
+    /**
+     * <p>
+     * Provides settings for messages sent to the user for after the Lambda fulfillment function completes.
+     * Post-fulfillment messages can be sent for both streaming and non-streaming conversations.
+     * </p>
+     * 
+     * @param postFulfillmentStatusSpecification
+     *        Provides settings for messages sent to the user for after the Lambda fulfillment function completes.
+     *        Post-fulfillment messages can be sent for both streaming and non-streaming conversations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FulfillmentCodeHookSettings withPostFulfillmentStatusSpecification(PostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
+        setPostFulfillmentStatusSpecification(postFulfillmentStatusSpecification);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides settings for update messages sent to the user for long-running Lambda fulfillment functions. Fulfillment
+     * updates can be used only with streaming conversations.
+     * </p>
+     * 
+     * @param fulfillmentUpdatesSpecification
+     *        Provides settings for update messages sent to the user for long-running Lambda fulfillment functions.
+     *        Fulfillment updates can be used only with streaming conversations.
+     */
+
+    public void setFulfillmentUpdatesSpecification(FulfillmentUpdatesSpecification fulfillmentUpdatesSpecification) {
+        this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
+    }
+
+    /**
+     * <p>
+     * Provides settings for update messages sent to the user for long-running Lambda fulfillment functions. Fulfillment
+     * updates can be used only with streaming conversations.
+     * </p>
+     * 
+     * @return Provides settings for update messages sent to the user for long-running Lambda fulfillment functions.
+     *         Fulfillment updates can be used only with streaming conversations.
+     */
+
+    public FulfillmentUpdatesSpecification getFulfillmentUpdatesSpecification() {
+        return this.fulfillmentUpdatesSpecification;
+    }
+
+    /**
+     * <p>
+     * Provides settings for update messages sent to the user for long-running Lambda fulfillment functions. Fulfillment
+     * updates can be used only with streaming conversations.
+     * </p>
+     * 
+     * @param fulfillmentUpdatesSpecification
+     *        Provides settings for update messages sent to the user for long-running Lambda fulfillment functions.
+     *        Fulfillment updates can be used only with streaming conversations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FulfillmentCodeHookSettings withFulfillmentUpdatesSpecification(FulfillmentUpdatesSpecification fulfillmentUpdatesSpecification) {
+        setFulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -100,7 +206,11 @@ public class FulfillmentCodeHookSettings implements Serializable, Cloneable, Str
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEnabled() != null)
-            sb.append("Enabled: ").append(getEnabled());
+            sb.append("Enabled: ").append(getEnabled()).append(",");
+        if (getPostFulfillmentStatusSpecification() != null)
+            sb.append("PostFulfillmentStatusSpecification: ").append(getPostFulfillmentStatusSpecification()).append(",");
+        if (getFulfillmentUpdatesSpecification() != null)
+            sb.append("FulfillmentUpdatesSpecification: ").append(getFulfillmentUpdatesSpecification());
         sb.append("}");
         return sb.toString();
     }
@@ -119,6 +229,16 @@ public class FulfillmentCodeHookSettings implements Serializable, Cloneable, Str
             return false;
         if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
             return false;
+        if (other.getPostFulfillmentStatusSpecification() == null ^ this.getPostFulfillmentStatusSpecification() == null)
+            return false;
+        if (other.getPostFulfillmentStatusSpecification() != null
+                && other.getPostFulfillmentStatusSpecification().equals(this.getPostFulfillmentStatusSpecification()) == false)
+            return false;
+        if (other.getFulfillmentUpdatesSpecification() == null ^ this.getFulfillmentUpdatesSpecification() == null)
+            return false;
+        if (other.getFulfillmentUpdatesSpecification() != null
+                && other.getFulfillmentUpdatesSpecification().equals(this.getFulfillmentUpdatesSpecification()) == false)
+            return false;
         return true;
     }
 
@@ -128,6 +248,8 @@ public class FulfillmentCodeHookSettings implements Serializable, Cloneable, Str
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
+        hashCode = prime * hashCode + ((getPostFulfillmentStatusSpecification() == null) ? 0 : getPostFulfillmentStatusSpecification().hashCode());
+        hashCode = prime * hashCode + ((getFulfillmentUpdatesSpecification() == null) ? 0 : getFulfillmentUpdatesSpecification().hashCode());
         return hashCode;
     }
 

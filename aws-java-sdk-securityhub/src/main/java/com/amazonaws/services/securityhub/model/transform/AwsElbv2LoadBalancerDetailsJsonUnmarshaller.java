@@ -92,6 +92,13 @@ public class AwsElbv2LoadBalancerDetailsJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     awsElbv2LoadBalancerDetails.setVpcId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LoadBalancerAttributes", targetDepth)) {
+                    context.nextToken();
+                    awsElbv2LoadBalancerDetails.setLoadBalancerAttributes(new ListUnmarshaller<AwsElbv2LoadBalancerAttribute>(
+                            AwsElbv2LoadBalancerAttributeJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

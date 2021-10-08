@@ -24,7 +24,8 @@ public enum DialogActionType {
     ConfirmIntent("ConfirmIntent"),
     Delegate("Delegate"),
     ElicitIntent("ElicitIntent"),
-    ElicitSlot("ElicitSlot");
+    ElicitSlot("ElicitSlot"),
+    None("None");
 
     private String value;
 

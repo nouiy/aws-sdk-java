@@ -149,16 +149,9 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>. For example:
-     * </p>
-     * <p>
-     * <code>{"username":"bob","password":"abc123xyz456"}</code>
-     * </p>
-     * <p>
-     * If your command-line tool or SDK requires quotation marks around the parameter, you should use single quotes to
-     * avoid confusion with the double quotes required in the JSON text.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
+     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      */
     private String secretString;
@@ -957,16 +950,9 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>. For example:
-     * </p>
-     * <p>
-     * <code>{"username":"bob","password":"abc123xyz456"}</code>
-     * </p>
-     * <p>
-     * If your command-line tool or SDK requires quotation marks around the parameter, you should use single quotes to
-     * avoid confusion with the double quotes required in the JSON text.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
+     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      * 
      * @param secretString
@@ -982,17 +968,9 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
-     *        pairs. For information on how to format a JSON parameter for the various command line tool environments,
-     *        see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
-     *        </p>
-     *        <p>
-     *        <code>{"username":"bob","password":"abc123xyz456"}</code>
-     *        </p>
-     *        <p>
-     *        If your command-line tool or SDK requires quotation marks around the parameter, you should use single
-     *        quotes to avoid confusion with the double quotes required in the JSON text.
+     *        pairs. For more information, see <a
+     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
+     *        values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      */
 
     public void setSecretString(String secretString) {
@@ -1014,16 +992,9 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>. For example:
-     * </p>
-     * <p>
-     * <code>{"username":"bob","password":"abc123xyz456"}</code>
-     * </p>
-     * <p>
-     * If your command-line tool or SDK requires quotation marks around the parameter, you should use single quotes to
-     * avoid confusion with the double quotes required in the JSON text.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
+     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      * 
      * @return (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.</p>
@@ -1038,17 +1009,9 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </p>
      *         <p>
      *         For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
-     *         pairs. For information on how to format a JSON parameter for the various command line tool environments,
-     *         see <a
-     *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *         JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
-     *         </p>
-     *         <p>
-     *         <code>{"username":"bob","password":"abc123xyz456"}</code>
-     *         </p>
-     *         <p>
-     *         If your command-line tool or SDK requires quotation marks around the parameter, you should use single
-     *         quotes to avoid confusion with the double quotes required in the JSON text.
+     *         pairs. For more information, see <a
+     *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
+     *         values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      */
 
     public String getSecretString() {
@@ -1070,16 +1033,9 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>. For example:
-     * </p>
-     * <p>
-     * <code>{"username":"bob","password":"abc123xyz456"}</code>
-     * </p>
-     * <p>
-     * If your command-line tool or SDK requires quotation marks around the parameter, you should use single quotes to
-     * avoid confusion with the double quotes required in the JSON text.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
+     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      * 
      * @param secretString
@@ -1095,17 +1051,9 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
-     *        pairs. For information on how to format a JSON parameter for the various command line tool environments,
-     *        see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
-     *        </p>
-     *        <p>
-     *        <code>{"username":"bob","password":"abc123xyz456"}</code>
-     *        </p>
-     *        <p>
-     *        If your command-line tool or SDK requires quotation marks around the parameter, you should use single
-     *        quotes to avoid confusion with the double quotes required in the JSON text.
+     *        pairs. For more information, see <a
+     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
+     *        values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -69,7 +69,8 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
     private String rotationLambdaARN;
     /**
      * <p>
-     * A structure with the rotation configuration for this secret.
+     * A structure with the rotation configuration for this secret. This field is only populated if rotation is
+     * configured.
      * </p>
      */
     private RotationRulesType rotationRules;
@@ -460,11 +461,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A structure with the rotation configuration for this secret.
+     * A structure with the rotation configuration for this secret. This field is only populated if rotation is
+     * configured.
      * </p>
      * 
      * @param rotationRules
-     *        A structure with the rotation configuration for this secret.
+     *        A structure with the rotation configuration for this secret. This field is only populated if rotation is
+     *        configured.
      */
 
     public void setRotationRules(RotationRulesType rotationRules) {
@@ -473,10 +476,12 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A structure with the rotation configuration for this secret.
+     * A structure with the rotation configuration for this secret. This field is only populated if rotation is
+     * configured.
      * </p>
      * 
-     * @return A structure with the rotation configuration for this secret.
+     * @return A structure with the rotation configuration for this secret. This field is only populated if rotation is
+     *         configured.
      */
 
     public RotationRulesType getRotationRules() {
@@ -485,11 +490,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A structure with the rotation configuration for this secret.
+     * A structure with the rotation configuration for this secret. This field is only populated if rotation is
+     * configured.
      * </p>
      * 
      * @param rotationRules
-     *        A structure with the rotation configuration for this secret.
+     *        A structure with the rotation configuration for this secret. This field is only populated if rotation is
+     *        configured.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

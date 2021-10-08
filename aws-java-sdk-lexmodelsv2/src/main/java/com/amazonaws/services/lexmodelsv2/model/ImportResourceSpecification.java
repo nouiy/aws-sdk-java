@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information about the bot or bot locale that you want to import. You can sepcifiy the
+ * Provides information about the bot or bot locale that you want to import. You can specify the
  * <code>botImportSpecification</code> or the <code>botLocaleImportSpecification</code>, but not both.
  * </p>
  * 

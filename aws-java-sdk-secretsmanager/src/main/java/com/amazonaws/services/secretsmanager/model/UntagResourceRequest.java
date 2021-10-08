@@ -30,24 +30,9 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The identifier for the secret that you want to remove tags from. You can specify either the Amazon Resource Name
      * (ARN) or the friendly name of the secret.
      * </p>
-     * <note>
      * <p>
-     * If you specify an ARN, we generally recommend that you specify a complete ARN. You can specify a partial ARN
-     * too—for example, if you don’t include the final hyphen and six random characters that Secrets Manager adds at the
-     * end of the ARN when you created the secret. A partial ARN match can work as long as it uniquely matches only one
-     * secret. However, if your secret has a name that ends in a hyphen followed by six characters (before Secrets
-     * Manager adds the hyphen and six characters to the ARN) and you try to use that as a partial ARN, then those
-     * characters cause Secrets Manager to assume that you’re specifying a complete ARN. This confusion can cause
-     * unexpected results. To avoid this situation, we recommend that you don’t create secret names ending with a hyphen
-     * followed by six characters.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
-     * <p>
-     * If you specify an incomplete ARN without the random suffix, and instead provide the 'friendly name', you
-     * <i>must</i> not include the random suffix. If you do include the random suffix added by Secrets Manager, you
-     * receive either a <i>ResourceNotFoundException</i> or an <i>AccessDeniedException</i> error, depending on your
-     * permissions.
-     * </p>
-     * </note>
      */
     private String secretId;
     /**
@@ -56,10 +41,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
-     * for the various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.
+     * This parameter to the API requires a JSON text string argument.
+     * </p>
+     * <p>
+     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
+     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      */
     private java.util.List<String> tagKeys;
@@ -69,44 +57,15 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The identifier for the secret that you want to remove tags from. You can specify either the Amazon Resource Name
      * (ARN) or the friendly name of the secret.
      * </p>
-     * <note>
      * <p>
-     * If you specify an ARN, we generally recommend that you specify a complete ARN. You can specify a partial ARN
-     * too—for example, if you don’t include the final hyphen and six random characters that Secrets Manager adds at the
-     * end of the ARN when you created the secret. A partial ARN match can work as long as it uniquely matches only one
-     * secret. However, if your secret has a name that ends in a hyphen followed by six characters (before Secrets
-     * Manager adds the hyphen and six characters to the ARN) and you try to use that as a partial ARN, then those
-     * characters cause Secrets Manager to assume that you’re specifying a complete ARN. This confusion can cause
-     * unexpected results. To avoid this situation, we recommend that you don’t create secret names ending with a hyphen
-     * followed by six characters.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
-     * <p>
-     * If you specify an incomplete ARN without the random suffix, and instead provide the 'friendly name', you
-     * <i>must</i> not include the random suffix. If you do include the random suffix added by Secrets Manager, you
-     * receive either a <i>ResourceNotFoundException</i> or an <i>AccessDeniedException</i> error, depending on your
-     * permissions.
-     * </p>
-     * </note>
      * 
      * @param secretId
      *        The identifier for the secret that you want to remove tags from. You can specify either the Amazon
-     *        Resource Name (ARN) or the friendly name of the secret.</p> <note>
+     *        Resource Name (ARN) or the friendly name of the secret.</p>
      *        <p>
-     *        If you specify an ARN, we generally recommend that you specify a complete ARN. You can specify a partial
-     *        ARN too—for example, if you don’t include the final hyphen and six random characters that Secrets Manager
-     *        adds at the end of the ARN when you created the secret. A partial ARN match can work as long as it
-     *        uniquely matches only one secret. However, if your secret has a name that ends in a hyphen followed by six
-     *        characters (before Secrets Manager adds the hyphen and six characters to the ARN) and you try to use that
-     *        as a partial ARN, then those characters cause Secrets Manager to assume that you’re specifying a complete
-     *        ARN. This confusion can cause unexpected results. To avoid this situation, we recommend that you don’t
-     *        create secret names ending with a hyphen followed by six characters.
-     *        </p>
-     *        <p>
-     *        If you specify an incomplete ARN without the random suffix, and instead provide the 'friendly name', you
-     *        <i>must</i> not include the random suffix. If you do include the random suffix added by Secrets Manager,
-     *        you receive either a <i>ResourceNotFoundException</i> or an <i>AccessDeniedException</i> error, depending
-     *        on your permissions.
-     *        </p>
+     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
 
     public void setSecretId(String secretId) {
@@ -118,43 +77,14 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The identifier for the secret that you want to remove tags from. You can specify either the Amazon Resource Name
      * (ARN) or the friendly name of the secret.
      * </p>
-     * <note>
      * <p>
-     * If you specify an ARN, we generally recommend that you specify a complete ARN. You can specify a partial ARN
-     * too—for example, if you don’t include the final hyphen and six random characters that Secrets Manager adds at the
-     * end of the ARN when you created the secret. A partial ARN match can work as long as it uniquely matches only one
-     * secret. However, if your secret has a name that ends in a hyphen followed by six characters (before Secrets
-     * Manager adds the hyphen and six characters to the ARN) and you try to use that as a partial ARN, then those
-     * characters cause Secrets Manager to assume that you’re specifying a complete ARN. This confusion can cause
-     * unexpected results. To avoid this situation, we recommend that you don’t create secret names ending with a hyphen
-     * followed by six characters.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
-     * <p>
-     * If you specify an incomplete ARN without the random suffix, and instead provide the 'friendly name', you
-     * <i>must</i> not include the random suffix. If you do include the random suffix added by Secrets Manager, you
-     * receive either a <i>ResourceNotFoundException</i> or an <i>AccessDeniedException</i> error, depending on your
-     * permissions.
-     * </p>
-     * </note>
      * 
      * @return The identifier for the secret that you want to remove tags from. You can specify either the Amazon
-     *         Resource Name (ARN) or the friendly name of the secret.</p> <note>
+     *         Resource Name (ARN) or the friendly name of the secret.</p>
      *         <p>
-     *         If you specify an ARN, we generally recommend that you specify a complete ARN. You can specify a partial
-     *         ARN too—for example, if you don’t include the final hyphen and six random characters that Secrets Manager
-     *         adds at the end of the ARN when you created the secret. A partial ARN match can work as long as it
-     *         uniquely matches only one secret. However, if your secret has a name that ends in a hyphen followed by
-     *         six characters (before Secrets Manager adds the hyphen and six characters to the ARN) and you try to use
-     *         that as a partial ARN, then those characters cause Secrets Manager to assume that you’re specifying a
-     *         complete ARN. This confusion can cause unexpected results. To avoid this situation, we recommend that you
-     *         don’t create secret names ending with a hyphen followed by six characters.
-     *         </p>
-     *         <p>
-     *         If you specify an incomplete ARN without the random suffix, and instead provide the 'friendly name', you
-     *         <i>must</i> not include the random suffix. If you do include the random suffix added by Secrets Manager,
-     *         you receive either a <i>ResourceNotFoundException</i> or an <i>AccessDeniedException</i> error, depending
-     *         on your permissions.
-     *         </p>
+     *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
 
     public String getSecretId() {
@@ -166,44 +96,15 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The identifier for the secret that you want to remove tags from. You can specify either the Amazon Resource Name
      * (ARN) or the friendly name of the secret.
      * </p>
-     * <note>
      * <p>
-     * If you specify an ARN, we generally recommend that you specify a complete ARN. You can specify a partial ARN
-     * too—for example, if you don’t include the final hyphen and six random characters that Secrets Manager adds at the
-     * end of the ARN when you created the secret. A partial ARN match can work as long as it uniquely matches only one
-     * secret. However, if your secret has a name that ends in a hyphen followed by six characters (before Secrets
-     * Manager adds the hyphen and six characters to the ARN) and you try to use that as a partial ARN, then those
-     * characters cause Secrets Manager to assume that you’re specifying a complete ARN. This confusion can cause
-     * unexpected results. To avoid this situation, we recommend that you don’t create secret names ending with a hyphen
-     * followed by six characters.
+     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
-     * <p>
-     * If you specify an incomplete ARN without the random suffix, and instead provide the 'friendly name', you
-     * <i>must</i> not include the random suffix. If you do include the random suffix added by Secrets Manager, you
-     * receive either a <i>ResourceNotFoundException</i> or an <i>AccessDeniedException</i> error, depending on your
-     * permissions.
-     * </p>
-     * </note>
      * 
      * @param secretId
      *        The identifier for the secret that you want to remove tags from. You can specify either the Amazon
-     *        Resource Name (ARN) or the friendly name of the secret.</p> <note>
+     *        Resource Name (ARN) or the friendly name of the secret.</p>
      *        <p>
-     *        If you specify an ARN, we generally recommend that you specify a complete ARN. You can specify a partial
-     *        ARN too—for example, if you don’t include the final hyphen and six random characters that Secrets Manager
-     *        adds at the end of the ARN when you created the secret. A partial ARN match can work as long as it
-     *        uniquely matches only one secret. However, if your secret has a name that ends in a hyphen followed by six
-     *        characters (before Secrets Manager adds the hyphen and six characters to the ARN) and you try to use that
-     *        as a partial ARN, then those characters cause Secrets Manager to assume that you’re specifying a complete
-     *        ARN. This confusion can cause unexpected results. To avoid this situation, we recommend that you don’t
-     *        create secret names ending with a hyphen followed by six characters.
-     *        </p>
-     *        <p>
-     *        If you specify an incomplete ARN without the random suffix, and instead provide the 'friendly name', you
-     *        <i>must</i> not include the random suffix. If you do include the random suffix added by Secrets Manager,
-     *        you receive either a <i>ResourceNotFoundException</i> or an <i>AccessDeniedException</i> error, depending
-     *        on your permissions.
-     *        </p>
+     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,19 +119,25 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
-     * for the various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.
+     * This parameter to the API requires a JSON text string argument.
+     * </p>
+     * <p>
+     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
+     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      * 
      * @return A list of tag key names to remove from the secret. You don't specify the value. Both the key and its
      *         associated value are removed.</p>
      *         <p>
-     *         This parameter to the API requires a JSON text string argument. For information on how to format a JSON
-     *         parameter for the various command line tool environments, see <a
-     *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *         JSON for Parameters</a> in the <i>CLI User Guide</i>.
+     *         This parameter to the API requires a JSON text string argument.
+     *         </p>
+     *         <p>
+     *         For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
+     *         pairs. For more information, see <a
+     *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
+     *         values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -243,20 +150,26 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
-     * for the various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.
+     * This parameter to the API requires a JSON text string argument.
+     * </p>
+     * <p>
+     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
+     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      * 
      * @param tagKeys
      *        A list of tag key names to remove from the secret. You don't specify the value. Both the key and its
      *        associated value are removed.</p>
      *        <p>
-     *        This parameter to the API requires a JSON text string argument. For information on how to format a JSON
-     *        parameter for the various command line tool environments, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
+     *        This parameter to the API requires a JSON text string argument.
+     *        </p>
+     *        <p>
+     *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
+     *        pairs. For more information, see <a
+     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
+     *        values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -274,10 +187,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
-     * for the various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.
+     * This parameter to the API requires a JSON text string argument.
+     * </p>
+     * <p>
+     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
+     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -289,10 +205,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        A list of tag key names to remove from the secret. You don't specify the value. Both the key and its
      *        associated value are removed.</p>
      *        <p>
-     *        This parameter to the API requires a JSON text string argument. For information on how to format a JSON
-     *        parameter for the various command line tool environments, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
+     *        This parameter to the API requires a JSON text string argument.
+     *        </p>
+     *        <p>
+     *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
+     *        pairs. For more information, see <a
+     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
+     *        values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -312,20 +231,26 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument. For information on how to format a JSON parameter
-     * for the various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.
+     * This parameter to the API requires a JSON text string argument.
+     * </p>
+     * <p>
+     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
+     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      * 
      * @param tagKeys
      *        A list of tag key names to remove from the secret. You don't specify the value. Both the key and its
      *        associated value are removed.</p>
      *        <p>
-     *        This parameter to the API requires a JSON text string argument. For information on how to format a JSON
-     *        parameter for the various command line tool environments, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
+     *        This parameter to the API requires a JSON text string argument.
+     *        </p>
+     *        <p>
+     *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
+     *        pairs. For more information, see <a
+     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
+     *        values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

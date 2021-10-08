@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.securityhub.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,8 @@ public class AwsCodeBuildProjectDetailsMarshaller {
 
     private static final MarshallingInfo<String> ENCRYPTIONKEY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionKey").build();
+    private static final MarshallingInfo<List> ARTIFACTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Artifacts").build();
     private static final MarshallingInfo<StructuredPojo> ENVIRONMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Environment").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -37,6 +40,8 @@ public class AwsCodeBuildProjectDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Source").build();
     private static final MarshallingInfo<String> SERVICEROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ServiceRole").build();
+    private static final MarshallingInfo<StructuredPojo> LOGSCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogsConfig").build();
     private static final MarshallingInfo<StructuredPojo> VPCCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VpcConfig").build();
 
@@ -57,10 +62,12 @@ public class AwsCodeBuildProjectDetailsMarshaller {
 
         try {
             protocolMarshaller.marshall(awsCodeBuildProjectDetails.getEncryptionKey(), ENCRYPTIONKEY_BINDING);
+            protocolMarshaller.marshall(awsCodeBuildProjectDetails.getArtifacts(), ARTIFACTS_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectDetails.getEnvironment(), ENVIRONMENT_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectDetails.getName(), NAME_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectDetails.getSource(), SOURCE_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectDetails.getServiceRole(), SERVICEROLE_BINDING);
+            protocolMarshaller.marshall(awsCodeBuildProjectDetails.getLogsConfig(), LOGSCONFIG_BINDING);
             protocolMarshaller.marshall(awsCodeBuildProjectDetails.getVpcConfig(), VPCCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

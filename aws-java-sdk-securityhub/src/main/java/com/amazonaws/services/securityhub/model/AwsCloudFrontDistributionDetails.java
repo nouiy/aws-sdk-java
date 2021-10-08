@@ -91,6 +91,12 @@ public class AwsCloudFrontDistributionDetails implements Serializable, Cloneable
     private AwsCloudFrontDistributionOriginGroups originGroups;
     /**
      * <p>
+     * Provides information about the TLS/SSL configuration that the distribution uses to communicate with viewers.
+     * </p>
+     */
+    private AwsCloudFrontDistributionViewerCertificate viewerCertificate;
+    /**
+     * <p>
      * Indicates the current status of the distribution.
      * </p>
      */
@@ -503,6 +509,49 @@ public class AwsCloudFrontDistributionDetails implements Serializable, Cloneable
 
     /**
      * <p>
+     * Provides information about the TLS/SSL configuration that the distribution uses to communicate with viewers.
+     * </p>
+     * 
+     * @param viewerCertificate
+     *        Provides information about the TLS/SSL configuration that the distribution uses to communicate with
+     *        viewers.
+     */
+
+    public void setViewerCertificate(AwsCloudFrontDistributionViewerCertificate viewerCertificate) {
+        this.viewerCertificate = viewerCertificate;
+    }
+
+    /**
+     * <p>
+     * Provides information about the TLS/SSL configuration that the distribution uses to communicate with viewers.
+     * </p>
+     * 
+     * @return Provides information about the TLS/SSL configuration that the distribution uses to communicate with
+     *         viewers.
+     */
+
+    public AwsCloudFrontDistributionViewerCertificate getViewerCertificate() {
+        return this.viewerCertificate;
+    }
+
+    /**
+     * <p>
+     * Provides information about the TLS/SSL configuration that the distribution uses to communicate with viewers.
+     * </p>
+     * 
+     * @param viewerCertificate
+     *        Provides information about the TLS/SSL configuration that the distribution uses to communicate with
+     *        viewers.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsCloudFrontDistributionDetails withViewerCertificate(AwsCloudFrontDistributionViewerCertificate viewerCertificate) {
+        setViewerCertificate(viewerCertificate);
+        return this;
+    }
+
+    /**
+     * <p>
      * Indicates the current status of the distribution.
      * </p>
      * 
@@ -611,6 +660,8 @@ public class AwsCloudFrontDistributionDetails implements Serializable, Cloneable
             sb.append("Origins: ").append(getOrigins()).append(",");
         if (getOriginGroups() != null)
             sb.append("OriginGroups: ").append(getOriginGroups()).append(",");
+        if (getViewerCertificate() != null)
+            sb.append("ViewerCertificate: ").append(getViewerCertificate()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getWebAclId() != null)
@@ -665,6 +716,10 @@ public class AwsCloudFrontDistributionDetails implements Serializable, Cloneable
             return false;
         if (other.getOriginGroups() != null && other.getOriginGroups().equals(this.getOriginGroups()) == false)
             return false;
+        if (other.getViewerCertificate() == null ^ this.getViewerCertificate() == null)
+            return false;
+        if (other.getViewerCertificate() != null && other.getViewerCertificate().equals(this.getViewerCertificate()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -690,6 +745,7 @@ public class AwsCloudFrontDistributionDetails implements Serializable, Cloneable
         hashCode = prime * hashCode + ((getLogging() == null) ? 0 : getLogging().hashCode());
         hashCode = prime * hashCode + ((getOrigins() == null) ? 0 : getOrigins().hashCode());
         hashCode = prime * hashCode + ((getOriginGroups() == null) ? 0 : getOriginGroups().hashCode());
+        hashCode = prime * hashCode + ((getViewerCertificate() == null) ? 0 : getViewerCertificate().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getWebAclId() == null) ? 0 : getWebAclId().hashCode());
         return hashCode;

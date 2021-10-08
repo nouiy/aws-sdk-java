@@ -49,12 +49,12 @@ public class ActiveContext implements Serializable, Cloneable, StructuredPojo {
     private ActiveContextTimeToLive timeToLive;
     /**
      * <p>
-     * A lis tof contexts active for the request. A context can be activated when a previous intent is fulfilled, or by
+     * A list of contexts active for the request. A context can be activated when a previous intent is fulfilled, or by
      * including the context in the request.
      * </p>
      * <p>
-     * If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session. If you
-     * specify an empty list, all contexts for the session are cleared.
+     * If you don't specify a list of contexts, Amazon Lex V2 will use the current list of contexts for the session. If
+     * you specify an empty list, all contexts for the session are cleared.
      * </p>
      */
     private java.util.Map<String, String> contextAttributes;
@@ -147,18 +147,18 @@ public class ActiveContext implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A lis tof contexts active for the request. A context can be activated when a previous intent is fulfilled, or by
+     * A list of contexts active for the request. A context can be activated when a previous intent is fulfilled, or by
      * including the context in the request.
      * </p>
      * <p>
-     * If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session. If you
-     * specify an empty list, all contexts for the session are cleared.
+     * If you don't specify a list of contexts, Amazon Lex V2 will use the current list of contexts for the session. If
+     * you specify an empty list, all contexts for the session are cleared.
      * </p>
      * 
-     * @return A lis tof contexts active for the request. A context can be activated when a previous intent is
+     * @return A list of contexts active for the request. A context can be activated when a previous intent is
      *         fulfilled, or by including the context in the request.</p>
      *         <p>
-     *         If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the
+     *         If you don't specify a list of contexts, Amazon Lex V2 will use the current list of contexts for the
      *         session. If you specify an empty list, all contexts for the session are cleared.
      */
 
@@ -168,20 +168,20 @@ public class ActiveContext implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A lis tof contexts active for the request. A context can be activated when a previous intent is fulfilled, or by
+     * A list of contexts active for the request. A context can be activated when a previous intent is fulfilled, or by
      * including the context in the request.
      * </p>
      * <p>
-     * If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session. If you
-     * specify an empty list, all contexts for the session are cleared.
+     * If you don't specify a list of contexts, Amazon Lex V2 will use the current list of contexts for the session. If
+     * you specify an empty list, all contexts for the session are cleared.
      * </p>
      * 
      * @param contextAttributes
-     *        A lis tof contexts active for the request. A context can be activated when a previous intent is fulfilled,
+     *        A list of contexts active for the request. A context can be activated when a previous intent is fulfilled,
      *        or by including the context in the request.</p>
      *        <p>
-     *        If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session.
-     *        If you specify an empty list, all contexts for the session are cleared.
+     *        If you don't specify a list of contexts, Amazon Lex V2 will use the current list of contexts for the
+     *        session. If you specify an empty list, all contexts for the session are cleared.
      */
 
     public void setContextAttributes(java.util.Map<String, String> contextAttributes) {
@@ -190,20 +190,20 @@ public class ActiveContext implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A lis tof contexts active for the request. A context can be activated when a previous intent is fulfilled, or by
+     * A list of contexts active for the request. A context can be activated when a previous intent is fulfilled, or by
      * including the context in the request.
      * </p>
      * <p>
-     * If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session. If you
-     * specify an empty list, all contexts for the session are cleared.
+     * If you don't specify a list of contexts, Amazon Lex V2 will use the current list of contexts for the session. If
+     * you specify an empty list, all contexts for the session are cleared.
      * </p>
      * 
      * @param contextAttributes
-     *        A lis tof contexts active for the request. A context can be activated when a previous intent is fulfilled,
+     *        A list of contexts active for the request. A context can be activated when a previous intent is fulfilled,
      *        or by including the context in the request.</p>
      *        <p>
-     *        If you don't specify a list of contexts, Amazon Lex will use the current list of contexts for the session.
-     *        If you specify an empty list, all contexts for the session are cleared.
+     *        If you don't specify a list of contexts, Amazon Lex V2 will use the current list of contexts for the
+     *        session. If you specify an empty list, all contexts for the session are cleared.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
