@@ -74,7 +74,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Creates Amazon QuickSight customizations the current Amazon Web Services Region;. Currently, you can add a custom
+     * Creates Amazon QuickSight customizations the current Amazon Web Services Region. Currently, you can add a custom
      * default theme by using the <code>CreateAccountCustomization</code> or <code>UpdateAccountCustomization</code> API
      * operation. To further customize Amazon QuickSight by removing Amazon QuickSight sample assets and videos for all
      * new users, see <a
@@ -657,7 +657,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Deletes all Amazon QuickSight customizations in this Amazon Web Services Region; for the specified Amazon Web
+     * Deletes all Amazon QuickSight customizations in this Amazon Web Services Region for the specified Amazon Web
      * Services account and Amazon QuickSight namespace.
      * </p>
      * 
@@ -1169,7 +1169,7 @@ public interface AmazonQuickSight {
     /**
      * <p>
      * Describes the customizations associated with the provided Amazon Web Services account and Amazon Amazon
-     * QuickSight namespace in an Amazon Web Services Region;. The Amazon QuickSight console evaluates which
+     * QuickSight namespace in an Amazon Web Services Region. The Amazon QuickSight console evaluates which
      * customizations to apply by running this API operation with the <code>Resolved</code> flag included.
      * </p>
      * <p>
@@ -1180,20 +1180,20 @@ public interface AmazonQuickSight {
      * <li>
      * <p>
      * <code>Amazon Web Services account</code> - The Amazon Web Services account exists at the top of the hierarchy. It
-     * has the potential to use all of the Amazon Web Services Regions; and AWS Services. When you subscribe to Amazon
-     * QuickSight, you choose one Amazon Web Services Region; to use as your home Region. That's where your free SPICE
-     * capacity is located. You can use Amazon QuickSight in any supported Amazon Web Services Region;.
+     * has the potential to use all of the Amazon Web Services Regions and AWS Services. When you subscribe to Amazon
+     * QuickSight, you choose one Amazon Web Services Region to use as your home Region. That's where your free SPICE
+     * capacity is located. You can use Amazon QuickSight in any supported Amazon Web Services Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Amazon Web Services Region;</code> - In each Amazon Web Services Region; where you sign in to Amazon
+     * <code>Amazon Web Services Region</code> - In each Amazon Web Services Region where you sign in to Amazon
      * QuickSight at least once, Amazon QuickSight acts as a separate instance of the same service. If you have a user
      * directory, it resides in us-east-1, which is the US East (N. Virginia). Generally speaking, these users have
-     * access to Amazon QuickSight in any Amazon Web Services Region;, unless they are constrained to a namespace.
+     * access to Amazon QuickSight in any Amazon Web Services Region, unless they are constrained to a namespace.
      * </p>
      * <p>
-     * To run the command in a different Amazon Web Services Region;, you change your Region settings. If you're using
+     * To run the command in a different Amazon Web Services Region, you change your Region settings. If you're using
      * the AWS CLI, you can use one of the following options:
      * </p>
      * <ul>
@@ -1210,7 +1210,7 @@ public interface AmazonQuickSight {
      * </li>
      * <li>
      * <p>
-     * Run <code>aws configure</code> to change your default Amazon Web Services Region;. Use Enter to key the same
+     * Run <code>aws configure</code> to change your default Amazon Web Services Region. Use Enter to key the same
      * settings for your keys. For more information, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">Configuring the AWS CLI</a>.
      * </p>
@@ -1223,16 +1223,16 @@ public interface AmazonQuickSight {
      * sources, datasets, dashboards, and so on). To access assets that are in a specific namespace, users and groups
      * must also be part of the same namespace. People who share a namespace are completely isolated from users and
      * assets in other namespaces, even if they are in the same Amazon Web Services account and Amazon Web Services
-     * Region;.
+     * Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Applied customizations</code> - Within an Amazon Web Services Region;, a set of Amazon QuickSight
+     * <code>Applied customizations</code> - Within an Amazon Web Services Region, a set of Amazon QuickSight
      * customizations can apply to an Amazon Web Services account or to a namespace. Settings that you apply to a
      * namespace override settings that you apply to an Amazon Web Services account. All settings are isolated to a
-     * single Amazon Web Services Region;. To apply them in other Amazon Web Services Regions;, run the
-     * <code>CreateAccountCustomization</code> command in each Amazon Web Services Region; where you want to apply the
+     * single Amazon Web Services Region. To apply them in other Amazon Web Services Regions, run the
+     * <code>CreateAccountCustomization</code> command in each Amazon Web Services Region where you want to apply the
      * same customizations.
      * </p>
      * </li>
@@ -1683,6 +1683,32 @@ public interface AmazonQuickSight {
      *      API Documentation</a>
      */
     DescribeIngestionResult describeIngestion(DescribeIngestionRequest describeIngestionRequest);
+
+    /**
+     * <p>
+     * Provides a summary and status of IP Rules.
+     * </p>
+     * 
+     * @param describeIpRestrictionRequest
+     * @return Result of the DescribeIpRestriction operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         access keys.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.DescribeIpRestriction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeIpRestriction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeIpRestrictionResult describeIpRestriction(DescribeIpRestrictionRequest describeIpRestrictionRequest);
 
     /**
      * <p>
@@ -2305,7 +2331,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists all of the datasets belonging to the current Amazon Web Services account in an Amazon Web Services Region;.
+     * Lists all of the datasets belonging to the current Amazon Web Services account in an Amazon Web Services Region.
      * </p>
      * <p>
      * The permissions resource is <code>arn:aws:quicksight:region:aws-account-id:dataset/*</code>.
@@ -2334,7 +2360,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Lists data sources in current Amazon Web Services Region; that belong to this Amazon Web Services account.
+     * Lists data sources in current Amazon Web Services Region that belong to this Amazon Web Services account.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -3112,7 +3138,7 @@ public interface AmazonQuickSight {
 
     /**
      * <p>
-     * Updates Amazon QuickSight customizations the current Amazon Web Services Region;. Currently, the only
+     * Updates Amazon QuickSight customizations the current Amazon Web Services Region. Currently, the only
      * customization you can use is a theme.
      * </p>
      * <p>
@@ -3566,6 +3592,34 @@ public interface AmazonQuickSight {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateIAMPolicyAssignmentResult updateIAMPolicyAssignment(UpdateIAMPolicyAssignmentRequest updateIAMPolicyAssignmentRequest);
+
+    /**
+     * <p>
+     * Updates content and status of IP Rules.
+     * </p>
+     * 
+     * @param updateIpRestrictionRequest
+     * @return Result of the UpdateIpRestriction operation returned by the service.
+     * @throws LimitExceededException
+     *         A limit is exceeded.
+     * @throws AccessDeniedException
+     *         You don't have access to this item. The provided credentials couldn't be validated. You might not be
+     *         authorized to carry out the request. Make sure that your account is authorized to use the Amazon
+     *         QuickSight service, that your policies have the correct permissions, and that you are using the correct
+     *         access keys.
+     * @throws InvalidParameterValueException
+     *         One or more parameters has a value that isn't valid.
+     * @throws ThrottlingException
+     *         Access is throttled.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws InternalFailureException
+     *         An internal failure occurred.
+     * @sample AmazonQuickSight.UpdateIpRestriction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateIpRestriction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateIpRestrictionResult updateIpRestriction(UpdateIpRestrictionRequest updateIpRestrictionRequest);
 
     /**
      * <p>

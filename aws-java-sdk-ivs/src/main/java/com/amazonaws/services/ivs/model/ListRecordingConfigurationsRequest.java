@@ -27,17 +27,57 @@ public class ListRecordingConfigurationsRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
+     * Maximum number of recording configurations to return. Default: 50.
+     * </p>
+     */
+    private Integer maxResults;
+    /**
+     * <p>
      * The first recording configuration to retrieve. This is used for pagination; see the <code>nextToken</code>
      * response field.
      * </p>
      */
     private String nextToken;
+
     /**
      * <p>
      * Maximum number of recording configurations to return. Default: 50.
      * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of recording configurations to return. Default: 50.
      */
-    private Integer maxResults;
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of recording configurations to return. Default: 50.
+     * </p>
+     * 
+     * @return Maximum number of recording configurations to return. Default: 50.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of recording configurations to return. Default: 50.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of recording configurations to return. Default: 50.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListRecordingConfigurationsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
 
     /**
      * <p>
@@ -86,46 +126,6 @@ public class ListRecordingConfigurationsRequest extends com.amazonaws.AmazonWebS
     }
 
     /**
-     * <p>
-     * Maximum number of recording configurations to return. Default: 50.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of recording configurations to return. Default: 50.
-     */
-
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of recording configurations to return. Default: 50.
-     * </p>
-     * 
-     * @return Maximum number of recording configurations to return. Default: 50.
-     */
-
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of recording configurations to return. Default: 50.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of recording configurations to return. Default: 50.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListRecordingConfigurationsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,10 +137,10 @@ public class ListRecordingConfigurationsRequest extends com.amazonaws.AmazonWebS
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -155,13 +155,13 @@ public class ListRecordingConfigurationsRequest extends com.amazonaws.AmazonWebS
         if (obj instanceof ListRecordingConfigurationsRequest == false)
             return false;
         ListRecordingConfigurationsRequest other = (ListRecordingConfigurationsRequest) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -171,8 +171,8 @@ public class ListRecordingConfigurationsRequest extends com.amazonaws.AmazonWebS
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

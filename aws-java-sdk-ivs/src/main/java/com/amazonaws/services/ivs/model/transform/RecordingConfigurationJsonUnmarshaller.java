@@ -52,13 +52,13 @@ public class RecordingConfigurationJsonUnmarshaller implements Unmarshaller<Reco
                     context.nextToken();
                     recordingConfiguration.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("name", targetDepth)) {
-                    context.nextToken();
-                    recordingConfiguration.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
                 if (context.testExpression("destinationConfiguration", targetDepth)) {
                     context.nextToken();
                     recordingConfiguration.setDestinationConfiguration(DestinationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("name", targetDepth)) {
+                    context.nextToken();
+                    recordingConfiguration.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();

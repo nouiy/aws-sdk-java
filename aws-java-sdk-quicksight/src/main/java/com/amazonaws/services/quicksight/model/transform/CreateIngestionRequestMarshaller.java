@@ -33,6 +33,8 @@ public class CreateIngestionRequestMarshaller {
             .marshallLocationName("IngestionId").build();
     private static final MarshallingInfo<String> AWSACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("AwsAccountId").build();
+    private static final MarshallingInfo<String> INGESTIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IngestionType").build();
 
     private static final CreateIngestionRequestMarshaller instance = new CreateIngestionRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class CreateIngestionRequestMarshaller {
             protocolMarshaller.marshall(createIngestionRequest.getDataSetId(), DATASETID_BINDING);
             protocolMarshaller.marshall(createIngestionRequest.getIngestionId(), INGESTIONID_BINDING);
             protocolMarshaller.marshall(createIngestionRequest.getAwsAccountId(), AWSACCOUNTID_BINDING);
+            protocolMarshaller.marshall(createIngestionRequest.getIngestionType(), INGESTIONTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -52,38 +52,38 @@ public class ChannelJsonUnmarshaller implements Unmarshaller<Channel, JsonUnmars
                     context.nextToken();
                     channel.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("name", targetDepth)) {
+                if (context.testExpression("authorized", targetDepth)) {
                     context.nextToken();
-                    channel.setName(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("latencyMode", targetDepth)) {
-                    context.nextToken();
-                    channel.setLatencyMode(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("type", targetDepth)) {
-                    context.nextToken();
-                    channel.setType(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("recordingConfigurationArn", targetDepth)) {
-                    context.nextToken();
-                    channel.setRecordingConfigurationArn(context.getUnmarshaller(String.class).unmarshall(context));
+                    channel.setAuthorized(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("ingestEndpoint", targetDepth)) {
                     context.nextToken();
                     channel.setIngestEndpoint(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("latencyMode", targetDepth)) {
+                    context.nextToken();
+                    channel.setLatencyMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("name", targetDepth)) {
+                    context.nextToken();
+                    channel.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("playbackUrl", targetDepth)) {
                     context.nextToken();
                     channel.setPlaybackUrl(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("authorized", targetDepth)) {
+                if (context.testExpression("recordingConfigurationArn", targetDepth)) {
                     context.nextToken();
-                    channel.setAuthorized(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    channel.setRecordingConfigurationArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     channel.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
+                }
+                if (context.testExpression("type", targetDepth)) {
+                    context.nextToken();
+                    channel.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -23,9 +23,12 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetStreamResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /** <p/> */
     private Stream stream;
 
     /**
+     * <p/>
+     * 
      * @param stream
      */
 
@@ -34,6 +37,8 @@ public class GetStreamResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
+     * <p/>
+     * 
      * @return
      */
 
@@ -42,6 +47,8 @@ public class GetStreamResult extends com.amazonaws.AmazonWebServiceResult<com.am
     }
 
     /**
+     * <p/>
+     * 
      * @param stream
      * @return Returns a reference to this object so that method calls can be chained together.
      */

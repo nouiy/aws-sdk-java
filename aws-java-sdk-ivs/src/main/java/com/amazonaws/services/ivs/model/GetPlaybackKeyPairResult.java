@@ -23,9 +23,12 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetPlaybackKeyPairResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /** <zonbook></zonbook><xhtml></xhtml> */
     private PlaybackKeyPair keyPair;
 
     /**
+     * <zonbook></zonbook><xhtml></xhtml>
+     * 
      * @param keyPair
      */
 
@@ -34,6 +37,8 @@ public class GetPlaybackKeyPairResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <zonbook></zonbook><xhtml></xhtml>
+     * 
      * @return
      */
 
@@ -42,6 +47,8 @@ public class GetPlaybackKeyPairResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <zonbook></zonbook><xhtml></xhtml>
+     * 
      * @param keyPair
      * @return Returns a reference to this object so that method calls can be chained together.
      */

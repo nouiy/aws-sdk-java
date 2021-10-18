@@ -23,9 +23,12 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetChannelResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /** <p/> */
     private Channel channel;
 
     /**
+     * <p/>
+     * 
      * @param channel
      */
 
@@ -34,6 +37,8 @@ public class GetChannelResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
+     * <p/>
+     * 
      * @return
      */
 
@@ -42,6 +47,8 @@ public class GetChannelResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
+     * <p/>
+     * 
      * @param channel
      * @return Returns a reference to this object so that method calls can be chained together.
      */

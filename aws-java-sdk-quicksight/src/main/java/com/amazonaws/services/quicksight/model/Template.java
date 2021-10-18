@@ -56,7 +56,7 @@ public class Template implements Serializable, Cloneable, StructuredPojo {
     private TemplateVersion version;
     /**
      * <p>
-     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account.
+     * The ID for the template. This is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      */
     private String templateId;
@@ -195,11 +195,11 @@ public class Template implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account.
+     * The ID for the template. This is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
      * @param templateId
-     *        The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        The ID for the template. This is unique per Amazon Web Services Region for each Amazon Web Services
      *        account.
      */
 
@@ -209,10 +209,10 @@ public class Template implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account.
+     * The ID for the template. This is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
-     * @return The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services
+     * @return The ID for the template. This is unique per Amazon Web Services Region for each Amazon Web Services
      *         account.
      */
 
@@ -222,11 +222,11 @@ public class Template implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services account.
+     * The ID for the template. This is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
      * @param templateId
-     *        The ID for the template. This is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        The ID for the template. This is unique per Amazon Web Services Region for each Amazon Web Services
      *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -680,6 +680,19 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeIpRestrictionResult> describeIpRestrictionAsync(DescribeIpRestrictionRequest request) {
+
+        return describeIpRestrictionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpRestrictionResult> describeIpRestrictionAsync(DescribeIpRestrictionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpRestrictionRequest, DescribeIpRestrictionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeNamespaceResult> describeNamespaceAsync(DescribeNamespaceRequest request) {
 
         return describeNamespaceAsync(request, null);
@@ -1411,6 +1424,19 @@ public class AbstractAmazonQuickSightAsync extends AbstractAmazonQuickSight impl
     @Override
     public java.util.concurrent.Future<UpdateIAMPolicyAssignmentResult> updateIAMPolicyAssignmentAsync(UpdateIAMPolicyAssignmentRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateIAMPolicyAssignmentRequest, UpdateIAMPolicyAssignmentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIpRestrictionResult> updateIpRestrictionAsync(UpdateIpRestrictionRequest request) {
+
+        return updateIpRestrictionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIpRestrictionResult> updateIpRestrictionAsync(UpdateIpRestrictionRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateIpRestrictionRequest, UpdateIpRestrictionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -52,17 +52,17 @@ public class ChannelSummaryJsonUnmarshaller implements Unmarshaller<ChannelSumma
                     context.nextToken();
                     channelSummary.setArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("name", targetDepth)) {
+                if (context.testExpression("authorized", targetDepth)) {
                     context.nextToken();
-                    channelSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
+                    channelSummary.setAuthorized(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("latencyMode", targetDepth)) {
                     context.nextToken();
                     channelSummary.setLatencyMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
-                if (context.testExpression("authorized", targetDepth)) {
+                if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
-                    channelSummary.setAuthorized(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                    channelSummary.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("recordingConfigurationArn", targetDepth)) {
                     context.nextToken();

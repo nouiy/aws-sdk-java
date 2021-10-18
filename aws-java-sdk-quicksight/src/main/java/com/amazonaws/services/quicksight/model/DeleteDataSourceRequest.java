@@ -33,8 +33,7 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String awsAccountId;
     /**
      * <p>
-     * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account.
+     * The ID of the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      */
     private String dataSourceId;
@@ -81,12 +80,11 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account.
+     * The ID of the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
      * @param dataSourceId
-     *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        The ID of the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services
      *        account.
      */
 
@@ -96,11 +94,10 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account.
+     * The ID of the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
-     * @return The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     * @return The ID of the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services
      *         account.
      */
 
@@ -110,12 +107,11 @@ public class DeleteDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account.
+     * The ID of the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
      * @param dataSourceId
-     *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        The ID of the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services
      *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

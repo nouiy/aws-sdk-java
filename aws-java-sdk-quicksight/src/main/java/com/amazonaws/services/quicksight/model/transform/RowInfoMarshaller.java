@@ -31,6 +31,8 @@ public class RowInfoMarshaller {
             .marshallLocationName("RowsIngested").build();
     private static final MarshallingInfo<Long> ROWSDROPPED_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("RowsDropped").build();
+    private static final MarshallingInfo<Long> TOTALROWSINDATASET_BINDING = MarshallingInfo.builder(MarshallingType.LONG)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TotalRowsInDataset").build();
 
     private static final RowInfoMarshaller instance = new RowInfoMarshaller();
 
@@ -50,6 +52,7 @@ public class RowInfoMarshaller {
         try {
             protocolMarshaller.marshall(rowInfo.getRowsIngested(), ROWSINGESTED_BINDING);
             protocolMarshaller.marshall(rowInfo.getRowsDropped(), ROWSDROPPED_BINDING);
+            protocolMarshaller.marshall(rowInfo.getTotalRowsInDataset(), TOTALROWSINDATASET_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

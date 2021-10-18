@@ -52,6 +52,10 @@ public class StreamJsonUnmarshaller implements Unmarshaller<Stream, JsonUnmarsha
                     context.nextToken();
                     stream.setChannelArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("health", targetDepth)) {
+                    context.nextToken();
+                    stream.setHealth(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("playbackUrl", targetDepth)) {
                     context.nextToken();
                     stream.setPlaybackUrl(context.getUnmarshaller(String.class).unmarshall(context));
@@ -63,10 +67,6 @@ public class StreamJsonUnmarshaller implements Unmarshaller<Stream, JsonUnmarsha
                 if (context.testExpression("state", targetDepth)) {
                     context.nextToken();
                     stream.setState(context.getUnmarshaller(String.class).unmarshall(context));
-                }
-                if (context.testExpression("health", targetDepth)) {
-                    context.nextToken();
-                    stream.setHealth(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("viewerCount", targetDepth)) {
                     context.nextToken();

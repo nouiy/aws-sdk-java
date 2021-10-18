@@ -1,3 +1,12 @@
+# __1.12.90__ __2021-10-18__
+## __Amazon Interactive Video Service__
+  - ### Features
+    - Bug fix: remove unsupported maxResults and nextToken pagination parameters from ListTagsForResource
+
+## __Amazon QuickSight__
+  - ### Features
+    - AWS QuickSight Service  Features    - Add IP Restriction UI and public APIs support.
+
 # __1.12.89__ __2021-10-15__
 ## __AWS Glue__
   - ### Features

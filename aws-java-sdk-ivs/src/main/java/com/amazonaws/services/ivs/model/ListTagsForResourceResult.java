@@ -23,16 +23,12 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /** <p/> */
     private java.util.Map<String, String> tags;
-    /**
-     * <p>
-     * If there are more tags than <code>maxResults</code>, use <code>nextToken</code> in the request to get the next
-     * set.
-     * </p>
-     */
-    private String nextToken;
 
     /**
+     * <p/>
+     * 
      * @return
      */
 
@@ -41,6 +37,8 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p/>
+     * 
      * @param tags
      */
 
@@ -49,6 +47,8 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p/>
+     * 
      * @param tags
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -87,52 +87,6 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
-     * <p>
-     * If there are more tags than <code>maxResults</code>, use <code>nextToken</code> in the request to get the next
-     * set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more tags than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
-     *        next set.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more tags than <code>maxResults</code>, use <code>nextToken</code> in the request to get the next
-     * set.
-     * </p>
-     * 
-     * @return If there are more tags than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
-     *         next set.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * If there are more tags than <code>maxResults</code>, use <code>nextToken</code> in the request to get the next
-     * set.
-     * </p>
-     * 
-     * @param nextToken
-     *        If there are more tags than <code>maxResults</code>, use <code>nextToken</code> in the request to get the
-     *        next set.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListTagsForResourceResult withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -145,9 +99,7 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags()).append(",");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -166,10 +118,6 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         return true;
     }
 
@@ -179,7 +127,6 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

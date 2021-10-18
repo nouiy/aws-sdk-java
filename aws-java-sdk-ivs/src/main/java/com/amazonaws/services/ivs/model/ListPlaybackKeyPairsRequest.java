@@ -27,57 +27,17 @@ public class ListPlaybackKeyPairsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Maximum number of key pairs to return.
-     * </p>
-     */
-    private String nextToken;
-    /**
-     * <p>
      * The first key pair to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * Default: 50.
      * </p>
      */
     private Integer maxResults;
-
     /**
      * <p>
      * Maximum number of key pairs to return.
      * </p>
-     * 
-     * @param nextToken
-     *        Maximum number of key pairs to return.
      */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * Maximum number of key pairs to return.
-     * </p>
-     * 
-     * @return Maximum number of key pairs to return.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * Maximum number of key pairs to return.
-     * </p>
-     * 
-     * @param nextToken
-     *        Maximum number of key pairs to return.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListPlaybackKeyPairsRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
+    private String nextToken;
 
     /**
      * <p>
@@ -126,6 +86,46 @@ public class ListPlaybackKeyPairsRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Maximum number of key pairs to return.
+     * </p>
+     * 
+     * @param nextToken
+     *        Maximum number of key pairs to return.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * Maximum number of key pairs to return.
+     * </p>
+     * 
+     * @return Maximum number of key pairs to return.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * Maximum number of key pairs to return.
+     * </p>
+     * 
+     * @param nextToken
+     *        Maximum number of key pairs to return.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPlaybackKeyPairsRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,10 +137,10 @@ public class ListPlaybackKeyPairsRequest extends com.amazonaws.AmazonWebServiceR
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -155,13 +155,13 @@ public class ListPlaybackKeyPairsRequest extends com.amazonaws.AmazonWebServiceR
         if (obj instanceof ListPlaybackKeyPairsRequest == false)
             return false;
         ListPlaybackKeyPairsRequest other = (ListPlaybackKeyPairsRequest) obj;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -171,8 +171,8 @@ public class ListPlaybackKeyPairsRequest extends com.amazonaws.AmazonWebServiceR
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

@@ -35,10 +35,16 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * Channel name.
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * </p>
      */
-    private String name;
+    private Boolean authorized;
+    /**
+     * <p>
+     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
+     * </p>
+     */
+    private String ingestEndpoint;
     /**
      * <p>
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
@@ -49,26 +55,16 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private String latencyMode;
     /**
      * <p>
-     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
-     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * Channel name.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Vertical resolution can be up to 1080 and bitrate
-     * can be up to 8.5 Mbps.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Vertical resolution can be up to 480 and bitrate can be up to 1.5 Mbps.
-     * </p>
-     * </li>
-     * </ul>
      */
-    private String type;
+    private String name;
+    /**
+     * <p>
+     * Channel playback URL.
+     * </p>
+     */
+    private String playbackUrl;
     /**
      * <p>
      * Recording-configuration ARN. A value other than an empty string indicates that recording is enabled. Default: ""
@@ -78,28 +74,32 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private String recordingConfigurationArn;
     /**
      * <p>
-     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
-     * </p>
-     */
-    private String ingestEndpoint;
-    /**
-     * <p>
-     * Channel playback URL.
-     * </p>
-     */
-    private String playbackUrl;
-    /**
-     * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     * </p>
-     */
-    private Boolean authorized;
-    /**
-     * <p>
      * Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
+     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
+     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
+     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
+     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String type;
 
     /**
      * <p>
@@ -143,41 +143,96 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Channel name.
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * </p>
      * 
-     * @param name
-     *        Channel name.
+     * @param authorized
+     *        Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      */
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAuthorized(Boolean authorized) {
+        this.authorized = authorized;
     }
 
     /**
      * <p>
-     * Channel name.
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * </p>
      * 
-     * @return Channel name.
+     * @return Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      */
 
-    public String getName() {
-        return this.name;
+    public Boolean getAuthorized() {
+        return this.authorized;
     }
 
     /**
      * <p>
-     * Channel name.
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * </p>
      * 
-     * @param name
-     *        Channel name.
+     * @param authorized
+     *        Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public Channel withName(String name) {
-        setName(name);
+    public Channel withAuthorized(Boolean authorized) {
+        setAuthorized(authorized);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     * </p>
+     * 
+     * @return Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     */
+
+    public Boolean isAuthorized() {
+        return this.authorized;
+    }
+
+    /**
+     * <p>
+     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
+     * </p>
+     * 
+     * @param ingestEndpoint
+     *        Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming
+     *        software.
+     */
+
+    public void setIngestEndpoint(String ingestEndpoint) {
+        this.ingestEndpoint = ingestEndpoint;
+    }
+
+    /**
+     * <p>
+     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
+     * </p>
+     * 
+     * @return Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming
+     *         software.
+     */
+
+    public String getIngestEndpoint() {
+        return this.ingestEndpoint;
+    }
+
+    /**
+     * <p>
+     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
+     * </p>
+     * 
+     * @param ingestEndpoint
+     *        Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming
+     *        software.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Channel withIngestEndpoint(String ingestEndpoint) {
+        setIngestEndpoint(ingestEndpoint);
         return this;
     }
 
@@ -262,188 +317,81 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
-     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * Channel name.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Vertical resolution can be up to 1080 and bitrate
-     * can be up to 8.5 Mbps.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Vertical resolution can be up to 480 and bitrate can be up to 1.5 Mbps.
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @param type
-     *        Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable
-     *        resolution or bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>
-     *        . Valid values:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
-     *        viewers the best experience for their devices and network conditions. Vertical resolution can be up to
-     *        1080 and bitrate can be up to 8.5 Mbps.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
-     *        is limited to the original input. Vertical resolution can be up to 480 and bitrate can be up to 1.5 Mbps.
-     *        </p>
-     *        </li>
-     * @see ChannelType
+     * @param name
+     *        Channel name.
      */
 
-    public void setType(String type) {
-        this.type = type;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * <p>
-     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
-     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * Channel name.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Vertical resolution can be up to 1080 and bitrate
-     * can be up to 8.5 Mbps.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Vertical resolution can be up to 480 and bitrate can be up to 1.5 Mbps.
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable
-     *         resolution or bitrate, the stream probably will disconnect immediately.</i> Default:
-     *         <code>STANDARD</code>. Valid values:</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
-     *         viewers the best experience for their devices and network conditions. Vertical resolution can be up to
-     *         1080 and bitrate can be up to 8.5 Mbps.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
-     *         is limited to the original input. Vertical resolution can be up to 480 and bitrate can be up to 1.5 Mbps.
-     *         </p>
-     *         </li>
-     * @see ChannelType
+     * @return Channel name.
      */
 
-    public String getType() {
-        return this.type;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * <p>
-     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
-     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * Channel name.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Vertical resolution can be up to 1080 and bitrate
-     * can be up to 8.5 Mbps.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Vertical resolution can be up to 480 and bitrate can be up to 1.5 Mbps.
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @param type
-     *        Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable
-     *        resolution or bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>
-     *        . Valid values:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
-     *        viewers the best experience for their devices and network conditions. Vertical resolution can be up to
-     *        1080 and bitrate can be up to 8.5 Mbps.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
-     *        is limited to the original input. Vertical resolution can be up to 480 and bitrate can be up to 1.5 Mbps.
-     *        </p>
-     *        </li>
+     * @param name
+     *        Channel name.
      * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ChannelType
      */
 
-    public Channel withType(String type) {
-        setType(type);
+    public Channel withName(String name) {
+        setName(name);
         return this;
     }
 
     /**
      * <p>
-     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
-     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * Channel playback URL.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
-     * the best experience for their devices and network conditions. Vertical resolution can be up to 1080 and bitrate
-     * can be up to 8.5 Mbps.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
-     * limited to the original input. Vertical resolution can be up to 480 and bitrate can be up to 1.5 Mbps.
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @param type
-     *        Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable
-     *        resolution or bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>
-     *        . Valid values:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
-     *        viewers the best experience for their devices and network conditions. Vertical resolution can be up to
-     *        1080 and bitrate can be up to 8.5 Mbps.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
-     *        is limited to the original input. Vertical resolution can be up to 480 and bitrate can be up to 1.5 Mbps.
-     *        </p>
-     *        </li>
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see ChannelType
+     * @param playbackUrl
+     *        Channel playback URL.
      */
 
-    public Channel withType(ChannelType type) {
-        this.type = type.toString();
+    public void setPlaybackUrl(String playbackUrl) {
+        this.playbackUrl = playbackUrl;
+    }
+
+    /**
+     * <p>
+     * Channel playback URL.
+     * </p>
+     * 
+     * @return Channel playback URL.
+     */
+
+    public String getPlaybackUrl() {
+        return this.playbackUrl;
+    }
+
+    /**
+     * <p>
+     * Channel playback URL.
+     * </p>
+     * 
+     * @param playbackUrl
+     *        Channel playback URL.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Channel withPlaybackUrl(String playbackUrl) {
+        setPlaybackUrl(playbackUrl);
         return this;
     }
 
@@ -491,141 +439,6 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     public Channel withRecordingConfigurationArn(String recordingConfigurationArn) {
         setRecordingConfigurationArn(recordingConfigurationArn);
         return this;
-    }
-
-    /**
-     * <p>
-     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
-     * </p>
-     * 
-     * @param ingestEndpoint
-     *        Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming
-     *        software.
-     */
-
-    public void setIngestEndpoint(String ingestEndpoint) {
-        this.ingestEndpoint = ingestEndpoint;
-    }
-
-    /**
-     * <p>
-     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
-     * </p>
-     * 
-     * @return Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming
-     *         software.
-     */
-
-    public String getIngestEndpoint() {
-        return this.ingestEndpoint;
-    }
-
-    /**
-     * <p>
-     * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
-     * </p>
-     * 
-     * @param ingestEndpoint
-     *        Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming
-     *        software.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Channel withIngestEndpoint(String ingestEndpoint) {
-        setIngestEndpoint(ingestEndpoint);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Channel playback URL.
-     * </p>
-     * 
-     * @param playbackUrl
-     *        Channel playback URL.
-     */
-
-    public void setPlaybackUrl(String playbackUrl) {
-        this.playbackUrl = playbackUrl;
-    }
-
-    /**
-     * <p>
-     * Channel playback URL.
-     * </p>
-     * 
-     * @return Channel playback URL.
-     */
-
-    public String getPlaybackUrl() {
-        return this.playbackUrl;
-    }
-
-    /**
-     * <p>
-     * Channel playback URL.
-     * </p>
-     * 
-     * @param playbackUrl
-     *        Channel playback URL.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Channel withPlaybackUrl(String playbackUrl) {
-        setPlaybackUrl(playbackUrl);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     * </p>
-     * 
-     * @param authorized
-     *        Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     */
-
-    public void setAuthorized(Boolean authorized) {
-        this.authorized = authorized;
-    }
-
-    /**
-     * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     * </p>
-     * 
-     * @return Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     */
-
-    public Boolean getAuthorized() {
-        return this.authorized;
-    }
-
-    /**
-     * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     * </p>
-     * 
-     * @param authorized
-     *        Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public Channel withAuthorized(Boolean authorized) {
-        setAuthorized(authorized);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     * </p>
-     * 
-     * @return Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     */
-
-    public Boolean isAuthorized() {
-        return this.authorized;
     }
 
     /**
@@ -697,6 +510,197 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
+     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
+     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
+     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
+     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param type
+     *        Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable
+     *        resolution or bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>
+     *        . Valid values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
+     *        viewers the best experience for their devices and network conditions. Resolution can be up to 1080p and
+     *        bitrate can be up to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio
+     *        is passed through.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
+     *        is limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     *        </p>
+     *        </li>
+     * @see ChannelType
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
+     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
+     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
+     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
+     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable
+     *         resolution or bitrate, the stream probably will disconnect immediately.</i> Default:
+     *         <code>STANDARD</code>. Valid values:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
+     *         viewers the best experience for their devices and network conditions. Resolution can be up to 1080p and
+     *         bitrate can be up to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio
+     *         is passed through.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
+     *         is limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     *         </p>
+     *         </li>
+     * @see ChannelType
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
+     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
+     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
+     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
+     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param type
+     *        Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable
+     *        resolution or bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>
+     *        . Valid values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
+     *        viewers the best experience for their devices and network conditions. Resolution can be up to 1080p and
+     *        bitrate can be up to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio
+     *        is passed through.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
+     *        is limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ChannelType
+     */
+
+    public Channel withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable resolution or
+     * bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>. Valid values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give viewers
+     * the best experience for their devices and network conditions. Resolution can be up to 1080p and bitrate can be up
+     * to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio is passed through.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice is
+     * limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param type
+     *        Channel type, which determines the allowable resolution and bitrate. <i>If you exceed the allowable
+     *        resolution or bitrate, the stream probably will disconnect immediately.</i> Default: <code>STANDARD</code>
+     *        . Valid values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>STANDARD</code>: Multiple qualities are generated from the original input, to automatically give
+     *        viewers the best experience for their devices and network conditions. Resolution can be up to 1080p and
+     *        bitrate can be up to 8.5 Mbps. Audio is transcoded only for renditions 360p and below; above that, audio
+     *        is passed through.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>BASIC</code>: Amazon IVS delivers the original input to viewers. The viewer’s video-quality choice
+     *        is limited to the original input. Resolution can be up to 480p and bitrate can be up to 1.5 Mbps.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ChannelType
+     */
+
+    public Channel withType(ChannelType type) {
+        this.type = type.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -710,22 +714,22 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getLatencyMode() != null)
-            sb.append("LatencyMode: ").append(getLatencyMode()).append(",");
-        if (getType() != null)
-            sb.append("Type: ").append(getType()).append(",");
-        if (getRecordingConfigurationArn() != null)
-            sb.append("RecordingConfigurationArn: ").append(getRecordingConfigurationArn()).append(",");
-        if (getIngestEndpoint() != null)
-            sb.append("IngestEndpoint: ").append(getIngestEndpoint()).append(",");
-        if (getPlaybackUrl() != null)
-            sb.append("PlaybackUrl: ").append(getPlaybackUrl()).append(",");
         if (getAuthorized() != null)
             sb.append("Authorized: ").append(getAuthorized()).append(",");
+        if (getIngestEndpoint() != null)
+            sb.append("IngestEndpoint: ").append(getIngestEndpoint()).append(",");
+        if (getLatencyMode() != null)
+            sb.append("LatencyMode: ").append(getLatencyMode()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
+        if (getPlaybackUrl() != null)
+            sb.append("PlaybackUrl: ").append(getPlaybackUrl()).append(",");
+        if (getRecordingConfigurationArn() != null)
+            sb.append("RecordingConfigurationArn: ").append(getRecordingConfigurationArn()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -744,37 +748,37 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
+        if (other.getAuthorized() == null ^ this.getAuthorized() == null)
             return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
-        if (other.getLatencyMode() == null ^ this.getLatencyMode() == null)
-            return false;
-        if (other.getLatencyMode() != null && other.getLatencyMode().equals(this.getLatencyMode()) == false)
-            return false;
-        if (other.getType() == null ^ this.getType() == null)
-            return false;
-        if (other.getType() != null && other.getType().equals(this.getType()) == false)
-            return false;
-        if (other.getRecordingConfigurationArn() == null ^ this.getRecordingConfigurationArn() == null)
-            return false;
-        if (other.getRecordingConfigurationArn() != null && other.getRecordingConfigurationArn().equals(this.getRecordingConfigurationArn()) == false)
+        if (other.getAuthorized() != null && other.getAuthorized().equals(this.getAuthorized()) == false)
             return false;
         if (other.getIngestEndpoint() == null ^ this.getIngestEndpoint() == null)
             return false;
         if (other.getIngestEndpoint() != null && other.getIngestEndpoint().equals(this.getIngestEndpoint()) == false)
             return false;
+        if (other.getLatencyMode() == null ^ this.getLatencyMode() == null)
+            return false;
+        if (other.getLatencyMode() != null && other.getLatencyMode().equals(this.getLatencyMode()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
         if (other.getPlaybackUrl() == null ^ this.getPlaybackUrl() == null)
             return false;
         if (other.getPlaybackUrl() != null && other.getPlaybackUrl().equals(this.getPlaybackUrl()) == false)
             return false;
-        if (other.getAuthorized() == null ^ this.getAuthorized() == null)
+        if (other.getRecordingConfigurationArn() == null ^ this.getRecordingConfigurationArn() == null)
             return false;
-        if (other.getAuthorized() != null && other.getAuthorized().equals(this.getAuthorized()) == false)
+        if (other.getRecordingConfigurationArn() != null && other.getRecordingConfigurationArn().equals(this.getRecordingConfigurationArn()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
         return true;
     }
@@ -785,14 +789,14 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getLatencyMode() == null) ? 0 : getLatencyMode().hashCode());
-        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
-        hashCode = prime * hashCode + ((getRecordingConfigurationArn() == null) ? 0 : getRecordingConfigurationArn().hashCode());
-        hashCode = prime * hashCode + ((getIngestEndpoint() == null) ? 0 : getIngestEndpoint().hashCode());
-        hashCode = prime * hashCode + ((getPlaybackUrl() == null) ? 0 : getPlaybackUrl().hashCode());
         hashCode = prime * hashCode + ((getAuthorized() == null) ? 0 : getAuthorized().hashCode());
+        hashCode = prime * hashCode + ((getIngestEndpoint() == null) ? 0 : getIngestEndpoint().hashCode());
+        hashCode = prime * hashCode + ((getLatencyMode() == null) ? 0 : getLatencyMode().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getPlaybackUrl() == null) ? 0 : getPlaybackUrl().hashCode());
+        hashCode = prime * hashCode + ((getRecordingConfigurationArn() == null) ? 0 : getRecordingConfigurationArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

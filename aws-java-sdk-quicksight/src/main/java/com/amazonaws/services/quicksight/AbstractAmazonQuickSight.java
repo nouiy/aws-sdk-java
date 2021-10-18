@@ -278,6 +278,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
     }
 
     @Override
+    public DescribeIpRestrictionResult describeIpRestriction(DescribeIpRestrictionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeNamespaceResult describeNamespace(DescribeNamespaceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -554,6 +559,11 @@ public class AbstractAmazonQuickSight implements AmazonQuickSight {
 
     @Override
     public UpdateIAMPolicyAssignmentResult updateIAMPolicyAssignment(UpdateIAMPolicyAssignmentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateIpRestrictionResult updateIpRestriction(UpdateIpRestrictionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

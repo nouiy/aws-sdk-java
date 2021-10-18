@@ -23,63 +23,14 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /** <p/> */
+    private java.util.List<BatchError> errors;
+    /** <p/> */
     private java.util.List<StreamKey> streamKeys;
 
-    private java.util.List<BatchError> errors;
-
     /**
-     * @return
-     */
-
-    public java.util.List<StreamKey> getStreamKeys() {
-        return streamKeys;
-    }
-
-    /**
-     * @param streamKeys
-     */
-
-    public void setStreamKeys(java.util.Collection<StreamKey> streamKeys) {
-        if (streamKeys == null) {
-            this.streamKeys = null;
-            return;
-        }
-
-        this.streamKeys = new java.util.ArrayList<StreamKey>(streamKeys);
-    }
-
-    /**
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setStreamKeys(java.util.Collection)} or {@link #withStreamKeys(java.util.Collection)} if you want to
-     * override the existing values.
-     * </p>
+     * <p/>
      * 
-     * @param streamKeys
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchGetStreamKeyResult withStreamKeys(StreamKey... streamKeys) {
-        if (this.streamKeys == null) {
-            setStreamKeys(new java.util.ArrayList<StreamKey>(streamKeys.length));
-        }
-        for (StreamKey ele : streamKeys) {
-            this.streamKeys.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * @param streamKeys
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public BatchGetStreamKeyResult withStreamKeys(java.util.Collection<StreamKey> streamKeys) {
-        setStreamKeys(streamKeys);
-        return this;
-    }
-
-    /**
      * @return
      */
 
@@ -88,6 +39,8 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p/>
+     * 
      * @param errors
      */
 
@@ -101,6 +54,7 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p/>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setErrors(java.util.Collection)} or {@link #withErrors(java.util.Collection)} if you want to override the
@@ -122,12 +76,73 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
     }
 
     /**
+     * <p/>
+     * 
      * @param errors
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public BatchGetStreamKeyResult withErrors(java.util.Collection<BatchError> errors) {
         setErrors(errors);
+        return this;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @return
+     */
+
+    public java.util.List<StreamKey> getStreamKeys() {
+        return streamKeys;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param streamKeys
+     */
+
+    public void setStreamKeys(java.util.Collection<StreamKey> streamKeys) {
+        if (streamKeys == null) {
+            this.streamKeys = null;
+            return;
+        }
+
+        this.streamKeys = new java.util.ArrayList<StreamKey>(streamKeys);
+    }
+
+    /**
+     * <p/>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setStreamKeys(java.util.Collection)} or {@link #withStreamKeys(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param streamKeys
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchGetStreamKeyResult withStreamKeys(StreamKey... streamKeys) {
+        if (this.streamKeys == null) {
+            setStreamKeys(new java.util.ArrayList<StreamKey>(streamKeys.length));
+        }
+        for (StreamKey ele : streamKeys) {
+            this.streamKeys.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param streamKeys
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchGetStreamKeyResult withStreamKeys(java.util.Collection<StreamKey> streamKeys) {
+        setStreamKeys(streamKeys);
         return this;
     }
 
@@ -143,10 +158,10 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getStreamKeys() != null)
-            sb.append("StreamKeys: ").append(getStreamKeys()).append(",");
         if (getErrors() != null)
-            sb.append("Errors: ").append(getErrors());
+            sb.append("Errors: ").append(getErrors()).append(",");
+        if (getStreamKeys() != null)
+            sb.append("StreamKeys: ").append(getStreamKeys());
         sb.append("}");
         return sb.toString();
     }
@@ -161,13 +176,13 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
         if (obj instanceof BatchGetStreamKeyResult == false)
             return false;
         BatchGetStreamKeyResult other = (BatchGetStreamKeyResult) obj;
-        if (other.getStreamKeys() == null ^ this.getStreamKeys() == null)
-            return false;
-        if (other.getStreamKeys() != null && other.getStreamKeys().equals(this.getStreamKeys()) == false)
-            return false;
         if (other.getErrors() == null ^ this.getErrors() == null)
             return false;
         if (other.getErrors() != null && other.getErrors().equals(this.getErrors()) == false)
+            return false;
+        if (other.getStreamKeys() == null ^ this.getStreamKeys() == null)
+            return false;
+        if (other.getStreamKeys() != null && other.getStreamKeys().equals(this.getStreamKeys()) == false)
             return false;
         return true;
     }
@@ -177,8 +192,8 @@ public class BatchGetStreamKeyResult extends com.amazonaws.AmazonWebServiceResul
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getStreamKeys() == null) ? 0 : getStreamKeys().hashCode());
         hashCode = prime * hashCode + ((getErrors() == null) ? 0 : getErrors().hashCode());
+        hashCode = prime * hashCode + ((getStreamKeys() == null) ? 0 : getStreamKeys().hashCode());
         return hashCode;
     }
 

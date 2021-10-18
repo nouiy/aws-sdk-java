@@ -33,7 +33,7 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String awsAccountId;
     /**
      * <p>
-     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
+     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region for each Amazon
      * Web Services account.
      * </p>
      */
@@ -151,12 +151,12 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
+     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region for each Amazon
      * Web Services account.
      * </p>
      * 
      * @param dataSetId
-     *        An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
+     *        An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region for each
      *        Amazon Web Services account.
      */
 
@@ -166,11 +166,11 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
+     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region for each Amazon
      * Web Services account.
      * </p>
      * 
-     * @return An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
+     * @return An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region for each
      *         Amazon Web Services account.
      */
 
@@ -180,12 +180,12 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
+     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region for each Amazon
      * Web Services account.
      * </p>
      * 
      * @param dataSetId
-     *        An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
+     *        An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region for each
      *        Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

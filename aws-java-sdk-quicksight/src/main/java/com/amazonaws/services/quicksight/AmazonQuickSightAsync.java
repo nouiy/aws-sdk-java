@@ -68,7 +68,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Creates Amazon QuickSight customizations the current Amazon Web Services Region;. Currently, you can add a custom
+     * Creates Amazon QuickSight customizations the current Amazon Web Services Region. Currently, you can add a custom
      * default theme by using the <code>CreateAccountCustomization</code> or <code>UpdateAccountCustomization</code> API
      * operation. To further customize Amazon QuickSight by removing Amazon QuickSight sample assets and videos for all
      * new users, see <a
@@ -100,7 +100,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Creates Amazon QuickSight customizations the current Amazon Web Services Region;. Currently, you can add a custom
+     * Creates Amazon QuickSight customizations the current Amazon Web Services Region. Currently, you can add a custom
      * default theme by using the <code>CreateAccountCustomization</code> or <code>UpdateAccountCustomization</code> API
      * operation. To further customize Amazon QuickSight by removing Amazon QuickSight sample assets and videos for all
      * new users, see <a
@@ -696,7 +696,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Deletes all Amazon QuickSight customizations in this Amazon Web Services Region; for the specified Amazon Web
+     * Deletes all Amazon QuickSight customizations in this Amazon Web Services Region for the specified Amazon Web
      * Services account and Amazon QuickSight namespace.
      * </p>
      * 
@@ -711,7 +711,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Deletes all Amazon QuickSight customizations in this Amazon Web Services Region; for the specified Amazon Web
+     * Deletes all Amazon QuickSight customizations in this Amazon Web Services Region for the specified Amazon Web
      * Services account and Amazon QuickSight namespace.
      * </p>
      * 
@@ -1266,7 +1266,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
     /**
      * <p>
      * Describes the customizations associated with the provided Amazon Web Services account and Amazon Amazon
-     * QuickSight namespace in an Amazon Web Services Region;. The Amazon QuickSight console evaluates which
+     * QuickSight namespace in an Amazon Web Services Region. The Amazon QuickSight console evaluates which
      * customizations to apply by running this API operation with the <code>Resolved</code> flag included.
      * </p>
      * <p>
@@ -1277,20 +1277,20 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * <li>
      * <p>
      * <code>Amazon Web Services account</code> - The Amazon Web Services account exists at the top of the hierarchy. It
-     * has the potential to use all of the Amazon Web Services Regions; and AWS Services. When you subscribe to Amazon
-     * QuickSight, you choose one Amazon Web Services Region; to use as your home Region. That's where your free SPICE
-     * capacity is located. You can use Amazon QuickSight in any supported Amazon Web Services Region;.
+     * has the potential to use all of the Amazon Web Services Regions and AWS Services. When you subscribe to Amazon
+     * QuickSight, you choose one Amazon Web Services Region to use as your home Region. That's where your free SPICE
+     * capacity is located. You can use Amazon QuickSight in any supported Amazon Web Services Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Amazon Web Services Region;</code> - In each Amazon Web Services Region; where you sign in to Amazon
+     * <code>Amazon Web Services Region</code> - In each Amazon Web Services Region where you sign in to Amazon
      * QuickSight at least once, Amazon QuickSight acts as a separate instance of the same service. If you have a user
      * directory, it resides in us-east-1, which is the US East (N. Virginia). Generally speaking, these users have
-     * access to Amazon QuickSight in any Amazon Web Services Region;, unless they are constrained to a namespace.
+     * access to Amazon QuickSight in any Amazon Web Services Region, unless they are constrained to a namespace.
      * </p>
      * <p>
-     * To run the command in a different Amazon Web Services Region;, you change your Region settings. If you're using
+     * To run the command in a different Amazon Web Services Region, you change your Region settings. If you're using
      * the AWS CLI, you can use one of the following options:
      * </p>
      * <ul>
@@ -1307,7 +1307,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * </li>
      * <li>
      * <p>
-     * Run <code>aws configure</code> to change your default Amazon Web Services Region;. Use Enter to key the same
+     * Run <code>aws configure</code> to change your default Amazon Web Services Region. Use Enter to key the same
      * settings for your keys. For more information, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">Configuring the AWS CLI</a>.
      * </p>
@@ -1320,16 +1320,16 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * sources, datasets, dashboards, and so on). To access assets that are in a specific namespace, users and groups
      * must also be part of the same namespace. People who share a namespace are completely isolated from users and
      * assets in other namespaces, even if they are in the same Amazon Web Services account and Amazon Web Services
-     * Region;.
+     * Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Applied customizations</code> - Within an Amazon Web Services Region;, a set of Amazon QuickSight
+     * <code>Applied customizations</code> - Within an Amazon Web Services Region, a set of Amazon QuickSight
      * customizations can apply to an Amazon Web Services account or to a namespace. Settings that you apply to a
      * namespace override settings that you apply to an Amazon Web Services account. All settings are isolated to a
-     * single Amazon Web Services Region;. To apply them in other Amazon Web Services Regions;, run the
-     * <code>CreateAccountCustomization</code> command in each Amazon Web Services Region; where you want to apply the
+     * single Amazon Web Services Region. To apply them in other Amazon Web Services Regions, run the
+     * <code>CreateAccountCustomization</code> command in each Amazon Web Services Region where you want to apply the
      * same customizations.
      * </p>
      * </li>
@@ -1348,7 +1348,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
     /**
      * <p>
      * Describes the customizations associated with the provided Amazon Web Services account and Amazon Amazon
-     * QuickSight namespace in an Amazon Web Services Region;. The Amazon QuickSight console evaluates which
+     * QuickSight namespace in an Amazon Web Services Region. The Amazon QuickSight console evaluates which
      * customizations to apply by running this API operation with the <code>Resolved</code> flag included.
      * </p>
      * <p>
@@ -1359,20 +1359,20 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * <li>
      * <p>
      * <code>Amazon Web Services account</code> - The Amazon Web Services account exists at the top of the hierarchy. It
-     * has the potential to use all of the Amazon Web Services Regions; and AWS Services. When you subscribe to Amazon
-     * QuickSight, you choose one Amazon Web Services Region; to use as your home Region. That's where your free SPICE
-     * capacity is located. You can use Amazon QuickSight in any supported Amazon Web Services Region;.
+     * has the potential to use all of the Amazon Web Services Regions and AWS Services. When you subscribe to Amazon
+     * QuickSight, you choose one Amazon Web Services Region to use as your home Region. That's where your free SPICE
+     * capacity is located. You can use Amazon QuickSight in any supported Amazon Web Services Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Amazon Web Services Region;</code> - In each Amazon Web Services Region; where you sign in to Amazon
+     * <code>Amazon Web Services Region</code> - In each Amazon Web Services Region where you sign in to Amazon
      * QuickSight at least once, Amazon QuickSight acts as a separate instance of the same service. If you have a user
      * directory, it resides in us-east-1, which is the US East (N. Virginia). Generally speaking, these users have
-     * access to Amazon QuickSight in any Amazon Web Services Region;, unless they are constrained to a namespace.
+     * access to Amazon QuickSight in any Amazon Web Services Region, unless they are constrained to a namespace.
      * </p>
      * <p>
-     * To run the command in a different Amazon Web Services Region;, you change your Region settings. If you're using
+     * To run the command in a different Amazon Web Services Region, you change your Region settings. If you're using
      * the AWS CLI, you can use one of the following options:
      * </p>
      * <ul>
@@ -1389,7 +1389,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * </li>
      * <li>
      * <p>
-     * Run <code>aws configure</code> to change your default Amazon Web Services Region;. Use Enter to key the same
+     * Run <code>aws configure</code> to change your default Amazon Web Services Region. Use Enter to key the same
      * settings for your keys. For more information, see <a
      * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html">Configuring the AWS CLI</a>.
      * </p>
@@ -1402,16 +1402,16 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      * sources, datasets, dashboards, and so on). To access assets that are in a specific namespace, users and groups
      * must also be part of the same namespace. People who share a namespace are completely isolated from users and
      * assets in other namespaces, even if they are in the same Amazon Web Services account and Amazon Web Services
-     * Region;.
+     * Region.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Applied customizations</code> - Within an Amazon Web Services Region;, a set of Amazon QuickSight
+     * <code>Applied customizations</code> - Within an Amazon Web Services Region, a set of Amazon QuickSight
      * customizations can apply to an Amazon Web Services account or to a namespace. Settings that you apply to a
      * namespace override settings that you apply to an Amazon Web Services account. All settings are isolated to a
-     * single Amazon Web Services Region;. To apply them in other Amazon Web Services Regions;, run the
-     * <code>CreateAccountCustomization</code> command in each Amazon Web Services Region; where you want to apply the
+     * single Amazon Web Services Region. To apply them in other Amazon Web Services Regions, run the
+     * <code>CreateAccountCustomization</code> command in each Amazon Web Services Region where you want to apply the
      * same customizations.
      * </p>
      * </li>
@@ -1926,6 +1926,37 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
      */
     java.util.concurrent.Future<DescribeIngestionResult> describeIngestionAsync(DescribeIngestionRequest describeIngestionRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeIngestionRequest, DescribeIngestionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Provides a summary and status of IP Rules.
+     * </p>
+     * 
+     * @param describeIpRestrictionRequest
+     * @return A Java Future containing the result of the DescribeIpRestriction operation returned by the service.
+     * @sample AmazonQuickSightAsync.DescribeIpRestriction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeIpRestriction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpRestrictionResult> describeIpRestrictionAsync(DescribeIpRestrictionRequest describeIpRestrictionRequest);
+
+    /**
+     * <p>
+     * Provides a summary and status of IP Rules.
+     * </p>
+     * 
+     * @param describeIpRestrictionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeIpRestriction operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.DescribeIpRestriction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/DescribeIpRestriction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeIpRestrictionResult> describeIpRestrictionAsync(DescribeIpRestrictionRequest describeIpRestrictionRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeIpRestrictionRequest, DescribeIpRestrictionResult> asyncHandler);
 
     /**
      * <p>
@@ -2678,7 +2709,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Lists all of the datasets belonging to the current Amazon Web Services account in an Amazon Web Services Region;.
+     * Lists all of the datasets belonging to the current Amazon Web Services account in an Amazon Web Services Region.
      * </p>
      * <p>
      * The permissions resource is <code>arn:aws:quicksight:region:aws-account-id:dataset/*</code>.
@@ -2694,7 +2725,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Lists all of the datasets belonging to the current Amazon Web Services account in an Amazon Web Services Region;.
+     * Lists all of the datasets belonging to the current Amazon Web Services account in an Amazon Web Services Region.
      * </p>
      * <p>
      * The permissions resource is <code>arn:aws:quicksight:region:aws-account-id:dataset/*</code>.
@@ -2715,7 +2746,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Lists data sources in current Amazon Web Services Region; that belong to this Amazon Web Services account.
+     * Lists data sources in current Amazon Web Services Region that belong to this Amazon Web Services account.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -2728,7 +2759,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Lists data sources in current Amazon Web Services Region; that belong to this Amazon Web Services account.
+     * Lists data sources in current Amazon Web Services Region that belong to this Amazon Web Services account.
      * </p>
      * 
      * @param listDataSourcesRequest
@@ -3578,7 +3609,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Updates Amazon QuickSight customizations the current Amazon Web Services Region;. Currently, the only
+     * Updates Amazon QuickSight customizations the current Amazon Web Services Region. Currently, the only
      * customization you can use is a theme.
      * </p>
      * <p>
@@ -3599,7 +3630,7 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
 
     /**
      * <p>
-     * Updates Amazon QuickSight customizations the current Amazon Web Services Region;. Currently, the only
+     * Updates Amazon QuickSight customizations the current Amazon Web Services Region. Currently, the only
      * customization you can use is a theme.
      * </p>
      * <p>
@@ -4088,6 +4119,37 @@ public interface AmazonQuickSightAsync extends AmazonQuickSight {
     java.util.concurrent.Future<UpdateIAMPolicyAssignmentResult> updateIAMPolicyAssignmentAsync(
             UpdateIAMPolicyAssignmentRequest updateIAMPolicyAssignmentRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateIAMPolicyAssignmentRequest, UpdateIAMPolicyAssignmentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates content and status of IP Rules.
+     * </p>
+     * 
+     * @param updateIpRestrictionRequest
+     * @return A Java Future containing the result of the UpdateIpRestriction operation returned by the service.
+     * @sample AmazonQuickSightAsync.UpdateIpRestriction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateIpRestriction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIpRestrictionResult> updateIpRestrictionAsync(UpdateIpRestrictionRequest updateIpRestrictionRequest);
+
+    /**
+     * <p>
+     * Updates content and status of IP Rules.
+     * </p>
+     * 
+     * @param updateIpRestrictionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateIpRestriction operation returned by the service.
+     * @sample AmazonQuickSightAsyncHandler.UpdateIpRestriction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/UpdateIpRestriction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateIpRestrictionResult> updateIpRestrictionAsync(UpdateIpRestrictionRequest updateIpRestrictionRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateIpRestrictionRequest, UpdateIpRestrictionResult> asyncHandler);
 
     /**
      * <p>

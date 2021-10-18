@@ -15,7 +15,7 @@ package com.amazonaws.services.ivs.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p/>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ChannelNotBroadcastingException extends com.amazonaws.services.ivs.model.AmazonIVSException {

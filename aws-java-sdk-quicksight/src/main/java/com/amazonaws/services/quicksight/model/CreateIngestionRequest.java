@@ -43,6 +43,12 @@ public class CreateIngestionRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String awsAccountId;
+    /**
+     * <p>
+     * The type of ingestion that you want to create.
+     * </p>
+     */
+    private String ingestionType;
 
     /**
      * <p>
@@ -165,6 +171,65 @@ public class CreateIngestionRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * The type of ingestion that you want to create.
+     * </p>
+     * 
+     * @param ingestionType
+     *        The type of ingestion that you want to create.
+     * @see IngestionType
+     */
+
+    public void setIngestionType(String ingestionType) {
+        this.ingestionType = ingestionType;
+    }
+
+    /**
+     * <p>
+     * The type of ingestion that you want to create.
+     * </p>
+     * 
+     * @return The type of ingestion that you want to create.
+     * @see IngestionType
+     */
+
+    public String getIngestionType() {
+        return this.ingestionType;
+    }
+
+    /**
+     * <p>
+     * The type of ingestion that you want to create.
+     * </p>
+     * 
+     * @param ingestionType
+     *        The type of ingestion that you want to create.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IngestionType
+     */
+
+    public CreateIngestionRequest withIngestionType(String ingestionType) {
+        setIngestionType(ingestionType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of ingestion that you want to create.
+     * </p>
+     * 
+     * @param ingestionType
+     *        The type of ingestion that you want to create.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see IngestionType
+     */
+
+    public CreateIngestionRequest withIngestionType(IngestionType ingestionType) {
+        this.ingestionType = ingestionType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +246,9 @@ public class CreateIngestionRequest extends com.amazonaws.AmazonWebServiceReques
         if (getIngestionId() != null)
             sb.append("IngestionId: ").append(getIngestionId()).append(",");
         if (getAwsAccountId() != null)
-            sb.append("AwsAccountId: ").append(getAwsAccountId());
+            sb.append("AwsAccountId: ").append(getAwsAccountId()).append(",");
+        if (getIngestionType() != null)
+            sb.append("IngestionType: ").append(getIngestionType());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +275,10 @@ public class CreateIngestionRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getAwsAccountId() != null && other.getAwsAccountId().equals(this.getAwsAccountId()) == false)
             return false;
+        if (other.getIngestionType() == null ^ this.getIngestionType() == null)
+            return false;
+        if (other.getIngestionType() != null && other.getIngestionType().equals(this.getIngestionType()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +290,7 @@ public class CreateIngestionRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getDataSetId() == null) ? 0 : getDataSetId().hashCode());
         hashCode = prime * hashCode + ((getIngestionId() == null) ? 0 : getIngestionId().hashCode());
         hashCode = prime * hashCode + ((getAwsAccountId() == null) ? 0 : getAwsAccountId().hashCode());
+        hashCode = prime * hashCode + ((getIngestionType() == null) ? 0 : getIngestionType().hashCode());
         return hashCode;
     }
 

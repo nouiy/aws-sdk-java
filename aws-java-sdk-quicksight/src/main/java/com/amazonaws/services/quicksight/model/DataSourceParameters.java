@@ -31,7 +31,7 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for Elasticsearch.
+     * The parameters for OpenSearch.
      * </p>
      */
     private AmazonElasticsearchParameters amazonElasticsearchParameters;
@@ -154,11 +154,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for Elasticsearch.
+     * The parameters for OpenSearch.
      * </p>
      * 
      * @param amazonElasticsearchParameters
-     *        The parameters for Elasticsearch.
+     *        The parameters for OpenSearch.
      */
 
     public void setAmazonElasticsearchParameters(AmazonElasticsearchParameters amazonElasticsearchParameters) {
@@ -167,10 +167,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for Elasticsearch.
+     * The parameters for OpenSearch.
      * </p>
      * 
-     * @return The parameters for Elasticsearch.
+     * @return The parameters for OpenSearch.
      */
 
     public AmazonElasticsearchParameters getAmazonElasticsearchParameters() {
@@ -179,11 +179,11 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The parameters for Elasticsearch.
+     * The parameters for OpenSearch.
      * </p>
      * 
      * @param amazonElasticsearchParameters
-     *        The parameters for Elasticsearch.
+     *        The parameters for OpenSearch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

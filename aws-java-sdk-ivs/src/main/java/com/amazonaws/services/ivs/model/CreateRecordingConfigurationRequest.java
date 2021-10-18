@@ -27,69 +27,22 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * An arbitrary string (a nickname) that helps the customer identify that resource. The value does not need to be
-     * unique.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
      * A complex type that contains a destination configuration for where recorded video will be stored.
      * </p>
      */
     private DestinationConfiguration destinationConfiguration;
     /**
      * <p>
+     * Recording-configuration name. The value does not need to be unique.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
      * Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.
      * </p>
      */
     private java.util.Map<String, String> tags;
-
-    /**
-     * <p>
-     * An arbitrary string (a nickname) that helps the customer identify that resource. The value does not need to be
-     * unique.
-     * </p>
-     * 
-     * @param name
-     *        An arbitrary string (a nickname) that helps the customer identify that resource. The value does not need
-     *        to be unique.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * An arbitrary string (a nickname) that helps the customer identify that resource. The value does not need to be
-     * unique.
-     * </p>
-     * 
-     * @return An arbitrary string (a nickname) that helps the customer identify that resource. The value does not need
-     *         to be unique.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * An arbitrary string (a nickname) that helps the customer identify that resource. The value does not need to be
-     * unique.
-     * </p>
-     * 
-     * @param name
-     *        An arbitrary string (a nickname) that helps the customer identify that resource. The value does not need
-     *        to be unique.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public CreateRecordingConfigurationRequest withName(String name) {
-        setName(name);
-        return this;
-    }
 
     /**
      * <p>
@@ -128,6 +81,46 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
 
     public CreateRecordingConfigurationRequest withDestinationConfiguration(DestinationConfiguration destinationConfiguration) {
         setDestinationConfiguration(destinationConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Recording-configuration name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Recording-configuration name. The value does not need to be unique.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Recording-configuration name. The value does not need to be unique.
+     * </p>
+     * 
+     * @return Recording-configuration name. The value does not need to be unique.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Recording-configuration name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Recording-configuration name. The value does not need to be unique.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateRecordingConfigurationRequest withName(String name) {
+        setName(name);
         return this;
     }
 
@@ -211,10 +204,10 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
         if (getDestinationConfiguration() != null)
             sb.append("DestinationConfiguration: ").append(getDestinationConfiguration()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -231,13 +224,13 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
         if (obj instanceof CreateRecordingConfigurationRequest == false)
             return false;
         CreateRecordingConfigurationRequest other = (CreateRecordingConfigurationRequest) obj;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
         if (other.getDestinationConfiguration() == null ^ this.getDestinationConfiguration() == null)
             return false;
         if (other.getDestinationConfiguration() != null && other.getDestinationConfiguration().equals(this.getDestinationConfiguration()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -251,8 +244,8 @@ public class CreateRecordingConfigurationRequest extends com.amazonaws.AmazonWeb
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getDestinationConfiguration() == null) ? 0 : getDestinationConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

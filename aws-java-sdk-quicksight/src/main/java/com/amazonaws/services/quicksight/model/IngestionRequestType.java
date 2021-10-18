@@ -15,7 +15,7 @@ package com.amazonaws.services.quicksight.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * This defines the type of ingestion request. This is returned as part of create ingestion response.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum IngestionRequestType {

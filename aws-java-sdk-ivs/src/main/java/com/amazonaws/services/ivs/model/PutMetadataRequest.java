@@ -133,7 +133,7 @@ public class PutMetadataRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
         if (getMetadata() != null)
-            sb.append("Metadata: ").append(getMetadata());
+            sb.append("Metadata: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

@@ -34,7 +34,7 @@ public class CreateIngestionRequestProtocolMarshaller implements Marshaller<Requ
 
     private static final OperationInfo SDK_OPERATION_BINDING = OperationInfo.builder().protocol(Protocol.REST_JSON)
             .requestUri("/accounts/{AwsAccountId}/data-sets/{DataSetId}/ingestions/{IngestionId}").httpMethodName(HttpMethodName.PUT)
-            .hasExplicitPayloadMember(false).hasPayloadMembers(false).serviceName("AmazonQuickSight").build();
+            .hasExplicitPayloadMember(false).hasPayloadMembers(true).serviceName("AmazonQuickSight").build();
 
     private final com.amazonaws.protocol.json.SdkJsonProtocolFactory protocolFactory;
 

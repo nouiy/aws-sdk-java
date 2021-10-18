@@ -36,10 +36,10 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * Channel name.
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * </p>
      */
-    private String name;
+    private Boolean authorized;
     /**
      * <p>
      * Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use
@@ -50,10 +50,10 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
     private String latencyMode;
     /**
      * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     * Channel name.
      * </p>
      */
-    private Boolean authorized;
+    private String name;
     /**
      * <p>
      * Recording-configuration ARN. A value other than an empty string indicates that recording is enabled. Default: ""
@@ -110,42 +110,54 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Channel name.
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * </p>
      * 
-     * @param name
-     *        Channel name.
+     * @param authorized
+     *        Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      */
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAuthorized(Boolean authorized) {
+        this.authorized = authorized;
     }
 
     /**
      * <p>
-     * Channel name.
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * </p>
      * 
-     * @return Channel name.
+     * @return Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      */
 
-    public String getName() {
-        return this.name;
+    public Boolean getAuthorized() {
+        return this.authorized;
     }
 
     /**
      * <p>
-     * Channel name.
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * </p>
      * 
-     * @param name
-     *        Channel name.
+     * @param authorized
+     *        Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ChannelSummary withName(String name) {
-        setName(name);
+    public ChannelSummary withAuthorized(Boolean authorized) {
+        setAuthorized(authorized);
         return this;
+    }
+
+    /**
+     * <p>
+     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     * </p>
+     * 
+     * @return Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     */
+
+    public Boolean isAuthorized() {
+        return this.authorized;
     }
 
     /**
@@ -229,54 +241,42 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     * Channel name.
      * </p>
      * 
-     * @param authorized
-     *        Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     * @param name
+     *        Channel name.
      */
 
-    public void setAuthorized(Boolean authorized) {
-        this.authorized = authorized;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
      * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     * Channel name.
      * </p>
      * 
-     * @return Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     * @return Channel name.
      */
 
-    public Boolean getAuthorized() {
-        return this.authorized;
+    public String getName() {
+        return this.name;
     }
 
     /**
      * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     * Channel name.
      * </p>
      * 
-     * @param authorized
-     *        Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
+     * @param name
+     *        Channel name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
-    public ChannelSummary withAuthorized(Boolean authorized) {
-        setAuthorized(authorized);
+    public ChannelSummary withName(String name) {
+        setName(name);
         return this;
-    }
-
-    /**
-     * <p>
-     * Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     * </p>
-     * 
-     * @return Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
-     */
-
-    public Boolean isAuthorized() {
-        return this.authorized;
     }
 
     /**
@@ -407,12 +407,12 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
-        if (getLatencyMode() != null)
-            sb.append("LatencyMode: ").append(getLatencyMode()).append(",");
         if (getAuthorized() != null)
             sb.append("Authorized: ").append(getAuthorized()).append(",");
+        if (getLatencyMode() != null)
+            sb.append("LatencyMode: ").append(getLatencyMode()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getRecordingConfigurationArn() != null)
             sb.append("RecordingConfigurationArn: ").append(getRecordingConfigurationArn()).append(",");
         if (getTags() != null)
@@ -435,17 +435,17 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
+        if (other.getAuthorized() == null ^ this.getAuthorized() == null)
             return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+        if (other.getAuthorized() != null && other.getAuthorized().equals(this.getAuthorized()) == false)
             return false;
         if (other.getLatencyMode() == null ^ this.getLatencyMode() == null)
             return false;
         if (other.getLatencyMode() != null && other.getLatencyMode().equals(this.getLatencyMode()) == false)
             return false;
-        if (other.getAuthorized() == null ^ this.getAuthorized() == null)
+        if (other.getName() == null ^ this.getName() == null)
             return false;
-        if (other.getAuthorized() != null && other.getAuthorized().equals(this.getAuthorized()) == false)
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getRecordingConfigurationArn() == null ^ this.getRecordingConfigurationArn() == null)
             return false;
@@ -464,9 +464,9 @@ public class ChannelSummary implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
-        hashCode = prime * hashCode + ((getLatencyMode() == null) ? 0 : getLatencyMode().hashCode());
         hashCode = prime * hashCode + ((getAuthorized() == null) ? 0 : getAuthorized().hashCode());
+        hashCode = prime * hashCode + ((getLatencyMode() == null) ? 0 : getLatencyMode().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRecordingConfigurationArn() == null) ? 0 : getRecordingConfigurationArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

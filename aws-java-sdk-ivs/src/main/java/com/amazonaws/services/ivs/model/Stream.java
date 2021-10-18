@@ -35,13 +35,19 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
     private String channelArn;
     /**
      * <p>
+     * The stream’s health.
+     * </p>
+     */
+    private String health;
+    /**
+     * <p>
      * URL of the master playlist, required by the video player to play the HLS stream.
      * </p>
      */
     private String playbackUrl;
     /**
      * <p>
-     * ISO-8601 formatted timestamp of the stream’s start.
+     * Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
      * </p>
      */
     private java.util.Date startTime;
@@ -53,13 +59,9 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
     private String state;
     /**
      * <p>
-     * The stream’s health.
-     * </p>
-     */
-    private String health;
-    /**
-     * <p>
-     * Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case, retry.
+     * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
+     * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
+     * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
      * </p>
      */
     private Long viewerCount;
@@ -106,6 +108,65 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The stream’s health.
+     * </p>
+     * 
+     * @param health
+     *        The stream’s health.
+     * @see StreamHealth
+     */
+
+    public void setHealth(String health) {
+        this.health = health;
+    }
+
+    /**
+     * <p>
+     * The stream’s health.
+     * </p>
+     * 
+     * @return The stream’s health.
+     * @see StreamHealth
+     */
+
+    public String getHealth() {
+        return this.health;
+    }
+
+    /**
+     * <p>
+     * The stream’s health.
+     * </p>
+     * 
+     * @param health
+     *        The stream’s health.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StreamHealth
+     */
+
+    public Stream withHealth(String health) {
+        setHealth(health);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The stream’s health.
+     * </p>
+     * 
+     * @param health
+     *        The stream’s health.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StreamHealth
+     */
+
+    public Stream withHealth(StreamHealth health) {
+        this.health = health.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * URL of the master playlist, required by the video player to play the HLS stream.
      * </p>
      * 
@@ -146,11 +207,11 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ISO-8601 formatted timestamp of the stream’s start.
+     * Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
      * </p>
      * 
      * @param startTime
-     *        ISO-8601 formatted timestamp of the stream’s start.
+     *        Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -159,10 +220,10 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ISO-8601 formatted timestamp of the stream’s start.
+     * Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
      * </p>
      * 
-     * @return ISO-8601 formatted timestamp of the stream’s start.
+     * @return Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
      */
 
     public java.util.Date getStartTime() {
@@ -171,11 +232,11 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ISO-8601 formatted timestamp of the stream’s start.
+     * Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
      * </p>
      * 
      * @param startTime
-     *        ISO-8601 formatted timestamp of the stream’s start.
+     *        Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,70 +306,15 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The stream’s health.
-     * </p>
-     * 
-     * @param health
-     *        The stream’s health.
-     * @see StreamHealth
-     */
-
-    public void setHealth(String health) {
-        this.health = health;
-    }
-
-    /**
-     * <p>
-     * The stream’s health.
-     * </p>
-     * 
-     * @return The stream’s health.
-     * @see StreamHealth
-     */
-
-    public String getHealth() {
-        return this.health;
-    }
-
-    /**
-     * <p>
-     * The stream’s health.
-     * </p>
-     * 
-     * @param health
-     *        The stream’s health.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see StreamHealth
-     */
-
-    public Stream withHealth(String health) {
-        setHealth(health);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The stream’s health.
-     * </p>
-     * 
-     * @param health
-     *        The stream’s health.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see StreamHealth
-     */
-
-    public Stream withHealth(StreamHealth health) {
-        this.health = health.toString();
-        return this;
-    }
-
-    /**
-     * <p>
-     * Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case, retry.
+     * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
+     * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
+     * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
      * </p>
      * 
      * @param viewerCount
-     *        Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case,
+     *        A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code>
+     *        within 15 seconds of when video playback starts and a view is removed from <code>viewerCount</code> within
+     *        1 minute of when video playback ends. A value of -1 indicates that the request timed out; in this case,
      *        retry.
      */
 
@@ -318,10 +324,14 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case, retry.
+     * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
+     * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
+     * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
      * </p>
      * 
-     * @return Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this
+     * @return A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code>
+     *         within 15 seconds of when video playback starts and a view is removed from <code>viewerCount</code>
+     *         within 1 minute of when video playback ends. A value of -1 indicates that the request timed out; in this
      *         case, retry.
      */
 
@@ -331,11 +341,15 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case, retry.
+     * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
+     * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
+     * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
      * </p>
      * 
      * @param viewerCount
-     *        Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case,
+     *        A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code>
+     *        within 15 seconds of when video playback starts and a view is removed from <code>viewerCount</code> within
+     *        1 minute of when video playback ends. A value of -1 indicates that the request timed out; in this case,
      *        retry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -359,14 +373,14 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
+        if (getHealth() != null)
+            sb.append("Health: ").append(getHealth()).append(",");
         if (getPlaybackUrl() != null)
             sb.append("PlaybackUrl: ").append(getPlaybackUrl()).append(",");
         if (getStartTime() != null)
             sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
-        if (getHealth() != null)
-            sb.append("Health: ").append(getHealth()).append(",");
         if (getViewerCount() != null)
             sb.append("ViewerCount: ").append(getViewerCount());
         sb.append("}");
@@ -387,6 +401,10 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getChannelArn() != null && other.getChannelArn().equals(this.getChannelArn()) == false)
             return false;
+        if (other.getHealth() == null ^ this.getHealth() == null)
+            return false;
+        if (other.getHealth() != null && other.getHealth().equals(this.getHealth()) == false)
+            return false;
         if (other.getPlaybackUrl() == null ^ this.getPlaybackUrl() == null)
             return false;
         if (other.getPlaybackUrl() != null && other.getPlaybackUrl().equals(this.getPlaybackUrl()) == false)
@@ -398,10 +416,6 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
         if (other.getState() == null ^ this.getState() == null)
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
-            return false;
-        if (other.getHealth() == null ^ this.getHealth() == null)
-            return false;
-        if (other.getHealth() != null && other.getHealth().equals(this.getHealth()) == false)
             return false;
         if (other.getViewerCount() == null ^ this.getViewerCount() == null)
             return false;
@@ -416,10 +430,10 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getChannelArn() == null) ? 0 : getChannelArn().hashCode());
+        hashCode = prime * hashCode + ((getHealth() == null) ? 0 : getHealth().hashCode());
         hashCode = prime * hashCode + ((getPlaybackUrl() == null) ? 0 : getPlaybackUrl().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
-        hashCode = prime * hashCode + ((getHealth() == null) ? 0 : getHealth().hashCode());
         hashCode = prime * hashCode + ((getViewerCount() == null) ? 0 : getViewerCount().hashCode());
         return hashCode;
     }

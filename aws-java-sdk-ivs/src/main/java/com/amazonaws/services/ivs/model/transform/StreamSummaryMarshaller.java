@@ -29,14 +29,14 @@ public class StreamSummaryMarshaller {
 
     private static final MarshallingInfo<String> CHANNELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channelArn").build();
-    private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("state").build();
     private static final MarshallingInfo<String> HEALTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("health").build();
-    private static final MarshallingInfo<Long> VIEWERCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("viewerCount").build();
     private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("state").build();
+    private static final MarshallingInfo<Long> VIEWERCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("viewerCount").build();
 
     private static final StreamSummaryMarshaller instance = new StreamSummaryMarshaller();
 
@@ -55,10 +55,10 @@ public class StreamSummaryMarshaller {
 
         try {
             protocolMarshaller.marshall(streamSummary.getChannelArn(), CHANNELARN_BINDING);
-            protocolMarshaller.marshall(streamSummary.getState(), STATE_BINDING);
             protocolMarshaller.marshall(streamSummary.getHealth(), HEALTH_BINDING);
-            protocolMarshaller.marshall(streamSummary.getViewerCount(), VIEWERCOUNT_BINDING);
             protocolMarshaller.marshall(streamSummary.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(streamSummary.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(streamSummary.getViewerCount(), VIEWERCOUNT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

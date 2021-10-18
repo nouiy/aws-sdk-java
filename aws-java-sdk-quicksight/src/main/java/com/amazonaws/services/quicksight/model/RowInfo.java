@@ -40,6 +40,12 @@ public class RowInfo implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Long rowsDropped;
+    /**
+     * <p>
+     * The total number of rows in the dataset.
+     * </p>
+     */
+    private Long totalRowsInDataset;
 
     /**
      * <p>
@@ -122,6 +128,46 @@ public class RowInfo implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The total number of rows in the dataset.
+     * </p>
+     * 
+     * @param totalRowsInDataset
+     *        The total number of rows in the dataset.
+     */
+
+    public void setTotalRowsInDataset(Long totalRowsInDataset) {
+        this.totalRowsInDataset = totalRowsInDataset;
+    }
+
+    /**
+     * <p>
+     * The total number of rows in the dataset.
+     * </p>
+     * 
+     * @return The total number of rows in the dataset.
+     */
+
+    public Long getTotalRowsInDataset() {
+        return this.totalRowsInDataset;
+    }
+
+    /**
+     * <p>
+     * The total number of rows in the dataset.
+     * </p>
+     * 
+     * @param totalRowsInDataset
+     *        The total number of rows in the dataset.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RowInfo withTotalRowsInDataset(Long totalRowsInDataset) {
+        setTotalRowsInDataset(totalRowsInDataset);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -136,7 +182,9 @@ public class RowInfo implements Serializable, Cloneable, StructuredPojo {
         if (getRowsIngested() != null)
             sb.append("RowsIngested: ").append(getRowsIngested()).append(",");
         if (getRowsDropped() != null)
-            sb.append("RowsDropped: ").append(getRowsDropped());
+            sb.append("RowsDropped: ").append(getRowsDropped()).append(",");
+        if (getTotalRowsInDataset() != null)
+            sb.append("TotalRowsInDataset: ").append(getTotalRowsInDataset());
         sb.append("}");
         return sb.toString();
     }
@@ -159,6 +207,10 @@ public class RowInfo implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRowsDropped() != null && other.getRowsDropped().equals(this.getRowsDropped()) == false)
             return false;
+        if (other.getTotalRowsInDataset() == null ^ this.getTotalRowsInDataset() == null)
+            return false;
+        if (other.getTotalRowsInDataset() != null && other.getTotalRowsInDataset().equals(this.getTotalRowsInDataset()) == false)
+            return false;
         return true;
     }
 
@@ -169,6 +221,7 @@ public class RowInfo implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getRowsIngested() == null) ? 0 : getRowsIngested().hashCode());
         hashCode = prime * hashCode + ((getRowsDropped() == null) ? 0 : getRowsDropped().hashCode());
+        hashCode = prime * hashCode + ((getTotalRowsInDataset() == null) ? 0 : getTotalRowsInDataset().hashCode());
         return hashCode;
     }
 

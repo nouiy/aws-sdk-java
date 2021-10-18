@@ -23,6 +23,7 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class BatchGetChannelResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /** <p/> */
     private java.util.List<Channel> channels;
     /**
      * <p>
@@ -32,6 +33,8 @@ public class BatchGetChannelResult extends com.amazonaws.AmazonWebServiceResult<
     private java.util.List<BatchError> errors;
 
     /**
+     * <p/>
+     * 
      * @return
      */
 
@@ -40,6 +43,8 @@ public class BatchGetChannelResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p/>
+     * 
      * @param channels
      */
 
@@ -53,6 +58,7 @@ public class BatchGetChannelResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p/>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setChannels(java.util.Collection)} or {@link #withChannels(java.util.Collection)} if you want to override
@@ -74,6 +80,8 @@ public class BatchGetChannelResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * <p/>
+     * 
      * @param channels
      * @return Returns a reference to this object so that method calls can be chained together.
      */

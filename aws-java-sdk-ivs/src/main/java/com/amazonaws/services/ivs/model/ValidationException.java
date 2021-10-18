@@ -15,7 +15,7 @@ package com.amazonaws.services.ivs.model;
 import javax.annotation.Generated;
 
 /**
- * 
+ * <p/>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ValidationException extends com.amazonaws.services.ivs.model.AmazonIVSException {
@@ -23,7 +23,7 @@ public class ValidationException extends com.amazonaws.services.ivs.model.Amazon
 
     /**
      * <p>
-     * The input fails to satisfy the constraints specified by an AWS service.
+     * The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * </p>
      */
     private String exceptionMessage;
@@ -40,11 +40,11 @@ public class ValidationException extends com.amazonaws.services.ivs.model.Amazon
 
     /**
      * <p>
-     * The input fails to satisfy the constraints specified by an AWS service.
+     * The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * </p>
      * 
      * @param exceptionMessage
-     *        The input fails to satisfy the constraints specified by an AWS service.
+     *        The input fails to satisfy the constraints specified by an Amazon Web Services service.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("exceptionMessage")
@@ -54,10 +54,10 @@ public class ValidationException extends com.amazonaws.services.ivs.model.Amazon
 
     /**
      * <p>
-     * The input fails to satisfy the constraints specified by an AWS service.
+     * The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * </p>
      * 
-     * @return The input fails to satisfy the constraints specified by an AWS service.
+     * @return The input fails to satisfy the constraints specified by an Amazon Web Services service.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("exceptionMessage")
@@ -67,11 +67,11 @@ public class ValidationException extends com.amazonaws.services.ivs.model.Amazon
 
     /**
      * <p>
-     * The input fails to satisfy the constraints specified by an AWS service.
+     * The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * </p>
      * 
      * @param exceptionMessage
-     *        The input fails to satisfy the constraints specified by an AWS service.
+     *        The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

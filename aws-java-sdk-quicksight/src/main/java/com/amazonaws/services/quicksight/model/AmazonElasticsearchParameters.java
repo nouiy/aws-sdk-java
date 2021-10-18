@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The parameters for Elasticsearch.
+ * The parameters for OpenSearch.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/AmazonElasticsearchParameters"
@@ -30,18 +30,18 @@ public class AmazonElasticsearchParameters implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The Elasticsearch domain.
+     * The OpenSearch domain.
      * </p>
      */
     private String domain;
 
     /**
      * <p>
-     * The Elasticsearch domain.
+     * The OpenSearch domain.
      * </p>
      * 
      * @param domain
-     *        The Elasticsearch domain.
+     *        The OpenSearch domain.
      */
 
     public void setDomain(String domain) {
@@ -50,10 +50,10 @@ public class AmazonElasticsearchParameters implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The Elasticsearch domain.
+     * The OpenSearch domain.
      * </p>
      * 
-     * @return The Elasticsearch domain.
+     * @return The OpenSearch domain.
      */
 
     public String getDomain() {
@@ -62,11 +62,11 @@ public class AmazonElasticsearchParameters implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The Elasticsearch domain.
+     * The OpenSearch domain.
      * </p>
      * 
      * @param domain
-     *        The Elasticsearch domain.
+     *        The OpenSearch domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

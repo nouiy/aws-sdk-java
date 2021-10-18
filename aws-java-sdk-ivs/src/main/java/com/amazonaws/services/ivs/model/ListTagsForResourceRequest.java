@@ -31,18 +31,6 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String resourceArn;
-    /**
-     * <p>
-     * The first tag to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * </p>
-     */
-    private String nextToken;
-    /**
-     * <p>
-     * Maximum number of tags to return. Default: 50.
-     * </p>
-     */
-    private Integer maxResults;
 
     /**
      * <p>
@@ -85,86 +73,6 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
-     * <p>
-     * The first tag to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * </p>
-     * 
-     * @param nextToken
-     *        The first tag to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     */
-
-    public void setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-    }
-
-    /**
-     * <p>
-     * The first tag to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * </p>
-     * 
-     * @return The first tag to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     */
-
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
-     * <p>
-     * The first tag to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * </p>
-     * 
-     * @param nextToken
-     *        The first tag to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListTagsForResourceRequest withNextToken(String nextToken) {
-        setNextToken(nextToken);
-        return this;
-    }
-
-    /**
-     * <p>
-     * Maximum number of tags to return. Default: 50.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of tags to return. Default: 50.
-     */
-
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of tags to return. Default: 50.
-     * </p>
-     * 
-     * @return Maximum number of tags to return. Default: 50.
-     */
-
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of tags to return. Default: 50.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of tags to return. Default: 50.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListTagsForResourceRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -177,11 +85,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getResourceArn() != null)
-            sb.append("ResourceArn: ").append(getResourceArn()).append(",");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
-        if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("ResourceArn: ").append(getResourceArn());
         sb.append("}");
         return sb.toString();
     }
@@ -200,14 +104,6 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getResourceArn() != null && other.getResourceArn().equals(this.getResourceArn()) == false)
             return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
-        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
-            return false;
-        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
-            return false;
         return true;
     }
 
@@ -217,8 +113,6 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
-        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;
     }
 

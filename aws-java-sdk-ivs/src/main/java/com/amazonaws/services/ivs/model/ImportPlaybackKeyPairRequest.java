@@ -27,23 +27,62 @@ public class ImportPlaybackKeyPairRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
+     * Playback-key-pair name. The value does not need to be unique.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
      * The public portion of a customer-generated key pair.
      * </p>
      */
     private String publicKeyMaterial;
     /**
      * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
      * Any tags provided with the request are added to the playback key pair tags.
      * </p>
      */
     private java.util.Map<String, String> tags;
+
+    /**
+     * <p>
+     * Playback-key-pair name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Playback-key-pair name. The value does not need to be unique.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Playback-key-pair name. The value does not need to be unique.
+     * </p>
+     * 
+     * @return Playback-key-pair name. The value does not need to be unique.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Playback-key-pair name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Playback-key-pair name. The value does not need to be unique.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImportPlaybackKeyPairRequest withName(String name) {
+        setName(name);
+        return this;
+    }
 
     /**
      * <p>
@@ -82,52 +121,6 @@ public class ImportPlaybackKeyPairRequest extends com.amazonaws.AmazonWebService
 
     public ImportPlaybackKeyPairRequest withPublicKeyMaterial(String publicKeyMaterial) {
         setPublicKeyMaterial(publicKeyMaterial);
-        return this;
-    }
-
-    /**
-     * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that
-     *        resource. The value does not need to be unique.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
-     * </p>
-     * 
-     * @return An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that
-     *         resource. The value does not need to be unique.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that
-     *        resource. The value does not need to be unique.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ImportPlaybackKeyPairRequest withName(String name) {
-        setName(name);
         return this;
     }
 
@@ -211,10 +204,10 @@ public class ImportPlaybackKeyPairRequest extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getPublicKeyMaterial() != null)
-            sb.append("PublicKeyMaterial: ").append(getPublicKeyMaterial()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getPublicKeyMaterial() != null)
+            sb.append("PublicKeyMaterial: ").append(getPublicKeyMaterial()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -231,13 +224,13 @@ public class ImportPlaybackKeyPairRequest extends com.amazonaws.AmazonWebService
         if (obj instanceof ImportPlaybackKeyPairRequest == false)
             return false;
         ImportPlaybackKeyPairRequest other = (ImportPlaybackKeyPairRequest) obj;
-        if (other.getPublicKeyMaterial() == null ^ this.getPublicKeyMaterial() == null)
-            return false;
-        if (other.getPublicKeyMaterial() != null && other.getPublicKeyMaterial().equals(this.getPublicKeyMaterial()) == false)
-            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getPublicKeyMaterial() == null ^ this.getPublicKeyMaterial() == null)
+            return false;
+        if (other.getPublicKeyMaterial() != null && other.getPublicKeyMaterial().equals(this.getPublicKeyMaterial()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -251,8 +244,8 @@ public class ImportPlaybackKeyPairRequest extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
-        hashCode = prime * hashCode + ((getPublicKeyMaterial() == null) ? 0 : getPublicKeyMaterial().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getPublicKeyMaterial() == null) ? 0 : getPublicKeyMaterial().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

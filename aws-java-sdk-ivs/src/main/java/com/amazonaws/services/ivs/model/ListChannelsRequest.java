@@ -39,16 +39,16 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String filterByRecordingConfigurationArn;
     /**
      * <p>
-     * The first channel to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
-     * </p>
-     */
-    private String nextToken;
-    /**
-     * <p>
      * Maximum number of channels to return. Default: 50.
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * The first channel to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
+     * </p>
+     */
+    private String nextToken;
 
     /**
      * <p>
@@ -132,6 +132,46 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
+     * Maximum number of channels to return. Default: 50.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of channels to return. Default: 50.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of channels to return. Default: 50.
+     * </p>
+     * 
+     * @return Maximum number of channels to return. Default: 50.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * Maximum number of channels to return. Default: 50.
+     * </p>
+     * 
+     * @param maxResults
+     *        Maximum number of channels to return. Default: 50.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListChannelsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
+     * <p>
      * The first channel to retrieve. This is used for pagination; see the <code>nextToken</code> response field.
      * </p>
      * 
@@ -172,46 +212,6 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
-     * <p>
-     * Maximum number of channels to return. Default: 50.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of channels to return. Default: 50.
-     */
-
-    public void setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of channels to return. Default: 50.
-     * </p>
-     * 
-     * @return Maximum number of channels to return. Default: 50.
-     */
-
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * <p>
-     * Maximum number of channels to return. Default: 50.
-     * </p>
-     * 
-     * @param maxResults
-     *        Maximum number of channels to return. Default: 50.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public ListChannelsRequest withMaxResults(Integer maxResults) {
-        setMaxResults(maxResults);
-        return this;
-    }
-
-    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -227,10 +227,10 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
             sb.append("FilterByName: ").append(getFilterByName()).append(",");
         if (getFilterByRecordingConfigurationArn() != null)
             sb.append("FilterByRecordingConfigurationArn: ").append(getFilterByRecordingConfigurationArn()).append(",");
-        if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -254,13 +254,13 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (other.getFilterByRecordingConfigurationArn() != null
                 && other.getFilterByRecordingConfigurationArn().equals(this.getFilterByRecordingConfigurationArn()) == false)
             return false;
-        if (other.getNextToken() == null ^ this.getNextToken() == null)
-            return false;
-        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
-            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
         return true;
     }
@@ -272,8 +272,8 @@ public class ListChannelsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
         hashCode = prime * hashCode + ((getFilterByName() == null) ? 0 : getFilterByName().hashCode());
         hashCode = prime * hashCode + ((getFilterByRecordingConfigurationArn() == null) ? 0 : getFilterByRecordingConfigurationArn().hashCode());
-        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

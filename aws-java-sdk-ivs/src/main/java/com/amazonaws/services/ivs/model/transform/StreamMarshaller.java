@@ -29,14 +29,14 @@ public class StreamMarshaller {
 
     private static final MarshallingInfo<String> CHANNELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("channelArn").build();
+    private static final MarshallingInfo<String> HEALTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("health").build();
     private static final MarshallingInfo<String> PLAYBACKURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("playbackUrl").build();
     private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
-    private static final MarshallingInfo<String> HEALTH_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
-            .marshallLocationName("health").build();
     private static final MarshallingInfo<Long> VIEWERCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("viewerCount").build();
 
@@ -57,10 +57,10 @@ public class StreamMarshaller {
 
         try {
             protocolMarshaller.marshall(stream.getChannelArn(), CHANNELARN_BINDING);
+            protocolMarshaller.marshall(stream.getHealth(), HEALTH_BINDING);
             protocolMarshaller.marshall(stream.getPlaybackUrl(), PLAYBACKURL_BINDING);
             protocolMarshaller.marshall(stream.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(stream.getState(), STATE_BINDING);
-            protocolMarshaller.marshall(stream.getHealth(), HEALTH_BINDING);
             protocolMarshaller.marshall(stream.getViewerCount(), VIEWERCOUNT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

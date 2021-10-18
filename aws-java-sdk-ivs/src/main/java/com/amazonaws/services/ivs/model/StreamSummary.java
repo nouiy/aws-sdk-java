@@ -36,28 +36,30 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
     private String channelArn;
     /**
      * <p>
-     * The stream’s state.
-     * </p>
-     */
-    private String state;
-    /**
-     * <p>
      * The stream’s health.
      * </p>
      */
     private String health;
     /**
      * <p>
-     * Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case, retry.
-     * </p>
-     */
-    private Long viewerCount;
-    /**
-     * <p>
-     * ISO-8601 formatted timestamp of the stream’s start.
+     * Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
      * </p>
      */
     private java.util.Date startTime;
+    /**
+     * <p>
+     * The stream’s state.
+     * </p>
+     */
+    private String state;
+    /**
+     * <p>
+     * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
+     * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
+     * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
+     * </p>
+     */
+    private Long viewerCount;
 
     /**
      * <p>
@@ -96,65 +98,6 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
 
     public StreamSummary withChannelArn(String channelArn) {
         setChannelArn(channelArn);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The stream’s state.
-     * </p>
-     * 
-     * @param state
-     *        The stream’s state.
-     * @see StreamState
-     */
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    /**
-     * <p>
-     * The stream’s state.
-     * </p>
-     * 
-     * @return The stream’s state.
-     * @see StreamState
-     */
-
-    public String getState() {
-        return this.state;
-    }
-
-    /**
-     * <p>
-     * The stream’s state.
-     * </p>
-     * 
-     * @param state
-     *        The stream’s state.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see StreamState
-     */
-
-    public StreamSummary withState(String state) {
-        setState(state);
-        return this;
-    }
-
-    /**
-     * <p>
-     * The stream’s state.
-     * </p>
-     * 
-     * @param state
-     *        The stream’s state.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see StreamState
-     */
-
-    public StreamSummary withState(StreamState state) {
-        this.state = state.toString();
         return this;
     }
 
@@ -219,11 +162,114 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case, retry.
+     * Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
+     * </p>
+     * 
+     * @param startTime
+     *        Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
+     */
+
+    public void setStartTime(java.util.Date startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * <p>
+     * Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
+     * </p>
+     * 
+     * @return Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
+     */
+
+    public java.util.Date getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * <p>
+     * Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
+     * </p>
+     * 
+     * @param startTime
+     *        Time of the stream’s start. This is an ISO 8601 timestamp returned as a string.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamSummary withStartTime(java.util.Date startTime) {
+        setStartTime(startTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The stream’s state.
+     * </p>
+     * 
+     * @param state
+     *        The stream’s state.
+     * @see StreamState
+     */
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    /**
+     * <p>
+     * The stream’s state.
+     * </p>
+     * 
+     * @return The stream’s state.
+     * @see StreamState
+     */
+
+    public String getState() {
+        return this.state;
+    }
+
+    /**
+     * <p>
+     * The stream’s state.
+     * </p>
+     * 
+     * @param state
+     *        The stream’s state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StreamState
+     */
+
+    public StreamSummary withState(String state) {
+        setState(state);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The stream’s state.
+     * </p>
+     * 
+     * @param state
+     *        The stream’s state.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StreamState
+     */
+
+    public StreamSummary withState(StreamState state) {
+        this.state = state.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
+     * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
+     * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
      * </p>
      * 
      * @param viewerCount
-     *        Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case,
+     *        A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code>
+     *        within 15 seconds of when video playback starts and a view is removed from <code>viewerCount</code> within
+     *        1 minute of when video playback ends. A value of -1 indicates that the request timed out; in this case,
      *        retry.
      */
 
@@ -233,10 +279,14 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case, retry.
+     * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
+     * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
+     * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
      * </p>
      * 
-     * @return Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this
+     * @return A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code>
+     *         within 15 seconds of when video playback starts and a view is removed from <code>viewerCount</code>
+     *         within 1 minute of when video playback ends. A value of -1 indicates that the request timed out; in this
      *         case, retry.
      */
 
@@ -246,57 +296,21 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case, retry.
+     * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
+     * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
+     * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
      * </p>
      * 
      * @param viewerCount
-     *        Number of current viewers of the stream. A value of -1 indicates that the request timed out; in this case,
+     *        A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code>
+     *        within 15 seconds of when video playback starts and a view is removed from <code>viewerCount</code> within
+     *        1 minute of when video playback ends. A value of -1 indicates that the request timed out; in this case,
      *        retry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public StreamSummary withViewerCount(Long viewerCount) {
         setViewerCount(viewerCount);
-        return this;
-    }
-
-    /**
-     * <p>
-     * ISO-8601 formatted timestamp of the stream’s start.
-     * </p>
-     * 
-     * @param startTime
-     *        ISO-8601 formatted timestamp of the stream’s start.
-     */
-
-    public void setStartTime(java.util.Date startTime) {
-        this.startTime = startTime;
-    }
-
-    /**
-     * <p>
-     * ISO-8601 formatted timestamp of the stream’s start.
-     * </p>
-     * 
-     * @return ISO-8601 formatted timestamp of the stream’s start.
-     */
-
-    public java.util.Date getStartTime() {
-        return this.startTime;
-    }
-
-    /**
-     * <p>
-     * ISO-8601 formatted timestamp of the stream’s start.
-     * </p>
-     * 
-     * @param startTime
-     *        ISO-8601 formatted timestamp of the stream’s start.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public StreamSummary withStartTime(java.util.Date startTime) {
-        setStartTime(startTime);
         return this;
     }
 
@@ -314,14 +328,14 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getChannelArn() != null)
             sb.append("ChannelArn: ").append(getChannelArn()).append(",");
-        if (getState() != null)
-            sb.append("State: ").append(getState()).append(",");
         if (getHealth() != null)
             sb.append("Health: ").append(getHealth()).append(",");
-        if (getViewerCount() != null)
-            sb.append("ViewerCount: ").append(getViewerCount()).append(",");
         if (getStartTime() != null)
-            sb.append("StartTime: ").append(getStartTime());
+            sb.append("StartTime: ").append(getStartTime()).append(",");
+        if (getState() != null)
+            sb.append("State: ").append(getState()).append(",");
+        if (getViewerCount() != null)
+            sb.append("ViewerCount: ").append(getViewerCount());
         sb.append("}");
         return sb.toString();
     }
@@ -340,21 +354,21 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getChannelArn() != null && other.getChannelArn().equals(this.getChannelArn()) == false)
             return false;
-        if (other.getState() == null ^ this.getState() == null)
-            return false;
-        if (other.getState() != null && other.getState().equals(this.getState()) == false)
-            return false;
         if (other.getHealth() == null ^ this.getHealth() == null)
             return false;
         if (other.getHealth() != null && other.getHealth().equals(this.getHealth()) == false)
             return false;
-        if (other.getViewerCount() == null ^ this.getViewerCount() == null)
-            return false;
-        if (other.getViewerCount() != null && other.getViewerCount().equals(this.getViewerCount()) == false)
-            return false;
         if (other.getStartTime() == null ^ this.getStartTime() == null)
             return false;
         if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
+            return false;
+        if (other.getState() == null ^ this.getState() == null)
+            return false;
+        if (other.getState() != null && other.getState().equals(this.getState()) == false)
+            return false;
+        if (other.getViewerCount() == null ^ this.getViewerCount() == null)
+            return false;
+        if (other.getViewerCount() != null && other.getViewerCount().equals(this.getViewerCount()) == false)
             return false;
         return true;
     }
@@ -365,10 +379,10 @@ public class StreamSummary implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getChannelArn() == null) ? 0 : getChannelArn().hashCode());
-        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getHealth() == null) ? 0 : getHealth().hashCode());
-        hashCode = prime * hashCode + ((getViewerCount() == null) ? 0 : getViewerCount().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
+        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getViewerCount() == null) ? 0 : getViewerCount().hashCode());
         return hashCode;
     }
 

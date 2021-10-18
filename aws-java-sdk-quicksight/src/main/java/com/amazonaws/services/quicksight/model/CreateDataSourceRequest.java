@@ -33,8 +33,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String awsAccountId;
     /**
      * <p>
-     * An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account.
+     * An ID for the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      */
     private String dataSourceId;
@@ -49,7 +48,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon OpenSearch Service.
      * </p>
      */
     private String type;
@@ -134,12 +133,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account.
+     * An ID for the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
      * @param dataSourceId
-     *        An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        An ID for the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services
      *        account.
      */
 
@@ -149,11 +147,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account.
+     * An ID for the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
-     * @return An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     * @return An ID for the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services
      *         account.
      */
 
@@ -163,12 +160,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
-     * account.
+     * An ID for the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
      * @param dataSourceId
-     *        An ID for the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        An ID for the data source. This ID is unique per Amazon Web Services Region for each Amazon Web Services
      *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -223,13 +219,13 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon OpenSearch Service.
      * </p>
      * 
      * @param type
      *        The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.</p>
      *        <p>
-     *        Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
+     *        Use <code>AMAZON_ELASTICSEARCH</code> for Amazon OpenSearch Service.
      * @see DataSourceType
      */
 
@@ -242,12 +238,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon OpenSearch Service.
      * </p>
      * 
      * @return The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.</p>
      *         <p>
-     *         Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
+     *         Use <code>AMAZON_ELASTICSEARCH</code> for Amazon OpenSearch Service.
      * @see DataSourceType
      */
 
@@ -260,13 +256,13 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon OpenSearch Service.
      * </p>
      * 
      * @param type
      *        The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.</p>
      *        <p>
-     *        Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
+     *        Use <code>AMAZON_ELASTICSEARCH</code> for Amazon OpenSearch Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceType
      */
@@ -281,13 +277,13 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.
      * </p>
      * <p>
-     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
+     * Use <code>AMAZON_ELASTICSEARCH</code> for Amazon OpenSearch Service.
      * </p>
      * 
      * @param type
      *        The type of the data source. To return a list of all data sources, use <code>ListDataSources</code>.</p>
      *        <p>
-     *        Use <code>AMAZON_ELASTICSEARCH</code> for Amazon Elasticsearch Service.
+     *        Use <code>AMAZON_ELASTICSEARCH</code> for Amazon OpenSearch Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataSourceType
      */

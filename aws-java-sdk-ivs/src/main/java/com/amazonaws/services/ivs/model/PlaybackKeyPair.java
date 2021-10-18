@@ -36,17 +36,16 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
     private String arn;
     /**
      * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
-     * </p>
-     */
-    private String name;
-    /**
-     * <p>
      * Key-pair identifier.
      * </p>
      */
     private String fingerprint;
+    /**
+     * <p>
+     * Playback-key-pair name. The value does not need to be unique.
+     * </p>
+     */
+    private String name;
     /**
      * <p>
      * Array of 1-50 maps, each of the form <code>string:string (key:value)</code>.
@@ -96,52 +95,6 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that
-     *        resource. The value does not need to be unique.
-     */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
-     * </p>
-     * 
-     * @return An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that
-     *         resource. The value does not need to be unique.
-     */
-
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
-     * </p>
-     * 
-     * @param name
-     *        An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that
-     *        resource. The value does not need to be unique.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public PlaybackKeyPair withName(String name) {
-        setName(name);
-        return this;
-    }
-
-    /**
-     * <p>
      * Key-pair identifier.
      * </p>
      * 
@@ -177,6 +130,46 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
 
     public PlaybackKeyPair withFingerprint(String fingerprint) {
         setFingerprint(fingerprint);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Playback-key-pair name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Playback-key-pair name. The value does not need to be unique.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * Playback-key-pair name. The value does not need to be unique.
+     * </p>
+     * 
+     * @return Playback-key-pair name. The value does not need to be unique.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * Playback-key-pair name. The value does not need to be unique.
+     * </p>
+     * 
+     * @param name
+     *        Playback-key-pair name. The value does not need to be unique.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PlaybackKeyPair withName(String name) {
+        setName(name);
         return this;
     }
 
@@ -262,10 +255,10 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
         sb.append("{");
         if (getArn() != null)
             sb.append("Arn: ").append(getArn()).append(",");
-        if (getName() != null)
-            sb.append("Name: ").append(getName()).append(",");
         if (getFingerprint() != null)
             sb.append("Fingerprint: ").append(getFingerprint()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -286,13 +279,13 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getArn() != null && other.getArn().equals(this.getArn()) == false)
             return false;
-        if (other.getName() == null ^ this.getName() == null)
-            return false;
-        if (other.getName() != null && other.getName().equals(this.getName()) == false)
-            return false;
         if (other.getFingerprint() == null ^ this.getFingerprint() == null)
             return false;
         if (other.getFingerprint() != null && other.getFingerprint().equals(this.getFingerprint()) == false)
+            return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
@@ -307,8 +300,8 @@ public class PlaybackKeyPair implements Serializable, Cloneable, StructuredPojo 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getArn() == null) ? 0 : getArn().hashCode());
-        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getFingerprint() == null) ? 0 : getFingerprint().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

@@ -1732,6 +1732,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeIpRestrictionResult> describeIpRestrictionAsync(DescribeIpRestrictionRequest request) {
+
+        return describeIpRestrictionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeIpRestrictionResult> describeIpRestrictionAsync(final DescribeIpRestrictionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeIpRestrictionRequest, DescribeIpRestrictionResult> asyncHandler) {
+        final DescribeIpRestrictionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeIpRestrictionResult>() {
+            @Override
+            public DescribeIpRestrictionResult call() throws Exception {
+                DescribeIpRestrictionResult result = null;
+
+                try {
+                    result = executeDescribeIpRestriction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeNamespaceResult> describeNamespaceAsync(DescribeNamespaceRequest request) {
 
         return describeNamespaceAsync(request, null);
@@ -3572,6 +3605,39 @@ public class AmazonQuickSightAsyncClient extends AmazonQuickSightClient implemen
 
                 try {
                     result = executeUpdateIAMPolicyAssignment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIpRestrictionResult> updateIpRestrictionAsync(UpdateIpRestrictionRequest request) {
+
+        return updateIpRestrictionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateIpRestrictionResult> updateIpRestrictionAsync(final UpdateIpRestrictionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateIpRestrictionRequest, UpdateIpRestrictionResult> asyncHandler) {
+        final UpdateIpRestrictionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateIpRestrictionResult>() {
+            @Override
+            public UpdateIpRestrictionResult call() throws Exception {
+                UpdateIpRestrictionResult result = null;
+
+                try {
+                    result = executeUpdateIpRestriction(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

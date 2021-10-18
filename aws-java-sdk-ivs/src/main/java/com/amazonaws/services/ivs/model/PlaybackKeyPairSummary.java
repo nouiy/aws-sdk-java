@@ -36,8 +36,7 @@ public class PlaybackKeyPairSummary implements Serializable, Cloneable, Structur
     private String arn;
     /**
      * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
+     * Playback-key-pair name. The value does not need to be unique.
      * </p>
      */
     private String name;
@@ -90,13 +89,11 @@ public class PlaybackKeyPairSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
+     * Playback-key-pair name. The value does not need to be unique.
      * </p>
      * 
      * @param name
-     *        An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that
-     *        resource. The value does not need to be unique.
+     *        Playback-key-pair name. The value does not need to be unique.
      */
 
     public void setName(String name) {
@@ -105,12 +102,10 @@ public class PlaybackKeyPairSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
+     * Playback-key-pair name. The value does not need to be unique.
      * </p>
      * 
-     * @return An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that
-     *         resource. The value does not need to be unique.
+     * @return Playback-key-pair name. The value does not need to be unique.
      */
 
     public String getName() {
@@ -119,13 +114,11 @@ public class PlaybackKeyPairSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource.
-     * The value does not need to be unique.
+     * Playback-key-pair name. The value does not need to be unique.
      * </p>
      * 
      * @param name
-     *        An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that
-     *        resource. The value does not need to be unique.
+     *        Playback-key-pair name. The value does not need to be unique.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

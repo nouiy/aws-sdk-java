@@ -43,7 +43,7 @@ public class UpdateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
     private String namespace;
     /**
      * <p>
-     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region.
      * </p>
      */
     private AccountCustomization accountCustomization;
@@ -182,11 +182,11 @@ public class UpdateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region.
      * </p>
      * 
      * @param accountCustomization
-     *        The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     *        The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region.
      */
 
     public void setAccountCustomization(AccountCustomization accountCustomization) {
@@ -195,10 +195,10 @@ public class UpdateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region.
      * </p>
      * 
-     * @return The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * @return The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region.
      */
 
     public AccountCustomization getAccountCustomization() {
@@ -207,11 +207,11 @@ public class UpdateAccountCustomizationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     * The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region.
      * </p>
      * 
      * @param accountCustomization
-     *        The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region;.
+     *        The Amazon QuickSight customizations you're updating in the current Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

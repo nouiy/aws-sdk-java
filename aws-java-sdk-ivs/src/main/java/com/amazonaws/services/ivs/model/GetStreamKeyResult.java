@@ -23,9 +23,12 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class GetStreamKeyResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
+    /** <zonbook></zonbook><xhtml></xhtml> */
     private StreamKey streamKey;
 
     /**
+     * <zonbook></zonbook><xhtml></xhtml>
+     * 
      * @param streamKey
      */
 
@@ -34,6 +37,8 @@ public class GetStreamKeyResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <zonbook></zonbook><xhtml></xhtml>
+     * 
      * @return
      */
 
@@ -42,6 +47,8 @@ public class GetStreamKeyResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <zonbook></zonbook><xhtml></xhtml>
+     * 
      * @param streamKey
      * @return Returns a reference to this object so that method calls can be chained together.
      */

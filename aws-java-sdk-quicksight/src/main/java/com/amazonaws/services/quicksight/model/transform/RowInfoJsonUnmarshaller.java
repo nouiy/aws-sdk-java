@@ -56,6 +56,10 @@ public class RowInfoJsonUnmarshaller implements Unmarshaller<RowInfo, JsonUnmars
                     context.nextToken();
                     rowInfo.setRowsDropped(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("TotalRowsInDataset", targetDepth)) {
+                    context.nextToken();
+                    rowInfo.setTotalRowsInDataset(context.getUnmarshaller(Long.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

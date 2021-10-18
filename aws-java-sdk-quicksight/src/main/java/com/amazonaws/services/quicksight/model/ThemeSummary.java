@@ -42,7 +42,7 @@ public class ThemeSummary implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The ID of the theme. This ID is unique per Amazon Web Services Region; for each Amazon Web Services account.
+     * The ID of the theme. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      */
     private String themeId;
@@ -147,11 +147,11 @@ public class ThemeSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the theme. This ID is unique per Amazon Web Services Region; for each Amazon Web Services account.
+     * The ID of the theme. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
      * @param themeId
-     *        The ID of the theme. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        The ID of the theme. This ID is unique per Amazon Web Services Region for each Amazon Web Services
      *        account.
      */
 
@@ -161,10 +161,10 @@ public class ThemeSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the theme. This ID is unique per Amazon Web Services Region; for each Amazon Web Services account.
+     * The ID of the theme. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
-     * @return The ID of the theme. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     * @return The ID of the theme. This ID is unique per Amazon Web Services Region for each Amazon Web Services
      *         account.
      */
 
@@ -174,11 +174,11 @@ public class ThemeSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the theme. This ID is unique per Amazon Web Services Region; for each Amazon Web Services account.
+     * The ID of the theme. This ID is unique per Amazon Web Services Region for each Amazon Web Services account.
      * </p>
      * 
      * @param themeId
-     *        The ID of the theme. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        The ID of the theme. This ID is unique per Amazon Web Services Region for each Amazon Web Services
      *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
