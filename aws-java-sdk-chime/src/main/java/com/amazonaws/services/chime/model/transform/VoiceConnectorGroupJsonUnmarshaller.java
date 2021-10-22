@@ -70,6 +70,10 @@ public class VoiceConnectorGroupJsonUnmarshaller implements Unmarshaller<VoiceCo
                     context.nextToken();
                     voiceConnectorGroup.setUpdatedTimestamp(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("VoiceConnectorGroupArn", targetDepth)) {
+                    context.nextToken();
+                    voiceConnectorGroup.setVoiceConnectorGroupArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

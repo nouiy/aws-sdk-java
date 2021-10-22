@@ -1171,7 +1171,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Removes the specified member account as a delegated administrator for Audit Manager.
+     * Removes the specified member Amazon Web Services account as a delegated administrator for Audit Manager.
      * </p>
      * <important>
      * <p>
@@ -2211,7 +2211,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns the settings for the specified account.
+     * Returns the settings for the specified Amazon Web Services account.
      * </p>
      * 
      * @param getSettingsRequest
@@ -2709,7 +2709,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Enables Audit Manager for the specified account.
+     * Enables Audit Manager for the specified Amazon Web Services account.
      * </p>
      * 
      * @param registerAccountRequest
@@ -2773,7 +2773,7 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Enables an account within the organization as the delegated administrator for Audit Manager.
+     * Enables an Amazon Web Services account within the organization as the delegated administrator for Audit Manager.
      * </p>
      * 
      * @param registerOrganizationAdminAccountRequest

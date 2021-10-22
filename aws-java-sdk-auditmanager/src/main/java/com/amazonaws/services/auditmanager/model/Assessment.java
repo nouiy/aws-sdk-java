@@ -37,7 +37,7 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * The account associated with the assessment.
+     * The Amazon Web Services account associated with the assessment.
      * </p>
      */
     private AWSAccount awsAccount;
@@ -102,11 +102,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The account associated with the assessment.
+     * The Amazon Web Services account associated with the assessment.
      * </p>
      * 
      * @param awsAccount
-     *        The account associated with the assessment.
+     *        The Amazon Web Services account associated with the assessment.
      */
 
     public void setAwsAccount(AWSAccount awsAccount) {
@@ -115,10 +115,10 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The account associated with the assessment.
+     * The Amazon Web Services account associated with the assessment.
      * </p>
      * 
-     * @return The account associated with the assessment.
+     * @return The Amazon Web Services account associated with the assessment.
      */
 
     public AWSAccount getAwsAccount() {
@@ -127,11 +127,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The account associated with the assessment.
+     * The Amazon Web Services account associated with the assessment.
      * </p>
      * 
      * @param awsAccount
-     *        The account associated with the assessment.
+     *        The Amazon Web Services account associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

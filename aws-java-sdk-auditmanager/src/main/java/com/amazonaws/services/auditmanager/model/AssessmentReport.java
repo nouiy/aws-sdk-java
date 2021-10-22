@@ -50,7 +50,7 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
     private String description;
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      */
     private String awsAccountId;
@@ -207,11 +207,11 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified account.
+     *        The identifier for the specified Amazon Web Services account.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -220,10 +220,10 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      * 
-     * @return The identifier for the specified account.
+     * @return The identifier for the specified Amazon Web Services account.
      */
 
     public String getAwsAccountId() {
@@ -232,11 +232,11 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified account.
+     *        The identifier for the specified Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

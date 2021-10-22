@@ -81,6 +81,16 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
      * </p>
      */
     private RegisteredUserQuickSightConsoleEmbeddingConfiguration quickSightConsole;
+    /**
+     * <p>
+     * The configuration details for embedding the Q search bar.
+     * </p>
+     * <p>
+     * For more information about embedding the Q search bar, see <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/user/embedding-overview.html">Embedding Overview</a>.
+     * </p>
+     */
+    private RegisteredUserQSearchBarEmbeddingConfiguration qSearchBar;
 
     /**
      * <p>
@@ -364,6 +374,67 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
     }
 
     /**
+     * <p>
+     * The configuration details for embedding the Q search bar.
+     * </p>
+     * <p>
+     * For more information about embedding the Q search bar, see <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/user/embedding-overview.html">Embedding Overview</a>.
+     * </p>
+     * 
+     * @param qSearchBar
+     *        The configuration details for embedding the Q search bar.</p>
+     *        <p>
+     *        For more information about embedding the Q search bar, see <a
+     *        href="https://docs.aws.amazon.com/quicksight/latest/user/embedding-overview.html">Embedding Overview</a>.
+     */
+
+    public void setQSearchBar(RegisteredUserQSearchBarEmbeddingConfiguration qSearchBar) {
+        this.qSearchBar = qSearchBar;
+    }
+
+    /**
+     * <p>
+     * The configuration details for embedding the Q search bar.
+     * </p>
+     * <p>
+     * For more information about embedding the Q search bar, see <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/user/embedding-overview.html">Embedding Overview</a>.
+     * </p>
+     * 
+     * @return The configuration details for embedding the Q search bar.</p>
+     *         <p>
+     *         For more information about embedding the Q search bar, see <a
+     *         href="https://docs.aws.amazon.com/quicksight/latest/user/embedding-overview.html">Embedding Overview</a>.
+     */
+
+    public RegisteredUserQSearchBarEmbeddingConfiguration getQSearchBar() {
+        return this.qSearchBar;
+    }
+
+    /**
+     * <p>
+     * The configuration details for embedding the Q search bar.
+     * </p>
+     * <p>
+     * For more information about embedding the Q search bar, see <a
+     * href="https://docs.aws.amazon.com/quicksight/latest/user/embedding-overview.html">Embedding Overview</a>.
+     * </p>
+     * 
+     * @param qSearchBar
+     *        The configuration details for embedding the Q search bar.</p>
+     *        <p>
+     *        For more information about embedding the Q search bar, see <a
+     *        href="https://docs.aws.amazon.com/quicksight/latest/user/embedding-overview.html">Embedding Overview</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisteredUserEmbeddingExperienceConfiguration withQSearchBar(RegisteredUserQSearchBarEmbeddingConfiguration qSearchBar) {
+        setQSearchBar(qSearchBar);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -378,7 +449,9 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
         if (getDashboard() != null)
             sb.append("Dashboard: ").append(getDashboard()).append(",");
         if (getQuickSightConsole() != null)
-            sb.append("QuickSightConsole: ").append(getQuickSightConsole());
+            sb.append("QuickSightConsole: ").append(getQuickSightConsole()).append(",");
+        if (getQSearchBar() != null)
+            sb.append("QSearchBar: ").append(getQSearchBar());
         sb.append("}");
         return sb.toString();
     }
@@ -401,6 +474,10 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
             return false;
         if (other.getQuickSightConsole() != null && other.getQuickSightConsole().equals(this.getQuickSightConsole()) == false)
             return false;
+        if (other.getQSearchBar() == null ^ this.getQSearchBar() == null)
+            return false;
+        if (other.getQSearchBar() != null && other.getQSearchBar().equals(this.getQSearchBar()) == false)
+            return false;
         return true;
     }
 
@@ -411,6 +488,7 @@ public class RegisteredUserEmbeddingExperienceConfiguration implements Serializa
 
         hashCode = prime * hashCode + ((getDashboard() == null) ? 0 : getDashboard().hashCode());
         hashCode = prime * hashCode + ((getQuickSightConsole() == null) ? 0 : getQuickSightConsole().hashCode());
+        hashCode = prime * hashCode + ((getQSearchBar() == null) ? 0 : getQSearchBar().hashCode());
         return hashCode;
     }
 

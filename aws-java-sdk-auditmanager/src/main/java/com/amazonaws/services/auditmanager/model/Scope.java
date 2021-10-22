@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The wrapper that contains the accounts and services in scope for the assessment.
+ * The wrapper that contains the Amazon Web Services accounts and services in scope for the assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Scope" target="_top">AWS API
@@ -30,7 +30,7 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The accounts included in the scope of the assessment.
+     * The Amazon Web Services accounts included in the scope of the assessment.
      * </p>
      */
     private java.util.List<AWSAccount> awsAccounts;
@@ -43,10 +43,10 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The accounts included in the scope of the assessment.
+     * The Amazon Web Services accounts included in the scope of the assessment.
      * </p>
      * 
-     * @return The accounts included in the scope of the assessment.
+     * @return The Amazon Web Services accounts included in the scope of the assessment.
      */
 
     public java.util.List<AWSAccount> getAwsAccounts() {
@@ -55,11 +55,11 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The accounts included in the scope of the assessment.
+     * The Amazon Web Services accounts included in the scope of the assessment.
      * </p>
      * 
      * @param awsAccounts
-     *        The accounts included in the scope of the assessment.
+     *        The Amazon Web Services accounts included in the scope of the assessment.
      */
 
     public void setAwsAccounts(java.util.Collection<AWSAccount> awsAccounts) {
@@ -73,7 +73,7 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The accounts included in the scope of the assessment.
+     * The Amazon Web Services accounts included in the scope of the assessment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +82,7 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param awsAccounts
-     *        The accounts included in the scope of the assessment.
+     *        The Amazon Web Services accounts included in the scope of the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class Scope implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The accounts included in the scope of the assessment.
+     * The Amazon Web Services accounts included in the scope of the assessment.
      * </p>
      * 
      * @param awsAccounts
-     *        The accounts included in the scope of the assessment.
+     *        The Amazon Web Services accounts included in the scope of the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

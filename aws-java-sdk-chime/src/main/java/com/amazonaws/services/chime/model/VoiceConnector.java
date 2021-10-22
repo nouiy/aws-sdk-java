@@ -70,6 +70,12 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date updatedTimestamp;
+    /**
+     * <p>
+     * The ARN of the specified Amazon Chime Voice Connector.
+     * </p>
+     */
+    private String voiceConnectorArn;
 
     /**
      * <p>
@@ -383,6 +389,46 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ARN of the specified Amazon Chime Voice Connector.
+     * </p>
+     * 
+     * @param voiceConnectorArn
+     *        The ARN of the specified Amazon Chime Voice Connector.
+     */
+
+    public void setVoiceConnectorArn(String voiceConnectorArn) {
+        this.voiceConnectorArn = voiceConnectorArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the specified Amazon Chime Voice Connector.
+     * </p>
+     * 
+     * @return The ARN of the specified Amazon Chime Voice Connector.
+     */
+
+    public String getVoiceConnectorArn() {
+        return this.voiceConnectorArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the specified Amazon Chime Voice Connector.
+     * </p>
+     * 
+     * @param voiceConnectorArn
+     *        The ARN of the specified Amazon Chime Voice Connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VoiceConnector withVoiceConnectorArn(String voiceConnectorArn) {
+        setVoiceConnectorArn(voiceConnectorArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -407,7 +453,9 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
         if (getCreatedTimestamp() != null)
             sb.append("CreatedTimestamp: ").append(getCreatedTimestamp()).append(",");
         if (getUpdatedTimestamp() != null)
-            sb.append("UpdatedTimestamp: ").append(getUpdatedTimestamp());
+            sb.append("UpdatedTimestamp: ").append(getUpdatedTimestamp()).append(",");
+        if (getVoiceConnectorArn() != null)
+            sb.append("VoiceConnectorArn: ").append(getVoiceConnectorArn());
         sb.append("}");
         return sb.toString();
     }
@@ -450,6 +498,10 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getUpdatedTimestamp() != null && other.getUpdatedTimestamp().equals(this.getUpdatedTimestamp()) == false)
             return false;
+        if (other.getVoiceConnectorArn() == null ^ this.getVoiceConnectorArn() == null)
+            return false;
+        if (other.getVoiceConnectorArn() != null && other.getVoiceConnectorArn().equals(this.getVoiceConnectorArn()) == false)
+            return false;
         return true;
     }
 
@@ -465,6 +517,7 @@ public class VoiceConnector implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRequireEncryption() == null) ? 0 : getRequireEncryption().hashCode());
         hashCode = prime * hashCode + ((getCreatedTimestamp() == null) ? 0 : getCreatedTimestamp().hashCode());
         hashCode = prime * hashCode + ((getUpdatedTimestamp() == null) ? 0 : getUpdatedTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getVoiceConnectorArn() == null) ? 0 : getVoiceConnectorArn().hashCode());
         return hashCode;
     }
 

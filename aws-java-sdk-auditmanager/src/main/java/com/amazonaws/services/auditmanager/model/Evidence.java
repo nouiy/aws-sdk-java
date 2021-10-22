@@ -37,7 +37,7 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     private String dataSource;
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      */
     private String evidenceAwsAccountId;
@@ -94,13 +94,13 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     private String complianceCheck;
     /**
      * <p>
-     * The account from which the evidence is collected, and its organization path.
+     * The Amazon Web Services account from which the evidence is collected, and its organization path.
      * </p>
      */
     private String awsOrganization;
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      */
     private String awsAccountId;
@@ -165,11 +165,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      * 
      * @param evidenceAwsAccountId
-     *        The identifier for the specified account.
+     *        The identifier for the specified Amazon Web Services account.
      */
 
     public void setEvidenceAwsAccountId(String evidenceAwsAccountId) {
@@ -178,10 +178,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      * 
-     * @return The identifier for the specified account.
+     * @return The identifier for the specified Amazon Web Services account.
      */
 
     public String getEvidenceAwsAccountId() {
@@ -190,11 +190,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      * 
      * @param evidenceAwsAccountId
-     *        The identifier for the specified account.
+     *        The identifier for the specified Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -601,11 +601,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The account from which the evidence is collected, and its organization path.
+     * The Amazon Web Services account from which the evidence is collected, and its organization path.
      * </p>
      * 
      * @param awsOrganization
-     *        The account from which the evidence is collected, and its organization path.
+     *        The Amazon Web Services account from which the evidence is collected, and its organization path.
      */
 
     public void setAwsOrganization(String awsOrganization) {
@@ -614,10 +614,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The account from which the evidence is collected, and its organization path.
+     * The Amazon Web Services account from which the evidence is collected, and its organization path.
      * </p>
      * 
-     * @return The account from which the evidence is collected, and its organization path.
+     * @return The Amazon Web Services account from which the evidence is collected, and its organization path.
      */
 
     public String getAwsOrganization() {
@@ -626,11 +626,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The account from which the evidence is collected, and its organization path.
+     * The Amazon Web Services account from which the evidence is collected, and its organization path.
      * </p>
      * 
      * @param awsOrganization
-     *        The account from which the evidence is collected, and its organization path.
+     *        The Amazon Web Services account from which the evidence is collected, and its organization path.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -641,11 +641,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified account.
+     *        The identifier for the specified Amazon Web Services account.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -654,10 +654,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      * 
-     * @return The identifier for the specified account.
+     * @return The identifier for the specified Amazon Web Services account.
      */
 
     public String getAwsAccountId() {
@@ -666,11 +666,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified account.
+     * The identifier for the specified Amazon Web Services account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified account.
+     *        The identifier for the specified Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

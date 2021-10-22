@@ -76,6 +76,10 @@ public class VoiceConnectorJsonUnmarshaller implements Unmarshaller<VoiceConnect
                     context.nextToken();
                     voiceConnector.setUpdatedTimestamp(DateJsonUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                 }
+                if (context.testExpression("VoiceConnectorArn", targetDepth)) {
+                    context.nextToken();
+                    voiceConnector.setVoiceConnectorArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

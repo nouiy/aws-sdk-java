@@ -60,6 +60,12 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private java.util.Date updatedTimestamp;
+    /**
+     * <p>
+     * The ARN of the specified Amazon Chime Voice Connector group.
+     * </p>
+     */
+    private String voiceConnectorGroupArn;
 
     /**
      * <p>
@@ -292,6 +298,46 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The ARN of the specified Amazon Chime Voice Connector group.
+     * </p>
+     * 
+     * @param voiceConnectorGroupArn
+     *        The ARN of the specified Amazon Chime Voice Connector group.
+     */
+
+    public void setVoiceConnectorGroupArn(String voiceConnectorGroupArn) {
+        this.voiceConnectorGroupArn = voiceConnectorGroupArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the specified Amazon Chime Voice Connector group.
+     * </p>
+     * 
+     * @return The ARN of the specified Amazon Chime Voice Connector group.
+     */
+
+    public String getVoiceConnectorGroupArn() {
+        return this.voiceConnectorGroupArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the specified Amazon Chime Voice Connector group.
+     * </p>
+     * 
+     * @param voiceConnectorGroupArn
+     *        The ARN of the specified Amazon Chime Voice Connector group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public VoiceConnectorGroup withVoiceConnectorGroupArn(String voiceConnectorGroupArn) {
+        setVoiceConnectorGroupArn(voiceConnectorGroupArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -312,7 +358,9 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
         if (getCreatedTimestamp() != null)
             sb.append("CreatedTimestamp: ").append(getCreatedTimestamp()).append(",");
         if (getUpdatedTimestamp() != null)
-            sb.append("UpdatedTimestamp: ").append(getUpdatedTimestamp());
+            sb.append("UpdatedTimestamp: ").append(getUpdatedTimestamp()).append(",");
+        if (getVoiceConnectorGroupArn() != null)
+            sb.append("VoiceConnectorGroupArn: ").append(getVoiceConnectorGroupArn());
         sb.append("}");
         return sb.toString();
     }
@@ -347,6 +395,10 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getUpdatedTimestamp() != null && other.getUpdatedTimestamp().equals(this.getUpdatedTimestamp()) == false)
             return false;
+        if (other.getVoiceConnectorGroupArn() == null ^ this.getVoiceConnectorGroupArn() == null)
+            return false;
+        if (other.getVoiceConnectorGroupArn() != null && other.getVoiceConnectorGroupArn().equals(this.getVoiceConnectorGroupArn()) == false)
+            return false;
         return true;
     }
 
@@ -360,6 +412,7 @@ public class VoiceConnectorGroup implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getVoiceConnectorItems() == null) ? 0 : getVoiceConnectorItems().hashCode());
         hashCode = prime * hashCode + ((getCreatedTimestamp() == null) ? 0 : getCreatedTimestamp().hashCode());
         hashCode = prime * hashCode + ((getUpdatedTimestamp() == null) ? 0 : getUpdatedTimestamp().hashCode());
+        hashCode = prime * hashCode + ((getVoiceConnectorGroupArn() == null) ? 0 : getVoiceConnectorGroupArn().hashCode());
         return hashCode;
     }
 

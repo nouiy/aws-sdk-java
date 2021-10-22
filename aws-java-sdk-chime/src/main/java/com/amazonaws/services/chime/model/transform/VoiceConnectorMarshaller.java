@@ -41,6 +41,8 @@ public class VoiceConnectorMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedTimestamp").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> UPDATEDTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdatedTimestamp").timestampFormat("iso8601").build();
+    private static final MarshallingInfo<String> VOICECONNECTORARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VoiceConnectorArn").build();
 
     private static final VoiceConnectorMarshaller instance = new VoiceConnectorMarshaller();
 
@@ -65,6 +67,7 @@ public class VoiceConnectorMarshaller {
             protocolMarshaller.marshall(voiceConnector.getRequireEncryption(), REQUIREENCRYPTION_BINDING);
             protocolMarshaller.marshall(voiceConnector.getCreatedTimestamp(), CREATEDTIMESTAMP_BINDING);
             protocolMarshaller.marshall(voiceConnector.getUpdatedTimestamp(), UPDATEDTIMESTAMP_BINDING);
+            protocolMarshaller.marshall(voiceConnector.getVoiceConnectorArn(), VOICECONNECTORARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
