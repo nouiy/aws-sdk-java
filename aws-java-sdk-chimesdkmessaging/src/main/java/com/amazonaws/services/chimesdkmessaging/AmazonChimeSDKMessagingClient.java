@@ -659,8 +659,8 @@ public class AmazonChimeSDKMessagingClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
-     * Adds a user to a channel. The <code>InvitedBy</code> response field is derived from the request header. A channel
-     * member can:
+     * Adds a user to a channel. The <code>InvitedBy</code> field in <code>ChannelMembership</code> is derived from the
+     * request header. A channel member can:
      * </p>
      * <ul>
      * <li>
@@ -1939,6 +1939,81 @@ public class AmazonChimeSDKMessagingClient extends AmazonWebServiceClient implem
 
     /**
      * <p>
+     * Gets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
+     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
+     * membership can retrieve preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't
+     * retrieve preferences for other users. Banned users can't retrieve membership preferences for the channel from
+     * which they are banned.
+     * </p>
+     * 
+     * @param getChannelMembershipPreferencesRequest
+     * @return Result of the GetChannelMembershipPreferences operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.GetChannelMembershipPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/GetChannelMembershipPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetChannelMembershipPreferencesResult getChannelMembershipPreferences(GetChannelMembershipPreferencesRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetChannelMembershipPreferences(request);
+    }
+
+    @SdkInternalApi
+    final GetChannelMembershipPreferencesResult executeGetChannelMembershipPreferences(
+            GetChannelMembershipPreferencesRequest getChannelMembershipPreferencesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getChannelMembershipPreferencesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetChannelMembershipPreferencesRequest> request = null;
+        Response<GetChannelMembershipPreferencesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetChannelMembershipPreferencesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getChannelMembershipPreferencesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Messaging");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetChannelMembershipPreferences");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetChannelMembershipPreferencesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetChannelMembershipPreferencesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets the full details of a channel message.
      * </p>
      * <note>
@@ -2350,6 +2425,11 @@ public class AmazonChimeSDKMessagingClient extends AmazonWebServiceClient implem
      * user that makes the API call as the value in the header.
      * </p>
      * </note>
+     * <p>
+     * If you want to list the channels to which a specific app instance user belongs, see the <a href=
+     * "https://docs.aws.amazon.com/chime/latest/APIReference/API_messaging-chime_ListChannelMembershipsForAppInstanceUser.html"
+     * >ListChannelMembershipsForAppInstanceUser</a> API.
+     * </p>
      * 
      * @param listChannelMembershipsRequest
      * @return Result of the ListChannelMemberships operation returned by the service.
@@ -2940,6 +3020,83 @@ public class AmazonChimeSDKMessagingClient extends AmazonWebServiceClient implem
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Sets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
+     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
+     * membership can set preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't set
+     * preferences for other users. Banned users can't set membership preferences for the channel from which they are
+     * banned.
+     * </p>
+     * 
+     * @param putChannelMembershipPreferencesRequest
+     * @return Result of the PutChannelMembershipPreferences operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.PutChannelMembershipPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/PutChannelMembershipPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutChannelMembershipPreferencesResult putChannelMembershipPreferences(PutChannelMembershipPreferencesRequest request) {
+        request = beforeClientExecution(request);
+        return executePutChannelMembershipPreferences(request);
+    }
+
+    @SdkInternalApi
+    final PutChannelMembershipPreferencesResult executePutChannelMembershipPreferences(
+            PutChannelMembershipPreferencesRequest putChannelMembershipPreferencesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putChannelMembershipPreferencesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutChannelMembershipPreferencesRequest> request = null;
+        Response<PutChannelMembershipPreferencesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutChannelMembershipPreferencesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putChannelMembershipPreferencesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Chime SDK Messaging");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutChannelMembershipPreferences");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutChannelMembershipPreferencesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutChannelMembershipPreferencesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

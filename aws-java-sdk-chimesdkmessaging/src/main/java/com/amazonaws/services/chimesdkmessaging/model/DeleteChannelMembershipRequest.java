@@ -33,7 +33,7 @@ public class DeleteChannelMembershipRequest extends com.amazonaws.AmazonWebServi
     private String channelArn;
     /**
      * <p>
-     * The ARN of the member that you're removing from the channel.
+     * The <code>AppInstanceUserArn</code> of the member that you're removing from the channel.
      * </p>
      */
     private String memberArn;
@@ -86,11 +86,11 @@ public class DeleteChannelMembershipRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ARN of the member that you're removing from the channel.
+     * The <code>AppInstanceUserArn</code> of the member that you're removing from the channel.
      * </p>
      * 
      * @param memberArn
-     *        The ARN of the member that you're removing from the channel.
+     *        The <code>AppInstanceUserArn</code> of the member that you're removing from the channel.
      */
 
     public void setMemberArn(String memberArn) {
@@ -99,10 +99,10 @@ public class DeleteChannelMembershipRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ARN of the member that you're removing from the channel.
+     * The <code>AppInstanceUserArn</code> of the member that you're removing from the channel.
      * </p>
      * 
-     * @return The ARN of the member that you're removing from the channel.
+     * @return The <code>AppInstanceUserArn</code> of the member that you're removing from the channel.
      */
 
     public String getMemberArn() {
@@ -111,11 +111,11 @@ public class DeleteChannelMembershipRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ARN of the member that you're removing from the channel.
+     * The <code>AppInstanceUserArn</code> of the member that you're removing from the channel.
      * </p>
      * 
      * @param memberArn
-     *        The ARN of the member that you're removing from the channel.
+     *        The <code>AppInstanceUserArn</code> of the member that you're removing from the channel.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

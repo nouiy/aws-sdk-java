@@ -33,7 +33,7 @@ public class DescribeChannelBanRequest extends com.amazonaws.AmazonWebServiceReq
     private String channelArn;
     /**
      * <p>
-     * The ARN of the member being banned.
+     * The <code>AppInstanceUserArn</code> of the member being banned.
      * </p>
      */
     private String memberArn;
@@ -86,11 +86,11 @@ public class DescribeChannelBanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the member being banned.
+     * The <code>AppInstanceUserArn</code> of the member being banned.
      * </p>
      * 
      * @param memberArn
-     *        The ARN of the member being banned.
+     *        The <code>AppInstanceUserArn</code> of the member being banned.
      */
 
     public void setMemberArn(String memberArn) {
@@ -99,10 +99,10 @@ public class DescribeChannelBanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the member being banned.
+     * The <code>AppInstanceUserArn</code> of the member being banned.
      * </p>
      * 
-     * @return The ARN of the member being banned.
+     * @return The <code>AppInstanceUserArn</code> of the member being banned.
      */
 
     public String getMemberArn() {
@@ -111,11 +111,11 @@ public class DescribeChannelBanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the member being banned.
+     * The <code>AppInstanceUserArn</code> of the member being banned.
      * </p>
      * 
      * @param memberArn
-     *        The ARN of the member being banned.
+     *        The <code>AppInstanceUserArn</code> of the member being banned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

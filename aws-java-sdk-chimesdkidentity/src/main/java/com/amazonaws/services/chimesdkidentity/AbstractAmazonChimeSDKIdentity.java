@@ -58,6 +58,11 @@ public class AbstractAmazonChimeSDKIdentity implements AmazonChimeSDKIdentity {
     }
 
     @Override
+    public DeregisterAppInstanceUserEndpointResult deregisterAppInstanceUserEndpoint(DeregisterAppInstanceUserEndpointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAppInstanceResult describeAppInstance(DescribeAppInstanceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -73,12 +78,22 @@ public class AbstractAmazonChimeSDKIdentity implements AmazonChimeSDKIdentity {
     }
 
     @Override
+    public DescribeAppInstanceUserEndpointResult describeAppInstanceUserEndpoint(DescribeAppInstanceUserEndpointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetAppInstanceRetentionSettingsResult getAppInstanceRetentionSettings(GetAppInstanceRetentionSettingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListAppInstanceAdminsResult listAppInstanceAdmins(ListAppInstanceAdminsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAppInstanceUserEndpointsResult listAppInstanceUserEndpoints(ListAppInstanceUserEndpointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -93,7 +108,27 @@ public class AbstractAmazonChimeSDKIdentity implements AmazonChimeSDKIdentity {
     }
 
     @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PutAppInstanceRetentionSettingsResult putAppInstanceRetentionSettings(PutAppInstanceRetentionSettingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RegisterAppInstanceUserEndpointResult registerAppInstanceUserEndpoint(RegisterAppInstanceUserEndpointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -104,6 +139,11 @@ public class AbstractAmazonChimeSDKIdentity implements AmazonChimeSDKIdentity {
 
     @Override
     public UpdateAppInstanceUserResult updateAppInstanceUser(UpdateAppInstanceUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAppInstanceUserEndpointResult updateAppInstanceUserEndpoint(UpdateAppInstanceUserEndpointRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

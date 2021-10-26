@@ -84,6 +84,10 @@ public class EndpointJsonUnmarshaller implements Unmarshaller<Endpoint, JsonUnma
                     context.nextToken();
                     endpoint.setCertificateArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("certificateAuthority", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setCertificateAuthority(CertificateJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("configurationOverrides", targetDepth)) {
                     context.nextToken();
                     endpoint.setConfigurationOverrides(ConfigurationOverridesJsonUnmarshaller.getInstance().unmarshall(context));

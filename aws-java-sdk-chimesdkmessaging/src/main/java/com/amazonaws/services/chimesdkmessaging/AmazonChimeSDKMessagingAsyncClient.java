@@ -810,6 +810,41 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
     }
 
     @Override
+    public java.util.concurrent.Future<GetChannelMembershipPreferencesResult> getChannelMembershipPreferencesAsync(
+            GetChannelMembershipPreferencesRequest request) {
+
+        return getChannelMembershipPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetChannelMembershipPreferencesResult> getChannelMembershipPreferencesAsync(
+            final GetChannelMembershipPreferencesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetChannelMembershipPreferencesRequest, GetChannelMembershipPreferencesResult> asyncHandler) {
+        final GetChannelMembershipPreferencesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetChannelMembershipPreferencesResult>() {
+            @Override
+            public GetChannelMembershipPreferencesResult call() throws Exception {
+                GetChannelMembershipPreferencesResult result = null;
+
+                try {
+                    result = executeGetChannelMembershipPreferences(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetChannelMessageResult> getChannelMessageAsync(GetChannelMessageRequest request) {
 
         return getChannelMessageAsync(request, null);
@@ -1229,6 +1264,41 @@ public class AmazonChimeSDKMessagingAsyncClient extends AmazonChimeSDKMessagingC
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutChannelMembershipPreferencesResult> putChannelMembershipPreferencesAsync(
+            PutChannelMembershipPreferencesRequest request) {
+
+        return putChannelMembershipPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutChannelMembershipPreferencesResult> putChannelMembershipPreferencesAsync(
+            final PutChannelMembershipPreferencesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutChannelMembershipPreferencesRequest, PutChannelMembershipPreferencesResult> asyncHandler) {
+        final PutChannelMembershipPreferencesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutChannelMembershipPreferencesResult>() {
+            @Override
+            public PutChannelMembershipPreferencesResult call() throws Exception {
+                PutChannelMembershipPreferencesResult result = null;
+
+                try {
+                    result = executePutChannelMembershipPreferences(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

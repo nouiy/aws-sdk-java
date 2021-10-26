@@ -67,6 +67,19 @@ public class SendChannelMessageRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String chimeBearer;
+    /**
+     * <p>
+     * The push notification configuration of the message.
+     * </p>
+     */
+    private PushNotificationConfiguration pushNotification;
+    /**
+     * <p>
+     * The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in the
+     * <code>PushNotificationPreferences</code>.
+     * </p>
+     */
+    private java.util.Map<String, MessageAttributeValue> messageAttributes;
 
     /**
      * <p>
@@ -387,6 +400,120 @@ public class SendChannelMessageRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The push notification configuration of the message.
+     * </p>
+     * 
+     * @param pushNotification
+     *        The push notification configuration of the message.
+     */
+
+    public void setPushNotification(PushNotificationConfiguration pushNotification) {
+        this.pushNotification = pushNotification;
+    }
+
+    /**
+     * <p>
+     * The push notification configuration of the message.
+     * </p>
+     * 
+     * @return The push notification configuration of the message.
+     */
+
+    public PushNotificationConfiguration getPushNotification() {
+        return this.pushNotification;
+    }
+
+    /**
+     * <p>
+     * The push notification configuration of the message.
+     * </p>
+     * 
+     * @param pushNotification
+     *        The push notification configuration of the message.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SendChannelMessageRequest withPushNotification(PushNotificationConfiguration pushNotification) {
+        setPushNotification(pushNotification);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in the
+     * <code>PushNotificationPreferences</code>.
+     * </p>
+     * 
+     * @return The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined
+     *         in the <code>PushNotificationPreferences</code>.
+     */
+
+    public java.util.Map<String, MessageAttributeValue> getMessageAttributes() {
+        return messageAttributes;
+    }
+
+    /**
+     * <p>
+     * The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in the
+     * <code>PushNotificationPreferences</code>.
+     * </p>
+     * 
+     * @param messageAttributes
+     *        The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in
+     *        the <code>PushNotificationPreferences</code>.
+     */
+
+    public void setMessageAttributes(java.util.Map<String, MessageAttributeValue> messageAttributes) {
+        this.messageAttributes = messageAttributes;
+    }
+
+    /**
+     * <p>
+     * The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in the
+     * <code>PushNotificationPreferences</code>.
+     * </p>
+     * 
+     * @param messageAttributes
+     *        The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in
+     *        the <code>PushNotificationPreferences</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SendChannelMessageRequest withMessageAttributes(java.util.Map<String, MessageAttributeValue> messageAttributes) {
+        setMessageAttributes(messageAttributes);
+        return this;
+    }
+
+    /**
+     * Add a single MessageAttributes entry
+     *
+     * @see SendChannelMessageRequest#withMessageAttributes
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SendChannelMessageRequest addMessageAttributesEntry(String key, MessageAttributeValue value) {
+        if (null == this.messageAttributes) {
+            this.messageAttributes = new java.util.HashMap<String, MessageAttributeValue>();
+        }
+        if (this.messageAttributes.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.messageAttributes.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into MessageAttributes.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SendChannelMessageRequest clearMessageAttributesEntries() {
+        this.messageAttributes = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -411,7 +538,11 @@ public class SendChannelMessageRequest extends com.amazonaws.AmazonWebServiceReq
         if (getClientRequestToken() != null)
             sb.append("ClientRequestToken: ").append("***Sensitive Data Redacted***").append(",");
         if (getChimeBearer() != null)
-            sb.append("ChimeBearer: ").append(getChimeBearer());
+            sb.append("ChimeBearer: ").append(getChimeBearer()).append(",");
+        if (getPushNotification() != null)
+            sb.append("PushNotification: ").append(getPushNotification()).append(",");
+        if (getMessageAttributes() != null)
+            sb.append("MessageAttributes: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -454,6 +585,14 @@ public class SendChannelMessageRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getChimeBearer() != null && other.getChimeBearer().equals(this.getChimeBearer()) == false)
             return false;
+        if (other.getPushNotification() == null ^ this.getPushNotification() == null)
+            return false;
+        if (other.getPushNotification() != null && other.getPushNotification().equals(this.getPushNotification()) == false)
+            return false;
+        if (other.getMessageAttributes() == null ^ this.getMessageAttributes() == null)
+            return false;
+        if (other.getMessageAttributes() != null && other.getMessageAttributes().equals(this.getMessageAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -469,6 +608,8 @@ public class SendChannelMessageRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getMetadata() == null) ? 0 : getMetadata().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getChimeBearer() == null) ? 0 : getChimeBearer().hashCode());
+        hashCode = prime * hashCode + ((getPushNotification() == null) ? 0 : getPushNotification().hashCode());
+        hashCode = prime * hashCode + ((getMessageAttributes() == null) ? 0 : getMessageAttributes().hashCode());
         return hashCode;
     }
 

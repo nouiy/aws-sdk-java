@@ -139,6 +139,11 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
     }
 
     @Override
+    public GetChannelMembershipPreferencesResult getChannelMembershipPreferences(GetChannelMembershipPreferencesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetChannelMessageResult getChannelMessage(GetChannelMessageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -200,6 +205,11 @@ public class AbstractAmazonChimeSDKMessaging implements AmazonChimeSDKMessaging 
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutChannelMembershipPreferencesResult putChannelMembershipPreferences(PutChannelMembershipPreferencesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

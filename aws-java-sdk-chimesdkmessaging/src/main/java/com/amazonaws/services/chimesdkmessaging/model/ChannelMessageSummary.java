@@ -89,6 +89,12 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
      * </p>
      */
     private ChannelMessageStatusStructure status;
+    /**
+     * <p>
+     * The message attribues listed in a the summary of a channel message.
+     * </p>
+     */
+    private java.util.Map<String, MessageAttributeValue> messageAttributes;
 
     /**
      * <p>
@@ -528,6 +534,74 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The message attribues listed in a the summary of a channel message.
+     * </p>
+     * 
+     * @return The message attribues listed in a the summary of a channel message.
+     */
+
+    public java.util.Map<String, MessageAttributeValue> getMessageAttributes() {
+        return messageAttributes;
+    }
+
+    /**
+     * <p>
+     * The message attribues listed in a the summary of a channel message.
+     * </p>
+     * 
+     * @param messageAttributes
+     *        The message attribues listed in a the summary of a channel message.
+     */
+
+    public void setMessageAttributes(java.util.Map<String, MessageAttributeValue> messageAttributes) {
+        this.messageAttributes = messageAttributes;
+    }
+
+    /**
+     * <p>
+     * The message attribues listed in a the summary of a channel message.
+     * </p>
+     * 
+     * @param messageAttributes
+     *        The message attribues listed in a the summary of a channel message.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageSummary withMessageAttributes(java.util.Map<String, MessageAttributeValue> messageAttributes) {
+        setMessageAttributes(messageAttributes);
+        return this;
+    }
+
+    /**
+     * Add a single MessageAttributes entry
+     *
+     * @see ChannelMessageSummary#withMessageAttributes
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageSummary addMessageAttributesEntry(String key, MessageAttributeValue value) {
+        if (null == this.messageAttributes) {
+            this.messageAttributes = new java.util.HashMap<String, MessageAttributeValue>();
+        }
+        if (this.messageAttributes.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.messageAttributes.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into MessageAttributes.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageSummary clearMessageAttributesEntries() {
+        this.messageAttributes = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -558,7 +632,9 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
         if (getRedacted() != null)
             sb.append("Redacted: ").append(getRedacted()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getMessageAttributes() != null)
+            sb.append("MessageAttributes: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -613,6 +689,10 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getMessageAttributes() == null ^ this.getMessageAttributes() == null)
+            return false;
+        if (other.getMessageAttributes() != null && other.getMessageAttributes().equals(this.getMessageAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -631,6 +711,7 @@ public class ChannelMessageSummary implements Serializable, Cloneable, Structure
         hashCode = prime * hashCode + ((getSender() == null) ? 0 : getSender().hashCode());
         hashCode = prime * hashCode + ((getRedacted() == null) ? 0 : getRedacted().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getMessageAttributes() == null) ? 0 : getMessageAttributes().hashCode());
         return hashCode;
     }
 

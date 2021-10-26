@@ -33,7 +33,7 @@ public class DeleteChannelModeratorRequest extends com.amazonaws.AmazonWebServic
     private String channelArn;
     /**
      * <p>
-     * The ARN of the moderator being deleted.
+     * The <code>AppInstanceUserArn</code> of the moderator being deleted.
      * </p>
      */
     private String channelModeratorArn;
@@ -86,11 +86,11 @@ public class DeleteChannelModeratorRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of the moderator being deleted.
+     * The <code>AppInstanceUserArn</code> of the moderator being deleted.
      * </p>
      * 
      * @param channelModeratorArn
-     *        The ARN of the moderator being deleted.
+     *        The <code>AppInstanceUserArn</code> of the moderator being deleted.
      */
 
     public void setChannelModeratorArn(String channelModeratorArn) {
@@ -99,10 +99,10 @@ public class DeleteChannelModeratorRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of the moderator being deleted.
+     * The <code>AppInstanceUserArn</code> of the moderator being deleted.
      * </p>
      * 
-     * @return The ARN of the moderator being deleted.
+     * @return The <code>AppInstanceUserArn</code> of the moderator being deleted.
      */
 
     public String getChannelModeratorArn() {
@@ -111,11 +111,11 @@ public class DeleteChannelModeratorRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of the moderator being deleted.
+     * The <code>AppInstanceUserArn</code> of the moderator being deleted.
      * </p>
      * 
      * @param channelModeratorArn
-     *        The ARN of the moderator being deleted.
+     *        The <code>AppInstanceUserArn</code> of the moderator being deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

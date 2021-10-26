@@ -278,6 +278,41 @@ public class AmazonChimeSDKIdentityAsyncClient extends AmazonChimeSDKIdentityCli
     }
 
     @Override
+    public java.util.concurrent.Future<DeregisterAppInstanceUserEndpointResult> deregisterAppInstanceUserEndpointAsync(
+            DeregisterAppInstanceUserEndpointRequest request) {
+
+        return deregisterAppInstanceUserEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeregisterAppInstanceUserEndpointResult> deregisterAppInstanceUserEndpointAsync(
+            final DeregisterAppInstanceUserEndpointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeregisterAppInstanceUserEndpointRequest, DeregisterAppInstanceUserEndpointResult> asyncHandler) {
+        final DeregisterAppInstanceUserEndpointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeregisterAppInstanceUserEndpointResult>() {
+            @Override
+            public DeregisterAppInstanceUserEndpointResult call() throws Exception {
+                DeregisterAppInstanceUserEndpointResult result = null;
+
+                try {
+                    result = executeDeregisterAppInstanceUserEndpoint(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAppInstanceResult> describeAppInstanceAsync(DescribeAppInstanceRequest request) {
 
         return describeAppInstanceAsync(request, null);
@@ -377,6 +412,41 @@ public class AmazonChimeSDKIdentityAsyncClient extends AmazonChimeSDKIdentityCli
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAppInstanceUserEndpointResult> describeAppInstanceUserEndpointAsync(
+            DescribeAppInstanceUserEndpointRequest request) {
+
+        return describeAppInstanceUserEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAppInstanceUserEndpointResult> describeAppInstanceUserEndpointAsync(
+            final DescribeAppInstanceUserEndpointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeAppInstanceUserEndpointRequest, DescribeAppInstanceUserEndpointResult> asyncHandler) {
+        final DescribeAppInstanceUserEndpointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeAppInstanceUserEndpointResult>() {
+            @Override
+            public DescribeAppInstanceUserEndpointResult call() throws Exception {
+                DescribeAppInstanceUserEndpointResult result = null;
+
+                try {
+                    result = executeDescribeAppInstanceUserEndpoint(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAppInstanceRetentionSettingsResult> getAppInstanceRetentionSettingsAsync(
             GetAppInstanceRetentionSettingsRequest request) {
 
@@ -429,6 +499,39 @@ public class AmazonChimeSDKIdentityAsyncClient extends AmazonChimeSDKIdentityCli
 
                 try {
                     result = executeListAppInstanceAdmins(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAppInstanceUserEndpointsResult> listAppInstanceUserEndpointsAsync(ListAppInstanceUserEndpointsRequest request) {
+
+        return listAppInstanceUserEndpointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAppInstanceUserEndpointsResult> listAppInstanceUserEndpointsAsync(final ListAppInstanceUserEndpointsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAppInstanceUserEndpointsRequest, ListAppInstanceUserEndpointsResult> asyncHandler) {
+        final ListAppInstanceUserEndpointsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAppInstanceUserEndpointsResult>() {
+            @Override
+            public ListAppInstanceUserEndpointsResult call() throws Exception {
+                ListAppInstanceUserEndpointsResult result = null;
+
+                try {
+                    result = executeListAppInstanceUserEndpoints(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -511,6 +614,39 @@ public class AmazonChimeSDKIdentityAsyncClient extends AmazonChimeSDKIdentityCli
     }
 
     @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
+
+        return listTagsForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(final ListTagsForResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+        final ListTagsForResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTagsForResourceResult>() {
+            @Override
+            public ListTagsForResourceResult call() throws Exception {
+                ListTagsForResourceResult result = null;
+
+                try {
+                    result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<PutAppInstanceRetentionSettingsResult> putAppInstanceRetentionSettingsAsync(
             PutAppInstanceRetentionSettingsRequest request) {
 
@@ -530,6 +666,107 @@ public class AmazonChimeSDKIdentityAsyncClient extends AmazonChimeSDKIdentityCli
 
                 try {
                     result = executePutAppInstanceRetentionSettings(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterAppInstanceUserEndpointResult> registerAppInstanceUserEndpointAsync(
+            RegisterAppInstanceUserEndpointRequest request) {
+
+        return registerAppInstanceUserEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterAppInstanceUserEndpointResult> registerAppInstanceUserEndpointAsync(
+            final RegisterAppInstanceUserEndpointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RegisterAppInstanceUserEndpointRequest, RegisterAppInstanceUserEndpointResult> asyncHandler) {
+        final RegisterAppInstanceUserEndpointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RegisterAppInstanceUserEndpointResult>() {
+            @Override
+            public RegisterAppInstanceUserEndpointResult call() throws Exception {
+                RegisterAppInstanceUserEndpointResult result = null;
+
+                try {
+                    result = executeRegisterAppInstanceUserEndpoint(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
+
+        return tagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(final TagResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+        final TagResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<TagResourceResult>() {
+            @Override
+            public TagResourceResult call() throws Exception {
+                TagResourceResult result = null;
+
+                try {
+                    result = executeTagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
+
+        return untagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(final UntagResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+        final UntagResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UntagResourceResult>() {
+            @Override
+            public UntagResourceResult call() throws Exception {
+                UntagResourceResult result = null;
+
+                try {
+                    result = executeUntagResource(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -596,6 +833,40 @@ public class AmazonChimeSDKIdentityAsyncClient extends AmazonChimeSDKIdentityCli
 
                 try {
                     result = executeUpdateAppInstanceUser(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAppInstanceUserEndpointResult> updateAppInstanceUserEndpointAsync(UpdateAppInstanceUserEndpointRequest request) {
+
+        return updateAppInstanceUserEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAppInstanceUserEndpointResult> updateAppInstanceUserEndpointAsync(
+            final UpdateAppInstanceUserEndpointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAppInstanceUserEndpointRequest, UpdateAppInstanceUserEndpointResult> asyncHandler) {
+        final UpdateAppInstanceUserEndpointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAppInstanceUserEndpointResult>() {
+            @Override
+            public UpdateAppInstanceUserEndpointResult call() throws Exception {
+                UpdateAppInstanceUserEndpointResult result = null;
+
+                try {
+                    result = executeUpdateAppInstanceUserEndpoint(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

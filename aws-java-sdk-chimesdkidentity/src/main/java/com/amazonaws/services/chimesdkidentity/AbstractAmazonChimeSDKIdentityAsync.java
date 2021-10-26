@@ -106,6 +106,21 @@ public class AbstractAmazonChimeSDKIdentityAsync extends AbstractAmazonChimeSDKI
     }
 
     @Override
+    public java.util.concurrent.Future<DeregisterAppInstanceUserEndpointResult> deregisterAppInstanceUserEndpointAsync(
+            DeregisterAppInstanceUserEndpointRequest request) {
+
+        return deregisterAppInstanceUserEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeregisterAppInstanceUserEndpointResult> deregisterAppInstanceUserEndpointAsync(
+            DeregisterAppInstanceUserEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeregisterAppInstanceUserEndpointRequest, DeregisterAppInstanceUserEndpointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAppInstanceResult> describeAppInstanceAsync(DescribeAppInstanceRequest request) {
 
         return describeAppInstanceAsync(request, null);
@@ -145,6 +160,21 @@ public class AbstractAmazonChimeSDKIdentityAsync extends AbstractAmazonChimeSDKI
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAppInstanceUserEndpointResult> describeAppInstanceUserEndpointAsync(
+            DescribeAppInstanceUserEndpointRequest request) {
+
+        return describeAppInstanceUserEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAppInstanceUserEndpointResult> describeAppInstanceUserEndpointAsync(
+            DescribeAppInstanceUserEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAppInstanceUserEndpointRequest, DescribeAppInstanceUserEndpointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetAppInstanceRetentionSettingsResult> getAppInstanceRetentionSettingsAsync(
             GetAppInstanceRetentionSettingsRequest request) {
 
@@ -168,6 +198,19 @@ public class AbstractAmazonChimeSDKIdentityAsync extends AbstractAmazonChimeSDKI
     @Override
     public java.util.concurrent.Future<ListAppInstanceAdminsResult> listAppInstanceAdminsAsync(ListAppInstanceAdminsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListAppInstanceAdminsRequest, ListAppInstanceAdminsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAppInstanceUserEndpointsResult> listAppInstanceUserEndpointsAsync(ListAppInstanceUserEndpointsRequest request) {
+
+        return listAppInstanceUserEndpointsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAppInstanceUserEndpointsResult> listAppInstanceUserEndpointsAsync(ListAppInstanceUserEndpointsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAppInstanceUserEndpointsRequest, ListAppInstanceUserEndpointsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -199,6 +242,19 @@ public class AbstractAmazonChimeSDKIdentityAsync extends AbstractAmazonChimeSDKI
     }
 
     @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
+
+        return listTagsForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<PutAppInstanceRetentionSettingsResult> putAppInstanceRetentionSettingsAsync(
             PutAppInstanceRetentionSettingsRequest request) {
 
@@ -209,6 +265,47 @@ public class AbstractAmazonChimeSDKIdentityAsync extends AbstractAmazonChimeSDKI
     public java.util.concurrent.Future<PutAppInstanceRetentionSettingsResult> putAppInstanceRetentionSettingsAsync(
             PutAppInstanceRetentionSettingsRequest request,
             com.amazonaws.handlers.AsyncHandler<PutAppInstanceRetentionSettingsRequest, PutAppInstanceRetentionSettingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterAppInstanceUserEndpointResult> registerAppInstanceUserEndpointAsync(
+            RegisterAppInstanceUserEndpointRequest request) {
+
+        return registerAppInstanceUserEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterAppInstanceUserEndpointResult> registerAppInstanceUserEndpointAsync(
+            RegisterAppInstanceUserEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<RegisterAppInstanceUserEndpointRequest, RegisterAppInstanceUserEndpointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
+
+        return tagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
+
+        return untagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -235,6 +332,19 @@ public class AbstractAmazonChimeSDKIdentityAsync extends AbstractAmazonChimeSDKI
     @Override
     public java.util.concurrent.Future<UpdateAppInstanceUserResult> updateAppInstanceUserAsync(UpdateAppInstanceUserRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateAppInstanceUserRequest, UpdateAppInstanceUserResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAppInstanceUserEndpointResult> updateAppInstanceUserEndpointAsync(UpdateAppInstanceUserEndpointRequest request) {
+
+        return updateAppInstanceUserEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAppInstanceUserEndpointResult> updateAppInstanceUserEndpointAsync(UpdateAppInstanceUserEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateAppInstanceUserEndpointRequest, UpdateAppInstanceUserEndpointResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

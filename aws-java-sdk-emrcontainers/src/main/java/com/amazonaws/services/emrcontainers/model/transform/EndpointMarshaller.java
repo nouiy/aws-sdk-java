@@ -47,6 +47,8 @@ public class EndpointMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("executionRoleArn").build();
     private static final MarshallingInfo<String> CERTIFICATEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("certificateArn").build();
+    private static final MarshallingInfo<StructuredPojo> CERTIFICATEAUTHORITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("certificateAuthority").build();
     private static final MarshallingInfo<StructuredPojo> CONFIGURATIONOVERRIDES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("configurationOverrides").build();
     private static final MarshallingInfo<String> SERVERURL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -89,6 +91,7 @@ public class EndpointMarshaller {
             protocolMarshaller.marshall(endpoint.getReleaseLabel(), RELEASELABEL_BINDING);
             protocolMarshaller.marshall(endpoint.getExecutionRoleArn(), EXECUTIONROLEARN_BINDING);
             protocolMarshaller.marshall(endpoint.getCertificateArn(), CERTIFICATEARN_BINDING);
+            protocolMarshaller.marshall(endpoint.getCertificateAuthority(), CERTIFICATEAUTHORITY_BINDING);
             protocolMarshaller.marshall(endpoint.getConfigurationOverrides(), CONFIGURATIONOVERRIDES_BINDING);
             protocolMarshaller.marshall(endpoint.getServerUrl(), SERVERURL_BINDING);
             protocolMarshaller.marshall(endpoint.getCreatedAt(), CREATEDAT_BINDING);

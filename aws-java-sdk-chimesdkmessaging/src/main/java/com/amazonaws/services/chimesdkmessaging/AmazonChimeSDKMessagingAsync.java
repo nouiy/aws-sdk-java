@@ -386,8 +386,8 @@ public interface AmazonChimeSDKMessagingAsync extends AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Adds a user to a channel. The <code>InvitedBy</code> response field is derived from the request header. A channel
-     * member can:
+     * Adds a user to a channel. The <code>InvitedBy</code> field in <code>ChannelMembership</code> is derived from the
+     * request header. A channel member can:
      * </p>
      * <ul>
      * <li>
@@ -448,8 +448,8 @@ public interface AmazonChimeSDKMessagingAsync extends AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Adds a user to a channel. The <code>InvitedBy</code> response field is derived from the request header. A channel
-     * member can:
+     * Adds a user to a channel. The <code>InvitedBy</code> field in <code>ChannelMembership</code> is derived from the
+     * request header. A channel member can:
      * </p>
      * <ul>
      * <li>
@@ -1226,6 +1226,51 @@ public interface AmazonChimeSDKMessagingAsync extends AmazonChimeSDKMessaging {
 
     /**
      * <p>
+     * Gets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
+     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
+     * membership can retrieve preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't
+     * retrieve preferences for other users. Banned users can't retrieve membership preferences for the channel from
+     * which they are banned.
+     * </p>
+     * 
+     * @param getChannelMembershipPreferencesRequest
+     * @return A Java Future containing the result of the GetChannelMembershipPreferences operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKMessagingAsync.GetChannelMembershipPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/GetChannelMembershipPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetChannelMembershipPreferencesResult> getChannelMembershipPreferencesAsync(
+            GetChannelMembershipPreferencesRequest getChannelMembershipPreferencesRequest);
+
+    /**
+     * <p>
+     * Gets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
+     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
+     * membership can retrieve preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't
+     * retrieve preferences for other users. Banned users can't retrieve membership preferences for the channel from
+     * which they are banned.
+     * </p>
+     * 
+     * @param getChannelMembershipPreferencesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetChannelMembershipPreferences operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKMessagingAsyncHandler.GetChannelMembershipPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/GetChannelMembershipPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetChannelMembershipPreferencesResult> getChannelMembershipPreferencesAsync(
+            GetChannelMembershipPreferencesRequest getChannelMembershipPreferencesRequest,
+            com.amazonaws.handlers.AsyncHandler<GetChannelMembershipPreferencesRequest, GetChannelMembershipPreferencesResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets the full details of a channel message.
      * </p>
      * <note>
@@ -1519,6 +1564,11 @@ public interface AmazonChimeSDKMessagingAsync extends AmazonChimeSDKMessaging {
      * user that makes the API call as the value in the header.
      * </p>
      * </note>
+     * <p>
+     * If you want to list the channels to which a specific app instance user belongs, see the <a href=
+     * "https://docs.aws.amazon.com/chime/latest/APIReference/API_messaging-chime_ListChannelMembershipsForAppInstanceUser.html"
+     * >ListChannelMembershipsForAppInstanceUser</a> API.
+     * </p>
      * 
      * @param listChannelMembershipsRequest
      * @return A Java Future containing the result of the ListChannelMemberships operation returned by the service.
@@ -1538,6 +1588,11 @@ public interface AmazonChimeSDKMessagingAsync extends AmazonChimeSDKMessaging {
      * user that makes the API call as the value in the header.
      * </p>
      * </note>
+     * <p>
+     * If you want to list the channels to which a specific app instance user belongs, see the <a href=
+     * "https://docs.aws.amazon.com/chime/latest/APIReference/API_messaging-chime_ListChannelMembershipsForAppInstanceUser.html"
+     * >ListChannelMembershipsForAppInstanceUser</a> API.
+     * </p>
      * 
      * @param listChannelMembershipsRequest
      * @param asyncHandler
@@ -1894,6 +1949,51 @@ public interface AmazonChimeSDKMessagingAsync extends AmazonChimeSDKMessaging {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Sets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
+     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
+     * membership can set preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't set
+     * preferences for other users. Banned users can't set membership preferences for the channel from which they are
+     * banned.
+     * </p>
+     * 
+     * @param putChannelMembershipPreferencesRequest
+     * @return A Java Future containing the result of the PutChannelMembershipPreferences operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKMessagingAsync.PutChannelMembershipPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/PutChannelMembershipPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutChannelMembershipPreferencesResult> putChannelMembershipPreferencesAsync(
+            PutChannelMembershipPreferencesRequest putChannelMembershipPreferencesRequest);
+
+    /**
+     * <p>
+     * Sets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
+     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
+     * membership can set preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't set
+     * preferences for other users. Banned users can't set membership preferences for the channel from which they are
+     * banned.
+     * </p>
+     * 
+     * @param putChannelMembershipPreferencesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutChannelMembershipPreferences operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKMessagingAsyncHandler.PutChannelMembershipPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/PutChannelMembershipPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutChannelMembershipPreferencesResult> putChannelMembershipPreferencesAsync(
+            PutChannelMembershipPreferencesRequest putChannelMembershipPreferencesRequest,
+            com.amazonaws.handlers.AsyncHandler<PutChannelMembershipPreferencesRequest, PutChannelMembershipPreferencesResult> asyncHandler);
 
     /**
      * <p>

@@ -88,6 +88,11 @@ public class ChannelMessageSummaryJsonUnmarshaller implements Unmarshaller<Chann
                     context.nextToken();
                     channelMessageSummary.setStatus(ChannelMessageStatusStructureJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("MessageAttributes", targetDepth)) {
+                    context.nextToken();
+                    channelMessageSummary.setMessageAttributes(new MapUnmarshaller<String, MessageAttributeValue>(context.getUnmarshaller(String.class),
+                            MessageAttributeValueJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

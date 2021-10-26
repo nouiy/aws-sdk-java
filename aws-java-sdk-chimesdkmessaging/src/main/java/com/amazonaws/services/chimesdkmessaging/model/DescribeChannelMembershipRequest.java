@@ -33,7 +33,7 @@ public class DescribeChannelMembershipRequest extends com.amazonaws.AmazonWebSer
     private String channelArn;
     /**
      * <p>
-     * The ARN of the member.
+     * The <code>AppInstanceUserArn</code> of the member.
      * </p>
      */
     private String memberArn;
@@ -86,11 +86,11 @@ public class DescribeChannelMembershipRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARN of the member.
+     * The <code>AppInstanceUserArn</code> of the member.
      * </p>
      * 
      * @param memberArn
-     *        The ARN of the member.
+     *        The <code>AppInstanceUserArn</code> of the member.
      */
 
     public void setMemberArn(String memberArn) {
@@ -99,10 +99,10 @@ public class DescribeChannelMembershipRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARN of the member.
+     * The <code>AppInstanceUserArn</code> of the member.
      * </p>
      * 
-     * @return The ARN of the member.
+     * @return The <code>AppInstanceUserArn</code> of the member.
      */
 
     public String getMemberArn() {
@@ -111,11 +111,11 @@ public class DescribeChannelMembershipRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The ARN of the member.
+     * The <code>AppInstanceUserArn</code> of the member.
      * </p>
      * 
      * @param memberArn
-     *        The ARN of the member.
+     *        The <code>AppInstanceUserArn</code> of the member.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

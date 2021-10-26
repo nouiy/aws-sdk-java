@@ -241,6 +241,32 @@ public interface AmazonChimeSDKIdentity {
 
     /**
      * <p>
+     * Deregisters an <code>AppInstanceUserEndpoint</code>.
+     * </p>
+     * 
+     * @param deregisterAppInstanceUserEndpointRequest
+     * @return Result of the DeregisterAppInstanceUserEndpoint operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKIdentity.DeregisterAppInstanceUserEndpoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/DeregisterAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeregisterAppInstanceUserEndpointResult deregisterAppInstanceUserEndpoint(DeregisterAppInstanceUserEndpointRequest deregisterAppInstanceUserEndpointRequest);
+
+    /**
+     * <p>
      * Returns the full details of an <code>AppInstance</code>.
      * </p>
      * 
@@ -316,6 +342,32 @@ public interface AmazonChimeSDKIdentity {
 
     /**
      * <p>
+     * Returns the full details of an <code>AppInstanceUserEndpoint</code>.
+     * </p>
+     * 
+     * @param describeAppInstanceUserEndpointRequest
+     * @return Result of the DescribeAppInstanceUserEndpoint operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKIdentity.DescribeAppInstanceUserEndpoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/DescribeAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeAppInstanceUserEndpointResult describeAppInstanceUserEndpoint(DescribeAppInstanceUserEndpointRequest describeAppInstanceUserEndpointRequest);
+
+    /**
+     * <p>
      * Gets the retention settings for an <code>AppInstance</code>.
      * </p>
      * 
@@ -369,6 +421,31 @@ public interface AmazonChimeSDKIdentity {
 
     /**
      * <p>
+     * Lists all the <code>AppInstanceUserEndpoints</code> created under a single <code>AppInstanceUser</code>.
+     * </p>
+     * 
+     * @param listAppInstanceUserEndpointsRequest
+     * @return Result of the ListAppInstanceUserEndpoints operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKIdentity.ListAppInstanceUserEndpoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/ListAppInstanceUserEndpoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAppInstanceUserEndpointsResult listAppInstanceUserEndpoints(ListAppInstanceUserEndpointsRequest listAppInstanceUserEndpointsRequest);
+
+    /**
+     * <p>
      * List all <code>AppInstanceUsers</code> created under a single <code>AppInstance</code>.
      * </p>
      * 
@@ -419,6 +496,31 @@ public interface AmazonChimeSDKIdentity {
 
     /**
      * <p>
+     * Lists the tags applied to an Amazon Chime SDK identity resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKIdentity.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
      * Sets the amount of time in days that a given <code>AppInstance</code> retains data.
      * </p>
      * 
@@ -442,6 +544,90 @@ public interface AmazonChimeSDKIdentity {
      *      target="_top">AWS API Documentation</a>
      */
     PutAppInstanceRetentionSettingsResult putAppInstanceRetentionSettings(PutAppInstanceRetentionSettingsRequest putAppInstanceRetentionSettingsRequest);
+
+    /**
+     * <p>
+     * Registers an endpoint under an Amazon Chime <code>AppInstanceUser</code>. The endpoint receives messages for a
+     * user. For push notifications, the endpoint is a mobile device used to receive mobile push notifications for a
+     * user.
+     * </p>
+     * 
+     * @param registerAppInstanceUserEndpointRequest
+     * @return Result of the RegisterAppInstanceUserEndpoint operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ResourceLimitExceededException
+     *         The request exceeds the resource limit.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKIdentity.RegisterAppInstanceUserEndpoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/RegisterAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RegisterAppInstanceUserEndpointResult registerAppInstanceUserEndpoint(RegisterAppInstanceUserEndpointRequest registerAppInstanceUserEndpointRequest);
+
+    /**
+     * <p>
+     * Applies the specified tags to the specified Amazon Chime SDK identity resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ResourceLimitExceededException
+     *         The request exceeds the resource limit.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKIdentity.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Removes the specified tags from the specified Amazon Chime SDK identity resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKIdentity.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
 
     /**
      * <p>
@@ -498,6 +684,34 @@ public interface AmazonChimeSDKIdentity {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateAppInstanceUserResult updateAppInstanceUser(UpdateAppInstanceUserRequest updateAppInstanceUserRequest);
+
+    /**
+     * <p>
+     * Updates the details of an <code>AppInstanceUserEndpoint</code>. You can update the name and
+     * <code>AllowMessage</code> values.
+     * </p>
+     * 
+     * @param updateAppInstanceUserEndpointRequest
+     * @return Result of the UpdateAppInstanceUserEndpoint operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKIdentity.UpdateAppInstanceUserEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/UpdateAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateAppInstanceUserEndpointResult updateAppInstanceUserEndpoint(UpdateAppInstanceUserEndpointRequest updateAppInstanceUserEndpointRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

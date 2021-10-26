@@ -33,7 +33,7 @@ public class DescribeChannelModeratorRequest extends com.amazonaws.AmazonWebServ
     private String channelArn;
     /**
      * <p>
-     * The ARN of the channel moderator.
+     * The <code>AppInstanceUserArn</code> of the channel moderator.
      * </p>
      */
     private String channelModeratorArn;
@@ -86,11 +86,11 @@ public class DescribeChannelModeratorRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ARN of the channel moderator.
+     * The <code>AppInstanceUserArn</code> of the channel moderator.
      * </p>
      * 
      * @param channelModeratorArn
-     *        The ARN of the channel moderator.
+     *        The <code>AppInstanceUserArn</code> of the channel moderator.
      */
 
     public void setChannelModeratorArn(String channelModeratorArn) {
@@ -99,10 +99,10 @@ public class DescribeChannelModeratorRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ARN of the channel moderator.
+     * The <code>AppInstanceUserArn</code> of the channel moderator.
      * </p>
      * 
-     * @return The ARN of the channel moderator.
+     * @return The <code>AppInstanceUserArn</code> of the channel moderator.
      */
 
     public String getChannelModeratorArn() {
@@ -111,11 +111,11 @@ public class DescribeChannelModeratorRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The ARN of the channel moderator.
+     * The <code>AppInstanceUserArn</code> of the channel moderator.
      * </p>
      * 
      * @param channelModeratorArn
-     *        The ARN of the channel moderator.
+     *        The <code>AppInstanceUserArn</code> of the channel moderator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

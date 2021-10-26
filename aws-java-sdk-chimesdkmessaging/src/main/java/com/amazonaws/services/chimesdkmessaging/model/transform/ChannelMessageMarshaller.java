@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.chimesdkmessaging.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -51,6 +53,8 @@ public class ChannelMessageMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Persistence").build();
     private static final MarshallingInfo<StructuredPojo> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Status").build();
+    private static final MarshallingInfo<Map> MESSAGEATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageAttributes").build();
 
     private static final ChannelMessageMarshaller instance = new ChannelMessageMarshaller();
 
@@ -80,6 +84,7 @@ public class ChannelMessageMarshaller {
             protocolMarshaller.marshall(channelMessage.getRedacted(), REDACTED_BINDING);
             protocolMarshaller.marshall(channelMessage.getPersistence(), PERSISTENCE_BINDING);
             protocolMarshaller.marshall(channelMessage.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(channelMessage.getMessageAttributes(), MESSAGEATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

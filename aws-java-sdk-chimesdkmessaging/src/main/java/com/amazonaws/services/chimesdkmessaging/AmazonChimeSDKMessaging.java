@@ -294,8 +294,8 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
-     * Adds a user to a channel. The <code>InvitedBy</code> response field is derived from the request header. A channel
-     * member can:
+     * Adds a user to a channel. The <code>InvitedBy</code> field in <code>ChannelMembership</code> is derived from the
+     * request header. A channel member can:
      * </p>
      * <ul>
      * <li>
@@ -885,6 +885,36 @@ public interface AmazonChimeSDKMessaging {
 
     /**
      * <p>
+     * Gets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
+     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
+     * membership can retrieve preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't
+     * retrieve preferences for other users. Banned users can't retrieve membership preferences for the channel from
+     * which they are banned.
+     * </p>
+     * 
+     * @param getChannelMembershipPreferencesRequest
+     * @return Result of the GetChannelMembershipPreferences operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.GetChannelMembershipPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/GetChannelMembershipPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetChannelMembershipPreferencesResult getChannelMembershipPreferences(GetChannelMembershipPreferencesRequest getChannelMembershipPreferencesRequest);
+
+    /**
+     * <p>
      * Gets the full details of a channel message.
      * </p>
      * <note>
@@ -1082,6 +1112,11 @@ public interface AmazonChimeSDKMessaging {
      * user that makes the API call as the value in the header.
      * </p>
      * </note>
+     * <p>
+     * If you want to list the channels to which a specific app instance user belongs, see the <a href=
+     * "https://docs.aws.amazon.com/chime/latest/APIReference/API_messaging-chime_ListChannelMembershipsForAppInstanceUser.html"
+     * >ListChannelMembershipsForAppInstanceUser</a> API.
+     * </p>
      * 
      * @param listChannelMembershipsRequest
      * @return Result of the ListChannelMemberships operation returned by the service.
@@ -1337,6 +1372,38 @@ public interface AmazonChimeSDKMessaging {
      *      target="_top">AWS API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Sets the membership preferences of an <code>AppInstanceUser</code> for the specified channel. The
+     * <code>AppInstanceUser</code> must be a member of the channel. Only the <code>AppInstanceUser</code> who owns the
+     * membership can set preferences. Users in the <code>AppInstanceAdmin</code> and channel moderator roles can't set
+     * preferences for other users. Banned users can't set membership preferences for the channel from which they are
+     * banned.
+     * </p>
+     * 
+     * @param putChannelMembershipPreferencesRequest
+     * @return Result of the PutChannelMembershipPreferences operation returned by the service.
+     * @throws BadRequestException
+     *         The input parameters don't match the service's restrictions.
+     * @throws ConflictException
+     *         The request could not be processed because of conflict in the current state of the resource.
+     * @throws UnauthorizedClientException
+     *         The client is not currently authorized to make the request.
+     * @throws ForbiddenException
+     *         The client is permanently forbidden from making the request.
+     * @throws ThrottledClientException
+     *         The client exceeded its request rate limit.
+     * @throws ServiceUnavailableException
+     *         The service is currently unavailable.
+     * @throws ServiceFailureException
+     *         The service encountered an unexpected error.
+     * @sample AmazonChimeSDKMessaging.PutChannelMembershipPreferences
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-messaging-2021-05-15/PutChannelMembershipPreferences"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutChannelMembershipPreferencesResult putChannelMembershipPreferences(PutChannelMembershipPreferencesRequest putChannelMembershipPreferencesRequest);
 
     /**
      * <p>

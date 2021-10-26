@@ -318,6 +318,21 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     }
 
     @Override
+    public java.util.concurrent.Future<GetChannelMembershipPreferencesResult> getChannelMembershipPreferencesAsync(
+            GetChannelMembershipPreferencesRequest request) {
+
+        return getChannelMembershipPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetChannelMembershipPreferencesResult> getChannelMembershipPreferencesAsync(
+            GetChannelMembershipPreferencesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetChannelMembershipPreferencesRequest, GetChannelMembershipPreferencesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetChannelMessageResult> getChannelMessageAsync(GetChannelMessageRequest request) {
 
         return getChannelMessageAsync(request, null);
@@ -488,6 +503,21 @@ public class AbstractAmazonChimeSDKMessagingAsync extends AbstractAmazonChimeSDK
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutChannelMembershipPreferencesResult> putChannelMembershipPreferencesAsync(
+            PutChannelMembershipPreferencesRequest request) {
+
+        return putChannelMembershipPreferencesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutChannelMembershipPreferencesResult> putChannelMembershipPreferencesAsync(
+            PutChannelMembershipPreferencesRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutChannelMembershipPreferencesRequest, PutChannelMembershipPreferencesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

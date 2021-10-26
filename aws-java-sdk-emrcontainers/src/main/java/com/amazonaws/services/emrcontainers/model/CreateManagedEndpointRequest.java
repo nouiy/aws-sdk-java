@@ -57,9 +57,11 @@ public class CreateManagedEndpointRequest extends com.amazonaws.AmazonWebService
     private String executionRoleArn;
     /**
      * <p>
-     * The certificate ARN of the managed endpoint.
+     * The certificate ARN provided by users for the managed endpoint. This fiedd is under deprecation and will be
+     * removed in future releases.
      * </p>
      */
+    @Deprecated
     private String certificateArn;
     /**
      * <p>
@@ -282,39 +284,45 @@ public class CreateManagedEndpointRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The certificate ARN of the managed endpoint.
+     * The certificate ARN provided by users for the managed endpoint. This fiedd is under deprecation and will be
+     * removed in future releases.
      * </p>
      * 
      * @param certificateArn
-     *        The certificate ARN of the managed endpoint.
+     *        The certificate ARN provided by users for the managed endpoint. This fiedd is under deprecation and will
+     *        be removed in future releases.
      */
-
+    @Deprecated
     public void setCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
     }
 
     /**
      * <p>
-     * The certificate ARN of the managed endpoint.
+     * The certificate ARN provided by users for the managed endpoint. This fiedd is under deprecation and will be
+     * removed in future releases.
      * </p>
      * 
-     * @return The certificate ARN of the managed endpoint.
+     * @return The certificate ARN provided by users for the managed endpoint. This fiedd is under deprecation and will
+     *         be removed in future releases.
      */
-
+    @Deprecated
     public String getCertificateArn() {
         return this.certificateArn;
     }
 
     /**
      * <p>
-     * The certificate ARN of the managed endpoint.
+     * The certificate ARN provided by users for the managed endpoint. This fiedd is under deprecation and will be
+     * removed in future releases.
      * </p>
      * 
      * @param certificateArn
-     *        The certificate ARN of the managed endpoint.
+     *        The certificate ARN provided by users for the managed endpoint. This fiedd is under deprecation and will
+     *        be removed in future releases.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public CreateManagedEndpointRequest withCertificateArn(String certificateArn) {
         setCertificateArn(certificateArn);
         return this;

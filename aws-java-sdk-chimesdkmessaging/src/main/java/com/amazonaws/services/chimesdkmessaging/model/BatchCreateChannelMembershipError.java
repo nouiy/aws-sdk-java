@@ -31,7 +31,7 @@ public class BatchCreateChannelMembershipError implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the member that the service couldn't add.
+     * The <code>AppInstanceUserArn</code> of the member that the service couldn't add.
      * </p>
      */
     private String memberArn;
@@ -50,11 +50,11 @@ public class BatchCreateChannelMembershipError implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the member that the service couldn't add.
+     * The <code>AppInstanceUserArn</code> of the member that the service couldn't add.
      * </p>
      * 
      * @param memberArn
-     *        The ARN of the member that the service couldn't add.
+     *        The <code>AppInstanceUserArn</code> of the member that the service couldn't add.
      */
 
     public void setMemberArn(String memberArn) {
@@ -63,10 +63,10 @@ public class BatchCreateChannelMembershipError implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the member that the service couldn't add.
+     * The <code>AppInstanceUserArn</code> of the member that the service couldn't add.
      * </p>
      * 
-     * @return The ARN of the member that the service couldn't add.
+     * @return The <code>AppInstanceUserArn</code> of the member that the service couldn't add.
      */
 
     public String getMemberArn() {
@@ -75,11 +75,11 @@ public class BatchCreateChannelMembershipError implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ARN of the member that the service couldn't add.
+     * The <code>AppInstanceUserArn</code> of the member that the service couldn't add.
      * </p>
      * 
      * @param memberArn
-     *        The ARN of the member that the service couldn't add.
+     *        The <code>AppInstanceUserArn</code> of the member that the service couldn't add.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

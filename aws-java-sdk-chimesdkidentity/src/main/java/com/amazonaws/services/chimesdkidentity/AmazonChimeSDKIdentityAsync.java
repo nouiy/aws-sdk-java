@@ -268,6 +268,43 @@ public interface AmazonChimeSDKIdentityAsync extends AmazonChimeSDKIdentity {
 
     /**
      * <p>
+     * Deregisters an <code>AppInstanceUserEndpoint</code>.
+     * </p>
+     * 
+     * @param deregisterAppInstanceUserEndpointRequest
+     * @return A Java Future containing the result of the DeregisterAppInstanceUserEndpoint operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsync.DeregisterAppInstanceUserEndpoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/DeregisterAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterAppInstanceUserEndpointResult> deregisterAppInstanceUserEndpointAsync(
+            DeregisterAppInstanceUserEndpointRequest deregisterAppInstanceUserEndpointRequest);
+
+    /**
+     * <p>
+     * Deregisters an <code>AppInstanceUserEndpoint</code>.
+     * </p>
+     * 
+     * @param deregisterAppInstanceUserEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeregisterAppInstanceUserEndpoint operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsyncHandler.DeregisterAppInstanceUserEndpoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/DeregisterAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterAppInstanceUserEndpointResult> deregisterAppInstanceUserEndpointAsync(
+            DeregisterAppInstanceUserEndpointRequest deregisterAppInstanceUserEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<DeregisterAppInstanceUserEndpointRequest, DeregisterAppInstanceUserEndpointResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the full details of an <code>AppInstance</code>.
      * </p>
      * 
@@ -361,6 +398,43 @@ public interface AmazonChimeSDKIdentityAsync extends AmazonChimeSDKIdentity {
 
     /**
      * <p>
+     * Returns the full details of an <code>AppInstanceUserEndpoint</code>.
+     * </p>
+     * 
+     * @param describeAppInstanceUserEndpointRequest
+     * @return A Java Future containing the result of the DescribeAppInstanceUserEndpoint operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsync.DescribeAppInstanceUserEndpoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/DescribeAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAppInstanceUserEndpointResult> describeAppInstanceUserEndpointAsync(
+            DescribeAppInstanceUserEndpointRequest describeAppInstanceUserEndpointRequest);
+
+    /**
+     * <p>
+     * Returns the full details of an <code>AppInstanceUserEndpoint</code>.
+     * </p>
+     * 
+     * @param describeAppInstanceUserEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeAppInstanceUserEndpoint operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsyncHandler.DescribeAppInstanceUserEndpoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/DescribeAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeAppInstanceUserEndpointResult> describeAppInstanceUserEndpointAsync(
+            DescribeAppInstanceUserEndpointRequest describeAppInstanceUserEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeAppInstanceUserEndpointRequest, DescribeAppInstanceUserEndpointResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets the retention settings for an <code>AppInstance</code>.
      * </p>
      * 
@@ -429,6 +503,41 @@ public interface AmazonChimeSDKIdentityAsync extends AmazonChimeSDKIdentity {
 
     /**
      * <p>
+     * Lists all the <code>AppInstanceUserEndpoints</code> created under a single <code>AppInstanceUser</code>.
+     * </p>
+     * 
+     * @param listAppInstanceUserEndpointsRequest
+     * @return A Java Future containing the result of the ListAppInstanceUserEndpoints operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsync.ListAppInstanceUserEndpoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/ListAppInstanceUserEndpoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAppInstanceUserEndpointsResult> listAppInstanceUserEndpointsAsync(
+            ListAppInstanceUserEndpointsRequest listAppInstanceUserEndpointsRequest);
+
+    /**
+     * <p>
+     * Lists all the <code>AppInstanceUserEndpoints</code> created under a single <code>AppInstanceUser</code>.
+     * </p>
+     * 
+     * @param listAppInstanceUserEndpointsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAppInstanceUserEndpoints operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsyncHandler.ListAppInstanceUserEndpoints
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/ListAppInstanceUserEndpoints"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAppInstanceUserEndpointsResult> listAppInstanceUserEndpointsAsync(
+            ListAppInstanceUserEndpointsRequest listAppInstanceUserEndpointsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAppInstanceUserEndpointsRequest, ListAppInstanceUserEndpointsResult> asyncHandler);
+
+    /**
+     * <p>
      * List all <code>AppInstanceUsers</code> created under a single <code>AppInstance</code>.
      * </p>
      * 
@@ -491,6 +600,37 @@ public interface AmazonChimeSDKIdentityAsync extends AmazonChimeSDKIdentity {
 
     /**
      * <p>
+     * Lists the tags applied to an Amazon Chime SDK identity resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AmazonChimeSDKIdentityAsync.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Lists the tags applied to an Amazon Chime SDK identity resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
+     * @sample AmazonChimeSDKIdentityAsyncHandler.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
      * Sets the amount of time in days that a given <code>AppInstance</code> retains data.
      * </p>
      * 
@@ -525,6 +665,109 @@ public interface AmazonChimeSDKIdentityAsync extends AmazonChimeSDKIdentity {
     java.util.concurrent.Future<PutAppInstanceRetentionSettingsResult> putAppInstanceRetentionSettingsAsync(
             PutAppInstanceRetentionSettingsRequest putAppInstanceRetentionSettingsRequest,
             com.amazonaws.handlers.AsyncHandler<PutAppInstanceRetentionSettingsRequest, PutAppInstanceRetentionSettingsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Registers an endpoint under an Amazon Chime <code>AppInstanceUser</code>. The endpoint receives messages for a
+     * user. For push notifications, the endpoint is a mobile device used to receive mobile push notifications for a
+     * user.
+     * </p>
+     * 
+     * @param registerAppInstanceUserEndpointRequest
+     * @return A Java Future containing the result of the RegisterAppInstanceUserEndpoint operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsync.RegisterAppInstanceUserEndpoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/RegisterAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterAppInstanceUserEndpointResult> registerAppInstanceUserEndpointAsync(
+            RegisterAppInstanceUserEndpointRequest registerAppInstanceUserEndpointRequest);
+
+    /**
+     * <p>
+     * Registers an endpoint under an Amazon Chime <code>AppInstanceUser</code>. The endpoint receives messages for a
+     * user. For push notifications, the endpoint is a mobile device used to receive mobile push notifications for a
+     * user.
+     * </p>
+     * 
+     * @param registerAppInstanceUserEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RegisterAppInstanceUserEndpoint operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsyncHandler.RegisterAppInstanceUserEndpoint
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/RegisterAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterAppInstanceUserEndpointResult> registerAppInstanceUserEndpointAsync(
+            RegisterAppInstanceUserEndpointRequest registerAppInstanceUserEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<RegisterAppInstanceUserEndpointRequest, RegisterAppInstanceUserEndpointResult> asyncHandler);
+
+    /**
+     * <p>
+     * Applies the specified tags to the specified Amazon Chime SDK identity resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AmazonChimeSDKIdentityAsync.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Applies the specified tags to the specified Amazon Chime SDK identity resource.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the TagResource operation returned by the service.
+     * @sample AmazonChimeSDKIdentityAsyncHandler.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes the specified tags from the specified Amazon Chime SDK identity resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AmazonChimeSDKIdentityAsync.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Removes the specified tags from the specified Amazon Chime SDK identity resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UntagResource operation returned by the service.
+     * @sample AmazonChimeSDKIdentityAsyncHandler.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/UntagResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
 
     /**
      * <p>
@@ -587,5 +830,42 @@ public interface AmazonChimeSDKIdentityAsync extends AmazonChimeSDKIdentity {
      */
     java.util.concurrent.Future<UpdateAppInstanceUserResult> updateAppInstanceUserAsync(UpdateAppInstanceUserRequest updateAppInstanceUserRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateAppInstanceUserRequest, UpdateAppInstanceUserResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the details of an <code>AppInstanceUserEndpoint</code>. You can update the name and
+     * <code>AllowMessage</code> values.
+     * </p>
+     * 
+     * @param updateAppInstanceUserEndpointRequest
+     * @return A Java Future containing the result of the UpdateAppInstanceUserEndpoint operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsync.UpdateAppInstanceUserEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/UpdateAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAppInstanceUserEndpointResult> updateAppInstanceUserEndpointAsync(
+            UpdateAppInstanceUserEndpointRequest updateAppInstanceUserEndpointRequest);
+
+    /**
+     * <p>
+     * Updates the details of an <code>AppInstanceUserEndpoint</code>. You can update the name and
+     * <code>AllowMessage</code> values.
+     * </p>
+     * 
+     * @param updateAppInstanceUserEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateAppInstanceUserEndpoint operation returned by the
+     *         service.
+     * @sample AmazonChimeSDKIdentityAsyncHandler.UpdateAppInstanceUserEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/chime-sdk-identity-2021-04-20/UpdateAppInstanceUserEndpoint"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAppInstanceUserEndpointResult> updateAppInstanceUserEndpointAsync(
+            UpdateAppInstanceUserEndpointRequest updateAppInstanceUserEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateAppInstanceUserEndpointRequest, UpdateAppInstanceUserEndpointResult> asyncHandler);
 
 }

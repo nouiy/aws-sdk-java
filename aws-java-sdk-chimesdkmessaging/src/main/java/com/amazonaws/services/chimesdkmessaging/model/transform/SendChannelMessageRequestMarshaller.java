@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.chimesdkmessaging.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -44,6 +46,10 @@ public class SendChannelMessageRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<String> CHIMEBEARER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.HEADER).marshallLocationName("x-amz-chime-bearer").build();
+    private static final MarshallingInfo<StructuredPojo> PUSHNOTIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PushNotification").build();
+    private static final MarshallingInfo<Map> MESSAGEATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageAttributes").build();
 
     private static final SendChannelMessageRequestMarshaller instance = new SendChannelMessageRequestMarshaller();
 
@@ -68,6 +74,8 @@ public class SendChannelMessageRequestMarshaller {
             protocolMarshaller.marshall(sendChannelMessageRequest.getMetadata(), METADATA_BINDING);
             protocolMarshaller.marshall(sendChannelMessageRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(sendChannelMessageRequest.getChimeBearer(), CHIMEBEARER_BINDING);
+            protocolMarshaller.marshall(sendChannelMessageRequest.getPushNotification(), PUSHNOTIFICATION_BINDING);
+            protocolMarshaller.marshall(sendChannelMessageRequest.getMessageAttributes(), MESSAGEATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
