@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A description of a Amazon Rekognition Custom Labels project.
+ * A description of an Amazon Rekognition Custom Labels project. For more information, see <a>DescribeProjects</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -43,6 +43,12 @@ public class ProjectDescription implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private String status;
+    /**
+     * <p>
+     * Information about the training and test datasets in the project.
+     * </p>
+     */
+    private java.util.List<DatasetMetadata> datasets;
 
     /**
      * <p>
@@ -184,6 +190,76 @@ public class ProjectDescription implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Information about the training and test datasets in the project.
+     * </p>
+     * 
+     * @return Information about the training and test datasets in the project.
+     */
+
+    public java.util.List<DatasetMetadata> getDatasets() {
+        return datasets;
+    }
+
+    /**
+     * <p>
+     * Information about the training and test datasets in the project.
+     * </p>
+     * 
+     * @param datasets
+     *        Information about the training and test datasets in the project.
+     */
+
+    public void setDatasets(java.util.Collection<DatasetMetadata> datasets) {
+        if (datasets == null) {
+            this.datasets = null;
+            return;
+        }
+
+        this.datasets = new java.util.ArrayList<DatasetMetadata>(datasets);
+    }
+
+    /**
+     * <p>
+     * Information about the training and test datasets in the project.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDatasets(java.util.Collection)} or {@link #withDatasets(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param datasets
+     *        Information about the training and test datasets in the project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProjectDescription withDatasets(DatasetMetadata... datasets) {
+        if (this.datasets == null) {
+            setDatasets(new java.util.ArrayList<DatasetMetadata>(datasets.length));
+        }
+        for (DatasetMetadata ele : datasets) {
+            this.datasets.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the training and test datasets in the project.
+     * </p>
+     * 
+     * @param datasets
+     *        Information about the training and test datasets in the project.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProjectDescription withDatasets(java.util.Collection<DatasetMetadata> datasets) {
+        setDatasets(datasets);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -200,7 +276,9 @@ public class ProjectDescription implements Serializable, Cloneable, StructuredPo
         if (getCreationTimestamp() != null)
             sb.append("CreationTimestamp: ").append(getCreationTimestamp()).append(",");
         if (getStatus() != null)
-            sb.append("Status: ").append(getStatus());
+            sb.append("Status: ").append(getStatus()).append(",");
+        if (getDatasets() != null)
+            sb.append("Datasets: ").append(getDatasets());
         sb.append("}");
         return sb.toString();
     }
@@ -227,6 +305,10 @@ public class ProjectDescription implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getDatasets() == null ^ this.getDatasets() == null)
+            return false;
+        if (other.getDatasets() != null && other.getDatasets().equals(this.getDatasets()) == false)
+            return false;
         return true;
     }
 
@@ -238,6 +320,7 @@ public class ProjectDescription implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getProjectArn() == null) ? 0 : getProjectArn().hashCode());
         hashCode = prime * hashCode + ((getCreationTimestamp() == null) ? 0 : getCreationTimestamp().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getDatasets() == null) ? 0 : getDatasets().hashCode());
         return hashCode;
     }
 

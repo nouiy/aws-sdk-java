@@ -33,9 +33,7 @@ public class GetCustomerGatewayAssociationsRequest extends com.amazonaws.AmazonW
     private String globalNetworkId;
     /**
      * <p>
-     * One or more customer gateway Amazon Resource Names (ARNs). For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>. The maximum is 10.
+     * One or more customer gateway Amazon Resource Names (ARNs). The maximum is 10.
      * </p>
      */
     private java.util.List<String> customerGatewayArns;
@@ -94,14 +92,10 @@ public class GetCustomerGatewayAssociationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * One or more customer gateway Amazon Resource Names (ARNs). For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>. The maximum is 10.
+     * One or more customer gateway Amazon Resource Names (ARNs). The maximum is 10.
      * </p>
      * 
-     * @return One or more customer gateway Amazon Resource Names (ARNs). For more information, see <a href=
-     *         "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *         >Resources Defined by Amazon EC2</a>. The maximum is 10.
+     * @return One or more customer gateway Amazon Resource Names (ARNs). The maximum is 10.
      */
 
     public java.util.List<String> getCustomerGatewayArns() {
@@ -110,15 +104,11 @@ public class GetCustomerGatewayAssociationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * One or more customer gateway Amazon Resource Names (ARNs). For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>. The maximum is 10.
+     * One or more customer gateway Amazon Resource Names (ARNs). The maximum is 10.
      * </p>
      * 
      * @param customerGatewayArns
-     *        One or more customer gateway Amazon Resource Names (ARNs). For more information, see <a href=
-     *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *        >Resources Defined by Amazon EC2</a>. The maximum is 10.
+     *        One or more customer gateway Amazon Resource Names (ARNs). The maximum is 10.
      */
 
     public void setCustomerGatewayArns(java.util.Collection<String> customerGatewayArns) {
@@ -132,9 +122,7 @@ public class GetCustomerGatewayAssociationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * One or more customer gateway Amazon Resource Names (ARNs). For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>. The maximum is 10.
+     * One or more customer gateway Amazon Resource Names (ARNs). The maximum is 10.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -143,9 +131,7 @@ public class GetCustomerGatewayAssociationsRequest extends com.amazonaws.AmazonW
      * </p>
      * 
      * @param customerGatewayArns
-     *        One or more customer gateway Amazon Resource Names (ARNs). For more information, see <a href=
-     *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *        >Resources Defined by Amazon EC2</a>. The maximum is 10.
+     *        One or more customer gateway Amazon Resource Names (ARNs). The maximum is 10.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,15 +147,11 @@ public class GetCustomerGatewayAssociationsRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * One or more customer gateway Amazon Resource Names (ARNs). For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>. The maximum is 10.
+     * One or more customer gateway Amazon Resource Names (ARNs). The maximum is 10.
      * </p>
      * 
      * @param customerGatewayArns
-     *        One or more customer gateway Amazon Resource Names (ARNs). For more information, see <a href=
-     *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *        >Resources Defined by Amazon EC2</a>. The maximum is 10.
+     *        One or more customer gateway Amazon Resource Names (ARNs). The maximum is 10.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

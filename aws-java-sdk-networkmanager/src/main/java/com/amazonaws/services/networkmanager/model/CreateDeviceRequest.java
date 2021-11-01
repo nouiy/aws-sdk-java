@@ -33,7 +33,8 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String globalNetworkId;
     /**
      * <p>
-     * The AWS location of the device.
+     * The Amazon Web Services location of the device, if applicable. For an on-premises device, you can omit this
+     * parameter.
      * </p>
      */
     private AWSLocation aWSLocation;
@@ -42,7 +43,7 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A description of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      */
     private String description;
@@ -57,7 +58,7 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The vendor of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      */
     private String vendor;
@@ -66,7 +67,7 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The model of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      */
     private String model;
@@ -75,7 +76,7 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The serial number of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      */
     private String serialNumber;
@@ -140,11 +141,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The AWS location of the device.
+     * The Amazon Web Services location of the device, if applicable. For an on-premises device, you can omit this
+     * parameter.
      * </p>
      * 
      * @param aWSLocation
-     *        The AWS location of the device.
+     *        The Amazon Web Services location of the device, if applicable. For an on-premises device, you can omit
+     *        this parameter.
      */
 
     public void setAWSLocation(AWSLocation aWSLocation) {
@@ -153,10 +156,12 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The AWS location of the device.
+     * The Amazon Web Services location of the device, if applicable. For an on-premises device, you can omit this
+     * parameter.
      * </p>
      * 
-     * @return The AWS location of the device.
+     * @return The Amazon Web Services location of the device, if applicable. For an on-premises device, you can omit
+     *         this parameter.
      */
 
     public AWSLocation getAWSLocation() {
@@ -165,11 +170,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The AWS location of the device.
+     * The Amazon Web Services location of the device, if applicable. For an on-premises device, you can omit this
+     * parameter.
      * </p>
      * 
      * @param aWSLocation
-     *        The AWS location of the device.
+     *        The Amazon Web Services location of the device, if applicable. For an on-premises device, you can omit
+     *        this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -183,13 +190,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A description of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @param description
      *        A description of the device.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 256 characters.
+     *        Constraints: Maximum length of 256 characters.
      */
 
     public void setDescription(String description) {
@@ -201,12 +208,12 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A description of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @return A description of the device.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 256 characters.
+     *         Constraints: Maximum length of 256 characters.
      */
 
     public String getDescription() {
@@ -218,13 +225,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * A description of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @param description
      *        A description of the device.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 256 characters.
+     *        Constraints: Maximum length of 256 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -278,13 +285,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The vendor of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param vendor
      *        The vendor of the device.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      */
 
     public void setVendor(String vendor) {
@@ -296,12 +303,12 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The vendor of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @return The vendor of the device.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 128 characters.
+     *         Constraints: Maximum length of 128 characters.
      */
 
     public String getVendor() {
@@ -313,13 +320,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The vendor of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param vendor
      *        The vendor of the device.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -333,13 +340,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The model of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param model
      *        The model of the device.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      */
 
     public void setModel(String model) {
@@ -351,12 +358,12 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The model of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @return The model of the device.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 128 characters.
+     *         Constraints: Maximum length of 128 characters.
      */
 
     public String getModel() {
@@ -368,13 +375,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The model of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param model
      *        The model of the device.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -388,13 +395,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The serial number of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param serialNumber
      *        The serial number of the device.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      */
 
     public void setSerialNumber(String serialNumber) {
@@ -406,12 +413,12 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The serial number of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @return The serial number of the device.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 128 characters.
+     *         Constraints: Maximum length of 128 characters.
      */
 
     public String getSerialNumber() {
@@ -423,13 +430,13 @@ public class CreateDeviceRequest extends com.amazonaws.AmazonWebServiceRequest i
      * The serial number of the device.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param serialNumber
      *        The serial number of the device.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

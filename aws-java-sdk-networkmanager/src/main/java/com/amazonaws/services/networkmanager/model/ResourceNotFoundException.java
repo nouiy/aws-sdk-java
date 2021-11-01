@@ -36,6 +36,8 @@ public class ResourceNotFoundException extends com.amazonaws.services.networkman
      */
     private String resourceType;
 
+    private java.util.Map<String, String> context;
+
     /**
      * Constructs a new ResourceNotFoundException with the specified error message.
      *
@@ -127,6 +129,62 @@ public class ResourceNotFoundException extends com.amazonaws.services.networkman
 
     public ResourceNotFoundException withResourceType(String resourceType) {
         setResourceType(resourceType);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("Context")
+    public java.util.Map<String, String> getContext() {
+        return context;
+    }
+
+    /**
+     * @param context
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("Context")
+    public void setContext(java.util.Map<String, String> context) {
+        this.context = context;
+    }
+
+    /**
+     * @param context
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceNotFoundException withContext(java.util.Map<String, String> context) {
+        setContext(context);
+        return this;
+    }
+
+    /**
+     * Add a single Context entry
+     *
+     * @see ResourceNotFoundException#withContext
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceNotFoundException addContextEntry(String key, String value) {
+        if (null == this.context) {
+            this.context = new java.util.HashMap<String, String>();
+        }
+        if (this.context.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.context.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Context.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceNotFoundException clearContextEntries() {
+        this.context = null;
         return this;
     }
 

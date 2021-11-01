@@ -41,7 +41,9 @@ public class RemoveRoleFromDBClusterRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The name of the feature for the DB cluster that the IAM role is to be disassociated from. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     * >DescribeDBEngineVersions</a>.
      * </p>
      */
     private String featureName;
@@ -135,12 +137,16 @@ public class RemoveRoleFromDBClusterRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The name of the feature for the DB cluster that the IAM role is to be disassociated from. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     * >DescribeDBEngineVersions</a>.
      * </p>
      * 
      * @param featureName
      *        The name of the feature for the DB cluster that the IAM role is to be disassociated from. For the list of
-     *        supported feature names, see <a>DBEngineVersion</a>.
+     *        supported feature names, see <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     *        >DescribeDBEngineVersions</a>.
      */
 
     public void setFeatureName(String featureName) {
@@ -150,11 +156,15 @@ public class RemoveRoleFromDBClusterRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The name of the feature for the DB cluster that the IAM role is to be disassociated from. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     * >DescribeDBEngineVersions</a>.
      * </p>
      * 
      * @return The name of the feature for the DB cluster that the IAM role is to be disassociated from. For the list of
-     *         supported feature names, see <a>DBEngineVersion</a>.
+     *         supported feature names, see <a href=
+     *         "https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     *         >DescribeDBEngineVersions</a>.
      */
 
     public String getFeatureName() {
@@ -164,12 +174,16 @@ public class RemoveRoleFromDBClusterRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The name of the feature for the DB cluster that the IAM role is to be disassociated from. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     * >DescribeDBEngineVersions</a>.
      * </p>
      * 
      * @param featureName
      *        The name of the feature for the DB cluster that the IAM role is to be disassociated from. For the list of
-     *        supported feature names, see <a>DBEngineVersion</a>.
+     *        supported feature names, see <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     *        >DescribeDBEngineVersions</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

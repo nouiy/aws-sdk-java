@@ -41,7 +41,8 @@ public class AddRoleToDBClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The name of the feature for the Neptune DB cluster that the IAM role is to be associated with. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="neptune/latest/userguide/api-other-apis.html#DBEngineVersion">DBEngineVersion</a>.
      * </p>
      */
     private String featureName;
@@ -135,12 +136,14 @@ public class AddRoleToDBClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The name of the feature for the Neptune DB cluster that the IAM role is to be associated with. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="neptune/latest/userguide/api-other-apis.html#DBEngineVersion">DBEngineVersion</a>.
      * </p>
      * 
      * @param featureName
      *        The name of the feature for the Neptune DB cluster that the IAM role is to be associated with. For the
-     *        list of supported feature names, see <a>DBEngineVersion</a>.
+     *        list of supported feature names, see <a
+     *        href="neptune/latest/userguide/api-other-apis.html#DBEngineVersion">DBEngineVersion</a>.
      */
 
     public void setFeatureName(String featureName) {
@@ -150,11 +153,13 @@ public class AddRoleToDBClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The name of the feature for the Neptune DB cluster that the IAM role is to be associated with. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="neptune/latest/userguide/api-other-apis.html#DBEngineVersion">DBEngineVersion</a>.
      * </p>
      * 
      * @return The name of the feature for the Neptune DB cluster that the IAM role is to be associated with. For the
-     *         list of supported feature names, see <a>DBEngineVersion</a>.
+     *         list of supported feature names, see <a
+     *         href="neptune/latest/userguide/api-other-apis.html#DBEngineVersion">DBEngineVersion</a>.
      */
 
     public String getFeatureName() {
@@ -164,12 +169,14 @@ public class AddRoleToDBClusterRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The name of the feature for the Neptune DB cluster that the IAM role is to be associated with. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="neptune/latest/userguide/api-other-apis.html#DBEngineVersion">DBEngineVersion</a>.
      * </p>
      * 
      * @param featureName
      *        The name of the feature for the Neptune DB cluster that the IAM role is to be associated with. For the
-     *        list of supported feature names, see <a>DBEngineVersion</a>.
+     *        list of supported feature names, see <a
+     *        href="neptune/latest/userguide/api-other-apis.html#DBEngineVersion">DBEngineVersion</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

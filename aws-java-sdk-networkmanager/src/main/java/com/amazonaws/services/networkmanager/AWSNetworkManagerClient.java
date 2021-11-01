@@ -52,11 +52,7 @@ import com.amazonaws.services.networkmanager.model.transform.*;
  * <p>
  * <p>
  * Transit Gateway Network Manager (Network Manager) enables you to create a global network, in which you can monitor
- * your AWS and on-premises networks that are built around transit gateways.
- * </p>
- * <p>
- * The Network Manager APIs are supported in the US West (Oregon) Region only. You must specify the
- * <code>us-west-2</code> Region in all requests made to Network Manager.
+ * your Amazon Web Services and on-premises networks that are built around transit gateways.
  * </p>
  */
 @ThreadSafe
@@ -1765,6 +1761,403 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Gets the count of network resources, by resource type, for the specified global network.
+     * </p>
+     * 
+     * @param getNetworkResourceCountsRequest
+     * @return Result of the GetNetworkResourceCounts operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkResourceCounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResourceCounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetNetworkResourceCountsResult getNetworkResourceCounts(GetNetworkResourceCountsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetNetworkResourceCounts(request);
+    }
+
+    @SdkInternalApi
+    final GetNetworkResourceCountsResult executeGetNetworkResourceCounts(GetNetworkResourceCountsRequest getNetworkResourceCountsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getNetworkResourceCountsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetNetworkResourceCountsRequest> request = null;
+        Response<GetNetworkResourceCountsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetNetworkResourceCountsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getNetworkResourceCountsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetNetworkResourceCounts");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetNetworkResourceCountsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetNetworkResourceCountsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the network resource relationships for the specified global network.
+     * </p>
+     * 
+     * @param getNetworkResourceRelationshipsRequest
+     * @return Result of the GetNetworkResourceRelationships operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkResourceRelationships
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResourceRelationships"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetNetworkResourceRelationshipsResult getNetworkResourceRelationships(GetNetworkResourceRelationshipsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetNetworkResourceRelationships(request);
+    }
+
+    @SdkInternalApi
+    final GetNetworkResourceRelationshipsResult executeGetNetworkResourceRelationships(
+            GetNetworkResourceRelationshipsRequest getNetworkResourceRelationshipsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getNetworkResourceRelationshipsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetNetworkResourceRelationshipsRequest> request = null;
+        Response<GetNetworkResourceRelationshipsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetNetworkResourceRelationshipsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getNetworkResourceRelationshipsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetNetworkResourceRelationships");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetNetworkResourceRelationshipsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetNetworkResourceRelationshipsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes the network resources for the specified global network.
+     * </p>
+     * <p>
+     * The results include information from the corresponding Describe call for the resource, minus any sensitive
+     * information such as pre-shared keys.
+     * </p>
+     * 
+     * @param getNetworkResourcesRequest
+     * @return Result of the GetNetworkResources operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetNetworkResourcesResult getNetworkResources(GetNetworkResourcesRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetNetworkResources(request);
+    }
+
+    @SdkInternalApi
+    final GetNetworkResourcesResult executeGetNetworkResources(GetNetworkResourcesRequest getNetworkResourcesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getNetworkResourcesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetNetworkResourcesRequest> request = null;
+        Response<GetNetworkResourcesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetNetworkResourcesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getNetworkResourcesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetNetworkResources");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetNetworkResourcesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetNetworkResourcesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the network routes of the specified global network.
+     * </p>
+     * 
+     * @param getNetworkRoutesRequest
+     * @return Result of the GetNetworkRoutes operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkRoutes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkRoutes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetNetworkRoutesResult getNetworkRoutes(GetNetworkRoutesRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetNetworkRoutes(request);
+    }
+
+    @SdkInternalApi
+    final GetNetworkRoutesResult executeGetNetworkRoutes(GetNetworkRoutesRequest getNetworkRoutesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getNetworkRoutesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetNetworkRoutesRequest> request = null;
+        Response<GetNetworkRoutesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetNetworkRoutesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getNetworkRoutesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetNetworkRoutes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetNetworkRoutesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetNetworkRoutesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the network telemetry of the specified global network.
+     * </p>
+     * 
+     * @param getNetworkTelemetryRequest
+     * @return Result of the GetNetworkTelemetry operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkTelemetry
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkTelemetry"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetNetworkTelemetryResult getNetworkTelemetry(GetNetworkTelemetryRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetNetworkTelemetry(request);
+    }
+
+    @SdkInternalApi
+    final GetNetworkTelemetryResult executeGetNetworkTelemetry(GetNetworkTelemetryRequest getNetworkTelemetryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getNetworkTelemetryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetNetworkTelemetryRequest> request = null;
+        Response<GetNetworkTelemetryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetNetworkTelemetryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getNetworkTelemetryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetNetworkTelemetry");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetNetworkTelemetryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetNetworkTelemetryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets information about the specified route analysis.
+     * </p>
+     * 
+     * @param getRouteAnalysisRequest
+     * @return Result of the GetRouteAnalysis operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetRouteAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetRouteAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetRouteAnalysisResult getRouteAnalysis(GetRouteAnalysisRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetRouteAnalysis(request);
+    }
+
+    @SdkInternalApi
+    final GetRouteAnalysisResult executeGetRouteAnalysis(GetRouteAnalysisRequest getRouteAnalysisRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getRouteAnalysisRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetRouteAnalysisRequest> request = null;
+        Response<GetRouteAnalysisResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetRouteAnalysisRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getRouteAnalysisRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetRouteAnalysis");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetRouteAnalysisResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetRouteAnalysisResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets information about one or more of your sites in a global network.
      * </p>
      * 
@@ -2034,9 +2427,9 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
-     * Registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be
-     * owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than
-     * one global network.
+     * Registers a transit gateway in your global network. The transit gateway can be in any Amazon Web Services Region,
+     * but it must be owned by the same Amazon Web Services account that owns the global network. You cannot register a
+     * transit gateway in more than one global network.
      * </p>
      * 
      * @param registerTransitGatewayRequest
@@ -2093,6 +2486,75 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
             HttpResponseHandler<AmazonWebServiceResponse<RegisterTransitGatewayResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new RegisterTransitGatewayResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts analyzing the routing path between the specified source and destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/route-analyzer.html">Route Analyzer</a>.
+     * </p>
+     * 
+     * @param startRouteAnalysisRequest
+     * @return Result of the StartRouteAnalysis operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.StartRouteAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/StartRouteAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public StartRouteAnalysisResult startRouteAnalysis(StartRouteAnalysisRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartRouteAnalysis(request);
+    }
+
+    @SdkInternalApi
+    final StartRouteAnalysisResult executeStartRouteAnalysis(StartRouteAnalysisRequest startRouteAnalysisRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startRouteAnalysisRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartRouteAnalysisRequest> request = null;
+        Response<StartRouteAnalysisResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartRouteAnalysisRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startRouteAnalysisRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartRouteAnalysis");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartRouteAnalysisResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartRouteAnalysisResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2508,6 +2970,76 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateLinkResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateLinkResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the resource metadata for the specified global network.
+     * </p>
+     * 
+     * @param updateNetworkResourceMetadataRequest
+     * @return Result of the UpdateNetworkResourceMetadata operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.UpdateNetworkResourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UpdateNetworkResourceMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateNetworkResourceMetadataResult updateNetworkResourceMetadata(UpdateNetworkResourceMetadataRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateNetworkResourceMetadata(request);
+    }
+
+    @SdkInternalApi
+    final UpdateNetworkResourceMetadataResult executeUpdateNetworkResourceMetadata(UpdateNetworkResourceMetadataRequest updateNetworkResourceMetadataRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateNetworkResourceMetadataRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateNetworkResourceMetadataRequest> request = null;
+        Response<UpdateNetworkResourceMetadataResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateNetworkResourceMetadataRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateNetworkResourceMetadataRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "NetworkManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateNetworkResourceMetadata");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateNetworkResourceMetadataResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateNetworkResourceMetadataResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

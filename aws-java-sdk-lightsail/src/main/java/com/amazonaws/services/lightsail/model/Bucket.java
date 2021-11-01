@@ -153,6 +153,12 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private BucketState state;
+    /**
+     * <p>
+     * An object that describes the access log configuration for the bucket.
+     * </p>
+     */
+    private BucketAccessLogConfig accessLogConfig;
 
     /**
      * <p>
@@ -1085,6 +1091,46 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * An object that describes the access log configuration for the bucket.
+     * </p>
+     * 
+     * @param accessLogConfig
+     *        An object that describes the access log configuration for the bucket.
+     */
+
+    public void setAccessLogConfig(BucketAccessLogConfig accessLogConfig) {
+        this.accessLogConfig = accessLogConfig;
+    }
+
+    /**
+     * <p>
+     * An object that describes the access log configuration for the bucket.
+     * </p>
+     * 
+     * @return An object that describes the access log configuration for the bucket.
+     */
+
+    public BucketAccessLogConfig getAccessLogConfig() {
+        return this.accessLogConfig;
+    }
+
+    /**
+     * <p>
+     * An object that describes the access log configuration for the bucket.
+     * </p>
+     * 
+     * @param accessLogConfig
+     *        An object that describes the access log configuration for the bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Bucket withAccessLogConfig(BucketAccessLogConfig accessLogConfig) {
+        setAccessLogConfig(accessLogConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1125,7 +1171,9 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
         if (getResourcesReceivingAccess() != null)
             sb.append("ResourcesReceivingAccess: ").append(getResourcesReceivingAccess()).append(",");
         if (getState() != null)
-            sb.append("State: ").append(getState());
+            sb.append("State: ").append(getState()).append(",");
+        if (getAccessLogConfig() != null)
+            sb.append("AccessLogConfig: ").append(getAccessLogConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -1200,6 +1248,10 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
+        if (other.getAccessLogConfig() == null ^ this.getAccessLogConfig() == null)
+            return false;
+        if (other.getAccessLogConfig() != null && other.getAccessLogConfig().equals(this.getAccessLogConfig()) == false)
+            return false;
         return true;
     }
 
@@ -1223,6 +1275,7 @@ public class Bucket implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getReadonlyAccessAccounts() == null) ? 0 : getReadonlyAccessAccounts().hashCode());
         hashCode = prime * hashCode + ((getResourcesReceivingAccess() == null) ? 0 : getResourcesReceivingAccess().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getAccessLogConfig() == null) ? 0 : getAccessLogConfig().hashCode());
         return hashCode;
     }
 

@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.rekognition.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class DescribeProjectsRequestMarshaller {
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<List> PROJECTNAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("ProjectNames").build();
 
     private static final DescribeProjectsRequestMarshaller instance = new DescribeProjectsRequestMarshaller();
 
@@ -50,6 +53,7 @@ public class DescribeProjectsRequestMarshaller {
         try {
             protocolMarshaller.marshall(describeProjectsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(describeProjectsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(describeProjectsRequest.getProjectNames(), PROJECTNAMES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

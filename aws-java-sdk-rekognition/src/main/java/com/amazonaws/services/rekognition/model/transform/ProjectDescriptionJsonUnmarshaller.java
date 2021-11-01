@@ -60,6 +60,12 @@ public class ProjectDescriptionJsonUnmarshaller implements Unmarshaller<ProjectD
                     context.nextToken();
                     projectDescription.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Datasets", targetDepth)) {
+                    context.nextToken();
+                    projectDescription.setDatasets(new ListUnmarshaller<DatasetMetadata>(DatasetMetadataJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

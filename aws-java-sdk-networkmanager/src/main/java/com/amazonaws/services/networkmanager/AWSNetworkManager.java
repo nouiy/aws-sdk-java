@@ -28,11 +28,7 @@ import com.amazonaws.services.networkmanager.model.*;
  * <p>
  * <p>
  * Transit Gateway Network Manager (Network Manager) enables you to create a global network, in which you can monitor
- * your AWS and on-premises networks that are built around transit gateways.
- * </p>
- * <p>
- * The Network Manager APIs are supported in the US West (Oregon) Region only. You must specify the
- * <code>us-west-2</code> Region in all requests made to Network Manager.
+ * your Amazon Web Services and on-premises networks that are built around transit gateways.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -681,6 +677,146 @@ public interface AWSNetworkManager {
 
     /**
      * <p>
+     * Gets the count of network resources, by resource type, for the specified global network.
+     * </p>
+     * 
+     * @param getNetworkResourceCountsRequest
+     * @return Result of the GetNetworkResourceCounts operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkResourceCounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResourceCounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetNetworkResourceCountsResult getNetworkResourceCounts(GetNetworkResourceCountsRequest getNetworkResourceCountsRequest);
+
+    /**
+     * <p>
+     * Gets the network resource relationships for the specified global network.
+     * </p>
+     * 
+     * @param getNetworkResourceRelationshipsRequest
+     * @return Result of the GetNetworkResourceRelationships operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkResourceRelationships
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResourceRelationships"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetNetworkResourceRelationshipsResult getNetworkResourceRelationships(GetNetworkResourceRelationshipsRequest getNetworkResourceRelationshipsRequest);
+
+    /**
+     * <p>
+     * Describes the network resources for the specified global network.
+     * </p>
+     * <p>
+     * The results include information from the corresponding Describe call for the resource, minus any sensitive
+     * information such as pre-shared keys.
+     * </p>
+     * 
+     * @param getNetworkResourcesRequest
+     * @return Result of the GetNetworkResources operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetNetworkResourcesResult getNetworkResources(GetNetworkResourcesRequest getNetworkResourcesRequest);
+
+    /**
+     * <p>
+     * Gets the network routes of the specified global network.
+     * </p>
+     * 
+     * @param getNetworkRoutesRequest
+     * @return Result of the GetNetworkRoutes operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkRoutes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkRoutes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetNetworkRoutesResult getNetworkRoutes(GetNetworkRoutesRequest getNetworkRoutesRequest);
+
+    /**
+     * <p>
+     * Gets the network telemetry of the specified global network.
+     * </p>
+     * 
+     * @param getNetworkTelemetryRequest
+     * @return Result of the GetNetworkTelemetry operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetNetworkTelemetry
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkTelemetry"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetNetworkTelemetryResult getNetworkTelemetry(GetNetworkTelemetryRequest getNetworkTelemetryRequest);
+
+    /**
+     * <p>
+     * Gets information about the specified route analysis.
+     * </p>
+     * 
+     * @param getRouteAnalysisRequest
+     * @return Result of the GetRouteAnalysis operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.GetRouteAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetRouteAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetRouteAnalysisResult getRouteAnalysis(GetRouteAnalysisRequest getRouteAnalysisRequest);
+
+    /**
+     * <p>
      * Gets information about one or more of your sites in a global network.
      * </p>
      * 
@@ -778,9 +914,9 @@ public interface AWSNetworkManager {
 
     /**
      * <p>
-     * Registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be
-     * owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than
-     * one global network.
+     * Registers a transit gateway in your global network. The transit gateway can be in any Amazon Web Services Region,
+     * but it must be owned by the same Amazon Web Services account that owns the global network. You cannot register a
+     * transit gateway in more than one global network.
      * </p>
      * 
      * @param registerTransitGatewayRequest
@@ -803,6 +939,33 @@ public interface AWSNetworkManager {
      *      target="_top">AWS API Documentation</a>
      */
     RegisterTransitGatewayResult registerTransitGateway(RegisterTransitGatewayRequest registerTransitGatewayRequest);
+
+    /**
+     * <p>
+     * Starts analyzing the routing path between the specified source and destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/route-analyzer.html">Route Analyzer</a>.
+     * </p>
+     * 
+     * @param startRouteAnalysisRequest
+     * @return Result of the StartRouteAnalysis operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.StartRouteAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/StartRouteAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartRouteAnalysisResult startRouteAnalysis(StartRouteAnalysisRequest startRouteAnalysisRequest);
 
     /**
      * <p>
@@ -966,6 +1129,32 @@ public interface AWSNetworkManager {
      *      Documentation</a>
      */
     UpdateLinkResult updateLink(UpdateLinkRequest updateLinkRequest);
+
+    /**
+     * <p>
+     * Updates the resource metadata for the specified global network.
+     * </p>
+     * 
+     * @param updateNetworkResourceMetadataRequest
+     * @return Result of the UpdateNetworkResourceMetadata operation returned by the service.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         The specified resource could not be found.
+     * @throws ConflictException
+     *         There was a conflict processing the request. Updating or deleting the resource can cause an inconsistent
+     *         state.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws InternalServerException
+     *         The request has failed due to an internal error.
+     * @sample AWSNetworkManager.UpdateNetworkResourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UpdateNetworkResourceMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateNetworkResourceMetadataResult updateNetworkResourceMetadata(UpdateNetworkResourceMetadataRequest updateNetworkResourceMetadataRequest);
 
     /**
      * <p>

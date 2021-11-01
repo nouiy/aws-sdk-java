@@ -27,11 +27,7 @@ import java.util.concurrent.ExecutorService;
  * <p>
  * <p>
  * Transit Gateway Network Manager (Network Manager) enables you to create a global network, in which you can monitor
- * your AWS and on-premises networks that are built around transit gateways.
- * </p>
- * <p>
- * The Network Manager APIs are supported in the US West (Oregon) Region only. You must specify the
- * <code>us-west-2</code> Region in all requests made to Network Manager.
+ * your Amazon Web Services and on-premises networks that are built around transit gateways.
  * </p>
  */
 @ThreadSafe
@@ -843,6 +839,206 @@ public class AWSNetworkManagerAsyncClient extends AWSNetworkManagerClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetNetworkResourceCountsResult> getNetworkResourceCountsAsync(GetNetworkResourceCountsRequest request) {
+
+        return getNetworkResourceCountsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourceCountsResult> getNetworkResourceCountsAsync(final GetNetworkResourceCountsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetNetworkResourceCountsRequest, GetNetworkResourceCountsResult> asyncHandler) {
+        final GetNetworkResourceCountsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetNetworkResourceCountsResult>() {
+            @Override
+            public GetNetworkResourceCountsResult call() throws Exception {
+                GetNetworkResourceCountsResult result = null;
+
+                try {
+                    result = executeGetNetworkResourceCounts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourceRelationshipsResult> getNetworkResourceRelationshipsAsync(
+            GetNetworkResourceRelationshipsRequest request) {
+
+        return getNetworkResourceRelationshipsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourceRelationshipsResult> getNetworkResourceRelationshipsAsync(
+            final GetNetworkResourceRelationshipsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetNetworkResourceRelationshipsRequest, GetNetworkResourceRelationshipsResult> asyncHandler) {
+        final GetNetworkResourceRelationshipsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetNetworkResourceRelationshipsResult>() {
+            @Override
+            public GetNetworkResourceRelationshipsResult call() throws Exception {
+                GetNetworkResourceRelationshipsResult result = null;
+
+                try {
+                    result = executeGetNetworkResourceRelationships(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourcesResult> getNetworkResourcesAsync(GetNetworkResourcesRequest request) {
+
+        return getNetworkResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourcesResult> getNetworkResourcesAsync(final GetNetworkResourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetNetworkResourcesRequest, GetNetworkResourcesResult> asyncHandler) {
+        final GetNetworkResourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetNetworkResourcesResult>() {
+            @Override
+            public GetNetworkResourcesResult call() throws Exception {
+                GetNetworkResourcesResult result = null;
+
+                try {
+                    result = executeGetNetworkResources(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkRoutesResult> getNetworkRoutesAsync(GetNetworkRoutesRequest request) {
+
+        return getNetworkRoutesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkRoutesResult> getNetworkRoutesAsync(final GetNetworkRoutesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetNetworkRoutesRequest, GetNetworkRoutesResult> asyncHandler) {
+        final GetNetworkRoutesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetNetworkRoutesResult>() {
+            @Override
+            public GetNetworkRoutesResult call() throws Exception {
+                GetNetworkRoutesResult result = null;
+
+                try {
+                    result = executeGetNetworkRoutes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkTelemetryResult> getNetworkTelemetryAsync(GetNetworkTelemetryRequest request) {
+
+        return getNetworkTelemetryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkTelemetryResult> getNetworkTelemetryAsync(final GetNetworkTelemetryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetNetworkTelemetryRequest, GetNetworkTelemetryResult> asyncHandler) {
+        final GetNetworkTelemetryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetNetworkTelemetryResult>() {
+            @Override
+            public GetNetworkTelemetryResult call() throws Exception {
+                GetNetworkTelemetryResult result = null;
+
+                try {
+                    result = executeGetNetworkTelemetry(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRouteAnalysisResult> getRouteAnalysisAsync(GetRouteAnalysisRequest request) {
+
+        return getRouteAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRouteAnalysisResult> getRouteAnalysisAsync(final GetRouteAnalysisRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRouteAnalysisRequest, GetRouteAnalysisResult> asyncHandler) {
+        final GetRouteAnalysisRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRouteAnalysisResult>() {
+            @Override
+            public GetRouteAnalysisResult call() throws Exception {
+                GetRouteAnalysisResult result = null;
+
+                try {
+                    result = executeGetRouteAnalysis(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetSitesResult> getSitesAsync(GetSitesRequest request) {
 
         return getSitesAsync(request, null);
@@ -995,6 +1191,39 @@ public class AWSNetworkManagerAsyncClient extends AWSNetworkManagerClient implem
 
                 try {
                     result = executeRegisterTransitGateway(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRouteAnalysisResult> startRouteAnalysisAsync(StartRouteAnalysisRequest request) {
+
+        return startRouteAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRouteAnalysisResult> startRouteAnalysisAsync(final StartRouteAnalysisRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartRouteAnalysisRequest, StartRouteAnalysisResult> asyncHandler) {
+        final StartRouteAnalysisRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartRouteAnalysisResult>() {
+            @Override
+            public StartRouteAnalysisResult call() throws Exception {
+                StartRouteAnalysisResult result = null;
+
+                try {
+                    result = executeStartRouteAnalysis(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1193,6 +1422,40 @@ public class AWSNetworkManagerAsyncClient extends AWSNetworkManagerClient implem
 
                 try {
                     result = executeUpdateLink(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNetworkResourceMetadataResult> updateNetworkResourceMetadataAsync(UpdateNetworkResourceMetadataRequest request) {
+
+        return updateNetworkResourceMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNetworkResourceMetadataResult> updateNetworkResourceMetadataAsync(
+            final UpdateNetworkResourceMetadataRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateNetworkResourceMetadataRequest, UpdateNetworkResourceMetadataResult> asyncHandler) {
+        final UpdateNetworkResourceMetadataRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateNetworkResourceMetadataResult>() {
+            @Override
+            public UpdateNetworkResourceMetadataResult call() throws Exception {
+                UpdateNetworkResourceMetadataResult result = null;
+
+                try {
+                    result = executeUpdateNetworkResourceMetadata(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

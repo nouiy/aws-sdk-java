@@ -36,7 +36,7 @@ public class UpdateGlobalNetworkRequest extends com.amazonaws.AmazonWebServiceRe
      * A description of the global network.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      */
     private String description;
@@ -86,13 +86,13 @@ public class UpdateGlobalNetworkRequest extends com.amazonaws.AmazonWebServiceRe
      * A description of the global network.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @param description
      *        A description of the global network.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 256 characters.
+     *        Constraints: Maximum length of 256 characters.
      */
 
     public void setDescription(String description) {
@@ -104,12 +104,12 @@ public class UpdateGlobalNetworkRequest extends com.amazonaws.AmazonWebServiceRe
      * A description of the global network.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @return A description of the global network.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 256 characters.
+     *         Constraints: Maximum length of 256 characters.
      */
 
     public String getDescription() {
@@ -121,13 +121,13 @@ public class UpdateGlobalNetworkRequest extends com.amazonaws.AmazonWebServiceRe
      * A description of the global network.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @param description
      *        A description of the global network.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 256 characters.
+     *        Constraints: Maximum length of 256 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

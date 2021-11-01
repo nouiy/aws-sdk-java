@@ -68,6 +68,12 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private java.util.List<String> readonlyAccessAccounts;
+    /**
+     * <p>
+     * An object that describes the access log configuration for the bucket.
+     * </p>
+     */
+    private BucketAccessLogConfig accessLogConfig;
 
     /**
      * <p>
@@ -373,6 +379,46 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * An object that describes the access log configuration for the bucket.
+     * </p>
+     * 
+     * @param accessLogConfig
+     *        An object that describes the access log configuration for the bucket.
+     */
+
+    public void setAccessLogConfig(BucketAccessLogConfig accessLogConfig) {
+        this.accessLogConfig = accessLogConfig;
+    }
+
+    /**
+     * <p>
+     * An object that describes the access log configuration for the bucket.
+     * </p>
+     * 
+     * @return An object that describes the access log configuration for the bucket.
+     */
+
+    public BucketAccessLogConfig getAccessLogConfig() {
+        return this.accessLogConfig;
+    }
+
+    /**
+     * <p>
+     * An object that describes the access log configuration for the bucket.
+     * </p>
+     * 
+     * @param accessLogConfig
+     *        An object that describes the access log configuration for the bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateBucketRequest withAccessLogConfig(BucketAccessLogConfig accessLogConfig) {
+        setAccessLogConfig(accessLogConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -391,7 +437,9 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getVersioning() != null)
             sb.append("Versioning: ").append(getVersioning()).append(",");
         if (getReadonlyAccessAccounts() != null)
-            sb.append("ReadonlyAccessAccounts: ").append(getReadonlyAccessAccounts());
+            sb.append("ReadonlyAccessAccounts: ").append(getReadonlyAccessAccounts()).append(",");
+        if (getAccessLogConfig() != null)
+            sb.append("AccessLogConfig: ").append(getAccessLogConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -422,6 +470,10 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getReadonlyAccessAccounts() != null && other.getReadonlyAccessAccounts().equals(this.getReadonlyAccessAccounts()) == false)
             return false;
+        if (other.getAccessLogConfig() == null ^ this.getAccessLogConfig() == null)
+            return false;
+        if (other.getAccessLogConfig() != null && other.getAccessLogConfig().equals(this.getAccessLogConfig()) == false)
+            return false;
         return true;
     }
 
@@ -434,6 +486,7 @@ public class UpdateBucketRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getAccessRules() == null) ? 0 : getAccessRules().hashCode());
         hashCode = prime * hashCode + ((getVersioning() == null) ? 0 : getVersioning().hashCode());
         hashCode = prime * hashCode + ((getReadonlyAccessAccounts() == null) ? 0 : getReadonlyAccessAccounts().hashCode());
+        hashCode = prime * hashCode + ((getAccessLogConfig() == null) ? 0 : getAccessLogConfig().hashCode());
         return hashCode;
     }
 

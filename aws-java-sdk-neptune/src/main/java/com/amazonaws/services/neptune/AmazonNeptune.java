@@ -59,7 +59,7 @@ public interface AmazonNeptune {
 
     /**
      * <p>
-     * Associates an Identity and Access Management (IAM) role from an Neptune DB cluster.
+     * Associates an Identity and Access Management (IAM) role with an Neptune DB cluster.
      * </p>
      * 
      * @param addRoleToDBClusterRequest
@@ -1589,7 +1589,7 @@ public interface AmazonNeptune {
 
     /**
      * <p>
-     * Starts an Amazon Neptune DB cluster that was stopped using the AWS console, the Amazon CLI stop-db-cluster
+     * Starts an Amazon Neptune DB cluster that was stopped using the Amazon console, the Amazon CLI stop-db-cluster
      * command, or the StopDBCluster API.
      * </p>
      * 

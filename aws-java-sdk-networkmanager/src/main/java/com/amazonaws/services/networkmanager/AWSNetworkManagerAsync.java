@@ -27,11 +27,7 @@ import com.amazonaws.services.networkmanager.model.*;
  * <p>
  * <p>
  * Transit Gateway Network Manager (Network Manager) enables you to create a global network, in which you can monitor
- * your AWS and on-premises networks that are built around transit gateways.
- * </p>
- * <p>
- * The Network Manager APIs are supported in the US West (Oregon) Region only. You must specify the
- * <code>us-west-2</code> Region in all requests made to Network Manager.
+ * your Amazon Web Services and on-premises networks that are built around transit gateways.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -838,6 +834,204 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
 
     /**
      * <p>
+     * Gets the count of network resources, by resource type, for the specified global network.
+     * </p>
+     * 
+     * @param getNetworkResourceCountsRequest
+     * @return A Java Future containing the result of the GetNetworkResourceCounts operation returned by the service.
+     * @sample AWSNetworkManagerAsync.GetNetworkResourceCounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResourceCounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkResourceCountsResult> getNetworkResourceCountsAsync(GetNetworkResourceCountsRequest getNetworkResourceCountsRequest);
+
+    /**
+     * <p>
+     * Gets the count of network resources, by resource type, for the specified global network.
+     * </p>
+     * 
+     * @param getNetworkResourceCountsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetNetworkResourceCounts operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.GetNetworkResourceCounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResourceCounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkResourceCountsResult> getNetworkResourceCountsAsync(GetNetworkResourceCountsRequest getNetworkResourceCountsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkResourceCountsRequest, GetNetworkResourceCountsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the network resource relationships for the specified global network.
+     * </p>
+     * 
+     * @param getNetworkResourceRelationshipsRequest
+     * @return A Java Future containing the result of the GetNetworkResourceRelationships operation returned by the
+     *         service.
+     * @sample AWSNetworkManagerAsync.GetNetworkResourceRelationships
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResourceRelationships"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkResourceRelationshipsResult> getNetworkResourceRelationshipsAsync(
+            GetNetworkResourceRelationshipsRequest getNetworkResourceRelationshipsRequest);
+
+    /**
+     * <p>
+     * Gets the network resource relationships for the specified global network.
+     * </p>
+     * 
+     * @param getNetworkResourceRelationshipsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetNetworkResourceRelationships operation returned by the
+     *         service.
+     * @sample AWSNetworkManagerAsyncHandler.GetNetworkResourceRelationships
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResourceRelationships"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkResourceRelationshipsResult> getNetworkResourceRelationshipsAsync(
+            GetNetworkResourceRelationshipsRequest getNetworkResourceRelationshipsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkResourceRelationshipsRequest, GetNetworkResourceRelationshipsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the network resources for the specified global network.
+     * </p>
+     * <p>
+     * The results include information from the corresponding Describe call for the resource, minus any sensitive
+     * information such as pre-shared keys.
+     * </p>
+     * 
+     * @param getNetworkResourcesRequest
+     * @return A Java Future containing the result of the GetNetworkResources operation returned by the service.
+     * @sample AWSNetworkManagerAsync.GetNetworkResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkResourcesResult> getNetworkResourcesAsync(GetNetworkResourcesRequest getNetworkResourcesRequest);
+
+    /**
+     * <p>
+     * Describes the network resources for the specified global network.
+     * </p>
+     * <p>
+     * The results include information from the corresponding Describe call for the resource, minus any sensitive
+     * information such as pre-shared keys.
+     * </p>
+     * 
+     * @param getNetworkResourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetNetworkResources operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.GetNetworkResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkResourcesResult> getNetworkResourcesAsync(GetNetworkResourcesRequest getNetworkResourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkResourcesRequest, GetNetworkResourcesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the network routes of the specified global network.
+     * </p>
+     * 
+     * @param getNetworkRoutesRequest
+     * @return A Java Future containing the result of the GetNetworkRoutes operation returned by the service.
+     * @sample AWSNetworkManagerAsync.GetNetworkRoutes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkRoutes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkRoutesResult> getNetworkRoutesAsync(GetNetworkRoutesRequest getNetworkRoutesRequest);
+
+    /**
+     * <p>
+     * Gets the network routes of the specified global network.
+     * </p>
+     * 
+     * @param getNetworkRoutesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetNetworkRoutes operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.GetNetworkRoutes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkRoutes"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkRoutesResult> getNetworkRoutesAsync(GetNetworkRoutesRequest getNetworkRoutesRequest,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkRoutesRequest, GetNetworkRoutesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the network telemetry of the specified global network.
+     * </p>
+     * 
+     * @param getNetworkTelemetryRequest
+     * @return A Java Future containing the result of the GetNetworkTelemetry operation returned by the service.
+     * @sample AWSNetworkManagerAsync.GetNetworkTelemetry
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkTelemetry"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkTelemetryResult> getNetworkTelemetryAsync(GetNetworkTelemetryRequest getNetworkTelemetryRequest);
+
+    /**
+     * <p>
+     * Gets the network telemetry of the specified global network.
+     * </p>
+     * 
+     * @param getNetworkTelemetryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetNetworkTelemetry operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.GetNetworkTelemetry
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetNetworkTelemetry"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkTelemetryResult> getNetworkTelemetryAsync(GetNetworkTelemetryRequest getNetworkTelemetryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkTelemetryRequest, GetNetworkTelemetryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets information about the specified route analysis.
+     * </p>
+     * 
+     * @param getRouteAnalysisRequest
+     * @return A Java Future containing the result of the GetRouteAnalysis operation returned by the service.
+     * @sample AWSNetworkManagerAsync.GetRouteAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetRouteAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRouteAnalysisResult> getRouteAnalysisAsync(GetRouteAnalysisRequest getRouteAnalysisRequest);
+
+    /**
+     * <p>
+     * Gets information about the specified route analysis.
+     * </p>
+     * 
+     * @param getRouteAnalysisRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRouteAnalysis operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.GetRouteAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/GetRouteAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRouteAnalysisResult> getRouteAnalysisAsync(GetRouteAnalysisRequest getRouteAnalysisRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRouteAnalysisRequest, GetRouteAnalysisResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets information about one or more of your sites in a global network.
      * </p>
      * 
@@ -972,9 +1166,9 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
 
     /**
      * <p>
-     * Registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be
-     * owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than
-     * one global network.
+     * Registers a transit gateway in your global network. The transit gateway can be in any Amazon Web Services Region,
+     * but it must be owned by the same Amazon Web Services account that owns the global network. You cannot register a
+     * transit gateway in more than one global network.
      * </p>
      * 
      * @param registerTransitGatewayRequest
@@ -987,9 +1181,9 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
 
     /**
      * <p>
-     * Registers a transit gateway in your global network. The transit gateway can be in any AWS Region, but it must be
-     * owned by the same AWS account that owns the global network. You cannot register a transit gateway in more than
-     * one global network.
+     * Registers a transit gateway in your global network. The transit gateway can be in any Amazon Web Services Region,
+     * but it must be owned by the same Amazon Web Services account that owns the global network. You cannot register a
+     * transit gateway in more than one global network.
      * </p>
      * 
      * @param registerTransitGatewayRequest
@@ -1004,6 +1198,39 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
      */
     java.util.concurrent.Future<RegisterTransitGatewayResult> registerTransitGatewayAsync(RegisterTransitGatewayRequest registerTransitGatewayRequest,
             com.amazonaws.handlers.AsyncHandler<RegisterTransitGatewayRequest, RegisterTransitGatewayResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts analyzing the routing path between the specified source and destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/route-analyzer.html">Route Analyzer</a>.
+     * </p>
+     * 
+     * @param startRouteAnalysisRequest
+     * @return A Java Future containing the result of the StartRouteAnalysis operation returned by the service.
+     * @sample AWSNetworkManagerAsync.StartRouteAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/StartRouteAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartRouteAnalysisResult> startRouteAnalysisAsync(StartRouteAnalysisRequest startRouteAnalysisRequest);
+
+    /**
+     * <p>
+     * Starts analyzing the routing path between the specified source and destination. For more information, see <a
+     * href="https://docs.aws.amazon.com/vpc/latest/tgw/route-analyzer.html">Route Analyzer</a>.
+     * </p>
+     * 
+     * @param startRouteAnalysisRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartRouteAnalysis operation returned by the service.
+     * @sample AWSNetworkManagerAsyncHandler.StartRouteAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/StartRouteAnalysis"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartRouteAnalysisResult> startRouteAnalysisAsync(StartRouteAnalysisRequest startRouteAnalysisRequest,
+            com.amazonaws.handlers.AsyncHandler<StartRouteAnalysisRequest, StartRouteAnalysisResult> asyncHandler);
 
     /**
      * <p>
@@ -1196,6 +1423,41 @@ public interface AWSNetworkManagerAsync extends AWSNetworkManager {
      */
     java.util.concurrent.Future<UpdateLinkResult> updateLinkAsync(UpdateLinkRequest updateLinkRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateLinkRequest, UpdateLinkResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the resource metadata for the specified global network.
+     * </p>
+     * 
+     * @param updateNetworkResourceMetadataRequest
+     * @return A Java Future containing the result of the UpdateNetworkResourceMetadata operation returned by the
+     *         service.
+     * @sample AWSNetworkManagerAsync.UpdateNetworkResourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UpdateNetworkResourceMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateNetworkResourceMetadataResult> updateNetworkResourceMetadataAsync(
+            UpdateNetworkResourceMetadataRequest updateNetworkResourceMetadataRequest);
+
+    /**
+     * <p>
+     * Updates the resource metadata for the specified global network.
+     * </p>
+     * 
+     * @param updateNetworkResourceMetadataRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateNetworkResourceMetadata operation returned by the
+     *         service.
+     * @sample AWSNetworkManagerAsyncHandler.UpdateNetworkResourceMetadata
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/UpdateNetworkResourceMetadata"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateNetworkResourceMetadataResult> updateNetworkResourceMetadataAsync(
+            UpdateNetworkResourceMetadataRequest updateNetworkResourceMetadataRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateNetworkResourceMetadataRequest, UpdateNetworkResourceMetadataResult> asyncHandler);
 
     /**
      * <p>

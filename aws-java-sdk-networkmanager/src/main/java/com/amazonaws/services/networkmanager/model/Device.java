@@ -48,7 +48,7 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
     private String globalNetworkId;
     /**
      * <p>
-     * The AWS location of the device.
+     * The Amazon Web Services location of the device.
      * </p>
      */
     private AWSLocation aWSLocation;
@@ -235,11 +235,11 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS location of the device.
+     * The Amazon Web Services location of the device.
      * </p>
      * 
      * @param aWSLocation
-     *        The AWS location of the device.
+     *        The Amazon Web Services location of the device.
      */
 
     public void setAWSLocation(AWSLocation aWSLocation) {
@@ -248,10 +248,10 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS location of the device.
+     * The Amazon Web Services location of the device.
      * </p>
      * 
-     * @return The AWS location of the device.
+     * @return The Amazon Web Services location of the device.
      */
 
     public AWSLocation getAWSLocation() {
@@ -260,11 +260,11 @@ public class Device implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS location of the device.
+     * The Amazon Web Services location of the device.
      * </p>
      * 
      * @param aWSLocation
-     *        The AWS location of the device.
+     *        The Amazon Web Services location of the device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

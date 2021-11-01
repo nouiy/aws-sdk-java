@@ -114,6 +114,10 @@ public class BucketJsonUnmarshaller implements Unmarshaller<Bucket, JsonUnmarsha
                     context.nextToken();
                     bucket.setState(BucketStateJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("accessLogConfig", targetDepth)) {
+                    context.nextToken();
+                    bucket.setAccessLogConfig(BucketAccessLogConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

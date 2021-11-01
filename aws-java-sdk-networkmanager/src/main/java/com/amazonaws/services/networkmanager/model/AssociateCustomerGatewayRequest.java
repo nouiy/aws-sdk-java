@@ -27,9 +27,7 @@ public class AssociateCustomerGatewayRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the customer gateway. For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>.
+     * The Amazon Resource Name (ARN) of the customer gateway.
      * </p>
      */
     private String customerGatewayArn;
@@ -54,15 +52,11 @@ public class AssociateCustomerGatewayRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the customer gateway. For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>.
+     * The Amazon Resource Name (ARN) of the customer gateway.
      * </p>
      * 
      * @param customerGatewayArn
-     *        The Amazon Resource Name (ARN) of the customer gateway. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *        >Resources Defined by Amazon EC2</a>.
+     *        The Amazon Resource Name (ARN) of the customer gateway.
      */
 
     public void setCustomerGatewayArn(String customerGatewayArn) {
@@ -71,14 +65,10 @@ public class AssociateCustomerGatewayRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the customer gateway. For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>.
+     * The Amazon Resource Name (ARN) of the customer gateway.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the customer gateway. For more information, see <a href=
-     *         "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *         >Resources Defined by Amazon EC2</a>.
+     * @return The Amazon Resource Name (ARN) of the customer gateway.
      */
 
     public String getCustomerGatewayArn() {
@@ -87,15 +77,11 @@ public class AssociateCustomerGatewayRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the customer gateway. For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>.
+     * The Amazon Resource Name (ARN) of the customer gateway.
      * </p>
      * 
      * @param customerGatewayArn
-     *        The Amazon Resource Name (ARN) of the customer gateway. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *        >Resources Defined by Amazon EC2</a>.
+     *        The Amazon Resource Name (ARN) of the customer gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

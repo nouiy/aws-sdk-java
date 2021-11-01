@@ -22,8 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Contains the Amazon S3 bucket location of the validation data for a model training job.
  * </p>
  * <p>
- * The validation data includes error information for individual JSON lines in the dataset. For more information, see
- * Debugging a Failed Model Training in the Amazon Rekognition Custom Labels Developer Guide.
+ * The validation data includes error information for individual JSON Lines in the dataset. For more information, see
+ * <i>Debugging a Failed Model Training</i> in the Amazon Rekognition Custom Labels Developer Guide.
  * </p>
  * <p>
  * You get the <code>ValidationData</code> object for the training dataset (<a>TrainingDataResult</a>) and the test

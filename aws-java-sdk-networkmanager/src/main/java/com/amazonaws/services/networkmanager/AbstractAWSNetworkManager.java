@@ -143,6 +143,36 @@ public class AbstractAWSNetworkManager implements AWSNetworkManager {
     }
 
     @Override
+    public GetNetworkResourceCountsResult getNetworkResourceCounts(GetNetworkResourceCountsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetNetworkResourceRelationshipsResult getNetworkResourceRelationships(GetNetworkResourceRelationshipsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetNetworkResourcesResult getNetworkResources(GetNetworkResourcesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetNetworkRoutesResult getNetworkRoutes(GetNetworkRoutesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetNetworkTelemetryResult getNetworkTelemetry(GetNetworkTelemetryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRouteAnalysisResult getRouteAnalysis(GetRouteAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetSitesResult getSites(GetSitesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -164,6 +194,11 @@ public class AbstractAWSNetworkManager implements AWSNetworkManager {
 
     @Override
     public RegisterTransitGatewayResult registerTransitGateway(RegisterTransitGatewayRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartRouteAnalysisResult startRouteAnalysis(StartRouteAnalysisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -194,6 +229,11 @@ public class AbstractAWSNetworkManager implements AWSNetworkManager {
 
     @Override
     public UpdateLinkResult updateLink(UpdateLinkRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateNetworkResourceMetadataResult updateNetworkResourceMetadata(UpdateNetworkResourceMetadataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

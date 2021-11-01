@@ -54,6 +54,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest request) {
+
+        return createDatasetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateDatasetRequest, CreateDatasetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateProjectResult> createProjectAsync(CreateProjectRequest request) {
 
         return createProjectAsync(request, null);
@@ -101,6 +114,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     @Override
     public java.util.concurrent.Future<DeleteCollectionResult> deleteCollectionAsync(DeleteCollectionRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteCollectionRequest, DeleteCollectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(DeleteDatasetRequest request) {
+
+        return deleteDatasetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(DeleteDatasetRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteDatasetRequest, DeleteDatasetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -166,6 +192,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     @Override
     public java.util.concurrent.Future<DescribeCollectionResult> describeCollectionAsync(DescribeCollectionRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeCollectionRequest, DescribeCollectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDatasetResult> describeDatasetAsync(DescribeDatasetRequest request) {
+
+        return describeDatasetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDatasetResult> describeDatasetAsync(DescribeDatasetRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeDatasetRequest, DescribeDatasetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -283,6 +322,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     @Override
     public java.util.concurrent.Future<DetectTextResult> detectTextAsync(DetectTextRequest request,
             com.amazonaws.handlers.AsyncHandler<DetectTextRequest, DetectTextResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DistributeDatasetEntriesResult> distributeDatasetEntriesAsync(DistributeDatasetEntriesRequest request) {
+
+        return distributeDatasetEntriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DistributeDatasetEntriesResult> distributeDatasetEntriesAsync(DistributeDatasetEntriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DistributeDatasetEntriesRequest, DistributeDatasetEntriesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -426,6 +478,32 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     @Override
     public java.util.concurrent.Future<ListCollectionsResult> listCollectionsAsync(ListCollectionsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListCollectionsRequest, ListCollectionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDatasetEntriesResult> listDatasetEntriesAsync(ListDatasetEntriesRequest request) {
+
+        return listDatasetEntriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDatasetEntriesResult> listDatasetEntriesAsync(ListDatasetEntriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListDatasetEntriesRequest, ListDatasetEntriesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDatasetLabelsResult> listDatasetLabelsAsync(ListDatasetLabelsRequest request) {
+
+        return listDatasetLabelsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDatasetLabelsResult> listDatasetLabelsAsync(ListDatasetLabelsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListDatasetLabelsRequest, ListDatasetLabelsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -686,6 +764,19 @@ public class AbstractAmazonRekognitionAsync extends AbstractAmazonRekognition im
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDatasetEntriesResult> updateDatasetEntriesAsync(UpdateDatasetEntriesRequest request) {
+
+        return updateDatasetEntriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDatasetEntriesResult> updateDatasetEntriesAsync(UpdateDatasetEntriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateDatasetEntriesRequest, UpdateDatasetEntriesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -33,9 +33,7 @@ public class RegisterTransitGatewayRequest extends com.amazonaws.AmazonWebServic
     private String globalNetworkId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the transit gateway. For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>.
+     * The Amazon Resource Name (ARN) of the transit gateway.
      * </p>
      */
     private String transitGatewayArn;
@@ -82,15 +80,11 @@ public class RegisterTransitGatewayRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the transit gateway. For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>.
+     * The Amazon Resource Name (ARN) of the transit gateway.
      * </p>
      * 
      * @param transitGatewayArn
-     *        The Amazon Resource Name (ARN) of the transit gateway. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *        >Resources Defined by Amazon EC2</a>.
+     *        The Amazon Resource Name (ARN) of the transit gateway.
      */
 
     public void setTransitGatewayArn(String transitGatewayArn) {
@@ -99,14 +93,10 @@ public class RegisterTransitGatewayRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the transit gateway. For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>.
+     * The Amazon Resource Name (ARN) of the transit gateway.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the transit gateway. For more information, see <a href=
-     *         "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *         >Resources Defined by Amazon EC2</a>.
+     * @return The Amazon Resource Name (ARN) of the transit gateway.
      */
 
     public String getTransitGatewayArn() {
@@ -115,15 +105,11 @@ public class RegisterTransitGatewayRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the transit gateway. For more information, see <a href=
-     * "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     * >Resources Defined by Amazon EC2</a>.
+     * The Amazon Resource Name (ARN) of the transit gateway.
      * </p>
      * 
      * @param transitGatewayArn
-     *        The Amazon Resource Name (ARN) of the transit gateway. For more information, see <a href=
-     *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonec2.html#amazonec2-resources-for-iam-policies"
-     *        >Resources Defined by Amazon EC2</a>.
+     *        The Amazon Resource Name (ARN) of the transit gateway.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

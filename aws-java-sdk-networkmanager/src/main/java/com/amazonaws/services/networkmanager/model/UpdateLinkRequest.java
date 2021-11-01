@@ -42,7 +42,7 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * A description of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      */
     private String description;
@@ -51,7 +51,7 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The type of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      */
     private String type;
@@ -66,7 +66,7 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The provider of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      */
     private String provider;
@@ -156,13 +156,13 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * A description of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @param description
      *        A description of the link.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 256 characters.
+     *        Constraints: Maximum length of 256 characters.
      */
 
     public void setDescription(String description) {
@@ -174,12 +174,12 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * A description of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @return A description of the link.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 256 characters.
+     *         Constraints: Maximum length of 256 characters.
      */
 
     public String getDescription() {
@@ -191,13 +191,13 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * A description of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @param description
      *        A description of the link.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 256 characters.
+     *        Constraints: Maximum length of 256 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -211,13 +211,13 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The type of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param type
      *        The type of the link.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      */
 
     public void setType(String type) {
@@ -229,12 +229,12 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The type of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @return The type of the link.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 128 characters.
+     *         Constraints: Maximum length of 128 characters.
      */
 
     public String getType() {
@@ -246,13 +246,13 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The type of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param type
      *        The type of the link.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -306,13 +306,13 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The provider of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param provider
      *        The provider of the link.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      */
 
     public void setProvider(String provider) {
@@ -324,12 +324,12 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The provider of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @return The provider of the link.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 128 characters.
+     *         Constraints: Maximum length of 128 characters.
      */
 
     public String getProvider() {
@@ -341,13 +341,13 @@ public class UpdateLinkRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * The provider of the link.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param provider
      *        The provider of the link.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

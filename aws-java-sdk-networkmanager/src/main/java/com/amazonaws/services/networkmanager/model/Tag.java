@@ -33,7 +33,7 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
      * The tag key.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      */
     private String key;
@@ -42,7 +42,7 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
      * The tag value.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      */
     private String value;
@@ -52,13 +52,13 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
      * The tag key.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param key
      *        The tag key.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      */
 
     public void setKey(String key) {
@@ -70,12 +70,12 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
      * The tag key.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @return The tag key.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 128 characters.
+     *         Constraints: Maximum length of 128 characters.
      */
 
     public String getKey() {
@@ -87,13 +87,13 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
      * The tag key.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 128 characters.
+     * Constraints: Maximum length of 128 characters.
      * </p>
      * 
      * @param key
      *        The tag key.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 128 characters.
+     *        Constraints: Maximum length of 128 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,13 +107,13 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
      * The tag value.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @param value
      *        The tag value.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 256 characters.
+     *        Constraints: Maximum length of 256 characters.
      */
 
     public void setValue(String value) {
@@ -125,12 +125,12 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
      * The tag value.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @return The tag value.</p>
      *         <p>
-     *         Length Constraints: Maximum length of 256 characters.
+     *         Constraints: Maximum length of 256 characters.
      */
 
     public String getValue() {
@@ -142,13 +142,13 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
      * The tag value.
      * </p>
      * <p>
-     * Length Constraints: Maximum length of 256 characters.
+     * Constraints: Maximum length of 256 characters.
      * </p>
      * 
      * @param value
      *        The tag value.</p>
      *        <p>
-     *        Length Constraints: Maximum length of 256 characters.
+     *        Constraints: Maximum length of 256 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

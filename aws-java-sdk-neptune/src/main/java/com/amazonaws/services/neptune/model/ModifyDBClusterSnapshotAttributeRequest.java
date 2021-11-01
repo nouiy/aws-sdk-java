@@ -49,7 +49,7 @@ public class ModifyDBClusterSnapshotAttributeRequest extends com.amazonaws.Amazo
      * To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to include one
      * or more Amazon account IDs, or <code>all</code> to make the manual DB cluster snapshot restorable by any Amazon
      * account. Do not add the <code>all</code> value for any manual DB cluster snapshots that contain private
-     * information that you don't want available to all AWS accounts.
+     * information that you don't want available to all Amazon accounts.
      * </p>
      */
     private java.util.List<String> valuesToAdd;
@@ -176,7 +176,7 @@ public class ModifyDBClusterSnapshotAttributeRequest extends com.amazonaws.Amazo
      * To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to include one
      * or more Amazon account IDs, or <code>all</code> to make the manual DB cluster snapshot restorable by any Amazon
      * account. Do not add the <code>all</code> value for any manual DB cluster snapshots that contain private
-     * information that you don't want available to all AWS accounts.
+     * information that you don't want available to all Amazon accounts.
      * </p>
      * 
      * @return A list of DB cluster snapshot attributes to add to the attribute specified by <code>AttributeName</code>
@@ -185,7 +185,7 @@ public class ModifyDBClusterSnapshotAttributeRequest extends com.amazonaws.Amazo
      *         To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to
      *         include one or more Amazon account IDs, or <code>all</code> to make the manual DB cluster snapshot
      *         restorable by any Amazon account. Do not add the <code>all</code> value for any manual DB cluster
-     *         snapshots that contain private information that you don't want available to all AWS accounts.
+     *         snapshots that contain private information that you don't want available to all Amazon accounts.
      */
 
     public java.util.List<String> getValuesToAdd() {
@@ -200,7 +200,7 @@ public class ModifyDBClusterSnapshotAttributeRequest extends com.amazonaws.Amazo
      * To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to include one
      * or more Amazon account IDs, or <code>all</code> to make the manual DB cluster snapshot restorable by any Amazon
      * account. Do not add the <code>all</code> value for any manual DB cluster snapshots that contain private
-     * information that you don't want available to all AWS accounts.
+     * information that you don't want available to all Amazon accounts.
      * </p>
      * 
      * @param valuesToAdd
@@ -210,7 +210,7 @@ public class ModifyDBClusterSnapshotAttributeRequest extends com.amazonaws.Amazo
      *        To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to
      *        include one or more Amazon account IDs, or <code>all</code> to make the manual DB cluster snapshot
      *        restorable by any Amazon account. Do not add the <code>all</code> value for any manual DB cluster
-     *        snapshots that contain private information that you don't want available to all AWS accounts.
+     *        snapshots that contain private information that you don't want available to all Amazon accounts.
      */
 
     public void setValuesToAdd(java.util.Collection<String> valuesToAdd) {
@@ -230,7 +230,7 @@ public class ModifyDBClusterSnapshotAttributeRequest extends com.amazonaws.Amazo
      * To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to include one
      * or more Amazon account IDs, or <code>all</code> to make the manual DB cluster snapshot restorable by any Amazon
      * account. Do not add the <code>all</code> value for any manual DB cluster snapshots that contain private
-     * information that you don't want available to all AWS accounts.
+     * information that you don't want available to all Amazon accounts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -245,7 +245,7 @@ public class ModifyDBClusterSnapshotAttributeRequest extends com.amazonaws.Amazo
      *        To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to
      *        include one or more Amazon account IDs, or <code>all</code> to make the manual DB cluster snapshot
      *        restorable by any Amazon account. Do not add the <code>all</code> value for any manual DB cluster
-     *        snapshots that contain private information that you don't want available to all AWS accounts.
+     *        snapshots that contain private information that you don't want available to all Amazon accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,7 +267,7 @@ public class ModifyDBClusterSnapshotAttributeRequest extends com.amazonaws.Amazo
      * To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to include one
      * or more Amazon account IDs, or <code>all</code> to make the manual DB cluster snapshot restorable by any Amazon
      * account. Do not add the <code>all</code> value for any manual DB cluster snapshots that contain private
-     * information that you don't want available to all AWS accounts.
+     * information that you don't want available to all Amazon accounts.
      * </p>
      * 
      * @param valuesToAdd
@@ -277,7 +277,7 @@ public class ModifyDBClusterSnapshotAttributeRequest extends com.amazonaws.Amazo
      *        To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to
      *        include one or more Amazon account IDs, or <code>all</code> to make the manual DB cluster snapshot
      *        restorable by any Amazon account. Do not add the <code>all</code> value for any manual DB cluster
-     *        snapshots that contain private information that you don't want available to all AWS accounts.
+     *        snapshots that contain private information that you don't want available to all Amazon accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

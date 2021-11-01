@@ -41,13 +41,16 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
     private OutputConfig outputConfig;
     /**
      * <p>
-     * The dataset to use for training.
+     * Specifies an external manifest that the services uses to train the model. If you specify
+     * <code>TrainingData</code> you must also specify <code>TestingData</code>. The project must not have any
+     * associated datasets.
      * </p>
      */
     private TrainingData trainingData;
     /**
      * <p>
-     * The dataset to use for testing.
+     * Specifies an external manifest that the service uses to test the model. If you specify <code>TestingData</code>
+     * you must also specify <code>TrainingData</code>. The project must not have any associated datasets.
      * </p>
      */
     private TestingData testingData;
@@ -59,14 +62,14 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
     private java.util.Map<String, String> tags;
     /**
      * <p>
-     * The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). You can supply the Amazon
-     * Resource Name (ARN) of your CMK, the ID of your CMK, an alias for your CMK, or an alias ARN. The key is used to
+     * The identifier for your AWS Key Management Service key (AWS KMS key). You can supply the Amazon Resource Name
+     * (ARN) of your KMS key, the ID of your KMS key, an alias for your KMS key, or an alias ARN. The key is used to
      * encrypt training and test images copied into the service for model training. Your source images are unaffected.
      * The key is also used to encrypt training results and manifest files written to the output Amazon S3 bucket (
      * <code>OutputConfig</code>).
      * </p>
      * <p>
-     * If you choose to use your own CMK, you need the following permissions on the CMK.
+     * If you choose to use your own KMS key, you need the following permissions on the KMS key.
      * </p>
      * <ul>
      * <li>
@@ -225,11 +228,15 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The dataset to use for training.
+     * Specifies an external manifest that the services uses to train the model. If you specify
+     * <code>TrainingData</code> you must also specify <code>TestingData</code>. The project must not have any
+     * associated datasets.
      * </p>
      * 
      * @param trainingData
-     *        The dataset to use for training.
+     *        Specifies an external manifest that the services uses to train the model. If you specify
+     *        <code>TrainingData</code> you must also specify <code>TestingData</code>. The project must not have any
+     *        associated datasets.
      */
 
     public void setTrainingData(TrainingData trainingData) {
@@ -238,10 +245,14 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The dataset to use for training.
+     * Specifies an external manifest that the services uses to train the model. If you specify
+     * <code>TrainingData</code> you must also specify <code>TestingData</code>. The project must not have any
+     * associated datasets.
      * </p>
      * 
-     * @return The dataset to use for training.
+     * @return Specifies an external manifest that the services uses to train the model. If you specify
+     *         <code>TrainingData</code> you must also specify <code>TestingData</code>. The project must not have any
+     *         associated datasets.
      */
 
     public TrainingData getTrainingData() {
@@ -250,11 +261,15 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The dataset to use for training.
+     * Specifies an external manifest that the services uses to train the model. If you specify
+     * <code>TrainingData</code> you must also specify <code>TestingData</code>. The project must not have any
+     * associated datasets.
      * </p>
      * 
      * @param trainingData
-     *        The dataset to use for training.
+     *        Specifies an external manifest that the services uses to train the model. If you specify
+     *        <code>TrainingData</code> you must also specify <code>TestingData</code>. The project must not have any
+     *        associated datasets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -265,11 +280,14 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The dataset to use for testing.
+     * Specifies an external manifest that the service uses to test the model. If you specify <code>TestingData</code>
+     * you must also specify <code>TrainingData</code>. The project must not have any associated datasets.
      * </p>
      * 
      * @param testingData
-     *        The dataset to use for testing.
+     *        Specifies an external manifest that the service uses to test the model. If you specify
+     *        <code>TestingData</code> you must also specify <code>TrainingData</code>. The project must not have any
+     *        associated datasets.
      */
 
     public void setTestingData(TestingData testingData) {
@@ -278,10 +296,13 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The dataset to use for testing.
+     * Specifies an external manifest that the service uses to test the model. If you specify <code>TestingData</code>
+     * you must also specify <code>TrainingData</code>. The project must not have any associated datasets.
      * </p>
      * 
-     * @return The dataset to use for testing.
+     * @return Specifies an external manifest that the service uses to test the model. If you specify
+     *         <code>TestingData</code> you must also specify <code>TrainingData</code>. The project must not have any
+     *         associated datasets.
      */
 
     public TestingData getTestingData() {
@@ -290,11 +311,14 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The dataset to use for testing.
+     * Specifies an external manifest that the service uses to test the model. If you specify <code>TestingData</code>
+     * you must also specify <code>TrainingData</code>. The project must not have any associated datasets.
      * </p>
      * 
      * @param testingData
-     *        The dataset to use for testing.
+     *        Specifies an external manifest that the service uses to test the model. If you specify
+     *        <code>TestingData</code> you must also specify <code>TrainingData</code>. The project must not have any
+     *        associated datasets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -373,14 +397,14 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). You can supply the Amazon
-     * Resource Name (ARN) of your CMK, the ID of your CMK, an alias for your CMK, or an alias ARN. The key is used to
+     * The identifier for your AWS Key Management Service key (AWS KMS key). You can supply the Amazon Resource Name
+     * (ARN) of your KMS key, the ID of your KMS key, an alias for your KMS key, or an alias ARN. The key is used to
      * encrypt training and test images copied into the service for model training. Your source images are unaffected.
      * The key is also used to encrypt training results and manifest files written to the output Amazon S3 bucket (
      * <code>OutputConfig</code>).
      * </p>
      * <p>
-     * If you choose to use your own CMK, you need the following permissions on the CMK.
+     * If you choose to use your own KMS key, you need the following permissions on the KMS key.
      * </p>
      * <ul>
      * <li>
@@ -410,13 +434,13 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). You can supply the
-     *        Amazon Resource Name (ARN) of your CMK, the ID of your CMK, an alias for your CMK, or an alias ARN. The
-     *        key is used to encrypt training and test images copied into the service for model training. Your source
-     *        images are unaffected. The key is also used to encrypt training results and manifest files written to the
-     *        output Amazon S3 bucket (<code>OutputConfig</code>).</p>
+     *        The identifier for your AWS Key Management Service key (AWS KMS key). You can supply the Amazon Resource
+     *        Name (ARN) of your KMS key, the ID of your KMS key, an alias for your KMS key, or an alias ARN. The key is
+     *        used to encrypt training and test images copied into the service for model training. Your source images
+     *        are unaffected. The key is also used to encrypt training results and manifest files written to the output
+     *        Amazon S3 bucket (<code>OutputConfig</code>).</p>
      *        <p>
-     *        If you choose to use your own CMK, you need the following permissions on the CMK.
+     *        If you choose to use your own KMS key, you need the following permissions on the KMS key.
      *        </p>
      *        <ul>
      *        <li>
@@ -451,14 +475,14 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). You can supply the Amazon
-     * Resource Name (ARN) of your CMK, the ID of your CMK, an alias for your CMK, or an alias ARN. The key is used to
+     * The identifier for your AWS Key Management Service key (AWS KMS key). You can supply the Amazon Resource Name
+     * (ARN) of your KMS key, the ID of your KMS key, an alias for your KMS key, or an alias ARN. The key is used to
      * encrypt training and test images copied into the service for model training. Your source images are unaffected.
      * The key is also used to encrypt training results and manifest files written to the output Amazon S3 bucket (
      * <code>OutputConfig</code>).
      * </p>
      * <p>
-     * If you choose to use your own CMK, you need the following permissions on the CMK.
+     * If you choose to use your own KMS key, you need the following permissions on the KMS key.
      * </p>
      * <ul>
      * <li>
@@ -487,13 +511,13 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
      * that AWS owns and manages.
      * </p>
      * 
-     * @return The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). You can supply
-     *         the Amazon Resource Name (ARN) of your CMK, the ID of your CMK, an alias for your CMK, or an alias ARN.
-     *         The key is used to encrypt training and test images copied into the service for model training. Your
-     *         source images are unaffected. The key is also used to encrypt training results and manifest files written
-     *         to the output Amazon S3 bucket (<code>OutputConfig</code>).</p>
+     * @return The identifier for your AWS Key Management Service key (AWS KMS key). You can supply the Amazon Resource
+     *         Name (ARN) of your KMS key, the ID of your KMS key, an alias for your KMS key, or an alias ARN. The key
+     *         is used to encrypt training and test images copied into the service for model training. Your source
+     *         images are unaffected. The key is also used to encrypt training results and manifest files written to the
+     *         output Amazon S3 bucket (<code>OutputConfig</code>).</p>
      *         <p>
-     *         If you choose to use your own CMK, you need the following permissions on the CMK.
+     *         If you choose to use your own KMS key, you need the following permissions on the KMS key.
      *         </p>
      *         <ul>
      *         <li>
@@ -528,14 +552,14 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). You can supply the Amazon
-     * Resource Name (ARN) of your CMK, the ID of your CMK, an alias for your CMK, or an alias ARN. The key is used to
+     * The identifier for your AWS Key Management Service key (AWS KMS key). You can supply the Amazon Resource Name
+     * (ARN) of your KMS key, the ID of your KMS key, an alias for your KMS key, or an alias ARN. The key is used to
      * encrypt training and test images copied into the service for model training. Your source images are unaffected.
      * The key is also used to encrypt training results and manifest files written to the output Amazon S3 bucket (
      * <code>OutputConfig</code>).
      * </p>
      * <p>
-     * If you choose to use your own CMK, you need the following permissions on the CMK.
+     * If you choose to use your own KMS key, you need the following permissions on the KMS key.
      * </p>
      * <ul>
      * <li>
@@ -565,13 +589,13 @@ public class CreateProjectVersionRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier for your AWS Key Management Service (AWS KMS) customer master key (CMK). You can supply the
-     *        Amazon Resource Name (ARN) of your CMK, the ID of your CMK, an alias for your CMK, or an alias ARN. The
-     *        key is used to encrypt training and test images copied into the service for model training. Your source
-     *        images are unaffected. The key is also used to encrypt training results and manifest files written to the
-     *        output Amazon S3 bucket (<code>OutputConfig</code>).</p>
+     *        The identifier for your AWS Key Management Service key (AWS KMS key). You can supply the Amazon Resource
+     *        Name (ARN) of your KMS key, the ID of your KMS key, an alias for your KMS key, or an alias ARN. The key is
+     *        used to encrypt training and test images copied into the service for model training. Your source images
+     *        are unaffected. The key is also used to encrypt training results and manifest files written to the output
+     *        Amazon S3 bucket (<code>OutputConfig</code>).</p>
      *        <p>
-     *        If you choose to use your own CMK, you need the following permissions on the CMK.
+     *        If you choose to use your own KMS key, you need the following permissions on the KMS key.
      *        </p>
      *        <ul>
      *        <li>

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The description of a version of a model.
+ * A description of a version of an Amazon Rekognition Custom Labels model.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -57,8 +57,8 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
     private String statusMessage;
     /**
      * <p>
-     * The duration, in seconds, that the model version has been billed for training. This value is only returned if the
-     * model version has been successfully trained.
+     * The duration, in seconds, that you were billed for a successful training of the model version. This value is only
+     * returned if the model version has been successfully trained.
      * </p>
      */
     private Long billableTrainingTimeInSeconds;
@@ -101,8 +101,8 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
     private GroundTruthManifest manifestSummary;
     /**
      * <p>
-     * The identifer for the AWS Key Management Service (AWS KMS) customer master key that was used to encrypt the model
-     * during training.
+     * The identifer for the AWS Key Management Service key (AWS KMS key) that was used to encrypt the model during
+     * training.
      * </p>
      */
     private String kmsKeyId;
@@ -331,13 +331,13 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The duration, in seconds, that the model version has been billed for training. This value is only returned if the
-     * model version has been successfully trained.
+     * The duration, in seconds, that you were billed for a successful training of the model version. This value is only
+     * returned if the model version has been successfully trained.
      * </p>
      * 
      * @param billableTrainingTimeInSeconds
-     *        The duration, in seconds, that the model version has been billed for training. This value is only returned
-     *        if the model version has been successfully trained.
+     *        The duration, in seconds, that you were billed for a successful training of the model version. This value
+     *        is only returned if the model version has been successfully trained.
      */
 
     public void setBillableTrainingTimeInSeconds(Long billableTrainingTimeInSeconds) {
@@ -346,12 +346,12 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The duration, in seconds, that the model version has been billed for training. This value is only returned if the
-     * model version has been successfully trained.
+     * The duration, in seconds, that you were billed for a successful training of the model version. This value is only
+     * returned if the model version has been successfully trained.
      * </p>
      * 
-     * @return The duration, in seconds, that the model version has been billed for training. This value is only
-     *         returned if the model version has been successfully trained.
+     * @return The duration, in seconds, that you were billed for a successful training of the model version. This value
+     *         is only returned if the model version has been successfully trained.
      */
 
     public Long getBillableTrainingTimeInSeconds() {
@@ -360,13 +360,13 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The duration, in seconds, that the model version has been billed for training. This value is only returned if the
-     * model version has been successfully trained.
+     * The duration, in seconds, that you were billed for a successful training of the model version. This value is only
+     * returned if the model version has been successfully trained.
      * </p>
      * 
      * @param billableTrainingTimeInSeconds
-     *        The duration, in seconds, that the model version has been billed for training. This value is only returned
-     *        if the model version has been successfully trained.
+     *        The duration, in seconds, that you were billed for a successful training of the model version. This value
+     *        is only returned if the model version has been successfully trained.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -623,13 +623,13 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The identifer for the AWS Key Management Service (AWS KMS) customer master key that was used to encrypt the model
-     * during training.
+     * The identifer for the AWS Key Management Service key (AWS KMS key) that was used to encrypt the model during
+     * training.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifer for the AWS Key Management Service (AWS KMS) customer master key that was used to encrypt
-     *        the model during training.
+     *        The identifer for the AWS Key Management Service key (AWS KMS key) that was used to encrypt the model
+     *        during training.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -638,12 +638,12 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The identifer for the AWS Key Management Service (AWS KMS) customer master key that was used to encrypt the model
-     * during training.
+     * The identifer for the AWS Key Management Service key (AWS KMS key) that was used to encrypt the model during
+     * training.
      * </p>
      * 
-     * @return The identifer for the AWS Key Management Service (AWS KMS) customer master key that was used to encrypt
-     *         the model during training.
+     * @return The identifer for the AWS Key Management Service key (AWS KMS key) that was used to encrypt the model
+     *         during training.
      */
 
     public String getKmsKeyId() {
@@ -652,13 +652,13 @@ public class ProjectVersionDescription implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The identifer for the AWS Key Management Service (AWS KMS) customer master key that was used to encrypt the model
-     * during training.
+     * The identifer for the AWS Key Management Service key (AWS KMS key) that was used to encrypt the model during
+     * training.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifer for the AWS Key Management Service (AWS KMS) customer master key that was used to encrypt
-     *        the model during training.
+     *        The identifer for the AWS Key Management Service key (AWS KMS key) that was used to encrypt the model
+     *        during training.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -324,6 +324,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest request) {
+
+        return createDatasetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(final CreateDatasetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateDatasetRequest, CreateDatasetResult> asyncHandler) {
+        final CreateDatasetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateDatasetResult>() {
+            @Override
+            public CreateDatasetResult call() throws Exception {
+                CreateDatasetResult result = null;
+
+                try {
+                    result = executeCreateDataset(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateProjectResult> createProjectAsync(CreateProjectRequest request) {
 
         return createProjectAsync(request, null);
@@ -440,6 +473,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeDeleteCollection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(DeleteDatasetRequest request) {
+
+        return deleteDatasetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(final DeleteDatasetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteDatasetRequest, DeleteDatasetResult> asyncHandler) {
+        final DeleteDatasetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteDatasetResult>() {
+            @Override
+            public DeleteDatasetResult call() throws Exception {
+                DeleteDatasetResult result = null;
+
+                try {
+                    result = executeDeleteDataset(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -605,6 +671,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeDescribeCollection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDatasetResult> describeDatasetAsync(DescribeDatasetRequest request) {
+
+        return describeDatasetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDatasetResult> describeDatasetAsync(final DescribeDatasetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDatasetRequest, DescribeDatasetResult> asyncHandler) {
+        final DescribeDatasetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDatasetResult>() {
+            @Override
+            public DescribeDatasetResult call() throws Exception {
+                DescribeDatasetResult result = null;
+
+                try {
+                    result = executeDescribeDataset(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -902,6 +1001,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeDetectText(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DistributeDatasetEntriesResult> distributeDatasetEntriesAsync(DistributeDatasetEntriesRequest request) {
+
+        return distributeDatasetEntriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DistributeDatasetEntriesResult> distributeDatasetEntriesAsync(final DistributeDatasetEntriesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DistributeDatasetEntriesRequest, DistributeDatasetEntriesResult> asyncHandler) {
+        final DistributeDatasetEntriesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DistributeDatasetEntriesResult>() {
+            @Override
+            public DistributeDatasetEntriesResult call() throws Exception {
+                DistributeDatasetEntriesResult result = null;
+
+                try {
+                    result = executeDistributeDatasetEntries(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1265,6 +1397,72 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeListCollections(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDatasetEntriesResult> listDatasetEntriesAsync(ListDatasetEntriesRequest request) {
+
+        return listDatasetEntriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDatasetEntriesResult> listDatasetEntriesAsync(final ListDatasetEntriesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListDatasetEntriesRequest, ListDatasetEntriesResult> asyncHandler) {
+        final ListDatasetEntriesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListDatasetEntriesResult>() {
+            @Override
+            public ListDatasetEntriesResult call() throws Exception {
+                ListDatasetEntriesResult result = null;
+
+                try {
+                    result = executeListDatasetEntries(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDatasetLabelsResult> listDatasetLabelsAsync(ListDatasetLabelsRequest request) {
+
+        return listDatasetLabelsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDatasetLabelsResult> listDatasetLabelsAsync(final ListDatasetLabelsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListDatasetLabelsRequest, ListDatasetLabelsResult> asyncHandler) {
+        final ListDatasetLabelsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListDatasetLabelsResult>() {
+            @Override
+            public ListDatasetLabelsResult call() throws Exception {
+                ListDatasetLabelsResult result = null;
+
+                try {
+                    result = executeListDatasetLabels(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1925,6 +2123,39 @@ public class AmazonRekognitionAsyncClient extends AmazonRekognitionClient implem
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDatasetEntriesResult> updateDatasetEntriesAsync(UpdateDatasetEntriesRequest request) {
+
+        return updateDatasetEntriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDatasetEntriesResult> updateDatasetEntriesAsync(final UpdateDatasetEntriesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateDatasetEntriesRequest, UpdateDatasetEntriesResult> asyncHandler) {
+        final UpdateDatasetEntriesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateDatasetEntriesResult>() {
+            @Override
+            public UpdateDatasetEntriesResult call() throws Exception {
+                UpdateDatasetEntriesResult result = null;
+
+                try {
+                    result = executeUpdateDatasetEntries(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

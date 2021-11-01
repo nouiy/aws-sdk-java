@@ -49,6 +49,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
     }
 
     @Override
+    public CreateDatasetResult createDataset(CreateDatasetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateProjectResult createProject(CreateProjectRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -65,6 +70,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public DeleteCollectionResult deleteCollection(DeleteCollectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteDatasetResult deleteDataset(DeleteDatasetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -90,6 +100,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public DescribeCollectionResult describeCollection(DescribeCollectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeDatasetResult describeDataset(DescribeDatasetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -135,6 +150,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public DetectTextResult detectText(DetectTextRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DistributeDatasetEntriesResult distributeDatasetEntries(DistributeDatasetEntriesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -190,6 +210,16 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public ListCollectionsResult listCollections(ListCollectionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListDatasetEntriesResult listDatasetEntries(ListDatasetEntriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListDatasetLabelsResult listDatasetLabels(ListDatasetLabelsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -290,6 +320,11 @@ public class AbstractAmazonRekognition implements AmazonRekognition {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateDatasetEntriesResult updateDatasetEntries(UpdateDatasetEntriesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -232,6 +232,47 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
     private String engineVersion;
     /**
      * <p>
+     * A value that indicates whether upgrades between different major versions are allowed.
+     * </p>
+     * <p>
+     * Constraints: You must set the allow-major-version-upgrade flag when providing an <code>EngineVersion</code>
+     * parameter that uses a different major version than the DB cluster's current version.
+     * </p>
+     */
+    private Boolean allowMajorVersionUpgrade;
+    /**
+     * <p>
+     * The name of the DB parameter group to apply to all instances of the DB cluster.
+     * </p>
+     * <note>
+     * <p>
+     * When you apply a parameter group using <code>DBInstanceParameterGroupName</code>, parameter changes aren't
+     * applied during the next maintenance window but instead are applied immediately.
+     * </p>
+     * </note>
+     * <p>
+     * Default: The existing name setting
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The DB parameter group must be in the same DB parameter group family as the target DB cluster version.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>DBInstanceParameterGroupName</code> parameter is only valid in combination with the
+     * <code>AllowMajorVersionUpgrade</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private String dBInstanceParameterGroupName;
+    /**
+     * <p>
      * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
      * deletion protection is enabled. By default, deletion protection is disabled.
      * </p>
@@ -1589,6 +1630,274 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * A value that indicates whether upgrades between different major versions are allowed.
+     * </p>
+     * <p>
+     * Constraints: You must set the allow-major-version-upgrade flag when providing an <code>EngineVersion</code>
+     * parameter that uses a different major version than the DB cluster's current version.
+     * </p>
+     * 
+     * @param allowMajorVersionUpgrade
+     *        A value that indicates whether upgrades between different major versions are allowed.</p>
+     *        <p>
+     *        Constraints: You must set the allow-major-version-upgrade flag when providing an
+     *        <code>EngineVersion</code> parameter that uses a different major version than the DB cluster's current
+     *        version.
+     */
+
+    public void setAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+        this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether upgrades between different major versions are allowed.
+     * </p>
+     * <p>
+     * Constraints: You must set the allow-major-version-upgrade flag when providing an <code>EngineVersion</code>
+     * parameter that uses a different major version than the DB cluster's current version.
+     * </p>
+     * 
+     * @return A value that indicates whether upgrades between different major versions are allowed.</p>
+     *         <p>
+     *         Constraints: You must set the allow-major-version-upgrade flag when providing an
+     *         <code>EngineVersion</code> parameter that uses a different major version than the DB cluster's current
+     *         version.
+     */
+
+    public Boolean getAllowMajorVersionUpgrade() {
+        return this.allowMajorVersionUpgrade;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether upgrades between different major versions are allowed.
+     * </p>
+     * <p>
+     * Constraints: You must set the allow-major-version-upgrade flag when providing an <code>EngineVersion</code>
+     * parameter that uses a different major version than the DB cluster's current version.
+     * </p>
+     * 
+     * @param allowMajorVersionUpgrade
+     *        A value that indicates whether upgrades between different major versions are allowed.</p>
+     *        <p>
+     *        Constraints: You must set the allow-major-version-upgrade flag when providing an
+     *        <code>EngineVersion</code> parameter that uses a different major version than the DB cluster's current
+     *        version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyDBClusterRequest withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+        setAllowMajorVersionUpgrade(allowMajorVersionUpgrade);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that indicates whether upgrades between different major versions are allowed.
+     * </p>
+     * <p>
+     * Constraints: You must set the allow-major-version-upgrade flag when providing an <code>EngineVersion</code>
+     * parameter that uses a different major version than the DB cluster's current version.
+     * </p>
+     * 
+     * @return A value that indicates whether upgrades between different major versions are allowed.</p>
+     *         <p>
+     *         Constraints: You must set the allow-major-version-upgrade flag when providing an
+     *         <code>EngineVersion</code> parameter that uses a different major version than the DB cluster's current
+     *         version.
+     */
+
+    public Boolean isAllowMajorVersionUpgrade() {
+        return this.allowMajorVersionUpgrade;
+    }
+
+    /**
+     * <p>
+     * The name of the DB parameter group to apply to all instances of the DB cluster.
+     * </p>
+     * <note>
+     * <p>
+     * When you apply a parameter group using <code>DBInstanceParameterGroupName</code>, parameter changes aren't
+     * applied during the next maintenance window but instead are applied immediately.
+     * </p>
+     * </note>
+     * <p>
+     * Default: The existing name setting
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The DB parameter group must be in the same DB parameter group family as the target DB cluster version.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>DBInstanceParameterGroupName</code> parameter is only valid in combination with the
+     * <code>AllowMajorVersionUpgrade</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dBInstanceParameterGroupName
+     *        The name of the DB parameter group to apply to all instances of the DB cluster. </p> <note>
+     *        <p>
+     *        When you apply a parameter group using <code>DBInstanceParameterGroupName</code>, parameter changes aren't
+     *        applied during the next maintenance window but instead are applied immediately.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Default: The existing name setting
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The DB parameter group must be in the same DB parameter group family as the target DB cluster version.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>DBInstanceParameterGroupName</code> parameter is only valid in combination with the
+     *        <code>AllowMajorVersionUpgrade</code> parameter.
+     *        </p>
+     *        </li>
+     */
+
+    public void setDBInstanceParameterGroupName(String dBInstanceParameterGroupName) {
+        this.dBInstanceParameterGroupName = dBInstanceParameterGroupName;
+    }
+
+    /**
+     * <p>
+     * The name of the DB parameter group to apply to all instances of the DB cluster.
+     * </p>
+     * <note>
+     * <p>
+     * When you apply a parameter group using <code>DBInstanceParameterGroupName</code>, parameter changes aren't
+     * applied during the next maintenance window but instead are applied immediately.
+     * </p>
+     * </note>
+     * <p>
+     * Default: The existing name setting
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The DB parameter group must be in the same DB parameter group family as the target DB cluster version.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>DBInstanceParameterGroupName</code> parameter is only valid in combination with the
+     * <code>AllowMajorVersionUpgrade</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The name of the DB parameter group to apply to all instances of the DB cluster. </p> <note>
+     *         <p>
+     *         When you apply a parameter group using <code>DBInstanceParameterGroupName</code>, parameter changes
+     *         aren't applied during the next maintenance window but instead are applied immediately.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Default: The existing name setting
+     *         </p>
+     *         <p>
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The DB parameter group must be in the same DB parameter group family as the target DB cluster version.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The <code>DBInstanceParameterGroupName</code> parameter is only valid in combination with the
+     *         <code>AllowMajorVersionUpgrade</code> parameter.
+     *         </p>
+     *         </li>
+     */
+
+    public String getDBInstanceParameterGroupName() {
+        return this.dBInstanceParameterGroupName;
+    }
+
+    /**
+     * <p>
+     * The name of the DB parameter group to apply to all instances of the DB cluster.
+     * </p>
+     * <note>
+     * <p>
+     * When you apply a parameter group using <code>DBInstanceParameterGroupName</code>, parameter changes aren't
+     * applied during the next maintenance window but instead are applied immediately.
+     * </p>
+     * </note>
+     * <p>
+     * Default: The existing name setting
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The DB parameter group must be in the same DB parameter group family as the target DB cluster version.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>DBInstanceParameterGroupName</code> parameter is only valid in combination with the
+     * <code>AllowMajorVersionUpgrade</code> parameter.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dBInstanceParameterGroupName
+     *        The name of the DB parameter group to apply to all instances of the DB cluster. </p> <note>
+     *        <p>
+     *        When you apply a parameter group using <code>DBInstanceParameterGroupName</code>, parameter changes aren't
+     *        applied during the next maintenance window but instead are applied immediately.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Default: The existing name setting
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The DB parameter group must be in the same DB parameter group family as the target DB cluster version.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>DBInstanceParameterGroupName</code> parameter is only valid in combination with the
+     *        <code>AllowMajorVersionUpgrade</code> parameter.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyDBClusterRequest withDBInstanceParameterGroupName(String dBInstanceParameterGroupName) {
+        setDBInstanceParameterGroupName(dBInstanceParameterGroupName);
+        return this;
+    }
+
+    /**
+     * <p>
      * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
      * deletion protection is enabled. By default, deletion protection is disabled.
      * </p>
@@ -1739,6 +2048,10 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             sb.append("CloudwatchLogsExportConfiguration: ").append(getCloudwatchLogsExportConfiguration()).append(",");
         if (getEngineVersion() != null)
             sb.append("EngineVersion: ").append(getEngineVersion()).append(",");
+        if (getAllowMajorVersionUpgrade() != null)
+            sb.append("AllowMajorVersionUpgrade: ").append(getAllowMajorVersionUpgrade()).append(",");
+        if (getDBInstanceParameterGroupName() != null)
+            sb.append("DBInstanceParameterGroupName: ").append(getDBInstanceParameterGroupName()).append(",");
         if (getDeletionProtection() != null)
             sb.append("DeletionProtection: ").append(getDeletionProtection()).append(",");
         if (getCopyTagsToSnapshot() != null)
@@ -1815,6 +2128,14 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getEngineVersion() != null && other.getEngineVersion().equals(this.getEngineVersion()) == false)
             return false;
+        if (other.getAllowMajorVersionUpgrade() == null ^ this.getAllowMajorVersionUpgrade() == null)
+            return false;
+        if (other.getAllowMajorVersionUpgrade() != null && other.getAllowMajorVersionUpgrade().equals(this.getAllowMajorVersionUpgrade()) == false)
+            return false;
+        if (other.getDBInstanceParameterGroupName() == null ^ this.getDBInstanceParameterGroupName() == null)
+            return false;
+        if (other.getDBInstanceParameterGroupName() != null && other.getDBInstanceParameterGroupName().equals(this.getDBInstanceParameterGroupName()) == false)
+            return false;
         if (other.getDeletionProtection() == null ^ this.getDeletionProtection() == null)
             return false;
         if (other.getDeletionProtection() != null && other.getDeletionProtection().equals(this.getDeletionProtection()) == false)
@@ -1845,6 +2166,8 @@ public class ModifyDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getEnableIAMDatabaseAuthentication() == null) ? 0 : getEnableIAMDatabaseAuthentication().hashCode());
         hashCode = prime * hashCode + ((getCloudwatchLogsExportConfiguration() == null) ? 0 : getCloudwatchLogsExportConfiguration().hashCode());
         hashCode = prime * hashCode + ((getEngineVersion() == null) ? 0 : getEngineVersion().hashCode());
+        hashCode = prime * hashCode + ((getAllowMajorVersionUpgrade() == null) ? 0 : getAllowMajorVersionUpgrade().hashCode());
+        hashCode = prime * hashCode + ((getDBInstanceParameterGroupName() == null) ? 0 : getDBInstanceParameterGroupName().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());
         hashCode = prime * hashCode + ((getCopyTagsToSnapshot() == null) ? 0 : getCopyTagsToSnapshot().hashCode());
         return hashCode;

@@ -94,7 +94,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
     private Integer scale;
     /**
      * <p>
-     * The tag keys and optional values to add to the certificate during create.
+     * The tag keys and optional values to add to the container service during create.
      * </p>
      * <p>
      * Use the <code>TagResource</code> action to tag a resource after it's created.
@@ -589,7 +589,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The tag keys and optional values to add to the certificate during create.
+     * The tag keys and optional values to add to the container service during create.
      * </p>
      * <p>
      * Use the <code>TagResource</code> action to tag a resource after it's created.
@@ -600,7 +600,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      * Guide</a>.
      * </p>
      * 
-     * @return The tag keys and optional values to add to the certificate during create.</p>
+     * @return The tag keys and optional values to add to the container service during create.</p>
      *         <p>
      *         Use the <code>TagResource</code> action to tag a resource after it's created.
      *         </p>
@@ -616,7 +616,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The tag keys and optional values to add to the certificate during create.
+     * The tag keys and optional values to add to the container service during create.
      * </p>
      * <p>
      * Use the <code>TagResource</code> action to tag a resource after it's created.
@@ -628,7 +628,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param tags
-     *        The tag keys and optional values to add to the certificate during create.</p>
+     *        The tag keys and optional values to add to the container service during create.</p>
      *        <p>
      *        Use the <code>TagResource</code> action to tag a resource after it's created.
      *        </p>
@@ -649,7 +649,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The tag keys and optional values to add to the certificate during create.
+     * The tag keys and optional values to add to the container service during create.
      * </p>
      * <p>
      * Use the <code>TagResource</code> action to tag a resource after it's created.
@@ -666,7 +666,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param tags
-     *        The tag keys and optional values to add to the certificate during create.</p>
+     *        The tag keys and optional values to add to the container service during create.</p>
      *        <p>
      *        Use the <code>TagResource</code> action to tag a resource after it's created.
      *        </p>
@@ -689,7 +689,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The tag keys and optional values to add to the certificate during create.
+     * The tag keys and optional values to add to the container service during create.
      * </p>
      * <p>
      * Use the <code>TagResource</code> action to tag a resource after it's created.
@@ -701,7 +701,7 @@ public class CreateContainerServiceRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param tags
-     *        The tag keys and optional values to add to the certificate during create.</p>
+     *        The tag keys and optional values to add to the container service during create.</p>
      *        <p>
      *        Use the <code>TagResource</code> action to tag a resource after it's created.
      *        </p>

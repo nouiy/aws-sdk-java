@@ -331,6 +331,86 @@ public class AbstractAWSNetworkManagerAsync extends AbstractAWSNetworkManager im
     }
 
     @Override
+    public java.util.concurrent.Future<GetNetworkResourceCountsResult> getNetworkResourceCountsAsync(GetNetworkResourceCountsRequest request) {
+
+        return getNetworkResourceCountsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourceCountsResult> getNetworkResourceCountsAsync(GetNetworkResourceCountsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkResourceCountsRequest, GetNetworkResourceCountsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourceRelationshipsResult> getNetworkResourceRelationshipsAsync(
+            GetNetworkResourceRelationshipsRequest request) {
+
+        return getNetworkResourceRelationshipsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourceRelationshipsResult> getNetworkResourceRelationshipsAsync(
+            GetNetworkResourceRelationshipsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkResourceRelationshipsRequest, GetNetworkResourceRelationshipsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourcesResult> getNetworkResourcesAsync(GetNetworkResourcesRequest request) {
+
+        return getNetworkResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkResourcesResult> getNetworkResourcesAsync(GetNetworkResourcesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkResourcesRequest, GetNetworkResourcesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkRoutesResult> getNetworkRoutesAsync(GetNetworkRoutesRequest request) {
+
+        return getNetworkRoutesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkRoutesResult> getNetworkRoutesAsync(GetNetworkRoutesRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkRoutesRequest, GetNetworkRoutesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkTelemetryResult> getNetworkTelemetryAsync(GetNetworkTelemetryRequest request) {
+
+        return getNetworkTelemetryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkTelemetryResult> getNetworkTelemetryAsync(GetNetworkTelemetryRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkTelemetryRequest, GetNetworkTelemetryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRouteAnalysisResult> getRouteAnalysisAsync(GetRouteAnalysisRequest request) {
+
+        return getRouteAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRouteAnalysisResult> getRouteAnalysisAsync(GetRouteAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRouteAnalysisRequest, GetRouteAnalysisResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetSitesResult> getSitesAsync(GetSitesRequest request) {
 
         return getSitesAsync(request, null);
@@ -393,6 +473,19 @@ public class AbstractAWSNetworkManagerAsync extends AbstractAWSNetworkManager im
     @Override
     public java.util.concurrent.Future<RegisterTransitGatewayResult> registerTransitGatewayAsync(RegisterTransitGatewayRequest request,
             com.amazonaws.handlers.AsyncHandler<RegisterTransitGatewayRequest, RegisterTransitGatewayResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRouteAnalysisResult> startRouteAnalysisAsync(StartRouteAnalysisRequest request) {
+
+        return startRouteAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartRouteAnalysisResult> startRouteAnalysisAsync(StartRouteAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartRouteAnalysisRequest, StartRouteAnalysisResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -471,6 +564,19 @@ public class AbstractAWSNetworkManagerAsync extends AbstractAWSNetworkManager im
     @Override
     public java.util.concurrent.Future<UpdateLinkResult> updateLinkAsync(UpdateLinkRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateLinkRequest, UpdateLinkResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNetworkResourceMetadataResult> updateNetworkResourceMetadataAsync(UpdateNetworkResourceMetadataRequest request) {
+
+        return updateNetworkResourceMetadataAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNetworkResourceMetadataResult> updateNetworkResourceMetadataAsync(UpdateNetworkResourceMetadataRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateNetworkResourceMetadataRequest, UpdateNetworkResourceMetadataResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

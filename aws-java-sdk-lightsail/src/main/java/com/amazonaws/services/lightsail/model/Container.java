@@ -35,8 +35,16 @@ public class Container implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Container images sourced from your Lightsail container service, that are registered and stored on your service,
-     * start with a colon (<code>:</code>). For example, <code>:container-service-1.mystaticwebsite.1</code>. Container
-     * images sourced from a public registry like Docker Hub don't start with a colon. For example,
+     * start with a colon (<code>:</code>). For example, if your container service name is
+     * <code>container-service-1</code>, the container image label is <code>mystaticsite</code>, and you want to use the
+     * third (<code>3</code>) version of the registered container image, then you should specify
+     * <code>:container-service-1.mystaticsite.3</code>. To use the latest version of a container image, specify
+     * <code>latest</code> instead of a version number (for example,
+     * <code>:container-service-1.mystaticsite.latest</code>). Lightsail will automatically use the highest numbered
+     * version of the registered container image.
+     * </p>
+     * <p>
+     * Container images sourced from a public registry like Docker Hub don't start with a colon. For example,
      * <code>nginx:latest</code> or <code>nginx</code>.
      * </p>
      */
@@ -66,8 +74,16 @@ public class Container implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Container images sourced from your Lightsail container service, that are registered and stored on your service,
-     * start with a colon (<code>:</code>). For example, <code>:container-service-1.mystaticwebsite.1</code>. Container
-     * images sourced from a public registry like Docker Hub don't start with a colon. For example,
+     * start with a colon (<code>:</code>). For example, if your container service name is
+     * <code>container-service-1</code>, the container image label is <code>mystaticsite</code>, and you want to use the
+     * third (<code>3</code>) version of the registered container image, then you should specify
+     * <code>:container-service-1.mystaticsite.3</code>. To use the latest version of a container image, specify
+     * <code>latest</code> instead of a version number (for example,
+     * <code>:container-service-1.mystaticsite.latest</code>). Lightsail will automatically use the highest numbered
+     * version of the registered container image.
+     * </p>
+     * <p>
+     * Container images sourced from a public registry like Docker Hub don't start with a colon. For example,
      * <code>nginx:latest</code> or <code>nginx</code>.
      * </p>
      * 
@@ -75,9 +91,17 @@ public class Container implements Serializable, Cloneable, StructuredPojo {
      *        The name of the image used for the container.</p>
      *        <p>
      *        Container images sourced from your Lightsail container service, that are registered and stored on your
-     *        service, start with a colon (<code>:</code>). For example,
-     *        <code>:container-service-1.mystaticwebsite.1</code>. Container images sourced from a public registry like
-     *        Docker Hub don't start with a colon. For example, <code>nginx:latest</code> or <code>nginx</code>.
+     *        service, start with a colon (<code>:</code>). For example, if your container service name is
+     *        <code>container-service-1</code>, the container image label is <code>mystaticsite</code>, and you want to
+     *        use the third (<code>3</code>) version of the registered container image, then you should specify
+     *        <code>:container-service-1.mystaticsite.3</code>. To use the latest version of a container image, specify
+     *        <code>latest</code> instead of a version number (for example,
+     *        <code>:container-service-1.mystaticsite.latest</code>). Lightsail will automatically use the highest
+     *        numbered version of the registered container image.
+     *        </p>
+     *        <p>
+     *        Container images sourced from a public registry like Docker Hub don't start with a colon. For example,
+     *        <code>nginx:latest</code> or <code>nginx</code>.
      */
 
     public void setImage(String image) {
@@ -90,17 +114,33 @@ public class Container implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Container images sourced from your Lightsail container service, that are registered and stored on your service,
-     * start with a colon (<code>:</code>). For example, <code>:container-service-1.mystaticwebsite.1</code>. Container
-     * images sourced from a public registry like Docker Hub don't start with a colon. For example,
+     * start with a colon (<code>:</code>). For example, if your container service name is
+     * <code>container-service-1</code>, the container image label is <code>mystaticsite</code>, and you want to use the
+     * third (<code>3</code>) version of the registered container image, then you should specify
+     * <code>:container-service-1.mystaticsite.3</code>. To use the latest version of a container image, specify
+     * <code>latest</code> instead of a version number (for example,
+     * <code>:container-service-1.mystaticsite.latest</code>). Lightsail will automatically use the highest numbered
+     * version of the registered container image.
+     * </p>
+     * <p>
+     * Container images sourced from a public registry like Docker Hub don't start with a colon. For example,
      * <code>nginx:latest</code> or <code>nginx</code>.
      * </p>
      * 
      * @return The name of the image used for the container.</p>
      *         <p>
      *         Container images sourced from your Lightsail container service, that are registered and stored on your
-     *         service, start with a colon (<code>:</code>). For example,
-     *         <code>:container-service-1.mystaticwebsite.1</code>. Container images sourced from a public registry like
-     *         Docker Hub don't start with a colon. For example, <code>nginx:latest</code> or <code>nginx</code>.
+     *         service, start with a colon (<code>:</code>). For example, if your container service name is
+     *         <code>container-service-1</code>, the container image label is <code>mystaticsite</code>, and you want to
+     *         use the third (<code>3</code>) version of the registered container image, then you should specify
+     *         <code>:container-service-1.mystaticsite.3</code>. To use the latest version of a container image, specify
+     *         <code>latest</code> instead of a version number (for example,
+     *         <code>:container-service-1.mystaticsite.latest</code>). Lightsail will automatically use the highest
+     *         numbered version of the registered container image.
+     *         </p>
+     *         <p>
+     *         Container images sourced from a public registry like Docker Hub don't start with a colon. For example,
+     *         <code>nginx:latest</code> or <code>nginx</code>.
      */
 
     public String getImage() {
@@ -113,8 +153,16 @@ public class Container implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Container images sourced from your Lightsail container service, that are registered and stored on your service,
-     * start with a colon (<code>:</code>). For example, <code>:container-service-1.mystaticwebsite.1</code>. Container
-     * images sourced from a public registry like Docker Hub don't start with a colon. For example,
+     * start with a colon (<code>:</code>). For example, if your container service name is
+     * <code>container-service-1</code>, the container image label is <code>mystaticsite</code>, and you want to use the
+     * third (<code>3</code>) version of the registered container image, then you should specify
+     * <code>:container-service-1.mystaticsite.3</code>. To use the latest version of a container image, specify
+     * <code>latest</code> instead of a version number (for example,
+     * <code>:container-service-1.mystaticsite.latest</code>). Lightsail will automatically use the highest numbered
+     * version of the registered container image.
+     * </p>
+     * <p>
+     * Container images sourced from a public registry like Docker Hub don't start with a colon. For example,
      * <code>nginx:latest</code> or <code>nginx</code>.
      * </p>
      * 
@@ -122,9 +170,17 @@ public class Container implements Serializable, Cloneable, StructuredPojo {
      *        The name of the image used for the container.</p>
      *        <p>
      *        Container images sourced from your Lightsail container service, that are registered and stored on your
-     *        service, start with a colon (<code>:</code>). For example,
-     *        <code>:container-service-1.mystaticwebsite.1</code>. Container images sourced from a public registry like
-     *        Docker Hub don't start with a colon. For example, <code>nginx:latest</code> or <code>nginx</code>.
+     *        service, start with a colon (<code>:</code>). For example, if your container service name is
+     *        <code>container-service-1</code>, the container image label is <code>mystaticsite</code>, and you want to
+     *        use the third (<code>3</code>) version of the registered container image, then you should specify
+     *        <code>:container-service-1.mystaticsite.3</code>. To use the latest version of a container image, specify
+     *        <code>latest</code> instead of a version number (for example,
+     *        <code>:container-service-1.mystaticsite.latest</code>). Lightsail will automatically use the highest
+     *        numbered version of the registered container image.
+     *        </p>
+     *        <p>
+     *        Container images sourced from a public registry like Docker Hub don't start with a colon. For example,
+     *        <code>nginx:latest</code> or <code>nginx</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

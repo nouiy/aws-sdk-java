@@ -36,6 +36,8 @@ public class UpdateBucketRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("versioning").build();
     private static final MarshallingInfo<List> READONLYACCESSACCOUNTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("readonlyAccessAccounts").build();
+    private static final MarshallingInfo<StructuredPojo> ACCESSLOGCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("accessLogConfig").build();
 
     private static final UpdateBucketRequestMarshaller instance = new UpdateBucketRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class UpdateBucketRequestMarshaller {
             protocolMarshaller.marshall(updateBucketRequest.getAccessRules(), ACCESSRULES_BINDING);
             protocolMarshaller.marshall(updateBucketRequest.getVersioning(), VERSIONING_BINDING);
             protocolMarshaller.marshall(updateBucketRequest.getReadonlyAccessAccounts(), READONLYACCESSACCOUNTS_BINDING);
+            protocolMarshaller.marshall(updateBucketRequest.getAccessLogConfig(), ACCESSLOGCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

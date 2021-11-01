@@ -61,7 +61,9 @@ public class DBClusterRole implements Serializable, Cloneable {
     /**
      * <p>
      * The name of the feature associated with the Amazon Identity and Access Management (IAM) role. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     * >DescribeDBEngineVersions</a>.
      * </p>
      */
     private String featureName;
@@ -266,12 +268,16 @@ public class DBClusterRole implements Serializable, Cloneable {
     /**
      * <p>
      * The name of the feature associated with the Amazon Identity and Access Management (IAM) role. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     * >DescribeDBEngineVersions</a>.
      * </p>
      * 
      * @param featureName
      *        The name of the feature associated with the Amazon Identity and Access Management (IAM) role. For the list
-     *        of supported feature names, see <a>DBEngineVersion</a>.
+     *        of supported feature names, see <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     *        >DescribeDBEngineVersions</a>.
      */
 
     public void setFeatureName(String featureName) {
@@ -281,11 +287,15 @@ public class DBClusterRole implements Serializable, Cloneable {
     /**
      * <p>
      * The name of the feature associated with the Amazon Identity and Access Management (IAM) role. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     * >DescribeDBEngineVersions</a>.
      * </p>
      * 
      * @return The name of the feature associated with the Amazon Identity and Access Management (IAM) role. For the
-     *         list of supported feature names, see <a>DBEngineVersion</a>.
+     *         list of supported feature names, see <a href=
+     *         "https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     *         >DescribeDBEngineVersions</a>.
      */
 
     public String getFeatureName() {
@@ -295,12 +305,16 @@ public class DBClusterRole implements Serializable, Cloneable {
     /**
      * <p>
      * The name of the feature associated with the Amazon Identity and Access Management (IAM) role. For the list of
-     * supported feature names, see <a>DBEngineVersion</a>.
+     * supported feature names, see <a
+     * href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     * >DescribeDBEngineVersions</a>.
      * </p>
      * 
      * @param featureName
      *        The name of the feature associated with the Amazon Identity and Access Management (IAM) role. For the list
-     *        of supported feature names, see <a>DBEngineVersion</a>.
+     *        of supported feature names, see <a
+     *        href="https://docs.aws.amazon.com/neptune/latest/userguide/api-other-apis.html#DescribeDBEngineVersions"
+     *        >DescribeDBEngineVersions</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

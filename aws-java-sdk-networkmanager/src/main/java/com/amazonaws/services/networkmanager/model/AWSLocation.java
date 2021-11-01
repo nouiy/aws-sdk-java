@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies a location in AWS.
+ * Specifies a location in Amazon Web Services.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/networkmanager-2019-07-05/AWSLocation" target="_top">AWS API
@@ -30,26 +30,26 @@ public class AWSLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Zone the device is located in. This can be the ID of an Availability Zone, Local Zone, Wavelength Zone, or an
-     * Outpost.
+     * The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or
+     * an Outpost.
      * </p>
      */
     private String zone;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the subnet the device is located in.
+     * The Amazon Resource Name (ARN) of the subnet that the device is located in.
      * </p>
      */
     private String subnetArn;
 
     /**
      * <p>
-     * The Zone the device is located in. This can be the ID of an Availability Zone, Local Zone, Wavelength Zone, or an
-     * Outpost.
+     * The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or
+     * an Outpost.
      * </p>
      * 
      * @param zone
-     *        The Zone the device is located in. This can be the ID of an Availability Zone, Local Zone, Wavelength
+     *        The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength
      *        Zone, or an Outpost.
      */
 
@@ -59,11 +59,11 @@ public class AWSLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Zone the device is located in. This can be the ID of an Availability Zone, Local Zone, Wavelength Zone, or an
-     * Outpost.
+     * The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or
+     * an Outpost.
      * </p>
      * 
-     * @return The Zone the device is located in. This can be the ID of an Availability Zone, Local Zone, Wavelength
+     * @return The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength
      *         Zone, or an Outpost.
      */
 
@@ -73,12 +73,12 @@ public class AWSLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Zone the device is located in. This can be the ID of an Availability Zone, Local Zone, Wavelength Zone, or an
-     * Outpost.
+     * The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or
+     * an Outpost.
      * </p>
      * 
      * @param zone
-     *        The Zone the device is located in. This can be the ID of an Availability Zone, Local Zone, Wavelength
+     *        The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength
      *        Zone, or an Outpost.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -90,11 +90,11 @@ public class AWSLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the subnet the device is located in.
+     * The Amazon Resource Name (ARN) of the subnet that the device is located in.
      * </p>
      * 
      * @param subnetArn
-     *        The Amazon Resource Name (ARN) of the subnet the device is located in.
+     *        The Amazon Resource Name (ARN) of the subnet that the device is located in.
      */
 
     public void setSubnetArn(String subnetArn) {
@@ -103,10 +103,10 @@ public class AWSLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the subnet the device is located in.
+     * The Amazon Resource Name (ARN) of the subnet that the device is located in.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the subnet the device is located in.
+     * @return The Amazon Resource Name (ARN) of the subnet that the device is located in.
      */
 
     public String getSubnetArn() {
@@ -115,11 +115,11 @@ public class AWSLocation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the subnet the device is located in.
+     * The Amazon Resource Name (ARN) of the subnet that the device is located in.
      * </p>
      * 
      * @param subnetArn
-     *        The Amazon Resource Name (ARN) of the subnet the device is located in.
+     *        The Amazon Resource Name (ARN) of the subnet that the device is located in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
