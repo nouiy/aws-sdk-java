@@ -25,20 +25,18 @@ public class TestCustomDataIdentifierResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The number of instances of sample text that matched the detection criteria specified in the custom data
-     * identifier.
+     * The number of occurrences of sample text that matched the criteria specified by the custom data identifier.
      * </p>
      */
     private Integer matchCount;
 
     /**
      * <p>
-     * The number of instances of sample text that matched the detection criteria specified in the custom data
-     * identifier.
+     * The number of occurrences of sample text that matched the criteria specified by the custom data identifier.
      * </p>
      * 
      * @param matchCount
-     *        The number of instances of sample text that matched the detection criteria specified in the custom data
+     *        The number of occurrences of sample text that matched the criteria specified by the custom data
      *        identifier.
      */
 
@@ -48,11 +46,10 @@ public class TestCustomDataIdentifierResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The number of instances of sample text that matched the detection criteria specified in the custom data
-     * identifier.
+     * The number of occurrences of sample text that matched the criteria specified by the custom data identifier.
      * </p>
      * 
-     * @return The number of instances of sample text that matched the detection criteria specified in the custom data
+     * @return The number of occurrences of sample text that matched the criteria specified by the custom data
      *         identifier.
      */
 
@@ -62,12 +59,11 @@ public class TestCustomDataIdentifierResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The number of instances of sample text that matched the detection criteria specified in the custom data
-     * identifier.
+     * The number of occurrences of sample text that matched the criteria specified by the custom data identifier.
      * </p>
      * 
      * @param matchCount
-     *        The number of instances of sample text that matched the detection criteria specified in the custom data
+     *        The number of occurrences of sample text that matched the criteria specified by the custom data
      *        identifier.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

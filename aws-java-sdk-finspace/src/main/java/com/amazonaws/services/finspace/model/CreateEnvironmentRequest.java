@@ -73,6 +73,32 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      */
     private FederationParameters federationParameters;
+    /**
+     * <p>
+     * Configuration information for the superuser.
+     * </p>
+     */
+    private SuperuserParameters superuserParameters;
+    /**
+     * <p>
+     * The list of Amazon Resource Names (ARN) of the data bundles to install. Currently supported data bundle ARNs:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/capital-markets-sample</code> - Contains sample Capital Markets
+     * datasets, categories and controlled vocabularies.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/taq</code> (default) - Contains trades and quotes data in addition
+     * to sample Capital Markets data.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private java.util.List<String> dataBundles;
 
     /**
      * <p>
@@ -455,6 +481,228 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     }
 
     /**
+     * <p>
+     * Configuration information for the superuser.
+     * </p>
+     * 
+     * @param superuserParameters
+     *        Configuration information for the superuser.
+     */
+
+    public void setSuperuserParameters(SuperuserParameters superuserParameters) {
+        this.superuserParameters = superuserParameters;
+    }
+
+    /**
+     * <p>
+     * Configuration information for the superuser.
+     * </p>
+     * 
+     * @return Configuration information for the superuser.
+     */
+
+    public SuperuserParameters getSuperuserParameters() {
+        return this.superuserParameters;
+    }
+
+    /**
+     * <p>
+     * Configuration information for the superuser.
+     * </p>
+     * 
+     * @param superuserParameters
+     *        Configuration information for the superuser.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest withSuperuserParameters(SuperuserParameters superuserParameters) {
+        setSuperuserParameters(superuserParameters);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Resource Names (ARN) of the data bundles to install. Currently supported data bundle ARNs:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/capital-markets-sample</code> - Contains sample Capital Markets
+     * datasets, categories and controlled vocabularies.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/taq</code> (default) - Contains trades and quotes data in addition
+     * to sample Capital Markets data.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The list of Amazon Resource Names (ARN) of the data bundles to install. Currently supported data bundle
+     *         ARNs:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>arn:aws:finspace:${Region}::data-bundle/capital-markets-sample</code> - Contains sample Capital
+     *         Markets datasets, categories and controlled vocabularies.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>arn:aws:finspace:${Region}::data-bundle/taq</code> (default) - Contains trades and quotes data in
+     *         addition to sample Capital Markets data.
+     *         </p>
+     *         </li>
+     */
+
+    public java.util.List<String> getDataBundles() {
+        return dataBundles;
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Resource Names (ARN) of the data bundles to install. Currently supported data bundle ARNs:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/capital-markets-sample</code> - Contains sample Capital Markets
+     * datasets, categories and controlled vocabularies.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/taq</code> (default) - Contains trades and quotes data in addition
+     * to sample Capital Markets data.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dataBundles
+     *        The list of Amazon Resource Names (ARN) of the data bundles to install. Currently supported data bundle
+     *        ARNs:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:finspace:${Region}::data-bundle/capital-markets-sample</code> - Contains sample Capital
+     *        Markets datasets, categories and controlled vocabularies.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:finspace:${Region}::data-bundle/taq</code> (default) - Contains trades and quotes data in
+     *        addition to sample Capital Markets data.
+     *        </p>
+     *        </li>
+     */
+
+    public void setDataBundles(java.util.Collection<String> dataBundles) {
+        if (dataBundles == null) {
+            this.dataBundles = null;
+            return;
+        }
+
+        this.dataBundles = new java.util.ArrayList<String>(dataBundles);
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Resource Names (ARN) of the data bundles to install. Currently supported data bundle ARNs:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/capital-markets-sample</code> - Contains sample Capital Markets
+     * datasets, categories and controlled vocabularies.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/taq</code> (default) - Contains trades and quotes data in addition
+     * to sample Capital Markets data.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setDataBundles(java.util.Collection)} or {@link #withDataBundles(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param dataBundles
+     *        The list of Amazon Resource Names (ARN) of the data bundles to install. Currently supported data bundle
+     *        ARNs:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:finspace:${Region}::data-bundle/capital-markets-sample</code> - Contains sample Capital
+     *        Markets datasets, categories and controlled vocabularies.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:finspace:${Region}::data-bundle/taq</code> (default) - Contains trades and quotes data in
+     *        addition to sample Capital Markets data.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest withDataBundles(String... dataBundles) {
+        if (this.dataBundles == null) {
+            setDataBundles(new java.util.ArrayList<String>(dataBundles.length));
+        }
+        for (String ele : dataBundles) {
+            this.dataBundles.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of Amazon Resource Names (ARN) of the data bundles to install. Currently supported data bundle ARNs:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/capital-markets-sample</code> - Contains sample Capital Markets
+     * datasets, categories and controlled vocabularies.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>arn:aws:finspace:${Region}::data-bundle/taq</code> (default) - Contains trades and quotes data in addition
+     * to sample Capital Markets data.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param dataBundles
+     *        The list of Amazon Resource Names (ARN) of the data bundles to install. Currently supported data bundle
+     *        ARNs:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:finspace:${Region}::data-bundle/capital-markets-sample</code> - Contains sample Capital
+     *        Markets datasets, categories and controlled vocabularies.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>arn:aws:finspace:${Region}::data-bundle/taq</code> (default) - Contains trades and quotes data in
+     *        addition to sample Capital Markets data.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentRequest withDataBundles(java.util.Collection<String> dataBundles) {
+        setDataBundles(dataBundles);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -477,7 +725,11 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         if (getFederationMode() != null)
             sb.append("FederationMode: ").append(getFederationMode()).append(",");
         if (getFederationParameters() != null)
-            sb.append("FederationParameters: ").append(getFederationParameters());
+            sb.append("FederationParameters: ").append(getFederationParameters()).append(",");
+        if (getSuperuserParameters() != null)
+            sb.append("SuperuserParameters: ").append(getSuperuserParameters()).append(",");
+        if (getDataBundles() != null)
+            sb.append("DataBundles: ").append(getDataBundles());
         sb.append("}");
         return sb.toString();
     }
@@ -516,6 +768,14 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getFederationParameters() != null && other.getFederationParameters().equals(this.getFederationParameters()) == false)
             return false;
+        if (other.getSuperuserParameters() == null ^ this.getSuperuserParameters() == null)
+            return false;
+        if (other.getSuperuserParameters() != null && other.getSuperuserParameters().equals(this.getSuperuserParameters()) == false)
+            return false;
+        if (other.getDataBundles() == null ^ this.getDataBundles() == null)
+            return false;
+        if (other.getDataBundles() != null && other.getDataBundles().equals(this.getDataBundles()) == false)
+            return false;
         return true;
     }
 
@@ -530,6 +790,8 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getFederationMode() == null) ? 0 : getFederationMode().hashCode());
         hashCode = prime * hashCode + ((getFederationParameters() == null) ? 0 : getFederationParameters().hashCode());
+        hashCode = prime * hashCode + ((getSuperuserParameters() == null) ? 0 : getSuperuserParameters().hashCode());
+        hashCode = prime * hashCode + ((getDataBundles() == null) ? 0 : getDataBundles().hashCode());
         return hashCode;
     }
 

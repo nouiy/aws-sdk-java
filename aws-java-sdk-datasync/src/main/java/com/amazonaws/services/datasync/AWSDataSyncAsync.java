@@ -220,6 +220,37 @@ public interface AWSDataSyncAsync extends AWSDataSync {
 
     /**
      * <p>
+     * Creates an endpoint for a Hadoop Distributed File System (HDFS).
+     * </p>
+     * 
+     * @param createLocationHdfsRequest
+     * @return A Java Future containing the result of the CreateLocationHdfs operation returned by the service.
+     * @sample AWSDataSyncAsync.CreateLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocationHdfsResult> createLocationHdfsAsync(CreateLocationHdfsRequest createLocationHdfsRequest);
+
+    /**
+     * <p>
+     * Creates an endpoint for a Hadoop Distributed File System (HDFS).
+     * </p>
+     * 
+     * @param createLocationHdfsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLocationHdfs operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.CreateLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLocationHdfsResult> createLocationHdfsAsync(CreateLocationHdfsRequest createLocationHdfsRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLocationHdfsRequest, CreateLocationHdfsResult> asyncHandler);
+
+    /**
+     * <p>
      * Defines a file system on a Network File System (NFS) server that can be read from or written to.
      * </p>
      * 
@@ -650,6 +681,39 @@ public interface AWSDataSyncAsync extends AWSDataSync {
     java.util.concurrent.Future<DescribeLocationFsxWindowsResult> describeLocationFsxWindowsAsync(
             DescribeLocationFsxWindowsRequest describeLocationFsxWindowsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeLocationFsxWindowsRequest, DescribeLocationFsxWindowsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns metadata, such as the authentication information about the Hadoop Distributed File System (HDFS)
+     * location.
+     * </p>
+     * 
+     * @param describeLocationHdfsRequest
+     * @return A Java Future containing the result of the DescribeLocationHdfs operation returned by the service.
+     * @sample AWSDataSyncAsync.DescribeLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLocationHdfsResult> describeLocationHdfsAsync(DescribeLocationHdfsRequest describeLocationHdfsRequest);
+
+    /**
+     * <p>
+     * Returns metadata, such as the authentication information about the Hadoop Distributed File System (HDFS)
+     * location.
+     * </p>
+     * 
+     * @param describeLocationHdfsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeLocationHdfs operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.DescribeLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeLocationHdfsResult> describeLocationHdfsAsync(DescribeLocationHdfsRequest describeLocationHdfsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeLocationHdfsRequest, DescribeLocationHdfsResult> asyncHandler);
 
     /**
      * <p>
@@ -1203,6 +1267,37 @@ public interface AWSDataSyncAsync extends AWSDataSync {
      */
     java.util.concurrent.Future<UpdateAgentResult> updateAgentAsync(UpdateAgentRequest updateAgentRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateAgentRequest, UpdateAgentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates some parameters of a previously created location for a Hadoop Distributed File System cluster.
+     * </p>
+     * 
+     * @param updateLocationHdfsRequest
+     * @return A Java Future containing the result of the UpdateLocationHdfs operation returned by the service.
+     * @sample AWSDataSyncAsync.UpdateLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateLocationHdfsResult> updateLocationHdfsAsync(UpdateLocationHdfsRequest updateLocationHdfsRequest);
+
+    /**
+     * <p>
+     * Updates some parameters of a previously created location for a Hadoop Distributed File System cluster.
+     * </p>
+     * 
+     * @param updateLocationHdfsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateLocationHdfs operation returned by the service.
+     * @sample AWSDataSyncAsyncHandler.UpdateLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateLocationHdfsResult> updateLocationHdfsAsync(UpdateLocationHdfsRequest updateLocationHdfsRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateLocationHdfsRequest, UpdateLocationHdfsResult> asyncHandler);
 
     /**
      * <p>

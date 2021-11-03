@@ -92,6 +92,12 @@ public class GetCustomDataIdentifierResultJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     getCustomDataIdentifierResult.setRegex(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("severityLevels", targetDepth)) {
+                    context.nextToken();
+                    getCustomDataIdentifierResult.setSeverityLevels(new ListUnmarshaller<SeverityLevel>(SeverityLevelJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     getCustomDataIdentifierResult.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

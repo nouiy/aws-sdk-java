@@ -212,6 +212,39 @@ public class AWSDataSyncAsyncClient extends AWSDataSyncClient implements AWSData
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLocationHdfsResult> createLocationHdfsAsync(CreateLocationHdfsRequest request) {
+
+        return createLocationHdfsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLocationHdfsResult> createLocationHdfsAsync(final CreateLocationHdfsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLocationHdfsRequest, CreateLocationHdfsResult> asyncHandler) {
+        final CreateLocationHdfsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLocationHdfsResult>() {
+            @Override
+            public CreateLocationHdfsResult call() throws Exception {
+                CreateLocationHdfsResult result = null;
+
+                try {
+                    result = executeCreateLocationHdfs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLocationNfsResult> createLocationNfsAsync(CreateLocationNfsRequest request) {
 
         return createLocationNfsAsync(request, null);
@@ -559,6 +592,39 @@ public class AWSDataSyncAsyncClient extends AWSDataSyncClient implements AWSData
 
                 try {
                     result = executeDescribeLocationFsxWindows(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationHdfsResult> describeLocationHdfsAsync(DescribeLocationHdfsRequest request) {
+
+        return describeLocationHdfsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeLocationHdfsResult> describeLocationHdfsAsync(final DescribeLocationHdfsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeLocationHdfsRequest, DescribeLocationHdfsResult> asyncHandler) {
+        final DescribeLocationHdfsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeLocationHdfsResult>() {
+            @Override
+            public DescribeLocationHdfsResult call() throws Exception {
+                DescribeLocationHdfsResult result = null;
+
+                try {
+                    result = executeDescribeLocationHdfs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1055,6 +1121,39 @@ public class AWSDataSyncAsyncClient extends AWSDataSyncClient implements AWSData
 
                 try {
                     result = executeUpdateAgent(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLocationHdfsResult> updateLocationHdfsAsync(UpdateLocationHdfsRequest request) {
+
+        return updateLocationHdfsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateLocationHdfsResult> updateLocationHdfsAsync(final UpdateLocationHdfsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateLocationHdfsRequest, UpdateLocationHdfsResult> asyncHandler) {
+        final UpdateLocationHdfsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateLocationHdfsResult>() {
+            @Override
+            public UpdateLocationHdfsResult call() throws Exception {
+                UpdateLocationHdfsResult result = null;
+
+                try {
+                    result = executeUpdateLocationHdfs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

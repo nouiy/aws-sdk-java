@@ -1,3 +1,20 @@
+# __1.12.102__ __2021-11-03__
+## __AWS DataSync__
+  - ### Features
+    - AWS DataSync now supports Hadoop Distributed File System (HDFS) Locations
+
+## __Amazon Connect Participant Service__
+  - ### Features
+    - This release adds a new boolean attribute - Connect Participant - to the CreateParticipantConnection API, which can be used to mark the participant as connected.
+
+## __Amazon Macie 2__
+  - ### Features
+    - This release adds support for specifying the severity of findings that a custom data identifier produces, based on the number of occurrences of text that matches the detection criteria.
+
+## __FinSpace User Environment Management service__
+  - ### Features
+    - Adds superuser and data-bundle parameters to CreateEnvironment API
+
 # __1.12.101__ __2021-11-02__
 ## __Amazon CloudFront__
   - ### Features

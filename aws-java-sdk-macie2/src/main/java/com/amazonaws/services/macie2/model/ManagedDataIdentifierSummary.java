@@ -33,9 +33,9 @@ public class ManagedDataIdentifierSummary implements Serializable, Cloneable, St
     /**
      * <p>
      * The category of sensitive data that the managed data identifier detects: CREDENTIALS, for credentials data such
-     * as private keys or Amazon Web Services secret keys; FINANCIAL_INFORMATION, for financial data such as credit card
-     * numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance identification
-     * numbers, or personally identifiable information, such as passport numbers.
+     * as private keys or Amazon Web Services secret access keys; FINANCIAL_INFORMATION, for financial data such as
+     * credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance
+     * identification numbers, or personally identifiable information, such as passport numbers.
      * </p>
      */
     private String category;
@@ -51,16 +51,16 @@ public class ManagedDataIdentifierSummary implements Serializable, Cloneable, St
     /**
      * <p>
      * The category of sensitive data that the managed data identifier detects: CREDENTIALS, for credentials data such
-     * as private keys or Amazon Web Services secret keys; FINANCIAL_INFORMATION, for financial data such as credit card
-     * numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance identification
-     * numbers, or personally identifiable information, such as passport numbers.
+     * as private keys or Amazon Web Services secret access keys; FINANCIAL_INFORMATION, for financial data such as
+     * credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance
+     * identification numbers, or personally identifiable information, such as passport numbers.
      * </p>
      * 
      * @param category
      *        The category of sensitive data that the managed data identifier detects: CREDENTIALS, for credentials data
-     *        such as private keys or Amazon Web Services secret keys; FINANCIAL_INFORMATION, for financial data such as
-     *        credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance
-     *        identification numbers, or personally identifiable information, such as passport numbers.
+     *        such as private keys or Amazon Web Services secret access keys; FINANCIAL_INFORMATION, for financial data
+     *        such as credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health
+     *        insurance identification numbers, or personally identifiable information, such as passport numbers.
      * @see SensitiveDataItemCategory
      */
 
@@ -71,15 +71,16 @@ public class ManagedDataIdentifierSummary implements Serializable, Cloneable, St
     /**
      * <p>
      * The category of sensitive data that the managed data identifier detects: CREDENTIALS, for credentials data such
-     * as private keys or Amazon Web Services secret keys; FINANCIAL_INFORMATION, for financial data such as credit card
-     * numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance identification
-     * numbers, or personally identifiable information, such as passport numbers.
+     * as private keys or Amazon Web Services secret access keys; FINANCIAL_INFORMATION, for financial data such as
+     * credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance
+     * identification numbers, or personally identifiable information, such as passport numbers.
      * </p>
      * 
      * @return The category of sensitive data that the managed data identifier detects: CREDENTIALS, for credentials
-     *         data such as private keys or Amazon Web Services secret keys; FINANCIAL_INFORMATION, for financial data
-     *         such as credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health
-     *         insurance identification numbers, or personally identifiable information, such as passport numbers.
+     *         data such as private keys or Amazon Web Services secret access keys; FINANCIAL_INFORMATION, for financial
+     *         data such as credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as
+     *         health insurance identification numbers, or personally identifiable information, such as passport
+     *         numbers.
      * @see SensitiveDataItemCategory
      */
 
@@ -90,16 +91,16 @@ public class ManagedDataIdentifierSummary implements Serializable, Cloneable, St
     /**
      * <p>
      * The category of sensitive data that the managed data identifier detects: CREDENTIALS, for credentials data such
-     * as private keys or Amazon Web Services secret keys; FINANCIAL_INFORMATION, for financial data such as credit card
-     * numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance identification
-     * numbers, or personally identifiable information, such as passport numbers.
+     * as private keys or Amazon Web Services secret access keys; FINANCIAL_INFORMATION, for financial data such as
+     * credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance
+     * identification numbers, or personally identifiable information, such as passport numbers.
      * </p>
      * 
      * @param category
      *        The category of sensitive data that the managed data identifier detects: CREDENTIALS, for credentials data
-     *        such as private keys or Amazon Web Services secret keys; FINANCIAL_INFORMATION, for financial data such as
-     *        credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance
-     *        identification numbers, or personally identifiable information, such as passport numbers.
+     *        such as private keys or Amazon Web Services secret access keys; FINANCIAL_INFORMATION, for financial data
+     *        such as credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health
+     *        insurance identification numbers, or personally identifiable information, such as passport numbers.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SensitiveDataItemCategory
      */
@@ -112,16 +113,16 @@ public class ManagedDataIdentifierSummary implements Serializable, Cloneable, St
     /**
      * <p>
      * The category of sensitive data that the managed data identifier detects: CREDENTIALS, for credentials data such
-     * as private keys or Amazon Web Services secret keys; FINANCIAL_INFORMATION, for financial data such as credit card
-     * numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance identification
-     * numbers, or personally identifiable information, such as passport numbers.
+     * as private keys or Amazon Web Services secret access keys; FINANCIAL_INFORMATION, for financial data such as
+     * credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance
+     * identification numbers, or personally identifiable information, such as passport numbers.
      * </p>
      * 
      * @param category
      *        The category of sensitive data that the managed data identifier detects: CREDENTIALS, for credentials data
-     *        such as private keys or Amazon Web Services secret keys; FINANCIAL_INFORMATION, for financial data such as
-     *        credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health insurance
-     *        identification numbers, or personally identifiable information, such as passport numbers.
+     *        such as private keys or Amazon Web Services secret access keys; FINANCIAL_INFORMATION, for financial data
+     *        such as credit card numbers; or, PERSONAL_INFORMATION, for personal health information, such as health
+     *        insurance identification numbers, or personally identifiable information, such as passport numbers.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SensitiveDataItemCategory
      */

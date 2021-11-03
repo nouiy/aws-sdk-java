@@ -40,7 +40,7 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * A list of filter rules that determines which files to include when running a task. The pattern should contain a
      * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2"</code>
+     * pipe), for example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -48,8 +48,8 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
     private java.util.List<FilterRule> includes;
     /**
      * <p>
-     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
-     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * A list of filter rules that determines which files to exclude from a task. The list contains a single filter
+     * string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
      * example, <code>"/folder1|/folder2"</code>.
      * </p>
      */
@@ -125,14 +125,14 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * A list of filter rules that determines which files to include when running a task. The pattern should contain a
      * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2"</code>
+     * pipe), for example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
      * 
      * @return A list of filter rules that determines which files to include when running a task. The pattern should
      *         contain a single filter string that consists of the patterns to include. The patterns are delimited by
-     *         "|" (that is, a pipe). For example: <code>"/folder1|/folder2"</code> </p>
+     *         "|" (that is, a pipe), for example, <code>"/folder1|/folder2"</code>. </p>
      *         <p>
      */
 
@@ -144,7 +144,7 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * A list of filter rules that determines which files to include when running a task. The pattern should contain a
      * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2"</code>
+     * pipe), for example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -152,7 +152,7 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * @param includes
      *        A list of filter rules that determines which files to include when running a task. The pattern should
      *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
-     *        (that is, a pipe). For example: <code>"/folder1|/folder2"</code> </p>
+     *        (that is, a pipe), for example, <code>"/folder1|/folder2"</code>. </p>
      *        <p>
      */
 
@@ -169,7 +169,7 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * A list of filter rules that determines which files to include when running a task. The pattern should contain a
      * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2"</code>
+     * pipe), for example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -182,7 +182,7 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * @param includes
      *        A list of filter rules that determines which files to include when running a task. The pattern should
      *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
-     *        (that is, a pipe). For example: <code>"/folder1|/folder2"</code> </p>
+     *        (that is, a pipe), for example, <code>"/folder1|/folder2"</code>. </p>
      *        <p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -201,7 +201,7 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * A list of filter rules that determines which files to include when running a task. The pattern should contain a
      * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2"</code>
+     * pipe), for example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -209,7 +209,7 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * @param includes
      *        A list of filter rules that determines which files to include when running a task. The pattern should
      *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
-     *        (that is, a pipe). For example: <code>"/folder1|/folder2"</code> </p>
+     *        (that is, a pipe), for example, <code>"/folder1|/folder2"</code>. </p>
      *        <p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -221,14 +221,14 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
-     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * A list of filter rules that determines which files to exclude from a task. The list contains a single filter
+     * string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
      * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * 
-     * @return A list of filter rules that determines which files to exclude from a task. The list should contain a
-     *         single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that
-     *         is, a pipe), for example, <code>"/folder1|/folder2"</code>.
+     * @return A list of filter rules that determines which files to exclude from a task. The list contains a single
+     *         filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a
+     *         pipe), for example, <code>"/folder1|/folder2"</code>.
      */
 
     public java.util.List<FilterRule> getExcludes() {
@@ -237,15 +237,15 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
-     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * A list of filter rules that determines which files to exclude from a task. The list contains a single filter
+     * string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
      * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * 
      * @param excludes
-     *        A list of filter rules that determines which files to exclude from a task. The list should contain a
-     *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
-     *        a pipe), for example, <code>"/folder1|/folder2"</code>.
+     *        A list of filter rules that determines which files to exclude from a task. The list contains a single
+     *        filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a
+     *        pipe), for example, <code>"/folder1|/folder2"</code>.
      */
 
     public void setExcludes(java.util.Collection<FilterRule> excludes) {
@@ -259,8 +259,8 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
-     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * A list of filter rules that determines which files to exclude from a task. The list contains a single filter
+     * string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
      * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
@@ -270,9 +270,9 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param excludes
-     *        A list of filter rules that determines which files to exclude from a task. The list should contain a
-     *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
-     *        a pipe), for example, <code>"/folder1|/folder2"</code>.
+     *        A list of filter rules that determines which files to exclude from a task. The list contains a single
+     *        filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a
+     *        pipe), for example, <code>"/folder1|/folder2"</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -288,15 +288,15 @@ public class StartTaskExecutionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A list of filter rules that determines which files to exclude from a task. The list should contain a single
-     * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
+     * A list of filter rules that determines which files to exclude from a task. The list contains a single filter
+     * string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
      * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * 
      * @param excludes
-     *        A list of filter rules that determines which files to exclude from a task. The list should contain a
-     *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
-     *        a pipe), for example, <code>"/folder1|/folder2"</code>.
+     *        A list of filter rules that determines which files to exclude from a task. The list contains a single
+     *        filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a
+     *        pipe), for example, <code>"/folder1|/folder2"</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

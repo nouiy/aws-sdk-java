@@ -1227,18 +1227,6 @@
       }, {
         "name" : "CONNECTION_ACK",
         "value" : "CONNECTION_ACK"
-      }, {
-        "name" : "PARTICIPANT_ACTIVE",
-        "value" : "PARTICIPANT_ACTIVE"
-      }, {
-        "name" : "PARTICIPANT_INACTIVE",
-        "value" : "PARTICIPANT_INACTIVE"
-      }, {
-        "name" : "PARTICIPANT_ENGAGED",
-        "value" : "PARTICIPANT_ENGAGED"
-      }, {
-        "name" : "PARTICIPANT_DISENGAGED",
-        "value" : "PARTICIPANT_DISENGAGED"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.connectparticipant.enum.ChatItemType",

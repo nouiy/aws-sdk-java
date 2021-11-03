@@ -51,7 +51,7 @@ import com.amazonaws.services.finspace.model.transform.*;
  * service call completes.
  * <p>
  * <p>
- * The FinSpace management service provides the APIs for managing the FinSpace environments.
+ * The FinSpace management service provides the APIs for managing FinSpace environments.
  * </p>
  */
 @ThreadSafe

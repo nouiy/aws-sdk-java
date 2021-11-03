@@ -404,6 +404,65 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
     /**
      * <p>
+     * Creates an endpoint for a Hadoop Distributed File System (HDFS).
+     * </p>
+     * 
+     * @param createLocationHdfsRequest
+     * @return Result of the CreateLocationHdfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.CreateLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public CreateLocationHdfsResult createLocationHdfs(CreateLocationHdfsRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateLocationHdfs(request);
+    }
+
+    @SdkInternalApi
+    final CreateLocationHdfsResult executeCreateLocationHdfs(CreateLocationHdfsRequest createLocationHdfsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createLocationHdfsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateLocationHdfsRequest> request = null;
+        Response<CreateLocationHdfsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateLocationHdfsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createLocationHdfsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateLocationHdfs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateLocationHdfsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateLocationHdfsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Defines a file system on a Network File System (NFS) server that can be read from or written to.
      * </p>
      * 
@@ -1089,6 +1148,66 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
             HttpResponseHandler<AmazonWebServiceResponse<DescribeLocationFsxWindowsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DescribeLocationFsxWindowsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns metadata, such as the authentication information about the Hadoop Distributed File System (HDFS)
+     * location.
+     * </p>
+     * 
+     * @param describeLocationHdfsRequest
+     * @return Result of the DescribeLocationHdfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeLocationHdfsResult describeLocationHdfs(DescribeLocationHdfsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeLocationHdfs(request);
+    }
+
+    @SdkInternalApi
+    final DescribeLocationHdfsResult executeDescribeLocationHdfs(DescribeLocationHdfsRequest describeLocationHdfsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeLocationHdfsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeLocationHdfsRequest> request = null;
+        Response<DescribeLocationHdfsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeLocationHdfsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeLocationHdfsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeLocationHdfs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeLocationHdfsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeLocationHdfsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2019,6 +2138,65 @@ public class AWSDataSyncClient extends AmazonWebServiceClient implements AWSData
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateAgentResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateAgentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates some parameters of a previously created location for a Hadoop Distributed File System cluster.
+     * </p>
+     * 
+     * @param updateLocationHdfsRequest
+     * @return Result of the UpdateLocationHdfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.UpdateLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UpdateLocationHdfsResult updateLocationHdfs(UpdateLocationHdfsRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateLocationHdfs(request);
+    }
+
+    @SdkInternalApi
+    final UpdateLocationHdfsResult executeUpdateLocationHdfs(UpdateLocationHdfsRequest updateLocationHdfsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateLocationHdfsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateLocationHdfsRequest> request = null;
+        Response<UpdateLocationHdfsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateLocationHdfsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateLocationHdfsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateLocationHdfs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateLocationHdfsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateLocationHdfsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

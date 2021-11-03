@@ -1818,7 +1818,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Enables an Amazon Macie administrator to suspend or re-enable a member account.
+     * Enables an Amazon Macie administrator to suspend or re-enable Macie for a member account.
      * </p>
      * 
      * @param updateMemberSessionRequest
@@ -1831,7 +1831,7 @@ public interface AmazonMacie2Async extends AmazonMacie2 {
 
     /**
      * <p>
-     * Enables an Amazon Macie administrator to suspend or re-enable a member account.
+     * Enables an Amazon Macie administrator to suspend or re-enable Macie for a member account.
      * </p>
      * 
      * @param updateMemberSessionRequest

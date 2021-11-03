@@ -40,7 +40,7 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -63,15 +63,15 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the CloudWatch LogGroup.
+     * The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
      * </p>
      */
     private String cloudWatchLogGroupArn;
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      */
     private java.util.List<FilterRule> includes;
@@ -146,14 +146,14 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
      * 
      * @return A list of filter rules that determines which files to exclude from a task. The list should contain a
      *         single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that
-     *         is, a pipe), for example: <code>"/folder1|/folder2"</code> </p>
+     *         is, a pipe), for example, <code>"/folder1|/folder2"</code>.</p>
      *         <p>
      */
 
@@ -165,7 +165,7 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -173,7 +173,7 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * @param excludes
      *        A list of filter rules that determines which files to exclude from a task. The list should contain a
      *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
-     *        a pipe), for example: <code>"/folder1|/folder2"</code> </p>
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>.</p>
      *        <p>
      */
 
@@ -190,7 +190,7 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -203,7 +203,7 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * @param excludes
      *        A list of filter rules that determines which files to exclude from a task. The list should contain a
      *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
-     *        a pipe), for example: <code>"/folder1|/folder2"</code> </p>
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>.</p>
      *        <p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -222,7 +222,7 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -230,7 +230,7 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * @param excludes
      *        A list of filter rules that determines which files to exclude from a task. The list should contain a
      *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
-     *        a pipe), for example: <code>"/folder1|/folder2"</code> </p>
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>.</p>
      *        <p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -343,11 +343,11 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the CloudWatch LogGroup.
+     * The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
      * </p>
      * 
      * @param cloudWatchLogGroupArn
-     *        The Amazon Resource Name (ARN) of the resource name of the CloudWatch LogGroup.
+     *        The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
      */
 
     public void setCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
@@ -356,10 +356,10 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the CloudWatch LogGroup.
+     * The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the resource name of the CloudWatch LogGroup.
+     * @return The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
      */
 
     public String getCloudWatchLogGroupArn() {
@@ -368,11 +368,11 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource name of the CloudWatch LogGroup.
+     * The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
      * </p>
      * 
      * @param cloudWatchLogGroupArn
-     *        The Amazon Resource Name (ARN) of the resource name of the CloudWatch LogGroup.
+     *        The Amazon Resource Name (ARN) of the resource name of the Amazon CloudWatch log group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -383,14 +383,14 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * 
-     * @return A list of filter rules that determines which files to include when running a task. The pattern should
-     *         contain a single filter string that consists of the patterns to include. The patterns are delimited by
-     *         "|" (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     * @return A list of filter rules that determines which files to include when running a task. The pattern contains a
+     *         single filter string that consists of the patterns to include. The patterns are delimited by "|" (that
+     *         is, a pipe), for example, <code>"/folder1|/folder2"</code>.
      */
 
     public java.util.List<FilterRule> getIncludes() {
@@ -399,15 +399,15 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * 
      * @param includes
-     *        A list of filter rules that determines which files to include when running a task. The pattern should
-     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
-     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     *        A list of filter rules that determines which files to include when running a task. The pattern contains a
+     *        single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is,
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>.
      */
 
     public void setIncludes(java.util.Collection<FilterRule> includes) {
@@ -421,9 +421,9 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -432,9 +432,9 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param includes
-     *        A list of filter rules that determines which files to include when running a task. The pattern should
-     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
-     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     *        A list of filter rules that determines which files to include when running a task. The pattern contains a
+     *        single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is,
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -450,15 +450,15 @@ public class UpdateTaskRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * 
      * @param includes
-     *        A list of filter rules that determines which files to include when running a task. The pattern should
-     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
-     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     *        A list of filter rules that determines which files to include when running a task. The pattern contains a
+     *        single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is,
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

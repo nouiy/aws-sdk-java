@@ -44,15 +44,16 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
     private String description;
     /**
      * <p>
-     * An array that lists specific character sequences (ignore words) to exclude from the results. If the text matched
-     * by the regular expression is the same as any string in this array, Amazon Macie ignores it. The array can contain
-     * as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case sensitive.
+     * An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If the text
+     * matched by the regular expression contains any string in this array, Amazon Macie ignores it. The array can
+     * contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case
+     * sensitive.
      * </p>
      */
     private java.util.List<String> ignoreWords;
     /**
      * <p>
-     * An array that lists specific character sequences (keywords), one of which must be within proximity
+     * An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity
      * (maximumMatchDistance) of the regular expression to match. The array can contain as many as 50 keywords. Each
      * keyword can contain 3-90 UTF-8 characters. Keywords aren't case sensitive.
      * </p>
@@ -60,9 +61,10 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
     private java.util.List<String> keywords;
     /**
      * <p>
-     * The maximum number of characters that can exist between text that matches the regex pattern and the character
-     * sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the proximity of a
-     * keyword to text that matches the regex pattern. The distance can be 1-300 characters. The default value is 50.
+     * The maximum number of characters that can exist between text that matches the regular expression and the
+     * character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the
+     * proximity of a keyword to text that matches the regular expression. The distance can be 1-300 characters. The
+     * default value is 50.
      * </p>
      */
     private Integer maximumMatchDistance;
@@ -84,6 +86,21 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String regex;
+    /**
+     * <p>
+     * The severity to assign to findings that the custom data identifier produces, based on the number of occurrences
+     * of text that matches the custom data identifier's detection criteria. You can specify as many as three
+     * SeverityLevel objects in this array, one for each severity: LOW, MEDIUM, or HIGH. If you specify more than one,
+     * the occurrences thresholds must be in ascending order by severity, moving from LOW to HIGH. For example, 1 for
+     * LOW, 50 for MEDIUM, and 100 for HIGH. If an S3 object contains fewer occurrences than the lowest specified
+     * threshold, Amazon Macie doesn't create a finding.
+     * </p>
+     * <p>
+     * If you don't specify any values for this array, Macie creates findings for S3 objects that contain at least one
+     * occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity to those findings.
+     * </p>
+     */
+    private java.util.List<SeverityLevel> severityLevels;
     /**
      * <p>
      * A map of key-value pairs that specifies the tags to associate with the custom data identifier.
@@ -207,15 +224,16 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * An array that lists specific character sequences (ignore words) to exclude from the results. If the text matched
-     * by the regular expression is the same as any string in this array, Amazon Macie ignores it. The array can contain
-     * as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case sensitive.
+     * An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If the text
+     * matched by the regular expression contains any string in this array, Amazon Macie ignores it. The array can
+     * contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case
+     * sensitive.
      * </p>
      * 
-     * @return An array that lists specific character sequences (ignore words) to exclude from the results. If the text
-     *         matched by the regular expression is the same as any string in this array, Amazon Macie ignores it. The
-     *         array can contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore
-     *         words are case sensitive.
+     * @return An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If
+     *         the text matched by the regular expression contains any string in this array, Amazon Macie ignores it.
+     *         The array can contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters.
+     *         Ignore words are case sensitive.
      */
 
     public java.util.List<String> getIgnoreWords() {
@@ -224,14 +242,15 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * An array that lists specific character sequences (ignore words) to exclude from the results. If the text matched
-     * by the regular expression is the same as any string in this array, Amazon Macie ignores it. The array can contain
-     * as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case sensitive.
+     * An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If the text
+     * matched by the regular expression contains any string in this array, Amazon Macie ignores it. The array can
+     * contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case
+     * sensitive.
      * </p>
      * 
      * @param ignoreWords
-     *        An array that lists specific character sequences (ignore words) to exclude from the results. If the text
-     *        matched by the regular expression is the same as any string in this array, Amazon Macie ignores it. The
+     *        An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If the
+     *        text matched by the regular expression contains any string in this array, Amazon Macie ignores it. The
      *        array can contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore
      *        words are case sensitive.
      */
@@ -247,9 +266,10 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * An array that lists specific character sequences (ignore words) to exclude from the results. If the text matched
-     * by the regular expression is the same as any string in this array, Amazon Macie ignores it. The array can contain
-     * as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case sensitive.
+     * An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If the text
+     * matched by the regular expression contains any string in this array, Amazon Macie ignores it. The array can
+     * contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case
+     * sensitive.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -258,8 +278,8 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param ignoreWords
-     *        An array that lists specific character sequences (ignore words) to exclude from the results. If the text
-     *        matched by the regular expression is the same as any string in this array, Amazon Macie ignores it. The
+     *        An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If the
+     *        text matched by the regular expression contains any string in this array, Amazon Macie ignores it. The
      *        array can contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore
      *        words are case sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -277,14 +297,15 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * An array that lists specific character sequences (ignore words) to exclude from the results. If the text matched
-     * by the regular expression is the same as any string in this array, Amazon Macie ignores it. The array can contain
-     * as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case sensitive.
+     * An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If the text
+     * matched by the regular expression contains any string in this array, Amazon Macie ignores it. The array can
+     * contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore words are case
+     * sensitive.
      * </p>
      * 
      * @param ignoreWords
-     *        An array that lists specific character sequences (ignore words) to exclude from the results. If the text
-     *        matched by the regular expression is the same as any string in this array, Amazon Macie ignores it. The
+     *        An array that lists specific character sequences (<i>ignore words</i>) to exclude from the results. If the
+     *        text matched by the regular expression contains any string in this array, Amazon Macie ignores it. The
      *        array can contain as many as 10 ignore words. Each ignore word can contain 4-90 UTF-8 characters. Ignore
      *        words are case sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -297,12 +318,12 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * An array that lists specific character sequences (keywords), one of which must be within proximity
+     * An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity
      * (maximumMatchDistance) of the regular expression to match. The array can contain as many as 50 keywords. Each
      * keyword can contain 3-90 UTF-8 characters. Keywords aren't case sensitive.
      * </p>
      * 
-     * @return An array that lists specific character sequences (keywords), one of which must be within proximity
+     * @return An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity
      *         (maximumMatchDistance) of the regular expression to match. The array can contain as many as 50 keywords.
      *         Each keyword can contain 3-90 UTF-8 characters. Keywords aren't case sensitive.
      */
@@ -313,13 +334,13 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * An array that lists specific character sequences (keywords), one of which must be within proximity
+     * An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity
      * (maximumMatchDistance) of the regular expression to match. The array can contain as many as 50 keywords. Each
      * keyword can contain 3-90 UTF-8 characters. Keywords aren't case sensitive.
      * </p>
      * 
      * @param keywords
-     *        An array that lists specific character sequences (keywords), one of which must be within proximity
+     *        An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity
      *        (maximumMatchDistance) of the regular expression to match. The array can contain as many as 50 keywords.
      *        Each keyword can contain 3-90 UTF-8 characters. Keywords aren't case sensitive.
      */
@@ -335,7 +356,7 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * An array that lists specific character sequences (keywords), one of which must be within proximity
+     * An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity
      * (maximumMatchDistance) of the regular expression to match. The array can contain as many as 50 keywords. Each
      * keyword can contain 3-90 UTF-8 characters. Keywords aren't case sensitive.
      * </p>
@@ -346,7 +367,7 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param keywords
-     *        An array that lists specific character sequences (keywords), one of which must be within proximity
+     *        An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity
      *        (maximumMatchDistance) of the regular expression to match. The array can contain as many as 50 keywords.
      *        Each keyword can contain 3-90 UTF-8 characters. Keywords aren't case sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -364,13 +385,13 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * An array that lists specific character sequences (keywords), one of which must be within proximity
+     * An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity
      * (maximumMatchDistance) of the regular expression to match. The array can contain as many as 50 keywords. Each
      * keyword can contain 3-90 UTF-8 characters. Keywords aren't case sensitive.
      * </p>
      * 
      * @param keywords
-     *        An array that lists specific character sequences (keywords), one of which must be within proximity
+     *        An array that lists specific character sequences (<i>keywords</i>), one of which must be within proximity
      *        (maximumMatchDistance) of the regular expression to match. The array can contain as many as 50 keywords.
      *        Each keyword can contain 3-90 UTF-8 characters. Keywords aren't case sensitive.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -383,16 +404,17 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The maximum number of characters that can exist between text that matches the regex pattern and the character
-     * sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the proximity of a
-     * keyword to text that matches the regex pattern. The distance can be 1-300 characters. The default value is 50.
+     * The maximum number of characters that can exist between text that matches the regular expression and the
+     * character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the
+     * proximity of a keyword to text that matches the regular expression. The distance can be 1-300 characters. The
+     * default value is 50.
      * </p>
      * 
      * @param maximumMatchDistance
-     *        The maximum number of characters that can exist between text that matches the regex pattern and the
+     *        The maximum number of characters that can exist between text that matches the regular expression and the
      *        character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on
-     *        the proximity of a keyword to text that matches the regex pattern. The distance can be 1-300 characters.
-     *        The default value is 50.
+     *        the proximity of a keyword to text that matches the regular expression. The distance can be 1-300
+     *        characters. The default value is 50.
      */
 
     public void setMaximumMatchDistance(Integer maximumMatchDistance) {
@@ -401,15 +423,16 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The maximum number of characters that can exist between text that matches the regex pattern and the character
-     * sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the proximity of a
-     * keyword to text that matches the regex pattern. The distance can be 1-300 characters. The default value is 50.
+     * The maximum number of characters that can exist between text that matches the regular expression and the
+     * character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the
+     * proximity of a keyword to text that matches the regular expression. The distance can be 1-300 characters. The
+     * default value is 50.
      * </p>
      * 
-     * @return The maximum number of characters that can exist between text that matches the regex pattern and the
+     * @return The maximum number of characters that can exist between text that matches the regular expression and the
      *         character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on
-     *         the proximity of a keyword to text that matches the regex pattern. The distance can be 1-300 characters.
-     *         The default value is 50.
+     *         the proximity of a keyword to text that matches the regular expression. The distance can be 1-300
+     *         characters. The default value is 50.
      */
 
     public Integer getMaximumMatchDistance() {
@@ -418,16 +441,17 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The maximum number of characters that can exist between text that matches the regex pattern and the character
-     * sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the proximity of a
-     * keyword to text that matches the regex pattern. The distance can be 1-300 characters. The default value is 50.
+     * The maximum number of characters that can exist between text that matches the regular expression and the
+     * character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on the
+     * proximity of a keyword to text that matches the regular expression. The distance can be 1-300 characters. The
+     * default value is 50.
      * </p>
      * 
      * @param maximumMatchDistance
-     *        The maximum number of characters that can exist between text that matches the regex pattern and the
+     *        The maximum number of characters that can exist between text that matches the regular expression and the
      *        character sequences specified by the keywords array. Amazon Macie includes or excludes a result based on
-     *        the proximity of a keyword to text that matches the regex pattern. The distance can be 1-300 characters.
-     *        The default value is 50.
+     *        the proximity of a keyword to text that matches the regular expression. The distance can be 1-300
+     *        characters. The default value is 50.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -551,6 +575,148 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
+     * The severity to assign to findings that the custom data identifier produces, based on the number of occurrences
+     * of text that matches the custom data identifier's detection criteria. You can specify as many as three
+     * SeverityLevel objects in this array, one for each severity: LOW, MEDIUM, or HIGH. If you specify more than one,
+     * the occurrences thresholds must be in ascending order by severity, moving from LOW to HIGH. For example, 1 for
+     * LOW, 50 for MEDIUM, and 100 for HIGH. If an S3 object contains fewer occurrences than the lowest specified
+     * threshold, Amazon Macie doesn't create a finding.
+     * </p>
+     * <p>
+     * If you don't specify any values for this array, Macie creates findings for S3 objects that contain at least one
+     * occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity to those findings.
+     * </p>
+     * 
+     * @return The severity to assign to findings that the custom data identifier produces, based on the number of
+     *         occurrences of text that matches the custom data identifier's detection criteria. You can specify as many
+     *         as three SeverityLevel objects in this array, one for each severity: LOW, MEDIUM, or HIGH. If you specify
+     *         more than one, the occurrences thresholds must be in ascending order by severity, moving from LOW to
+     *         HIGH. For example, 1 for LOW, 50 for MEDIUM, and 100 for HIGH. If an S3 object contains fewer occurrences
+     *         than the lowest specified threshold, Amazon Macie doesn't create a finding.</p>
+     *         <p>
+     *         If you don't specify any values for this array, Macie creates findings for S3 objects that contain at
+     *         least one occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity
+     *         to those findings.
+     */
+
+    public java.util.List<SeverityLevel> getSeverityLevels() {
+        return severityLevels;
+    }
+
+    /**
+     * <p>
+     * The severity to assign to findings that the custom data identifier produces, based on the number of occurrences
+     * of text that matches the custom data identifier's detection criteria. You can specify as many as three
+     * SeverityLevel objects in this array, one for each severity: LOW, MEDIUM, or HIGH. If you specify more than one,
+     * the occurrences thresholds must be in ascending order by severity, moving from LOW to HIGH. For example, 1 for
+     * LOW, 50 for MEDIUM, and 100 for HIGH. If an S3 object contains fewer occurrences than the lowest specified
+     * threshold, Amazon Macie doesn't create a finding.
+     * </p>
+     * <p>
+     * If you don't specify any values for this array, Macie creates findings for S3 objects that contain at least one
+     * occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity to those findings.
+     * </p>
+     * 
+     * @param severityLevels
+     *        The severity to assign to findings that the custom data identifier produces, based on the number of
+     *        occurrences of text that matches the custom data identifier's detection criteria. You can specify as many
+     *        as three SeverityLevel objects in this array, one for each severity: LOW, MEDIUM, or HIGH. If you specify
+     *        more than one, the occurrences thresholds must be in ascending order by severity, moving from LOW to HIGH.
+     *        For example, 1 for LOW, 50 for MEDIUM, and 100 for HIGH. If an S3 object contains fewer occurrences than
+     *        the lowest specified threshold, Amazon Macie doesn't create a finding.</p>
+     *        <p>
+     *        If you don't specify any values for this array, Macie creates findings for S3 objects that contain at
+     *        least one occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity to
+     *        those findings.
+     */
+
+    public void setSeverityLevels(java.util.Collection<SeverityLevel> severityLevels) {
+        if (severityLevels == null) {
+            this.severityLevels = null;
+            return;
+        }
+
+        this.severityLevels = new java.util.ArrayList<SeverityLevel>(severityLevels);
+    }
+
+    /**
+     * <p>
+     * The severity to assign to findings that the custom data identifier produces, based on the number of occurrences
+     * of text that matches the custom data identifier's detection criteria. You can specify as many as three
+     * SeverityLevel objects in this array, one for each severity: LOW, MEDIUM, or HIGH. If you specify more than one,
+     * the occurrences thresholds must be in ascending order by severity, moving from LOW to HIGH. For example, 1 for
+     * LOW, 50 for MEDIUM, and 100 for HIGH. If an S3 object contains fewer occurrences than the lowest specified
+     * threshold, Amazon Macie doesn't create a finding.
+     * </p>
+     * <p>
+     * If you don't specify any values for this array, Macie creates findings for S3 objects that contain at least one
+     * occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity to those findings.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSeverityLevels(java.util.Collection)} or {@link #withSeverityLevels(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param severityLevels
+     *        The severity to assign to findings that the custom data identifier produces, based on the number of
+     *        occurrences of text that matches the custom data identifier's detection criteria. You can specify as many
+     *        as three SeverityLevel objects in this array, one for each severity: LOW, MEDIUM, or HIGH. If you specify
+     *        more than one, the occurrences thresholds must be in ascending order by severity, moving from LOW to HIGH.
+     *        For example, 1 for LOW, 50 for MEDIUM, and 100 for HIGH. If an S3 object contains fewer occurrences than
+     *        the lowest specified threshold, Amazon Macie doesn't create a finding.</p>
+     *        <p>
+     *        If you don't specify any values for this array, Macie creates findings for S3 objects that contain at
+     *        least one occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity to
+     *        those findings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCustomDataIdentifierRequest withSeverityLevels(SeverityLevel... severityLevels) {
+        if (this.severityLevels == null) {
+            setSeverityLevels(new java.util.ArrayList<SeverityLevel>(severityLevels.length));
+        }
+        for (SeverityLevel ele : severityLevels) {
+            this.severityLevels.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The severity to assign to findings that the custom data identifier produces, based on the number of occurrences
+     * of text that matches the custom data identifier's detection criteria. You can specify as many as three
+     * SeverityLevel objects in this array, one for each severity: LOW, MEDIUM, or HIGH. If you specify more than one,
+     * the occurrences thresholds must be in ascending order by severity, moving from LOW to HIGH. For example, 1 for
+     * LOW, 50 for MEDIUM, and 100 for HIGH. If an S3 object contains fewer occurrences than the lowest specified
+     * threshold, Amazon Macie doesn't create a finding.
+     * </p>
+     * <p>
+     * If you don't specify any values for this array, Macie creates findings for S3 objects that contain at least one
+     * occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity to those findings.
+     * </p>
+     * 
+     * @param severityLevels
+     *        The severity to assign to findings that the custom data identifier produces, based on the number of
+     *        occurrences of text that matches the custom data identifier's detection criteria. You can specify as many
+     *        as three SeverityLevel objects in this array, one for each severity: LOW, MEDIUM, or HIGH. If you specify
+     *        more than one, the occurrences thresholds must be in ascending order by severity, moving from LOW to HIGH.
+     *        For example, 1 for LOW, 50 for MEDIUM, and 100 for HIGH. If an S3 object contains fewer occurrences than
+     *        the lowest specified threshold, Amazon Macie doesn't create a finding.</p>
+     *        <p>
+     *        If you don't specify any values for this array, Macie creates findings for S3 objects that contain at
+     *        least one occurrence of text that matches the detection criteria, and Macie assigns the MEDIUM severity to
+     *        those findings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCustomDataIdentifierRequest withSeverityLevels(java.util.Collection<SeverityLevel> severityLevels) {
+        setSeverityLevels(severityLevels);
+        return this;
+    }
+
+    /**
+     * <p>
      * A map of key-value pairs that specifies the tags to associate with the custom data identifier.
      * </p>
      * <p>
@@ -667,6 +833,8 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
             sb.append("Name: ").append(getName()).append(",");
         if (getRegex() != null)
             sb.append("Regex: ").append(getRegex()).append(",");
+        if (getSeverityLevels() != null)
+            sb.append("SeverityLevels: ").append(getSeverityLevels()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -711,6 +879,10 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getRegex() != null && other.getRegex().equals(this.getRegex()) == false)
             return false;
+        if (other.getSeverityLevels() == null ^ this.getSeverityLevels() == null)
+            return false;
+        if (other.getSeverityLevels() != null && other.getSeverityLevels().equals(this.getSeverityLevels()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -730,6 +902,7 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getMaximumMatchDistance() == null) ? 0 : getMaximumMatchDistance().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRegex() == null) ? 0 : getRegex().hashCode());
+        hashCode = prime * hashCode + ((getSeverityLevels() == null) ? 0 : getSeverityLevels().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

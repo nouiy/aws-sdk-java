@@ -13,7 +13,7 @@
 package com.amazonaws.services.finspace.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -41,6 +41,10 @@ public class CreateEnvironmentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("federationMode").build();
     private static final MarshallingInfo<StructuredPojo> FEDERATIONPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("federationParameters").build();
+    private static final MarshallingInfo<StructuredPojo> SUPERUSERPARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("superuserParameters").build();
+    private static final MarshallingInfo<List> DATABUNDLES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("dataBundles").build();
 
     private static final CreateEnvironmentRequestMarshaller instance = new CreateEnvironmentRequestMarshaller();
 
@@ -64,6 +68,8 @@ public class CreateEnvironmentRequestMarshaller {
             protocolMarshaller.marshall(createEnvironmentRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getFederationMode(), FEDERATIONMODE_BINDING);
             protocolMarshaller.marshall(createEnvironmentRequest.getFederationParameters(), FEDERATIONPARAMETERS_BINDING);
+            protocolMarshaller.marshall(createEnvironmentRequest.getSuperuserParameters(), SUPERUSERPARAMETERS_BINDING);
+            protocolMarshaller.marshall(createEnvironmentRequest.getDataBundles(), DATABUNDLES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

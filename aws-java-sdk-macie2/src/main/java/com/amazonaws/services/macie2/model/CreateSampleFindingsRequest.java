@@ -27,20 +27,20 @@ public class CreateSampleFindingsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An array that lists one or more types of findings to include in the set of sample findings. Currently, the only
-     * supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     * An array of finding types, one for each type of sample finding to create. To create a sample of every type of
+     * finding that Amazon Macie supports, don't include this array in your request.
      * </p>
      */
     private java.util.List<String> findingTypes;
 
     /**
      * <p>
-     * An array that lists one or more types of findings to include in the set of sample findings. Currently, the only
-     * supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     * An array of finding types, one for each type of sample finding to create. To create a sample of every type of
+     * finding that Amazon Macie supports, don't include this array in your request.
      * </p>
      * 
-     * @return An array that lists one or more types of findings to include in the set of sample findings. Currently,
-     *         the only supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     * @return An array of finding types, one for each type of sample finding to create. To create a sample of every
+     *         type of finding that Amazon Macie supports, don't include this array in your request.
      * @see FindingType
      */
 
@@ -50,13 +50,13 @@ public class CreateSampleFindingsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An array that lists one or more types of findings to include in the set of sample findings. Currently, the only
-     * supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     * An array of finding types, one for each type of sample finding to create. To create a sample of every type of
+     * finding that Amazon Macie supports, don't include this array in your request.
      * </p>
      * 
      * @param findingTypes
-     *        An array that lists one or more types of findings to include in the set of sample findings. Currently, the
-     *        only supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     *        An array of finding types, one for each type of sample finding to create. To create a sample of every type
+     *        of finding that Amazon Macie supports, don't include this array in your request.
      * @see FindingType
      */
 
@@ -71,8 +71,8 @@ public class CreateSampleFindingsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An array that lists one or more types of findings to include in the set of sample findings. Currently, the only
-     * supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     * An array of finding types, one for each type of sample finding to create. To create a sample of every type of
+     * finding that Amazon Macie supports, don't include this array in your request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,8 +81,8 @@ public class CreateSampleFindingsRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param findingTypes
-     *        An array that lists one or more types of findings to include in the set of sample findings. Currently, the
-     *        only supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     *        An array of finding types, one for each type of sample finding to create. To create a sample of every type
+     *        of finding that Amazon Macie supports, don't include this array in your request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FindingType
      */
@@ -99,13 +99,13 @@ public class CreateSampleFindingsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An array that lists one or more types of findings to include in the set of sample findings. Currently, the only
-     * supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     * An array of finding types, one for each type of sample finding to create. To create a sample of every type of
+     * finding that Amazon Macie supports, don't include this array in your request.
      * </p>
      * 
      * @param findingTypes
-     *        An array that lists one or more types of findings to include in the set of sample findings. Currently, the
-     *        only supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     *        An array of finding types, one for each type of sample finding to create. To create a sample of every type
+     *        of finding that Amazon Macie supports, don't include this array in your request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FindingType
      */
@@ -117,13 +117,13 @@ public class CreateSampleFindingsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An array that lists one or more types of findings to include in the set of sample findings. Currently, the only
-     * supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     * An array of finding types, one for each type of sample finding to create. To create a sample of every type of
+     * finding that Amazon Macie supports, don't include this array in your request.
      * </p>
      * 
      * @param findingTypes
-     *        An array that lists one or more types of findings to include in the set of sample findings. Currently, the
-     *        only supported value is Policy:IAMUser/S3BucketEncryptionDisabled.
+     *        An array of finding types, one for each type of sample finding to create. To create a sample of every type
+     *        of finding that Amazon Macie supports, don't include this array in your request.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FindingType
      */

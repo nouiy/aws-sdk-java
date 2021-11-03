@@ -46,6 +46,8 @@ public class CreateCustomDataIdentifierRequestMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> REGEX_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("regex").build();
+    private static final MarshallingInfo<List> SEVERITYLEVELS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("severityLevels").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -72,6 +74,7 @@ public class CreateCustomDataIdentifierRequestMarshaller {
             protocolMarshaller.marshall(createCustomDataIdentifierRequest.getMaximumMatchDistance(), MAXIMUMMATCHDISTANCE_BINDING);
             protocolMarshaller.marshall(createCustomDataIdentifierRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createCustomDataIdentifierRequest.getRegex(), REGEX_BINDING);
+            protocolMarshaller.marshall(createCustomDataIdentifierRequest.getSeverityLevels(), SEVERITYLEVELS_BINDING);
             protocolMarshaller.marshall(createCustomDataIdentifierRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -145,6 +145,23 @@ public interface AWSDataSync {
 
     /**
      * <p>
+     * Creates an endpoint for a Hadoop Distributed File System (HDFS).
+     * </p>
+     * 
+     * @param createLocationHdfsRequest
+     * @return Result of the CreateLocationHdfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.CreateLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/CreateLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateLocationHdfsResult createLocationHdfs(CreateLocationHdfsRequest createLocationHdfsRequest);
+
+    /**
+     * <p>
      * Defines a file system on a Network File System (NFS) server that can be read from or written to.
      * </p>
      * 
@@ -373,6 +390,24 @@ public interface AWSDataSync {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeLocationFsxWindowsResult describeLocationFsxWindows(DescribeLocationFsxWindowsRequest describeLocationFsxWindowsRequest);
+
+    /**
+     * <p>
+     * Returns metadata, such as the authentication information about the Hadoop Distributed File System (HDFS)
+     * location.
+     * </p>
+     * 
+     * @param describeLocationHdfsRequest
+     * @return Result of the DescribeLocationHdfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.DescribeLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/DescribeLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeLocationHdfsResult describeLocationHdfs(DescribeLocationHdfsRequest describeLocationHdfsRequest);
 
     /**
      * <p>
@@ -670,6 +705,23 @@ public interface AWSDataSync {
      *      Documentation</a>
      */
     UpdateAgentResult updateAgent(UpdateAgentRequest updateAgentRequest);
+
+    /**
+     * <p>
+     * Updates some parameters of a previously created location for a Hadoop Distributed File System cluster.
+     * </p>
+     * 
+     * @param updateLocationHdfsRequest
+     * @return Result of the UpdateLocationHdfs operation returned by the service.
+     * @throws InvalidRequestException
+     *         This exception is thrown when the client submits a malformed request.
+     * @throws InternalException
+     *         This exception is thrown when an error occurs in the DataSync service.
+     * @sample AWSDataSync.UpdateLocationHdfs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/datasync-2018-11-09/UpdateLocationHdfs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateLocationHdfsResult updateLocationHdfs(UpdateLocationHdfsRequest updateLocationHdfsRequest);
 
     /**
      * <p>

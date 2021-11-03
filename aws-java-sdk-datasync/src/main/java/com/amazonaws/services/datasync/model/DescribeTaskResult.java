@@ -79,13 +79,14 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
     private String cloudWatchLogGroupArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source ENIs (Elastic Network Interface) that was created for your subnet.
+     * The Amazon Resource Names (ARNs) of the source elastic network interfaces (ENIs) that were created for your
+     * subnet.
      * </p>
      */
     private java.util.List<String> sourceNetworkInterfaceArns;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the destination ENIs (Elastic Network Interface) that was created for your
+     * The Amazon Resource Names (ARNs) of the destination elastic network interfaces (ENIs) that were created for your
      * subnet.
      * </p>
      */
@@ -108,7 +109,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -142,9 +143,9 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
     private java.util.Date creationTime;
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2</code>".
      * </p>
      */
     private java.util.List<FilterRule> includes;
@@ -505,11 +506,12 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source ENIs (Elastic Network Interface) that was created for your subnet.
+     * The Amazon Resource Names (ARNs) of the source elastic network interfaces (ENIs) that were created for your
+     * subnet.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the source ENIs (Elastic Network Interface) that was created for your
-     *         subnet.
+     * @return The Amazon Resource Names (ARNs) of the source elastic network interfaces (ENIs) that were created for
+     *         your subnet.
      */
 
     public java.util.List<String> getSourceNetworkInterfaceArns() {
@@ -518,12 +520,13 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source ENIs (Elastic Network Interface) that was created for your subnet.
+     * The Amazon Resource Names (ARNs) of the source elastic network interfaces (ENIs) that were created for your
+     * subnet.
      * </p>
      * 
      * @param sourceNetworkInterfaceArns
-     *        The Amazon Resource Name (ARN) of the source ENIs (Elastic Network Interface) that was created for your
-     *        subnet.
+     *        The Amazon Resource Names (ARNs) of the source elastic network interfaces (ENIs) that were created for
+     *        your subnet.
      */
 
     public void setSourceNetworkInterfaceArns(java.util.Collection<String> sourceNetworkInterfaceArns) {
@@ -537,7 +540,8 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source ENIs (Elastic Network Interface) that was created for your subnet.
+     * The Amazon Resource Names (ARNs) of the source elastic network interfaces (ENIs) that were created for your
+     * subnet.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -546,8 +550,8 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param sourceNetworkInterfaceArns
-     *        The Amazon Resource Name (ARN) of the source ENIs (Elastic Network Interface) that was created for your
-     *        subnet.
+     *        The Amazon Resource Names (ARNs) of the source elastic network interfaces (ENIs) that were created for
+     *        your subnet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -563,12 +567,13 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the source ENIs (Elastic Network Interface) that was created for your subnet.
+     * The Amazon Resource Names (ARNs) of the source elastic network interfaces (ENIs) that were created for your
+     * subnet.
      * </p>
      * 
      * @param sourceNetworkInterfaceArns
-     *        The Amazon Resource Name (ARN) of the source ENIs (Elastic Network Interface) that was created for your
-     *        subnet.
+     *        The Amazon Resource Names (ARNs) of the source elastic network interfaces (ENIs) that were created for
+     *        your subnet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -579,12 +584,12 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the destination ENIs (Elastic Network Interface) that was created for your
+     * The Amazon Resource Names (ARNs) of the destination elastic network interfaces (ENIs) that were created for your
      * subnet.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the destination ENIs (Elastic Network Interface) that was created for
-     *         your subnet.
+     * @return The Amazon Resource Names (ARNs) of the destination elastic network interfaces (ENIs) that were created
+     *         for your subnet.
      */
 
     public java.util.List<String> getDestinationNetworkInterfaceArns() {
@@ -593,13 +598,13 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the destination ENIs (Elastic Network Interface) that was created for your
+     * The Amazon Resource Names (ARNs) of the destination elastic network interfaces (ENIs) that were created for your
      * subnet.
      * </p>
      * 
      * @param destinationNetworkInterfaceArns
-     *        The Amazon Resource Name (ARN) of the destination ENIs (Elastic Network Interface) that was created for
-     *        your subnet.
+     *        The Amazon Resource Names (ARNs) of the destination elastic network interfaces (ENIs) that were created
+     *        for your subnet.
      */
 
     public void setDestinationNetworkInterfaceArns(java.util.Collection<String> destinationNetworkInterfaceArns) {
@@ -613,7 +618,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the destination ENIs (Elastic Network Interface) that was created for your
+     * The Amazon Resource Names (ARNs) of the destination elastic network interfaces (ENIs) that were created for your
      * subnet.
      * </p>
      * <p>
@@ -623,8 +628,8 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param destinationNetworkInterfaceArns
-     *        The Amazon Resource Name (ARN) of the destination ENIs (Elastic Network Interface) that was created for
-     *        your subnet.
+     *        The Amazon Resource Names (ARNs) of the destination elastic network interfaces (ENIs) that were created
+     *        for your subnet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -640,13 +645,13 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the destination ENIs (Elastic Network Interface) that was created for your
+     * The Amazon Resource Names (ARNs) of the destination elastic network interfaces (ENIs) that were created for your
      * subnet.
      * </p>
      * 
      * @param destinationNetworkInterfaceArns
-     *        The Amazon Resource Name (ARN) of the destination ENIs (Elastic Network Interface) that was created for
-     *        your subnet.
+     *        The Amazon Resource Names (ARNs) of the destination elastic network interfaces (ENIs) that were created
+     *        for your subnet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -744,14 +749,14 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
      * 
      * @return A list of filter rules that determines which files to exclude from a task. The list should contain a
      *         single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that
-     *         is, a pipe), for example: <code>"/folder1|/folder2"</code> </p>
+     *         is, a pipe), for example, <code>"/folder1|/folder2"</code>. </p>
      *         <p>
      */
 
@@ -763,7 +768,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -771,7 +776,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * @param excludes
      *        A list of filter rules that determines which files to exclude from a task. The list should contain a
      *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
-     *        a pipe), for example: <code>"/folder1|/folder2"</code> </p>
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>. </p>
      *        <p>
      */
 
@@ -788,7 +793,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -801,7 +806,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * @param excludes
      *        A list of filter rules that determines which files to exclude from a task. The list should contain a
      *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
-     *        a pipe), for example: <code>"/folder1|/folder2"</code> </p>
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>. </p>
      *        <p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -820,7 +825,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * A list of filter rules that determines which files to exclude from a task. The list should contain a single
      * filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is, a pipe), for
-     * example: <code>"/folder1|/folder2"</code>
+     * example, <code>"/folder1|/folder2"</code>.
      * </p>
      * <p>
      * </p>
@@ -828,7 +833,7 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * @param excludes
      *        A list of filter rules that determines which files to exclude from a task. The list should contain a
      *        single filter string that consists of the patterns to exclude. The patterns are delimited by "|" (that is,
-     *        a pipe), for example: <code>"/folder1|/folder2"</code> </p>
+     *        a pipe), for example, <code>"/folder1|/folder2"</code>. </p>
      *        <p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1012,14 +1017,14 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2</code>".
      * </p>
      * 
-     * @return A list of filter rules that determines which files to include when running a task. The pattern should
-     *         contain a single filter string that consists of the patterns to include. The patterns are delimited by
-     *         "|" (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     * @return A list of filter rules that determines which files to include when running a task. The pattern contains a
+     *         single filter string that consists of the patterns to include. The patterns are delimited by "|" (that
+     *         is, a pipe), for example, <code>"/folder1|/folder2</code>".
      */
 
     public java.util.List<FilterRule> getIncludes() {
@@ -1028,15 +1033,15 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2</code>".
      * </p>
      * 
      * @param includes
-     *        A list of filter rules that determines which files to include when running a task. The pattern should
-     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
-     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     *        A list of filter rules that determines which files to include when running a task. The pattern contains a
+     *        single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is,
+     *        a pipe), for example, <code>"/folder1|/folder2</code>".
      */
 
     public void setIncludes(java.util.Collection<FilterRule> includes) {
@@ -1050,9 +1055,9 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2</code>".
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1061,9 +1066,9 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param includes
-     *        A list of filter rules that determines which files to include when running a task. The pattern should
-     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
-     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     *        A list of filter rules that determines which files to include when running a task. The pattern contains a
+     *        single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is,
+     *        a pipe), for example, <code>"/folder1|/folder2</code>".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1079,15 +1084,15 @@ public class DescribeTaskResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of filter rules that determines which files to include when running a task. The pattern should contain a
-     * single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a
-     * pipe). For example: <code>"/folder1|/folder2</code>"
+     * A list of filter rules that determines which files to include when running a task. The pattern contains a single
+     * filter string that consists of the patterns to include. The patterns are delimited by "|" (that is, a pipe), for
+     * example, <code>"/folder1|/folder2</code>".
      * </p>
      * 
      * @param includes
-     *        A list of filter rules that determines which files to include when running a task. The pattern should
-     *        contain a single filter string that consists of the patterns to include. The patterns are delimited by "|"
-     *        (that is, a pipe). For example: <code>"/folder1|/folder2</code>"
+     *        A list of filter rules that determines which files to include when running a task. The pattern contains a
+     *        single filter string that consists of the patterns to include. The patterns are delimited by "|" (that is,
+     *        a pipe), for example, <code>"/folder1|/folder2</code>".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

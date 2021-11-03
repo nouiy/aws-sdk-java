@@ -48,7 +48,7 @@ public class NfsMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <b> <a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a> </b> - stateful, firewall-friendly protocol version
-     * that supports delegations and pseudo filesystems.
+     * that supports delegations and pseudo file systems.
      * </p>
      * </li>
      * <li>
@@ -82,7 +82,7 @@ public class NfsMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <b> <a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a> </b> - stateful, firewall-friendly protocol version
-     * that supports delegations and pseudo filesystems.
+     * that supports delegations and pseudo file systems.
      * </p>
      * </li>
      * <li>
@@ -112,7 +112,7 @@ public class NfsMountOptions implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        <b> <a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a> </b> - stateful, firewall-friendly protocol
-     *        version that supports delegations and pseudo filesystems.
+     *        version that supports delegations and pseudo file systems.
      *        </p>
      *        </li>
      *        <li>
@@ -149,7 +149,7 @@ public class NfsMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <b> <a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a> </b> - stateful, firewall-friendly protocol version
-     * that supports delegations and pseudo filesystems.
+     * that supports delegations and pseudo file systems.
      * </p>
      * </li>
      * <li>
@@ -178,7 +178,7 @@ public class NfsMountOptions implements Serializable, Cloneable, StructuredPojo 
      *         <li>
      *         <p>
      *         <b> <a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a> </b> - stateful, firewall-friendly protocol
-     *         version that supports delegations and pseudo filesystems.
+     *         version that supports delegations and pseudo file systems.
      *         </p>
      *         </li>
      *         <li>
@@ -215,7 +215,7 @@ public class NfsMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <b> <a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a> </b> - stateful, firewall-friendly protocol version
-     * that supports delegations and pseudo filesystems.
+     * that supports delegations and pseudo file systems.
      * </p>
      * </li>
      * <li>
@@ -245,7 +245,7 @@ public class NfsMountOptions implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        <b> <a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a> </b> - stateful, firewall-friendly protocol
-     *        version that supports delegations and pseudo filesystems.
+     *        version that supports delegations and pseudo file systems.
      *        </p>
      *        </li>
      *        <li>
@@ -284,7 +284,7 @@ public class NfsMountOptions implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <b> <a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a> </b> - stateful, firewall-friendly protocol version
-     * that supports delegations and pseudo filesystems.
+     * that supports delegations and pseudo file systems.
      * </p>
      * </li>
      * <li>
@@ -314,7 +314,7 @@ public class NfsMountOptions implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        <b> <a href="https://tools.ietf.org/html/rfc3530">NFSv4.0</a> </b> - stateful, firewall-friendly protocol
-     *        version that supports delegations and pseudo filesystems.
+     *        version that supports delegations and pseudo file systems.
      *        </p>
      *        </li>
      *        <li>

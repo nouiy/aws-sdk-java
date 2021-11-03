@@ -48,6 +48,11 @@ public class AbstractAWSDataSync implements AWSDataSync {
     }
 
     @Override
+    public CreateLocationHdfsResult createLocationHdfs(CreateLocationHdfsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateLocationNfsResult createLocationNfs(CreateLocationNfsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -99,6 +104,11 @@ public class AbstractAWSDataSync implements AWSDataSync {
 
     @Override
     public DescribeLocationFsxWindowsResult describeLocationFsxWindows(DescribeLocationFsxWindowsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeLocationHdfsResult describeLocationHdfs(DescribeLocationHdfsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -174,6 +184,11 @@ public class AbstractAWSDataSync implements AWSDataSync {
 
     @Override
     public UpdateAgentResult updateAgent(UpdateAgentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateLocationHdfsResult updateLocationHdfs(UpdateLocationHdfsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
