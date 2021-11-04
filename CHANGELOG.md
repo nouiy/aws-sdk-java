@@ -1,4 +1,4 @@
-# __1.12.103__ __2021-11-04__
+# __1.12.104__ __2021-11-04__
 ## __AWS IoT Wireless__
   - ### Features
     - Adding APIs for the FUOTA (firmware update over the air) and multicast for LoRaWAN devices and APIs to support event notification opt-in feature for Sidewalk related events. A few existing APIs need to be modified for this new feature.
