@@ -34,8 +34,8 @@ public class GetTagValuesRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String paginationToken;
     /**
      * <p>
-     * Specifies the tag key for which you want to list all existing values that are currently used in the specified AWS
-     * Region for the calling AWS account.
+     * Specifies the tag key for which you want to list all existing values that are currently used in the specified
+     * Amazon Web Services Region for the calling account.
      * </p>
      */
     private String key;
@@ -88,13 +88,13 @@ public class GetTagValuesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the tag key for which you want to list all existing values that are currently used in the specified AWS
-     * Region for the calling AWS account.
+     * Specifies the tag key for which you want to list all existing values that are currently used in the specified
+     * Amazon Web Services Region for the calling account.
      * </p>
      * 
      * @param key
      *        Specifies the tag key for which you want to list all existing values that are currently used in the
-     *        specified AWS Region for the calling AWS account.
+     *        specified Amazon Web Services Region for the calling account.
      */
 
     public void setKey(String key) {
@@ -103,12 +103,12 @@ public class GetTagValuesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the tag key for which you want to list all existing values that are currently used in the specified AWS
-     * Region for the calling AWS account.
+     * Specifies the tag key for which you want to list all existing values that are currently used in the specified
+     * Amazon Web Services Region for the calling account.
      * </p>
      * 
      * @return Specifies the tag key for which you want to list all existing values that are currently used in the
-     *         specified AWS Region for the calling AWS account.
+     *         specified Amazon Web Services Region for the calling account.
      */
 
     public String getKey() {
@@ -117,13 +117,13 @@ public class GetTagValuesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the tag key for which you want to list all existing values that are currently used in the specified AWS
-     * Region for the calling AWS account.
+     * Specifies the tag key for which you want to list all existing values that are currently used in the specified
+     * Amazon Web Services Region for the calling account.
      * </p>
      * 
      * @param key
      *        Specifies the tag key for which you want to list all existing values that are currently used in the
-     *        specified AWS Region for the calling AWS account.
+     *        specified Amazon Web Services Region for the calling account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

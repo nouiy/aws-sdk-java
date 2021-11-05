@@ -34,9 +34,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String paginationToken;
     /**
      * <p>
-     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have the
-     * specified tag and, if included, the specified value. Each <code>TagFilter</code> must contain a key with values
-     * optional. A request can include up to 50 keys, and each key can include up to 20 values.
+     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have tags
+     * with the specified keys and, if included, the specified values. Each <code>TagFilter</code> must contain a key
+     * with values optional. A request can include up to 50 keys, and each key can include up to 20 values.
      * </p>
      * <p>
      * Note the following when deciding how to use TagFilters:
@@ -58,13 +58,13 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If you specify a filter that contains more than one value for a key, the response returns resources that match
-     * any of the specified values for that key.
+     * <i>any</i> of the specified values for that key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you don't specify any values for a key, the response returns resources that are tagged with that key and any
-     * or no value.
+     * If you don't specify a value for a key, the response returns all resources that are tagged with that key, with
+     * any or no value.
      * </p>
      * <p>
      * For example, for the following filters: <code>filter1= {keyA,{value1}}</code>,
@@ -109,7 +109,7 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
     private Integer resourcesPerPage;
     /**
      * <p>
-     * AWS recommends using <code>ResourcesPerPage</code> instead of this parameter.
+     * Amazon Web Services recommends using <code>ResourcesPerPage</code> instead of this parameter.
      * </p>
      * <p>
      * A limit that restricts the number of tags (key and value pairs) returned by <code>GetResources</code> in
@@ -138,16 +138,17 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
-     * </p>
-     * <p>
-     * For more information about ARNs, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * Name (ARN). For the list of services whose resources you can use in this parameter, see <a
+     * href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html">Services
+     * that support the Resource Groups Tagging API</a>.
      * </p>
      * <p>
      * You can specify multiple resource types by using an array. The array can include up to 100 items. Note that the
-     * length constraint requirement applies to each resource type filter.
+     * length constraint requirement applies to each resource type filter. For example, the following string would limit
+     * the response to only Amazon EC2 instances, Amazon S3 buckets, or any Audit Manager resource:
+     * </p>
+     * <p>
+     * <code>ec2:instance,s3:bucket,auditmanager</code>
      * </p>
      */
     private java.util.List<String> resourceTypeFilters;
@@ -182,8 +183,8 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * An ARN (Amazon Resource Name) uniquely identifies a resource. For more information, see <a
-     * href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and
-     * AWS Service Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
+     * and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      */
     private java.util.List<String> resourceARNList;
@@ -236,9 +237,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have the
-     * specified tag and, if included, the specified value. Each <code>TagFilter</code> must contain a key with values
-     * optional. A request can include up to 50 keys, and each key can include up to 20 values.
+     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have tags
+     * with the specified keys and, if included, the specified values. Each <code>TagFilter</code> must contain a key
+     * with values optional. A request can include up to 50 keys, and each key can include up to 20 values.
      * </p>
      * <p>
      * Note the following when deciding how to use TagFilters:
@@ -260,13 +261,13 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If you specify a filter that contains more than one value for a key, the response returns resources that match
-     * any of the specified values for that key.
+     * <i>any</i> of the specified values for that key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you don't specify any values for a key, the response returns resources that are tagged with that key and any
-     * or no value.
+     * If you don't specify a value for a key, the response returns all resources that are tagged with that key, with
+     * any or no value.
      * </p>
      * <p>
      * For example, for the following filters: <code>filter1= {keyA,{value1}}</code>,
@@ -301,8 +302,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * 
      * @return Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have
-     *         the specified tag and, if included, the specified value. Each <code>TagFilter</code> must contain a key
-     *         with values optional. A request can include up to 50 keys, and each key can include up to 20 values. </p>
+     *         tags with the specified keys and, if included, the specified values. Each <code>TagFilter</code> must
+     *         contain a key with values optional. A request can include up to 50 keys, and each key can include up to
+     *         20 values. </p>
      *         <p>
      *         Note the following when deciding how to use TagFilters:
      *         </p>
@@ -323,13 +325,13 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <li>
      *         <p>
      *         If you specify a filter that contains more than one value for a key, the response returns resources that
-     *         match any of the specified values for that key.
+     *         match <i>any</i> of the specified values for that key.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If you don't specify any values for a key, the response returns resources that are tagged with that key
-     *         and any or no value.
+     *         If you don't specify a value for a key, the response returns all resources that are tagged with that key,
+     *         with any or no value.
      *         </p>
      *         <p>
      *         For example, for the following filters: <code>filter1= {keyA,{value1}}</code>,
@@ -369,9 +371,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have the
-     * specified tag and, if included, the specified value. Each <code>TagFilter</code> must contain a key with values
-     * optional. A request can include up to 50 keys, and each key can include up to 20 values.
+     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have tags
+     * with the specified keys and, if included, the specified values. Each <code>TagFilter</code> must contain a key
+     * with values optional. A request can include up to 50 keys, and each key can include up to 20 values.
      * </p>
      * <p>
      * Note the following when deciding how to use TagFilters:
@@ -393,13 +395,13 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If you specify a filter that contains more than one value for a key, the response returns resources that match
-     * any of the specified values for that key.
+     * <i>any</i> of the specified values for that key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you don't specify any values for a key, the response returns resources that are tagged with that key and any
-     * or no value.
+     * If you don't specify a value for a key, the response returns all resources that are tagged with that key, with
+     * any or no value.
      * </p>
      * <p>
      * For example, for the following filters: <code>filter1= {keyA,{value1}}</code>,
@@ -435,8 +437,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param tagFilters
      *        Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have
-     *        the specified tag and, if included, the specified value. Each <code>TagFilter</code> must contain a key
-     *        with values optional. A request can include up to 50 keys, and each key can include up to 20 values. </p>
+     *        tags with the specified keys and, if included, the specified values. Each <code>TagFilter</code> must
+     *        contain a key with values optional. A request can include up to 50 keys, and each key can include up to 20
+     *        values. </p>
      *        <p>
      *        Note the following when deciding how to use TagFilters:
      *        </p>
@@ -457,13 +460,13 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        If you specify a filter that contains more than one value for a key, the response returns resources that
-     *        match any of the specified values for that key.
+     *        match <i>any</i> of the specified values for that key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify any values for a key, the response returns resources that are tagged with that key
-     *        and any or no value.
+     *        If you don't specify a value for a key, the response returns all resources that are tagged with that key,
+     *        with any or no value.
      *        </p>
      *        <p>
      *        For example, for the following filters: <code>filter1= {keyA,{value1}}</code>,
@@ -508,9 +511,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have the
-     * specified tag and, if included, the specified value. Each <code>TagFilter</code> must contain a key with values
-     * optional. A request can include up to 50 keys, and each key can include up to 20 values.
+     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have tags
+     * with the specified keys and, if included, the specified values. Each <code>TagFilter</code> must contain a key
+     * with values optional. A request can include up to 50 keys, and each key can include up to 20 values.
      * </p>
      * <p>
      * Note the following when deciding how to use TagFilters:
@@ -532,13 +535,13 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If you specify a filter that contains more than one value for a key, the response returns resources that match
-     * any of the specified values for that key.
+     * <i>any</i> of the specified values for that key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you don't specify any values for a key, the response returns resources that are tagged with that key and any
-     * or no value.
+     * If you don't specify a value for a key, the response returns all resources that are tagged with that key, with
+     * any or no value.
      * </p>
      * <p>
      * For example, for the following filters: <code>filter1= {keyA,{value1}}</code>,
@@ -579,8 +582,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param tagFilters
      *        Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have
-     *        the specified tag and, if included, the specified value. Each <code>TagFilter</code> must contain a key
-     *        with values optional. A request can include up to 50 keys, and each key can include up to 20 values. </p>
+     *        tags with the specified keys and, if included, the specified values. Each <code>TagFilter</code> must
+     *        contain a key with values optional. A request can include up to 50 keys, and each key can include up to 20
+     *        values. </p>
      *        <p>
      *        Note the following when deciding how to use TagFilters:
      *        </p>
@@ -601,13 +605,13 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        If you specify a filter that contains more than one value for a key, the response returns resources that
-     *        match any of the specified values for that key.
+     *        match <i>any</i> of the specified values for that key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify any values for a key, the response returns resources that are tagged with that key
-     *        and any or no value.
+     *        If you don't specify a value for a key, the response returns all resources that are tagged with that key,
+     *        with any or no value.
      *        </p>
      *        <p>
      *        For example, for the following filters: <code>filter1= {keyA,{value1}}</code>,
@@ -654,9 +658,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have the
-     * specified tag and, if included, the specified value. Each <code>TagFilter</code> must contain a key with values
-     * optional. A request can include up to 50 keys, and each key can include up to 20 values.
+     * Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have tags
+     * with the specified keys and, if included, the specified values. Each <code>TagFilter</code> must contain a key
+     * with values optional. A request can include up to 50 keys, and each key can include up to 20 values.
      * </p>
      * <p>
      * Note the following when deciding how to use TagFilters:
@@ -678,13 +682,13 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <li>
      * <p>
      * If you specify a filter that contains more than one value for a key, the response returns resources that match
-     * any of the specified values for that key.
+     * <i>any</i> of the specified values for that key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you don't specify any values for a key, the response returns resources that are tagged with that key and any
-     * or no value.
+     * If you don't specify a value for a key, the response returns all resources that are tagged with that key, with
+     * any or no value.
      * </p>
      * <p>
      * For example, for the following filters: <code>filter1= {keyA,{value1}}</code>,
@@ -720,8 +724,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param tagFilters
      *        Specifies a list of TagFilters (keys and values) to restrict the output to only those resources that have
-     *        the specified tag and, if included, the specified value. Each <code>TagFilter</code> must contain a key
-     *        with values optional. A request can include up to 50 keys, and each key can include up to 20 values. </p>
+     *        tags with the specified keys and, if included, the specified values. Each <code>TagFilter</code> must
+     *        contain a key with values optional. A request can include up to 50 keys, and each key can include up to 20
+     *        values. </p>
      *        <p>
      *        Note the following when deciding how to use TagFilters:
      *        </p>
@@ -742,13 +747,13 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        If you specify a filter that contains more than one value for a key, the response returns resources that
-     *        match any of the specified values for that key.
+     *        match <i>any</i> of the specified values for that key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify any values for a key, the response returns resources that are tagged with that key
-     *        and any or no value.
+     *        If you don't specify a value for a key, the response returns all resources that are tagged with that key,
+     *        with any or no value.
      *        </p>
      *        <p>
      *        For example, for the following filters: <code>filter1= {keyA,{value1}}</code>,
@@ -845,7 +850,7 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * AWS recommends using <code>ResourcesPerPage</code> instead of this parameter.
+     * Amazon Web Services recommends using <code>ResourcesPerPage</code> instead of this parameter.
      * </p>
      * <p>
      * A limit that restricts the number of tags (key and value pairs) returned by <code>GetResources</code> in
@@ -865,7 +870,7 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param tagsPerPage
-     *        AWS recommends using <code>ResourcesPerPage</code> instead of this parameter.</p>
+     *        Amazon Web Services recommends using <code>ResourcesPerPage</code> instead of this parameter.</p>
      *        <p>
      *        A limit that restricts the number of tags (key and value pairs) returned by <code>GetResources</code> in
      *        paginated output. A resource with no tags is counted as having one tag (one key and value pair).
@@ -890,7 +895,7 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * AWS recommends using <code>ResourcesPerPage</code> instead of this parameter.
+     * Amazon Web Services recommends using <code>ResourcesPerPage</code> instead of this parameter.
      * </p>
      * <p>
      * A limit that restricts the number of tags (key and value pairs) returned by <code>GetResources</code> in
@@ -909,7 +914,7 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * You can set <code>TagsPerPage</code> to a minimum of 100 items up to a maximum of 500 items.
      * </p>
      * 
-     * @return AWS recommends using <code>ResourcesPerPage</code> instead of this parameter.</p>
+     * @return Amazon Web Services recommends using <code>ResourcesPerPage</code> instead of this parameter.</p>
      *         <p>
      *         A limit that restricts the number of tags (key and value pairs) returned by <code>GetResources</code> in
      *         paginated output. A resource with no tags is counted as having one tag (one key and value pair).
@@ -934,7 +939,7 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * AWS recommends using <code>ResourcesPerPage</code> instead of this parameter.
+     * Amazon Web Services recommends using <code>ResourcesPerPage</code> instead of this parameter.
      * </p>
      * <p>
      * A limit that restricts the number of tags (key and value pairs) returned by <code>GetResources</code> in
@@ -954,7 +959,7 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param tagsPerPage
-     *        AWS recommends using <code>ResourcesPerPage</code> instead of this parameter.</p>
+     *        Amazon Web Services recommends using <code>ResourcesPerPage</code> instead of this parameter.</p>
      *        <p>
      *        A limit that restricts the number of tags (key and value pairs) returned by <code>GetResources</code> in
      *        paginated output. A resource with no tags is counted as having one tag (one key and value pair).
@@ -988,16 +993,17 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
-     * </p>
-     * <p>
-     * For more information about ARNs, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * Name (ARN). For the list of services whose resources you can use in this parameter, see <a
+     * href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html">Services
+     * that support the Resource Groups Tagging API</a>.
      * </p>
      * <p>
      * You can specify multiple resource types by using an array. The array can include up to 100 items. Note that the
-     * length constraint requirement applies to each resource type filter.
+     * length constraint requirement applies to each resource type filter. For example, the following string would limit
+     * the response to only Amazon EC2 instances, Amazon S3 buckets, or any Audit Manager resource:
+     * </p>
+     * <p>
+     * <code>ec2:instance,s3:bucket,auditmanager</code>
      * </p>
      * 
      * @return Specifies the resource types that you want included in the response. The format of each resource type is
@@ -1006,16 +1012,18 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <code>ec2:instance</code> returns only EC2 instances. </p>
      *         <p>
      *         The string for each service name and resource type is the same as that embedded in a resource's Amazon
-     *         Resource Name (ARN). Consult the <i>AWS General Reference</i> for the following:
-     *         </p>
-     *         <p>
-     *         For more information about ARNs, see <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *         (ARNs) and AWS Service Namespaces</a>.
+     *         Resource Name (ARN). For the list of services whose resources you can use in this parameter, see <a
+     *         href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html"
+     *         >Services that support the Resource Groups Tagging API</a>.
      *         </p>
      *         <p>
      *         You can specify multiple resource types by using an array. The array can include up to 100 items. Note
-     *         that the length constraint requirement applies to each resource type filter.
+     *         that the length constraint requirement applies to each resource type filter. For example, the following
+     *         string would limit the response to only Amazon EC2 instances, Amazon S3 buckets, or any Audit Manager
+     *         resource:
+     *         </p>
+     *         <p>
+     *         <code>ec2:instance,s3:bucket,auditmanager</code>
      */
 
     public java.util.List<String> getResourceTypeFilters() {
@@ -1031,16 +1039,17 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
-     * </p>
-     * <p>
-     * For more information about ARNs, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * Name (ARN). For the list of services whose resources you can use in this parameter, see <a
+     * href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html">Services
+     * that support the Resource Groups Tagging API</a>.
      * </p>
      * <p>
      * You can specify multiple resource types by using an array. The array can include up to 100 items. Note that the
-     * length constraint requirement applies to each resource type filter.
+     * length constraint requirement applies to each resource type filter. For example, the following string would limit
+     * the response to only Amazon EC2 instances, Amazon S3 buckets, or any Audit Manager resource:
+     * </p>
+     * <p>
+     * <code>ec2:instance,s3:bucket,auditmanager</code>
      * </p>
      * 
      * @param resourceTypeFilters
@@ -1050,16 +1059,18 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <code>ec2:instance</code> returns only EC2 instances. </p>
      *        <p>
      *        The string for each service name and resource type is the same as that embedded in a resource's Amazon
-     *        Resource Name (ARN). Consult the <i>AWS General Reference</i> for the following:
-     *        </p>
-     *        <p>
-     *        For more information about ARNs, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a>.
+     *        Resource Name (ARN). For the list of services whose resources you can use in this parameter, see <a
+     *        href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html"
+     *        >Services that support the Resource Groups Tagging API</a>.
      *        </p>
      *        <p>
      *        You can specify multiple resource types by using an array. The array can include up to 100 items. Note
-     *        that the length constraint requirement applies to each resource type filter.
+     *        that the length constraint requirement applies to each resource type filter. For example, the following
+     *        string would limit the response to only Amazon EC2 instances, Amazon S3 buckets, or any Audit Manager
+     *        resource:
+     *        </p>
+     *        <p>
+     *        <code>ec2:instance,s3:bucket,auditmanager</code>
      */
 
     public void setResourceTypeFilters(java.util.Collection<String> resourceTypeFilters) {
@@ -1080,16 +1091,17 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
-     * </p>
-     * <p>
-     * For more information about ARNs, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * Name (ARN). For the list of services whose resources you can use in this parameter, see <a
+     * href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html">Services
+     * that support the Resource Groups Tagging API</a>.
      * </p>
      * <p>
      * You can specify multiple resource types by using an array. The array can include up to 100 items. Note that the
-     * length constraint requirement applies to each resource type filter.
+     * length constraint requirement applies to each resource type filter. For example, the following string would limit
+     * the response to only Amazon EC2 instances, Amazon S3 buckets, or any Audit Manager resource:
+     * </p>
+     * <p>
+     * <code>ec2:instance,s3:bucket,auditmanager</code>
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1104,16 +1116,18 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <code>ec2:instance</code> returns only EC2 instances. </p>
      *        <p>
      *        The string for each service name and resource type is the same as that embedded in a resource's Amazon
-     *        Resource Name (ARN). Consult the <i>AWS General Reference</i> for the following:
-     *        </p>
-     *        <p>
-     *        For more information about ARNs, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a>.
+     *        Resource Name (ARN). For the list of services whose resources you can use in this parameter, see <a
+     *        href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html"
+     *        >Services that support the Resource Groups Tagging API</a>.
      *        </p>
      *        <p>
      *        You can specify multiple resource types by using an array. The array can include up to 100 items. Note
-     *        that the length constraint requirement applies to each resource type filter.
+     *        that the length constraint requirement applies to each resource type filter. For example, the following
+     *        string would limit the response to only Amazon EC2 instances, Amazon S3 buckets, or any Audit Manager
+     *        resource:
+     *        </p>
+     *        <p>
+     *        <code>ec2:instance,s3:bucket,auditmanager</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1136,16 +1150,17 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
-     * </p>
-     * <p>
-     * For more information about ARNs, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * Name (ARN). For the list of services whose resources you can use in this parameter, see <a
+     * href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html">Services
+     * that support the Resource Groups Tagging API</a>.
      * </p>
      * <p>
      * You can specify multiple resource types by using an array. The array can include up to 100 items. Note that the
-     * length constraint requirement applies to each resource type filter.
+     * length constraint requirement applies to each resource type filter. For example, the following string would limit
+     * the response to only Amazon EC2 instances, Amazon S3 buckets, or any Audit Manager resource:
+     * </p>
+     * <p>
+     * <code>ec2:instance,s3:bucket,auditmanager</code>
      * </p>
      * 
      * @param resourceTypeFilters
@@ -1155,16 +1170,18 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <code>ec2:instance</code> returns only EC2 instances. </p>
      *        <p>
      *        The string for each service name and resource type is the same as that embedded in a resource's Amazon
-     *        Resource Name (ARN). Consult the <i>AWS General Reference</i> for the following:
-     *        </p>
-     *        <p>
-     *        For more information about ARNs, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a>.
+     *        Resource Name (ARN). For the list of services whose resources you can use in this parameter, see <a
+     *        href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html"
+     *        >Services that support the Resource Groups Tagging API</a>.
      *        </p>
      *        <p>
      *        You can specify multiple resource types by using an array. The array can include up to 100 items. Note
-     *        that the length constraint requirement applies to each resource type filter.
+     *        that the length constraint requirement applies to each resource type filter. For example, the following
+     *        string would limit the response to only Amazon EC2 instances, Amazon S3 buckets, or any Audit Manager
+     *        resource:
+     *        </p>
+     *        <p>
+     *        <code>ec2:instance,s3:bucket,auditmanager</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1334,8 +1351,8 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * An ARN (Amazon Resource Name) uniquely identifies a resource. For more information, see <a
-     * href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and
-     * AWS Service Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
+     * and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @return Specifies a list of ARNs of resources for which you want to retrieve tag data. You can't specify both
@@ -1348,8 +1365,9 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </p>
      *         <p>
      *         An ARN (Amazon Resource Name) uniquely identifies a resource. For more information, see <a
-     *         href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *         (ARNs) and AWS Service Namespaces</a> in the <i>AWS General Reference</i>.
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     *         (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General
+     *         Reference</i>.
      */
 
     public java.util.List<String> getResourceARNList() {
@@ -1369,8 +1387,8 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * An ARN (Amazon Resource Name) uniquely identifies a resource. For more information, see <a
-     * href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and
-     * AWS Service Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
+     * and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param resourceARNList
@@ -1384,8 +1402,8 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        An ARN (Amazon Resource Name) uniquely identifies a resource. For more information, see <a
-     *        href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a> in the <i>AWS General Reference</i>.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     *        (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      */
 
     public void setResourceARNList(java.util.Collection<String> resourceARNList) {
@@ -1410,8 +1428,8 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * An ARN (Amazon Resource Name) uniquely identifies a resource. For more information, see <a
-     * href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and
-     * AWS Service Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
+     * and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1430,8 +1448,8 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        An ARN (Amazon Resource Name) uniquely identifies a resource. For more information, see <a
-     *        href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a> in the <i>AWS General Reference</i>.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     *        (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1458,8 +1476,8 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <p>
      * An ARN (Amazon Resource Name) uniquely identifies a resource. For more information, see <a
-     * href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and
-     * AWS Service Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
+     * and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param resourceARNList
@@ -1473,8 +1491,8 @@ public class GetResourcesRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </p>
      *        <p>
      *        An ARN (Amazon Resource Name) uniquely identifies a resource. For more information, see <a
-     *        href="http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a> in the <i>AWS General Reference</i>.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
+     *        (ARNs) and Amazon Web Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

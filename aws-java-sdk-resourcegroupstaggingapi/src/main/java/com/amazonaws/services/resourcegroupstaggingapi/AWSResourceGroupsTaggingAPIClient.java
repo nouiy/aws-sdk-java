@@ -161,15 +161,15 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You must meet the prerequisites for using tag policies. For information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html"
-     *         >Prerequisites and Permissions for Using Tag Policies</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html"
+     *         >Prerequisites and Permissions for Using Tag Policies</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         You must enable the tag policies service principal (<code>tagpolicies.tag.amazonaws.com</code>) to
-     *         integrate with AWS Organizations For information, see <a
-     *         href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html"
+     *         integrate with Organizations For information, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html"
      *         >EnableAWSServiceAccess</a>.
      *         </p>
      *         </li>
@@ -207,9 +207,9 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You can't access the Amazon S3 bucket for report storage. For more information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
-     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>AWS Organizations
-     *         User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
+     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>Organizations User
+     *         Guide.</i>
      *         </p>
      *         </li>
      * @throws ThrottledException
@@ -270,7 +270,7 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      * <p>
      * For more information on tag policies, see <a
      * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html">Tag
-     * Policies</a> in the <i>AWS Organizations User Guide.</i>
+     * Policies</a> in the <i>Organizations User Guide.</i>
      * </p>
      * <p>
      * You can call this operation only from the organization's management account and from the us-east-1 Region.
@@ -294,15 +294,15 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You must meet the prerequisites for using tag policies. For information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html"
-     *         >Prerequisites and Permissions for Using Tag Policies</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html"
+     *         >Prerequisites and Permissions for Using Tag Policies</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         You must enable the tag policies service principal (<code>tagpolicies.tag.amazonaws.com</code>) to
-     *         integrate with AWS Organizations For information, see <a
-     *         href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html"
+     *         integrate with Organizations For information, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html"
      *         >EnableAWSServiceAccess</a>.
      *         </p>
      *         </li>
@@ -340,9 +340,9 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You can't access the Amazon S3 bucket for report storage. For more information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
-     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>AWS Organizations
-     *         User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
+     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>Organizations User
+     *         Guide.</i>
      *         </p>
      *         </li>
      * @throws ThrottledException
@@ -397,8 +397,8 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
 
     /**
      * <p>
-     * Returns all the tagged or previously tagged resources that are located in the specified Region for the AWS
-     * account.
+     * Returns all the tagged or previously tagged resources that are located in the specified Amazon Web Services
+     * Region for the account.
      * </p>
      * <p>
      * Depending on what information you want returned, you can also specify the following:
@@ -414,7 +414,7 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      * <p>
      * Information about compliance with the account's effective tag policy. For more information on tag policies, see
      * <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies.html">Tag
-     * Policies</a> in the <i>AWS Organizations User Guide.</i>
+     * Policies</a> in the <i>Organizations User Guide.</i>
      * </p>
      * </li>
      * </ul>
@@ -454,9 +454,9 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You can't access the Amazon S3 bucket for report storage. For more information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
-     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>AWS Organizations
-     *         User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
+     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>Organizations User
+     *         Guide.</i>
      *         </p>
      *         </li>
      * @throws ThrottledException
@@ -517,7 +517,7 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
 
     /**
      * <p>
-     * Returns all tag keys currently in use in the specified Region for the calling AWS account.
+     * Returns all tag keys currently in use in the specified Amazon Web Services Region for the calling account.
      * </p>
      * <p>
      * This operation supports pagination, where the response can be sent in multiple pages. You should check the
@@ -555,9 +555,9 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You can't access the Amazon S3 bucket for report storage. For more information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
-     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>AWS Organizations
-     *         User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
+     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>Organizations User
+     *         Guide.</i>
      *         </p>
      *         </li>
      * @throws ThrottledException
@@ -618,8 +618,8 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
 
     /**
      * <p>
-     * Returns all tag values for the specified key that are used in the specified AWS Region for the calling AWS
-     * account.
+     * Returns all tag values for the specified key that are used in the specified Amazon Web Services Region for the
+     * calling account.
      * </p>
      * <p>
      * This operation supports pagination, where the response can be sent in multiple pages. You should check the
@@ -657,9 +657,9 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You can't access the Amazon S3 bucket for report storage. For more information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
-     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>AWS Organizations
-     *         User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
+     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>Organizations User
+     *         Guide.</i>
      *         </p>
      *         </li>
      * @throws ThrottledException
@@ -747,15 +747,15 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You must meet the prerequisites for using tag policies. For information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html"
-     *         >Prerequisites and Permissions for Using Tag Policies</a> in the <i>AWS Organizations User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html"
+     *         >Prerequisites and Permissions for Using Tag Policies</a> in the <i>Organizations User Guide.</i>
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         You must enable the tag policies service principal (<code>tagpolicies.tag.amazonaws.com</code>) to
-     *         integrate with AWS Organizations For information, see <a
-     *         href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html"
+     *         integrate with Organizations For information, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnableAWSServiceAccess.html"
      *         >EnableAWSServiceAccess</a>.
      *         </p>
      *         </li>
@@ -793,9 +793,9 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You can't access the Amazon S3 bucket for report storage. For more information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
-     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>AWS Organizations
-     *         User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
+     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>Organizations User
+     *         Guide.</i>
      *         </p>
      *         </li>
      * @throws ThrottledException
@@ -858,19 +858,22 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      * Not all resources can have tags. For a list of services with resources that support tagging using this operation,
      * see <a
      * href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/supported-services.html">Services
-     * that support the Resource Groups Tagging API</a>.
+     * that support the Resource Groups Tagging API</a>. If the resource doesn't yet support this operation, the
+     * resource's service might support tagging using its own API operations. For more information, refer to the
+     * documentation for that service.
      * </p>
      * </li>
      * <li>
      * <p>
      * Each resource can have up to 50 tags. For other limits, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html#tag-conventions">Tag Naming and Usage
-     * Conventions</a> in the <i>AWS General Reference.</i>
+     * Conventions</a> in the <i>Amazon Web Services General Reference.</i>
      * </p>
      * </li>
      * <li>
      * <p>
-     * You can only tag resources that are located in the specified AWS Region for the AWS account.
+     * You can only tag resources that are located in the specified Amazon Web Services Region for the Amazon Web
+     * Services account.
      * </p>
      * </li>
      * <li>
@@ -887,6 +890,26 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      * sensitive data.
      * </p>
      * </important>
+     * <p>
+     * <b>Minimum permissions</b>
+     * </p>
+     * <p>
+     * In addition to the <code>tag:TagResources</code> permission required by this operation, you must also have the
+     * tagging permission defined by the service that created the resource. For example, to tag an Amazon EC2 instance
+     * using the <code>TagResources</code> operation, you must have both of the following permissions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>tag:TagResource</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ec2:CreateTags</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param tagResourcesRequest
      * @return Result of the TagResources operation returned by the service.
@@ -916,9 +939,9 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You can't access the Amazon S3 bucket for report storage. For more information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
-     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>AWS Organizations
-     *         User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
+     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>Organizations User
+     *         Guide.</i>
      *         </p>
      *         </li>
      * @throws ThrottledException
@@ -990,7 +1013,29 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      * </li>
      * <li>
      * <p>
-     * You can only tag resources that are located in the specified AWS Region for the calling AWS account.
+     * You can only tag resources that are located in the specified Amazon Web Services Region for the calling Amazon
+     * Web Services account.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>Minimum permissions</b>
+     * </p>
+     * <p>
+     * In addition to the <code>tag:UntagResources</code> permission required by this operation, you must also have the
+     * remove tags permission defined by the service that created the resource. For example, to remove the tags from an
+     * Amazon EC2 instance using the <code>UntagResources</code> operation, you must have both of the following
+     * permissions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>tag:UntagResource</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ec2:DeleteTags</code>
      * </p>
      * </li>
      * </ul>
@@ -1023,9 +1068,9 @@ public class AWSResourceGroupsTaggingAPIClient extends AmazonWebServiceClient im
      *         <li>
      *         <p>
      *         You can't access the Amazon S3 bucket for report storage. For more information, see <a href=
-     *         "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
-     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>AWS Organizations
-     *         User Guide.</i>
+     *         "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
+     *         >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>Organizations User
+     *         Guide.</i>
      *         </p>
      *         </li>
      * @throws ThrottledException

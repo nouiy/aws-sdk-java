@@ -33,7 +33,7 @@ public class GetResourcesResult extends com.amazonaws.AmazonWebServiceResult<com
     private String paginationToken;
     /**
      * <p>
-     * A list of resource ARNs and the tags (keys and values) associated with those ARNs.
+     * A list of resource ARNs and the tags (keys and values) associated with each.
      * </p>
      */
     private java.util.List<ResourceTagMapping> resourceTagMappingList;
@@ -92,10 +92,10 @@ public class GetResourcesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of resource ARNs and the tags (keys and values) associated with those ARNs.
+     * A list of resource ARNs and the tags (keys and values) associated with each.
      * </p>
      * 
-     * @return A list of resource ARNs and the tags (keys and values) associated with those ARNs.
+     * @return A list of resource ARNs and the tags (keys and values) associated with each.
      */
 
     public java.util.List<ResourceTagMapping> getResourceTagMappingList() {
@@ -104,11 +104,11 @@ public class GetResourcesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of resource ARNs and the tags (keys and values) associated with those ARNs.
+     * A list of resource ARNs and the tags (keys and values) associated with each.
      * </p>
      * 
      * @param resourceTagMappingList
-     *        A list of resource ARNs and the tags (keys and values) associated with those ARNs.
+     *        A list of resource ARNs and the tags (keys and values) associated with each.
      */
 
     public void setResourceTagMappingList(java.util.Collection<ResourceTagMapping> resourceTagMappingList) {
@@ -122,7 +122,7 @@ public class GetResourcesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of resource ARNs and the tags (keys and values) associated with those ARNs.
+     * A list of resource ARNs and the tags (keys and values) associated with each.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -131,7 +131,7 @@ public class GetResourcesResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param resourceTagMappingList
-     *        A list of resource ARNs and the tags (keys and values) associated with those ARNs.
+     *        A list of resource ARNs and the tags (keys and values) associated with each.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,11 +147,11 @@ public class GetResourcesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of resource ARNs and the tags (keys and values) associated with those ARNs.
+     * A list of resource ARNs and the tags (keys and values) associated with each.
      * </p>
      * 
      * @param resourceTagMappingList
-     *        A list of resource ARNs and the tags (keys and values) associated with those ARNs.
+     *        A list of resource ARNs and the tags (keys and values) associated with each.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

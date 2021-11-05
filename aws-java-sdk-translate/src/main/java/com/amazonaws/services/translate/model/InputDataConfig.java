@@ -71,6 +71,12 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      * more Excel Workbook files (.xlsx).
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>application/x-xliff+xml</code>: The input data consists of one or more XML Localization Interchange File
+     * Format (XLIFF) files (.xlf). Amazon Translate supports only XLIFF version 1.2.
+     * </p>
+     * </li>
      * </ul>
      * <important>
      * <p>
@@ -165,6 +171,12 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      * more Excel Workbook files (.xlsx).
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>application/x-xliff+xml</code>: The input data consists of one or more XML Localization Interchange File
+     * Format (XLIFF) files (.xlf). Amazon Translate supports only XLIFF version 1.2.
+     * </p>
+     * </li>
      * </ul>
      * <important>
      * <p>
@@ -207,6 +219,12 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        <code>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</code>: The input data consists of
      *        one or more Excel Workbook files (.xlsx).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>application/x-xliff+xml</code>: The input data consists of one or more XML Localization Interchange
+     *        File Format (XLIFF) files (.xlf). Amazon Translate supports only XLIFF version 1.2.
      *        </p>
      *        </li>
      *        </ul>
@@ -259,6 +277,12 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      * more Excel Workbook files (.xlsx).
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>application/x-xliff+xml</code>: The input data consists of one or more XML Localization Interchange File
+     * Format (XLIFF) files (.xlf). Amazon Translate supports only XLIFF version 1.2.
+     * </p>
+     * </li>
      * </ul>
      * <important>
      * <p>
@@ -300,6 +324,12 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      *         <p>
      *         <code>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</code>: The input data consists
      *         of one or more Excel Workbook files (.xlsx).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>application/x-xliff+xml</code>: The input data consists of one or more XML Localization Interchange
+     *         File Format (XLIFF) files (.xlf). Amazon Translate supports only XLIFF version 1.2.
      *         </p>
      *         </li>
      *         </ul>
@@ -352,6 +382,12 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      * more Excel Workbook files (.xlsx).
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>application/x-xliff+xml</code>: The input data consists of one or more XML Localization Interchange File
+     * Format (XLIFF) files (.xlf). Amazon Translate supports only XLIFF version 1.2.
+     * </p>
+     * </li>
      * </ul>
      * <important>
      * <p>
@@ -394,6 +430,12 @@ public class InputDataConfig implements Serializable, Cloneable, StructuredPojo 
      *        <p>
      *        <code>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</code>: The input data consists of
      *        one or more Excel Workbook files (.xlsx).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>application/x-xliff+xml</code>: The input data consists of one or more XML Localization Interchange
+     *        File Format (XLIFF) files (.xlf). Amazon Translate supports only XLIFF version 1.2.
      *        </p>
      *        </li>
      *        </ul>

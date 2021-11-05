@@ -36,6 +36,8 @@ public class OutputDataConfig implements Serializable, Cloneable, StructuredPojo
      */
     private String s3Uri;
 
+    private EncryptionKey encryptionKey;
+
     /**
      * <p>
      * The URI of the S3 folder that contains a translation job's output file. The folder must be in the same Region as
@@ -83,6 +85,32 @@ public class OutputDataConfig implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * @param encryptionKey
+     */
+
+    public void setEncryptionKey(EncryptionKey encryptionKey) {
+        this.encryptionKey = encryptionKey;
+    }
+
+    /**
+     * @return
+     */
+
+    public EncryptionKey getEncryptionKey() {
+        return this.encryptionKey;
+    }
+
+    /**
+     * @param encryptionKey
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OutputDataConfig withEncryptionKey(EncryptionKey encryptionKey) {
+        setEncryptionKey(encryptionKey);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -95,7 +123,9 @@ public class OutputDataConfig implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getS3Uri() != null)
-            sb.append("S3Uri: ").append(getS3Uri());
+            sb.append("S3Uri: ").append(getS3Uri()).append(",");
+        if (getEncryptionKey() != null)
+            sb.append("EncryptionKey: ").append(getEncryptionKey());
         sb.append("}");
         return sb.toString();
     }
@@ -114,6 +144,10 @@ public class OutputDataConfig implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getS3Uri() != null && other.getS3Uri().equals(this.getS3Uri()) == false)
             return false;
+        if (other.getEncryptionKey() == null ^ this.getEncryptionKey() == null)
+            return false;
+        if (other.getEncryptionKey() != null && other.getEncryptionKey().equals(this.getEncryptionKey()) == false)
+            return false;
         return true;
     }
 
@@ -123,6 +157,7 @@ public class OutputDataConfig implements Serializable, Cloneable, StructuredPojo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getS3Uri() == null) ? 0 : getS3Uri().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionKey() == null) ? 0 : getEncryptionKey().hashCode());
         return hashCode;
     }
 

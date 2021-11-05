@@ -46,7 +46,7 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an AWS Identity Access and Management (IAM) role that grants Amazon Translate
-     * read access to your input data. For more nformation, see <a>identity-and-access-management</a>.
+     * read access to your input data. For more information, see <a>identity-and-access-management</a>.
      * </p>
      */
     private String dataAccessRoleArn;
@@ -67,15 +67,40 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
     private java.util.List<String> targetLanguageCodes;
     /**
      * <p>
-     * The name of the terminology to use in the batch translation job. For a list of available terminologies, use the
-     * <a>ListTerminologies</a> operation.
+     * The name of a custom terminology resource to add to the translation job. This resource lists examples source
+     * terms and the desired translation for each term.
+     * </p>
+     * <p>
+     * This parameter accepts only one custom terminology resource.
+     * </p>
+     * <p>
+     * For a list of available custom terminology resources, use the <a>ListTerminologies</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>how-custom-terminology</a>.
      * </p>
      */
     private java.util.List<String> terminologyNames;
     /**
      * <p>
-     * The names of the parallel data resources to use in the batch translation job. For a list of available parallel
-     * data resources, use the <a>ListParallelData</a> operation.
+     * The name of a parallel data resource to add to the translation job. This resource consists of examples that show
+     * how you want segments of text to be translated. When you add parallel data to a translation job, you create an
+     * <i>Active Custom Translation</i> job.
+     * </p>
+     * <p>
+     * This parameter accepts only one parallel data resource.
+     * </p>
+     * <note>
+     * <p>
+     * Active Custom Translation jobs are priced at a higher rate than other jobs that don't use parallel data. For more
+     * information, see <a href="http://aws.amazon.com/translate/pricing/">Amazon Translate pricing</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For a list of available parallel data resources, use the <a>ListParallelData</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>customizing-translations-parallel-data</a>.
      * </p>
      */
     private java.util.List<String> parallelDataNames;
@@ -209,12 +234,12 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an AWS Identity Access and Management (IAM) role that grants Amazon Translate
-     * read access to your input data. For more nformation, see <a>identity-and-access-management</a>.
+     * read access to your input data. For more information, see <a>identity-and-access-management</a>.
      * </p>
      * 
      * @param dataAccessRoleArn
      *        The Amazon Resource Name (ARN) of an AWS Identity Access and Management (IAM) role that grants Amazon
-     *        Translate read access to your input data. For more nformation, see <a>identity-and-access-management</a>.
+     *        Translate read access to your input data. For more information, see <a>identity-and-access-management</a>.
      */
 
     public void setDataAccessRoleArn(String dataAccessRoleArn) {
@@ -224,11 +249,12 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an AWS Identity Access and Management (IAM) role that grants Amazon Translate
-     * read access to your input data. For more nformation, see <a>identity-and-access-management</a>.
+     * read access to your input data. For more information, see <a>identity-and-access-management</a>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an AWS Identity Access and Management (IAM) role that grants Amazon
-     *         Translate read access to your input data. For more nformation, see <a>identity-and-access-management</a>.
+     *         Translate read access to your input data. For more information, see
+     *         <a>identity-and-access-management</a>.
      */
 
     public String getDataAccessRoleArn() {
@@ -238,12 +264,12 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an AWS Identity Access and Management (IAM) role that grants Amazon Translate
-     * read access to your input data. For more nformation, see <a>identity-and-access-management</a>.
+     * read access to your input data. For more information, see <a>identity-and-access-management</a>.
      * </p>
      * 
      * @param dataAccessRoleArn
      *        The Amazon Resource Name (ARN) of an AWS Identity Access and Management (IAM) role that grants Amazon
-     *        Translate read access to your input data. For more nformation, see <a>identity-and-access-management</a>.
+     *        Translate read access to your input data. For more information, see <a>identity-and-access-management</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -379,12 +405,29 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the terminology to use in the batch translation job. For a list of available terminologies, use the
-     * <a>ListTerminologies</a> operation.
+     * The name of a custom terminology resource to add to the translation job. This resource lists examples source
+     * terms and the desired translation for each term.
+     * </p>
+     * <p>
+     * This parameter accepts only one custom terminology resource.
+     * </p>
+     * <p>
+     * For a list of available custom terminology resources, use the <a>ListTerminologies</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>how-custom-terminology</a>.
      * </p>
      * 
-     * @return The name of the terminology to use in the batch translation job. For a list of available terminologies,
-     *         use the <a>ListTerminologies</a> operation.
+     * @return The name of a custom terminology resource to add to the translation job. This resource lists examples
+     *         source terms and the desired translation for each term.</p>
+     *         <p>
+     *         This parameter accepts only one custom terminology resource.
+     *         </p>
+     *         <p>
+     *         For a list of available custom terminology resources, use the <a>ListTerminologies</a> operation.
+     *         </p>
+     *         <p>
+     *         For more information, see <a>how-custom-terminology</a>.
      */
 
     public java.util.List<String> getTerminologyNames() {
@@ -393,13 +436,30 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the terminology to use in the batch translation job. For a list of available terminologies, use the
-     * <a>ListTerminologies</a> operation.
+     * The name of a custom terminology resource to add to the translation job. This resource lists examples source
+     * terms and the desired translation for each term.
+     * </p>
+     * <p>
+     * This parameter accepts only one custom terminology resource.
+     * </p>
+     * <p>
+     * For a list of available custom terminology resources, use the <a>ListTerminologies</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>how-custom-terminology</a>.
      * </p>
      * 
      * @param terminologyNames
-     *        The name of the terminology to use in the batch translation job. For a list of available terminologies,
-     *        use the <a>ListTerminologies</a> operation.
+     *        The name of a custom terminology resource to add to the translation job. This resource lists examples
+     *        source terms and the desired translation for each term.</p>
+     *        <p>
+     *        This parameter accepts only one custom terminology resource.
+     *        </p>
+     *        <p>
+     *        For a list of available custom terminology resources, use the <a>ListTerminologies</a> operation.
+     *        </p>
+     *        <p>
+     *        For more information, see <a>how-custom-terminology</a>.
      */
 
     public void setTerminologyNames(java.util.Collection<String> terminologyNames) {
@@ -413,8 +473,17 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the terminology to use in the batch translation job. For a list of available terminologies, use the
-     * <a>ListTerminologies</a> operation.
+     * The name of a custom terminology resource to add to the translation job. This resource lists examples source
+     * terms and the desired translation for each term.
+     * </p>
+     * <p>
+     * This parameter accepts only one custom terminology resource.
+     * </p>
+     * <p>
+     * For a list of available custom terminology resources, use the <a>ListTerminologies</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>how-custom-terminology</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -423,8 +492,16 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param terminologyNames
-     *        The name of the terminology to use in the batch translation job. For a list of available terminologies,
-     *        use the <a>ListTerminologies</a> operation.
+     *        The name of a custom terminology resource to add to the translation job. This resource lists examples
+     *        source terms and the desired translation for each term.</p>
+     *        <p>
+     *        This parameter accepts only one custom terminology resource.
+     *        </p>
+     *        <p>
+     *        For a list of available custom terminology resources, use the <a>ListTerminologies</a> operation.
+     *        </p>
+     *        <p>
+     *        For more information, see <a>how-custom-terminology</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -440,13 +517,30 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The name of the terminology to use in the batch translation job. For a list of available terminologies, use the
-     * <a>ListTerminologies</a> operation.
+     * The name of a custom terminology resource to add to the translation job. This resource lists examples source
+     * terms and the desired translation for each term.
+     * </p>
+     * <p>
+     * This parameter accepts only one custom terminology resource.
+     * </p>
+     * <p>
+     * For a list of available custom terminology resources, use the <a>ListTerminologies</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>how-custom-terminology</a>.
      * </p>
      * 
      * @param terminologyNames
-     *        The name of the terminology to use in the batch translation job. For a list of available terminologies,
-     *        use the <a>ListTerminologies</a> operation.
+     *        The name of a custom terminology resource to add to the translation job. This resource lists examples
+     *        source terms and the desired translation for each term.</p>
+     *        <p>
+     *        This parameter accepts only one custom terminology resource.
+     *        </p>
+     *        <p>
+     *        For a list of available custom terminology resources, use the <a>ListTerminologies</a> operation.
+     *        </p>
+     *        <p>
+     *        For more information, see <a>how-custom-terminology</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -457,12 +551,44 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The names of the parallel data resources to use in the batch translation job. For a list of available parallel
-     * data resources, use the <a>ListParallelData</a> operation.
+     * The name of a parallel data resource to add to the translation job. This resource consists of examples that show
+     * how you want segments of text to be translated. When you add parallel data to a translation job, you create an
+     * <i>Active Custom Translation</i> job.
+     * </p>
+     * <p>
+     * This parameter accepts only one parallel data resource.
+     * </p>
+     * <note>
+     * <p>
+     * Active Custom Translation jobs are priced at a higher rate than other jobs that don't use parallel data. For more
+     * information, see <a href="http://aws.amazon.com/translate/pricing/">Amazon Translate pricing</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For a list of available parallel data resources, use the <a>ListParallelData</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>customizing-translations-parallel-data</a>.
      * </p>
      * 
-     * @return The names of the parallel data resources to use in the batch translation job. For a list of available
-     *         parallel data resources, use the <a>ListParallelData</a> operation.
+     * @return The name of a parallel data resource to add to the translation job. This resource consists of examples
+     *         that show how you want segments of text to be translated. When you add parallel data to a translation
+     *         job, you create an <i>Active Custom Translation</i> job. </p>
+     *         <p>
+     *         This parameter accepts only one parallel data resource.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Active Custom Translation jobs are priced at a higher rate than other jobs that don't use parallel data.
+     *         For more information, see <a href="http://aws.amazon.com/translate/pricing/">Amazon Translate
+     *         pricing</a>.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         For a list of available parallel data resources, use the <a>ListParallelData</a> operation.
+     *         </p>
+     *         <p>
+     *         For more information, see <a>customizing-translations-parallel-data</a>.
      */
 
     public java.util.List<String> getParallelDataNames() {
@@ -471,13 +597,44 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The names of the parallel data resources to use in the batch translation job. For a list of available parallel
-     * data resources, use the <a>ListParallelData</a> operation.
+     * The name of a parallel data resource to add to the translation job. This resource consists of examples that show
+     * how you want segments of text to be translated. When you add parallel data to a translation job, you create an
+     * <i>Active Custom Translation</i> job.
+     * </p>
+     * <p>
+     * This parameter accepts only one parallel data resource.
+     * </p>
+     * <note>
+     * <p>
+     * Active Custom Translation jobs are priced at a higher rate than other jobs that don't use parallel data. For more
+     * information, see <a href="http://aws.amazon.com/translate/pricing/">Amazon Translate pricing</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For a list of available parallel data resources, use the <a>ListParallelData</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>customizing-translations-parallel-data</a>.
      * </p>
      * 
      * @param parallelDataNames
-     *        The names of the parallel data resources to use in the batch translation job. For a list of available
-     *        parallel data resources, use the <a>ListParallelData</a> operation.
+     *        The name of a parallel data resource to add to the translation job. This resource consists of examples
+     *        that show how you want segments of text to be translated. When you add parallel data to a translation job,
+     *        you create an <i>Active Custom Translation</i> job. </p>
+     *        <p>
+     *        This parameter accepts only one parallel data resource.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Active Custom Translation jobs are priced at a higher rate than other jobs that don't use parallel data.
+     *        For more information, see <a href="http://aws.amazon.com/translate/pricing/">Amazon Translate pricing</a>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For a list of available parallel data resources, use the <a>ListParallelData</a> operation.
+     *        </p>
+     *        <p>
+     *        For more information, see <a>customizing-translations-parallel-data</a>.
      */
 
     public void setParallelDataNames(java.util.Collection<String> parallelDataNames) {
@@ -491,8 +648,24 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The names of the parallel data resources to use in the batch translation job. For a list of available parallel
-     * data resources, use the <a>ListParallelData</a> operation.
+     * The name of a parallel data resource to add to the translation job. This resource consists of examples that show
+     * how you want segments of text to be translated. When you add parallel data to a translation job, you create an
+     * <i>Active Custom Translation</i> job.
+     * </p>
+     * <p>
+     * This parameter accepts only one parallel data resource.
+     * </p>
+     * <note>
+     * <p>
+     * Active Custom Translation jobs are priced at a higher rate than other jobs that don't use parallel data. For more
+     * information, see <a href="http://aws.amazon.com/translate/pricing/">Amazon Translate pricing</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For a list of available parallel data resources, use the <a>ListParallelData</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>customizing-translations-parallel-data</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -501,8 +674,23 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param parallelDataNames
-     *        The names of the parallel data resources to use in the batch translation job. For a list of available
-     *        parallel data resources, use the <a>ListParallelData</a> operation.
+     *        The name of a parallel data resource to add to the translation job. This resource consists of examples
+     *        that show how you want segments of text to be translated. When you add parallel data to a translation job,
+     *        you create an <i>Active Custom Translation</i> job. </p>
+     *        <p>
+     *        This parameter accepts only one parallel data resource.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Active Custom Translation jobs are priced at a higher rate than other jobs that don't use parallel data.
+     *        For more information, see <a href="http://aws.amazon.com/translate/pricing/">Amazon Translate pricing</a>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For a list of available parallel data resources, use the <a>ListParallelData</a> operation.
+     *        </p>
+     *        <p>
+     *        For more information, see <a>customizing-translations-parallel-data</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -518,13 +706,44 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The names of the parallel data resources to use in the batch translation job. For a list of available parallel
-     * data resources, use the <a>ListParallelData</a> operation.
+     * The name of a parallel data resource to add to the translation job. This resource consists of examples that show
+     * how you want segments of text to be translated. When you add parallel data to a translation job, you create an
+     * <i>Active Custom Translation</i> job.
+     * </p>
+     * <p>
+     * This parameter accepts only one parallel data resource.
+     * </p>
+     * <note>
+     * <p>
+     * Active Custom Translation jobs are priced at a higher rate than other jobs that don't use parallel data. For more
+     * information, see <a href="http://aws.amazon.com/translate/pricing/">Amazon Translate pricing</a>.
+     * </p>
+     * </note>
+     * <p>
+     * For a list of available parallel data resources, use the <a>ListParallelData</a> operation.
+     * </p>
+     * <p>
+     * For more information, see <a>customizing-translations-parallel-data</a>.
      * </p>
      * 
      * @param parallelDataNames
-     *        The names of the parallel data resources to use in the batch translation job. For a list of available
-     *        parallel data resources, use the <a>ListParallelData</a> operation.
+     *        The name of a parallel data resource to add to the translation job. This resource consists of examples
+     *        that show how you want segments of text to be translated. When you add parallel data to a translation job,
+     *        you create an <i>Active Custom Translation</i> job. </p>
+     *        <p>
+     *        This parameter accepts only one parallel data resource.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Active Custom Translation jobs are priced at a higher rate than other jobs that don't use parallel data.
+     *        For more information, see <a href="http://aws.amazon.com/translate/pricing/">Amazon Translate pricing</a>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For a list of available parallel data resources, use the <a>ListParallelData</a> operation.
+     *        </p>
+     *        <p>
+     *        For more information, see <a>customizing-translations-parallel-data</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

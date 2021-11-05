@@ -21,35 +21,36 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Information about the errors that are returned for each failed resource. This information can include
  * <code>InternalServiceException</code> and <code>InvalidParameterException</code> errors. It can also include any
- * valid error code returned by the AWS service that hosts the resource that the ARN key represents.
+ * valid error code returned by the Amazon Web Services service that hosts the resource that the ARN key represents.
  * </p>
  * <p>
- * The following are common error codes that you might receive from other AWS services:
+ * The following are common error codes that you might receive from other Amazon Web Services services:
  * </p>
  * <ul>
  * <li>
  * <p>
  * <b>InternalServiceException</b> – This can mean that the Resource Groups Tagging API didn't receive a response from
- * another AWS service. It can also mean the the resource type in the request is not supported by the Resource Groups
- * Tagging API. In these cases, it's safe to retry the request and then call <a
- * href="http://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/API_GetResources.html">GetResources</a> to
- * verify the changes.
+ * another Amazon Web Services service. It can also mean that the resource type in the request is not supported by the
+ * Resource Groups Tagging API. In these cases, it's safe to retry the request and then call <a
+ * href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/API_GetResources.html">GetResources</a>
+ * to verify the changes.
  * </p>
  * </li>
  * <li>
  * <p>
- * <b>AccessDeniedException</b> – This can mean that you need permission to calling tagging operations in the AWS
- * service that contains the resource. For example, to use the Resource Groups Tagging API to tag a CloudWatch alarm
- * resource, you need permission to call <a
- * href="http://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/API_TagResources.html">
+ * <b>AccessDeniedException</b> – This can mean that you need permission to call the tagging operations in the Amazon
+ * Web Services service that contains the resource. For example, to use the Resource Groups Tagging API to tag a Amazon
+ * CloudWatch alarm resource, you need permission to call both <a
+ * href="https://docs.aws.amazon.com/resourcegroupstagging/latest/APIReference/API_TagResources.html">
  * <code>TagResources</code> </a> <i>and</i> <a
- * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_TagResource.html"> <code>TagResource</code>
- * </a> in the CloudWatch API.
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_TagResource.html">
+ * <code>TagResource</code> </a> in the CloudWatch API.
  * </p>
  * </li>
  * </ul>
  * <p>
- * For more information on errors that are generated from other AWS services, see the documentation for that service.
+ * For more information on errors that are generated from other Amazon Web Services services, see the documentation for
+ * that service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/resourcegroupstaggingapi-2017-01-26/FailureInfo"
@@ -67,8 +68,8 @@ public class FailureInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The code of the common error. Valid values include <code>InternalServiceException</code>,
-     * <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts the
-     * resource that you want to tag.
+     * <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services service that
+     * hosts the resource that you want to tag.
      * </p>
      */
     private String errorCode;
@@ -122,14 +123,14 @@ public class FailureInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The code of the common error. Valid values include <code>InternalServiceException</code>,
-     * <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts the
-     * resource that you want to tag.
+     * <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services service that
+     * hosts the resource that you want to tag.
      * </p>
      * 
      * @param errorCode
      *        The code of the common error. Valid values include <code>InternalServiceException</code>,
-     *        <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts
-     *        the resource that you want to tag.
+     *        <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services
+     *        service that hosts the resource that you want to tag.
      * @see ErrorCode
      */
 
@@ -140,13 +141,13 @@ public class FailureInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The code of the common error. Valid values include <code>InternalServiceException</code>,
-     * <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts the
-     * resource that you want to tag.
+     * <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services service that
+     * hosts the resource that you want to tag.
      * </p>
      * 
      * @return The code of the common error. Valid values include <code>InternalServiceException</code>,
-     *         <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts
-     *         the resource that you want to tag.
+     *         <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services
+     *         service that hosts the resource that you want to tag.
      * @see ErrorCode
      */
 
@@ -157,14 +158,14 @@ public class FailureInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The code of the common error. Valid values include <code>InternalServiceException</code>,
-     * <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts the
-     * resource that you want to tag.
+     * <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services service that
+     * hosts the resource that you want to tag.
      * </p>
      * 
      * @param errorCode
      *        The code of the common error. Valid values include <code>InternalServiceException</code>,
-     *        <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts
-     *        the resource that you want to tag.
+     *        <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services
+     *        service that hosts the resource that you want to tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ErrorCode
      */
@@ -177,14 +178,14 @@ public class FailureInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The code of the common error. Valid values include <code>InternalServiceException</code>,
-     * <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts the
-     * resource that you want to tag.
+     * <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services service that
+     * hosts the resource that you want to tag.
      * </p>
      * 
      * @param errorCode
      *        The code of the common error. Valid values include <code>InternalServiceException</code>,
-     *        <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts
-     *        the resource that you want to tag.
+     *        <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services
+     *        service that hosts the resource that you want to tag.
      * @see ErrorCode
      */
 
@@ -195,14 +196,14 @@ public class FailureInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The code of the common error. Valid values include <code>InternalServiceException</code>,
-     * <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts the
-     * resource that you want to tag.
+     * <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services service that
+     * hosts the resource that you want to tag.
      * </p>
      * 
      * @param errorCode
      *        The code of the common error. Valid values include <code>InternalServiceException</code>,
-     *        <code>InvalidParameterException</code>, and any valid error code returned by the AWS service that hosts
-     *        the resource that you want to tag.
+     *        <code>InvalidParameterException</code>, and any valid error code returned by the Amazon Web Services
+     *        service that hosts the resource that you want to tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ErrorCode
      */

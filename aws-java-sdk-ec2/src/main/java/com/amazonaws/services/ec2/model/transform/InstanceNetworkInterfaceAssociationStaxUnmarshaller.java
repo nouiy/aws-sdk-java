@@ -48,6 +48,11 @@ public class InstanceNetworkInterfaceAssociationStaxUnmarshaller implements Unma
                     continue;
                 }
 
+                if (context.testExpression("customerOwnedIp", targetDepth)) {
+                    instanceNetworkInterfaceAssociation.setCustomerOwnedIp(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("ipOwnerId", targetDepth)) {
                     instanceNetworkInterfaceAssociation.setIpOwnerId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

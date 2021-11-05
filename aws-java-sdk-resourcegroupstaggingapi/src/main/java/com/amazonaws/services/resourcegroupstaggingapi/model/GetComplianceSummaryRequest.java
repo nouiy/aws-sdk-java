@@ -34,8 +34,8 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
     private java.util.List<String> targetIdFilters;
     /**
      * <p>
-     * Specifies a list of AWS Regions to limit the output by. If you use this parameter, the count of returned
-     * noncompliant resources includes only resources in the specified Regions.
+     * Specifies a list of Amazon Web Services Regions to limit the output to. If you use this parameter, the count of
+     * returned noncompliant resources includes only resources in the specified Regions.
      * </p>
      */
     private java.util.List<String> regionFilters;
@@ -48,14 +48,15 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
+     * Name (ARN). Consult the <i> <a href="https://docs.aws.amazon.com/general/latest/gr/">Amazon Web Services General
+     * Reference</a> </i> for the following:
      * </p>
      * <ul>
      * <li>
      * <p>
      * For a list of service name strings, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces"
-     * >AWS Service Namespaces</a>.
+     * >Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * <li>
@@ -68,7 +69,7 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * and Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * </ul>
@@ -193,12 +194,12 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies a list of AWS Regions to limit the output by. If you use this parameter, the count of returned
-     * noncompliant resources includes only resources in the specified Regions.
+     * Specifies a list of Amazon Web Services Regions to limit the output to. If you use this parameter, the count of
+     * returned noncompliant resources includes only resources in the specified Regions.
      * </p>
      * 
-     * @return Specifies a list of AWS Regions to limit the output by. If you use this parameter, the count of returned
-     *         noncompliant resources includes only resources in the specified Regions.
+     * @return Specifies a list of Amazon Web Services Regions to limit the output to. If you use this parameter, the
+     *         count of returned noncompliant resources includes only resources in the specified Regions.
      */
 
     public java.util.List<String> getRegionFilters() {
@@ -207,13 +208,13 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies a list of AWS Regions to limit the output by. If you use this parameter, the count of returned
-     * noncompliant resources includes only resources in the specified Regions.
+     * Specifies a list of Amazon Web Services Regions to limit the output to. If you use this parameter, the count of
+     * returned noncompliant resources includes only resources in the specified Regions.
      * </p>
      * 
      * @param regionFilters
-     *        Specifies a list of AWS Regions to limit the output by. If you use this parameter, the count of returned
-     *        noncompliant resources includes only resources in the specified Regions.
+     *        Specifies a list of Amazon Web Services Regions to limit the output to. If you use this parameter, the
+     *        count of returned noncompliant resources includes only resources in the specified Regions.
      */
 
     public void setRegionFilters(java.util.Collection<String> regionFilters) {
@@ -227,8 +228,8 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies a list of AWS Regions to limit the output by. If you use this parameter, the count of returned
-     * noncompliant resources includes only resources in the specified Regions.
+     * Specifies a list of Amazon Web Services Regions to limit the output to. If you use this parameter, the count of
+     * returned noncompliant resources includes only resources in the specified Regions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -237,8 +238,8 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param regionFilters
-     *        Specifies a list of AWS Regions to limit the output by. If you use this parameter, the count of returned
-     *        noncompliant resources includes only resources in the specified Regions.
+     *        Specifies a list of Amazon Web Services Regions to limit the output to. If you use this parameter, the
+     *        count of returned noncompliant resources includes only resources in the specified Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -254,13 +255,13 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies a list of AWS Regions to limit the output by. If you use this parameter, the count of returned
-     * noncompliant resources includes only resources in the specified Regions.
+     * Specifies a list of Amazon Web Services Regions to limit the output to. If you use this parameter, the count of
+     * returned noncompliant resources includes only resources in the specified Regions.
      * </p>
      * 
      * @param regionFilters
-     *        Specifies a list of AWS Regions to limit the output by. If you use this parameter, the count of returned
-     *        noncompliant resources includes only resources in the specified Regions.
+     *        Specifies a list of Amazon Web Services Regions to limit the output to. If you use this parameter, the
+     *        count of returned noncompliant resources includes only resources in the specified Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -278,14 +279,15 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
+     * Name (ARN). Consult the <i> <a href="https://docs.aws.amazon.com/general/latest/gr/">Amazon Web Services General
+     * Reference</a> </i> for the following:
      * </p>
      * <ul>
      * <li>
      * <p>
      * For a list of service name strings, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces"
-     * >AWS Service Namespaces</a>.
+     * >Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * <li>
@@ -298,7 +300,7 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * and Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * </ul>
@@ -310,17 +312,18 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * @return Specifies that you want the response to include information for only resources of the specified types.
      *         The format of each resource type is <code>service[:resourceType]</code>. For example, specifying a
      *         resource type of <code>ec2</code> returns all Amazon EC2 resources (which includes EC2 instances).
-     *         Specifying a resource type of <code>ec2:instance</code> returns only EC2 instances. </p>
+     *         Specifying a resource type of <code>ec2:instance</code> returns only EC2 instances.</p>
      *         <p>
      *         The string for each service name and resource type is the same as that embedded in a resource's Amazon
-     *         Resource Name (ARN). Consult the <i>AWS General Reference</i> for the following:
+     *         Resource Name (ARN). Consult the <i> <a href="https://docs.aws.amazon.com/general/latest/gr/">Amazon Web
+     *         Services General Reference</a> </i> for the following:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
      *         For a list of service name strings, see <a href=
      *         "https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces"
-     *         >AWS Service Namespaces</a>.
+     *         >Amazon Web Services Service Namespaces</a>.
      *         </p>
      *         </li>
      *         <li>
@@ -334,7 +337,7 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      *         <p>
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *         (ARNs) and AWS Service Namespaces</a>.
+     *         (ARNs) and Amazon Web Services Service Namespaces</a>.
      *         </p>
      *         </li>
      *         </ul>
@@ -356,14 +359,15 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
+     * Name (ARN). Consult the <i> <a href="https://docs.aws.amazon.com/general/latest/gr/">Amazon Web Services General
+     * Reference</a> </i> for the following:
      * </p>
      * <ul>
      * <li>
      * <p>
      * For a list of service name strings, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces"
-     * >AWS Service Namespaces</a>.
+     * >Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * <li>
@@ -376,7 +380,7 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * and Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * </ul>
@@ -389,17 +393,18 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      *        Specifies that you want the response to include information for only resources of the specified types. The
      *        format of each resource type is <code>service[:resourceType]</code>. For example, specifying a resource
      *        type of <code>ec2</code> returns all Amazon EC2 resources (which includes EC2 instances). Specifying a
-     *        resource type of <code>ec2:instance</code> returns only EC2 instances. </p>
+     *        resource type of <code>ec2:instance</code> returns only EC2 instances.</p>
      *        <p>
      *        The string for each service name and resource type is the same as that embedded in a resource's Amazon
-     *        Resource Name (ARN). Consult the <i>AWS General Reference</i> for the following:
+     *        Resource Name (ARN). Consult the <i> <a href="https://docs.aws.amazon.com/general/latest/gr/">Amazon Web
+     *        Services General Reference</a> </i> for the following:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        For a list of service name strings, see <a href=
      *        "https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces"
-     *        >AWS Service Namespaces</a>.
+     *        >Amazon Web Services Service Namespaces</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -413,7 +418,7 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      *        <p>
      *        For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a>.
+     *        (ARNs) and Amazon Web Services Service Namespaces</a>.
      *        </p>
      *        </li>
      *        </ul>
@@ -440,14 +445,15 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
+     * Name (ARN). Consult the <i> <a href="https://docs.aws.amazon.com/general/latest/gr/">Amazon Web Services General
+     * Reference</a> </i> for the following:
      * </p>
      * <ul>
      * <li>
      * <p>
      * For a list of service name strings, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces"
-     * >AWS Service Namespaces</a>.
+     * >Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * <li>
@@ -460,7 +466,7 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * and Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * </ul>
@@ -478,17 +484,18 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      *        Specifies that you want the response to include information for only resources of the specified types. The
      *        format of each resource type is <code>service[:resourceType]</code>. For example, specifying a resource
      *        type of <code>ec2</code> returns all Amazon EC2 resources (which includes EC2 instances). Specifying a
-     *        resource type of <code>ec2:instance</code> returns only EC2 instances. </p>
+     *        resource type of <code>ec2:instance</code> returns only EC2 instances.</p>
      *        <p>
      *        The string for each service name and resource type is the same as that embedded in a resource's Amazon
-     *        Resource Name (ARN). Consult the <i>AWS General Reference</i> for the following:
+     *        Resource Name (ARN). Consult the <i> <a href="https://docs.aws.amazon.com/general/latest/gr/">Amazon Web
+     *        Services General Reference</a> </i> for the following:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        For a list of service name strings, see <a href=
      *        "https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces"
-     *        >AWS Service Namespaces</a>.
+     *        >Amazon Web Services Service Namespaces</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -502,7 +509,7 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      *        <p>
      *        For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a>.
+     *        (ARNs) and Amazon Web Services Service Namespaces</a>.
      *        </p>
      *        </li>
      *        </ul>
@@ -531,14 +538,15 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * The string for each service name and resource type is the same as that embedded in a resource's Amazon Resource
-     * Name (ARN). Consult the <i>AWS General Reference</i> for the following:
+     * Name (ARN). Consult the <i> <a href="https://docs.aws.amazon.com/general/latest/gr/">Amazon Web Services General
+     * Reference</a> </i> for the following:
      * </p>
      * <ul>
      * <li>
      * <p>
      * For a list of service name strings, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces"
-     * >AWS Service Namespaces</a>.
+     * >Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * <li>
@@ -551,7 +559,7 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * and Amazon Web Services Service Namespaces</a>.
      * </p>
      * </li>
      * </ul>
@@ -564,17 +572,18 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      *        Specifies that you want the response to include information for only resources of the specified types. The
      *        format of each resource type is <code>service[:resourceType]</code>. For example, specifying a resource
      *        type of <code>ec2</code> returns all Amazon EC2 resources (which includes EC2 instances). Specifying a
-     *        resource type of <code>ec2:instance</code> returns only EC2 instances. </p>
+     *        resource type of <code>ec2:instance</code> returns only EC2 instances.</p>
      *        <p>
      *        The string for each service name and resource type is the same as that embedded in a resource's Amazon
-     *        Resource Name (ARN). Consult the <i>AWS General Reference</i> for the following:
+     *        Resource Name (ARN). Consult the <i> <a href="https://docs.aws.amazon.com/general/latest/gr/">Amazon Web
+     *        Services General Reference</a> </i> for the following:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        For a list of service name strings, see <a href=
      *        "https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces"
-     *        >AWS Service Namespaces</a>.
+     *        >Amazon Web Services Service Namespaces</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -588,7 +597,7 @@ public class GetComplianceSummaryRequest extends com.amazonaws.AmazonWebServiceR
      *        <p>
      *        For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a>.
+     *        (ARNs) and Amazon Web Services Service Namespaces</a>.
      *        </p>
      *        </li>
      *        </ul>

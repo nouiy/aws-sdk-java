@@ -36,7 +36,7 @@ public class ResourceTagMapping implements Serializable, Cloneable, StructuredPo
     private String resourceARN;
     /**
      * <p>
-     * The tags that have been applied to one or more AWS resources.
+     * The tags that have been applied to one or more Amazon Web Services resources.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -90,10 +90,10 @@ public class ResourceTagMapping implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The tags that have been applied to one or more AWS resources.
+     * The tags that have been applied to one or more Amazon Web Services resources.
      * </p>
      * 
-     * @return The tags that have been applied to one or more AWS resources.
+     * @return The tags that have been applied to one or more Amazon Web Services resources.
      */
 
     public java.util.List<Tag> getTags() {
@@ -102,11 +102,11 @@ public class ResourceTagMapping implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The tags that have been applied to one or more AWS resources.
+     * The tags that have been applied to one or more Amazon Web Services resources.
      * </p>
      * 
      * @param tags
-     *        The tags that have been applied to one or more AWS resources.
+     *        The tags that have been applied to one or more Amazon Web Services resources.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -120,7 +120,7 @@ public class ResourceTagMapping implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The tags that have been applied to one or more AWS resources.
+     * The tags that have been applied to one or more Amazon Web Services resources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -129,7 +129,7 @@ public class ResourceTagMapping implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param tags
-     *        The tags that have been applied to one or more AWS resources.
+     *        The tags that have been applied to one or more Amazon Web Services resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,11 +145,11 @@ public class ResourceTagMapping implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The tags that have been applied to one or more AWS resources.
+     * The tags that have been applied to one or more Amazon Web Services resources.
      * </p>
      * 
      * @param tags
-     *        The tags that have been applied to one or more AWS resources.
+     *        The tags that have been applied to one or more Amazon Web Services resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

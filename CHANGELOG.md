@@ -1,4 +1,38 @@
+# __1.12.105__ __2021-11-05__
+## __AWS Resource Groups Tagging API__
+  - ### Features
+    - Documentation updates and improvements.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - DescribeInstances now returns customer-owned IP addresses for instances running on an AWS Outpost.
+
+## __Amazon Translate__
+  - ### Features
+    - This release enable customers to use their own KMS keys to encrypt output files when they submit a batch transform job.
+
 # __1.12.104__ __2021-11-04__
+## __AWS IoT Wireless__
+  - ### Features
+    - Adding APIs for the FUOTA (firmware update over the air) and multicast for LoRaWAN devices and APIs to support event notification opt-in feature for Sidewalk related events. A few existing APIs need to be modified for this new feature.
+
+## __Amazon Chime SDK Meetings__
+  - ### Features
+    - The Amazon Chime SDK Meetings APIs allow software developers to create meetings and attendees for interactive audio, video, screen and content sharing in custom meeting applications which use the Amazon Chime SDK.
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds CRUD operation support for Security profile resource in Amazon Connect
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds a new instance replacement strategy for EC2 Fleet, Spot Fleet. Now you can select an action to perform when your instance gets a rebalance notification. EC2 Fleet, Spot Fleet can launch a replacement then terminate the instance that received notification after a termination delay
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - ListDevices and DescribeDevice now show Edge Manager agent version.
+
+# __1.12.103__ __2021-11-04__
 ## __AWS IoT Wireless__
   - ### Features
     - Adding APIs for the FUOTA (firmware update over the air) and multicast for LoRaWAN devices and APIs to support event notification opt-in feature for Sidewalk related events. A few existing APIs need to be modified for this new feature.

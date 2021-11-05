@@ -81,7 +81,7 @@ public class TextTranslationJobProperties implements Serializable, Cloneable, St
     private java.util.List<String> parallelDataNames;
     /**
      * <p>
-     * An explanation of any errors that may have occured during the translation job.
+     * An explanation of any errors that may have occurred during the translation job.
      * </p>
      */
     private String message;
@@ -570,11 +570,11 @@ public class TextTranslationJobProperties implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * An explanation of any errors that may have occured during the translation job.
+     * An explanation of any errors that may have occurred during the translation job.
      * </p>
      * 
      * @param message
-     *        An explanation of any errors that may have occured during the translation job.
+     *        An explanation of any errors that may have occurred during the translation job.
      */
 
     public void setMessage(String message) {
@@ -583,10 +583,10 @@ public class TextTranslationJobProperties implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * An explanation of any errors that may have occured during the translation job.
+     * An explanation of any errors that may have occurred during the translation job.
      * </p>
      * 
-     * @return An explanation of any errors that may have occured during the translation job.
+     * @return An explanation of any errors that may have occurred during the translation job.
      */
 
     public String getMessage() {
@@ -595,11 +595,11 @@ public class TextTranslationJobProperties implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * An explanation of any errors that may have occured during the translation job.
+     * An explanation of any errors that may have occurred during the translation job.
      * </p>
      * 
      * @param message
-     *        An explanation of any errors that may have occured during the translation job.
+     *        An explanation of any errors that may have occurred during the translation job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

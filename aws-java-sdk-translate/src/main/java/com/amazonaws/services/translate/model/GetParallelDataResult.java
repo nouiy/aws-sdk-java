@@ -31,9 +31,23 @@ public class GetParallelDataResult extends com.amazonaws.AmazonWebServiceResult<
     private ParallelDataProperties parallelDataProperties;
     /**
      * <p>
-     * The location of the most recent parallel data input file that was successfully imported into Amazon Translate.
-     * The location is returned as a presigned URL that has a 30 minute expiration.
+     * The Amazon S3 location of the most recent parallel data input file that was successfully imported into Amazon
+     * Translate. The location is returned as a presigned URL that has a 30 minute expiration.
      * </p>
+     * <important>
+     * <p>
+     * Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     * </p>
+     * <p>
+     * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
+     * begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the
+     * program might interpret the record as a formula and run the code within it.
+     * </p>
+     * <p>
+     * Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and trust its
+     * creator.
+     * </p>
+     * </important>
      */
     private ParallelDataDataLocation dataLocation;
     /**
@@ -95,13 +109,40 @@ public class GetParallelDataResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The location of the most recent parallel data input file that was successfully imported into Amazon Translate.
-     * The location is returned as a presigned URL that has a 30 minute expiration.
+     * The Amazon S3 location of the most recent parallel data input file that was successfully imported into Amazon
+     * Translate. The location is returned as a presigned URL that has a 30 minute expiration.
      * </p>
+     * <important>
+     * <p>
+     * Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     * </p>
+     * <p>
+     * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
+     * begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the
+     * program might interpret the record as a formula and run the code within it.
+     * </p>
+     * <p>
+     * Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and trust its
+     * creator.
+     * </p>
+     * </important>
      * 
      * @param dataLocation
-     *        The location of the most recent parallel data input file that was successfully imported into Amazon
-     *        Translate. The location is returned as a presigned URL that has a 30 minute expiration.
+     *        The Amazon S3 location of the most recent parallel data input file that was successfully imported into
+     *        Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p>
+     *        <important>
+     *        <p>
+     *        Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     *        </p>
+     *        <p>
+     *        CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The
+     *        record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet
+     *        program, the program might interpret the record as a formula and run the code within it.
+     *        </p>
+     *        <p>
+     *        Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and
+     *        trust its creator.
+     *        </p>
      */
 
     public void setDataLocation(ParallelDataDataLocation dataLocation) {
@@ -110,12 +151,39 @@ public class GetParallelDataResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The location of the most recent parallel data input file that was successfully imported into Amazon Translate.
-     * The location is returned as a presigned URL that has a 30 minute expiration.
+     * The Amazon S3 location of the most recent parallel data input file that was successfully imported into Amazon
+     * Translate. The location is returned as a presigned URL that has a 30 minute expiration.
      * </p>
+     * <important>
+     * <p>
+     * Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     * </p>
+     * <p>
+     * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
+     * begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the
+     * program might interpret the record as a formula and run the code within it.
+     * </p>
+     * <p>
+     * Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and trust its
+     * creator.
+     * </p>
+     * </important>
      * 
-     * @return The location of the most recent parallel data input file that was successfully imported into Amazon
-     *         Translate. The location is returned as a presigned URL that has a 30 minute expiration.
+     * @return The Amazon S3 location of the most recent parallel data input file that was successfully imported into
+     *         Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p>
+     *         <important>
+     *         <p>
+     *         Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     *         </p>
+     *         <p>
+     *         CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The
+     *         record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet
+     *         program, the program might interpret the record as a formula and run the code within it.
+     *         </p>
+     *         <p>
+     *         Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and
+     *         trust its creator.
+     *         </p>
      */
 
     public ParallelDataDataLocation getDataLocation() {
@@ -124,13 +192,40 @@ public class GetParallelDataResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The location of the most recent parallel data input file that was successfully imported into Amazon Translate.
-     * The location is returned as a presigned URL that has a 30 minute expiration.
+     * The Amazon S3 location of the most recent parallel data input file that was successfully imported into Amazon
+     * Translate. The location is returned as a presigned URL that has a 30 minute expiration.
      * </p>
+     * <important>
+     * <p>
+     * Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     * </p>
+     * <p>
+     * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
+     * begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the
+     * program might interpret the record as a formula and run the code within it.
+     * </p>
+     * <p>
+     * Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and trust its
+     * creator.
+     * </p>
+     * </important>
      * 
      * @param dataLocation
-     *        The location of the most recent parallel data input file that was successfully imported into Amazon
-     *        Translate. The location is returned as a presigned URL that has a 30 minute expiration.
+     *        The Amazon S3 location of the most recent parallel data input file that was successfully imported into
+     *        Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p>
+     *        <important>
+     *        <p>
+     *        Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     *        </p>
+     *        <p>
+     *        CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The
+     *        record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet
+     *        program, the program might interpret the record as a formula and run the code within it.
+     *        </p>
+     *        <p>
+     *        Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and
+     *        trust its creator.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

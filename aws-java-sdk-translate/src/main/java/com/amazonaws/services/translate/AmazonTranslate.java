@@ -44,8 +44,8 @@ public interface AmazonTranslate {
     /**
      * <p>
      * Creates a parallel data resource in Amazon Translate by importing an input file from Amazon S3. Parallel data
-     * files contain examples of source phrases and their translations from your translation memory. By adding parallel
-     * data, you can influence the style, tone, and word choice in your translation output.
+     * files contain examples that show how you want segments of text to be translated. By adding parallel data, you can
+     * influence the style, tone, and word choice in your translation output.
      * </p>
      * 
      * @param createParallelDataRequest
@@ -121,7 +121,7 @@ public interface AmazonTranslate {
 
     /**
      * <p>
-     * Gets the properties associated with an asycnhronous batch translation job including name, ID, status, source and
+     * Gets the properties associated with an asynchronous batch translation job including name, ID, status, source and
      * target languages, input/output S3 buckets, and so on.
      * </p>
      * 
@@ -315,6 +315,9 @@ public interface AmazonTranslate {
      * @throws ResourceNotFoundException
      *         The resource you are looking for has not been found. Review the resource you're looking for and see if a
      *         different resource will accomplish your needs before retrying the revised request.
+     * @throws InvalidParameterValueException
+     *         The value of the parameter is invalid. Review the value of the parameter you are using to correct it, and
+     *         then retry your operation.
      * @throws InternalServerException
      *         An internal server error occurred. Retry your request.
      * @sample AmazonTranslate.StartTextTranslationJob

@@ -42,8 +42,8 @@ import javax.annotation.Generated;
  * <li>
  * <p>
  * You can't access the Amazon S3 bucket for report storage. For more information, see <a href=
- * "http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
- * >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>AWS Organizations User Guide.</i>
+ * "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_tag-policies-prereqs.html#bucket-policies-org-report"
+ * >Additional Requirements for Organization-wide Tag Compliance Reports</a> in the <i>Organizations User Guide.</i>
  * </p>
  * </li>
  * </ul>

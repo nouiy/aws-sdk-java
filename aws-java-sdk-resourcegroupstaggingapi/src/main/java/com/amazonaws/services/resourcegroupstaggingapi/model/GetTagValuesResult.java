@@ -33,8 +33,8 @@ public class GetTagValuesResult extends com.amazonaws.AmazonWebServiceResult<com
     private String paginationToken;
     /**
      * <p>
-     * A list of all tag values for the specified key currently used in the specified AWS Region for the calling AWS
-     * account.
+     * A list of all tag values for the specified key currently used in the specified Amazon Web Services Region for the
+     * calling account.
      * </p>
      */
     private java.util.List<String> tagValues;
@@ -93,12 +93,12 @@ public class GetTagValuesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of all tag values for the specified key currently used in the specified AWS Region for the calling AWS
-     * account.
+     * A list of all tag values for the specified key currently used in the specified Amazon Web Services Region for the
+     * calling account.
      * </p>
      * 
-     * @return A list of all tag values for the specified key currently used in the specified AWS Region for the calling
-     *         AWS account.
+     * @return A list of all tag values for the specified key currently used in the specified Amazon Web Services Region
+     *         for the calling account.
      */
 
     public java.util.List<String> getTagValues() {
@@ -107,13 +107,13 @@ public class GetTagValuesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of all tag values for the specified key currently used in the specified AWS Region for the calling AWS
-     * account.
+     * A list of all tag values for the specified key currently used in the specified Amazon Web Services Region for the
+     * calling account.
      * </p>
      * 
      * @param tagValues
-     *        A list of all tag values for the specified key currently used in the specified AWS Region for the calling
-     *        AWS account.
+     *        A list of all tag values for the specified key currently used in the specified Amazon Web Services Region
+     *        for the calling account.
      */
 
     public void setTagValues(java.util.Collection<String> tagValues) {
@@ -127,8 +127,8 @@ public class GetTagValuesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of all tag values for the specified key currently used in the specified AWS Region for the calling AWS
-     * account.
+     * A list of all tag values for the specified key currently used in the specified Amazon Web Services Region for the
+     * calling account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -137,8 +137,8 @@ public class GetTagValuesResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param tagValues
-     *        A list of all tag values for the specified key currently used in the specified AWS Region for the calling
-     *        AWS account.
+     *        A list of all tag values for the specified key currently used in the specified Amazon Web Services Region
+     *        for the calling account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -154,13 +154,13 @@ public class GetTagValuesResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * A list of all tag values for the specified key currently used in the specified AWS Region for the calling AWS
-     * account.
+     * A list of all tag values for the specified key currently used in the specified Amazon Web Services Region for the
+     * calling account.
      * </p>
      * 
      * @param tagValues
-     *        A list of all tag values for the specified key currently used in the specified AWS Region for the calling
-     *        AWS account.
+     *        A list of all tag values for the specified key currently used in the specified Amazon Web Services Region
+     *        for the calling account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

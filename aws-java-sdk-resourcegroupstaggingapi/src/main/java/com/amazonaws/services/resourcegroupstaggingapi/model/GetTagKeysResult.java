@@ -33,7 +33,7 @@ public class GetTagKeysResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private String paginationToken;
     /**
      * <p>
-     * A list of all tag keys in the AWS account.
+     * A list of all tag keys in the Amazon Web Services account.
      * </p>
      */
     private java.util.List<String> tagKeys;
@@ -92,10 +92,10 @@ public class GetTagKeysResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of all tag keys in the AWS account.
+     * A list of all tag keys in the Amazon Web Services account.
      * </p>
      * 
-     * @return A list of all tag keys in the AWS account.
+     * @return A list of all tag keys in the Amazon Web Services account.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -104,11 +104,11 @@ public class GetTagKeysResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of all tag keys in the AWS account.
+     * A list of all tag keys in the Amazon Web Services account.
      * </p>
      * 
      * @param tagKeys
-     *        A list of all tag keys in the AWS account.
+     *        A list of all tag keys in the Amazon Web Services account.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -122,7 +122,7 @@ public class GetTagKeysResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of all tag keys in the AWS account.
+     * A list of all tag keys in the Amazon Web Services account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -131,7 +131,7 @@ public class GetTagKeysResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * 
      * @param tagKeys
-     *        A list of all tag keys in the AWS account.
+     *        A list of all tag keys in the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,11 +147,11 @@ public class GetTagKeysResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of all tag keys in the AWS account.
+     * A list of all tag keys in the Amazon Web Services account.
      * </p>
      * 
      * @param tagKeys
-     *        A list of all tag keys in the AWS account.
+     *        A list of all tag keys in the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

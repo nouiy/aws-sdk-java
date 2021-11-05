@@ -37,8 +37,8 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The account identifier or the root identifier of the organization. If you don't know the root ID, you can call
-     * the AWS Organizations <a
-     * href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
+     * the Organizations <a
+     * href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
      * </p>
      */
     private String targetId;
@@ -50,13 +50,13 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
     private String targetIdType;
     /**
      * <p>
-     * The AWS Region that the summary applies to.
+     * The Amazon Web Services Region that the summary applies to.
      * </p>
      */
     private String region;
     /**
      * <p>
-     * The AWS resource type.
+     * The Amazon Web Services resource type.
      * </p>
      */
     private String resourceType;
@@ -110,14 +110,14 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The account identifier or the root identifier of the organization. If you don't know the root ID, you can call
-     * the AWS Organizations <a
-     * href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
+     * the Organizations <a
+     * href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
      * </p>
      * 
      * @param targetId
      *        The account identifier or the root identifier of the organization. If you don't know the root ID, you can
-     *        call the AWS Organizations <a
-     *        href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
+     *        call the Organizations <a
+     *        href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
      */
 
     public void setTargetId(String targetId) {
@@ -127,13 +127,14 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The account identifier or the root identifier of the organization. If you don't know the root ID, you can call
-     * the AWS Organizations <a
-     * href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
+     * the Organizations <a
+     * href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
      * </p>
      * 
      * @return The account identifier or the root identifier of the organization. If you don't know the root ID, you can
-     *         call the AWS Organizations <a
-     *         href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
+     *         call the Organizations <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a>
+     *         API.
      */
 
     public String getTargetId() {
@@ -143,14 +144,14 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The account identifier or the root identifier of the organization. If you don't know the root ID, you can call
-     * the AWS Organizations <a
-     * href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
+     * the Organizations <a
+     * href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
      * </p>
      * 
      * @param targetId
      *        The account identifier or the root identifier of the organization. If you don't know the root ID, you can
-     *        call the AWS Organizations <a
-     *        href="http://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
+     *        call the Organizations <a
+     *        href="https://docs.aws.amazon.com/organizations/latest/APIReference/API_ListRoots.html">ListRoots</a> API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -220,11 +221,11 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region that the summary applies to.
+     * The Amazon Web Services Region that the summary applies to.
      * </p>
      * 
      * @param region
-     *        The AWS Region that the summary applies to.
+     *        The Amazon Web Services Region that the summary applies to.
      */
 
     public void setRegion(String region) {
@@ -233,10 +234,10 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region that the summary applies to.
+     * The Amazon Web Services Region that the summary applies to.
      * </p>
      * 
-     * @return The AWS Region that the summary applies to.
+     * @return The Amazon Web Services Region that the summary applies to.
      */
 
     public String getRegion() {
@@ -245,11 +246,11 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS Region that the summary applies to.
+     * The Amazon Web Services Region that the summary applies to.
      * </p>
      * 
      * @param region
-     *        The AWS Region that the summary applies to.
+     *        The Amazon Web Services Region that the summary applies to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -260,11 +261,11 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS resource type.
+     * The Amazon Web Services resource type.
      * </p>
      * 
      * @param resourceType
-     *        The AWS resource type.
+     *        The Amazon Web Services resource type.
      */
 
     public void setResourceType(String resourceType) {
@@ -273,10 +274,10 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS resource type.
+     * The Amazon Web Services resource type.
      * </p>
      * 
-     * @return The AWS resource type.
+     * @return The Amazon Web Services resource type.
      */
 
     public String getResourceType() {
@@ -285,11 +286,11 @@ public class Summary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS resource type.
+     * The Amazon Web Services resource type.
      * </p>
      * 
      * @param resourceType
-     *        The AWS resource type.
+     *        The Amazon Web Services resource type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
