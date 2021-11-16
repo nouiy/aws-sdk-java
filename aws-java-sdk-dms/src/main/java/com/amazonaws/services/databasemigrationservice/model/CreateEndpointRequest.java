@@ -43,8 +43,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of engine for the endpoint. Valid values, depending on the <code>EndpointType</code> value, include
      * <code>"mysql"</code>, <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>,
-     * <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>,
-     * <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     * <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>,
+     * <code>"s3"</code>, <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
      * <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
      * <code>"docdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      * </p>
@@ -212,11 +212,11 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     private KafkaSettings kafkaSettings;
     /**
      * <p>
-     * Settings in JSON format for the target Elasticsearch endpoint. For more information about the available settings,
+     * Settings in JSON format for the target OpenSearch endpoint. For more information about the available settings,
      * see <a href=
      * "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration"
-     * >Extra Connection Attributes When Using Elasticsearch as a Target for DMS</a> in the <i>Database Migration
-     * Service User Guide</i>.
+     * >Extra Connection Attributes When Using OpenSearch as a Target for DMS</a> in the <i>Database Migration Service
+     * User Guide</i>.
      * </p>
      */
     private ElasticsearchSettings elasticsearchSettings;
@@ -322,6 +322,12 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private RedisSettings redisSettings;
+    /**
+     * <p>
+     * Settings in JSON format for the source GCP MySQL endpoint.
+     * </p>
+     */
+    private GcpMySQLSettings gcpMySQLSettings;
 
     /**
      * <p>
@@ -446,8 +452,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of engine for the endpoint. Valid values, depending on the <code>EndpointType</code> value, include
      * <code>"mysql"</code>, <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>,
-     * <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>,
-     * <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     * <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>,
+     * <code>"s3"</code>, <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
      * <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
      * <code>"docdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      * </p>
@@ -455,10 +461,11 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * @param engineName
      *        The type of engine for the endpoint. Valid values, depending on the <code>EndpointType</code> value,
      *        include <code>"mysql"</code>, <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>,
-     *        <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>,
-     *        <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
-     *        <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
-     *        <code>"docdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     *        <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"opensearch"</code>,
+     *        <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>, <code>"azuredb"</code>,
+     *        <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>, <code>"kinesis"</code>,
+     *        <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"docdb"</code>, <code>"sqlserver"</code>, and
+     *        <code>"neptune"</code>.
      */
 
     public void setEngineName(String engineName) {
@@ -469,18 +476,19 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of engine for the endpoint. Valid values, depending on the <code>EndpointType</code> value, include
      * <code>"mysql"</code>, <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>,
-     * <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>,
-     * <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     * <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>,
+     * <code>"s3"</code>, <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
      * <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
      * <code>"docdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      * </p>
      * 
      * @return The type of engine for the endpoint. Valid values, depending on the <code>EndpointType</code> value,
      *         include <code>"mysql"</code>, <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>,
-     *         <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>,
-     *         <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
-     *         <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
-     *         <code>"docdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     *         <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"opensearch"</code>,
+     *         <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>, <code>"azuredb"</code>,
+     *         <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>, <code>"kinesis"</code>,
+     *         <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"docdb"</code>, <code>"sqlserver"</code>, and
+     *         <code>"neptune"</code>.
      */
 
     public String getEngineName() {
@@ -491,8 +499,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The type of engine for the endpoint. Valid values, depending on the <code>EndpointType</code> value, include
      * <code>"mysql"</code>, <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>,
-     * <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>,
-     * <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     * <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>,
+     * <code>"s3"</code>, <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
      * <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
      * <code>"docdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      * </p>
@@ -500,10 +508,11 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * @param engineName
      *        The type of engine for the endpoint. Valid values, depending on the <code>EndpointType</code> value,
      *        include <code>"mysql"</code>, <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>,
-     *        <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>,
-     *        <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
-     *        <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
-     *        <code>"docdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     *        <code>"aurora"</code>, <code>"aurora-postgresql"</code>, <code>"opensearch"</code>,
+     *        <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>, <code>"azuredb"</code>,
+     *        <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>, <code>"kinesis"</code>,
+     *        <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"docdb"</code>, <code>"sqlserver"</code>, and
+     *        <code>"neptune"</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1616,18 +1625,18 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Settings in JSON format for the target Elasticsearch endpoint. For more information about the available settings,
+     * Settings in JSON format for the target OpenSearch endpoint. For more information about the available settings,
      * see <a href=
      * "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration"
-     * >Extra Connection Attributes When Using Elasticsearch as a Target for DMS</a> in the <i>Database Migration
-     * Service User Guide</i>.
+     * >Extra Connection Attributes When Using OpenSearch as a Target for DMS</a> in the <i>Database Migration Service
+     * User Guide</i>.
      * </p>
      * 
      * @param elasticsearchSettings
-     *        Settings in JSON format for the target Elasticsearch endpoint. For more information about the available
+     *        Settings in JSON format for the target OpenSearch endpoint. For more information about the available
      *        settings, see <a href=
      *        "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration"
-     *        >Extra Connection Attributes When Using Elasticsearch as a Target for DMS</a> in the <i>Database Migration
+     *        >Extra Connection Attributes When Using OpenSearch as a Target for DMS</a> in the <i>Database Migration
      *        Service User Guide</i>.
      */
 
@@ -1637,18 +1646,18 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Settings in JSON format for the target Elasticsearch endpoint. For more information about the available settings,
+     * Settings in JSON format for the target OpenSearch endpoint. For more information about the available settings,
      * see <a href=
      * "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration"
-     * >Extra Connection Attributes When Using Elasticsearch as a Target for DMS</a> in the <i>Database Migration
-     * Service User Guide</i>.
+     * >Extra Connection Attributes When Using OpenSearch as a Target for DMS</a> in the <i>Database Migration Service
+     * User Guide</i>.
      * </p>
      * 
-     * @return Settings in JSON format for the target Elasticsearch endpoint. For more information about the available
+     * @return Settings in JSON format for the target OpenSearch endpoint. For more information about the available
      *         settings, see <a href=
      *         "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration"
-     *         >Extra Connection Attributes When Using Elasticsearch as a Target for DMS</a> in the <i>Database
-     *         Migration Service User Guide</i>.
+     *         >Extra Connection Attributes When Using OpenSearch as a Target for DMS</a> in the <i>Database Migration
+     *         Service User Guide</i>.
      */
 
     public ElasticsearchSettings getElasticsearchSettings() {
@@ -1657,18 +1666,18 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Settings in JSON format for the target Elasticsearch endpoint. For more information about the available settings,
+     * Settings in JSON format for the target OpenSearch endpoint. For more information about the available settings,
      * see <a href=
      * "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration"
-     * >Extra Connection Attributes When Using Elasticsearch as a Target for DMS</a> in the <i>Database Migration
-     * Service User Guide</i>.
+     * >Extra Connection Attributes When Using OpenSearch as a Target for DMS</a> in the <i>Database Migration Service
+     * User Guide</i>.
      * </p>
      * 
      * @param elasticsearchSettings
-     *        Settings in JSON format for the target Elasticsearch endpoint. For more information about the available
+     *        Settings in JSON format for the target OpenSearch endpoint. For more information about the available
      *        settings, see <a href=
      *        "https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration"
-     *        >Extra Connection Attributes When Using Elasticsearch as a Target for DMS</a> in the <i>Database Migration
+     *        >Extra Connection Attributes When Using OpenSearch as a Target for DMS</a> in the <i>Database Migration
      *        Service User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2358,6 +2367,46 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * Settings in JSON format for the source GCP MySQL endpoint.
+     * </p>
+     * 
+     * @param gcpMySQLSettings
+     *        Settings in JSON format for the source GCP MySQL endpoint.
+     */
+
+    public void setGcpMySQLSettings(GcpMySQLSettings gcpMySQLSettings) {
+        this.gcpMySQLSettings = gcpMySQLSettings;
+    }
+
+    /**
+     * <p>
+     * Settings in JSON format for the source GCP MySQL endpoint.
+     * </p>
+     * 
+     * @return Settings in JSON format for the source GCP MySQL endpoint.
+     */
+
+    public GcpMySQLSettings getGcpMySQLSettings() {
+        return this.gcpMySQLSettings;
+    }
+
+    /**
+     * <p>
+     * Settings in JSON format for the source GCP MySQL endpoint.
+     * </p>
+     * 
+     * @param gcpMySQLSettings
+     *        Settings in JSON format for the source GCP MySQL endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEndpointRequest withGcpMySQLSettings(GcpMySQLSettings gcpMySQLSettings) {
+        setGcpMySQLSettings(gcpMySQLSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2434,7 +2483,9 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getDocDbSettings() != null)
             sb.append("DocDbSettings: ").append(getDocDbSettings()).append(",");
         if (getRedisSettings() != null)
-            sb.append("RedisSettings: ").append(getRedisSettings());
+            sb.append("RedisSettings: ").append(getRedisSettings()).append(",");
+        if (getGcpMySQLSettings() != null)
+            sb.append("GcpMySQLSettings: ").append(getGcpMySQLSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -2581,6 +2632,10 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getRedisSettings() != null && other.getRedisSettings().equals(this.getRedisSettings()) == false)
             return false;
+        if (other.getGcpMySQLSettings() == null ^ this.getGcpMySQLSettings() == null)
+            return false;
+        if (other.getGcpMySQLSettings() != null && other.getGcpMySQLSettings().equals(this.getGcpMySQLSettings()) == false)
+            return false;
         return true;
     }
 
@@ -2622,6 +2677,7 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getResourceIdentifier() == null) ? 0 : getResourceIdentifier().hashCode());
         hashCode = prime * hashCode + ((getDocDbSettings() == null) ? 0 : getDocDbSettings().hashCode());
         hashCode = prime * hashCode + ((getRedisSettings() == null) ? 0 : getRedisSettings().hashCode());
+        hashCode = prime * hashCode + ((getGcpMySQLSettings() == null) ? 0 : getGcpMySQLSettings().hashCode());
         return hashCode;
     }
 

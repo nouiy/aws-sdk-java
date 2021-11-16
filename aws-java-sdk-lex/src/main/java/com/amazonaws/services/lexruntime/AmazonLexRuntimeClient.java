@@ -83,7 +83,7 @@ public class AmazonLexRuntimeClient extends AmazonWebServiceClient implements Am
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.lexruntime.model.transform.ConflictExceptionUnmarshaller.getInstance()))

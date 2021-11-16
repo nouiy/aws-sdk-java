@@ -141,9 +141,10 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * </p>
      * <p>
      * Amazon EKS add-ons help to automate the provisioning and lifecycle management of common operational software for
-     * Amazon EKS clusters. Amazon EKS add-ons can only be used with Amazon EKS clusters running version 1.18 with
-     * platform version <code>eks.3</code> or later because add-ons rely on the Server-side Apply Kubernetes feature,
-     * which is only available in Kubernetes 1.18 and later.
+     * Amazon EKS clusters. Amazon EKS add-ons require clusters running version 1.18 or later because Amazon EKS add-ons
+     * rely on the Server-side Apply Kubernetes feature, which is only available in Kubernetes 1.18 and later. For more
+     * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html">Amazon EKS
+     * add-ons</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param createAddonRequest
@@ -160,9 +161,10 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * </p>
      * <p>
      * Amazon EKS add-ons help to automate the provisioning and lifecycle management of common operational software for
-     * Amazon EKS clusters. Amazon EKS add-ons can only be used with Amazon EKS clusters running version 1.18 with
-     * platform version <code>eks.3</code> or later because add-ons rely on the Server-side Apply Kubernetes feature,
-     * which is only available in Kubernetes 1.18 and later.
+     * Amazon EKS clusters. Amazon EKS add-ons require clusters running version 1.18 or later because Amazon EKS add-ons
+     * rely on the Server-side Apply Kubernetes feature, which is only available in Kubernetes 1.18 and later. For more
+     * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html">Amazon EKS
+     * add-ons</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param createAddonRequest
@@ -1139,8 +1141,8 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * </p>
      * <p>
      * After the Manifest is updated and applied, then the connected cluster is visible to the Amazon EKS control plane.
-     * If the Manifest is not applied within a set amount of time, then the connected cluster will no longer be visible
-     * and must be deregistered. See <a>DeregisterCluster</a>.
+     * If the Manifest is not applied within three days, then the connected cluster will no longer be visible and must
+     * be deregistered. See <a>DeregisterCluster</a>.
      * </p>
      * 
      * @param registerClusterRequest
@@ -1171,8 +1173,8 @@ public interface AmazonEKSAsync extends AmazonEKS {
      * </p>
      * <p>
      * After the Manifest is updated and applied, then the connected cluster is visible to the Amazon EKS control plane.
-     * If the Manifest is not applied within a set amount of time, then the connected cluster will no longer be visible
-     * and must be deregistered. See <a>DeregisterCluster</a>.
+     * If the Manifest is not applied within three days, then the connected cluster will no longer be visible and must
+     * be deregistered. See <a>DeregisterCluster</a>.
      * </p>
      * 
      * @param registerClusterRequest

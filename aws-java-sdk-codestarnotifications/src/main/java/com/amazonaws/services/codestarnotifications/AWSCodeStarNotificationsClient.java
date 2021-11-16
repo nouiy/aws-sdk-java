@@ -166,7 +166,7 @@ public class AWSCodeStarNotificationsClient extends AmazonWebServiceClient imple
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConcurrentModificationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.codestarnotifications.model.transform.ConcurrentModificationExceptionUnmarshaller.getInstance()))

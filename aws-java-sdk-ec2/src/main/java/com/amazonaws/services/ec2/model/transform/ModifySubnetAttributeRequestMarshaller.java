@@ -60,6 +60,10 @@ public class ModifySubnetAttributeRequestMarshaller implements Marshaller<Reques
             request.addParameter("CustomerOwnedIpv4Pool", StringUtils.fromString(modifySubnetAttributeRequest.getCustomerOwnedIpv4Pool()));
         }
 
+        if (modifySubnetAttributeRequest.getEnableDns64() != null) {
+            request.addParameter("EnableDns64.Value", StringUtils.fromBoolean(modifySubnetAttributeRequest.getEnableDns64()));
+        }
+
         return request;
     }
 

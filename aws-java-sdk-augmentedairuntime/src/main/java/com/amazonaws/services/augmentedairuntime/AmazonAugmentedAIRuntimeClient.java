@@ -114,7 +114,7 @@ public class AmazonAugmentedAIRuntimeClient extends AmazonWebServiceClient imple
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.augmentedairuntime.model.transform.ValidationExceptionUnmarshaller.getInstance()))

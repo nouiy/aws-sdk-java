@@ -100,7 +100,7 @@ public class AWSsignerClient extends AmazonWebServiceClient implements AWSsigner
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.signer.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

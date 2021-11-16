@@ -74,7 +74,7 @@ public class AmazonPinpointSMSVoiceClient extends AmazonWebServiceClient impleme
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.pinpointsmsvoice.model.transform.NotFoundExceptionUnmarshaller.getInstance()))

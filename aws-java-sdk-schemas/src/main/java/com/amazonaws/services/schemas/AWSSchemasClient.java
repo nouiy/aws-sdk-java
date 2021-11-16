@@ -79,7 +79,7 @@ public class AWSSchemasClient extends AmazonWebServiceClient implements AWSSchem
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.schemas.model.transform.ConflictExceptionUnmarshaller.getInstance()))

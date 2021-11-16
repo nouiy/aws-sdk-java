@@ -88,7 +88,7 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
                                     com.amazonaws.services.eks.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))
@@ -101,6 +101,9 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.eks.model.transform.NotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.eks.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnsupportedAvailabilityZoneException").withExceptionUnmarshaller(
                                     com.amazonaws.services.eks.model.transform.UnsupportedAvailabilityZoneExceptionUnmarshaller.getInstance()))
@@ -338,9 +341,10 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
      * </p>
      * <p>
      * Amazon EKS add-ons help to automate the provisioning and lifecycle management of common operational software for
-     * Amazon EKS clusters. Amazon EKS add-ons can only be used with Amazon EKS clusters running version 1.18 with
-     * platform version <code>eks.3</code> or later because add-ons rely on the Server-side Apply Kubernetes feature,
-     * which is only available in Kubernetes 1.18 and later.
+     * Amazon EKS clusters. Amazon EKS add-ons require clusters running version 1.18 or later because Amazon EKS add-ons
+     * rely on the Server-side Apply Kubernetes feature, which is only available in Kubernetes 1.18 and later. For more
+     * information, see <a href="https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html">Amazon EKS
+     * add-ons</a> in the <i>Amazon EKS User Guide</i>.
      * </p>
      * 
      * @param createAddonRequest
@@ -1013,6 +1017,11 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
      *         These errors are usually caused by a server-side issue.
      * @throws ServiceUnavailableException
      *         The service is unavailable. Back off and retry the operation.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
      * @sample AmazonEKS.DeregisterCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/DeregisterCluster" target="_top">AWS API
      *      Documentation</a>
@@ -2123,8 +2132,8 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
      * </p>
      * <p>
      * After the Manifest is updated and applied, then the connected cluster is visible to the Amazon EKS control plane.
-     * If the Manifest is not applied within a set amount of time, then the connected cluster will no longer be visible
-     * and must be deregistered. See <a>DeregisterCluster</a>.
+     * If the Manifest is not applied within three days, then the connected cluster will no longer be visible and must
+     * be deregistered. See <a>DeregisterCluster</a>.
      * </p>
      * 
      * @param registerClusterRequest
@@ -2141,6 +2150,11 @@ public class AmazonEKSClient extends AmazonWebServiceClient implements AmazonEKS
      *         These errors are usually caused by a server-side issue.
      * @throws ServiceUnavailableException
      *         The service is unavailable. Back off and retry the operation.
+     * @throws AccessDeniedException
+     *         You don't have permissions to perform the requested operation. The user or role that is making the
+     *         request must have at least one IAM permissions policy attached that grants the required permissions. For
+     *         more information, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access
+     *         Management</a> in the <i>IAM User Guide</i>.
      * @sample AmazonEKS.RegisterCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/eks-2017-11-01/RegisterCluster" target="_top">AWS API
      *      Documentation</a>

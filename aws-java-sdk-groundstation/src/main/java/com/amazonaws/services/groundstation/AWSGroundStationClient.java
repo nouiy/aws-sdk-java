@@ -78,7 +78,7 @@ public class AWSGroundStationClient extends AmazonWebServiceClient implements AW
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidParameterException").withExceptionUnmarshaller(
                                     com.amazonaws.services.groundstation.model.transform.InvalidParameterExceptionUnmarshaller.getInstance()))

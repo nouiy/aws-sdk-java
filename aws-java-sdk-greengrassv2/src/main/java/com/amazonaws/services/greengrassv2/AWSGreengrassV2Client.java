@@ -90,7 +90,7 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("RequestAlreadyInProgressException").withExceptionUnmarshaller(
                                     com.amazonaws.services.greengrassv2.model.transform.RequestAlreadyInProgressExceptionUnmarshaller.getInstance()))

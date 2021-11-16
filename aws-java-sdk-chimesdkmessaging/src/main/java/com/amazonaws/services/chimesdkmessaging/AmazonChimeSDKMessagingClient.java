@@ -80,7 +80,7 @@ public class AmazonChimeSDKMessagingClient extends AmazonWebServiceClient implem
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnauthorizedClientException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chimesdkmessaging.model.transform.UnauthorizedClientExceptionUnmarshaller.getInstance()))

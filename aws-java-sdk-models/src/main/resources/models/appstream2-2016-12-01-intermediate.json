@@ -1520,6 +1520,10 @@
         "exceptionName" : "InvalidParameterCombinationException",
         "documentation" : "<p>Indicates an incorrect combination of parameters, or a missing parameter.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "OperationNotPermittedException",
+        "documentation" : "<p>The attempted operation is not permitted.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -51078,6 +51082,9 @@
       }, {
         "name" : "WINDOWS_SERVER_2019",
         "value" : "WINDOWS_SERVER_2019"
+      }, {
+        "name" : "AMAZON_LINUX2",
+        "value" : "AMAZON_LINUX2"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.appstream.enum.PlatformType",

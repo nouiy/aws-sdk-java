@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified master key (CMK) isn't enabled.
+ * The specified KMS key isn't enabled.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

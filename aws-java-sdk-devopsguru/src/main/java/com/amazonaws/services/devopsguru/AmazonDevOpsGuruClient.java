@@ -92,7 +92,7 @@ public class AmazonDevOpsGuruClient extends AmazonWebServiceClient implements Am
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.devopsguru.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))

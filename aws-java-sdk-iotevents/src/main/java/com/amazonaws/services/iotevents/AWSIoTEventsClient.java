@@ -78,7 +78,7 @@ public class AWSIoTEventsClient extends AmazonWebServiceClient implements AWSIoT
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalFailureException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iotevents.model.transform.InternalFailureExceptionUnmarshaller.getInstance()))

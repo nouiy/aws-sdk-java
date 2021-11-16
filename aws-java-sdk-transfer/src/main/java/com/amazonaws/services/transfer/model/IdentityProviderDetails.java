@@ -47,6 +47,12 @@ public class IdentityProviderDetails implements Serializable, Cloneable, Structu
      * </p>
      */
     private String directoryId;
+    /**
+     * <p>
+     * The ARN for a lambda function to use for the Identity provider.
+     * </p>
+     */
+    private String function;
 
     /**
      * <p>
@@ -169,6 +175,46 @@ public class IdentityProviderDetails implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * The ARN for a lambda function to use for the Identity provider.
+     * </p>
+     * 
+     * @param function
+     *        The ARN for a lambda function to use for the Identity provider.
+     */
+
+    public void setFunction(String function) {
+        this.function = function;
+    }
+
+    /**
+     * <p>
+     * The ARN for a lambda function to use for the Identity provider.
+     * </p>
+     * 
+     * @return The ARN for a lambda function to use for the Identity provider.
+     */
+
+    public String getFunction() {
+        return this.function;
+    }
+
+    /**
+     * <p>
+     * The ARN for a lambda function to use for the Identity provider.
+     * </p>
+     * 
+     * @param function
+     *        The ARN for a lambda function to use for the Identity provider.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public IdentityProviderDetails withFunction(String function) {
+        setFunction(function);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -185,7 +231,9 @@ public class IdentityProviderDetails implements Serializable, Cloneable, Structu
         if (getInvocationRole() != null)
             sb.append("InvocationRole: ").append(getInvocationRole()).append(",");
         if (getDirectoryId() != null)
-            sb.append("DirectoryId: ").append(getDirectoryId());
+            sb.append("DirectoryId: ").append(getDirectoryId()).append(",");
+        if (getFunction() != null)
+            sb.append("Function: ").append(getFunction());
         sb.append("}");
         return sb.toString();
     }
@@ -212,6 +260,10 @@ public class IdentityProviderDetails implements Serializable, Cloneable, Structu
             return false;
         if (other.getDirectoryId() != null && other.getDirectoryId().equals(this.getDirectoryId()) == false)
             return false;
+        if (other.getFunction() == null ^ this.getFunction() == null)
+            return false;
+        if (other.getFunction() != null && other.getFunction().equals(this.getFunction()) == false)
+            return false;
         return true;
     }
 
@@ -223,6 +275,7 @@ public class IdentityProviderDetails implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getUrl() == null) ? 0 : getUrl().hashCode());
         hashCode = prime * hashCode + ((getInvocationRole() == null) ? 0 : getInvocationRole().hashCode());
         hashCode = prime * hashCode + ((getDirectoryId() == null) ? 0 : getDirectoryId().hashCode());
+        hashCode = prime * hashCode + ((getFunction() == null) ? 0 : getFunction().hashCode());
         return hashCode;
     }
 

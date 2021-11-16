@@ -76,7 +76,7 @@ public class AmazonQLDBClient extends AmazonWebServiceClient implements AmazonQL
                     .withProtocolVersion("1.0")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourcePreconditionNotMetException").withExceptionUnmarshaller(
                                     com.amazonaws.services.qldb.model.transform.ResourcePreconditionNotMetExceptionUnmarshaller.getInstance()))

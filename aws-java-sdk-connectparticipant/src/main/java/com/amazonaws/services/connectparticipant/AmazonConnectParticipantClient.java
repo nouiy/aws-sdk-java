@@ -83,7 +83,7 @@ public class AmazonConnectParticipantClient extends AmazonWebServiceClient imple
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.connectparticipant.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

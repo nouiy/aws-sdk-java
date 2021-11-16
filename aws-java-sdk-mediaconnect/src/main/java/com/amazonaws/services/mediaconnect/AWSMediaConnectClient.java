@@ -77,7 +77,7 @@ public class AWSMediaConnectClient extends AmazonWebServiceClient implements AWS
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("CreateFlow420Exception").withExceptionUnmarshaller(
                                     com.amazonaws.services.mediaconnect.model.transform.CreateFlow420ExceptionUnmarshaller.getInstance()))

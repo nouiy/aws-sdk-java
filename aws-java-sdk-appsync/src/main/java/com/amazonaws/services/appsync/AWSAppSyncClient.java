@@ -76,7 +76,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConcurrentModificationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appsync.model.transform.ConcurrentModificationExceptionUnmarshaller.getInstance()))

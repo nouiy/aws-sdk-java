@@ -42,7 +42,7 @@ public class SybaseSettings implements Serializable, Cloneable, StructuredPojo {
     private String password;
     /**
      * <p>
-     * Endpoint TCP port.
+     * Endpoint TCP port. The default is 5000.
      * </p>
      */
     private Integer port;
@@ -168,11 +168,11 @@ public class SybaseSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Endpoint TCP port.
+     * Endpoint TCP port. The default is 5000.
      * </p>
      * 
      * @param port
-     *        Endpoint TCP port.
+     *        Endpoint TCP port. The default is 5000.
      */
 
     public void setPort(Integer port) {
@@ -181,10 +181,10 @@ public class SybaseSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Endpoint TCP port.
+     * Endpoint TCP port. The default is 5000.
      * </p>
      * 
-     * @return Endpoint TCP port.
+     * @return Endpoint TCP port. The default is 5000.
      */
 
     public Integer getPort() {
@@ -193,11 +193,11 @@ public class SybaseSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Endpoint TCP port.
+     * Endpoint TCP port. The default is 5000.
      * </p>
      * 
      * @param port
-     *        Endpoint TCP port.
+     *        Endpoint TCP port. The default is 5000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

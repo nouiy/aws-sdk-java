@@ -51,7 +51,7 @@
     "asyncInterface" : "AmazonDLMAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AmazonDLMModuleInjector",
     "defaultEndpoint" : "dlm.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "dlm.us-east-1.amazonaws.com",

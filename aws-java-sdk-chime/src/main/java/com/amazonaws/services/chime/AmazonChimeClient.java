@@ -124,7 +124,7 @@ public class AmazonChimeClient extends AmazonWebServiceClient implements AmazonC
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ForbiddenException").withExceptionUnmarshaller(
                                     com.amazonaws.services.chime.model.transform.ForbiddenExceptionUnmarshaller.getInstance()))

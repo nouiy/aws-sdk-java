@@ -83,7 +83,7 @@ public class AmazonDLMClient extends AmazonWebServiceClient implements AmazonDLM
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.dlm.model.transform.InvalidRequestExceptionUnmarshaller.getInstance()))

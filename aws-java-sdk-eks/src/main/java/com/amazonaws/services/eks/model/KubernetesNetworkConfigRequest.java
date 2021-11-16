@@ -38,7 +38,7 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+     * Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16.
      * </p>
      * </li>
      * <li>
@@ -71,7 +71,7 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+     * Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16.
      * </p>
      * </li>
      * <li>
@@ -100,7 +100,7 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      *        <ul>
      *        <li>
      *        <p>
-     *        Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+     *        Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16.
      *        </p>
      *        </li>
      *        <li>
@@ -135,7 +135,7 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+     * Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16.
      * </p>
      * </li>
      * <li>
@@ -163,7 +163,7 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      *         <ul>
      *         <li>
      *         <p>
-     *         Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+     *         Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16.
      *         </p>
      *         </li>
      *         <li>
@@ -198,7 +198,7 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+     * Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16.
      * </p>
      * </li>
      * <li>
@@ -227,7 +227,7 @@ public class KubernetesNetworkConfigRequest implements Serializable, Cloneable, 
      *        <ul>
      *        <li>
      *        <p>
-     *        Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0.0/12, or 192.168.0.0/16.
+     *        Within one of the following private IP address blocks: 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16.
      *        </p>
      *        </li>
      *        <li>

@@ -82,7 +82,7 @@ public class AmazonAppIntegrationsClient extends AmazonWebServiceClient implemen
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appintegrations.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

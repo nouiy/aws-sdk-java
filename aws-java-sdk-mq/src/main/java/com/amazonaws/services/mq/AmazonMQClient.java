@@ -78,7 +78,7 @@ public class AmazonMQClient extends AmazonWebServiceClient implements AmazonMQ {
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.mq.model.transform.ConflictExceptionUnmarshaller.getInstance()))

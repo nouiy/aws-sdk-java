@@ -80,7 +80,7 @@ public class AWSAmplifyClient extends AmazonWebServiceClient implements AWSAmpli
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalFailureException").withExceptionUnmarshaller(
                                     com.amazonaws.services.amplify.model.transform.InternalFailureExceptionUnmarshaller.getInstance()))

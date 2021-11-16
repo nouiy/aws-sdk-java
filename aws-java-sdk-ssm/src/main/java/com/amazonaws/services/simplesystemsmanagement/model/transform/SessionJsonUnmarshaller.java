@@ -76,6 +76,10 @@ public class SessionJsonUnmarshaller implements Unmarshaller<Session, JsonUnmars
                     context.nextToken();
                     session.setOwner(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Reason", targetDepth)) {
+                    context.nextToken();
+                    session.setReason(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Details", targetDepth)) {
                     context.nextToken();
                     session.setDetails(context.getUnmarshaller(String.class).unmarshall(context));
@@ -83,6 +87,10 @@ public class SessionJsonUnmarshaller implements Unmarshaller<Session, JsonUnmars
                 if (context.testExpression("OutputUrl", targetDepth)) {
                     context.nextToken();
                     session.setOutputUrl(SessionManagerOutputUrlJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("MaxSessionDuration", targetDepth)) {
+                    context.nextToken();
+                    session.setMaxSessionDuration(context.getUnmarshaller(String.class).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

@@ -44,7 +44,6 @@ public class JsonProtocolMarshaller<OrigRequest> implements ProtocolRequestMarsh
     private final Request<OrigRequest> request;
     private final String contentType;
     private final boolean hasExplicitPayloadMember;
-
     private final JsonMarshallerContext marshallerContext;
     private final MarshallerRegistry marshallerRegistry;
 
@@ -52,7 +51,8 @@ public class JsonProtocolMarshaller<OrigRequest> implements ProtocolRequestMarsh
                                   String contentType,
                                   OperationInfo operationInfo,
                                   OrigRequest originalRequest,
-                                  MarshallerRegistry.Builder marshallerRegistryOverrides) {
+                                  MarshallerRegistry.Builder marshallerRegistryOverrides,
+                                  EmptyBodyJsonMarshaller emptyBodyMarshaller) {
         this.jsonGenerator = jsonGenerator;
         this.contentType = contentType;
         this.hasExplicitPayloadMember = operationInfo.hasExplicitPayloadMember();
@@ -63,6 +63,7 @@ public class JsonProtocolMarshaller<OrigRequest> implements ProtocolRequestMarsh
                                                       .marshallerRegistry(marshallerRegistry)
                                                       .protocolHandler(this)
                                                       .request(request)
+                                                      .emptyBodyJsonMarshaller(emptyBodyMarshaller)
                                                       .build();
     }
 
@@ -193,7 +194,8 @@ public class JsonProtocolMarshaller<OrigRequest> implements ProtocolRequestMarsh
                 request.addHeader("Content-Length", Integer.toString(content.length));
             }
         }
-        if (!request.getHeaders().containsKey("Content-Type")) {
+        if (!request.getHeaders().containsKey("Content-Type") && contentType != null && request.getHeaders().containsKey(
+            "Content-Length")) {
             request.addHeader("Content-Type", contentType);
         }
         return request;

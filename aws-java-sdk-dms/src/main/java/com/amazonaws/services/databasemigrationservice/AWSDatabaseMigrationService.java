@@ -231,7 +231,7 @@ public interface AWSDatabaseMigrationService {
      * @throws KMSAccessDeniedException
      *         The ciphertext references a key that doesn't exist or that the DMS account doesn't have access to.
      * @throws KMSDisabledException
-     *         The specified master key (CMK) isn't enabled.
+     *         The specified KMS key isn't enabled.
      * @throws KMSInvalidStateException
      *         The state of the specified KMS resource isn't valid for this request.
      * @throws KMSNotFoundException
@@ -784,9 +784,7 @@ public interface AWSDatabaseMigrationService {
      * <p>
      * For more information about DMS task assessments, see <a
      * href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating a task
-     * assessment report</a> in the <a
-     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> Database
-     * Migration Service User Guide</a>.
+     * assessment report</a> in the <i>Database Migration Service User Guide</i>.
      * </p>
      * 
      * @param describeReplicationTaskAssessmentResultsRequest
@@ -987,7 +985,7 @@ public interface AWSDatabaseMigrationService {
      * @throws KMSAccessDeniedException
      *         The ciphertext references a key that doesn't exist or that the DMS account doesn't have access to.
      * @throws KMSDisabledException
-     *         The specified master key (CMK) isn't enabled.
+     *         The specified KMS key isn't enabled.
      * @throws KMSInvalidStateException
      *         The state of the specified KMS resource isn't valid for this request.
      * @throws KMSNotFoundException
@@ -1255,7 +1253,7 @@ public interface AWSDatabaseMigrationService {
      * @throws KMSAccessDeniedException
      *         The ciphertext references a key that doesn't exist or that the DMS account doesn't have access to.
      * @throws KMSDisabledException
-     *         The specified master key (CMK) isn't enabled.
+     *         The specified KMS key isn't enabled.
      * @throws KMSException
      *         An Key Management Service (KMS) error is preventing access to KMS.
      * @throws KMSInvalidStateException

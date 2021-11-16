@@ -51,7 +51,7 @@
     "asyncInterface" : "AmazonHoneycodeAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AmazonHoneycodeModuleInjector",
     "defaultEndpoint" : "honeycode.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "honeycode.us-east-1.amazonaws.com",

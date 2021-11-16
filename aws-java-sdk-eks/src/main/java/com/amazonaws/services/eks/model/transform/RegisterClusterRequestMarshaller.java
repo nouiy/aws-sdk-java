@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.eks.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -36,6 +38,8 @@ public class RegisterClusterRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTREQUESTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientRequestToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final RegisterClusterRequestMarshaller instance = new RegisterClusterRequestMarshaller();
 
@@ -56,6 +60,7 @@ public class RegisterClusterRequestMarshaller {
             protocolMarshaller.marshall(registerClusterRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(registerClusterRequest.getConnectorConfig(), CONNECTORCONFIG_BINDING);
             protocolMarshaller.marshall(registerClusterRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
+            protocolMarshaller.marshall(registerClusterRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

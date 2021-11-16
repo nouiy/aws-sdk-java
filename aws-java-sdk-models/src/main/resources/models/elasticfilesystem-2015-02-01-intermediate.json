@@ -60,7 +60,7 @@
     "asyncInterface" : "AmazonElasticFileSystemAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AmazonElasticFileSystemModuleInjector",
     "defaultEndpoint" : "https://elasticfilesystem.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "elasticfilesystem.us-east-1.amazonaws.com",

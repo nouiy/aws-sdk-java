@@ -82,7 +82,7 @@ public class AWSMarketplaceCatalogClient extends AmazonWebServiceClient implemen
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.marketplacecatalog.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

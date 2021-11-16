@@ -78,7 +78,7 @@ public class AmazonKinesisVideoSignalingChannelsClient extends AmazonWebServiceC
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidArgumentException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kinesisvideosignalingchannels.model.transform.InvalidArgumentExceptionUnmarshaller.getInstance()))

@@ -51,7 +51,7 @@
     "asyncInterface" : "AmazonPollyAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AmazonPollyModuleInjector",
     "defaultEndpoint" : "polly.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "polly.us-east-1.amazonaws.com",

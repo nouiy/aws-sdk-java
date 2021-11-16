@@ -115,7 +115,7 @@ public class AmazonGlacierClient extends AmazonWebServiceClient implements Amazo
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("RequestTimeoutException").withExceptionUnmarshaller(
                                     com.amazonaws.services.glacier.model.transform.RequestTimeoutExceptionUnmarshaller.getInstance()))

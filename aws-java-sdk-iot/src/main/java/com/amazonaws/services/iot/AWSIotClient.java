@@ -99,7 +99,7 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalFailureException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iot.model.transform.InternalFailureExceptionUnmarshaller.getInstance()))

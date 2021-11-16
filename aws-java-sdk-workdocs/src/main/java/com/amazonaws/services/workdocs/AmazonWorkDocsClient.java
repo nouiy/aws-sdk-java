@@ -109,7 +109,7 @@ public class AmazonWorkDocsClient extends AmazonWebServiceClient implements Amaz
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("FailedDependencyException").withExceptionUnmarshaller(
                                     com.amazonaws.services.workdocs.model.transform.FailedDependencyExceptionUnmarshaller.getInstance()))

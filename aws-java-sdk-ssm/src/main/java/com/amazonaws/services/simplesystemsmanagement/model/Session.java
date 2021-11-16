@@ -72,6 +72,12 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
     private String owner;
     /**
      * <p>
+     * The reason for connecting to the instance.
+     * </p>
+     */
+    private String reason;
+    /**
+     * <p>
      * Reserved for future use.
      * </p>
      */
@@ -82,6 +88,12 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private SessionManagerOutputUrl outputUrl;
+    /**
+     * <p>
+     * The maximum duration of a session before it terminates.
+     * </p>
+     */
+    private String maxSessionDuration;
 
     /**
      * <p>
@@ -390,6 +402,46 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The reason for connecting to the instance.
+     * </p>
+     * 
+     * @param reason
+     *        The reason for connecting to the instance.
+     */
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    /**
+     * <p>
+     * The reason for connecting to the instance.
+     * </p>
+     * 
+     * @return The reason for connecting to the instance.
+     */
+
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
+     * <p>
+     * The reason for connecting to the instance.
+     * </p>
+     * 
+     * @param reason
+     *        The reason for connecting to the instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Session withReason(String reason) {
+        setReason(reason);
+        return this;
+    }
+
+    /**
+     * <p>
      * Reserved for future use.
      * </p>
      * 
@@ -469,6 +521,46 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The maximum duration of a session before it terminates.
+     * </p>
+     * 
+     * @param maxSessionDuration
+     *        The maximum duration of a session before it terminates.
+     */
+
+    public void setMaxSessionDuration(String maxSessionDuration) {
+        this.maxSessionDuration = maxSessionDuration;
+    }
+
+    /**
+     * <p>
+     * The maximum duration of a session before it terminates.
+     * </p>
+     * 
+     * @return The maximum duration of a session before it terminates.
+     */
+
+    public String getMaxSessionDuration() {
+        return this.maxSessionDuration;
+    }
+
+    /**
+     * <p>
+     * The maximum duration of a session before it terminates.
+     * </p>
+     * 
+     * @param maxSessionDuration
+     *        The maximum duration of a session before it terminates.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Session withMaxSessionDuration(String maxSessionDuration) {
+        setMaxSessionDuration(maxSessionDuration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -494,10 +586,14 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
             sb.append("DocumentName: ").append(getDocumentName()).append(",");
         if (getOwner() != null)
             sb.append("Owner: ").append(getOwner()).append(",");
+        if (getReason() != null)
+            sb.append("Reason: ").append(getReason()).append(",");
         if (getDetails() != null)
             sb.append("Details: ").append(getDetails()).append(",");
         if (getOutputUrl() != null)
-            sb.append("OutputUrl: ").append(getOutputUrl());
+            sb.append("OutputUrl: ").append(getOutputUrl()).append(",");
+        if (getMaxSessionDuration() != null)
+            sb.append("MaxSessionDuration: ").append(getMaxSessionDuration());
         sb.append("}");
         return sb.toString();
     }
@@ -540,6 +636,10 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getOwner() != null && other.getOwner().equals(this.getOwner()) == false)
             return false;
+        if (other.getReason() == null ^ this.getReason() == null)
+            return false;
+        if (other.getReason() != null && other.getReason().equals(this.getReason()) == false)
+            return false;
         if (other.getDetails() == null ^ this.getDetails() == null)
             return false;
         if (other.getDetails() != null && other.getDetails().equals(this.getDetails()) == false)
@@ -547,6 +647,10 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
         if (other.getOutputUrl() == null ^ this.getOutputUrl() == null)
             return false;
         if (other.getOutputUrl() != null && other.getOutputUrl().equals(this.getOutputUrl()) == false)
+            return false;
+        if (other.getMaxSessionDuration() == null ^ this.getMaxSessionDuration() == null)
+            return false;
+        if (other.getMaxSessionDuration() != null && other.getMaxSessionDuration().equals(this.getMaxSessionDuration()) == false)
             return false;
         return true;
     }
@@ -563,8 +667,10 @@ public class Session implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEndDate() == null) ? 0 : getEndDate().hashCode());
         hashCode = prime * hashCode + ((getDocumentName() == null) ? 0 : getDocumentName().hashCode());
         hashCode = prime * hashCode + ((getOwner() == null) ? 0 : getOwner().hashCode());
+        hashCode = prime * hashCode + ((getReason() == null) ? 0 : getReason().hashCode());
         hashCode = prime * hashCode + ((getDetails() == null) ? 0 : getDetails().hashCode());
         hashCode = prime * hashCode + ((getOutputUrl() == null) ? 0 : getOutputUrl().hashCode());
+        hashCode = prime * hashCode + ((getMaxSessionDuration() == null) ? 0 : getMaxSessionDuration().hashCode());
         return hashCode;
     }
 

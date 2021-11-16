@@ -107,7 +107,7 @@ public class AmazonSageMakerFeatureStoreRuntimeClient extends AmazonWebServiceCl
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationError").withExceptionUnmarshaller(
                                     com.amazonaws.services.sagemakerfeaturestoreruntime.model.transform.ValidationErrorExceptionUnmarshaller.getInstance()))

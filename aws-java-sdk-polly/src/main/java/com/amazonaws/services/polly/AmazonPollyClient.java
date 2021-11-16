@@ -81,7 +81,7 @@ public class AmazonPollyClient extends AmazonWebServiceClient implements AmazonP
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidS3BucketException").withExceptionUnmarshaller(
                                     com.amazonaws.services.polly.model.transform.InvalidS3BucketExceptionUnmarshaller.getInstance()))

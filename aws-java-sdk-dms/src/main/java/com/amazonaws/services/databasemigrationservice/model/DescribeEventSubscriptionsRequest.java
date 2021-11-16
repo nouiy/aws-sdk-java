@@ -36,6 +36,9 @@ public class DescribeEventSubscriptionsRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * Filters applied to event subscriptions.
      * </p>
+     * <p>
+     * Valid filter names: event-subscription-arn | event-subscription-id
+     * </p>
      */
     private java.util.List<Filter> filters;
     /**
@@ -104,8 +107,13 @@ public class DescribeEventSubscriptionsRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * Filters applied to event subscriptions.
      * </p>
+     * <p>
+     * Valid filter names: event-subscription-arn | event-subscription-id
+     * </p>
      * 
-     * @return Filters applied to event subscriptions.
+     * @return Filters applied to event subscriptions.</p>
+     *         <p>
+     *         Valid filter names: event-subscription-arn | event-subscription-id
      */
 
     public java.util.List<Filter> getFilters() {
@@ -116,9 +124,14 @@ public class DescribeEventSubscriptionsRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * Filters applied to event subscriptions.
      * </p>
+     * <p>
+     * Valid filter names: event-subscription-arn | event-subscription-id
+     * </p>
      * 
      * @param filters
-     *        Filters applied to event subscriptions.
+     *        Filters applied to event subscriptions.</p>
+     *        <p>
+     *        Valid filter names: event-subscription-arn | event-subscription-id
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -135,13 +148,18 @@ public class DescribeEventSubscriptionsRequest extends com.amazonaws.AmazonWebSe
      * Filters applied to event subscriptions.
      * </p>
      * <p>
+     * Valid filter names: event-subscription-arn | event-subscription-id
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param filters
-     *        Filters applied to event subscriptions.
+     *        Filters applied to event subscriptions.</p>
+     *        <p>
+     *        Valid filter names: event-subscription-arn | event-subscription-id
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,9 +177,14 @@ public class DescribeEventSubscriptionsRequest extends com.amazonaws.AmazonWebSe
      * <p>
      * Filters applied to event subscriptions.
      * </p>
+     * <p>
+     * Valid filter names: event-subscription-arn | event-subscription-id
+     * </p>
      * 
      * @param filters
-     *        Filters applied to event subscriptions.
+     *        Filters applied to event subscriptions.</p>
+     *        <p>
+     *        Valid filter names: event-subscription-arn | event-subscription-id
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

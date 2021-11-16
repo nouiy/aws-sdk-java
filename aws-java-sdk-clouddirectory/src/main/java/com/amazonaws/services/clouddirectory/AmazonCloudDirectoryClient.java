@@ -82,7 +82,7 @@ public class AmazonCloudDirectoryClient extends AmazonWebServiceClient implement
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidArnException").withExceptionUnmarshaller(
                                     com.amazonaws.services.clouddirectory.model.transform.InvalidArnExceptionUnmarshaller.getInstance()))

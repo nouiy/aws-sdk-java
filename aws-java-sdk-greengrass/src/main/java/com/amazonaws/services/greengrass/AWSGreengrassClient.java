@@ -77,7 +77,7 @@ public class AWSGreengrassClient extends AmazonWebServiceClient implements AWSGr
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("BadRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.greengrass.model.transform.BadRequestExceptionUnmarshaller.getInstance()))

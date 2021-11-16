@@ -81,7 +81,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.macie2.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))

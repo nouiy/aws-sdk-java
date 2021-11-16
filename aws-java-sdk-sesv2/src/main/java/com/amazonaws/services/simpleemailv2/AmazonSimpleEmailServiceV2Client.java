@@ -84,7 +84,7 @@ public class AmazonSimpleEmailServiceV2Client extends AmazonWebServiceClient imp
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConcurrentModificationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.simpleemailv2.model.transform.ConcurrentModificationExceptionUnmarshaller.getInstance()))

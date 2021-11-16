@@ -160,6 +160,10 @@ public class S3SettingsJsonUnmarshaller implements Unmarshaller<S3Settings, Json
                     context.nextToken();
                     s3Settings.setCdcPath(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("UseTaskStartTimeForFullLoadTimestamp", targetDepth)) {
+                    context.nextToken();
+                    s3Settings.setUseTaskStartTimeForFullLoadTimestamp(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("CannedAclForObjects", targetDepth)) {
                     context.nextToken();
                     s3Settings.setCannedAclForObjects(context.getUnmarshaller(String.class).unmarshall(context));

@@ -77,7 +77,7 @@ public class AWSIoT1ClickDevicesClient extends AmazonWebServiceClient implements
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalFailureException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iot1clickdevices.model.transform.InternalFailureExceptionUnmarshaller.getInstance()))

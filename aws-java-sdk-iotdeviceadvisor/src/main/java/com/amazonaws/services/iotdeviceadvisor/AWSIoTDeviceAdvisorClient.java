@@ -82,7 +82,7 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iotdeviceadvisor.model.transform.ValidationExceptionUnmarshaller.getInstance()))

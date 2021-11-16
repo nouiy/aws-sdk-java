@@ -82,7 +82,7 @@ public class AWSPanoramaClient extends AmazonWebServiceClient implements AWSPano
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.panorama.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))

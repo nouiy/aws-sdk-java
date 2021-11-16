@@ -95,7 +95,7 @@ public class AWSSSOClient extends AmazonWebServiceClient implements AWSSSO {
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("TooManyRequestsException").withExceptionUnmarshaller(
                                     com.amazonaws.services.sso.model.transform.TooManyRequestsExceptionUnmarshaller.getInstance()))

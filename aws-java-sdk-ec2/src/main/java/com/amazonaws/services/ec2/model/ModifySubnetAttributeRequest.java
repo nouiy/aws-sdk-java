@@ -71,6 +71,13 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
      * </p>
      */
     private String customerOwnedIpv4Pool;
+    /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     */
+    private Boolean enableDns64;
 
     /**
      * <p>
@@ -416,6 +423,66 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
     }
 
     /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     * 
+     * @param enableDns64
+     *        Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return
+     *        synthetic IPv6 addresses for IPv4-only destinations.
+     */
+
+    public void setEnableDns64(Boolean enableDns64) {
+        this.enableDns64 = enableDns64;
+    }
+
+    /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     * 
+     * @return Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return
+     *         synthetic IPv6 addresses for IPv4-only destinations.
+     */
+
+    public Boolean getEnableDns64() {
+        return this.enableDns64;
+    }
+
+    /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     * 
+     * @param enableDns64
+     *        Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return
+     *        synthetic IPv6 addresses for IPv4-only destinations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifySubnetAttributeRequest withEnableDns64(Boolean enableDns64) {
+        setEnableDns64(enableDns64);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     * 
+     * @return Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return
+     *         synthetic IPv6 addresses for IPv4-only destinations.
+     */
+
+    public Boolean isEnableDns64() {
+        return this.enableDns64;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -447,7 +514,9 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
         if (getMapCustomerOwnedIpOnLaunch() != null)
             sb.append("MapCustomerOwnedIpOnLaunch: ").append(getMapCustomerOwnedIpOnLaunch()).append(",");
         if (getCustomerOwnedIpv4Pool() != null)
-            sb.append("CustomerOwnedIpv4Pool: ").append(getCustomerOwnedIpv4Pool());
+            sb.append("CustomerOwnedIpv4Pool: ").append(getCustomerOwnedIpv4Pool()).append(",");
+        if (getEnableDns64() != null)
+            sb.append("EnableDns64: ").append(getEnableDns64());
         sb.append("}");
         return sb.toString();
     }
@@ -482,6 +551,10 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
             return false;
         if (other.getCustomerOwnedIpv4Pool() != null && other.getCustomerOwnedIpv4Pool().equals(this.getCustomerOwnedIpv4Pool()) == false)
             return false;
+        if (other.getEnableDns64() == null ^ this.getEnableDns64() == null)
+            return false;
+        if (other.getEnableDns64() != null && other.getEnableDns64().equals(this.getEnableDns64()) == false)
+            return false;
         return true;
     }
 
@@ -495,6 +568,7 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
         hashCode = prime * hashCode + ((getSubnetId() == null) ? 0 : getSubnetId().hashCode());
         hashCode = prime * hashCode + ((getMapCustomerOwnedIpOnLaunch() == null) ? 0 : getMapCustomerOwnedIpOnLaunch().hashCode());
         hashCode = prime * hashCode + ((getCustomerOwnedIpv4Pool() == null) ? 0 : getCustomerOwnedIpv4Pool().hashCode());
+        hashCode = prime * hashCode + ((getEnableDns64() == null) ? 0 : getEnableDns64().hashCode());
         return hashCode;
     }
 

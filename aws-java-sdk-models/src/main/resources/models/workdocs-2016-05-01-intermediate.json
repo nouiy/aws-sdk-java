@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
     "emitLegacyEnumSetterFor" : {
       "Activity" : [ "Type" ],
       "Comment" : [ "Status", "Visibility" ],
@@ -75,7 +75,7 @@
     "asyncInterface" : "AmazonWorkDocsAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AmazonWorkDocsModuleInjector",
     "defaultEndpoint" : "workdocs.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "workdocs.us-east-1.amazonaws.com",

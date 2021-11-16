@@ -79,7 +79,7 @@ public class AmazonPrometheusClient extends AmazonWebServiceClient implements Am
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.prometheus.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

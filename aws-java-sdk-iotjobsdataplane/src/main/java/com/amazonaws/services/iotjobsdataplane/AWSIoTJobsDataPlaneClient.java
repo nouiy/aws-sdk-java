@@ -90,7 +90,7 @@ public class AWSIoTJobsDataPlaneClient extends AmazonWebServiceClient implements
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidStateTransitionException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iotjobsdataplane.model.transform.InvalidStateTransitionExceptionUnmarshaller.getInstance()))

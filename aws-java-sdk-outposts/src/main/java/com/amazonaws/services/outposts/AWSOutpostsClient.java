@@ -79,7 +79,7 @@ public class AWSOutpostsClient extends AmazonWebServiceClient implements AWSOutp
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.outposts.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

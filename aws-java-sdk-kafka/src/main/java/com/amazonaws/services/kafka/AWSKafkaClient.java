@@ -77,7 +77,7 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.kafka.model.transform.NotFoundExceptionUnmarshaller.getInstance()))

@@ -88,7 +88,7 @@ public class AWSBatchClient extends AmazonWebServiceClient implements AWSBatch {
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.batch.model.transform.ServerExceptionUnmarshaller.getInstance()))

@@ -51,7 +51,7 @@
     "asyncInterface" : "AWSAmplifyAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AWSAmplifyModuleInjector",
     "defaultEndpoint" : "amplify.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "amplify.us-east-1.amazonaws.com",

@@ -78,7 +78,7 @@ public class AmazonHoneycodeClient extends AmazonWebServiceClient implements Ama
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.honeycode.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

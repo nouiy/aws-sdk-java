@@ -76,7 +76,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConcurrentDeploymentException").withExceptionUnmarshaller(
                                     com.amazonaws.services.robomaker.model.transform.ConcurrentDeploymentExceptionUnmarshaller.getInstance()))

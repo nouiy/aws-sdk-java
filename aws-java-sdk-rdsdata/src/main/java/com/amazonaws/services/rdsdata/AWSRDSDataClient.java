@@ -85,7 +85,7 @@ public class AWSRDSDataClient extends AmazonWebServiceClient implements AWSRDSDa
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.rdsdata.model.transform.NotFoundExceptionUnmarshaller.getInstance()))

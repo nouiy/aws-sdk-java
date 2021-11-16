@@ -1436,32 +1436,24 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
      * <ol>
      * <li>
      * <p>
-     * Create an Amazon Kinesis Data Firehose.
+     * Create your logging destination. You can use an Amazon CloudWatch Logs log group, an Amazon Simple Storage
+     * Service (Amazon S3) bucket, or an Amazon Kinesis Data Firehose. For information about configuring logging
+     * destinations and the permissions that are required for each, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging web ACL traffic information</a>
+     * in the <i>WAF Developer Guide</i>.
      * </p>
-     * <p>
-     * Create the data firehose with a PUT source and in the Region that you are operating. If you are capturing logs
-     * for Amazon CloudFront, always create the firehose in US East (N. Virginia).
-     * </p>
-     * <p>
-     * Give the data firehose a name that starts with the prefix <code>aws-waf-logs-</code>. For example,
-     * <code>aws-waf-logs-us-east-2-analytics</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Do not create the data firehose using a <code>Kinesis stream</code> as your source.
-     * </p>
-     * </note></li>
+     * </li>
      * <li>
      * <p>
-     * Associate that firehose to your web ACL using a <code>PutLoggingConfiguration</code> request.
+     * Associate your logging destination to your web ACL using a <code>PutLoggingConfiguration</code> request.
      * </p>
      * </li>
      * </ol>
      * <p>
-     * When you successfully enable logging using a <code>PutLoggingConfiguration</code> request, WAF will create a
-     * service linked role with the necessary permissions to write logs to the Amazon Kinesis Data Firehose. For more
-     * information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging Web ACL
-     * Traffic Information</a> in the <i>WAF Developer Guide</i>.
+     * When you successfully enable logging using a <code>PutLoggingConfiguration</code> request, WAF creates an
+     * additional role or policy that is required to write logs to the logging destination. For an Amazon CloudWatch
+     * Logs log group, WAF creates a resource policy on the log group. For an Amazon S3 bucket, WAF creates a bucket
+     * policy. For an Amazon Kinesis Data Firehose, WAF creates a service-linked role.
      * </p>
      * <note>
      * <p>
@@ -1491,32 +1483,24 @@ public interface AWSWAFV2Async extends AWSWAFV2 {
      * <ol>
      * <li>
      * <p>
-     * Create an Amazon Kinesis Data Firehose.
+     * Create your logging destination. You can use an Amazon CloudWatch Logs log group, an Amazon Simple Storage
+     * Service (Amazon S3) bucket, or an Amazon Kinesis Data Firehose. For information about configuring logging
+     * destinations and the permissions that are required for each, see <a
+     * href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging web ACL traffic information</a>
+     * in the <i>WAF Developer Guide</i>.
      * </p>
-     * <p>
-     * Create the data firehose with a PUT source and in the Region that you are operating. If you are capturing logs
-     * for Amazon CloudFront, always create the firehose in US East (N. Virginia).
-     * </p>
-     * <p>
-     * Give the data firehose a name that starts with the prefix <code>aws-waf-logs-</code>. For example,
-     * <code>aws-waf-logs-us-east-2-analytics</code>.
-     * </p>
-     * <note>
-     * <p>
-     * Do not create the data firehose using a <code>Kinesis stream</code> as your source.
-     * </p>
-     * </note></li>
+     * </li>
      * <li>
      * <p>
-     * Associate that firehose to your web ACL using a <code>PutLoggingConfiguration</code> request.
+     * Associate your logging destination to your web ACL using a <code>PutLoggingConfiguration</code> request.
      * </p>
      * </li>
      * </ol>
      * <p>
-     * When you successfully enable logging using a <code>PutLoggingConfiguration</code> request, WAF will create a
-     * service linked role with the necessary permissions to write logs to the Amazon Kinesis Data Firehose. For more
-     * information, see <a href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging Web ACL
-     * Traffic Information</a> in the <i>WAF Developer Guide</i>.
+     * When you successfully enable logging using a <code>PutLoggingConfiguration</code> request, WAF creates an
+     * additional role or policy that is required to write logs to the logging destination. For an Amazon CloudWatch
+     * Logs log group, WAF creates a resource policy on the log group. For an Amazon S3 bucket, WAF creates a bucket
+     * policy. For an Amazon Kinesis Data Firehose, WAF creates a service-linked role.
      * </p>
      * <note>
      * <p>

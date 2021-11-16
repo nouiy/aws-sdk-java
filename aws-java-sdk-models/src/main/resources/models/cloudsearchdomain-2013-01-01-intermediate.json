@@ -81,7 +81,7 @@
     "asyncInterface" : "AmazonCloudSearchDomainAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AmazonCloudSearchDomainModuleInjector",
     "defaultEndpoint" : null,
     "defaultEndpointWithoutHttpProtocol" : null,

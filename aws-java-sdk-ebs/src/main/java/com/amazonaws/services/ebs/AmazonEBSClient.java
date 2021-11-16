@@ -97,7 +97,7 @@ public class AmazonEBSClient extends AmazonWebServiceClient implements AmazonEBS
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.ebs.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

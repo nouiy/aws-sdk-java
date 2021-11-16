@@ -1,3 +1,40 @@
+# __1.12.111__ __2021-11-15__
+## __AWS Database Migration Service__
+  - ### Features
+    - Add Settings in JSON format for the source GCP MySQL endpoint
+
+## __AWS SDK for Java__
+  - ### Bugfixes
+    - "Update the REST-JSON marshalling logic to conform to the standard expected behavior with respect to the `Content-Type` of the request."
+
+## __AWS Transfer Family__
+  - ### Features
+    - AWS Transfer Family now supports integrating a custom identity provider using AWS Lambda
+
+## __AWS WAFV2__
+  - ### Features
+    - Your options for logging web ACL traffic now include Amazon CloudWatch Logs log groups and Amazon S3 buckets.
+
+## __Amazon AppStream__
+  - ### Features
+    - This release includes support for images of AmazonLinux2 platform type.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - Adds a new VPC Subnet attribute "EnableDns64." When enabled on IPv6 Subnets, the Amazon-Provided DNS Resolver returns synthetic IPv6 addresses for IPv4-only destinations.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - Adding Tags support to Cluster Registrations.
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - Adds support for Session Reason and Max Session Duration for Systems Manager Session Manager.
+
+## __Migration Hub Strategy Recommendations__
+  - ### Features
+    - AWS SDK for Migration Hub Strategy Recommendations. It includes APIs to start the portfolio assessment, import portfolio data for assessment, and to retrieve recommendations. For more information, see the AWS Migration Hub documentation at https://docs.aws.amazon.com/migrationhub/index.html
+
 # __1.12.110__ __2021-11-12__
 ## __AWS Elemental MediaConvert__
   - ### Features

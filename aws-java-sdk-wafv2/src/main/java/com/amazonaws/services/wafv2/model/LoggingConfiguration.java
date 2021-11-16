@@ -19,9 +19,14 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines an association between Amazon Kinesis Data Firehose destinations and a web ACL resource, for logging from
- * WAF. As part of the association, you can specify parts of the standard logging fields to keep out of the logs and you
- * can specify filters so that you log only a subset of the logging records.
+ * Defines an association between logging destinations and a web ACL resource, for logging from WAF. As part of the
+ * association, you can specify parts of the standard logging fields to keep out of the logs and you can specify filters
+ * so that you log only a subset of the logging records.
+ * </p>
+ * <p>
+ * For information about configuring web ACL logging destinations, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging web ACL traffic information</a> in
+ * the <i>WAF Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/wafv2-2019-07-29/LoggingConfiguration" target="_top">AWS API
@@ -38,14 +43,14 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     private String resourceArn;
     /**
      * <p>
-     * The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL.
+     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * </p>
      */
     private java.util.List<String> logDestinationConfigs;
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
@@ -115,10 +120,10 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL.
+     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * </p>
      * 
-     * @return The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL.
+     * @return The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      */
 
     public java.util.List<String> getLogDestinationConfigs() {
@@ -127,11 +132,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL.
+     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * </p>
      * 
      * @param logDestinationConfigs
-     *        The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL.
+     *        The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      */
 
     public void setLogDestinationConfigs(java.util.Collection<String> logDestinationConfigs) {
@@ -145,7 +150,7 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL.
+     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -154,7 +159,7 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param logDestinationConfigs
-     *        The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL.
+     *        The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,11 +175,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL.
+     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * </p>
      * 
      * @param logDestinationConfigs
-     *        The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL.
+     *        The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,7 +191,7 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
@@ -196,8 +201,8 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
      * </note>
      * 
      * @return The parts of the request that you want to keep out of the logs. For example, if you redact the
-     *         <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
-     *         </p> <note>
+     *         <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>. </p>
+     *         <note>
      *         <p>
      *         You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
      *         <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
@@ -211,7 +216,7 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
@@ -222,8 +227,8 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
      * 
      * @param redactedFields
      *        The parts of the request that you want to keep out of the logs. For example, if you redact the
-     *        <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
-     *        </p> <note>
+     *        <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>. </p>
+     *        <note>
      *        <p>
      *        You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
      *        <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
@@ -242,7 +247,7 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
@@ -258,8 +263,8 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
      * 
      * @param redactedFields
      *        The parts of the request that you want to keep out of the logs. For example, if you redact the
-     *        <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
-     *        </p> <note>
+     *        <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>. </p>
+     *        <note>
      *        <p>
      *        You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
      *        <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.
@@ -280,7 +285,7 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The parts of the request that you want to keep out of the logs. For example, if you redact the
-     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
+     * <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>.
      * </p>
      * <note>
      * <p>
@@ -291,8 +296,8 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
      * 
      * @param redactedFields
      *        The parts of the request that you want to keep out of the logs. For example, if you redact the
-     *        <code>SingleHeader</code> field, the <code>HEADER</code> field in the firehose will be <code>xxx</code>.
-     *        </p> <note>
+     *        <code>SingleHeader</code> field, the <code>HEADER</code> field in the logs will be <code>xxx</code>. </p>
+     *        <note>
      *        <p>
      *        You can specify only the following fields for redaction: <code>UriPath</code>, <code>QueryString</code>,
      *        <code>SingleHeader</code>, <code>Method</code>, and <code>JsonBody</code>.

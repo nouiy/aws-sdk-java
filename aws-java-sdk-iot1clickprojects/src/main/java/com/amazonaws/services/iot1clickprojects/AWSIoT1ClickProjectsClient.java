@@ -76,7 +76,7 @@ public class AWSIoT1ClickProjectsClient extends AmazonWebServiceClient implement
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalFailureException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iot1clickprojects.model.transform.InternalFailureExceptionUnmarshaller.getInstance()))

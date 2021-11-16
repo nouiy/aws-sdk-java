@@ -85,7 +85,7 @@ public class AWSApplicationCostProfilerClient extends AmazonWebServiceClient imp
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.applicationcostprofiler.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

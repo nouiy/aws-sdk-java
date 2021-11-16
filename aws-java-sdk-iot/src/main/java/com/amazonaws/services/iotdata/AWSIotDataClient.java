@@ -90,7 +90,7 @@ public class AWSIotDataClient extends AmazonWebServiceClient implements AWSIotDa
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iotdata.model.transform.ConflictExceptionUnmarshaller.getInstance()))

@@ -34,7 +34,17 @@ public class StartReplicationTaskRequest extends com.amazonaws.AmazonWebServiceR
     private String replicationTaskArn;
     /**
      * <p>
-     * A type of replication task.
+     * The type of replication task to start.
+     * </p>
+     * <p>
+     * When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value for the
+     * first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to restart the task
+     * and <code>resume-processing</code> to resume the task.
+     * </p>
+     * <p>
+     * When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart the task,
+     * and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid value for a task
+     * with migration type of <code>cdc</code>.
      * </p>
      */
     private String startReplicationTaskType;
@@ -133,11 +143,30 @@ public class StartReplicationTaskRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A type of replication task.
+     * The type of replication task to start.
+     * </p>
+     * <p>
+     * When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value for the
+     * first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to restart the task
+     * and <code>resume-processing</code> to resume the task.
+     * </p>
+     * <p>
+     * When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart the task,
+     * and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid value for a task
+     * with migration type of <code>cdc</code>.
      * </p>
      * 
      * @param startReplicationTaskType
-     *        A type of replication task.
+     *        The type of replication task to start.</p>
+     *        <p>
+     *        When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value
+     *        for the first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to
+     *        restart the task and <code>resume-processing</code> to resume the task.
+     *        </p>
+     *        <p>
+     *        When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart
+     *        the task, and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid
+     *        value for a task with migration type of <code>cdc</code>.
      * @see StartReplicationTaskTypeValue
      */
 
@@ -147,10 +176,29 @@ public class StartReplicationTaskRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A type of replication task.
+     * The type of replication task to start.
+     * </p>
+     * <p>
+     * When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value for the
+     * first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to restart the task
+     * and <code>resume-processing</code> to resume the task.
+     * </p>
+     * <p>
+     * When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart the task,
+     * and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid value for a task
+     * with migration type of <code>cdc</code>.
      * </p>
      * 
-     * @return A type of replication task.
+     * @return The type of replication task to start.</p>
+     *         <p>
+     *         When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value
+     *         for the first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to
+     *         restart the task and <code>resume-processing</code> to resume the task.
+     *         </p>
+     *         <p>
+     *         When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart
+     *         the task, and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a
+     *         valid value for a task with migration type of <code>cdc</code>.
      * @see StartReplicationTaskTypeValue
      */
 
@@ -160,11 +208,30 @@ public class StartReplicationTaskRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A type of replication task.
+     * The type of replication task to start.
+     * </p>
+     * <p>
+     * When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value for the
+     * first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to restart the task
+     * and <code>resume-processing</code> to resume the task.
+     * </p>
+     * <p>
+     * When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart the task,
+     * and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid value for a task
+     * with migration type of <code>cdc</code>.
      * </p>
      * 
      * @param startReplicationTaskType
-     *        A type of replication task.
+     *        The type of replication task to start.</p>
+     *        <p>
+     *        When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value
+     *        for the first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to
+     *        restart the task and <code>resume-processing</code> to resume the task.
+     *        </p>
+     *        <p>
+     *        When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart
+     *        the task, and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid
+     *        value for a task with migration type of <code>cdc</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StartReplicationTaskTypeValue
      */
@@ -176,11 +243,30 @@ public class StartReplicationTaskRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A type of replication task.
+     * The type of replication task to start.
+     * </p>
+     * <p>
+     * When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value for the
+     * first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to restart the task
+     * and <code>resume-processing</code> to resume the task.
+     * </p>
+     * <p>
+     * When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart the task,
+     * and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid value for a task
+     * with migration type of <code>cdc</code>.
      * </p>
      * 
      * @param startReplicationTaskType
-     *        A type of replication task.
+     *        The type of replication task to start.</p>
+     *        <p>
+     *        When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value
+     *        for the first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to
+     *        restart the task and <code>resume-processing</code> to resume the task.
+     *        </p>
+     *        <p>
+     *        When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart
+     *        the task, and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid
+     *        value for a task with migration type of <code>cdc</code>.
      * @see StartReplicationTaskTypeValue
      */
 
@@ -190,11 +276,30 @@ public class StartReplicationTaskRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A type of replication task.
+     * The type of replication task to start.
+     * </p>
+     * <p>
+     * When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value for the
+     * first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to restart the task
+     * and <code>resume-processing</code> to resume the task.
+     * </p>
+     * <p>
+     * When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart the task,
+     * and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid value for a task
+     * with migration type of <code>cdc</code>.
      * </p>
      * 
      * @param startReplicationTaskType
-     *        A type of replication task.
+     *        The type of replication task to start.</p>
+     *        <p>
+     *        When the migration type is <code>full-load</code> or <code>full-load-and-cdc</code>, the only valid value
+     *        for the first run of the task is <code>start-replication</code>. You use <code>reload-target</code> to
+     *        restart the task and <code>resume-processing</code> to resume the task.
+     *        </p>
+     *        <p>
+     *        When the migration type is <code>cdc</code>, you use <code>start-replication</code> to start or restart
+     *        the task, and <code>resume-processing</code> to resume the task. <code>reload-target</code> is not a valid
+     *        value for a task with migration type of <code>cdc</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StartReplicationTaskTypeValue
      */

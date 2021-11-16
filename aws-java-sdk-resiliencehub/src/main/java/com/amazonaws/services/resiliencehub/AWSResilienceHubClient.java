@@ -79,7 +79,7 @@ public class AWSResilienceHubClient extends AmazonWebServiceClient implements AW
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.resiliencehub.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))

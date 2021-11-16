@@ -43,6 +43,9 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * The location of an imported Oracle Wallet certificate for use with SSL. Provide the name of a <code>.sso</code>
      * file using the <code>fileb://</code> prefix. You can't provide the certificate inline.
      * </p>
+     * <p>
+     * Example: <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
+     * </p>
      */
     private java.nio.ByteBuffer certificateWallet;
     /**
@@ -144,6 +147,9 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * file using the <code>fileb://</code> prefix. You can't provide the certificate inline.
      * </p>
      * <p>
+     * Example: <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
+     * </p>
+     * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
      * Users of the SDK should not perform Base64 encoding on this field.
      * </p>
@@ -156,7 +162,10 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param certificateWallet
      *        The location of an imported Oracle Wallet certificate for use with SSL. Provide the name of a
-     *        <code>.sso</code> file using the <code>fileb://</code> prefix. You can't provide the certificate inline.
+     *        <code>.sso</code> file using the <code>fileb://</code> prefix. You can't provide the certificate
+     *        inline.</p>
+     *        <p>
+     *        Example: <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      */
 
     public void setCertificateWallet(java.nio.ByteBuffer certificateWallet) {
@@ -169,6 +178,9 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * file using the <code>fileb://</code> prefix. You can't provide the certificate inline.
      * </p>
      * <p>
+     * Example: <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
+     * </p>
+     * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
      * using {@link java.nio.ByteBuffer#asReadOnlyBuffer()} to create a read-only view of the buffer with an independent
      * {@code position}, and calling {@code get} methods on this rather than directly on the returned {@code ByteBuffer}.
@@ -177,7 +189,10 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * 
      * @return The location of an imported Oracle Wallet certificate for use with SSL. Provide the name of a
-     *         <code>.sso</code> file using the <code>fileb://</code> prefix. You can't provide the certificate inline.
+     *         <code>.sso</code> file using the <code>fileb://</code> prefix. You can't provide the certificate
+     *         inline.</p>
+     *         <p>
+     *         Example: <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      */
 
     public java.nio.ByteBuffer getCertificateWallet() {
@@ -188,6 +203,9 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The location of an imported Oracle Wallet certificate for use with SSL. Provide the name of a <code>.sso</code>
      * file using the <code>fileb://</code> prefix. You can't provide the certificate inline.
+     * </p>
+     * <p>
+     * Example: <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -202,7 +220,10 @@ public class ImportCertificateRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param certificateWallet
      *        The location of an imported Oracle Wallet certificate for use with SSL. Provide the name of a
-     *        <code>.sso</code> file using the <code>fileb://</code> prefix. You can't provide the certificate inline.
+     *        <code>.sso</code> file using the <code>fileb://</code> prefix. You can't provide the certificate
+     *        inline.</p>
+     *        <p>
+     *        Example: <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

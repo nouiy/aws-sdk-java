@@ -79,7 +79,7 @@ public class AWSRoute53RecoveryControlConfigClient extends AmazonWebServiceClien
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.route53recoverycontrolconfig.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

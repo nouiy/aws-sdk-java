@@ -51,7 +51,7 @@
     "asyncInterface" : "AWSSchemasAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AWSSchemasModuleInjector",
     "defaultEndpoint" : "schemas.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "schemas.us-east-1.amazonaws.com",

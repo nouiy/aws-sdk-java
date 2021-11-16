@@ -83,6 +83,8 @@ public class S3SettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PreserveTransactions").build();
     private static final MarshallingInfo<String> CDCPATH_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("CdcPath").build();
+    private static final MarshallingInfo<Boolean> USETASKSTARTTIMEFORFULLLOADTIMESTAMP_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UseTaskStartTimeForFullLoadTimestamp").build();
     private static final MarshallingInfo<String> CANNEDACLFOROBJECTS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CannedAclForObjects").build();
     private static final MarshallingInfo<Boolean> ADDCOLUMNNAME_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -144,6 +146,7 @@ public class S3SettingsMarshaller {
             protocolMarshaller.marshall(s3Settings.getCsvNoSupValue(), CSVNOSUPVALUE_BINDING);
             protocolMarshaller.marshall(s3Settings.getPreserveTransactions(), PRESERVETRANSACTIONS_BINDING);
             protocolMarshaller.marshall(s3Settings.getCdcPath(), CDCPATH_BINDING);
+            protocolMarshaller.marshall(s3Settings.getUseTaskStartTimeForFullLoadTimestamp(), USETASKSTARTTIMEFORFULLLOADTIMESTAMP_BINDING);
             protocolMarshaller.marshall(s3Settings.getCannedAclForObjects(), CANNEDACLFOROBJECTS_BINDING);
             protocolMarshaller.marshall(s3Settings.getAddColumnName(), ADDCOLUMNNAME_BINDING);
             protocolMarshaller.marshall(s3Settings.getCdcMaxBatchInterval(), CDCMAXBATCHINTERVAL_BINDING);

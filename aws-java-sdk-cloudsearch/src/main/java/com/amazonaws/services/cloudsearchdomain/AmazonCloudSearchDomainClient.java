@@ -86,7 +86,7 @@ public class AmazonCloudSearchDomainClient extends AmazonWebServiceClient implem
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("SearchException").withExceptionUnmarshaller(
                                     com.amazonaws.services.cloudsearchdomain.model.transform.SearchExceptionUnmarshaller.getInstance()))

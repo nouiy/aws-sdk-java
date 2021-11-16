@@ -174,6 +174,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
+     * <p>
+     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
+     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * <code>IdentityProviderDetails</code> data type.
+     * </p>
      */
     private String identityProviderType;
     /**
@@ -1161,6 +1166,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
+     * <p>
+     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
+     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * <code>IdentityProviderDetails</code> data type.
+     * </p>
      * 
      * @param identityProviderType
      *        Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>,
@@ -1176,6 +1186,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
      *        <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for
      *        authentication using the <code>IdentityProviderDetails</code> parameter.
+     *        </p>
+     *        <p>
+     *        Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
+     *        choose this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter
+     *        for the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
      */
 
@@ -1199,6 +1214,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
+     * <p>
+     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
+     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * <code>IdentityProviderDetails</code> data type.
+     * </p>
      * 
      * @return Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>,
      *         which allows you to store and access user credentials within the Amazon Web Services Transfer Family
@@ -1213,6 +1233,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
      *         <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for
      *         authentication using the <code>IdentityProviderDetails</code> parameter.
+     *         </p>
+     *         <p>
+     *         Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
+     *         choose this value, you must specify the ARN for the lambda function in the <code>Function</code>
+     *         parameter for the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
      */
 
@@ -1236,6 +1261,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
+     * <p>
+     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
+     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * <code>IdentityProviderDetails</code> data type.
+     * </p>
      * 
      * @param identityProviderType
      *        Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>,
@@ -1251,6 +1281,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
      *        <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for
      *        authentication using the <code>IdentityProviderDetails</code> parameter.
+     *        </p>
+     *        <p>
+     *        Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
+     *        choose this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter
+     *        for the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdentityProviderType
      */
@@ -1276,6 +1311,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for authentication
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
+     * <p>
+     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
+     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * <code>IdentityProviderDetails</code> data type.
+     * </p>
      * 
      * @param identityProviderType
      *        Specifies the mode of authentication for a server. The default value is <code>SERVICE_MANAGED</code>,
@@ -1291,6 +1331,11 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        Use the <code>API_GATEWAY</code> value to integrate with an identity provider of your choosing. The
      *        <code>API_GATEWAY</code> setting requires you to provide an API Gateway endpoint URL to call for
      *        authentication using the <code>IdentityProviderDetails</code> parameter.
+     *        </p>
+     *        <p>
+     *        Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
+     *        choose this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter
+     *        for the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IdentityProviderType
      */

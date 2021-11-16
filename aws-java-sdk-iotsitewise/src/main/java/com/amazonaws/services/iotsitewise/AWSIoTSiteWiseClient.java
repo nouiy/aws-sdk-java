@@ -84,7 +84,7 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalFailureException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iotsitewise.model.transform.InternalFailureExceptionUnmarshaller.getInstance()))

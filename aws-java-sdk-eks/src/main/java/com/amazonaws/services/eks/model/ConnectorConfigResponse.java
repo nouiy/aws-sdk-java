@@ -55,8 +55,7 @@ public class ConnectorConfigResponse implements Serializable, Cloneable, Structu
     private String provider;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role that is used by the EKS connector to communicate with AWS services
-     * from the connected Kubernetes cluster.
+     * The Amazon Resource Name (ARN) of the role to communicate with services from the connected Kubernetes cluster.
      * </p>
      */
     private String roleArn;
@@ -229,13 +228,12 @@ public class ConnectorConfigResponse implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role that is used by the EKS connector to communicate with AWS services
-     * from the connected Kubernetes cluster.
+     * The Amazon Resource Name (ARN) of the role to communicate with services from the connected Kubernetes cluster.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the role that is used by the EKS connector to communicate with AWS
-     *        services from the connected Kubernetes cluster.
+     *        The Amazon Resource Name (ARN) of the role to communicate with services from the connected Kubernetes
+     *        cluster.
      */
 
     public void setRoleArn(String roleArn) {
@@ -244,12 +242,11 @@ public class ConnectorConfigResponse implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role that is used by the EKS connector to communicate with AWS services
-     * from the connected Kubernetes cluster.
+     * The Amazon Resource Name (ARN) of the role to communicate with services from the connected Kubernetes cluster.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the role that is used by the EKS connector to communicate with AWS
-     *         services from the connected Kubernetes cluster.
+     * @return The Amazon Resource Name (ARN) of the role to communicate with services from the connected Kubernetes
+     *         cluster.
      */
 
     public String getRoleArn() {
@@ -258,13 +255,12 @@ public class ConnectorConfigResponse implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the role that is used by the EKS connector to communicate with AWS services
-     * from the connected Kubernetes cluster.
+     * The Amazon Resource Name (ARN) of the role to communicate with services from the connected Kubernetes cluster.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the role that is used by the EKS connector to communicate with AWS
-     *        services from the connected Kubernetes cluster.
+     *        The Amazon Resource Name (ARN) of the role to communicate with services from the connected Kubernetes
+     *        cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

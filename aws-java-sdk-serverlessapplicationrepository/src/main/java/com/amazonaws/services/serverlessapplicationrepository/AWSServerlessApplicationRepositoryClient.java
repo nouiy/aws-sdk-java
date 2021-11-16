@@ -108,7 +108,7 @@ public class AWSServerlessApplicationRepositoryClient extends AmazonWebServiceCl
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.serverlessapplicationrepository.model.transform.ConflictExceptionUnmarshaller.getInstance()))

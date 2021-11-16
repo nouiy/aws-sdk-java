@@ -51,7 +51,7 @@
     "asyncInterface" : "AWSAppSyncAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AWSAppSyncModuleInjector",
     "defaultEndpoint" : "appsync.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "appsync.us-east-1.amazonaws.com",

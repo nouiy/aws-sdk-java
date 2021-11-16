@@ -58,7 +58,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
     private String databaseName;
     /**
      * <p>
-     * Specifies how often to check the binary log for new changes/events when the database is idle.
+     * Specifies how often to check the binary log for new changes/events when the database is idle. The default is five
+     * seconds.
      * </p>
      * <p>
      * Example: <code>eventsPollInterval=5;</code>
@@ -90,7 +91,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Improves performance when loading data into the MySQL-compatible target database. Specifies how many threads to
      * use to load the data into the MySQL-compatible target database. Setting a large number of threads can have an
-     * adverse effect on database performance, because a separate connection is required for each thread.
+     * adverse effect on database performance, because a separate connection is required for each thread. The default is
+     * one.
      * </p>
      * <p>
      * Example: <code>parallelLoadThreads=1</code>
@@ -356,7 +358,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies how often to check the binary log for new changes/events when the database is idle.
+     * Specifies how often to check the binary log for new changes/events when the database is idle. The default is five
+     * seconds.
      * </p>
      * <p>
      * Example: <code>eventsPollInterval=5;</code>
@@ -366,7 +369,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param eventsPollInterval
-     *        Specifies how often to check the binary log for new changes/events when the database is idle.</p>
+     *        Specifies how often to check the binary log for new changes/events when the database is idle. The default
+     *        is five seconds.</p>
      *        <p>
      *        Example: <code>eventsPollInterval=5;</code>
      *        </p>
@@ -380,7 +384,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies how often to check the binary log for new changes/events when the database is idle.
+     * Specifies how often to check the binary log for new changes/events when the database is idle. The default is five
+     * seconds.
      * </p>
      * <p>
      * Example: <code>eventsPollInterval=5;</code>
@@ -389,7 +394,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      * In the example, DMS checks for changes in the binary logs every five seconds.
      * </p>
      * 
-     * @return Specifies how often to check the binary log for new changes/events when the database is idle.</p>
+     * @return Specifies how often to check the binary log for new changes/events when the database is idle. The default
+     *         is five seconds.</p>
      *         <p>
      *         Example: <code>eventsPollInterval=5;</code>
      *         </p>
@@ -403,7 +409,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies how often to check the binary log for new changes/events when the database is idle.
+     * Specifies how often to check the binary log for new changes/events when the database is idle. The default is five
+     * seconds.
      * </p>
      * <p>
      * Example: <code>eventsPollInterval=5;</code>
@@ -413,7 +420,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param eventsPollInterval
-     *        Specifies how often to check the binary log for new changes/events when the database is idle.</p>
+     *        Specifies how often to check the binary log for new changes/events when the database is idle. The default
+     *        is five seconds.</p>
      *        <p>
      *        Example: <code>eventsPollInterval=5;</code>
      *        </p>
@@ -572,7 +580,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Improves performance when loading data into the MySQL-compatible target database. Specifies how many threads to
      * use to load the data into the MySQL-compatible target database. Setting a large number of threads can have an
-     * adverse effect on database performance, because a separate connection is required for each thread.
+     * adverse effect on database performance, because a separate connection is required for each thread. The default is
+     * one.
      * </p>
      * <p>
      * Example: <code>parallelLoadThreads=1</code>
@@ -582,7 +591,7 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      *        Improves performance when loading data into the MySQL-compatible target database. Specifies how many
      *        threads to use to load the data into the MySQL-compatible target database. Setting a large number of
      *        threads can have an adverse effect on database performance, because a separate connection is required for
-     *        each thread.</p>
+     *        each thread. The default is one.</p>
      *        <p>
      *        Example: <code>parallelLoadThreads=1</code>
      */
@@ -595,7 +604,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Improves performance when loading data into the MySQL-compatible target database. Specifies how many threads to
      * use to load the data into the MySQL-compatible target database. Setting a large number of threads can have an
-     * adverse effect on database performance, because a separate connection is required for each thread.
+     * adverse effect on database performance, because a separate connection is required for each thread. The default is
+     * one.
      * </p>
      * <p>
      * Example: <code>parallelLoadThreads=1</code>
@@ -604,7 +614,7 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      * @return Improves performance when loading data into the MySQL-compatible target database. Specifies how many
      *         threads to use to load the data into the MySQL-compatible target database. Setting a large number of
      *         threads can have an adverse effect on database performance, because a separate connection is required for
-     *         each thread.</p>
+     *         each thread. The default is one.</p>
      *         <p>
      *         Example: <code>parallelLoadThreads=1</code>
      */
@@ -617,7 +627,8 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Improves performance when loading data into the MySQL-compatible target database. Specifies how many threads to
      * use to load the data into the MySQL-compatible target database. Setting a large number of threads can have an
-     * adverse effect on database performance, because a separate connection is required for each thread.
+     * adverse effect on database performance, because a separate connection is required for each thread. The default is
+     * one.
      * </p>
      * <p>
      * Example: <code>parallelLoadThreads=1</code>
@@ -627,7 +638,7 @@ public class MySQLSettings implements Serializable, Cloneable, StructuredPojo {
      *        Improves performance when loading data into the MySQL-compatible target database. Specifies how many
      *        threads to use to load the data into the MySQL-compatible target database. Setting a large number of
      *        threads can have an adverse effect on database performance, because a separate connection is required for
-     *        each thread.</p>
+     *        each thread. The default is one.</p>
      *        <p>
      *        Example: <code>parallelLoadThreads=1</code>
      * @return Returns a reference to this object so that method calls can be chained together.

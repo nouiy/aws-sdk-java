@@ -17,10 +17,11 @@ package com.amazonaws.codegen.protocol;
 public class RestJsonProtocolMetdataProvider extends BaseJsonProtocolMetadataProvider {
 
     /**
-     * For Rest-JSON, sending an empty content type is our best option. See TT0059807265.
+     * Using the standard content-type for REST-JSON as a default. For historical context and troubleshooting
+     * related to content-type see https://w.amazon.com/bin/view/AWSSDKsAndTools/JavaSDK/FAQ/TroubleshootingRestJsonIssues/
      */
     @Override
     public String getContentType() {
-        return "";
+        return "application/json";
     }
 }

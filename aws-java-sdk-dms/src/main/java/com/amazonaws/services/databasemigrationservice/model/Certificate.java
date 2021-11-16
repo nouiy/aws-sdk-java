@@ -49,7 +49,8 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
     private String certificatePem;
     /**
      * <p>
-     * The location of an imported Oracle Wallet certificate for use with SSL.
+     * The location of an imported Oracle Wallet certificate for use with SSL. Example:
+     * <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      * </p>
      */
     private java.nio.ByteBuffer certificateWallet;
@@ -218,7 +219,8 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location of an imported Oracle Wallet certificate for use with SSL.
+     * The location of an imported Oracle Wallet certificate for use with SSL. Example:
+     * <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -232,7 +234,8 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param certificateWallet
-     *        The location of an imported Oracle Wallet certificate for use with SSL.
+     *        The location of an imported Oracle Wallet certificate for use with SSL. Example:
+     *        <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      */
 
     public void setCertificateWallet(java.nio.ByteBuffer certificateWallet) {
@@ -241,7 +244,8 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location of an imported Oracle Wallet certificate for use with SSL.
+     * The location of an imported Oracle Wallet certificate for use with SSL. Example:
+     * <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -251,7 +255,8 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
      * {@code position}.
      * </p>
      * 
-     * @return The location of an imported Oracle Wallet certificate for use with SSL.
+     * @return The location of an imported Oracle Wallet certificate for use with SSL. Example:
+     *         <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      */
 
     public java.nio.ByteBuffer getCertificateWallet() {
@@ -260,7 +265,8 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The location of an imported Oracle Wallet certificate for use with SSL.
+     * The location of an imported Oracle Wallet certificate for use with SSL. Example:
+     * <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -274,7 +280,8 @@ public class Certificate implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param certificateWallet
-     *        The location of an imported Oracle Wallet certificate for use with SSL.
+     *        The location of an imported Oracle Wallet certificate for use with SSL. Example:
+     *        <code>filebase64("${path.root}/rds-ca-2019-root.sso")</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

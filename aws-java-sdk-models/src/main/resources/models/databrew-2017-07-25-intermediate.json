@@ -51,7 +51,7 @@
     "asyncInterface" : "AWSGlueDataBrewAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AWSGlueDataBrewModuleInjector",
     "defaultEndpoint" : "databrew.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "databrew.us-east-1.amazonaws.com",

@@ -89,7 +89,7 @@ public class AWSSyntheticsClient extends AmazonWebServiceClient implements AWSSy
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.synthetics.model.transform.ConflictExceptionUnmarshaller.getInstance()))

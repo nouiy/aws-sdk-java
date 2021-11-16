@@ -87,7 +87,7 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotReadyException").withExceptionUnmarshaller(
                                     com.amazonaws.services.lambda.model.transform.ResourceNotReadyExceptionUnmarshaller.getInstance()))

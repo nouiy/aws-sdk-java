@@ -76,7 +76,7 @@ public class AWSAccountClient extends AmazonWebServiceClient implements AWSAccou
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.account.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

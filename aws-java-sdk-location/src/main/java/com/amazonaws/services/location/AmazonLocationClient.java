@@ -76,7 +76,7 @@ public class AmazonLocationClient extends AmazonWebServiceClient implements Amaz
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.location.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))

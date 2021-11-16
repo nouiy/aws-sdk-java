@@ -254,7 +254,7 @@
     "asyncInterface" : "AmazonGlacierAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AmazonGlacierModuleInjector",
     "defaultEndpoint" : "https://glacier.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "glacier.us-east-1.amazonaws.com",

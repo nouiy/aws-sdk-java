@@ -42,6 +42,13 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String documentName;
     /**
      * <p>
+     * The reason for connecting to the instance. This value is included in the details for the Amazon CloudWatch Events
+     * event created when you start the session.
+     * </p>
+     */
+    private String reason;
+    /**
+     * <p>
      * Reserved for future use.
      * </p>
      */
@@ -147,6 +154,52 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
+     * The reason for connecting to the instance. This value is included in the details for the Amazon CloudWatch Events
+     * event created when you start the session.
+     * </p>
+     * 
+     * @param reason
+     *        The reason for connecting to the instance. This value is included in the details for the Amazon CloudWatch
+     *        Events event created when you start the session.
+     */
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    /**
+     * <p>
+     * The reason for connecting to the instance. This value is included in the details for the Amazon CloudWatch Events
+     * event created when you start the session.
+     * </p>
+     * 
+     * @return The reason for connecting to the instance. This value is included in the details for the Amazon
+     *         CloudWatch Events event created when you start the session.
+     */
+
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
+     * <p>
+     * The reason for connecting to the instance. This value is included in the details for the Amazon CloudWatch Events
+     * event created when you start the session.
+     * </p>
+     * 
+     * @param reason
+     *        The reason for connecting to the instance. This value is included in the details for the Amazon CloudWatch
+     *        Events event created when you start the session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartSessionRequest withReason(String reason) {
+        setReason(reason);
+        return this;
+    }
+
+    /**
+     * <p>
      * Reserved for future use.
      * </p>
      * 
@@ -229,6 +282,8 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
             sb.append("Target: ").append(getTarget()).append(",");
         if (getDocumentName() != null)
             sb.append("DocumentName: ").append(getDocumentName()).append(",");
+        if (getReason() != null)
+            sb.append("Reason: ").append(getReason()).append(",");
         if (getParameters() != null)
             sb.append("Parameters: ").append(getParameters());
         sb.append("}");
@@ -253,6 +308,10 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getDocumentName() != null && other.getDocumentName().equals(this.getDocumentName()) == false)
             return false;
+        if (other.getReason() == null ^ this.getReason() == null)
+            return false;
+        if (other.getReason() != null && other.getReason().equals(this.getReason()) == false)
+            return false;
         if (other.getParameters() == null ^ this.getParameters() == null)
             return false;
         if (other.getParameters() != null && other.getParameters().equals(this.getParameters()) == false)
@@ -267,6 +326,7 @@ public class StartSessionRequest extends com.amazonaws.AmazonWebServiceRequest i
 
         hashCode = prime * hashCode + ((getTarget() == null) ? 0 : getTarget().hashCode());
         hashCode = prime * hashCode + ((getDocumentName() == null) ? 0 : getDocumentName().hashCode());
+        hashCode = prime * hashCode + ((getReason() == null) ? 0 : getReason().hashCode());
         hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
         return hashCode;
     }

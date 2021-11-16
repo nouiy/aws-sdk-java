@@ -56,7 +56,7 @@
     "asyncInterface" : "AmazonCognitoSyncAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AmazonCognitoSyncModuleInjector",
     "defaultEndpoint" : "https://cognito-sync.us-east-1.amazonaws.com/",
     "defaultEndpointWithoutHttpProtocol" : "cognito-sync.us-east-1.amazonaws.com/",

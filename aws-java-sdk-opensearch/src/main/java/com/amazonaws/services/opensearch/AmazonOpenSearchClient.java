@@ -90,7 +90,7 @@ public class AmazonOpenSearchClient extends AmazonWebServiceClient implements Am
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("DisabledOperationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.opensearch.model.transform.DisabledOperationExceptionUnmarshaller.getInstance()))

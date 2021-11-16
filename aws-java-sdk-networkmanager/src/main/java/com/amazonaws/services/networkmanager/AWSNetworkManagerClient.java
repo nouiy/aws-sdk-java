@@ -77,7 +77,7 @@ public class AWSNetworkManagerClient extends AmazonWebServiceClient implements A
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.networkmanager.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))

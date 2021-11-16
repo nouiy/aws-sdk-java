@@ -149,7 +149,7 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.detective.model.transform.ValidationExceptionUnmarshaller.getInstance()))

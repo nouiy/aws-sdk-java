@@ -79,7 +79,7 @@ public class AWSSavingsPlansClient extends AmazonWebServiceClient implements AWS
                     .withProtocolVersion("1.0")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.savingsplans.model.transform.ValidationExceptionUnmarshaller.getInstance()))

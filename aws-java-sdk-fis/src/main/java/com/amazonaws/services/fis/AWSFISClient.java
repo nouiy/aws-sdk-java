@@ -78,7 +78,7 @@ public class AWSFISClient extends AmazonWebServiceClient implements AWSFIS {
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.fis.model.transform.ConflictExceptionUnmarshaller.getInstance()))

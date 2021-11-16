@@ -76,7 +76,7 @@ public class AWSmgnClient extends AmazonWebServiceClient implements AWSmgn {
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.mgn.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))

@@ -78,7 +78,7 @@ public class AWSAppRegistryClient extends AmazonWebServiceClient implements AWSA
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appregistry.model.transform.ConflictExceptionUnmarshaller.getInstance()))

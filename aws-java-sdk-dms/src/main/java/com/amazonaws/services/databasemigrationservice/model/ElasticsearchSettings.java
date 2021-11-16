@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information that defines an Elasticsearch endpoint.
+ * Provides information that defines an OpenSearch endpoint.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/dms-2016-01-01/ElasticsearchSettings" target="_top">AWS API
@@ -37,7 +37,7 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
     private String serviceAccessRoleArn;
     /**
      * <p>
-     * The endpoint for the Elasticsearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not specified.
+     * The endpoint for the OpenSearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not specified.
      * </p>
      */
     private String endpointUri;
@@ -46,7 +46,7 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
      * The maximum percentage of records that can fail to be written before a full load operation stops.
      * </p>
      * <p>
-     * To avoid early failure, this counter is only effective after 1000 records are transferred. Elasticsearch also has
+     * To avoid early failure, this counter is only effective after 1000 records are transferred. OpenSearch also has
      * the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer of all records
      * fail in the last 10 minutes, the full load operation stops.
      * </p>
@@ -54,7 +54,7 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
     private Integer fullLoadErrorPercentage;
     /**
      * <p>
-     * The maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster.
+     * The maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster.
      * </p>
      */
     private Integer errorRetryDuration;
@@ -107,11 +107,11 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The endpoint for the Elasticsearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not specified.
+     * The endpoint for the OpenSearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not specified.
      * </p>
      * 
      * @param endpointUri
-     *        The endpoint for the Elasticsearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not
+     *        The endpoint for the OpenSearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not
      *        specified.
      */
 
@@ -121,10 +121,10 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The endpoint for the Elasticsearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not specified.
+     * The endpoint for the OpenSearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not specified.
      * </p>
      * 
-     * @return The endpoint for the Elasticsearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not
+     * @return The endpoint for the OpenSearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not
      *         specified.
      */
 
@@ -134,11 +134,11 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The endpoint for the Elasticsearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not specified.
+     * The endpoint for the OpenSearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not specified.
      * </p>
      * 
      * @param endpointUri
-     *        The endpoint for the Elasticsearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not
+     *        The endpoint for the OpenSearch cluster. DMS uses HTTPS if a transport protocol (http/https) is not
      *        specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -153,7 +153,7 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
      * The maximum percentage of records that can fail to be written before a full load operation stops.
      * </p>
      * <p>
-     * To avoid early failure, this counter is only effective after 1000 records are transferred. Elasticsearch also has
+     * To avoid early failure, this counter is only effective after 1000 records are transferred. OpenSearch also has
      * the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer of all records
      * fail in the last 10 minutes, the full load operation stops.
      * </p>
@@ -161,9 +161,9 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
      * @param fullLoadErrorPercentage
      *        The maximum percentage of records that can fail to be written before a full load operation stops.</p>
      *        <p>
-     *        To avoid early failure, this counter is only effective after 1000 records are transferred. Elasticsearch
-     *        also has the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer
-     *        of all records fail in the last 10 minutes, the full load operation stops.
+     *        To avoid early failure, this counter is only effective after 1000 records are transferred. OpenSearch also
+     *        has the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer of
+     *        all records fail in the last 10 minutes, the full load operation stops.
      */
 
     public void setFullLoadErrorPercentage(Integer fullLoadErrorPercentage) {
@@ -175,14 +175,14 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
      * The maximum percentage of records that can fail to be written before a full load operation stops.
      * </p>
      * <p>
-     * To avoid early failure, this counter is only effective after 1000 records are transferred. Elasticsearch also has
+     * To avoid early failure, this counter is only effective after 1000 records are transferred. OpenSearch also has
      * the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer of all records
      * fail in the last 10 minutes, the full load operation stops.
      * </p>
      * 
      * @return The maximum percentage of records that can fail to be written before a full load operation stops.</p>
      *         <p>
-     *         To avoid early failure, this counter is only effective after 1000 records are transferred. Elasticsearch
+     *         To avoid early failure, this counter is only effective after 1000 records are transferred. OpenSearch
      *         also has the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer
      *         of all records fail in the last 10 minutes, the full load operation stops.
      */
@@ -196,7 +196,7 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
      * The maximum percentage of records that can fail to be written before a full load operation stops.
      * </p>
      * <p>
-     * To avoid early failure, this counter is only effective after 1000 records are transferred. Elasticsearch also has
+     * To avoid early failure, this counter is only effective after 1000 records are transferred. OpenSearch also has
      * the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer of all records
      * fail in the last 10 minutes, the full load operation stops.
      * </p>
@@ -204,9 +204,9 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
      * @param fullLoadErrorPercentage
      *        The maximum percentage of records that can fail to be written before a full load operation stops.</p>
      *        <p>
-     *        To avoid early failure, this counter is only effective after 1000 records are transferred. Elasticsearch
-     *        also has the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer
-     *        of all records fail in the last 10 minutes, the full load operation stops.
+     *        To avoid early failure, this counter is only effective after 1000 records are transferred. OpenSearch also
+     *        has the concept of error monitoring during the last 10 minutes of an Observation Window. If transfer of
+     *        all records fail in the last 10 minutes, the full load operation stops.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -217,11 +217,11 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster.
+     * The maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster.
      * </p>
      * 
      * @param errorRetryDuration
-     *        The maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster.
+     *        The maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster.
      */
 
     public void setErrorRetryDuration(Integer errorRetryDuration) {
@@ -230,10 +230,10 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster.
+     * The maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster.
      * </p>
      * 
-     * @return The maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster.
+     * @return The maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster.
      */
 
     public Integer getErrorRetryDuration() {
@@ -242,11 +242,11 @@ public class ElasticsearchSettings implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster.
+     * The maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster.
      * </p>
      * 
      * @param errorRetryDuration
-     *        The maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster.
+     *        The maximum number of seconds for which DMS retries failed API requests to the OpenSearch cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -76,7 +76,7 @@ public class AmazonSageMakerRuntimeClient extends AmazonWebServiceClient impleme
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalFailure").withExceptionUnmarshaller(
                                     com.amazonaws.services.sagemakerruntime.model.transform.InternalFailureExceptionUnmarshaller.getInstance()))

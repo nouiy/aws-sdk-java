@@ -120,7 +120,7 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
     private String password;
     /**
      * <p>
-     * Endpoint TCP port.
+     * Endpoint TCP port. The default is 5432.
      * </p>
      */
     private Integer port;
@@ -827,11 +827,11 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Endpoint TCP port.
+     * Endpoint TCP port. The default is 5432.
      * </p>
      * 
      * @param port
-     *        Endpoint TCP port.
+     *        Endpoint TCP port. The default is 5432.
      */
 
     public void setPort(Integer port) {
@@ -840,10 +840,10 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Endpoint TCP port.
+     * Endpoint TCP port. The default is 5432.
      * </p>
      * 
-     * @return Endpoint TCP port.
+     * @return Endpoint TCP port. The default is 5432.
      */
 
     public Integer getPort() {
@@ -852,11 +852,11 @@ public class PostgreSQLSettings implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Endpoint TCP port.
+     * Endpoint TCP port. The default is 5432.
      * </p>
      * 
      * @param port
-     *        Endpoint TCP port.
+     *        Endpoint TCP port. The default is 5432.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

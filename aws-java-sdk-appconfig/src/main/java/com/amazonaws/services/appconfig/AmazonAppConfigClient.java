@@ -126,7 +126,7 @@ public class AmazonAppConfigClient extends AmazonWebServiceClient implements Ama
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appconfig.model.transform.ConflictExceptionUnmarshaller.getInstance()))

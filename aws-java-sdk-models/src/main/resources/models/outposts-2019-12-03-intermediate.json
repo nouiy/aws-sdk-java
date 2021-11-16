@@ -51,7 +51,7 @@
     "asyncInterface" : "AWSOutpostsAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AWSOutpostsModuleInjector",
     "defaultEndpoint" : "outposts.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "outposts.us-east-1.amazonaws.com",

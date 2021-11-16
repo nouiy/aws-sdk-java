@@ -76,7 +76,7 @@ public class AmazonSagemakerEdgeManagerClient extends AmazonWebServiceClient imp
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServiceException").withExceptionUnmarshaller(
                                     com.amazonaws.services.sagemakeredgemanager.model.transform.InternalServiceExceptionUnmarshaller.getInstance()))

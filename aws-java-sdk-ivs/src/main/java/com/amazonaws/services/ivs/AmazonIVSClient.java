@@ -96,7 +96,7 @@ public class AmazonIVSClient extends AmazonWebServiceClient implements AmazonIVS
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("StreamUnavailable").withExceptionUnmarshaller(
                                     com.amazonaws.services.ivs.model.transform.StreamUnavailableExceptionUnmarshaller.getInstance()))

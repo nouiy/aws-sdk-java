@@ -38,7 +38,7 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      * be used with both operations.
      * </p>
      * <p>
-     * For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
+     * For <code>DescribeParameters</code>, all of the listed patterns are valid except <code>Label</code>.
      * </p>
      * <p>
      * For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
@@ -82,7 +82,7 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      * be used with both operations.
      * </p>
      * <p>
-     * For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
+     * For <code>DescribeParameters</code>, all of the listed patterns are valid except <code>Label</code>.
      * </p>
      * <p>
      * For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
@@ -102,7 +102,7 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      *        <code>Key</code> can be used with both operations.
      *        </p>
      *        <p>
-     *        For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
+     *        For <code>DescribeParameters</code>, all of the listed patterns are valid except <code>Label</code>.
      *        </p>
      *        <p>
      *        For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
@@ -128,7 +128,7 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      * be used with both operations.
      * </p>
      * <p>
-     * For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
+     * For <code>DescribeParameters</code>, all of the listed patterns are valid except <code>Label</code>.
      * </p>
      * <p>
      * For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
@@ -147,7 +147,7 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      *         <code>Key</code> can be used with both operations.
      *         </p>
      *         <p>
-     *         For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
+     *         For <code>DescribeParameters</code>, all of the listed patterns are valid except <code>Label</code>.
      *         </p>
      *         <p>
      *         For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
@@ -173,7 +173,7 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      * be used with both operations.
      * </p>
      * <p>
-     * For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
+     * For <code>DescribeParameters</code>, all of the listed patterns are valid except <code>Label</code>.
      * </p>
      * <p>
      * For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:
@@ -193,7 +193,7 @@ public class ParameterStringFilter implements Serializable, Cloneable, Structure
      *        <code>Key</code> can be used with both operations.
      *        </p>
      *        <p>
-     *        For <code>DescribeActions</code>, all of the listed patterns are valid except <code>Label</code>.
+     *        For <code>DescribeParameters</code>, all of the listed patterns are valid except <code>Label</code>.
      *        </p>
      *        <p>
      *        For <code>GetParametersByPath</code>, the following patterns listed for <code>Key</code> aren't valid:

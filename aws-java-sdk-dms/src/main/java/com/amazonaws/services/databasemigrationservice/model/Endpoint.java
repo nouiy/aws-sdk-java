@@ -61,10 +61,10 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The database engine name. Valid values, depending on the EndpointType, include <code>"mysql"</code>,
      * <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>, <code>"aurora"</code>,
-     * <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>,
-     * <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>,
-     * <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"documentdb"</code>,
-     * <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     * <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>, <code>"s3"</code>,
+     * <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     * <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
+     * <code>"documentdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      * </p>
      */
     private String engineName;
@@ -177,30 +177,7 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     private S3Settings s3Settings;
     /**
      * <p>
-     * The settings in JSON format for the DMS transfer type of source endpoint.
-     * </p>
-     * <p>
-     * Possible settings include the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>ServiceAccessRoleArn</code> - - The Amazon Resource Name (ARN) used by the service access IAM role. The
-     * role must allow the <code>iam:PassRole</code> action.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>BucketName</code> - The name of the S3 bucket to use.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * Shorthand syntax for these settings is as follows: <code>ServiceAccessRoleArn=string,BucketName=string,</code>
-     * </p>
-     * <p>
-     * JSON syntax for these settings is as follows:
-     * <code>{ "ServiceAccessRoleArn": "string", "BucketName": "string"} </code>
+     * The settings for the DMS Transfer type source. For more information, see the DmsTransferSettings structure.
      * </p>
      */
     private DmsTransferSettings dmsTransferSettings;
@@ -227,8 +204,8 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     private KafkaSettings kafkaSettings;
     /**
      * <p>
-     * The settings for the Elasticsearch source endpoint. For more information, see the
-     * <code>ElasticsearchSettings</code> structure.
+     * The settings for the OpenSearch source endpoint. For more information, see the <code>ElasticsearchSettings</code>
+     * structure.
      * </p>
      */
     private ElasticsearchSettings elasticsearchSettings;
@@ -295,6 +272,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private RedisSettings redisSettings;
+    /**
+     * <p>
+     * Settings in JSON format for the source GCP MySQL endpoint.
+     * </p>
+     */
+    private GcpMySQLSettings gcpMySQLSettings;
 
     /**
      * <p>
@@ -419,19 +402,19 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The database engine name. Valid values, depending on the EndpointType, include <code>"mysql"</code>,
      * <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>, <code>"aurora"</code>,
-     * <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>,
-     * <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>,
-     * <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"documentdb"</code>,
-     * <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     * <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>, <code>"s3"</code>,
+     * <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     * <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
+     * <code>"documentdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      * </p>
      * 
      * @param engineName
      *        The database engine name. Valid values, depending on the EndpointType, include <code>"mysql"</code>,
      *        <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>, <code>"aurora"</code>,
-     *        <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>,
-     *        <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>,
-     *        <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"documentdb"</code>,
-     *        <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     *        <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>, <code>"s3"</code>,
+     *        <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     *        <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
+     *        <code>"documentdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      */
 
     public void setEngineName(String engineName) {
@@ -442,18 +425,18 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The database engine name. Valid values, depending on the EndpointType, include <code>"mysql"</code>,
      * <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>, <code>"aurora"</code>,
-     * <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>,
-     * <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>,
-     * <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"documentdb"</code>,
-     * <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     * <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>, <code>"s3"</code>,
+     * <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     * <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
+     * <code>"documentdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      * </p>
      * 
      * @return The database engine name. Valid values, depending on the EndpointType, include <code>"mysql"</code>,
      *         <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>, <code>"aurora"</code>,
-     *         <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>,
-     *         <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>,
-     *         <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"documentdb"</code>,
-     *         <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     *         <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>, <code>"s3"</code>,
+     *         <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     *         <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
+     *         <code>"documentdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      */
 
     public String getEngineName() {
@@ -464,19 +447,19 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The database engine name. Valid values, depending on the EndpointType, include <code>"mysql"</code>,
      * <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>, <code>"aurora"</code>,
-     * <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>,
-     * <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>,
-     * <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"documentdb"</code>,
-     * <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     * <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>, <code>"s3"</code>,
+     * <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     * <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
+     * <code>"documentdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      * </p>
      * 
      * @param engineName
      *        The database engine name. Valid values, depending on the EndpointType, include <code>"mysql"</code>,
      *        <code>"oracle"</code>, <code>"postgres"</code>, <code>"mariadb"</code>, <code>"aurora"</code>,
-     *        <code>"aurora-postgresql"</code>, <code>"redshift"</code>, <code>"s3"</code>, <code>"db2"</code>,
-     *        <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>, <code>"mongodb"</code>,
-     *        <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>, <code>"documentdb"</code>,
-     *        <code>"sqlserver"</code>, and <code>"neptune"</code>.
+     *        <code>"aurora-postgresql"</code>, <code>"opensearch"</code>, <code>"redshift"</code>, <code>"s3"</code>,
+     *        <code>"db2"</code>, <code>"azuredb"</code>, <code>"sybase"</code>, <code>"dynamodb"</code>,
+     *        <code>"mongodb"</code>, <code>"kinesis"</code>, <code>"kafka"</code>, <code>"elasticsearch"</code>,
+     *        <code>"documentdb"</code>, <code>"sqlserver"</code>, and <code>"neptune"</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1226,57 +1209,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The settings in JSON format for the DMS transfer type of source endpoint.
-     * </p>
-     * <p>
-     * Possible settings include the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>ServiceAccessRoleArn</code> - - The Amazon Resource Name (ARN) used by the service access IAM role. The
-     * role must allow the <code>iam:PassRole</code> action.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>BucketName</code> - The name of the S3 bucket to use.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * Shorthand syntax for these settings is as follows: <code>ServiceAccessRoleArn=string,BucketName=string,</code>
-     * </p>
-     * <p>
-     * JSON syntax for these settings is as follows:
-     * <code>{ "ServiceAccessRoleArn": "string", "BucketName": "string"} </code>
+     * The settings for the DMS Transfer type source. For more information, see the DmsTransferSettings structure.
      * </p>
      * 
      * @param dmsTransferSettings
-     *        The settings in JSON format for the DMS transfer type of source endpoint. </p>
-     *        <p>
-     *        Possible settings include the following:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>ServiceAccessRoleArn</code> - - The Amazon Resource Name (ARN) used by the service access IAM role.
-     *        The role must allow the <code>iam:PassRole</code> action.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>BucketName</code> - The name of the S3 bucket to use.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        Shorthand syntax for these settings is as follows:
-     *        <code>ServiceAccessRoleArn=string,BucketName=string,</code>
-     *        </p>
-     *        <p>
-     *        JSON syntax for these settings is as follows:
-     *        <code>{ "ServiceAccessRoleArn": "string", "BucketName": "string"} </code>
+     *        The settings for the DMS Transfer type source. For more information, see the DmsTransferSettings
+     *        structure.
      */
 
     public void setDmsTransferSettings(DmsTransferSettings dmsTransferSettings) {
@@ -1285,56 +1223,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The settings in JSON format for the DMS transfer type of source endpoint.
-     * </p>
-     * <p>
-     * Possible settings include the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>ServiceAccessRoleArn</code> - - The Amazon Resource Name (ARN) used by the service access IAM role. The
-     * role must allow the <code>iam:PassRole</code> action.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>BucketName</code> - The name of the S3 bucket to use.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * Shorthand syntax for these settings is as follows: <code>ServiceAccessRoleArn=string,BucketName=string,</code>
-     * </p>
-     * <p>
-     * JSON syntax for these settings is as follows:
-     * <code>{ "ServiceAccessRoleArn": "string", "BucketName": "string"} </code>
+     * The settings for the DMS Transfer type source. For more information, see the DmsTransferSettings structure.
      * </p>
      * 
-     * @return The settings in JSON format for the DMS transfer type of source endpoint. </p>
-     *         <p>
-     *         Possible settings include the following:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>ServiceAccessRoleArn</code> - - The Amazon Resource Name (ARN) used by the service access IAM role.
-     *         The role must allow the <code>iam:PassRole</code> action.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         <code>BucketName</code> - The name of the S3 bucket to use.
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         Shorthand syntax for these settings is as follows:
-     *         <code>ServiceAccessRoleArn=string,BucketName=string,</code>
-     *         </p>
-     *         <p>
-     *         JSON syntax for these settings is as follows:
-     *         <code>{ "ServiceAccessRoleArn": "string", "BucketName": "string"} </code>
+     * @return The settings for the DMS Transfer type source. For more information, see the DmsTransferSettings
+     *         structure.
      */
 
     public DmsTransferSettings getDmsTransferSettings() {
@@ -1343,57 +1236,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The settings in JSON format for the DMS transfer type of source endpoint.
-     * </p>
-     * <p>
-     * Possible settings include the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>ServiceAccessRoleArn</code> - - The Amazon Resource Name (ARN) used by the service access IAM role. The
-     * role must allow the <code>iam:PassRole</code> action.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>BucketName</code> - The name of the S3 bucket to use.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * Shorthand syntax for these settings is as follows: <code>ServiceAccessRoleArn=string,BucketName=string,</code>
-     * </p>
-     * <p>
-     * JSON syntax for these settings is as follows:
-     * <code>{ "ServiceAccessRoleArn": "string", "BucketName": "string"} </code>
+     * The settings for the DMS Transfer type source. For more information, see the DmsTransferSettings structure.
      * </p>
      * 
      * @param dmsTransferSettings
-     *        The settings in JSON format for the DMS transfer type of source endpoint. </p>
-     *        <p>
-     *        Possible settings include the following:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>ServiceAccessRoleArn</code> - - The Amazon Resource Name (ARN) used by the service access IAM role.
-     *        The role must allow the <code>iam:PassRole</code> action.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        <code>BucketName</code> - The name of the S3 bucket to use.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        Shorthand syntax for these settings is as follows:
-     *        <code>ServiceAccessRoleArn=string,BucketName=string,</code>
-     *        </p>
-     *        <p>
-     *        JSON syntax for these settings is as follows:
-     *        <code>{ "ServiceAccessRoleArn": "string", "BucketName": "string"} </code>
+     *        The settings for the DMS Transfer type source. For more information, see the DmsTransferSettings
+     *        structure.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1542,12 +1390,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The settings for the Elasticsearch source endpoint. For more information, see the
-     * <code>ElasticsearchSettings</code> structure.
+     * The settings for the OpenSearch source endpoint. For more information, see the <code>ElasticsearchSettings</code>
+     * structure.
      * </p>
      * 
      * @param elasticsearchSettings
-     *        The settings for the Elasticsearch source endpoint. For more information, see the
+     *        The settings for the OpenSearch source endpoint. For more information, see the
      *        <code>ElasticsearchSettings</code> structure.
      */
 
@@ -1557,11 +1405,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The settings for the Elasticsearch source endpoint. For more information, see the
-     * <code>ElasticsearchSettings</code> structure.
+     * The settings for the OpenSearch source endpoint. For more information, see the <code>ElasticsearchSettings</code>
+     * structure.
      * </p>
      * 
-     * @return The settings for the Elasticsearch source endpoint. For more information, see the
+     * @return The settings for the OpenSearch source endpoint. For more information, see the
      *         <code>ElasticsearchSettings</code> structure.
      */
 
@@ -1571,12 +1419,12 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The settings for the Elasticsearch source endpoint. For more information, see the
-     * <code>ElasticsearchSettings</code> structure.
+     * The settings for the OpenSearch source endpoint. For more information, see the <code>ElasticsearchSettings</code>
+     * structure.
      * </p>
      * 
      * @param elasticsearchSettings
-     *        The settings for the Elasticsearch source endpoint. For more information, see the
+     *        The settings for the OpenSearch source endpoint. For more information, see the
      *        <code>ElasticsearchSettings</code> structure.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2018,6 +1866,46 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Settings in JSON format for the source GCP MySQL endpoint.
+     * </p>
+     * 
+     * @param gcpMySQLSettings
+     *        Settings in JSON format for the source GCP MySQL endpoint.
+     */
+
+    public void setGcpMySQLSettings(GcpMySQLSettings gcpMySQLSettings) {
+        this.gcpMySQLSettings = gcpMySQLSettings;
+    }
+
+    /**
+     * <p>
+     * Settings in JSON format for the source GCP MySQL endpoint.
+     * </p>
+     * 
+     * @return Settings in JSON format for the source GCP MySQL endpoint.
+     */
+
+    public GcpMySQLSettings getGcpMySQLSettings() {
+        return this.gcpMySQLSettings;
+    }
+
+    /**
+     * <p>
+     * Settings in JSON format for the source GCP MySQL endpoint.
+     * </p>
+     * 
+     * @param gcpMySQLSettings
+     *        Settings in JSON format for the source GCP MySQL endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Endpoint withGcpMySQLSettings(GcpMySQLSettings gcpMySQLSettings) {
+        setGcpMySQLSettings(gcpMySQLSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2096,7 +1984,9 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
         if (getDocDbSettings() != null)
             sb.append("DocDbSettings: ").append(getDocDbSettings()).append(",");
         if (getRedisSettings() != null)
-            sb.append("RedisSettings: ").append(getRedisSettings());
+            sb.append("RedisSettings: ").append(getRedisSettings()).append(",");
+        if (getGcpMySQLSettings() != null)
+            sb.append("GcpMySQLSettings: ").append(getGcpMySQLSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -2247,6 +2137,10 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getRedisSettings() != null && other.getRedisSettings().equals(this.getRedisSettings()) == false)
             return false;
+        if (other.getGcpMySQLSettings() == null ^ this.getGcpMySQLSettings() == null)
+            return false;
+        if (other.getGcpMySQLSettings() != null && other.getGcpMySQLSettings().equals(this.getGcpMySQLSettings()) == false)
+            return false;
         return true;
     }
 
@@ -2289,6 +2183,7 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getIBMDb2Settings() == null) ? 0 : getIBMDb2Settings().hashCode());
         hashCode = prime * hashCode + ((getDocDbSettings() == null) ? 0 : getDocDbSettings().hashCode());
         hashCode = prime * hashCode + ((getRedisSettings() == null) ? 0 : getRedisSettings().hashCode());
+        hashCode = prime * hashCode + ((getGcpMySQLSettings() == null) ? 0 : getGcpMySQLSettings().hashCode());
         return hashCode;
     }
 

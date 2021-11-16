@@ -51,7 +51,7 @@
     "asyncInterface" : "AWSXRayAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AWSXRayModuleInjector",
     "defaultEndpoint" : "xray.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "xray.us-east-1.amazonaws.com",

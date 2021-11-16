@@ -77,7 +77,7 @@ public class AmazonWorkMailMessageFlowClient extends AmazonWebServiceClient impl
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidContentLocation").withExceptionUnmarshaller(
                                     com.amazonaws.services.workmailmessageflow.model.transform.InvalidContentLocationExceptionUnmarshaller.getInstance()))

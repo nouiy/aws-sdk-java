@@ -51,7 +51,7 @@
     "asyncInterface" : "AmazonEMRContainersAsync",
     "cborProtocol" : false,
     "checksumFormat" : null,
-    "contentType" : "",
+    "contentType" : "application/json",
     "cucumberModuleInjectorClassName" : "AmazonEMRContainersModuleInjector",
     "defaultEndpoint" : "emr-containers.us-east-1.amazonaws.com",
     "defaultEndpointWithoutHttpProtocol" : "emr-containers.us-east-1.amazonaws.com",

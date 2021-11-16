@@ -130,6 +130,13 @@ public class Subnet implements Serializable, Cloneable {
      * </p>
      */
     private String outpostArn;
+    /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     */
+    private Boolean enableDns64;
 
     /**
      * <p>
@@ -981,6 +988,66 @@ public class Subnet implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     * 
+     * @param enableDns64
+     *        Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return
+     *        synthetic IPv6 addresses for IPv4-only destinations.
+     */
+
+    public void setEnableDns64(Boolean enableDns64) {
+        this.enableDns64 = enableDns64;
+    }
+
+    /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     * 
+     * @return Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return
+     *         synthetic IPv6 addresses for IPv4-only destinations.
+     */
+
+    public Boolean getEnableDns64() {
+        return this.enableDns64;
+    }
+
+    /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     * 
+     * @param enableDns64
+     *        Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return
+     *        synthetic IPv6 addresses for IPv4-only destinations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Subnet withEnableDns64(Boolean enableDns64) {
+        setEnableDns64(enableDns64);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return synthetic
+     * IPv6 addresses for IPv4-only destinations.
+     * </p>
+     * 
+     * @return Indicates whether DNS queries made to the Amazon-provided DNS Resolver in this subnet should return
+     *         synthetic IPv6 addresses for IPv4-only destinations.
+     */
+
+    public Boolean isEnableDns64() {
+        return this.enableDns64;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1025,7 +1092,9 @@ public class Subnet implements Serializable, Cloneable {
         if (getSubnetArn() != null)
             sb.append("SubnetArn: ").append(getSubnetArn()).append(",");
         if (getOutpostArn() != null)
-            sb.append("OutpostArn: ").append(getOutpostArn());
+            sb.append("OutpostArn: ").append(getOutpostArn()).append(",");
+        if (getEnableDns64() != null)
+            sb.append("EnableDns64: ").append(getEnableDns64());
         sb.append("}");
         return sb.toString();
     }
@@ -1108,6 +1177,10 @@ public class Subnet implements Serializable, Cloneable {
             return false;
         if (other.getOutpostArn() != null && other.getOutpostArn().equals(this.getOutpostArn()) == false)
             return false;
+        if (other.getEnableDns64() == null ^ this.getEnableDns64() == null)
+            return false;
+        if (other.getEnableDns64() != null && other.getEnableDns64().equals(this.getEnableDns64()) == false)
+            return false;
         return true;
     }
 
@@ -1133,6 +1206,7 @@ public class Subnet implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getSubnetArn() == null) ? 0 : getSubnetArn().hashCode());
         hashCode = prime * hashCode + ((getOutpostArn() == null) ? 0 : getOutpostArn().hashCode());
+        hashCode = prime * hashCode + ((getEnableDns64() == null) ? 0 : getEnableDns64().hashCode());
         return hashCode;
     }
 

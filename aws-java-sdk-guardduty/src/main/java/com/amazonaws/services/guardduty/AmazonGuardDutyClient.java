@@ -91,7 +91,7 @@ public class AmazonGuardDutyClient extends AmazonWebServiceClient implements Ama
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("BadRequestException").withExceptionUnmarshaller(
                                     com.amazonaws.services.guardduty.model.transform.BadRequestExceptionUnmarshaller.getInstance()))

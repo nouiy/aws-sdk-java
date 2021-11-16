@@ -513,6 +513,19 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
     private String cdcPath;
     /**
      * <p>
+     * When set to true, this parameter uses the task start time as the timestamp column value instead of the time data
+     * is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is set to
+     * <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads, each row of the
+     * timestamp column contains the transaction commit time.
+     * </p>
+     * <p>
+     * When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load timestamp in
+     * the timestamp column increments with the time data arrives at the target.
+     * </p>
+     */
+    private Boolean useTaskStartTimeForFullLoadTimestamp;
+    /**
+     * <p>
      * A value that enables DMS to specify a predefined (canned) access control list for objects created in an Amazon S3
      * bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
      * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
@@ -4583,6 +4596,110 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * When set to true, this parameter uses the task start time as the timestamp column value instead of the time data
+     * is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is set to
+     * <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads, each row of the
+     * timestamp column contains the transaction commit time.
+     * </p>
+     * <p>
+     * When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load timestamp in
+     * the timestamp column increments with the time data arrives at the target.
+     * </p>
+     * 
+     * @param useTaskStartTimeForFullLoadTimestamp
+     *        When set to true, this parameter uses the task start time as the timestamp column value instead of the
+     *        time data is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is
+     *        set to <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads,
+     *        each row of the timestamp column contains the transaction commit time.</p>
+     *        <p>
+     *        When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load
+     *        timestamp in the timestamp column increments with the time data arrives at the target.
+     */
+
+    public void setUseTaskStartTimeForFullLoadTimestamp(Boolean useTaskStartTimeForFullLoadTimestamp) {
+        this.useTaskStartTimeForFullLoadTimestamp = useTaskStartTimeForFullLoadTimestamp;
+    }
+
+    /**
+     * <p>
+     * When set to true, this parameter uses the task start time as the timestamp column value instead of the time data
+     * is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is set to
+     * <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads, each row of the
+     * timestamp column contains the transaction commit time.
+     * </p>
+     * <p>
+     * When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load timestamp in
+     * the timestamp column increments with the time data arrives at the target.
+     * </p>
+     * 
+     * @return When set to true, this parameter uses the task start time as the timestamp column value instead of the
+     *         time data is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is
+     *         set to <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads,
+     *         each row of the timestamp column contains the transaction commit time.</p>
+     *         <p>
+     *         When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load
+     *         timestamp in the timestamp column increments with the time data arrives at the target.
+     */
+
+    public Boolean getUseTaskStartTimeForFullLoadTimestamp() {
+        return this.useTaskStartTimeForFullLoadTimestamp;
+    }
+
+    /**
+     * <p>
+     * When set to true, this parameter uses the task start time as the timestamp column value instead of the time data
+     * is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is set to
+     * <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads, each row of the
+     * timestamp column contains the transaction commit time.
+     * </p>
+     * <p>
+     * When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load timestamp in
+     * the timestamp column increments with the time data arrives at the target.
+     * </p>
+     * 
+     * @param useTaskStartTimeForFullLoadTimestamp
+     *        When set to true, this parameter uses the task start time as the timestamp column value instead of the
+     *        time data is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is
+     *        set to <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads,
+     *        each row of the timestamp column contains the transaction commit time.</p>
+     *        <p>
+     *        When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load
+     *        timestamp in the timestamp column increments with the time data arrives at the target.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Settings withUseTaskStartTimeForFullLoadTimestamp(Boolean useTaskStartTimeForFullLoadTimestamp) {
+        setUseTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When set to true, this parameter uses the task start time as the timestamp column value instead of the time data
+     * is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is set to
+     * <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads, each row of the
+     * timestamp column contains the transaction commit time.
+     * </p>
+     * <p>
+     * When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load timestamp in
+     * the timestamp column increments with the time data arrives at the target.
+     * </p>
+     * 
+     * @return When set to true, this parameter uses the task start time as the timestamp column value instead of the
+     *         time data is written to target. For full load, when <code>useTaskStartTimeForFullLoadTimestamp</code> is
+     *         set to <code>true</code>, each row of the timestamp column contains the task start time. For CDC loads,
+     *         each row of the timestamp column contains the transaction commit time.</p>
+     *         <p>
+     *         When <code>useTaskStartTimeForFullLoadTimestamp</code> is set to <code>false</code>, the full load
+     *         timestamp in the timestamp column increments with the time data arrives at the target.
+     */
+
+    public Boolean isUseTaskStartTimeForFullLoadTimestamp() {
+        return this.useTaskStartTimeForFullLoadTimestamp;
+    }
+
+    /**
+     * <p>
      * A value that enables DMS to specify a predefined (canned) access control list for objects created in an Amazon S3
      * bucket as .csv or .parquet files. For more information about Amazon S3 canned ACLs, see <a
      * href="http://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">Canned ACL</a> in the
@@ -5398,6 +5515,8 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
             sb.append("PreserveTransactions: ").append(getPreserveTransactions()).append(",");
         if (getCdcPath() != null)
             sb.append("CdcPath: ").append(getCdcPath()).append(",");
+        if (getUseTaskStartTimeForFullLoadTimestamp() != null)
+            sb.append("UseTaskStartTimeForFullLoadTimestamp: ").append(getUseTaskStartTimeForFullLoadTimestamp()).append(",");
         if (getCannedAclForObjects() != null)
             sb.append("CannedAclForObjects: ").append(getCannedAclForObjects()).append(",");
         if (getAddColumnName() != null)
@@ -5541,6 +5660,11 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCdcPath() != null && other.getCdcPath().equals(this.getCdcPath()) == false)
             return false;
+        if (other.getUseTaskStartTimeForFullLoadTimestamp() == null ^ this.getUseTaskStartTimeForFullLoadTimestamp() == null)
+            return false;
+        if (other.getUseTaskStartTimeForFullLoadTimestamp() != null
+                && other.getUseTaskStartTimeForFullLoadTimestamp().equals(this.getUseTaskStartTimeForFullLoadTimestamp()) == false)
+            return false;
         if (other.getCannedAclForObjects() == null ^ this.getCannedAclForObjects() == null)
             return false;
         if (other.getCannedAclForObjects() != null && other.getCannedAclForObjects().equals(this.getCannedAclForObjects()) == false)
@@ -5609,6 +5733,7 @@ public class S3Settings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCsvNoSupValue() == null) ? 0 : getCsvNoSupValue().hashCode());
         hashCode = prime * hashCode + ((getPreserveTransactions() == null) ? 0 : getPreserveTransactions().hashCode());
         hashCode = prime * hashCode + ((getCdcPath() == null) ? 0 : getCdcPath().hashCode());
+        hashCode = prime * hashCode + ((getUseTaskStartTimeForFullLoadTimestamp() == null) ? 0 : getUseTaskStartTimeForFullLoadTimestamp().hashCode());
         hashCode = prime * hashCode + ((getCannedAclForObjects() == null) ? 0 : getCannedAclForObjects().hashCode());
         hashCode = prime * hashCode + ((getAddColumnName() == null) ? 0 : getAddColumnName().hashCode());
         hashCode = prime * hashCode + ((getCdcMaxBatchInterval() == null) ? 0 : getCdcMaxBatchInterval().hashCode());

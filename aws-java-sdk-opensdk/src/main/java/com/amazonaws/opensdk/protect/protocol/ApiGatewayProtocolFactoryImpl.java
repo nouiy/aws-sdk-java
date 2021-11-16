@@ -35,6 +35,7 @@ import com.amazonaws.protocol.json.SdkJsonMarshallerFactory;
 import com.amazonaws.protocol.json.SdkStructuredJsonFactory;
 import com.amazonaws.protocol.json.SdkStructuredPlainJsonFactory;
 import com.amazonaws.protocol.json.StructuredJsonGenerator;
+import com.amazonaws.protocol.json.internal.EmptyBodyJsonMarshaller;
 import com.amazonaws.transform.JsonUnmarshallerContext;
 import com.amazonaws.transform.Unmarshaller;
 import com.amazonaws.util.DateUtils;
@@ -73,9 +74,9 @@ public final class ApiGatewayProtocolFactoryImpl implements SdkJsonMarshallerFac
                 .contentType(getContentType())
                 .operationInfo(operationInfo)
                 .originalRequest(origRequest)
-                .sendExplicitNullForPayload(true)
                 .marshallerOverride(MarshallLocation.PAYLOAD, MarshallingType.DATE,
                                     (val, generator) -> generator.writeValue(DateUtils.formatISO8601Date(val)))
+                .emptyBodyMarshaller(EmptyBodyJsonMarshaller.NULL)
                 .build();
     }
 

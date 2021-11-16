@@ -184,6 +184,10 @@ public class EndpointJsonUnmarshaller implements Unmarshaller<Endpoint, JsonUnma
                     context.nextToken();
                     endpoint.setRedisSettings(RedisSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("GcpMySQLSettings", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setGcpMySQLSettings(GcpMySQLSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

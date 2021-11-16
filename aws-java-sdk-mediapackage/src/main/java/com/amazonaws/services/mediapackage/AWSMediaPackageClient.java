@@ -74,7 +74,7 @@ public class AWSMediaPackageClient extends AmazonWebServiceClient implements AWS
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("UnprocessableEntityException").withExceptionUnmarshaller(
                                     com.amazonaws.services.mediapackage.model.transform.UnprocessableEntityExceptionUnmarshaller.getInstance()))
