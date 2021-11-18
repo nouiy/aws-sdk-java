@@ -30,24 +30,24 @@ public class Monitor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ARN of the Amazon CloudWatch alarm.
+     * Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.
      * </p>
      */
     private String alarmArn;
     /**
      * <p>
-     * ARN of an IAM role for AppConfig to monitor <code>AlarmArn</code>.
+     * ARN of an Identity and Access Management (IAM) role for AppConfig to monitor <code>AlarmArn</code>.
      * </p>
      */
     private String alarmRoleArn;
 
     /**
      * <p>
-     * ARN of the Amazon CloudWatch alarm.
+     * Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.
      * </p>
      * 
      * @param alarmArn
-     *        ARN of the Amazon CloudWatch alarm.
+     *        Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.
      */
 
     public void setAlarmArn(String alarmArn) {
@@ -56,10 +56,10 @@ public class Monitor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ARN of the Amazon CloudWatch alarm.
+     * Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.
      * </p>
      * 
-     * @return ARN of the Amazon CloudWatch alarm.
+     * @return Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.
      */
 
     public String getAlarmArn() {
@@ -68,11 +68,11 @@ public class Monitor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ARN of the Amazon CloudWatch alarm.
+     * Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.
      * </p>
      * 
      * @param alarmArn
-     *        ARN of the Amazon CloudWatch alarm.
+     *        Amazon Resource Name (ARN) of the Amazon CloudWatch alarm.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class Monitor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ARN of an IAM role for AppConfig to monitor <code>AlarmArn</code>.
+     * ARN of an Identity and Access Management (IAM) role for AppConfig to monitor <code>AlarmArn</code>.
      * </p>
      * 
      * @param alarmRoleArn
-     *        ARN of an IAM role for AppConfig to monitor <code>AlarmArn</code>.
+     *        ARN of an Identity and Access Management (IAM) role for AppConfig to monitor <code>AlarmArn</code>.
      */
 
     public void setAlarmRoleArn(String alarmRoleArn) {
@@ -96,10 +96,10 @@ public class Monitor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ARN of an IAM role for AppConfig to monitor <code>AlarmArn</code>.
+     * ARN of an Identity and Access Management (IAM) role for AppConfig to monitor <code>AlarmArn</code>.
      * </p>
      * 
-     * @return ARN of an IAM role for AppConfig to monitor <code>AlarmArn</code>.
+     * @return ARN of an Identity and Access Management (IAM) role for AppConfig to monitor <code>AlarmArn</code>.
      */
 
     public String getAlarmRoleArn() {
@@ -108,11 +108,11 @@ public class Monitor implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * ARN of an IAM role for AppConfig to monitor <code>AlarmArn</code>.
+     * ARN of an Identity and Access Management (IAM) role for AppConfig to monitor <code>AlarmArn</code>.
      * </p>
      * 
      * @param alarmRoleArn
-     *        ARN of an IAM role for AppConfig to monitor <code>AlarmArn</code>.
+     *        ARN of an Identity and Access Management (IAM) role for AppConfig to monitor <code>AlarmArn</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -85,6 +85,12 @@ public class UpdateProfileJobRequest extends com.amazonaws.AmazonWebServiceReque
     private S3Location outputLocation;
     /**
      * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     */
+    private java.util.List<ValidationConfiguration> validationConfigurations;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role to be assumed when DataBrew runs
      * the job.
      * </p>
@@ -558,6 +564,76 @@ public class UpdateProfileJobRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @return List of validation configurations that are applied to the profile job.
+     */
+
+    public java.util.List<ValidationConfiguration> getValidationConfigurations() {
+        return validationConfigurations;
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     */
+
+    public void setValidationConfigurations(java.util.Collection<ValidationConfiguration> validationConfigurations) {
+        if (validationConfigurations == null) {
+            this.validationConfigurations = null;
+            return;
+        }
+
+        this.validationConfigurations = new java.util.ArrayList<ValidationConfiguration>(validationConfigurations);
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setValidationConfigurations(java.util.Collection)} or
+     * {@link #withValidationConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateProfileJobRequest withValidationConfigurations(ValidationConfiguration... validationConfigurations) {
+        if (this.validationConfigurations == null) {
+            setValidationConfigurations(new java.util.ArrayList<ValidationConfiguration>(validationConfigurations.length));
+        }
+        for (ValidationConfiguration ele : validationConfigurations) {
+            this.validationConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateProfileJobRequest withValidationConfigurations(java.util.Collection<ValidationConfiguration> validationConfigurations) {
+        setValidationConfigurations(validationConfigurations);
+        return this;
+    }
+
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the Identity and Access Management (IAM) role to be assumed when DataBrew runs
      * the job.
      * </p>
@@ -728,6 +804,8 @@ public class UpdateProfileJobRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("MaxRetries: ").append(getMaxRetries()).append(",");
         if (getOutputLocation() != null)
             sb.append("OutputLocation: ").append(getOutputLocation()).append(",");
+        if (getValidationConfigurations() != null)
+            sb.append("ValidationConfigurations: ").append(getValidationConfigurations()).append(",");
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getTimeout() != null)
@@ -780,6 +858,10 @@ public class UpdateProfileJobRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getOutputLocation() != null && other.getOutputLocation().equals(this.getOutputLocation()) == false)
             return false;
+        if (other.getValidationConfigurations() == null ^ this.getValidationConfigurations() == null)
+            return false;
+        if (other.getValidationConfigurations() != null && other.getValidationConfigurations().equals(this.getValidationConfigurations()) == false)
+            return false;
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
@@ -808,6 +890,7 @@ public class UpdateProfileJobRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getMaxCapacity() == null) ? 0 : getMaxCapacity().hashCode());
         hashCode = prime * hashCode + ((getMaxRetries() == null) ? 0 : getMaxRetries().hashCode());
         hashCode = prime * hashCode + ((getOutputLocation() == null) ? 0 : getOutputLocation().hashCode());
+        hashCode = prime * hashCode + ((getValidationConfigurations() == null) ? 0 : getValidationConfigurations().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getTimeout() == null) ? 0 : getTimeout().hashCode());
         hashCode = prime * hashCode + ((getJobSample() == null) ? 0 : getJobSample().hashCode());

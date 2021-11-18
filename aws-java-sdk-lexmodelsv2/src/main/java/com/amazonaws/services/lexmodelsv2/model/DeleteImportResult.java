@@ -32,7 +32,9 @@ public class DeleteImportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the import will no longer be returned by the
-     * operation and calls to the with the import identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a> operation and calls to
+     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation
+     * with the import identifier will fail.
      * </p>
      */
     private String importStatus;
@@ -80,12 +82,17 @@ public class DeleteImportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the import will no longer be returned by the
-     * operation and calls to the with the import identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a> operation and calls to
+     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation
+     * with the import identifier will fail.
      * </p>
      * 
      * @param importStatus
      *        The current status of the deletion. When the deletion is complete, the import will no longer be returned
-     *        by the operation and calls to the with the import identifier will fail.
+     *        by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a>
+     *        operation and calls to the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation
+     *        with the import identifier will fail.
      * @see ImportStatus
      */
 
@@ -96,11 +103,16 @@ public class DeleteImportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the import will no longer be returned by the
-     * operation and calls to the with the import identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a> operation and calls to
+     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation
+     * with the import identifier will fail.
      * </p>
      * 
      * @return The current status of the deletion. When the deletion is complete, the import will no longer be returned
-     *         by the operation and calls to the with the import identifier will fail.
+     *         by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a>
+     *         operation and calls to the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation
+     *         with the import identifier will fail.
      * @see ImportStatus
      */
 
@@ -111,12 +123,17 @@ public class DeleteImportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the import will no longer be returned by the
-     * operation and calls to the with the import identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a> operation and calls to
+     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation
+     * with the import identifier will fail.
      * </p>
      * 
      * @param importStatus
      *        The current status of the deletion. When the deletion is complete, the import will no longer be returned
-     *        by the operation and calls to the with the import identifier will fail.
+     *        by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a>
+     *        operation and calls to the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation
+     *        with the import identifier will fail.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportStatus
      */
@@ -129,12 +146,17 @@ public class DeleteImportResult extends com.amazonaws.AmazonWebServiceResult<com
     /**
      * <p>
      * The current status of the deletion. When the deletion is complete, the import will no longer be returned by the
-     * operation and calls to the with the import identifier will fail.
+     * <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a> operation and calls to
+     * the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation
+     * with the import identifier will fail.
      * </p>
      * 
      * @param importStatus
      *        The current status of the deletion. When the deletion is complete, the import will no longer be returned
-     *        by the operation and calls to the with the import identifier will fail.
+     *        by the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListImports.html">ListImports</a>
+     *        operation and calls to the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeImport.html">DescribeImport</a> operation
+     *        with the import identifier will fail.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImportStatus
      */

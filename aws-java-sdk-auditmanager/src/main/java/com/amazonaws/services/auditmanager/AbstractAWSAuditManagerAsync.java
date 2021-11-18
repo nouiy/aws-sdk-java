@@ -436,6 +436,32 @@ public class AbstractAWSAuditManagerAsync extends AbstractAWSAuditManager implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetInsightsResult> getInsightsAsync(GetInsightsRequest request) {
+
+        return getInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInsightsResult> getInsightsAsync(GetInsightsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetInsightsRequest, GetInsightsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInsightsByAssessmentResult> getInsightsByAssessmentAsync(GetInsightsByAssessmentRequest request) {
+
+        return getInsightsByAssessmentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInsightsByAssessmentResult> getInsightsByAssessmentAsync(GetInsightsByAssessmentRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetInsightsByAssessmentRequest, GetInsightsByAssessmentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetOrganizationAdminAccountResult> getOrganizationAdminAccountAsync(GetOrganizationAdminAccountRequest request) {
 
         return getOrganizationAdminAccountAsync(request, null);
@@ -470,6 +496,21 @@ public class AbstractAWSAuditManagerAsync extends AbstractAWSAuditManager implem
     @Override
     public java.util.concurrent.Future<GetSettingsResult> getSettingsAsync(GetSettingsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetSettingsRequest, GetSettingsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssessmentControlInsightsByControlDomainResult> listAssessmentControlInsightsByControlDomainAsync(
+            ListAssessmentControlInsightsByControlDomainRequest request) {
+
+        return listAssessmentControlInsightsByControlDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssessmentControlInsightsByControlDomainResult> listAssessmentControlInsightsByControlDomainAsync(
+            ListAssessmentControlInsightsByControlDomainRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAssessmentControlInsightsByControlDomainRequest, ListAssessmentControlInsightsByControlDomainResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -524,6 +565,49 @@ public class AbstractAWSAuditManagerAsync extends AbstractAWSAuditManager implem
     @Override
     public java.util.concurrent.Future<ListAssessmentsResult> listAssessmentsAsync(ListAssessmentsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListAssessmentsRequest, ListAssessmentsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlDomainInsightsResult> listControlDomainInsightsAsync(ListControlDomainInsightsRequest request) {
+
+        return listControlDomainInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlDomainInsightsResult> listControlDomainInsightsAsync(ListControlDomainInsightsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListControlDomainInsightsRequest, ListControlDomainInsightsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlDomainInsightsByAssessmentResult> listControlDomainInsightsByAssessmentAsync(
+            ListControlDomainInsightsByAssessmentRequest request) {
+
+        return listControlDomainInsightsByAssessmentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlDomainInsightsByAssessmentResult> listControlDomainInsightsByAssessmentAsync(
+            ListControlDomainInsightsByAssessmentRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListControlDomainInsightsByAssessmentRequest, ListControlDomainInsightsByAssessmentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlInsightsByControlDomainResult> listControlInsightsByControlDomainAsync(
+            ListControlInsightsByControlDomainRequest request) {
+
+        return listControlInsightsByControlDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlInsightsByControlDomainResult> listControlInsightsByControlDomainAsync(
+            ListControlInsightsByControlDomainRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListControlInsightsByControlDomainRequest, ListControlInsightsByControlDomainResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

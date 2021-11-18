@@ -27,13 +27,13 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The identifier for the control set.
+     * The unique identifier for the control set.
      * </p>
      */
     private String controlSetId;
@@ -52,11 +52,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the assessment.
+     *        The unique identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -65,10 +65,10 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the assessment.
+     * @return The unique identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -77,11 +77,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the assessment.
+     *        The unique identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +92,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the control set.
+     * The unique identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the control set.
+     *        The unique identifier for the control set.
      */
 
     public void setControlSetId(String controlSetId) {
@@ -105,10 +105,10 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the control set.
+     * The unique identifier for the control set.
      * </p>
      * 
-     * @return The identifier for the control set.
+     * @return The unique identifier for the control set.
      */
 
     public String getControlSetId() {
@@ -117,11 +117,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the control set.
+     * The unique identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the control set.
+     *        The unique identifier for the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

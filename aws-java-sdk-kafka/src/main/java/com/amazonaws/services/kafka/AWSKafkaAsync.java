@@ -557,7 +557,7 @@ public interface AWSKafkaAsync extends AWSKafka {
 
     /**
      * <p>
-     * Returns a list of Kafka versions.
+     * Returns a list of Apache Kafka versions.
      * </p>
      * 
      * @param listKafkaVersionsRequest
@@ -570,7 +570,7 @@ public interface AWSKafkaAsync extends AWSKafka {
 
     /**
      * <p>
-     * Returns a list of Kafka versions.
+     * Returns a list of Apache Kafka versions.
      * </p>
      * 
      * @param listKafkaVersionsRequest
@@ -959,6 +959,39 @@ public interface AWSKafkaAsync extends AWSKafka {
      */
     java.util.concurrent.Future<UpdateConfigurationResult> updateConfigurationAsync(UpdateConfigurationRequest updateConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateConfigurationRequest, UpdateConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the cluster's connectivity configuration.
+     * </p>
+     * 
+     * @param updateConnectivityRequest
+     *        Request body for UpdateConnectivity.
+     * @return A Java Future containing the result of the UpdateConnectivity operation returned by the service.
+     * @sample AWSKafkaAsync.UpdateConnectivity
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateConnectivity" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConnectivityResult> updateConnectivityAsync(UpdateConnectivityRequest updateConnectivityRequest);
+
+    /**
+     * <p>
+     * Updates the cluster's connectivity configuration.
+     * </p>
+     * 
+     * @param updateConnectivityRequest
+     *        Request body for UpdateConnectivity.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateConnectivity operation returned by the service.
+     * @sample AWSKafkaAsyncHandler.UpdateConnectivity
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateConnectivity" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConnectivityResult> updateConnectivityAsync(UpdateConnectivityRequest updateConnectivityRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateConnectivityRequest, UpdateConnectivityResult> asyncHandler);
 
     /**
      * <p>

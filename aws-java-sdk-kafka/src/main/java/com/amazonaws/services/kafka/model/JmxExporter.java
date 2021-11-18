@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * 
  <p>
- * Indicates whether you want to enable or disable the JMX Exporter.
+ * Indicates whether you want to turn on or turn off the JMX Exporter.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/JmxExporter" target="_top">AWS API
@@ -31,19 +31,19 @@ public class JmxExporter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the JMX Exporter.
+     * Indicates whether you want to turn on or turn off the JMX Exporter.
      * </p>
      */
     private Boolean enabledInBroker;
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the JMX Exporter.
+     * Indicates whether you want to turn on or turn off the JMX Exporter.
      * </p>
      * 
      * @param enabledInBroker
      *        <p>
-     *        Indicates whether you want to enable or disable the JMX Exporter.
+     *        Indicates whether you want to turn on or turn off the JMX Exporter.
      *        </p>
      */
 
@@ -53,11 +53,11 @@ public class JmxExporter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the JMX Exporter.
+     * Indicates whether you want to turn on or turn off the JMX Exporter.
      * </p>
      * 
      * @return <p>
-     *         Indicates whether you want to enable or disable the JMX Exporter.
+     *         Indicates whether you want to turn on or turn off the JMX Exporter.
      *         </p>
      */
 
@@ -67,12 +67,12 @@ public class JmxExporter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the JMX Exporter.
+     * Indicates whether you want to turn on or turn off the JMX Exporter.
      * </p>
      * 
      * @param enabledInBroker
      *        <p>
-     *        Indicates whether you want to enable or disable the JMX Exporter.
+     *        Indicates whether you want to turn on or turn off the JMX Exporter.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -84,11 +84,11 @@ public class JmxExporter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the JMX Exporter.
+     * Indicates whether you want to turn on or turn off the JMX Exporter.
      * </p>
      * 
      * @return <p>
-     *         Indicates whether you want to enable or disable the JMX Exporter.
+     *         Indicates whether you want to turn on or turn off the JMX Exporter.
      *         </p>
      */
 

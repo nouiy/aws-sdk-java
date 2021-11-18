@@ -90,6 +90,10 @@ public class MutableClusterInfoJsonUnmarshaller implements Unmarshaller<MutableC
                     context.nextToken();
                     mutableClusterInfo.setEncryptionInfo(EncryptionInfoJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("connectivityInfo", targetDepth)) {
+                    context.nextToken();
+                    mutableClusterInfo.setConnectivityInfo(ConnectivityInfoJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

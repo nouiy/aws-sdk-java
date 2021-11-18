@@ -30,6 +30,12 @@ public class GetAccuracyMetricsResult extends com.amazonaws.AmazonWebServiceResu
      */
     private java.util.List<EvaluationResult> predictorEvaluationResults;
     /**
+     * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     */
+    private Boolean isAutoPredictor;
+    /**
      * <note>
      * <p>
      * The <code>LatencyOptimized</code> AutoML override strategy is only available in private beta. Contact AWS Support
@@ -120,6 +126,58 @@ public class GetAccuracyMetricsResult extends com.amazonaws.AmazonWebServiceResu
     public GetAccuracyMetricsResult withPredictorEvaluationResults(java.util.Collection<EvaluationResult> predictorEvaluationResults) {
         setPredictorEvaluationResults(predictorEvaluationResults);
         return this;
+    }
+
+    /**
+     * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     * 
+     * @param isAutoPredictor
+     *        Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     */
+
+    public void setIsAutoPredictor(Boolean isAutoPredictor) {
+        this.isAutoPredictor = isAutoPredictor;
+    }
+
+    /**
+     * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     * 
+     * @return Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     */
+
+    public Boolean getIsAutoPredictor() {
+        return this.isAutoPredictor;
+    }
+
+    /**
+     * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     * 
+     * @param isAutoPredictor
+     *        Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetAccuracyMetricsResult withIsAutoPredictor(Boolean isAutoPredictor) {
+        setIsAutoPredictor(isAutoPredictor);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     * 
+     * @return Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     */
+
+    public Boolean isAutoPredictor() {
+        return this.isAutoPredictor;
     }
 
     /**
@@ -334,6 +392,8 @@ public class GetAccuracyMetricsResult extends com.amazonaws.AmazonWebServiceResu
         sb.append("{");
         if (getPredictorEvaluationResults() != null)
             sb.append("PredictorEvaluationResults: ").append(getPredictorEvaluationResults()).append(",");
+        if (getIsAutoPredictor() != null)
+            sb.append("IsAutoPredictor: ").append(getIsAutoPredictor()).append(",");
         if (getAutoMLOverrideStrategy() != null)
             sb.append("AutoMLOverrideStrategy: ").append(getAutoMLOverrideStrategy()).append(",");
         if (getOptimizationMetric() != null)
@@ -356,6 +416,10 @@ public class GetAccuracyMetricsResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getPredictorEvaluationResults() != null && other.getPredictorEvaluationResults().equals(this.getPredictorEvaluationResults()) == false)
             return false;
+        if (other.getIsAutoPredictor() == null ^ this.getIsAutoPredictor() == null)
+            return false;
+        if (other.getIsAutoPredictor() != null && other.getIsAutoPredictor().equals(this.getIsAutoPredictor()) == false)
+            return false;
         if (other.getAutoMLOverrideStrategy() == null ^ this.getAutoMLOverrideStrategy() == null)
             return false;
         if (other.getAutoMLOverrideStrategy() != null && other.getAutoMLOverrideStrategy().equals(this.getAutoMLOverrideStrategy()) == false)
@@ -373,6 +437,7 @@ public class GetAccuracyMetricsResult extends com.amazonaws.AmazonWebServiceResu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getPredictorEvaluationResults() == null) ? 0 : getPredictorEvaluationResults().hashCode());
+        hashCode = prime * hashCode + ((getIsAutoPredictor() == null) ? 0 : getIsAutoPredictor().hashCode());
         hashCode = prime * hashCode + ((getAutoMLOverrideStrategy() == null) ? 0 : getAutoMLOverrideStrategy().hashCode());
         hashCode = prime * hashCode + ((getOptimizationMetric() == null) ? 0 : getOptimizationMetric().hashCode());
         return hashCode;

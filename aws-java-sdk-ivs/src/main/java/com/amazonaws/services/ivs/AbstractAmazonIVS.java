@@ -98,6 +98,11 @@ public class AbstractAmazonIVS implements AmazonIVS {
     }
 
     @Override
+    public GetStreamSessionResult getStreamSession(GetStreamSessionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ImportPlaybackKeyPairResult importPlaybackKeyPair(ImportPlaybackKeyPairRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -119,6 +124,11 @@ public class AbstractAmazonIVS implements AmazonIVS {
 
     @Override
     public ListStreamKeysResult listStreamKeys(ListStreamKeysRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListStreamSessionsResult listStreamSessions(ListStreamSessionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

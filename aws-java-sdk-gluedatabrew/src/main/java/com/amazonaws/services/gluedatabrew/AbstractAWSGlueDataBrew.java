@@ -58,6 +58,11 @@ public class AbstractAWSGlueDataBrew implements AWSGlueDataBrew {
     }
 
     @Override
+    public CreateRulesetResult createRuleset(CreateRulesetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateScheduleResult createSchedule(CreateScheduleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -79,6 +84,11 @@ public class AbstractAWSGlueDataBrew implements AWSGlueDataBrew {
 
     @Override
     public DeleteRecipeVersionResult deleteRecipeVersion(DeleteRecipeVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteRulesetResult deleteRuleset(DeleteRulesetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -109,6 +119,11 @@ public class AbstractAWSGlueDataBrew implements AWSGlueDataBrew {
 
     @Override
     public DescribeRecipeResult describeRecipe(DescribeRecipeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeRulesetResult describeRuleset(DescribeRulesetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -144,6 +159,11 @@ public class AbstractAWSGlueDataBrew implements AWSGlueDataBrew {
 
     @Override
     public ListRecipesResult listRecipes(ListRecipesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRulesetsResult listRulesets(ListRulesetsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -214,6 +234,11 @@ public class AbstractAWSGlueDataBrew implements AWSGlueDataBrew {
 
     @Override
     public UpdateRecipeJobResult updateRecipeJob(UpdateRecipeJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateRulesetResult updateRuleset(UpdateRulesetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

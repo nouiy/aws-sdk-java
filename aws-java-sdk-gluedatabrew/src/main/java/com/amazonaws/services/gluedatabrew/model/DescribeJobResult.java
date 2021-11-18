@@ -152,6 +152,12 @@ public class DescribeJobResult extends com.amazonaws.AmazonWebServiceResult<com.
      * </p>
      */
     private ProfileConfiguration profileConfiguration;
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     */
+    private java.util.List<ValidationConfiguration> validationConfigurations;
 
     private RecipeReference recipeReference;
     /**
@@ -1221,6 +1227,76 @@ public class DescribeJobResult extends com.amazonaws.AmazonWebServiceResult<com.
     }
 
     /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @return List of validation configurations that are applied to the profile job.
+     */
+
+    public java.util.List<ValidationConfiguration> getValidationConfigurations() {
+        return validationConfigurations;
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     */
+
+    public void setValidationConfigurations(java.util.Collection<ValidationConfiguration> validationConfigurations) {
+        if (validationConfigurations == null) {
+            this.validationConfigurations = null;
+            return;
+        }
+
+        this.validationConfigurations = new java.util.ArrayList<ValidationConfiguration>(validationConfigurations);
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setValidationConfigurations(java.util.Collection)} or
+     * {@link #withValidationConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeJobResult withValidationConfigurations(ValidationConfiguration... validationConfigurations) {
+        if (this.validationConfigurations == null) {
+            setValidationConfigurations(new java.util.ArrayList<ValidationConfiguration>(validationConfigurations.length));
+        }
+        for (ValidationConfiguration ele : validationConfigurations) {
+            this.validationConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeJobResult withValidationConfigurations(java.util.Collection<ValidationConfiguration> validationConfigurations) {
+        setValidationConfigurations(validationConfigurations);
+        return this;
+    }
+
+    /**
      * @param recipeReference
      */
 
@@ -1532,6 +1608,8 @@ public class DescribeJobResult extends com.amazonaws.AmazonWebServiceResult<com.
             sb.append("ProjectName: ").append(getProjectName()).append(",");
         if (getProfileConfiguration() != null)
             sb.append("ProfileConfiguration: ").append(getProfileConfiguration()).append(",");
+        if (getValidationConfigurations() != null)
+            sb.append("ValidationConfigurations: ").append(getValidationConfigurations()).append(",");
         if (getRecipeReference() != null)
             sb.append("RecipeReference: ").append(getRecipeReference()).append(",");
         if (getResourceArn() != null)
@@ -1626,6 +1704,10 @@ public class DescribeJobResult extends com.amazonaws.AmazonWebServiceResult<com.
             return false;
         if (other.getProfileConfiguration() != null && other.getProfileConfiguration().equals(this.getProfileConfiguration()) == false)
             return false;
+        if (other.getValidationConfigurations() == null ^ this.getValidationConfigurations() == null)
+            return false;
+        if (other.getValidationConfigurations() != null && other.getValidationConfigurations().equals(this.getValidationConfigurations()) == false)
+            return false;
         if (other.getRecipeReference() == null ^ this.getRecipeReference() == null)
             return false;
         if (other.getRecipeReference() != null && other.getRecipeReference().equals(this.getRecipeReference()) == false)
@@ -1675,6 +1757,7 @@ public class DescribeJobResult extends com.amazonaws.AmazonWebServiceResult<com.
         hashCode = prime * hashCode + ((getDatabaseOutputs() == null) ? 0 : getDatabaseOutputs().hashCode());
         hashCode = prime * hashCode + ((getProjectName() == null) ? 0 : getProjectName().hashCode());
         hashCode = prime * hashCode + ((getProfileConfiguration() == null) ? 0 : getProfileConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getValidationConfigurations() == null) ? 0 : getValidationConfigurations().hashCode());
         hashCode = prime * hashCode + ((getRecipeReference() == null) ? 0 : getRecipeReference().hashCode());
         hashCode = prime * hashCode + ((getResourceArn() == null) ? 0 : getResourceArn().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());

@@ -55,7 +55,7 @@ public class GetConfigurationProfileResult extends com.amazonaws.AmazonWebServic
     private String locationUri;
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
      */
     private String retrievalRoleArn;
@@ -65,6 +65,14 @@ public class GetConfigurationProfileResult extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private java.util.List<Validator> validators;
+    /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used for distributing configurations to your
+     * application.
+     * </p>
+     */
+    private String type;
 
     /**
      * <p>
@@ -268,11 +276,12 @@ public class GetConfigurationProfileResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
      * 
      * @param retrievalRoleArn
-     *        The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     *        The ARN of an IAM role with permission to access the configuration at the specified
+     *        <code>LocationUri</code>.
      */
 
     public void setRetrievalRoleArn(String retrievalRoleArn) {
@@ -281,10 +290,11 @@ public class GetConfigurationProfileResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
      * 
-     * @return The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * @return The ARN of an IAM role with permission to access the configuration at the specified
+     *         <code>LocationUri</code>.
      */
 
     public String getRetrievalRoleArn() {
@@ -293,11 +303,12 @@ public class GetConfigurationProfileResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
      * 
      * @param retrievalRoleArn
-     *        The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     *        The ARN of an IAM role with permission to access the configuration at the specified
+     *        <code>LocationUri</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -377,6 +388,58 @@ public class GetConfigurationProfileResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used for distributing configurations to your
+     * application.
+     * </p>
+     * 
+     * @param type
+     *        The type of configurations that the configuration profile contains. A configuration can be a feature flag
+     *        used for enabling or disabling new features or a free-form configuration used for distributing
+     *        configurations to your application.
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used for distributing configurations to your
+     * application.
+     * </p>
+     * 
+     * @return The type of configurations that the configuration profile contains. A configuration can be a feature flag
+     *         used for enabling or disabling new features or a free-form configuration used for distributing
+     *         configurations to your application.
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used for distributing configurations to your
+     * application.
+     * </p>
+     * 
+     * @param type
+     *        The type of configurations that the configuration profile contains. A configuration can be a feature flag
+     *        used for enabling or disabling new features or a free-form configuration used for distributing
+     *        configurations to your application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetConfigurationProfileResult withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -401,7 +464,9 @@ public class GetConfigurationProfileResult extends com.amazonaws.AmazonWebServic
         if (getRetrievalRoleArn() != null)
             sb.append("RetrievalRoleArn: ").append(getRetrievalRoleArn()).append(",");
         if (getValidators() != null)
-            sb.append("Validators: ").append(getValidators());
+            sb.append("Validators: ").append(getValidators()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -444,6 +509,10 @@ public class GetConfigurationProfileResult extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getValidators() != null && other.getValidators().equals(this.getValidators()) == false)
             return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
         return true;
     }
 
@@ -459,6 +528,7 @@ public class GetConfigurationProfileResult extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getLocationUri() == null) ? 0 : getLocationUri().hashCode());
         hashCode = prime * hashCode + ((getRetrievalRoleArn() == null) ? 0 : getRetrievalRoleArn().hashCode());
         hashCode = prime * hashCode + ((getValidators() == null) ? 0 : getValidators().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

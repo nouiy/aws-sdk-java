@@ -17,7 +17,9 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * This structure contains the definition for a Contributor Insights rule.
+ * This structure contains the definition for a Contributor Insights rule. For more information about this rule, see<a
+ * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContributorInsights.html"> Using Constributor
+ * Insights to analyze high-cardinality data</a> in the <i>Amazon CloudWatch User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/InsightRule" target="_top">AWS API
@@ -40,7 +42,7 @@ public class InsightRule implements Serializable, Cloneable {
     private String state;
     /**
      * <p>
-     * For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For built-in
+     * For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For managed
      * rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
      * </p>
      */
@@ -138,13 +140,13 @@ public class InsightRule implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For built-in
+     * For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For managed
      * rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
      * </p>
      * 
      * @param schema
      *        For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For
-     *        built-in rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
+     *        managed rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
      */
 
     public void setSchema(String schema) {
@@ -153,12 +155,12 @@ public class InsightRule implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For built-in
+     * For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For managed
      * rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
      * </p>
      * 
      * @return For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For
-     *         built-in rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
+     *         managed rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
      */
 
     public String getSchema() {
@@ -167,13 +169,13 @@ public class InsightRule implements Serializable, Cloneable {
 
     /**
      * <p>
-     * For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For built-in
+     * For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For managed
      * rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
      * </p>
      * 
      * @param schema
      *        For rules that you create, this is always <code>{"Name": "CloudWatchLogRule", "Version": 1}</code>. For
-     *        built-in rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
+     *        managed rules, this is <code>{"Name": "ServiceLogRule", "Version": 1}</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

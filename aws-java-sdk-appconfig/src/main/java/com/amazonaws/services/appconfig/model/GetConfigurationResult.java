@@ -27,6 +27,14 @@ public class GetConfigurationResult extends com.amazonaws.AmazonWebServiceResult
      * <p>
      * The content of the configuration or the configuration data.
      * </p>
+     * <important>
+     * <p>
+     * Compare the configuration version numbers of the configuration cached locally on your machine and the
+     * configuration number in the the header. If the configuration numbers are the same, the content can be ignored.
+     * The <code>Content</code> section only appears if the system finds new or updated configuration data. If the
+     * system doesn't find new or updated configuration data, then the <code>Content</code> section is not returned.
+     * </p>
+     * </important>
      */
     private java.nio.ByteBuffer content;
     /**
@@ -47,6 +55,14 @@ public class GetConfigurationResult extends com.amazonaws.AmazonWebServiceResult
      * <p>
      * The content of the configuration or the configuration data.
      * </p>
+     * <important>
+     * <p>
+     * Compare the configuration version numbers of the configuration cached locally on your machine and the
+     * configuration number in the the header. If the configuration numbers are the same, the content can be ignored.
+     * The <code>Content</code> section only appears if the system finds new or updated configuration data. If the
+     * system doesn't find new or updated configuration data, then the <code>Content</code> section is not returned.
+     * </p>
+     * </important>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
      * Users of the SDK should not perform Base64 encoding on this field.
@@ -59,7 +75,14 @@ public class GetConfigurationResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param content
-     *        The content of the configuration or the configuration data.
+     *        The content of the configuration or the configuration data.</p> <important>
+     *        <p>
+     *        Compare the configuration version numbers of the configuration cached locally on your machine and the
+     *        configuration number in the the header. If the configuration numbers are the same, the content can be
+     *        ignored. The <code>Content</code> section only appears if the system finds new or updated configuration
+     *        data. If the system doesn't find new or updated configuration data, then the <code>Content</code> section
+     *        is not returned.
+     *        </p>
      */
 
     public void setContent(java.nio.ByteBuffer content) {
@@ -70,6 +93,14 @@ public class GetConfigurationResult extends com.amazonaws.AmazonWebServiceResult
      * <p>
      * The content of the configuration or the configuration data.
      * </p>
+     * <important>
+     * <p>
+     * Compare the configuration version numbers of the configuration cached locally on your machine and the
+     * configuration number in the the header. If the configuration numbers are the same, the content can be ignored.
+     * The <code>Content</code> section only appears if the system finds new or updated configuration data. If the
+     * system doesn't find new or updated configuration data, then the <code>Content</code> section is not returned.
+     * </p>
+     * </important>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
      * using {@link java.nio.ByteBuffer#asReadOnlyBuffer()} to create a read-only view of the buffer with an independent
@@ -78,7 +109,14 @@ public class GetConfigurationResult extends com.amazonaws.AmazonWebServiceResult
      * {@code position}.
      * </p>
      * 
-     * @return The content of the configuration or the configuration data.
+     * @return The content of the configuration or the configuration data.</p> <important>
+     *         <p>
+     *         Compare the configuration version numbers of the configuration cached locally on your machine and the
+     *         configuration number in the the header. If the configuration numbers are the same, the content can be
+     *         ignored. The <code>Content</code> section only appears if the system finds new or updated configuration
+     *         data. If the system doesn't find new or updated configuration data, then the <code>Content</code> section
+     *         is not returned.
+     *         </p>
      */
 
     public java.nio.ByteBuffer getContent() {
@@ -89,6 +127,14 @@ public class GetConfigurationResult extends com.amazonaws.AmazonWebServiceResult
      * <p>
      * The content of the configuration or the configuration data.
      * </p>
+     * <important>
+     * <p>
+     * Compare the configuration version numbers of the configuration cached locally on your machine and the
+     * configuration number in the the header. If the configuration numbers are the same, the content can be ignored.
+     * The <code>Content</code> section only appears if the system finds new or updated configuration data. If the
+     * system doesn't find new or updated configuration data, then the <code>Content</code> section is not returned.
+     * </p>
+     * </important>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
      * Users of the SDK should not perform Base64 encoding on this field.
@@ -101,7 +147,14 @@ public class GetConfigurationResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param content
-     *        The content of the configuration or the configuration data.
+     *        The content of the configuration or the configuration data.</p> <important>
+     *        <p>
+     *        Compare the configuration version numbers of the configuration cached locally on your machine and the
+     *        configuration number in the the header. If the configuration numbers are the same, the content can be
+     *        ignored. The <code>Content</code> section only appears if the system finds new or updated configuration
+     *        data. If the system doesn't find new or updated configuration data, then the <code>Content</code> section
+     *        is not returned.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

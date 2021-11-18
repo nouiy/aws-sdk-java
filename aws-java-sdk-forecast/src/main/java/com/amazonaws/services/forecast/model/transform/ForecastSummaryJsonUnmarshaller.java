@@ -60,6 +60,10 @@ public class ForecastSummaryJsonUnmarshaller implements Unmarshaller<ForecastSum
                     context.nextToken();
                     forecastSummary.setPredictorArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CreatedUsingAutoPredictor", targetDepth)) {
+                    context.nextToken();
+                    forecastSummary.setCreatedUsingAutoPredictor(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("DatasetGroupArn", targetDepth)) {
                     context.nextToken();
                     forecastSummary.setDatasetGroupArn(context.getUnmarshaller(String.class).unmarshall(context));

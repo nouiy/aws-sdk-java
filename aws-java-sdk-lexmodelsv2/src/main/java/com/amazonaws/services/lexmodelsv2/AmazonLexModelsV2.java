@@ -536,7 +536,8 @@ public interface AmazonLexModelsV2 {
 
     /**
      * <p>
-     * Deletes a specific version of a bot. To delete all version of a bot, use the <a>DeleteBot</a> operation.
+     * Deletes a specific version of a bot. To delete all version of a bot, use the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DeleteBot.html">DeleteBot</a> operation.
      * </p>
      * 
      * @param deleteBotVersionRequest
@@ -752,6 +753,8 @@ public interface AmazonLexModelsV2 {
      * </p>
      * <p>
      * Amazon Lex stores the utterances that users send to your bot. Utterances are stored for 15 days for use with the
+     * <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListAggregatedUtterances.html">ListAggregatedUtterances</a>
      * operation, and then stored indefinitely for use in improving the ability of your bot to respond to user input..
      * </p>
      * <p>
@@ -1160,7 +1163,7 @@ public interface AmazonLexModelsV2 {
      * <p>
      * To use a built-in intent as a the base for your own intent, include the built-in intent signature in the
      * <code>parentIntentSignature</code> parameter when you call the <code>CreateIntent</code> operation. For more
-     * information, see <a>CreateIntent</a>.
+     * information, see <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateIntent.html">CreateIntent</a>.
      * </p>
      * 
      * @param listBuiltInIntentsRequest
@@ -1483,8 +1486,8 @@ public interface AmazonLexModelsV2 {
      * </p>
      * <p>
      * The password is not required. If you don't supply a password, Amazon Lex generates a zip file that is not
-     * protected by a password. This is the archive that is available at the pre-signed S3 URL provided by the
-     * operation.
+     * protected by a password. This is the archive that is available at the pre-signed S3 URL provided by the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeExport.html">DescribeExport</a> operation.
      * </p>
      * 
      * @param updateExportRequest

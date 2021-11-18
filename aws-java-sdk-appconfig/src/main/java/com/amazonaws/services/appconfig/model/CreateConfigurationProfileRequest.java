@@ -45,19 +45,27 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
     private String description;
     /**
      * <p>
-     * A URI to locate the configuration. You can specify a Systems Manager (SSM) document, an SSM Parameter Store
-     * parameter, or an Amazon S3 object. For an SSM document, specify either the document name in the format
-     * <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a parameter, specify
-     * either the parameter name in the format <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN. For an
-     * Amazon S3 object, specify the URI in the following format: <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>.
-     * Here is an example: s3://my-bucket/my-app/us-east-1/my-config.json
+     * A URI to locate the configuration. You can specify the AppConfig hosted configuration store, Systems Manager
+     * (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store and
+     * for feature flags, specify <code>hosted</code>. For an SSM document, specify either the document name in the
+     * format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a parameter,
+     * specify either the parameter name in the format <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN.
+     * For an Amazon S3 object, specify the URI in the following format:
+     * <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>. Here is an example:
+     * <code>s3://my-bucket/my-app/us-east-1/my-config.json</code>
      * </p>
      */
     private String locationUri;
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
+     * <important>
+     * <p>
+     * A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration store. It is
+     * required for all other sources that store your configuration.
+     * </p>
+     * </important>
      */
     private String retrievalRoleArn;
     /**
@@ -73,6 +81,14 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used for distributing configurations to your
+     * application.
+     * </p>
+     */
+    private String type;
 
     /**
      * <p>
@@ -196,22 +212,25 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A URI to locate the configuration. You can specify a Systems Manager (SSM) document, an SSM Parameter Store
-     * parameter, or an Amazon S3 object. For an SSM document, specify either the document name in the format
-     * <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a parameter, specify
-     * either the parameter name in the format <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN. For an
-     * Amazon S3 object, specify the URI in the following format: <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>.
-     * Here is an example: s3://my-bucket/my-app/us-east-1/my-config.json
+     * A URI to locate the configuration. You can specify the AppConfig hosted configuration store, Systems Manager
+     * (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store and
+     * for feature flags, specify <code>hosted</code>. For an SSM document, specify either the document name in the
+     * format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a parameter,
+     * specify either the parameter name in the format <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN.
+     * For an Amazon S3 object, specify the URI in the following format:
+     * <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>. Here is an example:
+     * <code>s3://my-bucket/my-app/us-east-1/my-config.json</code>
      * </p>
      * 
      * @param locationUri
-     *        A URI to locate the configuration. You can specify a Systems Manager (SSM) document, an SSM Parameter
-     *        Store parameter, or an Amazon S3 object. For an SSM document, specify either the document name in the
-     *        format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a
-     *        parameter, specify either the parameter name in the format
+     *        A URI to locate the configuration. You can specify the AppConfig hosted configuration store, Systems
+     *        Manager (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted
+     *        configuration store and for feature flags, specify <code>hosted</code>. For an SSM document, specify
+     *        either the document name in the format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon
+     *        Resource Name (ARN). For a parameter, specify either the parameter name in the format
      *        <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN. For an Amazon S3 object, specify the URI
      *        in the following format: <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>. Here is an example:
-     *        s3://my-bucket/my-app/us-east-1/my-config.json
+     *        <code>s3://my-bucket/my-app/us-east-1/my-config.json</code>
      */
 
     public void setLocationUri(String locationUri) {
@@ -220,21 +239,24 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A URI to locate the configuration. You can specify a Systems Manager (SSM) document, an SSM Parameter Store
-     * parameter, or an Amazon S3 object. For an SSM document, specify either the document name in the format
-     * <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a parameter, specify
-     * either the parameter name in the format <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN. For an
-     * Amazon S3 object, specify the URI in the following format: <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>.
-     * Here is an example: s3://my-bucket/my-app/us-east-1/my-config.json
+     * A URI to locate the configuration. You can specify the AppConfig hosted configuration store, Systems Manager
+     * (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store and
+     * for feature flags, specify <code>hosted</code>. For an SSM document, specify either the document name in the
+     * format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a parameter,
+     * specify either the parameter name in the format <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN.
+     * For an Amazon S3 object, specify the URI in the following format:
+     * <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>. Here is an example:
+     * <code>s3://my-bucket/my-app/us-east-1/my-config.json</code>
      * </p>
      * 
-     * @return A URI to locate the configuration. You can specify a Systems Manager (SSM) document, an SSM Parameter
-     *         Store parameter, or an Amazon S3 object. For an SSM document, specify either the document name in the
-     *         format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a
-     *         parameter, specify either the parameter name in the format
+     * @return A URI to locate the configuration. You can specify the AppConfig hosted configuration store, Systems
+     *         Manager (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted
+     *         configuration store and for feature flags, specify <code>hosted</code>. For an SSM document, specify
+     *         either the document name in the format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon
+     *         Resource Name (ARN). For a parameter, specify either the parameter name in the format
      *         <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN. For an Amazon S3 object, specify the URI
      *         in the following format: <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>. Here is an example:
-     *         s3://my-bucket/my-app/us-east-1/my-config.json
+     *         <code>s3://my-bucket/my-app/us-east-1/my-config.json</code>
      */
 
     public String getLocationUri() {
@@ -243,22 +265,25 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * A URI to locate the configuration. You can specify a Systems Manager (SSM) document, an SSM Parameter Store
-     * parameter, or an Amazon S3 object. For an SSM document, specify either the document name in the format
-     * <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a parameter, specify
-     * either the parameter name in the format <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN. For an
-     * Amazon S3 object, specify the URI in the following format: <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>.
-     * Here is an example: s3://my-bucket/my-app/us-east-1/my-config.json
+     * A URI to locate the configuration. You can specify the AppConfig hosted configuration store, Systems Manager
+     * (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted configuration store and
+     * for feature flags, specify <code>hosted</code>. For an SSM document, specify either the document name in the
+     * format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a parameter,
+     * specify either the parameter name in the format <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN.
+     * For an Amazon S3 object, specify the URI in the following format:
+     * <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>. Here is an example:
+     * <code>s3://my-bucket/my-app/us-east-1/my-config.json</code>
      * </p>
      * 
      * @param locationUri
-     *        A URI to locate the configuration. You can specify a Systems Manager (SSM) document, an SSM Parameter
-     *        Store parameter, or an Amazon S3 object. For an SSM document, specify either the document name in the
-     *        format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon Resource Name (ARN). For a
-     *        parameter, specify either the parameter name in the format
+     *        A URI to locate the configuration. You can specify the AppConfig hosted configuration store, Systems
+     *        Manager (SSM) document, an SSM Parameter Store parameter, or an Amazon S3 object. For the hosted
+     *        configuration store and for feature flags, specify <code>hosted</code>. For an SSM document, specify
+     *        either the document name in the format <code>ssm-document://&lt;Document_name&gt;</code> or the Amazon
+     *        Resource Name (ARN). For a parameter, specify either the parameter name in the format
      *        <code>ssm-parameter://&lt;Parameter_name&gt;</code> or the ARN. For an Amazon S3 object, specify the URI
      *        in the following format: <code>s3://&lt;bucket&gt;/&lt;objectKey&gt; </code>. Here is an example:
-     *        s3://my-bucket/my-app/us-east-1/my-config.json
+     *        <code>s3://my-bucket/my-app/us-east-1/my-config.json</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -269,11 +294,22 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
+     * <important>
+     * <p>
+     * A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration store. It is
+     * required for all other sources that store your configuration.
+     * </p>
+     * </important>
      * 
      * @param retrievalRoleArn
-     *        The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     *        The ARN of an IAM role with permission to access the configuration at the specified
+     *        <code>LocationUri</code>.</p> <important>
+     *        <p>
+     *        A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration
+     *        store. It is required for all other sources that store your configuration.
+     *        </p>
      */
 
     public void setRetrievalRoleArn(String retrievalRoleArn) {
@@ -282,10 +318,21 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
+     * <important>
+     * <p>
+     * A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration store. It is
+     * required for all other sources that store your configuration.
+     * </p>
+     * </important>
      * 
-     * @return The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * @return The ARN of an IAM role with permission to access the configuration at the specified
+     *         <code>LocationUri</code>.</p> <important>
+     *         <p>
+     *         A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration
+     *         store. It is required for all other sources that store your configuration.
+     *         </p>
      */
 
     public String getRetrievalRoleArn() {
@@ -294,11 +341,22 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
+     * <important>
+     * <p>
+     * A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration store. It is
+     * required for all other sources that store your configuration.
+     * </p>
+     * </important>
      * 
      * @param retrievalRoleArn
-     *        The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     *        The ARN of an IAM role with permission to access the configuration at the specified
+     *        <code>LocationUri</code>.</p> <important>
+     *        <p>
+     *        A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration
+     *        store. It is required for all other sources that store your configuration.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -452,6 +510,58 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used for distributing configurations to your
+     * application.
+     * </p>
+     * 
+     * @param type
+     *        The type of configurations that the configuration profile contains. A configuration can be a feature flag
+     *        used for enabling or disabling new features or a free-form configuration used for distributing
+     *        configurations to your application.
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used for distributing configurations to your
+     * application.
+     * </p>
+     * 
+     * @return The type of configurations that the configuration profile contains. A configuration can be a feature flag
+     *         used for enabling or disabling new features or a free-form configuration used for distributing
+     *         configurations to your application.
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used for distributing configurations to your
+     * application.
+     * </p>
+     * 
+     * @param type
+     *        The type of configurations that the configuration profile contains. A configuration can be a feature flag
+     *        used for enabling or disabling new features or a free-form configuration used for distributing
+     *        configurations to your application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateConfigurationProfileRequest withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -476,7 +586,9 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
         if (getValidators() != null)
             sb.append("Validators: ").append(getValidators()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -519,6 +631,10 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
         return true;
     }
 
@@ -534,6 +650,7 @@ public class CreateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getRetrievalRoleArn() == null) ? 0 : getRetrievalRoleArn().hashCode());
         hashCode = prime * hashCode + ((getValidators() == null) ? 0 : getValidators().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * 
  <p>
- * Describes the setup to be used for Kafka broker nodes in the cluster.
+ * Describes the setup to be used for Apache Kafka broker nodes in the cluster.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/BrokerNodeGroupInfo" target="_top">AWS API
@@ -51,7 +51,7 @@ public class BrokerNodeGroupInfo implements Serializable, Cloneable, StructuredP
     private java.util.List<String> clientSubnets;
     /**
      * <p>
-     * The type of Amazon EC2 instances to use for Kafka brokers. The following instance types are allowed:
+     * The type of Amazon EC2 instances to use for Apache Kafka brokers. The following instance types are allowed:
      * kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and kafka.m5.24xlarge.
      * </p>
      */
@@ -70,6 +70,12 @@ public class BrokerNodeGroupInfo implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private StorageInfo storageInfo;
+    /**
+     * <p>
+     * Information about the broker access configuration.
+     * </p>
+     */
+    private ConnectivityInfo connectivityInfo;
 
     /**
      * <p>
@@ -283,14 +289,14 @@ public class BrokerNodeGroupInfo implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of Amazon EC2 instances to use for Kafka brokers. The following instance types are allowed:
+     * The type of Amazon EC2 instances to use for Apache Kafka brokers. The following instance types are allowed:
      * kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and kafka.m5.24xlarge.
      * </p>
      * 
      * @param instanceType
      *        <p>
-     *        The type of Amazon EC2 instances to use for Kafka brokers. The following instance types are allowed:
-     *        kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and
+     *        The type of Amazon EC2 instances to use for Apache Kafka brokers. The following instance types are
+     *        allowed: kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and
      *        kafka.m5.24xlarge.
      *        </p>
      */
@@ -301,13 +307,13 @@ public class BrokerNodeGroupInfo implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of Amazon EC2 instances to use for Kafka brokers. The following instance types are allowed:
+     * The type of Amazon EC2 instances to use for Apache Kafka brokers. The following instance types are allowed:
      * kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and kafka.m5.24xlarge.
      * </p>
      * 
      * @return <p>
-     *         The type of Amazon EC2 instances to use for Kafka brokers. The following instance types are allowed:
-     *         kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and
+     *         The type of Amazon EC2 instances to use for Apache Kafka brokers. The following instance types are
+     *         allowed: kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and
      *         kafka.m5.24xlarge.
      *         </p>
      */
@@ -318,14 +324,14 @@ public class BrokerNodeGroupInfo implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The type of Amazon EC2 instances to use for Kafka brokers. The following instance types are allowed:
+     * The type of Amazon EC2 instances to use for Apache Kafka brokers. The following instance types are allowed:
      * kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and kafka.m5.24xlarge.
      * </p>
      * 
      * @param instanceType
      *        <p>
-     *        The type of Amazon EC2 instances to use for Kafka brokers. The following instance types are allowed:
-     *        kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and
+     *        The type of Amazon EC2 instances to use for Apache Kafka brokers. The following instance types are
+     *        allowed: kafka.m5.large, kafka.m5.xlarge, kafka.m5.2xlarge, kafka.m5.4xlarge, kafka.m5.12xlarge, and
      *        kafka.m5.24xlarge.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -478,6 +484,52 @@ public class BrokerNodeGroupInfo implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * Information about the broker access configuration.
+     * </p>
+     * 
+     * @param connectivityInfo
+     *        <p>
+     *        Information about the broker access configuration.
+     *        </p>
+     */
+
+    public void setConnectivityInfo(ConnectivityInfo connectivityInfo) {
+        this.connectivityInfo = connectivityInfo;
+    }
+
+    /**
+     * <p>
+     * Information about the broker access configuration.
+     * </p>
+     * 
+     * @return <p>
+     *         Information about the broker access configuration.
+     *         </p>
+     */
+
+    public ConnectivityInfo getConnectivityInfo() {
+        return this.connectivityInfo;
+    }
+
+    /**
+     * <p>
+     * Information about the broker access configuration.
+     * </p>
+     * 
+     * @param connectivityInfo
+     *        <p>
+     *        Information about the broker access configuration.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BrokerNodeGroupInfo withConnectivityInfo(ConnectivityInfo connectivityInfo) {
+        setConnectivityInfo(connectivityInfo);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -498,7 +550,9 @@ public class BrokerNodeGroupInfo implements Serializable, Cloneable, StructuredP
         if (getSecurityGroups() != null)
             sb.append("SecurityGroups: ").append(getSecurityGroups()).append(",");
         if (getStorageInfo() != null)
-            sb.append("StorageInfo: ").append(getStorageInfo());
+            sb.append("StorageInfo: ").append(getStorageInfo()).append(",");
+        if (getConnectivityInfo() != null)
+            sb.append("ConnectivityInfo: ").append(getConnectivityInfo());
         sb.append("}");
         return sb.toString();
     }
@@ -533,6 +587,10 @@ public class BrokerNodeGroupInfo implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getStorageInfo() != null && other.getStorageInfo().equals(this.getStorageInfo()) == false)
             return false;
+        if (other.getConnectivityInfo() == null ^ this.getConnectivityInfo() == null)
+            return false;
+        if (other.getConnectivityInfo() != null && other.getConnectivityInfo().equals(this.getConnectivityInfo()) == false)
+            return false;
         return true;
     }
 
@@ -546,6 +604,7 @@ public class BrokerNodeGroupInfo implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
         hashCode = prime * hashCode + ((getSecurityGroups() == null) ? 0 : getSecurityGroups().hashCode());
         hashCode = prime * hashCode + ((getStorageInfo() == null) ? 0 : getStorageInfo().hashCode());
+        hashCode = prime * hashCode + ((getConnectivityInfo() == null) ? 0 : getConnectivityInfo().hashCode());
         return hashCode;
     }
 

@@ -27,6 +27,12 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
+     * Filters the stream list to match the specified criterion.
+     * </p>
+     */
+    private StreamFilters filterBy;
+    /**
+     * <p>
      * Maximum number of streams to return. Default: 50.
      * </p>
      */
@@ -37,6 +43,46 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String nextToken;
+
+    /**
+     * <p>
+     * Filters the stream list to match the specified criterion.
+     * </p>
+     * 
+     * @param filterBy
+     *        Filters the stream list to match the specified criterion.
+     */
+
+    public void setFilterBy(StreamFilters filterBy) {
+        this.filterBy = filterBy;
+    }
+
+    /**
+     * <p>
+     * Filters the stream list to match the specified criterion.
+     * </p>
+     * 
+     * @return Filters the stream list to match the specified criterion.
+     */
+
+    public StreamFilters getFilterBy() {
+        return this.filterBy;
+    }
+
+    /**
+     * <p>
+     * Filters the stream list to match the specified criterion.
+     * </p>
+     * 
+     * @param filterBy
+     *        Filters the stream list to match the specified criterion.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListStreamsRequest withFilterBy(StreamFilters filterBy) {
+        setFilterBy(filterBy);
+        return this;
+    }
 
     /**
      * <p>
@@ -130,6 +176,8 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getFilterBy() != null)
+            sb.append("FilterBy: ").append(getFilterBy()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
@@ -148,6 +196,10 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (obj instanceof ListStreamsRequest == false)
             return false;
         ListStreamsRequest other = (ListStreamsRequest) obj;
+        if (other.getFilterBy() == null ^ this.getFilterBy() == null)
+            return false;
+        if (other.getFilterBy() != null && other.getFilterBy().equals(this.getFilterBy()) == false)
+            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
@@ -164,6 +216,7 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getFilterBy() == null) ? 0 : getFilterBy().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;

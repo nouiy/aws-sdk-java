@@ -231,6 +231,25 @@ public interface AWSGlueDataBrew {
 
     /**
      * <p>
+     * Creates a new ruleset that can be used in a profile job to validate the data quality of a dataset.
+     * </p>
+     * 
+     * @param createRulesetRequest
+     * @return Result of the CreateRuleset operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         A service quota is exceeded.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @sample AWSGlueDataBrew.CreateRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateRulesetResult createRuleset(CreateRulesetRequest createRulesetRequest);
+
+    /**
+     * <p>
      * Creates a new schedule for one or more DataBrew jobs. Jobs can be run at a specific date and time, or at regular
      * intervals.
      * </p>
@@ -324,6 +343,25 @@ public interface AWSGlueDataBrew {
      *      API Documentation</a>
      */
     DeleteRecipeVersionResult deleteRecipeVersion(DeleteRecipeVersionRequest deleteRecipeVersionRequest);
+
+    /**
+     * <p>
+     * Deletes a ruleset.
+     * </p>
+     * 
+     * @param deleteRulesetRequest
+     * @return Result of the DeleteRuleset operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @sample AWSGlueDataBrew.DeleteRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DeleteRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DeleteRulesetResult deleteRuleset(DeleteRulesetRequest deleteRulesetRequest);
 
     /**
      * <p>
@@ -426,6 +464,23 @@ public interface AWSGlueDataBrew {
      *      Documentation</a>
      */
     DescribeRecipeResult describeRecipe(DescribeRecipeRequest describeRecipeRequest);
+
+    /**
+     * <p>
+     * Retrieves detailed information about the ruleset.
+     * </p>
+     * 
+     * @param describeRulesetRequest
+     * @return Result of the DescribeRuleset operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @sample AWSGlueDataBrew.DescribeRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DescribeRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeRulesetResult describeRuleset(DescribeRulesetRequest describeRulesetRequest);
 
     /**
      * <p>
@@ -535,6 +590,23 @@ public interface AWSGlueDataBrew {
      *      Documentation</a>
      */
     ListRecipesResult listRecipes(ListRecipesRequest listRecipesRequest);
+
+    /**
+     * <p>
+     * List all rulesets available in the current account or rulesets associated with a specific resource (dataset).
+     * </p>
+     * 
+     * @param listRulesetsRequest
+     * @return Result of the ListRulesets operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @sample AWSGlueDataBrew.ListRulesets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListRulesets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListRulesetsResult listRulesets(ListRulesetsRequest listRulesetsRequest);
 
     /**
      * <p>
@@ -795,6 +867,23 @@ public interface AWSGlueDataBrew {
      *      Documentation</a>
      */
     UpdateRecipeJobResult updateRecipeJob(UpdateRecipeJobRequest updateRecipeJobRequest);
+
+    /**
+     * <p>
+     * Updates specified ruleset.
+     * </p>
+     * 
+     * @param updateRulesetRequest
+     * @return Result of the UpdateRuleset operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @sample AWSGlueDataBrew.UpdateRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateRulesetResult updateRuleset(UpdateRulesetRequest updateRulesetRequest);
 
     /**
      * <p>

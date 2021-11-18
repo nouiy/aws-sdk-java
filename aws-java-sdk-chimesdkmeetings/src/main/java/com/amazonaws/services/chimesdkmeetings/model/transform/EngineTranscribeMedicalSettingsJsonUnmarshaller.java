@@ -68,6 +68,10 @@ public class EngineTranscribeMedicalSettingsJsonUnmarshaller implements Unmarsha
                     context.nextToken();
                     engineTranscribeMedicalSettings.setRegion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ContentIdentificationType", targetDepth)) {
+                    context.nextToken();
+                    engineTranscribeMedicalSettings.setContentIdentificationType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

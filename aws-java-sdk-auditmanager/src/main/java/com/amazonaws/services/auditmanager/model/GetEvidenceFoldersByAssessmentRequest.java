@@ -27,7 +27,7 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      */
     private String assessmentId;
@@ -46,11 +46,11 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the assessment.
+     *        The unique identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -59,10 +59,10 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the assessment.
+     * @return The unique identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -71,11 +71,11 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the assessment.
+     *        The unique identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

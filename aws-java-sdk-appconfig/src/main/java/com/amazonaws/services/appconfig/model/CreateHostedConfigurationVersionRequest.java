@@ -52,8 +52,7 @@ public class CreateHostedConfigurationVersionRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * A standard MIME type describing the format of the configuration content. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17"
-     * >Content-Type</a>.
+     * href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * </p>
      */
     private String contentType;
@@ -61,7 +60,7 @@ public class CreateHostedConfigurationVersionRequest extends com.amazonaws.Amazo
      * <p>
      * An optional locking token used to prevent race conditions from overwriting configuration updates when creating a
      * new version. To ensure your data is not overwritten when creating multiple hosted configuration versions in rapid
-     * succession, specify the version of the latest hosted configuration version.
+     * succession, specify the version number of the latest hosted configuration version.
      * </p>
      */
     private Integer latestVersionNumber;
@@ -256,15 +255,12 @@ public class CreateHostedConfigurationVersionRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * A standard MIME type describing the format of the configuration content. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17"
-     * >Content-Type</a>.
+     * href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * </p>
      * 
      * @param contentType
      *        A standard MIME type describing the format of the configuration content. For more information, see <a
-     *        href=
-     *        "https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-
-     *        Type</a>.
+     *        href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      */
 
     public void setContentType(String contentType) {
@@ -274,14 +270,11 @@ public class CreateHostedConfigurationVersionRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * A standard MIME type describing the format of the configuration content. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17"
-     * >Content-Type</a>.
+     * href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * </p>
      * 
      * @return A standard MIME type describing the format of the configuration content. For more information, see <a
-     *         href
-     *         ="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content
-     *         -Type</a>.
+     *         href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      */
 
     public String getContentType() {
@@ -291,15 +284,12 @@ public class CreateHostedConfigurationVersionRequest extends com.amazonaws.Amazo
     /**
      * <p>
      * A standard MIME type describing the format of the configuration content. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17"
-     * >Content-Type</a>.
+     * href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * </p>
      * 
      * @param contentType
      *        A standard MIME type describing the format of the configuration content. For more information, see <a
-     *        href=
-     *        "https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-
-     *        Type</a>.
+     *        href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -312,13 +302,13 @@ public class CreateHostedConfigurationVersionRequest extends com.amazonaws.Amazo
      * <p>
      * An optional locking token used to prevent race conditions from overwriting configuration updates when creating a
      * new version. To ensure your data is not overwritten when creating multiple hosted configuration versions in rapid
-     * succession, specify the version of the latest hosted configuration version.
+     * succession, specify the version number of the latest hosted configuration version.
      * </p>
      * 
      * @param latestVersionNumber
      *        An optional locking token used to prevent race conditions from overwriting configuration updates when
      *        creating a new version. To ensure your data is not overwritten when creating multiple hosted configuration
-     *        versions in rapid succession, specify the version of the latest hosted configuration version.
+     *        versions in rapid succession, specify the version number of the latest hosted configuration version.
      */
 
     public void setLatestVersionNumber(Integer latestVersionNumber) {
@@ -329,12 +319,12 @@ public class CreateHostedConfigurationVersionRequest extends com.amazonaws.Amazo
      * <p>
      * An optional locking token used to prevent race conditions from overwriting configuration updates when creating a
      * new version. To ensure your data is not overwritten when creating multiple hosted configuration versions in rapid
-     * succession, specify the version of the latest hosted configuration version.
+     * succession, specify the version number of the latest hosted configuration version.
      * </p>
      * 
      * @return An optional locking token used to prevent race conditions from overwriting configuration updates when
      *         creating a new version. To ensure your data is not overwritten when creating multiple hosted
-     *         configuration versions in rapid succession, specify the version of the latest hosted configuration
+     *         configuration versions in rapid succession, specify the version number of the latest hosted configuration
      *         version.
      */
 
@@ -346,13 +336,13 @@ public class CreateHostedConfigurationVersionRequest extends com.amazonaws.Amazo
      * <p>
      * An optional locking token used to prevent race conditions from overwriting configuration updates when creating a
      * new version. To ensure your data is not overwritten when creating multiple hosted configuration versions in rapid
-     * succession, specify the version of the latest hosted configuration version.
+     * succession, specify the version number of the latest hosted configuration version.
      * </p>
      * 
      * @param latestVersionNumber
      *        An optional locking token used to prevent race conditions from overwriting configuration updates when
      *        creating a new version. To ensure your data is not overwritten when creating multiple hosted configuration
-     *        versions in rapid succession, specify the version of the latest hosted configuration version.
+     *        versions in rapid succession, specify the version number of the latest hosted configuration version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

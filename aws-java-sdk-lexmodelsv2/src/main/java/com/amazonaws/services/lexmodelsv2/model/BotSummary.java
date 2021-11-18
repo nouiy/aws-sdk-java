@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary information about a bot returned by the <a>ListBots</a> operation.
+ * Summary information about a bot returned by the <a
+ * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListBots.html">ListBots</a> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BotSummary" target="_top">AWS API
@@ -30,8 +31,8 @@ public class BotSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the
-     * <a>DescribeBot</a> operation.
+     * The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBot.html">DescribeBot</a> operation.
      * </p>
      */
     private String botId;
@@ -68,13 +69,13 @@ public class BotSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the
-     * <a>DescribeBot</a> operation.
+     * The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBot.html">DescribeBot</a> operation.
      * </p>
      * 
      * @param botId
      *        The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the
-     *        <a>DescribeBot</a> operation.
+     *        <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBot.html">DescribeBot</a> operation.
      */
 
     public void setBotId(String botId) {
@@ -83,12 +84,12 @@ public class BotSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the
-     * <a>DescribeBot</a> operation.
+     * The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBot.html">DescribeBot</a> operation.
      * </p>
      * 
      * @return The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the
-     *         <a>DescribeBot</a> operation.
+     *         <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBot.html">DescribeBot</a> operation.
      */
 
     public String getBotId() {
@@ -97,13 +98,13 @@ public class BotSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the
-     * <a>DescribeBot</a> operation.
+     * The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBot.html">DescribeBot</a> operation.
      * </p>
      * 
      * @param botId
      *        The unique identifier assigned to the bot. Use this ID to get detailed information about the bot with the
-     *        <a>DescribeBot</a> operation.
+     *        <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBot.html">DescribeBot</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

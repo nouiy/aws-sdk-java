@@ -60,6 +60,10 @@ public class InputJsonUnmarshaller implements Unmarshaller<Input, JsonUnmarshall
                     context.nextToken();
                     input.setDatabaseInputDefinition(DatabaseInputDefinitionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Metadata", targetDepth)) {
+                    context.nextToken();
+                    input.setMetadata(MetadataJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

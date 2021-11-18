@@ -55,6 +55,10 @@ public class GetAccuracyMetricsResultJsonUnmarshaller implements Unmarshaller<Ge
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("IsAutoPredictor", targetDepth)) {
+                    context.nextToken();
+                    getAccuracyMetricsResult.setIsAutoPredictor(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("AutoMLOverrideStrategy", targetDepth)) {
                     context.nextToken();
                     getAccuracyMetricsResult.setAutoMLOverrideStrategy(context.getUnmarshaller(String.class).unmarshall(context));

@@ -27,36 +27,36 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The identifier for the control set.
+     * The unique identifier for the control set.
      * </p>
      */
     private String controlSetId;
     /**
      * <p>
-     * The identifier for the folder that the evidence is stored in.
+     * The unique identifier for the folder that the evidence is stored in.
      * </p>
      */
     private String evidenceFolderId;
     /**
      * <p>
-     * The identifier for the evidence.
+     * The unique identifier for the evidence.
      * </p>
      */
     private String evidenceId;
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the assessment.
+     *        The unique identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -65,10 +65,10 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the assessment.
+     * @return The unique identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -77,11 +77,11 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the assessment.
+     *        The unique identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +92,11 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the control set.
+     * The unique identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the control set.
+     *        The unique identifier for the control set.
      */
 
     public void setControlSetId(String controlSetId) {
@@ -105,10 +105,10 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the control set.
+     * The unique identifier for the control set.
      * </p>
      * 
-     * @return The identifier for the control set.
+     * @return The unique identifier for the control set.
      */
 
     public String getControlSetId() {
@@ -117,11 +117,11 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the control set.
+     * The unique identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the control set.
+     *        The unique identifier for the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,11 +132,11 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the folder that the evidence is stored in.
+     * The unique identifier for the folder that the evidence is stored in.
      * </p>
      * 
      * @param evidenceFolderId
-     *        The identifier for the folder that the evidence is stored in.
+     *        The unique identifier for the folder that the evidence is stored in.
      */
 
     public void setEvidenceFolderId(String evidenceFolderId) {
@@ -145,10 +145,10 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the folder that the evidence is stored in.
+     * The unique identifier for the folder that the evidence is stored in.
      * </p>
      * 
-     * @return The identifier for the folder that the evidence is stored in.
+     * @return The unique identifier for the folder that the evidence is stored in.
      */
 
     public String getEvidenceFolderId() {
@@ -157,11 +157,11 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the folder that the evidence is stored in.
+     * The unique identifier for the folder that the evidence is stored in.
      * </p>
      * 
      * @param evidenceFolderId
-     *        The identifier for the folder that the evidence is stored in.
+     *        The unique identifier for the folder that the evidence is stored in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -172,11 +172,11 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the evidence.
+     * The unique identifier for the evidence.
      * </p>
      * 
      * @param evidenceId
-     *        The identifier for the evidence.
+     *        The unique identifier for the evidence.
      */
 
     public void setEvidenceId(String evidenceId) {
@@ -185,10 +185,10 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the evidence.
+     * The unique identifier for the evidence.
      * </p>
      * 
-     * @return The identifier for the evidence.
+     * @return The unique identifier for the evidence.
      */
 
     public String getEvidenceId() {
@@ -197,11 +197,11 @@ public class GetEvidenceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the evidence.
+     * The unique identifier for the evidence.
      * </p>
      * 
      * @param evidenceId
-     *        The identifier for the evidence.
+     *        The unique identifier for the evidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

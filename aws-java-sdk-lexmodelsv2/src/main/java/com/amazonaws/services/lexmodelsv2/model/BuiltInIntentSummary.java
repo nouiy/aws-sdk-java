@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides summary information about a built-in intent for the <a>ListBuiltInIntents</a> operation.
+ * Provides summary information about a built-in intent for the <a
+ * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListBuiltInIntents.html"> ListBuiltInIntents </a> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BuiltInIntentSummary" target="_top">AWS

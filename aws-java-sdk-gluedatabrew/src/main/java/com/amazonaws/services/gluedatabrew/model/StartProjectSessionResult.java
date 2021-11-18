@@ -131,7 +131,7 @@ public class StartProjectSessionResult extends com.amazonaws.AmazonWebServiceRes
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getClientSessionId() != null)
-            sb.append("ClientSessionId: ").append(getClientSessionId());
+            sb.append("ClientSessionId: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

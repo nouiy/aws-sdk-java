@@ -178,6 +178,16 @@ public class AbstractAWSAuditManager implements AWSAuditManager {
     }
 
     @Override
+    public GetInsightsResult getInsights(GetInsightsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetInsightsByAssessmentResult getInsightsByAssessment(GetInsightsByAssessmentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetOrganizationAdminAccountResult getOrganizationAdminAccount(GetOrganizationAdminAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -189,6 +199,12 @@ public class AbstractAWSAuditManager implements AWSAuditManager {
 
     @Override
     public GetSettingsResult getSettings(GetSettingsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAssessmentControlInsightsByControlDomainResult listAssessmentControlInsightsByControlDomain(
+            ListAssessmentControlInsightsByControlDomainRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -209,6 +225,21 @@ public class AbstractAWSAuditManager implements AWSAuditManager {
 
     @Override
     public ListAssessmentsResult listAssessments(ListAssessmentsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListControlDomainInsightsResult listControlDomainInsights(ListControlDomainInsightsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListControlDomainInsightsByAssessmentResult listControlDomainInsightsByAssessment(ListControlDomainInsightsByAssessmentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListControlInsightsByControlDomainResult listControlInsightsByControlDomain(ListControlInsightsByControlDomainRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

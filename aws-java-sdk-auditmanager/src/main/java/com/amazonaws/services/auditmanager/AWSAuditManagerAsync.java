@@ -1089,6 +1089,68 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
+     * Gets the latest analytics data for all your current active assessments.
+     * </p>
+     * 
+     * @param getInsightsRequest
+     * @return A Java Future containing the result of the GetInsights operation returned by the service.
+     * @sample AWSAuditManagerAsync.GetInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsights" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetInsightsResult> getInsightsAsync(GetInsightsRequest getInsightsRequest);
+
+    /**
+     * <p>
+     * Gets the latest analytics data for all your current active assessments.
+     * </p>
+     * 
+     * @param getInsightsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetInsights operation returned by the service.
+     * @sample AWSAuditManagerAsyncHandler.GetInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsights" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetInsightsResult> getInsightsAsync(GetInsightsRequest getInsightsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetInsightsRequest, GetInsightsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the latest analytics data for a specific active assessment.
+     * </p>
+     * 
+     * @param getInsightsByAssessmentRequest
+     * @return A Java Future containing the result of the GetInsightsByAssessment operation returned by the service.
+     * @sample AWSAuditManagerAsync.GetInsightsByAssessment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsightsByAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetInsightsByAssessmentResult> getInsightsByAssessmentAsync(GetInsightsByAssessmentRequest getInsightsByAssessmentRequest);
+
+    /**
+     * <p>
+     * Gets the latest analytics data for a specific active assessment.
+     * </p>
+     * 
+     * @param getInsightsByAssessmentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetInsightsByAssessment operation returned by the service.
+     * @sample AWSAuditManagerAsyncHandler.GetInsightsByAssessment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsightsByAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetInsightsByAssessmentResult> getInsightsByAssessmentAsync(GetInsightsByAssessmentRequest getInsightsByAssessmentRequest,
+            com.amazonaws.handlers.AsyncHandler<GetInsightsByAssessmentRequest, GetInsightsByAssessmentResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns the name of the delegated Amazon Web Services administrator account for the organization.
      * </p>
      * 
@@ -1181,6 +1243,59 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
      */
     java.util.concurrent.Future<GetSettingsResult> getSettingsAsync(GetSettingsRequest getSettingsRequest,
             com.amazonaws.handlers.AsyncHandler<GetSettingsRequest, GetSettingsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the latest analytics data for controls within a specific control domain and a specific active assessment.
+     * </p>
+     * <note>
+     * <p>
+     * Control insights are listed only if the control belongs to the control domain and assessment that was specified.
+     * Moreover, the control must have collected evidence on the <code>lastUpdated</code> date of
+     * <code>controlInsightsByAssessment</code>. If neither of these conditions are met, no data is listed for that
+     * control.
+     * </p>
+     * </note>
+     * 
+     * @param listAssessmentControlInsightsByControlDomainRequest
+     * @return A Java Future containing the result of the ListAssessmentControlInsightsByControlDomain operation
+     *         returned by the service.
+     * @sample AWSAuditManagerAsync.ListAssessmentControlInsightsByControlDomain
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentControlInsightsByControlDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssessmentControlInsightsByControlDomainResult> listAssessmentControlInsightsByControlDomainAsync(
+            ListAssessmentControlInsightsByControlDomainRequest listAssessmentControlInsightsByControlDomainRequest);
+
+    /**
+     * <p>
+     * Lists the latest analytics data for controls within a specific control domain and a specific active assessment.
+     * </p>
+     * <note>
+     * <p>
+     * Control insights are listed only if the control belongs to the control domain and assessment that was specified.
+     * Moreover, the control must have collected evidence on the <code>lastUpdated</code> date of
+     * <code>controlInsightsByAssessment</code>. If neither of these conditions are met, no data is listed for that
+     * control.
+     * </p>
+     * </note>
+     * 
+     * @param listAssessmentControlInsightsByControlDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAssessmentControlInsightsByControlDomain operation
+     *         returned by the service.
+     * @sample AWSAuditManagerAsyncHandler.ListAssessmentControlInsightsByControlDomain
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentControlInsightsByControlDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssessmentControlInsightsByControlDomainResult> listAssessmentControlInsightsByControlDomainAsync(
+            ListAssessmentControlInsightsByControlDomainRequest listAssessmentControlInsightsByControlDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAssessmentControlInsightsByControlDomainRequest, ListAssessmentControlInsightsByControlDomainResult> asyncHandler);
 
     /**
      * <p>
@@ -1311,6 +1426,153 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
      */
     java.util.concurrent.Future<ListAssessmentsResult> listAssessmentsAsync(ListAssessmentsRequest listAssessmentsRequest,
             com.amazonaws.handlers.AsyncHandler<ListAssessmentsRequest, ListAssessmentsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the latest analytics data for control domains across all of your active assessments.
+     * </p>
+     * <note>
+     * <p>
+     * A control domain is listed only if at least one of the controls within that domain collected evidence on the
+     * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this condition isn’t met, no data is
+     * listed for that control domain.
+     * </p>
+     * </note>
+     * 
+     * @param listControlDomainInsightsRequest
+     * @return A Java Future containing the result of the ListControlDomainInsights operation returned by the service.
+     * @sample AWSAuditManagerAsync.ListControlDomainInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsights"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListControlDomainInsightsResult> listControlDomainInsightsAsync(
+            ListControlDomainInsightsRequest listControlDomainInsightsRequest);
+
+    /**
+     * <p>
+     * Lists the latest analytics data for control domains across all of your active assessments.
+     * </p>
+     * <note>
+     * <p>
+     * A control domain is listed only if at least one of the controls within that domain collected evidence on the
+     * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this condition isn’t met, no data is
+     * listed for that control domain.
+     * </p>
+     * </note>
+     * 
+     * @param listControlDomainInsightsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListControlDomainInsights operation returned by the service.
+     * @sample AWSAuditManagerAsyncHandler.ListControlDomainInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsights"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListControlDomainInsightsResult> listControlDomainInsightsAsync(
+            ListControlDomainInsightsRequest listControlDomainInsightsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListControlDomainInsightsRequest, ListControlDomainInsightsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists analytics data for control domains within a specified active assessment.
+     * </p>
+     * <note>
+     * <p>
+     * A control domain is listed only if at least one of the controls within that domain collected evidence on the
+     * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this condition isn’t met, no data is
+     * listed for that domain.
+     * </p>
+     * </note>
+     * 
+     * @param listControlDomainInsightsByAssessmentRequest
+     * @return A Java Future containing the result of the ListControlDomainInsightsByAssessment operation returned by
+     *         the service.
+     * @sample AWSAuditManagerAsync.ListControlDomainInsightsByAssessment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsightsByAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListControlDomainInsightsByAssessmentResult> listControlDomainInsightsByAssessmentAsync(
+            ListControlDomainInsightsByAssessmentRequest listControlDomainInsightsByAssessmentRequest);
+
+    /**
+     * <p>
+     * Lists analytics data for control domains within a specified active assessment.
+     * </p>
+     * <note>
+     * <p>
+     * A control domain is listed only if at least one of the controls within that domain collected evidence on the
+     * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this condition isn’t met, no data is
+     * listed for that domain.
+     * </p>
+     * </note>
+     * 
+     * @param listControlDomainInsightsByAssessmentRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListControlDomainInsightsByAssessment operation returned by
+     *         the service.
+     * @sample AWSAuditManagerAsyncHandler.ListControlDomainInsightsByAssessment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsightsByAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListControlDomainInsightsByAssessmentResult> listControlDomainInsightsByAssessmentAsync(
+            ListControlDomainInsightsByAssessmentRequest listControlDomainInsightsByAssessmentRequest,
+            com.amazonaws.handlers.AsyncHandler<ListControlDomainInsightsByAssessmentRequest, ListControlDomainInsightsByAssessmentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the latest analytics data for controls within a specific control domain across all active assessments.
+     * </p>
+     * <note>
+     * <p>
+     * Control insights are listed only if the control belongs to the control domain that was specified and the control
+     * collected evidence on the <code>lastUpdated</code> date of <code>controlInsightsMetadata</code>. If neither of
+     * these conditions are met, no data is listed for that control.
+     * </p>
+     * </note>
+     * 
+     * @param listControlInsightsByControlDomainRequest
+     * @return A Java Future containing the result of the ListControlInsightsByControlDomain operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsync.ListControlInsightsByControlDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlInsightsByControlDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListControlInsightsByControlDomainResult> listControlInsightsByControlDomainAsync(
+            ListControlInsightsByControlDomainRequest listControlInsightsByControlDomainRequest);
+
+    /**
+     * <p>
+     * Lists the latest analytics data for controls within a specific control domain across all active assessments.
+     * </p>
+     * <note>
+     * <p>
+     * Control insights are listed only if the control belongs to the control domain that was specified and the control
+     * collected evidence on the <code>lastUpdated</code> date of <code>controlInsightsMetadata</code>. If neither of
+     * these conditions are met, no data is listed for that control.
+     * </p>
+     * </note>
+     * 
+     * @param listControlInsightsByControlDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListControlInsightsByControlDomain operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsyncHandler.ListControlInsightsByControlDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlInsightsByControlDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListControlInsightsByControlDomainResult> listControlInsightsByControlDomainAsync(
+            ListControlInsightsByControlDomainRequest listControlInsightsByControlDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<ListControlInsightsByControlDomainRequest, ListControlInsightsByControlDomainResult> asyncHandler);
 
     /**
      * <p>

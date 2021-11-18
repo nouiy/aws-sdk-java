@@ -28,10 +28,7 @@ import com.amazonaws.services.chimesdkmeetings.model.*;
  * <p>
  * <p>
  * The Amazon Chime SDK meetings APIs in this section allow software developers to create Amazon Chime SDK meetings, set
- * the AWS Regions for meetings, create and manage users, and send and receive meeting notifications. For more
- * information about the meeting APIs, see <a
- * href="http://amazonaws.com/chime/latest/APIReference/API_Operations_Amazon_Chime_SDK_meetings">Amazon Chime SDK
- * meetings</a>.
+ * the AWS Regions for meetings, create and manage users, and send and receive meeting notifications.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -47,7 +44,9 @@ public interface AmazonChimeSDKMeetings {
 
     /**
      * <p>
-     * Creates a group of meeting attendees.
+     * Creates up to 100 attendees for an active Amazon Chime SDK meeting. For more information about the Amazon Chime
+     * SDK, see <a href="https://docs.aws.amazon.com/chime/latest/dg/meetings-sdk.html">Using the Amazon Chime SDK</a>
+     * in the <i>Amazon Chime Developer Guide</i>.
      * </p>
      * 
      * @param batchCreateAttendeeRequest

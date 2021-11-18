@@ -27,7 +27,7 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The identifier for the framework.
+     * The unique identifier for the framework.
      * </p>
      */
     private String frameworkId;
@@ -58,11 +58,11 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The identifier for the framework.
+     * The unique identifier for the framework.
      * </p>
      * 
      * @param frameworkId
-     *        The identifier for the framework.
+     *        The unique identifier for the framework.
      */
 
     public void setFrameworkId(String frameworkId) {
@@ -71,10 +71,10 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The identifier for the framework.
+     * The unique identifier for the framework.
      * </p>
      * 
-     * @return The identifier for the framework.
+     * @return The unique identifier for the framework.
      */
 
     public String getFrameworkId() {
@@ -83,11 +83,11 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The identifier for the framework.
+     * The unique identifier for the framework.
      * </p>
      * 
      * @param frameworkId
-     *        The identifier for the framework.
+     *        The unique identifier for the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

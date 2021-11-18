@@ -27,24 +27,24 @@ public class DeleteEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The application ID that includes the environment you want to delete.
+     * The application ID that includes the environment that you want to delete.
      * </p>
      */
     private String applicationId;
     /**
      * <p>
-     * The ID of the environment you want to delete.
+     * The ID of the environment that you want to delete.
      * </p>
      */
     private String environmentId;
 
     /**
      * <p>
-     * The application ID that includes the environment you want to delete.
+     * The application ID that includes the environment that you want to delete.
      * </p>
      * 
      * @param applicationId
-     *        The application ID that includes the environment you want to delete.
+     *        The application ID that includes the environment that you want to delete.
      */
 
     public void setApplicationId(String applicationId) {
@@ -53,10 +53,10 @@ public class DeleteEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The application ID that includes the environment you want to delete.
+     * The application ID that includes the environment that you want to delete.
      * </p>
      * 
-     * @return The application ID that includes the environment you want to delete.
+     * @return The application ID that includes the environment that you want to delete.
      */
 
     public String getApplicationId() {
@@ -65,11 +65,11 @@ public class DeleteEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The application ID that includes the environment you want to delete.
+     * The application ID that includes the environment that you want to delete.
      * </p>
      * 
      * @param applicationId
-     *        The application ID that includes the environment you want to delete.
+     *        The application ID that includes the environment that you want to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class DeleteEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the environment you want to delete.
+     * The ID of the environment that you want to delete.
      * </p>
      * 
      * @param environmentId
-     *        The ID of the environment you want to delete.
+     *        The ID of the environment that you want to delete.
      */
 
     public void setEnvironmentId(String environmentId) {
@@ -93,10 +93,10 @@ public class DeleteEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the environment you want to delete.
+     * The ID of the environment that you want to delete.
      * </p>
      * 
-     * @return The ID of the environment you want to delete.
+     * @return The ID of the environment that you want to delete.
      */
 
     public String getEnvironmentId() {
@@ -105,11 +105,11 @@ public class DeleteEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the environment you want to delete.
+     * The ID of the environment that you want to delete.
      * </p>
      * 
      * @param environmentId
-     *        The ID of the environment you want to delete.
+     *        The ID of the environment that you want to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

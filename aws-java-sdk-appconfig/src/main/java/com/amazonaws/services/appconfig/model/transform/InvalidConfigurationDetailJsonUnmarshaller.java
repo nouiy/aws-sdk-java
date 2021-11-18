@@ -10,13 +10,13 @@
  * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.services.redshiftdataapi.model.transform;
+package com.amazonaws.services.appconfig.model.transform;
 
 import java.math.*;
 
 import javax.annotation.Generated;
 
-import com.amazonaws.services.redshiftdataapi.model.*;
+import com.amazonaws.services.appconfig.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
@@ -24,18 +24,13 @@ import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
- * DatabaseConnectionException JSON Unmarshaller
+ * InvalidConfigurationDetail JSON Unmarshaller
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
-public class DatabaseConnectionExceptionUnmarshaller extends EnhancedJsonErrorUnmarshaller {
-    private DatabaseConnectionExceptionUnmarshaller() {
-        super(com.amazonaws.services.redshiftdataapi.model.DatabaseConnectionException.class, "DatabaseConnectionException");
-    }
+public class InvalidConfigurationDetailJsonUnmarshaller implements Unmarshaller<InvalidConfigurationDetail, JsonUnmarshallerContext> {
 
-    @Override
-    public com.amazonaws.services.redshiftdataapi.model.DatabaseConnectionException unmarshallFromContext(JsonUnmarshallerContext context) throws Exception {
-        com.amazonaws.services.redshiftdataapi.model.DatabaseConnectionException databaseConnectionException = new com.amazonaws.services.redshiftdataapi.model.DatabaseConnectionException(
-                null);
+    public InvalidConfigurationDetail unmarshall(JsonUnmarshallerContext context) throws Exception {
+        InvalidConfigurationDetail invalidConfigurationDetail = new InvalidConfigurationDetail();
 
         int originalDepth = context.getCurrentDepth();
         String currentParentElement = context.getCurrentParentElement();
@@ -53,6 +48,22 @@ public class DatabaseConnectionExceptionUnmarshaller extends EnhancedJsonErrorUn
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Constraint", targetDepth)) {
+                    context.nextToken();
+                    invalidConfigurationDetail.setConstraint(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Location", targetDepth)) {
+                    context.nextToken();
+                    invalidConfigurationDetail.setLocation(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Reason", targetDepth)) {
+                    context.nextToken();
+                    invalidConfigurationDetail.setReason(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Type", targetDepth)) {
+                    context.nextToken();
+                    invalidConfigurationDetail.setType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
@@ -61,14 +72,15 @@ public class DatabaseConnectionExceptionUnmarshaller extends EnhancedJsonErrorUn
             }
             token = context.nextToken();
         }
-        return databaseConnectionException;
+
+        return invalidConfigurationDetail;
     }
 
-    private static DatabaseConnectionExceptionUnmarshaller instance;
+    private static InvalidConfigurationDetailJsonUnmarshaller instance;
 
-    public static DatabaseConnectionExceptionUnmarshaller getInstance() {
+    public static InvalidConfigurationDetailJsonUnmarshaller getInstance() {
         if (instance == null)
-            instance = new DatabaseConnectionExceptionUnmarshaller();
+            instance = new InvalidConfigurationDetailJsonUnmarshaller();
         return instance;
     }
 }

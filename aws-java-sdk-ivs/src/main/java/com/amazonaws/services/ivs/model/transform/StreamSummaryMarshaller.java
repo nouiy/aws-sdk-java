@@ -35,6 +35,8 @@ public class StreamSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
+    private static final MarshallingInfo<String> STREAMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("streamId").build();
     private static final MarshallingInfo<Long> VIEWERCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.LONG).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("viewerCount").build();
 
@@ -58,6 +60,7 @@ public class StreamSummaryMarshaller {
             protocolMarshaller.marshall(streamSummary.getHealth(), HEALTH_BINDING);
             protocolMarshaller.marshall(streamSummary.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(streamSummary.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(streamSummary.getStreamId(), STREAMID_BINDING);
             protocolMarshaller.marshall(streamSummary.getViewerCount(), VIEWERCOUNT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

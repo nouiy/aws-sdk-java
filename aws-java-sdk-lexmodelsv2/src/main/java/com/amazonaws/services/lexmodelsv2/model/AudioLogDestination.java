@@ -31,7 +31,8 @@ public class AudioLogDestination implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The Amazon S3 bucket where the audio log files are stored. The IAM role specified in the <code>roleArn</code>
-     * parameter of the <a>CreateBot</a> operation must have permission to write to this bucket.
+     * parameter of the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation
+     * must have permission to write to this bucket.
      * </p>
      */
     private S3BucketLogDestination s3Bucket;
@@ -39,13 +40,15 @@ public class AudioLogDestination implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The Amazon S3 bucket where the audio log files are stored. The IAM role specified in the <code>roleArn</code>
-     * parameter of the <a>CreateBot</a> operation must have permission to write to this bucket.
+     * parameter of the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation
+     * must have permission to write to this bucket.
      * </p>
      * 
      * @param s3Bucket
      *        The Amazon S3 bucket where the audio log files are stored. The IAM role specified in the
-     *        <code>roleArn</code> parameter of the <a>CreateBot</a> operation must have permission to write to this
-     *        bucket.
+     *        <code>roleArn</code> parameter of the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation must have
+     *        permission to write to this bucket.
      */
 
     public void setS3Bucket(S3BucketLogDestination s3Bucket) {
@@ -55,12 +58,14 @@ public class AudioLogDestination implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The Amazon S3 bucket where the audio log files are stored. The IAM role specified in the <code>roleArn</code>
-     * parameter of the <a>CreateBot</a> operation must have permission to write to this bucket.
+     * parameter of the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation
+     * must have permission to write to this bucket.
      * </p>
      * 
      * @return The Amazon S3 bucket where the audio log files are stored. The IAM role specified in the
-     *         <code>roleArn</code> parameter of the <a>CreateBot</a> operation must have permission to write to this
-     *         bucket.
+     *         <code>roleArn</code> parameter of the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation must have
+     *         permission to write to this bucket.
      */
 
     public S3BucketLogDestination getS3Bucket() {
@@ -70,13 +75,15 @@ public class AudioLogDestination implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The Amazon S3 bucket where the audio log files are stored. The IAM role specified in the <code>roleArn</code>
-     * parameter of the <a>CreateBot</a> operation must have permission to write to this bucket.
+     * parameter of the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation
+     * must have permission to write to this bucket.
      * </p>
      * 
      * @param s3Bucket
      *        The Amazon S3 bucket where the audio log files are stored. The IAM role specified in the
-     *        <code>roleArn</code> parameter of the <a>CreateBot</a> operation must have permission to write to this
-     *        bucket.
+     *        <code>roleArn</code> parameter of the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation must have
+     *        permission to write to this bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

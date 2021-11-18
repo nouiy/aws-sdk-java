@@ -62,6 +62,18 @@ public class ViewFrameJsonUnmarshaller implements Unmarshaller<ViewFrame, JsonUn
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("StartRowIndex", targetDepth)) {
+                    context.nextToken();
+                    viewFrame.setStartRowIndex(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("RowRange", targetDepth)) {
+                    context.nextToken();
+                    viewFrame.setRowRange(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("Analytics", targetDepth)) {
+                    context.nextToken();
+                    viewFrame.setAnalytics(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

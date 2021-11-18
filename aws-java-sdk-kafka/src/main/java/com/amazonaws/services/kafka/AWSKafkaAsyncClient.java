@@ -1033,6 +1033,39 @@ public class AWSKafkaAsyncClient extends AWSKafkaClient implements AWSKafkaAsync
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateConnectivityResult> updateConnectivityAsync(UpdateConnectivityRequest request) {
+
+        return updateConnectivityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConnectivityResult> updateConnectivityAsync(final UpdateConnectivityRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateConnectivityRequest, UpdateConnectivityResult> asyncHandler) {
+        final UpdateConnectivityRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateConnectivityResult>() {
+            @Override
+            public UpdateConnectivityResult call() throws Exception {
+                UpdateConnectivityResult result = null;
+
+                try {
+                    result = executeUpdateConnectivity(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateMonitoringResult> updateMonitoringAsync(UpdateMonitoringRequest request) {
 
         return updateMonitoringAsync(request, null);

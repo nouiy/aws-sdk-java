@@ -27,7 +27,8 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for the import. It is included in the response from the operation.
+     * The unique identifier for the import. It is included in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateUploadUrl.html">CreateUploadUrl</a> operation.
      * </p>
      */
     private String importId;
@@ -54,11 +55,13 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for the import. It is included in the response from the operation.
+     * The unique identifier for the import. It is included in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateUploadUrl.html">CreateUploadUrl</a> operation.
      * </p>
      * 
      * @param importId
-     *        The unique identifier for the import. It is included in the response from the operation.
+     *        The unique identifier for the import. It is included in the response from the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateUploadUrl.html">CreateUploadUrl</a> operation.
      */
 
     public void setImportId(String importId) {
@@ -67,10 +70,13 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for the import. It is included in the response from the operation.
+     * The unique identifier for the import. It is included in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateUploadUrl.html">CreateUploadUrl</a> operation.
      * </p>
      * 
-     * @return The unique identifier for the import. It is included in the response from the operation.
+     * @return The unique identifier for the import. It is included in the response from the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateUploadUrl.html">CreateUploadUrl</a>
+     *         operation.
      */
 
     public String getImportId() {
@@ -79,11 +85,13 @@ public class StartImportRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The unique identifier for the import. It is included in the response from the operation.
+     * The unique identifier for the import. It is included in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateUploadUrl.html">CreateUploadUrl</a> operation.
      * </p>
      * 
      * @param importId
-     *        The unique identifier for the import. It is included in the response from the operation.
+     *        The unique identifier for the import. It is included in the response from the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateUploadUrl.html">CreateUploadUrl</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

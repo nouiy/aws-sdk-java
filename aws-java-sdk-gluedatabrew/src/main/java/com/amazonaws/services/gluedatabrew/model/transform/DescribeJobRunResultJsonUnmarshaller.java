@@ -76,6 +76,13 @@ public class DescribeJobRunResultJsonUnmarshaller implements Unmarshaller<Descri
                     context.nextToken();
                     describeJobRunResult.setProfileConfiguration(ProfileConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ValidationConfigurations", targetDepth)) {
+                    context.nextToken();
+                    describeJobRunResult.setValidationConfigurations(new ListUnmarshaller<ValidationConfiguration>(ValidationConfigurationJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("RunId", targetDepth)) {
                     context.nextToken();
                     describeJobRunResult.setRunId(context.getUnmarshaller(String.class).unmarshall(context));

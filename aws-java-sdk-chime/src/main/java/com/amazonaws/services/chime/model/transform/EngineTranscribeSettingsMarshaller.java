@@ -37,6 +37,18 @@ public class EngineTranscribeSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VocabularyName").build();
     private static final MarshallingInfo<String> REGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Region").build();
+    private static final MarshallingInfo<Boolean> ENABLEPARTIALRESULTSSTABILIZATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EnablePartialResultsStabilization").build();
+    private static final MarshallingInfo<String> PARTIALRESULTSSTABILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PartialResultsStability").build();
+    private static final MarshallingInfo<String> CONTENTIDENTIFICATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContentIdentificationType").build();
+    private static final MarshallingInfo<String> CONTENTREDACTIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContentRedactionType").build();
+    private static final MarshallingInfo<String> PIIENTITYTYPES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PiiEntityTypes").build();
+    private static final MarshallingInfo<String> LANGUAGEMODELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LanguageModelName").build();
 
     private static final EngineTranscribeSettingsMarshaller instance = new EngineTranscribeSettingsMarshaller();
 
@@ -59,6 +71,12 @@ public class EngineTranscribeSettingsMarshaller {
             protocolMarshaller.marshall(engineTranscribeSettings.getVocabularyFilterName(), VOCABULARYFILTERNAME_BINDING);
             protocolMarshaller.marshall(engineTranscribeSettings.getVocabularyName(), VOCABULARYNAME_BINDING);
             protocolMarshaller.marshall(engineTranscribeSettings.getRegion(), REGION_BINDING);
+            protocolMarshaller.marshall(engineTranscribeSettings.getEnablePartialResultsStabilization(), ENABLEPARTIALRESULTSSTABILIZATION_BINDING);
+            protocolMarshaller.marshall(engineTranscribeSettings.getPartialResultsStability(), PARTIALRESULTSSTABILITY_BINDING);
+            protocolMarshaller.marshall(engineTranscribeSettings.getContentIdentificationType(), CONTENTIDENTIFICATIONTYPE_BINDING);
+            protocolMarshaller.marshall(engineTranscribeSettings.getContentRedactionType(), CONTENTREDACTIONTYPE_BINDING);
+            protocolMarshaller.marshall(engineTranscribeSettings.getPiiEntityTypes(), PIIENTITYTYPES_BINDING);
+            protocolMarshaller.marshall(engineTranscribeSettings.getLanguageModelName(), LANGUAGEMODELNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

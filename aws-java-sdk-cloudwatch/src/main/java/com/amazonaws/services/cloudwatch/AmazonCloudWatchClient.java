@@ -397,6 +397,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      *         The value of an input parameter is bad or out-of-range.
      * @throws MissingRequiredParameterException
      *         An input parameter that is required is missing.
+     * @throws InvalidParameterCombinationException
+     *         Parameters were used together that cannot be used together.
      * @sample AmazonCloudWatch.DeleteAnomalyDetector
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DeleteAnomalyDetector"
      *      target="_top">AWS API Documentation</a>
@@ -643,6 +645,12 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * <p>
      * CloudWatch retains the history of an alarm even if you delete the alarm.
      * </p>
+     * <p>
+     * To use this operation and return information about a composite alarm, you must be signed on with the
+     * <code>cloudwatch:DescribeAlarmHistory</code> permission that is scoped to <code>*</code>. You can't return
+     * information about composite alarms if your <code>cloudwatch:DescribeAlarmHistory</code> permission has a narrower
+     * scope.
+     * </p>
      * 
      * @param describeAlarmHistoryRequest
      * @return Result of the DescribeAlarmHistory operation returned by the service.
@@ -706,6 +714,11 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * <p>
      * Retrieves the specified alarms. You can filter the results by specifying a prefix for the alarm name, the alarm
      * state, or a prefix for any action.
+     * </p>
+     * <p>
+     * To use this operation and return information about composite alarms, you must be signed on with the
+     * <code>cloudwatch:DescribeAlarms</code> permission that is scoped to <code>*</code>. You can't return information
+     * about composite alarms if your <code>cloudwatch:DescribeAlarms</code> permission has a narrower scope.
      * </p>
      * 
      * @param describeAlarmsRequest
@@ -828,9 +841,11 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
 
     /**
      * <p>
-     * Lists the anomaly detection models that you have created in your account. You can list all models in your account
-     * or filter the results to only the models that are related to a certain namespace, metric name, or metric
-     * dimension.
+     * Lists the anomaly detection models that you have created in your account. For single metric anomaly detectors,
+     * you can list all of the models in your account or filter the results to only the models that are related to a
+     * certain namespace, metric name, or metric dimension. For metric math anomaly detectors, you can list them by
+     * adding <code>METRIC_MATH</code> to the <code>AnomalyDetectorTypes</code> array. This will return all metric math
+     * anomaly detectors in your account.
      * </p>
      * 
      * @param describeAnomalyDetectorsRequest
@@ -841,6 +856,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      *         Request processing has failed due to some unknown error, exception, or failure.
      * @throws InvalidParameterValueException
      *         The value of an input parameter is bad or out-of-range.
+     * @throws InvalidParameterCombinationException
+     *         Parameters were used together that cannot be used together.
      * @sample AmazonCloudWatch.DescribeAnomalyDetectors
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/DescribeAnomalyDetectors"
      *      target="_top">AWS API Documentation</a>
@@ -2057,6 +2074,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      *         The value of an input parameter is bad or out-of-range.
      * @throws MissingRequiredParameterException
      *         An input parameter that is required is missing.
+     * @throws InvalidParameterCombinationException
+     *         Parameters were used together that cannot be used together.
      * @sample AmazonCloudWatch.PutAnomalyDetector
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/monitoring-2010-08-01/PutAnomalyDetector" target="_top">AWS
      *      API Documentation</a>
@@ -2148,6 +2167,11 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * <p>
      * When you update an existing alarm, its state is left unchanged, but the update completely overwrites the previous
      * configuration of the alarm.
+     * </p>
+     * <p>
+     * To use this operation, you must be signed on with the <code>cloudwatch:PutCompositeAlarm</code> permission that
+     * is scoped to <code>*</code>. You can't create a composite alarms if your
+     * <code>cloudwatch:PutCompositeAlarm</code> permission has a narrower scope.
      * </p>
      * <p>
      * If you are an IAM user, you must have <code>iam:CreateServiceLinkedRole</code> to create a composite alarm that
@@ -2385,10 +2409,10 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * </li>
      * </ul>
      * <p>
-     * The first time you create an alarm in the Management Console, the CLI, or by using the PutMetricAlarm API,
-     * CloudWatch creates the necessary service-linked role for you. The service-linked roles are called
-     * <code>AWSServiceRoleForCloudWatchEvents</code> and <code>AWSServiceRoleForCloudWatchAlarms_ActionSSM</code>. For
-     * more information, see <a href=
+     * The first time you create an alarm in the Amazon Web Services Management Console, the CLI, or by using the
+     * PutMetricAlarm API, CloudWatch creates the necessary service-linked role for you. The service-linked roles are
+     * called <code>AWSServiceRoleForCloudWatchEvents</code> and
+     * <code>AWSServiceRoleForCloudWatchAlarms_ActionSSM</code>. For more information, see <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html#iam-term-service-linked-role"
      * >Amazon Web Services service-linked role</a>.
      * </p>
@@ -2602,8 +2626,8 @@ public class AmazonCloudWatchClient extends AmazonWebServiceClient implements Am
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Metric-Streams.html"> Using Metric
-     * Streams</a>.
+     * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Metric-Streams.html"> Using
+     * Metric Streams</a>.
      * </p>
      * <p>
      * To create a metric stream, you must be logged on to an account that has the <code>iam:PassRole</code> permission

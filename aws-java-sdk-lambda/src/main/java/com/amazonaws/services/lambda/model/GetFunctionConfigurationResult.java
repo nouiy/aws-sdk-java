@@ -121,7 +121,7 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
-     * configured a customer managed CMK.
+     * configured a customer managed key.
      * </p>
      */
     private String kMSKeyArn;
@@ -133,7 +133,7 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
     private TracingConfigResponse tracingConfig;
     /**
      * <p>
-     * For Lambda@Edge functions, the ARN of the master function.
+     * For Lambda@Edge functions, the ARN of the main function.
      * </p>
      */
     private String masterArn;
@@ -876,12 +876,12 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
-     * configured a customer managed CMK.
+     * configured a customer managed key.
      * </p>
      * 
      * @param kMSKeyArn
      *        The KMS key that's used to encrypt the function's environment variables. This key is only returned if
-     *        you've configured a customer managed CMK.
+     *        you've configured a customer managed key.
      */
 
     public void setKMSKeyArn(String kMSKeyArn) {
@@ -891,11 +891,11 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
-     * configured a customer managed CMK.
+     * configured a customer managed key.
      * </p>
      * 
      * @return The KMS key that's used to encrypt the function's environment variables. This key is only returned if
-     *         you've configured a customer managed CMK.
+     *         you've configured a customer managed key.
      */
 
     public String getKMSKeyArn() {
@@ -905,12 +905,12 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
-     * configured a customer managed CMK.
+     * configured a customer managed key.
      * </p>
      * 
      * @param kMSKeyArn
      *        The KMS key that's used to encrypt the function's environment variables. This key is only returned if
-     *        you've configured a customer managed CMK.
+     *        you've configured a customer managed key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -961,11 +961,11 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * For Lambda@Edge functions, the ARN of the master function.
+     * For Lambda@Edge functions, the ARN of the main function.
      * </p>
      * 
      * @param masterArn
-     *        For Lambda@Edge functions, the ARN of the master function.
+     *        For Lambda@Edge functions, the ARN of the main function.
      */
 
     public void setMasterArn(String masterArn) {
@@ -974,10 +974,10 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * For Lambda@Edge functions, the ARN of the master function.
+     * For Lambda@Edge functions, the ARN of the main function.
      * </p>
      * 
-     * @return For Lambda@Edge functions, the ARN of the master function.
+     * @return For Lambda@Edge functions, the ARN of the main function.
      */
 
     public String getMasterArn() {
@@ -986,11 +986,11 @@ public class GetFunctionConfigurationResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * For Lambda@Edge functions, the ARN of the master function.
+     * For Lambda@Edge functions, the ARN of the main function.
      * </p>
      * 
      * @param masterArn
-     *        For Lambda@Edge functions, the ARN of the master function.
+     *        For Lambda@Edge functions, the ARN of the main function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

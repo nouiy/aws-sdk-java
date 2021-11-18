@@ -58,7 +58,7 @@ public class CreateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
     private Float growthFactor;
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by dividing the total number of targets by the
@@ -310,7 +310,7 @@ public class CreateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by dividing the total number of targets by the
@@ -340,7 +340,7 @@ public class CreateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param growthType
-     *        The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth
+     *        The algorithm used to define how percentage grows over time. AppConfig supports the following growth
      *        types:</p>
      *        <p>
      *        <b>Linear</b>: For this type, AppConfig processes the deployment by dividing the total number of targets
@@ -376,7 +376,7 @@ public class CreateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by dividing the total number of targets by the
@@ -405,7 +405,7 @@ public class CreateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
      * targets, and continues until the configuration has been deployed to all targets.
      * </p>
      * 
-     * @return The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth
+     * @return The algorithm used to define how percentage grows over time. AppConfig supports the following growth
      *         types:</p>
      *         <p>
      *         <b>Linear</b>: For this type, AppConfig processes the deployment by dividing the total number of targets
@@ -441,7 +441,7 @@ public class CreateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by dividing the total number of targets by the
@@ -471,7 +471,7 @@ public class CreateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param growthType
-     *        The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth
+     *        The algorithm used to define how percentage grows over time. AppConfig supports the following growth
      *        types:</p>
      *        <p>
      *        <b>Linear</b>: For this type, AppConfig processes the deployment by dividing the total number of targets
@@ -509,7 +509,7 @@ public class CreateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by dividing the total number of targets by the
@@ -539,7 +539,7 @@ public class CreateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param growthType
-     *        The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth
+     *        The algorithm used to define how percentage grows over time. AppConfig supports the following growth
      *        types:</p>
      *        <p>
      *        <b>Linear</b>: For this type, AppConfig processes the deployment by dividing the total number of targets

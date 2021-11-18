@@ -33,6 +33,10 @@ public class PredictorSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PredictorName").build();
     private static final MarshallingInfo<String> DATASETGROUPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatasetGroupArn").build();
+    private static final MarshallingInfo<Boolean> ISAUTOPREDICTOR_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IsAutoPredictor").build();
+    private static final MarshallingInfo<StructuredPojo> REFERENCEPREDICTORSUMMARY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReferencePredictorSummary").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Status").build();
     private static final MarshallingInfo<String> MESSAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -61,6 +65,8 @@ public class PredictorSummaryMarshaller {
             protocolMarshaller.marshall(predictorSummary.getPredictorArn(), PREDICTORARN_BINDING);
             protocolMarshaller.marshall(predictorSummary.getPredictorName(), PREDICTORNAME_BINDING);
             protocolMarshaller.marshall(predictorSummary.getDatasetGroupArn(), DATASETGROUPARN_BINDING);
+            protocolMarshaller.marshall(predictorSummary.getIsAutoPredictor(), ISAUTOPREDICTOR_BINDING);
+            protocolMarshaller.marshall(predictorSummary.getReferencePredictorSummary(), REFERENCEPREDICTORSUMMARY_BINDING);
             protocolMarshaller.marshall(predictorSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(predictorSummary.getMessage(), MESSAGE_BINDING);
             protocolMarshaller.marshall(predictorSummary.getCreationTime(), CREATIONTIME_BINDING);

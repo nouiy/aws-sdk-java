@@ -1131,6 +1131,72 @@ public class AWSAuditManagerAsyncClient extends AWSAuditManagerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetInsightsResult> getInsightsAsync(GetInsightsRequest request) {
+
+        return getInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInsightsResult> getInsightsAsync(final GetInsightsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetInsightsRequest, GetInsightsResult> asyncHandler) {
+        final GetInsightsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetInsightsResult>() {
+            @Override
+            public GetInsightsResult call() throws Exception {
+                GetInsightsResult result = null;
+
+                try {
+                    result = executeGetInsights(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInsightsByAssessmentResult> getInsightsByAssessmentAsync(GetInsightsByAssessmentRequest request) {
+
+        return getInsightsByAssessmentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInsightsByAssessmentResult> getInsightsByAssessmentAsync(final GetInsightsByAssessmentRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetInsightsByAssessmentRequest, GetInsightsByAssessmentResult> asyncHandler) {
+        final GetInsightsByAssessmentRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetInsightsByAssessmentResult>() {
+            @Override
+            public GetInsightsByAssessmentResult call() throws Exception {
+                GetInsightsByAssessmentResult result = null;
+
+                try {
+                    result = executeGetInsightsByAssessment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetOrganizationAdminAccountResult> getOrganizationAdminAccountAsync(GetOrganizationAdminAccountRequest request) {
 
         return getOrganizationAdminAccountAsync(request, null);
@@ -1214,6 +1280,41 @@ public class AWSAuditManagerAsyncClient extends AWSAuditManagerClient implements
 
                 try {
                     result = executeGetSettings(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssessmentControlInsightsByControlDomainResult> listAssessmentControlInsightsByControlDomainAsync(
+            ListAssessmentControlInsightsByControlDomainRequest request) {
+
+        return listAssessmentControlInsightsByControlDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssessmentControlInsightsByControlDomainResult> listAssessmentControlInsightsByControlDomainAsync(
+            final ListAssessmentControlInsightsByControlDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAssessmentControlInsightsByControlDomainRequest, ListAssessmentControlInsightsByControlDomainResult> asyncHandler) {
+        final ListAssessmentControlInsightsByControlDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAssessmentControlInsightsByControlDomainResult>() {
+            @Override
+            public ListAssessmentControlInsightsByControlDomainResult call() throws Exception {
+                ListAssessmentControlInsightsByControlDomainResult result = null;
+
+                try {
+                    result = executeListAssessmentControlInsightsByControlDomain(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1348,6 +1449,109 @@ public class AWSAuditManagerAsyncClient extends AWSAuditManagerClient implements
 
                 try {
                     result = executeListAssessments(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlDomainInsightsResult> listControlDomainInsightsAsync(ListControlDomainInsightsRequest request) {
+
+        return listControlDomainInsightsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlDomainInsightsResult> listControlDomainInsightsAsync(final ListControlDomainInsightsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListControlDomainInsightsRequest, ListControlDomainInsightsResult> asyncHandler) {
+        final ListControlDomainInsightsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListControlDomainInsightsResult>() {
+            @Override
+            public ListControlDomainInsightsResult call() throws Exception {
+                ListControlDomainInsightsResult result = null;
+
+                try {
+                    result = executeListControlDomainInsights(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlDomainInsightsByAssessmentResult> listControlDomainInsightsByAssessmentAsync(
+            ListControlDomainInsightsByAssessmentRequest request) {
+
+        return listControlDomainInsightsByAssessmentAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlDomainInsightsByAssessmentResult> listControlDomainInsightsByAssessmentAsync(
+            final ListControlDomainInsightsByAssessmentRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListControlDomainInsightsByAssessmentRequest, ListControlDomainInsightsByAssessmentResult> asyncHandler) {
+        final ListControlDomainInsightsByAssessmentRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListControlDomainInsightsByAssessmentResult>() {
+            @Override
+            public ListControlDomainInsightsByAssessmentResult call() throws Exception {
+                ListControlDomainInsightsByAssessmentResult result = null;
+
+                try {
+                    result = executeListControlDomainInsightsByAssessment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlInsightsByControlDomainResult> listControlInsightsByControlDomainAsync(
+            ListControlInsightsByControlDomainRequest request) {
+
+        return listControlInsightsByControlDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListControlInsightsByControlDomainResult> listControlInsightsByControlDomainAsync(
+            final ListControlInsightsByControlDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListControlInsightsByControlDomainRequest, ListControlInsightsByControlDomainResult> asyncHandler) {
+        final ListControlInsightsByControlDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListControlInsightsByControlDomainResult>() {
+            @Override
+            public ListControlInsightsByControlDomainResult call() throws Exception {
+                ListControlInsightsByControlDomainResult result = null;
+
+                try {
+                    result = executeListControlInsightsByControlDomain(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

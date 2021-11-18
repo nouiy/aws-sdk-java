@@ -33,6 +33,8 @@ public class ListConfigurationProfilesRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("max_results").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("next_token").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.QUERY_PARAM)
+            .marshallLocationName("type").build();
 
     private static final ListConfigurationProfilesRequestMarshaller instance = new ListConfigurationProfilesRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class ListConfigurationProfilesRequestMarshaller {
             protocolMarshaller.marshall(listConfigurationProfilesRequest.getApplicationId(), APPLICATIONID_BINDING);
             protocolMarshaller.marshall(listConfigurationProfilesRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listConfigurationProfilesRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(listConfigurationProfilesRequest.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

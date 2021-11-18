@@ -31,25 +31,25 @@ public class PrometheusInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the JMX Exporter.
+     * Indicates whether you want to turn on or turn off the JMX Exporter.
      * </p>
      */
     private JmxExporterInfo jmxExporter;
     /**
      * <p>
-     * Indicates whether you want to enable or disable the Node Exporter.
+     * Indicates whether you want to turn on or turn off the Node Exporter.
      * </p>
      */
     private NodeExporterInfo nodeExporter;
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the JMX Exporter.
+     * Indicates whether you want to turn on or turn off the JMX Exporter.
      * </p>
      * 
      * @param jmxExporter
      *        <p>
-     *        Indicates whether you want to enable or disable the JMX Exporter.
+     *        Indicates whether you want to turn on or turn off the JMX Exporter.
      *        </p>
      */
 
@@ -59,11 +59,11 @@ public class PrometheusInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the JMX Exporter.
+     * Indicates whether you want to turn on or turn off the JMX Exporter.
      * </p>
      * 
      * @return <p>
-     *         Indicates whether you want to enable or disable the JMX Exporter.
+     *         Indicates whether you want to turn on or turn off the JMX Exporter.
      *         </p>
      */
 
@@ -73,12 +73,12 @@ public class PrometheusInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the JMX Exporter.
+     * Indicates whether you want to turn on or turn off the JMX Exporter.
      * </p>
      * 
      * @param jmxExporter
      *        <p>
-     *        Indicates whether you want to enable or disable the JMX Exporter.
+     *        Indicates whether you want to turn on or turn off the JMX Exporter.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -90,12 +90,12 @@ public class PrometheusInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the Node Exporter.
+     * Indicates whether you want to turn on or turn off the Node Exporter.
      * </p>
      * 
      * @param nodeExporter
      *        <p>
-     *        Indicates whether you want to enable or disable the Node Exporter.
+     *        Indicates whether you want to turn on or turn off the Node Exporter.
      *        </p>
      */
 
@@ -105,11 +105,11 @@ public class PrometheusInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the Node Exporter.
+     * Indicates whether you want to turn on or turn off the Node Exporter.
      * </p>
      * 
      * @return <p>
-     *         Indicates whether you want to enable or disable the Node Exporter.
+     *         Indicates whether you want to turn on or turn off the Node Exporter.
      *         </p>
      */
 
@@ -119,12 +119,12 @@ public class PrometheusInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether you want to enable or disable the Node Exporter.
+     * Indicates whether you want to turn on or turn off the Node Exporter.
      * </p>
      * 
      * @param nodeExporter
      *        <p>
-     *        Indicates whether you want to enable or disable the Node Exporter.
+     *        Indicates whether you want to turn on or turn off the Node Exporter.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

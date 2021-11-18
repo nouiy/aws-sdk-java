@@ -38,6 +38,8 @@ public class ConfigurationProfileSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LocationUri").build();
     private static final MarshallingInfo<List> VALIDATORTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ValidatorTypes").build();
+    private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Type").build();
 
     private static final ConfigurationProfileSummaryMarshaller instance = new ConfigurationProfileSummaryMarshaller();
 
@@ -60,6 +62,7 @@ public class ConfigurationProfileSummaryMarshaller {
             protocolMarshaller.marshall(configurationProfileSummary.getName(), NAME_BINDING);
             protocolMarshaller.marshall(configurationProfileSummary.getLocationUri(), LOCATIONURI_BINDING);
             protocolMarshaller.marshall(configurationProfileSummary.getValidatorTypes(), VALIDATORTYPES_BINDING);
+            protocolMarshaller.marshall(configurationProfileSummary.getType(), TYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

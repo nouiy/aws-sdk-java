@@ -587,6 +587,67 @@ public class AWSGlueDataBrewClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Creates a new ruleset that can be used in a profile job to validate the data quality of a dataset.
+     * </p>
+     * 
+     * @param createRulesetRequest
+     * @return Result of the CreateRuleset operation returned by the service.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @throws ServiceQuotaExceededException
+     *         A service quota is exceeded.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @sample AWSGlueDataBrew.CreateRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateRulesetResult createRuleset(CreateRulesetRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateRuleset(request);
+    }
+
+    @SdkInternalApi
+    final CreateRulesetResult executeCreateRuleset(CreateRulesetRequest createRulesetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createRulesetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateRulesetRequest> request = null;
+        Response<CreateRulesetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateRulesetRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createRulesetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataBrew");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateRuleset");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateRulesetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateRulesetResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a new schedule for one or more DataBrew jobs. Jobs can be run at a specific date and time, or at regular
      * intervals.
      * </p>
@@ -881,6 +942,67 @@ public class AWSGlueDataBrewClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteRecipeVersionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteRecipeVersionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a ruleset.
+     * </p>
+     * 
+     * @param deleteRulesetRequest
+     * @return Result of the DeleteRuleset operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @throws ConflictException
+     *         Updating or deleting a resource can cause an inconsistent state.
+     * @sample AWSGlueDataBrew.DeleteRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DeleteRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteRulesetResult deleteRuleset(DeleteRulesetRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteRuleset(request);
+    }
+
+    @SdkInternalApi
+    final DeleteRulesetResult executeDeleteRuleset(DeleteRulesetRequest deleteRulesetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteRulesetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteRulesetRequest> request = null;
+        Response<DeleteRulesetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteRulesetRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteRulesetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataBrew");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteRuleset");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteRulesetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteRulesetResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1235,6 +1357,65 @@ public class AWSGlueDataBrewClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeRecipeResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeRecipeResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves detailed information about the ruleset.
+     * </p>
+     * 
+     * @param describeRulesetRequest
+     * @return Result of the DescribeRuleset operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @sample AWSGlueDataBrew.DescribeRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DescribeRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeRulesetResult describeRuleset(DescribeRulesetRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeRuleset(request);
+    }
+
+    @SdkInternalApi
+    final DescribeRulesetResult executeDescribeRuleset(DescribeRulesetRequest describeRulesetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeRulesetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeRulesetRequest> request = null;
+        Response<DescribeRulesetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeRulesetRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeRulesetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataBrew");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeRuleset");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeRulesetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeRulesetResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1638,6 +1819,65 @@ public class AWSGlueDataBrewClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<ListRecipesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListRecipesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List all rulesets available in the current account or rulesets associated with a specific resource (dataset).
+     * </p>
+     * 
+     * @param listRulesetsRequest
+     * @return Result of the ListRulesets operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @sample AWSGlueDataBrew.ListRulesets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListRulesets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListRulesetsResult listRulesets(ListRulesetsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListRulesets(request);
+    }
+
+    @SdkInternalApi
+    final ListRulesetsResult executeListRulesets(ListRulesetsRequest listRulesetsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listRulesetsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListRulesetsRequest> request = null;
+        Response<ListRulesetsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListRulesetsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listRulesetsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataBrew");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListRulesets");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListRulesetsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListRulesetsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2488,6 +2728,65 @@ public class AWSGlueDataBrewClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateRecipeJobResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateRecipeJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates specified ruleset.
+     * </p>
+     * 
+     * @param updateRulesetRequest
+     * @return Result of the UpdateRuleset operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ValidationException
+     *         The input parameters for this request failed validation.
+     * @sample AWSGlueDataBrew.UpdateRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateRulesetResult updateRuleset(UpdateRulesetRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateRuleset(request);
+    }
+
+    @SdkInternalApi
+    final UpdateRulesetResult executeUpdateRuleset(UpdateRulesetRequest updateRulesetRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateRulesetRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateRulesetRequest> request = null;
+        Response<UpdateRulesetResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateRulesetRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateRulesetRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "DataBrew");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateRuleset");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateRulesetResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateRulesetResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

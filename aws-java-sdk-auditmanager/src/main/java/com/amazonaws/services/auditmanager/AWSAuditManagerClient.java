@@ -126,14 +126,14 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.auditmanager.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.auditmanager.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.auditmanager.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.auditmanager.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.auditmanager.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.auditmanager.model.AWSAuditManagerException.class));
 
     public static AWSAuditManagerClientBuilder builder() {
@@ -2151,6 +2151,132 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
+     * Gets the latest analytics data for all your current active assessments.
+     * </p>
+     * 
+     * @param getInsightsRequest
+     * @return Result of the GetInsights operation returned by the service.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.GetInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsights" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetInsightsResult getInsights(GetInsightsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetInsights(request);
+    }
+
+    @SdkInternalApi
+    final GetInsightsResult executeGetInsights(GetInsightsRequest getInsightsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getInsightsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetInsightsRequest> request = null;
+        Response<GetInsightsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetInsightsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getInsightsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AuditManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetInsights");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetInsightsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetInsightsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the latest analytics data for a specific active assessment.
+     * </p>
+     * 
+     * @param getInsightsByAssessmentRequest
+     * @return Result of the GetInsightsByAssessment operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.GetInsightsByAssessment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsightsByAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetInsightsByAssessmentResult getInsightsByAssessment(GetInsightsByAssessmentRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetInsightsByAssessment(request);
+    }
+
+    @SdkInternalApi
+    final GetInsightsByAssessmentResult executeGetInsightsByAssessment(GetInsightsByAssessmentRequest getInsightsByAssessmentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getInsightsByAssessmentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetInsightsByAssessmentRequest> request = null;
+        Response<GetInsightsByAssessmentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetInsightsByAssessmentRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getInsightsByAssessmentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AuditManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetInsightsByAssessment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetInsightsByAssessmentResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetInsightsByAssessmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns the name of the delegated Amazon Web Services administrator account for the organization.
      * </p>
      * 
@@ -2327,6 +2453,83 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<GetSettingsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetSettingsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the latest analytics data for controls within a specific control domain and a specific active assessment.
+     * </p>
+     * <note>
+     * <p>
+     * Control insights are listed only if the control belongs to the control domain and assessment that was specified.
+     * Moreover, the control must have collected evidence on the <code>lastUpdated</code> date of
+     * <code>controlInsightsByAssessment</code>. If neither of these conditions are met, no data is listed for that
+     * control.
+     * </p>
+     * </note>
+     * 
+     * @param listAssessmentControlInsightsByControlDomainRequest
+     * @return Result of the ListAssessmentControlInsightsByControlDomain operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.ListAssessmentControlInsightsByControlDomain
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentControlInsightsByControlDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAssessmentControlInsightsByControlDomainResult listAssessmentControlInsightsByControlDomain(
+            ListAssessmentControlInsightsByControlDomainRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAssessmentControlInsightsByControlDomain(request);
+    }
+
+    @SdkInternalApi
+    final ListAssessmentControlInsightsByControlDomainResult executeListAssessmentControlInsightsByControlDomain(
+            ListAssessmentControlInsightsByControlDomainRequest listAssessmentControlInsightsByControlDomainRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAssessmentControlInsightsByControlDomainRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAssessmentControlInsightsByControlDomainRequest> request = null;
+        Response<ListAssessmentControlInsightsByControlDomainResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAssessmentControlInsightsByControlDomainRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAssessmentControlInsightsByControlDomainRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AuditManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAssessmentControlInsightsByControlDomain");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAssessmentControlInsightsByControlDomainResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListAssessmentControlInsightsByControlDomainResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2582,6 +2785,228 @@ public class AWSAuditManagerClient extends AmazonWebServiceClient implements AWS
 
             HttpResponseHandler<AmazonWebServiceResponse<ListAssessmentsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListAssessmentsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the latest analytics data for control domains across all of your active assessments.
+     * </p>
+     * <note>
+     * <p>
+     * A control domain is listed only if at least one of the controls within that domain collected evidence on the
+     * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this condition isn’t met, no data is
+     * listed for that control domain.
+     * </p>
+     * </note>
+     * 
+     * @param listControlDomainInsightsRequest
+     * @return Result of the ListControlDomainInsights operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @sample AWSAuditManager.ListControlDomainInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsights"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListControlDomainInsightsResult listControlDomainInsights(ListControlDomainInsightsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListControlDomainInsights(request);
+    }
+
+    @SdkInternalApi
+    final ListControlDomainInsightsResult executeListControlDomainInsights(ListControlDomainInsightsRequest listControlDomainInsightsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listControlDomainInsightsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListControlDomainInsightsRequest> request = null;
+        Response<ListControlDomainInsightsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListControlDomainInsightsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listControlDomainInsightsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AuditManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListControlDomainInsights");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListControlDomainInsightsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListControlDomainInsightsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists analytics data for control domains within a specified active assessment.
+     * </p>
+     * <note>
+     * <p>
+     * A control domain is listed only if at least one of the controls within that domain collected evidence on the
+     * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this condition isn’t met, no data is
+     * listed for that domain.
+     * </p>
+     * </note>
+     * 
+     * @param listControlDomainInsightsByAssessmentRequest
+     * @return Result of the ListControlDomainInsightsByAssessment operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.ListControlDomainInsightsByAssessment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsightsByAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListControlDomainInsightsByAssessmentResult listControlDomainInsightsByAssessment(ListControlDomainInsightsByAssessmentRequest request) {
+        request = beforeClientExecution(request);
+        return executeListControlDomainInsightsByAssessment(request);
+    }
+
+    @SdkInternalApi
+    final ListControlDomainInsightsByAssessmentResult executeListControlDomainInsightsByAssessment(
+            ListControlDomainInsightsByAssessmentRequest listControlDomainInsightsByAssessmentRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listControlDomainInsightsByAssessmentRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListControlDomainInsightsByAssessmentRequest> request = null;
+        Response<ListControlDomainInsightsByAssessmentResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListControlDomainInsightsByAssessmentRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listControlDomainInsightsByAssessmentRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AuditManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListControlDomainInsightsByAssessment");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListControlDomainInsightsByAssessmentResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListControlDomainInsightsByAssessmentResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the latest analytics data for controls within a specific control domain across all active assessments.
+     * </p>
+     * <note>
+     * <p>
+     * Control insights are listed only if the control belongs to the control domain that was specified and the control
+     * collected evidence on the <code>lastUpdated</code> date of <code>controlInsightsMetadata</code>. If neither of
+     * these conditions are met, no data is listed for that control.
+     * </p>
+     * </note>
+     * 
+     * @param listControlInsightsByControlDomainRequest
+     * @return Result of the ListControlInsightsByControlDomain operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @sample AWSAuditManager.ListControlInsightsByControlDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlInsightsByControlDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListControlInsightsByControlDomainResult listControlInsightsByControlDomain(ListControlInsightsByControlDomainRequest request) {
+        request = beforeClientExecution(request);
+        return executeListControlInsightsByControlDomain(request);
+    }
+
+    @SdkInternalApi
+    final ListControlInsightsByControlDomainResult executeListControlInsightsByControlDomain(
+            ListControlInsightsByControlDomainRequest listControlInsightsByControlDomainRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listControlInsightsByControlDomainRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListControlInsightsByControlDomainRequest> request = null;
+        Response<ListControlInsightsByControlDomainResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListControlInsightsByControlDomainRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listControlInsightsByControlDomainRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AuditManager");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListControlInsightsByControlDomain");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListControlInsightsByControlDomainResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListControlInsightsByControlDomainResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

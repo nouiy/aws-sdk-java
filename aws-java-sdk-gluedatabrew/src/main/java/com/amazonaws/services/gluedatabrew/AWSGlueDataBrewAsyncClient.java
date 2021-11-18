@@ -276,6 +276,39 @@ public class AWSGlueDataBrewAsyncClient extends AWSGlueDataBrewClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateRulesetResult> createRulesetAsync(CreateRulesetRequest request) {
+
+        return createRulesetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRulesetResult> createRulesetAsync(final CreateRulesetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateRulesetRequest, CreateRulesetResult> asyncHandler) {
+        final CreateRulesetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateRulesetResult>() {
+            @Override
+            public CreateRulesetResult call() throws Exception {
+                CreateRulesetResult result = null;
+
+                try {
+                    result = executeCreateRuleset(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateScheduleResult> createScheduleAsync(CreateScheduleRequest request) {
 
         return createScheduleAsync(request, null);
@@ -425,6 +458,39 @@ public class AWSGlueDataBrewAsyncClient extends AWSGlueDataBrewClient implements
 
                 try {
                     result = executeDeleteRecipeVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRulesetResult> deleteRulesetAsync(DeleteRulesetRequest request) {
+
+        return deleteRulesetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRulesetResult> deleteRulesetAsync(final DeleteRulesetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteRulesetRequest, DeleteRulesetResult> asyncHandler) {
+        final DeleteRulesetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteRulesetResult>() {
+            @Override
+            public DeleteRulesetResult call() throws Exception {
+                DeleteRulesetResult result = null;
+
+                try {
+                    result = executeDeleteRuleset(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -623,6 +689,39 @@ public class AWSGlueDataBrewAsyncClient extends AWSGlueDataBrewClient implements
 
                 try {
                     result = executeDescribeRecipe(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRulesetResult> describeRulesetAsync(DescribeRulesetRequest request) {
+
+        return describeRulesetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRulesetResult> describeRulesetAsync(final DescribeRulesetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeRulesetRequest, DescribeRulesetResult> asyncHandler) {
+        final DescribeRulesetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeRulesetResult>() {
+            @Override
+            public DescribeRulesetResult call() throws Exception {
+                DescribeRulesetResult result = null;
+
+                try {
+                    result = executeDescribeRuleset(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -854,6 +953,39 @@ public class AWSGlueDataBrewAsyncClient extends AWSGlueDataBrewClient implements
 
                 try {
                     result = executeListRecipes(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRulesetsResult> listRulesetsAsync(ListRulesetsRequest request) {
+
+        return listRulesetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRulesetsResult> listRulesetsAsync(final ListRulesetsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRulesetsRequest, ListRulesetsResult> asyncHandler) {
+        final ListRulesetsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRulesetsResult>() {
+            @Override
+            public ListRulesetsResult call() throws Exception {
+                ListRulesetsResult result = null;
+
+                try {
+                    result = executeListRulesets(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1316,6 +1448,39 @@ public class AWSGlueDataBrewAsyncClient extends AWSGlueDataBrewClient implements
 
                 try {
                     result = executeUpdateRecipeJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRulesetResult> updateRulesetAsync(UpdateRulesetRequest request) {
+
+        return updateRulesetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRulesetResult> updateRulesetAsync(final UpdateRulesetRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateRulesetRequest, UpdateRulesetResult> asyncHandler) {
+        final UpdateRulesetRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateRulesetResult>() {
+            @Override
+            public UpdateRulesetResult call() throws Exception {
+                UpdateRulesetResult result = null;
+
+                try {
+                    result = executeUpdateRuleset(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

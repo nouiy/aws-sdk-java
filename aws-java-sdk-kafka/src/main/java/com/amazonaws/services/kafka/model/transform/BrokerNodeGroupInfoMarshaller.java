@@ -38,6 +38,8 @@ public class BrokerNodeGroupInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("securityGroups").build();
     private static final MarshallingInfo<StructuredPojo> STORAGEINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("storageInfo").build();
+    private static final MarshallingInfo<StructuredPojo> CONNECTIVITYINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectivityInfo").build();
 
     private static final BrokerNodeGroupInfoMarshaller instance = new BrokerNodeGroupInfoMarshaller();
 
@@ -60,6 +62,7 @@ public class BrokerNodeGroupInfoMarshaller {
             protocolMarshaller.marshall(brokerNodeGroupInfo.getInstanceType(), INSTANCETYPE_BINDING);
             protocolMarshaller.marshall(brokerNodeGroupInfo.getSecurityGroups(), SECURITYGROUPS_BINDING);
             protocolMarshaller.marshall(brokerNodeGroupInfo.getStorageInfo(), STORAGEINFO_BINDING);
+            protocolMarshaller.marshall(brokerNodeGroupInfo.getConnectivityInfo(), CONNECTIVITYINFO_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

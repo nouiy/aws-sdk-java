@@ -34,6 +34,8 @@ public class ProfileConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProfileColumns").build();
     private static final MarshallingInfo<List> COLUMNSTATISTICSCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ColumnStatisticsConfigurations").build();
+    private static final MarshallingInfo<StructuredPojo> ENTITYDETECTORCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EntityDetectorConfiguration").build();
 
     private static final ProfileConfigurationMarshaller instance = new ProfileConfigurationMarshaller();
 
@@ -54,6 +56,7 @@ public class ProfileConfigurationMarshaller {
             protocolMarshaller.marshall(profileConfiguration.getDatasetStatisticsConfiguration(), DATASETSTATISTICSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(profileConfiguration.getProfileColumns(), PROFILECOLUMNS_BINDING);
             protocolMarshaller.marshall(profileConfiguration.getColumnStatisticsConfigurations(), COLUMNSTATISTICSCONFIGURATIONS_BINDING);
+            protocolMarshaller.marshall(profileConfiguration.getEntityDetectorConfiguration(), ENTITYDETECTORCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

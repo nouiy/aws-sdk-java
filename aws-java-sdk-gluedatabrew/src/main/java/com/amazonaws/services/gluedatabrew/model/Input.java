@@ -46,6 +46,12 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private DatabaseInputDefinition databaseInputDefinition;
+    /**
+     * <p>
+     * Contains additional resource information needed for specific datasets.
+     * </p>
+     */
+    private Metadata metadata;
 
     /**
      * <p>
@@ -168,6 +174,46 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains additional resource information needed for specific datasets.
+     * </p>
+     * 
+     * @param metadata
+     *        Contains additional resource information needed for specific datasets.
+     */
+
+    public void setMetadata(Metadata metadata) {
+        this.metadata = metadata;
+    }
+
+    /**
+     * <p>
+     * Contains additional resource information needed for specific datasets.
+     * </p>
+     * 
+     * @return Contains additional resource information needed for specific datasets.
+     */
+
+    public Metadata getMetadata() {
+        return this.metadata;
+    }
+
+    /**
+     * <p>
+     * Contains additional resource information needed for specific datasets.
+     * </p>
+     * 
+     * @param metadata
+     *        Contains additional resource information needed for specific datasets.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Input withMetadata(Metadata metadata) {
+        setMetadata(metadata);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +230,9 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
         if (getDataCatalogInputDefinition() != null)
             sb.append("DataCatalogInputDefinition: ").append(getDataCatalogInputDefinition()).append(",");
         if (getDatabaseInputDefinition() != null)
-            sb.append("DatabaseInputDefinition: ").append(getDatabaseInputDefinition());
+            sb.append("DatabaseInputDefinition: ").append(getDatabaseInputDefinition()).append(",");
+        if (getMetadata() != null)
+            sb.append("Metadata: ").append(getMetadata());
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +259,10 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDatabaseInputDefinition() != null && other.getDatabaseInputDefinition().equals(this.getDatabaseInputDefinition()) == false)
             return false;
+        if (other.getMetadata() == null ^ this.getMetadata() == null)
+            return false;
+        if (other.getMetadata() != null && other.getMetadata().equals(this.getMetadata()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +274,7 @@ public class Input implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getS3InputDefinition() == null) ? 0 : getS3InputDefinition().hashCode());
         hashCode = prime * hashCode + ((getDataCatalogInputDefinition() == null) ? 0 : getDataCatalogInputDefinition().hashCode());
         hashCode = prime * hashCode + ((getDatabaseInputDefinition() == null) ? 0 : getDatabaseInputDefinition().hashCode());
+        hashCode = prime * hashCode + ((getMetadata() == null) ? 0 : getMetadata().hashCode());
         return hashCode;
     }
 

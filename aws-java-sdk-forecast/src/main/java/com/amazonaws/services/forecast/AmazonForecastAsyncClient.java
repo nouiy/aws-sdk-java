@@ -76,6 +76,39 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAutoPredictorResult> createAutoPredictorAsync(CreateAutoPredictorRequest request) {
+
+        return createAutoPredictorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAutoPredictorResult> createAutoPredictorAsync(final CreateAutoPredictorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateAutoPredictorRequest, CreateAutoPredictorResult> asyncHandler) {
+        final CreateAutoPredictorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateAutoPredictorResult>() {
+            @Override
+            public CreateAutoPredictorResult call() throws Exception {
+                CreateAutoPredictorResult result = null;
+
+                try {
+                    result = executeCreateAutoPredictor(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest request) {
 
         return createDatasetAsync(request, null);
@@ -159,6 +192,72 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
 
                 try {
                     result = executeCreateDatasetImportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExplainabilityResult> createExplainabilityAsync(CreateExplainabilityRequest request) {
+
+        return createExplainabilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExplainabilityResult> createExplainabilityAsync(final CreateExplainabilityRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateExplainabilityRequest, CreateExplainabilityResult> asyncHandler) {
+        final CreateExplainabilityRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateExplainabilityResult>() {
+            @Override
+            public CreateExplainabilityResult call() throws Exception {
+                CreateExplainabilityResult result = null;
+
+                try {
+                    result = executeCreateExplainability(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExplainabilityExportResult> createExplainabilityExportAsync(CreateExplainabilityExportRequest request) {
+
+        return createExplainabilityExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExplainabilityExportResult> createExplainabilityExportAsync(final CreateExplainabilityExportRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateExplainabilityExportRequest, CreateExplainabilityExportResult> asyncHandler) {
+        final CreateExplainabilityExportRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateExplainabilityExportResult>() {
+            @Override
+            public CreateExplainabilityExportResult call() throws Exception {
+                CreateExplainabilityExportResult result = null;
+
+                try {
+                    result = executeCreateExplainabilityExport(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -408,6 +507,72 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteExplainabilityResult> deleteExplainabilityAsync(DeleteExplainabilityRequest request) {
+
+        return deleteExplainabilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExplainabilityResult> deleteExplainabilityAsync(final DeleteExplainabilityRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteExplainabilityRequest, DeleteExplainabilityResult> asyncHandler) {
+        final DeleteExplainabilityRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteExplainabilityResult>() {
+            @Override
+            public DeleteExplainabilityResult call() throws Exception {
+                DeleteExplainabilityResult result = null;
+
+                try {
+                    result = executeDeleteExplainability(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExplainabilityExportResult> deleteExplainabilityExportAsync(DeleteExplainabilityExportRequest request) {
+
+        return deleteExplainabilityExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExplainabilityExportResult> deleteExplainabilityExportAsync(final DeleteExplainabilityExportRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteExplainabilityExportRequest, DeleteExplainabilityExportResult> asyncHandler) {
+        final DeleteExplainabilityExportRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteExplainabilityExportResult>() {
+            @Override
+            public DeleteExplainabilityExportResult call() throws Exception {
+                DeleteExplainabilityExportResult result = null;
+
+                try {
+                    result = executeDeleteExplainabilityExport(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteForecastResult> deleteForecastAsync(DeleteForecastRequest request) {
 
         return deleteForecastAsync(request, null);
@@ -575,6 +740,39 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAutoPredictorResult> describeAutoPredictorAsync(DescribeAutoPredictorRequest request) {
+
+        return describeAutoPredictorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAutoPredictorResult> describeAutoPredictorAsync(final DescribeAutoPredictorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeAutoPredictorRequest, DescribeAutoPredictorResult> asyncHandler) {
+        final DescribeAutoPredictorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeAutoPredictorResult>() {
+            @Override
+            public DescribeAutoPredictorResult call() throws Exception {
+                DescribeAutoPredictorResult result = null;
+
+                try {
+                    result = executeDescribeAutoPredictor(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDatasetResult> describeDatasetAsync(DescribeDatasetRequest request) {
 
         return describeDatasetAsync(request, null);
@@ -658,6 +856,72 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
 
                 try {
                     result = executeDescribeDatasetImportJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExplainabilityResult> describeExplainabilityAsync(DescribeExplainabilityRequest request) {
+
+        return describeExplainabilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExplainabilityResult> describeExplainabilityAsync(final DescribeExplainabilityRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeExplainabilityRequest, DescribeExplainabilityResult> asyncHandler) {
+        final DescribeExplainabilityRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeExplainabilityResult>() {
+            @Override
+            public DescribeExplainabilityResult call() throws Exception {
+                DescribeExplainabilityResult result = null;
+
+                try {
+                    result = executeDescribeExplainability(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExplainabilityExportResult> describeExplainabilityExportAsync(DescribeExplainabilityExportRequest request) {
+
+        return describeExplainabilityExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExplainabilityExportResult> describeExplainabilityExportAsync(final DescribeExplainabilityExportRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeExplainabilityExportRequest, DescribeExplainabilityExportResult> asyncHandler) {
+        final DescribeExplainabilityExportRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeExplainabilityExportResult>() {
+            @Override
+            public DescribeExplainabilityExportResult call() throws Exception {
+                DescribeExplainabilityExportResult result = null;
+
+                try {
+                    result = executeDescribeExplainabilityExport(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -924,6 +1188,72 @@ public class AmazonForecastAsyncClient extends AmazonForecastClient implements A
 
                 try {
                     result = executeListDatasets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExplainabilitiesResult> listExplainabilitiesAsync(ListExplainabilitiesRequest request) {
+
+        return listExplainabilitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExplainabilitiesResult> listExplainabilitiesAsync(final ListExplainabilitiesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListExplainabilitiesRequest, ListExplainabilitiesResult> asyncHandler) {
+        final ListExplainabilitiesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListExplainabilitiesResult>() {
+            @Override
+            public ListExplainabilitiesResult call() throws Exception {
+                ListExplainabilitiesResult result = null;
+
+                try {
+                    result = executeListExplainabilities(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExplainabilityExportsResult> listExplainabilityExportsAsync(ListExplainabilityExportsRequest request) {
+
+        return listExplainabilityExportsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExplainabilityExportsResult> listExplainabilityExportsAsync(final ListExplainabilityExportsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListExplainabilityExportsRequest, ListExplainabilityExportsResult> asyncHandler) {
+        final ListExplainabilityExportsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListExplainabilityExportsResult>() {
+            @Override
+            public ListExplainabilityExportsResult call() throws Exception {
+                ListExplainabilityExportsResult result = null;
+
+                try {
+                    result = executeListExplainabilityExports(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -48,6 +48,8 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
      * </p>
      */
     private String predictorArn;
+
+    private Boolean createdUsingAutoPredictor;
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the dataset group that provided the data used to train the predictor.
@@ -251,6 +253,40 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
     public ForecastSummary withPredictorArn(String predictorArn) {
         setPredictorArn(predictorArn);
         return this;
+    }
+
+    /**
+     * @param createdUsingAutoPredictor
+     */
+
+    public void setCreatedUsingAutoPredictor(Boolean createdUsingAutoPredictor) {
+        this.createdUsingAutoPredictor = createdUsingAutoPredictor;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean getCreatedUsingAutoPredictor() {
+        return this.createdUsingAutoPredictor;
+    }
+
+    /**
+     * @param createdUsingAutoPredictor
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ForecastSummary withCreatedUsingAutoPredictor(Boolean createdUsingAutoPredictor) {
+        setCreatedUsingAutoPredictor(createdUsingAutoPredictor);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean isCreatedUsingAutoPredictor() {
+        return this.createdUsingAutoPredictor;
     }
 
     /**
@@ -792,6 +828,8 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
             sb.append("ForecastName: ").append(getForecastName()).append(",");
         if (getPredictorArn() != null)
             sb.append("PredictorArn: ").append(getPredictorArn()).append(",");
+        if (getCreatedUsingAutoPredictor() != null)
+            sb.append("CreatedUsingAutoPredictor: ").append(getCreatedUsingAutoPredictor()).append(",");
         if (getDatasetGroupArn() != null)
             sb.append("DatasetGroupArn: ").append(getDatasetGroupArn()).append(",");
         if (getStatus() != null)
@@ -828,6 +866,10 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getPredictorArn() != null && other.getPredictorArn().equals(this.getPredictorArn()) == false)
             return false;
+        if (other.getCreatedUsingAutoPredictor() == null ^ this.getCreatedUsingAutoPredictor() == null)
+            return false;
+        if (other.getCreatedUsingAutoPredictor() != null && other.getCreatedUsingAutoPredictor().equals(this.getCreatedUsingAutoPredictor()) == false)
+            return false;
         if (other.getDatasetGroupArn() == null ^ this.getDatasetGroupArn() == null)
             return false;
         if (other.getDatasetGroupArn() != null && other.getDatasetGroupArn().equals(this.getDatasetGroupArn()) == false)
@@ -859,6 +901,7 @@ public class ForecastSummary implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getForecastArn() == null) ? 0 : getForecastArn().hashCode());
         hashCode = prime * hashCode + ((getForecastName() == null) ? 0 : getForecastName().hashCode());
         hashCode = prime * hashCode + ((getPredictorArn() == null) ? 0 : getPredictorArn().hashCode());
+        hashCode = prime * hashCode + ((getCreatedUsingAutoPredictor() == null) ? 0 : getCreatedUsingAutoPredictor().hashCode());
         hashCode = prime * hashCode + ((getDatasetGroupArn() == null) ? 0 : getDatasetGroupArn().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());

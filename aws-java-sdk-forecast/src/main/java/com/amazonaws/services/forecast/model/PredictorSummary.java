@@ -50,6 +50,18 @@ public class PredictorSummary implements Serializable, Cloneable, StructuredPojo
     private String datasetGroupArn;
     /**
      * <p>
+     * Whether AutoPredictor was used to create the predictor.
+     * </p>
+     */
+    private Boolean isAutoPredictor;
+    /**
+     * <p>
+     * A summary of the reference predictor used if the predictor was retrained or upgraded.
+     * </p>
+     */
+    private ReferencePredictorSummary referencePredictorSummary;
+    /**
+     * <p>
      * The status of the predictor. States include:
      * </p>
      * <ul>
@@ -245,6 +257,98 @@ public class PredictorSummary implements Serializable, Cloneable, StructuredPojo
 
     public PredictorSummary withDatasetGroupArn(String datasetGroupArn) {
         setDatasetGroupArn(datasetGroupArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether AutoPredictor was used to create the predictor.
+     * </p>
+     * 
+     * @param isAutoPredictor
+     *        Whether AutoPredictor was used to create the predictor.
+     */
+
+    public void setIsAutoPredictor(Boolean isAutoPredictor) {
+        this.isAutoPredictor = isAutoPredictor;
+    }
+
+    /**
+     * <p>
+     * Whether AutoPredictor was used to create the predictor.
+     * </p>
+     * 
+     * @return Whether AutoPredictor was used to create the predictor.
+     */
+
+    public Boolean getIsAutoPredictor() {
+        return this.isAutoPredictor;
+    }
+
+    /**
+     * <p>
+     * Whether AutoPredictor was used to create the predictor.
+     * </p>
+     * 
+     * @param isAutoPredictor
+     *        Whether AutoPredictor was used to create the predictor.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PredictorSummary withIsAutoPredictor(Boolean isAutoPredictor) {
+        setIsAutoPredictor(isAutoPredictor);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether AutoPredictor was used to create the predictor.
+     * </p>
+     * 
+     * @return Whether AutoPredictor was used to create the predictor.
+     */
+
+    public Boolean isAutoPredictor() {
+        return this.isAutoPredictor;
+    }
+
+    /**
+     * <p>
+     * A summary of the reference predictor used if the predictor was retrained or upgraded.
+     * </p>
+     * 
+     * @param referencePredictorSummary
+     *        A summary of the reference predictor used if the predictor was retrained or upgraded.
+     */
+
+    public void setReferencePredictorSummary(ReferencePredictorSummary referencePredictorSummary) {
+        this.referencePredictorSummary = referencePredictorSummary;
+    }
+
+    /**
+     * <p>
+     * A summary of the reference predictor used if the predictor was retrained or upgraded.
+     * </p>
+     * 
+     * @return A summary of the reference predictor used if the predictor was retrained or upgraded.
+     */
+
+    public ReferencePredictorSummary getReferencePredictorSummary() {
+        return this.referencePredictorSummary;
+    }
+
+    /**
+     * <p>
+     * A summary of the reference predictor used if the predictor was retrained or upgraded.
+     * </p>
+     * 
+     * @param referencePredictorSummary
+     *        A summary of the reference predictor used if the predictor was retrained or upgraded.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PredictorSummary withReferencePredictorSummary(ReferencePredictorSummary referencePredictorSummary) {
+        setReferencePredictorSummary(referencePredictorSummary);
         return this;
     }
 
@@ -750,6 +854,10 @@ public class PredictorSummary implements Serializable, Cloneable, StructuredPojo
             sb.append("PredictorName: ").append(getPredictorName()).append(",");
         if (getDatasetGroupArn() != null)
             sb.append("DatasetGroupArn: ").append(getDatasetGroupArn()).append(",");
+        if (getIsAutoPredictor() != null)
+            sb.append("IsAutoPredictor: ").append(getIsAutoPredictor()).append(",");
+        if (getReferencePredictorSummary() != null)
+            sb.append("ReferencePredictorSummary: ").append(getReferencePredictorSummary()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getMessage() != null)
@@ -784,6 +892,14 @@ public class PredictorSummary implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getDatasetGroupArn() != null && other.getDatasetGroupArn().equals(this.getDatasetGroupArn()) == false)
             return false;
+        if (other.getIsAutoPredictor() == null ^ this.getIsAutoPredictor() == null)
+            return false;
+        if (other.getIsAutoPredictor() != null && other.getIsAutoPredictor().equals(this.getIsAutoPredictor()) == false)
+            return false;
+        if (other.getReferencePredictorSummary() == null ^ this.getReferencePredictorSummary() == null)
+            return false;
+        if (other.getReferencePredictorSummary() != null && other.getReferencePredictorSummary().equals(this.getReferencePredictorSummary()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -811,6 +927,8 @@ public class PredictorSummary implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getPredictorArn() == null) ? 0 : getPredictorArn().hashCode());
         hashCode = prime * hashCode + ((getPredictorName() == null) ? 0 : getPredictorName().hashCode());
         hashCode = prime * hashCode + ((getDatasetGroupArn() == null) ? 0 : getDatasetGroupArn().hashCode());
+        hashCode = prime * hashCode + ((getIsAutoPredictor() == null) ? 0 : getIsAutoPredictor().hashCode());
+        hashCode = prime * hashCode + ((getReferencePredictorSummary() == null) ? 0 : getReferencePredictorSummary().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());

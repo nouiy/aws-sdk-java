@@ -48,8 +48,7 @@ public class SubStatementData implements Serializable, Cloneable, StructuredPojo
     private String error;
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
-     * an empty result set.
+     * A value that indicates whether the statement has a result set. The result set can be empty.
      * </p>
      */
     private Boolean hasResultSet;
@@ -224,13 +223,11 @@ public class SubStatementData implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
-     * an empty result set.
+     * A value that indicates whether the statement has a result set. The result set can be empty.
      * </p>
      * 
      * @param hasResultSet
-     *        A value that indicates whether the statement has a result set. The result set can be empty. The value is
-     *        true for an empty result set.
+     *        A value that indicates whether the statement has a result set. The result set can be empty.
      */
 
     public void setHasResultSet(Boolean hasResultSet) {
@@ -239,12 +236,10 @@ public class SubStatementData implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
-     * an empty result set.
+     * A value that indicates whether the statement has a result set. The result set can be empty.
      * </p>
      * 
-     * @return A value that indicates whether the statement has a result set. The result set can be empty. The value is
-     *         true for an empty result set.
+     * @return A value that indicates whether the statement has a result set. The result set can be empty.
      */
 
     public Boolean getHasResultSet() {
@@ -253,13 +248,11 @@ public class SubStatementData implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
-     * an empty result set.
+     * A value that indicates whether the statement has a result set. The result set can be empty.
      * </p>
      * 
      * @param hasResultSet
-     *        A value that indicates whether the statement has a result set. The result set can be empty. The value is
-     *        true for an empty result set.
+     *        A value that indicates whether the statement has a result set. The result set can be empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -270,12 +263,10 @@ public class SubStatementData implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
-     * an empty result set.
+     * A value that indicates whether the statement has a result set. The result set can be empty.
      * </p>
      * 
-     * @return A value that indicates whether the statement has a result set. The result set can be empty. The value is
-     *         true for an empty result set.
+     * @return A value that indicates whether the statement has a result set. The result set can be empty.
      */
 
     public Boolean isHasResultSet() {

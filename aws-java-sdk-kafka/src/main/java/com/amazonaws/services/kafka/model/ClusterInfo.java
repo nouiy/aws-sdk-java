@@ -67,7 +67,7 @@ public class ClusterInfo implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date creationTime;
     /**
      * <p>
-     * Information about the version of software currently deployed on the Kafka brokers in the cluster.
+     * Information about the version of software currently deployed on the Apache Kafka brokers in the cluster.
      * </p>
      */
     private BrokerSoftwareInfo currentBrokerSoftwareInfo;
@@ -412,12 +412,12 @@ public class ClusterInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the version of software currently deployed on the Kafka brokers in the cluster.
+     * Information about the version of software currently deployed on the Apache Kafka brokers in the cluster.
      * </p>
      * 
      * @param currentBrokerSoftwareInfo
      *        <p>
-     *        Information about the version of software currently deployed on the Kafka brokers in the cluster.
+     *        Information about the version of software currently deployed on the Apache Kafka brokers in the cluster.
      *        </p>
      */
 
@@ -427,11 +427,11 @@ public class ClusterInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the version of software currently deployed on the Kafka brokers in the cluster.
+     * Information about the version of software currently deployed on the Apache Kafka brokers in the cluster.
      * </p>
      * 
      * @return <p>
-     *         Information about the version of software currently deployed on the Kafka brokers in the cluster.
+     *         Information about the version of software currently deployed on the Apache Kafka brokers in the cluster.
      *         </p>
      */
 
@@ -441,12 +441,12 @@ public class ClusterInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the version of software currently deployed on the Kafka brokers in the cluster.
+     * Information about the version of software currently deployed on the Apache Kafka brokers in the cluster.
      * </p>
      * 
      * @param currentBrokerSoftwareInfo
      *        <p>
-     *        Information about the version of software currently deployed on the Kafka brokers in the cluster.
+     *        Information about the version of software currently deployed on the Apache Kafka brokers in the cluster.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

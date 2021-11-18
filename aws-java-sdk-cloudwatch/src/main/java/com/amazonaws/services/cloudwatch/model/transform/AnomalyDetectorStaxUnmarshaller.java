@@ -79,6 +79,16 @@ public class AnomalyDetectorStaxUnmarshaller implements Unmarshaller<AnomalyDete
                     anomalyDetector.setStateValue(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("SingleMetricAnomalyDetector", targetDepth)) {
+                    anomalyDetector.setSingleMetricAnomalyDetector(SingleMetricAnomalyDetectorStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("MetricMathAnomalyDetector", targetDepth)) {
+                    anomalyDetector.setMetricMathAnomalyDetector(MetricMathAnomalyDetectorStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return anomalyDetector;

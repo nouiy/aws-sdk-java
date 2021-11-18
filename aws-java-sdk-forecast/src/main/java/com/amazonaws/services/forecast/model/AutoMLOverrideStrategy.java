@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum AutoMLOverrideStrategy {
 
-    LatencyOptimized("LatencyOptimized");
+    LatencyOptimized("LatencyOptimized"),
+    AccuracyOptimized("AccuracyOptimized");
 
     private String value;
 

@@ -42,6 +42,13 @@ public class DatabaseInputDefinition implements Serializable, Cloneable, Structu
     private String databaseTableName;
 
     private S3Location tempDirectory;
+    /**
+     * <p>
+     * Custom SQL to run against the provided Glue connection. This SQL will be used as the input for DataBrew projects
+     * and jobs.
+     * </p>
+     */
+    private String queryString;
 
     /**
      * <p>
@@ -150,6 +157,52 @@ public class DatabaseInputDefinition implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Custom SQL to run against the provided Glue connection. This SQL will be used as the input for DataBrew projects
+     * and jobs.
+     * </p>
+     * 
+     * @param queryString
+     *        Custom SQL to run against the provided Glue connection. This SQL will be used as the input for DataBrew
+     *        projects and jobs.
+     */
+
+    public void setQueryString(String queryString) {
+        this.queryString = queryString;
+    }
+
+    /**
+     * <p>
+     * Custom SQL to run against the provided Glue connection. This SQL will be used as the input for DataBrew projects
+     * and jobs.
+     * </p>
+     * 
+     * @return Custom SQL to run against the provided Glue connection. This SQL will be used as the input for DataBrew
+     *         projects and jobs.
+     */
+
+    public String getQueryString() {
+        return this.queryString;
+    }
+
+    /**
+     * <p>
+     * Custom SQL to run against the provided Glue connection. This SQL will be used as the input for DataBrew projects
+     * and jobs.
+     * </p>
+     * 
+     * @param queryString
+     *        Custom SQL to run against the provided Glue connection. This SQL will be used as the input for DataBrew
+     *        projects and jobs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DatabaseInputDefinition withQueryString(String queryString) {
+        setQueryString(queryString);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -166,7 +219,9 @@ public class DatabaseInputDefinition implements Serializable, Cloneable, Structu
         if (getDatabaseTableName() != null)
             sb.append("DatabaseTableName: ").append(getDatabaseTableName()).append(",");
         if (getTempDirectory() != null)
-            sb.append("TempDirectory: ").append(getTempDirectory());
+            sb.append("TempDirectory: ").append(getTempDirectory()).append(",");
+        if (getQueryString() != null)
+            sb.append("QueryString: ").append(getQueryString());
         sb.append("}");
         return sb.toString();
     }
@@ -193,6 +248,10 @@ public class DatabaseInputDefinition implements Serializable, Cloneable, Structu
             return false;
         if (other.getTempDirectory() != null && other.getTempDirectory().equals(this.getTempDirectory()) == false)
             return false;
+        if (other.getQueryString() == null ^ this.getQueryString() == null)
+            return false;
+        if (other.getQueryString() != null && other.getQueryString().equals(this.getQueryString()) == false)
+            return false;
         return true;
     }
 
@@ -204,6 +263,7 @@ public class DatabaseInputDefinition implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getGlueConnectionName() == null) ? 0 : getGlueConnectionName().hashCode());
         hashCode = prime * hashCode + ((getDatabaseTableName() == null) ? 0 : getDatabaseTableName().hashCode());
         hashCode = prime * hashCode + ((getTempDirectory() == null) ? 0 : getTempDirectory().hashCode());
+        hashCode = prime * hashCode + ((getQueryString() == null) ? 0 : getQueryString().hashCode());
         return hashCode;
     }
 

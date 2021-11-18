@@ -27,19 +27,19 @@ public class Unauthenticated implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether you want to enable or disable unauthenticated traffic to your cluster.
+     * Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.
      * </p>
      */
     private Boolean enabled;
 
     /**
      * <p>
-     * Specifies whether you want to enable or disable unauthenticated traffic to your cluster.
+     * Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.
      * </p>
      * 
      * @param enabled
      *        <p>
-     *        Specifies whether you want to enable or disable unauthenticated traffic to your cluster.
+     *        Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.
      *        </p>
      */
 
@@ -49,11 +49,11 @@ public class Unauthenticated implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether you want to enable or disable unauthenticated traffic to your cluster.
+     * Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.
      * </p>
      * 
      * @return <p>
-     *         Specifies whether you want to enable or disable unauthenticated traffic to your cluster.
+     *         Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.
      *         </p>
      */
 
@@ -63,12 +63,12 @@ public class Unauthenticated implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether you want to enable or disable unauthenticated traffic to your cluster.
+     * Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.
      * </p>
      * 
      * @param enabled
      *        <p>
-     *        Specifies whether you want to enable or disable unauthenticated traffic to your cluster.
+     *        Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -80,11 +80,11 @@ public class Unauthenticated implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Specifies whether you want to enable or disable unauthenticated traffic to your cluster.
+     * Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.
      * </p>
      * 
      * @return <p>
-     *         Specifies whether you want to enable or disable unauthenticated traffic to your cluster.
+     *         Specifies whether you want to turn on or turn off unauthenticated traffic to your cluster.
      *         </p>
      */
 

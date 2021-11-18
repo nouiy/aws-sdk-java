@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.gluedatabrew.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -43,6 +44,8 @@ public class UpdateProfileJobRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxRetries").build();
     private static final MarshallingInfo<StructuredPojo> OUTPUTLOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutputLocation").build();
+    private static final MarshallingInfo<List> VALIDATIONCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ValidationConfigurations").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("RoleArn").build();
     private static final MarshallingInfo<Integer> TIMEOUT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER).marshallLocation(MarshallLocation.PAYLOAD)
@@ -74,6 +77,7 @@ public class UpdateProfileJobRequestMarshaller {
             protocolMarshaller.marshall(updateProfileJobRequest.getMaxCapacity(), MAXCAPACITY_BINDING);
             protocolMarshaller.marshall(updateProfileJobRequest.getMaxRetries(), MAXRETRIES_BINDING);
             protocolMarshaller.marshall(updateProfileJobRequest.getOutputLocation(), OUTPUTLOCATION_BINDING);
+            protocolMarshaller.marshall(updateProfileJobRequest.getValidationConfigurations(), VALIDATIONCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(updateProfileJobRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(updateProfileJobRequest.getTimeout(), TIMEOUT_BINDING);
             protocolMarshaller.marshall(updateProfileJobRequest.getJobSample(), JOBSAMPLE_BINDING);

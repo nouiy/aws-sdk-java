@@ -64,6 +64,10 @@ public class StreamSummaryJsonUnmarshaller implements Unmarshaller<StreamSummary
                     context.nextToken();
                     streamSummary.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("streamId", targetDepth)) {
+                    context.nextToken();
+                    streamSummary.setStreamId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("viewerCount", targetDepth)) {
                     context.nextToken();
                     streamSummary.setViewerCount(context.getUnmarshaller(Long.class).unmarshall(context));

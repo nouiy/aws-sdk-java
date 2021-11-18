@@ -43,6 +43,88 @@ public interface AmazonForecast {
 
     /**
      * <p>
+     * Creates an Amazon Forecast predictor.
+     * </p>
+     * <p>
+     * Amazon Forecast creates predictors with AutoPredictor, which involves applying the optimal combination of
+     * algorithms to each time series in your datasets. You can use CreateAutoPredictor to create new predictors or
+     * upgrade/retrain existing predictors.
+     * </p>
+     * <p>
+     * <b>Creating new predictors</b>
+     * </p>
+     * <p>
+     * The following parameters are required when creating a new predictor:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PredictorName</code> - A unique name for the predictor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DatasetGroupArn</code> - The ARN of the dataset group used to train the predictor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ForecastFrequency</code> - The granularity of your forecasts (hourly, daily, weekly, etc).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ForecastHorizon</code> - The number of time steps being forecasted.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When creating a new predictor, do not specify a value for <code>ReferencePredictorArn</code>.
+     * </p>
+     * <p>
+     * <b>Upgrading and retraining predictors</b>
+     * </p>
+     * <p>
+     * The following parameters are required when retraining or upgrading a predictor:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PredictorName</code> - A unique name for the predictor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ReferencePredictorArn</code> - The ARN of the predictor to retrain or upgrade.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When upgrading or retraining a predictor, only specify values for the <code>ReferencePredictorArn</code> and
+     * <code>PredictorName</code>.
+     * </p>
+     * 
+     * @param createAutoPredictorRequest
+     * @return Result of the CreateAutoPredictor operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceAlreadyExistsException
+     *         There is already a resource with this name. Try again with a different name.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @throws LimitExceededException
+     *         The limit on the number of resources per account has been exceeded.
+     * @sample AmazonForecast.CreateAutoPredictor
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreateAutoPredictor" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateAutoPredictorResult createAutoPredictor(CreateAutoPredictorRequest createAutoPredictorRequest);
+
+    /**
+     * <p>
      * Creates an Amazon Forecast dataset. The information about the dataset that you provide helps Forecast understand
      * how to consume the data for model training. This includes the following:
      * </p>
@@ -186,6 +268,208 @@ public interface AmazonForecast {
     CreateDatasetImportJobResult createDatasetImportJob(CreateDatasetImportJobRequest createDatasetImportJobRequest);
 
     /**
+     * <note>
+     * <p>
+     * Explainability is only available for Forecasts and Predictors generated from an AutoPredictor
+     * (<a>CreateAutoPredictor</a>)
+     * </p>
+     * </note>
+     * <p>
+     * Creates an Amazon Forecast Explainability.
+     * </p>
+     * <p>
+     * Explainability helps you better understand how the attributes in your datasets impact forecast. Amazon Forecast
+     * uses a metric called Impact scores to quantify the relative impact of each attribute and determine whether they
+     * increase or decrease forecast values.
+     * </p>
+     * <p>
+     * To enable Forecast Explainability, your predictor must include at least one of the following: related time
+     * series, item metadata, or additional datasets like Holidays and the Weather Index.
+     * </p>
+     * <p>
+     * CreateExplainability accepts either a Predictor ARN or Forecast ARN. To receive aggregated Impact scores for all
+     * time series and time points in your datasets, provide a Predictor ARN. To receive Impact scores for specific time
+     * series and time points, provide a Forecast ARN.
+     * </p>
+     * <p>
+     * <b>CreateExplainability with a Predictor ARN</b>
+     * </p>
+     * <note>
+     * <p>
+     * You can only have one Explainability resource per predictor. If you already enabled <code>ExplainPredictor</code>
+     * in <a>CreateAutoPredictor</a>, that predictor already has an Explainability resource.
+     * </p>
+     * </note>
+     * <p>
+     * The following parameters are required when providing a Predictor ARN:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ExplainabilityName</code> - A unique name for the Explainability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ResourceArn</code> - The Arn of the predictor.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TimePointGranularity</code> - Must be set to “ALL”.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TimeSeriesGranularity</code> - Must be set to “ALL”.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Do not specify a value for the following parameters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>DataSource</code> - Only valid when TimeSeriesGranularity is “SPECIFIC”.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Schema</code> - Only valid when TimeSeriesGranularity is “SPECIFIC”.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>StartDateTime</code> - Only valid when TimePointGranularity is “SPECIFIC”.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EndDateTime</code> - Only valid when TimePointGranularity is “SPECIFIC”.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>CreateExplainability with a Forecast ARN</b>
+     * </p>
+     * <note>
+     * <p>
+     * You can specify a maximum of 50 time series and 1500 time points.
+     * </p>
+     * </note>
+     * <p>
+     * The following parameters are required when providing a Predictor ARN:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ExplainabilityName</code> - A unique name for the Explainability.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ResourceArn</code> - The Arn of the forecast.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TimePointGranularity</code> - Either “ALL” or “SPECIFIC”.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>TimeSeriesGranularity</code> - Either “ALL” or “SPECIFIC”.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you set TimeSeriesGranularity to “SPECIFIC”, you must also provide the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>DataSource</code> - The S3 location of the CSV file specifying your time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Schema</code> - The Schema defines the attributes and attribute types listed in the Data Source.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * If you set TimePointGranularity to “SPECIFIC”, you must also provide the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>StartDateTime</code> - The first timestamp in the range of time points.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>EndDateTime</code> - The last timestamp in the range of time points.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param createExplainabilityRequest
+     * @return Result of the CreateExplainability operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceAlreadyExistsException
+     *         There is already a resource with this name. Try again with a different name.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @throws LimitExceededException
+     *         The limit on the number of resources per account has been exceeded.
+     * @sample AmazonForecast.CreateExplainability
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreateExplainability" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateExplainabilityResult createExplainability(CreateExplainabilityRequest createExplainabilityRequest);
+
+    /**
+     * <p>
+     * Exports an Explainability resource created by the <a>CreateExplainability</a> operation. Exported files are
+     * exported to an Amazon Simple Storage Service (Amazon S3) bucket.
+     * </p>
+     * <p>
+     * You must specify a <a>DataDestination</a> object that includes an Amazon S3 bucket and an AWS Identity and Access
+     * Management (IAM) role that Amazon Forecast can assume to access the Amazon S3 bucket. For more information, see
+     * <a>aws-forecast-iam-roles</a>.
+     * </p>
+     * <note>
+     * <p>
+     * The <code>Status</code> of the export job must be <code>ACTIVE</code> before you can access the export in your
+     * Amazon S3 bucket. To get the status, use the <a>DescribeExplainabilityExport</a> operation.
+     * </p>
+     * </note>
+     * 
+     * @param createExplainabilityExportRequest
+     * @return Result of the CreateExplainabilityExport operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceAlreadyExistsException
+     *         There is already a resource with this name. Try again with a different name.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @throws LimitExceededException
+     *         The limit on the number of resources per account has been exceeded.
+     * @sample AmazonForecast.CreateExplainabilityExport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/CreateExplainabilityExport"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateExplainabilityExportResult createExplainabilityExport(CreateExplainabilityExportRequest createExplainabilityExportRequest);
+
+    /**
      * <p>
      * Creates a forecast for each item in the <code>TARGET_TIME_SERIES</code> dataset that was used to train the
      * predictor. This is known as inference. To retrieve the forecast for a single item at low latency, use the
@@ -284,6 +568,12 @@ public interface AmazonForecast {
     CreateForecastExportJobResult createForecastExportJob(CreateForecastExportJobRequest createForecastExportJobRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation creates a legacy predictor that does not include all the predictor functionalities provided by
+     * Amazon Forecast. To create a predictor that is compatible with all aspects of Forecast, use CreateAutoPredictor.
+     * </p>
+     * </note>
      * <p>
      * Creates an Amazon Forecast predictor.
      * </p>
@@ -500,6 +790,50 @@ public interface AmazonForecast {
 
     /**
      * <p>
+     * Deletes an Explainability resource.
+     * </p>
+     * <p>
+     * You can delete only predictor that have a status of <code>ACTIVE</code> or <code>CREATE_FAILED</code>. To get the
+     * status, use the <a>DescribeExplainability</a> operation.
+     * </p>
+     * 
+     * @param deleteExplainabilityRequest
+     * @return Result of the DeleteExplainability operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonForecast.DeleteExplainability
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeleteExplainability" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteExplainabilityResult deleteExplainability(DeleteExplainabilityRequest deleteExplainabilityRequest);
+
+    /**
+     * <p>
+     * Deletes an Explainability export job.
+     * </p>
+     * 
+     * @param deleteExplainabilityExportRequest
+     * @return Result of the DeleteExplainabilityExport operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonForecast.DeleteExplainabilityExport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DeleteExplainabilityExport"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteExplainabilityExportResult deleteExplainabilityExport(DeleteExplainabilityExportRequest deleteExplainabilityExportRequest);
+
+    /**
+     * <p>
      * Deletes a forecast created using the <a>CreateForecast</a> operation. You can delete only forecasts that have a
      * status of <code>ACTIVE</code> or <code>CREATE_FAILED</code>. To get the status, use the <a>DescribeForecast</a>
      * operation.
@@ -645,6 +979,24 @@ public interface AmazonForecast {
 
     /**
      * <p>
+     * Describes a predictor created using the CreateAutoPredictor operation.
+     * </p>
+     * 
+     * @param describeAutoPredictorRequest
+     * @return Result of the DescribeAutoPredictor operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @sample AmazonForecast.DescribeAutoPredictor
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribeAutoPredictor" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeAutoPredictorResult describeAutoPredictor(DescribeAutoPredictorRequest describeAutoPredictorRequest);
+
+    /**
+     * <p>
      * Describes an Amazon Forecast dataset created using the <a>CreateDataset</a> operation.
      * </p>
      * <p>
@@ -782,6 +1134,42 @@ public interface AmazonForecast {
 
     /**
      * <p>
+     * Describes an Explainability resource created using the <a>CreateExplainability</a> operation.
+     * </p>
+     * 
+     * @param describeExplainabilityRequest
+     * @return Result of the DescribeExplainability operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @sample AmazonForecast.DescribeExplainability
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribeExplainability"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeExplainabilityResult describeExplainability(DescribeExplainabilityRequest describeExplainabilityRequest);
+
+    /**
+     * <p>
+     * Describes an Explainability export created using the <a>CreateExplainabilityExport</a> operation.
+     * </p>
+     * 
+     * @param describeExplainabilityExportRequest
+     * @return Result of the DescribeExplainabilityExport operation returned by the service.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @throws ResourceNotFoundException
+     *         We can't find a resource with that Amazon Resource Name (ARN). Check the ARN and try again.
+     * @sample AmazonForecast.DescribeExplainabilityExport
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/DescribeExplainabilityExport"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeExplainabilityExportResult describeExplainabilityExport(DescribeExplainabilityExportRequest describeExplainabilityExportRequest);
+
+    /**
+     * <p>
      * Describes a forecast created using the <a>CreateForecast</a> operation.
      * </p>
      * <p>
@@ -874,6 +1262,15 @@ public interface AmazonForecast {
     DescribeForecastExportJobResult describeForecastExportJob(DescribeForecastExportJobRequest describeForecastExportJobRequest);
 
     /**
+     * <note>
+     * <p>
+     * This operation is only valid for legacy predictors created with CreatePredictor. If you are not using a legacy
+     * predictor, use DescribeAutoPredictor.
+     * </p>
+     * <p>
+     * To upgrade a legacy predictor to AutoPredictor, see Upgrading to AutoPredictor.
+     * </p>
+     * </note>
      * <p>
      * Describes a predictor created using the <a>CreatePredictor</a> operation.
      * </p>
@@ -1067,6 +1464,54 @@ public interface AmazonForecast {
      *      Documentation</a>
      */
     ListDatasetsResult listDatasets(ListDatasetsRequest listDatasetsRequest);
+
+    /**
+     * <p>
+     * Returns a list of Explainability resources created using the <a>CreateExplainability</a> operation. This
+     * operation returns a summary for each Explainability. You can filter the list using an array of <a>Filter</a>
+     * objects.
+     * </p>
+     * <p>
+     * To retrieve the complete set of properties for a particular Explainability resource, use the ARN with the
+     * <a>DescribeExplainability</a> operation.
+     * </p>
+     * 
+     * @param listExplainabilitiesRequest
+     * @return Result of the ListExplainabilities operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The token is not valid. Tokens expire after 24 hours.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @sample AmazonForecast.ListExplainabilities
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListExplainabilities" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListExplainabilitiesResult listExplainabilities(ListExplainabilitiesRequest listExplainabilitiesRequest);
+
+    /**
+     * <p>
+     * Returns a list of Explainability exports created using the <a>CreateExplainabilityExport</a> operation. This
+     * operation returns a summary for each Explainability export. You can filter the list using an array of
+     * <a>Filter</a> objects.
+     * </p>
+     * <p>
+     * To retrieve the complete set of properties for a particular Explainability export, use the ARN with the
+     * <a>DescribeExplainability</a> operation.
+     * </p>
+     * 
+     * @param listExplainabilityExportsRequest
+     * @return Result of the ListExplainabilityExports operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The token is not valid. Tokens expire after 24 hours.
+     * @throws InvalidInputException
+     *         We can't process the request because it includes an invalid value or a value that exceeds the valid
+     *         range.
+     * @sample AmazonForecast.ListExplainabilityExports
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/forecast-2018-06-26/ListExplainabilityExports"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListExplainabilityExportsResult listExplainabilityExports(ListExplainabilityExportsRequest listExplainabilityExportsRequest);
 
     /**
      * <p>

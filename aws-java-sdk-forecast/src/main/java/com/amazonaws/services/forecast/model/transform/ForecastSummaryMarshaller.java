@@ -33,6 +33,8 @@ public class ForecastSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ForecastName").build();
     private static final MarshallingInfo<String> PREDICTORARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PredictorArn").build();
+    private static final MarshallingInfo<Boolean> CREATEDUSINGAUTOPREDICTOR_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedUsingAutoPredictor").build();
     private static final MarshallingInfo<String> DATASETGROUPARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatasetGroupArn").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -63,6 +65,7 @@ public class ForecastSummaryMarshaller {
             protocolMarshaller.marshall(forecastSummary.getForecastArn(), FORECASTARN_BINDING);
             protocolMarshaller.marshall(forecastSummary.getForecastName(), FORECASTNAME_BINDING);
             protocolMarshaller.marshall(forecastSummary.getPredictorArn(), PREDICTORARN_BINDING);
+            protocolMarshaller.marshall(forecastSummary.getCreatedUsingAutoPredictor(), CREATEDUSINGAUTOPREDICTOR_BINDING);
             protocolMarshaller.marshall(forecastSummary.getDatasetGroupArn(), DATASETGROUPARN_BINDING);
             protocolMarshaller.marshall(forecastSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(forecastSummary.getMessage(), MESSAGE_BINDING);

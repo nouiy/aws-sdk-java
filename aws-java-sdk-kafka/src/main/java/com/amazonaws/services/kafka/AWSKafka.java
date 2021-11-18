@@ -628,7 +628,7 @@ public interface AWSKafka {
 
     /**
      * <p>
-     * Returns a list of Kafka versions.
+     * Returns a list of Apache Kafka versions.
      * </p>
      * 
      * @param listKafkaVersionsRequest
@@ -1061,6 +1061,44 @@ public interface AWSKafka {
      *      Documentation</a>
      */
     UpdateConfigurationResult updateConfiguration(UpdateConfigurationRequest updateConfigurationRequest);
+
+    /**
+     * <p>
+     * Updates the cluster's connectivity configuration.
+     * </p>
+     * 
+     * @param updateConnectivityRequest
+     *        Request body for UpdateConnectivity.
+     * @return Result of the UpdateConnectivity operation returned by the service.
+     * @throws BadRequestException
+     *         <p>
+     *         The request isn't valid because the input is incorrect. Correct your input and then submit it again.
+     *         </p>
+     * @throws UnauthorizedException
+     *         <p>
+     *         The request is not authorized. The provided credentials couldn't be validated.
+     *         </p>
+     * @throws InternalServerErrorException
+     *         <p>
+     *         There was an unexpected internal server error. Retrying your request might resolve the issue.
+     *         </p>
+     * @throws ForbiddenException
+     *         <p>
+     *         Access forbidden. Check your credentials and then retry your request.
+     *         </p>
+     * @throws NotFoundException
+     *         <p>
+     *         The resource could not be found due to incorrect input. Correct the input, then retry the request.
+     *         </p>
+     * @throws ServiceUnavailableException
+     *         <p>
+     *         503 response
+     *         </p>
+     * @sample AWSKafka.UpdateConnectivity
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateConnectivity" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateConnectivityResult updateConnectivity(UpdateConnectivityRequest updateConnectivityRequest);
 
     /**
      * <p>

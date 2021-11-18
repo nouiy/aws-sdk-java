@@ -68,6 +68,10 @@ public class StreamJsonUnmarshaller implements Unmarshaller<Stream, JsonUnmarsha
                     context.nextToken();
                     stream.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("streamId", targetDepth)) {
+                    context.nextToken();
+                    stream.setStreamId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("viewerCount", targetDepth)) {
                     context.nextToken();
                     stream.setViewerCount(context.getUnmarshaller(Long.class).unmarshall(context));

@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * 
  <p>
- * The state of a Kafka cluster.
+ * The state of the Apache Kafka cluster.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

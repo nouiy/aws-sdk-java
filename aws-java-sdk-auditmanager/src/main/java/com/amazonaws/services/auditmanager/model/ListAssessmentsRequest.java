@@ -27,6 +27,12 @@ public class ListAssessmentsRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
+     * The current status of the assessment.
+     * </p>
+     */
+    private String status;
+    /**
+     * <p>
      * The pagination token that's used to fetch the next set of results.
      * </p>
      */
@@ -37,6 +43,65 @@ public class ListAssessmentsRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private Integer maxResults;
+
+    /**
+     * <p>
+     * The current status of the assessment.
+     * </p>
+     * 
+     * @param status
+     *        The current status of the assessment.
+     * @see AssessmentStatus
+     */
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * The current status of the assessment.
+     * </p>
+     * 
+     * @return The current status of the assessment.
+     * @see AssessmentStatus
+     */
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * The current status of the assessment.
+     * </p>
+     * 
+     * @param status
+     *        The current status of the assessment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AssessmentStatus
+     */
+
+    public ListAssessmentsRequest withStatus(String status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The current status of the assessment.
+     * </p>
+     * 
+     * @param status
+     *        The current status of the assessment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AssessmentStatus
+     */
+
+    public ListAssessmentsRequest withStatus(AssessmentStatus status) {
+        this.status = status.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -130,6 +195,8 @@ public class ListAssessmentsRequest extends com.amazonaws.AmazonWebServiceReques
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
@@ -148,6 +215,10 @@ public class ListAssessmentsRequest extends com.amazonaws.AmazonWebServiceReques
         if (obj instanceof ListAssessmentsRequest == false)
             return false;
         ListAssessmentsRequest other = (ListAssessmentsRequest) obj;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
@@ -164,6 +235,7 @@ public class ListAssessmentsRequest extends com.amazonaws.AmazonWebServiceReques
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         return hashCode;

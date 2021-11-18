@@ -58,6 +58,14 @@ public class ConfigurationProfileSummary implements Serializable, Cloneable, Str
      * </p>
      */
     private java.util.List<String> validatorTypes;
+    /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used to introduce changes to your
+     * application.
+     * </p>
+     */
+    private String type;
 
     /**
      * <p>
@@ -318,6 +326,58 @@ public class ConfigurationProfileSummary implements Serializable, Cloneable, Str
     }
 
     /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used to introduce changes to your
+     * application.
+     * </p>
+     * 
+     * @param type
+     *        The type of configurations that the configuration profile contains. A configuration can be a feature flag
+     *        used for enabling or disabling new features or a free-form configuration used to introduce changes to your
+     *        application.
+     */
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used to introduce changes to your
+     * application.
+     * </p>
+     * 
+     * @return The type of configurations that the configuration profile contains. A configuration can be a feature flag
+     *         used for enabling or disabling new features or a free-form configuration used to introduce changes to
+     *         your application.
+     */
+
+    public String getType() {
+        return this.type;
+    }
+
+    /**
+     * <p>
+     * The type of configurations that the configuration profile contains. A configuration can be a feature flag used
+     * for enabling or disabling new features or a free-form configuration used to introduce changes to your
+     * application.
+     * </p>
+     * 
+     * @param type
+     *        The type of configurations that the configuration profile contains. A configuration can be a feature flag
+     *        used for enabling or disabling new features or a free-form configuration used to introduce changes to your
+     *        application.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConfigurationProfileSummary withType(String type) {
+        setType(type);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -338,7 +398,9 @@ public class ConfigurationProfileSummary implements Serializable, Cloneable, Str
         if (getLocationUri() != null)
             sb.append("LocationUri: ").append(getLocationUri()).append(",");
         if (getValidatorTypes() != null)
-            sb.append("ValidatorTypes: ").append(getValidatorTypes());
+            sb.append("ValidatorTypes: ").append(getValidatorTypes()).append(",");
+        if (getType() != null)
+            sb.append("Type: ").append(getType());
         sb.append("}");
         return sb.toString();
     }
@@ -373,6 +435,10 @@ public class ConfigurationProfileSummary implements Serializable, Cloneable, Str
             return false;
         if (other.getValidatorTypes() != null && other.getValidatorTypes().equals(this.getValidatorTypes()) == false)
             return false;
+        if (other.getType() == null ^ this.getType() == null)
+            return false;
+        if (other.getType() != null && other.getType().equals(this.getType()) == false)
+            return false;
         return true;
     }
 
@@ -386,6 +452,7 @@ public class ConfigurationProfileSummary implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getLocationUri() == null) ? 0 : getLocationUri().hashCode());
         hashCode = prime * hashCode + ((getValidatorTypes() == null) ? 0 : getValidatorTypes().hashCode());
+        hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         return hashCode;
     }
 

@@ -25,11 +25,10 @@ import java.util.concurrent.ExecutorService;
  * the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive notification when
  * an asynchronous operation completes.
  * <p>
- * <fullname>AWS AppConfig</fullname>
  * <p>
- * Use AWS AppConfig, a capability of AWS Systems Manager, to create, manage, and quickly deploy application
+ * Use AppConfig, a capability of Amazon Web Services Systems Manager, to create, manage, and quickly deploy application
  * configurations. AppConfig supports controlled deployments to applications of any size and includes built-in
- * validation checks and monitoring. You can use AppConfig with applications hosted on Amazon EC2 instances, AWS Lambda,
+ * validation checks and monitoring. You can use AppConfig with applications hosted on Amazon EC2 instances, Lambda,
  * containers, mobile applications, or IoT devices.
  * </p>
  * <p>
@@ -47,7 +46,7 @@ import java.util.concurrent.ExecutorService;
  * automatically rolls back to the previous version.
  * </p>
  * <p>
- * AppConfig supports multiple use cases. Here are some examples.
+ * AppConfig supports multiple use cases. Here are some examples:
  * </p>
  * <ul>
  * <li>
@@ -76,7 +75,7 @@ import java.util.concurrent.ExecutorService;
  * </ul>
  * <p>
  * This reference is intended to be used with the <a
- * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html">AWS AppConfig User Guide</a>.
+ * href="http://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html">AppConfig User Guide</a>.
  * </p>
  */
 @ThreadSafe

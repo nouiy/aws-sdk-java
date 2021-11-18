@@ -60,6 +60,12 @@ public class DescribePredictorResultJsonUnmarshaller implements Unmarshaller<Des
                     context.nextToken();
                     describePredictorResult.setAlgorithmArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("AutoMLAlgorithmArns", targetDepth)) {
+                    context.nextToken();
+                    describePredictorResult.setAutoMLAlgorithmArns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("ForecastHorizon", targetDepth)) {
                     context.nextToken();
                     describePredictorResult.setForecastHorizon(context.getUnmarshaller(Integer.class).unmarshall(context));
@@ -115,15 +121,13 @@ public class DescribePredictorResultJsonUnmarshaller implements Unmarshaller<Des
                     context.nextToken();
                     describePredictorResult.setEstimatedTimeRemainingInMinutes(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("IsAutoPredictor", targetDepth)) {
+                    context.nextToken();
+                    describePredictorResult.setIsAutoPredictor(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("DatasetImportJobArns", targetDepth)) {
                     context.nextToken();
                     describePredictorResult.setDatasetImportJobArns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
-
-                    .unmarshall(context));
-                }
-                if (context.testExpression("AutoMLAlgorithmArns", targetDepth)) {
-                    context.nextToken();
-                    describePredictorResult.setAutoMLAlgorithmArns(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
 
                     .unmarshall(context));
                 }

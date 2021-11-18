@@ -97,8 +97,8 @@ public class StopDeploymentResult extends com.amazonaws.AmazonWebServiceResult<c
     private Float growthFactor;
     /**
      * <p>
-     * The amount of time AppConfig monitored for alarms before considering the deployment to be complete and no longer
-     * eligible for automatic roll back.
+     * The amount of time that AppConfig monitored for alarms before considering the deployment to be complete and no
+     * longer eligible for automatic rollback.
      * </p>
      */
     private Integer finalBakeTimeInMinutes;
@@ -634,13 +634,13 @@ public class StopDeploymentResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The amount of time AppConfig monitored for alarms before considering the deployment to be complete and no longer
-     * eligible for automatic roll back.
+     * The amount of time that AppConfig monitored for alarms before considering the deployment to be complete and no
+     * longer eligible for automatic rollback.
      * </p>
      * 
      * @param finalBakeTimeInMinutes
-     *        The amount of time AppConfig monitored for alarms before considering the deployment to be complete and no
-     *        longer eligible for automatic roll back.
+     *        The amount of time that AppConfig monitored for alarms before considering the deployment to be complete
+     *        and no longer eligible for automatic rollback.
      */
 
     public void setFinalBakeTimeInMinutes(Integer finalBakeTimeInMinutes) {
@@ -649,12 +649,12 @@ public class StopDeploymentResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The amount of time AppConfig monitored for alarms before considering the deployment to be complete and no longer
-     * eligible for automatic roll back.
+     * The amount of time that AppConfig monitored for alarms before considering the deployment to be complete and no
+     * longer eligible for automatic rollback.
      * </p>
      * 
-     * @return The amount of time AppConfig monitored for alarms before considering the deployment to be complete and no
-     *         longer eligible for automatic roll back.
+     * @return The amount of time that AppConfig monitored for alarms before considering the deployment to be complete
+     *         and no longer eligible for automatic rollback.
      */
 
     public Integer getFinalBakeTimeInMinutes() {
@@ -663,13 +663,13 @@ public class StopDeploymentResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The amount of time AppConfig monitored for alarms before considering the deployment to be complete and no longer
-     * eligible for automatic roll back.
+     * The amount of time that AppConfig monitored for alarms before considering the deployment to be complete and no
+     * longer eligible for automatic rollback.
      * </p>
      * 
      * @param finalBakeTimeInMinutes
-     *        The amount of time AppConfig monitored for alarms before considering the deployment to be complete and no
-     *        longer eligible for automatic roll back.
+     *        The amount of time that AppConfig monitored for alarms before considering the deployment to be complete
+     *        and no longer eligible for automatic rollback.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

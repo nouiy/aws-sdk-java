@@ -51,7 +51,7 @@ public class UpdateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
     private String description;
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
      */
     private String retrievalRoleArn;
@@ -224,11 +224,12 @@ public class UpdateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
      * 
      * @param retrievalRoleArn
-     *        The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     *        The ARN of an IAM role with permission to access the configuration at the specified
+     *        <code>LocationUri</code>.
      */
 
     public void setRetrievalRoleArn(String retrievalRoleArn) {
@@ -237,10 +238,11 @@ public class UpdateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
      * 
-     * @return The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * @return The ARN of an IAM role with permission to access the configuration at the specified
+     *         <code>LocationUri</code>.
      */
 
     public String getRetrievalRoleArn() {
@@ -249,11 +251,12 @@ public class UpdateConfigurationProfileRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     * The ARN of an IAM role with permission to access the configuration at the specified <code>LocationUri</code>.
      * </p>
      * 
      * @param retrievalRoleArn
-     *        The ARN of an IAM role with permission to access the configuration at the specified LocationUri.
+     *        The ARN of an IAM role with permission to access the configuration at the specified
+     *        <code>LocationUri</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

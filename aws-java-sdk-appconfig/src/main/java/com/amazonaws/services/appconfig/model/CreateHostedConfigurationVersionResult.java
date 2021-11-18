@@ -57,8 +57,7 @@ public class CreateHostedConfigurationVersionResult extends com.amazonaws.Amazon
     /**
      * <p>
      * A standard MIME type describing the format of the configuration content. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17"
-     * >Content-Type</a>.
+     * href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * </p>
      */
     private String contentType;
@@ -293,15 +292,12 @@ public class CreateHostedConfigurationVersionResult extends com.amazonaws.Amazon
     /**
      * <p>
      * A standard MIME type describing the format of the configuration content. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17"
-     * >Content-Type</a>.
+     * href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * </p>
      * 
      * @param contentType
      *        A standard MIME type describing the format of the configuration content. For more information, see <a
-     *        href=
-     *        "https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-
-     *        Type</a>.
+     *        href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      */
 
     public void setContentType(String contentType) {
@@ -311,14 +307,11 @@ public class CreateHostedConfigurationVersionResult extends com.amazonaws.Amazon
     /**
      * <p>
      * A standard MIME type describing the format of the configuration content. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17"
-     * >Content-Type</a>.
+     * href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * </p>
      * 
      * @return A standard MIME type describing the format of the configuration content. For more information, see <a
-     *         href
-     *         ="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content
-     *         -Type</a>.
+     *         href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      */
 
     public String getContentType() {
@@ -328,15 +321,12 @@ public class CreateHostedConfigurationVersionResult extends com.amazonaws.Amazon
     /**
      * <p>
      * A standard MIME type describing the format of the configuration content. For more information, see <a
-     * href="https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17"
-     * >Content-Type</a>.
+     * href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * </p>
      * 
      * @param contentType
      *        A standard MIME type describing the format of the configuration content. For more information, see <a
-     *        href=
-     *        "https://docs.aws.amazon.com/https:/www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-
-     *        Type</a>.
+     *        href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

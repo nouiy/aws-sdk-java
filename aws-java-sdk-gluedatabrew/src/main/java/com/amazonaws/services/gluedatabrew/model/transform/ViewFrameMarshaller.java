@@ -34,6 +34,12 @@ public class ViewFrameMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ColumnRange").build();
     private static final MarshallingInfo<List> HIDDENCOLUMNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("HiddenColumns").build();
+    private static final MarshallingInfo<Integer> STARTROWINDEX_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartRowIndex").build();
+    private static final MarshallingInfo<Integer> ROWRANGE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RowRange").build();
+    private static final MarshallingInfo<String> ANALYTICS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Analytics").build();
 
     private static final ViewFrameMarshaller instance = new ViewFrameMarshaller();
 
@@ -54,6 +60,9 @@ public class ViewFrameMarshaller {
             protocolMarshaller.marshall(viewFrame.getStartColumnIndex(), STARTCOLUMNINDEX_BINDING);
             protocolMarshaller.marshall(viewFrame.getColumnRange(), COLUMNRANGE_BINDING);
             protocolMarshaller.marshall(viewFrame.getHiddenColumns(), HIDDENCOLUMNS_BINDING);
+            protocolMarshaller.marshall(viewFrame.getStartRowIndex(), STARTROWINDEX_BINDING);
+            protocolMarshaller.marshall(viewFrame.getRowRange(), ROWRANGE_BINDING);
+            protocolMarshaller.marshall(viewFrame.getAnalytics(), ANALYTICS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

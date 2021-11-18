@@ -76,7 +76,7 @@ public class AWSfinspaceClient extends AmazonWebServiceClient implements AWSfins
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("application/x-amz-json-1.1")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.finspace.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

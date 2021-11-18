@@ -209,6 +209,19 @@ public class AbstractAmazonIVSAsync extends AbstractAmazonIVS implements AmazonI
     }
 
     @Override
+    public java.util.concurrent.Future<GetStreamSessionResult> getStreamSessionAsync(GetStreamSessionRequest request) {
+
+        return getStreamSessionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetStreamSessionResult> getStreamSessionAsync(GetStreamSessionRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetStreamSessionRequest, GetStreamSessionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ImportPlaybackKeyPairResult> importPlaybackKeyPairAsync(ImportPlaybackKeyPairRequest request) {
 
         return importPlaybackKeyPairAsync(request, null);
@@ -269,6 +282,19 @@ public class AbstractAmazonIVSAsync extends AbstractAmazonIVS implements AmazonI
     @Override
     public java.util.concurrent.Future<ListStreamKeysResult> listStreamKeysAsync(ListStreamKeysRequest request,
             com.amazonaws.handlers.AsyncHandler<ListStreamKeysRequest, ListStreamKeysResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStreamSessionsResult> listStreamSessionsAsync(ListStreamSessionsRequest request) {
+
+        return listStreamSessionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStreamSessionsResult> listStreamSessionsAsync(ListStreamSessionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListStreamSessionsRequest, ListStreamSessionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

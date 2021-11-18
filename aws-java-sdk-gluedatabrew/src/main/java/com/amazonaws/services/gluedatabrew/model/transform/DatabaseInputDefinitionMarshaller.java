@@ -33,6 +33,8 @@ public class DatabaseInputDefinitionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatabaseTableName").build();
     private static final MarshallingInfo<StructuredPojo> TEMPDIRECTORY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TempDirectory").build();
+    private static final MarshallingInfo<String> QUERYSTRING_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QueryString").build();
 
     private static final DatabaseInputDefinitionMarshaller instance = new DatabaseInputDefinitionMarshaller();
 
@@ -53,6 +55,7 @@ public class DatabaseInputDefinitionMarshaller {
             protocolMarshaller.marshall(databaseInputDefinition.getGlueConnectionName(), GLUECONNECTIONNAME_BINDING);
             protocolMarshaller.marshall(databaseInputDefinition.getDatabaseTableName(), DATABASETABLENAME_BINDING);
             protocolMarshaller.marshall(databaseInputDefinition.getTempDirectory(), TEMPDIRECTORY_BINDING);
+            protocolMarshaller.marshall(databaseInputDefinition.getQueryString(), QUERYSTRING_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

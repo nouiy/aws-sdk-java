@@ -122,6 +122,13 @@ public class DescribeJobResultJsonUnmarshaller implements Unmarshaller<DescribeJ
                     context.nextToken();
                     describeJobResult.setProfileConfiguration(ProfileConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("ValidationConfigurations", targetDepth)) {
+                    context.nextToken();
+                    describeJobResult.setValidationConfigurations(new ListUnmarshaller<ValidationConfiguration>(ValidationConfigurationJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("RecipeReference", targetDepth)) {
                     context.nextToken();
                     describeJobResult.setRecipeReference(RecipeReferenceJsonUnmarshaller.getInstance().unmarshall(context));

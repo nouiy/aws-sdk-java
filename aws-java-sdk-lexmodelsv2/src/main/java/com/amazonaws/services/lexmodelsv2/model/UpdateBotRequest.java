@@ -27,7 +27,8 @@ public class UpdateBotRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The unique identifier of the bot to update. This identifier is returned by the <a>CreateBot</a> operation.
+     * The unique identifier of the bot to update. This identifier is returned by the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * </p>
      */
     private String botId;
@@ -71,11 +72,13 @@ public class UpdateBotRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The unique identifier of the bot to update. This identifier is returned by the <a>CreateBot</a> operation.
+     * The unique identifier of the bot to update. This identifier is returned by the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to update. This identifier is returned by the <a>CreateBot</a> operation.
+     *        The unique identifier of the bot to update. This identifier is returned by the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      */
 
     public void setBotId(String botId) {
@@ -84,11 +87,12 @@ public class UpdateBotRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The unique identifier of the bot to update. This identifier is returned by the <a>CreateBot</a> operation.
+     * The unique identifier of the bot to update. This identifier is returned by the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * </p>
      * 
-     * @return The unique identifier of the bot to update. This identifier is returned by the <a>CreateBot</a>
-     *         operation.
+     * @return The unique identifier of the bot to update. This identifier is returned by the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      */
 
     public String getBotId() {
@@ -97,11 +101,13 @@ public class UpdateBotRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The unique identifier of the bot to update. This identifier is returned by the <a>CreateBot</a> operation.
+     * The unique identifier of the bot to update. This identifier is returned by the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * </p>
      * 
      * @param botId
-     *        The unique identifier of the bot to update. This identifier is returned by the <a>CreateBot</a> operation.
+     *        The unique identifier of the bot to update. This identifier is returned by the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

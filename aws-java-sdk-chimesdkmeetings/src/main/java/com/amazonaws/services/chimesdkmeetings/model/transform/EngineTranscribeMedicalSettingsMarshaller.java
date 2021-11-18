@@ -37,6 +37,8 @@ public class EngineTranscribeMedicalSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VocabularyName").build();
     private static final MarshallingInfo<String> REGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Region").build();
+    private static final MarshallingInfo<String> CONTENTIDENTIFICATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ContentIdentificationType").build();
 
     private static final EngineTranscribeMedicalSettingsMarshaller instance = new EngineTranscribeMedicalSettingsMarshaller();
 
@@ -59,6 +61,7 @@ public class EngineTranscribeMedicalSettingsMarshaller {
             protocolMarshaller.marshall(engineTranscribeMedicalSettings.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(engineTranscribeMedicalSettings.getVocabularyName(), VOCABULARYNAME_BINDING);
             protocolMarshaller.marshall(engineTranscribeMedicalSettings.getRegion(), REGION_BINDING);
+            protocolMarshaller.marshall(engineTranscribeMedicalSettings.getContentIdentificationType(), CONTENTIDENTIFICATIONTYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -76,7 +76,7 @@ public class AWSFinSpaceDataClient extends AmazonWebServiceClient implements AWS
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("application/x-amz-json-1.1")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.finspacedata.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))

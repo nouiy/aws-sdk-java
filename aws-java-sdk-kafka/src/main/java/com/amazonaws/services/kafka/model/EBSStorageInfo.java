@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * 
  <p>
- * Contains information about the EBS storage volumes attached to Kafka broker nodes.
+ * Contains information about the EBS storage volumes attached to Apache Kafka broker nodes.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/EBSStorageInfo" target="_top">AWS API

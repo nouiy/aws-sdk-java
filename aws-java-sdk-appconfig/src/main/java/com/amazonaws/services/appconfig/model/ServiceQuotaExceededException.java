@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The number of hosted configuration versions exceeds the limit for the AppConfig configuration store. Delete one or
- * more versions and try again.
+ * The number of hosted configuration versions exceeds the limit for the AppConfig hosted configuration store. Delete
+ * one or more versions and try again.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

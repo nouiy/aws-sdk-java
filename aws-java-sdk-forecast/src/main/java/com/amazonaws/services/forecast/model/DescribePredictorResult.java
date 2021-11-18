@@ -43,6 +43,12 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
     private String algorithmArn;
     /**
      * <p>
+     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
+     * </p>
+     */
+    private java.util.List<String> autoMLAlgorithmArns;
+    /**
+     * <p>
      * The number of time-steps of the forecast. The forecast horizon is also called the prediction length.
      * </p>
      */
@@ -137,16 +143,16 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
     private Long estimatedTimeRemainingInMinutes;
     /**
      * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     */
+    private Boolean isAutoPredictor;
+    /**
+     * <p>
      * An array of the ARNs of the dataset import jobs used to import training data for the predictor.
      * </p>
      */
     private java.util.List<String> datasetImportJobArns;
-    /**
-     * <p>
-     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
-     * </p>
-     */
-    private java.util.List<String> autoMLAlgorithmArns;
     /**
      * <p>
      * The status of the predictor. States include:
@@ -350,6 +356,76 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
 
     public DescribePredictorResult withAlgorithmArn(String algorithmArn) {
         setAlgorithmArn(algorithmArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
+     * </p>
+     * 
+     * @return When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
+     */
+
+    public java.util.List<String> getAutoMLAlgorithmArns() {
+        return autoMLAlgorithmArns;
+    }
+
+    /**
+     * <p>
+     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
+     * </p>
+     * 
+     * @param autoMLAlgorithmArns
+     *        When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
+     */
+
+    public void setAutoMLAlgorithmArns(java.util.Collection<String> autoMLAlgorithmArns) {
+        if (autoMLAlgorithmArns == null) {
+            this.autoMLAlgorithmArns = null;
+            return;
+        }
+
+        this.autoMLAlgorithmArns = new java.util.ArrayList<String>(autoMLAlgorithmArns);
+    }
+
+    /**
+     * <p>
+     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAutoMLAlgorithmArns(java.util.Collection)} or {@link #withAutoMLAlgorithmArns(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param autoMLAlgorithmArns
+     *        When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribePredictorResult withAutoMLAlgorithmArns(String... autoMLAlgorithmArns) {
+        if (this.autoMLAlgorithmArns == null) {
+            setAutoMLAlgorithmArns(new java.util.ArrayList<String>(autoMLAlgorithmArns.length));
+        }
+        for (String ele : autoMLAlgorithmArns) {
+            this.autoMLAlgorithmArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
+     * </p>
+     * 
+     * @param autoMLAlgorithmArns
+     *        When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribePredictorResult withAutoMLAlgorithmArns(java.util.Collection<String> autoMLAlgorithmArns) {
+        setAutoMLAlgorithmArns(autoMLAlgorithmArns);
         return this;
     }
 
@@ -1092,6 +1168,58 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     * 
+     * @param isAutoPredictor
+     *        Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     */
+
+    public void setIsAutoPredictor(Boolean isAutoPredictor) {
+        this.isAutoPredictor = isAutoPredictor;
+    }
+
+    /**
+     * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     * 
+     * @return Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     */
+
+    public Boolean getIsAutoPredictor() {
+        return this.isAutoPredictor;
+    }
+
+    /**
+     * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     * 
+     * @param isAutoPredictor
+     *        Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribePredictorResult withIsAutoPredictor(Boolean isAutoPredictor) {
+        setIsAutoPredictor(isAutoPredictor);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     * </p>
+     * 
+     * @return Whether the predictor was created with <a>CreateAutoPredictor</a>.
+     */
+
+    public Boolean isAutoPredictor() {
+        return this.isAutoPredictor;
+    }
+
+    /**
+     * <p>
      * An array of the ARNs of the dataset import jobs used to import training data for the predictor.
      * </p>
      * 
@@ -1157,76 +1285,6 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
 
     public DescribePredictorResult withDatasetImportJobArns(java.util.Collection<String> datasetImportJobArns) {
         setDatasetImportJobArns(datasetImportJobArns);
-        return this;
-    }
-
-    /**
-     * <p>
-     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
-     * </p>
-     * 
-     * @return When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
-     */
-
-    public java.util.List<String> getAutoMLAlgorithmArns() {
-        return autoMLAlgorithmArns;
-    }
-
-    /**
-     * <p>
-     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
-     * </p>
-     * 
-     * @param autoMLAlgorithmArns
-     *        When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
-     */
-
-    public void setAutoMLAlgorithmArns(java.util.Collection<String> autoMLAlgorithmArns) {
-        if (autoMLAlgorithmArns == null) {
-            this.autoMLAlgorithmArns = null;
-            return;
-        }
-
-        this.autoMLAlgorithmArns = new java.util.ArrayList<String>(autoMLAlgorithmArns);
-    }
-
-    /**
-     * <p>
-     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
-     * </p>
-     * <p>
-     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
-     * {@link #setAutoMLAlgorithmArns(java.util.Collection)} or {@link #withAutoMLAlgorithmArns(java.util.Collection)}
-     * if you want to override the existing values.
-     * </p>
-     * 
-     * @param autoMLAlgorithmArns
-     *        When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribePredictorResult withAutoMLAlgorithmArns(String... autoMLAlgorithmArns) {
-        if (this.autoMLAlgorithmArns == null) {
-            setAutoMLAlgorithmArns(new java.util.ArrayList<String>(autoMLAlgorithmArns.length));
-        }
-        for (String ele : autoMLAlgorithmArns) {
-            this.autoMLAlgorithmArns.add(ele);
-        }
-        return this;
-    }
-
-    /**
-     * <p>
-     * When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
-     * </p>
-     * 
-     * @param autoMLAlgorithmArns
-     *        When <code>PerformAutoML</code> is specified, the ARN of the chosen algorithm.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     */
-
-    public DescribePredictorResult withAutoMLAlgorithmArns(java.util.Collection<String> autoMLAlgorithmArns) {
-        setAutoMLAlgorithmArns(autoMLAlgorithmArns);
         return this;
     }
 
@@ -1791,6 +1849,8 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
             sb.append("PredictorName: ").append(getPredictorName()).append(",");
         if (getAlgorithmArn() != null)
             sb.append("AlgorithmArn: ").append(getAlgorithmArn()).append(",");
+        if (getAutoMLAlgorithmArns() != null)
+            sb.append("AutoMLAlgorithmArns: ").append(getAutoMLAlgorithmArns()).append(",");
         if (getForecastHorizon() != null)
             sb.append("ForecastHorizon: ").append(getForecastHorizon()).append(",");
         if (getForecastTypes() != null)
@@ -1817,10 +1877,10 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
             sb.append("PredictorExecutionDetails: ").append(getPredictorExecutionDetails()).append(",");
         if (getEstimatedTimeRemainingInMinutes() != null)
             sb.append("EstimatedTimeRemainingInMinutes: ").append(getEstimatedTimeRemainingInMinutes()).append(",");
+        if (getIsAutoPredictor() != null)
+            sb.append("IsAutoPredictor: ").append(getIsAutoPredictor()).append(",");
         if (getDatasetImportJobArns() != null)
             sb.append("DatasetImportJobArns: ").append(getDatasetImportJobArns()).append(",");
-        if (getAutoMLAlgorithmArns() != null)
-            sb.append("AutoMLAlgorithmArns: ").append(getAutoMLAlgorithmArns()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getMessage() != null)
@@ -1856,6 +1916,10 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
         if (other.getAlgorithmArn() == null ^ this.getAlgorithmArn() == null)
             return false;
         if (other.getAlgorithmArn() != null && other.getAlgorithmArn().equals(this.getAlgorithmArn()) == false)
+            return false;
+        if (other.getAutoMLAlgorithmArns() == null ^ this.getAutoMLAlgorithmArns() == null)
+            return false;
+        if (other.getAutoMLAlgorithmArns() != null && other.getAutoMLAlgorithmArns().equals(this.getAutoMLAlgorithmArns()) == false)
             return false;
         if (other.getForecastHorizon() == null ^ this.getForecastHorizon() == null)
             return false;
@@ -1910,13 +1974,13 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
         if (other.getEstimatedTimeRemainingInMinutes() != null
                 && other.getEstimatedTimeRemainingInMinutes().equals(this.getEstimatedTimeRemainingInMinutes()) == false)
             return false;
+        if (other.getIsAutoPredictor() == null ^ this.getIsAutoPredictor() == null)
+            return false;
+        if (other.getIsAutoPredictor() != null && other.getIsAutoPredictor().equals(this.getIsAutoPredictor()) == false)
+            return false;
         if (other.getDatasetImportJobArns() == null ^ this.getDatasetImportJobArns() == null)
             return false;
         if (other.getDatasetImportJobArns() != null && other.getDatasetImportJobArns().equals(this.getDatasetImportJobArns()) == false)
-            return false;
-        if (other.getAutoMLAlgorithmArns() == null ^ this.getAutoMLAlgorithmArns() == null)
-            return false;
-        if (other.getAutoMLAlgorithmArns() != null && other.getAutoMLAlgorithmArns().equals(this.getAutoMLAlgorithmArns()) == false)
             return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
@@ -1949,6 +2013,7 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getPredictorArn() == null) ? 0 : getPredictorArn().hashCode());
         hashCode = prime * hashCode + ((getPredictorName() == null) ? 0 : getPredictorName().hashCode());
         hashCode = prime * hashCode + ((getAlgorithmArn() == null) ? 0 : getAlgorithmArn().hashCode());
+        hashCode = prime * hashCode + ((getAutoMLAlgorithmArns() == null) ? 0 : getAutoMLAlgorithmArns().hashCode());
         hashCode = prime * hashCode + ((getForecastHorizon() == null) ? 0 : getForecastHorizon().hashCode());
         hashCode = prime * hashCode + ((getForecastTypes() == null) ? 0 : getForecastTypes().hashCode());
         hashCode = prime * hashCode + ((getPerformAutoML() == null) ? 0 : getPerformAutoML().hashCode());
@@ -1962,8 +2027,8 @@ public class DescribePredictorResult extends com.amazonaws.AmazonWebServiceResul
         hashCode = prime * hashCode + ((getEncryptionConfig() == null) ? 0 : getEncryptionConfig().hashCode());
         hashCode = prime * hashCode + ((getPredictorExecutionDetails() == null) ? 0 : getPredictorExecutionDetails().hashCode());
         hashCode = prime * hashCode + ((getEstimatedTimeRemainingInMinutes() == null) ? 0 : getEstimatedTimeRemainingInMinutes().hashCode());
+        hashCode = prime * hashCode + ((getIsAutoPredictor() == null) ? 0 : getIsAutoPredictor().hashCode());
         hashCode = prime * hashCode + ((getDatasetImportJobArns() == null) ? 0 : getDatasetImportJobArns().hashCode());
-        hashCode = prime * hashCode + ((getAutoMLAlgorithmArns() == null) ? 0 : getAutoMLAlgorithmArns().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getMessage() == null) ? 0 : getMessage().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());

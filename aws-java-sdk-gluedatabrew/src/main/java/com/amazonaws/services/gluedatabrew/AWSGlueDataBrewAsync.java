@@ -342,6 +342,37 @@ public interface AWSGlueDataBrewAsync extends AWSGlueDataBrew {
 
     /**
      * <p>
+     * Creates a new ruleset that can be used in a profile job to validate the data quality of a dataset.
+     * </p>
+     * 
+     * @param createRulesetRequest
+     * @return A Java Future containing the result of the CreateRuleset operation returned by the service.
+     * @sample AWSGlueDataBrewAsync.CreateRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRulesetResult> createRulesetAsync(CreateRulesetRequest createRulesetRequest);
+
+    /**
+     * <p>
+     * Creates a new ruleset that can be used in a profile job to validate the data quality of a dataset.
+     * </p>
+     * 
+     * @param createRulesetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateRuleset operation returned by the service.
+     * @sample AWSGlueDataBrewAsyncHandler.CreateRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/CreateRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRulesetResult> createRulesetAsync(CreateRulesetRequest createRulesetRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateRulesetRequest, CreateRulesetResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new schedule for one or more DataBrew jobs. Jobs can be run at a specific date and time, or at regular
      * intervals.
      * </p>
@@ -496,6 +527,37 @@ public interface AWSGlueDataBrewAsync extends AWSGlueDataBrew {
      */
     java.util.concurrent.Future<DeleteRecipeVersionResult> deleteRecipeVersionAsync(DeleteRecipeVersionRequest deleteRecipeVersionRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteRecipeVersionRequest, DeleteRecipeVersionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a ruleset.
+     * </p>
+     * 
+     * @param deleteRulesetRequest
+     * @return A Java Future containing the result of the DeleteRuleset operation returned by the service.
+     * @sample AWSGlueDataBrewAsync.DeleteRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DeleteRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRulesetResult> deleteRulesetAsync(DeleteRulesetRequest deleteRulesetRequest);
+
+    /**
+     * <p>
+     * Deletes a ruleset.
+     * </p>
+     * 
+     * @param deleteRulesetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteRuleset operation returned by the service.
+     * @sample AWSGlueDataBrewAsyncHandler.DeleteRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DeleteRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRulesetResult> deleteRulesetAsync(DeleteRulesetRequest deleteRulesetRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteRulesetRequest, DeleteRulesetResult> asyncHandler);
 
     /**
      * <p>
@@ -682,6 +744,37 @@ public interface AWSGlueDataBrewAsync extends AWSGlueDataBrew {
      */
     java.util.concurrent.Future<DescribeRecipeResult> describeRecipeAsync(DescribeRecipeRequest describeRecipeRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeRecipeRequest, DescribeRecipeResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves detailed information about the ruleset.
+     * </p>
+     * 
+     * @param describeRulesetRequest
+     * @return A Java Future containing the result of the DescribeRuleset operation returned by the service.
+     * @sample AWSGlueDataBrewAsync.DescribeRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DescribeRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRulesetResult> describeRulesetAsync(DescribeRulesetRequest describeRulesetRequest);
+
+    /**
+     * <p>
+     * Retrieves detailed information about the ruleset.
+     * </p>
+     * 
+     * @param describeRulesetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeRuleset operation returned by the service.
+     * @sample AWSGlueDataBrewAsyncHandler.DescribeRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/DescribeRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeRulesetResult> describeRulesetAsync(DescribeRulesetRequest describeRulesetRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeRulesetRequest, DescribeRulesetResult> asyncHandler);
 
     /**
      * <p>
@@ -899,6 +992,37 @@ public interface AWSGlueDataBrewAsync extends AWSGlueDataBrew {
      */
     java.util.concurrent.Future<ListRecipesResult> listRecipesAsync(ListRecipesRequest listRecipesRequest,
             com.amazonaws.handlers.AsyncHandler<ListRecipesRequest, ListRecipesResult> asyncHandler);
+
+    /**
+     * <p>
+     * List all rulesets available in the current account or rulesets associated with a specific resource (dataset).
+     * </p>
+     * 
+     * @param listRulesetsRequest
+     * @return A Java Future containing the result of the ListRulesets operation returned by the service.
+     * @sample AWSGlueDataBrewAsync.ListRulesets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListRulesets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListRulesetsResult> listRulesetsAsync(ListRulesetsRequest listRulesetsRequest);
+
+    /**
+     * <p>
+     * List all rulesets available in the current account or rulesets associated with a specific resource (dataset).
+     * </p>
+     * 
+     * @param listRulesetsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRulesets operation returned by the service.
+     * @sample AWSGlueDataBrewAsyncHandler.ListRulesets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/ListRulesets" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListRulesetsResult> listRulesetsAsync(ListRulesetsRequest listRulesetsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRulesetsRequest, ListRulesetsResult> asyncHandler);
 
     /**
      * <p>
@@ -1333,6 +1457,37 @@ public interface AWSGlueDataBrewAsync extends AWSGlueDataBrew {
      */
     java.util.concurrent.Future<UpdateRecipeJobResult> updateRecipeJobAsync(UpdateRecipeJobRequest updateRecipeJobRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateRecipeJobRequest, UpdateRecipeJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates specified ruleset.
+     * </p>
+     * 
+     * @param updateRulesetRequest
+     * @return A Java Future containing the result of the UpdateRuleset operation returned by the service.
+     * @sample AWSGlueDataBrewAsync.UpdateRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRulesetResult> updateRulesetAsync(UpdateRulesetRequest updateRulesetRequest);
+
+    /**
+     * <p>
+     * Updates specified ruleset.
+     * </p>
+     * 
+     * @param updateRulesetRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateRuleset operation returned by the service.
+     * @sample AWSGlueDataBrewAsyncHandler.UpdateRuleset
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/UpdateRuleset" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateRulesetResult> updateRulesetAsync(UpdateRulesetRequest updateRulesetRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateRulesetRequest, UpdateRulesetResult> asyncHandler);
 
     /**
      * <p>

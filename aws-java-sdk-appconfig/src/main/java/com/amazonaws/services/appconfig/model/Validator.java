@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A validator provides a syntactic or semantic check to ensure the configuration you want to deploy functions as
+ * A validator provides a syntactic or semantic check to ensure the configuration that you want to deploy functions as
  * intended. To validate your application configuration data, you provide a schema or a Lambda function that runs
  * against the configuration. The configuration deployment or update can only proceed when the configuration data is
  * valid.
@@ -39,7 +39,7 @@ public class Validator implements Serializable, Cloneable, StructuredPojo {
     private String type;
     /**
      * <p>
-     * Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+     * Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.
      * </p>
      */
     private String content;
@@ -105,11 +105,11 @@ public class Validator implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+     * Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.
      * </p>
      * 
      * @param content
-     *        Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+     *        Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.
      */
 
     public void setContent(String content) {
@@ -118,10 +118,10 @@ public class Validator implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+     * Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.
      * </p>
      * 
-     * @return Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+     * @return Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.
      */
 
     public String getContent() {
@@ -130,11 +130,11 @@ public class Validator implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+     * Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.
      * </p>
      * 
      * @param content
-     *        Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
+     *        Either the JSON Schema content or the Amazon Resource Name (ARN) of an Lambda function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

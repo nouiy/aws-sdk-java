@@ -33,7 +33,7 @@ public class GetEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequest
     private String applicationId;
     /**
      * <p>
-     * The ID of the environment you wnat to get.
+     * The ID of the environment that you want to get.
      * </p>
      */
     private String environmentId;
@@ -80,11 +80,11 @@ public class GetEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the environment you wnat to get.
+     * The ID of the environment that you want to get.
      * </p>
      * 
      * @param environmentId
-     *        The ID of the environment you wnat to get.
+     *        The ID of the environment that you want to get.
      */
 
     public void setEnvironmentId(String environmentId) {
@@ -93,10 +93,10 @@ public class GetEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the environment you wnat to get.
+     * The ID of the environment that you want to get.
      * </p>
      * 
-     * @return The ID of the environment you wnat to get.
+     * @return The ID of the environment that you want to get.
      */
 
     public String getEnvironmentId() {
@@ -105,11 +105,11 @@ public class GetEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the environment you wnat to get.
+     * The ID of the environment that you want to get.
      * </p>
      * 
      * @param environmentId
-     *        The ID of the environment you wnat to get.
+     *        The ID of the environment that you want to get.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

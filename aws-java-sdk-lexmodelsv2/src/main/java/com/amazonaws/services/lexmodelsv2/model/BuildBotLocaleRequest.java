@@ -27,7 +27,8 @@ public class BuildBotLocaleRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the bot to build. The identifier is returned in the response from the operation.
+     * The identifier of the bot to build. The identifier is returned in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * </p>
      */
     private String botId;
@@ -49,11 +50,13 @@ public class BuildBotLocaleRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the bot to build. The identifier is returned in the response from the operation.
+     * The identifier of the bot to build. The identifier is returned in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * </p>
      * 
      * @param botId
-     *        The identifier of the bot to build. The identifier is returned in the response from the operation.
+     *        The identifier of the bot to build. The identifier is returned in the response from the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      */
 
     public void setBotId(String botId) {
@@ -62,10 +65,12 @@ public class BuildBotLocaleRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the bot to build. The identifier is returned in the response from the operation.
+     * The identifier of the bot to build. The identifier is returned in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * </p>
      * 
-     * @return The identifier of the bot to build. The identifier is returned in the response from the operation.
+     * @return The identifier of the bot to build. The identifier is returned in the response from the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      */
 
     public String getBotId() {
@@ -74,11 +79,13 @@ public class BuildBotLocaleRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the bot to build. The identifier is returned in the response from the operation.
+     * The identifier of the bot to build. The identifier is returned in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * </p>
      * 
      * @param botId
-     *        The identifier of the bot to build. The identifier is returned in the response from the operation.
+     *        The identifier of the bot to build. The identifier is returned in the response from the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_CreateBot.html">CreateBot</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * 
  <p>
- * Contains source Kafka versions and compatible target Kafka versions.
+ * Contains source Apache Kafka versions and compatible target Apache Kafka versions.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/CompatibleKafkaVersion" target="_top">AWS API
@@ -31,25 +31,25 @@ public class CompatibleKafkaVersion implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A Kafka version.
+     * An Apache Kafka version.
      * </p>
      */
     private String sourceVersion;
     /**
      * <p>
-     * A list of Kafka versions.
+     * A list of Apache Kafka versions.
      * </p>
      */
     private java.util.List<String> targetVersions;
 
     /**
      * <p>
-     * A Kafka version.
+     * An Apache Kafka version.
      * </p>
      * 
      * @param sourceVersion
      *        <p>
-     *        A Kafka version.
+     *        An Apache Kafka version.
      *        </p>
      */
 
@@ -59,11 +59,11 @@ public class CompatibleKafkaVersion implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A Kafka version.
+     * An Apache Kafka version.
      * </p>
      * 
      * @return <p>
-     *         A Kafka version.
+     *         An Apache Kafka version.
      *         </p>
      */
 
@@ -73,12 +73,12 @@ public class CompatibleKafkaVersion implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A Kafka version.
+     * An Apache Kafka version.
      * </p>
      * 
      * @param sourceVersion
      *        <p>
-     *        A Kafka version.
+     *        An Apache Kafka version.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -90,11 +90,11 @@ public class CompatibleKafkaVersion implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A list of Kafka versions.
+     * A list of Apache Kafka versions.
      * </p>
      * 
      * @return <p>
-     *         A list of Kafka versions.
+     *         A list of Apache Kafka versions.
      *         </p>
      */
 
@@ -104,12 +104,12 @@ public class CompatibleKafkaVersion implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A list of Kafka versions.
+     * A list of Apache Kafka versions.
      * </p>
      * 
      * @param targetVersions
      *        <p>
-     *        A list of Kafka versions.
+     *        A list of Apache Kafka versions.
      *        </p>
      */
 
@@ -124,7 +124,7 @@ public class CompatibleKafkaVersion implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A list of Kafka versions.
+     * A list of Apache Kafka versions.
      * </p>
      * 
      * <p>
@@ -135,7 +135,7 @@ public class CompatibleKafkaVersion implements Serializable, Cloneable, Structur
      * 
      * @param targetVersions
      *        <p>
-     *        A list of Kafka versions.
+     *        A list of Apache Kafka versions.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -152,12 +152,12 @@ public class CompatibleKafkaVersion implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * A list of Kafka versions.
+     * A list of Apache Kafka versions.
      * </p>
      * 
      * @param targetVersions
      *        <p>
-     *        A list of Kafka versions.
+     *        A list of Apache Kafka versions.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -47,6 +47,24 @@ public class ViewFrame implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> hiddenColumns;
+    /**
+     * <p>
+     * The starting index for the range of rows to return in the view frame.
+     * </p>
+     */
+    private Integer startRowIndex;
+    /**
+     * <p>
+     * The number of rows to include in the view frame, beginning with the <code>StartRowIndex</code> value.
+     * </p>
+     */
+    private Integer rowRange;
+    /**
+     * <p>
+     * Controls if analytics computation is enabled or disabled. Enabled by default.
+     * </p>
+     */
+    private String analytics;
 
     /**
      * <p>
@@ -205,6 +223,145 @@ public class ViewFrame implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The starting index for the range of rows to return in the view frame.
+     * </p>
+     * 
+     * @param startRowIndex
+     *        The starting index for the range of rows to return in the view frame.
+     */
+
+    public void setStartRowIndex(Integer startRowIndex) {
+        this.startRowIndex = startRowIndex;
+    }
+
+    /**
+     * <p>
+     * The starting index for the range of rows to return in the view frame.
+     * </p>
+     * 
+     * @return The starting index for the range of rows to return in the view frame.
+     */
+
+    public Integer getStartRowIndex() {
+        return this.startRowIndex;
+    }
+
+    /**
+     * <p>
+     * The starting index for the range of rows to return in the view frame.
+     * </p>
+     * 
+     * @param startRowIndex
+     *        The starting index for the range of rows to return in the view frame.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ViewFrame withStartRowIndex(Integer startRowIndex) {
+        setStartRowIndex(startRowIndex);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of rows to include in the view frame, beginning with the <code>StartRowIndex</code> value.
+     * </p>
+     * 
+     * @param rowRange
+     *        The number of rows to include in the view frame, beginning with the <code>StartRowIndex</code> value.
+     */
+
+    public void setRowRange(Integer rowRange) {
+        this.rowRange = rowRange;
+    }
+
+    /**
+     * <p>
+     * The number of rows to include in the view frame, beginning with the <code>StartRowIndex</code> value.
+     * </p>
+     * 
+     * @return The number of rows to include in the view frame, beginning with the <code>StartRowIndex</code> value.
+     */
+
+    public Integer getRowRange() {
+        return this.rowRange;
+    }
+
+    /**
+     * <p>
+     * The number of rows to include in the view frame, beginning with the <code>StartRowIndex</code> value.
+     * </p>
+     * 
+     * @param rowRange
+     *        The number of rows to include in the view frame, beginning with the <code>StartRowIndex</code> value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ViewFrame withRowRange(Integer rowRange) {
+        setRowRange(rowRange);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Controls if analytics computation is enabled or disabled. Enabled by default.
+     * </p>
+     * 
+     * @param analytics
+     *        Controls if analytics computation is enabled or disabled. Enabled by default.
+     * @see AnalyticsMode
+     */
+
+    public void setAnalytics(String analytics) {
+        this.analytics = analytics;
+    }
+
+    /**
+     * <p>
+     * Controls if analytics computation is enabled or disabled. Enabled by default.
+     * </p>
+     * 
+     * @return Controls if analytics computation is enabled or disabled. Enabled by default.
+     * @see AnalyticsMode
+     */
+
+    public String getAnalytics() {
+        return this.analytics;
+    }
+
+    /**
+     * <p>
+     * Controls if analytics computation is enabled or disabled. Enabled by default.
+     * </p>
+     * 
+     * @param analytics
+     *        Controls if analytics computation is enabled or disabled. Enabled by default.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnalyticsMode
+     */
+
+    public ViewFrame withAnalytics(String analytics) {
+        setAnalytics(analytics);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Controls if analytics computation is enabled or disabled. Enabled by default.
+     * </p>
+     * 
+     * @param analytics
+     *        Controls if analytics computation is enabled or disabled. Enabled by default.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnalyticsMode
+     */
+
+    public ViewFrame withAnalytics(AnalyticsMode analytics) {
+        this.analytics = analytics.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -221,7 +378,13 @@ public class ViewFrame implements Serializable, Cloneable, StructuredPojo {
         if (getColumnRange() != null)
             sb.append("ColumnRange: ").append(getColumnRange()).append(",");
         if (getHiddenColumns() != null)
-            sb.append("HiddenColumns: ").append(getHiddenColumns());
+            sb.append("HiddenColumns: ").append(getHiddenColumns()).append(",");
+        if (getStartRowIndex() != null)
+            sb.append("StartRowIndex: ").append(getStartRowIndex()).append(",");
+        if (getRowRange() != null)
+            sb.append("RowRange: ").append(getRowRange()).append(",");
+        if (getAnalytics() != null)
+            sb.append("Analytics: ").append(getAnalytics());
         sb.append("}");
         return sb.toString();
     }
@@ -248,6 +411,18 @@ public class ViewFrame implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getHiddenColumns() != null && other.getHiddenColumns().equals(this.getHiddenColumns()) == false)
             return false;
+        if (other.getStartRowIndex() == null ^ this.getStartRowIndex() == null)
+            return false;
+        if (other.getStartRowIndex() != null && other.getStartRowIndex().equals(this.getStartRowIndex()) == false)
+            return false;
+        if (other.getRowRange() == null ^ this.getRowRange() == null)
+            return false;
+        if (other.getRowRange() != null && other.getRowRange().equals(this.getRowRange()) == false)
+            return false;
+        if (other.getAnalytics() == null ^ this.getAnalytics() == null)
+            return false;
+        if (other.getAnalytics() != null && other.getAnalytics().equals(this.getAnalytics()) == false)
+            return false;
         return true;
     }
 
@@ -259,6 +434,9 @@ public class ViewFrame implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStartColumnIndex() == null) ? 0 : getStartColumnIndex().hashCode());
         hashCode = prime * hashCode + ((getColumnRange() == null) ? 0 : getColumnRange().hashCode());
         hashCode = prime * hashCode + ((getHiddenColumns() == null) ? 0 : getHiddenColumns().hashCode());
+        hashCode = prime * hashCode + ((getStartRowIndex() == null) ? 0 : getStartRowIndex().hashCode());
+        hashCode = prime * hashCode + ((getRowRange() == null) ? 0 : getRowRange().hashCode());
+        hashCode = prime * hashCode + ((getAnalytics() == null) ? 0 : getAnalytics().hashCode());
         return hashCode;
     }
 

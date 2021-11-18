@@ -39,8 +39,9 @@ public class CreateBotAliasRequest extends com.amazonaws.AmazonWebServiceRequest
     private String description;
     /**
      * <p>
-     * The version of the bot that this alias points to. You can use the operation to change the bot version associated
-     * with the alias.
+     * The version of the bot that this alias points to. You can use the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_UpdateBotAlias.html">UpdateBotAlias</a> operation to change
+     * the bot version associated with the alias.
      * </p>
      */
     private String botVersion;
@@ -158,13 +159,15 @@ public class CreateBotAliasRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The version of the bot that this alias points to. You can use the operation to change the bot version associated
-     * with the alias.
+     * The version of the bot that this alias points to. You can use the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_UpdateBotAlias.html">UpdateBotAlias</a> operation to change
+     * the bot version associated with the alias.
      * </p>
      * 
      * @param botVersion
-     *        The version of the bot that this alias points to. You can use the operation to change the bot version
-     *        associated with the alias.
+     *        The version of the bot that this alias points to. You can use the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_UpdateBotAlias.html">UpdateBotAlias</a> operation to
+     *        change the bot version associated with the alias.
      */
 
     public void setBotVersion(String botVersion) {
@@ -173,12 +176,14 @@ public class CreateBotAliasRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The version of the bot that this alias points to. You can use the operation to change the bot version associated
-     * with the alias.
+     * The version of the bot that this alias points to. You can use the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_UpdateBotAlias.html">UpdateBotAlias</a> operation to change
+     * the bot version associated with the alias.
      * </p>
      * 
-     * @return The version of the bot that this alias points to. You can use the operation to change the bot version
-     *         associated with the alias.
+     * @return The version of the bot that this alias points to. You can use the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/API_UpdateBotAlias.html">UpdateBotAlias</a> operation
+     *         to change the bot version associated with the alias.
      */
 
     public String getBotVersion() {
@@ -187,13 +192,15 @@ public class CreateBotAliasRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The version of the bot that this alias points to. You can use the operation to change the bot version associated
-     * with the alias.
+     * The version of the bot that this alias points to. You can use the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_UpdateBotAlias.html">UpdateBotAlias</a> operation to change
+     * the bot version associated with the alias.
      * </p>
      * 
      * @param botVersion
-     *        The version of the bot that this alias points to. You can use the operation to change the bot version
-     *        associated with the alias.
+     *        The version of the bot that this alias points to. You can use the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_UpdateBotAlias.html">UpdateBotAlias</a> operation to
+     *        change the bot version associated with the alias.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

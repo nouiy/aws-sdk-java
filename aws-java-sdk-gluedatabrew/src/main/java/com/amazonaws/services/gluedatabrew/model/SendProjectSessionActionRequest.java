@@ -313,7 +313,7 @@ public class SendProjectSessionActionRequest extends com.amazonaws.AmazonWebServ
         if (getStepIndex() != null)
             sb.append("StepIndex: ").append(getStepIndex()).append(",");
         if (getClientSessionId() != null)
-            sb.append("ClientSessionId: ").append(getClientSessionId()).append(",");
+            sb.append("ClientSessionId: ").append("***Sensitive Data Redacted***").append(",");
         if (getViewFrame() != null)
             sb.append("ViewFrame: ").append(getViewFrame());
         sb.append("}");

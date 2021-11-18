@@ -29,6 +29,8 @@ public class VoiceSettingsMarshaller {
 
     private static final MarshallingInfo<String> VOICEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("voiceId").build();
+    private static final MarshallingInfo<String> ENGINE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("engine").build();
 
     private static final VoiceSettingsMarshaller instance = new VoiceSettingsMarshaller();
 
@@ -47,6 +49,7 @@ public class VoiceSettingsMarshaller {
 
         try {
             protocolMarshaller.marshall(voiceSettings.getVoiceId(), VOICEID_BINDING);
+            protocolMarshaller.marshall(voiceSettings.getEngine(), ENGINE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -45,8 +45,9 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
     private String configuration;
     /**
      * <p>
-     * A unique ID to identify the client for the configuration. This ID enables AppConfig to deploy the configuration
-     * in intervals, as defined in the deployment strategy.
+     * The clientId parameter in the following command is a unique, user-specified ID to identify the client for the
+     * configuration. This ID enables AppConfig to deploy the configuration in intervals, as defined in the deployment
+     * strategy.
      * </p>
      */
     private String clientId;
@@ -56,9 +57,9 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <important>
      * <p>
-     * AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
-     * configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call
-     * to <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
+     * AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the configuration
+     * version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call to
+     * <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
      * clients receive a configuration.
      * </p>
      * <p>
@@ -70,8 +71,8 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * <p>
      * For more information about working with configurations, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-retrieving-the-configuration.html"
-     * >Retrieving the Configuration</a> in the <i>AWS AppConfig User Guide</i>.
+     * href="http://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-retrieving-the-configuration.html"
+     * >Retrieving the Configuration</a> in the <i>AppConfig User Guide</i>.
      * </p>
      */
     private String clientConfigurationVersion;
@@ -198,13 +199,15 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique ID to identify the client for the configuration. This ID enables AppConfig to deploy the configuration
-     * in intervals, as defined in the deployment strategy.
+     * The clientId parameter in the following command is a unique, user-specified ID to identify the client for the
+     * configuration. This ID enables AppConfig to deploy the configuration in intervals, as defined in the deployment
+     * strategy.
      * </p>
      * 
      * @param clientId
-     *        A unique ID to identify the client for the configuration. This ID enables AppConfig to deploy the
-     *        configuration in intervals, as defined in the deployment strategy.
+     *        The clientId parameter in the following command is a unique, user-specified ID to identify the client for
+     *        the configuration. This ID enables AppConfig to deploy the configuration in intervals, as defined in the
+     *        deployment strategy.
      */
 
     public void setClientId(String clientId) {
@@ -213,12 +216,14 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique ID to identify the client for the configuration. This ID enables AppConfig to deploy the configuration
-     * in intervals, as defined in the deployment strategy.
+     * The clientId parameter in the following command is a unique, user-specified ID to identify the client for the
+     * configuration. This ID enables AppConfig to deploy the configuration in intervals, as defined in the deployment
+     * strategy.
      * </p>
      * 
-     * @return A unique ID to identify the client for the configuration. This ID enables AppConfig to deploy the
-     *         configuration in intervals, as defined in the deployment strategy.
+     * @return The clientId parameter in the following command is a unique, user-specified ID to identify the client for
+     *         the configuration. This ID enables AppConfig to deploy the configuration in intervals, as defined in the
+     *         deployment strategy.
      */
 
     public String getClientId() {
@@ -227,13 +232,15 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A unique ID to identify the client for the configuration. This ID enables AppConfig to deploy the configuration
-     * in intervals, as defined in the deployment strategy.
+     * The clientId parameter in the following command is a unique, user-specified ID to identify the client for the
+     * configuration. This ID enables AppConfig to deploy the configuration in intervals, as defined in the deployment
+     * strategy.
      * </p>
      * 
      * @param clientId
-     *        A unique ID to identify the client for the configuration. This ID enables AppConfig to deploy the
-     *        configuration in intervals, as defined in the deployment strategy.
+     *        The clientId parameter in the following command is a unique, user-specified ID to identify the client for
+     *        the configuration. This ID enables AppConfig to deploy the configuration in intervals, as defined in the
+     *        deployment strategy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -248,9 +255,9 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <important>
      * <p>
-     * AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
-     * configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call
-     * to <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
+     * AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the configuration
+     * version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call to
+     * <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
      * clients receive a configuration.
      * </p>
      * <p>
@@ -262,15 +269,15 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * <p>
      * For more information about working with configurations, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-retrieving-the-configuration.html"
-     * >Retrieving the Configuration</a> in the <i>AWS AppConfig User Guide</i>.
+     * href="http://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-retrieving-the-configuration.html"
+     * >Retrieving the Configuration</a> in the <i>AppConfig User Guide</i>.
      * </p>
      * 
      * @param clientConfigurationVersion
      *        The configuration version returned in the most recent <code>GetConfiguration</code> response.</p>
      *        <important>
      *        <p>
-     *        AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
+     *        AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
      *        configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each
      *        call to <code>GetConfiguration</code>, your clients receive the current configuration. You are charged
      *        each time your clients receive a configuration.
@@ -283,9 +290,9 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </important>
      *        <p>
-     *        For more information about working with configurations, see <a href=
-     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-retrieving-the-configuration.html"
-     *        >Retrieving the Configuration</a> in the <i>AWS AppConfig User Guide</i>.
+     *        For more information about working with configurations, see <a
+     *        href="http://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-retrieving-the-configuration.html"
+     *        >Retrieving the Configuration</a> in the <i>AppConfig User Guide</i>.
      */
 
     public void setClientConfigurationVersion(String clientConfigurationVersion) {
@@ -298,9 +305,9 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <important>
      * <p>
-     * AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
-     * configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call
-     * to <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
+     * AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the configuration
+     * version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call to
+     * <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
      * clients receive a configuration.
      * </p>
      * <p>
@@ -312,14 +319,14 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * <p>
      * For more information about working with configurations, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-retrieving-the-configuration.html"
-     * >Retrieving the Configuration</a> in the <i>AWS AppConfig User Guide</i>.
+     * href="http://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-retrieving-the-configuration.html"
+     * >Retrieving the Configuration</a> in the <i>AppConfig User Guide</i>.
      * </p>
      * 
      * @return The configuration version returned in the most recent <code>GetConfiguration</code> response.</p>
      *         <important>
      *         <p>
-     *         AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
+     *         AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
      *         configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with
      *         each call to <code>GetConfiguration</code>, your clients receive the current configuration. You are
      *         charged each time your clients receive a configuration.
@@ -333,8 +340,8 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      *         </important>
      *         <p>
      *         For more information about working with configurations, see <a href=
-     *         "https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-retrieving-the-configuration.html"
-     *         >Retrieving the Configuration</a> in the <i>AWS AppConfig User Guide</i>.
+     *         "http://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-retrieving-the-configuration.html"
+     *         >Retrieving the Configuration</a> in the <i>AppConfig User Guide</i>.
      */
 
     public String getClientConfigurationVersion() {
@@ -347,9 +354,9 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <important>
      * <p>
-     * AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
-     * configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call
-     * to <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
+     * AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the configuration
+     * version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call to
+     * <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
      * clients receive a configuration.
      * </p>
      * <p>
@@ -361,15 +368,15 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      * </important>
      * <p>
      * For more information about working with configurations, see <a
-     * href="https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-retrieving-the-configuration.html"
-     * >Retrieving the Configuration</a> in the <i>AWS AppConfig User Guide</i>.
+     * href="http://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-retrieving-the-configuration.html"
+     * >Retrieving the Configuration</a> in the <i>AppConfig User Guide</i>.
      * </p>
      * 
      * @param clientConfigurationVersion
      *        The configuration version returned in the most recent <code>GetConfiguration</code> response.</p>
      *        <important>
      *        <p>
-     *        AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
+     *        AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
      *        configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each
      *        call to <code>GetConfiguration</code>, your clients receive the current configuration. You are charged
      *        each time your clients receive a configuration.
@@ -382,9 +389,9 @@ public class GetConfigurationRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </important>
      *        <p>
-     *        For more information about working with configurations, see <a href=
-     *        "https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-retrieving-the-configuration.html"
-     *        >Retrieving the Configuration</a> in the <i>AWS AppConfig User Guide</i>.
+     *        For more information about working with configurations, see <a
+     *        href="http://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-retrieving-the-configuration.html"
+     *        >Retrieving the Configuration</a> in the <i>AppConfig User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,13 +31,13 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The type of deployment event. Deployment event types include the start, stop, or completion of a deployment; a
-     * percentage update; the start or stop of a bake period; the start or completion of a rollback.
+     * percentage update; the start or stop of a bake period; and the start or completion of a rollback.
      * </p>
      */
     private String eventType;
     /**
      * <p>
-     * The entity that triggered the deployment event. Events can be triggered by a user, AWS AppConfig, an Amazon
+     * The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon
      * CloudWatch alarm, or an internal error.
      * </p>
      */
@@ -45,8 +45,8 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A description of the deployment event. Descriptions include, but are not limited to, the user account or the
-     * CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment, or in the
-     * case of an internal error, a recommendation to attempt a new deployment.
+     * Amazon CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment, or
+     * in the case of an internal error, a recommendation to attempt a new deployment.
      * </p>
      */
     private String description;
@@ -60,12 +60,12 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The type of deployment event. Deployment event types include the start, stop, or completion of a deployment; a
-     * percentage update; the start or stop of a bake period; the start or completion of a rollback.
+     * percentage update; the start or stop of a bake period; and the start or completion of a rollback.
      * </p>
      * 
      * @param eventType
      *        The type of deployment event. Deployment event types include the start, stop, or completion of a
-     *        deployment; a percentage update; the start or stop of a bake period; the start or completion of a
+     *        deployment; a percentage update; the start or stop of a bake period; and the start or completion of a
      *        rollback.
      * @see DeploymentEventType
      */
@@ -77,11 +77,11 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The type of deployment event. Deployment event types include the start, stop, or completion of a deployment; a
-     * percentage update; the start or stop of a bake period; the start or completion of a rollback.
+     * percentage update; the start or stop of a bake period; and the start or completion of a rollback.
      * </p>
      * 
      * @return The type of deployment event. Deployment event types include the start, stop, or completion of a
-     *         deployment; a percentage update; the start or stop of a bake period; the start or completion of a
+     *         deployment; a percentage update; the start or stop of a bake period; and the start or completion of a
      *         rollback.
      * @see DeploymentEventType
      */
@@ -93,12 +93,12 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The type of deployment event. Deployment event types include the start, stop, or completion of a deployment; a
-     * percentage update; the start or stop of a bake period; the start or completion of a rollback.
+     * percentage update; the start or stop of a bake period; and the start or completion of a rollback.
      * </p>
      * 
      * @param eventType
      *        The type of deployment event. Deployment event types include the start, stop, or completion of a
-     *        deployment; a percentage update; the start or stop of a bake period; the start or completion of a
+     *        deployment; a percentage update; the start or stop of a bake period; and the start or completion of a
      *        rollback.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeploymentEventType
@@ -112,12 +112,12 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The type of deployment event. Deployment event types include the start, stop, or completion of a deployment; a
-     * percentage update; the start or stop of a bake period; the start or completion of a rollback.
+     * percentage update; the start or stop of a bake period; and the start or completion of a rollback.
      * </p>
      * 
      * @param eventType
      *        The type of deployment event. Deployment event types include the start, stop, or completion of a
-     *        deployment; a percentage update; the start or stop of a bake period; the start or completion of a
+     *        deployment; a percentage update; the start or stop of a bake period; and the start or completion of a
      *        rollback.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DeploymentEventType
@@ -130,13 +130,13 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The entity that triggered the deployment event. Events can be triggered by a user, AWS AppConfig, an Amazon
+     * The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon
      * CloudWatch alarm, or an internal error.
      * </p>
      * 
      * @param triggeredBy
-     *        The entity that triggered the deployment event. Events can be triggered by a user, AWS AppConfig, an
-     *        Amazon CloudWatch alarm, or an internal error.
+     *        The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon
+     *        CloudWatch alarm, or an internal error.
      * @see TriggeredBy
      */
 
@@ -146,12 +146,12 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The entity that triggered the deployment event. Events can be triggered by a user, AWS AppConfig, an Amazon
+     * The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon
      * CloudWatch alarm, or an internal error.
      * </p>
      * 
-     * @return The entity that triggered the deployment event. Events can be triggered by a user, AWS AppConfig, an
-     *         Amazon CloudWatch alarm, or an internal error.
+     * @return The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon
+     *         CloudWatch alarm, or an internal error.
      * @see TriggeredBy
      */
 
@@ -161,13 +161,13 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The entity that triggered the deployment event. Events can be triggered by a user, AWS AppConfig, an Amazon
+     * The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon
      * CloudWatch alarm, or an internal error.
      * </p>
      * 
      * @param triggeredBy
-     *        The entity that triggered the deployment event. Events can be triggered by a user, AWS AppConfig, an
-     *        Amazon CloudWatch alarm, or an internal error.
+     *        The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon
+     *        CloudWatch alarm, or an internal error.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TriggeredBy
      */
@@ -179,13 +179,13 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The entity that triggered the deployment event. Events can be triggered by a user, AWS AppConfig, an Amazon
+     * The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon
      * CloudWatch alarm, or an internal error.
      * </p>
      * 
      * @param triggeredBy
-     *        The entity that triggered the deployment event. Events can be triggered by a user, AWS AppConfig, an
-     *        Amazon CloudWatch alarm, or an internal error.
+     *        The entity that triggered the deployment event. Events can be triggered by a user, AppConfig, an Amazon
+     *        CloudWatch alarm, or an internal error.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TriggeredBy
      */
@@ -198,14 +198,14 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A description of the deployment event. Descriptions include, but are not limited to, the user account or the
-     * CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment, or in the
-     * case of an internal error, a recommendation to attempt a new deployment.
+     * Amazon CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment, or
+     * in the case of an internal error, a recommendation to attempt a new deployment.
      * </p>
      * 
      * @param description
      *        A description of the deployment event. Descriptions include, but are not limited to, the user account or
-     *        the CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment,
-     *        or in the case of an internal error, a recommendation to attempt a new deployment.
+     *        the Amazon CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the
+     *        deployment, or in the case of an internal error, a recommendation to attempt a new deployment.
      */
 
     public void setDescription(String description) {
@@ -215,13 +215,13 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A description of the deployment event. Descriptions include, but are not limited to, the user account or the
-     * CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment, or in the
-     * case of an internal error, a recommendation to attempt a new deployment.
+     * Amazon CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment, or
+     * in the case of an internal error, a recommendation to attempt a new deployment.
      * </p>
      * 
      * @return A description of the deployment event. Descriptions include, but are not limited to, the user account or
-     *         the CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment,
-     *         or in the case of an internal error, a recommendation to attempt a new deployment.
+     *         the Amazon CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the
+     *         deployment, or in the case of an internal error, a recommendation to attempt a new deployment.
      */
 
     public String getDescription() {
@@ -231,14 +231,14 @@ public class DeploymentEvent implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * A description of the deployment event. Descriptions include, but are not limited to, the user account or the
-     * CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment, or in the
-     * case of an internal error, a recommendation to attempt a new deployment.
+     * Amazon CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment, or
+     * in the case of an internal error, a recommendation to attempt a new deployment.
      * </p>
      * 
      * @param description
      *        A description of the deployment event. Descriptions include, but are not limited to, the user account or
-     *        the CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the deployment,
-     *        or in the case of an internal error, a recommendation to attempt a new deployment.
+     *        the Amazon CloudWatch alarm ARN that initiated a rollback, the percentage of hosts that received the
+     *        deployment, or in the case of an internal error, a recommendation to attempt a new deployment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

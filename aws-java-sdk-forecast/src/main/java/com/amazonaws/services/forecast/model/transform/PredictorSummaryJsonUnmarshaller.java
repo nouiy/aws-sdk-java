@@ -60,6 +60,14 @@ public class PredictorSummaryJsonUnmarshaller implements Unmarshaller<PredictorS
                     context.nextToken();
                     predictorSummary.setDatasetGroupArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("IsAutoPredictor", targetDepth)) {
+                    context.nextToken();
+                    predictorSummary.setIsAutoPredictor(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("ReferencePredictorSummary", targetDepth)) {
+                    context.nextToken();
+                    predictorSummary.setReferencePredictorSummary(ReferencePredictorSummaryJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Status", targetDepth)) {
                     context.nextToken();
                     predictorSummary.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

@@ -61,7 +61,7 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
     private OpenMonitoring openMonitoring;
     /**
      * <p>
-     * The Kafka version.
+     * The Apache Kafka version.
      * </p>
      */
     private String kafkaVersion;
@@ -90,6 +90,12 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private EncryptionInfo encryptionInfo;
+    /**
+     * <p>
+     * Information about the broker access configuration.
+     * </p>
+     */
+    private ConnectivityInfo connectivityInfo;
 
     /**
      * <p>
@@ -377,12 +383,12 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Kafka version.
+     * The Apache Kafka version.
      * </p>
      * 
      * @param kafkaVersion
      *        <p>
-     *        The Kafka version.
+     *        The Apache Kafka version.
      *        </p>
      */
 
@@ -392,11 +398,11 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Kafka version.
+     * The Apache Kafka version.
      * </p>
      * 
      * @return <p>
-     *         The Kafka version.
+     *         The Apache Kafka version.
      *         </p>
      */
 
@@ -406,12 +412,12 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Kafka version.
+     * The Apache Kafka version.
      * </p>
      * 
      * @param kafkaVersion
      *        <p>
-     *        The Kafka version.
+     *        The Apache Kafka version.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -612,6 +618,52 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * Information about the broker access configuration.
+     * </p>
+     * 
+     * @param connectivityInfo
+     *        <p>
+     *        Information about the broker access configuration.
+     *        </p>
+     */
+
+    public void setConnectivityInfo(ConnectivityInfo connectivityInfo) {
+        this.connectivityInfo = connectivityInfo;
+    }
+
+    /**
+     * <p>
+     * Information about the broker access configuration.
+     * </p>
+     * 
+     * @return <p>
+     *         Information about the broker access configuration.
+     *         </p>
+     */
+
+    public ConnectivityInfo getConnectivityInfo() {
+        return this.connectivityInfo;
+    }
+
+    /**
+     * <p>
+     * Information about the broker access configuration.
+     * </p>
+     * 
+     * @param connectivityInfo
+     *        <p>
+     *        Information about the broker access configuration.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MutableClusterInfo withConnectivityInfo(ConnectivityInfo connectivityInfo) {
+        setConnectivityInfo(connectivityInfo);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -642,7 +694,9 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
         if (getClientAuthentication() != null)
             sb.append("ClientAuthentication: ").append(getClientAuthentication()).append(",");
         if (getEncryptionInfo() != null)
-            sb.append("EncryptionInfo: ").append(getEncryptionInfo());
+            sb.append("EncryptionInfo: ").append(getEncryptionInfo()).append(",");
+        if (getConnectivityInfo() != null)
+            sb.append("ConnectivityInfo: ").append(getConnectivityInfo());
         sb.append("}");
         return sb.toString();
     }
@@ -697,6 +751,10 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getEncryptionInfo() != null && other.getEncryptionInfo().equals(this.getEncryptionInfo()) == false)
             return false;
+        if (other.getConnectivityInfo() == null ^ this.getConnectivityInfo() == null)
+            return false;
+        if (other.getConnectivityInfo() != null && other.getConnectivityInfo().equals(this.getConnectivityInfo()) == false)
+            return false;
         return true;
     }
 
@@ -715,6 +773,7 @@ public class MutableClusterInfo implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
         hashCode = prime * hashCode + ((getClientAuthentication() == null) ? 0 : getClientAuthentication().hashCode());
         hashCode = prime * hashCode + ((getEncryptionInfo() == null) ? 0 : getEncryptionInfo().hashCode());
+        hashCode = prime * hashCode + ((getConnectivityInfo() == null) ? 0 : getConnectivityInfo().hashCode());
         return hashCode;
     }
 

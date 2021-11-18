@@ -84,7 +84,7 @@ public class AmazonNimbleStudioClient extends AmazonWebServiceClient implements 
                     .withProtocolVersion("1.1")
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
-                    .withContentTypeOverride("application/x-amz-json-1.1")
+                    .withContentTypeOverride("application/json")
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.nimblestudio.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))

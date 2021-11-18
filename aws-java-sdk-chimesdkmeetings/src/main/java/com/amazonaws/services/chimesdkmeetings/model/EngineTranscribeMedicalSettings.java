@@ -59,6 +59,12 @@ public class EngineTranscribeMedicalSettings implements Serializable, Cloneable,
      * </p>
      */
     private String region;
+    /**
+     * <p>
+     * Set this field to <code>PHI</code> to identify personal health information in the transcription output.
+     * </p>
+     */
+    private String contentIdentificationType;
 
     /**
      * <p>
@@ -345,6 +351,65 @@ public class EngineTranscribeMedicalSettings implements Serializable, Cloneable,
     }
 
     /**
+     * <p>
+     * Set this field to <code>PHI</code> to identify personal health information in the transcription output.
+     * </p>
+     * 
+     * @param contentIdentificationType
+     *        Set this field to <code>PHI</code> to identify personal health information in the transcription output.
+     * @see TranscribeMedicalContentIdentificationType
+     */
+
+    public void setContentIdentificationType(String contentIdentificationType) {
+        this.contentIdentificationType = contentIdentificationType;
+    }
+
+    /**
+     * <p>
+     * Set this field to <code>PHI</code> to identify personal health information in the transcription output.
+     * </p>
+     * 
+     * @return Set this field to <code>PHI</code> to identify personal health information in the transcription output.
+     * @see TranscribeMedicalContentIdentificationType
+     */
+
+    public String getContentIdentificationType() {
+        return this.contentIdentificationType;
+    }
+
+    /**
+     * <p>
+     * Set this field to <code>PHI</code> to identify personal health information in the transcription output.
+     * </p>
+     * 
+     * @param contentIdentificationType
+     *        Set this field to <code>PHI</code> to identify personal health information in the transcription output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TranscribeMedicalContentIdentificationType
+     */
+
+    public EngineTranscribeMedicalSettings withContentIdentificationType(String contentIdentificationType) {
+        setContentIdentificationType(contentIdentificationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Set this field to <code>PHI</code> to identify personal health information in the transcription output.
+     * </p>
+     * 
+     * @param contentIdentificationType
+     *        Set this field to <code>PHI</code> to identify personal health information in the transcription output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TranscribeMedicalContentIdentificationType
+     */
+
+    public EngineTranscribeMedicalSettings withContentIdentificationType(TranscribeMedicalContentIdentificationType contentIdentificationType) {
+        this.contentIdentificationType = contentIdentificationType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -365,7 +430,9 @@ public class EngineTranscribeMedicalSettings implements Serializable, Cloneable,
         if (getVocabularyName() != null)
             sb.append("VocabularyName: ").append(getVocabularyName()).append(",");
         if (getRegion() != null)
-            sb.append("Region: ").append(getRegion());
+            sb.append("Region: ").append(getRegion()).append(",");
+        if (getContentIdentificationType() != null)
+            sb.append("ContentIdentificationType: ").append(getContentIdentificationType());
         sb.append("}");
         return sb.toString();
     }
@@ -400,6 +467,10 @@ public class EngineTranscribeMedicalSettings implements Serializable, Cloneable,
             return false;
         if (other.getRegion() != null && other.getRegion().equals(this.getRegion()) == false)
             return false;
+        if (other.getContentIdentificationType() == null ^ this.getContentIdentificationType() == null)
+            return false;
+        if (other.getContentIdentificationType() != null && other.getContentIdentificationType().equals(this.getContentIdentificationType()) == false)
+            return false;
         return true;
     }
 
@@ -413,6 +484,7 @@ public class EngineTranscribeMedicalSettings implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getVocabularyName() == null) ? 0 : getVocabularyName().hashCode());
         hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
+        hashCode = prime * hashCode + ((getContentIdentificationType() == null) ? 0 : getContentIdentificationType().hashCode());
         return hashCode;
     }
 

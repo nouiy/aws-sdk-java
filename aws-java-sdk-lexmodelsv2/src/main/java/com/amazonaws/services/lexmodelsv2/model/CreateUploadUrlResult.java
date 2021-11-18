@@ -25,7 +25,8 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * An identifier for a unique import job. Use it when you call the operation.
+     * An identifier for a unique import job. Use it when you call the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_StartImport.html">StartImport</a> operation.
      * </p>
      */
     private String importId;
@@ -38,11 +39,13 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * An identifier for a unique import job. Use it when you call the operation.
+     * An identifier for a unique import job. Use it when you call the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_StartImport.html">StartImport</a> operation.
      * </p>
      * 
      * @param importId
-     *        An identifier for a unique import job. Use it when you call the operation.
+     *        An identifier for a unique import job. Use it when you call the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_StartImport.html">StartImport</a> operation.
      */
 
     public void setImportId(String importId) {
@@ -51,10 +54,12 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * An identifier for a unique import job. Use it when you call the operation.
+     * An identifier for a unique import job. Use it when you call the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_StartImport.html">StartImport</a> operation.
      * </p>
      * 
-     * @return An identifier for a unique import job. Use it when you call the operation.
+     * @return An identifier for a unique import job. Use it when you call the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/API_StartImport.html">StartImport</a> operation.
      */
 
     public String getImportId() {
@@ -63,11 +68,13 @@ public class CreateUploadUrlResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * An identifier for a unique import job. Use it when you call the operation.
+     * An identifier for a unique import job. Use it when you call the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_StartImport.html">StartImport</a> operation.
      * </p>
      * 
      * @param importId
-     *        An identifier for a unique import job. Use it when you call the operation.
+     *        An identifier for a unique import job. Use it when you call the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_StartImport.html">StartImport</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

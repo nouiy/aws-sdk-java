@@ -47,6 +47,24 @@ public class GetBootstrapBrokersResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      */
     private String bootstrapBrokerStringSaslIam;
+    /**
+     * <p>
+     * A string containing one or more DNS names (or IP) and TLS port pairs.
+     * </p>
+     */
+    private String bootstrapBrokerStringPublicTls;
+    /**
+     * <p>
+     * A string containing one or more DNS names (or IP) and Sasl Scram port pairs.
+     * </p>
+     */
+    private String bootstrapBrokerStringPublicSaslScram;
+    /**
+     * <p>
+     * A string that contains one or more DNS names (or IP addresses) and SASL IAM port pairs.
+     * </p>
+     */
+    private String bootstrapBrokerStringPublicSaslIam;
 
     /**
      * <p>
@@ -233,6 +251,144 @@ public class GetBootstrapBrokersResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * A string containing one or more DNS names (or IP) and TLS port pairs.
+     * </p>
+     * 
+     * @param bootstrapBrokerStringPublicTls
+     *        <p>
+     *        A string containing one or more DNS names (or IP) and TLS port pairs.
+     *        </p>
+     */
+
+    public void setBootstrapBrokerStringPublicTls(String bootstrapBrokerStringPublicTls) {
+        this.bootstrapBrokerStringPublicTls = bootstrapBrokerStringPublicTls;
+    }
+
+    /**
+     * <p>
+     * A string containing one or more DNS names (or IP) and TLS port pairs.
+     * </p>
+     * 
+     * @return <p>
+     *         A string containing one or more DNS names (or IP) and TLS port pairs.
+     *         </p>
+     */
+
+    public String getBootstrapBrokerStringPublicTls() {
+        return this.bootstrapBrokerStringPublicTls;
+    }
+
+    /**
+     * <p>
+     * A string containing one or more DNS names (or IP) and TLS port pairs.
+     * </p>
+     * 
+     * @param bootstrapBrokerStringPublicTls
+     *        <p>
+     *        A string containing one or more DNS names (or IP) and TLS port pairs.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetBootstrapBrokersResult withBootstrapBrokerStringPublicTls(String bootstrapBrokerStringPublicTls) {
+        setBootstrapBrokerStringPublicTls(bootstrapBrokerStringPublicTls);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A string containing one or more DNS names (or IP) and Sasl Scram port pairs.
+     * </p>
+     * 
+     * @param bootstrapBrokerStringPublicSaslScram
+     *        <p>
+     *        A string containing one or more DNS names (or IP) and Sasl Scram port pairs.
+     *        </p>
+     */
+
+    public void setBootstrapBrokerStringPublicSaslScram(String bootstrapBrokerStringPublicSaslScram) {
+        this.bootstrapBrokerStringPublicSaslScram = bootstrapBrokerStringPublicSaslScram;
+    }
+
+    /**
+     * <p>
+     * A string containing one or more DNS names (or IP) and Sasl Scram port pairs.
+     * </p>
+     * 
+     * @return <p>
+     *         A string containing one or more DNS names (or IP) and Sasl Scram port pairs.
+     *         </p>
+     */
+
+    public String getBootstrapBrokerStringPublicSaslScram() {
+        return this.bootstrapBrokerStringPublicSaslScram;
+    }
+
+    /**
+     * <p>
+     * A string containing one or more DNS names (or IP) and Sasl Scram port pairs.
+     * </p>
+     * 
+     * @param bootstrapBrokerStringPublicSaslScram
+     *        <p>
+     *        A string containing one or more DNS names (or IP) and Sasl Scram port pairs.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetBootstrapBrokersResult withBootstrapBrokerStringPublicSaslScram(String bootstrapBrokerStringPublicSaslScram) {
+        setBootstrapBrokerStringPublicSaslScram(bootstrapBrokerStringPublicSaslScram);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A string that contains one or more DNS names (or IP addresses) and SASL IAM port pairs.
+     * </p>
+     * 
+     * @param bootstrapBrokerStringPublicSaslIam
+     *        <p>
+     *        A string that contains one or more DNS names (or IP addresses) and SASL IAM port pairs.
+     *        </p>
+     */
+
+    public void setBootstrapBrokerStringPublicSaslIam(String bootstrapBrokerStringPublicSaslIam) {
+        this.bootstrapBrokerStringPublicSaslIam = bootstrapBrokerStringPublicSaslIam;
+    }
+
+    /**
+     * <p>
+     * A string that contains one or more DNS names (or IP addresses) and SASL IAM port pairs.
+     * </p>
+     * 
+     * @return <p>
+     *         A string that contains one or more DNS names (or IP addresses) and SASL IAM port pairs.
+     *         </p>
+     */
+
+    public String getBootstrapBrokerStringPublicSaslIam() {
+        return this.bootstrapBrokerStringPublicSaslIam;
+    }
+
+    /**
+     * <p>
+     * A string that contains one or more DNS names (or IP addresses) and SASL IAM port pairs.
+     * </p>
+     * 
+     * @param bootstrapBrokerStringPublicSaslIam
+     *        <p>
+     *        A string that contains one or more DNS names (or IP addresses) and SASL IAM port pairs.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetBootstrapBrokersResult withBootstrapBrokerStringPublicSaslIam(String bootstrapBrokerStringPublicSaslIam) {
+        setBootstrapBrokerStringPublicSaslIam(bootstrapBrokerStringPublicSaslIam);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -251,7 +407,13 @@ public class GetBootstrapBrokersResult extends com.amazonaws.AmazonWebServiceRes
         if (getBootstrapBrokerStringSaslScram() != null)
             sb.append("BootstrapBrokerStringSaslScram: ").append(getBootstrapBrokerStringSaslScram()).append(",");
         if (getBootstrapBrokerStringSaslIam() != null)
-            sb.append("BootstrapBrokerStringSaslIam: ").append(getBootstrapBrokerStringSaslIam());
+            sb.append("BootstrapBrokerStringSaslIam: ").append(getBootstrapBrokerStringSaslIam()).append(",");
+        if (getBootstrapBrokerStringPublicTls() != null)
+            sb.append("BootstrapBrokerStringPublicTls: ").append(getBootstrapBrokerStringPublicTls()).append(",");
+        if (getBootstrapBrokerStringPublicSaslScram() != null)
+            sb.append("BootstrapBrokerStringPublicSaslScram: ").append(getBootstrapBrokerStringPublicSaslScram()).append(",");
+        if (getBootstrapBrokerStringPublicSaslIam() != null)
+            sb.append("BootstrapBrokerStringPublicSaslIam: ").append(getBootstrapBrokerStringPublicSaslIam());
         sb.append("}");
         return sb.toString();
     }
@@ -283,6 +445,21 @@ public class GetBootstrapBrokersResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getBootstrapBrokerStringSaslIam() != null && other.getBootstrapBrokerStringSaslIam().equals(this.getBootstrapBrokerStringSaslIam()) == false)
             return false;
+        if (other.getBootstrapBrokerStringPublicTls() == null ^ this.getBootstrapBrokerStringPublicTls() == null)
+            return false;
+        if (other.getBootstrapBrokerStringPublicTls() != null
+                && other.getBootstrapBrokerStringPublicTls().equals(this.getBootstrapBrokerStringPublicTls()) == false)
+            return false;
+        if (other.getBootstrapBrokerStringPublicSaslScram() == null ^ this.getBootstrapBrokerStringPublicSaslScram() == null)
+            return false;
+        if (other.getBootstrapBrokerStringPublicSaslScram() != null
+                && other.getBootstrapBrokerStringPublicSaslScram().equals(this.getBootstrapBrokerStringPublicSaslScram()) == false)
+            return false;
+        if (other.getBootstrapBrokerStringPublicSaslIam() == null ^ this.getBootstrapBrokerStringPublicSaslIam() == null)
+            return false;
+        if (other.getBootstrapBrokerStringPublicSaslIam() != null
+                && other.getBootstrapBrokerStringPublicSaslIam().equals(this.getBootstrapBrokerStringPublicSaslIam()) == false)
+            return false;
         return true;
     }
 
@@ -295,6 +472,9 @@ public class GetBootstrapBrokersResult extends com.amazonaws.AmazonWebServiceRes
         hashCode = prime * hashCode + ((getBootstrapBrokerStringTls() == null) ? 0 : getBootstrapBrokerStringTls().hashCode());
         hashCode = prime * hashCode + ((getBootstrapBrokerStringSaslScram() == null) ? 0 : getBootstrapBrokerStringSaslScram().hashCode());
         hashCode = prime * hashCode + ((getBootstrapBrokerStringSaslIam() == null) ? 0 : getBootstrapBrokerStringSaslIam().hashCode());
+        hashCode = prime * hashCode + ((getBootstrapBrokerStringPublicTls() == null) ? 0 : getBootstrapBrokerStringPublicTls().hashCode());
+        hashCode = prime * hashCode + ((getBootstrapBrokerStringPublicSaslScram() == null) ? 0 : getBootstrapBrokerStringPublicSaslScram().hashCode());
+        hashCode = prime * hashCode + ((getBootstrapBrokerStringPublicSaslIam() == null) ? 0 : getBootstrapBrokerStringPublicSaslIam().hashCode());
         return hashCode;
     }
 

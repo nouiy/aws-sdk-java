@@ -78,6 +78,20 @@ public class DescribeAnomalyDetectorsRequestMarshaller implements Marshaller<Req
             }
         }
 
+        if (!describeAnomalyDetectorsRequest.getAnomalyDetectorTypes().isEmpty()
+                || !((com.amazonaws.internal.SdkInternalList<String>) describeAnomalyDetectorsRequest.getAnomalyDetectorTypes()).isAutoConstruct()) {
+            com.amazonaws.internal.SdkInternalList<String> anomalyDetectorTypesList = (com.amazonaws.internal.SdkInternalList<String>) describeAnomalyDetectorsRequest
+                    .getAnomalyDetectorTypes();
+            int anomalyDetectorTypesListIndex = 1;
+
+            for (String anomalyDetectorTypesListValue : anomalyDetectorTypesList) {
+                if (anomalyDetectorTypesListValue != null) {
+                    request.addParameter("AnomalyDetectorTypes.member." + anomalyDetectorTypesListIndex, StringUtils.fromString(anomalyDetectorTypesListValue));
+                }
+                anomalyDetectorTypesListIndex++;
+            }
+        }
+
         return request;
     }
 

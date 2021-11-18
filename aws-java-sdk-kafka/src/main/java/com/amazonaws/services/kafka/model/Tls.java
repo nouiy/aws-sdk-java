@@ -36,7 +36,7 @@ public class Tls implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> certificateAuthorityArnList;
     /**
      * <p>
-     * Specifies whether you want to enable or disable TLS authentication.
+     * Specifies whether you want to turn on or turn off TLS authentication.
      * </p>
      */
     private Boolean enabled;
@@ -122,12 +122,12 @@ public class Tls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether you want to enable or disable TLS authentication.
+     * Specifies whether you want to turn on or turn off TLS authentication.
      * </p>
      * 
      * @param enabled
      *        <p>
-     *        Specifies whether you want to enable or disable TLS authentication.
+     *        Specifies whether you want to turn on or turn off TLS authentication.
      *        </p>
      */
 
@@ -137,11 +137,11 @@ public class Tls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether you want to enable or disable TLS authentication.
+     * Specifies whether you want to turn on or turn off TLS authentication.
      * </p>
      * 
      * @return <p>
-     *         Specifies whether you want to enable or disable TLS authentication.
+     *         Specifies whether you want to turn on or turn off TLS authentication.
      *         </p>
      */
 
@@ -151,12 +151,12 @@ public class Tls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether you want to enable or disable TLS authentication.
+     * Specifies whether you want to turn on or turn off TLS authentication.
      * </p>
      * 
      * @param enabled
      *        <p>
-     *        Specifies whether you want to enable or disable TLS authentication.
+     *        Specifies whether you want to turn on or turn off TLS authentication.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -168,11 +168,11 @@ public class Tls implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether you want to enable or disable TLS authentication.
+     * Specifies whether you want to turn on or turn off TLS authentication.
      * </p>
      * 
      * @return <p>
-     *         Specifies whether you want to enable or disable TLS authentication.
+     *         Specifies whether you want to turn on or turn off TLS authentication.
      *         </p>
      */
 

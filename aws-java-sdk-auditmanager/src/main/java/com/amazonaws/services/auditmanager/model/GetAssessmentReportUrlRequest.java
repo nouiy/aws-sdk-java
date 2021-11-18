@@ -27,24 +27,24 @@ public class GetAssessmentReportUrlRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the assessment report.
+     * The unique identifier for the assessment report.
      * </p>
      */
     private String assessmentReportId;
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      */
     private String assessmentId;
 
     /**
      * <p>
-     * The identifier for the assessment report.
+     * The unique identifier for the assessment report.
      * </p>
      * 
      * @param assessmentReportId
-     *        The identifier for the assessment report.
+     *        The unique identifier for the assessment report.
      */
 
     public void setAssessmentReportId(String assessmentReportId) {
@@ -53,10 +53,10 @@ public class GetAssessmentReportUrlRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the assessment report.
+     * The unique identifier for the assessment report.
      * </p>
      * 
-     * @return The identifier for the assessment report.
+     * @return The unique identifier for the assessment report.
      */
 
     public String getAssessmentReportId() {
@@ -65,11 +65,11 @@ public class GetAssessmentReportUrlRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the assessment report.
+     * The unique identifier for the assessment report.
      * </p>
      * 
      * @param assessmentReportId
-     *        The identifier for the assessment report.
+     *        The unique identifier for the assessment report.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class GetAssessmentReportUrlRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the assessment.
+     *        The unique identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -93,10 +93,10 @@ public class GetAssessmentReportUrlRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the assessment.
+     * @return The unique identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -105,11 +105,11 @@ public class GetAssessmentReportUrlRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the assessment.
+     *        The unique identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

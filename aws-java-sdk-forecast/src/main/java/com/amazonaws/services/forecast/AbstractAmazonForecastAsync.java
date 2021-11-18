@@ -28,6 +28,19 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreateAutoPredictorResult> createAutoPredictorAsync(CreateAutoPredictorRequest request) {
+
+        return createAutoPredictorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateAutoPredictorResult> createAutoPredictorAsync(CreateAutoPredictorRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateAutoPredictorRequest, CreateAutoPredictorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateDatasetResult> createDatasetAsync(CreateDatasetRequest request) {
 
         return createDatasetAsync(request, null);
@@ -62,6 +75,32 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     @Override
     public java.util.concurrent.Future<CreateDatasetImportJobResult> createDatasetImportJobAsync(CreateDatasetImportJobRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateDatasetImportJobRequest, CreateDatasetImportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExplainabilityResult> createExplainabilityAsync(CreateExplainabilityRequest request) {
+
+        return createExplainabilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExplainabilityResult> createExplainabilityAsync(CreateExplainabilityRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateExplainabilityRequest, CreateExplainabilityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExplainabilityExportResult> createExplainabilityExportAsync(CreateExplainabilityExportRequest request) {
+
+        return createExplainabilityExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateExplainabilityExportResult> createExplainabilityExportAsync(CreateExplainabilityExportRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateExplainabilityExportRequest, CreateExplainabilityExportResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -160,6 +199,32 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteExplainabilityResult> deleteExplainabilityAsync(DeleteExplainabilityRequest request) {
+
+        return deleteExplainabilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExplainabilityResult> deleteExplainabilityAsync(DeleteExplainabilityRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteExplainabilityRequest, DeleteExplainabilityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExplainabilityExportResult> deleteExplainabilityExportAsync(DeleteExplainabilityExportRequest request) {
+
+        return deleteExplainabilityExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteExplainabilityExportResult> deleteExplainabilityExportAsync(DeleteExplainabilityExportRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteExplainabilityExportRequest, DeleteExplainabilityExportResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteForecastResult> deleteForecastAsync(DeleteForecastRequest request) {
 
         return deleteForecastAsync(request, null);
@@ -227,6 +292,19 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeAutoPredictorResult> describeAutoPredictorAsync(DescribeAutoPredictorRequest request) {
+
+        return describeAutoPredictorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeAutoPredictorResult> describeAutoPredictorAsync(DescribeAutoPredictorRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeAutoPredictorRequest, DescribeAutoPredictorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDatasetResult> describeDatasetAsync(DescribeDatasetRequest request) {
 
         return describeDatasetAsync(request, null);
@@ -261,6 +339,32 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     @Override
     public java.util.concurrent.Future<DescribeDatasetImportJobResult> describeDatasetImportJobAsync(DescribeDatasetImportJobRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeDatasetImportJobRequest, DescribeDatasetImportJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExplainabilityResult> describeExplainabilityAsync(DescribeExplainabilityRequest request) {
+
+        return describeExplainabilityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExplainabilityResult> describeExplainabilityAsync(DescribeExplainabilityRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeExplainabilityRequest, DescribeExplainabilityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExplainabilityExportResult> describeExplainabilityExportAsync(DescribeExplainabilityExportRequest request) {
+
+        return describeExplainabilityExportAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeExplainabilityExportResult> describeExplainabilityExportAsync(DescribeExplainabilityExportRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeExplainabilityExportRequest, DescribeExplainabilityExportResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -367,6 +471,32 @@ public class AbstractAmazonForecastAsync extends AbstractAmazonForecast implemen
     @Override
     public java.util.concurrent.Future<ListDatasetsResult> listDatasetsAsync(ListDatasetsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListDatasetsRequest, ListDatasetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExplainabilitiesResult> listExplainabilitiesAsync(ListExplainabilitiesRequest request) {
+
+        return listExplainabilitiesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExplainabilitiesResult> listExplainabilitiesAsync(ListExplainabilitiesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListExplainabilitiesRequest, ListExplainabilitiesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExplainabilityExportsResult> listExplainabilityExportsAsync(ListExplainabilityExportsRequest request) {
+
+        return listExplainabilityExportsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListExplainabilityExportsResult> listExplainabilityExportsAsync(ListExplainabilityExportsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListExplainabilityExportsRequest, ListExplainabilityExportsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

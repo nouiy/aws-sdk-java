@@ -68,6 +68,12 @@ public class DescribeJobRunResult extends com.amazonaws.AmazonWebServiceResult<c
     private ProfileConfiguration profileConfiguration;
     /**
      * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     */
+    private java.util.List<ValidationConfiguration> validationConfigurations;
+    /**
+     * <p>
      * The unique identifier of the job run.
      * </p>
      */
@@ -415,6 +421,76 @@ public class DescribeJobRunResult extends com.amazonaws.AmazonWebServiceResult<c
 
     public DescribeJobRunResult withProfileConfiguration(ProfileConfiguration profileConfiguration) {
         setProfileConfiguration(profileConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @return List of validation configurations that are applied to the profile job.
+     */
+
+    public java.util.List<ValidationConfiguration> getValidationConfigurations() {
+        return validationConfigurations;
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     */
+
+    public void setValidationConfigurations(java.util.Collection<ValidationConfiguration> validationConfigurations) {
+        if (validationConfigurations == null) {
+            this.validationConfigurations = null;
+            return;
+        }
+
+        this.validationConfigurations = new java.util.ArrayList<ValidationConfiguration>(validationConfigurations);
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setValidationConfigurations(java.util.Collection)} or
+     * {@link #withValidationConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeJobRunResult withValidationConfigurations(ValidationConfiguration... validationConfigurations) {
+        if (this.validationConfigurations == null) {
+            setValidationConfigurations(new java.util.ArrayList<ValidationConfiguration>(validationConfigurations.length));
+        }
+        for (ValidationConfiguration ele : validationConfigurations) {
+            this.validationConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeJobRunResult withValidationConfigurations(java.util.Collection<ValidationConfiguration> validationConfigurations) {
+        setValidationConfigurations(validationConfigurations);
         return this;
     }
 
@@ -1018,6 +1094,8 @@ public class DescribeJobRunResult extends com.amazonaws.AmazonWebServiceResult<c
             sb.append("JobName: ").append(getJobName()).append(",");
         if (getProfileConfiguration() != null)
             sb.append("ProfileConfiguration: ").append(getProfileConfiguration()).append(",");
+        if (getValidationConfigurations() != null)
+            sb.append("ValidationConfigurations: ").append(getValidationConfigurations()).append(",");
         if (getRunId() != null)
             sb.append("RunId: ").append(getRunId()).append(",");
         if (getState() != null)
@@ -1082,6 +1160,10 @@ public class DescribeJobRunResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getProfileConfiguration() != null && other.getProfileConfiguration().equals(this.getProfileConfiguration()) == false)
             return false;
+        if (other.getValidationConfigurations() == null ^ this.getValidationConfigurations() == null)
+            return false;
+        if (other.getValidationConfigurations() != null && other.getValidationConfigurations().equals(this.getValidationConfigurations()) == false)
+            return false;
         if (other.getRunId() == null ^ this.getRunId() == null)
             return false;
         if (other.getRunId() != null && other.getRunId().equals(this.getRunId()) == false)
@@ -1141,6 +1223,7 @@ public class DescribeJobRunResult extends com.amazonaws.AmazonWebServiceResult<c
         hashCode = prime * hashCode + ((getExecutionTime() == null) ? 0 : getExecutionTime().hashCode());
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
         hashCode = prime * hashCode + ((getProfileConfiguration() == null) ? 0 : getProfileConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getValidationConfigurations() == null) ? 0 : getValidationConfigurations().hashCode());
         hashCode = prime * hashCode + ((getRunId() == null) ? 0 : getRunId().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getLogSubscription() == null) ? 0 : getLogSubscription().hashCode());

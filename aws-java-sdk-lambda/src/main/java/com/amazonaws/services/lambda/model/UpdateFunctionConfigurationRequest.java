@@ -77,8 +77,8 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
     private String description;
     /**
      * <p>
-     * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum
-     * allowed value is 900 seconds. For additional information, see <a
+     * The amount of time (in seconds) that Lambda allows a function to run before stopping it. The default is 3
+     * seconds. The maximum allowed value is 900 seconds. For additional information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda execution environment</a>.
      * </p>
      */
@@ -481,14 +481,14 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum
-     * allowed value is 900 seconds. For additional information, see <a
+     * The amount of time (in seconds) that Lambda allows a function to run before stopping it. The default is 3
+     * seconds. The maximum allowed value is 900 seconds. For additional information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda execution environment</a>.
      * </p>
      * 
      * @param timeout
-     *        The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The
-     *        maximum allowed value is 900 seconds. For additional information, see <a
+     *        The amount of time (in seconds) that Lambda allows a function to run before stopping it. The default is 3
+     *        seconds. The maximum allowed value is 900 seconds. For additional information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda execution
      *        environment</a>.
      */
@@ -499,13 +499,13 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum
-     * allowed value is 900 seconds. For additional information, see <a
+     * The amount of time (in seconds) that Lambda allows a function to run before stopping it. The default is 3
+     * seconds. The maximum allowed value is 900 seconds. For additional information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda execution environment</a>.
      * </p>
      * 
-     * @return The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The
-     *         maximum allowed value is 900 seconds. For additional information, see <a
+     * @return The amount of time (in seconds) that Lambda allows a function to run before stopping it. The default is 3
+     *         seconds. The maximum allowed value is 900 seconds. For additional information, see <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda execution
      *         environment</a>.
      */
@@ -516,14 +516,14 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum
-     * allowed value is 900 seconds. For additional information, see <a
+     * The amount of time (in seconds) that Lambda allows a function to run before stopping it. The default is 3
+     * seconds. The maximum allowed value is 900 seconds. For additional information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda execution environment</a>.
      * </p>
      * 
      * @param timeout
-     *        The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The
-     *        maximum allowed value is 900 seconds. For additional information, see <a
+     *        The amount of time (in seconds) that Lambda allows a function to run before stopping it. The default is 3
+     *        seconds. The maximum allowed value is 900 seconds. For additional information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html">Lambda execution
      *        environment</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

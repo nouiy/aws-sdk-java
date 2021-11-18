@@ -34,6 +34,13 @@ public class VoiceSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String voiceId;
+    /**
+     * <p>
+     * Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user. For more
+     * information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">Voices in Amazon Polly</a>.
+     * </p>
+     */
+    private String engine;
 
     /**
      * <p>
@@ -76,6 +83,77 @@ public class VoiceSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user. For more
+     * information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">Voices in Amazon Polly</a>.
+     * </p>
+     * 
+     * @param engine
+     *        Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user.
+     *        For more information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">Voices in
+     *        Amazon Polly</a>.
+     * @see VoiceEngine
+     */
+
+    public void setEngine(String engine) {
+        this.engine = engine;
+    }
+
+    /**
+     * <p>
+     * Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user. For more
+     * information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">Voices in Amazon Polly</a>.
+     * </p>
+     * 
+     * @return Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user.
+     *         For more information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">Voices in
+     *         Amazon Polly</a>.
+     * @see VoiceEngine
+     */
+
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
+     * <p>
+     * Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user. For more
+     * information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">Voices in Amazon Polly</a>.
+     * </p>
+     * 
+     * @param engine
+     *        Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user.
+     *        For more information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">Voices in
+     *        Amazon Polly</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VoiceEngine
+     */
+
+    public VoiceSettings withEngine(String engine) {
+        setEngine(engine);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user. For more
+     * information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">Voices in Amazon Polly</a>.
+     * </p>
+     * 
+     * @param engine
+     *        Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user.
+     *        For more information, see <a href="https://docs.aws.amazon.com/polly/latest/dg/voicelist.html">Voices in
+     *        Amazon Polly</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see VoiceEngine
+     */
+
+    public VoiceSettings withEngine(VoiceEngine engine) {
+        this.engine = engine.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +166,9 @@ public class VoiceSettings implements Serializable, Cloneable, StructuredPojo {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getVoiceId() != null)
-            sb.append("VoiceId: ").append(getVoiceId());
+            sb.append("VoiceId: ").append(getVoiceId()).append(",");
+        if (getEngine() != null)
+            sb.append("Engine: ").append(getEngine());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +187,10 @@ public class VoiceSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getVoiceId() != null && other.getVoiceId().equals(this.getVoiceId()) == false)
             return false;
+        if (other.getEngine() == null ^ this.getEngine() == null)
+            return false;
+        if (other.getEngine() != null && other.getEngine().equals(this.getEngine()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +200,7 @@ public class VoiceSettings implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getVoiceId() == null) ? 0 : getVoiceId().hashCode());
+        hashCode = prime * hashCode + ((getEngine() == null) ? 0 : getEngine().hashCode());
         return hashCode;
     }
 

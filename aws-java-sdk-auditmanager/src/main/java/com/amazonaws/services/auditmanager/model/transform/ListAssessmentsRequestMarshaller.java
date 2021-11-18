@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class ListAssessmentsRequestMarshaller {
 
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("status").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -48,6 +50,7 @@ public class ListAssessmentsRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(listAssessmentsRequest.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(listAssessmentsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listAssessmentsRequest.getMaxResults(), MAXRESULTS_BINDING);
         } catch (Exception e) {

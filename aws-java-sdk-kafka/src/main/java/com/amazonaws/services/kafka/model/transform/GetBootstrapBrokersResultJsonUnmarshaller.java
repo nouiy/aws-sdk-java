@@ -64,6 +64,18 @@ public class GetBootstrapBrokersResultJsonUnmarshaller implements Unmarshaller<G
                     context.nextToken();
                     getBootstrapBrokersResult.setBootstrapBrokerStringSaslIam(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("bootstrapBrokerStringPublicTls", targetDepth)) {
+                    context.nextToken();
+                    getBootstrapBrokersResult.setBootstrapBrokerStringPublicTls(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("bootstrapBrokerStringPublicSaslScram", targetDepth)) {
+                    context.nextToken();
+                    getBootstrapBrokersResult.setBootstrapBrokerStringPublicSaslScram(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("bootstrapBrokerStringPublicSaslIam", targetDepth)) {
+                    context.nextToken();
+                    getBootstrapBrokersResult.setBootstrapBrokerStringPublicSaslIam(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

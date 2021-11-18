@@ -59,6 +59,12 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
     private String state;
     /**
      * <p>
+     * Unique identifier for a live or previously live stream in the specified channel.
+     * </p>
+     */
+    private String streamId;
+    /**
+     * <p>
      * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
      * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
      * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
@@ -306,6 +312,46 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Unique identifier for a live or previously live stream in the specified channel.
+     * </p>
+     * 
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
+     */
+
+    public void setStreamId(String streamId) {
+        this.streamId = streamId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for a live or previously live stream in the specified channel.
+     * </p>
+     * 
+     * @return Unique identifier for a live or previously live stream in the specified channel.
+     */
+
+    public String getStreamId() {
+        return this.streamId;
+    }
+
+    /**
+     * <p>
+     * Unique identifier for a live or previously live stream in the specified channel.
+     * </p>
+     * 
+     * @param streamId
+     *        Unique identifier for a live or previously live stream in the specified channel.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Stream withStreamId(String streamId) {
+        setStreamId(streamId);
+        return this;
+    }
+
+    /**
+     * <p>
      * A count of concurrent views of the stream. Typically, a new view appears in <code>viewerCount</code> within 15
      * seconds of when video playback starts and a view is removed from <code>viewerCount</code> within 1 minute of when
      * video playback ends. A value of -1 indicates that the request timed out; in this case, retry.
@@ -381,6 +427,8 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
             sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
+        if (getStreamId() != null)
+            sb.append("StreamId: ").append(getStreamId()).append(",");
         if (getViewerCount() != null)
             sb.append("ViewerCount: ").append(getViewerCount());
         sb.append("}");
@@ -417,6 +465,10 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
+        if (other.getStreamId() == null ^ this.getStreamId() == null)
+            return false;
+        if (other.getStreamId() != null && other.getStreamId().equals(this.getStreamId()) == false)
+            return false;
         if (other.getViewerCount() == null ^ this.getViewerCount() == null)
             return false;
         if (other.getViewerCount() != null && other.getViewerCount().equals(this.getViewerCount()) == false)
@@ -434,6 +486,7 @@ public class Stream implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getPlaybackUrl() == null) ? 0 : getPlaybackUrl().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
         hashCode = prime * hashCode + ((getViewerCount() == null) ? 0 : getViewerCount().hashCode());
         return hashCode;
     }

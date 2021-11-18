@@ -106,6 +106,19 @@ public class AbstractAWSGlueDataBrewAsync extends AbstractAWSGlueDataBrew implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateRulesetResult> createRulesetAsync(CreateRulesetRequest request) {
+
+        return createRulesetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRulesetResult> createRulesetAsync(CreateRulesetRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateRulesetRequest, CreateRulesetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateScheduleResult> createScheduleAsync(CreateScheduleRequest request) {
 
         return createScheduleAsync(request, null);
@@ -166,6 +179,19 @@ public class AbstractAWSGlueDataBrewAsync extends AbstractAWSGlueDataBrew implem
     @Override
     public java.util.concurrent.Future<DeleteRecipeVersionResult> deleteRecipeVersionAsync(DeleteRecipeVersionRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteRecipeVersionRequest, DeleteRecipeVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRulesetResult> deleteRulesetAsync(DeleteRulesetRequest request) {
+
+        return deleteRulesetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRulesetResult> deleteRulesetAsync(DeleteRulesetRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteRulesetRequest, DeleteRulesetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -244,6 +270,19 @@ public class AbstractAWSGlueDataBrewAsync extends AbstractAWSGlueDataBrew implem
     @Override
     public java.util.concurrent.Future<DescribeRecipeResult> describeRecipeAsync(DescribeRecipeRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeRecipeRequest, DescribeRecipeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRulesetResult> describeRulesetAsync(DescribeRulesetRequest request) {
+
+        return describeRulesetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRulesetResult> describeRulesetAsync(DescribeRulesetRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeRulesetRequest, DescribeRulesetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -335,6 +374,19 @@ public class AbstractAWSGlueDataBrewAsync extends AbstractAWSGlueDataBrew implem
     @Override
     public java.util.concurrent.Future<ListRecipesResult> listRecipesAsync(ListRecipesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListRecipesRequest, ListRecipesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRulesetsResult> listRulesetsAsync(ListRulesetsRequest request) {
+
+        return listRulesetsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRulesetsResult> listRulesetsAsync(ListRulesetsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRulesetsRequest, ListRulesetsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -517,6 +569,19 @@ public class AbstractAWSGlueDataBrewAsync extends AbstractAWSGlueDataBrew implem
     @Override
     public java.util.concurrent.Future<UpdateRecipeJobResult> updateRecipeJobAsync(UpdateRecipeJobRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateRecipeJobRequest, UpdateRecipeJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRulesetResult> updateRulesetAsync(UpdateRulesetRequest request) {
+
+        return updateRulesetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRulesetResult> updateRulesetAsync(UpdateRulesetRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateRulesetRequest, UpdateRulesetResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary information about bot aliases returned from the <a>ListBotAliases</a> operation.
+ * Summary information about bot aliases returned from the <a
+ * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_ListBotAliases.html">ListBotAliases</a> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BotAliasSummary" target="_top">AWS API
@@ -31,7 +32,8 @@ public class BotAliasSummary implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The unique identifier assigned to the bot alias. You can use this ID to get detailed information about the alias
-     * using the <a>DescribeBotAlias</a> operation.
+     * using the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBotAlias.html">DescribeBotAlias</a>
+     * operation.
      * </p>
      */
     private String botAliasId;
@@ -75,12 +77,15 @@ public class BotAliasSummary implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The unique identifier assigned to the bot alias. You can use this ID to get detailed information about the alias
-     * using the <a>DescribeBotAlias</a> operation.
+     * using the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBotAlias.html">DescribeBotAlias</a>
+     * operation.
      * </p>
      * 
      * @param botAliasId
      *        The unique identifier assigned to the bot alias. You can use this ID to get detailed information about the
-     *        alias using the <a>DescribeBotAlias</a> operation.
+     *        alias using the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBotAlias.html">DescribeBotAlias</a>
+     *        operation.
      */
 
     public void setBotAliasId(String botAliasId) {
@@ -90,11 +95,14 @@ public class BotAliasSummary implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The unique identifier assigned to the bot alias. You can use this ID to get detailed information about the alias
-     * using the <a>DescribeBotAlias</a> operation.
+     * using the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBotAlias.html">DescribeBotAlias</a>
+     * operation.
      * </p>
      * 
      * @return The unique identifier assigned to the bot alias. You can use this ID to get detailed information about
-     *         the alias using the <a>DescribeBotAlias</a> operation.
+     *         the alias using the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBotAlias.html">DescribeBotAlias</a>
+     *         operation.
      */
 
     public String getBotAliasId() {
@@ -104,12 +112,15 @@ public class BotAliasSummary implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The unique identifier assigned to the bot alias. You can use this ID to get detailed information about the alias
-     * using the <a>DescribeBotAlias</a> operation.
+     * using the <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBotAlias.html">DescribeBotAlias</a>
+     * operation.
      * </p>
      * 
      * @param botAliasId
      *        The unique identifier assigned to the bot alias. You can use this ID to get detailed information about the
-     *        alias using the <a>DescribeBotAlias</a> operation.
+     *        alias using the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_DescribeBotAlias.html">DescribeBotAlias</a>
+     *        operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

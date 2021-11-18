@@ -173,6 +173,11 @@ public class AbstractAWSKafka implements AWSKafka {
     }
 
     @Override
+    public UpdateConnectivityResult updateConnectivity(UpdateConnectivityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateMonitoringResult updateMonitoring(UpdateMonitoringRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -404,6 +404,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateConnectivityResult> updateConnectivityAsync(UpdateConnectivityRequest request) {
+
+        return updateConnectivityAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConnectivityResult> updateConnectivityAsync(UpdateConnectivityRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateConnectivityRequest, UpdateConnectivityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateMonitoringResult> updateMonitoringAsync(UpdateMonitoringRequest request) {
 
         return updateMonitoringAsync(request, null);

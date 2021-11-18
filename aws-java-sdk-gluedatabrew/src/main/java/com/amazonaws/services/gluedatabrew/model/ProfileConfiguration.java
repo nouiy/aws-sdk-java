@@ -53,6 +53,12 @@ public class ProfileConfiguration implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.List<ColumnStatisticsConfiguration> columnStatisticsConfigurations;
+    /**
+     * <p>
+     * Configuration of entity detection for a profile job. When undefined, entity detection is disabled.
+     * </p>
+     */
+    private EntityDetectorConfiguration entityDetectorConfiguration;
 
     /**
      * <p>
@@ -275,6 +281,46 @@ public class ProfileConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * Configuration of entity detection for a profile job. When undefined, entity detection is disabled.
+     * </p>
+     * 
+     * @param entityDetectorConfiguration
+     *        Configuration of entity detection for a profile job. When undefined, entity detection is disabled.
+     */
+
+    public void setEntityDetectorConfiguration(EntityDetectorConfiguration entityDetectorConfiguration) {
+        this.entityDetectorConfiguration = entityDetectorConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration of entity detection for a profile job. When undefined, entity detection is disabled.
+     * </p>
+     * 
+     * @return Configuration of entity detection for a profile job. When undefined, entity detection is disabled.
+     */
+
+    public EntityDetectorConfiguration getEntityDetectorConfiguration() {
+        return this.entityDetectorConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration of entity detection for a profile job. When undefined, entity detection is disabled.
+     * </p>
+     * 
+     * @param entityDetectorConfiguration
+     *        Configuration of entity detection for a profile job. When undefined, entity detection is disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ProfileConfiguration withEntityDetectorConfiguration(EntityDetectorConfiguration entityDetectorConfiguration) {
+        setEntityDetectorConfiguration(entityDetectorConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -291,7 +337,9 @@ public class ProfileConfiguration implements Serializable, Cloneable, Structured
         if (getProfileColumns() != null)
             sb.append("ProfileColumns: ").append(getProfileColumns()).append(",");
         if (getColumnStatisticsConfigurations() != null)
-            sb.append("ColumnStatisticsConfigurations: ").append(getColumnStatisticsConfigurations());
+            sb.append("ColumnStatisticsConfigurations: ").append(getColumnStatisticsConfigurations()).append(",");
+        if (getEntityDetectorConfiguration() != null)
+            sb.append("EntityDetectorConfiguration: ").append(getEntityDetectorConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -320,6 +368,10 @@ public class ProfileConfiguration implements Serializable, Cloneable, Structured
         if (other.getColumnStatisticsConfigurations() != null
                 && other.getColumnStatisticsConfigurations().equals(this.getColumnStatisticsConfigurations()) == false)
             return false;
+        if (other.getEntityDetectorConfiguration() == null ^ this.getEntityDetectorConfiguration() == null)
+            return false;
+        if (other.getEntityDetectorConfiguration() != null && other.getEntityDetectorConfiguration().equals(this.getEntityDetectorConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -331,6 +383,7 @@ public class ProfileConfiguration implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getDatasetStatisticsConfiguration() == null) ? 0 : getDatasetStatisticsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getProfileColumns() == null) ? 0 : getProfileColumns().hashCode());
         hashCode = prime * hashCode + ((getColumnStatisticsConfigurations() == null) ? 0 : getColumnStatisticsConfigurations().hashCode());
+        hashCode = prime * hashCode + ((getEntityDetectorConfiguration() == null) ? 0 : getEntityDetectorConfiguration().hashCode());
         return hashCode;
     }
 

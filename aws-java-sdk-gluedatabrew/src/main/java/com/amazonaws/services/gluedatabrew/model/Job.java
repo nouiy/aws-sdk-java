@@ -196,6 +196,12 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private JobSample jobSample;
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     */
+    private java.util.List<ValidationConfiguration> validationConfigurations;
 
     /**
      * <p>
@@ -1526,6 +1532,76 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @return List of validation configurations that are applied to the profile job.
+     */
+
+    public java.util.List<ValidationConfiguration> getValidationConfigurations() {
+        return validationConfigurations;
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     */
+
+    public void setValidationConfigurations(java.util.Collection<ValidationConfiguration> validationConfigurations) {
+        if (validationConfigurations == null) {
+            this.validationConfigurations = null;
+            return;
+        }
+
+        this.validationConfigurations = new java.util.ArrayList<ValidationConfiguration>(validationConfigurations);
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setValidationConfigurations(java.util.Collection)} or
+     * {@link #withValidationConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withValidationConfigurations(ValidationConfiguration... validationConfigurations) {
+        if (this.validationConfigurations == null) {
+            setValidationConfigurations(new java.util.ArrayList<ValidationConfiguration>(validationConfigurations.length));
+        }
+        for (ValidationConfiguration ele : validationConfigurations) {
+            this.validationConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * List of validation configurations that are applied to the profile job.
+     * </p>
+     * 
+     * @param validationConfigurations
+     *        List of validation configurations that are applied to the profile job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withValidationConfigurations(java.util.Collection<ValidationConfiguration> validationConfigurations) {
+        setValidationConfigurations(validationConfigurations);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1582,7 +1658,9 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getJobSample() != null)
-            sb.append("JobSample: ").append(getJobSample());
+            sb.append("JobSample: ").append(getJobSample()).append(",");
+        if (getValidationConfigurations() != null)
+            sb.append("ValidationConfigurations: ").append(getValidationConfigurations());
         sb.append("}");
         return sb.toString();
     }
@@ -1689,6 +1767,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getJobSample() != null && other.getJobSample().equals(this.getJobSample()) == false)
             return false;
+        if (other.getValidationConfigurations() == null ^ this.getValidationConfigurations() == null)
+            return false;
+        if (other.getValidationConfigurations() != null && other.getValidationConfigurations().equals(this.getValidationConfigurations()) == false)
+            return false;
         return true;
     }
 
@@ -1720,6 +1802,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTimeout() == null) ? 0 : getTimeout().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getJobSample() == null) ? 0 : getJobSample().hashCode());
+        hashCode = prime * hashCode + ((getValidationConfigurations() == null) ? 0 : getValidationConfigurations().hashCode());
         return hashCode;
     }
 

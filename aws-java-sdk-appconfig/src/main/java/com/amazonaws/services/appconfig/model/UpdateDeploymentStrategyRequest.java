@@ -45,8 +45,8 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
     private Integer deploymentDurationInMinutes;
     /**
      * <p>
-     * The amount of time AppConfig monitors for alarms before considering the deployment to be complete and no longer
-     * eligible for automatic roll back.
+     * The amount of time that AppConfig monitors for alarms before considering the deployment to be complete and no
+     * longer eligible for automatic rollback.
      * </p>
      */
     private Integer finalBakeTimeInMinutes;
@@ -58,7 +58,7 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
     private Float growthFactor;
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by increments of the growth factor evenly
@@ -211,13 +211,13 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The amount of time AppConfig monitors for alarms before considering the deployment to be complete and no longer
-     * eligible for automatic roll back.
+     * The amount of time that AppConfig monitors for alarms before considering the deployment to be complete and no
+     * longer eligible for automatic rollback.
      * </p>
      * 
      * @param finalBakeTimeInMinutes
-     *        The amount of time AppConfig monitors for alarms before considering the deployment to be complete and no
-     *        longer eligible for automatic roll back.
+     *        The amount of time that AppConfig monitors for alarms before considering the deployment to be complete and
+     *        no longer eligible for automatic rollback.
      */
 
     public void setFinalBakeTimeInMinutes(Integer finalBakeTimeInMinutes) {
@@ -226,12 +226,12 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The amount of time AppConfig monitors for alarms before considering the deployment to be complete and no longer
-     * eligible for automatic roll back.
+     * The amount of time that AppConfig monitors for alarms before considering the deployment to be complete and no
+     * longer eligible for automatic rollback.
      * </p>
      * 
-     * @return The amount of time AppConfig monitors for alarms before considering the deployment to be complete and no
-     *         longer eligible for automatic roll back.
+     * @return The amount of time that AppConfig monitors for alarms before considering the deployment to be complete
+     *         and no longer eligible for automatic rollback.
      */
 
     public Integer getFinalBakeTimeInMinutes() {
@@ -240,13 +240,13 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The amount of time AppConfig monitors for alarms before considering the deployment to be complete and no longer
-     * eligible for automatic roll back.
+     * The amount of time that AppConfig monitors for alarms before considering the deployment to be complete and no
+     * longer eligible for automatic rollback.
      * </p>
      * 
      * @param finalBakeTimeInMinutes
-     *        The amount of time AppConfig monitors for alarms before considering the deployment to be complete and no
-     *        longer eligible for automatic roll back.
+     *        The amount of time that AppConfig monitors for alarms before considering the deployment to be complete and
+     *        no longer eligible for automatic rollback.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -297,7 +297,7 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by increments of the growth factor evenly
@@ -327,7 +327,7 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param growthType
-     *        The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth
+     *        The algorithm used to define how percentage grows over time. AppConfig supports the following growth
      *        types:</p>
      *        <p>
      *        <b>Linear</b>: For this type, AppConfig processes the deployment by increments of the growth factor evenly
@@ -363,7 +363,7 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by increments of the growth factor evenly
@@ -392,7 +392,7 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
      * targets, and continues until the configuration has been deployed to all targets.
      * </p>
      * 
-     * @return The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth
+     * @return The algorithm used to define how percentage grows over time. AppConfig supports the following growth
      *         types:</p>
      *         <p>
      *         <b>Linear</b>: For this type, AppConfig processes the deployment by increments of the growth factor
@@ -428,7 +428,7 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by increments of the growth factor evenly
@@ -458,7 +458,7 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param growthType
-     *        The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth
+     *        The algorithm used to define how percentage grows over time. AppConfig supports the following growth
      *        types:</p>
      *        <p>
      *        <b>Linear</b>: For this type, AppConfig processes the deployment by increments of the growth factor evenly
@@ -496,7 +496,7 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth types:
+     * The algorithm used to define how percentage grows over time. AppConfig supports the following growth types:
      * </p>
      * <p>
      * <b>Linear</b>: For this type, AppConfig processes the deployment by increments of the growth factor evenly
@@ -526,7 +526,7 @@ public class UpdateDeploymentStrategyRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param growthType
-     *        The algorithm used to define how percentage grows over time. AWS AppConfig supports the following growth
+     *        The algorithm used to define how percentage grows over time. AppConfig supports the following growth
      *        types:</p>
      *        <p>
      *        <b>Linear</b>: For this type, AppConfig processes the deployment by increments of the growth factor evenly

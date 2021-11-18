@@ -41,7 +41,10 @@ public class DeleteUtterancesRequest extends com.amazonaws.AmazonWebServiceReque
     private String localeId;
     /**
      * <p>
-     * The unique identifier of the session with the user. The ID is returned in the response from the and operations.
+     * The unique identifier of the session with the user. The ID is returned in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeText.html">RecognizeText</a> and <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeUtterance.html">RecognizeUtterance</a>
+     * operations.
      * </p>
      */
     private String sessionId;
@@ -140,11 +143,17 @@ public class DeleteUtterancesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the session with the user. The ID is returned in the response from the and operations.
+     * The unique identifier of the session with the user. The ID is returned in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeText.html">RecognizeText</a> and <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeUtterance.html">RecognizeUtterance</a>
+     * operations.
      * </p>
      * 
      * @param sessionId
-     *        The unique identifier of the session with the user. The ID is returned in the response from the and
+     *        The unique identifier of the session with the user. The ID is returned in the response from the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeText.html">RecognizeText</a> and <a
+     *        href
+     *        ="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeUtterance.html">RecognizeUtterance</a>
      *        operations.
      */
 
@@ -154,11 +163,16 @@ public class DeleteUtterancesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the session with the user. The ID is returned in the response from the and operations.
+     * The unique identifier of the session with the user. The ID is returned in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeText.html">RecognizeText</a> and <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeUtterance.html">RecognizeUtterance</a>
+     * operations.
      * </p>
      * 
-     * @return The unique identifier of the session with the user. The ID is returned in the response from the and
-     *         operations.
+     * @return The unique identifier of the session with the user. The ID is returned in the response from the <a
+     *         href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeText.html">RecognizeText</a> and
+     *         <a href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeUtterance.html">
+     *         RecognizeUtterance</a> operations.
      */
 
     public String getSessionId() {
@@ -167,11 +181,17 @@ public class DeleteUtterancesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The unique identifier of the session with the user. The ID is returned in the response from the and operations.
+     * The unique identifier of the session with the user. The ID is returned in the response from the <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeText.html">RecognizeText</a> and <a
+     * href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeUtterance.html">RecognizeUtterance</a>
+     * operations.
      * </p>
      * 
      * @param sessionId
-     *        The unique identifier of the session with the user. The ID is returned in the response from the and
+     *        The unique identifier of the session with the user. The ID is returned in the response from the <a
+     *        href="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeText.html">RecognizeText</a> and <a
+     *        href
+     *        ="https://docs.aws.amazon.com/lexv2/latest/dg/API_runtime_RecognizeUtterance.html">RecognizeUtterance</a>
      *        operations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

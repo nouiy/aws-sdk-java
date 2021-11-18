@@ -48,6 +48,8 @@ public class MutableClusterInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("clientAuthentication").build();
     private static final MarshallingInfo<StructuredPojo> ENCRYPTIONINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("encryptionInfo").build();
+    private static final MarshallingInfo<StructuredPojo> CONNECTIVITYINFO_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectivityInfo").build();
 
     private static final MutableClusterInfoMarshaller instance = new MutableClusterInfoMarshaller();
 
@@ -75,6 +77,7 @@ public class MutableClusterInfoMarshaller {
             protocolMarshaller.marshall(mutableClusterInfo.getInstanceType(), INSTANCETYPE_BINDING);
             protocolMarshaller.marshall(mutableClusterInfo.getClientAuthentication(), CLIENTAUTHENTICATION_BINDING);
             protocolMarshaller.marshall(mutableClusterInfo.getEncryptionInfo(), ENCRYPTIONINFO_BINDING);
+            protocolMarshaller.marshall(mutableClusterInfo.getConnectivityInfo(), CONNECTIVITYINFO_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

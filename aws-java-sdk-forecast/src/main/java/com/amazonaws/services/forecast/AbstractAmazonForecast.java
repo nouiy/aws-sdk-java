@@ -28,6 +28,11 @@ public class AbstractAmazonForecast implements AmazonForecast {
     }
 
     @Override
+    public CreateAutoPredictorResult createAutoPredictor(CreateAutoPredictorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateDatasetResult createDataset(CreateDatasetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -39,6 +44,16 @@ public class AbstractAmazonForecast implements AmazonForecast {
 
     @Override
     public CreateDatasetImportJobResult createDatasetImportJob(CreateDatasetImportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateExplainabilityResult createExplainability(CreateExplainabilityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateExplainabilityExportResult createExplainabilityExport(CreateExplainabilityExportRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -78,6 +93,16 @@ public class AbstractAmazonForecast implements AmazonForecast {
     }
 
     @Override
+    public DeleteExplainabilityResult deleteExplainability(DeleteExplainabilityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteExplainabilityExportResult deleteExplainabilityExport(DeleteExplainabilityExportRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteForecastResult deleteForecast(DeleteForecastRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -103,6 +128,11 @@ public class AbstractAmazonForecast implements AmazonForecast {
     }
 
     @Override
+    public DescribeAutoPredictorResult describeAutoPredictor(DescribeAutoPredictorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeDatasetResult describeDataset(DescribeDatasetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -114,6 +144,16 @@ public class AbstractAmazonForecast implements AmazonForecast {
 
     @Override
     public DescribeDatasetImportJobResult describeDatasetImportJob(DescribeDatasetImportJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeExplainabilityResult describeExplainability(DescribeExplainabilityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeExplainabilityExportResult describeExplainabilityExport(DescribeExplainabilityExportRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -154,6 +194,16 @@ public class AbstractAmazonForecast implements AmazonForecast {
 
     @Override
     public ListDatasetsResult listDatasets(ListDatasetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListExplainabilitiesResult listExplainabilities(ListExplainabilitiesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListExplainabilityExportsResult listExplainabilityExports(ListExplainabilityExportsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

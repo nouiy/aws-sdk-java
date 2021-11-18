@@ -26,11 +26,10 @@ import com.amazonaws.services.appconfig.model.*;
  * {@link com.amazonaws.services.appconfig.AbstractAmazonAppConfig} instead.
  * </p>
  * <p>
- * <fullname>AWS AppConfig</fullname>
  * <p>
- * Use AWS AppConfig, a capability of AWS Systems Manager, to create, manage, and quickly deploy application
+ * Use AppConfig, a capability of Amazon Web Services Systems Manager, to create, manage, and quickly deploy application
  * configurations. AppConfig supports controlled deployments to applications of any size and includes built-in
- * validation checks and monitoring. You can use AppConfig with applications hosted on Amazon EC2 instances, AWS Lambda,
+ * validation checks and monitoring. You can use AppConfig with applications hosted on Amazon EC2 instances, Lambda,
  * containers, mobile applications, or IoT devices.
  * </p>
  * <p>
@@ -48,7 +47,7 @@ import com.amazonaws.services.appconfig.model.*;
  * automatically rolls back to the previous version.
  * </p>
  * <p>
- * AppConfig supports multiple use cases. Here are some examples.
+ * AppConfig supports multiple use cases. Here are some examples:
  * </p>
  * <ul>
  * <li>
@@ -77,7 +76,7 @@ import com.amazonaws.services.appconfig.model.*;
  * </ul>
  * <p>
  * This reference is intended to be used with the <a
- * href="http://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html">AWS AppConfig User Guide</a>.
+ * href="http://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html">AppConfig User Guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -93,16 +92,16 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * An application in AppConfig is a logical unit of code that provides capabilities for your customers. For example,
-     * an application can be a microservice that runs on Amazon EC2 instances, a mobile application installed by your
-     * users, a serverless application using Amazon API Gateway and AWS Lambda, or any system you run on behalf of
-     * others.
+     * Creates an application. An application in AppConfig is a logical unit of code that provides capabilities for your
+     * customers. For example, an application can be a microservice that runs on Amazon EC2 instances, a mobile
+     * application installed by your users, a serverless application using Amazon API Gateway and Lambda, or any system
+     * you run on behalf of others.
      * </p>
      * 
      * @param createApplicationRequest
      * @return Result of the CreateApplication operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @sample AmazonAppConfig.CreateApplication
@@ -113,38 +112,40 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Information that enables AppConfig to access the configuration source. Valid configuration sources include
-     * Systems Manager (SSM) documents, SSM Parameter Store parameters, and Amazon S3 objects. A configuration profile
-     * includes the following information.
+     * Creates a configuration profile, which is information that enables AppConfig to access the configuration source.
+     * Valid configuration sources include the AppConfig hosted configuration store, Amazon Web Services Systems Manager
+     * (SSM) documents, SSM Parameter Store parameters, Amazon S3 objects, or any <a href=
+     * "http://docs.aws.amazon.com/codepipeline/latest/userguide/integrations-action-type.html#integrations-source"
+     * >integration source action</a> supported by CodePipeline. A configuration profile includes the following
+     * information:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The Uri location of the configuration data.
+     * The URI location of the configuration data.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The AWS Identity and Access Management (IAM) role that provides access to the configuration data.
+     * The Identity and Access Management (IAM) role that provides access to the configuration data.
      * </p>
      * </li>
      * <li>
      * <p>
-     * A validator for the configuration data. Available validators include either a JSON Schema or an AWS Lambda
-     * function.
+     * A validator for the configuration data. Available validators include either a JSON Schema or an Lambda function.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For more information, see <a href=
-     * "http://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html"
-     * >Create a Configuration and a Configuration Profile</a> in the <i>AWS AppConfig User Guide</i>.
+     * For more information, see <a
+     * href="http://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-configuration-and-profile.html"
+     * >Create a Configuration and a Configuration Profile</a> in the <i>AppConfig User Guide</i>.
      * </p>
      * 
      * @param createConfigurationProfileRequest
      * @return Result of the CreateConfigurationProfile operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws InternalServerException
@@ -157,9 +158,9 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * A deployment strategy defines important criteria for rolling out your configuration to the designated targets. A
-     * deployment strategy includes: the overall duration required, a percentage of targets to receive the deployment
-     * during each interval, an algorithm that defines how percentage grows, and bake time.
+     * Creates a deployment strategy that defines important criteria for rolling out your configuration to the
+     * designated targets. A deployment strategy includes the overall duration required, a percentage of targets to
+     * receive the deployment during each interval, an algorithm that defines how percentage grows, and bake time.
      * </p>
      * 
      * @param createDeploymentStrategyRequest
@@ -167,7 +168,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.CreateDeploymentStrategy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/CreateDeploymentStrategy"
      *      target="_top">AWS API Documentation</a>
@@ -176,12 +177,12 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * For each application, you define one or more environments. An environment is a logical deployment group of
-     * AppConfig targets, such as applications in a <code>Beta</code> or <code>Production</code> environment. You can
-     * also define environments for application subcomponents such as the <code>Web</code>, <code>Mobile</code> and
-     * <code>Back-end</code> components for your application. You can configure Amazon CloudWatch alarms for each
-     * environment. The system monitors alarms during a configuration deployment. If an alarm is triggered, the system
-     * rolls back the configuration.
+     * Creates an environment. For each application, you define one or more environments. An environment is a logical
+     * deployment group of AppConfig targets, such as applications in a <code>Beta</code> or <code>Production</code>
+     * environment. You can also define environments for application subcomponents such as the <code>Web</code>,
+     * <code>Mobile</code> and <code>Back-end</code> components for your application. You can configure Amazon
+     * CloudWatch alarms for each environment. The system monitors alarms during a configuration deployment. If an alarm
+     * is triggered, the system rolls back the configuration.
      * </p>
      * 
      * @param createEnvironmentRequest
@@ -191,7 +192,7 @@ public interface AmazonAppConfig {
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.CreateEnvironment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/CreateEnvironment" target="_top">AWS
      *      API Documentation</a>
@@ -200,16 +201,16 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Create a new configuration in the AppConfig configuration store.
+     * Creates a new configuration in the AppConfig hosted configuration store.
      * </p>
      * 
      * @param createHostedConfigurationVersionRequest
      * @return Result of the CreateHostedConfigurationVersion operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ServiceQuotaExceededException
-     *         The number of hosted configuration versions exceeds the limit for the AppConfig configuration store.
-     *         Delete one or more versions and try again.
+     *         The number of hosted configuration versions exceeds the limit for the AppConfig hosted configuration
+     *         store. Delete one or more versions and try again.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws ConflictException
@@ -226,7 +227,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Delete an application. Deleting an application does not delete a configuration from a host.
+     * Deletes an application. Deleting an application does not delete a configuration from a host.
      * </p>
      * 
      * @param deleteApplicationRequest
@@ -236,7 +237,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.DeleteApplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/DeleteApplication" target="_top">AWS
      *      API Documentation</a>
@@ -245,7 +246,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Delete a configuration profile. Deleting a configuration profile does not delete a configuration from a host.
+     * Deletes a configuration profile. Deleting a configuration profile does not delete a configuration from a host.
      * </p>
      * 
      * @param deleteConfigurationProfileRequest
@@ -257,7 +258,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.DeleteConfigurationProfile
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/DeleteConfigurationProfile"
      *      target="_top">AWS API Documentation</a>
@@ -266,7 +267,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Delete a deployment strategy. Deleting a deployment strategy does not delete a configuration from a host.
+     * Deletes a deployment strategy. Deleting a deployment strategy does not delete a configuration from a host.
      * </p>
      * 
      * @param deleteDeploymentStrategyRequest
@@ -276,7 +277,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.DeleteDeploymentStrategy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/DeleteDeploymentStrategy"
      *      target="_top">AWS API Documentation</a>
@@ -285,7 +286,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Delete an environment. Deleting an environment does not delete a configuration from a host.
+     * Deletes an environment. Deleting an environment does not delete a configuration from a host.
      * </p>
      * 
      * @param deleteEnvironmentRequest
@@ -297,7 +298,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.DeleteEnvironment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/DeleteEnvironment" target="_top">AWS
      *      API Documentation</a>
@@ -306,13 +307,13 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Delete a version of a configuration from the AppConfig configuration store.
+     * Deletes a version of a configuration from the AppConfig hosted configuration store.
      * </p>
      * 
      * @param deleteHostedConfigurationVersionRequest
      * @return Result of the DeleteHostedConfigurationVersion operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws InternalServerException
@@ -325,7 +326,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Retrieve information about an application.
+     * Retrieves information about an application.
      * </p>
      * 
      * @param getApplicationRequest
@@ -335,7 +336,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.GetApplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetApplication" target="_top">AWS API
      *      Documentation</a>
@@ -344,13 +345,13 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Receive information about a configuration.
+     * Retrieves information about a configuration.
      * </p>
      * <important>
      * <p>
-     * AWS AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the
-     * configuration version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call
-     * to <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
+     * AppConfig uses the value of the <code>ClientConfigurationVersion</code> parameter to identify the configuration
+     * version on your clients. If you don’t send <code>ClientConfigurationVersion</code> with each call to
+     * <code>GetConfiguration</code>, your clients receive the current configuration. You are charged each time your
      * clients receive a configuration.
      * </p>
      * <p>
@@ -368,7 +369,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.GetConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetConfiguration" target="_top">AWS API
      *      Documentation</a>
@@ -377,7 +378,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Retrieve information about a configuration profile.
+     * Retrieves information about a configuration profile.
      * </p>
      * 
      * @param getConfigurationProfileRequest
@@ -387,7 +388,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.GetConfigurationProfile
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetConfigurationProfile"
      *      target="_top">AWS API Documentation</a>
@@ -396,7 +397,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Retrieve information about a configuration deployment.
+     * Retrieves information about a configuration deployment.
      * </p>
      * 
      * @param getDeploymentRequest
@@ -406,7 +407,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.GetDeployment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetDeployment" target="_top">AWS API
      *      Documentation</a>
@@ -415,9 +416,9 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Retrieve information about a deployment strategy. A deployment strategy defines important criteria for rolling
-     * out your configuration to the designated targets. A deployment strategy includes: the overall duration required,
-     * a percentage of targets to receive the deployment during each interval, an algorithm that defines how percentage
+     * Retrieves information about a deployment strategy. A deployment strategy defines important criteria for rolling
+     * out your configuration to the designated targets. A deployment strategy includes the overall duration required, a
+     * percentage of targets to receive the deployment during each interval, an algorithm that defines how percentage
      * grows, and bake time.
      * </p>
      * 
@@ -428,7 +429,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.GetDeploymentStrategy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetDeploymentStrategy"
      *      target="_top">AWS API Documentation</a>
@@ -437,7 +438,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Retrieve information about an environment. An environment is a logical deployment group of AppConfig
+     * Retrieves information about an environment. An environment is a logical deployment group of AppConfig
      * applications, such as applications in a <code>Production</code> environment or in an <code>EU_Region</code>
      * environment. Each configuration deployment targets an environment. You can enable one or more Amazon CloudWatch
      * alarms for an environment. If an alarm is triggered during a deployment, AppConfig roles back the configuration.
@@ -450,7 +451,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.GetEnvironment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/GetEnvironment" target="_top">AWS API
      *      Documentation</a>
@@ -459,13 +460,13 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Get information about a specific configuration version.
+     * Retrieves information about a specific configuration version.
      * </p>
      * 
      * @param getHostedConfigurationVersionRequest
      * @return Result of the GetHostedConfigurationVersion operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws InternalServerException
@@ -478,7 +479,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * List all applications in your AWS account.
+     * Lists all applications in your Amazon Web Services account.
      * </p>
      * 
      * @param listApplicationsRequest
@@ -486,7 +487,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.ListApplications
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListApplications" target="_top">AWS API
      *      Documentation</a>
@@ -505,7 +506,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.ListConfigurationProfiles
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListConfigurationProfiles"
      *      target="_top">AWS API Documentation</a>
@@ -514,7 +515,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * List deployment strategies.
+     * Lists deployment strategies.
      * </p>
      * 
      * @param listDeploymentStrategiesRequest
@@ -522,7 +523,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.ListDeploymentStrategies
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListDeploymentStrategies"
      *      target="_top">AWS API Documentation</a>
@@ -541,7 +542,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.ListDeployments
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListDeployments" target="_top">AWS API
      *      Documentation</a>
@@ -550,7 +551,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * List the environments for an application.
+     * Lists the environments for an application.
      * </p>
      * 
      * @param listEnvironmentsRequest
@@ -560,7 +561,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.ListEnvironments
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/ListEnvironments" target="_top">AWS API
      *      Documentation</a>
@@ -569,13 +570,13 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * View a list of configurations stored in the AppConfig configuration store by version.
+     * Lists configurations stored in the AppConfig hosted configuration store by version.
      * </p>
      * 
      * @param listHostedConfigurationVersionsRequest
      * @return Result of the ListHostedConfigurationVersions operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws InternalServerException
@@ -596,7 +597,7 @@ public interface AmazonAppConfig {
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @sample AmazonAppConfig.ListTagsForResource
@@ -613,7 +614,7 @@ public interface AmazonAppConfig {
      * @param startDeploymentRequest
      * @return Result of the StartDeployment operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws ConflictException
@@ -639,7 +640,7 @@ public interface AmazonAppConfig {
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @sample AmazonAppConfig.StopDeployment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appconfig-2019-10-09/StopDeployment" target="_top">AWS API
      *      Documentation</a>
@@ -648,7 +649,7 @@ public interface AmazonAppConfig {
 
     /**
      * <p>
-     * Metadata to assign to an AppConfig resource. Tags help organize and categorize your AppConfig resources. Each tag
+     * Assigns metadata to an AppConfig resource. Tags help organize and categorize your AppConfig resources. Each tag
      * consists of a key and an optional value, both of which you define. You can specify a maximum of 50 tags for a
      * resource.
      * </p>
@@ -658,7 +659,7 @@ public interface AmazonAppConfig {
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @sample AmazonAppConfig.TagResource
@@ -677,7 +678,7 @@ public interface AmazonAppConfig {
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         There was an internal failure in the AppConfig service.
      * @sample AmazonAppConfig.UntagResource
@@ -694,7 +695,7 @@ public interface AmazonAppConfig {
      * @param updateApplicationRequest
      * @return Result of the UpdateApplication operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws InternalServerException
@@ -713,7 +714,7 @@ public interface AmazonAppConfig {
      * @param updateConfigurationProfileRequest
      * @return Result of the UpdateConfigurationProfile operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws InternalServerException
@@ -732,7 +733,7 @@ public interface AmazonAppConfig {
      * @param updateDeploymentStrategyRequest
      * @return Result of the UpdateDeploymentStrategy operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws InternalServerException
@@ -751,7 +752,7 @@ public interface AmazonAppConfig {
      * @param updateEnvironmentRequest
      * @return Result of the UpdateEnvironment operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws InternalServerException
@@ -770,7 +771,7 @@ public interface AmazonAppConfig {
      * @param validateConfigurationRequest
      * @return Result of the ValidateConfiguration operation returned by the service.
      * @throws BadRequestException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ResourceNotFoundException
      *         The requested resource could not be found.
      * @throws InternalServerException

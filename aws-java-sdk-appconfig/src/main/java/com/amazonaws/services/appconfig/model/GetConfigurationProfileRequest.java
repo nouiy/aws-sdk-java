@@ -33,7 +33,7 @@ public class GetConfigurationProfileRequest extends com.amazonaws.AmazonWebServi
     private String applicationId;
     /**
      * <p>
-     * The ID of the configuration profile you want to get.
+     * The ID of the configuration profile that you want to get.
      * </p>
      */
     private String configurationProfileId;
@@ -80,11 +80,11 @@ public class GetConfigurationProfileRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the configuration profile you want to get.
+     * The ID of the configuration profile that you want to get.
      * </p>
      * 
      * @param configurationProfileId
-     *        The ID of the configuration profile you want to get.
+     *        The ID of the configuration profile that you want to get.
      */
 
     public void setConfigurationProfileId(String configurationProfileId) {
@@ -93,10 +93,10 @@ public class GetConfigurationProfileRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the configuration profile you want to get.
+     * The ID of the configuration profile that you want to get.
      * </p>
      * 
-     * @return The ID of the configuration profile you want to get.
+     * @return The ID of the configuration profile that you want to get.
      */
 
     public String getConfigurationProfileId() {
@@ -105,11 +105,11 @@ public class GetConfigurationProfileRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The ID of the configuration profile you want to get.
+     * The ID of the configuration profile that you want to get.
      * </p>
      * 
      * @param configurationProfileId
-     *        The ID of the configuration profile you want to get.
+     *        The ID of the configuration profile that you want to get.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1422,7 +1422,7 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
 
     /**
      * <p>
-     * Returns a list of Kafka versions.
+     * Returns a list of Apache Kafka versions.
      * </p>
      * 
      * @param listKafkaVersionsRequest
@@ -2396,6 +2396,86 @@ public class AWSKafkaClient extends AmazonWebServiceClient implements AWSKafka {
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the cluster's connectivity configuration.
+     * </p>
+     * 
+     * @param updateConnectivityRequest
+     *        Request body for UpdateConnectivity.
+     * @return Result of the UpdateConnectivity operation returned by the service.
+     * @throws BadRequestException
+     *         <p>
+     *         The request isn't valid because the input is incorrect. Correct your input and then submit it again.
+     *         </p>
+     * @throws UnauthorizedException
+     *         <p>
+     *         The request is not authorized. The provided credentials couldn't be validated.
+     *         </p>
+     * @throws InternalServerErrorException
+     *         <p>
+     *         There was an unexpected internal server error. Retrying your request might resolve the issue.
+     *         </p>
+     * @throws ForbiddenException
+     *         <p>
+     *         Access forbidden. Check your credentials and then retry your request.
+     *         </p>
+     * @throws NotFoundException
+     *         <p>
+     *         The resource could not be found due to incorrect input. Correct the input, then retry the request.
+     *         </p>
+     * @throws ServiceUnavailableException
+     *         <p>
+     *         503 response
+     *         </p>
+     * @sample AWSKafka.UpdateConnectivity
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/UpdateConnectivity" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateConnectivityResult updateConnectivity(UpdateConnectivityRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateConnectivity(request);
+    }
+
+    @SdkInternalApi
+    final UpdateConnectivityResult executeUpdateConnectivity(UpdateConnectivityRequest updateConnectivityRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateConnectivityRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateConnectivityRequest> request = null;
+        Response<UpdateConnectivityResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateConnectivityRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateConnectivityRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Kafka");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateConnectivity");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateConnectivityResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateConnectivityResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

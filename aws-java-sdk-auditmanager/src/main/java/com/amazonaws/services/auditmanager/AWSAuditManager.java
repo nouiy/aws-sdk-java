@@ -761,6 +761,46 @@ public interface AWSAuditManager {
 
     /**
      * <p>
+     * Gets the latest analytics data for all your current active assessments.
+     * </p>
+     * 
+     * @param getInsightsRequest
+     * @return Result of the GetInsights operation returned by the service.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.GetInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsights" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetInsightsResult getInsights(GetInsightsRequest getInsightsRequest);
+
+    /**
+     * <p>
+     * Gets the latest analytics data for a specific active assessment.
+     * </p>
+     * 
+     * @param getInsightsByAssessmentRequest
+     * @return Result of the GetInsightsByAssessment operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.GetInsightsByAssessment
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetInsightsByAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetInsightsByAssessmentResult getInsightsByAssessment(GetInsightsByAssessmentRequest getInsightsByAssessmentRequest);
+
+    /**
+     * <p>
      * Returns the name of the delegated Amazon Web Services administrator account for the organization.
      * </p>
      * 
@@ -818,6 +858,38 @@ public interface AWSAuditManager {
      *      Documentation</a>
      */
     GetSettingsResult getSettings(GetSettingsRequest getSettingsRequest);
+
+    /**
+     * <p>
+     * Lists the latest analytics data for controls within a specific control domain and a specific active assessment.
+     * </p>
+     * <note>
+     * <p>
+     * Control insights are listed only if the control belongs to the control domain and assessment that was specified.
+     * Moreover, the control must have collected evidence on the <code>lastUpdated</code> date of
+     * <code>controlInsightsByAssessment</code>. If neither of these conditions are met, no data is listed for that
+     * control.
+     * </p>
+     * </note>
+     * 
+     * @param listAssessmentControlInsightsByControlDomainRequest
+     * @return Result of the ListAssessmentControlInsightsByControlDomain operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.ListAssessmentControlInsightsByControlDomain
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentControlInsightsByControlDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAssessmentControlInsightsByControlDomainResult listAssessmentControlInsightsByControlDomain(
+            ListAssessmentControlInsightsByControlDomainRequest listAssessmentControlInsightsByControlDomainRequest);
 
     /**
      * <p>
@@ -900,6 +972,96 @@ public interface AWSAuditManager {
      *      API Documentation</a>
      */
     ListAssessmentsResult listAssessments(ListAssessmentsRequest listAssessmentsRequest);
+
+    /**
+     * <p>
+     * Lists the latest analytics data for control domains across all of your active assessments.
+     * </p>
+     * <note>
+     * <p>
+     * A control domain is listed only if at least one of the controls within that domain collected evidence on the
+     * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this condition isn’t met, no data is
+     * listed for that control domain.
+     * </p>
+     * </note>
+     * 
+     * @param listControlDomainInsightsRequest
+     * @return Result of the ListControlDomainInsights operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @sample AWSAuditManager.ListControlDomainInsights
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsights"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListControlDomainInsightsResult listControlDomainInsights(ListControlDomainInsightsRequest listControlDomainInsightsRequest);
+
+    /**
+     * <p>
+     * Lists analytics data for control domains within a specified active assessment.
+     * </p>
+     * <note>
+     * <p>
+     * A control domain is listed only if at least one of the controls within that domain collected evidence on the
+     * <code>lastUpdated</code> date of <code>controlDomainInsights</code>. If this condition isn’t met, no data is
+     * listed for that domain.
+     * </p>
+     * </note>
+     * 
+     * @param listControlDomainInsightsByAssessmentRequest
+     * @return Result of the ListControlDomainInsightsByAssessment operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.ListControlDomainInsightsByAssessment
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlDomainInsightsByAssessment"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListControlDomainInsightsByAssessmentResult listControlDomainInsightsByAssessment(
+            ListControlDomainInsightsByAssessmentRequest listControlDomainInsightsByAssessmentRequest);
+
+    /**
+     * <p>
+     * Lists the latest analytics data for controls within a specific control domain across all active assessments.
+     * </p>
+     * <note>
+     * <p>
+     * Control insights are listed only if the control belongs to the control domain that was specified and the control
+     * collected evidence on the <code>lastUpdated</code> date of <code>controlInsightsMetadata</code>. If neither of
+     * these conditions are met, no data is listed for that control.
+     * </p>
+     * </note>
+     * 
+     * @param listControlInsightsByControlDomainRequest
+     * @return Result of the ListControlInsightsByControlDomain operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @sample AWSAuditManager.ListControlInsightsByControlDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListControlInsightsByControlDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListControlInsightsByControlDomainResult listControlInsightsByControlDomain(
+            ListControlInsightsByControlDomainRequest listControlInsightsByControlDomainRequest);
 
     /**
      * <p>
