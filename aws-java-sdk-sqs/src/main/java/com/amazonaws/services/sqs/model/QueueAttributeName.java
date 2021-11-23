@@ -40,7 +40,8 @@ public enum QueueAttributeName {
     KmsDataKeyReusePeriodSeconds("KmsDataKeyReusePeriodSeconds"),
     DeduplicationScope("DeduplicationScope"),
     FifoThroughputLimit("FifoThroughputLimit"),
-    RedriveAllowPolicy("RedriveAllowPolicy");
+    RedriveAllowPolicy("RedriveAllowPolicy"),
+    SqsManagedSseEnabled("SqsManagedSseEnabled");
 
     private String value;
 

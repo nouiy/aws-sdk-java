@@ -194,6 +194,16 @@ public class NetworkInterfaceStaxUnmarshaller implements Unmarshaller<NetworkInt
                     networkInterface.setDenyAllIgwTraffic(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ipv6Native", targetDepth)) {
+                    networkInterface.setIpv6Native(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("ipv6Address", targetDepth)) {
+                    networkInterface.setIpv6Address(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return networkInterface;

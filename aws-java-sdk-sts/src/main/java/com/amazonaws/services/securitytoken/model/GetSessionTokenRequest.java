@@ -40,8 +40,8 @@ public class GetSessionTokenRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>GetSessionToken</code> call. Specify this value if the IAM user has a policy that requires MFA
      * authentication. The value is either the serial number for a hardware device (such as <code>GAHT12345678</code>)
      * or an Amazon Resource Name (ARN) for a virtual device (such as <code>arn:aws:iam::123456789012:mfa/user</code>).
-     * You can find the device for an IAM user by going to the Management Console and viewing the user's security
-     * credentials.
+     * You can find the device for an IAM user by going to the Amazon Web Services Management Console and viewing the
+     * user's security credentials.
      * </p>
      * <p>
      * The regex used to validate this parameter is a string of characters consisting of upper- and lower-case
@@ -130,8 +130,8 @@ public class GetSessionTokenRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>GetSessionToken</code> call. Specify this value if the IAM user has a policy that requires MFA
      * authentication. The value is either the serial number for a hardware device (such as <code>GAHT12345678</code>)
      * or an Amazon Resource Name (ARN) for a virtual device (such as <code>arn:aws:iam::123456789012:mfa/user</code>).
-     * You can find the device for an IAM user by going to the Management Console and viewing the user's security
-     * credentials.
+     * You can find the device for an IAM user by going to the Amazon Web Services Management Console and viewing the
+     * user's security credentials.
      * </p>
      * <p>
      * The regex used to validate this parameter is a string of characters consisting of upper- and lower-case
@@ -145,7 +145,7 @@ public class GetSessionTokenRequest extends com.amazonaws.AmazonWebServiceReques
      *        authentication. The value is either the serial number for a hardware device (such as
      *        <code>GAHT12345678</code>) or an Amazon Resource Name (ARN) for a virtual device (such as
      *        <code>arn:aws:iam::123456789012:mfa/user</code>). You can find the device for an IAM user by going to the
-     *        Management Console and viewing the user's security credentials. </p>
+     *        Amazon Web Services Management Console and viewing the user's security credentials. </p>
      *        <p>
      *        The regex used to validate this parameter is a string of characters consisting of upper- and lower-case
      *        alphanumeric characters with no spaces. You can also include underscores or any of the following
@@ -162,8 +162,8 @@ public class GetSessionTokenRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>GetSessionToken</code> call. Specify this value if the IAM user has a policy that requires MFA
      * authentication. The value is either the serial number for a hardware device (such as <code>GAHT12345678</code>)
      * or an Amazon Resource Name (ARN) for a virtual device (such as <code>arn:aws:iam::123456789012:mfa/user</code>).
-     * You can find the device for an IAM user by going to the Management Console and viewing the user's security
-     * credentials.
+     * You can find the device for an IAM user by going to the Amazon Web Services Management Console and viewing the
+     * user's security credentials.
      * </p>
      * <p>
      * The regex used to validate this parameter is a string of characters consisting of upper- and lower-case
@@ -176,7 +176,7 @@ public class GetSessionTokenRequest extends com.amazonaws.AmazonWebServiceReques
      *         authentication. The value is either the serial number for a hardware device (such as
      *         <code>GAHT12345678</code>) or an Amazon Resource Name (ARN) for a virtual device (such as
      *         <code>arn:aws:iam::123456789012:mfa/user</code>). You can find the device for an IAM user by going to the
-     *         Management Console and viewing the user's security credentials. </p>
+     *         Amazon Web Services Management Console and viewing the user's security credentials. </p>
      *         <p>
      *         The regex used to validate this parameter is a string of characters consisting of upper- and lower-case
      *         alphanumeric characters with no spaces. You can also include underscores or any of the following
@@ -193,8 +193,8 @@ public class GetSessionTokenRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>GetSessionToken</code> call. Specify this value if the IAM user has a policy that requires MFA
      * authentication. The value is either the serial number for a hardware device (such as <code>GAHT12345678</code>)
      * or an Amazon Resource Name (ARN) for a virtual device (such as <code>arn:aws:iam::123456789012:mfa/user</code>).
-     * You can find the device for an IAM user by going to the Management Console and viewing the user's security
-     * credentials.
+     * You can find the device for an IAM user by going to the Amazon Web Services Management Console and viewing the
+     * user's security credentials.
      * </p>
      * <p>
      * The regex used to validate this parameter is a string of characters consisting of upper- and lower-case
@@ -208,7 +208,7 @@ public class GetSessionTokenRequest extends com.amazonaws.AmazonWebServiceReques
      *        authentication. The value is either the serial number for a hardware device (such as
      *        <code>GAHT12345678</code>) or an Amazon Resource Name (ARN) for a virtual device (such as
      *        <code>arn:aws:iam::123456789012:mfa/user</code>). You can find the device for an IAM user by going to the
-     *        Management Console and viewing the user's security credentials. </p>
+     *        Amazon Web Services Management Console and viewing the user's security credentials. </p>
      *        <p>
      *        The regex used to validate this parameter is a string of characters consisting of upper- and lower-case
      *        alphanumeric characters with no spaces. You can also include underscores or any of the following

@@ -3498,6 +3498,39 @@ public class AWSIotAsyncClient extends AWSIotClient implements AWSIotAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeManagedJobTemplateResult> describeManagedJobTemplateAsync(DescribeManagedJobTemplateRequest request) {
+
+        return describeManagedJobTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeManagedJobTemplateResult> describeManagedJobTemplateAsync(final DescribeManagedJobTemplateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeManagedJobTemplateRequest, DescribeManagedJobTemplateResult> asyncHandler) {
+        final DescribeManagedJobTemplateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeManagedJobTemplateResult>() {
+            @Override
+            public DescribeManagedJobTemplateResult call() throws Exception {
+                DescribeManagedJobTemplateResult result = null;
+
+                try {
+                    result = executeDescribeManagedJobTemplate(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeMitigationActionResult> describeMitigationActionAsync(DescribeMitigationActionRequest request) {
 
         return describeMitigationActionAsync(request, null);
@@ -5345,6 +5378,39 @@ public class AWSIotAsyncClient extends AWSIotClient implements AWSIotAsync {
 
                 try {
                     result = executeListJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListManagedJobTemplatesResult> listManagedJobTemplatesAsync(ListManagedJobTemplatesRequest request) {
+
+        return listManagedJobTemplatesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListManagedJobTemplatesResult> listManagedJobTemplatesAsync(final ListManagedJobTemplatesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListManagedJobTemplatesRequest, ListManagedJobTemplatesResult> asyncHandler) {
+        final ListManagedJobTemplatesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListManagedJobTemplatesResult>() {
+            @Override
+            public ListManagedJobTemplatesResult call() throws Exception {
+                ListManagedJobTemplatesResult result = null;
+
+                try {
+                    result = executeListManagedJobTemplates(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

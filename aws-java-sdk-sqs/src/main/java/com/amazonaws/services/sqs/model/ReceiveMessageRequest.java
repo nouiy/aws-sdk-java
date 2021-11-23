@@ -87,6 +87,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys. Only
+     * one server-side encryption option is supported per queue (e.g. <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     * >SSE-KMS</a> or <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     * >SSE-SQS</a>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>MessageDeduplicationId</code> – Returns the value provided by the producer that calls the
      * <code> <a>SendMessage</a> </code> action.
      * </p>
@@ -389,6 +399,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys. Only
+     * one server-side encryption option is supported per queue (e.g. <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     * >SSE-KMS</a> or <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     * >SSE-SQS</a>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>MessageDeduplicationId</code> – Returns the value provided by the producer that calls the
      * <code> <a>SendMessage</a> </code> action.
      * </p>
@@ -452,6 +472,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <p>
      *         <code>SentTimestamp</code> – Returns the time the message was sent to the queue (<a
      *         href="http://en.wikipedia.org/wiki/Unix_time">epoch time</a> in milliseconds).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys.
+     *         Only one server-side encryption option is supported per queue (e.g. <a href=
+     *         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     *         >SSE-KMS</a> or <a href=
+     *         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     *         >SSE-SQS</a>).
      *         </p>
      *         </li>
      *         <li>
@@ -534,6 +564,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys. Only
+     * one server-side encryption option is supported per queue (e.g. <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     * >SSE-KMS</a> or <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     * >SSE-SQS</a>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>MessageDeduplicationId</code> – Returns the value provided by the producer that calls the
      * <code> <a>SendMessage</a> </code> action.
      * </p>
@@ -598,6 +638,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        <code>SentTimestamp</code> – Returns the time the message was sent to the queue (<a
      *        href="http://en.wikipedia.org/wiki/Unix_time">epoch time</a> in milliseconds).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys.
+     *        Only one server-side encryption option is supported per queue (e.g. <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     *        >SSE-KMS</a> or <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     *        >SSE-SQS</a>).
      *        </p>
      *        </li>
      *        <li>
@@ -682,6 +732,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys. Only
+     * one server-side encryption option is supported per queue (e.g. <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     * >SSE-KMS</a> or <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     * >SSE-SQS</a>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>MessageDeduplicationId</code> – Returns the value provided by the producer that calls the
      * <code> <a>SendMessage</a> </code> action.
      * </p>
@@ -751,6 +811,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        <code>SentTimestamp</code> – Returns the time the message was sent to the queue (<a
      *        href="http://en.wikipedia.org/wiki/Unix_time">epoch time</a> in milliseconds).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys.
+     *        Only one server-side encryption option is supported per queue (e.g. <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     *        >SSE-KMS</a> or <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     *        >SSE-SQS</a>).
      *        </p>
      *        </li>
      *        <li>
@@ -837,6 +907,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys. Only
+     * one server-side encryption option is supported per queue (e.g. <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     * >SSE-KMS</a> or <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     * >SSE-SQS</a>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>MessageDeduplicationId</code> – Returns the value provided by the producer that calls the
      * <code> <a>SendMessage</a> </code> action.
      * </p>
@@ -901,6 +981,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        <code>SentTimestamp</code> – Returns the time the message was sent to the queue (<a
      *        href="http://en.wikipedia.org/wiki/Unix_time">epoch time</a> in milliseconds).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys.
+     *        Only one server-side encryption option is supported per queue (e.g. <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     *        >SSE-KMS</a> or <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     *        >SSE-SQS</a>).
      *        </p>
      *        </li>
      *        <li>
@@ -982,6 +1072,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
+     * <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys. Only
+     * one server-side encryption option is supported per queue (e.g. <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     * >SSE-KMS</a> or <a href=
+     * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     * >SSE-SQS</a>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>MessageDeduplicationId</code> – Returns the value provided by the producer that calls the
      * <code> <a>SendMessage</a> </code> action.
      * </p>
@@ -1046,6 +1146,16 @@ public class ReceiveMessageRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <p>
      *        <code>SentTimestamp</code> – Returns the time the message was sent to the queue (<a
      *        href="http://en.wikipedia.org/wiki/Unix_time">epoch time</a> in milliseconds).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>SqsManagedSseEnabled</code> – Enables server-side queue encryption using SQS owned encryption keys.
+     *        Only one server-side encryption option is supported per queue (e.g. <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html"
+     *        >SSE-KMS</a> or <a href=
+     *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html"
+     *        >SSE-SQS</a>).
      *        </p>
      *        </li>
      *        <li>

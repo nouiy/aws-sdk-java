@@ -38,6 +38,11 @@ public class AbstractAWSIoTDeviceAdvisor implements AWSIoTDeviceAdvisor {
     }
 
     @Override
+    public GetEndpointResult getEndpoint(GetEndpointRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetSuiteDefinitionResult getSuiteDefinition(GetSuiteDefinitionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

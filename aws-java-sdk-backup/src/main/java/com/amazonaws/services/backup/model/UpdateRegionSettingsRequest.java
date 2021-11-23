@@ -31,6 +31,13 @@ public class UpdateRegionSettingsRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private java.util.Map<String, Boolean> resourceTypeOptInPreference;
+    /**
+     * <p>
+     * Enables or disables <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html">
+     * Backup's advanced DynamoDB backup features</a> for the Region.
+     * </p>
+     */
+    private java.util.Map<String, Boolean> resourceTypeManagementPreference;
 
     /**
      * <p>
@@ -101,6 +108,83 @@ public class UpdateRegionSettingsRequest extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * Enables or disables <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html">
+     * Backup's advanced DynamoDB backup features</a> for the Region.
+     * </p>
+     * 
+     * @return Enables or disables <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
+     *         DynamoDB backup features</a> for the Region.
+     */
+
+    public java.util.Map<String, Boolean> getResourceTypeManagementPreference() {
+        return resourceTypeManagementPreference;
+    }
+
+    /**
+     * <p>
+     * Enables or disables <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html">
+     * Backup's advanced DynamoDB backup features</a> for the Region.
+     * </p>
+     * 
+     * @param resourceTypeManagementPreference
+     *        Enables or disables <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
+     *        DynamoDB backup features</a> for the Region.
+     */
+
+    public void setResourceTypeManagementPreference(java.util.Map<String, Boolean> resourceTypeManagementPreference) {
+        this.resourceTypeManagementPreference = resourceTypeManagementPreference;
+    }
+
+    /**
+     * <p>
+     * Enables or disables <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html">
+     * Backup's advanced DynamoDB backup features</a> for the Region.
+     * </p>
+     * 
+     * @param resourceTypeManagementPreference
+     *        Enables or disables <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
+     *        DynamoDB backup features</a> for the Region.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRegionSettingsRequest withResourceTypeManagementPreference(java.util.Map<String, Boolean> resourceTypeManagementPreference) {
+        setResourceTypeManagementPreference(resourceTypeManagementPreference);
+        return this;
+    }
+
+    /**
+     * Add a single ResourceTypeManagementPreference entry
+     *
+     * @see UpdateRegionSettingsRequest#withResourceTypeManagementPreference
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRegionSettingsRequest addResourceTypeManagementPreferenceEntry(String key, Boolean value) {
+        if (null == this.resourceTypeManagementPreference) {
+            this.resourceTypeManagementPreference = new java.util.HashMap<String, Boolean>();
+        }
+        if (this.resourceTypeManagementPreference.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.resourceTypeManagementPreference.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into ResourceTypeManagementPreference.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRegionSettingsRequest clearResourceTypeManagementPreferenceEntries() {
+        this.resourceTypeManagementPreference = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -113,7 +197,9 @@ public class UpdateRegionSettingsRequest extends com.amazonaws.AmazonWebServiceR
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getResourceTypeOptInPreference() != null)
-            sb.append("ResourceTypeOptInPreference: ").append(getResourceTypeOptInPreference());
+            sb.append("ResourceTypeOptInPreference: ").append(getResourceTypeOptInPreference()).append(",");
+        if (getResourceTypeManagementPreference() != null)
+            sb.append("ResourceTypeManagementPreference: ").append(getResourceTypeManagementPreference());
         sb.append("}");
         return sb.toString();
     }
@@ -132,6 +218,11 @@ public class UpdateRegionSettingsRequest extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getResourceTypeOptInPreference() != null && other.getResourceTypeOptInPreference().equals(this.getResourceTypeOptInPreference()) == false)
             return false;
+        if (other.getResourceTypeManagementPreference() == null ^ this.getResourceTypeManagementPreference() == null)
+            return false;
+        if (other.getResourceTypeManagementPreference() != null
+                && other.getResourceTypeManagementPreference().equals(this.getResourceTypeManagementPreference()) == false)
+            return false;
         return true;
     }
 
@@ -141,6 +232,7 @@ public class UpdateRegionSettingsRequest extends com.amazonaws.AmazonWebServiceR
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getResourceTypeOptInPreference() == null) ? 0 : getResourceTypeOptInPreference().hashCode());
+        hashCode = prime * hashCode + ((getResourceTypeManagementPreference() == null) ? 0 : getResourceTypeManagementPreference().hashCode());
         return hashCode;
     }
 

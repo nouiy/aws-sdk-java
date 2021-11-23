@@ -99,6 +99,10 @@ public class CreateSubnetRequestMarshaller implements Marshaller<Request<CreateS
             request.addParameter("VpcId", StringUtils.fromString(createSubnetRequest.getVpcId()));
         }
 
+        if (createSubnetRequest.getIpv6Native() != null) {
+            request.addParameter("Ipv6Native", StringUtils.fromBoolean(createSubnetRequest.getIpv6Native()));
+        }
+
         return request;
     }
 

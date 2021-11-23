@@ -53,6 +53,11 @@ public class DescribeRegionSettingsResultJsonUnmarshaller implements Unmarshalle
                     describeRegionSettingsResult.setResourceTypeOptInPreference(new MapUnmarshaller<String, Boolean>(context.getUnmarshaller(String.class),
                             context.getUnmarshaller(Boolean.class)).unmarshall(context));
                 }
+                if (context.testExpression("ResourceTypeManagementPreference", targetDepth)) {
+                    context.nextToken();
+                    describeRegionSettingsResult.setResourceTypeManagementPreference(new MapUnmarshaller<String, Boolean>(
+                            context.getUnmarshaller(String.class), context.getUnmarshaller(Boolean.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

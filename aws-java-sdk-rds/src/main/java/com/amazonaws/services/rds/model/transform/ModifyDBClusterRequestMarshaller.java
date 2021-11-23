@@ -205,6 +205,46 @@ public class ModifyDBClusterRequestMarshaller implements Marshaller<Request<Modi
             request.addParameter("EnableGlobalWriteForwarding", StringUtils.fromBoolean(modifyDBClusterRequest.getEnableGlobalWriteForwarding()));
         }
 
+        if (modifyDBClusterRequest.getDBClusterInstanceClass() != null) {
+            request.addParameter("DBClusterInstanceClass", StringUtils.fromString(modifyDBClusterRequest.getDBClusterInstanceClass()));
+        }
+
+        if (modifyDBClusterRequest.getAllocatedStorage() != null) {
+            request.addParameter("AllocatedStorage", StringUtils.fromInteger(modifyDBClusterRequest.getAllocatedStorage()));
+        }
+
+        if (modifyDBClusterRequest.getStorageType() != null) {
+            request.addParameter("StorageType", StringUtils.fromString(modifyDBClusterRequest.getStorageType()));
+        }
+
+        if (modifyDBClusterRequest.getIops() != null) {
+            request.addParameter("Iops", StringUtils.fromInteger(modifyDBClusterRequest.getIops()));
+        }
+
+        if (modifyDBClusterRequest.getAutoMinorVersionUpgrade() != null) {
+            request.addParameter("AutoMinorVersionUpgrade", StringUtils.fromBoolean(modifyDBClusterRequest.getAutoMinorVersionUpgrade()));
+        }
+
+        if (modifyDBClusterRequest.getMonitoringInterval() != null) {
+            request.addParameter("MonitoringInterval", StringUtils.fromInteger(modifyDBClusterRequest.getMonitoringInterval()));
+        }
+
+        if (modifyDBClusterRequest.getMonitoringRoleArn() != null) {
+            request.addParameter("MonitoringRoleArn", StringUtils.fromString(modifyDBClusterRequest.getMonitoringRoleArn()));
+        }
+
+        if (modifyDBClusterRequest.getEnablePerformanceInsights() != null) {
+            request.addParameter("EnablePerformanceInsights", StringUtils.fromBoolean(modifyDBClusterRequest.getEnablePerformanceInsights()));
+        }
+
+        if (modifyDBClusterRequest.getPerformanceInsightsKMSKeyId() != null) {
+            request.addParameter("PerformanceInsightsKMSKeyId", StringUtils.fromString(modifyDBClusterRequest.getPerformanceInsightsKMSKeyId()));
+        }
+
+        if (modifyDBClusterRequest.getPerformanceInsightsRetentionPeriod() != null) {
+            request.addParameter("PerformanceInsightsRetentionPeriod", StringUtils.fromInteger(modifyDBClusterRequest.getPerformanceInsightsRetentionPeriod()));
+        }
+
         return request;
     }
 

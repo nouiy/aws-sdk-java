@@ -45,15 +45,15 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * <b>Permissions</b>
      * </p>
      * <p>
      * The temporary security credentials created by <code>AssumeRole</code> can be used to make API calls to any Amazon
-     * Web Services service with the following exception: You cannot call the STS <code>GetFederationToken</code> or
-     * <code>GetSessionToken</code> API operations.
+     * Web Services service with the following exception: You cannot call the Amazon Web Services STS
+     * <code>GetFederationToken</code> or <code>GetSessionToken</code> API operations.
      * </p>
      * <p>
      * (Optional) You can pass inline or managed <a
@@ -70,20 +70,28 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * Policies</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
-     * To assume a role from a different account, your account must be trusted by the role. The trust relationship is
-     * defined in the role's trust policy when the role is created. That trust policy states which accounts are allowed
-     * to delegate that access to users in the account.
+     * When you create a role, you create two policies: A role trust policy that specifies <i>who</i> can assume the
+     * role and a permissions policy that specifies <i>what</i> can be done with the role. You specify the trusted
+     * principal who is allowed to assume the role in the role trust policy.
+     * </p>
+     * <p>
+     * To assume a role from a different account, your Amazon Web Services account must be trusted by the role. The
+     * trust relationship is defined in the role's trust policy when the role is created. That trust policy states which
+     * accounts are allowed to delegate that access to users in the account.
      * </p>
      * <p>
      * A user who wants to access a role in a different account must also have permissions that are delegated from the
      * user account administrator. The administrator must attach a policy that allows the user to call
-     * <code>AssumeRole</code> for the ARN of the role in the other account. If the user is in the same account as the
-     * role, then you can do either of the following:
+     * <code>AssumeRole</code> for the ARN of the role in the other account.
+     * </p>
+     * <p>
+     * To allow a user to assume a role in the same account, you can do either of the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Attach a policy to the user (identical to the previous user in a different account).
+     * Attach a policy to the user that allows the user to call <code>AssumeRole</code> (as long as the role's trust
+     * policy trusts the account).
      * </p>
      * </li>
      * <li>
@@ -93,10 +101,11 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * </li>
      * </ul>
      * <p>
-     * In this case, the trust policy acts as an IAM resource-based policy. Users in the same account as the role do not
-     * need explicit permission to assume the role. For more information about trust policies and resource-based
-     * policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html">IAM Policies</a> in
-     * the <i>IAM User Guide</i>.
+     * You can do either because the role’s trust policy acts as an IAM resource-based policy. When a resource-based
+     * policy grants access to a principal in the same account, no additional identity-based policy is required. For
+     * more information about trust policies and resource-based policies, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html">IAM Policies</a> in the <i>IAM User
+     * Guide</i>.
      * </p>
      * <p>
      * <b>Tags</b>
@@ -161,15 +170,15 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * <b>Permissions</b>
      * </p>
      * <p>
      * The temporary security credentials created by <code>AssumeRole</code> can be used to make API calls to any Amazon
-     * Web Services service with the following exception: You cannot call the STS <code>GetFederationToken</code> or
-     * <code>GetSessionToken</code> API operations.
+     * Web Services service with the following exception: You cannot call the Amazon Web Services STS
+     * <code>GetFederationToken</code> or <code>GetSessionToken</code> API operations.
      * </p>
      * <p>
      * (Optional) You can pass inline or managed <a
@@ -186,20 +195,28 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * Policies</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
-     * To assume a role from a different account, your account must be trusted by the role. The trust relationship is
-     * defined in the role's trust policy when the role is created. That trust policy states which accounts are allowed
-     * to delegate that access to users in the account.
+     * When you create a role, you create two policies: A role trust policy that specifies <i>who</i> can assume the
+     * role and a permissions policy that specifies <i>what</i> can be done with the role. You specify the trusted
+     * principal who is allowed to assume the role in the role trust policy.
+     * </p>
+     * <p>
+     * To assume a role from a different account, your Amazon Web Services account must be trusted by the role. The
+     * trust relationship is defined in the role's trust policy when the role is created. That trust policy states which
+     * accounts are allowed to delegate that access to users in the account.
      * </p>
      * <p>
      * A user who wants to access a role in a different account must also have permissions that are delegated from the
      * user account administrator. The administrator must attach a policy that allows the user to call
-     * <code>AssumeRole</code> for the ARN of the role in the other account. If the user is in the same account as the
-     * role, then you can do either of the following:
+     * <code>AssumeRole</code> for the ARN of the role in the other account.
+     * </p>
+     * <p>
+     * To allow a user to assume a role in the same account, you can do either of the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Attach a policy to the user (identical to the previous user in a different account).
+     * Attach a policy to the user that allows the user to call <code>AssumeRole</code> (as long as the role's trust
+     * policy trusts the account).
      * </p>
      * </li>
      * <li>
@@ -209,10 +226,11 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * </li>
      * </ul>
      * <p>
-     * In this case, the trust policy acts as an IAM resource-based policy. Users in the same account as the role do not
-     * need explicit permission to assume the role. For more information about trust policies and resource-based
-     * policies, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html">IAM Policies</a> in
-     * the <i>IAM User Guide</i>.
+     * You can do either because the role’s trust policy acts as an IAM resource-based policy. When a resource-based
+     * policy grants access to a principal in the same account, no additional identity-based policy is required. For
+     * more information about trust policies and resource-based policies, see <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html">IAM Policies</a> in the <i>IAM User
+     * Guide</i>.
      * </p>
      * <p>
      * <b>Tags</b>
@@ -282,7 +300,7 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * The temporary security credentials returned by this operation consist of an access key ID, a secret access key,
@@ -449,7 +467,7 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * The temporary security credentials returned by this operation consist of an access key ID, a secret access key,
@@ -645,7 +663,7 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * The temporary security credentials returned by this API consist of an access key ID, a secret access key, and a
@@ -828,7 +846,7 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * The temporary security credentials returned by this API consist of an access key ID, a secret access key, and a
@@ -1001,10 +1019,11 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * </p>
      * </note>
      * <p>
-     * The message is encoded because the details of the authorization status can constitute privileged information that
+     * The message is encoded because the details of the authorization status can contain privileged information that
      * the user who requested the operation should not see. To decode an authorization status message, a user must be
-     * granted permissions via an IAM policy to request the <code>DecodeAuthorizationMessage</code> (
-     * <code>sts:DecodeAuthorizationMessage</code>) action.
+     * granted permissions through an IAM <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html">policy</a> to request the
+     * <code>DecodeAuthorizationMessage</code> (<code>sts:DecodeAuthorizationMessage</code>) action.
      * </p>
      * <p>
      * The decoded message includes the following type of information:
@@ -1067,10 +1086,11 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * </p>
      * </note>
      * <p>
-     * The message is encoded because the details of the authorization status can constitute privileged information that
+     * The message is encoded because the details of the authorization status can contain privileged information that
      * the user who requested the operation should not see. To decode an authorization status message, a user must be
-     * granted permissions via an IAM policy to request the <code>DecodeAuthorizationMessage</code> (
-     * <code>sts:DecodeAuthorizationMessage</code>) action.
+     * granted permissions through an IAM <a
+     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html">policy</a> to request the
+     * <code>DecodeAuthorizationMessage</code> (<code>sts:DecodeAuthorizationMessage</code>) action.
      * </p>
      * <p>
      * The decoded message includes the following type of information:
@@ -1262,7 +1282,7 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1287,8 +1307,8 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * </p>
      * <p>
      * The temporary credentials are valid for the specified duration, from 900 seconds (15 minutes) up to a maximum of
-     * 129,600 seconds (36 hours). The default session duration is 43,200 seconds (12 hours). Temporary credentials that
-     * are obtained by using Amazon Web Services account root user credentials have a maximum duration of 3,600 seconds
+     * 129,600 seconds (36 hours). The default session duration is 43,200 seconds (12 hours). Temporary credentials
+     * obtained by using the Amazon Web Services account root user credentials have a maximum duration of 3,600 seconds
      * (1 hour).
      * </p>
      * <p>
@@ -1353,75 +1373,6 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * >Federation Through a Web-based Identity Provider</a> in the <i>IAM User Guide</i>.
      * </p>
      * </note>
-     * <p>
-     * You can also call <code>GetFederationToken</code> using the security credentials of an Amazon Web Services
-     * account root user, but we do not recommend it. Instead, we recommend that you create an IAM user for the purpose
-     * of the proxy application. Then attach a policy to the IAM user that limits federated users to only the actions
-     * and resources that they need to access. For more information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html">IAM Best Practices</a> in the <i>IAM
-     * User Guide</i>.
-     * </p>
-     * <p>
-     * <b>Session duration</b>
-     * </p>
-     * <p>
-     * The temporary credentials are valid for the specified duration, from 900 seconds (15 minutes) up to a maximum of
-     * 129,600 seconds (36 hours). The default session duration is 43,200 seconds (12 hours). Temporary credentials that
-     * are obtained by using Amazon Web Services account root user credentials have a maximum duration of 3,600 seconds
-     * (1 hour).
-     * </p>
-     * <p>
-     * <b>Permissions</b>
-     * </p>
-     * <p>
-     * You can use the temporary credentials created by <code>GetFederationToken</code> in any Amazon Web Services
-     * service except the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * You cannot call any IAM operations using the CLI or the Amazon Web Services API.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * You cannot call any STS operations except <code>GetCallerIdentity</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * You must pass an inline or managed <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session policy</a>
-     * to this operation. You can pass a single JSON policy document to use as an inline session policy. You can also
-     * specify up to 10 managed policies to use as managed session policies. The plain text that you use for both inline
-     * and managed session policies can't exceed 2,048 characters.
-     * </p>
-     * <p>
-     * Though the session policy parameters are optional, if you do not pass a policy, then the resulting federated user
-     * session has no permissions. When you pass session policies, the session permissions are the intersection of the
-     * IAM user policies and the session policies that you pass. This gives you a way to further restrict the
-     * permissions for a federated user. You cannot use session policies to grant more permissions than those that are
-     * defined in the permissions policy of the IAM user. For more information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">Session
-     * Policies</a> in the <i>IAM User Guide</i>. For information about using <code>GetFederationToken</code> to create
-     * temporary security credentials, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getfederationtoken"
-     * >GetFederationToken—Federation Through a Custom Identity Broker</a>.
-     * </p>
-     * <p>
-     * You can use the credentials to access a resource that has a resource-based policy. If that policy specifically
-     * references the federated user session in the <code>Principal</code> element of the policy, the session has the
-     * permissions allowed by the policy. These permissions are granted in addition to the permissions granted by the
-     * session policies.
-     * </p>
-     * <p>
-     * <b>Tags</b>
-     * </p>
-     * <p>
-     * (Optional) You can pass tag key-value pairs to your session. These are called session tags. For more information
-     * about session tags, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html">Passing
-     * Session Tags in STS</a> in the <i>IAM User Guide</i>.
-     * </p>
      * <p>
      * An administrator must grant you the permissions necessary to pass session tags. The administrator can also create
      * granular permissions to allow you to pass only specific session tags. For more information, see <a
@@ -1456,7 +1407,7 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1481,8 +1432,8 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * </p>
      * <p>
      * The temporary credentials are valid for the specified duration, from 900 seconds (15 minutes) up to a maximum of
-     * 129,600 seconds (36 hours). The default session duration is 43,200 seconds (12 hours). Temporary credentials that
-     * are obtained by using Amazon Web Services account root user credentials have a maximum duration of 3,600 seconds
+     * 129,600 seconds (36 hours). The default session duration is 43,200 seconds (12 hours). Temporary credentials
+     * obtained by using the Amazon Web Services account root user credentials have a maximum duration of 3,600 seconds
      * (1 hour).
      * </p>
      * <p>
@@ -1547,75 +1498,6 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * >Federation Through a Web-based Identity Provider</a> in the <i>IAM User Guide</i>.
      * </p>
      * </note>
-     * <p>
-     * You can also call <code>GetFederationToken</code> using the security credentials of an Amazon Web Services
-     * account root user, but we do not recommend it. Instead, we recommend that you create an IAM user for the purpose
-     * of the proxy application. Then attach a policy to the IAM user that limits federated users to only the actions
-     * and resources that they need to access. For more information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html">IAM Best Practices</a> in the <i>IAM
-     * User Guide</i>.
-     * </p>
-     * <p>
-     * <b>Session duration</b>
-     * </p>
-     * <p>
-     * The temporary credentials are valid for the specified duration, from 900 seconds (15 minutes) up to a maximum of
-     * 129,600 seconds (36 hours). The default session duration is 43,200 seconds (12 hours). Temporary credentials that
-     * are obtained by using Amazon Web Services account root user credentials have a maximum duration of 3,600 seconds
-     * (1 hour).
-     * </p>
-     * <p>
-     * <b>Permissions</b>
-     * </p>
-     * <p>
-     * You can use the temporary credentials created by <code>GetFederationToken</code> in any Amazon Web Services
-     * service except the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * You cannot call any IAM operations using the CLI or the Amazon Web Services API.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * You cannot call any STS operations except <code>GetCallerIdentity</code>.
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * You must pass an inline or managed <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">session policy</a>
-     * to this operation. You can pass a single JSON policy document to use as an inline session policy. You can also
-     * specify up to 10 managed policies to use as managed session policies. The plain text that you use for both inline
-     * and managed session policies can't exceed 2,048 characters.
-     * </p>
-     * <p>
-     * Though the session policy parameters are optional, if you do not pass a policy, then the resulting federated user
-     * session has no permissions. When you pass session policies, the session permissions are the intersection of the
-     * IAM user policies and the session policies that you pass. This gives you a way to further restrict the
-     * permissions for a federated user. You cannot use session policies to grant more permissions than those that are
-     * defined in the permissions policy of the IAM user. For more information, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#policies_session">Session
-     * Policies</a> in the <i>IAM User Guide</i>. For information about using <code>GetFederationToken</code> to create
-     * temporary security credentials, see <a
-     * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#api_getfederationtoken"
-     * >GetFederationToken—Federation Through a Custom Identity Broker</a>.
-     * </p>
-     * <p>
-     * You can use the credentials to access a resource that has a resource-based policy. If that policy specifically
-     * references the federated user session in the <code>Principal</code> element of the policy, the session has the
-     * permissions allowed by the policy. These permissions are granted in addition to the permissions granted by the
-     * session policies.
-     * </p>
-     * <p>
-     * <b>Tags</b>
-     * </p>
-     * <p>
-     * (Optional) You can pass tag key-value pairs to your session. These are called session tags. For more information
-     * about session tags, see <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_session-tags.html">Passing
-     * Session Tags in STS</a> in the <i>IAM User Guide</i>.
-     * </p>
      * <p>
      * An administrator must grant you the permissions necessary to pass session tags. The administrator can also create
      * granular permissions to allow you to pass only specific session tags. For more information, see <a
@@ -1656,7 +1538,7 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * <b>Session Duration</b>
@@ -1730,7 +1612,7 @@ public interface AWSSecurityTokenServiceAsync extends AWSSecurityTokenService {
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html">Requesting Temporary
      * Security Credentials</a> and <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html#stsapi_comparison"
-     * >Comparing the STS API operations</a> in the <i>IAM User Guide</i>.
+     * >Comparing the Amazon Web Services STS API operations</a> in the <i>IAM User Guide</i>.
      * </p>
      * <p>
      * <b>Session Duration</b>

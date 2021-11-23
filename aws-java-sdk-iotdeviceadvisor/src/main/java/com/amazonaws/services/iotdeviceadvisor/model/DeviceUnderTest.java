@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Lists all the devices under test
+ * Information of a test device. Required to provide either a thing ARN or a certificate ARN.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/DeviceUnderTest" target="_top">AWS
@@ -30,24 +30,24 @@ public class DeviceUnderTest implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Lists devices thing arn
+     * Lists devices thing ARN.
      * </p>
      */
     private String thingArn;
     /**
      * <p>
-     * Lists devices certificate arn
+     * Lists devices certificate ARN.
      * </p>
      */
     private String certificateArn;
 
     /**
      * <p>
-     * Lists devices thing arn
+     * Lists devices thing ARN.
      * </p>
      * 
      * @param thingArn
-     *        Lists devices thing arn
+     *        Lists devices thing ARN.
      */
 
     public void setThingArn(String thingArn) {
@@ -56,10 +56,10 @@ public class DeviceUnderTest implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Lists devices thing arn
+     * Lists devices thing ARN.
      * </p>
      * 
-     * @return Lists devices thing arn
+     * @return Lists devices thing ARN.
      */
 
     public String getThingArn() {
@@ -68,11 +68,11 @@ public class DeviceUnderTest implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Lists devices thing arn
+     * Lists devices thing ARN.
      * </p>
      * 
      * @param thingArn
-     *        Lists devices thing arn
+     *        Lists devices thing ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class DeviceUnderTest implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Lists devices certificate arn
+     * Lists devices certificate ARN.
      * </p>
      * 
      * @param certificateArn
-     *        Lists devices certificate arn
+     *        Lists devices certificate ARN.
      */
 
     public void setCertificateArn(String certificateArn) {
@@ -96,10 +96,10 @@ public class DeviceUnderTest implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Lists devices certificate arn
+     * Lists devices certificate ARN.
      * </p>
      * 
-     * @return Lists devices certificate arn
+     * @return Lists devices certificate ARN.
      */
 
     public String getCertificateArn() {
@@ -108,11 +108,11 @@ public class DeviceUnderTest implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Lists devices certificate arn
+     * Lists devices certificate ARN.
      * </p>
      * 
      * @param certificateArn
-     *        Lists devices certificate arn
+     *        Lists devices certificate ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

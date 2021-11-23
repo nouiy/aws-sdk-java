@@ -76,6 +76,10 @@ public class GetEventSourceMappingResultJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     getEventSourceMappingResult.setEventSourceArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("FilterCriteria", targetDepth)) {
+                    context.nextToken();
+                    getEventSourceMappingResult.setFilterCriteria(FilterCriteriaJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("FunctionArn", targetDepth)) {
                     context.nextToken();
                     getEventSourceMappingResult.setFunctionArn(context.getUnmarshaller(String.class).unmarshall(context));

@@ -68,7 +68,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <li>
      * <p>
      * Can specify a PostgreSQL DB instance only if the source is running PostgreSQL 9.3.5 or later (9.4.7 and higher
-     * for cross-region replication).
+     * for cross-Region replication).
      * </p>
      * </li>
      * <li>
@@ -97,9 +97,9 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     private String sourceDBInstanceIdentifier;
     /**
      * <p>
-     * The compute and memory capacity of the read replica, for example, <code>db.m4.large</code>. Not all DB instance
-     * classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
-     * instance classes, and availability for your engine, see <a
+     * The compute and memory capacity of the read replica, for example db.m4.large. Not all DB instance classes are
+     * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
+     * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
      * in the <i>Amazon RDS User Guide.</i>
      * </p>
@@ -187,8 +187,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * If you do not specify a value for <code>DBParameterGroupName</code>, then Amazon RDS uses the
-     * <code>DBParameterGroup</code> of source DB instance for a same region read replica, or the default
-     * <code>DBParameterGroup</code> for the specified DB engine for a cross region read replica.
+     * <code>DBParameterGroup</code> of source DB instance for a same Region read replica, or the default
+     * <code>DBParameterGroup</code> for the specified DB engine for a cross-Region read replica.
      * </p>
      * <p>
      * Specifying a parameter group for this operation is only supported for Oracle DB instances. It isn't supported for
@@ -221,10 +221,10 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -444,7 +444,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * <code>SourceRegion</code> isn't supported for SQL Server, because SQL Server on Amazon RDS doesn't support
-     * cross-region read replicas.
+     * cross-Region read replicas.
      * </p>
      * </note>
      * <p>
@@ -455,7 +455,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -540,7 +540,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
@@ -690,7 +690,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        Can specify a PostgreSQL DB instance only if the source is running PostgreSQL 9.3.5 or later (9.4.7 and
-     *        higher for cross-region replication).
+     *        higher for cross-Region replication).
      *        </p>
      *        </li>
      *        <li>
@@ -802,7 +802,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <li>
      * <p>
      * Can specify a PostgreSQL DB instance only if the source is running PostgreSQL 9.3.5 or later (9.4.7 and higher
-     * for cross-region replication).
+     * for cross-Region replication).
      * </p>
      * </li>
      * <li>
@@ -862,7 +862,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        Can specify a PostgreSQL DB instance only if the source is running PostgreSQL 9.3.5 or later (9.4.7 and
-     *        higher for cross-region replication).
+     *        higher for cross-Region replication).
      *        </p>
      *        </li>
      *        <li>
@@ -928,7 +928,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <li>
      * <p>
      * Can specify a PostgreSQL DB instance only if the source is running PostgreSQL 9.3.5 or later (9.4.7 and higher
-     * for cross-region replication).
+     * for cross-Region replication).
      * </p>
      * </li>
      * <li>
@@ -987,7 +987,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *         <li>
      *         <p>
      *         Can specify a PostgreSQL DB instance only if the source is running PostgreSQL 9.3.5 or later (9.4.7 and
-     *         higher for cross-region replication).
+     *         higher for cross-Region replication).
      *         </p>
      *         </li>
      *         <li>
@@ -1053,7 +1053,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * <li>
      * <p>
      * Can specify a PostgreSQL DB instance only if the source is running PostgreSQL 9.3.5 or later (9.4.7 and higher
-     * for cross-region replication).
+     * for cross-Region replication).
      * </p>
      * </li>
      * <li>
@@ -1113,7 +1113,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        <li>
      *        <p>
      *        Can specify a PostgreSQL DB instance only if the source is running PostgreSQL 9.3.5 or later (9.4.7 and
-     *        higher for cross-region replication).
+     *        higher for cross-Region replication).
      *        </p>
      *        </li>
      *        <li>
@@ -1147,9 +1147,9 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The compute and memory capacity of the read replica, for example, <code>db.m4.large</code>. Not all DB instance
-     * classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
-     * instance classes, and availability for your engine, see <a
+     * The compute and memory capacity of the read replica, for example db.m4.large. Not all DB instance classes are
+     * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
+     * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
      * in the <i>Amazon RDS User Guide.</i>
      * </p>
@@ -1158,9 +1158,9 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param dBInstanceClass
-     *        The compute and memory capacity of the read replica, for example, <code>db.m4.large</code>. Not all DB
-     *        instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
-     *        full list of DB instance classes, and availability for your engine, see <a
+     *        The compute and memory capacity of the read replica, for example db.m4.large. Not all DB instance classes
+     *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
+     *        instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
      *        Class</a> in the <i>Amazon RDS User Guide.</i> </p>
      *        <p>
@@ -1173,9 +1173,9 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The compute and memory capacity of the read replica, for example, <code>db.m4.large</code>. Not all DB instance
-     * classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
-     * instance classes, and availability for your engine, see <a
+     * The compute and memory capacity of the read replica, for example db.m4.large. Not all DB instance classes are
+     * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
+     * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
      * in the <i>Amazon RDS User Guide.</i>
      * </p>
@@ -1183,9 +1183,9 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * Default: Inherits from the source DB instance.
      * </p>
      * 
-     * @return The compute and memory capacity of the read replica, for example, <code>db.m4.large</code>. Not all DB
-     *         instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
-     *         full list of DB instance classes, and availability for your engine, see <a
+     * @return The compute and memory capacity of the read replica, for example db.m4.large. Not all DB instance classes
+     *         are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
+     *         instance classes, and availability for your engine, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
      *         Class</a> in the <i>Amazon RDS User Guide.</i> </p>
      *         <p>
@@ -1198,9 +1198,9 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The compute and memory capacity of the read replica, for example, <code>db.m4.large</code>. Not all DB instance
-     * classes are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
-     * instance classes, and availability for your engine, see <a
+     * The compute and memory capacity of the read replica, for example db.m4.large. Not all DB instance classes are
+     * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
+     * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
      * in the <i>Amazon RDS User Guide.</i>
      * </p>
@@ -1209,9 +1209,9 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param dBInstanceClass
-     *        The compute and memory capacity of the read replica, for example, <code>db.m4.large</code>. Not all DB
-     *        instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
-     *        full list of DB instance classes, and availability for your engine, see <a
+     *        The compute and memory capacity of the read replica, for example db.m4.large. Not all DB instance classes
+     *        are available in all Amazon Web Services Regions, or for all database engines. For the full list of DB
+     *        instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
      *        Class</a> in the <i>Amazon RDS User Guide.</i> </p>
      *        <p>
@@ -1726,8 +1726,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * If you do not specify a value for <code>DBParameterGroupName</code>, then Amazon RDS uses the
-     * <code>DBParameterGroup</code> of source DB instance for a same region read replica, or the default
-     * <code>DBParameterGroup</code> for the specified DB engine for a cross region read replica.
+     * <code>DBParameterGroup</code> of source DB instance for a same Region read replica, or the default
+     * <code>DBParameterGroup</code> for the specified DB engine for a cross-Region read replica.
      * </p>
      * <p>
      * Specifying a parameter group for this operation is only supported for Oracle DB instances. It isn't supported for
@@ -1758,8 +1758,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        The name of the DB parameter group to associate with this DB instance.</p>
      *        <p>
      *        If you do not specify a value for <code>DBParameterGroupName</code>, then Amazon RDS uses the
-     *        <code>DBParameterGroup</code> of source DB instance for a same region read replica, or the default
-     *        <code>DBParameterGroup</code> for the specified DB engine for a cross region read replica.
+     *        <code>DBParameterGroup</code> of source DB instance for a same Region read replica, or the default
+     *        <code>DBParameterGroup</code> for the specified DB engine for a cross-Region read replica.
      *        </p>
      *        <p>
      *        Specifying a parameter group for this operation is only supported for Oracle DB instances. It isn't
@@ -1796,8 +1796,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * If you do not specify a value for <code>DBParameterGroupName</code>, then Amazon RDS uses the
-     * <code>DBParameterGroup</code> of source DB instance for a same region read replica, or the default
-     * <code>DBParameterGroup</code> for the specified DB engine for a cross region read replica.
+     * <code>DBParameterGroup</code> of source DB instance for a same Region read replica, or the default
+     * <code>DBParameterGroup</code> for the specified DB engine for a cross-Region read replica.
      * </p>
      * <p>
      * Specifying a parameter group for this operation is only supported for Oracle DB instances. It isn't supported for
@@ -1827,8 +1827,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * @return The name of the DB parameter group to associate with this DB instance.</p>
      *         <p>
      *         If you do not specify a value for <code>DBParameterGroupName</code>, then Amazon RDS uses the
-     *         <code>DBParameterGroup</code> of source DB instance for a same region read replica, or the default
-     *         <code>DBParameterGroup</code> for the specified DB engine for a cross region read replica.
+     *         <code>DBParameterGroup</code> of source DB instance for a same Region read replica, or the default
+     *         <code>DBParameterGroup</code> for the specified DB engine for a cross-Region read replica.
      *         </p>
      *         <p>
      *         Specifying a parameter group for this operation is only supported for Oracle DB instances. It isn't
@@ -1865,8 +1865,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * If you do not specify a value for <code>DBParameterGroupName</code>, then Amazon RDS uses the
-     * <code>DBParameterGroup</code> of source DB instance for a same region read replica, or the default
-     * <code>DBParameterGroup</code> for the specified DB engine for a cross region read replica.
+     * <code>DBParameterGroup</code> of source DB instance for a same Region read replica, or the default
+     * <code>DBParameterGroup</code> for the specified DB engine for a cross-Region read replica.
      * </p>
      * <p>
      * Specifying a parameter group for this operation is only supported for Oracle DB instances. It isn't supported for
@@ -1897,8 +1897,8 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        The name of the DB parameter group to associate with this DB instance.</p>
      *        <p>
      *        If you do not specify a value for <code>DBParameterGroupName</code>, then Amazon RDS uses the
-     *        <code>DBParameterGroup</code> of source DB instance for a same region read replica, or the default
-     *        <code>DBParameterGroup</code> for the specified DB engine for a cross region read replica.
+     *        <code>DBParameterGroup</code> of source DB instance for a same Region read replica, or the default
+     *        <code>DBParameterGroup</code> for the specified DB engine for a cross-Region read replica.
      *        </p>
      *        <p>
      *        Specifying a parameter group for this operation is only supported for Oracle DB instances. It isn't
@@ -1936,10 +1936,10 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -1952,10 +1952,11 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * @param publiclyAccessible
      *        A value that indicates whether the DB instance is publicly accessible.</p>
      *        <p>
-     *        When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from
-     *        within the DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access
-     *        to the DB instance is ultimately controlled by the security group it uses, and that public access is not
-     *        permitted if the security group assigned to the DB instance doesn't permit it.
+     *        When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *        IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
+     *        from outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security
+     *        group it uses. That public access isn't permitted if the security group assigned to the DB cluster doesn't
+     *        permit it.
      *        </p>
      *        <p>
      *        When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
@@ -1974,10 +1975,10 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -1989,10 +1990,11 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * 
      * @return A value that indicates whether the DB instance is publicly accessible.</p>
      *         <p>
-     *         When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from
-     *         within the DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access
-     *         to the DB instance is ultimately controlled by the security group it uses, and that public access is not
-     *         permitted if the security group assigned to the DB instance doesn't permit it.
+     *         When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *         IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
+     *         from outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security
+     *         group it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     *         doesn't permit it.
      *         </p>
      *         <p>
      *         When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
@@ -2011,10 +2013,10 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -2027,10 +2029,11 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * @param publiclyAccessible
      *        A value that indicates whether the DB instance is publicly accessible.</p>
      *        <p>
-     *        When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from
-     *        within the DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access
-     *        to the DB instance is ultimately controlled by the security group it uses, and that public access is not
-     *        permitted if the security group assigned to the DB instance doesn't permit it.
+     *        When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *        IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
+     *        from outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security
+     *        group it uses. That public access isn't permitted if the security group assigned to the DB cluster doesn't
+     *        permit it.
      *        </p>
      *        <p>
      *        When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
@@ -2051,10 +2054,10 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -2066,10 +2069,11 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * 
      * @return A value that indicates whether the DB instance is publicly accessible.</p>
      *         <p>
-     *         When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from
-     *         within the DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access
-     *         to the DB instance is ultimately controlled by the security group it uses, and that public access is not
-     *         permitted if the security group assigned to the DB instance doesn't permit it.
+     *         When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *         IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
+     *         from outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security
+     *         group it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     *         doesn't permit it.
      *         </p>
      *         <p>
      *         When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
@@ -3137,7 +3141,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * <code>SourceRegion</code> isn't supported for SQL Server, because SQL Server on Amazon RDS doesn't support
-     * cross-region read replicas.
+     * cross-Region read replicas.
      * </p>
      * </note>
      * <p>
@@ -3208,7 +3212,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        </p>
      *        <p>
      *        <code>SourceRegion</code> isn't supported for SQL Server, because SQL Server on Amazon RDS doesn't support
-     *        cross-region read replicas.
+     *        cross-Region read replicas.
      *        </p>
      *        </note>
      *        <p>
@@ -3283,7 +3287,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * <code>SourceRegion</code> isn't supported for SQL Server, because SQL Server on Amazon RDS doesn't support
-     * cross-region read replicas.
+     * cross-Region read replicas.
      * </p>
      * </note>
      * <p>
@@ -3353,7 +3357,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *         </p>
      *         <p>
      *         <code>SourceRegion</code> isn't supported for SQL Server, because SQL Server on Amazon RDS doesn't
-     *         support cross-region read replicas.
+     *         support cross-Region read replicas.
      *         </p>
      *         </note>
      *         <p>
@@ -3428,7 +3432,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * <p>
      * <code>SourceRegion</code> isn't supported for SQL Server, because SQL Server on Amazon RDS doesn't support
-     * cross-region read replicas.
+     * cross-Region read replicas.
      * </p>
      * </note>
      * <p>
@@ -3499,7 +3503,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      *        </p>
      *        <p>
      *        <code>SourceRegion</code> isn't supported for SQL Server, because SQL Server on Amazon RDS doesn't support
-     *        cross-region read replicas.
+     *        cross-Region read replicas.
      *        </p>
      *        </note>
      *        <p>
@@ -3515,7 +3519,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -3528,7 +3532,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        For more information about IAM database authentication, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
@@ -3545,7 +3549,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -3557,7 +3561,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         For more information about IAM database authentication, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
@@ -3574,7 +3578,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -3587,7 +3591,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        For more information about IAM database authentication, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
@@ -3606,7 +3610,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information about IAM database authentication, see <a
@@ -3618,7 +3622,7 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         For more information about IAM database authentication, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
@@ -4201,14 +4205,14 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @param deletionProtection
      *        A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection is disabled. For more
+     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *        Instance</a>.
@@ -4221,13 +4225,13 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @return A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection is disabled. For more
+     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *         Instance</a>.
@@ -4240,14 +4244,14 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @param deletionProtection
      *        A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection is disabled. For more
+     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *        Instance</a>.
@@ -4262,13 +4266,13 @@ public class CreateDBInstanceReadReplicaRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @return A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection is disabled. For more
+     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *         Instance</a>.

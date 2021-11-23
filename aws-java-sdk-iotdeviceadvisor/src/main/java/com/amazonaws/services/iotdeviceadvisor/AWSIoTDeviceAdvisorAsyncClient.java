@@ -26,13 +26,14 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- * software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable
- * and secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can
- * confirm that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive
- * software updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS
- * Partner Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device
- * in and wait for it to be tested.
+ * Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT
+ * devices during device software development. Device Advisor provides pre-built tests that you can use to validate IoT
+ * devices for reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to
+ * production. By using Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core,
+ * follow security best practices and, if applicable, receive software updates from IoT Device Management. You can also
+ * download signed qualification reports to submit to the Amazon Web Services Partner Network to get your device
+ * qualified for the Amazon Web Services Partner Device Catalog without the need to send your device in and wait for it
+ * to be tested.
  * </p>
  */
 @ThreadSafe
@@ -132,6 +133,39 @@ public class AWSIoTDeviceAdvisorAsyncClient extends AWSIoTDeviceAdvisorClient im
 
                 try {
                     result = executeDeleteSuiteDefinition(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEndpointResult> getEndpointAsync(GetEndpointRequest request) {
+
+        return getEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEndpointResult> getEndpointAsync(final GetEndpointRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetEndpointRequest, GetEndpointResult> asyncHandler) {
+        final GetEndpointRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetEndpointResult>() {
+            @Override
+            public GetEndpointResult call() throws Exception {
+                GetEndpointResult result = null;
+
+                try {
+                    result = executeGetEndpoint(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

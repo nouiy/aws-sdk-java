@@ -67,6 +67,16 @@ public class ResizeClusterMessageStaxUnmarshaller implements Unmarshaller<Resize
                     resizeClusterMessage.setClassic(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ReservedNodeId", targetDepth)) {
+                    resizeClusterMessage.setReservedNodeId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("TargetReservedNodeOfferingId", targetDepth)) {
+                    resizeClusterMessage.setTargetReservedNodeOfferingId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return resizeClusterMessage;

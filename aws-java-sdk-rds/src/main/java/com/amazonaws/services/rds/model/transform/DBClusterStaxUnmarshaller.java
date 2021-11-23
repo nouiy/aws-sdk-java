@@ -379,6 +379,56 @@ public class DBClusterStaxUnmarshaller implements Unmarshaller<DBCluster, StaxUn
                     dBCluster.setPendingModifiedValues(ClusterPendingModifiedValuesStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("DBClusterInstanceClass", targetDepth)) {
+                    dBCluster.setDBClusterInstanceClass(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("StorageType", targetDepth)) {
+                    dBCluster.setStorageType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("Iops", targetDepth)) {
+                    dBCluster.setIops(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("PubliclyAccessible", targetDepth)) {
+                    dBCluster.setPubliclyAccessible(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("AutoMinorVersionUpgrade", targetDepth)) {
+                    dBCluster.setAutoMinorVersionUpgrade(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("MonitoringInterval", targetDepth)) {
+                    dBCluster.setMonitoringInterval(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("MonitoringRoleArn", targetDepth)) {
+                    dBCluster.setMonitoringRoleArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("PerformanceInsightsEnabled", targetDepth)) {
+                    dBCluster.setPerformanceInsightsEnabled(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("PerformanceInsightsKMSKeyId", targetDepth)) {
+                    dBCluster.setPerformanceInsightsKMSKeyId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("PerformanceInsightsRetentionPeriod", targetDepth)) {
+                    dBCluster.setPerformanceInsightsRetentionPeriod(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBCluster;

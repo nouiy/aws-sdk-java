@@ -36,7 +36,7 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * <ul>
      * <li>
      * <p>
-     * Must match the name of an existing DB cluster parameter group.
+     * Must not match the name of an existing DB cluster parameter group.
      * </p>
      * </li>
      * </ul>
@@ -64,6 +64,18 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * </p>
      * <p>
      * Example: <code>aurora-postgresql9.6</code>
+     * </p>
+     * <p>
+     * <b>RDS for MySQL</b>
+     * </p>
+     * <p>
+     * Example: <code>mysql8.0</code>
+     * </p>
+     * <p>
+     * <b>RDS for PostgreSQL</b>
+     * </p>
+     * <p>
+     * Example: <code>postgres12</code>
      * </p>
      * <p>
      * To list all of the available parameter group families for a DB engine, use the following command:
@@ -102,6 +114,16 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * <code>aurora-postgresql</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>mysql</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>postgres</code>
+     * </p>
+     * </li>
      * </ul>
      */
     private String dBParameterGroupFamily;
@@ -128,7 +150,7 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * <ul>
      * <li>
      * <p>
-     * Must match the name of an existing DB cluster parameter group.
+     * Must not match the name of an existing DB cluster parameter group.
      * </p>
      * </li>
      * </ul>
@@ -146,7 +168,7 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      *        <ul>
      *        <li>
      *        <p>
-     *        Must match the name of an existing DB cluster parameter group.
+     *        Must not match the name of an existing DB cluster parameter group.
      *        </p>
      *        </li>
      *        </ul>
@@ -170,7 +192,7 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * <ul>
      * <li>
      * <p>
-     * Must match the name of an existing DB cluster parameter group.
+     * Must not match the name of an existing DB cluster parameter group.
      * </p>
      * </li>
      * </ul>
@@ -187,7 +209,7 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      *         <ul>
      *         <li>
      *         <p>
-     *         Must match the name of an existing DB cluster parameter group.
+     *         Must not match the name of an existing DB cluster parameter group.
      *         </p>
      *         </li>
      *         </ul>
@@ -211,7 +233,7 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * <ul>
      * <li>
      * <p>
-     * Must match the name of an existing DB cluster parameter group.
+     * Must not match the name of an existing DB cluster parameter group.
      * </p>
      * </li>
      * </ul>
@@ -229,7 +251,7 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      *        <ul>
      *        <li>
      *        <p>
-     *        Must match the name of an existing DB cluster parameter group.
+     *        Must not match the name of an existing DB cluster parameter group.
      *        </p>
      *        </li>
      *        </ul>
@@ -264,6 +286,18 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * Example: <code>aurora-postgresql9.6</code>
      * </p>
      * <p>
+     * <b>RDS for MySQL</b>
+     * </p>
+     * <p>
+     * Example: <code>mysql8.0</code>
+     * </p>
+     * <p>
+     * <b>RDS for PostgreSQL</b>
+     * </p>
+     * <p>
+     * Example: <code>postgres12</code>
+     * </p>
+     * <p>
      * To list all of the available parameter group families for a DB engine, use the following command:
      * </p>
      * <p>
@@ -300,6 +334,16 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * <code>aurora-postgresql</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>mysql</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>postgres</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param dBParameterGroupFamily
@@ -317,6 +361,18 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      *        </p>
      *        <p>
      *        Example: <code>aurora-postgresql9.6</code>
+     *        </p>
+     *        <p>
+     *        <b>RDS for MySQL</b>
+     *        </p>
+     *        <p>
+     *        Example: <code>mysql8.0</code>
+     *        </p>
+     *        <p>
+     *        <b>RDS for PostgreSQL</b>
+     *        </p>
+     *        <p>
+     *        Example: <code>postgres12</code>
      *        </p>
      *        <p>
      *        To list all of the available parameter group families for a DB engine, use the following command:
@@ -355,6 +411,16 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      *        <code>aurora-postgresql</code>
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>mysql</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>postgres</code>
+     *        </p>
+     *        </li>
      */
 
     public void setDBParameterGroupFamily(String dBParameterGroupFamily) {
@@ -378,6 +444,18 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * </p>
      * <p>
      * Example: <code>aurora-postgresql9.6</code>
+     * </p>
+     * <p>
+     * <b>RDS for MySQL</b>
+     * </p>
+     * <p>
+     * Example: <code>mysql8.0</code>
+     * </p>
+     * <p>
+     * <b>RDS for PostgreSQL</b>
+     * </p>
+     * <p>
+     * Example: <code>postgres12</code>
      * </p>
      * <p>
      * To list all of the available parameter group families for a DB engine, use the following command:
@@ -416,6 +494,16 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * <code>aurora-postgresql</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>mysql</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>postgres</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The DB cluster parameter group family name. A DB cluster parameter group can be associated with one and
@@ -432,6 +520,18 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      *         </p>
      *         <p>
      *         Example: <code>aurora-postgresql9.6</code>
+     *         </p>
+     *         <p>
+     *         <b>RDS for MySQL</b>
+     *         </p>
+     *         <p>
+     *         Example: <code>mysql8.0</code>
+     *         </p>
+     *         <p>
+     *         <b>RDS for PostgreSQL</b>
+     *         </p>
+     *         <p>
+     *         Example: <code>postgres12</code>
      *         </p>
      *         <p>
      *         To list all of the available parameter group families for a DB engine, use the following command:
@@ -470,6 +570,16 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      *         <code>aurora-postgresql</code>
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>mysql</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>postgres</code>
+     *         </p>
+     *         </li>
      */
 
     public String getDBParameterGroupFamily() {
@@ -493,6 +603,18 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * </p>
      * <p>
      * Example: <code>aurora-postgresql9.6</code>
+     * </p>
+     * <p>
+     * <b>RDS for MySQL</b>
+     * </p>
+     * <p>
+     * Example: <code>mysql8.0</code>
+     * </p>
+     * <p>
+     * <b>RDS for PostgreSQL</b>
+     * </p>
+     * <p>
+     * Example: <code>postgres12</code>
      * </p>
      * <p>
      * To list all of the available parameter group families for a DB engine, use the following command:
@@ -531,6 +653,16 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      * <code>aurora-postgresql</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>mysql</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>postgres</code>
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param dBParameterGroupFamily
@@ -548,6 +680,18 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      *        </p>
      *        <p>
      *        Example: <code>aurora-postgresql9.6</code>
+     *        </p>
+     *        <p>
+     *        <b>RDS for MySQL</b>
+     *        </p>
+     *        <p>
+     *        Example: <code>mysql8.0</code>
+     *        </p>
+     *        <p>
+     *        <b>RDS for PostgreSQL</b>
+     *        </p>
+     *        <p>
+     *        Example: <code>postgres12</code>
      *        </p>
      *        <p>
      *        To list all of the available parameter group families for a DB engine, use the following command:
@@ -584,6 +728,16 @@ public class CreateDBClusterParameterGroupRequest extends com.amazonaws.AmazonWe
      *        <li>
      *        <p>
      *        <code>aurora-postgresql</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>mysql</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>postgres</code>
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

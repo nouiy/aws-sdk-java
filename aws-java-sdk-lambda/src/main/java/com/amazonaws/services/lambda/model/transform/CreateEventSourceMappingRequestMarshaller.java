@@ -36,6 +36,8 @@ public class CreateEventSourceMappingRequestMarshaller {
             .marshallLocationName("Enabled").build();
     private static final MarshallingInfo<Integer> BATCHSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BatchSize").build();
+    private static final MarshallingInfo<StructuredPojo> FILTERCRITERIA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterCriteria").build();
     private static final MarshallingInfo<Integer> MAXIMUMBATCHINGWINDOWINSECONDS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaximumBatchingWindowInSeconds").build();
     private static final MarshallingInfo<Integer> PARALLELIZATIONFACTOR_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
@@ -85,6 +87,7 @@ public class CreateEventSourceMappingRequestMarshaller {
             protocolMarshaller.marshall(createEventSourceMappingRequest.getFunctionName(), FUNCTIONNAME_BINDING);
             protocolMarshaller.marshall(createEventSourceMappingRequest.getEnabled(), ENABLED_BINDING);
             protocolMarshaller.marshall(createEventSourceMappingRequest.getBatchSize(), BATCHSIZE_BINDING);
+            protocolMarshaller.marshall(createEventSourceMappingRequest.getFilterCriteria(), FILTERCRITERIA_BINDING);
             protocolMarshaller.marshall(createEventSourceMappingRequest.getMaximumBatchingWindowInSeconds(), MAXIMUMBATCHINGWINDOWINSECONDS_BINDING);
             protocolMarshaller.marshall(createEventSourceMappingRequest.getParallelizationFactor(), PARALLELIZATIONFACTOR_BINDING);
             protocolMarshaller.marshall(createEventSourceMappingRequest.getStartingPosition(), STARTINGPOSITION_BINDING);

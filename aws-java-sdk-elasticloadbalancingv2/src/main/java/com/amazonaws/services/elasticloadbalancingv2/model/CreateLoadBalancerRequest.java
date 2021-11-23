@@ -124,8 +124,7 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The type of IP addresses used by the subnets for your load balancer. The possible values are <code>ipv4</code>
-     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal load balancers must use
-     * <code>ipv4</code>.
+     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * </p>
      */
     private String ipAddressType;
@@ -1042,14 +1041,12 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The type of IP addresses used by the subnets for your load balancer. The possible values are <code>ipv4</code>
-     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal load balancers must use
-     * <code>ipv4</code>.
+     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * </p>
      * 
      * @param ipAddressType
      *        The type of IP addresses used by the subnets for your load balancer. The possible values are
-     *        <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal
-     *        load balancers must use <code>ipv4</code>.
+     *        <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * @see IpAddressType
      */
 
@@ -1060,13 +1057,11 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The type of IP addresses used by the subnets for your load balancer. The possible values are <code>ipv4</code>
-     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal load balancers must use
-     * <code>ipv4</code>.
+     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * </p>
      * 
      * @return The type of IP addresses used by the subnets for your load balancer. The possible values are
-     *         <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal
-     *         load balancers must use <code>ipv4</code>.
+     *         <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * @see IpAddressType
      */
 
@@ -1077,14 +1072,12 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The type of IP addresses used by the subnets for your load balancer. The possible values are <code>ipv4</code>
-     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal load balancers must use
-     * <code>ipv4</code>.
+     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * </p>
      * 
      * @param ipAddressType
      *        The type of IP addresses used by the subnets for your load balancer. The possible values are
-     *        <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal
-     *        load balancers must use <code>ipv4</code>.
+     *        <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */
@@ -1097,14 +1090,12 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The type of IP addresses used by the subnets for your load balancer. The possible values are <code>ipv4</code>
-     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal load balancers must use
-     * <code>ipv4</code>.
+     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * </p>
      * 
      * @param ipAddressType
      *        The type of IP addresses used by the subnets for your load balancer. The possible values are
-     *        <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal
-     *        load balancers must use <code>ipv4</code>.
+     *        <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * @see IpAddressType
      */
 
@@ -1115,14 +1106,12 @@ public class CreateLoadBalancerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The type of IP addresses used by the subnets for your load balancer. The possible values are <code>ipv4</code>
-     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal load balancers must use
-     * <code>ipv4</code>.
+     * (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * </p>
      * 
      * @param ipAddressType
      *        The type of IP addresses used by the subnets for your load balancer. The possible values are
-     *        <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). Internal
-     *        load balancers must use <code>ipv4</code>.
+     *        <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses).
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */

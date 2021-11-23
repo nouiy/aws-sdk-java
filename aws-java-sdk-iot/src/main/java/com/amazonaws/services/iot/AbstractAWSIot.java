@@ -524,6 +524,11 @@ public class AbstractAWSIot implements AWSIot {
     }
 
     @Override
+    public DescribeManagedJobTemplateResult describeManagedJobTemplate(DescribeManagedJobTemplateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeMitigationActionResult describeMitigationAction(DescribeMitigationActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -801,6 +806,11 @@ public class AbstractAWSIot implements AWSIot {
 
     @Override
     public ListJobsResult listJobs(ListJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListManagedJobTemplatesResult listManagedJobTemplates(ListManagedJobTemplatesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

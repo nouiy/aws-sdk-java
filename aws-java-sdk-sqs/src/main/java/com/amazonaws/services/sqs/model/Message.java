@@ -27,8 +27,8 @@ public class Message implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A unique identifier for the message. A <code>MessageId</code>is considered unique across all accounts for an
-     * extended period of time.
+     * A unique identifier for the message. A <code>MessageId</code>is considered unique across all Amazon Web Services
+     * accounts for an extended period of time.
      * </p>
      */
     private String messageId;
@@ -119,13 +119,13 @@ public class Message implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A unique identifier for the message. A <code>MessageId</code>is considered unique across all accounts for an
-     * extended period of time.
+     * A unique identifier for the message. A <code>MessageId</code>is considered unique across all Amazon Web Services
+     * accounts for an extended period of time.
      * </p>
      * 
      * @param messageId
-     *        A unique identifier for the message. A <code>MessageId</code>is considered unique across all accounts for
-     *        an extended period of time.
+     *        A unique identifier for the message. A <code>MessageId</code>is considered unique across all Amazon Web
+     *        Services accounts for an extended period of time.
      */
 
     public void setMessageId(String messageId) {
@@ -134,12 +134,12 @@ public class Message implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A unique identifier for the message. A <code>MessageId</code>is considered unique across all accounts for an
-     * extended period of time.
+     * A unique identifier for the message. A <code>MessageId</code>is considered unique across all Amazon Web Services
+     * accounts for an extended period of time.
      * </p>
      * 
-     * @return A unique identifier for the message. A <code>MessageId</code>is considered unique across all accounts for
-     *         an extended period of time.
+     * @return A unique identifier for the message. A <code>MessageId</code>is considered unique across all Amazon Web
+     *         Services accounts for an extended period of time.
      */
 
     public String getMessageId() {
@@ -148,13 +148,13 @@ public class Message implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A unique identifier for the message. A <code>MessageId</code>is considered unique across all accounts for an
-     * extended period of time.
+     * A unique identifier for the message. A <code>MessageId</code>is considered unique across all Amazon Web Services
+     * accounts for an extended period of time.
      * </p>
      * 
      * @param messageId
-     *        A unique identifier for the message. A <code>MessageId</code>is considered unique across all accounts for
-     *        an extended period of time.
+     *        A unique identifier for the message. A <code>MessageId</code>is considered unique across all Amazon Web
+     *        Services accounts for an extended period of time.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

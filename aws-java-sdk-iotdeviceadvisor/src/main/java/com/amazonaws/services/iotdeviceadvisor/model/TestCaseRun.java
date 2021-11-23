@@ -30,13 +30,13 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run Id.
+     * Provides test case run ID.
      * </p>
      */
     private String testCaseRunId;
     /**
      * <p>
-     * Provides test case run definition Id.
+     * Provides test case run definition ID.
      * </p>
      */
     private String testCaseDefinitionId;
@@ -50,6 +50,48 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Provides test case run status.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PASS</code>: Test passed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAIL</code>: Test failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code>: Test has not started running but is scheduled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RUNNING</code>: Test is running
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERORR</code>: Test faced an error when running due to an internal issue.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String status;
     /**
@@ -85,11 +127,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run Id.
+     * Provides test case run ID.
      * </p>
      * 
      * @param testCaseRunId
-     *        Provides test case run Id.
+     *        Provides test case run ID.
      */
 
     public void setTestCaseRunId(String testCaseRunId) {
@@ -98,10 +140,10 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run Id.
+     * Provides test case run ID.
      * </p>
      * 
-     * @return Provides test case run Id.
+     * @return Provides test case run ID.
      */
 
     public String getTestCaseRunId() {
@@ -110,11 +152,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run Id.
+     * Provides test case run ID.
      * </p>
      * 
      * @param testCaseRunId
-     *        Provides test case run Id.
+     *        Provides test case run ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -125,11 +167,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run definition Id.
+     * Provides test case run definition ID.
      * </p>
      * 
      * @param testCaseDefinitionId
-     *        Provides test case run definition Id.
+     *        Provides test case run definition ID.
      */
 
     public void setTestCaseDefinitionId(String testCaseDefinitionId) {
@@ -138,10 +180,10 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run definition Id.
+     * Provides test case run definition ID.
      * </p>
      * 
-     * @return Provides test case run definition Id.
+     * @return Provides test case run definition ID.
      */
 
     public String getTestCaseDefinitionId() {
@@ -150,11 +192,11 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Provides test case run definition Id.
+     * Provides test case run definition ID.
      * </p>
      * 
      * @param testCaseDefinitionId
-     *        Provides test case run definition Id.
+     *        Provides test case run definition ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -207,9 +249,93 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Provides test case run status.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PASS</code>: Test passed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAIL</code>: Test failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code>: Test has not started running but is scheduled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RUNNING</code>: Test is running
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERORR</code>: Test faced an error when running due to an internal issue.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        Provides test case run status.
+     *        Provides test case run status.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PASS</code>: Test passed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>FAIL</code>: Test failed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PENDING</code>: Test has not started running but is scheduled.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>RUNNING</code>: Test is running
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite
+     *        run.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ERORR</code>: Test faced an error when running due to an internal issue.
+     *        </p>
+     *        </li>
      * @see Status
      */
 
@@ -221,8 +347,92 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Provides test case run status.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PASS</code>: Test passed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAIL</code>: Test failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code>: Test has not started running but is scheduled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RUNNING</code>: Test is running
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERORR</code>: Test faced an error when running due to an internal issue.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Provides test case run status.
+     * @return Provides test case run status.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>PASS</code>: Test passed.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>FAIL</code>: Test failed.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PENDING</code>: Test has not started running but is scheduled.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>RUNNING</code>: Test is running
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a
+     *         suite run.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ERORR</code>: Test faced an error when running due to an internal issue.
+     *         </p>
+     *         </li>
      * @see Status
      */
 
@@ -234,9 +444,93 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Provides test case run status.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PASS</code>: Test passed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAIL</code>: Test failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code>: Test has not started running but is scheduled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RUNNING</code>: Test is running
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERORR</code>: Test faced an error when running due to an internal issue.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        Provides test case run status.
+     *        Provides test case run status.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PASS</code>: Test passed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>FAIL</code>: Test failed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PENDING</code>: Test has not started running but is scheduled.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>RUNNING</code>: Test is running
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite
+     *        run.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ERORR</code>: Test faced an error when running due to an internal issue.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */
@@ -250,9 +544,93 @@ public class TestCaseRun implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Provides test case run status.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>PASS</code>: Test passed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAIL</code>: Test failed.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PENDING</code>: Test has not started running but is scheduled.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RUNNING</code>: Test is running
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ERORR</code>: Test faced an error when running due to an internal issue.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        Provides test case run status.
+     *        Provides test case run status.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>PASS</code>: Test passed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>FAIL</code>: Test failed.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PENDING</code>: Test has not started running but is scheduled.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>RUNNING</code>: Test is running
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>STOPPING</code>: Test is performing cleanup steps. You will see this status only if you stop a suite
+     *        run.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>STOPPED</code> Test is stopped. You will see this status only if you stop a suite run.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PASS_WITH_WARNINGS</code>: Test passed with warnings.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ERORR</code>: Test faced an error when running due to an internal issue.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Status
      */

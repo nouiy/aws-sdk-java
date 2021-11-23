@@ -57,6 +57,8 @@ public class UpdateDomainConfigRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdvancedSecurityOptions").build();
     private static final MarshallingInfo<StructuredPojo> AUTOTUNEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoTuneOptions").build();
+    private static final MarshallingInfo<Boolean> DRYRUN_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("DryRun").build();
 
     private static final UpdateDomainConfigRequestMarshaller instance = new UpdateDomainConfigRequestMarshaller();
 
@@ -88,6 +90,7 @@ public class UpdateDomainConfigRequestMarshaller {
             protocolMarshaller.marshall(updateDomainConfigRequest.getNodeToNodeEncryptionOptions(), NODETONODEENCRYPTIONOPTIONS_BINDING);
             protocolMarshaller.marshall(updateDomainConfigRequest.getAdvancedSecurityOptions(), ADVANCEDSECURITYOPTIONS_BINDING);
             protocolMarshaller.marshall(updateDomainConfigRequest.getAutoTuneOptions(), AUTOTUNEOPTIONS_BINDING);
+            protocolMarshaller.marshall(updateDomainConfigRequest.getDryRun(), DRYRUN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

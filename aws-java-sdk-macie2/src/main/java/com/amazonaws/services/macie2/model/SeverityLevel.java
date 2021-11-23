@@ -39,9 +39,9 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
     private Long occurrencesThreshold;
     /**
      * <p>
-     * The severity to assign to a finding if the number of occurrences is greater than or equal to the specified
-     * threshold (occurrencesThreshold) and, if applicable, is less than the threshold for the next consecutive severity
-     * level for the custom data identifier.
+     * The severity to assign to a finding: if the number of occurrences is greater than or equal to the specified
+     * threshold (occurrencesThreshold); and, if applicable, the number of occurrences is less than the threshold for
+     * the next consecutive severity level for the custom data identifier, moving from LOW to HIGH.
      * </p>
      */
     private String severity;
@@ -94,15 +94,15 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity to assign to a finding if the number of occurrences is greater than or equal to the specified
-     * threshold (occurrencesThreshold) and, if applicable, is less than the threshold for the next consecutive severity
-     * level for the custom data identifier.
+     * The severity to assign to a finding: if the number of occurrences is greater than or equal to the specified
+     * threshold (occurrencesThreshold); and, if applicable, the number of occurrences is less than the threshold for
+     * the next consecutive severity level for the custom data identifier, moving from LOW to HIGH.
      * </p>
      * 
      * @param severity
-     *        The severity to assign to a finding if the number of occurrences is greater than or equal to the specified
-     *        threshold (occurrencesThreshold) and, if applicable, is less than the threshold for the next consecutive
-     *        severity level for the custom data identifier.
+     *        The severity to assign to a finding: if the number of occurrences is greater than or equal to the
+     *        specified threshold (occurrencesThreshold); and, if applicable, the number of occurrences is less than the
+     *        threshold for the next consecutive severity level for the custom data identifier, moving from LOW to HIGH.
      * @see DataIdentifierSeverity
      */
 
@@ -112,14 +112,15 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity to assign to a finding if the number of occurrences is greater than or equal to the specified
-     * threshold (occurrencesThreshold) and, if applicable, is less than the threshold for the next consecutive severity
-     * level for the custom data identifier.
+     * The severity to assign to a finding: if the number of occurrences is greater than or equal to the specified
+     * threshold (occurrencesThreshold); and, if applicable, the number of occurrences is less than the threshold for
+     * the next consecutive severity level for the custom data identifier, moving from LOW to HIGH.
      * </p>
      * 
-     * @return The severity to assign to a finding if the number of occurrences is greater than or equal to the
-     *         specified threshold (occurrencesThreshold) and, if applicable, is less than the threshold for the next
-     *         consecutive severity level for the custom data identifier.
+     * @return The severity to assign to a finding: if the number of occurrences is greater than or equal to the
+     *         specified threshold (occurrencesThreshold); and, if applicable, the number of occurrences is less than
+     *         the threshold for the next consecutive severity level for the custom data identifier, moving from LOW to
+     *         HIGH.
      * @see DataIdentifierSeverity
      */
 
@@ -129,15 +130,15 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity to assign to a finding if the number of occurrences is greater than or equal to the specified
-     * threshold (occurrencesThreshold) and, if applicable, is less than the threshold for the next consecutive severity
-     * level for the custom data identifier.
+     * The severity to assign to a finding: if the number of occurrences is greater than or equal to the specified
+     * threshold (occurrencesThreshold); and, if applicable, the number of occurrences is less than the threshold for
+     * the next consecutive severity level for the custom data identifier, moving from LOW to HIGH.
      * </p>
      * 
      * @param severity
-     *        The severity to assign to a finding if the number of occurrences is greater than or equal to the specified
-     *        threshold (occurrencesThreshold) and, if applicable, is less than the threshold for the next consecutive
-     *        severity level for the custom data identifier.
+     *        The severity to assign to a finding: if the number of occurrences is greater than or equal to the
+     *        specified threshold (occurrencesThreshold); and, if applicable, the number of occurrences is less than the
+     *        threshold for the next consecutive severity level for the custom data identifier, moving from LOW to HIGH.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataIdentifierSeverity
      */
@@ -149,15 +150,15 @@ public class SeverityLevel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The severity to assign to a finding if the number of occurrences is greater than or equal to the specified
-     * threshold (occurrencesThreshold) and, if applicable, is less than the threshold for the next consecutive severity
-     * level for the custom data identifier.
+     * The severity to assign to a finding: if the number of occurrences is greater than or equal to the specified
+     * threshold (occurrencesThreshold); and, if applicable, the number of occurrences is less than the threshold for
+     * the next consecutive severity level for the custom data identifier, moving from LOW to HIGH.
      * </p>
      * 
      * @param severity
-     *        The severity to assign to a finding if the number of occurrences is greater than or equal to the specified
-     *        threshold (occurrencesThreshold) and, if applicable, is less than the threshold for the next consecutive
-     *        severity level for the custom data identifier.
+     *        The severity to assign to a finding: if the number of occurrences is greater than or equal to the
+     *        specified threshold (occurrencesThreshold); and, if applicable, the number of occurrences is less than the
+     *        threshold for the next consecutive severity level for the custom data identifier, moving from LOW to HIGH.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataIdentifierSeverity
      */

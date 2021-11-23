@@ -70,6 +70,11 @@ public class CreateUserGroupResultStaxUnmarshaller implements Unmarshaller<Creat
                     continue;
                 }
 
+                if (context.testExpression("MinimumEngineVersion", targetDepth)) {
+                    createUserGroupResult.setMinimumEngineVersion(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("PendingChanges", targetDepth)) {
                     createUserGroupResult.setPendingChanges(UserGroupPendingChangesStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

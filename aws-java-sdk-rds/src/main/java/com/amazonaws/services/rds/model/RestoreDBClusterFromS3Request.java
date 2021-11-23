@@ -317,7 +317,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -404,7 +404,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection is disabled.
+     * deletion protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      */
     private Boolean deletionProtection;
@@ -2335,7 +2335,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -2345,7 +2345,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
@@ -2359,7 +2359,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -2368,7 +2368,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
@@ -2382,7 +2382,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -2392,7 +2392,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
@@ -2408,7 +2408,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * For more information, see <a
@@ -2417,7 +2417,7 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html"> IAM
@@ -2939,12 +2939,12 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection is disabled.
+     * deletion protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      * 
      * @param deletionProtection
      *        A value that indicates whether the DB cluster has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection is disabled.
+     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled.
      */
 
     public void setDeletionProtection(Boolean deletionProtection) {
@@ -2954,11 +2954,11 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection is disabled.
+     * deletion protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      * 
      * @return A value that indicates whether the DB cluster has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection is disabled.
+     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled.
      */
 
     public Boolean getDeletionProtection() {
@@ -2968,12 +2968,12 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection is disabled.
+     * deletion protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      * 
      * @param deletionProtection
      *        A value that indicates whether the DB cluster has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection is disabled.
+     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2985,11 +2985,11 @@ public class RestoreDBClusterFromS3Request extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A value that indicates whether the DB cluster has deletion protection enabled. The database can't be deleted when
-     * deletion protection is enabled. By default, deletion protection is disabled.
+     * deletion protection is enabled. By default, deletion protection isn't enabled.
      * </p>
      * 
      * @return A value that indicates whether the DB cluster has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection is disabled.
+     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled.
      */
 
     public Boolean isDeletionProtection() {

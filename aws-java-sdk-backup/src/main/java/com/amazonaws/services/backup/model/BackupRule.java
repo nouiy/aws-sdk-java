@@ -30,7 +30,7 @@ public class BackupRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An optional display name for a backup rule.
+     * A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      */
     private String ruleName;
@@ -44,11 +44,13 @@ public class BackupRule implements Serializable, Cloneable, StructuredPojo {
     private String targetBackupVaultName;
     /**
      * <p>
-     * A cron expression in UTC specifying when Backup initiates a backup job. For more information about cron
-     * expressions, see <a
+     * A cron expression in UTC specifying when Backup initiates a backup job. For more information about Amazon Web
+     * Services cron expressions, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for
-     * Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Prior to specifying a value for this parameter, we
-     * recommend testing your cron expression using one of the many available cron generator and testing tools.
+     * Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Two examples of Amazon Web Services cron
+     * expressions are <code> 15 * ? * * *</code> (take a backup every hour at 15 minutes past the hour) and
+     * <code>0 12 * * ? *</code> (take a backup every day at 12 noon UTC). For a table of examples, click the preceding
+     * link and scroll down the page.
      * </p>
      */
     private String scheduleExpression;
@@ -110,11 +112,11 @@ public class BackupRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An optional display name for a backup rule.
+     * A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
      * @param ruleName
-     *        An optional display name for a backup rule.
+     *        A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      */
 
     public void setRuleName(String ruleName) {
@@ -123,10 +125,10 @@ public class BackupRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An optional display name for a backup rule.
+     * A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
-     * @return An optional display name for a backup rule.
+     * @return A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      */
 
     public String getRuleName() {
@@ -135,11 +137,11 @@ public class BackupRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An optional display name for a backup rule.
+     * A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
      * @param ruleName
-     *        An optional display name for a backup rule.
+     *        A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -202,20 +204,23 @@ public class BackupRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A cron expression in UTC specifying when Backup initiates a backup job. For more information about cron
-     * expressions, see <a
+     * A cron expression in UTC specifying when Backup initiates a backup job. For more information about Amazon Web
+     * Services cron expressions, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for
-     * Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Prior to specifying a value for this parameter, we
-     * recommend testing your cron expression using one of the many available cron generator and testing tools.
+     * Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Two examples of Amazon Web Services cron
+     * expressions are <code> 15 * ? * * *</code> (take a backup every hour at 15 minutes past the hour) and
+     * <code>0 12 * * ? *</code> (take a backup every day at 12 noon UTC). For a table of examples, click the preceding
+     * link and scroll down the page.
      * </p>
      * 
      * @param scheduleExpression
-     *        A cron expression in UTC specifying when Backup initiates a backup job. For more information about cron
-     *        expressions, see <a
+     *        A cron expression in UTC specifying when Backup initiates a backup job. For more information about Amazon
+     *        Web Services cron expressions, see <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule
-     *        Expressions for Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Prior to specifying a value
-     *        for this parameter, we recommend testing your cron expression using one of the many available cron
-     *        generator and testing tools.
+     *        Expressions for Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Two examples of Amazon Web
+     *        Services cron expressions are <code> 15 * ? * * *</code> (take a backup every hour at 15 minutes past the
+     *        hour) and <code>0 12 * * ? *</code> (take a backup every day at 12 noon UTC). For a table of examples,
+     *        click the preceding link and scroll down the page.
      */
 
     public void setScheduleExpression(String scheduleExpression) {
@@ -224,19 +229,22 @@ public class BackupRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A cron expression in UTC specifying when Backup initiates a backup job. For more information about cron
-     * expressions, see <a
+     * A cron expression in UTC specifying when Backup initiates a backup job. For more information about Amazon Web
+     * Services cron expressions, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for
-     * Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Prior to specifying a value for this parameter, we
-     * recommend testing your cron expression using one of the many available cron generator and testing tools.
+     * Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Two examples of Amazon Web Services cron
+     * expressions are <code> 15 * ? * * *</code> (take a backup every hour at 15 minutes past the hour) and
+     * <code>0 12 * * ? *</code> (take a backup every day at 12 noon UTC). For a table of examples, click the preceding
+     * link and scroll down the page.
      * </p>
      * 
-     * @return A cron expression in UTC specifying when Backup initiates a backup job. For more information about cron
-     *         expressions, see <a
+     * @return A cron expression in UTC specifying when Backup initiates a backup job. For more information about Amazon
+     *         Web Services cron expressions, see <a
      *         href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule
-     *         Expressions for Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Prior to specifying a value
-     *         for this parameter, we recommend testing your cron expression using one of the many available cron
-     *         generator and testing tools.
+     *         Expressions for Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Two examples of Amazon Web
+     *         Services cron expressions are <code> 15 * ? * * *</code> (take a backup every hour at 15 minutes past the
+     *         hour) and <code>0 12 * * ? *</code> (take a backup every day at 12 noon UTC). For a table of examples,
+     *         click the preceding link and scroll down the page.
      */
 
     public String getScheduleExpression() {
@@ -245,20 +253,23 @@ public class BackupRule implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A cron expression in UTC specifying when Backup initiates a backup job. For more information about cron
-     * expressions, see <a
+     * A cron expression in UTC specifying when Backup initiates a backup job. For more information about Amazon Web
+     * Services cron expressions, see <a
      * href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule Expressions for
-     * Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Prior to specifying a value for this parameter, we
-     * recommend testing your cron expression using one of the many available cron generator and testing tools.
+     * Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Two examples of Amazon Web Services cron
+     * expressions are <code> 15 * ? * * *</code> (take a backup every hour at 15 minutes past the hour) and
+     * <code>0 12 * * ? *</code> (take a backup every day at 12 noon UTC). For a table of examples, click the preceding
+     * link and scroll down the page.
      * </p>
      * 
      * @param scheduleExpression
-     *        A cron expression in UTC specifying when Backup initiates a backup job. For more information about cron
-     *        expressions, see <a
+     *        A cron expression in UTC specifying when Backup initiates a backup job. For more information about Amazon
+     *        Web Services cron expressions, see <a
      *        href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html">Schedule
-     *        Expressions for Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Prior to specifying a value
-     *        for this parameter, we recommend testing your cron expression using one of the many available cron
-     *        generator and testing tools.
+     *        Expressions for Rules</a> in the <i>Amazon CloudWatch Events User Guide.</i>. Two examples of Amazon Web
+     *        Services cron expressions are <code> 15 * ? * * *</code> (take a backup every hour at 15 minutes past the
+     *        hour) and <code>0 12 * * ? *</code> (take a backup every day at 12 noon UTC). For a table of examples,
+     *        click the preceding link and scroll down the page.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

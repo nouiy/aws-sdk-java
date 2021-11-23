@@ -78,6 +78,27 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
      * </p>
      */
     private Boolean enableDns64;
+    /**
+     * <p>
+     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
+     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
+     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
+     * instance ID.
+     * </p>
+     */
+    private String privateDnsHostnameTypeOnLaunch;
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     * </p>
+     */
+    private Boolean enableResourceNameDnsARecordOnLaunch;
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     * </p>
+     */
+    private Boolean enableResourceNameDnsAAAARecordOnLaunch;
 
     /**
      * <p>
@@ -483,6 +504,193 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
     }
 
     /**
+     * <p>
+     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
+     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
+     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
+     * instance ID.
+     * </p>
+     * 
+     * @param privateDnsHostnameTypeOnLaunch
+     *        The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance
+     *        DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be
+     *        based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4
+     *        address or the instance ID.
+     * @see HostnameType
+     */
+
+    public void setPrivateDnsHostnameTypeOnLaunch(String privateDnsHostnameTypeOnLaunch) {
+        this.privateDnsHostnameTypeOnLaunch = privateDnsHostnameTypeOnLaunch;
+    }
+
+    /**
+     * <p>
+     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
+     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
+     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
+     * instance ID.
+     * </p>
+     * 
+     * @return The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance
+     *         DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be
+     *         based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4
+     *         address or the instance ID.
+     * @see HostnameType
+     */
+
+    public String getPrivateDnsHostnameTypeOnLaunch() {
+        return this.privateDnsHostnameTypeOnLaunch;
+    }
+
+    /**
+     * <p>
+     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
+     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
+     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
+     * instance ID.
+     * </p>
+     * 
+     * @param privateDnsHostnameTypeOnLaunch
+     *        The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance
+     *        DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be
+     *        based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4
+     *        address or the instance ID.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HostnameType
+     */
+
+    public ModifySubnetAttributeRequest withPrivateDnsHostnameTypeOnLaunch(String privateDnsHostnameTypeOnLaunch) {
+        setPrivateDnsHostnameTypeOnLaunch(privateDnsHostnameTypeOnLaunch);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance DNS name
+     * must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the
+     * instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the
+     * instance ID.
+     * </p>
+     * 
+     * @param privateDnsHostnameTypeOnLaunch
+     *        The type of hostnames to assign to instances in the subnet at launch. For IPv4 only subnets, an instance
+     *        DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be
+     *        based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4
+     *        address or the instance ID.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HostnameType
+     */
+
+    public ModifySubnetAttributeRequest withPrivateDnsHostnameTypeOnLaunch(HostnameType privateDnsHostnameTypeOnLaunch) {
+        this.privateDnsHostnameTypeOnLaunch = privateDnsHostnameTypeOnLaunch.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     * </p>
+     * 
+     * @param enableResourceNameDnsARecordOnLaunch
+     *        Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     */
+
+    public void setEnableResourceNameDnsARecordOnLaunch(Boolean enableResourceNameDnsARecordOnLaunch) {
+        this.enableResourceNameDnsARecordOnLaunch = enableResourceNameDnsARecordOnLaunch;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     * </p>
+     * 
+     * @return Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     */
+
+    public Boolean getEnableResourceNameDnsARecordOnLaunch() {
+        return this.enableResourceNameDnsARecordOnLaunch;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     * </p>
+     * 
+     * @param enableResourceNameDnsARecordOnLaunch
+     *        Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifySubnetAttributeRequest withEnableResourceNameDnsARecordOnLaunch(Boolean enableResourceNameDnsARecordOnLaunch) {
+        setEnableResourceNameDnsARecordOnLaunch(enableResourceNameDnsARecordOnLaunch);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     * </p>
+     * 
+     * @return Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     */
+
+    public Boolean isEnableResourceNameDnsARecordOnLaunch() {
+        return this.enableResourceNameDnsARecordOnLaunch;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     * </p>
+     * 
+     * @param enableResourceNameDnsAAAARecordOnLaunch
+     *        Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     */
+
+    public void setEnableResourceNameDnsAAAARecordOnLaunch(Boolean enableResourceNameDnsAAAARecordOnLaunch) {
+        this.enableResourceNameDnsAAAARecordOnLaunch = enableResourceNameDnsAAAARecordOnLaunch;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     * </p>
+     * 
+     * @return Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     */
+
+    public Boolean getEnableResourceNameDnsAAAARecordOnLaunch() {
+        return this.enableResourceNameDnsAAAARecordOnLaunch;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     * </p>
+     * 
+     * @param enableResourceNameDnsAAAARecordOnLaunch
+     *        Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifySubnetAttributeRequest withEnableResourceNameDnsAAAARecordOnLaunch(Boolean enableResourceNameDnsAAAARecordOnLaunch) {
+        setEnableResourceNameDnsAAAARecordOnLaunch(enableResourceNameDnsAAAARecordOnLaunch);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     * </p>
+     * 
+     * @return Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     */
+
+    public Boolean isEnableResourceNameDnsAAAARecordOnLaunch() {
+        return this.enableResourceNameDnsAAAARecordOnLaunch;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -516,7 +724,13 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
         if (getCustomerOwnedIpv4Pool() != null)
             sb.append("CustomerOwnedIpv4Pool: ").append(getCustomerOwnedIpv4Pool()).append(",");
         if (getEnableDns64() != null)
-            sb.append("EnableDns64: ").append(getEnableDns64());
+            sb.append("EnableDns64: ").append(getEnableDns64()).append(",");
+        if (getPrivateDnsHostnameTypeOnLaunch() != null)
+            sb.append("PrivateDnsHostnameTypeOnLaunch: ").append(getPrivateDnsHostnameTypeOnLaunch()).append(",");
+        if (getEnableResourceNameDnsARecordOnLaunch() != null)
+            sb.append("EnableResourceNameDnsARecordOnLaunch: ").append(getEnableResourceNameDnsARecordOnLaunch()).append(",");
+        if (getEnableResourceNameDnsAAAARecordOnLaunch() != null)
+            sb.append("EnableResourceNameDnsAAAARecordOnLaunch: ").append(getEnableResourceNameDnsAAAARecordOnLaunch());
         sb.append("}");
         return sb.toString();
     }
@@ -555,6 +769,21 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
             return false;
         if (other.getEnableDns64() != null && other.getEnableDns64().equals(this.getEnableDns64()) == false)
             return false;
+        if (other.getPrivateDnsHostnameTypeOnLaunch() == null ^ this.getPrivateDnsHostnameTypeOnLaunch() == null)
+            return false;
+        if (other.getPrivateDnsHostnameTypeOnLaunch() != null
+                && other.getPrivateDnsHostnameTypeOnLaunch().equals(this.getPrivateDnsHostnameTypeOnLaunch()) == false)
+            return false;
+        if (other.getEnableResourceNameDnsARecordOnLaunch() == null ^ this.getEnableResourceNameDnsARecordOnLaunch() == null)
+            return false;
+        if (other.getEnableResourceNameDnsARecordOnLaunch() != null
+                && other.getEnableResourceNameDnsARecordOnLaunch().equals(this.getEnableResourceNameDnsARecordOnLaunch()) == false)
+            return false;
+        if (other.getEnableResourceNameDnsAAAARecordOnLaunch() == null ^ this.getEnableResourceNameDnsAAAARecordOnLaunch() == null)
+            return false;
+        if (other.getEnableResourceNameDnsAAAARecordOnLaunch() != null
+                && other.getEnableResourceNameDnsAAAARecordOnLaunch().equals(this.getEnableResourceNameDnsAAAARecordOnLaunch()) == false)
+            return false;
         return true;
     }
 
@@ -569,6 +798,9 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
         hashCode = prime * hashCode + ((getMapCustomerOwnedIpOnLaunch() == null) ? 0 : getMapCustomerOwnedIpOnLaunch().hashCode());
         hashCode = prime * hashCode + ((getCustomerOwnedIpv4Pool() == null) ? 0 : getCustomerOwnedIpv4Pool().hashCode());
         hashCode = prime * hashCode + ((getEnableDns64() == null) ? 0 : getEnableDns64().hashCode());
+        hashCode = prime * hashCode + ((getPrivateDnsHostnameTypeOnLaunch() == null) ? 0 : getPrivateDnsHostnameTypeOnLaunch().hashCode());
+        hashCode = prime * hashCode + ((getEnableResourceNameDnsARecordOnLaunch() == null) ? 0 : getEnableResourceNameDnsARecordOnLaunch().hashCode());
+        hashCode = prime * hashCode + ((getEnableResourceNameDnsAAAARecordOnLaunch() == null) ? 0 : getEnableResourceNameDnsAAAARecordOnLaunch().hashCode());
         return hashCode;
     }
 

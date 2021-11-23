@@ -54,6 +54,19 @@ public class AbstractAWSIoTDeviceAdvisorAsync extends AbstractAWSIoTDeviceAdviso
     }
 
     @Override
+    public java.util.concurrent.Future<GetEndpointResult> getEndpointAsync(GetEndpointRequest request) {
+
+        return getEndpointAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetEndpointResult> getEndpointAsync(GetEndpointRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetEndpointRequest, GetEndpointResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetSuiteDefinitionResult> getSuiteDefinitionAsync(GetSuiteDefinitionRequest request) {
 
         return getSuiteDefinitionAsync(request, null);

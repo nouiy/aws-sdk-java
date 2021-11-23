@@ -714,6 +714,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public DBCluster rebootDBCluster(RebootDBClusterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DBInstance rebootDBInstance(RebootDBInstanceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -37,8 +37,8 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the description of a custom data identifier.
-     * Other users of your account might be able to see the identifier's description, depending on the actions that
-     * they're allowed to perform in Amazon Macie.
+     * Other users of your account might be able to see this description, depending on the actions that they're allowed
+     * to perform in Amazon Macie.
      * </p>
      */
     private String description;
@@ -74,8 +74,8 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the name of a custom data identifier. Other
-     * users of your account might be able to see the identifier's name, depending on the actions that they're allowed
-     * to perform in Amazon Macie.
+     * users of your account might be able to see this name, depending on the actions that they're allowed to perform in
+     * Amazon Macie.
      * </p>
      */
     private String name;
@@ -158,8 +158,8 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the description of a custom data identifier.
-     * Other users of your account might be able to see the identifier's description, depending on the actions that
-     * they're allowed to perform in Amazon Macie.
+     * Other users of your account might be able to see this description, depending on the actions that they're allowed
+     * to perform in Amazon Macie.
      * </p>
      * 
      * @param description
@@ -167,8 +167,8 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      *        characters.</p>
      *        <p>
      *        We strongly recommend that you avoid including any sensitive data in the description of a custom data
-     *        identifier. Other users of your account might be able to see the identifier's description, depending on
-     *        the actions that they're allowed to perform in Amazon Macie.
+     *        identifier. Other users of your account might be able to see this description, depending on the actions
+     *        that they're allowed to perform in Amazon Macie.
      */
 
     public void setDescription(String description) {
@@ -181,16 +181,16 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the description of a custom data identifier.
-     * Other users of your account might be able to see the identifier's description, depending on the actions that
-     * they're allowed to perform in Amazon Macie.
+     * Other users of your account might be able to see this description, depending on the actions that they're allowed
+     * to perform in Amazon Macie.
      * </p>
      * 
      * @return A custom description of the custom data identifier. The description can contain as many as 512
      *         characters.</p>
      *         <p>
      *         We strongly recommend that you avoid including any sensitive data in the description of a custom data
-     *         identifier. Other users of your account might be able to see the identifier's description, depending on
-     *         the actions that they're allowed to perform in Amazon Macie.
+     *         identifier. Other users of your account might be able to see this description, depending on the actions
+     *         that they're allowed to perform in Amazon Macie.
      */
 
     public String getDescription() {
@@ -203,8 +203,8 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the description of a custom data identifier.
-     * Other users of your account might be able to see the identifier's description, depending on the actions that
-     * they're allowed to perform in Amazon Macie.
+     * Other users of your account might be able to see this description, depending on the actions that they're allowed
+     * to perform in Amazon Macie.
      * </p>
      * 
      * @param description
@@ -212,8 +212,8 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      *        characters.</p>
      *        <p>
      *        We strongly recommend that you avoid including any sensitive data in the description of a custom data
-     *        identifier. Other users of your account might be able to see the identifier's description, depending on
-     *        the actions that they're allowed to perform in Amazon Macie.
+     *        identifier. Other users of your account might be able to see this description, depending on the actions
+     *        that they're allowed to perform in Amazon Macie.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -466,16 +466,16 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the name of a custom data identifier. Other
-     * users of your account might be able to see the identifier's name, depending on the actions that they're allowed
-     * to perform in Amazon Macie.
+     * users of your account might be able to see this name, depending on the actions that they're allowed to perform in
+     * Amazon Macie.
      * </p>
      * 
      * @param name
      *        A custom name for the custom data identifier. The name can contain as many as 128 characters.</p>
      *        <p>
      *        We strongly recommend that you avoid including any sensitive data in the name of a custom data identifier.
-     *        Other users of your account might be able to see the identifier's name, depending on the actions that
-     *        they're allowed to perform in Amazon Macie.
+     *        Other users of your account might be able to see this name, depending on the actions that they're allowed
+     *        to perform in Amazon Macie.
      */
 
     public void setName(String name) {
@@ -488,15 +488,15 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the name of a custom data identifier. Other
-     * users of your account might be able to see the identifier's name, depending on the actions that they're allowed
-     * to perform in Amazon Macie.
+     * users of your account might be able to see this name, depending on the actions that they're allowed to perform in
+     * Amazon Macie.
      * </p>
      * 
      * @return A custom name for the custom data identifier. The name can contain as many as 128 characters.</p>
      *         <p>
      *         We strongly recommend that you avoid including any sensitive data in the name of a custom data
-     *         identifier. Other users of your account might be able to see the identifier's name, depending on the
-     *         actions that they're allowed to perform in Amazon Macie.
+     *         identifier. Other users of your account might be able to see this name, depending on the actions that
+     *         they're allowed to perform in Amazon Macie.
      */
 
     public String getName() {
@@ -509,16 +509,16 @@ public class CreateCustomDataIdentifierRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the name of a custom data identifier. Other
-     * users of your account might be able to see the identifier's name, depending on the actions that they're allowed
-     * to perform in Amazon Macie.
+     * users of your account might be able to see this name, depending on the actions that they're allowed to perform in
+     * Amazon Macie.
      * </p>
      * 
      * @param name
      *        A custom name for the custom data identifier. The name can contain as many as 128 characters.</p>
      *        <p>
      *        We strongly recommend that you avoid including any sensitive data in the name of a custom data identifier.
-     *        Other users of your account might be able to see the identifier's name, depending on the actions that
-     *        they're allowed to perform in Amazon Macie.
+     *        Other users of your account might be able to see this name, depending on the actions that they're allowed
+     *        to perform in Amazon Macie.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

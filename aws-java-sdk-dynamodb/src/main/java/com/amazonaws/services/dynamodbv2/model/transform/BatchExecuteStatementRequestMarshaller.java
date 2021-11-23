@@ -30,6 +30,8 @@ public class BatchExecuteStatementRequestMarshaller {
 
     private static final MarshallingInfo<List> STATEMENTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Statements").build();
+    private static final MarshallingInfo<String> RETURNCONSUMEDCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReturnConsumedCapacity").build();
 
     private static final BatchExecuteStatementRequestMarshaller instance = new BatchExecuteStatementRequestMarshaller();
 
@@ -48,6 +50,7 @@ public class BatchExecuteStatementRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(batchExecuteStatementRequest.getStatements(), STATEMENTS_BINDING);
+            protocolMarshaller.marshall(batchExecuteStatementRequest.getReturnConsumedCapacity(), RETURNCONSUMEDCAPACITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

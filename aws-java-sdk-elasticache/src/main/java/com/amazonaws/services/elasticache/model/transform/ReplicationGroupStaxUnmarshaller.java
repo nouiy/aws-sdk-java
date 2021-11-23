@@ -194,6 +194,11 @@ public class ReplicationGroupStaxUnmarshaller implements Unmarshaller<Replicatio
                     replicationGroup.setReplicationGroupCreateTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("DataTiering", targetDepth)) {
+                    replicationGroup.setDataTiering(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return replicationGroup;

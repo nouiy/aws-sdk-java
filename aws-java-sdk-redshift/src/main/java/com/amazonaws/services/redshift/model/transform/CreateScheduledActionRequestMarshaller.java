@@ -71,6 +71,15 @@ public class CreateScheduledActionRequestMarshaller implements Marshaller<Reques
                         if (resizeCluster.getClassic() != null) {
                             request.addParameter("TargetAction.ResizeCluster.Classic", StringUtils.fromBoolean(resizeCluster.getClassic()));
                         }
+
+                        if (resizeCluster.getReservedNodeId() != null) {
+                            request.addParameter("TargetAction.ResizeCluster.ReservedNodeId", StringUtils.fromString(resizeCluster.getReservedNodeId()));
+                        }
+
+                        if (resizeCluster.getTargetReservedNodeOfferingId() != null) {
+                            request.addParameter("TargetAction.ResizeCluster.TargetReservedNodeOfferingId",
+                                    StringUtils.fromString(resizeCluster.getTargetReservedNodeOfferingId()));
+                        }
                     }
                 }
 

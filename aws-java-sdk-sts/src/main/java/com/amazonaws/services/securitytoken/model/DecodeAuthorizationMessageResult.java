@@ -29,18 +29,18 @@ public class DecodeAuthorizationMessageResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An XML document that contains the decoded message.
+     * The API returns a response with the decoded message.
      * </p>
      */
     private String decodedMessage;
 
     /**
      * <p>
-     * An XML document that contains the decoded message.
+     * The API returns a response with the decoded message.
      * </p>
      * 
      * @param decodedMessage
-     *        An XML document that contains the decoded message.
+     *        The API returns a response with the decoded message.
      */
 
     public void setDecodedMessage(String decodedMessage) {
@@ -49,10 +49,10 @@ public class DecodeAuthorizationMessageResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An XML document that contains the decoded message.
+     * The API returns a response with the decoded message.
      * </p>
      * 
-     * @return An XML document that contains the decoded message.
+     * @return The API returns a response with the decoded message.
      */
 
     public String getDecodedMessage() {
@@ -61,11 +61,11 @@ public class DecodeAuthorizationMessageResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * An XML document that contains the decoded message.
+     * The API returns a response with the decoded message.
      * </p>
      * 
      * @param decodedMessage
-     *        An XML document that contains the decoded message.
+     *        The API returns a response with the decoded message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

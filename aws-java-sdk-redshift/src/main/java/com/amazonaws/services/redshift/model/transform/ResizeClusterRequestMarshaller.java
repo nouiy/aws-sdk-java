@@ -60,6 +60,14 @@ public class ResizeClusterRequestMarshaller implements Marshaller<Request<Resize
             request.addParameter("Classic", StringUtils.fromBoolean(resizeClusterRequest.getClassic()));
         }
 
+        if (resizeClusterRequest.getReservedNodeId() != null) {
+            request.addParameter("ReservedNodeId", StringUtils.fromString(resizeClusterRequest.getReservedNodeId()));
+        }
+
+        if (resizeClusterRequest.getTargetReservedNodeOfferingId() != null) {
+            request.addParameter("TargetReservedNodeOfferingId", StringUtils.fromString(resizeClusterRequest.getTargetReservedNodeOfferingId()));
+        }
+
         return request;
     }
 

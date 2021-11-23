@@ -40,7 +40,7 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
     private java.util.List<StreamFile> files;
     /**
      * <p>
-     * An IAM role that allows the IoT service principal assumes to access your S3 files.
+     * An IAM role that allows the IoT service principal to access your S3 files.
      * </p>
      */
     private String roleArn;
@@ -203,11 +203,11 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An IAM role that allows the IoT service principal assumes to access your S3 files.
+     * An IAM role that allows the IoT service principal to access your S3 files.
      * </p>
      * 
      * @param roleArn
-     *        An IAM role that allows the IoT service principal assumes to access your S3 files.
+     *        An IAM role that allows the IoT service principal to access your S3 files.
      */
 
     public void setRoleArn(String roleArn) {
@@ -216,10 +216,10 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An IAM role that allows the IoT service principal assumes to access your S3 files.
+     * An IAM role that allows the IoT service principal to access your S3 files.
      * </p>
      * 
-     * @return An IAM role that allows the IoT service principal assumes to access your S3 files.
+     * @return An IAM role that allows the IoT service principal to access your S3 files.
      */
 
     public String getRoleArn() {
@@ -228,11 +228,11 @@ public class CreateStreamRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * An IAM role that allows the IoT service principal assumes to access your S3 files.
+     * An IAM role that allows the IoT service principal to access your S3 files.
      * </p>
      * 
      * @param roleArn
-     *        An IAM role that allows the IoT service principal assumes to access your S3 files.
+     *        An IAM role that allows the IoT service principal to access your S3 files.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

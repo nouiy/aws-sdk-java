@@ -4603,6 +4603,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<DBCluster> rebootDBClusterAsync(RebootDBClusterRequest request) {
+
+        return rebootDBClusterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DBCluster> rebootDBClusterAsync(final RebootDBClusterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RebootDBClusterRequest, DBCluster> asyncHandler) {
+        final RebootDBClusterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DBCluster>() {
+            @Override
+            public DBCluster call() throws Exception {
+                DBCluster result = null;
+
+                try {
+                    result = executeRebootDBCluster(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DBInstance> rebootDBInstanceAsync(RebootDBInstanceRequest request) {
 
         return rebootDBInstanceAsync(request, null);

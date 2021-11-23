@@ -10731,8 +10731,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * software issues. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html">Status
      * checks for your instances</a> and <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html">Troubleshooting
-     * instances with failed status checks</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html">Troubleshoot instances
+     * with failed status checks</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -10776,8 +10776,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * software issues. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/monitoring-system-instance-status-check.html">Status
      * checks for your instances</a> and <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html">Troubleshooting
-     * instances with failed status checks</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstances.html">Troubleshoot instances
+     * with failed status checks</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -18554,7 +18554,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * To modify some attributes, the instance must be stopped. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_ChangingAttributesWhileInstanceStopped.html"
-     * >Modifying attributes of a stopped instance</a> in the <i>Amazon EC2 User Guide</i>.
+     * >Modify a stopped instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param modifyInstanceAttributeRequest
@@ -18578,7 +18578,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * To modify some attributes, the instance must be stopped. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_ChangingAttributesWhileInstanceStopped.html"
-     * >Modifying attributes of a stopped instance</a> in the <i>Amazon EC2 User Guide</i>.
+     * >Modify a stopped instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param modifyInstanceAttributeRequest
@@ -19042,6 +19042,39 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<ModifyNetworkInterfaceAttributeResult> modifyNetworkInterfaceAttributeAsync(
             ModifyNetworkInterfaceAttributeRequest modifyNetworkInterfaceAttributeRequest,
             com.amazonaws.handlers.AsyncHandler<ModifyNetworkInterfaceAttributeRequest, ModifyNetworkInterfaceAttributeResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the options for instance hostnames for the specified instance.
+     * </p>
+     * 
+     * @param modifyPrivateDnsNameOptionsRequest
+     * @return A Java Future containing the result of the ModifyPrivateDnsNameOptions operation returned by the service.
+     * @sample AmazonEC2Async.ModifyPrivateDnsNameOptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyPrivateDnsNameOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyPrivateDnsNameOptionsResult> modifyPrivateDnsNameOptionsAsync(
+            ModifyPrivateDnsNameOptionsRequest modifyPrivateDnsNameOptionsRequest);
+
+    /**
+     * <p>
+     * Modifies the options for instance hostnames for the specified instance.
+     * </p>
+     * 
+     * @param modifyPrivateDnsNameOptionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ModifyPrivateDnsNameOptions operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ModifyPrivateDnsNameOptions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ModifyPrivateDnsNameOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ModifyPrivateDnsNameOptionsResult> modifyPrivateDnsNameOptionsAsync(
+            ModifyPrivateDnsNameOptionsRequest modifyPrivateDnsNameOptionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ModifyPrivateDnsNameOptionsRequest, ModifyPrivateDnsNameOptionsResult> asyncHandler);
 
     /**
      * <p>
@@ -20280,8 +20313,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * Enables detailed monitoring for a running instance. Otherwise, basic monitoring is enabled. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitoring your instances
-     * and volumes</a> in the <i>Amazon EC2 User Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitor your instances
+     * using CloudWatch</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * To disable detailed monitoring, see .
@@ -20298,8 +20331,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * Enables detailed monitoring for a running instance. Otherwise, basic monitoring is enabled. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitoring your instances
-     * and volumes</a> in the <i>Amazon EC2 User Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch.html">Monitor your instances
+     * using CloudWatch</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * To disable detailed monitoring, see .
@@ -20588,8 +20621,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about troubleshooting, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html">Getting console output and
-     * rebooting instances</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html">Troubleshoot an unreachable
+     * instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param rebootInstancesRequest
@@ -20611,8 +20644,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * </p>
      * <p>
      * For more information about troubleshooting, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html">Getting console output and
-     * rebooting instances</a> in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-console.html">Troubleshoot an unreachable
+     * instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param rebootInstancesRequest
@@ -22572,9 +22605,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * For more information about configuring your operating system to generate a crash dump when a kernel panic or stop
      * error occurs, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/diagnostic-interrupt.html">Send a
-     * diagnostic interrupt</a> (Linux instances) or <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/diagnostic-interrupt.html">Send a Diagnostic
-     * Interrupt</a> (Windows instances).
+     * diagnostic interrupt (for advanced users)</a> (Linux instances) or <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/diagnostic-interrupt.html">Send a diagnostic
+     * interrupt (for advanced users)</a> (Windows instances).
      * </p>
      * 
      * @param sendDiagnosticInterruptRequest
@@ -22603,9 +22636,9 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * For more information about configuring your operating system to generate a crash dump when a kernel panic or stop
      * error occurs, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/diagnostic-interrupt.html">Send a
-     * diagnostic interrupt</a> (Linux instances) or <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/diagnostic-interrupt.html">Send a Diagnostic
-     * Interrupt</a> (Windows instances).
+     * diagnostic interrupt (for advanced users)</a> (Linux instances) or <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/diagnostic-interrupt.html">Send a diagnostic
+     * interrupt (for advanced users)</a> (Windows instances).
      * </p>
      * 
      * @param sendDiagnosticInterruptRequest
@@ -22646,8 +22679,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * tenancy to <code>default</code> or <code>dedicated</code>.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stopping
-     * instances</a> in the <i>Amazon EC2 User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stop and
+     * start your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param startInstancesRequest
@@ -22683,8 +22716,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * tenancy to <code>default</code> or <code>dedicated</code>.
      * </p>
      * <p>
-     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stopping
-     * instances</a> in the <i>Amazon EC2 User Guide</i>.
+     * For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html">Stop and
+     * start your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param startInstancesRequest
@@ -22838,7 +22871,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * When you stop an instance, we attempt to shut it down forcibly after a short while. If your instance appears
      * stuck in the stopping state after a period of time, there may be an issue with the underlying host computer. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html">Troubleshooting
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html">Troubleshoot
      * stopping your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
@@ -22894,7 +22927,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * When you stop an instance, we attempt to shut it down forcibly after a short while. If your instance appears
      * stuck in the stopping state after a period of time, there may be an issue with the underlying host computer. For
      * more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html">Troubleshooting
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesStopping.html">Troubleshoot
      * stopping your instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 

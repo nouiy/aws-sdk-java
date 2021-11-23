@@ -367,6 +367,10 @@ public class CreateReplicationGroupRequestMarshaller implements Marshaller<Reque
             }
         }
 
+        if (createReplicationGroupRequest.getDataTieringEnabled() != null) {
+            request.addParameter("DataTieringEnabled", StringUtils.fromBoolean(createReplicationGroupRequest.getDataTieringEnabled()));
+        }
+
         return request;
     }
 

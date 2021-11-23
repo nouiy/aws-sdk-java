@@ -40,7 +40,7 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
     private String dBClusterEndpointIdentifier;
     /**
      * <p>
-     * The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
+     * The type of the endpoint, one of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
      * </p>
      */
     private String endpointType;
@@ -53,7 +53,7 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are
-     * reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     * reachable through the custom endpoint. This parameter is relevant only if the list of static members is empty.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> excludedMembers;
@@ -152,11 +152,11 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
+     * The type of the endpoint, one of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
      * </p>
      * 
      * @param endpointType
-     *        The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
+     *        The type of the endpoint, one of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
      */
 
     public void setEndpointType(String endpointType) {
@@ -165,10 +165,10 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
+     * The type of the endpoint, one of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
      * </p>
      * 
-     * @return The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
+     * @return The type of the endpoint, one of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
      */
 
     public String getEndpointType() {
@@ -177,11 +177,11 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
+     * The type of the endpoint, one of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
      * </p>
      * 
      * @param endpointType
-     *        The type of the endpoint. One of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
+     *        The type of the endpoint, one of: <code>READER</code>, <code>WRITER</code>, <code>ANY</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -266,12 +266,12 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are
-     * reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     * reachable through the custom endpoint. This parameter is relevant only if the list of static members is empty.
      * </p>
      * 
      * @return List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible
-     *         instances are reachable through the custom endpoint. Only relevant if the list of static members is
-     *         empty.
+     *         instances are reachable through the custom endpoint. This parameter is relevant only if the list of
+     *         static members is empty.
      */
 
     public java.util.List<String> getExcludedMembers() {
@@ -284,12 +284,13 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are
-     * reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     * reachable through the custom endpoint. This parameter is relevant only if the list of static members is empty.
      * </p>
      * 
      * @param excludedMembers
      *        List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible
-     *        instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     *        instances are reachable through the custom endpoint. This parameter is relevant only if the list of static
+     *        members is empty.
      */
 
     public void setExcludedMembers(java.util.Collection<String> excludedMembers) {
@@ -304,7 +305,7 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are
-     * reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     * reachable through the custom endpoint. This parameter is relevant only if the list of static members is empty.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -314,7 +315,8 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
      * 
      * @param excludedMembers
      *        List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible
-     *        instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     *        instances are reachable through the custom endpoint. This parameter is relevant only if the list of static
+     *        members is empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,12 +333,13 @@ public class CreateDBClusterEndpointRequest extends com.amazonaws.AmazonWebServi
     /**
      * <p>
      * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are
-     * reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     * reachable through the custom endpoint. This parameter is relevant only if the list of static members is empty.
      * </p>
      * 
      * @param excludedMembers
      *        List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible
-     *        instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     *        instances are reachable through the custom endpoint. This parameter is relevant only if the list of static
+     *        members is empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

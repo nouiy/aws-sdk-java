@@ -518,6 +518,12 @@ public class Cluster implements Serializable, Cloneable {
      * </p>
      */
     private String defaultIamRoleArn;
+    /**
+     * <p>
+     * The status of the reserved-node exchange request. Statuses include in-progress and requested.
+     * </p>
+     */
+    private ReservedNodeExchangeStatus reservedNodeExchangeStatus;
 
     /**
      * <p>
@@ -4041,6 +4047,46 @@ public class Cluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The status of the reserved-node exchange request. Statuses include in-progress and requested.
+     * </p>
+     * 
+     * @param reservedNodeExchangeStatus
+     *        The status of the reserved-node exchange request. Statuses include in-progress and requested.
+     */
+
+    public void setReservedNodeExchangeStatus(ReservedNodeExchangeStatus reservedNodeExchangeStatus) {
+        this.reservedNodeExchangeStatus = reservedNodeExchangeStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the reserved-node exchange request. Statuses include in-progress and requested.
+     * </p>
+     * 
+     * @return The status of the reserved-node exchange request. Statuses include in-progress and requested.
+     */
+
+    public ReservedNodeExchangeStatus getReservedNodeExchangeStatus() {
+        return this.reservedNodeExchangeStatus;
+    }
+
+    /**
+     * <p>
+     * The status of the reserved-node exchange request. Statuses include in-progress and requested.
+     * </p>
+     * 
+     * @param reservedNodeExchangeStatus
+     *        The status of the reserved-node exchange request. Statuses include in-progress and requested.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Cluster withReservedNodeExchangeStatus(ReservedNodeExchangeStatus reservedNodeExchangeStatus) {
+        setReservedNodeExchangeStatus(reservedNodeExchangeStatus);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -4153,7 +4199,9 @@ public class Cluster implements Serializable, Cloneable {
         if (getAquaConfiguration() != null)
             sb.append("AquaConfiguration: ").append(getAquaConfiguration()).append(",");
         if (getDefaultIamRoleArn() != null)
-            sb.append("DefaultIamRoleArn: ").append(getDefaultIamRoleArn());
+            sb.append("DefaultIamRoleArn: ").append(getDefaultIamRoleArn()).append(",");
+        if (getReservedNodeExchangeStatus() != null)
+            sb.append("ReservedNodeExchangeStatus: ").append(getReservedNodeExchangeStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -4380,6 +4428,10 @@ public class Cluster implements Serializable, Cloneable {
             return false;
         if (other.getDefaultIamRoleArn() != null && other.getDefaultIamRoleArn().equals(this.getDefaultIamRoleArn()) == false)
             return false;
+        if (other.getReservedNodeExchangeStatus() == null ^ this.getReservedNodeExchangeStatus() == null)
+            return false;
+        if (other.getReservedNodeExchangeStatus() != null && other.getReservedNodeExchangeStatus().equals(this.getReservedNodeExchangeStatus()) == false)
+            return false;
         return true;
     }
 
@@ -4439,6 +4491,7 @@ public class Cluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getTotalStorageCapacityInMegaBytes() == null) ? 0 : getTotalStorageCapacityInMegaBytes().hashCode());
         hashCode = prime * hashCode + ((getAquaConfiguration() == null) ? 0 : getAquaConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDefaultIamRoleArn() == null) ? 0 : getDefaultIamRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getReservedNodeExchangeStatus() == null) ? 0 : getReservedNodeExchangeStatus().hashCode());
         return hashCode;
     }
 

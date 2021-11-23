@@ -58,9 +58,9 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private Integer allocatedStorage;
     /**
      * <p>
-     * The new compute and memory capacity of the DB instance, for example, <code>db.m4.large</code>. Not all DB
-     * instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
-     * of DB instance classes, and availability for your engine, see <a
+     * The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are
+     * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
+     * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
      * in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -725,10 +725,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -792,7 +792,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
@@ -883,7 +883,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
@@ -1220,9 +1220,9 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new compute and memory capacity of the DB instance, for example, <code>db.m4.large</code>. Not all DB
-     * instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
-     * of DB instance classes, and availability for your engine, see <a
+     * The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are
+     * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
+     * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
      * in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -1238,9 +1238,9 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param dBInstanceClass
-     *        The new compute and memory capacity of the DB instance, for example, <code>db.m4.large</code>. Not all DB
-     *        instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
-     *        full list of DB instance classes, and availability for your engine, see <a
+     *        The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance
+     *        classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
+     *        of DB instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
      *        Class</a> in the <i>Amazon RDS User Guide</i>. </p>
      *        <p>
@@ -1260,9 +1260,9 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new compute and memory capacity of the DB instance, for example, <code>db.m4.large</code>. Not all DB
-     * instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
-     * of DB instance classes, and availability for your engine, see <a
+     * The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are
+     * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
+     * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
      * in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -1277,9 +1277,9 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Default: Uses existing setting
      * </p>
      * 
-     * @return The new compute and memory capacity of the DB instance, for example, <code>db.m4.large</code>. Not all DB
-     *         instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
-     *         full list of DB instance classes, and availability for your engine, see <a
+     * @return The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance
+     *         classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
+     *         of DB instance classes, and availability for your engine, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
      *         Class</a> in the <i>Amazon RDS User Guide</i>. </p>
      *         <p>
@@ -1299,9 +1299,9 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new compute and memory capacity of the DB instance, for example, <code>db.m4.large</code>. Not all DB
-     * instance classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
-     * of DB instance classes, and availability for your engine, see <a
+     * The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance classes are
+     * available in all Amazon Web Services Regions, or for all database engines. For the full list of DB instance
+     * classes, and availability for your engine, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class</a>
      * in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -1317,9 +1317,9 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param dBInstanceClass
-     *        The new compute and memory capacity of the DB instance, for example, <code>db.m4.large</code>. Not all DB
-     *        instance classes are available in all Amazon Web Services Regions, or for all database engines. For the
-     *        full list of DB instance classes, and availability for your engine, see <a
+     *        The new compute and memory capacity of the DB instance, for example db.m4.large. Not all DB instance
+     *        classes are available in all Amazon Web Services Regions, or for all database engines. For the full list
+     *        of DB instance classes, and availability for your engine, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance
      *        Class</a> in the <i>Amazon RDS User Guide</i>. </p>
      *        <p>
@@ -5559,10 +5559,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -5583,10 +5583,11 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param publiclyAccessible
      *        A value that indicates whether the DB instance is publicly accessible. </p>
      *        <p>
-     *        When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from
-     *        within the DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access
-     *        to the DB instance is ultimately controlled by the security group it uses, and that public access is not
-     *        permitted if the security group assigned to the DB instance doesn't permit it.
+     *        When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *        IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
+     *        from outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security
+     *        group it uses. That public access isn't permitted if the security group assigned to the DB cluster doesn't
+     *        permit it.
      *        </p>
      *        <p>
      *        When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
@@ -5613,10 +5614,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -5636,10 +5637,11 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return A value that indicates whether the DB instance is publicly accessible. </p>
      *         <p>
-     *         When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from
-     *         within the DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access
-     *         to the DB instance is ultimately controlled by the security group it uses, and that public access is not
-     *         permitted if the security group assigned to the DB instance doesn't permit it.
+     *         When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *         IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
+     *         from outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security
+     *         group it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     *         doesn't permit it.
      *         </p>
      *         <p>
      *         When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
@@ -5666,10 +5668,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -5690,10 +5692,11 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param publiclyAccessible
      *        A value that indicates whether the DB instance is publicly accessible. </p>
      *        <p>
-     *        When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from
-     *        within the DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access
-     *        to the DB instance is ultimately controlled by the security group it uses, and that public access is not
-     *        permitted if the security group assigned to the DB instance doesn't permit it.
+     *        When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *        IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
+     *        from outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security
+     *        group it uses. That public access isn't permitted if the security group assigned to the DB cluster doesn't
+     *        permit it.
      *        </p>
      *        <p>
      *        When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
@@ -5722,10 +5725,10 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is publicly accessible.
      * </p>
      * <p>
-     * When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from within the
-     * DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access to the DB instance
-     * is ultimately controlled by the security group it uses, and that public access is not permitted if the security
-     * group assigned to the DB instance doesn't permit it.
+     * When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security group it uses.
+     * That public access isn't permitted if the security group assigned to the DB cluster doesn't permit it.
      * </p>
      * <p>
      * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
@@ -5745,10 +5748,11 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return A value that indicates whether the DB instance is publicly accessible. </p>
      *         <p>
-     *         When the DB instance is publicly accessible, its DNS endpoint resolves to the private IP address from
-     *         within the DB instance's VPC, and to the public IP address from outside of the DB instance's VPC. Access
-     *         to the DB instance is ultimately controlled by the security group it uses, and that public access is not
-     *         permitted if the security group assigned to the DB instance doesn't permit it.
+     *         When the DB cluster is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *         IP address from within the DB cluster's virtual private cloud (VPC). It resolves to the public IP address
+     *         from outside of the DB cluster's VPC. Access to the DB cluster is ultimately controlled by the security
+     *         group it uses. That public access isn't permitted if the security group assigned to the DB cluster
+     *         doesn't permit it.
      *         </p>
      *         <p>
      *         When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
@@ -6034,7 +6038,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
@@ -6051,7 +6055,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts
      *        is managed by the DB cluster.
@@ -6072,7 +6076,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
@@ -6088,7 +6092,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database
      *         accounts is managed by the DB cluster.
@@ -6109,7 +6113,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
@@ -6126,7 +6130,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *        (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *        (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *        <p>
      *        This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts
      *        is managed by the DB cluster.
@@ -6149,7 +6153,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management (IAM)
-     * accounts to database accounts. By default, mapping is disabled.
+     * accounts to database accounts. By default, mapping isn't enabled.
      * </p>
      * <p>
      * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
@@ -6165,7 +6169,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
-     *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
+     *         (IAM) accounts to database accounts. By default, mapping isn't enabled.</p>
      *         <p>
      *         This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database
      *         accounts is managed by the DB cluster.
@@ -6718,14 +6722,14 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @param deletionProtection
      *        A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection is disabled. For more
+     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *        Instance</a>.
@@ -6738,13 +6742,13 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @return A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection is disabled. For more
+     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *         Instance</a>.
@@ -6757,14 +6761,14 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @param deletionProtection
      *        A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *        deleted when deletion protection is enabled. By default, deletion protection is disabled. For more
+     *        deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *        information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *        Instance</a>.
@@ -6779,13 +6783,13 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A value that indicates whether the DB instance has deletion protection enabled. The database can't be deleted
-     * when deletion protection is enabled. By default, deletion protection is disabled. For more information, see <a
+     * when deletion protection is enabled. By default, deletion protection isn't enabled. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      * Instance</a>.
      * </p>
      * 
      * @return A value that indicates whether the DB instance has deletion protection enabled. The database can't be
-     *         deleted when deletion protection is enabled. By default, deletion protection is disabled. For more
+     *         deleted when deletion protection is enabled. By default, deletion protection isn't enabled. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_DeleteInstance.html"> Deleting a DB
      *         Instance</a>.

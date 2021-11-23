@@ -30,7 +30,7 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An optional display name for a backup rule.
+     * A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      */
     private String ruleName;
@@ -100,11 +100,11 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An optional display name for a backup rule.
+     * A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
      * @param ruleName
-     *        An optional display name for a backup rule.
+     *        A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      */
 
     public void setRuleName(String ruleName) {
@@ -113,10 +113,10 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An optional display name for a backup rule.
+     * A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
-     * @return An optional display name for a backup rule.
+     * @return A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      */
 
     public String getRuleName() {
@@ -125,11 +125,11 @@ public class BackupRuleInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An optional display name for a backup rule.
+     * A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
      * @param ruleName
-     *        An optional display name for a backup rule.
+     *        A display name for a backup rule. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

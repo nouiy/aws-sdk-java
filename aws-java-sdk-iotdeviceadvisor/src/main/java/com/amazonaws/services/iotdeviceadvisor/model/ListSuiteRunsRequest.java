@@ -27,7 +27,7 @@ public class ListSuiteRunsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Lists the test suite runs of the specified test suite based on suite definition Id.
+     * Lists the test suite runs of the specified test suite based on suite definition ID.
      * </p>
      */
     private String suiteDefinitionId;
@@ -53,11 +53,11 @@ public class ListSuiteRunsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Lists the test suite runs of the specified test suite based on suite definition Id.
+     * Lists the test suite runs of the specified test suite based on suite definition ID.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Lists the test suite runs of the specified test suite based on suite definition Id.
+     *        Lists the test suite runs of the specified test suite based on suite definition ID.
      */
 
     public void setSuiteDefinitionId(String suiteDefinitionId) {
@@ -66,10 +66,10 @@ public class ListSuiteRunsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Lists the test suite runs of the specified test suite based on suite definition Id.
+     * Lists the test suite runs of the specified test suite based on suite definition ID.
      * </p>
      * 
-     * @return Lists the test suite runs of the specified test suite based on suite definition Id.
+     * @return Lists the test suite runs of the specified test suite based on suite definition ID.
      */
 
     public String getSuiteDefinitionId() {
@@ -78,11 +78,11 @@ public class ListSuiteRunsRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Lists the test suite runs of the specified test suite based on suite definition Id.
+     * Lists the test suite runs of the specified test suite based on suite definition ID.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Lists the test suite runs of the specified test suite based on suite definition Id.
+     *        Lists the test suite runs of the specified test suite based on suite definition ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

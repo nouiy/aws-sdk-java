@@ -2001,6 +2001,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
+    public java.util.concurrent.Future<DBCluster> rebootDBClusterAsync(RebootDBClusterRequest request) {
+
+        return rebootDBClusterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DBCluster> rebootDBClusterAsync(RebootDBClusterRequest request,
+            com.amazonaws.handlers.AsyncHandler<RebootDBClusterRequest, DBCluster> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DBInstance> rebootDBInstanceAsync(RebootDBInstanceRequest request) {
 
         return rebootDBInstanceAsync(request, null);

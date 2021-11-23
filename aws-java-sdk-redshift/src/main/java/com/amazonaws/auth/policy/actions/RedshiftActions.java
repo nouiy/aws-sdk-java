@@ -163,6 +163,8 @@ public enum RedshiftActions implements Action {
     DescribeOrderableClusterOptions("redshift:DescribeOrderableClusterOptions"),
     /** Action for the DescribePartners operation. */
     DescribePartners("redshift:DescribePartners"),
+    /** Action for the DescribeReservedNodeExchangeStatus operation. */
+    DescribeReservedNodeExchangeStatus("redshift:DescribeReservedNodeExchangeStatus"),
     /** Action for the DescribeReservedNodeOfferings operation. */
     DescribeReservedNodeOfferings("redshift:DescribeReservedNodeOfferings"),
     /** Action for the DescribeReservedNodes operation. */
@@ -195,6 +197,8 @@ public enum RedshiftActions implements Action {
     EnableSnapshotCopy("redshift:EnableSnapshotCopy"),
     /** Action for the GetClusterCredentials operation. */
     GetClusterCredentials("redshift:GetClusterCredentials"),
+    /** Action for the GetReservedNodeExchangeConfigurationOptions operation. */
+    GetReservedNodeExchangeConfigurationOptions("redshift:GetReservedNodeExchangeConfigurationOptions"),
     /** Action for the GetReservedNodeExchangeOfferings operation. */
     GetReservedNodeExchangeOfferings("redshift:GetReservedNodeExchangeOfferings"),
     /** Action for the ModifyAquaConfiguration operation. */

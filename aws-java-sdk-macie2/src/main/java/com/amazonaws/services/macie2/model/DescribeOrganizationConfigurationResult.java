@@ -26,28 +26,24 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the Amazon Web Services
-     * organization.
+     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.
      * </p>
      */
     private Boolean autoEnable;
     /**
      * <p>
-     * Specifies whether the maximum number of Amazon Macie member accounts are part of the Amazon Web Services
-     * organization.
+     * Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.
      * </p>
      */
     private Boolean maxAccountLimitReached;
 
     /**
      * <p>
-     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the Amazon Web Services
-     * organization.
+     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.
      * </p>
      * 
      * @param autoEnable
-     *        Specifies whether Amazon Macie is enabled automatically for accounts that are added to the Amazon Web
-     *        Services organization.
+     *        Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.
      */
 
     public void setAutoEnable(Boolean autoEnable) {
@@ -56,12 +52,10 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the Amazon Web Services
-     * organization.
+     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.
      * </p>
      * 
-     * @return Specifies whether Amazon Macie is enabled automatically for accounts that are added to the Amazon Web
-     *         Services organization.
+     * @return Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.
      */
 
     public Boolean getAutoEnable() {
@@ -70,13 +64,11 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the Amazon Web Services
-     * organization.
+     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.
      * </p>
      * 
      * @param autoEnable
-     *        Specifies whether Amazon Macie is enabled automatically for accounts that are added to the Amazon Web
-     *        Services organization.
+     *        Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,12 +79,10 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the Amazon Web Services
-     * organization.
+     * Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.
      * </p>
      * 
-     * @return Specifies whether Amazon Macie is enabled automatically for accounts that are added to the Amazon Web
-     *         Services organization.
+     * @return Specifies whether Amazon Macie is enabled automatically for accounts that are added to the organization.
      */
 
     public Boolean isAutoEnable() {
@@ -101,13 +91,11 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Specifies whether the maximum number of Amazon Macie member accounts are part of the Amazon Web Services
-     * organization.
+     * Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.
      * </p>
      * 
      * @param maxAccountLimitReached
-     *        Specifies whether the maximum number of Amazon Macie member accounts are part of the Amazon Web Services
-     *        organization.
+     *        Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.
      */
 
     public void setMaxAccountLimitReached(Boolean maxAccountLimitReached) {
@@ -116,12 +104,10 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Specifies whether the maximum number of Amazon Macie member accounts are part of the Amazon Web Services
-     * organization.
+     * Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.
      * </p>
      * 
-     * @return Specifies whether the maximum number of Amazon Macie member accounts are part of the Amazon Web Services
-     *         organization.
+     * @return Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.
      */
 
     public Boolean getMaxAccountLimitReached() {
@@ -130,13 +116,11 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Specifies whether the maximum number of Amazon Macie member accounts are part of the Amazon Web Services
-     * organization.
+     * Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.
      * </p>
      * 
      * @param maxAccountLimitReached
-     *        Specifies whether the maximum number of Amazon Macie member accounts are part of the Amazon Web Services
-     *        organization.
+     *        Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,12 +131,10 @@ public class DescribeOrganizationConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Specifies whether the maximum number of Amazon Macie member accounts are part of the Amazon Web Services
-     * organization.
+     * Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.
      * </p>
      * 
-     * @return Specifies whether the maximum number of Amazon Macie member accounts are part of the Amazon Web Services
-     *         organization.
+     * @return Specifies whether the maximum number of Amazon Macie member accounts are part of the organization.
      */
 
     public Boolean isMaxAccountLimitReached() {

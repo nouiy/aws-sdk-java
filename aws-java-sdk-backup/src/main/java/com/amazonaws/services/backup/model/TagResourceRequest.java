@@ -34,7 +34,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Key-value pairs that are used to help organize your resources. You can assign your own metadata to the resources
-     * you create.
+     * you create. For clarity, this is the structure to assign tags: <code>[{"Key":"string","Value":"string"}]</code>.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -85,11 +85,12 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Key-value pairs that are used to help organize your resources. You can assign your own metadata to the resources
-     * you create.
+     * you create. For clarity, this is the structure to assign tags: <code>[{"Key":"string","Value":"string"}]</code>.
      * </p>
      * 
      * @return Key-value pairs that are used to help organize your resources. You can assign your own metadata to the
-     *         resources you create.
+     *         resources you create. For clarity, this is the structure to assign tags:
+     *         <code>[{"Key":"string","Value":"string"}]</code>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -99,12 +100,13 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Key-value pairs that are used to help organize your resources. You can assign your own metadata to the resources
-     * you create.
+     * you create. For clarity, this is the structure to assign tags: <code>[{"Key":"string","Value":"string"}]</code>.
      * </p>
      * 
      * @param tags
      *        Key-value pairs that are used to help organize your resources. You can assign your own metadata to the
-     *        resources you create.
+     *        resources you create. For clarity, this is the structure to assign tags:
+     *        <code>[{"Key":"string","Value":"string"}]</code>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -114,12 +116,13 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * Key-value pairs that are used to help organize your resources. You can assign your own metadata to the resources
-     * you create.
+     * you create. For clarity, this is the structure to assign tags: <code>[{"Key":"string","Value":"string"}]</code>.
      * </p>
      * 
      * @param tags
      *        Key-value pairs that are used to help organize your resources. You can assign your own metadata to the
-     *        resources you create.
+     *        resources you create. For clarity, this is the structure to assign tags:
+     *        <code>[{"Key":"string","Value":"string"}]</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

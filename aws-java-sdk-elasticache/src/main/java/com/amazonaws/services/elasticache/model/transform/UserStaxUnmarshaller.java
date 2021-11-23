@@ -65,6 +65,11 @@ public class UserStaxUnmarshaller implements Unmarshaller<User, StaxUnmarshaller
                     continue;
                 }
 
+                if (context.testExpression("MinimumEngineVersion", targetDepth)) {
+                    user.setMinimumEngineVersion(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("AccessString", targetDepth)) {
                     user.setAccessString(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

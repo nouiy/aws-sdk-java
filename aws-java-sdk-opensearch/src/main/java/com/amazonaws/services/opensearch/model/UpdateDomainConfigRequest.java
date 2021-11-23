@@ -118,6 +118,13 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private AutoTuneOptions autoTuneOptions;
+    /**
+     * <p>
+     * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
+     * validation checks (DryRunResults) without actually applying the change.
+     * </p>
+     */
+    private Boolean dryRun;
 
     /**
      * <p>
@@ -793,6 +800,66 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
+     * validation checks (DryRunResults) without actually applying the change.
+     * </p>
+     * 
+     * @param dryRun
+     *        This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the
+     *        results of validation checks (DryRunResults) without actually applying the change.
+     */
+
+    public void setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+    }
+
+    /**
+     * <p>
+     * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
+     * validation checks (DryRunResults) without actually applying the change.
+     * </p>
+     * 
+     * @return This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the
+     *         results of validation checks (DryRunResults) without actually applying the change.
+     */
+
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * <p>
+     * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
+     * validation checks (DryRunResults) without actually applying the change.
+     * </p>
+     * 
+     * @param dryRun
+     *        This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the
+     *        results of validation checks (DryRunResults) without actually applying the change.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDomainConfigRequest withDryRun(Boolean dryRun) {
+        setDryRun(dryRun);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the results of
+     * validation checks (DryRunResults) without actually applying the change.
+     * </p>
+     * 
+     * @return This flag, when set to True, specifies whether the <code>UpdateDomain</code> request should return the
+     *         results of validation checks (DryRunResults) without actually applying the change.
+     */
+
+    public Boolean isDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -831,7 +898,9 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
         if (getAdvancedSecurityOptions() != null)
             sb.append("AdvancedSecurityOptions: ").append(getAdvancedSecurityOptions()).append(",");
         if (getAutoTuneOptions() != null)
-            sb.append("AutoTuneOptions: ").append(getAutoTuneOptions());
+            sb.append("AutoTuneOptions: ").append(getAutoTuneOptions()).append(",");
+        if (getDryRun() != null)
+            sb.append("DryRun: ").append(getDryRun());
         sb.append("}");
         return sb.toString();
     }
@@ -902,6 +971,10 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getAutoTuneOptions() != null && other.getAutoTuneOptions().equals(this.getAutoTuneOptions()) == false)
             return false;
+        if (other.getDryRun() == null ^ this.getDryRun() == null)
+            return false;
+        if (other.getDryRun() != null && other.getDryRun().equals(this.getDryRun()) == false)
+            return false;
         return true;
     }
 
@@ -924,6 +997,7 @@ public class UpdateDomainConfigRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getNodeToNodeEncryptionOptions() == null) ? 0 : getNodeToNodeEncryptionOptions().hashCode());
         hashCode = prime * hashCode + ((getAdvancedSecurityOptions() == null) ? 0 : getAdvancedSecurityOptions().hashCode());
         hashCode = prime * hashCode + ((getAutoTuneOptions() == null) ? 0 : getAutoTuneOptions().hashCode());
+        hashCode = prime * hashCode + ((getDryRun() == null) ? 0 : getDryRun().hashCode());
         return hashCode;
     }
 

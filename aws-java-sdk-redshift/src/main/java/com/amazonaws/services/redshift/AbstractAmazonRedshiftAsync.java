@@ -1209,6 +1209,21 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeReservedNodeExchangeStatusResult> describeReservedNodeExchangeStatusAsync(
+            DescribeReservedNodeExchangeStatusRequest request) {
+
+        return describeReservedNodeExchangeStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReservedNodeExchangeStatusResult> describeReservedNodeExchangeStatusAsync(
+            DescribeReservedNodeExchangeStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeReservedNodeExchangeStatusRequest, DescribeReservedNodeExchangeStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeReservedNodeOfferingsResult> describeReservedNodeOfferingsAsync(DescribeReservedNodeOfferingsRequest request) {
 
         return describeReservedNodeOfferingsAsync(request, null);
@@ -1528,6 +1543,21 @@ public class AbstractAmazonRedshiftAsync extends AbstractAmazonRedshift implemen
     @Override
     public java.util.concurrent.Future<GetClusterCredentialsResult> getClusterCredentialsAsync(GetClusterCredentialsRequest request,
             com.amazonaws.handlers.AsyncHandler<GetClusterCredentialsRequest, GetClusterCredentialsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetReservedNodeExchangeConfigurationOptionsResult> getReservedNodeExchangeConfigurationOptionsAsync(
+            GetReservedNodeExchangeConfigurationOptionsRequest request) {
+
+        return getReservedNodeExchangeConfigurationOptionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetReservedNodeExchangeConfigurationOptionsResult> getReservedNodeExchangeConfigurationOptionsAsync(
+            GetReservedNodeExchangeConfigurationOptionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetReservedNodeExchangeConfigurationOptionsRequest, GetReservedNodeExchangeConfigurationOptionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

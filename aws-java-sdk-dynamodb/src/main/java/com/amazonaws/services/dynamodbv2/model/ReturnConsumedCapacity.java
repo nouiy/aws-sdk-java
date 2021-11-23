@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Determines the level of detail about provisioned throughput consumption that is returned in the response:
+ * Determines the level of detail about either provisioned or on-demand throughput consumption that is returned in the
+ * response:
  * </p>
  * <ul>
  * <li>

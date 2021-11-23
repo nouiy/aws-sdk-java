@@ -65,6 +65,11 @@ public class CreateUserResultStaxUnmarshaller implements Unmarshaller<CreateUser
                     continue;
                 }
 
+                if (context.testExpression("MinimumEngineVersion", targetDepth)) {
+                    createUserResult.setMinimumEngineVersion(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("AccessString", targetDepth)) {
                     createUserResult.setAccessString(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

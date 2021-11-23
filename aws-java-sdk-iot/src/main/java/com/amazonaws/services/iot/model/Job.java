@@ -158,6 +158,13 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String jobTemplateArn;
+    /**
+     * <p>
+     * A key-value map that pairs the patterns that need to be replaced in a managed template job document schema. You
+     * can use the description of each key as a guidance to specify the inputs during runtime when creating a job.
+     * </p>
+     */
+    private java.util.Map<String, String> documentParameters;
 
     /**
      * <p>
@@ -1125,6 +1132,83 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A key-value map that pairs the patterns that need to be replaced in a managed template job document schema. You
+     * can use the description of each key as a guidance to specify the inputs during runtime when creating a job.
+     * </p>
+     * 
+     * @return A key-value map that pairs the patterns that need to be replaced in a managed template job document
+     *         schema. You can use the description of each key as a guidance to specify the inputs during runtime when
+     *         creating a job.
+     */
+
+    public java.util.Map<String, String> getDocumentParameters() {
+        return documentParameters;
+    }
+
+    /**
+     * <p>
+     * A key-value map that pairs the patterns that need to be replaced in a managed template job document schema. You
+     * can use the description of each key as a guidance to specify the inputs during runtime when creating a job.
+     * </p>
+     * 
+     * @param documentParameters
+     *        A key-value map that pairs the patterns that need to be replaced in a managed template job document
+     *        schema. You can use the description of each key as a guidance to specify the inputs during runtime when
+     *        creating a job.
+     */
+
+    public void setDocumentParameters(java.util.Map<String, String> documentParameters) {
+        this.documentParameters = documentParameters;
+    }
+
+    /**
+     * <p>
+     * A key-value map that pairs the patterns that need to be replaced in a managed template job document schema. You
+     * can use the description of each key as a guidance to specify the inputs during runtime when creating a job.
+     * </p>
+     * 
+     * @param documentParameters
+     *        A key-value map that pairs the patterns that need to be replaced in a managed template job document
+     *        schema. You can use the description of each key as a guidance to specify the inputs during runtime when
+     *        creating a job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job withDocumentParameters(java.util.Map<String, String> documentParameters) {
+        setDocumentParameters(documentParameters);
+        return this;
+    }
+
+    /**
+     * Add a single DocumentParameters entry
+     *
+     * @see Job#withDocumentParameters
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job addDocumentParametersEntry(String key, String value) {
+        if (null == this.documentParameters) {
+            this.documentParameters = new java.util.HashMap<String, String>();
+        }
+        if (this.documentParameters.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.documentParameters.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into DocumentParameters.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Job clearDocumentParametersEntries() {
+        this.documentParameters = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1173,7 +1257,9 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         if (getNamespaceId() != null)
             sb.append("NamespaceId: ").append(getNamespaceId()).append(",");
         if (getJobTemplateArn() != null)
-            sb.append("JobTemplateArn: ").append(getJobTemplateArn());
+            sb.append("JobTemplateArn: ").append(getJobTemplateArn()).append(",");
+        if (getDocumentParameters() != null)
+            sb.append("DocumentParameters: ").append(getDocumentParameters());
         sb.append("}");
         return sb.toString();
     }
@@ -1264,6 +1350,10 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getJobTemplateArn() != null && other.getJobTemplateArn().equals(this.getJobTemplateArn()) == false)
             return false;
+        if (other.getDocumentParameters() == null ^ this.getDocumentParameters() == null)
+            return false;
+        if (other.getDocumentParameters() != null && other.getDocumentParameters().equals(this.getDocumentParameters()) == false)
+            return false;
         return true;
     }
 
@@ -1291,6 +1381,7 @@ public class Job implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTimeoutConfig() == null) ? 0 : getTimeoutConfig().hashCode());
         hashCode = prime * hashCode + ((getNamespaceId() == null) ? 0 : getNamespaceId().hashCode());
         hashCode = prime * hashCode + ((getJobTemplateArn() == null) ? 0 : getJobTemplateArn().hashCode());
+        hashCode = prime * hashCode + ((getDocumentParameters() == null) ? 0 : getDocumentParameters().hashCode());
         return hashCode;
     }
 

@@ -1395,6 +1395,41 @@ public class AWSIoTWirelessAsyncClient extends AWSIoTWirelessClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetNetworkAnalyzerConfigurationResult> getNetworkAnalyzerConfigurationAsync(
+            GetNetworkAnalyzerConfigurationRequest request) {
+
+        return getNetworkAnalyzerConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkAnalyzerConfigurationResult> getNetworkAnalyzerConfigurationAsync(
+            final GetNetworkAnalyzerConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetNetworkAnalyzerConfigurationRequest, GetNetworkAnalyzerConfigurationResult> asyncHandler) {
+        final GetNetworkAnalyzerConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetNetworkAnalyzerConfigurationResult>() {
+            @Override
+            public GetNetworkAnalyzerConfigurationResult call() throws Exception {
+                GetNetworkAnalyzerConfigurationResult result = null;
+
+                try {
+                    result = executeGetNetworkAnalyzerConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPartnerAccountResult> getPartnerAccountAsync(GetPartnerAccountRequest request) {
 
         return getPartnerAccountAsync(request, null);
@@ -2713,6 +2748,41 @@ public class AWSIoTWirelessAsyncClient extends AWSIoTWirelessClient implements A
 
                 try {
                     result = executeUpdateMulticastGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNetworkAnalyzerConfigurationResult> updateNetworkAnalyzerConfigurationAsync(
+            UpdateNetworkAnalyzerConfigurationRequest request) {
+
+        return updateNetworkAnalyzerConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNetworkAnalyzerConfigurationResult> updateNetworkAnalyzerConfigurationAsync(
+            final UpdateNetworkAnalyzerConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateNetworkAnalyzerConfigurationRequest, UpdateNetworkAnalyzerConfigurationResult> asyncHandler) {
+        final UpdateNetworkAnalyzerConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateNetworkAnalyzerConfigurationResult>() {
+            @Override
+            public UpdateNetworkAnalyzerConfigurationResult call() throws Exception {
+                UpdateNetworkAnalyzerConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateNetworkAnalyzerConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

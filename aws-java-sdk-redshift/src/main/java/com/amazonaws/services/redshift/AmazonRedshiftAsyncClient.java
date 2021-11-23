@@ -2851,6 +2851,41 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeReservedNodeExchangeStatusResult> describeReservedNodeExchangeStatusAsync(
+            DescribeReservedNodeExchangeStatusRequest request) {
+
+        return describeReservedNodeExchangeStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReservedNodeExchangeStatusResult> describeReservedNodeExchangeStatusAsync(
+            final DescribeReservedNodeExchangeStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeReservedNodeExchangeStatusRequest, DescribeReservedNodeExchangeStatusResult> asyncHandler) {
+        final DescribeReservedNodeExchangeStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeReservedNodeExchangeStatusResult>() {
+            @Override
+            public DescribeReservedNodeExchangeStatusResult call() throws Exception {
+                DescribeReservedNodeExchangeStatusResult result = null;
+
+                try {
+                    result = executeDescribeReservedNodeExchangeStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeReservedNodeOfferingsResult> describeReservedNodeOfferingsAsync(DescribeReservedNodeOfferingsRequest request) {
 
         return describeReservedNodeOfferingsAsync(request, null);
@@ -3481,6 +3516,41 @@ public class AmazonRedshiftAsyncClient extends AmazonRedshiftClient implements A
 
                 try {
                     result = executeGetClusterCredentials(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetReservedNodeExchangeConfigurationOptionsResult> getReservedNodeExchangeConfigurationOptionsAsync(
+            GetReservedNodeExchangeConfigurationOptionsRequest request) {
+
+        return getReservedNodeExchangeConfigurationOptionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetReservedNodeExchangeConfigurationOptionsResult> getReservedNodeExchangeConfigurationOptionsAsync(
+            final GetReservedNodeExchangeConfigurationOptionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetReservedNodeExchangeConfigurationOptionsRequest, GetReservedNodeExchangeConfigurationOptionsResult> asyncHandler) {
+        final GetReservedNodeExchangeConfigurationOptionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetReservedNodeExchangeConfigurationOptionsResult>() {
+            @Override
+            public GetReservedNodeExchangeConfigurationOptionsResult call() throws Exception {
+                GetReservedNodeExchangeConfigurationOptionsResult result = null;
+
+                try {
+                    result = executeGetReservedNodeExchangeConfigurationOptions(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

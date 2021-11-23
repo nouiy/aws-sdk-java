@@ -91,6 +91,13 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     private String eventSourceArn;
     /**
      * <p>
+     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     * process an event. For more information, see Event filtering.
+     * </p>
+     */
+    private FilterCriteria filterCriteria;
+    /**
+     * <p>
      * The ARN of the Lambda function.
      * </p>
      */
@@ -589,6 +596,52 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     public EventSourceMappingConfiguration withEventSourceArn(String eventSourceArn) {
         setEventSourceArn(eventSourceArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     * process an event. For more information, see Event filtering.
+     * </p>
+     * 
+     * @param filterCriteria
+     *        (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     *        process an event. For more information, see Event filtering.
+     */
+
+    public void setFilterCriteria(FilterCriteria filterCriteria) {
+        this.filterCriteria = filterCriteria;
+    }
+
+    /**
+     * <p>
+     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     * process an event. For more information, see Event filtering.
+     * </p>
+     * 
+     * @return (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda
+     *         should process an event. For more information, see Event filtering.
+     */
+
+    public FilterCriteria getFilterCriteria() {
+        return this.filterCriteria;
+    }
+
+    /**
+     * <p>
+     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     * process an event. For more information, see Event filtering.
+     * </p>
+     * 
+     * @param filterCriteria
+     *        (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     *        process an event. For more information, see Event filtering.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EventSourceMappingConfiguration withFilterCriteria(FilterCriteria filterCriteria) {
+        setFilterCriteria(filterCriteria);
         return this;
     }
 
@@ -1429,6 +1482,8 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
             sb.append("ParallelizationFactor: ").append(getParallelizationFactor()).append(",");
         if (getEventSourceArn() != null)
             sb.append("EventSourceArn: ").append(getEventSourceArn()).append(",");
+        if (getFilterCriteria() != null)
+            sb.append("FilterCriteria: ").append(getFilterCriteria()).append(",");
         if (getFunctionArn() != null)
             sb.append("FunctionArn: ").append(getFunctionArn()).append(",");
         if (getLastModified() != null)
@@ -1501,6 +1556,10 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
         if (other.getEventSourceArn() == null ^ this.getEventSourceArn() == null)
             return false;
         if (other.getEventSourceArn() != null && other.getEventSourceArn().equals(this.getEventSourceArn()) == false)
+            return false;
+        if (other.getFilterCriteria() == null ^ this.getFilterCriteria() == null)
+            return false;
+        if (other.getFilterCriteria() != null && other.getFilterCriteria().equals(this.getFilterCriteria()) == false)
             return false;
         if (other.getFunctionArn() == null ^ this.getFunctionArn() == null)
             return false;
@@ -1577,6 +1636,7 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getMaximumBatchingWindowInSeconds() == null) ? 0 : getMaximumBatchingWindowInSeconds().hashCode());
         hashCode = prime * hashCode + ((getParallelizationFactor() == null) ? 0 : getParallelizationFactor().hashCode());
         hashCode = prime * hashCode + ((getEventSourceArn() == null) ? 0 : getEventSourceArn().hashCode());
+        hashCode = prime * hashCode + ((getFilterCriteria() == null) ? 0 : getFilterCriteria().hashCode());
         hashCode = prime * hashCode + ((getFunctionArn() == null) ? 0 : getFunctionArn().hashCode());
         hashCode = prime * hashCode + ((getLastModified() == null) ? 0 : getLastModified().hashCode());
         hashCode = prime * hashCode + ((getLastProcessingResult() == null) ? 0 : getLastProcessingResult().hashCode());

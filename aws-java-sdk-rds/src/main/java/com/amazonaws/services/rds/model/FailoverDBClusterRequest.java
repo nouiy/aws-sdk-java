@@ -44,11 +44,14 @@ public class FailoverDBClusterRequest extends com.amazonaws.AmazonWebServiceRequ
     private String dBClusterIdentifier;
     /**
      * <p>
-     * The name of the instance to promote to the primary instance.
+     * The name of the DB instance to promote to the primary DB instance.
      * </p>
      * <p>
-     * You must specify the instance identifier for an Aurora Replica in the DB cluster. For example,
-     * <code>mydbcluster-replica1</code>.
+     * Specify the DB instance identifier for an Aurora Replica or a Multi-AZ readable standby in the DB cluster, for
+     * example <code>mydbcluster-replica1</code>.
+     * </p>
+     * <p>
+     * This setting isn't supported for RDS for MySQL Multi-AZ DB clusters.
      * </p>
      */
     private String targetDBInstanceIdentifier;
@@ -152,18 +155,24 @@ public class FailoverDBClusterRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name of the instance to promote to the primary instance.
+     * The name of the DB instance to promote to the primary DB instance.
      * </p>
      * <p>
-     * You must specify the instance identifier for an Aurora Replica in the DB cluster. For example,
-     * <code>mydbcluster-replica1</code>.
+     * Specify the DB instance identifier for an Aurora Replica or a Multi-AZ readable standby in the DB cluster, for
+     * example <code>mydbcluster-replica1</code>.
+     * </p>
+     * <p>
+     * This setting isn't supported for RDS for MySQL Multi-AZ DB clusters.
      * </p>
      * 
      * @param targetDBInstanceIdentifier
-     *        The name of the instance to promote to the primary instance.</p>
+     *        The name of the DB instance to promote to the primary DB instance.</p>
      *        <p>
-     *        You must specify the instance identifier for an Aurora Replica in the DB cluster. For example,
-     *        <code>mydbcluster-replica1</code>.
+     *        Specify the DB instance identifier for an Aurora Replica or a Multi-AZ readable standby in the DB cluster,
+     *        for example <code>mydbcluster-replica1</code>.
+     *        </p>
+     *        <p>
+     *        This setting isn't supported for RDS for MySQL Multi-AZ DB clusters.
      */
 
     public void setTargetDBInstanceIdentifier(String targetDBInstanceIdentifier) {
@@ -172,17 +181,23 @@ public class FailoverDBClusterRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name of the instance to promote to the primary instance.
+     * The name of the DB instance to promote to the primary DB instance.
      * </p>
      * <p>
-     * You must specify the instance identifier for an Aurora Replica in the DB cluster. For example,
-     * <code>mydbcluster-replica1</code>.
+     * Specify the DB instance identifier for an Aurora Replica or a Multi-AZ readable standby in the DB cluster, for
+     * example <code>mydbcluster-replica1</code>.
+     * </p>
+     * <p>
+     * This setting isn't supported for RDS for MySQL Multi-AZ DB clusters.
      * </p>
      * 
-     * @return The name of the instance to promote to the primary instance.</p>
+     * @return The name of the DB instance to promote to the primary DB instance.</p>
      *         <p>
-     *         You must specify the instance identifier for an Aurora Replica in the DB cluster. For example,
-     *         <code>mydbcluster-replica1</code>.
+     *         Specify the DB instance identifier for an Aurora Replica or a Multi-AZ readable standby in the DB
+     *         cluster, for example <code>mydbcluster-replica1</code>.
+     *         </p>
+     *         <p>
+     *         This setting isn't supported for RDS for MySQL Multi-AZ DB clusters.
      */
 
     public String getTargetDBInstanceIdentifier() {
@@ -191,18 +206,24 @@ public class FailoverDBClusterRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name of the instance to promote to the primary instance.
+     * The name of the DB instance to promote to the primary DB instance.
      * </p>
      * <p>
-     * You must specify the instance identifier for an Aurora Replica in the DB cluster. For example,
-     * <code>mydbcluster-replica1</code>.
+     * Specify the DB instance identifier for an Aurora Replica or a Multi-AZ readable standby in the DB cluster, for
+     * example <code>mydbcluster-replica1</code>.
+     * </p>
+     * <p>
+     * This setting isn't supported for RDS for MySQL Multi-AZ DB clusters.
      * </p>
      * 
      * @param targetDBInstanceIdentifier
-     *        The name of the instance to promote to the primary instance.</p>
+     *        The name of the DB instance to promote to the primary DB instance.</p>
      *        <p>
-     *        You must specify the instance identifier for an Aurora Replica in the DB cluster. For example,
-     *        <code>mydbcluster-replica1</code>.
+     *        Specify the DB instance identifier for an Aurora Replica or a Multi-AZ readable standby in the DB cluster,
+     *        for example <code>mydbcluster-replica1</code>.
+     *        </p>
+     *        <p>
+     *        This setting isn't supported for RDS for MySQL Multi-AZ DB clusters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

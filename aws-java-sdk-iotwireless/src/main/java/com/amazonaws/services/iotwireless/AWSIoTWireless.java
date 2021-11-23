@@ -1005,6 +1005,29 @@ public interface AWSIoTWireless {
 
     /**
      * <p>
+     * Get NetworkAnalyzer configuration.
+     * </p>
+     * 
+     * @param getNetworkAnalyzerConfigurationRequest
+     * @return Result of the GetNetworkAnalyzerConfiguration operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.GetNetworkAnalyzerConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetNetworkAnalyzerConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetNetworkAnalyzerConfigurationResult getNetworkAnalyzerConfiguration(GetNetworkAnalyzerConfigurationRequest getNetworkAnalyzerConfigurationRequest);
+
+    /**
+     * <p>
      * Gets information about a partner account. If <code>PartnerAccountId</code> and <code>PartnerType</code> are
      * <code>null</code>, returns all partner accounts.
      * </p>
@@ -1923,6 +1946,30 @@ public interface AWSIoTWireless {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateMulticastGroupResult updateMulticastGroup(UpdateMulticastGroupRequest updateMulticastGroupRequest);
+
+    /**
+     * <p>
+     * Update NetworkAnalyzer configuration.
+     * </p>
+     * 
+     * @param updateNetworkAnalyzerConfigurationRequest
+     * @return Result of the UpdateNetworkAnalyzerConfiguration operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.UpdateNetworkAnalyzerConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/UpdateNetworkAnalyzerConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateNetworkAnalyzerConfigurationResult updateNetworkAnalyzerConfiguration(
+            UpdateNetworkAnalyzerConfigurationRequest updateNetworkAnalyzerConfigurationRequest);
 
     /**
      * <p>

@@ -1306,6 +1306,19 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeManagedJobTemplateResult> describeManagedJobTemplateAsync(DescribeManagedJobTemplateRequest request) {
+
+        return describeManagedJobTemplateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeManagedJobTemplateResult> describeManagedJobTemplateAsync(DescribeManagedJobTemplateRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeManagedJobTemplateRequest, DescribeManagedJobTemplateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeMitigationActionResult> describeMitigationActionAsync(DescribeMitigationActionRequest request) {
 
         return describeMitigationActionAsync(request, null);
@@ -2043,6 +2056,19 @@ public class AbstractAWSIotAsync extends AbstractAWSIot implements AWSIotAsync {
     @Override
     public java.util.concurrent.Future<ListJobsResult> listJobsAsync(ListJobsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListJobsRequest, ListJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListManagedJobTemplatesResult> listManagedJobTemplatesAsync(ListManagedJobTemplatesRequest request) {
+
+        return listManagedJobTemplatesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListManagedJobTemplatesResult> listManagedJobTemplatesAsync(ListManagedJobTemplatesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListManagedJobTemplatesRequest, ListManagedJobTemplatesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

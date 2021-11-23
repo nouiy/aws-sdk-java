@@ -31,7 +31,7 @@ public class BackupPlanInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The optional display name of a backup plan.
+     * The display name of a backup plan. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      */
     private String backupPlanName;
@@ -52,11 +52,11 @@ public class BackupPlanInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The optional display name of a backup plan.
+     * The display name of a backup plan. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
      * @param backupPlanName
-     *        The optional display name of a backup plan.
+     *        The display name of a backup plan. Must contain 1 to 50 alphanumeric or '-_.' characters.
      */
 
     public void setBackupPlanName(String backupPlanName) {
@@ -65,10 +65,10 @@ public class BackupPlanInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The optional display name of a backup plan.
+     * The display name of a backup plan. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
-     * @return The optional display name of a backup plan.
+     * @return The display name of a backup plan. Must contain 1 to 50 alphanumeric or '-_.' characters.
      */
 
     public String getBackupPlanName() {
@@ -77,11 +77,11 @@ public class BackupPlanInput implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The optional display name of a backup plan.
+     * The display name of a backup plan. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
      * @param backupPlanName
-     *        The optional display name of a backup plan.
+     *        The display name of a backup plan. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

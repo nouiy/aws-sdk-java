@@ -52,6 +52,10 @@ public class UpdateDomainConfigResultJsonUnmarshaller implements Unmarshaller<Up
                     context.nextToken();
                     updateDomainConfigResult.setDomainConfig(DomainConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DryRunResults", targetDepth)) {
+                    context.nextToken();
+                    updateDomainConfigResult.setDryRunResults(DryRunResultsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

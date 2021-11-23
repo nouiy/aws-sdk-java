@@ -26,7 +26,7 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * An array of objects, one for each account that's associated with the administrator account and meets the criteria
-     * specified by the onlyAssociated request parameter.
+     * specified in the request.
      * </p>
      */
     private java.util.List<Member> members;
@@ -41,11 +41,11 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * An array of objects, one for each account that's associated with the administrator account and meets the criteria
-     * specified by the onlyAssociated request parameter.
+     * specified in the request.
      * </p>
      * 
      * @return An array of objects, one for each account that's associated with the administrator account and meets the
-     *         criteria specified by the onlyAssociated request parameter.
+     *         criteria specified in the request.
      */
 
     public java.util.List<Member> getMembers() {
@@ -55,12 +55,12 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * An array of objects, one for each account that's associated with the administrator account and meets the criteria
-     * specified by the onlyAssociated request parameter.
+     * specified in the request.
      * </p>
      * 
      * @param members
      *        An array of objects, one for each account that's associated with the administrator account and meets the
-     *        criteria specified by the onlyAssociated request parameter.
+     *        criteria specified in the request.
      */
 
     public void setMembers(java.util.Collection<Member> members) {
@@ -75,7 +75,7 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * An array of objects, one for each account that's associated with the administrator account and meets the criteria
-     * specified by the onlyAssociated request parameter.
+     * specified in the request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -85,7 +85,7 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
      * 
      * @param members
      *        An array of objects, one for each account that's associated with the administrator account and meets the
-     *        criteria specified by the onlyAssociated request parameter.
+     *        criteria specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,12 +102,12 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
     /**
      * <p>
      * An array of objects, one for each account that's associated with the administrator account and meets the criteria
-     * specified by the onlyAssociated request parameter.
+     * specified in the request.
      * </p>
      * 
      * @param members
      *        An array of objects, one for each account that's associated with the administrator account and meets the
-     *        criteria specified by the onlyAssociated request parameter.
+     *        criteria specified in the request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

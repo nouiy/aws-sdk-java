@@ -27,21 +27,21 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specifies whether to enable Amazon Macie automatically for each account, when the account is added to the Amazon
-     * Web Services organization.
+     * Specifies whether to enable Amazon Macie automatically for an account when the account is added to the
+     * organization in Organizations.
      * </p>
      */
     private Boolean autoEnable;
 
     /**
      * <p>
-     * Specifies whether to enable Amazon Macie automatically for each account, when the account is added to the Amazon
-     * Web Services organization.
+     * Specifies whether to enable Amazon Macie automatically for an account when the account is added to the
+     * organization in Organizations.
      * </p>
      * 
      * @param autoEnable
-     *        Specifies whether to enable Amazon Macie automatically for each account, when the account is added to the
-     *        Amazon Web Services organization.
+     *        Specifies whether to enable Amazon Macie automatically for an account when the account is added to the
+     *        organization in Organizations.
      */
 
     public void setAutoEnable(Boolean autoEnable) {
@@ -50,12 +50,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specifies whether to enable Amazon Macie automatically for each account, when the account is added to the Amazon
-     * Web Services organization.
+     * Specifies whether to enable Amazon Macie automatically for an account when the account is added to the
+     * organization in Organizations.
      * </p>
      * 
-     * @return Specifies whether to enable Amazon Macie automatically for each account, when the account is added to the
-     *         Amazon Web Services organization.
+     * @return Specifies whether to enable Amazon Macie automatically for an account when the account is added to the
+     *         organization in Organizations.
      */
 
     public Boolean getAutoEnable() {
@@ -64,13 +64,13 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specifies whether to enable Amazon Macie automatically for each account, when the account is added to the Amazon
-     * Web Services organization.
+     * Specifies whether to enable Amazon Macie automatically for an account when the account is added to the
+     * organization in Organizations.
      * </p>
      * 
      * @param autoEnable
-     *        Specifies whether to enable Amazon Macie automatically for each account, when the account is added to the
-     *        Amazon Web Services organization.
+     *        Specifies whether to enable Amazon Macie automatically for an account when the account is added to the
+     *        organization in Organizations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -81,12 +81,12 @@ public class UpdateOrganizationConfigurationRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specifies whether to enable Amazon Macie automatically for each account, when the account is added to the Amazon
-     * Web Services organization.
+     * Specifies whether to enable Amazon Macie automatically for an account when the account is added to the
+     * organization in Organizations.
      * </p>
      * 
-     * @return Specifies whether to enable Amazon Macie automatically for each account, when the account is added to the
-     *         Amazon Web Services organization.
+     * @return Specifies whether to enable Amazon Macie automatically for an account when the account is added to the
+     *         organization in Organizations.
      */
 
     public Boolean isAutoEnable() {

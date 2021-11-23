@@ -130,6 +130,12 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      */
     private String jobTemplateArn;
+    /**
+     * <p>
+     * Parameters of a managed template that you can specify to create the job document.
+     * </p>
+     */
+    private java.util.Map<String, String> documentParameters;
 
     /**
      * <p>
@@ -928,6 +934,74 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * Parameters of a managed template that you can specify to create the job document.
+     * </p>
+     * 
+     * @return Parameters of a managed template that you can specify to create the job document.
+     */
+
+    public java.util.Map<String, String> getDocumentParameters() {
+        return documentParameters;
+    }
+
+    /**
+     * <p>
+     * Parameters of a managed template that you can specify to create the job document.
+     * </p>
+     * 
+     * @param documentParameters
+     *        Parameters of a managed template that you can specify to create the job document.
+     */
+
+    public void setDocumentParameters(java.util.Map<String, String> documentParameters) {
+        this.documentParameters = documentParameters;
+    }
+
+    /**
+     * <p>
+     * Parameters of a managed template that you can specify to create the job document.
+     * </p>
+     * 
+     * @param documentParameters
+     *        Parameters of a managed template that you can specify to create the job document.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateJobRequest withDocumentParameters(java.util.Map<String, String> documentParameters) {
+        setDocumentParameters(documentParameters);
+        return this;
+    }
+
+    /**
+     * Add a single DocumentParameters entry
+     *
+     * @see CreateJobRequest#withDocumentParameters
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateJobRequest addDocumentParametersEntry(String key, String value) {
+        if (null == this.documentParameters) {
+            this.documentParameters = new java.util.HashMap<String, String>();
+        }
+        if (this.documentParameters.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.documentParameters.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into DocumentParameters.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateJobRequest clearDocumentParametersEntries() {
+        this.documentParameters = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -964,7 +1038,9 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (getNamespaceId() != null)
             sb.append("NamespaceId: ").append(getNamespaceId()).append(",");
         if (getJobTemplateArn() != null)
-            sb.append("JobTemplateArn: ").append(getJobTemplateArn());
+            sb.append("JobTemplateArn: ").append(getJobTemplateArn()).append(",");
+        if (getDocumentParameters() != null)
+            sb.append("DocumentParameters: ").append(getDocumentParameters());
         sb.append("}");
         return sb.toString();
     }
@@ -1031,6 +1107,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getJobTemplateArn() != null && other.getJobTemplateArn().equals(this.getJobTemplateArn()) == false)
             return false;
+        if (other.getDocumentParameters() == null ^ this.getDocumentParameters() == null)
+            return false;
+        if (other.getDocumentParameters() != null && other.getDocumentParameters().equals(this.getDocumentParameters()) == false)
+            return false;
         return true;
     }
 
@@ -1052,6 +1132,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getNamespaceId() == null) ? 0 : getNamespaceId().hashCode());
         hashCode = prime * hashCode + ((getJobTemplateArn() == null) ? 0 : getJobTemplateArn().hashCode());
+        hashCode = prime * hashCode + ((getDocumentParameters() == null) ? 0 : getDocumentParameters().hashCode());
         return hashCode;
     }
 

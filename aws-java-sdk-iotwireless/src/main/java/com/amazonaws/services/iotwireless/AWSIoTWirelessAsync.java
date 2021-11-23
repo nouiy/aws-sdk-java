@@ -1337,6 +1337,41 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
 
     /**
      * <p>
+     * Get NetworkAnalyzer configuration.
+     * </p>
+     * 
+     * @param getNetworkAnalyzerConfigurationRequest
+     * @return A Java Future containing the result of the GetNetworkAnalyzerConfiguration operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsync.GetNetworkAnalyzerConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetNetworkAnalyzerConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkAnalyzerConfigurationResult> getNetworkAnalyzerConfigurationAsync(
+            GetNetworkAnalyzerConfigurationRequest getNetworkAnalyzerConfigurationRequest);
+
+    /**
+     * <p>
+     * Get NetworkAnalyzer configuration.
+     * </p>
+     * 
+     * @param getNetworkAnalyzerConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetNetworkAnalyzerConfiguration operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsyncHandler.GetNetworkAnalyzerConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetNetworkAnalyzerConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetNetworkAnalyzerConfigurationResult> getNetworkAnalyzerConfigurationAsync(
+            GetNetworkAnalyzerConfigurationRequest getNetworkAnalyzerConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkAnalyzerConfigurationRequest, GetNetworkAnalyzerConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets information about a partner account. If <code>PartnerAccountId</code> and <code>PartnerType</code> are
      * <code>null</code>, returns all partner accounts.
      * </p>
@@ -2638,6 +2673,41 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      */
     java.util.concurrent.Future<UpdateMulticastGroupResult> updateMulticastGroupAsync(UpdateMulticastGroupRequest updateMulticastGroupRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateMulticastGroupRequest, UpdateMulticastGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update NetworkAnalyzer configuration.
+     * </p>
+     * 
+     * @param updateNetworkAnalyzerConfigurationRequest
+     * @return A Java Future containing the result of the UpdateNetworkAnalyzerConfiguration operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsync.UpdateNetworkAnalyzerConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/UpdateNetworkAnalyzerConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateNetworkAnalyzerConfigurationResult> updateNetworkAnalyzerConfigurationAsync(
+            UpdateNetworkAnalyzerConfigurationRequest updateNetworkAnalyzerConfigurationRequest);
+
+    /**
+     * <p>
+     * Update NetworkAnalyzer configuration.
+     * </p>
+     * 
+     * @param updateNetworkAnalyzerConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateNetworkAnalyzerConfiguration operation returned by the
+     *         service.
+     * @sample AWSIoTWirelessAsyncHandler.UpdateNetworkAnalyzerConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/UpdateNetworkAnalyzerConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateNetworkAnalyzerConfigurationResult> updateNetworkAnalyzerConfigurationAsync(
+            UpdateNetworkAnalyzerConfigurationRequest updateNetworkAnalyzerConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateNetworkAnalyzerConfigurationRequest, UpdateNetworkAnalyzerConfigurationResult> asyncHandler);
 
     /**
      * <p>

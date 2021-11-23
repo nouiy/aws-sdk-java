@@ -25,7 +25,7 @@ public class AssociateSubnetCidrBlockResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information about the IPv6 CIDR block association.
+     * Information about the IPv6 association.
      * </p>
      */
     private SubnetIpv6CidrBlockAssociation ipv6CidrBlockAssociation;
@@ -38,11 +38,11 @@ public class AssociateSubnetCidrBlockResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information about the IPv6 CIDR block association.
+     * Information about the IPv6 association.
      * </p>
      * 
      * @param ipv6CidrBlockAssociation
-     *        Information about the IPv6 CIDR block association.
+     *        Information about the IPv6 association.
      */
 
     public void setIpv6CidrBlockAssociation(SubnetIpv6CidrBlockAssociation ipv6CidrBlockAssociation) {
@@ -51,10 +51,10 @@ public class AssociateSubnetCidrBlockResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information about the IPv6 CIDR block association.
+     * Information about the IPv6 association.
      * </p>
      * 
-     * @return Information about the IPv6 CIDR block association.
+     * @return Information about the IPv6 association.
      */
 
     public SubnetIpv6CidrBlockAssociation getIpv6CidrBlockAssociation() {
@@ -63,11 +63,11 @@ public class AssociateSubnetCidrBlockResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Information about the IPv6 CIDR block association.
+     * Information about the IPv6 association.
      * </p>
      * 
      * @param ipv6CidrBlockAssociation
-     *        Information about the IPv6 CIDR block association.
+     *        Information about the IPv6 association.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -56,8 +56,8 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * </li>
      * <li>
      * <p>
-     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone. You can
-     * also use <code>defaultForAz</code> as the filter name.
+     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone (
+     * <code>true</code> | <code>false</code>). You can also use <code>defaultForAz</code> as the filter name.
      * </p>
      * </li>
      * <li>
@@ -74,6 +74,12 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * <li>
      * <p>
      * <code>ipv6-cidr-block-association.state</code> - The state of an IPv6 CIDR block associated with the subnet.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ipv6-native</code> - Indicates whether this is an IPv6 only subnet (<code>true</code> | <code>false</code>
+     * ).
      * </p>
      * </li>
      * <li>
@@ -177,8 +183,8 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * </li>
      * <li>
      * <p>
-     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone. You can
-     * also use <code>defaultForAz</code> as the filter name.
+     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone (
+     * <code>true</code> | <code>false</code>). You can also use <code>defaultForAz</code> as the filter name.
      * </p>
      * </li>
      * <li>
@@ -195,6 +201,12 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * <li>
      * <p>
      * <code>ipv6-cidr-block-association.state</code> - The state of an IPv6 CIDR block associated with the subnet.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ipv6-native</code> - Indicates whether this is an IPv6 only subnet (<code>true</code> | <code>false</code>
+     * ).
      * </p>
      * </li>
      * <li>
@@ -271,8 +283,8 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      *         </li>
      *         <li>
      *         <p>
-     *         <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone. You
-     *         can also use <code>defaultForAz</code> as the filter name.
+     *         <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone (
+     *         <code>true</code> | <code>false</code>). You can also use <code>defaultForAz</code> as the filter name.
      *         </p>
      *         </li>
      *         <li>
@@ -290,6 +302,12 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      *         <p>
      *         <code>ipv6-cidr-block-association.state</code> - The state of an IPv6 CIDR block associated with the
      *         subnet.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ipv6-native</code> - Indicates whether this is an IPv6 only subnet (<code>true</code> |
+     *         <code>false</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -376,8 +394,8 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * </li>
      * <li>
      * <p>
-     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone. You can
-     * also use <code>defaultForAz</code> as the filter name.
+     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone (
+     * <code>true</code> | <code>false</code>). You can also use <code>defaultForAz</code> as the filter name.
      * </p>
      * </li>
      * <li>
@@ -394,6 +412,12 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * <li>
      * <p>
      * <code>ipv6-cidr-block-association.state</code> - The state of an IPv6 CIDR block associated with the subnet.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ipv6-native</code> - Indicates whether this is an IPv6 only subnet (<code>true</code> | <code>false</code>
+     * ).
      * </p>
      * </li>
      * <li>
@@ -471,8 +495,8 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      *        </li>
      *        <li>
      *        <p>
-     *        <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone. You
-     *        can also use <code>defaultForAz</code> as the filter name.
+     *        <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone (
+     *        <code>true</code> | <code>false</code>). You can also use <code>defaultForAz</code> as the filter name.
      *        </p>
      *        </li>
      *        <li>
@@ -490,6 +514,12 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      *        <p>
      *        <code>ipv6-cidr-block-association.state</code> - The state of an IPv6 CIDR block associated with the
      *        subnet.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ipv6-native</code> - Indicates whether this is an IPv6 only subnet (<code>true</code> |
+     *        <code>false</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -578,8 +608,8 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * </li>
      * <li>
      * <p>
-     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone. You can
-     * also use <code>defaultForAz</code> as the filter name.
+     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone (
+     * <code>true</code> | <code>false</code>). You can also use <code>defaultForAz</code> as the filter name.
      * </p>
      * </li>
      * <li>
@@ -596,6 +626,12 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * <li>
      * <p>
      * <code>ipv6-cidr-block-association.state</code> - The state of an IPv6 CIDR block associated with the subnet.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ipv6-native</code> - Indicates whether this is an IPv6 only subnet (<code>true</code> | <code>false</code>
+     * ).
      * </p>
      * </li>
      * <li>
@@ -678,8 +714,8 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      *        </li>
      *        <li>
      *        <p>
-     *        <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone. You
-     *        can also use <code>defaultForAz</code> as the filter name.
+     *        <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone (
+     *        <code>true</code> | <code>false</code>). You can also use <code>defaultForAz</code> as the filter name.
      *        </p>
      *        </li>
      *        <li>
@@ -697,6 +733,12 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      *        <p>
      *        <code>ipv6-cidr-block-association.state</code> - The state of an IPv6 CIDR block associated with the
      *        subnet.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ipv6-native</code> - Indicates whether this is an IPv6 only subnet (<code>true</code> |
+     *        <code>false</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -787,8 +829,8 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * </li>
      * <li>
      * <p>
-     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone. You can
-     * also use <code>defaultForAz</code> as the filter name.
+     * <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone (
+     * <code>true</code> | <code>false</code>). You can also use <code>defaultForAz</code> as the filter name.
      * </p>
      * </li>
      * <li>
@@ -805,6 +847,12 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      * <li>
      * <p>
      * <code>ipv6-cidr-block-association.state</code> - The state of an IPv6 CIDR block associated with the subnet.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ipv6-native</code> - Indicates whether this is an IPv6 only subnet (<code>true</code> | <code>false</code>
+     * ).
      * </p>
      * </li>
      * <li>
@@ -882,8 +930,8 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      *        </li>
      *        <li>
      *        <p>
-     *        <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone. You
-     *        can also use <code>defaultForAz</code> as the filter name.
+     *        <code>default-for-az</code> - Indicates whether this is the default subnet for the Availability Zone (
+     *        <code>true</code> | <code>false</code>). You can also use <code>defaultForAz</code> as the filter name.
      *        </p>
      *        </li>
      *        <li>
@@ -901,6 +949,12 @@ public class DescribeSubnetsRequest extends AmazonWebServiceRequest implements S
      *        <p>
      *        <code>ipv6-cidr-block-association.state</code> - The state of an IPv6 CIDR block associated with the
      *        subnet.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ipv6-native</code> - Indicates whether this is an IPv6 only subnet (<code>true</code> |
+     *        <code>false</code>).
      *        </p>
      *        </li>
      *        <li>

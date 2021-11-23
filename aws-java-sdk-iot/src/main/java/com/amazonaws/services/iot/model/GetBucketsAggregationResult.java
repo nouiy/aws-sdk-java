@@ -20,8 +20,7 @@ public class GetBucketsAggregationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The total number of documents that fit the query string criteria and contain a value for the Aggregation field
-     * targeted in the request.
+     * The total number of things that fit the query string criteria.
      * </p>
      */
     private Integer totalCount;
@@ -41,13 +40,11 @@ public class GetBucketsAggregationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The total number of documents that fit the query string criteria and contain a value for the Aggregation field
-     * targeted in the request.
+     * The total number of things that fit the query string criteria.
      * </p>
      * 
      * @param totalCount
-     *        The total number of documents that fit the query string criteria and contain a value for the Aggregation
-     *        field targeted in the request.
+     *        The total number of things that fit the query string criteria.
      */
 
     public void setTotalCount(Integer totalCount) {
@@ -56,12 +53,10 @@ public class GetBucketsAggregationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The total number of documents that fit the query string criteria and contain a value for the Aggregation field
-     * targeted in the request.
+     * The total number of things that fit the query string criteria.
      * </p>
      * 
-     * @return The total number of documents that fit the query string criteria and contain a value for the Aggregation
-     *         field targeted in the request.
+     * @return The total number of things that fit the query string criteria.
      */
 
     public Integer getTotalCount() {
@@ -70,13 +65,11 @@ public class GetBucketsAggregationResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The total number of documents that fit the query string criteria and contain a value for the Aggregation field
-     * targeted in the request.
+     * The total number of things that fit the query string criteria.
      * </p>
      * 
      * @param totalCount
-     *        The total number of documents that fit the query string criteria and contain a value for the Aggregation
-     *        field targeted in the request.
+     *        The total number of things that fit the query string criteria.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

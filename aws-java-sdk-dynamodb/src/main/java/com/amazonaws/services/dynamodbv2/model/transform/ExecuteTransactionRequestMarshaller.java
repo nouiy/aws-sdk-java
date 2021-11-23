@@ -35,6 +35,8 @@ public class ExecuteTransactionRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTREQUESTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientRequestToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<String> RETURNCONSUMEDCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReturnConsumedCapacity").build();
 
     private static final ExecuteTransactionRequestMarshaller instance = new ExecuteTransactionRequestMarshaller();
 
@@ -54,6 +56,7 @@ public class ExecuteTransactionRequestMarshaller {
         try {
             protocolMarshaller.marshall(executeTransactionRequest.getTransactStatements(), TRANSACTSTATEMENTS_BINDING);
             protocolMarshaller.marshall(executeTransactionRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
+            protocolMarshaller.marshall(executeTransactionRequest.getReturnConsumedCapacity(), RETURNCONSUMEDCAPACITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

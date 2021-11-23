@@ -52,7 +52,7 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM"
-     * >Updating the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
+     * >Update the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstanceBlockDeviceMappingSpecification> blockDeviceMappings;
@@ -358,7 +358,7 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM"
-     * >Updating the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
+     * >Update the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return Modifies the <code>DeleteOnTermination</code> attribute for volumes that are currently attached. The
@@ -368,7 +368,7 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      *         To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the
      *         instance. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM"
-     *         >Updating the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
+     *         >Update the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public java.util.List<InstanceBlockDeviceMappingSpecification> getBlockDeviceMappings() {
@@ -388,7 +388,7 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM"
-     * >Updating the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
+     * >Update the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param blockDeviceMappings
@@ -399,7 +399,7 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      *        To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the
      *        instance. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM"
-     *        >Updating the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
+     *        >Update the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setBlockDeviceMappings(java.util.Collection<InstanceBlockDeviceMappingSpecification> blockDeviceMappings) {
@@ -421,7 +421,7 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM"
-     * >Updating the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
+     * >Update the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -437,7 +437,7 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      *        To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the
      *        instance. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM"
-     *        >Updating the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
+     *        >Update the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -461,7 +461,7 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      * To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the instance.
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM"
-     * >Updating the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
+     * >Update the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param blockDeviceMappings
@@ -472,7 +472,7 @@ public class ModifyInstanceAttributeRequest extends AmazonWebServiceRequest impl
      *        To add instance store volumes to an Amazon EBS-backed instance, you must add them when you launch the
      *        instance. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#Using_OverridingAMIBDM"
-     *        >Updating the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
+     *        >Update the block device mapping when launching an instance</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

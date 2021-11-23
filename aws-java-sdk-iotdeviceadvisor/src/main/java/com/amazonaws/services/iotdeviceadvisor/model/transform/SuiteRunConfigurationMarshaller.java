@@ -32,6 +32,8 @@ public class SuiteRunConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("primaryDevice").build();
     private static final MarshallingInfo<List> SELECTEDTESTLIST_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("selectedTestList").build();
+    private static final MarshallingInfo<Boolean> PARALLELRUN_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parallelRun").build();
 
     private static final SuiteRunConfigurationMarshaller instance = new SuiteRunConfigurationMarshaller();
 
@@ -51,6 +53,7 @@ public class SuiteRunConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(suiteRunConfiguration.getPrimaryDevice(), PRIMARYDEVICE_BINDING);
             protocolMarshaller.marshall(suiteRunConfiguration.getSelectedTestList(), SELECTEDTESTLIST_BINDING);
+            protocolMarshaller.marshall(suiteRunConfiguration.getParallelRun(), PARALLELRUN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

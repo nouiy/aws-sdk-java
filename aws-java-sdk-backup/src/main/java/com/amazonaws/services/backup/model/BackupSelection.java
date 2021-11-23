@@ -30,7 +30,7 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The display name of a resource selection document.
+     * The display name of a resource selection document. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      */
     private String selectionName;
@@ -43,30 +43,82 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
     private String iamRoleArn;
     /**
      * <p>
-     * An array of strings that contain Amazon Resource Names (ARNs) of resources to assign to a backup plan.
+     * A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to assign many resources to a backup plan, consider a different resource selection strategy, such as
+     * assigning all resources of a resource type or refining your resource selection using tags.
      * </p>
      */
     private java.util.List<String> resources;
     /**
      * <p>
-     * An array of conditions used to specify a set of resources to assign to a backup plan; for example,
-     * <code>"StringEquals": {"ec2:ResourceTag/Department": "accounting"</code>. Assigns the backup plan to every
-     * resource with at least one matching tag.
+     * A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     * <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.
      * </p>
+     * <p>
+     * <code>ListOfTags</code> differs from <code>Conditions</code> as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you specify more than one condition, you assign all resources that match AT LEAST ONE condition (using OR
+     * logic).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports
+     * <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and <code>StringNotLike</code>.
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<Condition> listOfTags;
-
+    /**
+     * <p>
+     * A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to exclude many resources from a backup plan, consider a different resource selection strategy, such
+     * as assigning only one or a few resource types or refining your resource selection using tags.
+     * </p>
+     */
     private java.util.List<String> notResources;
-
+    /**
+     * <p>
+     * A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     * <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.
+     * </p>
+     * <p>
+     * <code>Conditions</code> differs from <code>ListOfTags</code> as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you specify more than one condition, you only assign the resources that match ALL conditions (using AND
+     * logic).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Conditions</code> supports <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>
+     * , and <code>StringNotLike</code>. <code>ListOfTags</code> only supports <code>StringEquals</code>.
+     * </p>
+     * </li>
+     * </ul>
+     */
     private Conditions conditions;
 
     /**
      * <p>
-     * The display name of a resource selection document.
+     * The display name of a resource selection document. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
      * @param selectionName
-     *        The display name of a resource selection document.
+     *        The display name of a resource selection document. Must contain 1 to 50 alphanumeric or '-_.' characters.
      */
 
     public void setSelectionName(String selectionName) {
@@ -75,10 +127,10 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The display name of a resource selection document.
+     * The display name of a resource selection document. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
-     * @return The display name of a resource selection document.
+     * @return The display name of a resource selection document. Must contain 1 to 50 alphanumeric or '-_.' characters.
      */
 
     public String getSelectionName() {
@@ -87,11 +139,11 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The display name of a resource selection document.
+     * The display name of a resource selection document. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * </p>
      * 
      * @param selectionName
-     *        The display name of a resource selection document.
+     *        The display name of a resource selection document. Must contain 1 to 50 alphanumeric or '-_.' characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -148,10 +200,19 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of strings that contain Amazon Resource Names (ARNs) of resources to assign to a backup plan.
+     * A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to assign many resources to a backup plan, consider a different resource selection strategy, such as
+     * assigning all resources of a resource type or refining your resource selection using tags.
      * </p>
      * 
-     * @return An array of strings that contain Amazon Resource Names (ARNs) of resources to assign to a backup plan.
+     * @return A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500
+     *         without wildcards, or 30 ARNs with wildcards.</p>
+     *         <p>
+     *         If you need to assign many resources to a backup plan, consider a different resource selection strategy,
+     *         such as assigning all resources of a resource type or refining your resource selection using tags.
      */
 
     public java.util.List<String> getResources() {
@@ -160,11 +221,20 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of strings that contain Amazon Resource Names (ARNs) of resources to assign to a backup plan.
+     * A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to assign many resources to a backup plan, consider a different resource selection strategy, such as
+     * assigning all resources of a resource type or refining your resource selection using tags.
      * </p>
      * 
      * @param resources
-     *        An array of strings that contain Amazon Resource Names (ARNs) of resources to assign to a backup plan.
+     *        A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500
+     *        without wildcards, or 30 ARNs with wildcards.</p>
+     *        <p>
+     *        If you need to assign many resources to a backup plan, consider a different resource selection strategy,
+     *        such as assigning all resources of a resource type or refining your resource selection using tags.
      */
 
     public void setResources(java.util.Collection<String> resources) {
@@ -178,7 +248,12 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of strings that contain Amazon Resource Names (ARNs) of resources to assign to a backup plan.
+     * A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to assign many resources to a backup plan, consider a different resource selection strategy, such as
+     * assigning all resources of a resource type or refining your resource selection using tags.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -187,7 +262,11 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param resources
-     *        An array of strings that contain Amazon Resource Names (ARNs) of resources to assign to a backup plan.
+     *        A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500
+     *        without wildcards, or 30 ARNs with wildcards.</p>
+     *        <p>
+     *        If you need to assign many resources to a backup plan, consider a different resource selection strategy,
+     *        such as assigning all resources of a resource type or refining your resource selection using tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -203,11 +282,20 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of strings that contain Amazon Resource Names (ARNs) of resources to assign to a backup plan.
+     * A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to assign many resources to a backup plan, consider a different resource selection strategy, such as
+     * assigning all resources of a resource type or refining your resource selection using tags.
      * </p>
      * 
      * @param resources
-     *        An array of strings that contain Amazon Resource Names (ARNs) of resources to assign to a backup plan.
+     *        A list of Amazon Resource Names (ARNs) to assign to a backup plan. The maximum number of ARNs is 500
+     *        without wildcards, or 30 ARNs with wildcards.</p>
+     *        <p>
+     *        If you need to assign many resources to a backup plan, consider a different resource selection strategy,
+     *        such as assigning all resources of a resource type or refining your resource selection using tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,14 +306,46 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of conditions used to specify a set of resources to assign to a backup plan; for example,
-     * <code>"StringEquals": {"ec2:ResourceTag/Department": "accounting"</code>. Assigns the backup plan to every
-     * resource with at least one matching tag.
+     * A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     * <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.
      * </p>
+     * <p>
+     * <code>ListOfTags</code> differs from <code>Conditions</code> as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you specify more than one condition, you assign all resources that match AT LEAST ONE condition (using OR
+     * logic).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports
+     * <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and <code>StringNotLike</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return An array of conditions used to specify a set of resources to assign to a backup plan; for example,
-     *         <code>"StringEquals": {"ec2:ResourceTag/Department": "accounting"</code>. Assigns the backup plan to
-     *         every resource with at least one matching tag.
+     * @return A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     *         <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+     *         <p>
+     *         <code>ListOfTags</code> differs from <code>Conditions</code> as follows:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         When you specify more than one condition, you assign all resources that match AT LEAST ONE condition
+     *         (using OR logic).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports
+     *         <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and
+     *         <code>StringNotLike</code>.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<Condition> getListOfTags() {
@@ -234,15 +354,47 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of conditions used to specify a set of resources to assign to a backup plan; for example,
-     * <code>"StringEquals": {"ec2:ResourceTag/Department": "accounting"</code>. Assigns the backup plan to every
-     * resource with at least one matching tag.
+     * A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     * <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.
      * </p>
+     * <p>
+     * <code>ListOfTags</code> differs from <code>Conditions</code> as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you specify more than one condition, you assign all resources that match AT LEAST ONE condition (using OR
+     * logic).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports
+     * <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and <code>StringNotLike</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param listOfTags
-     *        An array of conditions used to specify a set of resources to assign to a backup plan; for example,
-     *        <code>"StringEquals": {"ec2:ResourceTag/Department": "accounting"</code>. Assigns the backup plan to every
-     *        resource with at least one matching tag.
+     *        A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     *        <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+     *        <p>
+     *        <code>ListOfTags</code> differs from <code>Conditions</code> as follows:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        When you specify more than one condition, you assign all resources that match AT LEAST ONE condition
+     *        (using OR logic).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports
+     *        <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and
+     *        <code>StringNotLike</code>.
+     *        </p>
+     *        </li>
      */
 
     public void setListOfTags(java.util.Collection<Condition> listOfTags) {
@@ -256,10 +408,26 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of conditions used to specify a set of resources to assign to a backup plan; for example,
-     * <code>"StringEquals": {"ec2:ResourceTag/Department": "accounting"</code>. Assigns the backup plan to every
-     * resource with at least one matching tag.
+     * A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     * <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.
      * </p>
+     * <p>
+     * <code>ListOfTags</code> differs from <code>Conditions</code> as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you specify more than one condition, you assign all resources that match AT LEAST ONE condition (using OR
+     * logic).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports
+     * <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and <code>StringNotLike</code>.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setListOfTags(java.util.Collection)} or {@link #withListOfTags(java.util.Collection)} if you want to
@@ -267,9 +435,25 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param listOfTags
-     *        An array of conditions used to specify a set of resources to assign to a backup plan; for example,
-     *        <code>"StringEquals": {"ec2:ResourceTag/Department": "accounting"</code>. Assigns the backup plan to every
-     *        resource with at least one matching tag.
+     *        A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     *        <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+     *        <p>
+     *        <code>ListOfTags</code> differs from <code>Conditions</code> as follows:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        When you specify more than one condition, you assign all resources that match AT LEAST ONE condition
+     *        (using OR logic).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports
+     *        <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and
+     *        <code>StringNotLike</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -285,15 +469,47 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * An array of conditions used to specify a set of resources to assign to a backup plan; for example,
-     * <code>"StringEquals": {"ec2:ResourceTag/Department": "accounting"</code>. Assigns the backup plan to every
-     * resource with at least one matching tag.
+     * A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     * <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.
      * </p>
+     * <p>
+     * <code>ListOfTags</code> differs from <code>Conditions</code> as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you specify more than one condition, you assign all resources that match AT LEAST ONE condition (using OR
+     * logic).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports
+     * <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and <code>StringNotLike</code>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param listOfTags
-     *        An array of conditions used to specify a set of resources to assign to a backup plan; for example,
-     *        <code>"StringEquals": {"ec2:ResourceTag/Department": "accounting"</code>. Assigns the backup plan to every
-     *        resource with at least one matching tag.
+     *        A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     *        <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+     *        <p>
+     *        <code>ListOfTags</code> differs from <code>Conditions</code> as follows:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        When you specify more than one condition, you assign all resources that match AT LEAST ONE condition
+     *        (using OR logic).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ListOfTags</code> only supports <code>StringEquals</code>. <code>Conditions</code> supports
+     *        <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>, and
+     *        <code>StringNotLike</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -303,7 +519,21 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to exclude many resources from a backup plan, consider a different resource selection strategy, such
+     * as assigning only one or a few resource types or refining your resource selection using tags.
+     * </p>
+     * 
+     * @return A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500
+     *         without wildcards, or 30 ARNs with wildcards.</p>
+     *         <p>
+     *         If you need to exclude many resources from a backup plan, consider a different resource selection
+     *         strategy, such as assigning only one or a few resource types or refining your resource selection using
+     *         tags.
      */
 
     public java.util.List<String> getNotResources() {
@@ -311,7 +541,22 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to exclude many resources from a backup plan, consider a different resource selection strategy, such
+     * as assigning only one or a few resource types or refining your resource selection using tags.
+     * </p>
+     * 
      * @param notResources
+     *        A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500
+     *        without wildcards, or 30 ARNs with wildcards.</p>
+     *        <p>
+     *        If you need to exclude many resources from a backup plan, consider a different resource selection
+     *        strategy, such as assigning only one or a few resource types or refining your resource selection using
+     *        tags.
      */
 
     public void setNotResources(java.util.Collection<String> notResources) {
@@ -325,12 +570,26 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
+     * A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to exclude many resources from a backup plan, consider a different resource selection strategy, such
+     * as assigning only one or a few resource types or refining your resource selection using tags.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setNotResources(java.util.Collection)} or {@link #withNotResources(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param notResources
+     *        A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500
+     *        without wildcards, or 30 ARNs with wildcards.</p>
+     *        <p>
+     *        If you need to exclude many resources from a backup plan, consider a different resource selection
+     *        strategy, such as assigning only one or a few resource types or refining your resource selection using
+     *        tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -345,7 +604,22 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500 without
+     * wildcards, or 30 ARNs with wildcards.
+     * </p>
+     * <p>
+     * If you need to exclude many resources from a backup plan, consider a different resource selection strategy, such
+     * as assigning only one or a few resource types or refining your resource selection using tags.
+     * </p>
+     * 
      * @param notResources
+     *        A list of Amazon Resource Names (ARNs) to exclude from a backup plan. The maximum number of ARNs is 500
+     *        without wildcards, or 30 ARNs with wildcards.</p>
+     *        <p>
+     *        If you need to exclude many resources from a backup plan, consider a different resource selection
+     *        strategy, such as assigning only one or a few resource types or refining your resource selection using
+     *        tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -355,7 +629,48 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     * <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.
+     * </p>
+     * <p>
+     * <code>Conditions</code> differs from <code>ListOfTags</code> as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you specify more than one condition, you only assign the resources that match ALL conditions (using AND
+     * logic).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Conditions</code> supports <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>
+     * , and <code>StringNotLike</code>. <code>ListOfTags</code> only supports <code>StringEquals</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param conditions
+     *        A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     *        <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+     *        <p>
+     *        <code>Conditions</code> differs from <code>ListOfTags</code> as follows:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        When you specify more than one condition, you only assign the resources that match ALL conditions (using
+     *        AND logic).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Conditions</code> supports <code>StringEquals</code>, <code>StringLike</code>,
+     *        <code>StringNotEquals</code>, and <code>StringNotLike</code>. <code>ListOfTags</code> only supports
+     *        <code>StringEquals</code>.
+     *        </p>
+     *        </li>
      */
 
     public void setConditions(Conditions conditions) {
@@ -363,7 +678,47 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
-     * @return
+     * <p>
+     * A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     * <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.
+     * </p>
+     * <p>
+     * <code>Conditions</code> differs from <code>ListOfTags</code> as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you specify more than one condition, you only assign the resources that match ALL conditions (using AND
+     * logic).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Conditions</code> supports <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>
+     * , and <code>StringNotLike</code>. <code>ListOfTags</code> only supports <code>StringEquals</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     *         <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+     *         <p>
+     *         <code>Conditions</code> differs from <code>ListOfTags</code> as follows:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         When you specify more than one condition, you only assign the resources that match ALL conditions (using
+     *         AND logic).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Conditions</code> supports <code>StringEquals</code>, <code>StringLike</code>,
+     *         <code>StringNotEquals</code>, and <code>StringNotLike</code>. <code>ListOfTags</code> only supports
+     *         <code>StringEquals</code>.
+     *         </p>
+     *         </li>
      */
 
     public Conditions getConditions() {
@@ -371,7 +726,48 @@ public class BackupSelection implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     * <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.
+     * </p>
+     * <p>
+     * <code>Conditions</code> differs from <code>ListOfTags</code> as follows:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * When you specify more than one condition, you only assign the resources that match ALL conditions (using AND
+     * logic).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Conditions</code> supports <code>StringEquals</code>, <code>StringLike</code>, <code>StringNotEquals</code>
+     * , and <code>StringNotLike</code>. <code>ListOfTags</code> only supports <code>StringEquals</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * 
      * @param conditions
+     *        A list of conditions that you define to assign resources to your backup plans using tags. For example,
+     *        <code>"StringEquals": {"Department": "accounting"</code>. Condition operators are case sensitive.</p>
+     *        <p>
+     *        <code>Conditions</code> differs from <code>ListOfTags</code> as follows:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        When you specify more than one condition, you only assign the resources that match ALL conditions (using
+     *        AND logic).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Conditions</code> supports <code>StringEquals</code>, <code>StringLike</code>,
+     *        <code>StringNotEquals</code>, and <code>StringNotLike</code>. <code>ListOfTags</code> only supports
+     *        <code>StringEquals</code>.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

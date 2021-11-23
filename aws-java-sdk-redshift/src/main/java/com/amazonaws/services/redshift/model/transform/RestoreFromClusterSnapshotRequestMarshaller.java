@@ -191,6 +191,14 @@ public class RestoreFromClusterSnapshotRequestMarshaller implements Marshaller<R
             request.addParameter("DefaultIamRoleArn", StringUtils.fromString(restoreFromClusterSnapshotRequest.getDefaultIamRoleArn()));
         }
 
+        if (restoreFromClusterSnapshotRequest.getReservedNodeId() != null) {
+            request.addParameter("ReservedNodeId", StringUtils.fromString(restoreFromClusterSnapshotRequest.getReservedNodeId()));
+        }
+
+        if (restoreFromClusterSnapshotRequest.getTargetReservedNodeOfferingId() != null) {
+            request.addParameter("TargetReservedNodeOfferingId", StringUtils.fromString(restoreFromClusterSnapshotRequest.getTargetReservedNodeOfferingId()));
+        }
+
         return request;
     }
 

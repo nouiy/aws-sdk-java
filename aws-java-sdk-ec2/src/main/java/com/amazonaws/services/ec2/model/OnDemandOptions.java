@@ -28,32 +28,44 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify
-     * <code>lowest-price</code>, EC2 Fleet uses price to determine the order, launching the lowest price first. If you
-     * specify <code>prioritized</code>, EC2 Fleet uses the priority that you assigned to each launch template override,
-     * launching the highest priority first. If you do not specify a value, EC2 Fleet defaults to
-     * <code>lowest-price</code>.
+     * The strategy that determines the order of the launch template overrides to use in fulfilling On-Demand capacity.
+     * </p>
+     * <p>
+     * <code>lowest-price</code> - EC2 Fleet uses price to determine the order, launching the lowest price first.
+     * </p>
+     * <p>
+     * <code>prioritized</code> - EC2 Fleet uses the priority that you assigned to each launch template override,
+     * launching the highest priority first.
+     * </p>
+     * <p>
+     * Default: <code>lowest-price</code>
      * </p>
      */
     private String allocationStrategy;
     /**
      * <p>
-     * The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity. Supported only for fleets
-     * of type <code>instant</code>.
+     * The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      */
     private CapacityReservationOptions capacityReservationOptions;
     /**
      * <p>
-     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet. Supported
-     * only for fleets of type <code>instant</code>.
+     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      */
     private Boolean singleInstanceType;
     /**
      * <p>
-     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone. Supported only for
-     * fleets of type <code>instant</code>.
+     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      */
     private Boolean singleAvailabilityZone;
@@ -61,6 +73,13 @@ public class OnDemandOptions implements Serializable, Cloneable {
      * <p>
      * The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not reached,
      * the fleet launches no instances.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
+     * </p>
+     * <p>
+     * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
+     * <code>SingleInstanceType</code>
      * </p>
      */
     private Integer minTargetCapacity;
@@ -73,19 +92,31 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify
-     * <code>lowest-price</code>, EC2 Fleet uses price to determine the order, launching the lowest price first. If you
-     * specify <code>prioritized</code>, EC2 Fleet uses the priority that you assigned to each launch template override,
-     * launching the highest priority first. If you do not specify a value, EC2 Fleet defaults to
-     * <code>lowest-price</code>.
+     * The strategy that determines the order of the launch template overrides to use in fulfilling On-Demand capacity.
+     * </p>
+     * <p>
+     * <code>lowest-price</code> - EC2 Fleet uses price to determine the order, launching the lowest price first.
+     * </p>
+     * <p>
+     * <code>prioritized</code> - EC2 Fleet uses the priority that you assigned to each launch template override,
+     * launching the highest priority first.
+     * </p>
+     * <p>
+     * Default: <code>lowest-price</code>
      * </p>
      * 
      * @param allocationStrategy
-     *        The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify
-     *        <code>lowest-price</code>, EC2 Fleet uses price to determine the order, launching the lowest price first.
-     *        If you specify <code>prioritized</code>, EC2 Fleet uses the priority that you assigned to each launch
-     *        template override, launching the highest priority first. If you do not specify a value, EC2 Fleet defaults
-     *        to <code>lowest-price</code>.
+     *        The strategy that determines the order of the launch template overrides to use in fulfilling On-Demand
+     *        capacity.</p>
+     *        <p>
+     *        <code>lowest-price</code> - EC2 Fleet uses price to determine the order, launching the lowest price first.
+     *        </p>
+     *        <p>
+     *        <code>prioritized</code> - EC2 Fleet uses the priority that you assigned to each launch template override,
+     *        launching the highest priority first.
+     *        </p>
+     *        <p>
+     *        Default: <code>lowest-price</code>
      * @see FleetOnDemandAllocationStrategy
      */
 
@@ -95,18 +126,31 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify
-     * <code>lowest-price</code>, EC2 Fleet uses price to determine the order, launching the lowest price first. If you
-     * specify <code>prioritized</code>, EC2 Fleet uses the priority that you assigned to each launch template override,
-     * launching the highest priority first. If you do not specify a value, EC2 Fleet defaults to
-     * <code>lowest-price</code>.
+     * The strategy that determines the order of the launch template overrides to use in fulfilling On-Demand capacity.
+     * </p>
+     * <p>
+     * <code>lowest-price</code> - EC2 Fleet uses price to determine the order, launching the lowest price first.
+     * </p>
+     * <p>
+     * <code>prioritized</code> - EC2 Fleet uses the priority that you assigned to each launch template override,
+     * launching the highest priority first.
+     * </p>
+     * <p>
+     * Default: <code>lowest-price</code>
      * </p>
      * 
-     * @return The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify
-     *         <code>lowest-price</code>, EC2 Fleet uses price to determine the order, launching the lowest price first.
-     *         If you specify <code>prioritized</code>, EC2 Fleet uses the priority that you assigned to each launch
-     *         template override, launching the highest priority first. If you do not specify a value, EC2 Fleet
-     *         defaults to <code>lowest-price</code>.
+     * @return The strategy that determines the order of the launch template overrides to use in fulfilling On-Demand
+     *         capacity.</p>
+     *         <p>
+     *         <code>lowest-price</code> - EC2 Fleet uses price to determine the order, launching the lowest price
+     *         first.
+     *         </p>
+     *         <p>
+     *         <code>prioritized</code> - EC2 Fleet uses the priority that you assigned to each launch template
+     *         override, launching the highest priority first.
+     *         </p>
+     *         <p>
+     *         Default: <code>lowest-price</code>
      * @see FleetOnDemandAllocationStrategy
      */
 
@@ -116,19 +160,31 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify
-     * <code>lowest-price</code>, EC2 Fleet uses price to determine the order, launching the lowest price first. If you
-     * specify <code>prioritized</code>, EC2 Fleet uses the priority that you assigned to each launch template override,
-     * launching the highest priority first. If you do not specify a value, EC2 Fleet defaults to
-     * <code>lowest-price</code>.
+     * The strategy that determines the order of the launch template overrides to use in fulfilling On-Demand capacity.
+     * </p>
+     * <p>
+     * <code>lowest-price</code> - EC2 Fleet uses price to determine the order, launching the lowest price first.
+     * </p>
+     * <p>
+     * <code>prioritized</code> - EC2 Fleet uses the priority that you assigned to each launch template override,
+     * launching the highest priority first.
+     * </p>
+     * <p>
+     * Default: <code>lowest-price</code>
      * </p>
      * 
      * @param allocationStrategy
-     *        The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify
-     *        <code>lowest-price</code>, EC2 Fleet uses price to determine the order, launching the lowest price first.
-     *        If you specify <code>prioritized</code>, EC2 Fleet uses the priority that you assigned to each launch
-     *        template override, launching the highest priority first. If you do not specify a value, EC2 Fleet defaults
-     *        to <code>lowest-price</code>.
+     *        The strategy that determines the order of the launch template overrides to use in fulfilling On-Demand
+     *        capacity.</p>
+     *        <p>
+     *        <code>lowest-price</code> - EC2 Fleet uses price to determine the order, launching the lowest price first.
+     *        </p>
+     *        <p>
+     *        <code>prioritized</code> - EC2 Fleet uses the priority that you assigned to each launch template override,
+     *        launching the highest priority first.
+     *        </p>
+     *        <p>
+     *        Default: <code>lowest-price</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FleetOnDemandAllocationStrategy
      */
@@ -140,19 +196,31 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify
-     * <code>lowest-price</code>, EC2 Fleet uses price to determine the order, launching the lowest price first. If you
-     * specify <code>prioritized</code>, EC2 Fleet uses the priority that you assigned to each launch template override,
-     * launching the highest priority first. If you do not specify a value, EC2 Fleet defaults to
-     * <code>lowest-price</code>.
+     * The strategy that determines the order of the launch template overrides to use in fulfilling On-Demand capacity.
+     * </p>
+     * <p>
+     * <code>lowest-price</code> - EC2 Fleet uses price to determine the order, launching the lowest price first.
+     * </p>
+     * <p>
+     * <code>prioritized</code> - EC2 Fleet uses the priority that you assigned to each launch template override,
+     * launching the highest priority first.
+     * </p>
+     * <p>
+     * Default: <code>lowest-price</code>
      * </p>
      * 
      * @param allocationStrategy
-     *        The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify
-     *        <code>lowest-price</code>, EC2 Fleet uses price to determine the order, launching the lowest price first.
-     *        If you specify <code>prioritized</code>, EC2 Fleet uses the priority that you assigned to each launch
-     *        template override, launching the highest priority first. If you do not specify a value, EC2 Fleet defaults
-     *        to <code>lowest-price</code>.
+     *        The strategy that determines the order of the launch template overrides to use in fulfilling On-Demand
+     *        capacity.</p>
+     *        <p>
+     *        <code>lowest-price</code> - EC2 Fleet uses price to determine the order, launching the lowest price first.
+     *        </p>
+     *        <p>
+     *        <code>prioritized</code> - EC2 Fleet uses the priority that you assigned to each launch template override,
+     *        launching the highest priority first.
+     *        </p>
+     *        <p>
+     *        Default: <code>lowest-price</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FleetOnDemandAllocationStrategy
      */
@@ -164,13 +232,16 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity. Supported only for fleets
-     * of type <code>instant</code>.
+     * The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
      * @param capacityReservationOptions
-     *        The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity. Supported only for
-     *        fleets of type <code>instant</code>.
+     *        The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>instant</code>.
      */
 
     public void setCapacityReservationOptions(CapacityReservationOptions capacityReservationOptions) {
@@ -179,12 +250,15 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity. Supported only for fleets
-     * of type <code>instant</code>.
+     * The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
-     * @return The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity. Supported only for
-     *         fleets of type <code>instant</code>.
+     * @return The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity.</p>
+     *         <p>
+     *         Supported only for fleets of type <code>instant</code>.
      */
 
     public CapacityReservationOptions getCapacityReservationOptions() {
@@ -193,13 +267,16 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity. Supported only for fleets
-     * of type <code>instant</code>.
+     * The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
      * @param capacityReservationOptions
-     *        The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity. Supported only for
-     *        fleets of type <code>instant</code>.
+     *        The strategy for using unused Capacity Reservations for fulfilling On-Demand capacity.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>instant</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -210,12 +287,15 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet. Supported
-     * only for fleets of type <code>instant</code>.
+     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
      * @param singleInstanceType
-     *        Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.
+     *        Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.</p>
+     *        <p>
      *        Supported only for fleets of type <code>instant</code>.
      */
 
@@ -225,11 +305,14 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet. Supported
-     * only for fleets of type <code>instant</code>.
+     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
-     * @return Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.
+     * @return Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.</p>
+     *         <p>
      *         Supported only for fleets of type <code>instant</code>.
      */
 
@@ -239,12 +322,15 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet. Supported
-     * only for fleets of type <code>instant</code>.
+     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
      * @param singleInstanceType
-     *        Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.
+     *        Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.</p>
+     *        <p>
      *        Supported only for fleets of type <code>instant</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -256,11 +342,14 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet. Supported
-     * only for fleets of type <code>instant</code>.
+     * Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
-     * @return Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.
+     * @return Indicates that the fleet uses a single instance type to launch all On-Demand Instances in the fleet.</p>
+     *         <p>
      *         Supported only for fleets of type <code>instant</code>.
      */
 
@@ -270,13 +359,16 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone. Supported only for
-     * fleets of type <code>instant</code>.
+     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
      * @param singleAvailabilityZone
-     *        Indicates that the fleet launches all On-Demand Instances into a single Availability Zone. Supported only
-     *        for fleets of type <code>instant</code>.
+     *        Indicates that the fleet launches all On-Demand Instances into a single Availability Zone.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>instant</code>.
      */
 
     public void setSingleAvailabilityZone(Boolean singleAvailabilityZone) {
@@ -285,12 +377,15 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone. Supported only for
-     * fleets of type <code>instant</code>.
+     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
-     * @return Indicates that the fleet launches all On-Demand Instances into a single Availability Zone. Supported only
-     *         for fleets of type <code>instant</code>.
+     * @return Indicates that the fleet launches all On-Demand Instances into a single Availability Zone.</p>
+     *         <p>
+     *         Supported only for fleets of type <code>instant</code>.
      */
 
     public Boolean getSingleAvailabilityZone() {
@@ -299,13 +394,16 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone. Supported only for
-     * fleets of type <code>instant</code>.
+     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
      * @param singleAvailabilityZone
-     *        Indicates that the fleet launches all On-Demand Instances into a single Availability Zone. Supported only
-     *        for fleets of type <code>instant</code>.
+     *        Indicates that the fleet launches all On-Demand Instances into a single Availability Zone.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>instant</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -316,12 +414,15 @@ public class OnDemandOptions implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone. Supported only for
-     * fleets of type <code>instant</code>.
+     * Indicates that the fleet launches all On-Demand Instances into a single Availability Zone.
+     * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
      * </p>
      * 
-     * @return Indicates that the fleet launches all On-Demand Instances into a single Availability Zone. Supported only
-     *         for fleets of type <code>instant</code>.
+     * @return Indicates that the fleet launches all On-Demand Instances into a single Availability Zone.</p>
+     *         <p>
+     *         Supported only for fleets of type <code>instant</code>.
      */
 
     public Boolean isSingleAvailabilityZone() {
@@ -333,10 +434,23 @@ public class OnDemandOptions implements Serializable, Cloneable {
      * The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not reached,
      * the fleet launches no instances.
      * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
+     * </p>
+     * <p>
+     * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
+     * <code>SingleInstanceType</code>
+     * </p>
      * 
      * @param minTargetCapacity
      *        The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not
-     *        reached, the fleet launches no instances.
+     *        reached, the fleet launches no instances.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>instant</code>.
+     *        </p>
+     *        <p>
+     *        At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
+     *        <code>SingleInstanceType</code>
      */
 
     public void setMinTargetCapacity(Integer minTargetCapacity) {
@@ -348,9 +462,22 @@ public class OnDemandOptions implements Serializable, Cloneable {
      * The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not reached,
      * the fleet launches no instances.
      * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
+     * </p>
+     * <p>
+     * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
+     * <code>SingleInstanceType</code>
+     * </p>
      * 
      * @return The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not
-     *         reached, the fleet launches no instances.
+     *         reached, the fleet launches no instances.</p>
+     *         <p>
+     *         Supported only for fleets of type <code>instant</code>.
+     *         </p>
+     *         <p>
+     *         At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
+     *         <code>SingleInstanceType</code>
      */
 
     public Integer getMinTargetCapacity() {
@@ -362,10 +489,23 @@ public class OnDemandOptions implements Serializable, Cloneable {
      * The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not reached,
      * the fleet launches no instances.
      * </p>
+     * <p>
+     * Supported only for fleets of type <code>instant</code>.
+     * </p>
+     * <p>
+     * At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
+     * <code>SingleInstanceType</code>
+     * </p>
      * 
      * @param minTargetCapacity
      *        The minimum target capacity for On-Demand Instances in the fleet. If the minimum target capacity is not
-     *        reached, the fleet launches no instances.
+     *        reached, the fleet launches no instances.</p>
+     *        <p>
+     *        Supported only for fleets of type <code>instant</code>.
+     *        </p>
+     *        <p>
+     *        At least one of the following must be specified: <code>SingleAvailabilityZone</code> |
+     *        <code>SingleInstanceType</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

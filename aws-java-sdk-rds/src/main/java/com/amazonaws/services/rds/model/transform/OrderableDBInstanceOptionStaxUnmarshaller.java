@@ -204,6 +204,11 @@ public class OrderableDBInstanceOptionStaxUnmarshaller implements Unmarshaller<O
                     orderableDBInstanceOption.setSupportsGlobalDatabases(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("SupportsClusters", targetDepth)) {
+                    orderableDBInstanceOption.setSupportsClusters(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return orderableDBInstanceOption;

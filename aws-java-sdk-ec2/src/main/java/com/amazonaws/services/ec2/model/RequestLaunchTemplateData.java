@@ -270,6 +270,12 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      */
     private InstanceRequirementsRequest instanceRequirements;
+    /**
+     * <p>
+     * The options for the instance hostname. The default values are inherited from the subnet.
+     * </p>
+     */
+    private LaunchTemplatePrivateDnsNameOptionsRequest privateDnsNameOptions;
 
     /**
      * <p>
@@ -2200,6 +2206,46 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The options for the instance hostname. The default values are inherited from the subnet.
+     * </p>
+     * 
+     * @param privateDnsNameOptions
+     *        The options for the instance hostname. The default values are inherited from the subnet.
+     */
+
+    public void setPrivateDnsNameOptions(LaunchTemplatePrivateDnsNameOptionsRequest privateDnsNameOptions) {
+        this.privateDnsNameOptions = privateDnsNameOptions;
+    }
+
+    /**
+     * <p>
+     * The options for the instance hostname. The default values are inherited from the subnet.
+     * </p>
+     * 
+     * @return The options for the instance hostname. The default values are inherited from the subnet.
+     */
+
+    public LaunchTemplatePrivateDnsNameOptionsRequest getPrivateDnsNameOptions() {
+        return this.privateDnsNameOptions;
+    }
+
+    /**
+     * <p>
+     * The options for the instance hostname. The default values are inherited from the subnet.
+     * </p>
+     * 
+     * @param privateDnsNameOptions
+     *        The options for the instance hostname. The default values are inherited from the subnet.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RequestLaunchTemplateData withPrivateDnsNameOptions(LaunchTemplatePrivateDnsNameOptionsRequest privateDnsNameOptions) {
+        setPrivateDnsNameOptions(privateDnsNameOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2266,7 +2312,9 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
         if (getEnclaveOptions() != null)
             sb.append("EnclaveOptions: ").append(getEnclaveOptions()).append(",");
         if (getInstanceRequirements() != null)
-            sb.append("InstanceRequirements: ").append(getInstanceRequirements());
+            sb.append("InstanceRequirements: ").append(getInstanceRequirements()).append(",");
+        if (getPrivateDnsNameOptions() != null)
+            sb.append("PrivateDnsNameOptions: ").append(getPrivateDnsNameOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -2395,6 +2443,10 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
             return false;
         if (other.getInstanceRequirements() != null && other.getInstanceRequirements().equals(this.getInstanceRequirements()) == false)
             return false;
+        if (other.getPrivateDnsNameOptions() == null ^ this.getPrivateDnsNameOptions() == null)
+            return false;
+        if (other.getPrivateDnsNameOptions() != null && other.getPrivateDnsNameOptions().equals(this.getPrivateDnsNameOptions()) == false)
+            return false;
         return true;
     }
 
@@ -2431,6 +2483,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getMetadataOptions() == null) ? 0 : getMetadataOptions().hashCode());
         hashCode = prime * hashCode + ((getEnclaveOptions() == null) ? 0 : getEnclaveOptions().hashCode());
         hashCode = prime * hashCode + ((getInstanceRequirements() == null) ? 0 : getInstanceRequirements().hashCode());
+        hashCode = prime * hashCode + ((getPrivateDnsNameOptions() == null) ? 0 : getPrivateDnsNameOptions().hashCode());
         return hashCode;
     }
 

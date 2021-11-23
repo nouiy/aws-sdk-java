@@ -852,6 +852,25 @@ public class CreateLaunchTemplateRequestMarshaller implements Marshaller<Request
                     }
                 }
             }
+
+            LaunchTemplatePrivateDnsNameOptionsRequest privateDnsNameOptions = launchTemplateData.getPrivateDnsNameOptions();
+            if (privateDnsNameOptions != null) {
+
+                if (privateDnsNameOptions.getHostnameType() != null) {
+                    request.addParameter("LaunchTemplateData.PrivateDnsNameOptions.HostnameType",
+                            StringUtils.fromString(privateDnsNameOptions.getHostnameType()));
+                }
+
+                if (privateDnsNameOptions.getEnableResourceNameDnsARecord() != null) {
+                    request.addParameter("LaunchTemplateData.PrivateDnsNameOptions.EnableResourceNameDnsARecord",
+                            StringUtils.fromBoolean(privateDnsNameOptions.getEnableResourceNameDnsARecord()));
+                }
+
+                if (privateDnsNameOptions.getEnableResourceNameDnsAAAARecord() != null) {
+                    request.addParameter("LaunchTemplateData.PrivateDnsNameOptions.EnableResourceNameDnsAAAARecord",
+                            StringUtils.fromBoolean(privateDnsNameOptions.getEnableResourceNameDnsAAAARecord()));
+                }
+            }
         }
 
         com.amazonaws.internal.SdkInternalList<TagSpecification> createLaunchTemplateRequestTagSpecificationsList = (com.amazonaws.internal.SdkInternalList<TagSpecification>) createLaunchTemplateRequest

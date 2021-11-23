@@ -27,7 +27,7 @@ public class StartSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Suite definition Id of the test suite.
+     * Suite definition ID of the test suite.
      * </p>
      */
     private String suiteDefinitionId;
@@ -52,11 +52,11 @@ public class StartSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Suite definition Id of the test suite.
+     * Suite definition ID of the test suite.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite.
+     *        Suite definition ID of the test suite.
      */
 
     public void setSuiteDefinitionId(String suiteDefinitionId) {
@@ -65,10 +65,10 @@ public class StartSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Suite definition Id of the test suite.
+     * Suite definition ID of the test suite.
      * </p>
      * 
-     * @return Suite definition Id of the test suite.
+     * @return Suite definition ID of the test suite.
      */
 
     public String getSuiteDefinitionId() {
@@ -77,11 +77,11 @@ public class StartSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Suite definition Id of the test suite.
+     * Suite definition ID of the test suite.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite.
+     *        Suite definition ID of the test suite.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

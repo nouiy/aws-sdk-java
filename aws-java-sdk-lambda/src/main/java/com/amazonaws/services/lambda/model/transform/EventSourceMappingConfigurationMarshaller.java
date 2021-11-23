@@ -42,6 +42,8 @@ public class EventSourceMappingConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParallelizationFactor").build();
     private static final MarshallingInfo<String> EVENTSOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EventSourceArn").build();
+    private static final MarshallingInfo<StructuredPojo> FILTERCRITERIA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FilterCriteria").build();
     private static final MarshallingInfo<String> FUNCTIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FunctionArn").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFIED_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -96,6 +98,7 @@ public class EventSourceMappingConfigurationMarshaller {
             protocolMarshaller.marshall(eventSourceMappingConfiguration.getMaximumBatchingWindowInSeconds(), MAXIMUMBATCHINGWINDOWINSECONDS_BINDING);
             protocolMarshaller.marshall(eventSourceMappingConfiguration.getParallelizationFactor(), PARALLELIZATIONFACTOR_BINDING);
             protocolMarshaller.marshall(eventSourceMappingConfiguration.getEventSourceArn(), EVENTSOURCEARN_BINDING);
+            protocolMarshaller.marshall(eventSourceMappingConfiguration.getFilterCriteria(), FILTERCRITERIA_BINDING);
             protocolMarshaller.marshall(eventSourceMappingConfiguration.getFunctionArn(), FUNCTIONARN_BINDING);
             protocolMarshaller.marshall(eventSourceMappingConfiguration.getLastModified(), LASTMODIFIED_BINDING);
             protocolMarshaller.marshall(eventSourceMappingConfiguration.getLastProcessingResult(), LASTPROCESSINGRESULT_BINDING);

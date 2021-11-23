@@ -44,8 +44,8 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the description of a filter. Other users of
-     * your account might be able to see the filter's description, depending on the actions that they're allowed to
-     * perform in Amazon Macie.
+     * your account might be able to see this description, depending on the actions that they're allowed to perform in
+     * Amazon Macie.
      * </p>
      */
     private String description;
@@ -62,8 +62,7 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the name of a filter. Other users of your
-     * account might be able to see the filter's name, depending on the actions that they're allowed to perform in
-     * Amazon Macie.
+     * account might be able to see this name, depending on the actions that they're allowed to perform in Amazon Macie.
      * </p>
      */
     private String name;
@@ -203,16 +202,16 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the description of a filter. Other users of
-     * your account might be able to see the filter's description, depending on the actions that they're allowed to
-     * perform in Amazon Macie.
+     * your account might be able to see this description, depending on the actions that they're allowed to perform in
+     * Amazon Macie.
      * </p>
      * 
      * @param description
      *        A custom description of the filter. The description can contain as many as 512 characters.</p>
      *        <p>
      *        We strongly recommend that you avoid including any sensitive data in the description of a filter. Other
-     *        users of your account might be able to see the filter's description, depending on the actions that they're
-     *        allowed to perform in Amazon Macie.
+     *        users of your account might be able to see this description, depending on the actions that they're allowed
+     *        to perform in Amazon Macie.
      */
 
     public void setDescription(String description) {
@@ -225,15 +224,15 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the description of a filter. Other users of
-     * your account might be able to see the filter's description, depending on the actions that they're allowed to
-     * perform in Amazon Macie.
+     * your account might be able to see this description, depending on the actions that they're allowed to perform in
+     * Amazon Macie.
      * </p>
      * 
      * @return A custom description of the filter. The description can contain as many as 512 characters.</p>
      *         <p>
      *         We strongly recommend that you avoid including any sensitive data in the description of a filter. Other
-     *         users of your account might be able to see the filter's description, depending on the actions that
-     *         they're allowed to perform in Amazon Macie.
+     *         users of your account might be able to see this description, depending on the actions that they're
+     *         allowed to perform in Amazon Macie.
      */
 
     public String getDescription() {
@@ -246,16 +245,16 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the description of a filter. Other users of
-     * your account might be able to see the filter's description, depending on the actions that they're allowed to
-     * perform in Amazon Macie.
+     * your account might be able to see this description, depending on the actions that they're allowed to perform in
+     * Amazon Macie.
      * </p>
      * 
      * @param description
      *        A custom description of the filter. The description can contain as many as 512 characters.</p>
      *        <p>
      *        We strongly recommend that you avoid including any sensitive data in the description of a filter. Other
-     *        users of your account might be able to see the filter's description, depending on the actions that they're
-     *        allowed to perform in Amazon Macie.
+     *        users of your account might be able to see this description, depending on the actions that they're allowed
+     *        to perform in Amazon Macie.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -311,8 +310,7 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the name of a filter. Other users of your
-     * account might be able to see the filter's name, depending on the actions that they're allowed to perform in
-     * Amazon Macie.
+     * account might be able to see this name, depending on the actions that they're allowed to perform in Amazon Macie.
      * </p>
      * 
      * @param name
@@ -320,8 +318,8 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      *        characters.</p>
      *        <p>
      *        We strongly recommend that you avoid including any sensitive data in the name of a filter. Other users of
-     *        your account might be able to see the filter's name, depending on the actions that they're allowed to
-     *        perform in Amazon Macie.
+     *        your account might be able to see this name, depending on the actions that they're allowed to perform in
+     *        Amazon Macie.
      */
 
     public void setName(String name) {
@@ -335,16 +333,15 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the name of a filter. Other users of your
-     * account might be able to see the filter's name, depending on the actions that they're allowed to perform in
-     * Amazon Macie.
+     * account might be able to see this name, depending on the actions that they're allowed to perform in Amazon Macie.
      * </p>
      * 
      * @return A custom name for the filter. The name must contain at least 3 characters and can contain as many as 64
      *         characters.</p>
      *         <p>
      *         We strongly recommend that you avoid including any sensitive data in the name of a filter. Other users of
-     *         your account might be able to see the filter's name, depending on the actions that they're allowed to
-     *         perform in Amazon Macie.
+     *         your account might be able to see this name, depending on the actions that they're allowed to perform in
+     *         Amazon Macie.
      */
 
     public String getName() {
@@ -358,8 +355,7 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * We strongly recommend that you avoid including any sensitive data in the name of a filter. Other users of your
-     * account might be able to see the filter's name, depending on the actions that they're allowed to perform in
-     * Amazon Macie.
+     * account might be able to see this name, depending on the actions that they're allowed to perform in Amazon Macie.
      * </p>
      * 
      * @param name
@@ -367,8 +363,8 @@ public class CreateFindingsFilterRequest extends com.amazonaws.AmazonWebServiceR
      *        characters.</p>
      *        <p>
      *        We strongly recommend that you avoid including any sensitive data in the name of a filter. Other users of
-     *        your account might be able to see the filter's name, depending on the actions that they're allowed to
-     *        perform in Amazon Macie.
+     *        your account might be able to see this name, depending on the actions that they're allowed to perform in
+     *        Amazon Macie.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

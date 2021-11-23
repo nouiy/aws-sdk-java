@@ -18,6 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Contains information about which resources to include or exclude from a backup plan using their tags. Conditions are
+ * case sensitive.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/Conditions" target="_top">AWS API
  *      Documentation</a>
@@ -25,16 +29,43 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class Conditions implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged with the same value. Also
+     * called "exact matching."
+     * </p>
+     */
     private java.util.List<ConditionParameter> stringEquals;
-
+    /**
+     * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged that do not have the same
+     * value. Also called "negated matching."
+     * </p>
+     */
     private java.util.List<ConditionParameter> stringNotEquals;
-
+    /**
+     * <p>
+     * Filters the values of your tagged resources for matching tag values with the use of a wildcard character (*)
+     * anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".
+     * </p>
+     */
     private java.util.List<ConditionParameter> stringLike;
-
+    /**
+     * <p>
+     * Filters the values of your tagged resources for non-matching tag values with the use of a wildcard character (*)
+     * anywhere in the string.
+     * </p>
+     */
     private java.util.List<ConditionParameter> stringNotLike;
 
     /**
-     * @return
+     * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged with the same value. Also
+     * called "exact matching."
+     * </p>
+     * 
+     * @return Filters the values of your tagged resources for only those resources that you tagged with the same value.
+     *         Also called "exact matching."
      */
 
     public java.util.List<ConditionParameter> getStringEquals() {
@@ -42,7 +73,14 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged with the same value. Also
+     * called "exact matching."
+     * </p>
+     * 
      * @param stringEquals
+     *        Filters the values of your tagged resources for only those resources that you tagged with the same value.
+     *        Also called "exact matching."
      */
 
     public void setStringEquals(java.util.Collection<ConditionParameter> stringEquals) {
@@ -56,12 +94,18 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged with the same value. Also
+     * called "exact matching."
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setStringEquals(java.util.Collection)} or {@link #withStringEquals(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param stringEquals
+     *        Filters the values of your tagged resources for only those resources that you tagged with the same value.
+     *        Also called "exact matching."
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -76,7 +120,14 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged with the same value. Also
+     * called "exact matching."
+     * </p>
+     * 
      * @param stringEquals
+     *        Filters the values of your tagged resources for only those resources that you tagged with the same value.
+     *        Also called "exact matching."
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,7 +137,13 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged that do not have the same
+     * value. Also called "negated matching."
+     * </p>
+     * 
+     * @return Filters the values of your tagged resources for only those resources that you tagged that do not have the
+     *         same value. Also called "negated matching."
      */
 
     public java.util.List<ConditionParameter> getStringNotEquals() {
@@ -94,7 +151,14 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged that do not have the same
+     * value. Also called "negated matching."
+     * </p>
+     * 
      * @param stringNotEquals
+     *        Filters the values of your tagged resources for only those resources that you tagged that do not have the
+     *        same value. Also called "negated matching."
      */
 
     public void setStringNotEquals(java.util.Collection<ConditionParameter> stringNotEquals) {
@@ -108,12 +172,18 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged that do not have the same
+     * value. Also called "negated matching."
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setStringNotEquals(java.util.Collection)} or {@link #withStringNotEquals(java.util.Collection)} if you
      * want to override the existing values.
      * </p>
      * 
      * @param stringNotEquals
+     *        Filters the values of your tagged resources for only those resources that you tagged that do not have the
+     *        same value. Also called "negated matching."
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,7 +198,14 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Filters the values of your tagged resources for only those resources that you tagged that do not have the same
+     * value. Also called "negated matching."
+     * </p>
+     * 
      * @param stringNotEquals
+     *        Filters the values of your tagged resources for only those resources that you tagged that do not have the
+     *        same value. Also called "negated matching."
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,7 +215,13 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Filters the values of your tagged resources for matching tag values with the use of a wildcard character (*)
+     * anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".
+     * </p>
+     * 
+     * @return Filters the values of your tagged resources for matching tag values with the use of a wildcard character
+     *         (*) anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".
      */
 
     public java.util.List<ConditionParameter> getStringLike() {
@@ -146,7 +229,14 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Filters the values of your tagged resources for matching tag values with the use of a wildcard character (*)
+     * anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".
+     * </p>
+     * 
      * @param stringLike
+     *        Filters the values of your tagged resources for matching tag values with the use of a wildcard character
+     *        (*) anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".
      */
 
     public void setStringLike(java.util.Collection<ConditionParameter> stringLike) {
@@ -160,12 +250,18 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Filters the values of your tagged resources for matching tag values with the use of a wildcard character (*)
+     * anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setStringLike(java.util.Collection)} or {@link #withStringLike(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param stringLike
+     *        Filters the values of your tagged resources for matching tag values with the use of a wildcard character
+     *        (*) anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -180,7 +276,14 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Filters the values of your tagged resources for matching tag values with the use of a wildcard character (*)
+     * anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".
+     * </p>
+     * 
      * @param stringLike
+     *        Filters the values of your tagged resources for matching tag values with the use of a wildcard character
+     *        (*) anywhere in the string. For example, "prod*" or "*rod*" matches the tag value "production".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -190,7 +293,13 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Filters the values of your tagged resources for non-matching tag values with the use of a wildcard character (*)
+     * anywhere in the string.
+     * </p>
+     * 
+     * @return Filters the values of your tagged resources for non-matching tag values with the use of a wildcard
+     *         character (*) anywhere in the string.
      */
 
     public java.util.List<ConditionParameter> getStringNotLike() {
@@ -198,7 +307,14 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Filters the values of your tagged resources for non-matching tag values with the use of a wildcard character (*)
+     * anywhere in the string.
+     * </p>
+     * 
      * @param stringNotLike
+     *        Filters the values of your tagged resources for non-matching tag values with the use of a wildcard
+     *        character (*) anywhere in the string.
      */
 
     public void setStringNotLike(java.util.Collection<ConditionParameter> stringNotLike) {
@@ -212,12 +328,18 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Filters the values of your tagged resources for non-matching tag values with the use of a wildcard character (*)
+     * anywhere in the string.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setStringNotLike(java.util.Collection)} or {@link #withStringNotLike(java.util.Collection)} if you want
      * to override the existing values.
      * </p>
      * 
      * @param stringNotLike
+     *        Filters the values of your tagged resources for non-matching tag values with the use of a wildcard
+     *        character (*) anywhere in the string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -232,7 +354,14 @@ public class Conditions implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Filters the values of your tagged resources for non-matching tag values with the use of a wildcard character (*)
+     * anywhere in the string.
+     * </p>
+     * 
      * @param stringNotLike
+     *        Filters the values of your tagged resources for non-matching tag values with the use of a wildcard
+     *        character (*) anywhere in the string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

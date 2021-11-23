@@ -29,6 +29,13 @@ public class BatchExecuteStatementResult extends com.amazonaws.AmazonWebServiceR
      * </p>
      */
     private java.util.List<BatchStatementResponse> responses;
+    /**
+     * <p>
+     * The capacity units consumed by the entire operation. The values of the list are ordered according to the ordering
+     * of the statements.
+     * </p>
+     */
+    private java.util.List<ConsumedCapacity> consumedCapacity;
 
     /**
      * <p>
@@ -101,6 +108,84 @@ public class BatchExecuteStatementResult extends com.amazonaws.AmazonWebServiceR
     }
 
     /**
+     * <p>
+     * The capacity units consumed by the entire operation. The values of the list are ordered according to the ordering
+     * of the statements.
+     * </p>
+     * 
+     * @return The capacity units consumed by the entire operation. The values of the list are ordered according to the
+     *         ordering of the statements.
+     */
+
+    public java.util.List<ConsumedCapacity> getConsumedCapacity() {
+        return consumedCapacity;
+    }
+
+    /**
+     * <p>
+     * The capacity units consumed by the entire operation. The values of the list are ordered according to the ordering
+     * of the statements.
+     * </p>
+     * 
+     * @param consumedCapacity
+     *        The capacity units consumed by the entire operation. The values of the list are ordered according to the
+     *        ordering of the statements.
+     */
+
+    public void setConsumedCapacity(java.util.Collection<ConsumedCapacity> consumedCapacity) {
+        if (consumedCapacity == null) {
+            this.consumedCapacity = null;
+            return;
+        }
+
+        this.consumedCapacity = new java.util.ArrayList<ConsumedCapacity>(consumedCapacity);
+    }
+
+    /**
+     * <p>
+     * The capacity units consumed by the entire operation. The values of the list are ordered according to the ordering
+     * of the statements.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setConsumedCapacity(java.util.Collection)} or {@link #withConsumedCapacity(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param consumedCapacity
+     *        The capacity units consumed by the entire operation. The values of the list are ordered according to the
+     *        ordering of the statements.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchExecuteStatementResult withConsumedCapacity(ConsumedCapacity... consumedCapacity) {
+        if (this.consumedCapacity == null) {
+            setConsumedCapacity(new java.util.ArrayList<ConsumedCapacity>(consumedCapacity.length));
+        }
+        for (ConsumedCapacity ele : consumedCapacity) {
+            this.consumedCapacity.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The capacity units consumed by the entire operation. The values of the list are ordered according to the ordering
+     * of the statements.
+     * </p>
+     * 
+     * @param consumedCapacity
+     *        The capacity units consumed by the entire operation. The values of the list are ordered according to the
+     *        ordering of the statements.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public BatchExecuteStatementResult withConsumedCapacity(java.util.Collection<ConsumedCapacity> consumedCapacity) {
+        setConsumedCapacity(consumedCapacity);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -113,7 +198,9 @@ public class BatchExecuteStatementResult extends com.amazonaws.AmazonWebServiceR
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getResponses() != null)
-            sb.append("Responses: ").append(getResponses());
+            sb.append("Responses: ").append(getResponses()).append(",");
+        if (getConsumedCapacity() != null)
+            sb.append("ConsumedCapacity: ").append(getConsumedCapacity());
         sb.append("}");
         return sb.toString();
     }
@@ -132,6 +219,10 @@ public class BatchExecuteStatementResult extends com.amazonaws.AmazonWebServiceR
             return false;
         if (other.getResponses() != null && other.getResponses().equals(this.getResponses()) == false)
             return false;
+        if (other.getConsumedCapacity() == null ^ this.getConsumedCapacity() == null)
+            return false;
+        if (other.getConsumedCapacity() != null && other.getConsumedCapacity().equals(this.getConsumedCapacity()) == false)
+            return false;
         return true;
     }
 
@@ -141,6 +232,7 @@ public class BatchExecuteStatementResult extends com.amazonaws.AmazonWebServiceR
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getResponses() == null) ? 0 : getResponses().hashCode());
+        hashCode = prime * hashCode + ((getConsumedCapacity() == null) ? 0 : getConsumedCapacity().hashCode());
         return hashCode;
     }
 

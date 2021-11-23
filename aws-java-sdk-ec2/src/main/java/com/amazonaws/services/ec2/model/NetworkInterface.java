@@ -173,6 +173,18 @@ public class NetworkInterface implements Serializable, Cloneable {
      * </p>
      */
     private Boolean denyAllIgwTraffic;
+    /**
+     * <p>
+     * Indicates whether this is an IPv6 only network interface.
+     * </p>
+     */
+    private Boolean ipv6Native;
+    /**
+     * <p>
+     * The IPv6 globally unique address associated with the network interface.
+     * </p>
+     */
+    private String ipv6Address;
 
     /**
      * <p>
@@ -1462,6 +1474,98 @@ public class NetworkInterface implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether this is an IPv6 only network interface.
+     * </p>
+     * 
+     * @param ipv6Native
+     *        Indicates whether this is an IPv6 only network interface.
+     */
+
+    public void setIpv6Native(Boolean ipv6Native) {
+        this.ipv6Native = ipv6Native;
+    }
+
+    /**
+     * <p>
+     * Indicates whether this is an IPv6 only network interface.
+     * </p>
+     * 
+     * @return Indicates whether this is an IPv6 only network interface.
+     */
+
+    public Boolean getIpv6Native() {
+        return this.ipv6Native;
+    }
+
+    /**
+     * <p>
+     * Indicates whether this is an IPv6 only network interface.
+     * </p>
+     * 
+     * @param ipv6Native
+     *        Indicates whether this is an IPv6 only network interface.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkInterface withIpv6Native(Boolean ipv6Native) {
+        setIpv6Native(ipv6Native);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether this is an IPv6 only network interface.
+     * </p>
+     * 
+     * @return Indicates whether this is an IPv6 only network interface.
+     */
+
+    public Boolean isIpv6Native() {
+        return this.ipv6Native;
+    }
+
+    /**
+     * <p>
+     * The IPv6 globally unique address associated with the network interface.
+     * </p>
+     * 
+     * @param ipv6Address
+     *        The IPv6 globally unique address associated with the network interface.
+     */
+
+    public void setIpv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+    }
+
+    /**
+     * <p>
+     * The IPv6 globally unique address associated with the network interface.
+     * </p>
+     * 
+     * @return The IPv6 globally unique address associated with the network interface.
+     */
+
+    public String getIpv6Address() {
+        return this.ipv6Address;
+    }
+
+    /**
+     * <p>
+     * The IPv6 globally unique address associated with the network interface.
+     * </p>
+     * 
+     * @param ipv6Address
+     *        The IPv6 globally unique address associated with the network interface.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkInterface withIpv6Address(String ipv6Address) {
+        setIpv6Address(ipv6Address);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1520,7 +1624,11 @@ public class NetworkInterface implements Serializable, Cloneable {
         if (getVpcId() != null)
             sb.append("VpcId: ").append(getVpcId()).append(",");
         if (getDenyAllIgwTraffic() != null)
-            sb.append("DenyAllIgwTraffic: ").append(getDenyAllIgwTraffic());
+            sb.append("DenyAllIgwTraffic: ").append(getDenyAllIgwTraffic()).append(",");
+        if (getIpv6Native() != null)
+            sb.append("Ipv6Native: ").append(getIpv6Native()).append(",");
+        if (getIpv6Address() != null)
+            sb.append("Ipv6Address: ").append(getIpv6Address());
         sb.append("}");
         return sb.toString();
     }
@@ -1631,6 +1739,14 @@ public class NetworkInterface implements Serializable, Cloneable {
             return false;
         if (other.getDenyAllIgwTraffic() != null && other.getDenyAllIgwTraffic().equals(this.getDenyAllIgwTraffic()) == false)
             return false;
+        if (other.getIpv6Native() == null ^ this.getIpv6Native() == null)
+            return false;
+        if (other.getIpv6Native() != null && other.getIpv6Native().equals(this.getIpv6Native()) == false)
+            return false;
+        if (other.getIpv6Address() == null ^ this.getIpv6Address() == null)
+            return false;
+        if (other.getIpv6Address() != null && other.getIpv6Address().equals(this.getIpv6Address()) == false)
+            return false;
         return true;
     }
 
@@ -1663,6 +1779,8 @@ public class NetworkInterface implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getTagSet() == null) ? 0 : getTagSet().hashCode());
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
         hashCode = prime * hashCode + ((getDenyAllIgwTraffic() == null) ? 0 : getDenyAllIgwTraffic().hashCode());
+        hashCode = prime * hashCode + ((getIpv6Native() == null) ? 0 : getIpv6Native().hashCode());
+        hashCode = prime * hashCode + ((getIpv6Address() == null) ? 0 : getIpv6Address().hashCode());
         return hashCode;
     }
 

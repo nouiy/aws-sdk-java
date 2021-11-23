@@ -49,6 +49,12 @@ public class FleetSpotCapacityRebalance implements Serializable, Cloneable {
      * The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot Instance after launching a
      * new replacement Spot Instance.
      * </p>
+     * <p>
+     * Valid only when <code>replacementStrategy</code> is set to <code>launch-before-terminate</code>.
+     * </p>
+     * <p>
+     * Valid values: Minimum value of <code>120</code> seconds. Maximum value of <code>7200</code> seconds.
+     * </p>
      */
     private Integer terminationDelay;
 
@@ -204,10 +210,21 @@ public class FleetSpotCapacityRebalance implements Serializable, Cloneable {
      * The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot Instance after launching a
      * new replacement Spot Instance.
      * </p>
+     * <p>
+     * Valid only when <code>replacementStrategy</code> is set to <code>launch-before-terminate</code>.
+     * </p>
+     * <p>
+     * Valid values: Minimum value of <code>120</code> seconds. Maximum value of <code>7200</code> seconds.
+     * </p>
      * 
      * @param terminationDelay
      *        The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot Instance after
-     *        launching a new replacement Spot Instance.
+     *        launching a new replacement Spot Instance.</p>
+     *        <p>
+     *        Valid only when <code>replacementStrategy</code> is set to <code>launch-before-terminate</code>.
+     *        </p>
+     *        <p>
+     *        Valid values: Minimum value of <code>120</code> seconds. Maximum value of <code>7200</code> seconds.
      */
 
     public void setTerminationDelay(Integer terminationDelay) {
@@ -219,9 +236,20 @@ public class FleetSpotCapacityRebalance implements Serializable, Cloneable {
      * The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot Instance after launching a
      * new replacement Spot Instance.
      * </p>
+     * <p>
+     * Valid only when <code>replacementStrategy</code> is set to <code>launch-before-terminate</code>.
+     * </p>
+     * <p>
+     * Valid values: Minimum value of <code>120</code> seconds. Maximum value of <code>7200</code> seconds.
+     * </p>
      * 
      * @return The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot Instance after
-     *         launching a new replacement Spot Instance.
+     *         launching a new replacement Spot Instance.</p>
+     *         <p>
+     *         Valid only when <code>replacementStrategy</code> is set to <code>launch-before-terminate</code>.
+     *         </p>
+     *         <p>
+     *         Valid values: Minimum value of <code>120</code> seconds. Maximum value of <code>7200</code> seconds.
      */
 
     public Integer getTerminationDelay() {
@@ -233,10 +261,21 @@ public class FleetSpotCapacityRebalance implements Serializable, Cloneable {
      * The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot Instance after launching a
      * new replacement Spot Instance.
      * </p>
+     * <p>
+     * Valid only when <code>replacementStrategy</code> is set to <code>launch-before-terminate</code>.
+     * </p>
+     * <p>
+     * Valid values: Minimum value of <code>120</code> seconds. Maximum value of <code>7200</code> seconds.
+     * </p>
      * 
      * @param terminationDelay
      *        The amount of time (in seconds) that Amazon EC2 waits before terminating the old Spot Instance after
-     *        launching a new replacement Spot Instance.
+     *        launching a new replacement Spot Instance.</p>
+     *        <p>
+     *        Valid only when <code>replacementStrategy</code> is set to <code>launch-before-terminate</code>.
+     *        </p>
+     *        <p>
+     *        Valid values: Minimum value of <code>120</code> seconds. Maximum value of <code>7200</code> seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

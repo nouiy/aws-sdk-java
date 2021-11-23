@@ -137,6 +137,19 @@ public class Subnet implements Serializable, Cloneable {
      * </p>
      */
     private Boolean enableDns64;
+    /**
+     * <p>
+     * Indicates whether this is an IPv6 only subnet.
+     * </p>
+     */
+    private Boolean ipv6Native;
+    /**
+     * <p>
+     * The type of hostnames to assign to instances in the subnet at launch. An instance hostname is based on the IPv4
+     * address or ID of the instance.
+     * </p>
+     */
+    private PrivateDnsNameOptionsOnLaunch privateDnsNameOptionsOnLaunch;
 
     /**
      * <p>
@@ -1048,6 +1061,104 @@ public class Subnet implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether this is an IPv6 only subnet.
+     * </p>
+     * 
+     * @param ipv6Native
+     *        Indicates whether this is an IPv6 only subnet.
+     */
+
+    public void setIpv6Native(Boolean ipv6Native) {
+        this.ipv6Native = ipv6Native;
+    }
+
+    /**
+     * <p>
+     * Indicates whether this is an IPv6 only subnet.
+     * </p>
+     * 
+     * @return Indicates whether this is an IPv6 only subnet.
+     */
+
+    public Boolean getIpv6Native() {
+        return this.ipv6Native;
+    }
+
+    /**
+     * <p>
+     * Indicates whether this is an IPv6 only subnet.
+     * </p>
+     * 
+     * @param ipv6Native
+     *        Indicates whether this is an IPv6 only subnet.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Subnet withIpv6Native(Boolean ipv6Native) {
+        setIpv6Native(ipv6Native);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether this is an IPv6 only subnet.
+     * </p>
+     * 
+     * @return Indicates whether this is an IPv6 only subnet.
+     */
+
+    public Boolean isIpv6Native() {
+        return this.ipv6Native;
+    }
+
+    /**
+     * <p>
+     * The type of hostnames to assign to instances in the subnet at launch. An instance hostname is based on the IPv4
+     * address or ID of the instance.
+     * </p>
+     * 
+     * @param privateDnsNameOptionsOnLaunch
+     *        The type of hostnames to assign to instances in the subnet at launch. An instance hostname is based on the
+     *        IPv4 address or ID of the instance.
+     */
+
+    public void setPrivateDnsNameOptionsOnLaunch(PrivateDnsNameOptionsOnLaunch privateDnsNameOptionsOnLaunch) {
+        this.privateDnsNameOptionsOnLaunch = privateDnsNameOptionsOnLaunch;
+    }
+
+    /**
+     * <p>
+     * The type of hostnames to assign to instances in the subnet at launch. An instance hostname is based on the IPv4
+     * address or ID of the instance.
+     * </p>
+     * 
+     * @return The type of hostnames to assign to instances in the subnet at launch. An instance hostname is based on
+     *         the IPv4 address or ID of the instance.
+     */
+
+    public PrivateDnsNameOptionsOnLaunch getPrivateDnsNameOptionsOnLaunch() {
+        return this.privateDnsNameOptionsOnLaunch;
+    }
+
+    /**
+     * <p>
+     * The type of hostnames to assign to instances in the subnet at launch. An instance hostname is based on the IPv4
+     * address or ID of the instance.
+     * </p>
+     * 
+     * @param privateDnsNameOptionsOnLaunch
+     *        The type of hostnames to assign to instances in the subnet at launch. An instance hostname is based on the
+     *        IPv4 address or ID of the instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Subnet withPrivateDnsNameOptionsOnLaunch(PrivateDnsNameOptionsOnLaunch privateDnsNameOptionsOnLaunch) {
+        setPrivateDnsNameOptionsOnLaunch(privateDnsNameOptionsOnLaunch);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1094,7 +1205,11 @@ public class Subnet implements Serializable, Cloneable {
         if (getOutpostArn() != null)
             sb.append("OutpostArn: ").append(getOutpostArn()).append(",");
         if (getEnableDns64() != null)
-            sb.append("EnableDns64: ").append(getEnableDns64());
+            sb.append("EnableDns64: ").append(getEnableDns64()).append(",");
+        if (getIpv6Native() != null)
+            sb.append("Ipv6Native: ").append(getIpv6Native()).append(",");
+        if (getPrivateDnsNameOptionsOnLaunch() != null)
+            sb.append("PrivateDnsNameOptionsOnLaunch: ").append(getPrivateDnsNameOptionsOnLaunch());
         sb.append("}");
         return sb.toString();
     }
@@ -1181,6 +1296,15 @@ public class Subnet implements Serializable, Cloneable {
             return false;
         if (other.getEnableDns64() != null && other.getEnableDns64().equals(this.getEnableDns64()) == false)
             return false;
+        if (other.getIpv6Native() == null ^ this.getIpv6Native() == null)
+            return false;
+        if (other.getIpv6Native() != null && other.getIpv6Native().equals(this.getIpv6Native()) == false)
+            return false;
+        if (other.getPrivateDnsNameOptionsOnLaunch() == null ^ this.getPrivateDnsNameOptionsOnLaunch() == null)
+            return false;
+        if (other.getPrivateDnsNameOptionsOnLaunch() != null
+                && other.getPrivateDnsNameOptionsOnLaunch().equals(this.getPrivateDnsNameOptionsOnLaunch()) == false)
+            return false;
         return true;
     }
 
@@ -1207,6 +1331,8 @@ public class Subnet implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getSubnetArn() == null) ? 0 : getSubnetArn().hashCode());
         hashCode = prime * hashCode + ((getOutpostArn() == null) ? 0 : getOutpostArn().hashCode());
         hashCode = prime * hashCode + ((getEnableDns64() == null) ? 0 : getEnableDns64().hashCode());
+        hashCode = prime * hashCode + ((getIpv6Native() == null) ? 0 : getIpv6Native().hashCode());
+        hashCode = prime * hashCode + ((getPrivateDnsNameOptionsOnLaunch() == null) ? 0 : getPrivateDnsNameOptionsOnLaunch().hashCode());
         return hashCode;
     }
 

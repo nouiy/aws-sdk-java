@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A map of key-value pairs for all supported statistics. Currently, only count is supported.
+ * A map of key-value pairs for all supported statistics. For issues with missing or unexpected values for this API,
+ * consult <a href="https://docs.aws.amazon.com/iot/latest/developerguide/fleet-indexing-troubleshooting.html"> Fleet
+ * indexing troubleshooting guide</a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -27,7 +29,7 @@ public class Statistics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The count of things that match the query.
+     * The count of things that match the query string criteria and contain a valid aggregation field value.
      * </p>
      */
     private Integer count;
@@ -76,11 +78,11 @@ public class Statistics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The count of things that match the query.
+     * The count of things that match the query string criteria and contain a valid aggregation field value.
      * </p>
      * 
      * @param count
-     *        The count of things that match the query.
+     *        The count of things that match the query string criteria and contain a valid aggregation field value.
      */
 
     public void setCount(Integer count) {
@@ -89,10 +91,10 @@ public class Statistics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The count of things that match the query.
+     * The count of things that match the query string criteria and contain a valid aggregation field value.
      * </p>
      * 
-     * @return The count of things that match the query.
+     * @return The count of things that match the query string criteria and contain a valid aggregation field value.
      */
 
     public Integer getCount() {
@@ -101,11 +103,11 @@ public class Statistics implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The count of things that match the query.
+     * The count of things that match the query string criteria and contain a valid aggregation field value.
      * </p>
      * 
      * @param count
-     *        The count of things that match the query.
+     *        The count of things that match the query string criteria and contain a valid aggregation field value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

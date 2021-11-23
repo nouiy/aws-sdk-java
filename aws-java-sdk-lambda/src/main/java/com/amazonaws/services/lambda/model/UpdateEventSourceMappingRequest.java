@@ -108,9 +108,22 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <b>Self-Managed Apache Kafka</b> - Default 100. Max 10,000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     * </p>
+     * </li>
      * </ul>
      */
     private Integer batchSize;
+    /**
+     * <p>
+     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     * process an event. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * </p>
+     */
+    private FilterCriteria filterCriteria;
     /**
      * <p>
      * (Streams and Amazon SQS standard queues) The maximum amount of time, in seconds, that Lambda spends gathering
@@ -532,6 +545,11 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <b>Self-Managed Apache Kafka</b> - Default 100. Max 10,000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param batchSize
@@ -563,6 +581,11 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <b>Self-Managed Apache Kafka</b> - Default 100. Max 10,000.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
      *        </p>
      *        </li>
      */
@@ -604,6 +627,11 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <b>Self-Managed Apache Kafka</b> - Default 100. Max 10,000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The maximum number of records in each batch that Lambda pulls from your stream or queue and sends to your
@@ -634,6 +662,11 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *         <li>
      *         <p>
      *         <b>Self-Managed Apache Kafka</b> - Default 100. Max 10,000.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
      *         </p>
      *         </li>
      */
@@ -675,6 +708,11 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * <b>Self-Managed Apache Kafka</b> - Default 100. Max 10,000.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param batchSize
@@ -708,11 +746,71 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      *        <b>Self-Managed Apache Kafka</b> - Default 100. Max 10,000.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <b>Amazon MQ (ActiveMQ and RabbitMQ)</b> - Default 100. Max 10,000.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateEventSourceMappingRequest withBatchSize(Integer batchSize) {
         setBatchSize(batchSize);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     * process an event. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * </p>
+     * 
+     * @param filterCriteria
+     *        (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     *        process an event. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
+     *        filtering</a>.
+     */
+
+    public void setFilterCriteria(FilterCriteria filterCriteria) {
+        this.filterCriteria = filterCriteria;
+    }
+
+    /**
+     * <p>
+     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     * process an event. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * </p>
+     * 
+     * @return (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda
+     *         should process an event. For more information, see <a
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
+     *         filtering</a>.
+     */
+
+    public FilterCriteria getFilterCriteria() {
+        return this.filterCriteria;
+    }
+
+    /**
+     * <p>
+     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     * process an event. For more information, see <a
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
+     * </p>
+     * 
+     * @param filterCriteria
+     *        (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     *        process an event. For more information, see <a
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
+     *        filtering</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEventSourceMappingRequest withFilterCriteria(FilterCriteria filterCriteria) {
+        setFilterCriteria(filterCriteria);
         return this;
     }
 
@@ -1257,6 +1355,8 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
             sb.append("Enabled: ").append(getEnabled()).append(",");
         if (getBatchSize() != null)
             sb.append("BatchSize: ").append(getBatchSize()).append(",");
+        if (getFilterCriteria() != null)
+            sb.append("FilterCriteria: ").append(getFilterCriteria()).append(",");
         if (getMaximumBatchingWindowInSeconds() != null)
             sb.append("MaximumBatchingWindowInSeconds: ").append(getMaximumBatchingWindowInSeconds()).append(",");
         if (getDestinationConfig() != null)
@@ -1304,6 +1404,10 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
         if (other.getBatchSize() == null ^ this.getBatchSize() == null)
             return false;
         if (other.getBatchSize() != null && other.getBatchSize().equals(this.getBatchSize()) == false)
+            return false;
+        if (other.getFilterCriteria() == null ^ this.getFilterCriteria() == null)
+            return false;
+        if (other.getFilterCriteria() != null && other.getFilterCriteria().equals(this.getFilterCriteria()) == false)
             return false;
         if (other.getMaximumBatchingWindowInSeconds() == null ^ this.getMaximumBatchingWindowInSeconds() == null)
             return false;
@@ -1354,6 +1458,7 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getFunctionName() == null) ? 0 : getFunctionName().hashCode());
         hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
         hashCode = prime * hashCode + ((getBatchSize() == null) ? 0 : getBatchSize().hashCode());
+        hashCode = prime * hashCode + ((getFilterCriteria() == null) ? 0 : getFilterCriteria().hashCode());
         hashCode = prime * hashCode + ((getMaximumBatchingWindowInSeconds() == null) ? 0 : getMaximumBatchingWindowInSeconds().hashCode());
         hashCode = prime * hashCode + ((getDestinationConfig() == null) ? 0 : getDestinationConfig().hashCode());
         hashCode = prime * hashCode + ((getMaximumRecordAgeInSeconds() == null) ? 0 : getMaximumRecordAgeInSeconds().hashCode());

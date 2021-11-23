@@ -63,11 +63,17 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
      * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
      * to <code>100.68.0.0/18</code>.
      * </p>
+     * <p>
+     * This parameter is not supported for an IPv6 only subnet.
+     * </p>
      */
     private String cidrBlock;
     /**
      * <p>
      * The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix length.
+     * </p>
+     * <p>
+     * This parameter is required for an IPv6 only subnet.
      * </p>
      */
     private String ipv6CidrBlock;
@@ -84,6 +90,12 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      */
     private String vpcId;
+    /**
+     * <p>
+     * Indicates whether to create an IPv6 only subnet.
+     * </p>
+     */
+    private Boolean ipv6Native;
 
     /**
      * Default constructor for CreateSubnetRequest object. Callers should use the setter or fluent setter (with...)
@@ -101,7 +113,9 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
      * @param cidrBlock
      *        The IPv4 network range for the subnet, in CIDR notation. For example, <code>10.0.0.0/24</code>. We modify
      *        the specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>,
-     *        we modify it to <code>100.68.0.0/18</code>.
+     *        we modify it to <code>100.68.0.0/18</code>.</p>
+     *        <p>
+     *        This parameter is not supported for an IPv6 only subnet.
      */
     public CreateSubnetRequest(String vpcId, String cidrBlock) {
         setVpcId(vpcId);
@@ -348,11 +362,16 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
      * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
      * to <code>100.68.0.0/18</code>.
      * </p>
+     * <p>
+     * This parameter is not supported for an IPv6 only subnet.
+     * </p>
      * 
      * @param cidrBlock
      *        The IPv4 network range for the subnet, in CIDR notation. For example, <code>10.0.0.0/24</code>. We modify
      *        the specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>,
-     *        we modify it to <code>100.68.0.0/18</code>.
+     *        we modify it to <code>100.68.0.0/18</code>.</p>
+     *        <p>
+     *        This parameter is not supported for an IPv6 only subnet.
      */
 
     public void setCidrBlock(String cidrBlock) {
@@ -365,10 +384,15 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
      * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
      * to <code>100.68.0.0/18</code>.
      * </p>
+     * <p>
+     * This parameter is not supported for an IPv6 only subnet.
+     * </p>
      * 
      * @return The IPv4 network range for the subnet, in CIDR notation. For example, <code>10.0.0.0/24</code>. We modify
      *         the specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>,
-     *         we modify it to <code>100.68.0.0/18</code>.
+     *         we modify it to <code>100.68.0.0/18</code>.</p>
+     *         <p>
+     *         This parameter is not supported for an IPv6 only subnet.
      */
 
     public String getCidrBlock() {
@@ -381,11 +405,16 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
      * specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>, we modify it
      * to <code>100.68.0.0/18</code>.
      * </p>
+     * <p>
+     * This parameter is not supported for an IPv6 only subnet.
+     * </p>
      * 
      * @param cidrBlock
      *        The IPv4 network range for the subnet, in CIDR notation. For example, <code>10.0.0.0/24</code>. We modify
      *        the specified CIDR block to its canonical form; for example, if you specify <code>100.68.0.18/18</code>,
-     *        we modify it to <code>100.68.0.0/18</code>.
+     *        we modify it to <code>100.68.0.0/18</code>.</p>
+     *        <p>
+     *        This parameter is not supported for an IPv6 only subnet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -398,9 +427,14 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix length.
      * </p>
+     * <p>
+     * This parameter is required for an IPv6 only subnet.
+     * </p>
      * 
      * @param ipv6CidrBlock
-     *        The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix length.
+     *        The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix length.</p>
+     *        <p>
+     *        This parameter is required for an IPv6 only subnet.
      */
 
     public void setIpv6CidrBlock(String ipv6CidrBlock) {
@@ -411,8 +445,14 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix length.
      * </p>
+     * <p>
+     * This parameter is required for an IPv6 only subnet.
+     * </p>
      * 
-     * @return The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix length.
+     * @return The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix
+     *         length.</p>
+     *         <p>
+     *         This parameter is required for an IPv6 only subnet.
      */
 
     public String getIpv6CidrBlock() {
@@ -423,9 +463,14 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
      * <p>
      * The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix length.
      * </p>
+     * <p>
+     * This parameter is required for an IPv6 only subnet.
+     * </p>
      * 
      * @param ipv6CidrBlock
-     *        The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix length.
+     *        The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64 prefix length.</p>
+     *        <p>
+     *        This parameter is required for an IPv6 only subnet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -521,6 +566,58 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
     }
 
     /**
+     * <p>
+     * Indicates whether to create an IPv6 only subnet.
+     * </p>
+     * 
+     * @param ipv6Native
+     *        Indicates whether to create an IPv6 only subnet.
+     */
+
+    public void setIpv6Native(Boolean ipv6Native) {
+        this.ipv6Native = ipv6Native;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to create an IPv6 only subnet.
+     * </p>
+     * 
+     * @return Indicates whether to create an IPv6 only subnet.
+     */
+
+    public Boolean getIpv6Native() {
+        return this.ipv6Native;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to create an IPv6 only subnet.
+     * </p>
+     * 
+     * @param ipv6Native
+     *        Indicates whether to create an IPv6 only subnet.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateSubnetRequest withIpv6Native(Boolean ipv6Native) {
+        setIpv6Native(ipv6Native);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether to create an IPv6 only subnet.
+     * </p>
+     * 
+     * @return Indicates whether to create an IPv6 only subnet.
+     */
+
+    public Boolean isIpv6Native() {
+        return this.ipv6Native;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -556,7 +653,9 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
         if (getOutpostArn() != null)
             sb.append("OutpostArn: ").append(getOutpostArn()).append(",");
         if (getVpcId() != null)
-            sb.append("VpcId: ").append(getVpcId());
+            sb.append("VpcId: ").append(getVpcId()).append(",");
+        if (getIpv6Native() != null)
+            sb.append("Ipv6Native: ").append(getIpv6Native());
         sb.append("}");
         return sb.toString();
     }
@@ -599,6 +698,10 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
             return false;
         if (other.getVpcId() != null && other.getVpcId().equals(this.getVpcId()) == false)
             return false;
+        if (other.getIpv6Native() == null ^ this.getIpv6Native() == null)
+            return false;
+        if (other.getIpv6Native() != null && other.getIpv6Native().equals(this.getIpv6Native()) == false)
+            return false;
         return true;
     }
 
@@ -614,6 +717,7 @@ public class CreateSubnetRequest extends AmazonWebServiceRequest implements Seri
         hashCode = prime * hashCode + ((getIpv6CidrBlock() == null) ? 0 : getIpv6CidrBlock().hashCode());
         hashCode = prime * hashCode + ((getOutpostArn() == null) ? 0 : getOutpostArn().hashCode());
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
+        hashCode = prime * hashCode + ((getIpv6Native() == null) ? 0 : getIpv6Native().hashCode());
         return hashCode;
     }
 

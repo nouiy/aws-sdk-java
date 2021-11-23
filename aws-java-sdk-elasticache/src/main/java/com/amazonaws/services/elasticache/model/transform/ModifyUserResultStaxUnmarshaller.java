@@ -65,6 +65,11 @@ public class ModifyUserResultStaxUnmarshaller implements Unmarshaller<ModifyUser
                     continue;
                 }
 
+                if (context.testExpression("MinimumEngineVersion", targetDepth)) {
+                    modifyUserResult.setMinimumEngineVersion(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("AccessString", targetDepth)) {
                     modifyUserResult.setAccessString(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

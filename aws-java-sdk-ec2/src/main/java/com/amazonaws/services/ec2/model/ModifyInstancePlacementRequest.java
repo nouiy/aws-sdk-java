@@ -70,7 +70,8 @@ public class ModifyInstancePlacementRequest extends AmazonWebServiceRequest impl
     private String tenancy;
     /**
      * <p>
-     * Reserved for future use.
+     * The number of the partition in which to place the instance. Valid only if the placement group strategy is set to
+     * <code>partition</code>.
      * </p>
      */
     private Integer partitionNumber;
@@ -436,11 +437,13 @@ public class ModifyInstancePlacementRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Reserved for future use.
+     * The number of the partition in which to place the instance. Valid only if the placement group strategy is set to
+     * <code>partition</code>.
      * </p>
      * 
      * @param partitionNumber
-     *        Reserved for future use.
+     *        The number of the partition in which to place the instance. Valid only if the placement group strategy is
+     *        set to <code>partition</code>.
      */
 
     public void setPartitionNumber(Integer partitionNumber) {
@@ -449,10 +452,12 @@ public class ModifyInstancePlacementRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Reserved for future use.
+     * The number of the partition in which to place the instance. Valid only if the placement group strategy is set to
+     * <code>partition</code>.
      * </p>
      * 
-     * @return Reserved for future use.
+     * @return The number of the partition in which to place the instance. Valid only if the placement group strategy is
+     *         set to <code>partition</code>.
      */
 
     public Integer getPartitionNumber() {
@@ -461,11 +466,13 @@ public class ModifyInstancePlacementRequest extends AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Reserved for future use.
+     * The number of the partition in which to place the instance. Valid only if the placement group strategy is set to
+     * <code>partition</code>.
      * </p>
      * 
      * @param partitionNumber
-     *        Reserved for future use.
+     *        The number of the partition in which to place the instance. Valid only if the placement group strategy is
+     *        set to <code>partition</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -26,13 +26,14 @@ import com.amazonaws.services.iotdeviceadvisor.model.*;
  * </p>
  * <p>
  * <p>
- * AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- * software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable
- * and secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can
- * confirm that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive
- * software updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS
- * Partner Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device
- * in and wait for it to be tested.
+ * Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT
+ * devices during device software development. Device Advisor provides pre-built tests that you can use to validate IoT
+ * devices for reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to
+ * production. By using Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core,
+ * follow security best practices and, if applicable, receive software updates from IoT Device Management. You can also
+ * download signed qualification reports to submit to the Amazon Web Services Partner Network to get your device
+ * qualified for the Amazon Web Services Partner Device Catalog without the need to send your device in and wait for it
+ * to be tested.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -41,6 +42,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Creates a Device Advisor test suite.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >CreateSuiteDefinition</a> action.
      * </p>
      * 
      * @param createSuiteDefinitionRequest
@@ -54,6 +60,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Creates a Device Advisor test suite.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >CreateSuiteDefinition</a> action.
      * </p>
      * 
      * @param createSuiteDefinitionRequest
@@ -73,6 +84,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Deletes a Device Advisor test suite.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >DeleteSuiteDefinition</a> action.
+     * </p>
      * 
      * @param deleteSuiteDefinitionRequest
      * @return A Java Future containing the result of the DeleteSuiteDefinition operation returned by the service.
@@ -85,6 +101,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Deletes a Device Advisor test suite.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >DeleteSuiteDefinition</a> action.
      * </p>
      * 
      * @param deleteSuiteDefinitionRequest
@@ -101,8 +122,36 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
             com.amazonaws.handlers.AsyncHandler<DeleteSuiteDefinitionRequest, DeleteSuiteDefinitionResult> asyncHandler);
 
     /**
+     * @param getEndpointRequest
+     * @return A Java Future containing the result of the GetEndpoint operation returned by the service.
+     * @sample AWSIoTDeviceAdvisorAsync.GetEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/GetEndpoint" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEndpointResult> getEndpointAsync(GetEndpointRequest getEndpointRequest);
+
+    /**
+     * @param getEndpointRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetEndpoint operation returned by the service.
+     * @sample AWSIoTDeviceAdvisorAsyncHandler.GetEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/GetEndpoint" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetEndpointResult> getEndpointAsync(GetEndpointRequest getEndpointRequest,
+            com.amazonaws.handlers.AsyncHandler<GetEndpointRequest, GetEndpointResult> asyncHandler);
+
+    /**
      * <p>
      * Gets information about a Device Advisor test suite.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetSuiteDefinition</a> action.
      * </p>
      * 
      * @param getSuiteDefinitionRequest
@@ -116,6 +165,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Gets information about a Device Advisor test suite.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetSuiteDefinition</a> action.
      * </p>
      * 
      * @param getSuiteDefinitionRequest
@@ -135,6 +189,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Gets information about a Device Advisor test suite run.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetSuiteRun</a> action.
+     * </p>
      * 
      * @param getSuiteRunRequest
      * @return A Java Future containing the result of the GetSuiteRun operation returned by the service.
@@ -147,6 +206,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Gets information about a Device Advisor test suite run.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetSuiteRun</a> action.
      * </p>
      * 
      * @param getSuiteRunRequest
@@ -166,6 +230,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Gets a report download link for a successful Device Advisor qualifying test suite run.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetSuiteRunReport</a> action.
+     * </p>
      * 
      * @param getSuiteRunReportRequest
      * @return A Java Future containing the result of the GetSuiteRunReport operation returned by the service.
@@ -178,6 +247,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Gets a report download link for a successful Device Advisor qualifying test suite run.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetSuiteRunReport</a> action.
      * </p>
      * 
      * @param getSuiteRunReportRequest
@@ -197,6 +271,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Lists the Device Advisor test suites you have created.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListSuiteDefinitions</a> action.
+     * </p>
      * 
      * @param listSuiteDefinitionsRequest
      * @return A Java Future containing the result of the ListSuiteDefinitions operation returned by the service.
@@ -209,6 +288,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Lists the Device Advisor test suites you have created.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListSuiteDefinitions</a> action.
      * </p>
      * 
      * @param listSuiteDefinitionsRequest
@@ -229,6 +313,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * Lists the runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs
      * of a specific version of the test suite.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListSuiteRuns</a> action.
+     * </p>
      * 
      * @param listSuiteRunsRequest
      * @return A Java Future containing the result of the ListSuiteRuns operation returned by the service.
@@ -242,6 +331,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Lists the runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs
      * of a specific version of the test suite.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListSuiteRuns</a> action.
      * </p>
      * 
      * @param listSuiteRunsRequest
@@ -261,6 +355,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Lists the tags attached to an IoT Device Advisor resource.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListTagsForResource</a> action.
+     * </p>
      * 
      * @param listTagsForResourceRequest
      * @return A Java Future containing the result of the ListTagsForResource operation returned by the service.
@@ -273,6 +372,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Lists the tags attached to an IoT Device Advisor resource.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListTagsForResource</a> action.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -292,6 +396,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Starts a Device Advisor test suite run.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >StartSuiteRun</a> action.
+     * </p>
      * 
      * @param startSuiteRunRequest
      * @return A Java Future containing the result of the StartSuiteRun operation returned by the service.
@@ -304,6 +413,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Starts a Device Advisor test suite run.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >StartSuiteRun</a> action.
      * </p>
      * 
      * @param startSuiteRunRequest
@@ -323,6 +437,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Stops a Device Advisor test suite run that is currently running.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >StopSuiteRun</a> action.
+     * </p>
      * 
      * @param stopSuiteRunRequest
      * @return A Java Future containing the result of the StopSuiteRun operation returned by the service.
@@ -335,6 +454,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Stops a Device Advisor test suite run that is currently running.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >StopSuiteRun</a> action.
      * </p>
      * 
      * @param stopSuiteRunRequest
@@ -354,6 +478,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Adds to and modifies existing tags of an IoT Device Advisor resource.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >TagResource</a> action.
+     * </p>
      * 
      * @param tagResourceRequest
      * @return A Java Future containing the result of the TagResource operation returned by the service.
@@ -366,6 +495,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Adds to and modifies existing tags of an IoT Device Advisor resource.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >TagResource</a> action.
      * </p>
      * 
      * @param tagResourceRequest
@@ -385,6 +519,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Removes tags from an IoT Device Advisor resource.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >UntagResource</a> action.
+     * </p>
      * 
      * @param untagResourceRequest
      * @return A Java Future containing the result of the UntagResource operation returned by the service.
@@ -397,6 +536,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Removes tags from an IoT Device Advisor resource.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >UntagResource</a> action.
      * </p>
      * 
      * @param untagResourceRequest
@@ -416,6 +560,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
      * <p>
      * Updates a Device Advisor test suite.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >UpdateSuiteDefinition</a> action.
+     * </p>
      * 
      * @param updateSuiteDefinitionRequest
      * @return A Java Future containing the result of the UpdateSuiteDefinition operation returned by the service.
@@ -428,6 +577,11 @@ public interface AWSIoTDeviceAdvisorAsync extends AWSIoTDeviceAdvisor {
     /**
      * <p>
      * Updates a Device Advisor test suite.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >UpdateSuiteDefinition</a> action.
      * </p>
      * 
      * @param updateSuiteDefinitionRequest

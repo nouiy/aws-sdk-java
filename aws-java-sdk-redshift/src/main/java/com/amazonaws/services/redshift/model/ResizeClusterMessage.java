@@ -58,6 +58,18 @@ public class ResizeClusterMessage implements Serializable, Cloneable {
      * </p>
      */
     private Boolean classic;
+    /**
+     * <p>
+     * The identifier of the reserved node.
+     * </p>
+     */
+    private String reservedNodeId;
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     */
+    private String targetReservedNodeOfferingId;
 
     /**
      * <p>
@@ -281,6 +293,86 @@ public class ResizeClusterMessage implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The identifier of the reserved node.
+     * </p>
+     * 
+     * @param reservedNodeId
+     *        The identifier of the reserved node.
+     */
+
+    public void setReservedNodeId(String reservedNodeId) {
+        this.reservedNodeId = reservedNodeId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the reserved node.
+     * </p>
+     * 
+     * @return The identifier of the reserved node.
+     */
+
+    public String getReservedNodeId() {
+        return this.reservedNodeId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the reserved node.
+     * </p>
+     * 
+     * @param reservedNodeId
+     *        The identifier of the reserved node.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResizeClusterMessage withReservedNodeId(String reservedNodeId) {
+        setReservedNodeId(reservedNodeId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     * 
+     * @param targetReservedNodeOfferingId
+     *        The identifier of the target reserved node offering.
+     */
+
+    public void setTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
+        this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     * 
+     * @return The identifier of the target reserved node offering.
+     */
+
+    public String getTargetReservedNodeOfferingId() {
+        return this.targetReservedNodeOfferingId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     * 
+     * @param targetReservedNodeOfferingId
+     *        The identifier of the target reserved node offering.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResizeClusterMessage withTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
+        setTargetReservedNodeOfferingId(targetReservedNodeOfferingId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -301,7 +393,11 @@ public class ResizeClusterMessage implements Serializable, Cloneable {
         if (getNumberOfNodes() != null)
             sb.append("NumberOfNodes: ").append(getNumberOfNodes()).append(",");
         if (getClassic() != null)
-            sb.append("Classic: ").append(getClassic());
+            sb.append("Classic: ").append(getClassic()).append(",");
+        if (getReservedNodeId() != null)
+            sb.append("ReservedNodeId: ").append(getReservedNodeId()).append(",");
+        if (getTargetReservedNodeOfferingId() != null)
+            sb.append("TargetReservedNodeOfferingId: ").append(getTargetReservedNodeOfferingId());
         sb.append("}");
         return sb.toString();
     }
@@ -336,6 +432,14 @@ public class ResizeClusterMessage implements Serializable, Cloneable {
             return false;
         if (other.getClassic() != null && other.getClassic().equals(this.getClassic()) == false)
             return false;
+        if (other.getReservedNodeId() == null ^ this.getReservedNodeId() == null)
+            return false;
+        if (other.getReservedNodeId() != null && other.getReservedNodeId().equals(this.getReservedNodeId()) == false)
+            return false;
+        if (other.getTargetReservedNodeOfferingId() == null ^ this.getTargetReservedNodeOfferingId() == null)
+            return false;
+        if (other.getTargetReservedNodeOfferingId() != null && other.getTargetReservedNodeOfferingId().equals(this.getTargetReservedNodeOfferingId()) == false)
+            return false;
         return true;
     }
 
@@ -349,6 +453,8 @@ public class ResizeClusterMessage implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getNodeType() == null) ? 0 : getNodeType().hashCode());
         hashCode = prime * hashCode + ((getNumberOfNodes() == null) ? 0 : getNumberOfNodes().hashCode());
         hashCode = prime * hashCode + ((getClassic() == null) ? 0 : getClassic().hashCode());
+        hashCode = prime * hashCode + ((getReservedNodeId() == null) ? 0 : getReservedNodeId().hashCode());
+        hashCode = prime * hashCode + ((getTargetReservedNodeOfferingId() == null) ? 0 : getTargetReservedNodeOfferingId().hashCode());
         return hashCode;
     }
 

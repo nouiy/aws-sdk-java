@@ -47,6 +47,8 @@ public class CreateUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> userIds;
+
+    private String minimumEngineVersion;
     /**
      * <p>
      * A list of updates being applied to the user group.
@@ -260,6 +262,32 @@ public class CreateUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
     }
 
     /**
+     * @param minimumEngineVersion
+     */
+
+    public void setMinimumEngineVersion(String minimumEngineVersion) {
+        this.minimumEngineVersion = minimumEngineVersion;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getMinimumEngineVersion() {
+        return this.minimumEngineVersion;
+    }
+
+    /**
+     * @param minimumEngineVersion
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateUserGroupResult withMinimumEngineVersion(String minimumEngineVersion) {
+        setMinimumEngineVersion(minimumEngineVersion);
+        return this;
+    }
+
+    /**
      * <p>
      * A list of updates being applied to the user group.
      * </p>
@@ -432,6 +460,8 @@ public class CreateUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
             sb.append("Engine: ").append(getEngine()).append(",");
         if (getUserIds() != null)
             sb.append("UserIds: ").append(getUserIds()).append(",");
+        if (getMinimumEngineVersion() != null)
+            sb.append("MinimumEngineVersion: ").append(getMinimumEngineVersion()).append(",");
         if (getPendingChanges() != null)
             sb.append("PendingChanges: ").append(getPendingChanges()).append(",");
         if (getReplicationGroups() != null)
@@ -468,6 +498,10 @@ public class CreateUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
             return false;
         if (other.getUserIds() != null && other.getUserIds().equals(this.getUserIds()) == false)
             return false;
+        if (other.getMinimumEngineVersion() == null ^ this.getMinimumEngineVersion() == null)
+            return false;
+        if (other.getMinimumEngineVersion() != null && other.getMinimumEngineVersion().equals(this.getMinimumEngineVersion()) == false)
+            return false;
         if (other.getPendingChanges() == null ^ this.getPendingChanges() == null)
             return false;
         if (other.getPendingChanges() != null && other.getPendingChanges().equals(this.getPendingChanges()) == false)
@@ -492,6 +526,7 @@ public class CreateUserGroupResult extends com.amazonaws.AmazonWebServiceResult<
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getEngine() == null) ? 0 : getEngine().hashCode());
         hashCode = prime * hashCode + ((getUserIds() == null) ? 0 : getUserIds().hashCode());
+        hashCode = prime * hashCode + ((getMinimumEngineVersion() == null) ? 0 : getMinimumEngineVersion().hashCode());
         hashCode = prime * hashCode + ((getPendingChanges() == null) ? 0 : getPendingChanges().hashCode());
         hashCode = prime * hashCode + ((getReplicationGroups() == null) ? 0 : getReplicationGroups().hashCode());
         hashCode = prime * hashCode + ((getARN() == null) ? 0 : getARN().hashCode());

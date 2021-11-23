@@ -104,6 +104,9 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
                             new JsonErrorShapeMetadata().withErrorCode("InternalFailureException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iot.model.transform.InternalFailureExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.iot.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("LimitExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.iot.model.transform.LimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -1769,7 +1772,9 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
      * </p>
      * <p>
      * <b>Note:</b> The CSR must include a public key that is either an RSA key with a length of at least 2048 bits or
-     * an ECC key from NIST P-256 or NIST P-384 curves.
+     * an ECC key from NIST P-256, NIST P-384, or NIST P-512 curves. For supported certificates, consult <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html#x509-cert-algorithms">
+     * Certificate signing algorithms supported by IoT</a>.
      * </p>
      * <p>
      * <b>Note:</b> Reusing the same certificate signing request (CSR) results in a distinct certificate.
@@ -7346,6 +7351,69 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
 
     /**
      * <p>
+     * View details of a managed job template.
+     * </p>
+     * 
+     * @param describeManagedJobTemplateRequest
+     * @return Result of the DescribeManagedJobTemplate operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws InternalServerException
+     *         Internal error from the service that indicates an unexpected error or that the service is unavailable.
+     * @sample AWSIot.DescribeManagedJobTemplate
+     */
+    @Override
+    public DescribeManagedJobTemplateResult describeManagedJobTemplate(DescribeManagedJobTemplateRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeManagedJobTemplate(request);
+    }
+
+    @SdkInternalApi
+    final DescribeManagedJobTemplateResult executeDescribeManagedJobTemplate(DescribeManagedJobTemplateRequest describeManagedJobTemplateRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeManagedJobTemplateRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeManagedJobTemplateRequest> request = null;
+        Response<DescribeManagedJobTemplateResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeManagedJobTemplateRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeManagedJobTemplateRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoT");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeManagedJobTemplate");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeManagedJobTemplateResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeManagedJobTemplateResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets information about a mitigation action.
      * </p>
      * <p>
@@ -11235,6 +11303,69 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
 
     /**
      * <p>
+     * Returns a list of managed job templates.
+     * </p>
+     * 
+     * @param listManagedJobTemplatesRequest
+     * @return Result of the ListManagedJobTemplates operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource does not exist.
+     * @throws ThrottlingException
+     *         The rate exceeds the limit.
+     * @throws InternalServerException
+     *         Internal error from the service that indicates an unexpected error or that the service is unavailable.
+     * @sample AWSIot.ListManagedJobTemplates
+     */
+    @Override
+    public ListManagedJobTemplatesResult listManagedJobTemplates(ListManagedJobTemplatesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListManagedJobTemplates(request);
+    }
+
+    @SdkInternalApi
+    final ListManagedJobTemplatesResult executeListManagedJobTemplates(ListManagedJobTemplatesRequest listManagedJobTemplatesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listManagedJobTemplatesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListManagedJobTemplatesRequest> request = null;
+        Response<ListManagedJobTemplatesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListManagedJobTemplatesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listManagedJobTemplatesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoT");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListManagedJobTemplates");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListManagedJobTemplatesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListManagedJobTemplatesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets a list of all mitigation actions that match the specified filter criteria.
      * </p>
      * <p>
@@ -13599,7 +13730,9 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
 
     /**
      * <p>
-     * Register a certificate that does not have a certificate authority (CA).
+     * Register a certificate that does not have a certificate authority (CA). For supported certificates, consult <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html#x509-cert-algorithms">
+     * Certificate signing algorithms supported by IoT</a>.
      * </p>
      * 
      * @param registerCertificateWithoutCARequest
@@ -13837,6 +13970,11 @@ public class AWSIotClient extends AmazonWebServiceClient implements AWSIot {
      * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
      * >RemoveThingFromBillingGroup</a> action.
      * </p>
+     * <note>
+     * <p>
+     * This call is asynchronous. It might take several seconds for the detachment to propagate.
+     * </p>
+     * </note>
      * 
      * @param removeThingFromBillingGroupRequest
      * @return Result of the RemoveThingFromBillingGroup operation returned by the service.

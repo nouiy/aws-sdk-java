@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Includes information about tags you define to assign tagged resources to a backup plan.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/backup-2018-11-15/ConditionParameter" target="_top">AWS API
  *      Documentation</a>
@@ -25,12 +28,30 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ConditionParameter implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The key in a key-value pair. For example, in the tag <code>Department: Accounting</code>, <code>Department</code>
+     * is the key.
+     * </p>
+     */
     private String conditionKey;
-
+    /**
+     * <p>
+     * The value in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     * <code>Accounting</code> is the value.
+     * </p>
+     */
     private String conditionValue;
 
     /**
+     * <p>
+     * The key in a key-value pair. For example, in the tag <code>Department: Accounting</code>, <code>Department</code>
+     * is the key.
+     * </p>
+     * 
      * @param conditionKey
+     *        The key in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     *        <code>Department</code> is the key.
      */
 
     public void setConditionKey(String conditionKey) {
@@ -38,7 +59,13 @@ public class ConditionParameter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The key in a key-value pair. For example, in the tag <code>Department: Accounting</code>, <code>Department</code>
+     * is the key.
+     * </p>
+     * 
+     * @return The key in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     *         <code>Department</code> is the key.
      */
 
     public String getConditionKey() {
@@ -46,7 +73,14 @@ public class ConditionParameter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The key in a key-value pair. For example, in the tag <code>Department: Accounting</code>, <code>Department</code>
+     * is the key.
+     * </p>
+     * 
      * @param conditionKey
+     *        The key in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     *        <code>Department</code> is the key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -56,7 +90,14 @@ public class ConditionParameter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The value in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     * <code>Accounting</code> is the value.
+     * </p>
+     * 
      * @param conditionValue
+     *        The value in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     *        <code>Accounting</code> is the value.
      */
 
     public void setConditionValue(String conditionValue) {
@@ -64,7 +105,13 @@ public class ConditionParameter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
-     * @return
+     * <p>
+     * The value in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     * <code>Accounting</code> is the value.
+     * </p>
+     * 
+     * @return The value in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     *         <code>Accounting</code> is the value.
      */
 
     public String getConditionValue() {
@@ -72,7 +119,14 @@ public class ConditionParameter implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The value in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     * <code>Accounting</code> is the value.
+     * </p>
+     * 
      * @param conditionValue
+     *        The value in a key-value pair. For example, in the tag <code>Department: Accounting</code>,
+     *        <code>Accounting</code> is the value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

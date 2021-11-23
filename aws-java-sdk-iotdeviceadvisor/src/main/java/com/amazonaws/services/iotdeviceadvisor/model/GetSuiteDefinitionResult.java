@@ -25,7 +25,7 @@ public class GetSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Suite definition Id of the suite definition.
+     * Suite definition ID of the suite definition.
      * </p>
      */
     private String suiteDefinitionId;
@@ -74,11 +74,11 @@ public class GetSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Suite definition Id of the suite definition.
+     * Suite definition ID of the suite definition.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the suite definition.
+     *        Suite definition ID of the suite definition.
      */
 
     public void setSuiteDefinitionId(String suiteDefinitionId) {
@@ -87,10 +87,10 @@ public class GetSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Suite definition Id of the suite definition.
+     * Suite definition ID of the suite definition.
      * </p>
      * 
-     * @return Suite definition Id of the suite definition.
+     * @return Suite definition ID of the suite definition.
      */
 
     public String getSuiteDefinitionId() {
@@ -99,11 +99,11 @@ public class GetSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Suite definition Id of the suite definition.
+     * Suite definition ID of the suite definition.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the suite definition.
+     *        Suite definition ID of the suite definition.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

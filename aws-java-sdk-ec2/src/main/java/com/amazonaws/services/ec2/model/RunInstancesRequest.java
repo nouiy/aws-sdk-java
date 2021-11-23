@@ -191,12 +191,11 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The user data to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running commands on your Linux instance
-     * at launch</a> (Linux) and <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     * >Adding User Data</a> (Windows). If you are using a command line tool, base64-encoding is performed for you, and
-     * you can load the text from a file. Otherwise, you must provide base64-encoded text. User data is limited to 16
-     * KB.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
+     * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
+     * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
+     * performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
+     * data is limited to 16 KB.
      * </p>
      */
     private String userData;
@@ -348,8 +347,8 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU options</a>
-     * in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private CpuOptionsRequest cpuOptions;
@@ -397,6 +396,12 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
      * </p>
      */
     private EnclaveOptionsRequest enclaveOptions;
+    /**
+     * <p>
+     * The options for the instance hostname. The default values are inherited from the subnet.
+     * </p>
+     */
+    private PrivateDnsNameOptionsRequest privateDnsNameOptions;
 
     /**
      * Default constructor for RunInstancesRequest object. Callers should use the setter or fluent setter (with...)
@@ -1679,22 +1684,21 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The user data to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running commands on your Linux instance
-     * at launch</a> (Linux) and <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     * >Adding User Data</a> (Windows). If you are using a command line tool, base64-encoding is performed for you, and
-     * you can load the text from a file. Otherwise, you must provide base64-encoded text. User data is limited to 16
-     * KB.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
+     * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
+     * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
+     * performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
+     * data is limited to 16 KB.
      * </p>
      * 
      * @param userData
      *        The user data to make available to the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running commands on your Linux
-     *        instance at launch</a> (Linux) and <a href=
-     *        "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     *        >Adding User Data</a> (Windows). If you are using a command line tool, base64-encoding is performed for
-     *        you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User data is
-     *        limited to 16 KB.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
+     *        instance at launch</a> and <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run commands on
+     *        your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is performed
+     *        for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User data
+     *        is limited to 16 KB.
      */
 
     public void setUserData(String userData) {
@@ -1704,21 +1708,20 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The user data to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running commands on your Linux instance
-     * at launch</a> (Linux) and <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     * >Adding User Data</a> (Windows). If you are using a command line tool, base64-encoding is performed for you, and
-     * you can load the text from a file. Otherwise, you must provide base64-encoded text. User data is limited to 16
-     * KB.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
+     * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
+     * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
+     * performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
+     * data is limited to 16 KB.
      * </p>
      * 
      * @return The user data to make available to the instance. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running commands on your Linux
-     *         instance at launch</a> (Linux) and <a href=
-     *         "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     *         >Adding User Data</a> (Windows). If you are using a command line tool, base64-encoding is performed for
-     *         you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User data is
-     *         limited to 16 KB.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
+     *         instance at launch</a> and <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run commands on
+     *         your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is performed
+     *         for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
+     *         data is limited to 16 KB.
      */
 
     public String getUserData() {
@@ -1728,22 +1731,21 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The user data to make available to the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running commands on your Linux instance
-     * at launch</a> (Linux) and <a href=
-     * "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     * >Adding User Data</a> (Windows). If you are using a command line tool, base64-encoding is performed for you, and
-     * you can load the text from a file. Otherwise, you must provide base64-encoded text. User data is limited to 16
-     * KB.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux instance at
+     * launch</a> and <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run
+     * commands on your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is
+     * performed for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User
+     * data is limited to 16 KB.
      * </p>
      * 
      * @param userData
      *        The user data to make available to the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Running commands on your Linux
-     *        instance at launch</a> (Linux) and <a href=
-     *        "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data"
-     *        >Adding User Data</a> (Windows). If you are using a command line tool, base64-encoding is performed for
-     *        you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User data is
-     *        limited to 16 KB.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html">Run commands on your Linux
+     *        instance at launch</a> and <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html">Run commands on
+     *        your Windows instance at launch</a>. If you are using a command line tool, base64-encoding is performed
+     *        for you, and you can load the text from a file. Otherwise, you must provide base64-encoded text. User data
+     *        is limited to 16 KB.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2918,13 +2920,13 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU options</a>
-     * in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param cpuOptions
      *        The CPU options for the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU
      *        options</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
@@ -2935,12 +2937,12 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU options</a>
-     * in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The CPU options for the instance. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU
      *         options</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
@@ -2951,13 +2953,13 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     /**
      * <p>
      * The CPU options for the instance. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU options</a>
-     * in the <i>Amazon EC2 User Guide</i>.
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU options</a> in
+     * the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param cpuOptions
      *        The CPU options for the instance. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimizing CPU
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html">Optimize CPU
      *        options</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -3279,6 +3281,46 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
     }
 
     /**
+     * <p>
+     * The options for the instance hostname. The default values are inherited from the subnet.
+     * </p>
+     * 
+     * @param privateDnsNameOptions
+     *        The options for the instance hostname. The default values are inherited from the subnet.
+     */
+
+    public void setPrivateDnsNameOptions(PrivateDnsNameOptionsRequest privateDnsNameOptions) {
+        this.privateDnsNameOptions = privateDnsNameOptions;
+    }
+
+    /**
+     * <p>
+     * The options for the instance hostname. The default values are inherited from the subnet.
+     * </p>
+     * 
+     * @return The options for the instance hostname. The default values are inherited from the subnet.
+     */
+
+    public PrivateDnsNameOptionsRequest getPrivateDnsNameOptions() {
+        return this.privateDnsNameOptions;
+    }
+
+    /**
+     * <p>
+     * The options for the instance hostname. The default values are inherited from the subnet.
+     * </p>
+     * 
+     * @param privateDnsNameOptions
+     *        The options for the instance hostname. The default values are inherited from the subnet.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RunInstancesRequest withPrivateDnsNameOptions(PrivateDnsNameOptionsRequest privateDnsNameOptions) {
+        setPrivateDnsNameOptions(privateDnsNameOptions);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -3372,7 +3414,9 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
         if (getMetadataOptions() != null)
             sb.append("MetadataOptions: ").append(getMetadataOptions()).append(",");
         if (getEnclaveOptions() != null)
-            sb.append("EnclaveOptions: ").append(getEnclaveOptions());
+            sb.append("EnclaveOptions: ").append(getEnclaveOptions()).append(",");
+        if (getPrivateDnsNameOptions() != null)
+            sb.append("PrivateDnsNameOptions: ").append(getPrivateDnsNameOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -3533,6 +3577,10 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
             return false;
         if (other.getEnclaveOptions() != null && other.getEnclaveOptions().equals(this.getEnclaveOptions()) == false)
             return false;
+        if (other.getPrivateDnsNameOptions() == null ^ this.getPrivateDnsNameOptions() == null)
+            return false;
+        if (other.getPrivateDnsNameOptions() != null && other.getPrivateDnsNameOptions().equals(this.getPrivateDnsNameOptions()) == false)
+            return false;
         return true;
     }
 
@@ -3577,6 +3625,7 @@ public class RunInstancesRequest extends AmazonWebServiceRequest implements Seri
         hashCode = prime * hashCode + ((getLicenseSpecifications() == null) ? 0 : getLicenseSpecifications().hashCode());
         hashCode = prime * hashCode + ((getMetadataOptions() == null) ? 0 : getMetadataOptions().hashCode());
         hashCode = prime * hashCode + ((getEnclaveOptions() == null) ? 0 : getEnclaveOptions().hashCode());
+        hashCode = prime * hashCode + ((getPrivateDnsNameOptions() == null) ? 0 : getPrivateDnsNameOptions().hashCode());
         return hashCode;
     }
 

@@ -233,6 +233,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -428,7 +435,8 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
     private String notificationTopicArn;
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      */
     private Boolean autoMinorVersionUpgrade;
@@ -656,6 +664,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        Current generation:
+     *        </p>
+     *        <p>
+     *        <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *        </p>
+     *        <p>
+     *        <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *        <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *        </p>
      *        <p>
      *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
@@ -1654,6 +1669,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -1812,6 +1834,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        Current generation:
+     *        </p>
+     *        <p>
+     *        <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *        </p>
+     *        <p>
+     *        <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *        <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *        </p>
      *        <p>
      *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
@@ -1980,6 +2009,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -2137,6 +2173,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *         <li>
      *         <p>
      *         Current generation:
+     *         </p>
+     *         <p>
+     *         <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *         </p>
+     *         <p>
+     *         <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *         <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *         </p>
      *         <p>
      *         <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
@@ -2305,6 +2348,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -2463,6 +2513,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        Current generation:
+     *        </p>
+     *        <p>
+     *        <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *        </p>
+     *        <p>
+     *        <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *        <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *        </p>
      *        <p>
      *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
@@ -3477,11 +3534,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        This parameter is currently disabled.
+     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *        the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -3490,10 +3549,12 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return This parameter is currently disabled.
+     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *         the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -3502,11 +3563,13 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        This parameter is currently disabled.
+     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *        the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3517,10 +3580,12 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return This parameter is currently disabled.
+     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *         the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public Boolean isAutoMinorVersionUpgrade() {

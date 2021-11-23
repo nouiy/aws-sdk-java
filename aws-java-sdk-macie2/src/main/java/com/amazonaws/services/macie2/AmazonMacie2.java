@@ -469,7 +469,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves the Amazon Macie configuration settings for an Amazon Web Services organization.
+     * Retrieves the Amazon Macie configuration settings for an organization in Organizations.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest
@@ -497,7 +497,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Disables an Amazon Macie account and deletes Macie resources for the account.
+     * Disables Amazon Macie and deletes all settings and resources for a Macie account.
      * </p>
      * 
      * @param disableMacieRequest
@@ -525,7 +525,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Disables an account as the delegated Amazon Macie administrator account for an Amazon Web Services organization.
+     * Disables an account as the delegated Amazon Macie administrator account for an organization in Organizations.
      * </p>
      * 
      * @param disableOrganizationAdminAccountRequest
@@ -668,8 +668,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Designates an account as the delegated Amazon Macie administrator account for an Amazon Web Services
-     * organization.
+     * Designates an account as the delegated Amazon Macie administrator account for an organization in Organizations.
      * </p>
      * 
      * @param enableOrganizationAdminAccountRequest
@@ -725,7 +724,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves (queries) aggregated statistical data for all the S3 buckets that Amazon Macie monitors and analyzes.
+     * Retrieves (queries) aggregated statistical data about S3 buckets that Amazon Macie monitors and analyzes.
      * </p>
      * 
      * @param getBucketStatisticsRequest
@@ -1273,8 +1272,8 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Retrieves information about the delegated Amazon Macie administrator account for an Amazon Web Services
-     * organization.
+     * Retrieves information about the delegated Amazon Macie administrator account for an organization in
+     * Organizations.
      * </p>
      * 
      * @param listOrganizationAdminAccountsRequest
@@ -1515,7 +1514,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Suspends or re-enables an Amazon Macie account, or updates the configuration settings for a Macie account.
+     * Suspends or re-enables Amazon Macie, or updates the configuration settings for a Macie account.
      * </p>
      * 
      * @param updateMacieSessionRequest
@@ -1571,7 +1570,7 @@ public interface AmazonMacie2 {
 
     /**
      * <p>
-     * Updates the Amazon Macie configuration settings for an Amazon Web Services organization.
+     * Updates the Amazon Macie configuration settings for an organization in Organizations.
      * </p>
      * 
      * @param updateOrganizationConfigurationRequest

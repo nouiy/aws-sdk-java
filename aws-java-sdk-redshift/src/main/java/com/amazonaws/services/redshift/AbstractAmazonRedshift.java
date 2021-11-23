@@ -444,6 +444,11 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
     }
 
     @Override
+    public DescribeReservedNodeExchangeStatusResult describeReservedNodeExchangeStatus(DescribeReservedNodeExchangeStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeReservedNodeOfferingsResult describeReservedNodeOfferings(DescribeReservedNodeOfferingsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -545,6 +550,12 @@ public class AbstractAmazonRedshift implements AmazonRedshift {
 
     @Override
     public GetClusterCredentialsResult getClusterCredentials(GetClusterCredentialsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetReservedNodeExchangeConfigurationOptionsResult getReservedNodeExchangeConfigurationOptions(
+            GetReservedNodeExchangeConfigurationOptionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

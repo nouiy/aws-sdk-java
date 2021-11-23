@@ -36,6 +36,8 @@ public class ExecuteStatementRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConsistentRead").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("NextToken").build();
+    private static final MarshallingInfo<String> RETURNCONSUMEDCAPACITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReturnConsumedCapacity").build();
 
     private static final ExecuteStatementRequestMarshaller instance = new ExecuteStatementRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class ExecuteStatementRequestMarshaller {
             protocolMarshaller.marshall(executeStatementRequest.getParameters(), PARAMETERS_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getConsistentRead(), CONSISTENTREAD_BINDING);
             protocolMarshaller.marshall(executeStatementRequest.getNextToken(), NEXTTOKEN_BINDING);
+            protocolMarshaller.marshall(executeStatementRequest.getReturnConsumedCapacity(), RETURNCONSUMEDCAPACITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

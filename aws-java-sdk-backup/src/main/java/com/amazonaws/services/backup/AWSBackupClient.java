@@ -230,50 +230,9 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
 
     /**
      * <p>
-     * Creates a JSON document that specifies a set of resources to assign to a backup plan. Resources can be included
-     * by specifying patterns for a <code>ListOfTags</code> and selected <code>Resources</code>.
-     * </p>
-     * <p>
-     * For example, consider the following patterns:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>Resources: "arn:aws:ec2:region:account-id:volume/volume-id"</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ConditionKey:"department"</code>
-     * </p>
-     * <p>
-     * <code>ConditionValue:"finance"</code>
-     * </p>
-     * <p>
-     * <code>ConditionType:"StringEquals"</code>
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * <code>ConditionKey:"importance"</code>
-     * </p>
-     * <p>
-     * <code>ConditionValue:"critical"</code>
-     * </p>
-     * <p>
-     * <code>ConditionType:"StringEquals"</code>
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * Using these patterns would back up all Amazon Elastic Block Store (Amazon EBS) volumes that are tagged as
-     * <code>"department=finance"</code>, <code>"importance=critical"</code>, in addition to an EBS volume with the
-     * specified volume ID.
-     * </p>
-     * <p>
-     * Resources and conditions are additive in that all resources that match the pattern are selected. This shouldn't
-     * be confused with a logical AND, where all conditions must match. The matching patterns are logically put together
-     * using the OR operator. In other words, all patterns that match are selected for backup.
+     * Creates a JSON document that specifies a set of resources to assign to a backup plan. For examples, see <a
+     * href="https://docs.aws.amazon.com/assigning-resources.html#assigning-resources-json">Assigning resources
+     * programmatically</a>.
      * </p>
      * 
      * @param createBackupSelectionRequest
@@ -3530,6 +3489,11 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
      * retention period of any recovery point currently stored in a backup vault. If specified, Vault Lock enforces a
      * minimum and maximum retention period for future backup and copy jobs that target a backup vault.
      * </p>
+     * <note>
+     * <p>
+     * Backup Vault Lock has yet to receive a third-party assessment for SEC 17a-4(f) and CFTC.
+     * </p>
+     * </note>
      * 
      * @param putBackupVaultLockConfigurationRequest
      * @return Result of the PutBackupVaultLockConfiguration operation returned by the service.
@@ -4348,6 +4312,9 @@ public class AWSBackupClient extends AmazonWebServiceClient implements AWSBackup
      *         A resource that is required for the action doesn't exist.
      * @throws InvalidParameterValueException
      *         Indicates that something is wrong with a parameter's value. For example, the value is out of range.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a parameter is of the wrong
+     *         type.
      * @throws MissingParameterValueException
      *         Indicates that a required parameter is missing.
      * @throws ServiceUnavailableException

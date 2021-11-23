@@ -205,6 +205,22 @@ public class RestoreDBClusterFromSnapshotRequestMarshaller implements
             request.addParameter("DomainIAMRoleName", StringUtils.fromString(restoreDBClusterFromSnapshotRequest.getDomainIAMRoleName()));
         }
 
+        if (restoreDBClusterFromSnapshotRequest.getDBClusterInstanceClass() != null) {
+            request.addParameter("DBClusterInstanceClass", StringUtils.fromString(restoreDBClusterFromSnapshotRequest.getDBClusterInstanceClass()));
+        }
+
+        if (restoreDBClusterFromSnapshotRequest.getStorageType() != null) {
+            request.addParameter("StorageType", StringUtils.fromString(restoreDBClusterFromSnapshotRequest.getStorageType()));
+        }
+
+        if (restoreDBClusterFromSnapshotRequest.getIops() != null) {
+            request.addParameter("Iops", StringUtils.fromInteger(restoreDBClusterFromSnapshotRequest.getIops()));
+        }
+
+        if (restoreDBClusterFromSnapshotRequest.getPubliclyAccessible() != null) {
+            request.addParameter("PubliclyAccessible", StringUtils.fromBoolean(restoreDBClusterFromSnapshotRequest.getPubliclyAccessible()));
+        }
+
         return request;
     }
 

@@ -50,7 +50,7 @@ public class GetMemberResult extends com.amazonaws.AmazonWebServiceResult<com.am
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when an Amazon Macie membership invitation was last sent
-     * to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     * to the account. This value is null if an invitation hasn't been sent to the account.
      * </p>
      */
     private java.util.Date invitedAt;
@@ -245,12 +245,12 @@ public class GetMemberResult extends com.amazonaws.AmazonWebServiceResult<com.am
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when an Amazon Macie membership invitation was last sent
-     * to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     * to the account. This value is null if an invitation hasn't been sent to the account.
      * </p>
      * 
      * @param invitedAt
      *        The date and time, in UTC and extended ISO 8601 format, when an Amazon Macie membership invitation was
-     *        last sent to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     *        last sent to the account. This value is null if an invitation hasn't been sent to the account.
      */
 
     public void setInvitedAt(java.util.Date invitedAt) {
@@ -260,11 +260,11 @@ public class GetMemberResult extends com.amazonaws.AmazonWebServiceResult<com.am
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when an Amazon Macie membership invitation was last sent
-     * to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     * to the account. This value is null if an invitation hasn't been sent to the account.
      * </p>
      * 
      * @return The date and time, in UTC and extended ISO 8601 format, when an Amazon Macie membership invitation was
-     *         last sent to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     *         last sent to the account. This value is null if an invitation hasn't been sent to the account.
      */
 
     public java.util.Date getInvitedAt() {
@@ -274,12 +274,12 @@ public class GetMemberResult extends com.amazonaws.AmazonWebServiceResult<com.am
     /**
      * <p>
      * The date and time, in UTC and extended ISO 8601 format, when an Amazon Macie membership invitation was last sent
-     * to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     * to the account. This value is null if an invitation hasn't been sent to the account.
      * </p>
      * 
      * @param invitedAt
      *        The date and time, in UTC and extended ISO 8601 format, when an Amazon Macie membership invitation was
-     *        last sent to the account. This value is null if a Macie invitation hasn't been sent to the account.
+     *        last sent to the account. This value is null if an invitation hasn't been sent to the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

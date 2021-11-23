@@ -6582,6 +6582,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<ModifyPrivateDnsNameOptionsResult> modifyPrivateDnsNameOptionsAsync(ModifyPrivateDnsNameOptionsRequest request) {
+
+        return modifyPrivateDnsNameOptionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyPrivateDnsNameOptionsResult> modifyPrivateDnsNameOptionsAsync(ModifyPrivateDnsNameOptionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyPrivateDnsNameOptionsRequest, ModifyPrivateDnsNameOptionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ModifyReservedInstancesResult> modifyReservedInstancesAsync(ModifyReservedInstancesRequest request) {
 
         return modifyReservedInstancesAsync(request, null);

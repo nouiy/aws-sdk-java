@@ -41,6 +41,8 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
      */
     private java.util.List<String> selectedTestList;
 
+    private Boolean parallelRun;
+
     /**
      * <p>
      * Gets the primary device for suite run.
@@ -152,6 +154,40 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
     }
 
     /**
+     * @param parallelRun
+     */
+
+    public void setParallelRun(Boolean parallelRun) {
+        this.parallelRun = parallelRun;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean getParallelRun() {
+        return this.parallelRun;
+    }
+
+    /**
+     * @param parallelRun
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SuiteRunConfiguration withParallelRun(Boolean parallelRun) {
+        setParallelRun(parallelRun);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public Boolean isParallelRun() {
+        return this.parallelRun;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -166,7 +202,9 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
         if (getPrimaryDevice() != null)
             sb.append("PrimaryDevice: ").append(getPrimaryDevice()).append(",");
         if (getSelectedTestList() != null)
-            sb.append("SelectedTestList: ").append(getSelectedTestList());
+            sb.append("SelectedTestList: ").append(getSelectedTestList()).append(",");
+        if (getParallelRun() != null)
+            sb.append("ParallelRun: ").append(getParallelRun());
         sb.append("}");
         return sb.toString();
     }
@@ -189,6 +227,10 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
             return false;
         if (other.getSelectedTestList() != null && other.getSelectedTestList().equals(this.getSelectedTestList()) == false)
             return false;
+        if (other.getParallelRun() == null ^ this.getParallelRun() == null)
+            return false;
+        if (other.getParallelRun() != null && other.getParallelRun().equals(this.getParallelRun()) == false)
+            return false;
         return true;
     }
 
@@ -199,6 +241,7 @@ public class SuiteRunConfiguration implements Serializable, Cloneable, Structure
 
         hashCode = prime * hashCode + ((getPrimaryDevice() == null) ? 0 : getPrimaryDevice().hashCode());
         hashCode = prime * hashCode + ((getSelectedTestList() == null) ? 0 : getSelectedTestList().hashCode());
+        hashCode = prime * hashCode + ((getParallelRun() == null) ? 0 : getParallelRun().hashCode());
         return hashCode;
     }
 

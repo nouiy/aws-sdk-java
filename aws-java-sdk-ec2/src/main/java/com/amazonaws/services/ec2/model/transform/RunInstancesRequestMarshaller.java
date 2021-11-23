@@ -647,6 +647,24 @@ public class RunInstancesRequestMarshaller implements Marshaller<Request<RunInst
             }
         }
 
+        PrivateDnsNameOptionsRequest privateDnsNameOptions = runInstancesRequest.getPrivateDnsNameOptions();
+        if (privateDnsNameOptions != null) {
+
+            if (privateDnsNameOptions.getHostnameType() != null) {
+                request.addParameter("PrivateDnsNameOptions.HostnameType", StringUtils.fromString(privateDnsNameOptions.getHostnameType()));
+            }
+
+            if (privateDnsNameOptions.getEnableResourceNameDnsARecord() != null) {
+                request.addParameter("PrivateDnsNameOptions.EnableResourceNameDnsARecord",
+                        StringUtils.fromBoolean(privateDnsNameOptions.getEnableResourceNameDnsARecord()));
+            }
+
+            if (privateDnsNameOptions.getEnableResourceNameDnsAAAARecord() != null) {
+                request.addParameter("PrivateDnsNameOptions.EnableResourceNameDnsAAAARecord",
+                        StringUtils.fromBoolean(privateDnsNameOptions.getEnableResourceNameDnsAAAARecord()));
+            }
+        }
+
         return request;
     }
 

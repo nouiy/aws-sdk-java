@@ -739,7 +739,7 @@ public interface AmazonElastiCache {
 
     /**
      * <p>
-     * For Redis engine version 6.x onwards: Creates a Redis user. For more information, see <a
+     * For Redis engine version 6.0 onwards: Creates a Redis user. For more information, see <a
      * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access
      * Control (RBAC)</a>.
      * </p>
@@ -752,6 +752,8 @@ public interface AmazonElastiCache {
      *         The quota of users has been exceeded.
      * @throws DuplicateUserNameException
      *         A user with this username already exists.
+     * @throws ServiceLinkedRoleNotFoundException
+     *         The specified service linked role (SLR) was not found.
      * @throws InvalidParameterValueException
      *         The value for a parameter is invalid.
      * @throws InvalidParameterCombinationException
@@ -767,7 +769,7 @@ public interface AmazonElastiCache {
 
     /**
      * <p>
-     * For Redis engine version 6.x onwards: Creates a Redis user group. For more information, see <a
+     * For Redis engine version 6.0 onwards: Creates a Redis user group. For more information, see <a
      * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access
      * Control (RBAC)</a>
      * </p>
@@ -780,6 +782,8 @@ public interface AmazonElastiCache {
      *         A user with this username already exists.
      * @throws UserGroupAlreadyExistsException
      *         The user group with this ID already exists.
+     * @throws ServiceLinkedRoleNotFoundException
+     *         The specified service linked role (SLR) was not found.
      * @throws DefaultUserRequiredException
      *         You must add default user to a user group.
      * @throws UserGroupQuotaExceededException
@@ -1145,7 +1149,7 @@ public interface AmazonElastiCache {
 
     /**
      * <p>
-     * For Redis engine version 6.x onwards: Deletes a user. The user will be removed from all user groups and in turn
+     * For Redis engine version 6.0 onwards: Deletes a user. The user will be removed from all user groups and in turn
      * removed from all replication groups. For more information, see <a
      * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access
      * Control (RBAC)</a>.
@@ -1157,6 +1161,8 @@ public interface AmazonElastiCache {
      *         The user is not in active state.
      * @throws UserNotFoundException
      *         The user does not exist or could not be found.
+     * @throws ServiceLinkedRoleNotFoundException
+     *         The specified service linked role (SLR) was not found.
      * @throws InvalidParameterValueException
      *         The value for a parameter is invalid.
      * @throws DefaultUserAssociatedToUserGroupException
@@ -1169,7 +1175,7 @@ public interface AmazonElastiCache {
 
     /**
      * <p>
-     * For Redis engine version 6.x onwards: Deletes a user group. The user group must first be disassociated from the
+     * For Redis engine version 6.0 onwards: Deletes a user group. The user group must first be disassociated from the
      * replication group before it can be deleted. For more information, see <a
      * href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html">Using Role Based Access
      * Control (RBAC)</a>.
@@ -1181,6 +1187,8 @@ public interface AmazonElastiCache {
      *         The user group was not found or does not exist
      * @throws InvalidUserGroupStateException
      *         The user group is not in an active state.
+     * @throws ServiceLinkedRoleNotFoundException
+     *         The specified service linked role (SLR) was not found.
      * @throws InvalidParameterValueException
      *         The value for a parameter is invalid.
      * @sample AmazonElastiCache.DeleteUserGroup
@@ -1598,6 +1606,8 @@ public interface AmazonElastiCache {
      * @return Result of the DescribeUserGroups operation returned by the service.
      * @throws UserGroupNotFoundException
      *         The user group was not found or does not exist
+     * @throws ServiceLinkedRoleNotFoundException
+     *         The specified service linked role (SLR) was not found.
      * @throws InvalidParameterCombinationException
      *         Two or more incompatible parameters were specified.
      * @sample AmazonElastiCache.DescribeUserGroups
@@ -1615,6 +1625,8 @@ public interface AmazonElastiCache {
      * @return Result of the DescribeUsers operation returned by the service.
      * @throws UserNotFoundException
      *         The user does not exist or could not be found.
+     * @throws ServiceLinkedRoleNotFoundException
+     *         The specified service linked role (SLR) was not found.
      * @throws InvalidParameterCombinationException
      *         Two or more incompatible parameters were specified.
      * @sample AmazonElastiCache.DescribeUsers
@@ -2046,6 +2058,8 @@ public interface AmazonElastiCache {
      *         The user does not exist or could not be found.
      * @throws InvalidUserStateException
      *         The user is not in active state.
+     * @throws ServiceLinkedRoleNotFoundException
+     *         The specified service linked role (SLR) was not found.
      * @throws InvalidParameterValueException
      *         The value for a parameter is invalid.
      * @throws InvalidParameterCombinationException
@@ -2069,6 +2083,8 @@ public interface AmazonElastiCache {
      *         The user does not exist or could not be found.
      * @throws DuplicateUserNameException
      *         A user with this username already exists.
+     * @throws ServiceLinkedRoleNotFoundException
+     *         The specified service linked role (SLR) was not found.
      * @throws DefaultUserRequiredException
      *         You must add default user to a user group.
      * @throws InvalidUserGroupStateException
@@ -2290,6 +2306,11 @@ public interface AmazonElastiCache {
      * <p>
      * Represents the input of a <code>TestFailover</code> operation which test automatic failover on a specified node
      * group (called shard in the console) in a replication group (called cluster in the console).
+     * </p>
+     * <p>
+     * This API is designed for testing the behavior of your application in case of ElastiCache failover. It is not
+     * designed to be an operational tool for initiating a failover to overcome a problem you may have with the cluster.
+     * Moreover, in certain conditions such as large-scale operational events, Amazon may block this API.
      * </p>
      * <p class="title">
      * <b>Note the following</b>

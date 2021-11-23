@@ -27,24 +27,24 @@ public class GetSuiteRunReportRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Suite definition Id of the test suite.
+     * Suite definition ID of the test suite.
      * </p>
      */
     private String suiteDefinitionId;
     /**
      * <p>
-     * Suite run Id of the test suite run.
+     * Suite run ID of the test suite run.
      * </p>
      */
     private String suiteRunId;
 
     /**
      * <p>
-     * Suite definition Id of the test suite.
+     * Suite definition ID of the test suite.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite.
+     *        Suite definition ID of the test suite.
      */
 
     public void setSuiteDefinitionId(String suiteDefinitionId) {
@@ -53,10 +53,10 @@ public class GetSuiteRunReportRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Suite definition Id of the test suite.
+     * Suite definition ID of the test suite.
      * </p>
      * 
-     * @return Suite definition Id of the test suite.
+     * @return Suite definition ID of the test suite.
      */
 
     public String getSuiteDefinitionId() {
@@ -65,11 +65,11 @@ public class GetSuiteRunReportRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Suite definition Id of the test suite.
+     * Suite definition ID of the test suite.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite.
+     *        Suite definition ID of the test suite.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class GetSuiteRunReportRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Suite run Id of the test suite run.
+     * Suite run ID of the test suite run.
      * </p>
      * 
      * @param suiteRunId
-     *        Suite run Id of the test suite run.
+     *        Suite run ID of the test suite run.
      */
 
     public void setSuiteRunId(String suiteRunId) {
@@ -93,10 +93,10 @@ public class GetSuiteRunReportRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Suite run Id of the test suite run.
+     * Suite run ID of the test suite run.
      * </p>
      * 
-     * @return Suite run Id of the test suite run.
+     * @return Suite run ID of the test suite run.
      */
 
     public String getSuiteRunId() {
@@ -105,11 +105,11 @@ public class GetSuiteRunReportRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Suite run Id of the test suite run.
+     * Suite run ID of the test suite run.
      * </p>
      * 
      * @param suiteRunId
-     *        Suite run Id of the test suite run.
+     *        Suite run ID of the test suite run.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

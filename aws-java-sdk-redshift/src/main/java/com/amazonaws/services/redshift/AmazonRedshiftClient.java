@@ -302,6 +302,7 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
         exceptionUnmarshallers.add(new InvalidUsageLimitExceptionUnmarshaller());
         exceptionUnmarshallers.add(new InvalidRestoreExceptionUnmarshaller());
         exceptionUnmarshallers.add(new SnapshotCopyDisabledExceptionUnmarshaller());
+        exceptionUnmarshallers.add(new ReservedNodeExchangeNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new ClusterSubnetGroupQuotaExceededExceptionUnmarshaller());
         exceptionUnmarshallers.add(new InvalidScheduleExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DependentServiceRequestThrottlingExceptionUnmarshaller());
@@ -5166,6 +5167,71 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Returns exchange status details and associated metadata for a reserved-node exchange. Statuses include such
+     * values as in progress and requested.
+     * </p>
+     * 
+     * @param describeReservedNodeExchangeStatusRequest
+     * @return Result of the DescribeReservedNodeExchangeStatus operation returned by the service.
+     * @throws ReservedNodeNotFoundException
+     *         The specified reserved compute node not found.
+     * @throws ReservedNodeExchangeNotFoundException
+     *         The reserved-node exchange status wasn't found.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @sample AmazonRedshift.DescribeReservedNodeExchangeStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeReservedNodeExchangeStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeReservedNodeExchangeStatusResult describeReservedNodeExchangeStatus(DescribeReservedNodeExchangeStatusRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeReservedNodeExchangeStatus(request);
+    }
+
+    @SdkInternalApi
+    final DescribeReservedNodeExchangeStatusResult executeDescribeReservedNodeExchangeStatus(
+            DescribeReservedNodeExchangeStatusRequest describeReservedNodeExchangeStatusRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeReservedNodeExchangeStatusRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeReservedNodeExchangeStatusRequest> request = null;
+        Response<DescribeReservedNodeExchangeStatusResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeReservedNodeExchangeStatusRequestMarshaller()
+                        .marshall(super.beforeMarshalling(describeReservedNodeExchangeStatusRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeReservedNodeExchangeStatus");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeReservedNodeExchangeStatusResult> responseHandler = new StaxResponseHandler<DescribeReservedNodeExchangeStatusResult>(
+                    new DescribeReservedNodeExchangeStatusResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of the available reserved node offerings by Amazon Redshift with their descriptions including the
      * node type, the fixed and recurring costs of reserving the node and duration the node will be reserved for you.
      * These descriptions help you determine which reserve node offering you want to purchase. You then use the unique
@@ -6281,6 +6347,85 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
 
             StaxResponseHandler<GetClusterCredentialsResult> responseHandler = new StaxResponseHandler<GetClusterCredentialsResult>(
                     new GetClusterCredentialsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets the configuration options for the reserved-node exchange. These options include information about the source
+     * reserved node and target reserved node offering. Details include the node type, the price, the node count, and
+     * the offering type.
+     * </p>
+     * 
+     * @param getReservedNodeExchangeConfigurationOptionsRequest
+     * @return Result of the GetReservedNodeExchangeConfigurationOptions operation returned by the service.
+     * @throws ReservedNodeNotFoundException
+     *         The specified reserved compute node not found.
+     * @throws InvalidReservedNodeStateException
+     *         Indicates that the Reserved Node being exchanged is not in an active state.
+     * @throws ReservedNodeAlreadyMigratedException
+     *         Indicates that the reserved node has already been exchanged.
+     * @throws ReservedNodeOfferingNotFoundException
+     *         Specified offering does not exist.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws ClusterSnapshotNotFoundException
+     *         The snapshot identifier does not refer to an existing cluster snapshot.
+     * @sample AmazonRedshift.GetReservedNodeExchangeConfigurationOptions
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/GetReservedNodeExchangeConfigurationOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetReservedNodeExchangeConfigurationOptionsResult getReservedNodeExchangeConfigurationOptions(
+            GetReservedNodeExchangeConfigurationOptionsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetReservedNodeExchangeConfigurationOptions(request);
+    }
+
+    @SdkInternalApi
+    final GetReservedNodeExchangeConfigurationOptionsResult executeGetReservedNodeExchangeConfigurationOptions(
+            GetReservedNodeExchangeConfigurationOptionsRequest getReservedNodeExchangeConfigurationOptionsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getReservedNodeExchangeConfigurationOptionsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetReservedNodeExchangeConfigurationOptionsRequest> request = null;
+        Response<GetReservedNodeExchangeConfigurationOptionsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetReservedNodeExchangeConfigurationOptionsRequestMarshaller().marshall(super
+                        .beforeMarshalling(getReservedNodeExchangeConfigurationOptionsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Redshift");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetReservedNodeExchangeConfigurationOptions");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetReservedNodeExchangeConfigurationOptionsResult> responseHandler = new StaxResponseHandler<GetReservedNodeExchangeConfigurationOptionsResult>(
+                    new GetReservedNodeExchangeConfigurationOptionsResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -7871,6 +8016,19 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         Your account is not authorized to perform the requested operation.
      * @throws LimitExceededException
      *         The encryption key has exceeded its grant limit in Amazon Web Services KMS.
+     * @throws ReservedNodeNotFoundException
+     *         The specified reserved compute node not found.
+     * @throws InvalidReservedNodeStateException
+     *         Indicates that the Reserved Node being exchanged is not in an active state.
+     * @throws ReservedNodeAlreadyMigratedException
+     *         Indicates that the reserved node has already been exchanged.
+     * @throws ReservedNodeOfferingNotFoundException
+     *         Specified offering does not exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws ReservedNodeAlreadyExistsException
+     *         User already has a reservation with the given identifier.
      * @sample AmazonRedshift.ResizeCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ResizeCluster" target="_top">AWS API
      *      Documentation</a>
@@ -7997,6 +8155,21 @@ public class AmazonRedshiftClient extends AmazonWebServiceClient implements Amaz
      *         You have exceeded the number of tags allowed.
      * @throws InvalidTagException
      *         The tag is invalid.
+     * @throws ReservedNodeNotFoundException
+     *         The specified reserved compute node not found.
+     * @throws InvalidReservedNodeStateException
+     *         Indicates that the Reserved Node being exchanged is not in an active state.
+     * @throws ReservedNodeAlreadyMigratedException
+     *         Indicates that the reserved node has already been exchanged.
+     * @throws ReservedNodeOfferingNotFoundException
+     *         Specified offering does not exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws ReservedNodeAlreadyExistsException
+     *         User already has a reservation with the given identifier.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.RestoreFromClusterSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RestoreFromClusterSnapshot"
      *      target="_top">AWS API Documentation</a>

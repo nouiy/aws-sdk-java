@@ -17,12 +17,36 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Contains the details of an Amazon Aurora DB cluster.
+ * Contains the details of an Amazon Aurora DB cluster or Multi-AZ DB cluster.
  * </p>
  * <p>
- * This data type is used as a response element in the <code>DescribeDBClusters</code>, <code>StopDBCluster</code>, and
- * <code>StartDBCluster</code> actions.
+ * For an Amazon Aurora DB cluster, this data type is used as a response element in the operations
+ * <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
+ * <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>PromoteReadReplicaDBCluster</code>,
+ * <code>RestoreDBClusterFromS3</code>, <code>RestoreDBClusterFromSnapshot</code>,
+ * <code>RestoreDBClusterToPointInTime</code>, <code>StartDBCluster</code>, and <code>StopDBCluster</code>.
  * </p>
+ * <p>
+ * For a Multi-AZ DB cluster, this data type is used as a response element in the operations
+ * <code>CreateDBCluster</code>, <code>DeleteDBCluster</code>, <code>DescribeDBClusters</code>,
+ * <code>FailoverDBCluster</code>, <code>ModifyDBCluster</code>, <code>RebootDBCluster</code>,
+ * <code>RestoreDBClusterFromSnapshot</code>, and <code>RestoreDBClusterToPointInTime</code>.
+ * </p>
+ * <p>
+ * For more information on Amazon Aurora DB clusters, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html"> What is Amazon
+ * Aurora?</a> in the <i>Amazon Aurora User Guide.</i>
+ * </p>
+ * <p>
+ * For more information on Multi-AZ DB clusters, see <a
+ * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+ * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+ * </p>
+ * <note>
+ * <p>
+ * The Multi-AZ DB clusters feature is in preview and is subject to change.
+ * </p>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DBCluster" target="_top">AWS API
  *      Documentation</a>
@@ -420,6 +444,112 @@ public class DBCluster implements Serializable, Cloneable {
      * </p>
      */
     private ClusterPendingModifiedValues pendingModifiedValues;
+    /**
+     * <p>
+     * The name of the compute and memory capacity class of the DB instance.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private String dBClusterInstanceClass;
+    /**
+     * <p>
+     * The storage type associated with DB instance.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private String storageType;
+    /**
+     * <p>
+     * The Provisioned IOPS (I/O operations per second) value.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private Integer iops;
+    /**
+     * <p>
+     * Specifies the accessibility options for the DB instance.
+     * </p>
+     * <p>
+     * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by the security group it
+     * uses. That public access is not permitted if the security group assigned to the DB instance doesn't permit it.
+     * </p>
+     * <p>
+     * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
+     * private IP address.
+     * </p>
+     * <p>
+     * For more information, see <a>CreateDBInstance</a>.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private Boolean publiclyAccessible;
+    /**
+     * <p>
+     * A value that indicates that minor version patches are applied automatically.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private Boolean autoMinorVersionUpgrade;
+    /**
+     * <p>
+     * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private Integer monitoringInterval;
+    /**
+     * <p>
+     * The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch Logs.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private String monitoringRoleArn;
+    /**
+     * <p>
+     * True if Performance Insights is enabled for the DB cluster, and otherwise false.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private Boolean performanceInsightsEnabled;
+    /**
+     * <p>
+     * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
+     * </p>
+     * <p>
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private String performanceInsightsKMSKeyId;
+    /**
+     * <p>
+     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     */
+    private Integer performanceInsightsRetentionPeriod;
 
     /**
      * <p>
@@ -3544,6 +3674,743 @@ public class DBCluster implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The name of the compute and memory capacity class of the DB instance.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param dBClusterInstanceClass
+     *        The name of the compute and memory capacity class of the DB instance.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setDBClusterInstanceClass(String dBClusterInstanceClass) {
+        this.dBClusterInstanceClass = dBClusterInstanceClass;
+    }
+
+    /**
+     * <p>
+     * The name of the compute and memory capacity class of the DB instance.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return The name of the compute and memory capacity class of the DB instance.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public String getDBClusterInstanceClass() {
+        return this.dBClusterInstanceClass;
+    }
+
+    /**
+     * <p>
+     * The name of the compute and memory capacity class of the DB instance.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param dBClusterInstanceClass
+     *        The name of the compute and memory capacity class of the DB instance.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withDBClusterInstanceClass(String dBClusterInstanceClass) {
+        setDBClusterInstanceClass(dBClusterInstanceClass);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The storage type associated with DB instance.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type associated with DB instance.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setStorageType(String storageType) {
+        this.storageType = storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type associated with DB instance.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return The storage type associated with DB instance.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
+     * <p>
+     * The storage type associated with DB instance.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param storageType
+     *        The storage type associated with DB instance.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withStorageType(String storageType) {
+        setStorageType(storageType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Provisioned IOPS (I/O operations per second) value.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param iops
+     *        The Provisioned IOPS (I/O operations per second) value.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setIops(Integer iops) {
+        this.iops = iops;
+    }
+
+    /**
+     * <p>
+     * The Provisioned IOPS (I/O operations per second) value.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return The Provisioned IOPS (I/O operations per second) value.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Integer getIops() {
+        return this.iops;
+    }
+
+    /**
+     * <p>
+     * The Provisioned IOPS (I/O operations per second) value.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param iops
+     *        The Provisioned IOPS (I/O operations per second) value.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withIops(Integer iops) {
+        setIops(iops);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the accessibility options for the DB instance.
+     * </p>
+     * <p>
+     * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by the security group it
+     * uses. That public access is not permitted if the security group assigned to the DB instance doesn't permit it.
+     * </p>
+     * <p>
+     * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
+     * private IP address.
+     * </p>
+     * <p>
+     * For more information, see <a>CreateDBInstance</a>.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param publiclyAccessible
+     *        Specifies the accessibility options for the DB instance.</p>
+     *        <p>
+     *        When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *        IP address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address
+     *        from outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by the security
+     *        group it uses. That public access is not permitted if the security group assigned to the DB instance
+     *        doesn't permit it.
+     *        </p>
+     *        <p>
+     *        When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
+     *        resolves to a private IP address.
+     *        </p>
+     *        <p>
+     *        For more information, see <a>CreateDBInstance</a>.
+     *        </p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setPubliclyAccessible(Boolean publiclyAccessible) {
+        this.publiclyAccessible = publiclyAccessible;
+    }
+
+    /**
+     * <p>
+     * Specifies the accessibility options for the DB instance.
+     * </p>
+     * <p>
+     * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by the security group it
+     * uses. That public access is not permitted if the security group assigned to the DB instance doesn't permit it.
+     * </p>
+     * <p>
+     * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
+     * private IP address.
+     * </p>
+     * <p>
+     * For more information, see <a>CreateDBInstance</a>.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return Specifies the accessibility options for the DB instance.</p>
+     *         <p>
+     *         When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the
+     *         private IP address from within the DB instance's virtual private cloud (VPC). It resolves to the public
+     *         IP address from outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by
+     *         the security group it uses. That public access is not permitted if the security group assigned to the DB
+     *         instance doesn't permit it.
+     *         </p>
+     *         <p>
+     *         When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
+     *         resolves to a private IP address.
+     *         </p>
+     *         <p>
+     *         For more information, see <a>CreateDBInstance</a>.
+     *         </p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Boolean getPubliclyAccessible() {
+        return this.publiclyAccessible;
+    }
+
+    /**
+     * <p>
+     * Specifies the accessibility options for the DB instance.
+     * </p>
+     * <p>
+     * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by the security group it
+     * uses. That public access is not permitted if the security group assigned to the DB instance doesn't permit it.
+     * </p>
+     * <p>
+     * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
+     * private IP address.
+     * </p>
+     * <p>
+     * For more information, see <a>CreateDBInstance</a>.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param publiclyAccessible
+     *        Specifies the accessibility options for the DB instance.</p>
+     *        <p>
+     *        When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private
+     *        IP address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address
+     *        from outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by the security
+     *        group it uses. That public access is not permitted if the security group assigned to the DB instance
+     *        doesn't permit it.
+     *        </p>
+     *        <p>
+     *        When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
+     *        resolves to a private IP address.
+     *        </p>
+     *        <p>
+     *        For more information, see <a>CreateDBInstance</a>.
+     *        </p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withPubliclyAccessible(Boolean publiclyAccessible) {
+        setPubliclyAccessible(publiclyAccessible);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the accessibility options for the DB instance.
+     * </p>
+     * <p>
+     * When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the private IP
+     * address from within the DB instance's virtual private cloud (VPC). It resolves to the public IP address from
+     * outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by the security group it
+     * uses. That public access is not permitted if the security group assigned to the DB instance doesn't permit it.
+     * </p>
+     * <p>
+     * When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that resolves to a
+     * private IP address.
+     * </p>
+     * <p>
+     * For more information, see <a>CreateDBInstance</a>.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return Specifies the accessibility options for the DB instance.</p>
+     *         <p>
+     *         When the DB instance is publicly accessible, its Domain Name System (DNS) endpoint resolves to the
+     *         private IP address from within the DB instance's virtual private cloud (VPC). It resolves to the public
+     *         IP address from outside of the DB instance's VPC. Access to the DB instance is ultimately controlled by
+     *         the security group it uses. That public access is not permitted if the security group assigned to the DB
+     *         instance doesn't permit it.
+     *         </p>
+     *         <p>
+     *         When the DB instance isn't publicly accessible, it is an internal DB instance with a DNS name that
+     *         resolves to a private IP address.
+     *         </p>
+     *         <p>
+     *         For more information, see <a>CreateDBInstance</a>.
+     *         </p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Boolean isPubliclyAccessible() {
+        return this.publiclyAccessible;
+    }
+
+    /**
+     * <p>
+     * A value that indicates that minor version patches are applied automatically.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param autoMinorVersionUpgrade
+     *        A value that indicates that minor version patches are applied automatically.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+    }
+
+    /**
+     * <p>
+     * A value that indicates that minor version patches are applied automatically.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return A value that indicates that minor version patches are applied automatically.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Boolean getAutoMinorVersionUpgrade() {
+        return this.autoMinorVersionUpgrade;
+    }
+
+    /**
+     * <p>
+     * A value that indicates that minor version patches are applied automatically.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param autoMinorVersionUpgrade
+     *        A value that indicates that minor version patches are applied automatically.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+        setAutoMinorVersionUpgrade(autoMinorVersionUpgrade);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A value that indicates that minor version patches are applied automatically.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return A value that indicates that minor version patches are applied automatically.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Boolean isAutoMinorVersionUpgrade() {
+        return this.autoMinorVersionUpgrade;
+    }
+
+    /**
+     * <p>
+     * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param monitoringInterval
+     *        The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB
+     *        cluster.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setMonitoringInterval(Integer monitoringInterval) {
+        this.monitoringInterval = monitoringInterval;
+    }
+
+    /**
+     * <p>
+     * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB
+     *         cluster.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Integer getMonitoringInterval() {
+        return this.monitoringInterval;
+    }
+
+    /**
+     * <p>
+     * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param monitoringInterval
+     *        The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB
+     *        cluster.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withMonitoringInterval(Integer monitoringInterval) {
+        setMonitoringInterval(monitoringInterval);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch Logs.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param monitoringRoleArn
+     *        The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch
+     *        Logs.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setMonitoringRoleArn(String monitoringRoleArn) {
+        this.monitoringRoleArn = monitoringRoleArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch Logs.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch
+     *         Logs.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public String getMonitoringRoleArn() {
+        return this.monitoringRoleArn;
+    }
+
+    /**
+     * <p>
+     * The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch Logs.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param monitoringRoleArn
+     *        The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to Amazon CloudWatch
+     *        Logs.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withMonitoringRoleArn(String monitoringRoleArn) {
+        setMonitoringRoleArn(monitoringRoleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * True if Performance Insights is enabled for the DB cluster, and otherwise false.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param performanceInsightsEnabled
+     *        True if Performance Insights is enabled for the DB cluster, and otherwise false.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setPerformanceInsightsEnabled(Boolean performanceInsightsEnabled) {
+        this.performanceInsightsEnabled = performanceInsightsEnabled;
+    }
+
+    /**
+     * <p>
+     * True if Performance Insights is enabled for the DB cluster, and otherwise false.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return True if Performance Insights is enabled for the DB cluster, and otherwise false.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Boolean getPerformanceInsightsEnabled() {
+        return this.performanceInsightsEnabled;
+    }
+
+    /**
+     * <p>
+     * True if Performance Insights is enabled for the DB cluster, and otherwise false.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param performanceInsightsEnabled
+     *        True if Performance Insights is enabled for the DB cluster, and otherwise false.</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withPerformanceInsightsEnabled(Boolean performanceInsightsEnabled) {
+        setPerformanceInsightsEnabled(performanceInsightsEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * True if Performance Insights is enabled for the DB cluster, and otherwise false.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return True if Performance Insights is enabled for the DB cluster, and otherwise false.</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Boolean isPerformanceInsightsEnabled() {
+        return this.performanceInsightsEnabled;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
+     * </p>
+     * <p>
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param performanceInsightsKMSKeyId
+     *        The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
+     *        <p>
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
+     *        </p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
+        this.performanceInsightsKMSKeyId = performanceInsightsKMSKeyId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
+     * </p>
+     * <p>
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
+     *         <p>
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
+     *         </p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public String getPerformanceInsightsKMSKeyId() {
+        return this.performanceInsightsKMSKeyId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
+     * </p>
+     * <p>
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param performanceInsightsKMSKeyId
+     *        The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
+     *        <p>
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
+     *        </p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
+        setPerformanceInsightsKMSKeyId(performanceInsightsKMSKeyId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param performanceInsightsRetentionPeriod
+     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public void setPerformanceInsightsRetentionPeriod(Integer performanceInsightsRetentionPeriod) {
+        this.performanceInsightsRetentionPeriod = performanceInsightsRetentionPeriod;
+    }
+
+    /**
+     * <p>
+     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @return The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2
+     *         years).</p>
+     *         <p>
+     *         This setting is only for non-Aurora Multi-AZ DB clusters.
+     */
+
+    public Integer getPerformanceInsightsRetentionPeriod() {
+        return this.performanceInsightsRetentionPeriod;
+    }
+
+    /**
+     * <p>
+     * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * </p>
+     * <p>
+     * This setting is only for non-Aurora Multi-AZ DB clusters.
+     * </p>
+     * 
+     * @param performanceInsightsRetentionPeriod
+     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+     *        <p>
+     *        This setting is only for non-Aurora Multi-AZ DB clusters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBCluster withPerformanceInsightsRetentionPeriod(Integer performanceInsightsRetentionPeriod) {
+        setPerformanceInsightsRetentionPeriod(performanceInsightsRetentionPeriod);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3668,7 +4535,27 @@ public class DBCluster implements Serializable, Cloneable {
         if (getGlobalWriteForwardingRequested() != null)
             sb.append("GlobalWriteForwardingRequested: ").append(getGlobalWriteForwardingRequested()).append(",");
         if (getPendingModifiedValues() != null)
-            sb.append("PendingModifiedValues: ").append(getPendingModifiedValues());
+            sb.append("PendingModifiedValues: ").append(getPendingModifiedValues()).append(",");
+        if (getDBClusterInstanceClass() != null)
+            sb.append("DBClusterInstanceClass: ").append(getDBClusterInstanceClass()).append(",");
+        if (getStorageType() != null)
+            sb.append("StorageType: ").append(getStorageType()).append(",");
+        if (getIops() != null)
+            sb.append("Iops: ").append(getIops()).append(",");
+        if (getPubliclyAccessible() != null)
+            sb.append("PubliclyAccessible: ").append(getPubliclyAccessible()).append(",");
+        if (getAutoMinorVersionUpgrade() != null)
+            sb.append("AutoMinorVersionUpgrade: ").append(getAutoMinorVersionUpgrade()).append(",");
+        if (getMonitoringInterval() != null)
+            sb.append("MonitoringInterval: ").append(getMonitoringInterval()).append(",");
+        if (getMonitoringRoleArn() != null)
+            sb.append("MonitoringRoleArn: ").append(getMonitoringRoleArn()).append(",");
+        if (getPerformanceInsightsEnabled() != null)
+            sb.append("PerformanceInsightsEnabled: ").append(getPerformanceInsightsEnabled()).append(",");
+        if (getPerformanceInsightsKMSKeyId() != null)
+            sb.append("PerformanceInsightsKMSKeyId: ").append(getPerformanceInsightsKMSKeyId()).append(",");
+        if (getPerformanceInsightsRetentionPeriod() != null)
+            sb.append("PerformanceInsightsRetentionPeriod: ").append(getPerformanceInsightsRetentionPeriod());
         sb.append("}");
         return sb.toString();
     }
@@ -3916,6 +4803,47 @@ public class DBCluster implements Serializable, Cloneable {
             return false;
         if (other.getPendingModifiedValues() != null && other.getPendingModifiedValues().equals(this.getPendingModifiedValues()) == false)
             return false;
+        if (other.getDBClusterInstanceClass() == null ^ this.getDBClusterInstanceClass() == null)
+            return false;
+        if (other.getDBClusterInstanceClass() != null && other.getDBClusterInstanceClass().equals(this.getDBClusterInstanceClass()) == false)
+            return false;
+        if (other.getStorageType() == null ^ this.getStorageType() == null)
+            return false;
+        if (other.getStorageType() != null && other.getStorageType().equals(this.getStorageType()) == false)
+            return false;
+        if (other.getIops() == null ^ this.getIops() == null)
+            return false;
+        if (other.getIops() != null && other.getIops().equals(this.getIops()) == false)
+            return false;
+        if (other.getPubliclyAccessible() == null ^ this.getPubliclyAccessible() == null)
+            return false;
+        if (other.getPubliclyAccessible() != null && other.getPubliclyAccessible().equals(this.getPubliclyAccessible()) == false)
+            return false;
+        if (other.getAutoMinorVersionUpgrade() == null ^ this.getAutoMinorVersionUpgrade() == null)
+            return false;
+        if (other.getAutoMinorVersionUpgrade() != null && other.getAutoMinorVersionUpgrade().equals(this.getAutoMinorVersionUpgrade()) == false)
+            return false;
+        if (other.getMonitoringInterval() == null ^ this.getMonitoringInterval() == null)
+            return false;
+        if (other.getMonitoringInterval() != null && other.getMonitoringInterval().equals(this.getMonitoringInterval()) == false)
+            return false;
+        if (other.getMonitoringRoleArn() == null ^ this.getMonitoringRoleArn() == null)
+            return false;
+        if (other.getMonitoringRoleArn() != null && other.getMonitoringRoleArn().equals(this.getMonitoringRoleArn()) == false)
+            return false;
+        if (other.getPerformanceInsightsEnabled() == null ^ this.getPerformanceInsightsEnabled() == null)
+            return false;
+        if (other.getPerformanceInsightsEnabled() != null && other.getPerformanceInsightsEnabled().equals(this.getPerformanceInsightsEnabled()) == false)
+            return false;
+        if (other.getPerformanceInsightsKMSKeyId() == null ^ this.getPerformanceInsightsKMSKeyId() == null)
+            return false;
+        if (other.getPerformanceInsightsKMSKeyId() != null && other.getPerformanceInsightsKMSKeyId().equals(this.getPerformanceInsightsKMSKeyId()) == false)
+            return false;
+        if (other.getPerformanceInsightsRetentionPeriod() == null ^ this.getPerformanceInsightsRetentionPeriod() == null)
+            return false;
+        if (other.getPerformanceInsightsRetentionPeriod() != null
+                && other.getPerformanceInsightsRetentionPeriod().equals(this.getPerformanceInsightsRetentionPeriod()) == false)
+            return false;
         return true;
     }
 
@@ -3981,6 +4909,16 @@ public class DBCluster implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getGlobalWriteForwardingStatus() == null) ? 0 : getGlobalWriteForwardingStatus().hashCode());
         hashCode = prime * hashCode + ((getGlobalWriteForwardingRequested() == null) ? 0 : getGlobalWriteForwardingRequested().hashCode());
         hashCode = prime * hashCode + ((getPendingModifiedValues() == null) ? 0 : getPendingModifiedValues().hashCode());
+        hashCode = prime * hashCode + ((getDBClusterInstanceClass() == null) ? 0 : getDBClusterInstanceClass().hashCode());
+        hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
+        hashCode = prime * hashCode + ((getIops() == null) ? 0 : getIops().hashCode());
+        hashCode = prime * hashCode + ((getPubliclyAccessible() == null) ? 0 : getPubliclyAccessible().hashCode());
+        hashCode = prime * hashCode + ((getAutoMinorVersionUpgrade() == null) ? 0 : getAutoMinorVersionUpgrade().hashCode());
+        hashCode = prime * hashCode + ((getMonitoringInterval() == null) ? 0 : getMonitoringInterval().hashCode());
+        hashCode = prime * hashCode + ((getMonitoringRoleArn() == null) ? 0 : getMonitoringRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getPerformanceInsightsEnabled() == null) ? 0 : getPerformanceInsightsEnabled().hashCode());
+        hashCode = prime * hashCode + ((getPerformanceInsightsKMSKeyId() == null) ? 0 : getPerformanceInsightsKMSKeyId().hashCode());
+        hashCode = prime * hashCode + ((getPerformanceInsightsRetentionPeriod() == null) ? 0 : getPerformanceInsightsRetentionPeriod().hashCode());
         return hashCode;
     }
 

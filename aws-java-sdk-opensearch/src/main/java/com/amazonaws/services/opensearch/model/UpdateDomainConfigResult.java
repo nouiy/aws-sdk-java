@@ -29,6 +29,12 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      */
     private DomainConfig domainConfig;
+    /**
+     * <p>
+     * Contains result of DryRun.
+     * </p>
+     */
+    private DryRunResults dryRunResults;
 
     /**
      * <p>
@@ -71,6 +77,46 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
     }
 
     /**
+     * <p>
+     * Contains result of DryRun.
+     * </p>
+     * 
+     * @param dryRunResults
+     *        Contains result of DryRun.
+     */
+
+    public void setDryRunResults(DryRunResults dryRunResults) {
+        this.dryRunResults = dryRunResults;
+    }
+
+    /**
+     * <p>
+     * Contains result of DryRun.
+     * </p>
+     * 
+     * @return Contains result of DryRun.
+     */
+
+    public DryRunResults getDryRunResults() {
+        return this.dryRunResults;
+    }
+
+    /**
+     * <p>
+     * Contains result of DryRun.
+     * </p>
+     * 
+     * @param dryRunResults
+     *        Contains result of DryRun.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDomainConfigResult withDryRunResults(DryRunResults dryRunResults) {
+        setDryRunResults(dryRunResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -83,7 +129,9 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDomainConfig() != null)
-            sb.append("DomainConfig: ").append(getDomainConfig());
+            sb.append("DomainConfig: ").append(getDomainConfig()).append(",");
+        if (getDryRunResults() != null)
+            sb.append("DryRunResults: ").append(getDryRunResults());
         sb.append("}");
         return sb.toString();
     }
@@ -102,6 +150,10 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getDomainConfig() != null && other.getDomainConfig().equals(this.getDomainConfig()) == false)
             return false;
+        if (other.getDryRunResults() == null ^ this.getDryRunResults() == null)
+            return false;
+        if (other.getDryRunResults() != null && other.getDryRunResults().equals(this.getDryRunResults()) == false)
+            return false;
         return true;
     }
 
@@ -111,6 +163,7 @@ public class UpdateDomainConfigResult extends com.amazonaws.AmazonWebServiceResu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDomainConfig() == null) ? 0 : getDomainConfig().hashCode());
+        hashCode = prime * hashCode + ((getDryRunResults() == null) ? 0 : getDryRunResults().hashCode());
         return hashCode;
     }
 

@@ -44,6 +44,10 @@ public class CreateDefaultSubnetRequestMarshaller implements Marshaller<Request<
             request.addParameter("AvailabilityZone", StringUtils.fromString(createDefaultSubnetRequest.getAvailabilityZone()));
         }
 
+        if (createDefaultSubnetRequest.getIpv6Native() != null) {
+            request.addParameter("Ipv6Native", StringUtils.fromBoolean(createDefaultSubnetRequest.getIpv6Native()));
+        }
+
         return request;
     }
 

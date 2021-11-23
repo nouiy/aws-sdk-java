@@ -27,24 +27,24 @@ public class StopSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Suite definition Id of the test suite run to be stopped.
+     * Suite definition ID of the test suite run to be stopped.
      * </p>
      */
     private String suiteDefinitionId;
     /**
      * <p>
-     * Suite run Id of the test suite run to be stopped.
+     * Suite run ID of the test suite run to be stopped.
      * </p>
      */
     private String suiteRunId;
 
     /**
      * <p>
-     * Suite definition Id of the test suite run to be stopped.
+     * Suite definition ID of the test suite run to be stopped.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite run to be stopped.
+     *        Suite definition ID of the test suite run to be stopped.
      */
 
     public void setSuiteDefinitionId(String suiteDefinitionId) {
@@ -53,10 +53,10 @@ public class StopSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Suite definition Id of the test suite run to be stopped.
+     * Suite definition ID of the test suite run to be stopped.
      * </p>
      * 
-     * @return Suite definition Id of the test suite run to be stopped.
+     * @return Suite definition ID of the test suite run to be stopped.
      */
 
     public String getSuiteDefinitionId() {
@@ -65,11 +65,11 @@ public class StopSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Suite definition Id of the test suite run to be stopped.
+     * Suite definition ID of the test suite run to be stopped.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite run to be stopped.
+     *        Suite definition ID of the test suite run to be stopped.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class StopSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Suite run Id of the test suite run to be stopped.
+     * Suite run ID of the test suite run to be stopped.
      * </p>
      * 
      * @param suiteRunId
-     *        Suite run Id of the test suite run to be stopped.
+     *        Suite run ID of the test suite run to be stopped.
      */
 
     public void setSuiteRunId(String suiteRunId) {
@@ -93,10 +93,10 @@ public class StopSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Suite run Id of the test suite run to be stopped.
+     * Suite run ID of the test suite run to be stopped.
      * </p>
      * 
-     * @return Suite run Id of the test suite run to be stopped.
+     * @return Suite run ID of the test suite run to be stopped.
      */
 
     public String getSuiteRunId() {
@@ -105,11 +105,11 @@ public class StopSuiteRunRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Suite run Id of the test suite run to be stopped.
+     * Suite run ID of the test suite run to be stopped.
      * </p>
      * 
      * @param suiteRunId
-     *        Suite run Id of the test suite run to be stopped.
+     *        Suite run ID of the test suite run to be stopped.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

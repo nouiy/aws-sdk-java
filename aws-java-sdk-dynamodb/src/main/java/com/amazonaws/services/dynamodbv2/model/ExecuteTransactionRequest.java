@@ -37,6 +37,17 @@ public class ExecuteTransactionRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String clientRequestToken;
+    /**
+     * <p>
+     * Determines the level of detail about either provisioned or on-demand throughput consumption that is returned in
+     * the response. For more information, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactGetItems.html"
+     * >TransactGetItems</a> and <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html"
+     * >TransactWriteItems</a>.
+     * </p>
+     */
+    private String returnConsumedCapacity;
 
     /**
      * <p>
@@ -150,6 +161,105 @@ public class ExecuteTransactionRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * Determines the level of detail about either provisioned or on-demand throughput consumption that is returned in
+     * the response. For more information, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactGetItems.html"
+     * >TransactGetItems</a> and <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html"
+     * >TransactWriteItems</a>.
+     * </p>
+     * 
+     * @param returnConsumedCapacity
+     *        Determines the level of detail about either provisioned or on-demand throughput consumption that is
+     *        returned in the response. For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactGetItems.html"
+     *        >TransactGetItems</a> and <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html"
+     *        >TransactWriteItems</a>.
+     * @see ReturnConsumedCapacity
+     */
+
+    public void setReturnConsumedCapacity(String returnConsumedCapacity) {
+        this.returnConsumedCapacity = returnConsumedCapacity;
+    }
+
+    /**
+     * <p>
+     * Determines the level of detail about either provisioned or on-demand throughput consumption that is returned in
+     * the response. For more information, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactGetItems.html"
+     * >TransactGetItems</a> and <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html"
+     * >TransactWriteItems</a>.
+     * </p>
+     * 
+     * @return Determines the level of detail about either provisioned or on-demand throughput consumption that is
+     *         returned in the response. For more information, see <a
+     *         href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactGetItems.html"
+     *         >TransactGetItems</a> and <a
+     *         href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html"
+     *         >TransactWriteItems</a>.
+     * @see ReturnConsumedCapacity
+     */
+
+    public String getReturnConsumedCapacity() {
+        return this.returnConsumedCapacity;
+    }
+
+    /**
+     * <p>
+     * Determines the level of detail about either provisioned or on-demand throughput consumption that is returned in
+     * the response. For more information, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactGetItems.html"
+     * >TransactGetItems</a> and <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html"
+     * >TransactWriteItems</a>.
+     * </p>
+     * 
+     * @param returnConsumedCapacity
+     *        Determines the level of detail about either provisioned or on-demand throughput consumption that is
+     *        returned in the response. For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactGetItems.html"
+     *        >TransactGetItems</a> and <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html"
+     *        >TransactWriteItems</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ReturnConsumedCapacity
+     */
+
+    public ExecuteTransactionRequest withReturnConsumedCapacity(String returnConsumedCapacity) {
+        setReturnConsumedCapacity(returnConsumedCapacity);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Determines the level of detail about either provisioned or on-demand throughput consumption that is returned in
+     * the response. For more information, see <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactGetItems.html"
+     * >TransactGetItems</a> and <a
+     * href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html"
+     * >TransactWriteItems</a>.
+     * </p>
+     * 
+     * @param returnConsumedCapacity
+     *        Determines the level of detail about either provisioned or on-demand throughput consumption that is
+     *        returned in the response. For more information, see <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactGetItems.html"
+     *        >TransactGetItems</a> and <a
+     *        href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_TransactWriteItems.html"
+     *        >TransactWriteItems</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ReturnConsumedCapacity
+     */
+
+    public ExecuteTransactionRequest withReturnConsumedCapacity(ReturnConsumedCapacity returnConsumedCapacity) {
+        this.returnConsumedCapacity = returnConsumedCapacity.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -164,7 +274,9 @@ public class ExecuteTransactionRequest extends com.amazonaws.AmazonWebServiceReq
         if (getTransactStatements() != null)
             sb.append("TransactStatements: ").append(getTransactStatements()).append(",");
         if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append(getClientRequestToken());
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
+        if (getReturnConsumedCapacity() != null)
+            sb.append("ReturnConsumedCapacity: ").append(getReturnConsumedCapacity());
         sb.append("}");
         return sb.toString();
     }
@@ -187,6 +299,10 @@ public class ExecuteTransactionRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
+        if (other.getReturnConsumedCapacity() == null ^ this.getReturnConsumedCapacity() == null)
+            return false;
+        if (other.getReturnConsumedCapacity() != null && other.getReturnConsumedCapacity().equals(this.getReturnConsumedCapacity()) == false)
+            return false;
         return true;
     }
 
@@ -197,6 +313,7 @@ public class ExecuteTransactionRequest extends com.amazonaws.AmazonWebServiceReq
 
         hashCode = prime * hashCode + ((getTransactStatements() == null) ? 0 : getTransactStatements().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
+        hashCode = prime * hashCode + ((getReturnConsumedCapacity() == null) ? 0 : getReturnConsumedCapacity().hashCode());
         return hashCode;
     }
 

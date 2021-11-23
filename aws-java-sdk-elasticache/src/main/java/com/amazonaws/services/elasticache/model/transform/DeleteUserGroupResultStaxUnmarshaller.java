@@ -70,6 +70,11 @@ public class DeleteUserGroupResultStaxUnmarshaller implements Unmarshaller<Delet
                     continue;
                 }
 
+                if (context.testExpression("MinimumEngineVersion", targetDepth)) {
+                    deleteUserGroupResult.setMinimumEngineVersion(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("PendingChanges", targetDepth)) {
                     deleteUserGroupResult.setPendingChanges(UserGroupPendingChangesStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

@@ -232,6 +232,14 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * </p>
      */
     private java.util.Date replicationGroupCreateTime;
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     */
+    private String dataTiering;
 
     /**
      * <p>
@@ -1901,6 +1909,99 @@ public class ReplicationGroup implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @param dataTiering
+     *        Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     *        parameter must be set to true when using r6gd nodes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @see DataTieringStatus
+     */
+
+    public void setDataTiering(String dataTiering) {
+        this.dataTiering = dataTiering;
+    }
+
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @return Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type.
+     *         This parameter must be set to true when using r6gd nodes. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @see DataTieringStatus
+     */
+
+    public String getDataTiering() {
+        return this.dataTiering;
+    }
+
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @param dataTiering
+     *        Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     *        parameter must be set to true when using r6gd nodes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataTieringStatus
+     */
+
+    public ReplicationGroup withDataTiering(String dataTiering) {
+        setDataTiering(dataTiering);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @param dataTiering
+     *        Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     *        parameter must be set to true when using r6gd nodes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @see DataTieringStatus
+     */
+
+    public void setDataTiering(DataTieringStatus dataTiering) {
+        withDataTiering(dataTiering);
+    }
+
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @param dataTiering
+     *        Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     *        parameter must be set to true when using r6gd nodes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataTieringStatus
+     */
+
+    public ReplicationGroup withDataTiering(DataTieringStatus dataTiering) {
+        this.dataTiering = dataTiering.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1961,7 +2062,9 @@ public class ReplicationGroup implements Serializable, Cloneable {
         if (getLogDeliveryConfigurations() != null)
             sb.append("LogDeliveryConfigurations: ").append(getLogDeliveryConfigurations()).append(",");
         if (getReplicationGroupCreateTime() != null)
-            sb.append("ReplicationGroupCreateTime: ").append(getReplicationGroupCreateTime());
+            sb.append("ReplicationGroupCreateTime: ").append(getReplicationGroupCreateTime()).append(",");
+        if (getDataTiering() != null)
+            sb.append("DataTiering: ").append(getDataTiering());
         sb.append("}");
         return sb.toString();
     }
@@ -2076,6 +2179,10 @@ public class ReplicationGroup implements Serializable, Cloneable {
             return false;
         if (other.getReplicationGroupCreateTime() != null && other.getReplicationGroupCreateTime().equals(this.getReplicationGroupCreateTime()) == false)
             return false;
+        if (other.getDataTiering() == null ^ this.getDataTiering() == null)
+            return false;
+        if (other.getDataTiering() != null && other.getDataTiering().equals(this.getDataTiering()) == false)
+            return false;
         return true;
     }
 
@@ -2109,6 +2216,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getUserGroupIds() == null) ? 0 : getUserGroupIds().hashCode());
         hashCode = prime * hashCode + ((getLogDeliveryConfigurations() == null) ? 0 : getLogDeliveryConfigurations().hashCode());
         hashCode = prime * hashCode + ((getReplicationGroupCreateTime() == null) ? 0 : getReplicationGroupCreateTime().hashCode());
+        hashCode = prime * hashCode + ((getDataTiering() == null) ? 0 : getDataTiering().hashCode());
         return hashCode;
     }
 

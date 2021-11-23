@@ -191,6 +191,22 @@ public class RestoreDBClusterToPointInTimeRequestMarshaller implements
             request.addParameter("EngineMode", StringUtils.fromString(restoreDBClusterToPointInTimeRequest.getEngineMode()));
         }
 
+        if (restoreDBClusterToPointInTimeRequest.getDBClusterInstanceClass() != null) {
+            request.addParameter("DBClusterInstanceClass", StringUtils.fromString(restoreDBClusterToPointInTimeRequest.getDBClusterInstanceClass()));
+        }
+
+        if (restoreDBClusterToPointInTimeRequest.getStorageType() != null) {
+            request.addParameter("StorageType", StringUtils.fromString(restoreDBClusterToPointInTimeRequest.getStorageType()));
+        }
+
+        if (restoreDBClusterToPointInTimeRequest.getPubliclyAccessible() != null) {
+            request.addParameter("PubliclyAccessible", StringUtils.fromBoolean(restoreDBClusterToPointInTimeRequest.getPubliclyAccessible()));
+        }
+
+        if (restoreDBClusterToPointInTimeRequest.getIops() != null) {
+            request.addParameter("Iops", StringUtils.fromInteger(restoreDBClusterToPointInTimeRequest.getIops()));
+        }
+
         return request;
     }
 

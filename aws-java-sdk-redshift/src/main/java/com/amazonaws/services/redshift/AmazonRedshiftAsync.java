@@ -3073,6 +3073,43 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
 
     /**
      * <p>
+     * Returns exchange status details and associated metadata for a reserved-node exchange. Statuses include such
+     * values as in progress and requested.
+     * </p>
+     * 
+     * @param describeReservedNodeExchangeStatusRequest
+     * @return A Java Future containing the result of the DescribeReservedNodeExchangeStatus operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsync.DescribeReservedNodeExchangeStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeReservedNodeExchangeStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeReservedNodeExchangeStatusResult> describeReservedNodeExchangeStatusAsync(
+            DescribeReservedNodeExchangeStatusRequest describeReservedNodeExchangeStatusRequest);
+
+    /**
+     * <p>
+     * Returns exchange status details and associated metadata for a reserved-node exchange. Statuses include such
+     * values as in progress and requested.
+     * </p>
+     * 
+     * @param describeReservedNodeExchangeStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeReservedNodeExchangeStatus operation returned by the
+     *         service.
+     * @sample AmazonRedshiftAsyncHandler.DescribeReservedNodeExchangeStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeReservedNodeExchangeStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeReservedNodeExchangeStatusResult> describeReservedNodeExchangeStatusAsync(
+            DescribeReservedNodeExchangeStatusRequest describeReservedNodeExchangeStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeReservedNodeExchangeStatusRequest, DescribeReservedNodeExchangeStatusResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of the available reserved node offerings by Amazon Redshift with their descriptions including the
      * node type, the fixed and recurring costs of reserving the node and duration the node will be reserved for you.
      * These descriptions help you determine which reserve node offering you want to purchase. You then use the unique
@@ -3881,6 +3918,47 @@ public interface AmazonRedshiftAsync extends AmazonRedshift {
      */
     java.util.concurrent.Future<GetClusterCredentialsResult> getClusterCredentialsAsync(GetClusterCredentialsRequest getClusterCredentialsRequest,
             com.amazonaws.handlers.AsyncHandler<GetClusterCredentialsRequest, GetClusterCredentialsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the configuration options for the reserved-node exchange. These options include information about the source
+     * reserved node and target reserved node offering. Details include the node type, the price, the node count, and
+     * the offering type.
+     * </p>
+     * 
+     * @param getReservedNodeExchangeConfigurationOptionsRequest
+     * @return A Java Future containing the result of the GetReservedNodeExchangeConfigurationOptions operation returned
+     *         by the service.
+     * @sample AmazonRedshiftAsync.GetReservedNodeExchangeConfigurationOptions
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/GetReservedNodeExchangeConfigurationOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetReservedNodeExchangeConfigurationOptionsResult> getReservedNodeExchangeConfigurationOptionsAsync(
+            GetReservedNodeExchangeConfigurationOptionsRequest getReservedNodeExchangeConfigurationOptionsRequest);
+
+    /**
+     * <p>
+     * Gets the configuration options for the reserved-node exchange. These options include information about the source
+     * reserved node and target reserved node offering. Details include the node type, the price, the node count, and
+     * the offering type.
+     * </p>
+     * 
+     * @param getReservedNodeExchangeConfigurationOptionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetReservedNodeExchangeConfigurationOptions operation returned
+     *         by the service.
+     * @sample AmazonRedshiftAsyncHandler.GetReservedNodeExchangeConfigurationOptions
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/GetReservedNodeExchangeConfigurationOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetReservedNodeExchangeConfigurationOptionsResult> getReservedNodeExchangeConfigurationOptionsAsync(
+            GetReservedNodeExchangeConfigurationOptionsRequest getReservedNodeExchangeConfigurationOptionsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetReservedNodeExchangeConfigurationOptionsRequest, GetReservedNodeExchangeConfigurationOptionsResult> asyncHandler);
 
     /**
      * <p>

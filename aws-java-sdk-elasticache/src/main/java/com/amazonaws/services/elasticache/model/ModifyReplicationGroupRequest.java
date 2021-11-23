@@ -214,7 +214,8 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     private String engineVersion;
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      */
     private Boolean autoMinorVersionUpgrade;
@@ -1615,11 +1616,13 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        This parameter is currently disabled.
+     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *        the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -1628,10 +1631,12 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return This parameter is currently disabled.
+     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *         the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -1640,11 +1645,13 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        This parameter is currently disabled.
+     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *        the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1655,10 +1662,12 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return This parameter is currently disabled.
+     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *         the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public Boolean isAutoMinorVersionUpgrade() {

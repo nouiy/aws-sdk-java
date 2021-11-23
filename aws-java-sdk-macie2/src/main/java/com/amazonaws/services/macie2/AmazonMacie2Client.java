@@ -1214,7 +1214,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Retrieves the Amazon Macie configuration settings for an Amazon Web Services organization.
+     * Retrieves the Amazon Macie configuration settings for an organization in Organizations.
      * </p>
      * 
      * @param describeOrganizationConfigurationRequest
@@ -1287,7 +1287,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Disables an Amazon Macie account and deletes Macie resources for the account.
+     * Disables Amazon Macie and deletes all settings and resources for a Macie account.
      * </p>
      * 
      * @param disableMacieRequest
@@ -1357,7 +1357,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Disables an account as the delegated Amazon Macie administrator account for an Amazon Web Services organization.
+     * Disables an account as the delegated Amazon Macie administrator account for an organization in Organizations.
      * </p>
      * 
      * @param disableOrganizationAdminAccountRequest
@@ -1717,8 +1717,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Designates an account as the delegated Amazon Macie administrator account for an Amazon Web Services
-     * organization.
+     * Designates an account as the delegated Amazon Macie administrator account for an organization in Organizations.
      * </p>
      * 
      * @param enableOrganizationAdminAccountRequest
@@ -1862,7 +1861,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Retrieves (queries) aggregated statistical data for all the S3 buckets that Amazon Macie monitors and analyzes.
+     * Retrieves (queries) aggregated statistical data about S3 buckets that Amazon Macie monitors and analyzes.
      * </p>
      * 
      * @param getBucketStatisticsRequest
@@ -3261,8 +3260,8 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Retrieves information about the delegated Amazon Macie administrator account for an Amazon Web Services
-     * organization.
+     * Retrieves information about the delegated Amazon Macie administrator account for an organization in
+     * Organizations.
      * </p>
      * 
      * @param listOrganizationAdminAccountsRequest
@@ -3933,7 +3932,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Suspends or re-enables an Amazon Macie account, or updates the configuration settings for a Macie account.
+     * Suspends or re-enables Amazon Macie, or updates the configuration settings for a Macie account.
      * </p>
      * 
      * @param updateMacieSessionRequest
@@ -4073,7 +4072,7 @@ public class AmazonMacie2Client extends AmazonWebServiceClient implements Amazon
 
     /**
      * <p>
-     * Updates the Amazon Macie configuration settings for an Amazon Web Services organization.
+     * Updates the Amazon Macie configuration settings for an organization in Organizations.
      * </p>
      * 
      * @param updateOrganizationConfigurationRequest

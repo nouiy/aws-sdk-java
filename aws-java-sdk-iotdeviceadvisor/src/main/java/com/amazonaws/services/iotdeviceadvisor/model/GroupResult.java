@@ -30,7 +30,7 @@ public class GroupResult implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Group result Id.
+     * Group result ID.
      * </p>
      */
     private String groupId;
@@ -49,11 +49,11 @@ public class GroupResult implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Group result Id.
+     * Group result ID.
      * </p>
      * 
      * @param groupId
-     *        Group result Id.
+     *        Group result ID.
      */
 
     public void setGroupId(String groupId) {
@@ -62,10 +62,10 @@ public class GroupResult implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Group result Id.
+     * Group result ID.
      * </p>
      * 
-     * @return Group result Id.
+     * @return Group result ID.
      */
 
     public String getGroupId() {
@@ -74,11 +74,11 @@ public class GroupResult implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Group result Id.
+     * Group result ID.
      * </p>
      * 
      * @param groupId
-     *        Group result Id.
+     *        Group result ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

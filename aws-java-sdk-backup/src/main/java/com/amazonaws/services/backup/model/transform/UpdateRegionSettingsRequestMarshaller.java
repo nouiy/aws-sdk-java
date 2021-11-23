@@ -31,6 +31,8 @@ public class UpdateRegionSettingsRequestMarshaller {
 
     private static final MarshallingInfo<Map> RESOURCETYPEOPTINPREFERENCE_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceTypeOptInPreference").build();
+    private static final MarshallingInfo<Map> RESOURCETYPEMANAGEMENTPREFERENCE_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceTypeManagementPreference").build();
 
     private static final UpdateRegionSettingsRequestMarshaller instance = new UpdateRegionSettingsRequestMarshaller();
 
@@ -49,6 +51,7 @@ public class UpdateRegionSettingsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateRegionSettingsRequest.getResourceTypeOptInPreference(), RESOURCETYPEOPTINPREFERENCE_BINDING);
+            protocolMarshaller.marshall(updateRegionSettingsRequest.getResourceTypeManagementPreference(), RESOURCETYPEMANAGEMENTPREFERENCE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

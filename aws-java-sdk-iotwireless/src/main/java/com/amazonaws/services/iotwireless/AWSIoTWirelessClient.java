@@ -2795,6 +2795,74 @@ public class AWSIoTWirelessClient extends AmazonWebServiceClient implements AWSI
 
     /**
      * <p>
+     * Get NetworkAnalyzer configuration.
+     * </p>
+     * 
+     * @param getNetworkAnalyzerConfigurationRequest
+     * @return Result of the GetNetworkAnalyzerConfiguration operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.GetNetworkAnalyzerConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/GetNetworkAnalyzerConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetNetworkAnalyzerConfigurationResult getNetworkAnalyzerConfiguration(GetNetworkAnalyzerConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetNetworkAnalyzerConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final GetNetworkAnalyzerConfigurationResult executeGetNetworkAnalyzerConfiguration(
+            GetNetworkAnalyzerConfigurationRequest getNetworkAnalyzerConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getNetworkAnalyzerConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetNetworkAnalyzerConfigurationRequest> request = null;
+        Response<GetNetworkAnalyzerConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetNetworkAnalyzerConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getNetworkAnalyzerConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoT Wireless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetNetworkAnalyzerConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetNetworkAnalyzerConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetNetworkAnalyzerConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets information about a partner account. If <code>PartnerAccountId</code> and <code>PartnerType</code> are
      * <code>null</code>, returns all partner accounts.
      * </p>
@@ -5419,6 +5487,74 @@ public class AWSIoTWirelessClient extends AmazonWebServiceClient implements AWSI
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateMulticastGroupResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateMulticastGroupResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update NetworkAnalyzer configuration.
+     * </p>
+     * 
+     * @param updateNetworkAnalyzerConfigurationRequest
+     * @return Result of the UpdateNetworkAnalyzerConfiguration operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @sample AWSIoTWireless.UpdateNetworkAnalyzerConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/UpdateNetworkAnalyzerConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateNetworkAnalyzerConfigurationResult updateNetworkAnalyzerConfiguration(UpdateNetworkAnalyzerConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateNetworkAnalyzerConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateNetworkAnalyzerConfigurationResult executeUpdateNetworkAnalyzerConfiguration(
+            UpdateNetworkAnalyzerConfigurationRequest updateNetworkAnalyzerConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateNetworkAnalyzerConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateNetworkAnalyzerConfigurationRequest> request = null;
+        Response<UpdateNetworkAnalyzerConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateNetworkAnalyzerConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateNetworkAnalyzerConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoT Wireless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateNetworkAnalyzerConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateNetworkAnalyzerConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateNetworkAnalyzerConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

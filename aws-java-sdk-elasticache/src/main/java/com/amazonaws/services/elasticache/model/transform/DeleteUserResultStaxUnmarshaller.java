@@ -65,6 +65,11 @@ public class DeleteUserResultStaxUnmarshaller implements Unmarshaller<DeleteUser
                     continue;
                 }
 
+                if (context.testExpression("MinimumEngineVersion", targetDepth)) {
+                    deleteUserResult.setMinimumEngineVersion(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("AccessString", targetDepth)) {
                     deleteUserResult.setAccessString(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

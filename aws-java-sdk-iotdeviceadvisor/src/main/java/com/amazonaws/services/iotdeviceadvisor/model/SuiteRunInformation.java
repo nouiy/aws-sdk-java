@@ -21,6 +21,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Information about the suite run.
  * </p>
+ * <p>
+ * Requires permission to access the <a href=
+ * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+ * >SuiteRunInformation</a> action.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/SuiteRunInformation"
  *      target="_top">AWS API Documentation</a>
@@ -30,7 +35,7 @@ public class SuiteRunInformation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Suite definition Id of the suite run.
+     * Suite definition ID of the suite run.
      * </p>
      */
     private String suiteDefinitionId;
@@ -48,7 +53,7 @@ public class SuiteRunInformation implements Serializable, Cloneable, StructuredP
     private String suiteDefinitionName;
     /**
      * <p>
-     * Suite run Id of the suite run.
+     * Suite run ID of the suite run.
      * </p>
      */
     private String suiteRunId;
@@ -91,11 +96,11 @@ public class SuiteRunInformation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Suite definition Id of the suite run.
+     * Suite definition ID of the suite run.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the suite run.
+     *        Suite definition ID of the suite run.
      */
 
     public void setSuiteDefinitionId(String suiteDefinitionId) {
@@ -104,10 +109,10 @@ public class SuiteRunInformation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Suite definition Id of the suite run.
+     * Suite definition ID of the suite run.
      * </p>
      * 
-     * @return Suite definition Id of the suite run.
+     * @return Suite definition ID of the suite run.
      */
 
     public String getSuiteDefinitionId() {
@@ -116,11 +121,11 @@ public class SuiteRunInformation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Suite definition Id of the suite run.
+     * Suite definition ID of the suite run.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the suite run.
+     *        Suite definition ID of the suite run.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -211,11 +216,11 @@ public class SuiteRunInformation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Suite run Id of the suite run.
+     * Suite run ID of the suite run.
      * </p>
      * 
      * @param suiteRunId
-     *        Suite run Id of the suite run.
+     *        Suite run ID of the suite run.
      */
 
     public void setSuiteRunId(String suiteRunId) {
@@ -224,10 +229,10 @@ public class SuiteRunInformation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Suite run Id of the suite run.
+     * Suite run ID of the suite run.
      * </p>
      * 
-     * @return Suite run Id of the suite run.
+     * @return Suite run ID of the suite run.
      */
 
     public String getSuiteRunId() {
@@ -236,11 +241,11 @@ public class SuiteRunInformation implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Suite run Id of the suite run.
+     * Suite run ID of the suite run.
      * </p>
      * 
      * @param suiteRunId
-     *        Suite run Id of the suite run.
+     *        Suite run ID of the suite run.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

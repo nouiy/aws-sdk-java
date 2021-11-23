@@ -1923,6 +1923,27 @@ public interface AmazonRedshift {
 
     /**
      * <p>
+     * Returns exchange status details and associated metadata for a reserved-node exchange. Statuses include such
+     * values as in progress and requested.
+     * </p>
+     * 
+     * @param describeReservedNodeExchangeStatusRequest
+     * @return Result of the DescribeReservedNodeExchangeStatus operation returned by the service.
+     * @throws ReservedNodeNotFoundException
+     *         The specified reserved compute node not found.
+     * @throws ReservedNodeExchangeNotFoundException
+     *         The reserved-node exchange status wasn't found.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @sample AmazonRedshift.DescribeReservedNodeExchangeStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/DescribeReservedNodeExchangeStatus"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeReservedNodeExchangeStatusResult describeReservedNodeExchangeStatus(
+            DescribeReservedNodeExchangeStatusRequest describeReservedNodeExchangeStatusRequest);
+
+    /**
+     * <p>
      * Returns a list of the available reserved node offerings by Amazon Redshift with their descriptions including the
      * node type, the fixed and recurring costs of reserving the node and duration the node will be reserved for you.
      * These descriptions help you determine which reserve node offering you want to purchase. You then use the unique
@@ -2374,6 +2395,40 @@ public interface AmazonRedshift {
      *      API Documentation</a>
      */
     GetClusterCredentialsResult getClusterCredentials(GetClusterCredentialsRequest getClusterCredentialsRequest);
+
+    /**
+     * <p>
+     * Gets the configuration options for the reserved-node exchange. These options include information about the source
+     * reserved node and target reserved node offering. Details include the node type, the price, the node count, and
+     * the offering type.
+     * </p>
+     * 
+     * @param getReservedNodeExchangeConfigurationOptionsRequest
+     * @return Result of the GetReservedNodeExchangeConfigurationOptions operation returned by the service.
+     * @throws ReservedNodeNotFoundException
+     *         The specified reserved compute node not found.
+     * @throws InvalidReservedNodeStateException
+     *         Indicates that the Reserved Node being exchanged is not in an active state.
+     * @throws ReservedNodeAlreadyMigratedException
+     *         Indicates that the reserved node has already been exchanged.
+     * @throws ReservedNodeOfferingNotFoundException
+     *         Specified offering does not exist.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws ClusterNotFoundException
+     *         The <code>ClusterIdentifier</code> parameter does not refer to an existing cluster.
+     * @throws ClusterSnapshotNotFoundException
+     *         The snapshot identifier does not refer to an existing cluster snapshot.
+     * @sample AmazonRedshift.GetReservedNodeExchangeConfigurationOptions
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/GetReservedNodeExchangeConfigurationOptions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetReservedNodeExchangeConfigurationOptionsResult getReservedNodeExchangeConfigurationOptions(
+            GetReservedNodeExchangeConfigurationOptionsRequest getReservedNodeExchangeConfigurationOptionsRequest);
 
     /**
      * <p>
@@ -3018,6 +3073,19 @@ public interface AmazonRedshift {
      *         Your account is not authorized to perform the requested operation.
      * @throws LimitExceededException
      *         The encryption key has exceeded its grant limit in Amazon Web Services KMS.
+     * @throws ReservedNodeNotFoundException
+     *         The specified reserved compute node not found.
+     * @throws InvalidReservedNodeStateException
+     *         Indicates that the Reserved Node being exchanged is not in an active state.
+     * @throws ReservedNodeAlreadyMigratedException
+     *         Indicates that the reserved node has already been exchanged.
+     * @throws ReservedNodeOfferingNotFoundException
+     *         Specified offering does not exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws ReservedNodeAlreadyExistsException
+     *         User already has a reservation with the given identifier.
      * @sample AmazonRedshift.ResizeCluster
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/ResizeCluster" target="_top">AWS API
      *      Documentation</a>
@@ -3102,6 +3170,21 @@ public interface AmazonRedshift {
      *         You have exceeded the number of tags allowed.
      * @throws InvalidTagException
      *         The tag is invalid.
+     * @throws ReservedNodeNotFoundException
+     *         The specified reserved compute node not found.
+     * @throws InvalidReservedNodeStateException
+     *         Indicates that the Reserved Node being exchanged is not in an active state.
+     * @throws ReservedNodeAlreadyMigratedException
+     *         Indicates that the reserved node has already been exchanged.
+     * @throws ReservedNodeOfferingNotFoundException
+     *         Specified offering does not exist.
+     * @throws DependentServiceUnavailableException
+     *         Your request cannot be completed because a dependent internal service is temporarily unavailable. Wait 30
+     *         to 60 seconds and try again.
+     * @throws ReservedNodeAlreadyExistsException
+     *         User already has a reservation with the given identifier.
+     * @throws UnsupportedOperationException
+     *         The requested operation isn't supported.
      * @sample AmazonRedshift.RestoreFromClusterSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-2012-12-01/RestoreFromClusterSnapshot"
      *      target="_top">AWS API Documentation</a>

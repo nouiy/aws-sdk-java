@@ -144,6 +144,16 @@ public class SubnetStaxUnmarshaller implements Unmarshaller<Subnet, StaxUnmarsha
                     subnet.setEnableDns64(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ipv6Native", targetDepth)) {
+                    subnet.setIpv6Native(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("privateDnsNameOptionsOnLaunch", targetDepth)) {
+                    subnet.setPrivateDnsNameOptionsOnLaunch(PrivateDnsNameOptionsOnLaunchStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return subnet;

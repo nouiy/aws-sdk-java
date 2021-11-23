@@ -73,7 +73,7 @@ public class SourceAccessConfiguration implements Serializable, Cloneable, Struc
      * <li>
      * <p>
      * <code>VIRTUAL_HOST</code> - (Amazon MQ) The name of the virtual host in your RabbitMQ broker. Lambda uses this
-     * RabbitMQ host as the event source.
+     * RabbitMQ host as the event source. This property cannot be specified in an UpdateEventSourceMapping API call.
      * </p>
      * </li>
      * </ul>
@@ -131,7 +131,7 @@ public class SourceAccessConfiguration implements Serializable, Cloneable, Struc
      * <li>
      * <p>
      * <code>VIRTUAL_HOST</code> - (Amazon MQ) The name of the virtual host in your RabbitMQ broker. Lambda uses this
-     * RabbitMQ host as the event source.
+     * RabbitMQ host as the event source. This property cannot be specified in an UpdateEventSourceMapping API call.
      * </p>
      * </li>
      * </ul>
@@ -178,7 +178,8 @@ public class SourceAccessConfiguration implements Serializable, Cloneable, Struc
      *        <li>
      *        <p>
      *        <code>VIRTUAL_HOST</code> - (Amazon MQ) The name of the virtual host in your RabbitMQ broker. Lambda uses
-     *        this RabbitMQ host as the event source.
+     *        this RabbitMQ host as the event source. This property cannot be specified in an UpdateEventSourceMapping
+     *        API call.
      *        </p>
      *        </li>
      * @see SourceAccessType
@@ -232,7 +233,7 @@ public class SourceAccessConfiguration implements Serializable, Cloneable, Struc
      * <li>
      * <p>
      * <code>VIRTUAL_HOST</code> - (Amazon MQ) The name of the virtual host in your RabbitMQ broker. Lambda uses this
-     * RabbitMQ host as the event source.
+     * RabbitMQ host as the event source. This property cannot be specified in an UpdateEventSourceMapping API call.
      * </p>
      * </li>
      * </ul>
@@ -278,7 +279,8 @@ public class SourceAccessConfiguration implements Serializable, Cloneable, Struc
      *         <li>
      *         <p>
      *         <code>VIRTUAL_HOST</code> - (Amazon MQ) The name of the virtual host in your RabbitMQ broker. Lambda uses
-     *         this RabbitMQ host as the event source.
+     *         this RabbitMQ host as the event source. This property cannot be specified in an UpdateEventSourceMapping
+     *         API call.
      *         </p>
      *         </li>
      * @see SourceAccessType
@@ -332,7 +334,7 @@ public class SourceAccessConfiguration implements Serializable, Cloneable, Struc
      * <li>
      * <p>
      * <code>VIRTUAL_HOST</code> - (Amazon MQ) The name of the virtual host in your RabbitMQ broker. Lambda uses this
-     * RabbitMQ host as the event source.
+     * RabbitMQ host as the event source. This property cannot be specified in an UpdateEventSourceMapping API call.
      * </p>
      * </li>
      * </ul>
@@ -379,7 +381,8 @@ public class SourceAccessConfiguration implements Serializable, Cloneable, Struc
      *        <li>
      *        <p>
      *        <code>VIRTUAL_HOST</code> - (Amazon MQ) The name of the virtual host in your RabbitMQ broker. Lambda uses
-     *        this RabbitMQ host as the event source.
+     *        this RabbitMQ host as the event source. This property cannot be specified in an UpdateEventSourceMapping
+     *        API call.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -435,7 +438,7 @@ public class SourceAccessConfiguration implements Serializable, Cloneable, Struc
      * <li>
      * <p>
      * <code>VIRTUAL_HOST</code> - (Amazon MQ) The name of the virtual host in your RabbitMQ broker. Lambda uses this
-     * RabbitMQ host as the event source.
+     * RabbitMQ host as the event source. This property cannot be specified in an UpdateEventSourceMapping API call.
      * </p>
      * </li>
      * </ul>
@@ -482,7 +485,8 @@ public class SourceAccessConfiguration implements Serializable, Cloneable, Struc
      *        <li>
      *        <p>
      *        <code>VIRTUAL_HOST</code> - (Amazon MQ) The name of the virtual host in your RabbitMQ broker. Lambda uses
-     *        this RabbitMQ host as the event source.
+     *        this RabbitMQ host as the event source. This property cannot be specified in an UpdateEventSourceMapping
+     *        API call.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

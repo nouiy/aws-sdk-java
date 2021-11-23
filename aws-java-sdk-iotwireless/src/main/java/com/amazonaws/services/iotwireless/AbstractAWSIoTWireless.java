@@ -224,6 +224,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
     }
 
     @Override
+    public GetNetworkAnalyzerConfigurationResult getNetworkAnalyzerConfiguration(GetNetworkAnalyzerConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetPartnerAccountResult getPartnerAccount(GetPartnerAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -422,6 +427,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
 
     @Override
     public UpdateMulticastGroupResult updateMulticastGroup(UpdateMulticastGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateNetworkAnalyzerConfigurationResult updateNetworkAnalyzerConfiguration(UpdateNetworkAnalyzerConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -27,7 +27,7 @@ public class GetSuiteDefinitionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Suite definition Id of the test suite to get.
+     * Suite definition ID of the test suite to get.
      * </p>
      */
     private String suiteDefinitionId;
@@ -40,11 +40,11 @@ public class GetSuiteDefinitionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Suite definition Id of the test suite to get.
+     * Suite definition ID of the test suite to get.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite to get.
+     *        Suite definition ID of the test suite to get.
      */
 
     public void setSuiteDefinitionId(String suiteDefinitionId) {
@@ -53,10 +53,10 @@ public class GetSuiteDefinitionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Suite definition Id of the test suite to get.
+     * Suite definition ID of the test suite to get.
      * </p>
      * 
-     * @return Suite definition Id of the test suite to get.
+     * @return Suite definition ID of the test suite to get.
      */
 
     public String getSuiteDefinitionId() {
@@ -65,11 +65,11 @@ public class GetSuiteDefinitionRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Suite definition Id of the test suite to get.
+     * Suite definition ID of the test suite to get.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite to get.
+     *        Suite definition ID of the test suite to get.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

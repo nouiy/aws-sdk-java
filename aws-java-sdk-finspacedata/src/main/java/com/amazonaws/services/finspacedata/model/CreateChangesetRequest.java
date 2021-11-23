@@ -100,6 +100,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * <p>
      * For example, you could specify the following for <code>formatParams</code>:
+     * <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
      * </p>
      */
     private java.util.Map<String, String> formatParams;
@@ -480,6 +481,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * <p>
      * For example, you could specify the following for <code>formatParams</code>:
+     * <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
      * </p>
      * 
      * @return Options that define the structure of the source file(s) including the format type (
@@ -512,6 +514,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *         </ul>
      *         <p>
      *         For example, you could specify the following for <code>formatParams</code>:
+     *         <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
      */
 
     public java.util.Map<String, String> getFormatParams() {
@@ -551,6 +554,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * <p>
      * For example, you could specify the following for <code>formatParams</code>:
+     * <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
      * </p>
      * 
      * @param formatParams
@@ -584,6 +588,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </ul>
      *        <p>
      *        For example, you could specify the following for <code>formatParams</code>:
+     *        <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
      */
 
     public void setFormatParams(java.util.Map<String, String> formatParams) {
@@ -623,6 +628,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * </ul>
      * <p>
      * For example, you could specify the following for <code>formatParams</code>:
+     * <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
      * </p>
      * 
      * @param formatParams
@@ -656,6 +662,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </ul>
      *        <p>
      *        For example, you could specify the following for <code>formatParams</code>:
+     *        <code> "formatParams": { "formatType": "CSV", "withHeader": "true", "separator": ",", "compression":"None" } </code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

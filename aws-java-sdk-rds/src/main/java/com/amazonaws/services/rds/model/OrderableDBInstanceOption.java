@@ -205,6 +205,20 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
      * </p>
      */
     private Boolean supportsGlobalDatabases;
+    /**
+     * <p>
+     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * </p>
+     * <p>
+     * The Multi-AZ DB clusters feature is in preview and is subject to change.
+     * </p>
+     * <p>
+     * For more information on Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     */
+    private Boolean supportsClusters;
 
     /**
      * <p>
@@ -1667,6 +1681,118 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * </p>
+     * <p>
+     * The Multi-AZ DB clusters feature is in preview and is subject to change.
+     * </p>
+     * <p>
+     * For more information on Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     * 
+     * @param supportsClusters
+     *        Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
+     *        <p>
+     *        The Multi-AZ DB clusters feature is in preview and is subject to change.
+     *        </p>
+     *        <p>
+     *        For more information on Multi-AZ DB clusters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     *        deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     */
+
+    public void setSupportsClusters(Boolean supportsClusters) {
+        this.supportsClusters = supportsClusters;
+    }
+
+    /**
+     * <p>
+     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * </p>
+     * <p>
+     * The Multi-AZ DB clusters feature is in preview and is subject to change.
+     * </p>
+     * <p>
+     * For more information on Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     * 
+     * @return Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
+     *         <p>
+     *         The Multi-AZ DB clusters feature is in preview and is subject to change.
+     *         </p>
+     *         <p>
+     *         For more information on Multi-AZ DB clusters, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">
+     *         Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     */
+
+    public Boolean getSupportsClusters() {
+        return this.supportsClusters;
+    }
+
+    /**
+     * <p>
+     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * </p>
+     * <p>
+     * The Multi-AZ DB clusters feature is in preview and is subject to change.
+     * </p>
+     * <p>
+     * For more information on Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     * 
+     * @param supportsClusters
+     *        Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
+     *        <p>
+     *        The Multi-AZ DB clusters feature is in preview and is subject to change.
+     *        </p>
+     *        <p>
+     *        For more information on Multi-AZ DB clusters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     *        deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OrderableDBInstanceOption withSupportsClusters(Boolean supportsClusters) {
+        setSupportsClusters(supportsClusters);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Whether DB instances can be configured as a Multi-AZ DB cluster.
+     * </p>
+     * <p>
+     * The Multi-AZ DB clusters feature is in preview and is subject to change.
+     * </p>
+     * <p>
+     * For more information on Multi-AZ DB clusters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html"> Multi-AZ
+     * deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     * 
+     * @return Whether DB instances can be configured as a Multi-AZ DB cluster.</p>
+     *         <p>
+     *         The Multi-AZ DB clusters feature is in preview and is subject to change.
+     *         </p>
+     *         <p>
+     *         For more information on Multi-AZ DB clusters, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/multi-az-db-clusters-concepts.html">
+     *         Multi-AZ deployments with two readable standby DB instances</a> in the <i>Amazon RDS User Guide.</i>
+     */
+
+    public Boolean isSupportsClusters() {
+        return this.supportsClusters;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1733,7 +1859,9 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
         if (getSupportedActivityStreamModes() != null)
             sb.append("SupportedActivityStreamModes: ").append(getSupportedActivityStreamModes()).append(",");
         if (getSupportsGlobalDatabases() != null)
-            sb.append("SupportsGlobalDatabases: ").append(getSupportsGlobalDatabases());
+            sb.append("SupportsGlobalDatabases: ").append(getSupportsGlobalDatabases()).append(",");
+        if (getSupportsClusters() != null)
+            sb.append("SupportsClusters: ").append(getSupportsClusters());
         sb.append("}");
         return sb.toString();
     }
@@ -1862,6 +1990,10 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
             return false;
         if (other.getSupportsGlobalDatabases() != null && other.getSupportsGlobalDatabases().equals(this.getSupportsGlobalDatabases()) == false)
             return false;
+        if (other.getSupportsClusters() == null ^ this.getSupportsClusters() == null)
+            return false;
+        if (other.getSupportsClusters() != null && other.getSupportsClusters().equals(this.getSupportsClusters()) == false)
+            return false;
         return true;
     }
 
@@ -1898,6 +2030,7 @@ public class OrderableDBInstanceOption implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getOutpostCapable() == null) ? 0 : getOutpostCapable().hashCode());
         hashCode = prime * hashCode + ((getSupportedActivityStreamModes() == null) ? 0 : getSupportedActivityStreamModes().hashCode());
         hashCode = prime * hashCode + ((getSupportsGlobalDatabases() == null) ? 0 : getSupportsGlobalDatabases().hashCode());
+        hashCode = prime * hashCode + ((getSupportsClusters() == null) ? 0 : getSupportsClusters().hashCode());
         return hashCode;
     }
 

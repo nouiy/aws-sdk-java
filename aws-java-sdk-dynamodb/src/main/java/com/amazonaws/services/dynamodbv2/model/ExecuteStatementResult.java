@@ -38,6 +38,8 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
      */
     private String nextToken;
 
+    private ConsumedCapacity consumedCapacity;
+
     /**
      * <p>
      * If a read operation was used, this property will contain the result of the read operation; a map of attribute
@@ -163,6 +165,32 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * @param consumedCapacity
+     */
+
+    public void setConsumedCapacity(ConsumedCapacity consumedCapacity) {
+        this.consumedCapacity = consumedCapacity;
+    }
+
+    /**
+     * @return
+     */
+
+    public ConsumedCapacity getConsumedCapacity() {
+        return this.consumedCapacity;
+    }
+
+    /**
+     * @param consumedCapacity
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExecuteStatementResult withConsumedCapacity(ConsumedCapacity consumedCapacity) {
+        setConsumedCapacity(consumedCapacity);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -177,7 +205,9 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
         if (getItems() != null)
             sb.append("Items: ").append(getItems()).append(",");
         if (getNextToken() != null)
-            sb.append("NextToken: ").append(getNextToken());
+            sb.append("NextToken: ").append(getNextToken()).append(",");
+        if (getConsumedCapacity() != null)
+            sb.append("ConsumedCapacity: ").append(getConsumedCapacity());
         sb.append("}");
         return sb.toString();
     }
@@ -200,6 +230,10 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
             return false;
+        if (other.getConsumedCapacity() == null ^ this.getConsumedCapacity() == null)
+            return false;
+        if (other.getConsumedCapacity() != null && other.getConsumedCapacity().equals(this.getConsumedCapacity()) == false)
+            return false;
         return true;
     }
 
@@ -210,6 +244,7 @@ public class ExecuteStatementResult extends com.amazonaws.AmazonWebServiceResult
 
         hashCode = prime * hashCode + ((getItems() == null) ? 0 : getItems().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
+        hashCode = prime * hashCode + ((getConsumedCapacity() == null) ? 0 : getConsumedCapacity().hashCode());
         return hashCode;
     }
 

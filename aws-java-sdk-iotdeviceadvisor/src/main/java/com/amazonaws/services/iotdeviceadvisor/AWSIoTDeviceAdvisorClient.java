@@ -51,13 +51,14 @@ import com.amazonaws.services.iotdeviceadvisor.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * AWS IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device
- * software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable
- * and secure connectivity with AWS IoT Core before deploying devices to production. By using Device Advisor, you can
- * confirm that your devices can connect to AWS IoT Core, follow security best practices and, if applicable, receive
- * software updates from IoT Device Management. You can also download signed qualification reports to submit to the AWS
- * Partner Network to get your device qualified for the AWS Partner Device Catalog without the need to send your device
- * in and wait for it to be tested.
+ * Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT
+ * devices during device software development. Device Advisor provides pre-built tests that you can use to validate IoT
+ * devices for reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to
+ * production. By using Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core,
+ * follow security best practices and, if applicable, receive software updates from IoT Device Management. You can also
+ * download signed qualification reports to submit to the Amazon Web Services Partner Network to get your device
+ * qualified for the Amazon Web Services Partner Device Catalog without the need to send your device in and wait for it
+ * to be tested.
  * </p>
  */
 @ThreadSafe
@@ -147,6 +148,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
      * <p>
      * Creates a Device Advisor test suite.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >CreateSuiteDefinition</a> action.
+     * </p>
      * 
      * @param createSuiteDefinitionRequest
      * @return Result of the CreateSuiteDefinition operation returned by the service.
@@ -207,6 +213,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
      * <p>
      * Deletes a Device Advisor test suite.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >DeleteSuiteDefinition</a> action.
+     * </p>
      * 
      * @param deleteSuiteDefinitionRequest
      * @return Result of the DeleteSuiteDefinition operation returned by the service.
@@ -264,8 +275,70 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
     }
 
     /**
+     * @param getEndpointRequest
+     * @return Result of the GetEndpoint operation returned by the service.
+     * @throws ValidationException
+     *         Sends invalid request exception.
+     * @throws InternalServerException
+     *         Sends Internal Failure Exception.
+     * @throws ResourceNotFoundException
+     *         Sends Resource Not Found Exception.
+     * @sample AWSIoTDeviceAdvisor.GetEndpoint
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotdeviceadvisor-2020-09-18/GetEndpoint" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetEndpointResult getEndpoint(GetEndpointRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetEndpoint(request);
+    }
+
+    @SdkInternalApi
+    final GetEndpointResult executeGetEndpoint(GetEndpointRequest getEndpointRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getEndpointRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetEndpointRequest> request = null;
+        Response<GetEndpointResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetEndpointRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getEndpointRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IotDeviceAdvisor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetEndpoint");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetEndpointResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetEndpointResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
      * <p>
      * Gets information about a Device Advisor test suite.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetSuiteDefinition</a> action.
      * </p>
      * 
      * @param getSuiteDefinitionRequest
@@ -328,6 +401,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
      * <p>
      * Gets information about a Device Advisor test suite run.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetSuiteRun</a> action.
+     * </p>
      * 
      * @param getSuiteRunRequest
      * @return Result of the GetSuiteRun operation returned by the service.
@@ -388,6 +466,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
     /**
      * <p>
      * Gets a report download link for a successful Device Advisor qualifying test suite run.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >GetSuiteRunReport</a> action.
      * </p>
      * 
      * @param getSuiteRunReportRequest
@@ -450,6 +533,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
      * <p>
      * Lists the Device Advisor test suites you have created.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListSuiteDefinitions</a> action.
+     * </p>
      * 
      * @param listSuiteDefinitionsRequest
      * @return Result of the ListSuiteDefinitions operation returned by the service.
@@ -510,6 +598,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
      * Lists the runs of the specified Device Advisor test suite. You can list all runs of the test suite, or the runs
      * of a specific version of the test suite.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListSuiteRuns</a> action.
+     * </p>
      * 
      * @param listSuiteRunsRequest
      * @return Result of the ListSuiteRuns operation returned by the service.
@@ -568,6 +661,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
     /**
      * <p>
      * Lists the tags attached to an IoT Device Advisor resource.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >ListTagsForResource</a> action.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -630,6 +728,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
      * <p>
      * Starts a Device Advisor test suite run.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >StartSuiteRun</a> action.
+     * </p>
      * 
      * @param startSuiteRunRequest
      * @return Result of the StartSuiteRun operation returned by the service.
@@ -690,6 +793,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
     /**
      * <p>
      * Stops a Device Advisor test suite run that is currently running.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >StopSuiteRun</a> action.
      * </p>
      * 
      * @param stopSuiteRunRequest
@@ -752,6 +860,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
      * <p>
      * Adds to and modifies existing tags of an IoT Device Advisor resource.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >TagResource</a> action.
+     * </p>
      * 
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
@@ -813,6 +926,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
      * <p>
      * Removes tags from an IoT Device Advisor resource.
      * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >UntagResource</a> action.
+     * </p>
      * 
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
@@ -873,6 +991,11 @@ public class AWSIoTDeviceAdvisorClient extends AmazonWebServiceClient implements
     /**
      * <p>
      * Updates a Device Advisor test suite.
+     * </p>
+     * <p>
+     * Requires permission to access the <a href=
+     * "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions"
+     * >UpdateSuiteDefinition</a> action.
      * </p>
      * 
      * @param updateSuiteDefinitionRequest

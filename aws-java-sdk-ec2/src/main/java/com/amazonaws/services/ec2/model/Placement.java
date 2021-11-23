@@ -59,7 +59,7 @@ public class Placement implements Serializable, Cloneable {
     private String groupName;
     /**
      * <p>
-     * The number of the partition the instance is in. Valid only if the placement group strategy is set to
+     * The number of the partition that the instance is in. Valid only if the placement group strategy is set to
      * <code>partition</code>.
      * </p>
      * <p>
@@ -338,7 +338,7 @@ public class Placement implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of the partition the instance is in. Valid only if the placement group strategy is set to
+     * The number of the partition that the instance is in. Valid only if the placement group strategy is set to
      * <code>partition</code>.
      * </p>
      * <p>
@@ -347,7 +347,7 @@ public class Placement implements Serializable, Cloneable {
      * </p>
      * 
      * @param partitionNumber
-     *        The number of the partition the instance is in. Valid only if the placement group strategy is set to
+     *        The number of the partition that the instance is in. Valid only if the placement group strategy is set to
      *        <code>partition</code>.</p>
      *        <p>
      *        This parameter is not supported by <a
@@ -360,7 +360,7 @@ public class Placement implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of the partition the instance is in. Valid only if the placement group strategy is set to
+     * The number of the partition that the instance is in. Valid only if the placement group strategy is set to
      * <code>partition</code>.
      * </p>
      * <p>
@@ -368,7 +368,7 @@ public class Placement implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet">CreateFleet</a>.
      * </p>
      * 
-     * @return The number of the partition the instance is in. Valid only if the placement group strategy is set to
+     * @return The number of the partition that the instance is in. Valid only if the placement group strategy is set to
      *         <code>partition</code>.</p>
      *         <p>
      *         This parameter is not supported by <a
@@ -381,7 +381,7 @@ public class Placement implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of the partition the instance is in. Valid only if the placement group strategy is set to
+     * The number of the partition that the instance is in. Valid only if the placement group strategy is set to
      * <code>partition</code>.
      * </p>
      * <p>
@@ -390,7 +390,7 @@ public class Placement implements Serializable, Cloneable {
      * </p>
      * 
      * @param partitionNumber
-     *        The number of the partition the instance is in. Valid only if the placement group strategy is set to
+     *        The number of the partition that the instance is in. Valid only if the placement group strategy is set to
      *        <code>partition</code>.</p>
      *        <p>
      *        This parameter is not supported by <a

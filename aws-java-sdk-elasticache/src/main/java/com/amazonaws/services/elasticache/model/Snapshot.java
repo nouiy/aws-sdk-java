@@ -158,6 +158,13 @@ public class Snapshot implements Serializable, Cloneable {
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -347,7 +354,8 @@ public class Snapshot implements Serializable, Cloneable {
     private String vpcId;
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      */
     private Boolean autoMinorVersionUpgrade;
@@ -402,6 +410,14 @@ public class Snapshot implements Serializable, Cloneable {
      * </p>
      */
     private String aRN;
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     */
+    private String dataTiering;
 
     /**
      * <p>
@@ -754,6 +770,13 @@ public class Snapshot implements Serializable, Cloneable {
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -912,6 +935,13 @@ public class Snapshot implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        Current generation:
+     *        </p>
+     *        <p>
+     *        <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *        </p>
+     *        <p>
+     *        <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *        <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *        </p>
      *        <p>
      *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
@@ -1080,6 +1110,13 @@ public class Snapshot implements Serializable, Cloneable {
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -1237,6 +1274,13 @@ public class Snapshot implements Serializable, Cloneable {
      *         <li>
      *         <p>
      *         Current generation:
+     *         </p>
+     *         <p>
+     *         <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *         </p>
+     *         <p>
+     *         <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *         <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *         </p>
      *         <p>
      *         <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
@@ -1405,6 +1449,13 @@ public class Snapshot implements Serializable, Cloneable {
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -1563,6 +1614,13 @@ public class Snapshot implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        Current generation:
+     *        </p>
+     *        <p>
+     *        <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *        </p>
+     *        <p>
+     *        <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *        <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *        </p>
      *        <p>
      *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
@@ -2407,11 +2465,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        This parameter is currently disabled.
+     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *        the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -2420,10 +2480,12 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return This parameter is currently disabled.
+     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *         the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -2432,11 +2494,13 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
-     *        This parameter is currently disabled.
+     *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *        the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2447,10 +2511,12 @@ public class Snapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * This parameter is currently disabled.
+     *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
+     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
-     * @return This parameter is currently disabled.
+     * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
+     *         the next minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -2858,6 +2924,99 @@ public class Snapshot implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @param dataTiering
+     *        Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     *        parameter must be set to true when using r6gd nodes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @see DataTieringStatus
+     */
+
+    public void setDataTiering(String dataTiering) {
+        this.dataTiering = dataTiering;
+    }
+
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @return Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type.
+     *         This parameter must be set to true when using r6gd nodes. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @see DataTieringStatus
+     */
+
+    public String getDataTiering() {
+        return this.dataTiering;
+    }
+
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @param dataTiering
+     *        Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     *        parameter must be set to true when using r6gd nodes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataTieringStatus
+     */
+
+    public Snapshot withDataTiering(String dataTiering) {
+        setDataTiering(dataTiering);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @param dataTiering
+     *        Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     *        parameter must be set to true when using r6gd nodes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @see DataTieringStatus
+     */
+
+    public void setDataTiering(DataTieringStatus dataTiering) {
+        withDataTiering(dataTiering);
+    }
+
+    /**
+     * <p>
+     * Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     * parameter must be set to true when using r6gd nodes. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * </p>
+     * 
+     * @param dataTiering
+     *        Enables data tiering. Data tiering is only supported for replication groups using the r6gd node type. This
+     *        parameter must be set to true when using r6gd nodes. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html">Data tiering</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DataTieringStatus
+     */
+
+    public Snapshot withDataTiering(DataTieringStatus dataTiering) {
+        this.dataTiering = dataTiering.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2922,7 +3081,9 @@ public class Snapshot implements Serializable, Cloneable {
         if (getKmsKeyId() != null)
             sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
         if (getARN() != null)
-            sb.append("ARN: ").append(getARN());
+            sb.append("ARN: ").append(getARN()).append(",");
+        if (getDataTiering() != null)
+            sb.append("DataTiering: ").append(getDataTiering());
         sb.append("}");
         return sb.toString();
     }
@@ -3045,6 +3206,10 @@ public class Snapshot implements Serializable, Cloneable {
             return false;
         if (other.getARN() != null && other.getARN().equals(this.getARN()) == false)
             return false;
+        if (other.getDataTiering() == null ^ this.getDataTiering() == null)
+            return false;
+        if (other.getDataTiering() != null && other.getDataTiering().equals(this.getDataTiering()) == false)
+            return false;
         return true;
     }
 
@@ -3080,6 +3245,7 @@ public class Snapshot implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getNodeSnapshots() == null) ? 0 : getNodeSnapshots().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getARN() == null) ? 0 : getARN().hashCode());
+        hashCode = prime * hashCode + ((getDataTiering() == null) ? 0 : getDataTiering().hashCode());
         return hashCode;
     }
 

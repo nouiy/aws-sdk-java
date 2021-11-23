@@ -374,6 +374,18 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String defaultIamRoleArn;
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     */
+    private String reservedNodeId;
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     */
+    private String targetReservedNodeOfferingId;
 
     /**
      * <p>
@@ -2803,6 +2815,86 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     * 
+     * @param reservedNodeId
+     *        The identifier of the target reserved node offering.
+     */
+
+    public void setReservedNodeId(String reservedNodeId) {
+        this.reservedNodeId = reservedNodeId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     * 
+     * @return The identifier of the target reserved node offering.
+     */
+
+    public String getReservedNodeId() {
+        return this.reservedNodeId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     * 
+     * @param reservedNodeId
+     *        The identifier of the target reserved node offering.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreFromClusterSnapshotRequest withReservedNodeId(String reservedNodeId) {
+        setReservedNodeId(reservedNodeId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     * 
+     * @param targetReservedNodeOfferingId
+     *        The identifier of the target reserved node offering.
+     */
+
+    public void setTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
+        this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     * 
+     * @return The identifier of the target reserved node offering.
+     */
+
+    public String getTargetReservedNodeOfferingId() {
+        return this.targetReservedNodeOfferingId;
+    }
+
+    /**
+     * <p>
+     * The identifier of the target reserved node offering.
+     * </p>
+     * 
+     * @param targetReservedNodeOfferingId
+     *        The identifier of the target reserved node offering.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreFromClusterSnapshotRequest withTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
+        setTargetReservedNodeOfferingId(targetReservedNodeOfferingId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2871,7 +2963,11 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
         if (getAquaConfigurationStatus() != null)
             sb.append("AquaConfigurationStatus: ").append(getAquaConfigurationStatus()).append(",");
         if (getDefaultIamRoleArn() != null)
-            sb.append("DefaultIamRoleArn: ").append(getDefaultIamRoleArn());
+            sb.append("DefaultIamRoleArn: ").append(getDefaultIamRoleArn()).append(",");
+        if (getReservedNodeId() != null)
+            sb.append("ReservedNodeId: ").append(getReservedNodeId()).append(",");
+        if (getTargetReservedNodeOfferingId() != null)
+            sb.append("TargetReservedNodeOfferingId: ").append(getTargetReservedNodeOfferingId());
         sb.append("}");
         return sb.toString();
     }
@@ -3005,6 +3101,14 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getDefaultIamRoleArn() != null && other.getDefaultIamRoleArn().equals(this.getDefaultIamRoleArn()) == false)
             return false;
+        if (other.getReservedNodeId() == null ^ this.getReservedNodeId() == null)
+            return false;
+        if (other.getReservedNodeId() != null && other.getReservedNodeId().equals(this.getReservedNodeId()) == false)
+            return false;
+        if (other.getTargetReservedNodeOfferingId() == null ^ this.getTargetReservedNodeOfferingId() == null)
+            return false;
+        if (other.getTargetReservedNodeOfferingId() != null && other.getTargetReservedNodeOfferingId().equals(this.getTargetReservedNodeOfferingId()) == false)
+            return false;
         return true;
     }
 
@@ -3042,6 +3146,8 @@ public class RestoreFromClusterSnapshotRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getAvailabilityZoneRelocation() == null) ? 0 : getAvailabilityZoneRelocation().hashCode());
         hashCode = prime * hashCode + ((getAquaConfigurationStatus() == null) ? 0 : getAquaConfigurationStatus().hashCode());
         hashCode = prime * hashCode + ((getDefaultIamRoleArn() == null) ? 0 : getDefaultIamRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getReservedNodeId() == null) ? 0 : getReservedNodeId().hashCode());
+        hashCode = prime * hashCode + ((getTargetReservedNodeOfferingId() == null) ? 0 : getTargetReservedNodeOfferingId().hashCode());
         return hashCode;
     }
 

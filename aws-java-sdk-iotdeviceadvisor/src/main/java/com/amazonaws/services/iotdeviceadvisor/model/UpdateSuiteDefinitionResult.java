@@ -25,13 +25,13 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Suite definition Id of the updated test suite.
+     * Suite definition ID of the updated test suite.
      * </p>
      */
     private String suiteDefinitionId;
     /**
      * <p>
-     * Amazon Resource name of the updated test suite.
+     * Amazon Resource Name (ARN) of the updated test suite.
      * </p>
      */
     private String suiteDefinitionArn;
@@ -62,11 +62,11 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Suite definition Id of the updated test suite.
+     * Suite definition ID of the updated test suite.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the updated test suite.
+     *        Suite definition ID of the updated test suite.
      */
 
     public void setSuiteDefinitionId(String suiteDefinitionId) {
@@ -75,10 +75,10 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Suite definition Id of the updated test suite.
+     * Suite definition ID of the updated test suite.
      * </p>
      * 
-     * @return Suite definition Id of the updated test suite.
+     * @return Suite definition ID of the updated test suite.
      */
 
     public String getSuiteDefinitionId() {
@@ -87,11 +87,11 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Suite definition Id of the updated test suite.
+     * Suite definition ID of the updated test suite.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the updated test suite.
+     *        Suite definition ID of the updated test suite.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,11 +102,11 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amazon Resource name of the updated test suite.
+     * Amazon Resource Name (ARN) of the updated test suite.
      * </p>
      * 
      * @param suiteDefinitionArn
-     *        Amazon Resource name of the updated test suite.
+     *        Amazon Resource Name (ARN) of the updated test suite.
      */
 
     public void setSuiteDefinitionArn(String suiteDefinitionArn) {
@@ -115,10 +115,10 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amazon Resource name of the updated test suite.
+     * Amazon Resource Name (ARN) of the updated test suite.
      * </p>
      * 
-     * @return Amazon Resource name of the updated test suite.
+     * @return Amazon Resource Name (ARN) of the updated test suite.
      */
 
     public String getSuiteDefinitionArn() {
@@ -127,11 +127,11 @@ public class UpdateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Amazon Resource name of the updated test suite.
+     * Amazon Resource Name (ARN) of the updated test suite.
      * </p>
      * 
      * @param suiteDefinitionArn
-     *        Amazon Resource name of the updated test suite.
+     *        Amazon Resource Name (ARN) of the updated test suite.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

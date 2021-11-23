@@ -567,6 +567,21 @@ public class AbstractAWSIoTWirelessAsync extends AbstractAWSIoTWireless implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetNetworkAnalyzerConfigurationResult> getNetworkAnalyzerConfigurationAsync(
+            GetNetworkAnalyzerConfigurationRequest request) {
+
+        return getNetworkAnalyzerConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetNetworkAnalyzerConfigurationResult> getNetworkAnalyzerConfigurationAsync(
+            GetNetworkAnalyzerConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetNetworkAnalyzerConfigurationRequest, GetNetworkAnalyzerConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetPartnerAccountResult> getPartnerAccountAsync(GetPartnerAccountRequest request) {
 
         return getPartnerAccountAsync(request, null);
@@ -1092,6 +1107,21 @@ public class AbstractAWSIoTWirelessAsync extends AbstractAWSIoTWireless implemen
     @Override
     public java.util.concurrent.Future<UpdateMulticastGroupResult> updateMulticastGroupAsync(UpdateMulticastGroupRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateMulticastGroupRequest, UpdateMulticastGroupResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNetworkAnalyzerConfigurationResult> updateNetworkAnalyzerConfigurationAsync(
+            UpdateNetworkAnalyzerConfigurationRequest request) {
+
+        return updateNetworkAnalyzerConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNetworkAnalyzerConfigurationResult> updateNetworkAnalyzerConfigurationAsync(
+            UpdateNetworkAnalyzerConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateNetworkAnalyzerConfigurationRequest, UpdateNetworkAnalyzerConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

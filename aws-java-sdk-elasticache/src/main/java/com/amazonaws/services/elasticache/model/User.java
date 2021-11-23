@@ -47,6 +47,8 @@ public class User implements Serializable, Cloneable {
      * </p>
      */
     private String engine;
+
+    private String minimumEngineVersion;
     /**
      * <p>
      * Access permissions string used for this user.
@@ -229,6 +231,32 @@ public class User implements Serializable, Cloneable {
 
     public User withEngine(String engine) {
         setEngine(engine);
+        return this;
+    }
+
+    /**
+     * @param minimumEngineVersion
+     */
+
+    public void setMinimumEngineVersion(String minimumEngineVersion) {
+        this.minimumEngineVersion = minimumEngineVersion;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getMinimumEngineVersion() {
+        return this.minimumEngineVersion;
+    }
+
+    /**
+     * @param minimumEngineVersion
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public User withMinimumEngineVersion(String minimumEngineVersion) {
+        setMinimumEngineVersion(minimumEngineVersion);
         return this;
     }
 
@@ -445,6 +473,8 @@ public class User implements Serializable, Cloneable {
             sb.append("Status: ").append(getStatus()).append(",");
         if (getEngine() != null)
             sb.append("Engine: ").append(getEngine()).append(",");
+        if (getMinimumEngineVersion() != null)
+            sb.append("MinimumEngineVersion: ").append(getMinimumEngineVersion()).append(",");
         if (getAccessString() != null)
             sb.append("AccessString: ").append(getAccessString()).append(",");
         if (getUserGroupIds() != null)
@@ -483,6 +513,10 @@ public class User implements Serializable, Cloneable {
             return false;
         if (other.getEngine() != null && other.getEngine().equals(this.getEngine()) == false)
             return false;
+        if (other.getMinimumEngineVersion() == null ^ this.getMinimumEngineVersion() == null)
+            return false;
+        if (other.getMinimumEngineVersion() != null && other.getMinimumEngineVersion().equals(this.getMinimumEngineVersion()) == false)
+            return false;
         if (other.getAccessString() == null ^ this.getAccessString() == null)
             return false;
         if (other.getAccessString() != null && other.getAccessString().equals(this.getAccessString()) == false)
@@ -511,6 +545,7 @@ public class User implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getUserName() == null) ? 0 : getUserName().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getEngine() == null) ? 0 : getEngine().hashCode());
+        hashCode = prime * hashCode + ((getMinimumEngineVersion() == null) ? 0 : getMinimumEngineVersion().hashCode());
         hashCode = prime * hashCode + ((getAccessString() == null) ? 0 : getAccessString().hashCode());
         hashCode = prime * hashCode + ((getUserGroupIds() == null) ? 0 : getUserGroupIds().hashCode());
         hashCode = prime * hashCode + ((getAuthentication() == null) ? 0 : getAuthentication().hashCode());

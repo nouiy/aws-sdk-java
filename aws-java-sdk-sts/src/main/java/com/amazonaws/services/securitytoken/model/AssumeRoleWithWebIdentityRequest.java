@@ -144,7 +144,8 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
      * a <code>SessionDuration</code> parameter that specifies the maximum length of the console session. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html"
-     * >Creating a URL that Enables Federated Users to Access the Management Console</a> in the <i>IAM User Guide</i>.
+     * >Creating a URL that Enables Federated Users to Access the Amazon Web Services Management Console</a> in the
+     * <i>IAM User Guide</i>.
      * </p>
      * </note>
      */
@@ -866,7 +867,8 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
      * a <code>SessionDuration</code> parameter that specifies the maximum length of the console session. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html"
-     * >Creating a URL that Enables Federated Users to Access the Management Console</a> in the <i>IAM User Guide</i>.
+     * >Creating a URL that Enables Federated Users to Access the Amazon Web Services Management Console</a> in the
+     * <i>IAM User Guide</i>.
      * </p>
      * </note>
      * 
@@ -888,8 +890,8 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
      *        token takes a <code>SessionDuration</code> parameter that specifies the maximum length of the console
      *        session. For more information, see <a href=
      *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html"
-     *        >Creating a URL that Enables Federated Users to Access the Management Console</a> in the <i>IAM User
-     *        Guide</i>.
+     *        >Creating a URL that Enables Federated Users to Access the Amazon Web Services Management Console</a> in
+     *        the <i>IAM User Guide</i>.
      *        </p>
      */
 
@@ -917,7 +919,8 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
      * a <code>SessionDuration</code> parameter that specifies the maximum length of the console session. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html"
-     * >Creating a URL that Enables Federated Users to Access the Management Console</a> in the <i>IAM User Guide</i>.
+     * >Creating a URL that Enables Federated Users to Access the Amazon Web Services Management Console</a> in the
+     * <i>IAM User Guide</i>.
      * </p>
      * </note>
      * 
@@ -938,8 +941,8 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
      *         sign-in token takes a <code>SessionDuration</code> parameter that specifies the maximum length of the
      *         console session. For more information, see <a href=
      *         "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html"
-     *         >Creating a URL that Enables Federated Users to Access the Management Console</a> in the <i>IAM User
-     *         Guide</i>.
+     *         >Creating a URL that Enables Federated Users to Access the Amazon Web Services Management Console</a> in
+     *         the <i>IAM User Guide</i>.
      *         </p>
      */
 
@@ -967,7 +970,8 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
      * a <code>SessionDuration</code> parameter that specifies the maximum length of the console session. For more
      * information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html"
-     * >Creating a URL that Enables Federated Users to Access the Management Console</a> in the <i>IAM User Guide</i>.
+     * >Creating a URL that Enables Federated Users to Access the Amazon Web Services Management Console</a> in the
+     * <i>IAM User Guide</i>.
      * </p>
      * </note>
      * 
@@ -989,8 +993,8 @@ public class AssumeRoleWithWebIdentityRequest extends com.amazonaws.AmazonWebSer
      *        token takes a <code>SessionDuration</code> parameter that specifies the maximum length of the console
      *        session. For more information, see <a href=
      *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-custom-url.html"
-     *        >Creating a URL that Enables Federated Users to Access the Management Console</a> in the <i>IAM User
-     *        Guide</i>.
+     *        >Creating a URL that Enables Federated Users to Access the Amazon Web Services Management Console</a> in
+     *        the <i>IAM User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

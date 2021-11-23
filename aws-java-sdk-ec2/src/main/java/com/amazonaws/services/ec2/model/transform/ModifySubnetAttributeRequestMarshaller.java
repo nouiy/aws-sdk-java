@@ -64,6 +64,20 @@ public class ModifySubnetAttributeRequestMarshaller implements Marshaller<Reques
             request.addParameter("EnableDns64.Value", StringUtils.fromBoolean(modifySubnetAttributeRequest.getEnableDns64()));
         }
 
+        if (modifySubnetAttributeRequest.getPrivateDnsHostnameTypeOnLaunch() != null) {
+            request.addParameter("PrivateDnsHostnameTypeOnLaunch", StringUtils.fromString(modifySubnetAttributeRequest.getPrivateDnsHostnameTypeOnLaunch()));
+        }
+
+        if (modifySubnetAttributeRequest.getEnableResourceNameDnsARecordOnLaunch() != null) {
+            request.addParameter("EnableResourceNameDnsARecordOnLaunch.Value",
+                    StringUtils.fromBoolean(modifySubnetAttributeRequest.getEnableResourceNameDnsARecordOnLaunch()));
+        }
+
+        if (modifySubnetAttributeRequest.getEnableResourceNameDnsAAAARecordOnLaunch() != null) {
+            request.addParameter("EnableResourceNameDnsAAAARecordOnLaunch.Value",
+                    StringUtils.fromBoolean(modifySubnetAttributeRequest.getEnableResourceNameDnsAAAARecordOnLaunch()));
+        }
+
         return request;
     }
 

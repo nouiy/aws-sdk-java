@@ -27,7 +27,7 @@ public class UpdateSuiteDefinitionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Suite definition Id of the test suite to be updated.
+     * Suite definition ID of the test suite to be updated.
      * </p>
      */
     private String suiteDefinitionId;
@@ -40,11 +40,11 @@ public class UpdateSuiteDefinitionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Suite definition Id of the test suite to be updated.
+     * Suite definition ID of the test suite to be updated.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite to be updated.
+     *        Suite definition ID of the test suite to be updated.
      */
 
     public void setSuiteDefinitionId(String suiteDefinitionId) {
@@ -53,10 +53,10 @@ public class UpdateSuiteDefinitionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Suite definition Id of the test suite to be updated.
+     * Suite definition ID of the test suite to be updated.
      * </p>
      * 
-     * @return Suite definition Id of the test suite to be updated.
+     * @return Suite definition ID of the test suite to be updated.
      */
 
     public String getSuiteDefinitionId() {
@@ -65,11 +65,11 @@ public class UpdateSuiteDefinitionRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Suite definition Id of the test suite to be updated.
+     * Suite definition ID of the test suite to be updated.
      * </p>
      * 
      * @param suiteDefinitionId
-     *        Suite definition Id of the test suite to be updated.
+     *        Suite definition ID of the test suite to be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

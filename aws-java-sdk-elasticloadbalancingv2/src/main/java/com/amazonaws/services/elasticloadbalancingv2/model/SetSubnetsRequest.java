@@ -77,8 +77,7 @@ public class SetSubnetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * [Network Load Balancers] The type of IP addresses used by the subnets for your load balancer. The possible values
      * are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t
-     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. Internal load balancers must
-     * use <code>ipv4</code>.
+     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. .
      * </p>
      */
     private String ipAddressType;
@@ -499,15 +498,13 @@ public class SetSubnetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * [Network Load Balancers] The type of IP addresses used by the subnets for your load balancer. The possible values
      * are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t
-     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. Internal load balancers must
-     * use <code>ipv4</code>.
+     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. .
      * </p>
      * 
      * @param ipAddressType
      *        [Network Load Balancers] The type of IP addresses used by the subnets for your load balancer. The possible
      *        values are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6
-     *        addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener.
-     *        Internal load balancers must use <code>ipv4</code>.
+     *        addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. .
      * @see IpAddressType
      */
 
@@ -519,14 +516,13 @@ public class SetSubnetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * [Network Load Balancers] The type of IP addresses used by the subnets for your load balancer. The possible values
      * are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t
-     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. Internal load balancers must
-     * use <code>ipv4</code>.
+     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. .
      * </p>
      * 
      * @return [Network Load Balancers] The type of IP addresses used by the subnets for your load balancer. The
      *         possible values are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6
      *         addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener.
-     *         Internal load balancers must use <code>ipv4</code>.
+     *         .
      * @see IpAddressType
      */
 
@@ -538,15 +534,13 @@ public class SetSubnetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * [Network Load Balancers] The type of IP addresses used by the subnets for your load balancer. The possible values
      * are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t
-     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. Internal load balancers must
-     * use <code>ipv4</code>.
+     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. .
      * </p>
      * 
      * @param ipAddressType
      *        [Network Load Balancers] The type of IP addresses used by the subnets for your load balancer. The possible
      *        values are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6
-     *        addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener.
-     *        Internal load balancers must use <code>ipv4</code>.
+     *        addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. .
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */
@@ -560,15 +554,13 @@ public class SetSubnetsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * [Network Load Balancers] The type of IP addresses used by the subnets for your load balancer. The possible values
      * are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6 addresses). You can’t
-     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. Internal load balancers must
-     * use <code>ipv4</code>.
+     * specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. .
      * </p>
      * 
      * @param ipAddressType
      *        [Network Load Balancers] The type of IP addresses used by the subnets for your load balancer. The possible
      *        values are <code>ipv4</code> (for IPv4 addresses) and <code>dualstack</code> (for IPv4 and IPv6
-     *        addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener.
-     *        Internal load balancers must use <code>ipv4</code>.
+     *        addresses). You can’t specify <code>dualstack</code> for a load balancer with a UDP or TCP_UDP listener. .
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see IpAddressType
      */

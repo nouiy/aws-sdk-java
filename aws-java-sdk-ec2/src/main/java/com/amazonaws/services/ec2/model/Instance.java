@@ -356,6 +356,18 @@ public class Instance implements Serializable, Cloneable {
      * </p>
      */
     private java.util.Date usageOperationUpdateTime;
+    /**
+     * <p>
+     * The options for the instance hostname.
+     * </p>
+     */
+    private PrivateDnsNameOptionsResponse privateDnsNameOptions;
+    /**
+     * <p>
+     * The IPv6 address assigned to the instance.
+     * </p>
+     */
+    private String ipv6Address;
 
     /**
      * <p>
@@ -3138,6 +3150,86 @@ public class Instance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The options for the instance hostname.
+     * </p>
+     * 
+     * @param privateDnsNameOptions
+     *        The options for the instance hostname.
+     */
+
+    public void setPrivateDnsNameOptions(PrivateDnsNameOptionsResponse privateDnsNameOptions) {
+        this.privateDnsNameOptions = privateDnsNameOptions;
+    }
+
+    /**
+     * <p>
+     * The options for the instance hostname.
+     * </p>
+     * 
+     * @return The options for the instance hostname.
+     */
+
+    public PrivateDnsNameOptionsResponse getPrivateDnsNameOptions() {
+        return this.privateDnsNameOptions;
+    }
+
+    /**
+     * <p>
+     * The options for the instance hostname.
+     * </p>
+     * 
+     * @param privateDnsNameOptions
+     *        The options for the instance hostname.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withPrivateDnsNameOptions(PrivateDnsNameOptionsResponse privateDnsNameOptions) {
+        setPrivateDnsNameOptions(privateDnsNameOptions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The IPv6 address assigned to the instance.
+     * </p>
+     * 
+     * @param ipv6Address
+     *        The IPv6 address assigned to the instance.
+     */
+
+    public void setIpv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+    }
+
+    /**
+     * <p>
+     * The IPv6 address assigned to the instance.
+     * </p>
+     * 
+     * @return The IPv6 address assigned to the instance.
+     */
+
+    public String getIpv6Address() {
+        return this.ipv6Address;
+    }
+
+    /**
+     * <p>
+     * The IPv6 address assigned to the instance.
+     * </p>
+     * 
+     * @param ipv6Address
+     *        The IPv6 address assigned to the instance.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Instance withIpv6Address(String ipv6Address) {
+        setIpv6Address(ipv6Address);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -3252,7 +3344,11 @@ public class Instance implements Serializable, Cloneable {
         if (getUsageOperation() != null)
             sb.append("UsageOperation: ").append(getUsageOperation()).append(",");
         if (getUsageOperationUpdateTime() != null)
-            sb.append("UsageOperationUpdateTime: ").append(getUsageOperationUpdateTime());
+            sb.append("UsageOperationUpdateTime: ").append(getUsageOperationUpdateTime()).append(",");
+        if (getPrivateDnsNameOptions() != null)
+            sb.append("PrivateDnsNameOptions: ").append(getPrivateDnsNameOptions()).append(",");
+        if (getIpv6Address() != null)
+            sb.append("Ipv6Address: ").append(getIpv6Address());
         sb.append("}");
         return sb.toString();
     }
@@ -3477,6 +3573,14 @@ public class Instance implements Serializable, Cloneable {
             return false;
         if (other.getUsageOperationUpdateTime() != null && other.getUsageOperationUpdateTime().equals(this.getUsageOperationUpdateTime()) == false)
             return false;
+        if (other.getPrivateDnsNameOptions() == null ^ this.getPrivateDnsNameOptions() == null)
+            return false;
+        if (other.getPrivateDnsNameOptions() != null && other.getPrivateDnsNameOptions().equals(this.getPrivateDnsNameOptions()) == false)
+            return false;
+        if (other.getIpv6Address() == null ^ this.getIpv6Address() == null)
+            return false;
+        if (other.getIpv6Address() != null && other.getIpv6Address().equals(this.getIpv6Address()) == false)
+            return false;
         return true;
     }
 
@@ -3537,6 +3641,8 @@ public class Instance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getPlatformDetails() == null) ? 0 : getPlatformDetails().hashCode());
         hashCode = prime * hashCode + ((getUsageOperation() == null) ? 0 : getUsageOperation().hashCode());
         hashCode = prime * hashCode + ((getUsageOperationUpdateTime() == null) ? 0 : getUsageOperationUpdateTime().hashCode());
+        hashCode = prime * hashCode + ((getPrivateDnsNameOptions() == null) ? 0 : getPrivateDnsNameOptions().hashCode());
+        hashCode = prime * hashCode + ((getIpv6Address() == null) ? 0 : getIpv6Address().hashCode());
         return hashCode;
     }
 

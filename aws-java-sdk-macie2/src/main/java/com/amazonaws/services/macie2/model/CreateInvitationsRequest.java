@@ -33,16 +33,16 @@ public class CreateInvitationsRequest extends com.amazonaws.AmazonWebServiceRequ
     private java.util.List<String> accountIds;
     /**
      * <p>
-     * Specifies whether to send an email notification to the root user of each account that the invitation will be sent
-     * to. This notification is in addition to an alert that the root user receives in Personal Health Dashboard. To
-     * send an email notification to the root user of each account, set this value to true.
+     * Specifies whether to send the invitation as an email message. If this value is false, Amazon Macie sends the
+     * invitation (as an email message) to the email address that you specified for the recipient's account when you
+     * associated the account with your account. The default value is false.
      * </p>
      */
     private Boolean disableEmailNotification;
     /**
      * <p>
-     * A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it
-     * sends for an invitation.
+     * Custom text to include in the email message that contains the invitation. The text can contain as many as 80
+     * alphanumeric characters.
      * </p>
      */
     private String message;
@@ -119,15 +119,15 @@ public class CreateInvitationsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies whether to send an email notification to the root user of each account that the invitation will be sent
-     * to. This notification is in addition to an alert that the root user receives in Personal Health Dashboard. To
-     * send an email notification to the root user of each account, set this value to true.
+     * Specifies whether to send the invitation as an email message. If this value is false, Amazon Macie sends the
+     * invitation (as an email message) to the email address that you specified for the recipient's account when you
+     * associated the account with your account. The default value is false.
      * </p>
      * 
      * @param disableEmailNotification
-     *        Specifies whether to send an email notification to the root user of each account that the invitation will
-     *        be sent to. This notification is in addition to an alert that the root user receives in Personal Health
-     *        Dashboard. To send an email notification to the root user of each account, set this value to true.
+     *        Specifies whether to send the invitation as an email message. If this value is false, Amazon Macie sends
+     *        the invitation (as an email message) to the email address that you specified for the recipient's account
+     *        when you associated the account with your account. The default value is false.
      */
 
     public void setDisableEmailNotification(Boolean disableEmailNotification) {
@@ -136,14 +136,14 @@ public class CreateInvitationsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies whether to send an email notification to the root user of each account that the invitation will be sent
-     * to. This notification is in addition to an alert that the root user receives in Personal Health Dashboard. To
-     * send an email notification to the root user of each account, set this value to true.
+     * Specifies whether to send the invitation as an email message. If this value is false, Amazon Macie sends the
+     * invitation (as an email message) to the email address that you specified for the recipient's account when you
+     * associated the account with your account. The default value is false.
      * </p>
      * 
-     * @return Specifies whether to send an email notification to the root user of each account that the invitation will
-     *         be sent to. This notification is in addition to an alert that the root user receives in Personal Health
-     *         Dashboard. To send an email notification to the root user of each account, set this value to true.
+     * @return Specifies whether to send the invitation as an email message. If this value is false, Amazon Macie sends
+     *         the invitation (as an email message) to the email address that you specified for the recipient's account
+     *         when you associated the account with your account. The default value is false.
      */
 
     public Boolean getDisableEmailNotification() {
@@ -152,15 +152,15 @@ public class CreateInvitationsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies whether to send an email notification to the root user of each account that the invitation will be sent
-     * to. This notification is in addition to an alert that the root user receives in Personal Health Dashboard. To
-     * send an email notification to the root user of each account, set this value to true.
+     * Specifies whether to send the invitation as an email message. If this value is false, Amazon Macie sends the
+     * invitation (as an email message) to the email address that you specified for the recipient's account when you
+     * associated the account with your account. The default value is false.
      * </p>
      * 
      * @param disableEmailNotification
-     *        Specifies whether to send an email notification to the root user of each account that the invitation will
-     *        be sent to. This notification is in addition to an alert that the root user receives in Personal Health
-     *        Dashboard. To send an email notification to the root user of each account, set this value to true.
+     *        Specifies whether to send the invitation as an email message. If this value is false, Amazon Macie sends
+     *        the invitation (as an email message) to the email address that you specified for the recipient's account
+     *        when you associated the account with your account. The default value is false.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -171,14 +171,14 @@ public class CreateInvitationsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies whether to send an email notification to the root user of each account that the invitation will be sent
-     * to. This notification is in addition to an alert that the root user receives in Personal Health Dashboard. To
-     * send an email notification to the root user of each account, set this value to true.
+     * Specifies whether to send the invitation as an email message. If this value is false, Amazon Macie sends the
+     * invitation (as an email message) to the email address that you specified for the recipient's account when you
+     * associated the account with your account. The default value is false.
      * </p>
      * 
-     * @return Specifies whether to send an email notification to the root user of each account that the invitation will
-     *         be sent to. This notification is in addition to an alert that the root user receives in Personal Health
-     *         Dashboard. To send an email notification to the root user of each account, set this value to true.
+     * @return Specifies whether to send the invitation as an email message. If this value is false, Amazon Macie sends
+     *         the invitation (as an email message) to the email address that you specified for the recipient's account
+     *         when you associated the account with your account. The default value is false.
      */
 
     public Boolean isDisableEmailNotification() {
@@ -187,13 +187,13 @@ public class CreateInvitationsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it
-     * sends for an invitation.
+     * Custom text to include in the email message that contains the invitation. The text can contain as many as 80
+     * alphanumeric characters.
      * </p>
      * 
      * @param message
-     *        A custom message to include in the invitation. Amazon Macie adds this message to the standard content that
-     *        it sends for an invitation.
+     *        Custom text to include in the email message that contains the invitation. The text can contain as many as
+     *        80 alphanumeric characters.
      */
 
     public void setMessage(String message) {
@@ -202,12 +202,12 @@ public class CreateInvitationsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it
-     * sends for an invitation.
+     * Custom text to include in the email message that contains the invitation. The text can contain as many as 80
+     * alphanumeric characters.
      * </p>
      * 
-     * @return A custom message to include in the invitation. Amazon Macie adds this message to the standard content
-     *         that it sends for an invitation.
+     * @return Custom text to include in the email message that contains the invitation. The text can contain as many as
+     *         80 alphanumeric characters.
      */
 
     public String getMessage() {
@@ -216,13 +216,13 @@ public class CreateInvitationsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it
-     * sends for an invitation.
+     * Custom text to include in the email message that contains the invitation. The text can contain as many as 80
+     * alphanumeric characters.
      * </p>
      * 
      * @param message
-     *        A custom message to include in the invitation. Amazon Macie adds this message to the standard content that
-     *        it sends for an invitation.
+     *        Custom text to include in the email message that contains the invitation. The text can contain as many as
+     *        80 alphanumeric characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -32,6 +32,8 @@ public class BatchExecuteStatementRequest extends com.amazonaws.AmazonWebService
      */
     private java.util.List<BatchStatementRequest> statements;
 
+    private String returnConsumedCapacity;
+
     /**
      * <p>
      * The list of PartiQL statements representing the batch to run.
@@ -103,6 +105,46 @@ public class BatchExecuteStatementRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * @param returnConsumedCapacity
+     * @see ReturnConsumedCapacity
+     */
+
+    public void setReturnConsumedCapacity(String returnConsumedCapacity) {
+        this.returnConsumedCapacity = returnConsumedCapacity;
+    }
+
+    /**
+     * @return
+     * @see ReturnConsumedCapacity
+     */
+
+    public String getReturnConsumedCapacity() {
+        return this.returnConsumedCapacity;
+    }
+
+    /**
+     * @param returnConsumedCapacity
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ReturnConsumedCapacity
+     */
+
+    public BatchExecuteStatementRequest withReturnConsumedCapacity(String returnConsumedCapacity) {
+        setReturnConsumedCapacity(returnConsumedCapacity);
+        return this;
+    }
+
+    /**
+     * @param returnConsumedCapacity
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ReturnConsumedCapacity
+     */
+
+    public BatchExecuteStatementRequest withReturnConsumedCapacity(ReturnConsumedCapacity returnConsumedCapacity) {
+        this.returnConsumedCapacity = returnConsumedCapacity.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -115,7 +157,9 @@ public class BatchExecuteStatementRequest extends com.amazonaws.AmazonWebService
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getStatements() != null)
-            sb.append("Statements: ").append(getStatements());
+            sb.append("Statements: ").append(getStatements()).append(",");
+        if (getReturnConsumedCapacity() != null)
+            sb.append("ReturnConsumedCapacity: ").append(getReturnConsumedCapacity());
         sb.append("}");
         return sb.toString();
     }
@@ -134,6 +178,10 @@ public class BatchExecuteStatementRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getStatements() != null && other.getStatements().equals(this.getStatements()) == false)
             return false;
+        if (other.getReturnConsumedCapacity() == null ^ this.getReturnConsumedCapacity() == null)
+            return false;
+        if (other.getReturnConsumedCapacity() != null && other.getReturnConsumedCapacity().equals(this.getReturnConsumedCapacity()) == false)
+            return false;
         return true;
     }
 
@@ -143,6 +191,7 @@ public class BatchExecuteStatementRequest extends com.amazonaws.AmazonWebService
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getStatements() == null) ? 0 : getStatements().hashCode());
+        hashCode = prime * hashCode + ((getReturnConsumedCapacity() == null) ? 0 : getReturnConsumedCapacity().hashCode());
         return hashCode;
     }
 

@@ -206,6 +206,12 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      */
     private InstanceRequirements instanceRequirements;
+    /**
+     * <p>
+     * The options for the instance hostname.
+     * </p>
+     */
+    private LaunchTemplatePrivateDnsNameOptions privateDnsNameOptions;
 
     /**
      * <p>
@@ -1731,6 +1737,46 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The options for the instance hostname.
+     * </p>
+     * 
+     * @param privateDnsNameOptions
+     *        The options for the instance hostname.
+     */
+
+    public void setPrivateDnsNameOptions(LaunchTemplatePrivateDnsNameOptions privateDnsNameOptions) {
+        this.privateDnsNameOptions = privateDnsNameOptions;
+    }
+
+    /**
+     * <p>
+     * The options for the instance hostname.
+     * </p>
+     * 
+     * @return The options for the instance hostname.
+     */
+
+    public LaunchTemplatePrivateDnsNameOptions getPrivateDnsNameOptions() {
+        return this.privateDnsNameOptions;
+    }
+
+    /**
+     * <p>
+     * The options for the instance hostname.
+     * </p>
+     * 
+     * @param privateDnsNameOptions
+     *        The options for the instance hostname.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResponseLaunchTemplateData withPrivateDnsNameOptions(LaunchTemplatePrivateDnsNameOptions privateDnsNameOptions) {
+        setPrivateDnsNameOptions(privateDnsNameOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1797,7 +1843,9 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
         if (getEnclaveOptions() != null)
             sb.append("EnclaveOptions: ").append(getEnclaveOptions()).append(",");
         if (getInstanceRequirements() != null)
-            sb.append("InstanceRequirements: ").append(getInstanceRequirements());
+            sb.append("InstanceRequirements: ").append(getInstanceRequirements()).append(",");
+        if (getPrivateDnsNameOptions() != null)
+            sb.append("PrivateDnsNameOptions: ").append(getPrivateDnsNameOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -1926,6 +1974,10 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
             return false;
         if (other.getInstanceRequirements() != null && other.getInstanceRequirements().equals(this.getInstanceRequirements()) == false)
             return false;
+        if (other.getPrivateDnsNameOptions() == null ^ this.getPrivateDnsNameOptions() == null)
+            return false;
+        if (other.getPrivateDnsNameOptions() != null && other.getPrivateDnsNameOptions().equals(this.getPrivateDnsNameOptions()) == false)
+            return false;
         return true;
     }
 
@@ -1962,6 +2014,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getMetadataOptions() == null) ? 0 : getMetadataOptions().hashCode());
         hashCode = prime * hashCode + ((getEnclaveOptions() == null) ? 0 : getEnclaveOptions().hashCode());
         hashCode = prime * hashCode + ((getInstanceRequirements() == null) ? 0 : getInstanceRequirements().hashCode());
+        hashCode = prime * hashCode + ((getPrivateDnsNameOptions() == null) ? 0 : getPrivateDnsNameOptions().hashCode());
         return hashCode;
     }
 

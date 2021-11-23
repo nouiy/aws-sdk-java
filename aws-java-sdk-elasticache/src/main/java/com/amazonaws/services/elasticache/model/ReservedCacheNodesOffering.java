@@ -125,6 +125,13 @@ public class ReservedCacheNodesOffering implements Serializable, Cloneable {
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -362,6 +369,13 @@ public class ReservedCacheNodesOffering implements Serializable, Cloneable {
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -520,6 +534,13 @@ public class ReservedCacheNodesOffering implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        Current generation:
+     *        </p>
+     *        <p>
+     *        <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *        </p>
+     *        <p>
+     *        <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *        <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *        </p>
      *        <p>
      *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
@@ -688,6 +709,13 @@ public class ReservedCacheNodesOffering implements Serializable, Cloneable {
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -845,6 +873,13 @@ public class ReservedCacheNodesOffering implements Serializable, Cloneable {
      *         <li>
      *         <p>
      *         Current generation:
+     *         </p>
+     *         <p>
+     *         <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *         </p>
+     *         <p>
+     *         <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *         <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *         </p>
      *         <p>
      *         <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
@@ -1013,6 +1048,13 @@ public class ReservedCacheNodesOffering implements Serializable, Cloneable {
      * Current generation:
      * </p>
      * <p>
+     * <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     * </p>
+     * <p>
+     * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
+     * </p>
+     * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
      * </p>
@@ -1171,6 +1213,13 @@ public class ReservedCacheNodesOffering implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        Current generation:
+     *        </p>
+     *        <p>
+     *        <b>R6gd node types</b> (available only for Redis engine version 6.2 onward).
+     *        </p>
+     *        <p>
+     *        <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
+     *        <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *        </p>
      *        <p>
      *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine

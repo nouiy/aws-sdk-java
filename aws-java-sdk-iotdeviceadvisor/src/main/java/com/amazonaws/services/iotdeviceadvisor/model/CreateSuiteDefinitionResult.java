@@ -31,7 +31,7 @@ public class CreateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
     private String suiteDefinitionId;
     /**
      * <p>
-     * Creates a Device Advisor test suite with Amazon Resource name.
+     * Creates a Device Advisor test suite with Amazon Resource Name (ARN).
      * </p>
      */
     private String suiteDefinitionArn;
@@ -90,11 +90,11 @@ public class CreateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Creates a Device Advisor test suite with Amazon Resource name.
+     * Creates a Device Advisor test suite with Amazon Resource Name (ARN).
      * </p>
      * 
      * @param suiteDefinitionArn
-     *        Creates a Device Advisor test suite with Amazon Resource name.
+     *        Creates a Device Advisor test suite with Amazon Resource Name (ARN).
      */
 
     public void setSuiteDefinitionArn(String suiteDefinitionArn) {
@@ -103,10 +103,10 @@ public class CreateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Creates a Device Advisor test suite with Amazon Resource name.
+     * Creates a Device Advisor test suite with Amazon Resource Name (ARN).
      * </p>
      * 
-     * @return Creates a Device Advisor test suite with Amazon Resource name.
+     * @return Creates a Device Advisor test suite with Amazon Resource Name (ARN).
      */
 
     public String getSuiteDefinitionArn() {
@@ -115,11 +115,11 @@ public class CreateSuiteDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Creates a Device Advisor test suite with Amazon Resource name.
+     * Creates a Device Advisor test suite with Amazon Resource Name (ARN).
      * </p>
      * 
      * @param suiteDefinitionArn
-     *        Creates a Device Advisor test suite with Amazon Resource name.
+     *        Creates a Device Advisor test suite with Amazon Resource Name (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information about an Amazon Macie membership invitation that was received by an account.
+ * Provides information about an Amazon Macie membership invitation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/macie2-2020-01-01/Invitation" target="_top">AWS API
@@ -36,8 +36,7 @@ public class Invitation implements Serializable, Cloneable, StructuredPojo {
     private String accountId;
     /**
      * <p>
-     * The unique identifier for the invitation. Amazon Macie uses this identifier to validate the inviter account with
-     * the invitee account.
+     * The unique identifier for the invitation.
      * </p>
      */
     private String invitationId;
@@ -49,8 +48,8 @@ public class Invitation implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date invitedAt;
     /**
      * <p>
-     * The status of the relationship between the account that sent the invitation (<i>inviter account</i>) and the
-     * account that received the invitation (<i>invitee account</i>).
+     * The status of the relationship between the account that sent the invitation and the account that received the
+     * invitation.
      * </p>
      */
     private String relationshipStatus;
@@ -97,13 +96,11 @@ public class Invitation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the invitation. Amazon Macie uses this identifier to validate the inviter account with
-     * the invitee account.
+     * The unique identifier for the invitation.
      * </p>
      * 
      * @param invitationId
-     *        The unique identifier for the invitation. Amazon Macie uses this identifier to validate the inviter
-     *        account with the invitee account.
+     *        The unique identifier for the invitation.
      */
 
     public void setInvitationId(String invitationId) {
@@ -112,12 +109,10 @@ public class Invitation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the invitation. Amazon Macie uses this identifier to validate the inviter account with
-     * the invitee account.
+     * The unique identifier for the invitation.
      * </p>
      * 
-     * @return The unique identifier for the invitation. Amazon Macie uses this identifier to validate the inviter
-     *         account with the invitee account.
+     * @return The unique identifier for the invitation.
      */
 
     public String getInvitationId() {
@@ -126,13 +121,11 @@ public class Invitation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the invitation. Amazon Macie uses this identifier to validate the inviter account with
-     * the invitee account.
+     * The unique identifier for the invitation.
      * </p>
      * 
      * @param invitationId
-     *        The unique identifier for the invitation. Amazon Macie uses this identifier to validate the inviter
-     *        account with the invitee account.
+     *        The unique identifier for the invitation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -183,13 +176,13 @@ public class Invitation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the relationship between the account that sent the invitation (<i>inviter account</i>) and the
-     * account that received the invitation (<i>invitee account</i>).
+     * The status of the relationship between the account that sent the invitation and the account that received the
+     * invitation.
      * </p>
      * 
      * @param relationshipStatus
-     *        The status of the relationship between the account that sent the invitation (<i>inviter account</i>) and
-     *        the account that received the invitation (<i>invitee account</i>).
+     *        The status of the relationship between the account that sent the invitation and the account that received
+     *        the invitation.
      * @see RelationshipStatus
      */
 
@@ -199,12 +192,12 @@ public class Invitation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the relationship between the account that sent the invitation (<i>inviter account</i>) and the
-     * account that received the invitation (<i>invitee account</i>).
+     * The status of the relationship between the account that sent the invitation and the account that received the
+     * invitation.
      * </p>
      * 
-     * @return The status of the relationship between the account that sent the invitation (<i>inviter account</i>) and
-     *         the account that received the invitation (<i>invitee account</i>).
+     * @return The status of the relationship between the account that sent the invitation and the account that received
+     *         the invitation.
      * @see RelationshipStatus
      */
 
@@ -214,13 +207,13 @@ public class Invitation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the relationship between the account that sent the invitation (<i>inviter account</i>) and the
-     * account that received the invitation (<i>invitee account</i>).
+     * The status of the relationship between the account that sent the invitation and the account that received the
+     * invitation.
      * </p>
      * 
      * @param relationshipStatus
-     *        The status of the relationship between the account that sent the invitation (<i>inviter account</i>) and
-     *        the account that received the invitation (<i>invitee account</i>).
+     *        The status of the relationship between the account that sent the invitation and the account that received
+     *        the invitation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RelationshipStatus
      */
@@ -232,13 +225,13 @@ public class Invitation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the relationship between the account that sent the invitation (<i>inviter account</i>) and the
-     * account that received the invitation (<i>invitee account</i>).
+     * The status of the relationship between the account that sent the invitation and the account that received the
+     * invitation.
      * </p>
      * 
      * @param relationshipStatus
-     *        The status of the relationship between the account that sent the invitation (<i>inviter account</i>) and
-     *        the account that received the invitation (<i>invitee account</i>).
+     *        The status of the relationship between the account that sent the invitation and the account that received
+     *        the invitation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RelationshipStatus
      */

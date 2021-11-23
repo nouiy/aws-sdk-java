@@ -45,9 +45,9 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String label;
     /**
      * <p>
-     * The account numbers of the <a
+     * The Amazon Web Services account numbers of the <a
      * href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     * permission. For information about locating the account identification, see <a href=
+     * permission. For information about locating the Amazon Web Services account identification, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      * >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
@@ -92,9 +92,9 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Maximum 80 characters. Allowed characters include alphanumeric characters, hyphens (<code>-</code>), and
      *        underscores (<code>_</code>).
      * @param aWSAccountIds
-     *        The account numbers of the <a
+     *        The Amazon Web Services account numbers of the <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     *        permission. For information about locating the account identification, see <a href=
+     *        permission. For information about locating the Amazon Web Services account identification, see <a href=
      *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      *        >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      * @param actions
@@ -229,16 +229,16 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The account numbers of the <a
+     * The Amazon Web Services account numbers of the <a
      * href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     * permission. For information about locating the account identification, see <a href=
+     * permission. For information about locating the Amazon Web Services account identification, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      * >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * 
-     * @return The account numbers of the <a
+     * @return The Amazon Web Services account numbers of the <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     *         permission. For information about locating the account identification, see <a href=
+     *         permission. For information about locating the Amazon Web Services account identification, see <a href=
      *         "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      *         >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      */
@@ -252,17 +252,17 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The account numbers of the <a
+     * The Amazon Web Services account numbers of the <a
      * href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     * permission. For information about locating the account identification, see <a href=
+     * permission. For information about locating the Amazon Web Services account identification, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      * >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * 
      * @param aWSAccountIds
-     *        The account numbers of the <a
+     *        The Amazon Web Services account numbers of the <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     *        permission. For information about locating the account identification, see <a href=
+     *        permission. For information about locating the Amazon Web Services account identification, see <a href=
      *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      *        >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      */
@@ -278,9 +278,9 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The account numbers of the <a
+     * The Amazon Web Services account numbers of the <a
      * href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     * permission. For information about locating the account identification, see <a href=
+     * permission. For information about locating the Amazon Web Services account identification, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      * >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
@@ -291,9 +291,9 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param aWSAccountIds
-     *        The account numbers of the <a
+     *        The Amazon Web Services account numbers of the <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     *        permission. For information about locating the account identification, see <a href=
+     *        permission. For information about locating the Amazon Web Services account identification, see <a href=
      *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      *        >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -311,17 +311,17 @@ public class AddPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The account numbers of the <a
+     * The Amazon Web Services account numbers of the <a
      * href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     * permission. For information about locating the account identification, see <a href=
+     * permission. For information about locating the Amazon Web Services account identification, see <a href=
      * "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      * >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      * </p>
      * 
      * @param aWSAccountIds
-     *        The account numbers of the <a
+     *        The Amazon Web Services account numbers of the <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#P">principals</a> who are to receive
-     *        permission. For information about locating the account identification, see <a href=
+     *        permission. For information about locating the Amazon Web Services account identification, see <a href=
      *        "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-making-api-requests.html#sqs-api-request-authentication"
      *        >Your Amazon Web Services Identifiers</a> in the <i>Amazon SQS Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

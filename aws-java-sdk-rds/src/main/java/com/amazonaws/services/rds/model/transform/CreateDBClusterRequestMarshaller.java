@@ -245,6 +245,50 @@ public class CreateDBClusterRequestMarshaller implements Marshaller<Request<Crea
             request.addParameter("EnableGlobalWriteForwarding", StringUtils.fromBoolean(createDBClusterRequest.getEnableGlobalWriteForwarding()));
         }
 
+        if (createDBClusterRequest.getDBClusterInstanceClass() != null) {
+            request.addParameter("DBClusterInstanceClass", StringUtils.fromString(createDBClusterRequest.getDBClusterInstanceClass()));
+        }
+
+        if (createDBClusterRequest.getAllocatedStorage() != null) {
+            request.addParameter("AllocatedStorage", StringUtils.fromInteger(createDBClusterRequest.getAllocatedStorage()));
+        }
+
+        if (createDBClusterRequest.getStorageType() != null) {
+            request.addParameter("StorageType", StringUtils.fromString(createDBClusterRequest.getStorageType()));
+        }
+
+        if (createDBClusterRequest.getIops() != null) {
+            request.addParameter("Iops", StringUtils.fromInteger(createDBClusterRequest.getIops()));
+        }
+
+        if (createDBClusterRequest.getPubliclyAccessible() != null) {
+            request.addParameter("PubliclyAccessible", StringUtils.fromBoolean(createDBClusterRequest.getPubliclyAccessible()));
+        }
+
+        if (createDBClusterRequest.getAutoMinorVersionUpgrade() != null) {
+            request.addParameter("AutoMinorVersionUpgrade", StringUtils.fromBoolean(createDBClusterRequest.getAutoMinorVersionUpgrade()));
+        }
+
+        if (createDBClusterRequest.getMonitoringInterval() != null) {
+            request.addParameter("MonitoringInterval", StringUtils.fromInteger(createDBClusterRequest.getMonitoringInterval()));
+        }
+
+        if (createDBClusterRequest.getMonitoringRoleArn() != null) {
+            request.addParameter("MonitoringRoleArn", StringUtils.fromString(createDBClusterRequest.getMonitoringRoleArn()));
+        }
+
+        if (createDBClusterRequest.getEnablePerformanceInsights() != null) {
+            request.addParameter("EnablePerformanceInsights", StringUtils.fromBoolean(createDBClusterRequest.getEnablePerformanceInsights()));
+        }
+
+        if (createDBClusterRequest.getPerformanceInsightsKMSKeyId() != null) {
+            request.addParameter("PerformanceInsightsKMSKeyId", StringUtils.fromString(createDBClusterRequest.getPerformanceInsightsKMSKeyId()));
+        }
+
+        if (createDBClusterRequest.getPerformanceInsightsRetentionPeriod() != null) {
+            request.addParameter("PerformanceInsightsRetentionPeriod", StringUtils.fromInteger(createDBClusterRequest.getPerformanceInsightsRetentionPeriod()));
+        }
+
         if (createDBClusterRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBClusterRequest.getSourceRegion()));
         }

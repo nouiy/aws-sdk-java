@@ -255,6 +255,8 @@ public enum RDSActions implements Action {
     PromoteReadReplicaDBCluster("rds:PromoteReadReplicaDBCluster"),
     /** Action for the PurchaseReservedDBInstancesOffering operation. */
     PurchaseReservedDBInstancesOffering("rds:PurchaseReservedDBInstancesOffering"),
+    /** Action for the RebootDBCluster operation. */
+    RebootDBCluster("rds:RebootDBCluster"),
     /** Action for the RebootDBInstance operation. */
     RebootDBInstance("rds:RebootDBInstance"),
     /** Action for the RegisterDBProxyTargets operation. */
