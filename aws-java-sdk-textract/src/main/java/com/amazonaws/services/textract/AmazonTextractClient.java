@@ -231,7 +231,7 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
      * @throws UnsupportedDocumentException
      *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format. Documents for asynchronous operations can also be in PDF format.
+     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -300,7 +300,8 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Analyzes an input document for financially related relationships between text.
+     * <code>AnalyzeExpense</code> synchronously analyzes an input document for financially related relationships
+     * between text.
      * </p>
      * <p>
      * Information is returned as <code>ExpenseDocuments</code> and seperated as follows.
@@ -334,7 +335,7 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
      * @throws UnsupportedDocumentException
      *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format. Documents for asynchronous operations can also be in PDF format.
+     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -401,6 +402,91 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Analyzes identity documents for relevant information. This information is extracted and returned as
+     * <code>IdentityDocumentFields</code>, which records both the normalized field and value of the extracted text.
+     * </p>
+     * 
+     * @param analyzeIDRequest
+     * @return Result of the AnalyzeID operation returned by the service.
+     * @throws InvalidParameterException
+     *         An input parameter violated a constraint. For example, in synchronous operations, an
+     *         <code>InvalidParameterException</code> exception occurs when neither of the <code>S3Object</code> or
+     *         <code>Bytes</code> values are supplied in the <code>Document</code> request parameter. Validate your
+     *         parameter before calling the API operation again.
+     * @throws InvalidS3ObjectException
+     *         Amazon Textract is unable to access the S3 object that's specified in the request. for more information,
+     *         <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Configure Access to
+     *         Amazon S3</a> For troubleshooting information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
+     * @throws UnsupportedDocumentException
+     *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
+     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
+     * @throws DocumentTooLargeException
+     *         The document can't be processed because it's too large. The maximum document size for synchronous
+     *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
+     * @throws BadDocumentException
+     *         Amazon Textract isn't able to read the document. For more information on the document limits in Amazon
+     *         Textract, see <a>limits</a>.
+     * @throws AccessDeniedException
+     *         You aren't authorized to perform the action. Use the Amazon Resource Name (ARN) of an authorized user or
+     *         IAM role to perform the operation.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Textract.
+     * @throws InternalServerErrorException
+     *         Amazon Textract experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Textract is temporarily unable to process the request. Try your call again.
+     * @sample AmazonTextract.AnalyzeID
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/AnalyzeID" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public AnalyzeIDResult analyzeID(AnalyzeIDRequest request) {
+        request = beforeClientExecution(request);
+        return executeAnalyzeID(request);
+    }
+
+    @SdkInternalApi
+    final AnalyzeIDResult executeAnalyzeID(AnalyzeIDRequest analyzeIDRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(analyzeIDRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AnalyzeIDRequest> request = null;
+        Response<AnalyzeIDResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AnalyzeIDRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(analyzeIDRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Textract");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AnalyzeID");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AnalyzeIDResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
+                    .withPayloadJson(true).withHasStreamingSuccessResponse(false), new AnalyzeIDResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Detects text in the input document. Amazon Textract can detect lines of text and the words that make up a line of
      * text. The input document must be an image in JPEG or PNG format. <code>DetectDocumentText</code> returns the
      * detected text in an array of <a>Block</a> objects.
@@ -434,7 +520,7 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
      * @throws UnsupportedDocumentException
      *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format. Documents for asynchronous operations can also be in PDF format.
+     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -884,7 +970,7 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
      *         incorrectly.
      * @throws UnsupportedDocumentException
      *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format. Documents for asynchronous operations can also be in PDF format.
+     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -998,7 +1084,7 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
      *         incorrectly.
      * @throws UnsupportedDocumentException
      *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format. Documents for asynchronous operations can also be in PDF format.
+     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
@@ -1114,7 +1200,7 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
      *         incorrectly.
      * @throws UnsupportedDocumentException
      *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
-     *         JPEG format. Documents for asynchronous operations can also be in PDF format.
+     *         JPEG format only. Documents for asynchronous operations can be in PDF format.
      * @throws DocumentTooLargeException
      *         The document can't be processed because it's too large. The maximum document size for synchronous
      *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.

@@ -110,6 +110,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateBatchSegmentJobResult> createBatchSegmentJobAsync(CreateBatchSegmentJobRequest request) {
+
+        return createBatchSegmentJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBatchSegmentJobResult> createBatchSegmentJobAsync(final CreateBatchSegmentJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateBatchSegmentJobRequest, CreateBatchSegmentJobResult> asyncHandler) {
+        final CreateBatchSegmentJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateBatchSegmentJobResult>() {
+            @Override
+            public CreateBatchSegmentJobResult call() throws Exception {
+                CreateBatchSegmentJobResult result = null;
+
+                try {
+                    result = executeCreateBatchSegmentJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateCampaignResult> createCampaignAsync(CreateCampaignRequest request) {
 
         return createCampaignAsync(request, null);
@@ -325,6 +358,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
 
                 try {
                     result = executeCreateFilter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRecommenderResult> createRecommenderAsync(CreateRecommenderRequest request) {
+
+        return createRecommenderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRecommenderResult> createRecommenderAsync(final CreateRecommenderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateRecommenderRequest, CreateRecommenderResult> asyncHandler) {
+        final CreateRecommenderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateRecommenderResult>() {
+            @Override
+            public CreateRecommenderResult call() throws Exception {
+                CreateRecommenderResult result = null;
+
+                try {
+                    result = executeCreateRecommender(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -605,6 +671,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteRecommenderResult> deleteRecommenderAsync(DeleteRecommenderRequest request) {
+
+        return deleteRecommenderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRecommenderResult> deleteRecommenderAsync(final DeleteRecommenderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteRecommenderRequest, DeleteRecommenderResult> asyncHandler) {
+        final DeleteRecommenderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteRecommenderResult>() {
+            @Override
+            public DeleteRecommenderResult call() throws Exception {
+                DeleteRecommenderResult result = null;
+
+                try {
+                    result = executeDeleteRecommender(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteSchemaResult> deleteSchemaAsync(DeleteSchemaRequest request) {
 
         return deleteSchemaAsync(request, null);
@@ -721,6 +820,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
 
                 try {
                     result = executeDescribeBatchInferenceJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBatchSegmentJobResult> describeBatchSegmentJobAsync(DescribeBatchSegmentJobRequest request) {
+
+        return describeBatchSegmentJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBatchSegmentJobResult> describeBatchSegmentJobAsync(final DescribeBatchSegmentJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeBatchSegmentJobRequest, DescribeBatchSegmentJobResult> asyncHandler) {
+        final DescribeBatchSegmentJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeBatchSegmentJobResult>() {
+            @Override
+            public DescribeBatchSegmentJobResult call() throws Exception {
+                DescribeBatchSegmentJobResult result = null;
+
+                try {
+                    result = executeDescribeBatchSegmentJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1035,6 +1167,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeRecommenderResult> describeRecommenderAsync(DescribeRecommenderRequest request) {
+
+        return describeRecommenderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeRecommenderResult> describeRecommenderAsync(final DescribeRecommenderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeRecommenderRequest, DescribeRecommenderResult> asyncHandler) {
+        final DescribeRecommenderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeRecommenderResult>() {
+            @Override
+            public DescribeRecommenderResult call() throws Exception {
+                DescribeRecommenderResult result = null;
+
+                try {
+                    result = executeDescribeRecommender(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeSchemaResult> describeSchemaAsync(DescribeSchemaRequest request) {
 
         return describeSchemaAsync(request, null);
@@ -1184,6 +1349,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
 
                 try {
                     result = executeListBatchInferenceJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBatchSegmentJobsResult> listBatchSegmentJobsAsync(ListBatchSegmentJobsRequest request) {
+
+        return listBatchSegmentJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListBatchSegmentJobsResult> listBatchSegmentJobsAsync(final ListBatchSegmentJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListBatchSegmentJobsRequest, ListBatchSegmentJobsResult> asyncHandler) {
+        final ListBatchSegmentJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListBatchSegmentJobsResult>() {
+            @Override
+            public ListBatchSegmentJobsResult call() throws Exception {
+                ListBatchSegmentJobsResult result = null;
+
+                try {
+                    result = executeListBatchSegmentJobs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1464,6 +1662,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListRecommendersResult> listRecommendersAsync(ListRecommendersRequest request) {
+
+        return listRecommendersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRecommendersResult> listRecommendersAsync(final ListRecommendersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRecommendersRequest, ListRecommendersResult> asyncHandler) {
+        final ListRecommendersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRecommendersResult>() {
+            @Override
+            public ListRecommendersResult call() throws Exception {
+                ListRecommendersResult result = null;
+
+                try {
+                    result = executeListRecommenders(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSchemasResult> listSchemasAsync(ListSchemasRequest request) {
 
         return listSchemasAsync(request, null);
@@ -1613,6 +1844,39 @@ public class AmazonPersonalizeAsyncClient extends AmazonPersonalizeClient implem
 
                 try {
                     result = executeUpdateCampaign(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRecommenderResult> updateRecommenderAsync(UpdateRecommenderRequest request) {
+
+        return updateRecommenderAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateRecommenderResult> updateRecommenderAsync(final UpdateRecommenderRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateRecommenderRequest, UpdateRecommenderResult> asyncHandler) {
+        final UpdateRecommenderRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateRecommenderResult>() {
+            @Override
+            public UpdateRecommenderResult call() throws Exception {
+                UpdateRecommenderResult result = null;
+
+                try {
+                    result = executeUpdateRecommender(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -39,6 +39,8 @@ public class DatasetGroupSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedDateTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> FAILUREREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("failureReason").build();
+    private static final MarshallingInfo<String> DOMAIN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("domain").build();
 
     private static final DatasetGroupSummaryMarshaller instance = new DatasetGroupSummaryMarshaller();
 
@@ -62,6 +64,7 @@ public class DatasetGroupSummaryMarshaller {
             protocolMarshaller.marshall(datasetGroupSummary.getCreationDateTime(), CREATIONDATETIME_BINDING);
             protocolMarshaller.marshall(datasetGroupSummary.getLastUpdatedDateTime(), LASTUPDATEDDATETIME_BINDING);
             protocolMarshaller.marshall(datasetGroupSummary.getFailureReason(), FAILUREREASON_BINDING);
+            protocolMarshaller.marshall(datasetGroupSummary.getDomain(), DOMAIN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

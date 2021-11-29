@@ -91,6 +91,13 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private java.util.Map<String, String> filterValues;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the recommender to use to get recommendations. Provide a recommender ARN if you
+     * created a Domain dataset group with a recommender for a domain use case.
+     * </p>
+     */
+    private String recommenderArn;
 
     /**
      * <p>
@@ -561,6 +568,52 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the recommender to use to get recommendations. Provide a recommender ARN if you
+     * created a Domain dataset group with a recommender for a domain use case.
+     * </p>
+     * 
+     * @param recommenderArn
+     *        The Amazon Resource Name (ARN) of the recommender to use to get recommendations. Provide a recommender ARN
+     *        if you created a Domain dataset group with a recommender for a domain use case.
+     */
+
+    public void setRecommenderArn(String recommenderArn) {
+        this.recommenderArn = recommenderArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the recommender to use to get recommendations. Provide a recommender ARN if you
+     * created a Domain dataset group with a recommender for a domain use case.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the recommender to use to get recommendations. Provide a recommender
+     *         ARN if you created a Domain dataset group with a recommender for a domain use case.
+     */
+
+    public String getRecommenderArn() {
+        return this.recommenderArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the recommender to use to get recommendations. Provide a recommender ARN if you
+     * created a Domain dataset group with a recommender for a domain use case.
+     * </p>
+     * 
+     * @param recommenderArn
+     *        The Amazon Resource Name (ARN) of the recommender to use to get recommendations. Provide a recommender ARN
+     *        if you created a Domain dataset group with a recommender for a domain use case.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetRecommendationsRequest withRecommenderArn(String recommenderArn) {
+        setRecommenderArn(recommenderArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -585,7 +638,9 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
         if (getFilterArn() != null)
             sb.append("FilterArn: ").append(getFilterArn()).append(",");
         if (getFilterValues() != null)
-            sb.append("FilterValues: ").append("***Sensitive Data Redacted***");
+            sb.append("FilterValues: ").append("***Sensitive Data Redacted***").append(",");
+        if (getRecommenderArn() != null)
+            sb.append("RecommenderArn: ").append(getRecommenderArn());
         sb.append("}");
         return sb.toString();
     }
@@ -628,6 +683,10 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getFilterValues() != null && other.getFilterValues().equals(this.getFilterValues()) == false)
             return false;
+        if (other.getRecommenderArn() == null ^ this.getRecommenderArn() == null)
+            return false;
+        if (other.getRecommenderArn() != null && other.getRecommenderArn().equals(this.getRecommenderArn()) == false)
+            return false;
         return true;
     }
 
@@ -643,6 +702,7 @@ public class GetRecommendationsRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getContext() == null) ? 0 : getContext().hashCode());
         hashCode = prime * hashCode + ((getFilterArn() == null) ? 0 : getFilterArn().hashCode());
         hashCode = prime * hashCode + ((getFilterValues() == null) ? 0 : getFilterValues().hashCode());
+        hashCode = prime * hashCode + ((getRecommenderArn() == null) ? 0 : getRecommenderArn().hashCode());
         return hashCode;
     }
 

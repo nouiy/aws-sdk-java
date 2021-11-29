@@ -68,6 +68,10 @@ public class DatasetSchemaJsonUnmarshaller implements Unmarshaller<DatasetSchema
                     context.nextToken();
                     datasetSchema.setLastUpdatedDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("domain", targetDepth)) {
+                    context.nextToken();
+                    datasetSchema.setDomain(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

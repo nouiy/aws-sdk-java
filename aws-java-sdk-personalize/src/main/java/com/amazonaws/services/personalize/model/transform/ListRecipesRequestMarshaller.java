@@ -33,6 +33,8 @@ public class ListRecipesRequestMarshaller {
             .marshallLocationName("nextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
+    private static final MarshallingInfo<String> DOMAIN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("domain").build();
 
     private static final ListRecipesRequestMarshaller instance = new ListRecipesRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class ListRecipesRequestMarshaller {
             protocolMarshaller.marshall(listRecipesRequest.getRecipeProvider(), RECIPEPROVIDER_BINDING);
             protocolMarshaller.marshall(listRecipesRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listRecipesRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listRecipesRequest.getDomain(), DOMAIN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

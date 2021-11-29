@@ -37,6 +37,8 @@ public class RecipeSummaryMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("creationDateTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("lastUpdatedDateTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<String> DOMAIN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("domain").build();
 
     private static final RecipeSummaryMarshaller instance = new RecipeSummaryMarshaller();
 
@@ -59,6 +61,7 @@ public class RecipeSummaryMarshaller {
             protocolMarshaller.marshall(recipeSummary.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(recipeSummary.getCreationDateTime(), CREATIONDATETIME_BINDING);
             protocolMarshaller.marshall(recipeSummary.getLastUpdatedDateTime(), LASTUPDATEDDATETIME_BINDING);
+            protocolMarshaller.marshall(recipeSummary.getDomain(), DOMAIN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -68,7 +68,31 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
-     * Creates a campaign by deploying a solution version. When a client calls the <a
+     * Creates a batch segment job. The operation can handle up to 50 million records and the input file must be in JSON
+     * format. For more information, see <a>recommendations-batch</a>.
+     * </p>
+     * 
+     * @param createBatchSegmentJobRequest
+     * @return Result of the CreateBatchSegmentJob operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource already exists.
+     * @throws LimitExceededException
+     *         The limit on the number of requests per second has been exceeded.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.CreateBatchSegmentJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateBatchSegmentJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateBatchSegmentJobResult createBatchSegmentJob(CreateBatchSegmentJobRequest createBatchSegmentJobRequest);
+
+    /**
+     * <p>
+     * Creates a campaign that deploys a solution version. When a client calls the <a
      * href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetRecommendations.html">GetRecommendations</a>
      * and <a href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetPersonalizedRanking.html">
      * GetPersonalizedRanking</a> APIs, a campaign is specified in the request.
@@ -303,8 +327,8 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
-     * Creates an empty dataset group. A dataset group contains related datasets that supply data for training a model.
-     * A dataset group can contain at most three datasets, one for each type of dataset:
+     * Creates an empty dataset group. A dataset group is a container for Amazon Personalize resources. A dataset group
+     * can contain at most three datasets, one for each type of dataset:
      * </p>
      * <ul>
      * <li>
@@ -324,8 +348,11 @@ public interface AmazonPersonalize {
      * </li>
      * </ul>
      * <p>
-     * To train a model (create a solution), a dataset group that contains an <code>Interactions</code> dataset is
-     * required. Call <a>CreateDataset</a> to add a dataset to the group.
+     * A dataset group can be a Domain dataset group, where you specify a domain and use pre-configured resources like
+     * recommenders, or a Custom dataset group, where you use custom resources, such as a solution with a solution
+     * version, that you deploy with a campaign. If you start with a Domain dataset group, you can still add custom
+     * resources such as solutions and solution versions trained with recipes for custom use cases and deployed with
+     * campaigns.
      * </p>
      * <p>
      * A dataset group can be in one of the following states:
@@ -564,12 +591,89 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
+     * Creates a recommender with the recipe (a Domain dataset group use case) you specify. You create recommenders for
+     * a Domain dataset group and specify the recommender's Amazon Resource Name (ARN) when you make a <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetRecommendations.html">GetRecommendations</a>
+     * request.
+     * </p>
+     * <p>
+     * <b>Status</b>
+     * </p>
+     * <p>
+     * A recommender can be in one of the following states:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETE PENDING &gt; DELETE IN_PROGRESS
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * To get the recommender status, call <a>DescribeRecommender</a>.
+     * </p>
+     * <note>
+     * <p>
+     * Wait until the <code>status</code> of the recommender is <code>ACTIVE</code> before asking the recommender for
+     * recommendations.
+     * </p>
+     * </note>
+     * <p class="title">
+     * <b>Related APIs</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a>ListRecommenders</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a>DescribeRecommender</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a>UpdateRecommender</a>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a>DeleteRecommender</a>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param createRecommenderRequest
+     * @return Result of the CreateRecommender operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceAlreadyExistsException
+     *         The specified resource already exists.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws LimitExceededException
+     *         The limit on the number of requests per second has been exceeded.
+     * @sample AmazonPersonalize.CreateRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/CreateRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateRecommenderResult createRecommender(CreateRecommenderRequest createRecommenderRequest);
+
+    /**
+     * <p>
      * Creates an Amazon Personalize schema from the specified schema string. The schema you create must be in Avro JSON
      * format.
      * </p>
      * <p>
      * Amazon Personalize recognizes three schema variants. Each schema is associated with a dataset type and has a set
-     * of required field and keywords. You specify a schema when you call <a>CreateDataset</a>.
+     * of required field and keywords. If you are creating a schema for a dataset in a Domain dataset group, you provide
+     * the domain of the Domain dataset group. You specify a schema when you call <a>CreateDataset</a>.
      * </p>
      * <p class="title">
      * <b>Related APIs</b>
@@ -712,9 +816,9 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
-     * Trains or retrains an active solution. A solution is created using the <a>CreateSolution</a> operation and must
-     * be in the ACTIVE state before calling <code>CreateSolutionVersion</code>. A new version of the solution is
-     * created every time you call this operation.
+     * Trains or retrains an active solution in a Custom dataset group. A solution is created using the
+     * <a>CreateSolution</a> operation and must be in the ACTIVE state before calling <code>CreateSolutionVersion</code>
+     * . A new version of the solution is created every time you call this operation.
      * </p>
      * <p>
      * <b>Status</b>
@@ -936,6 +1040,27 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
+     * Deactivates and removes a recommender. A deleted recommender can no longer be specified in a <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_RS_GetRecommendations.html">GetRecommendations</a>
+     * request.
+     * </p>
+     * 
+     * @param deleteRecommenderRequest
+     * @return Result of the DeleteRecommender operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.DeleteRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DeleteRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteRecommenderResult deleteRecommender(DeleteRecommenderRequest deleteRecommenderRequest);
+
+    /**
+     * <p>
      * Deletes a schema. Before deleting a schema, you must delete all datasets referencing the schema. For more
      * information on schemas, see <a>CreateSchema</a>.
      * </p>
@@ -1011,6 +1136,24 @@ public interface AmazonPersonalize {
      *      target="_top">AWS API Documentation</a>
      */
     DescribeBatchInferenceJobResult describeBatchInferenceJob(DescribeBatchInferenceJobRequest describeBatchInferenceJobRequest);
+
+    /**
+     * <p>
+     * Gets the properties of a batch segment job including name, Amazon Resource Name (ARN), status, input and output
+     * configurations, and the ARN of the solution version used to generate segments.
+     * </p>
+     * 
+     * @param describeBatchSegmentJobRequest
+     * @return Result of the DescribeBatchSegmentJob operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @sample AmazonPersonalize.DescribeBatchSegmentJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeBatchSegmentJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeBatchSegmentJobResult describeBatchSegmentJob(DescribeBatchSegmentJobRequest describeBatchSegmentJobRequest);
 
     /**
      * <p>
@@ -1217,6 +1360,46 @@ public interface AmazonPersonalize {
 
     /**
      * <p>
+     * Describes the given recommender, including its status.
+     * </p>
+     * <p>
+     * A recommender can be in one of the following states:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * DELETE PENDING &gt; DELETE IN_PROGRESS
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * When the <code>status</code> is <code>CREATE FAILED</code>, the response includes the <code>failureReason</code>
+     * key, which describes why.
+     * </p>
+     * <p>
+     * For more information on recommenders, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateRecommender.html">CreateRecommender</a>.
+     * </p>
+     * 
+     * @param describeRecommenderRequest
+     * @return Result of the DescribeRecommender operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @sample AmazonPersonalize.DescribeRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DescribeRecommender"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeRecommenderResult describeRecommender(DescribeRecommenderRequest describeRecommenderRequest);
+
+    /**
+     * <p>
      * Describes a schema. For more information on schemas, see <a>CreateSchema</a>.
      * </p>
      * 
@@ -1301,6 +1484,23 @@ public interface AmazonPersonalize {
      *      target="_top">AWS API Documentation</a>
      */
     ListBatchInferenceJobsResult listBatchInferenceJobs(ListBatchInferenceJobsRequest listBatchInferenceJobsRequest);
+
+    /**
+     * <p>
+     * Gets a list of the batch segment jobs that have been performed off of a solution version that you specify.
+     * </p>
+     * 
+     * @param listBatchSegmentJobsRequest
+     * @return Result of the ListBatchSegmentJobs operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws InvalidNextTokenException
+     *         The token is not valid.
+     * @sample AmazonPersonalize.ListBatchSegmentJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListBatchSegmentJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListBatchSegmentJobsResult listBatchSegmentJobs(ListBatchSegmentJobsRequest listBatchSegmentJobsRequest);
 
     /**
      * <p>
@@ -1441,11 +1641,33 @@ public interface AmazonPersonalize {
      * @return Result of the ListRecipes operation returned by the service.
      * @throws InvalidNextTokenException
      *         The token is not valid.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
      * @sample AmazonPersonalize.ListRecipes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListRecipes" target="_top">AWS API
      *      Documentation</a>
      */
     ListRecipesResult listRecipes(ListRecipesRequest listRecipesRequest);
+
+    /**
+     * <p>
+     * Returns a list of recommenders in a given Domain dataset group. When a Domain dataset group is not specified, all
+     * the recommenders associated with the account are listed. The response provides the properties for each
+     * recommender, including the Amazon Resource Name (ARN). For more information on recommenders, see <a
+     * href="https://docs.aws.amazon.com/personalize/latest/dg/API_CreateRecommender.html">CreateRecommender</a>.
+     * </p>
+     * 
+     * @param listRecommendersRequest
+     * @return Result of the ListRecommenders operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws InvalidNextTokenException
+     *         The token is not valid.
+     * @sample AmazonPersonalize.ListRecommenders
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/ListRecommenders" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListRecommendersResult listRecommenders(ListRecommendersRequest listRecommendersRequest);
 
     /**
      * <p>
@@ -1576,6 +1798,25 @@ public interface AmazonPersonalize {
      *      Documentation</a>
      */
     UpdateCampaignResult updateCampaign(UpdateCampaignRequest updateCampaignRequest);
+
+    /**
+     * <p>
+     * Updates the recommender to modify the recommender configuration.
+     * </p>
+     * 
+     * @param updateRecommenderRequest
+     * @return Result of the UpdateRecommender operation returned by the service.
+     * @throws InvalidInputException
+     *         Provide a valid value for the field or parameter.
+     * @throws ResourceNotFoundException
+     *         Could not find the specified resource.
+     * @throws ResourceInUseException
+     *         The specified resource is in use.
+     * @sample AmazonPersonalize.UpdateRecommender
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/UpdateRecommender" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateRecommenderResult updateRecommender(UpdateRecommenderRequest updateRecommenderRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

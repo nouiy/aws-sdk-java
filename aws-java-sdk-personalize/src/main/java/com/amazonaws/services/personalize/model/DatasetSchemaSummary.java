@@ -52,6 +52,12 @@ public class DatasetSchemaSummary implements Serializable, Cloneable, Structured
      * </p>
      */
     private java.util.Date lastUpdatedDateTime;
+    /**
+     * <p>
+     * The domain of a schema that you created for a dataset in a Domain dataset group.
+     * </p>
+     */
+    private String domain;
 
     /**
      * <p>
@@ -214,6 +220,65 @@ public class DatasetSchemaSummary implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The domain of a schema that you created for a dataset in a Domain dataset group.
+     * </p>
+     * 
+     * @param domain
+     *        The domain of a schema that you created for a dataset in a Domain dataset group.
+     * @see Domain
+     */
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+    /**
+     * <p>
+     * The domain of a schema that you created for a dataset in a Domain dataset group.
+     * </p>
+     * 
+     * @return The domain of a schema that you created for a dataset in a Domain dataset group.
+     * @see Domain
+     */
+
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
+     * <p>
+     * The domain of a schema that you created for a dataset in a Domain dataset group.
+     * </p>
+     * 
+     * @param domain
+     *        The domain of a schema that you created for a dataset in a Domain dataset group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Domain
+     */
+
+    public DatasetSchemaSummary withDomain(String domain) {
+        setDomain(domain);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The domain of a schema that you created for a dataset in a Domain dataset group.
+     * </p>
+     * 
+     * @param domain
+     *        The domain of a schema that you created for a dataset in a Domain dataset group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Domain
+     */
+
+    public DatasetSchemaSummary withDomain(Domain domain) {
+        this.domain = domain.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -232,7 +297,9 @@ public class DatasetSchemaSummary implements Serializable, Cloneable, Structured
         if (getCreationDateTime() != null)
             sb.append("CreationDateTime: ").append(getCreationDateTime()).append(",");
         if (getLastUpdatedDateTime() != null)
-            sb.append("LastUpdatedDateTime: ").append(getLastUpdatedDateTime());
+            sb.append("LastUpdatedDateTime: ").append(getLastUpdatedDateTime()).append(",");
+        if (getDomain() != null)
+            sb.append("Domain: ").append(getDomain());
         sb.append("}");
         return sb.toString();
     }
@@ -263,6 +330,10 @@ public class DatasetSchemaSummary implements Serializable, Cloneable, Structured
             return false;
         if (other.getLastUpdatedDateTime() != null && other.getLastUpdatedDateTime().equals(this.getLastUpdatedDateTime()) == false)
             return false;
+        if (other.getDomain() == null ^ this.getDomain() == null)
+            return false;
+        if (other.getDomain() != null && other.getDomain().equals(this.getDomain()) == false)
+            return false;
         return true;
     }
 
@@ -275,6 +346,7 @@ public class DatasetSchemaSummary implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getSchemaArn() == null) ? 0 : getSchemaArn().hashCode());
         hashCode = prime * hashCode + ((getCreationDateTime() == null) ? 0 : getCreationDateTime().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedDateTime() == null) ? 0 : getLastUpdatedDateTime().hashCode());
+        hashCode = prime * hashCode + ((getDomain() == null) ? 0 : getDomain().hashCode());
         return hashCode;
     }
 

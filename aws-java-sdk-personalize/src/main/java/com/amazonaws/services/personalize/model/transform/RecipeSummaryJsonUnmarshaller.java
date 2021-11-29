@@ -68,6 +68,10 @@ public class RecipeSummaryJsonUnmarshaller implements Unmarshaller<RecipeSummary
                     context.nextToken();
                     recipeSummary.setLastUpdatedDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("domain", targetDepth)) {
+                    context.nextToken();
+                    recipeSummary.setDomain(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

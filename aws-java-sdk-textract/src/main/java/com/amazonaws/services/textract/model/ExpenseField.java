@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Breakdown of detected information, seperated into the catagories Type, LableDetection, and ValueDetection
+ * Breakdown of detected information, seperated into the catagories Type, LabelDetection, and ValueDetection
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/ExpenseField" target="_top">AWS API

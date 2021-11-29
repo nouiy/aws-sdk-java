@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that provides information about a specific version of a <a>Solution</a>.
+ * An object that provides information about a specific version of a <a>Solution</a> in a Custom dataset group.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/SolutionVersion" target="_top">AWS API

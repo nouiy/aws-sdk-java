@@ -33,6 +33,8 @@ public class CreateDatasetGroupRequestMarshaller {
             .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<String> KMSKEYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("kmsKeyArn").build();
+    private static final MarshallingInfo<String> DOMAIN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("domain").build();
 
     private static final CreateDatasetGroupRequestMarshaller instance = new CreateDatasetGroupRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class CreateDatasetGroupRequestMarshaller {
             protocolMarshaller.marshall(createDatasetGroupRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createDatasetGroupRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(createDatasetGroupRequest.getKmsKeyArn(), KMSKEYARN_BINDING);
+            protocolMarshaller.marshall(createDatasetGroupRequest.getDomain(), DOMAIN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

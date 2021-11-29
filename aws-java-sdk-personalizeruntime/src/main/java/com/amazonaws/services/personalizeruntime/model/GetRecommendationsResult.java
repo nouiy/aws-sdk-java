@@ -25,7 +25,7 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500 items in
+     * A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500 items in
      * the list.
      * </p>
      */
@@ -39,11 +39,11 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500 items in
+     * A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500 items in
      * the list.
      * </p>
      * 
-     * @return A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500
+     * @return A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500
      *         items in the list.
      */
 
@@ -53,12 +53,12 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500 items in
+     * A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500 items in
      * the list.
      * </p>
      * 
      * @param itemList
-     *        A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500
+     *        A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500
      *        items in the list.
      */
 
@@ -73,7 +73,7 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500 items in
+     * A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500 items in
      * the list.
      * </p>
      * <p>
@@ -83,7 +83,7 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
      * </p>
      * 
      * @param itemList
-     *        A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500
+     *        A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500
      *        items in the list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -100,12 +100,12 @@ public class GetRecommendationsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500 items in
+     * A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500 items in
      * the list.
      * </p>
      * 
      * @param itemList
-     *        A list of recommendations sorted in ascending order by prediction score. There can be a maximum of 500
+     *        A list of recommendations sorted in descending order by prediction score. There can be a maximum of 500
      *        items in the list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

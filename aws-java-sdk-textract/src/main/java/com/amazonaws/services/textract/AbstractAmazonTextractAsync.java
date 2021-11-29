@@ -54,6 +54,19 @@ public class AbstractAmazonTextractAsync extends AbstractAmazonTextract implemen
     }
 
     @Override
+    public java.util.concurrent.Future<AnalyzeIDResult> analyzeIDAsync(AnalyzeIDRequest request) {
+
+        return analyzeIDAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AnalyzeIDResult> analyzeIDAsync(AnalyzeIDRequest request,
+            com.amazonaws.handlers.AsyncHandler<AnalyzeIDRequest, AnalyzeIDResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DetectDocumentTextResult> detectDocumentTextAsync(DetectDocumentTextRequest request) {
 
         return detectDocumentTextAsync(request, null);

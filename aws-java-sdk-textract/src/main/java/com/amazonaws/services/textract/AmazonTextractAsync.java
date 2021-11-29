@@ -156,7 +156,8 @@ public interface AmazonTextractAsync extends AmazonTextract {
 
     /**
      * <p>
-     * Analyzes an input document for financially related relationships between text.
+     * <code>AnalyzeExpense</code> synchronously analyzes an input document for financially related relationships
+     * between text.
      * </p>
      * <p>
      * Information is returned as <code>ExpenseDocuments</code> and seperated as follows.
@@ -186,7 +187,8 @@ public interface AmazonTextractAsync extends AmazonTextract {
 
     /**
      * <p>
-     * Analyzes an input document for financially related relationships between text.
+     * <code>AnalyzeExpense</code> synchronously analyzes an input document for financially related relationships
+     * between text.
      * </p>
      * <p>
      * Information is returned as <code>ExpenseDocuments</code> and seperated as follows.
@@ -218,6 +220,39 @@ public interface AmazonTextractAsync extends AmazonTextract {
      */
     java.util.concurrent.Future<AnalyzeExpenseResult> analyzeExpenseAsync(AnalyzeExpenseRequest analyzeExpenseRequest,
             com.amazonaws.handlers.AsyncHandler<AnalyzeExpenseRequest, AnalyzeExpenseResult> asyncHandler);
+
+    /**
+     * <p>
+     * Analyzes identity documents for relevant information. This information is extracted and returned as
+     * <code>IdentityDocumentFields</code>, which records both the normalized field and value of the extracted text.
+     * </p>
+     * 
+     * @param analyzeIDRequest
+     * @return A Java Future containing the result of the AnalyzeID operation returned by the service.
+     * @sample AmazonTextractAsync.AnalyzeID
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/AnalyzeID" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AnalyzeIDResult> analyzeIDAsync(AnalyzeIDRequest analyzeIDRequest);
+
+    /**
+     * <p>
+     * Analyzes identity documents for relevant information. This information is extracted and returned as
+     * <code>IdentityDocumentFields</code>, which records both the normalized field and value of the extracted text.
+     * </p>
+     * 
+     * @param analyzeIDRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AnalyzeID operation returned by the service.
+     * @sample AmazonTextractAsyncHandler.AnalyzeID
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/AnalyzeID" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AnalyzeIDResult> analyzeIDAsync(AnalyzeIDRequest analyzeIDRequest,
+            com.amazonaws.handlers.AsyncHandler<AnalyzeIDRequest, AnalyzeIDResult> asyncHandler);
 
     /**
      * <p>

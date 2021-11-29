@@ -33,6 +33,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
     }
 
     @Override
+    public CreateBatchSegmentJobResult createBatchSegmentJob(CreateBatchSegmentJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateCampaignResult createCampaign(CreateCampaignRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -64,6 +69,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
 
     @Override
     public CreateFilterResult createFilter(CreateFilterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateRecommenderResult createRecommender(CreateRecommenderRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -108,6 +118,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
     }
 
     @Override
+    public DeleteRecommenderResult deleteRecommender(DeleteRecommenderRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteSchemaResult deleteSchema(DeleteSchemaRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -124,6 +139,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
 
     @Override
     public DescribeBatchInferenceJobResult describeBatchInferenceJob(DescribeBatchInferenceJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeBatchSegmentJobResult describeBatchSegmentJob(DescribeBatchSegmentJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -173,6 +193,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
     }
 
     @Override
+    public DescribeRecommenderResult describeRecommender(DescribeRecommenderRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeSchemaResult describeSchema(DescribeSchemaRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -194,6 +219,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
 
     @Override
     public ListBatchInferenceJobsResult listBatchInferenceJobs(ListBatchInferenceJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListBatchSegmentJobsResult listBatchSegmentJobs(ListBatchSegmentJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -238,6 +268,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
     }
 
     @Override
+    public ListRecommendersResult listRecommenders(ListRecommendersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListSchemasResult listSchemas(ListSchemasRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -259,6 +294,11 @@ public class AbstractAmazonPersonalize implements AmazonPersonalize {
 
     @Override
     public UpdateCampaignResult updateCampaign(UpdateCampaignRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateRecommenderResult updateRecommender(UpdateRecommenderRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

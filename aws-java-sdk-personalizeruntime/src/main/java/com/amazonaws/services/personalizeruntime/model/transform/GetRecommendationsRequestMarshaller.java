@@ -43,6 +43,8 @@ public class GetRecommendationsRequestMarshaller {
             .marshallLocationName("filterArn").build();
     private static final MarshallingInfo<Map> FILTERVALUES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("filterValues").build();
+    private static final MarshallingInfo<String> RECOMMENDERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("recommenderArn").build();
 
     private static final GetRecommendationsRequestMarshaller instance = new GetRecommendationsRequestMarshaller();
 
@@ -67,6 +69,7 @@ public class GetRecommendationsRequestMarshaller {
             protocolMarshaller.marshall(getRecommendationsRequest.getContext(), CONTEXT_BINDING);
             protocolMarshaller.marshall(getRecommendationsRequest.getFilterArn(), FILTERARN_BINDING);
             protocolMarshaller.marshall(getRecommendationsRequest.getFilterValues(), FILTERVALUES_BINDING);
+            protocolMarshaller.marshall(getRecommendationsRequest.getRecommenderArn(), RECOMMENDERARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

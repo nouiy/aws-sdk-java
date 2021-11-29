@@ -44,6 +44,14 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String kmsKeyArn;
+    /**
+     * <p>
+     * The domain of the dataset group. Specify a domain to create a Domain dataset group. The domain you specify
+     * determines the default schemas for datasets and the use cases available for recommenders. If you don't specify a
+     * domain, you create a Custom dataset group with solution versions that you deploy with a campaign.
+     * </p>
+     */
+    private String domain;
 
     /**
      * <p>
@@ -172,6 +180,85 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The domain of the dataset group. Specify a domain to create a Domain dataset group. The domain you specify
+     * determines the default schemas for datasets and the use cases available for recommenders. If you don't specify a
+     * domain, you create a Custom dataset group with solution versions that you deploy with a campaign.
+     * </p>
+     * 
+     * @param domain
+     *        The domain of the dataset group. Specify a domain to create a Domain dataset group. The domain you specify
+     *        determines the default schemas for datasets and the use cases available for recommenders. If you don't
+     *        specify a domain, you create a Custom dataset group with solution versions that you deploy with a
+     *        campaign.
+     * @see Domain
+     */
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+    /**
+     * <p>
+     * The domain of the dataset group. Specify a domain to create a Domain dataset group. The domain you specify
+     * determines the default schemas for datasets and the use cases available for recommenders. If you don't specify a
+     * domain, you create a Custom dataset group with solution versions that you deploy with a campaign.
+     * </p>
+     * 
+     * @return The domain of the dataset group. Specify a domain to create a Domain dataset group. The domain you
+     *         specify determines the default schemas for datasets and the use cases available for recommenders. If you
+     *         don't specify a domain, you create a Custom dataset group with solution versions that you deploy with a
+     *         campaign.
+     * @see Domain
+     */
+
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
+     * <p>
+     * The domain of the dataset group. Specify a domain to create a Domain dataset group. The domain you specify
+     * determines the default schemas for datasets and the use cases available for recommenders. If you don't specify a
+     * domain, you create a Custom dataset group with solution versions that you deploy with a campaign.
+     * </p>
+     * 
+     * @param domain
+     *        The domain of the dataset group. Specify a domain to create a Domain dataset group. The domain you specify
+     *        determines the default schemas for datasets and the use cases available for recommenders. If you don't
+     *        specify a domain, you create a Custom dataset group with solution versions that you deploy with a
+     *        campaign.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Domain
+     */
+
+    public CreateDatasetGroupRequest withDomain(String domain) {
+        setDomain(domain);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The domain of the dataset group. Specify a domain to create a Domain dataset group. The domain you specify
+     * determines the default schemas for datasets and the use cases available for recommenders. If you don't specify a
+     * domain, you create a Custom dataset group with solution versions that you deploy with a campaign.
+     * </p>
+     * 
+     * @param domain
+     *        The domain of the dataset group. Specify a domain to create a Domain dataset group. The domain you specify
+     *        determines the default schemas for datasets and the use cases available for recommenders. If you don't
+     *        specify a domain, you create a Custom dataset group with solution versions that you deploy with a
+     *        campaign.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Domain
+     */
+
+    public CreateDatasetGroupRequest withDomain(Domain domain) {
+        this.domain = domain.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -188,7 +275,9 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getKmsKeyArn() != null)
-            sb.append("KmsKeyArn: ").append(getKmsKeyArn());
+            sb.append("KmsKeyArn: ").append(getKmsKeyArn()).append(",");
+        if (getDomain() != null)
+            sb.append("Domain: ").append(getDomain());
         sb.append("}");
         return sb.toString();
     }
@@ -215,6 +304,10 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
             return false;
+        if (other.getDomain() == null ^ this.getDomain() == null)
+            return false;
+        if (other.getDomain() != null && other.getDomain().equals(this.getDomain()) == false)
+            return false;
         return true;
     }
 
@@ -226,6 +319,7 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getDomain() == null) ? 0 : getDomain().hashCode());
         return hashCode;
     }
 
