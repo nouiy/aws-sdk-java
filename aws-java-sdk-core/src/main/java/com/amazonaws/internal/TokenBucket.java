@@ -161,15 +161,14 @@ public class TokenBucket {
      * @return The unfulfilled amount.
      */
     double tryAcquireCapacity(double amount) {
+        double result;
         if (amount <= currentCapacity) {
-            currentCapacity = currentCapacity - amount;
-            amount = 0;
+            result = 0;
         } else {
-            amount = amount - currentCapacity;
-            currentCapacity = 0;
+            result = amount - currentCapacity;
         }
-
-        return amount;
+        currentCapacity = currentCapacity - amount;
+        return result;
     }
 
     private void initialize() {

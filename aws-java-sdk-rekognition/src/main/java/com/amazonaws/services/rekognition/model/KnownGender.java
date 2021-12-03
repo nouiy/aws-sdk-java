@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The known gender identity for the celebrity that matches the provided ID.
+ * The known gender identity for the celebrity that matches the provided ID. The known gender identity can be Male,
+ * Female, Nonbinary, or Unlisted.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

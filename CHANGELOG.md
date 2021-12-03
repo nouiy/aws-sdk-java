@@ -1,3 +1,8 @@
+# __1.12.125__ __2021-12-03__
+## __Amazon Rekognition__
+  - ### Features
+    - This release added new KnownGender types for Celebrity Recognition.
+
 # __1.12.124__ __2021-12-02__
 ## __AWS Amplify UI Builder__
   - ### Features

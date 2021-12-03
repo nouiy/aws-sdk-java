@@ -23,7 +23,9 @@ import javax.annotation.Generated;
 public enum KnownGenderType {
 
     Male("Male"),
-    Female("Female");
+    Female("Female"),
+    Nonbinary("Nonbinary"),
+    Unlisted("Unlisted");
 
     private String value;
 

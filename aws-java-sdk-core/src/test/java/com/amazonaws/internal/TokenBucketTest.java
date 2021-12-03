@@ -76,6 +76,49 @@ public class TokenBucketTest {
 
         assertThat(acquired, equalTo(true));
         assertThat(TimeUnit.NANOSECONDS.toSeconds(elapsed), equalTo(1L));
+        assertThat(tb.getCurrentCapacity(), equalTo(-1.0));
+    }
+
+    @Test
+    public void acquire_amountGreaterThanNonZeroPositiveCapacity_setsNegativeCapacity() {
+        TokenBucket tb = Mockito.spy(new TokenBucket());
+
+        // stub out sleep(), since we do not want to wait for sleep time.
+        Mockito.doAnswer(new Answer() {
+            @Override
+            public Void answer(InvocationOnMock invocationOnMock) throws Throwable {
+                return null;
+            }
+        }).when(tb).sleep(90);
+
+        tb.setFillRate(1.0);
+        tb.setCurrentCapacity(11.0);
+        tb.enable();
+
+        boolean acquired = tb.acquire(101);
+        assertThat(acquired, equalTo(true));
+        assertThat(tb.getCurrentCapacity(), equalTo(-90.0));
+    }
+
+    @Test
+    public void acquire_amountGreaterThanNegativeCapacity_setsNegativeCapacity() {
+        TokenBucket tb = Mockito.spy(new TokenBucket());
+
+        // stub out sleep(), since we do not want to wait for sleep time.
+        Mockito.doAnswer(new Answer() {
+            @Override
+            public Void answer(InvocationOnMock invocationOnMock) throws Throwable {
+                return null;
+            }
+        }).when(tb).sleep(3);
+
+        tb.setFillRate(1.0);
+        tb.setCurrentCapacity(-1.0);
+        tb.enable();
+
+        boolean acquired = tb.acquire(2);
+        assertThat(acquired, equalTo(true));
+        assertThat(tb.getCurrentCapacity(), equalTo(-3.0));
     }
 
     @Test
@@ -110,6 +153,16 @@ public class TokenBucketTest {
         tb.setCurrentCapacity(5.0);
 
         assertThat(tb.tryAcquireCapacity(5.0), equalTo(0.0));
+        assertThat(tb.getCurrentCapacity(), equalTo(0.0));
+    }
+
+    @Test
+    public void tryAcquireCapacity_amountGreaterThanCapacity_setsNegativeCapacity() {
+        TokenBucket tb = new TokenBucket();
+        tb.setCurrentCapacity(5.0);
+
+        assertThat(tb.tryAcquireCapacity(8.0), equalTo(3.0));
+        assertThat(tb.getCurrentCapacity(), equalTo(-3.0));
     }
 
     @Test
