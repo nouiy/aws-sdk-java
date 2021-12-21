@@ -83,6 +83,14 @@ public class SourceJsonUnmarshaller implements Unmarshaller<Source, JsonUnmarsha
                     context.nextToken();
                     source.setName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("senderControlPort", targetDepth)) {
+                    context.nextToken();
+                    source.setSenderControlPort(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("senderIpAddress", targetDepth)) {
+                    context.nextToken();
+                    source.setSenderIpAddress(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("sourceArn", targetDepth)) {
                     context.nextToken();
                     source.setSourceArn(context.getUnmarshaller(String.class).unmarshall(context));

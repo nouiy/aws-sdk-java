@@ -1255,6 +1255,74 @@ public class AmazonLookoutMetricsClient extends AmazonWebServiceClient implement
 
     /**
      * <p>
+     * Returns a list of measures that are potential causes or effects of an anomaly group.
+     * </p>
+     * 
+     * @param listAnomalyGroupRelatedMetricsRequest
+     * @return Result of the ListAnomalyGroupRelatedMetrics operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found. Check the ARN of the resource and try again.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by the AWS service. Check your input values and try
+     *         again.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception, or failure.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
+     * @throws TooManyRequestsException
+     *         The request was denied due to too many requests being submitted at the same time.
+     * @sample AmazonLookoutMetrics.ListAnomalyGroupRelatedMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutmetrics-2017-07-25/ListAnomalyGroupRelatedMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAnomalyGroupRelatedMetricsResult listAnomalyGroupRelatedMetrics(ListAnomalyGroupRelatedMetricsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAnomalyGroupRelatedMetrics(request);
+    }
+
+    @SdkInternalApi
+    final ListAnomalyGroupRelatedMetricsResult executeListAnomalyGroupRelatedMetrics(ListAnomalyGroupRelatedMetricsRequest listAnomalyGroupRelatedMetricsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAnomalyGroupRelatedMetricsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAnomalyGroupRelatedMetricsRequest> request = null;
+        Response<ListAnomalyGroupRelatedMetricsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAnomalyGroupRelatedMetricsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAnomalyGroupRelatedMetricsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "LookoutMetrics");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAnomalyGroupRelatedMetrics");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAnomalyGroupRelatedMetricsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAnomalyGroupRelatedMetricsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of anomaly groups.
      * </p>
      * 

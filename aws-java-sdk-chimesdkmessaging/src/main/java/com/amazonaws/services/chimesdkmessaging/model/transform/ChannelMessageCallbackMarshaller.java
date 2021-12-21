@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.chimesdkmessaging.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +35,10 @@ public class ChannelMessageCallbackMarshaller {
             .marshallLocationName("Content").build();
     private static final MarshallingInfo<String> METADATA_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Metadata").build();
+    private static final MarshallingInfo<StructuredPojo> PUSHNOTIFICATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PushNotification").build();
+    private static final MarshallingInfo<Map> MESSAGEATTRIBUTES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MessageAttributes").build();
 
     private static final ChannelMessageCallbackMarshaller instance = new ChannelMessageCallbackMarshaller();
 
@@ -53,6 +59,8 @@ public class ChannelMessageCallbackMarshaller {
             protocolMarshaller.marshall(channelMessageCallback.getMessageId(), MESSAGEID_BINDING);
             protocolMarshaller.marshall(channelMessageCallback.getContent(), CONTENT_BINDING);
             protocolMarshaller.marshall(channelMessageCallback.getMetadata(), METADATA_BINDING);
+            protocolMarshaller.marshall(channelMessageCallback.getPushNotification(), PUSHNOTIFICATION_BINDING);
+            protocolMarshaller.marshall(channelMessageCallback.getMessageAttributes(), MESSAGEATTRIBUTES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

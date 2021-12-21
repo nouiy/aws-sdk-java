@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -133,7 +133,7 @@
         "variableDeclarationType" : "AcceptEulasRequest",
         "variableName" : "acceptEulasRequest",
         "variableType" : "AcceptEulasRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "AcceptEulasRequest",
         "variableSetterType" : "AcceptEulasRequest"
       },
@@ -142,7 +142,7 @@
       "operationName" : "AcceptEulas",
       "returnType" : {
         "returnType" : "AcceptEulasResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "AcceptEulasResult"
     },
@@ -194,7 +194,7 @@
         "variableDeclarationType" : "CreateLaunchProfileRequest",
         "variableName" : "createLaunchProfileRequest",
         "variableType" : "CreateLaunchProfileRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "CreateLaunchProfileRequest",
         "variableSetterType" : "CreateLaunchProfileRequest"
       },
@@ -203,7 +203,7 @@
       "operationName" : "CreateLaunchProfile",
       "returnType" : {
         "returnType" : "CreateLaunchProfileResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "CreateLaunchProfileResult"
     },
@@ -255,7 +255,7 @@
         "variableDeclarationType" : "CreateStreamingImageRequest",
         "variableName" : "createStreamingImageRequest",
         "variableType" : "CreateStreamingImageRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "CreateStreamingImageRequest",
         "variableSetterType" : "CreateStreamingImageRequest"
       },
@@ -264,7 +264,7 @@
       "operationName" : "CreateStreamingImage",
       "returnType" : {
         "returnType" : "CreateStreamingImageResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "CreateStreamingImageResult"
     },
@@ -316,7 +316,7 @@
         "variableDeclarationType" : "CreateStreamingSessionRequest",
         "variableName" : "createStreamingSessionRequest",
         "variableType" : "CreateStreamingSessionRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "CreateStreamingSessionRequest",
         "variableSetterType" : "CreateStreamingSessionRequest"
       },
@@ -325,7 +325,7 @@
       "operationName" : "CreateStreamingSession",
       "returnType" : {
         "returnType" : "CreateStreamingSessionResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "CreateStreamingSessionResult"
     },
@@ -377,7 +377,7 @@
         "variableDeclarationType" : "CreateStreamingSessionStreamRequest",
         "variableName" : "createStreamingSessionStreamRequest",
         "variableType" : "CreateStreamingSessionStreamRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "CreateStreamingSessionStreamRequest",
         "variableSetterType" : "CreateStreamingSessionStreamRequest"
       },
@@ -386,7 +386,7 @@
       "operationName" : "CreateStreamingSessionStream",
       "returnType" : {
         "returnType" : "CreateStreamingSessionStreamResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "CreateStreamingSessionStreamResult"
     },
@@ -438,7 +438,7 @@
         "variableDeclarationType" : "CreateStudioRequest",
         "variableName" : "createStudioRequest",
         "variableType" : "CreateStudioRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "CreateStudioRequest",
         "variableSetterType" : "CreateStudioRequest"
       },
@@ -447,7 +447,7 @@
       "operationName" : "CreateStudio",
       "returnType" : {
         "returnType" : "CreateStudioResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "CreateStudioResult"
     },
@@ -499,7 +499,7 @@
         "variableDeclarationType" : "CreateStudioComponentRequest",
         "variableName" : "createStudioComponentRequest",
         "variableType" : "CreateStudioComponentRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "CreateStudioComponentRequest",
         "variableSetterType" : "CreateStudioComponentRequest"
       },
@@ -508,7 +508,7 @@
       "operationName" : "CreateStudioComponent",
       "returnType" : {
         "returnType" : "CreateStudioComponentResult",
-        "documentation" : "<p/>"
+        "documentation" : null
       },
       "syncReturnType" : "CreateStudioComponentResult"
     },
@@ -569,7 +569,7 @@
       "operationName" : "DeleteLaunchProfile",
       "returnType" : {
         "returnType" : "DeleteLaunchProfileResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "DeleteLaunchProfileResult"
     },
@@ -630,7 +630,7 @@
       "operationName" : "DeleteLaunchProfileMember",
       "returnType" : {
         "returnType" : "DeleteLaunchProfileMemberResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "DeleteLaunchProfileMemberResult"
     },
@@ -691,7 +691,7 @@
       "operationName" : "DeleteStreamingImage",
       "returnType" : {
         "returnType" : "DeleteStreamingImageResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "DeleteStreamingImageResult"
     },
@@ -752,7 +752,7 @@
       "operationName" : "DeleteStreamingSession",
       "returnType" : {
         "returnType" : "DeleteStreamingSessionResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "DeleteStreamingSessionResult"
     },
@@ -813,7 +813,7 @@
       "operationName" : "DeleteStudio",
       "returnType" : {
         "returnType" : "DeleteStudioResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "DeleteStudioResult"
     },
@@ -874,7 +874,7 @@
       "operationName" : "DeleteStudioComponent",
       "returnType" : {
         "returnType" : "DeleteStudioComponentResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "DeleteStudioComponentResult"
     },
@@ -935,7 +935,7 @@
       "operationName" : "DeleteStudioMember",
       "returnType" : {
         "returnType" : "DeleteStudioMemberResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "DeleteStudioMemberResult"
     },
@@ -996,7 +996,7 @@
       "operationName" : "GetEula",
       "returnType" : {
         "returnType" : "GetEulaResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetEulaResult"
     },
@@ -1057,7 +1057,7 @@
       "operationName" : "GetLaunchProfile",
       "returnType" : {
         "returnType" : "GetLaunchProfileResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetLaunchProfileResult"
     },
@@ -1118,7 +1118,7 @@
       "operationName" : "GetLaunchProfileDetails",
       "returnType" : {
         "returnType" : "GetLaunchProfileDetailsResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetLaunchProfileDetailsResult"
     },
@@ -1179,7 +1179,7 @@
       "operationName" : "GetLaunchProfileInitialization",
       "returnType" : {
         "returnType" : "GetLaunchProfileInitializationResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetLaunchProfileInitializationResult"
     },
@@ -1240,7 +1240,7 @@
       "operationName" : "GetLaunchProfileMember",
       "returnType" : {
         "returnType" : "GetLaunchProfileMemberResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetLaunchProfileMemberResult"
     },
@@ -1301,7 +1301,7 @@
       "operationName" : "GetStreamingImage",
       "returnType" : {
         "returnType" : "GetStreamingImageResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetStreamingImageResult"
     },
@@ -1362,7 +1362,7 @@
       "operationName" : "GetStreamingSession",
       "returnType" : {
         "returnType" : "GetStreamingSessionResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetStreamingSessionResult"
     },
@@ -1423,7 +1423,7 @@
       "operationName" : "GetStreamingSessionStream",
       "returnType" : {
         "returnType" : "GetStreamingSessionStreamResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetStreamingSessionStreamResult"
     },
@@ -1484,7 +1484,7 @@
       "operationName" : "GetStudio",
       "returnType" : {
         "returnType" : "GetStudioResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetStudioResult"
     },
@@ -1545,7 +1545,7 @@
       "operationName" : "GetStudioComponent",
       "returnType" : {
         "returnType" : "GetStudioComponentResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetStudioComponentResult"
     },
@@ -1606,7 +1606,7 @@
       "operationName" : "GetStudioMember",
       "returnType" : {
         "returnType" : "GetStudioMemberResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "GetStudioMemberResult"
     },
@@ -1667,7 +1667,7 @@
       "operationName" : "ListEulaAcceptances",
       "returnType" : {
         "returnType" : "ListEulaAcceptancesResult",
-        "documentation" : "<p/>"
+        "documentation" : null
       },
       "syncReturnType" : "ListEulaAcceptancesResult"
     },
@@ -1728,7 +1728,7 @@
       "operationName" : "ListEulas",
       "returnType" : {
         "returnType" : "ListEulasResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "ListEulasResult"
     },
@@ -1789,7 +1789,7 @@
       "operationName" : "ListLaunchProfileMembers",
       "returnType" : {
         "returnType" : "ListLaunchProfileMembersResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "ListLaunchProfileMembersResult"
     },
@@ -1850,7 +1850,7 @@
       "operationName" : "ListLaunchProfiles",
       "returnType" : {
         "returnType" : "ListLaunchProfilesResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "ListLaunchProfilesResult"
     },
@@ -1911,7 +1911,7 @@
       "operationName" : "ListStreamingImages",
       "returnType" : {
         "returnType" : "ListStreamingImagesResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "ListStreamingImagesResult"
     },
@@ -1972,7 +1972,7 @@
       "operationName" : "ListStreamingSessions",
       "returnType" : {
         "returnType" : "ListStreamingSessionsResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "ListStreamingSessionsResult"
     },
@@ -2033,7 +2033,7 @@
       "operationName" : "ListStudioComponents",
       "returnType" : {
         "returnType" : "ListStudioComponentsResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "ListStudioComponentsResult"
     },
@@ -2044,7 +2044,7 @@
       "asyncReturnType" : "ListStudioMembersResult",
       "authenticated" : true,
       "deprecated" : false,
-      "documentation" : "<p>Get all users in a given studio membership.</p>",
+      "documentation" : "<p>Get all users in a given studio membership.</p> <note> <p> <code>ListStudioMembers</code> only returns admin members.</p> </note>",
       "endpointCacheRequired" : false,
       "endpointDiscovery" : null,
       "endpointOperation" : false,
@@ -2094,7 +2094,7 @@
       "operationName" : "ListStudioMembers",
       "returnType" : {
         "returnType" : "ListStudioMembersResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "ListStudioMembersResult"
     },
@@ -2155,7 +2155,7 @@
       "operationName" : "ListStudios",
       "returnType" : {
         "returnType" : "ListStudiosResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "ListStudiosResult"
     },
@@ -2216,7 +2216,7 @@
       "operationName" : "ListTagsForResource",
       "returnType" : {
         "returnType" : "ListTagsForResourceResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "ListTagsForResourceResult"
     },
@@ -2268,7 +2268,7 @@
         "variableDeclarationType" : "PutLaunchProfileMembersRequest",
         "variableName" : "putLaunchProfileMembersRequest",
         "variableType" : "PutLaunchProfileMembersRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "PutLaunchProfileMembersRequest",
         "variableSetterType" : "PutLaunchProfileMembersRequest"
       },
@@ -2329,7 +2329,7 @@
         "variableDeclarationType" : "PutStudioMembersRequest",
         "variableName" : "putStudioMembersRequest",
         "variableType" : "PutStudioMembersRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "PutStudioMembersRequest",
         "variableSetterType" : "PutStudioMembersRequest"
       },
@@ -2338,7 +2338,7 @@
       "operationName" : "PutStudioMembers",
       "returnType" : {
         "returnType" : "PutStudioMembersResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "PutStudioMembersResult"
     },
@@ -2460,7 +2460,7 @@
       "operationName" : "StartStudioSSOConfigurationRepair",
       "returnType" : {
         "returnType" : "StartStudioSSOConfigurationRepairResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "StartStudioSSOConfigurationRepairResult"
     },
@@ -2573,7 +2573,7 @@
         "variableDeclarationType" : "TagResourceRequest",
         "variableName" : "tagResourceRequest",
         "variableType" : "TagResourceRequest",
-        "documentation" : "<p/>",
+        "documentation" : "",
         "simpleType" : "TagResourceRequest",
         "variableSetterType" : "TagResourceRequest"
       },
@@ -2695,7 +2695,7 @@
         "variableDeclarationType" : "UpdateLaunchProfileRequest",
         "variableName" : "updateLaunchProfileRequest",
         "variableType" : "UpdateLaunchProfileRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "UpdateLaunchProfileRequest",
         "variableSetterType" : "UpdateLaunchProfileRequest"
       },
@@ -2704,7 +2704,7 @@
       "operationName" : "UpdateLaunchProfile",
       "returnType" : {
         "returnType" : "UpdateLaunchProfileResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "UpdateLaunchProfileResult"
     },
@@ -2756,7 +2756,7 @@
         "variableDeclarationType" : "UpdateLaunchProfileMemberRequest",
         "variableName" : "updateLaunchProfileMemberRequest",
         "variableType" : "UpdateLaunchProfileMemberRequest",
-        "documentation" : "<p/>",
+        "documentation" : "",
         "simpleType" : "UpdateLaunchProfileMemberRequest",
         "variableSetterType" : "UpdateLaunchProfileMemberRequest"
       },
@@ -2817,7 +2817,7 @@
         "variableDeclarationType" : "UpdateStreamingImageRequest",
         "variableName" : "updateStreamingImageRequest",
         "variableType" : "UpdateStreamingImageRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "UpdateStreamingImageRequest",
         "variableSetterType" : "UpdateStreamingImageRequest"
       },
@@ -2826,7 +2826,7 @@
       "operationName" : "UpdateStreamingImage",
       "returnType" : {
         "returnType" : "UpdateStreamingImageResult",
-        "documentation" : "<p/>"
+        "documentation" : null
       },
       "syncReturnType" : "UpdateStreamingImageResult"
     },
@@ -2878,7 +2878,7 @@
         "variableDeclarationType" : "UpdateStudioRequest",
         "variableName" : "updateStudioRequest",
         "variableType" : "UpdateStudioRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "UpdateStudioRequest",
         "variableSetterType" : "UpdateStudioRequest"
       },
@@ -2887,7 +2887,7 @@
       "operationName" : "UpdateStudio",
       "returnType" : {
         "returnType" : "UpdateStudioResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "UpdateStudioResult"
     },
@@ -2939,7 +2939,7 @@
         "variableDeclarationType" : "UpdateStudioComponentRequest",
         "variableName" : "updateStudioComponentRequest",
         "variableType" : "UpdateStudioComponentRequest",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+        "documentation" : "",
         "simpleType" : "UpdateStudioComponentRequest",
         "variableSetterType" : "UpdateStudioComponentRequest"
       },
@@ -2948,7 +2948,7 @@
       "operationName" : "UpdateStudioComponent",
       "returnType" : {
         "returnType" : "UpdateStudioComponentResult",
-        "documentation" : "<zonbook></zonbook><xhtml></xhtml>"
+        "documentation" : null
       },
       "syncReturnType" : "UpdateStudioComponentResult"
     }
@@ -2963,7 +2963,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -3597,7 +3597,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -6201,7 +6201,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -8173,7 +8173,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -8357,7 +8357,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -9408,7 +9408,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -9592,7 +9592,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -10782,7 +10782,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -10966,7 +10966,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -11571,7 +11571,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -11755,7 +11755,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -14005,7 +14005,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -14189,7 +14189,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -15379,7 +15379,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -16168,7 +16168,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -16678,7 +16678,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -17328,7 +17328,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -17978,7 +17978,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -18628,7 +18628,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -19278,7 +19278,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -19649,7 +19649,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -21501,7 +21501,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -22012,7 +22012,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -23722,7 +23722,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -24372,7 +24372,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -24883,7 +24883,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -25394,7 +25394,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -25905,7 +25905,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -26555,7 +26555,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -27066,7 +27066,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -27577,7 +27577,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -27949,7 +27949,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -31562,7 +31562,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>A Launch Profile Initialization contains information required for a workstation or server to connect to a launch profile</p> <p>This includes scripts, endpoints, security groups, subnets, and other configuration.</p>",
+      "documentation" : "<p>A Launch Profile Initialization contains information required for a workstation or server to connect to a launch profile.</p> <p>This includes scripts, endpoints, security groups, subnets, and other configuration.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -33362,7 +33362,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "<p>The Launch Profile Initialization Active Directory contains information required for the launch profile to connect to the Active Directory.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -34716,7 +34716,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "<p>The Launch Profile Initialization Script is used when start streaming session runs.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -35178,7 +35178,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "<p>Launch profile membership enables your studio admins to delegate launch profile access to other studio users in the Nimble Studio portal without needing to write or maintain complex IAM policies. A launch profile member is a user association from your studio identity source who is granted permissions to a launch profile.</p> <p>A launch profile member (type USER) provides the following permissions to that launch profile:</p> <ul> <li> <p>GetLaunchProfile</p> </li> <li> <p>GetLaunchProfileInitialization</p> </li> <li> <p>GetLaunchProfileMembers</p> </li> <li> <p>GetLaunchProfileMember</p> </li> <li> <p>CreateStreamingSession</p> </li> <li> <p>GetLaunchProfileDetails</p> </li> </ul>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -35779,7 +35779,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "USER",
@@ -35826,7 +35826,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "LINUX",
@@ -35876,7 +35876,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "CREATE_IN_PROGRESS",
@@ -35944,7 +35944,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "LAUNCH_PROFILE_CREATED",
@@ -36845,7 +36845,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -37831,7 +37831,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -38927,7 +38927,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -40330,7 +40330,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -41287,7 +41287,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -42522,7 +42522,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -44093,7 +44093,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -45050,7 +45050,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -45065,12 +45065,12 @@
         "c2jName" : "members",
         "c2jShape" : "StudioMembershipList",
         "deprecated" : false,
-        "documentation" : "<p>A list of members.</p>",
+        "documentation" : "<p>A list of admin members.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>A list of members.</p>\n@param members A list of members.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>A list of admin members.</p>\n@param members A list of admin members.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withMembers",
-        "getterDocumentation" : "/**<p>A list of members.</p>\n@return A list of members.*/",
+        "getterDocumentation" : "/**<p>A list of admin members.</p>\n@return A list of admin members.*/",
         "getterMethodName" : "getMembers",
         "getterModel" : {
           "returnType" : "java.util.List<StudioMembership>",
@@ -45188,7 +45188,7 @@
         "marshallingType" : "LIST",
         "name" : "Members",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>A list of members.</p>\n@param members A list of members.*/",
+        "setterDocumentation" : "/**<p>A list of admin members.</p>\n@param members A list of admin members.*/",
         "setterMethodName" : "setMembers",
         "setterModel" : {
           "timestampFormat" : null,
@@ -45203,13 +45203,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>A list of members.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setMembers(java.util.Collection)} or {@link #withMembers(java.util.Collection)} if you want to override the existing values.</p>\n@param members A list of members.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>A list of admin members.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setMembers(java.util.Collection)} or {@link #withMembers(java.util.Collection)} if you want to override the existing values.</p>\n@param members A list of admin members.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "java.util.List<StudioMembership>",
           "variableName" : "members",
           "variableType" : "java.util.List<StudioMembership>",
-          "documentation" : "<p>A list of members.</p>",
+          "documentation" : "<p>A list of admin members.</p>",
           "simpleType" : "List<StudioMembership>",
           "variableSetterType" : "java.util.Collection<StudioMembership>"
         },
@@ -45289,12 +45289,12 @@
           "c2jName" : "members",
           "c2jShape" : "StudioMembershipList",
           "deprecated" : false,
-          "documentation" : "<p>A list of members.</p>",
+          "documentation" : "<p>A list of admin members.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>A list of members.</p>\n@param members A list of members.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>A list of admin members.</p>\n@param members A list of admin members.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withMembers",
-          "getterDocumentation" : "/**<p>A list of members.</p>\n@return A list of members.*/",
+          "getterDocumentation" : "/**<p>A list of admin members.</p>\n@return A list of admin members.*/",
           "getterMethodName" : "getMembers",
           "getterModel" : {
             "returnType" : "java.util.List<StudioMembership>",
@@ -45412,7 +45412,7 @@
           "marshallingType" : "LIST",
           "name" : "Members",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>A list of members.</p>\n@param members A list of members.*/",
+          "setterDocumentation" : "/**<p>A list of admin members.</p>\n@param members A list of admin members.*/",
           "setterMethodName" : "setMembers",
           "setterModel" : {
             "timestampFormat" : null,
@@ -45427,13 +45427,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>A list of members.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setMembers(java.util.Collection)} or {@link #withMembers(java.util.Collection)} if you want to override the existing values.</p>\n@param members A list of members.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>A list of admin members.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setMembers(java.util.Collection)} or {@link #withMembers(java.util.Collection)} if you want to override the existing values.</p>\n@param members A list of admin members.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "java.util.List<StudioMembership>",
             "variableName" : "members",
             "variableType" : "java.util.List<StudioMembership>",
-            "documentation" : "<p>A list of members.</p>",
+            "documentation" : "<p>A list of admin members.</p>",
             "simpleType" : "List<StudioMembership>",
             "variableSetterType" : "java.util.Collection<StudioMembership>"
           },
@@ -45729,7 +45729,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -46408,7 +46408,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -46760,7 +46760,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "<p>A new member that is added to a launch profile.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -47083,7 +47083,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "<p>A new studio user's membership.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -47406,7 +47406,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -48362,7 +48362,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -49135,7 +49135,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -52195,7 +52195,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -53401,6 +53401,75 @@
         },
         "xmlNameSpaceUri" : null
       }, {
+        "c2jName" : "sessionStorage",
+        "c2jShape" : "StreamConfigurationSessionStorage",
+        "deprecated" : false,
+        "documentation" : "<p>(Optional) The upload storage for a streaming session.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>(Optional) The upload storage for a streaming session.</p>\n@param sessionStorage (Optional) The upload storage for a streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withSessionStorage",
+        "getterDocumentation" : "/**<p>(Optional) The upload storage for a streaming session.</p>\n@return (Optional) The upload storage for a streaming session.*/",
+        "getterMethodName" : "getSessionStorage",
+        "getterModel" : {
+          "returnType" : "StreamConfigurationSessionStorage",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "sessionStorage",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "sessionStorage",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "StructuredPojo",
+        "marshallingType" : "STRUCTURED",
+        "name" : "SessionStorage",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>(Optional) The upload storage for a streaming session.</p>\n@param sessionStorage (Optional) The upload storage for a streaming session.*/",
+        "setterMethodName" : "setSessionStorage",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "StreamConfigurationSessionStorage",
+          "variableName" : "sessionStorage",
+          "variableType" : "StreamConfigurationSessionStorage",
+          "documentation" : "",
+          "simpleType" : "StreamConfigurationSessionStorage",
+          "variableSetterType" : "StreamConfigurationSessionStorage"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : false,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>(Optional) The upload storage for a streaming session.</p>\n@param sessionStorage (Optional) The upload storage for a streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "StreamConfigurationSessionStorage",
+          "variableName" : "sessionStorage",
+          "variableType" : "StreamConfigurationSessionStorage",
+          "documentation" : "<p>(Optional) The upload storage for a streaming session.</p>",
+          "simpleType" : "StreamConfigurationSessionStorage",
+          "variableSetterType" : "StreamConfigurationSessionStorage"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
         "c2jName" : "streamingImageIds",
         "c2jShape" : "StreamingImageIdList",
         "deprecated" : false,
@@ -53919,6 +53988,76 @@
           },
           "xmlNameSpaceUri" : null
         },
+        "SessionStorage" : {
+          "c2jName" : "sessionStorage",
+          "c2jShape" : "StreamConfigurationSessionStorage",
+          "deprecated" : false,
+          "documentation" : "<p>(Optional) The upload storage for a streaming session.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>(Optional) The upload storage for a streaming session.</p>\n@param sessionStorage (Optional) The upload storage for a streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withSessionStorage",
+          "getterDocumentation" : "/**<p>(Optional) The upload storage for a streaming session.</p>\n@return (Optional) The upload storage for a streaming session.*/",
+          "getterMethodName" : "getSessionStorage",
+          "getterModel" : {
+            "returnType" : "StreamConfigurationSessionStorage",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "sessionStorage",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "sessionStorage",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "StructuredPojo",
+          "marshallingType" : "STRUCTURED",
+          "name" : "SessionStorage",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>(Optional) The upload storage for a streaming session.</p>\n@param sessionStorage (Optional) The upload storage for a streaming session.*/",
+          "setterMethodName" : "setSessionStorage",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "StreamConfigurationSessionStorage",
+            "variableName" : "sessionStorage",
+            "variableType" : "StreamConfigurationSessionStorage",
+            "documentation" : "",
+            "simpleType" : "StreamConfigurationSessionStorage",
+            "variableSetterType" : "StreamConfigurationSessionStorage"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : false,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>(Optional) The upload storage for a streaming session.</p>\n@param sessionStorage (Optional) The upload storage for a streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "StreamConfigurationSessionStorage",
+            "variableName" : "sessionStorage",
+            "variableType" : "StreamConfigurationSessionStorage",
+            "documentation" : "<p>(Optional) The upload storage for a streaming session.</p>",
+            "simpleType" : "StreamConfigurationSessionStorage",
+            "variableSetterType" : "StreamConfigurationSessionStorage"
+          },
+          "xmlNameSpaceUri" : null
+        },
         "StreamingImageIds" : {
           "c2jName" : "streamingImageIds",
           "c2jShape" : "StreamingImageIdList",
@@ -54411,12 +54550,12 @@
         "c2jName" : "maxStoppedSessionLengthInMinutes",
         "c2jShape" : "StreamConfigurationMaxStoppedSessionLengthInMinutes",
         "deprecated" : false,
-        "documentation" : "<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>",
+        "documentation" : "<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>\n@param maxStoppedSessionLengthInMinutes The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>\n@param maxStoppedSessionLengthInMinutes Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withMaxStoppedSessionLengthInMinutes",
-        "getterDocumentation" : "/**<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>\n@return The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.*/",
+        "getterDocumentation" : "/**<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>\n@return Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).*/",
         "getterMethodName" : "getMaxStoppedSessionLengthInMinutes",
         "getterModel" : {
           "returnType" : "Integer",
@@ -54450,7 +54589,7 @@
         "marshallingType" : "INTEGER",
         "name" : "MaxStoppedSessionLengthInMinutes",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>\n@param maxStoppedSessionLengthInMinutes The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.*/",
+        "setterDocumentation" : "/**<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>\n@param maxStoppedSessionLengthInMinutes Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).*/",
         "setterMethodName" : "setMaxStoppedSessionLengthInMinutes",
         "setterModel" : {
           "timestampFormat" : null,
@@ -54465,15 +54604,84 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>\n@param maxStoppedSessionLengthInMinutes The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>\n@param maxStoppedSessionLengthInMinutes Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "Integer",
           "variableName" : "maxStoppedSessionLengthInMinutes",
           "variableType" : "Integer",
-          "documentation" : "<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>",
+          "documentation" : "<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>",
           "simpleType" : "Integer",
           "variableSetterType" : "Integer"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "sessionStorage",
+        "c2jShape" : "StreamConfigurationSessionStorage",
+        "deprecated" : false,
+        "documentation" : "<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>\n@param sessionStorage (Optional) The upload storage for a streaming workstation that is created using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withSessionStorage",
+        "getterDocumentation" : "/**<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>\n@return (Optional) The upload storage for a streaming workstation that is created using this launch profile.*/",
+        "getterMethodName" : "getSessionStorage",
+        "getterModel" : {
+          "returnType" : "StreamConfigurationSessionStorage",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "sessionStorage",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "sessionStorage",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "StructuredPojo",
+        "marshallingType" : "STRUCTURED",
+        "name" : "SessionStorage",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>\n@param sessionStorage (Optional) The upload storage for a streaming workstation that is created using this launch profile.*/",
+        "setterMethodName" : "setSessionStorage",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "StreamConfigurationSessionStorage",
+          "variableName" : "sessionStorage",
+          "variableType" : "StreamConfigurationSessionStorage",
+          "documentation" : "",
+          "simpleType" : "StreamConfigurationSessionStorage",
+          "variableSetterType" : "StreamConfigurationSessionStorage"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : false,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>\n@param sessionStorage (Optional) The upload storage for a streaming workstation that is created using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "StreamConfigurationSessionStorage",
+          "variableName" : "sessionStorage",
+          "variableType" : "StreamConfigurationSessionStorage",
+          "documentation" : "<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>",
+          "simpleType" : "StreamConfigurationSessionStorage",
+          "variableSetterType" : "StreamConfigurationSessionStorage"
         },
         "xmlNameSpaceUri" : null
       }, {
@@ -54929,12 +55137,12 @@
           "c2jName" : "maxStoppedSessionLengthInMinutes",
           "c2jShape" : "StreamConfigurationMaxStoppedSessionLengthInMinutes",
           "deprecated" : false,
-          "documentation" : "<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>",
+          "documentation" : "<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>\n@param maxStoppedSessionLengthInMinutes The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>\n@param maxStoppedSessionLengthInMinutes Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withMaxStoppedSessionLengthInMinutes",
-          "getterDocumentation" : "/**<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>\n@return The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.*/",
+          "getterDocumentation" : "/**<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>\n@return Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).*/",
           "getterMethodName" : "getMaxStoppedSessionLengthInMinutes",
           "getterModel" : {
             "returnType" : "Integer",
@@ -54968,7 +55176,7 @@
           "marshallingType" : "INTEGER",
           "name" : "MaxStoppedSessionLengthInMinutes",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>\n@param maxStoppedSessionLengthInMinutes The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.*/",
+          "setterDocumentation" : "/**<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>\n@param maxStoppedSessionLengthInMinutes Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).*/",
           "setterMethodName" : "setMaxStoppedSessionLengthInMinutes",
           "setterModel" : {
             "timestampFormat" : null,
@@ -54983,15 +55191,85 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>\n@param maxStoppedSessionLengthInMinutes The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>\n@param maxStoppedSessionLengthInMinutes Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "Integer",
             "variableName" : "maxStoppedSessionLengthInMinutes",
             "variableType" : "Integer",
-            "documentation" : "<p>The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690 minutes, and the maximum length of time is 30 days.</p>",
+            "documentation" : "<p>Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED state. The default value is 0. The maximum value is 5760.</p> <p>If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).</p> <p>If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).</p>",
             "simpleType" : "Integer",
             "variableSetterType" : "Integer"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "SessionStorage" : {
+          "c2jName" : "sessionStorage",
+          "c2jShape" : "StreamConfigurationSessionStorage",
+          "deprecated" : false,
+          "documentation" : "<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>\n@param sessionStorage (Optional) The upload storage for a streaming workstation that is created using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withSessionStorage",
+          "getterDocumentation" : "/**<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>\n@return (Optional) The upload storage for a streaming workstation that is created using this launch profile.*/",
+          "getterMethodName" : "getSessionStorage",
+          "getterModel" : {
+            "returnType" : "StreamConfigurationSessionStorage",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "sessionStorage",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "sessionStorage",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "StructuredPojo",
+          "marshallingType" : "STRUCTURED",
+          "name" : "SessionStorage",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>\n@param sessionStorage (Optional) The upload storage for a streaming workstation that is created using this launch profile.*/",
+          "setterMethodName" : "setSessionStorage",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "StreamConfigurationSessionStorage",
+            "variableName" : "sessionStorage",
+            "variableType" : "StreamConfigurationSessionStorage",
+            "documentation" : "",
+            "simpleType" : "StreamConfigurationSessionStorage",
+            "variableSetterType" : "StreamConfigurationSessionStorage"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : false,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>\n@param sessionStorage (Optional) The upload storage for a streaming workstation that is created using this launch profile.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "StreamConfigurationSessionStorage",
+            "variableName" : "sessionStorage",
+            "variableType" : "StreamConfigurationSessionStorage",
+            "documentation" : "<p>(Optional) The upload storage for a streaming workstation that is created using this launch profile.</p>",
+            "simpleType" : "StreamConfigurationSessionStorage",
+            "variableSetterType" : "StreamConfigurationSessionStorage"
           },
           "xmlNameSpaceUri" : null
         },
@@ -55172,6 +55450,497 @@
       },
       "wrapper" : false
     },
+    "StreamConfigurationSessionStorage" : {
+      "c2jName" : "StreamConfigurationSessionStorage",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The configuration for a streaming session’s upload storage.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.nimblestudio.model.StreamConfigurationSessionStorage",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ {
+        "c2jName" : "mode",
+        "c2jShape" : "StreamingSessionStorageModeList",
+        "deprecated" : false,
+        "documentation" : "<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "StreamingSessionStorageMode",
+        "fluentSetterDocumentation" : "/**<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>\n@param mode Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StreamingSessionStorageMode*/",
+        "fluentSetterMethodName" : "withMode",
+        "getterDocumentation" : "/**<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>\n@return Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.\n@see StreamingSessionStorageMode*/",
+        "getterMethodName" : "getMode",
+        "getterModel" : {
+          "returnType" : "java.util.List<String>",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "mode",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "mode",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : true,
+        "listModel" : {
+          "implType" : "java.util.ArrayList",
+          "interfaceType" : "java.util.List",
+          "listMemberModel" : {
+            "c2jName" : "member",
+            "c2jShape" : "StreamingSessionStorageMode",
+            "deprecated" : false,
+            "documentation" : "",
+            "endpointDiscoveryId" : false,
+            "enumType" : "StreamingSessionStorageMode",
+            "fluentSetterDocumentation" : "/**\n@param member \n@return Returns a reference to this object so that method calls can be chained together.\n@see StreamingSessionStorageMode*/",
+            "fluentSetterMethodName" : "withMember",
+            "getterDocumentation" : "/**\n@return \n@see StreamingSessionStorageMode*/",
+            "getterMethodName" : "getMember",
+            "getterModel" : {
+              "returnType" : "String",
+              "documentation" : null
+            },
+            "http" : {
+              "additionalMarshallingPath" : null,
+              "additionalUnmarshallingPath" : null,
+              "flattened" : false,
+              "greedy" : false,
+              "header" : false,
+              "isPayload" : false,
+              "isStreaming" : false,
+              "location" : null,
+              "marshallLocation" : "PAYLOAD",
+              "marshallLocationName" : "member",
+              "queryString" : false,
+              "requiresLength" : false,
+              "statusCode" : false,
+              "unmarshallLocationName" : "member",
+              "uri" : false
+            },
+            "idempotencyToken" : false,
+            "isBinary" : false,
+            "jsonValue" : false,
+            "list" : false,
+            "listModel" : null,
+            "map" : false,
+            "mapModel" : null,
+            "marshallingTargetClass" : "String",
+            "marshallingType" : "STRING",
+            "name" : "Member",
+            "sensitive" : false,
+            "setterDocumentation" : "/**\n@param member \n@see StreamingSessionStorageMode*/",
+            "setterMethodName" : "setMember",
+            "setterModel" : {
+              "timestampFormat" : null,
+              "variableDeclarationType" : "String",
+              "variableName" : "member",
+              "variableType" : "String",
+              "documentation" : "",
+              "simpleType" : "String",
+              "variableSetterType" : "String"
+            },
+            "shouldEmitLegacyEnumSetter" : false,
+            "shouldFullyQualify" : false,
+            "simple" : true,
+            "unmarshallingType" : null,
+            "varargSetterDocumentation" : "/**\n@param member \n@return Returns a reference to this object so that method calls can be chained together.\n@see StreamingSessionStorageMode*/",
+            "variable" : {
+              "timestampFormat" : null,
+              "variableDeclarationType" : "String",
+              "variableName" : "member",
+              "variableType" : "String",
+              "documentation" : "",
+              "simpleType" : "String",
+              "variableSetterType" : "String"
+            },
+            "xmlNameSpaceUri" : null
+          },
+          "memberLocationName" : null,
+          "memberType" : "String",
+          "map" : false,
+          "marshallNonAutoConstructedEmptyLists" : false,
+          "memberAdditionalMarshallingPath" : null,
+          "memberAdditionalUnmarshallingPath" : null,
+          "sendEmptyQueryString" : false,
+          "simple" : true,
+          "simpleType" : "String",
+          "templateImplType" : "java.util.ArrayList<String>",
+          "templateType" : "java.util.List<String>"
+        },
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "List",
+        "marshallingType" : "LIST",
+        "name" : "Mode",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>\n@param mode Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.\n@see StreamingSessionStorageMode*/",
+        "setterMethodName" : "setMode",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "java.util.List<String>",
+          "variableName" : "mode",
+          "variableType" : "java.util.List<String>",
+          "documentation" : "",
+          "simpleType" : "List<String>",
+          "variableSetterType" : "java.util.Collection<String>"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : false,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setMode(java.util.Collection)} or {@link #withMode(java.util.Collection)} if you want to override the existing values.</p>\n@param mode Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StreamingSessionStorageMode*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "java.util.List<String>",
+          "variableName" : "mode",
+          "variableType" : "java.util.List<String>",
+          "documentation" : "<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>",
+          "simpleType" : "List<String>",
+          "variableSetterType" : "java.util.Collection<String>"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "root",
+        "c2jShape" : "StreamingSessionStorageRoot",
+        "deprecated" : false,
+        "documentation" : "<p>The configuration for the upload storage root of the streaming session.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The configuration for the upload storage root of the streaming session.</p>\n@param root The configuration for the upload storage root of the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withRoot",
+        "getterDocumentation" : "/**<p>The configuration for the upload storage root of the streaming session.</p>\n@return The configuration for the upload storage root of the streaming session.*/",
+        "getterMethodName" : "getRoot",
+        "getterModel" : {
+          "returnType" : "StreamingSessionStorageRoot",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "root",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "root",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "StructuredPojo",
+        "marshallingType" : "STRUCTURED",
+        "name" : "Root",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The configuration for the upload storage root of the streaming session.</p>\n@param root The configuration for the upload storage root of the streaming session.*/",
+        "setterMethodName" : "setRoot",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "StreamingSessionStorageRoot",
+          "variableName" : "root",
+          "variableType" : "StreamingSessionStorageRoot",
+          "documentation" : "",
+          "simpleType" : "StreamingSessionStorageRoot",
+          "variableSetterType" : "StreamingSessionStorageRoot"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : false,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The configuration for the upload storage root of the streaming session.</p>\n@param root The configuration for the upload storage root of the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "StreamingSessionStorageRoot",
+          "variableName" : "root",
+          "variableType" : "StreamingSessionStorageRoot",
+          "documentation" : "<p>The configuration for the upload storage root of the streaming session.</p>",
+          "simpleType" : "StreamingSessionStorageRoot",
+          "variableSetterType" : "StreamingSessionStorageRoot"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "Mode" : {
+          "c2jName" : "mode",
+          "c2jShape" : "StreamingSessionStorageModeList",
+          "deprecated" : false,
+          "documentation" : "<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "StreamingSessionStorageMode",
+          "fluentSetterDocumentation" : "/**<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>\n@param mode Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StreamingSessionStorageMode*/",
+          "fluentSetterMethodName" : "withMode",
+          "getterDocumentation" : "/**<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>\n@return Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.\n@see StreamingSessionStorageMode*/",
+          "getterMethodName" : "getMode",
+          "getterModel" : {
+            "returnType" : "java.util.List<String>",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "mode",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "mode",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : true,
+          "listModel" : {
+            "implType" : "java.util.ArrayList",
+            "interfaceType" : "java.util.List",
+            "listMemberModel" : {
+              "c2jName" : "member",
+              "c2jShape" : "StreamingSessionStorageMode",
+              "deprecated" : false,
+              "documentation" : "",
+              "endpointDiscoveryId" : false,
+              "enumType" : "StreamingSessionStorageMode",
+              "fluentSetterDocumentation" : "/**\n@param member \n@return Returns a reference to this object so that method calls can be chained together.\n@see StreamingSessionStorageMode*/",
+              "fluentSetterMethodName" : "withMember",
+              "getterDocumentation" : "/**\n@return \n@see StreamingSessionStorageMode*/",
+              "getterMethodName" : "getMember",
+              "getterModel" : {
+                "returnType" : "String",
+                "documentation" : null
+              },
+              "http" : {
+                "additionalMarshallingPath" : null,
+                "additionalUnmarshallingPath" : null,
+                "flattened" : false,
+                "greedy" : false,
+                "header" : false,
+                "isPayload" : false,
+                "isStreaming" : false,
+                "location" : null,
+                "marshallLocation" : "PAYLOAD",
+                "marshallLocationName" : "member",
+                "queryString" : false,
+                "requiresLength" : false,
+                "statusCode" : false,
+                "unmarshallLocationName" : "member",
+                "uri" : false
+              },
+              "idempotencyToken" : false,
+              "isBinary" : false,
+              "jsonValue" : false,
+              "list" : false,
+              "listModel" : null,
+              "map" : false,
+              "mapModel" : null,
+              "marshallingTargetClass" : "String",
+              "marshallingType" : "STRING",
+              "name" : "Member",
+              "sensitive" : false,
+              "setterDocumentation" : "/**\n@param member \n@see StreamingSessionStorageMode*/",
+              "setterMethodName" : "setMember",
+              "setterModel" : {
+                "timestampFormat" : null,
+                "variableDeclarationType" : "String",
+                "variableName" : "member",
+                "variableType" : "String",
+                "documentation" : "",
+                "simpleType" : "String",
+                "variableSetterType" : "String"
+              },
+              "shouldEmitLegacyEnumSetter" : false,
+              "shouldFullyQualify" : false,
+              "simple" : true,
+              "unmarshallingType" : null,
+              "varargSetterDocumentation" : "/**\n@param member \n@return Returns a reference to this object so that method calls can be chained together.\n@see StreamingSessionStorageMode*/",
+              "variable" : {
+                "timestampFormat" : null,
+                "variableDeclarationType" : "String",
+                "variableName" : "member",
+                "variableType" : "String",
+                "documentation" : "",
+                "simpleType" : "String",
+                "variableSetterType" : "String"
+              },
+              "xmlNameSpaceUri" : null
+            },
+            "memberLocationName" : null,
+            "memberType" : "String",
+            "map" : false,
+            "marshallNonAutoConstructedEmptyLists" : false,
+            "memberAdditionalMarshallingPath" : null,
+            "memberAdditionalUnmarshallingPath" : null,
+            "sendEmptyQueryString" : false,
+            "simple" : true,
+            "simpleType" : "String",
+            "templateImplType" : "java.util.ArrayList<String>",
+            "templateType" : "java.util.List<String>"
+          },
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "List",
+          "marshallingType" : "LIST",
+          "name" : "Mode",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>\n@param mode Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.\n@see StreamingSessionStorageMode*/",
+          "setterMethodName" : "setMode",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "java.util.List<String>",
+            "variableName" : "mode",
+            "variableType" : "java.util.List<String>",
+            "documentation" : "",
+            "simpleType" : "List<String>",
+            "variableSetterType" : "java.util.Collection<String>"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : false,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>\n<p><b>NOTE:</b> This method appends the values to the existing list (if any). Use {@link #setMode(java.util.Collection)} or {@link #withMode(java.util.Collection)} if you want to override the existing values.</p>\n@param mode Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see StreamingSessionStorageMode*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "java.util.List<String>",
+            "variableName" : "mode",
+            "variableType" : "java.util.List<String>",
+            "documentation" : "<p>Allows artists to upload files to their workstations. The only valid option is <code>UPLOAD</code>.</p>",
+            "simpleType" : "List<String>",
+            "variableSetterType" : "java.util.Collection<String>"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "Root" : {
+          "c2jName" : "root",
+          "c2jShape" : "StreamingSessionStorageRoot",
+          "deprecated" : false,
+          "documentation" : "<p>The configuration for the upload storage root of the streaming session.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The configuration for the upload storage root of the streaming session.</p>\n@param root The configuration for the upload storage root of the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withRoot",
+          "getterDocumentation" : "/**<p>The configuration for the upload storage root of the streaming session.</p>\n@return The configuration for the upload storage root of the streaming session.*/",
+          "getterMethodName" : "getRoot",
+          "getterModel" : {
+            "returnType" : "StreamingSessionStorageRoot",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "root",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "root",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "StructuredPojo",
+          "marshallingType" : "STRUCTURED",
+          "name" : "Root",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The configuration for the upload storage root of the streaming session.</p>\n@param root The configuration for the upload storage root of the streaming session.*/",
+          "setterMethodName" : "setRoot",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "StreamingSessionStorageRoot",
+            "variableName" : "root",
+            "variableType" : "StreamingSessionStorageRoot",
+            "documentation" : "",
+            "simpleType" : "StreamingSessionStorageRoot",
+            "variableSetterType" : "StreamingSessionStorageRoot"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : false,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The configuration for the upload storage root of the streaming session.</p>\n@param root The configuration for the upload storage root of the streaming session.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "StreamingSessionStorageRoot",
+            "variableName" : "root",
+            "variableType" : "StreamingSessionStorageRoot",
+            "documentation" : "<p>The configuration for the upload storage root of the streaming session.</p>",
+            "simpleType" : "StreamingSessionStorageRoot",
+            "variableSetterType" : "StreamingSessionStorageRoot"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.nimblestudio.model",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ "mode" ],
+      "shapeName" : "StreamConfigurationSessionStorage",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "StreamConfigurationSessionStorage",
+        "variableName" : "streamConfigurationSessionStorage",
+        "variableType" : "StreamConfigurationSessionStorage",
+        "documentation" : null,
+        "simpleType" : "StreamConfigurationSessionStorage",
+        "variableSetterType" : "StreamConfigurationSessionStorage"
+      },
+      "wrapper" : false
+    },
     "StreamingClipboardMode" : {
       "c2jName" : "StreamingClipboardMode",
       "customization" : {
@@ -55181,7 +55950,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "ENABLED",
@@ -57742,7 +58511,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "CUSTOMER_MANAGED_KEY",
@@ -57789,7 +58558,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "CREATE_IN_PROGRESS",
@@ -57877,6 +58646,9 @@
       }, {
         "name" : "INTERNAL_ERROR",
         "value" : "INTERNAL_ERROR"
+      }, {
+        "name" : "ACCESS_DENIED",
+        "value" : "ACCESS_DENIED"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.nimblestudio.enum.StreamingImageStatusCode",
@@ -57919,7 +58691,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "G4dnXlarge",
@@ -61051,7 +61823,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "STREAMING_SESSION_READY",
@@ -61128,6 +61900,376 @@
         "documentation" : null,
         "simpleType" : "StreamingSessionStatusCode",
         "variableSetterType" : "StreamingSessionStatusCode"
+      },
+      "wrapper" : false
+    },
+    "StreamingSessionStorageMode" : {
+      "c2jName" : "StreamingSessionStorageMode",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : [ {
+        "name" : "UPLOAD",
+        "value" : "UPLOAD"
+      } ],
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.nimblestudio.enum.StreamingSessionStorageMode",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.nimblestudio.enum",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "StreamingSessionStorageMode",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "StreamingSessionStorageMode",
+        "variableName" : "streamingSessionStorageMode",
+        "variableType" : "StreamingSessionStorageMode",
+        "documentation" : null,
+        "simpleType" : "StreamingSessionStorageMode",
+        "variableSetterType" : "StreamingSessionStorageMode"
+      },
+      "wrapper" : false
+    },
+    "StreamingSessionStorageRoot" : {
+      "c2jName" : "StreamingSessionStorageRoot",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>The upload storage root location (folder) on streaming workstations where files are uploaded.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.nimblestudio.model.StreamingSessionStorageRoot",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ {
+        "c2jName" : "linux",
+        "c2jShape" : "StreamingSessionStorageRootPathLinux",
+        "deprecated" : false,
+        "documentation" : "<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>\n@param linux The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withLinux",
+        "getterDocumentation" : "/**<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>\n@return The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.*/",
+        "getterMethodName" : "getLinux",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "linux",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "linux",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Linux",
+        "sensitive" : true,
+        "setterDocumentation" : "/**<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>\n@param linux The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.*/",
+        "setterMethodName" : "setLinux",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "linux",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>\n@param linux The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "linux",
+          "variableType" : "String",
+          "documentation" : "<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "windows",
+        "c2jShape" : "StreamingSessionStorageRootPathWindows",
+        "deprecated" : false,
+        "documentation" : "<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : null,
+        "fluentSetterDocumentation" : "/**<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>\n@param windows The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterMethodName" : "withWindows",
+        "getterDocumentation" : "/**<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>\n@return The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.*/",
+        "getterMethodName" : "getWindows",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "windows",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "windows",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Windows",
+        "sensitive" : true,
+        "setterDocumentation" : "/**<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>\n@param windows The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.*/",
+        "setterMethodName" : "setWindows",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "windows",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>\n@param windows The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "windows",
+          "variableType" : "String",
+          "documentation" : "<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
+      } ],
+      "membersAsMap" : {
+        "Linux" : {
+          "c2jName" : "linux",
+          "c2jShape" : "StreamingSessionStorageRootPathLinux",
+          "deprecated" : false,
+          "documentation" : "<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>\n@param linux The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withLinux",
+          "getterDocumentation" : "/**<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>\n@return The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.*/",
+          "getterMethodName" : "getLinux",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "linux",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "linux",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Linux",
+          "sensitive" : true,
+          "setterDocumentation" : "/**<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>\n@param linux The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.*/",
+          "setterMethodName" : "setLinux",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "linux",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>\n@param linux The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "linux",
+            "variableType" : "String",
+            "documentation" : "<p>The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "Windows" : {
+          "c2jName" : "windows",
+          "c2jShape" : "StreamingSessionStorageRootPathWindows",
+          "deprecated" : false,
+          "documentation" : "<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : null,
+          "fluentSetterDocumentation" : "/**<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>\n@param windows The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterMethodName" : "withWindows",
+          "getterDocumentation" : "/**<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>\n@return The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.*/",
+          "getterMethodName" : "getWindows",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "windows",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "windows",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Windows",
+          "sensitive" : true,
+          "setterDocumentation" : "/**<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>\n@param windows The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.*/",
+          "setterMethodName" : "setWindows",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "windows",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>\n@param windows The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "windows",
+            "variableType" : "String",
+            "documentation" : "<p>The folder path in Windows workstations where files are uploaded. The default path is <code>%HOMEPATH%\\Downloads</code>.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        }
+      },
+      "packageName" : "com.amazonaws.services.nimblestudio.model",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "StreamingSessionStorageRoot",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "StreamingSessionStorageRoot",
+        "variableName" : "streamingSessionStorageRoot",
+        "variableType" : "StreamingSessionStorageRoot",
+        "documentation" : null,
+        "simpleType" : "StreamingSessionStorageRoot",
+        "variableSetterType" : "StreamingSessionStorageRoot"
       },
       "wrapper" : false
     },
@@ -62297,7 +63439,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "READY",
@@ -62359,7 +63501,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "STREAM_CREATE_IN_PROGRESS",
@@ -69279,7 +70421,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "SYSTEM_INITIALIZATION",
@@ -69471,7 +70613,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "AWS_MANAGED_MICROSOFT_AD",
@@ -69527,7 +70669,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "<p>The studio component's summary.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -70823,7 +71965,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "ACTIVE_DIRECTORY",
@@ -71856,7 +72998,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "ADMINISTRATOR",
@@ -71903,7 +73045,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : [ {
         "name" : "CREATE_IN_PROGRESS",
@@ -72069,7 +73211,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -73635,7 +74777,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -74563,7 +75705,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -76060,7 +77202,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -76244,7 +77386,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -76988,7 +78130,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p/>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -77003,12 +78145,12 @@
         "c2jName" : "streamingImage",
         "c2jShape" : "StreamingImage",
         "deprecated" : false,
-        "documentation" : "<p/>",
+        "documentation" : "",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p/>\n@param streamingImage \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**\n@param streamingImage \n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withStreamingImage",
-        "getterDocumentation" : "/**<p/>\n@return */",
+        "getterDocumentation" : "/**\n@return */",
         "getterMethodName" : "getStreamingImage",
         "getterModel" : {
           "returnType" : "StreamingImage",
@@ -77042,7 +78184,7 @@
         "marshallingType" : "STRUCTURED",
         "name" : "StreamingImage",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p/>\n@param streamingImage */",
+        "setterDocumentation" : "/**\n@param streamingImage */",
         "setterMethodName" : "setStreamingImage",
         "setterModel" : {
           "timestampFormat" : null,
@@ -77057,13 +78199,13 @@
         "shouldFullyQualify" : false,
         "simple" : false,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p/>\n@param streamingImage \n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**\n@param streamingImage \n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "StreamingImage",
           "variableName" : "streamingImage",
           "variableType" : "StreamingImage",
-          "documentation" : "<p/>",
+          "documentation" : "",
           "simpleType" : "StreamingImage",
           "variableSetterType" : "StreamingImage"
         },
@@ -77074,12 +78216,12 @@
           "c2jName" : "streamingImage",
           "c2jShape" : "StreamingImage",
           "deprecated" : false,
-          "documentation" : "<p/>",
+          "documentation" : "",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p/>\n@param streamingImage \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**\n@param streamingImage \n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withStreamingImage",
-          "getterDocumentation" : "/**<p/>\n@return */",
+          "getterDocumentation" : "/**\n@return */",
           "getterMethodName" : "getStreamingImage",
           "getterModel" : {
             "returnType" : "StreamingImage",
@@ -77113,7 +78255,7 @@
           "marshallingType" : "STRUCTURED",
           "name" : "StreamingImage",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p/>\n@param streamingImage */",
+          "setterDocumentation" : "/**\n@param streamingImage */",
           "setterMethodName" : "setStreamingImage",
           "setterModel" : {
             "timestampFormat" : null,
@@ -77128,13 +78270,13 @@
           "shouldFullyQualify" : false,
           "simple" : false,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p/>\n@param streamingImage \n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**\n@param streamingImage \n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "StreamingImage",
             "variableName" : "streamingImage",
             "variableType" : "StreamingImage",
-            "documentation" : "<p/>",
+            "documentation" : "",
             "simpleType" : "StreamingImage",
             "variableSetterType" : "StreamingImage"
           },
@@ -77172,7 +78314,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -79254,7 +80396,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -79438,7 +80580,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -80182,7 +81324,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<zonbook></zonbook><xhtml></xhtml>",
+      "documentation" : "",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,

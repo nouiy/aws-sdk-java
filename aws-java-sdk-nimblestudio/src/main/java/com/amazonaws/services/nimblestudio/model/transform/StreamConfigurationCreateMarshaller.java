@@ -36,6 +36,8 @@ public class StreamConfigurationCreateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxSessionLengthInMinutes").build();
     private static final MarshallingInfo<Integer> MAXSTOPPEDSESSIONLENGTHINMINUTES_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxStoppedSessionLengthInMinutes").build();
+    private static final MarshallingInfo<StructuredPojo> SESSIONSTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sessionStorage").build();
     private static final MarshallingInfo<List> STREAMINGIMAGEIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("streamingImageIds").build();
 
@@ -59,6 +61,7 @@ public class StreamConfigurationCreateMarshaller {
             protocolMarshaller.marshall(streamConfigurationCreate.getEc2InstanceTypes(), EC2INSTANCETYPES_BINDING);
             protocolMarshaller.marshall(streamConfigurationCreate.getMaxSessionLengthInMinutes(), MAXSESSIONLENGTHINMINUTES_BINDING);
             protocolMarshaller.marshall(streamConfigurationCreate.getMaxStoppedSessionLengthInMinutes(), MAXSTOPPEDSESSIONLENGTHINMINUTES_BINDING);
+            protocolMarshaller.marshall(streamConfigurationCreate.getSessionStorage(), SESSIONSTORAGE_BINDING);
             protocolMarshaller.marshall(streamConfigurationCreate.getStreamingImageIds(), STREAMINGIMAGEIDS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -42,6 +42,10 @@ public class TransportMarshaller {
             .marshallLocationName("protocol").build();
     private static final MarshallingInfo<String> REMOTEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("remoteId").build();
+    private static final MarshallingInfo<Integer> SENDERCONTROLPORT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("senderControlPort").build();
+    private static final MarshallingInfo<String> SENDERIPADDRESS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("senderIpAddress").build();
     private static final MarshallingInfo<Integer> SMOOTHINGLATENCY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("smoothingLatency").build();
     private static final MarshallingInfo<String> STREAMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -70,6 +74,8 @@ public class TransportMarshaller {
             protocolMarshaller.marshall(transport.getMinLatency(), MINLATENCY_BINDING);
             protocolMarshaller.marshall(transport.getProtocol(), PROTOCOL_BINDING);
             protocolMarshaller.marshall(transport.getRemoteId(), REMOTEID_BINDING);
+            protocolMarshaller.marshall(transport.getSenderControlPort(), SENDERCONTROLPORT_BINDING);
+            protocolMarshaller.marshall(transport.getSenderIpAddress(), SENDERIPADDRESS_BINDING);
             protocolMarshaller.marshall(transport.getSmoothingLatency(), SMOOTHINGLATENCY_BINDING);
             protocolMarshaller.marshall(transport.getStreamId(), STREAMID_BINDING);
         } catch (Exception e) {

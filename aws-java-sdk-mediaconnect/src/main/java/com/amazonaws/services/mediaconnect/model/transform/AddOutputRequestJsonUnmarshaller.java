@@ -97,6 +97,10 @@ public class AddOutputRequestJsonUnmarshaller implements Unmarshaller<AddOutputR
                     context.nextToken();
                     addOutputRequest.setRemoteId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("senderControlPort", targetDepth)) {
+                    context.nextToken();
+                    addOutputRequest.setSenderControlPort(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("smoothingLatency", targetDepth)) {
                     context.nextToken();
                     addOutputRequest.setSmoothingLatency(context.getUnmarshaller(Integer.class).unmarshall(context));

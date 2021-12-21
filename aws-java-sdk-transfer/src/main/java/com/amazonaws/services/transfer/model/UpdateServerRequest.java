@@ -91,6 +91,10 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a single
      * dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
      * </p>
+     * <p>
+     * Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server resumes
+     * recent, negotiated sessions through a unique session ID.
+     * </p>
      */
     private ProtocolDetails protocolDetails;
     /**
@@ -579,12 +583,20 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a single
      * dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
      * </p>
+     * <p>
+     * Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server resumes
+     * recent, negotiated sessions through a unique session ID.
+     * </p>
      * 
      * @param protocolDetails
      *        The protocol settings that are configured for your server. </p>
      *        <p>
      *        Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a
      *        single dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     *        </p>
+     *        <p>
+     *        Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server
+     *        resumes recent, negotiated sessions through a unique session ID.
      */
 
     public void setProtocolDetails(ProtocolDetails protocolDetails) {
@@ -599,11 +611,19 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a single
      * dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
      * </p>
+     * <p>
+     * Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server resumes
+     * recent, negotiated sessions through a unique session ID.
+     * </p>
      * 
      * @return The protocol settings that are configured for your server. </p>
      *         <p>
      *         Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a
      *         single dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     *         </p>
+     *         <p>
+     *         Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server
+     *         resumes recent, negotiated sessions through a unique session ID.
      */
 
     public ProtocolDetails getProtocolDetails() {
@@ -618,12 +638,20 @@ public class UpdateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a single
      * dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
      * </p>
+     * <p>
+     * Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server resumes
+     * recent, negotiated sessions through a unique session ID.
+     * </p>
      * 
      * @param protocolDetails
      *        The protocol settings that are configured for your server. </p>
      *        <p>
      *        Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a
      *        single dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     *        </p>
+     *        <p>
+     *        Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server
+     *        resumes recent, negotiated sessions through a unique session ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

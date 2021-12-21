@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A Launch Profile Initialization contains information required for a workstation or server to connect to a launch
- * profile
+ * profile.
  * </p>
  * <p>
  * This includes scripts, endpoints, security groups, subnets, and other configuration.

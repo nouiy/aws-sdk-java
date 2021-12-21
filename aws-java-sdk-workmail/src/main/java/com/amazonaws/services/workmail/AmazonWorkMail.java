@@ -405,6 +405,27 @@ public interface AmazonWorkMail {
 
     /**
      * <p>
+     * Deletes the email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param deleteEmailMonitoringConfigurationRequest
+     * @return Result of the DeleteEmailMonitoringConfiguration operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.DeleteEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteEmailMonitoringConfigurationResult deleteEmailMonitoringConfiguration(
+            DeleteEmailMonitoringConfigurationRequest deleteEmailMonitoringConfigurationRequest);
+
+    /**
+     * <p>
      * Deletes a group from Amazon WorkMail.
      * </p>
      * 
@@ -667,6 +688,29 @@ public interface AmazonWorkMail {
      *      API Documentation</a>
      */
     DeregisterMailDomainResult deregisterMailDomain(DeregisterMailDomainRequest deregisterMailDomainRequest);
+
+    /**
+     * <p>
+     * Describes the current email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param describeEmailMonitoringConfigurationRequest
+     * @return Result of the DescribeEmailMonitoringConfiguration operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource cannot be found.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.DescribeEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DescribeEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeEmailMonitoringConfigurationResult describeEmailMonitoringConfiguration(
+            DescribeEmailMonitoringConfigurationRequest describeEmailMonitoringConfigurationRequest);
 
     /**
      * <p>
@@ -1296,6 +1340,28 @@ public interface AmazonWorkMail {
      *      API Documentation</a>
      */
     PutAccessControlRuleResult putAccessControlRule(PutAccessControlRuleRequest putAccessControlRuleRequest);
+
+    /**
+     * <p>
+     * Creates or updates the email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param putEmailMonitoringConfigurationRequest
+     * @return Result of the PutEmailMonitoringConfiguration operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource cannot be found.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.PutEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutEmailMonitoringConfigurationResult putEmailMonitoringConfiguration(PutEmailMonitoringConfigurationRequest putEmailMonitoringConfigurationRequest);
 
     /**
      * <p>

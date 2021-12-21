@@ -21,11 +21,6 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The protocol settings that are configured for your server.
  * </p>
- * <note>
- * <p>
- * This type is only valid in the <code>UpdateServer</code> API.
- * </p>
- * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/transfer-2018-11-05/ProtocolDetails" target="_top">AWS API
  *      Documentation</a>
@@ -54,6 +49,44 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
      * </note>
      */
     private String passiveIp;
+    /**
+     * <p>
+     * A property used with Transfer servers that use the FTPS protocol. TLS Session Resumption provides a mechanism to
+     * resume or share a negotiated secret key between the control and data connection for an FTPS session.
+     * <code>TlsSessionResumptionMode</code> determines whether or not the server resumes recent, negotiated sessions
+     * through a unique session ID. This property is available during <code>CreateServer</code> and
+     * <code>UpdateServer</code> calls. If a <code>TlsSessionResumptionMode</code> value is not specified during
+     * CreateServer, it is set to <code>ENFORCED</code> by default.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>DISABLED</code>: the server does not process TLS session resumption client requests and creates a new TLS
+     * session for each request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENABLED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server doesn't reject client data connections that do not perform the TLS session resumption client processing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENFORCED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server rejects client data connections that do not perform the TLS session resumption client processing. Before
+     * you set the value to <code>ENFORCED</code>, test your clients.
+     * </p>
+     * <note>
+     * <p>
+     * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session resumption, you
+     * prevent any connections from FTPS clients that don't perform the protocol negotiation. To determine whether or
+     * not you can use the <code>ENFORCED</code> value, you need to test your clients.
+     * </p>
+     * </note></li>
+     * </ul>
+     */
+    private String tlsSessionResumptionMode;
 
     /**
      * <p>
@@ -183,6 +216,321 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * A property used with Transfer servers that use the FTPS protocol. TLS Session Resumption provides a mechanism to
+     * resume or share a negotiated secret key between the control and data connection for an FTPS session.
+     * <code>TlsSessionResumptionMode</code> determines whether or not the server resumes recent, negotiated sessions
+     * through a unique session ID. This property is available during <code>CreateServer</code> and
+     * <code>UpdateServer</code> calls. If a <code>TlsSessionResumptionMode</code> value is not specified during
+     * CreateServer, it is set to <code>ENFORCED</code> by default.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>DISABLED</code>: the server does not process TLS session resumption client requests and creates a new TLS
+     * session for each request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENABLED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server doesn't reject client data connections that do not perform the TLS session resumption client processing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENFORCED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server rejects client data connections that do not perform the TLS session resumption client processing. Before
+     * you set the value to <code>ENFORCED</code>, test your clients.
+     * </p>
+     * <note>
+     * <p>
+     * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session resumption, you
+     * prevent any connections from FTPS clients that don't perform the protocol negotiation. To determine whether or
+     * not you can use the <code>ENFORCED</code> value, you need to test your clients.
+     * </p>
+     * </note></li>
+     * </ul>
+     * 
+     * @param tlsSessionResumptionMode
+     *        A property used with Transfer servers that use the FTPS protocol. TLS Session Resumption provides a
+     *        mechanism to resume or share a negotiated secret key between the control and data connection for an FTPS
+     *        session. <code>TlsSessionResumptionMode</code> determines whether or not the server resumes recent,
+     *        negotiated sessions through a unique session ID. This property is available during
+     *        <code>CreateServer</code> and <code>UpdateServer</code> calls. If a <code>TlsSessionResumptionMode</code>
+     *        value is not specified during CreateServer, it is set to <code>ENFORCED</code> by default.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>DISABLED</code>: the server does not process TLS session resumption client requests and creates a
+     *        new TLS session for each request.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ENABLED</code>: the server processes and accepts clients that are performing TLS session resumption.
+     *        The server doesn't reject client data connections that do not perform the TLS session resumption client
+     *        processing.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ENFORCED</code>: the server processes and accepts clients that are performing TLS session
+     *        resumption. The server rejects client data connections that do not perform the TLS session resumption
+     *        client processing. Before you set the value to <code>ENFORCED</code>, test your clients.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session resumption,
+     *        you prevent any connections from FTPS clients that don't perform the protocol negotiation. To determine
+     *        whether or not you can use the <code>ENFORCED</code> value, you need to test your clients.
+     *        </p>
+     *        </note></li>
+     * @see TlsSessionResumptionMode
+     */
+
+    public void setTlsSessionResumptionMode(String tlsSessionResumptionMode) {
+        this.tlsSessionResumptionMode = tlsSessionResumptionMode;
+    }
+
+    /**
+     * <p>
+     * A property used with Transfer servers that use the FTPS protocol. TLS Session Resumption provides a mechanism to
+     * resume or share a negotiated secret key between the control and data connection for an FTPS session.
+     * <code>TlsSessionResumptionMode</code> determines whether or not the server resumes recent, negotiated sessions
+     * through a unique session ID. This property is available during <code>CreateServer</code> and
+     * <code>UpdateServer</code> calls. If a <code>TlsSessionResumptionMode</code> value is not specified during
+     * CreateServer, it is set to <code>ENFORCED</code> by default.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>DISABLED</code>: the server does not process TLS session resumption client requests and creates a new TLS
+     * session for each request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENABLED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server doesn't reject client data connections that do not perform the TLS session resumption client processing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENFORCED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server rejects client data connections that do not perform the TLS session resumption client processing. Before
+     * you set the value to <code>ENFORCED</code>, test your clients.
+     * </p>
+     * <note>
+     * <p>
+     * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session resumption, you
+     * prevent any connections from FTPS clients that don't perform the protocol negotiation. To determine whether or
+     * not you can use the <code>ENFORCED</code> value, you need to test your clients.
+     * </p>
+     * </note></li>
+     * </ul>
+     * 
+     * @return A property used with Transfer servers that use the FTPS protocol. TLS Session Resumption provides a
+     *         mechanism to resume or share a negotiated secret key between the control and data connection for an FTPS
+     *         session. <code>TlsSessionResumptionMode</code> determines whether or not the server resumes recent,
+     *         negotiated sessions through a unique session ID. This property is available during
+     *         <code>CreateServer</code> and <code>UpdateServer</code> calls. If a <code>TlsSessionResumptionMode</code>
+     *         value is not specified during CreateServer, it is set to <code>ENFORCED</code> by default.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>DISABLED</code>: the server does not process TLS session resumption client requests and creates a
+     *         new TLS session for each request.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ENABLED</code>: the server processes and accepts clients that are performing TLS session
+     *         resumption. The server doesn't reject client data connections that do not perform the TLS session
+     *         resumption client processing.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ENFORCED</code>: the server processes and accepts clients that are performing TLS session
+     *         resumption. The server rejects client data connections that do not perform the TLS session resumption
+     *         client processing. Before you set the value to <code>ENFORCED</code>, test your clients.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session resumption,
+     *         you prevent any connections from FTPS clients that don't perform the protocol negotiation. To determine
+     *         whether or not you can use the <code>ENFORCED</code> value, you need to test your clients.
+     *         </p>
+     *         </note></li>
+     * @see TlsSessionResumptionMode
+     */
+
+    public String getTlsSessionResumptionMode() {
+        return this.tlsSessionResumptionMode;
+    }
+
+    /**
+     * <p>
+     * A property used with Transfer servers that use the FTPS protocol. TLS Session Resumption provides a mechanism to
+     * resume or share a negotiated secret key between the control and data connection for an FTPS session.
+     * <code>TlsSessionResumptionMode</code> determines whether or not the server resumes recent, negotiated sessions
+     * through a unique session ID. This property is available during <code>CreateServer</code> and
+     * <code>UpdateServer</code> calls. If a <code>TlsSessionResumptionMode</code> value is not specified during
+     * CreateServer, it is set to <code>ENFORCED</code> by default.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>DISABLED</code>: the server does not process TLS session resumption client requests and creates a new TLS
+     * session for each request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENABLED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server doesn't reject client data connections that do not perform the TLS session resumption client processing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENFORCED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server rejects client data connections that do not perform the TLS session resumption client processing. Before
+     * you set the value to <code>ENFORCED</code>, test your clients.
+     * </p>
+     * <note>
+     * <p>
+     * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session resumption, you
+     * prevent any connections from FTPS clients that don't perform the protocol negotiation. To determine whether or
+     * not you can use the <code>ENFORCED</code> value, you need to test your clients.
+     * </p>
+     * </note></li>
+     * </ul>
+     * 
+     * @param tlsSessionResumptionMode
+     *        A property used with Transfer servers that use the FTPS protocol. TLS Session Resumption provides a
+     *        mechanism to resume or share a negotiated secret key between the control and data connection for an FTPS
+     *        session. <code>TlsSessionResumptionMode</code> determines whether or not the server resumes recent,
+     *        negotiated sessions through a unique session ID. This property is available during
+     *        <code>CreateServer</code> and <code>UpdateServer</code> calls. If a <code>TlsSessionResumptionMode</code>
+     *        value is not specified during CreateServer, it is set to <code>ENFORCED</code> by default.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>DISABLED</code>: the server does not process TLS session resumption client requests and creates a
+     *        new TLS session for each request.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ENABLED</code>: the server processes and accepts clients that are performing TLS session resumption.
+     *        The server doesn't reject client data connections that do not perform the TLS session resumption client
+     *        processing.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ENFORCED</code>: the server processes and accepts clients that are performing TLS session
+     *        resumption. The server rejects client data connections that do not perform the TLS session resumption
+     *        client processing. Before you set the value to <code>ENFORCED</code>, test your clients.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session resumption,
+     *        you prevent any connections from FTPS clients that don't perform the protocol negotiation. To determine
+     *        whether or not you can use the <code>ENFORCED</code> value, you need to test your clients.
+     *        </p>
+     *        </note></li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TlsSessionResumptionMode
+     */
+
+    public ProtocolDetails withTlsSessionResumptionMode(String tlsSessionResumptionMode) {
+        setTlsSessionResumptionMode(tlsSessionResumptionMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A property used with Transfer servers that use the FTPS protocol. TLS Session Resumption provides a mechanism to
+     * resume or share a negotiated secret key between the control and data connection for an FTPS session.
+     * <code>TlsSessionResumptionMode</code> determines whether or not the server resumes recent, negotiated sessions
+     * through a unique session ID. This property is available during <code>CreateServer</code> and
+     * <code>UpdateServer</code> calls. If a <code>TlsSessionResumptionMode</code> value is not specified during
+     * CreateServer, it is set to <code>ENFORCED</code> by default.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>DISABLED</code>: the server does not process TLS session resumption client requests and creates a new TLS
+     * session for each request.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENABLED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server doesn't reject client data connections that do not perform the TLS session resumption client processing.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ENFORCED</code>: the server processes and accepts clients that are performing TLS session resumption. The
+     * server rejects client data connections that do not perform the TLS session resumption client processing. Before
+     * you set the value to <code>ENFORCED</code>, test your clients.
+     * </p>
+     * <note>
+     * <p>
+     * Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session resumption, you
+     * prevent any connections from FTPS clients that don't perform the protocol negotiation. To determine whether or
+     * not you can use the <code>ENFORCED</code> value, you need to test your clients.
+     * </p>
+     * </note></li>
+     * </ul>
+     * 
+     * @param tlsSessionResumptionMode
+     *        A property used with Transfer servers that use the FTPS protocol. TLS Session Resumption provides a
+     *        mechanism to resume or share a negotiated secret key between the control and data connection for an FTPS
+     *        session. <code>TlsSessionResumptionMode</code> determines whether or not the server resumes recent,
+     *        negotiated sessions through a unique session ID. This property is available during
+     *        <code>CreateServer</code> and <code>UpdateServer</code> calls. If a <code>TlsSessionResumptionMode</code>
+     *        value is not specified during CreateServer, it is set to <code>ENFORCED</code> by default.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>DISABLED</code>: the server does not process TLS session resumption client requests and creates a
+     *        new TLS session for each request.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ENABLED</code>: the server processes and accepts clients that are performing TLS session resumption.
+     *        The server doesn't reject client data connections that do not perform the TLS session resumption client
+     *        processing.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ENFORCED</code>: the server processes and accepts clients that are performing TLS session
+     *        resumption. The server rejects client data connections that do not perform the TLS session resumption
+     *        client processing. Before you set the value to <code>ENFORCED</code>, test your clients.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        Not all FTPS clients perform TLS session resumption. So, if you choose to enforce TLS session resumption,
+     *        you prevent any connections from FTPS clients that don't perform the protocol negotiation. To determine
+     *        whether or not you can use the <code>ENFORCED</code> value, you need to test your clients.
+     *        </p>
+     *        </note></li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TlsSessionResumptionMode
+     */
+
+    public ProtocolDetails withTlsSessionResumptionMode(TlsSessionResumptionMode tlsSessionResumptionMode) {
+        this.tlsSessionResumptionMode = tlsSessionResumptionMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -195,7 +543,9 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getPassiveIp() != null)
-            sb.append("PassiveIp: ").append(getPassiveIp());
+            sb.append("PassiveIp: ").append(getPassiveIp()).append(",");
+        if (getTlsSessionResumptionMode() != null)
+            sb.append("TlsSessionResumptionMode: ").append(getTlsSessionResumptionMode());
         sb.append("}");
         return sb.toString();
     }
@@ -214,6 +564,10 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getPassiveIp() != null && other.getPassiveIp().equals(this.getPassiveIp()) == false)
             return false;
+        if (other.getTlsSessionResumptionMode() == null ^ this.getTlsSessionResumptionMode() == null)
+            return false;
+        if (other.getTlsSessionResumptionMode() != null && other.getTlsSessionResumptionMode().equals(this.getTlsSessionResumptionMode()) == false)
+            return false;
         return true;
     }
 
@@ -223,6 +577,7 @@ public class ProtocolDetails implements Serializable, Cloneable, StructuredPojo 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getPassiveIp() == null) ? 0 : getPassiveIp().hashCode());
+        hashCode = prime * hashCode + ((getTlsSessionResumptionMode() == null) ? 0 : getTlsSessionResumptionMode().hashCode());
         return hashCode;
     }
 

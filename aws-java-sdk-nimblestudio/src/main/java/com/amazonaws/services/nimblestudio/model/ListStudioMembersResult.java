@@ -16,7 +16,6 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
- * <zonbook></zonbook><xhtml></xhtml>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/nimble-2020-08-01/ListStudioMembers" target="_top">AWS API
  *      Documentation</a>
@@ -26,7 +25,7 @@ public class ListStudioMembersResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of members.
+     * A list of admin members.
      * </p>
      */
     private java.util.List<StudioMembership> members;
@@ -39,10 +38,10 @@ public class ListStudioMembersResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of members.
+     * A list of admin members.
      * </p>
      * 
-     * @return A list of members.
+     * @return A list of admin members.
      */
 
     public java.util.List<StudioMembership> getMembers() {
@@ -51,11 +50,11 @@ public class ListStudioMembersResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of members.
+     * A list of admin members.
      * </p>
      * 
      * @param members
-     *        A list of members.
+     *        A list of admin members.
      */
 
     public void setMembers(java.util.Collection<StudioMembership> members) {
@@ -69,7 +68,7 @@ public class ListStudioMembersResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of members.
+     * A list of admin members.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +77,7 @@ public class ListStudioMembersResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      * 
      * @param members
-     *        A list of members.
+     *        A list of admin members.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +93,11 @@ public class ListStudioMembersResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of members.
+     * A list of admin members.
      * </p>
      * 
      * @param members
-     *        A list of members.
+     *        A list of admin members.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

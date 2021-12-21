@@ -27,7 +27,8 @@ public enum Protocol {
     Rist("rist"),
     St2110Jpegxs("st2110-jpegxs"),
     Cdi("cdi"),
-    SrtListener("srt-listener");
+    SrtListener("srt-listener"),
+    FujitsuQos("fujitsu-qos");
 
     private String value;
 

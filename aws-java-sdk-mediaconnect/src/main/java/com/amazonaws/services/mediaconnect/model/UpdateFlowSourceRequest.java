@@ -44,7 +44,10 @@ public class UpdateFlowSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private Integer ingestPort;
     /** The smoothing max bitrate for RIST, RTP, and RTP-FEC streams. */
     private Integer maxBitrate;
-    /** The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams. */
+    /**
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based
+     * streams.
+     */
     private Integer maxLatency;
     /** The size of the buffer (in milliseconds) to use to sync incoming source data. */
     private Integer maxSyncBuffer;
@@ -59,6 +62,10 @@ public class UpdateFlowSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private Integer minLatency;
     /** The protocol that is used by the source. */
     private String protocol;
+    /** The port that the flow uses to send outbound requests to initiate connection with the sender. */
+    private Integer senderControlPort;
+    /** The IP address that the flow communicates with to initiate connection with the sender. */
+    private String senderIpAddress;
     /** The ARN of the source that you want to update. */
     private String sourceArn;
     /** The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams. */
@@ -288,10 +295,12 @@ public class UpdateFlowSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based
+     * streams.
      * 
      * @param maxLatency
-     *        The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     *        The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and
+     *        Fujitsu-based streams.
      */
 
     public void setMaxLatency(Integer maxLatency) {
@@ -299,9 +308,11 @@ public class UpdateFlowSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based
+     * streams.
      * 
-     * @return The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * @return The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and
+     *         Fujitsu-based streams.
      */
 
     public Integer getMaxLatency() {
@@ -309,10 +320,12 @@ public class UpdateFlowSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
-     * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based
+     * streams.
      * 
      * @param maxLatency
-     *        The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
+     *        The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and
+     *        Fujitsu-based streams.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -522,6 +535,74 @@ public class UpdateFlowSourceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * 
+     * @param senderControlPort
+     *        The port that the flow uses to send outbound requests to initiate connection with the sender.
+     */
+
+    public void setSenderControlPort(Integer senderControlPort) {
+        this.senderControlPort = senderControlPort;
+    }
+
+    /**
+     * The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * 
+     * @return The port that the flow uses to send outbound requests to initiate connection with the sender.
+     */
+
+    public Integer getSenderControlPort() {
+        return this.senderControlPort;
+    }
+
+    /**
+     * The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * 
+     * @param senderControlPort
+     *        The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFlowSourceRequest withSenderControlPort(Integer senderControlPort) {
+        setSenderControlPort(senderControlPort);
+        return this;
+    }
+
+    /**
+     * The IP address that the flow communicates with to initiate connection with the sender.
+     * 
+     * @param senderIpAddress
+     *        The IP address that the flow communicates with to initiate connection with the sender.
+     */
+
+    public void setSenderIpAddress(String senderIpAddress) {
+        this.senderIpAddress = senderIpAddress;
+    }
+
+    /**
+     * The IP address that the flow communicates with to initiate connection with the sender.
+     * 
+     * @return The IP address that the flow communicates with to initiate connection with the sender.
+     */
+
+    public String getSenderIpAddress() {
+        return this.senderIpAddress;
+    }
+
+    /**
+     * The IP address that the flow communicates with to initiate connection with the sender.
+     * 
+     * @param senderIpAddress
+     *        The IP address that the flow communicates with to initiate connection with the sender.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFlowSourceRequest withSenderIpAddress(String senderIpAddress) {
+        setSenderIpAddress(senderIpAddress);
+        return this;
+    }
+
+    /**
      * The ARN of the source that you want to update.
      * 
      * @param sourceArn
@@ -697,6 +778,10 @@ public class UpdateFlowSourceRequest extends com.amazonaws.AmazonWebServiceReque
             sb.append("MinLatency: ").append(getMinLatency()).append(",");
         if (getProtocol() != null)
             sb.append("Protocol: ").append(getProtocol()).append(",");
+        if (getSenderControlPort() != null)
+            sb.append("SenderControlPort: ").append(getSenderControlPort()).append(",");
+        if (getSenderIpAddress() != null)
+            sb.append("SenderIpAddress: ").append(getSenderIpAddress()).append(",");
         if (getSourceArn() != null)
             sb.append("SourceArn: ").append(getSourceArn()).append(",");
         if (getStreamId() != null)
@@ -764,6 +849,14 @@ public class UpdateFlowSourceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getProtocol() != null && other.getProtocol().equals(this.getProtocol()) == false)
             return false;
+        if (other.getSenderControlPort() == null ^ this.getSenderControlPort() == null)
+            return false;
+        if (other.getSenderControlPort() != null && other.getSenderControlPort().equals(this.getSenderControlPort()) == false)
+            return false;
+        if (other.getSenderIpAddress() == null ^ this.getSenderIpAddress() == null)
+            return false;
+        if (other.getSenderIpAddress() != null && other.getSenderIpAddress().equals(this.getSenderIpAddress()) == false)
+            return false;
         if (other.getSourceArn() == null ^ this.getSourceArn() == null)
             return false;
         if (other.getSourceArn() != null && other.getSourceArn().equals(this.getSourceArn()) == false)
@@ -799,6 +892,8 @@ public class UpdateFlowSourceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getMediaStreamSourceConfigurations() == null) ? 0 : getMediaStreamSourceConfigurations().hashCode());
         hashCode = prime * hashCode + ((getMinLatency() == null) ? 0 : getMinLatency().hashCode());
         hashCode = prime * hashCode + ((getProtocol() == null) ? 0 : getProtocol().hashCode());
+        hashCode = prime * hashCode + ((getSenderControlPort() == null) ? 0 : getSenderControlPort().hashCode());
+        hashCode = prime * hashCode + ((getSenderIpAddress() == null) ? 0 : getSenderIpAddress().hashCode());
         hashCode = prime * hashCode + ((getSourceArn() == null) ? 0 : getSourceArn().hashCode());
         hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
         hashCode = prime * hashCode + ((getVpcInterfaceName() == null) ? 0 : getVpcInterfaceName().hashCode());

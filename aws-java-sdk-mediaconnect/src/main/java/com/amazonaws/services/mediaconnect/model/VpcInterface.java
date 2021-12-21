@@ -26,7 +26,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class VpcInterface implements Serializable, Cloneable, StructuredPojo {
 
-    /** Immutable and has to be a unique against other VpcInterfaces in this Flow */
+    /** Immutable and has to be a unique against other VpcInterfaces in this Flow. */
     private String name;
     /** IDs of the network interfaces created in customer's account by MediaConnect. */
     private java.util.List<String> networkInterfaceIds;
@@ -40,10 +40,10 @@ public class VpcInterface implements Serializable, Cloneable, StructuredPojo {
     private String subnetId;
 
     /**
-     * Immutable and has to be a unique against other VpcInterfaces in this Flow
+     * Immutable and has to be a unique against other VpcInterfaces in this Flow.
      * 
      * @param name
-     *        Immutable and has to be a unique against other VpcInterfaces in this Flow
+     *        Immutable and has to be a unique against other VpcInterfaces in this Flow.
      */
 
     public void setName(String name) {
@@ -51,9 +51,9 @@ public class VpcInterface implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Immutable and has to be a unique against other VpcInterfaces in this Flow
+     * Immutable and has to be a unique against other VpcInterfaces in this Flow.
      * 
-     * @return Immutable and has to be a unique against other VpcInterfaces in this Flow
+     * @return Immutable and has to be a unique against other VpcInterfaces in this Flow.
      */
 
     public String getName() {
@@ -61,10 +61,10 @@ public class VpcInterface implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * Immutable and has to be a unique against other VpcInterfaces in this Flow
+     * Immutable and has to be a unique against other VpcInterfaces in this Flow.
      * 
      * @param name
-     *        Immutable and has to be a unique against other VpcInterfaces in this Flow
+     *        Immutable and has to be a unique against other VpcInterfaces in this Flow.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

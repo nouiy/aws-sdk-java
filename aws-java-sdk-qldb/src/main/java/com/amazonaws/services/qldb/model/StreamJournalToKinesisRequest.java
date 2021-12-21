@@ -36,6 +36,10 @@ public class StreamJournalToKinesisRequest extends com.amazonaws.AmazonWebServic
      * The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal stream to write data
      * records to a Kinesis Data Streams resource.
      * </p>
+     * <p>
+     * To pass a role to QLDB when requesting a journal stream, you must have permissions to perform the
+     * <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal stream requests.
+     * </p>
      */
     private String roleArn;
     /**
@@ -136,10 +140,18 @@ public class StreamJournalToKinesisRequest extends com.amazonaws.AmazonWebServic
      * The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal stream to write data
      * records to a Kinesis Data Streams resource.
      * </p>
+     * <p>
+     * To pass a role to QLDB when requesting a journal stream, you must have permissions to perform the
+     * <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal stream requests.
+     * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal stream to write
-     *        data records to a Kinesis Data Streams resource.
+     *        data records to a Kinesis Data Streams resource.</p>
+     *        <p>
+     *        To pass a role to QLDB when requesting a journal stream, you must have permissions to perform the
+     *        <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal stream
+     *        requests.
      */
 
     public void setRoleArn(String roleArn) {
@@ -151,9 +163,17 @@ public class StreamJournalToKinesisRequest extends com.amazonaws.AmazonWebServic
      * The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal stream to write data
      * records to a Kinesis Data Streams resource.
      * </p>
+     * <p>
+     * To pass a role to QLDB when requesting a journal stream, you must have permissions to perform the
+     * <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal stream requests.
+     * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal stream to write
-     *         data records to a Kinesis Data Streams resource.
+     *         data records to a Kinesis Data Streams resource.</p>
+     *         <p>
+     *         To pass a role to QLDB when requesting a journal stream, you must have permissions to perform the
+     *         <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal stream
+     *         requests.
      */
 
     public String getRoleArn() {
@@ -165,10 +185,18 @@ public class StreamJournalToKinesisRequest extends com.amazonaws.AmazonWebServic
      * The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal stream to write data
      * records to a Kinesis Data Streams resource.
      * </p>
+     * <p>
+     * To pass a role to QLDB when requesting a journal stream, you must have permissions to perform the
+     * <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal stream requests.
+     * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal stream to write
-     *        data records to a Kinesis Data Streams resource.
+     *        data records to a Kinesis Data Streams resource.</p>
+     *        <p>
+     *        To pass a role to QLDB when requesting a journal stream, you must have permissions to perform the
+     *        <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal stream
+     *        requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

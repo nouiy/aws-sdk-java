@@ -83,6 +83,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
     }
 
     @Override
+    public DeleteEmailMonitoringConfigurationResult deleteEmailMonitoringConfiguration(DeleteEmailMonitoringConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteGroupResult deleteGroup(DeleteGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -129,6 +134,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
 
     @Override
     public DeregisterMailDomainResult deregisterMailDomain(DeregisterMailDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeEmailMonitoringConfigurationResult describeEmailMonitoringConfiguration(DescribeEmailMonitoringConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -274,6 +284,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
 
     @Override
     public PutAccessControlRuleResult putAccessControlRule(PutAccessControlRuleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutEmailMonitoringConfigurationResult putEmailMonitoringConfiguration(PutEmailMonitoringConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

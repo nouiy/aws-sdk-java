@@ -46,6 +46,19 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
      * </p>
      */
     private String metadata;
+    /**
+     * <p>
+     * The push notification configuration of the message.
+     * </p>
+     */
+    private PushNotificationConfiguration pushNotification;
+    /**
+     * <p>
+     * The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in the
+     * <code>PushNotificationPreferences</code>.
+     * </p>
+     */
+    private java.util.Map<String, MessageAttributeValue> messageAttributes;
 
     /**
      * <p>
@@ -168,6 +181,120 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The push notification configuration of the message.
+     * </p>
+     * 
+     * @param pushNotification
+     *        The push notification configuration of the message.
+     */
+
+    public void setPushNotification(PushNotificationConfiguration pushNotification) {
+        this.pushNotification = pushNotification;
+    }
+
+    /**
+     * <p>
+     * The push notification configuration of the message.
+     * </p>
+     * 
+     * @return The push notification configuration of the message.
+     */
+
+    public PushNotificationConfiguration getPushNotification() {
+        return this.pushNotification;
+    }
+
+    /**
+     * <p>
+     * The push notification configuration of the message.
+     * </p>
+     * 
+     * @param pushNotification
+     *        The push notification configuration of the message.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageCallback withPushNotification(PushNotificationConfiguration pushNotification) {
+        setPushNotification(pushNotification);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in the
+     * <code>PushNotificationPreferences</code>.
+     * </p>
+     * 
+     * @return The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined
+     *         in the <code>PushNotificationPreferences</code>.
+     */
+
+    public java.util.Map<String, MessageAttributeValue> getMessageAttributes() {
+        return messageAttributes;
+    }
+
+    /**
+     * <p>
+     * The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in the
+     * <code>PushNotificationPreferences</code>.
+     * </p>
+     * 
+     * @param messageAttributes
+     *        The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in
+     *        the <code>PushNotificationPreferences</code>.
+     */
+
+    public void setMessageAttributes(java.util.Map<String, MessageAttributeValue> messageAttributes) {
+        this.messageAttributes = messageAttributes;
+    }
+
+    /**
+     * <p>
+     * The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in the
+     * <code>PushNotificationPreferences</code>.
+     * </p>
+     * 
+     * @param messageAttributes
+     *        The attributes for the message, used for message filtering along with a <code>FilterRule</code> defined in
+     *        the <code>PushNotificationPreferences</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageCallback withMessageAttributes(java.util.Map<String, MessageAttributeValue> messageAttributes) {
+        setMessageAttributes(messageAttributes);
+        return this;
+    }
+
+    /**
+     * Add a single MessageAttributes entry
+     *
+     * @see ChannelMessageCallback#withMessageAttributes
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageCallback addMessageAttributesEntry(String key, MessageAttributeValue value) {
+        if (null == this.messageAttributes) {
+            this.messageAttributes = new java.util.HashMap<String, MessageAttributeValue>();
+        }
+        if (this.messageAttributes.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.messageAttributes.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into MessageAttributes.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ChannelMessageCallback clearMessageAttributesEntries() {
+        this.messageAttributes = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -184,7 +311,11 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
         if (getContent() != null)
             sb.append("Content: ").append("***Sensitive Data Redacted***").append(",");
         if (getMetadata() != null)
-            sb.append("Metadata: ").append("***Sensitive Data Redacted***");
+            sb.append("Metadata: ").append("***Sensitive Data Redacted***").append(",");
+        if (getPushNotification() != null)
+            sb.append("PushNotification: ").append(getPushNotification()).append(",");
+        if (getMessageAttributes() != null)
+            sb.append("MessageAttributes: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }
@@ -211,6 +342,14 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
             return false;
         if (other.getMetadata() != null && other.getMetadata().equals(this.getMetadata()) == false)
             return false;
+        if (other.getPushNotification() == null ^ this.getPushNotification() == null)
+            return false;
+        if (other.getPushNotification() != null && other.getPushNotification().equals(this.getPushNotification()) == false)
+            return false;
+        if (other.getMessageAttributes() == null ^ this.getMessageAttributes() == null)
+            return false;
+        if (other.getMessageAttributes() != null && other.getMessageAttributes().equals(this.getMessageAttributes()) == false)
+            return false;
         return true;
     }
 
@@ -222,6 +361,8 @@ public class ChannelMessageCallback implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getMessageId() == null) ? 0 : getMessageId().hashCode());
         hashCode = prime * hashCode + ((getContent() == null) ? 0 : getContent().hashCode());
         hashCode = prime * hashCode + ((getMetadata() == null) ? 0 : getMetadata().hashCode());
+        hashCode = prime * hashCode + ((getPushNotification() == null) ? 0 : getPushNotification().hashCode());
+        hashCode = prime * hashCode + ((getMessageAttributes() == null) ? 0 : getMessageAttributes().hashCode());
         return hashCode;
     }
 

@@ -43,7 +43,10 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
      * (static-key).
      */
     private Encryption encryption;
-    /** The maximum latency in milliseconds for Zixi-based streams. */
+    /**
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based
+     * streams.
+     */
     private Integer maxLatency;
     /** The media streams that are associated with the output, and the parameters for those associations. */
     private java.util.List<MediaStreamOutputConfigurationRequest> mediaStreamOutputConfigurations;
@@ -62,6 +65,8 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
     private String protocol;
     /** The remote ID for the Zixi-pull output stream. */
     private String remoteId;
+    /** The port that the flow uses to send outbound requests to initiate connection with the sender. */
+    private Integer senderControlPort;
     /** The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams. */
     private Integer smoothingLatency;
     /** The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams. */
@@ -258,10 +263,12 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * The maximum latency in milliseconds for Zixi-based streams.
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based
+     * streams.
      * 
      * @param maxLatency
-     *        The maximum latency in milliseconds for Zixi-based streams.
+     *        The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and
+     *        Fujitsu-based streams.
      */
 
     public void setMaxLatency(Integer maxLatency) {
@@ -269,9 +276,11 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * The maximum latency in milliseconds for Zixi-based streams.
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based
+     * streams.
      * 
-     * @return The maximum latency in milliseconds for Zixi-based streams.
+     * @return The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and
+     *         Fujitsu-based streams.
      */
 
     public Integer getMaxLatency() {
@@ -279,10 +288,12 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * The maximum latency in milliseconds for Zixi-based streams.
+     * The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based
+     * streams.
      * 
      * @param maxLatency
-     *        The maximum latency in milliseconds for Zixi-based streams.
+     *        The maximum latency in milliseconds. This parameter applies only to RIST-based, Zixi-based, and
+     *        Fujitsu-based streams.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -559,6 +570,40 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * 
+     * @param senderControlPort
+     *        The port that the flow uses to send outbound requests to initiate connection with the sender.
+     */
+
+    public void setSenderControlPort(Integer senderControlPort) {
+        this.senderControlPort = senderControlPort;
+    }
+
+    /**
+     * The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * 
+     * @return The port that the flow uses to send outbound requests to initiate connection with the sender.
+     */
+
+    public Integer getSenderControlPort() {
+        return this.senderControlPort;
+    }
+
+    /**
+     * The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * 
+     * @param senderControlPort
+     *        The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AddOutputRequest withSenderControlPort(Integer senderControlPort) {
+        setSenderControlPort(senderControlPort);
+        return this;
+    }
+
+    /**
      * The smoothing latency in milliseconds for RIST, RTP, and RTP-FEC streams.
      * 
      * @param smoothingLatency
@@ -694,6 +739,8 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
             sb.append("Protocol: ").append(getProtocol()).append(",");
         if (getRemoteId() != null)
             sb.append("RemoteId: ").append(getRemoteId()).append(",");
+        if (getSenderControlPort() != null)
+            sb.append("SenderControlPort: ").append(getSenderControlPort()).append(",");
         if (getSmoothingLatency() != null)
             sb.append("SmoothingLatency: ").append(getSmoothingLatency()).append(",");
         if (getStreamId() != null)
@@ -759,6 +806,10 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getRemoteId() != null && other.getRemoteId().equals(this.getRemoteId()) == false)
             return false;
+        if (other.getSenderControlPort() == null ^ this.getSenderControlPort() == null)
+            return false;
+        if (other.getSenderControlPort() != null && other.getSenderControlPort().equals(this.getSenderControlPort()) == false)
+            return false;
         if (other.getSmoothingLatency() == null ^ this.getSmoothingLatency() == null)
             return false;
         if (other.getSmoothingLatency() != null && other.getSmoothingLatency().equals(this.getSmoothingLatency()) == false)
@@ -790,6 +841,7 @@ public class AddOutputRequest implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getPort() == null) ? 0 : getPort().hashCode());
         hashCode = prime * hashCode + ((getProtocol() == null) ? 0 : getProtocol().hashCode());
         hashCode = prime * hashCode + ((getRemoteId() == null) ? 0 : getRemoteId().hashCode());
+        hashCode = prime * hashCode + ((getSenderControlPort() == null) ? 0 : getSenderControlPort().hashCode());
         hashCode = prime * hashCode + ((getSmoothingLatency() == null) ? 0 : getSmoothingLatency().hashCode());
         hashCode = prime * hashCode + ((getStreamId() == null) ? 0 : getStreamId().hashCode());
         hashCode = prime * hashCode + ((getVpcInterfaceAttachment() == null) ? 0 : getVpcInterfaceAttachment().hashCode());

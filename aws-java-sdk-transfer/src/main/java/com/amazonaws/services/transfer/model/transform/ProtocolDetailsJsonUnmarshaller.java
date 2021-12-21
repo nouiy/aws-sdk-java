@@ -52,6 +52,10 @@ public class ProtocolDetailsJsonUnmarshaller implements Unmarshaller<ProtocolDet
                     context.nextToken();
                     protocolDetails.setPassiveIp(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("TlsSessionResumptionMode", targetDepth)) {
+                    context.nextToken();
+                    protocolDetails.setTlsSessionResumptionMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

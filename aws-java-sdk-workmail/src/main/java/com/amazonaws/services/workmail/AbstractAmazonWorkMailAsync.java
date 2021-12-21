@@ -171,6 +171,21 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteEmailMonitoringConfigurationResult> deleteEmailMonitoringConfigurationAsync(
+            DeleteEmailMonitoringConfigurationRequest request) {
+
+        return deleteEmailMonitoringConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEmailMonitoringConfigurationResult> deleteEmailMonitoringConfigurationAsync(
+            DeleteEmailMonitoringConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteEmailMonitoringConfigurationRequest, DeleteEmailMonitoringConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteGroupResult> deleteGroupAsync(DeleteGroupRequest request) {
 
         return deleteGroupAsync(request, null);
@@ -298,6 +313,21 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     @Override
     public java.util.concurrent.Future<DeregisterMailDomainResult> deregisterMailDomainAsync(DeregisterMailDomainRequest request,
             com.amazonaws.handlers.AsyncHandler<DeregisterMailDomainRequest, DeregisterMailDomainResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEmailMonitoringConfigurationResult> describeEmailMonitoringConfigurationAsync(
+            DescribeEmailMonitoringConfigurationRequest request) {
+
+        return describeEmailMonitoringConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEmailMonitoringConfigurationResult> describeEmailMonitoringConfigurationAsync(
+            DescribeEmailMonitoringConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeEmailMonitoringConfigurationRequest, DescribeEmailMonitoringConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -679,6 +709,21 @@ public class AbstractAmazonWorkMailAsync extends AbstractAmazonWorkMail implemen
     @Override
     public java.util.concurrent.Future<PutAccessControlRuleResult> putAccessControlRuleAsync(PutAccessControlRuleRequest request,
             com.amazonaws.handlers.AsyncHandler<PutAccessControlRuleRequest, PutAccessControlRuleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutEmailMonitoringConfigurationResult> putEmailMonitoringConfigurationAsync(
+            PutEmailMonitoringConfigurationRequest request) {
+
+        return putEmailMonitoringConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutEmailMonitoringConfigurationResult> putEmailMonitoringConfigurationAsync(
+            PutEmailMonitoringConfigurationRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutEmailMonitoringConfigurationRequest, PutEmailMonitoringConfigurationResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

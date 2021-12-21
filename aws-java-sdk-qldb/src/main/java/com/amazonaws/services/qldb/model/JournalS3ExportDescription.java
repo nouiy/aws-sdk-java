@@ -56,14 +56,14 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
     private String status;
     /**
      * <p>
-     * The inclusive start date and time for the range of journal contents that are specified in the original export
+     * The inclusive start date and time for the range of journal contents that was specified in the original export
      * request.
      * </p>
      */
     private java.util.Date inclusiveStartTime;
     /**
      * <p>
-     * The exclusive end date and time for the range of journal contents that are specified in the original export
+     * The exclusive end date and time for the range of journal contents that was specified in the original export
      * request.
      * </p>
      */
@@ -83,13 +83,19 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption of your
+     * (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of your
      * exported data.
      * </p>
      * </li>
      * </ul>
      */
     private String roleArn;
+    /**
+     * <p>
+     * The output format of the exported journal data.
+     * </p>
+     */
+    private String outputFormat;
 
     /**
      * <p>
@@ -278,12 +284,12 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The inclusive start date and time for the range of journal contents that are specified in the original export
+     * The inclusive start date and time for the range of journal contents that was specified in the original export
      * request.
      * </p>
      * 
      * @param inclusiveStartTime
-     *        The inclusive start date and time for the range of journal contents that are specified in the original
+     *        The inclusive start date and time for the range of journal contents that was specified in the original
      *        export request.
      */
 
@@ -293,11 +299,11 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The inclusive start date and time for the range of journal contents that are specified in the original export
+     * The inclusive start date and time for the range of journal contents that was specified in the original export
      * request.
      * </p>
      * 
-     * @return The inclusive start date and time for the range of journal contents that are specified in the original
+     * @return The inclusive start date and time for the range of journal contents that was specified in the original
      *         export request.
      */
 
@@ -307,12 +313,12 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The inclusive start date and time for the range of journal contents that are specified in the original export
+     * The inclusive start date and time for the range of journal contents that was specified in the original export
      * request.
      * </p>
      * 
      * @param inclusiveStartTime
-     *        The inclusive start date and time for the range of journal contents that are specified in the original
+     *        The inclusive start date and time for the range of journal contents that was specified in the original
      *        export request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -324,12 +330,12 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The exclusive end date and time for the range of journal contents that are specified in the original export
+     * The exclusive end date and time for the range of journal contents that was specified in the original export
      * request.
      * </p>
      * 
      * @param exclusiveEndTime
-     *        The exclusive end date and time for the range of journal contents that are specified in the original
+     *        The exclusive end date and time for the range of journal contents that was specified in the original
      *        export request.
      */
 
@@ -339,11 +345,11 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The exclusive end date and time for the range of journal contents that are specified in the original export
+     * The exclusive end date and time for the range of journal contents that was specified in the original export
      * request.
      * </p>
      * 
-     * @return The exclusive end date and time for the range of journal contents that are specified in the original
+     * @return The exclusive end date and time for the range of journal contents that was specified in the original
      *         export request.
      */
 
@@ -353,12 +359,12 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The exclusive end date and time for the range of journal contents that are specified in the original export
+     * The exclusive end date and time for the range of journal contents that was specified in the original export
      * request.
      * </p>
      * 
      * @param exclusiveEndTime
-     *        The exclusive end date and time for the range of journal contents that are specified in the original
+     *        The exclusive end date and time for the range of journal contents that was specified in the original
      *        export request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -407,7 +413,7 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption of your
+     * (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of your
      * exported data.
      * </p>
      * </li>
@@ -424,8 +430,8 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
      *        </li>
      *        <li>
      *        <p>
-     *        (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption
-     *        of your exported data.
+     *        (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of
+     *        your exported data.
      *        </p>
      *        </li>
      */
@@ -447,7 +453,7 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption of your
+     * (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of your
      * exported data.
      * </p>
      * </li>
@@ -463,8 +469,8 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
      *         </li>
      *         <li>
      *         <p>
-     *         (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption
-     *         of your exported data.
+     *         (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of
+     *         your exported data.
      *         </p>
      *         </li>
      */
@@ -486,7 +492,7 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
      * </li>
      * <li>
      * <p>
-     * (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption of your
+     * (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of your
      * exported data.
      * </p>
      * </li>
@@ -503,8 +509,8 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
      *        </li>
      *        <li>
      *        <p>
-     *        (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption
-     *        of your exported data.
+     *        (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of
+     *        your exported data.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -512,6 +518,65 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
 
     public JournalS3ExportDescription withRoleArn(String roleArn) {
         setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The output format of the exported journal data.
+     * </p>
+     * 
+     * @param outputFormat
+     *        The output format of the exported journal data.
+     * @see OutputFormat
+     */
+
+    public void setOutputFormat(String outputFormat) {
+        this.outputFormat = outputFormat;
+    }
+
+    /**
+     * <p>
+     * The output format of the exported journal data.
+     * </p>
+     * 
+     * @return The output format of the exported journal data.
+     * @see OutputFormat
+     */
+
+    public String getOutputFormat() {
+        return this.outputFormat;
+    }
+
+    /**
+     * <p>
+     * The output format of the exported journal data.
+     * </p>
+     * 
+     * @param outputFormat
+     *        The output format of the exported journal data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OutputFormat
+     */
+
+    public JournalS3ExportDescription withOutputFormat(String outputFormat) {
+        setOutputFormat(outputFormat);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The output format of the exported journal data.
+     * </p>
+     * 
+     * @param outputFormat
+     *        The output format of the exported journal data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OutputFormat
+     */
+
+    public JournalS3ExportDescription withOutputFormat(OutputFormat outputFormat) {
+        this.outputFormat = outputFormat.toString();
         return this;
     }
 
@@ -542,7 +607,9 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
         if (getS3ExportConfiguration() != null)
             sb.append("S3ExportConfiguration: ").append(getS3ExportConfiguration()).append(",");
         if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn());
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getOutputFormat() != null)
+            sb.append("OutputFormat: ").append(getOutputFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -589,6 +656,10 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
+        if (other.getOutputFormat() == null ^ this.getOutputFormat() == null)
+            return false;
+        if (other.getOutputFormat() != null && other.getOutputFormat().equals(this.getOutputFormat()) == false)
+            return false;
         return true;
     }
 
@@ -605,6 +676,7 @@ public class JournalS3ExportDescription implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getExclusiveEndTime() == null) ? 0 : getExclusiveEndTime().hashCode());
         hashCode = prime * hashCode + ((getS3ExportConfiguration() == null) ? 0 : getS3ExportConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getOutputFormat() == null) ? 0 : getOutputFormat().hashCode());
         return hashCode;
     }
 

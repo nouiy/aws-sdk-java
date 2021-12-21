@@ -480,6 +480,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
 
     /**
      * <p>
+     * Deletes the email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param deleteEmailMonitoringConfigurationRequest
+     * @return A Java Future containing the result of the DeleteEmailMonitoringConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.DeleteEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEmailMonitoringConfigurationResult> deleteEmailMonitoringConfigurationAsync(
+            DeleteEmailMonitoringConfigurationRequest deleteEmailMonitoringConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes the email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param deleteEmailMonitoringConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteEmailMonitoringConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.DeleteEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteEmailMonitoringConfigurationResult> deleteEmailMonitoringConfigurationAsync(
+            DeleteEmailMonitoringConfigurationRequest deleteEmailMonitoringConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteEmailMonitoringConfigurationRequest, DeleteEmailMonitoringConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a group from Amazon WorkMail.
      * </p>
      * 
@@ -843,6 +878,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      */
     java.util.concurrent.Future<DeregisterMailDomainResult> deregisterMailDomainAsync(DeregisterMailDomainRequest deregisterMailDomainRequest,
             com.amazonaws.handlers.AsyncHandler<DeregisterMailDomainRequest, DeregisterMailDomainResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the current email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param describeEmailMonitoringConfigurationRequest
+     * @return A Java Future containing the result of the DescribeEmailMonitoringConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.DescribeEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DescribeEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEmailMonitoringConfigurationResult> describeEmailMonitoringConfigurationAsync(
+            DescribeEmailMonitoringConfigurationRequest describeEmailMonitoringConfigurationRequest);
+
+    /**
+     * <p>
+     * Describes the current email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param describeEmailMonitoringConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeEmailMonitoringConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.DescribeEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DescribeEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeEmailMonitoringConfigurationResult> describeEmailMonitoringConfigurationAsync(
+            DescribeEmailMonitoringConfigurationRequest describeEmailMonitoringConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeEmailMonitoringConfigurationRequest, DescribeEmailMonitoringConfigurationResult> asyncHandler);
 
     /**
      * <p>
@@ -1780,6 +1850,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      */
     java.util.concurrent.Future<PutAccessControlRuleResult> putAccessControlRuleAsync(PutAccessControlRuleRequest putAccessControlRuleRequest,
             com.amazonaws.handlers.AsyncHandler<PutAccessControlRuleRequest, PutAccessControlRuleResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates or updates the email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param putEmailMonitoringConfigurationRequest
+     * @return A Java Future containing the result of the PutEmailMonitoringConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsync.PutEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutEmailMonitoringConfigurationResult> putEmailMonitoringConfigurationAsync(
+            PutEmailMonitoringConfigurationRequest putEmailMonitoringConfigurationRequest);
+
+    /**
+     * <p>
+     * Creates or updates the email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param putEmailMonitoringConfigurationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutEmailMonitoringConfiguration operation returned by the
+     *         service.
+     * @sample AmazonWorkMailAsyncHandler.PutEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutEmailMonitoringConfigurationResult> putEmailMonitoringConfigurationAsync(
+            PutEmailMonitoringConfigurationRequest putEmailMonitoringConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<PutEmailMonitoringConfigurationRequest, PutEmailMonitoringConfigurationResult> asyncHandler);
 
     /**
      * <p>

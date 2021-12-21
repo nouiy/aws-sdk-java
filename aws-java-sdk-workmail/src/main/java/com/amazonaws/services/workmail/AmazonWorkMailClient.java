@@ -1024,6 +1024,71 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Deletes the email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param deleteEmailMonitoringConfigurationRequest
+     * @return Result of the DeleteEmailMonitoringConfiguration operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.DeleteEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeleteEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteEmailMonitoringConfigurationResult deleteEmailMonitoringConfiguration(DeleteEmailMonitoringConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteEmailMonitoringConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DeleteEmailMonitoringConfigurationResult executeDeleteEmailMonitoringConfiguration(
+            DeleteEmailMonitoringConfigurationRequest deleteEmailMonitoringConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteEmailMonitoringConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteEmailMonitoringConfigurationRequest> request = null;
+        Response<DeleteEmailMonitoringConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteEmailMonitoringConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteEmailMonitoringConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteEmailMonitoringConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteEmailMonitoringConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteEmailMonitoringConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a group from Amazon WorkMail.
      * </p>
      * 
@@ -1706,6 +1771,73 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<DeregisterMailDomainResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeregisterMailDomainResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes the current email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param describeEmailMonitoringConfigurationRequest
+     * @return Result of the DescribeEmailMonitoringConfiguration operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource cannot be found.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.DescribeEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DescribeEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeEmailMonitoringConfigurationResult describeEmailMonitoringConfiguration(DescribeEmailMonitoringConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeEmailMonitoringConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DescribeEmailMonitoringConfigurationResult executeDescribeEmailMonitoringConfiguration(
+            DescribeEmailMonitoringConfigurationRequest describeEmailMonitoringConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeEmailMonitoringConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeEmailMonitoringConfigurationRequest> request = null;
+        Response<DescribeEmailMonitoringConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeEmailMonitoringConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeEmailMonitoringConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeEmailMonitoringConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeEmailMonitoringConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeEmailMonitoringConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3578,6 +3710,73 @@ public class AmazonWorkMailClient extends AmazonWebServiceClient implements Amaz
 
             HttpResponseHandler<AmazonWebServiceResponse<PutAccessControlRuleResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PutAccessControlRuleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates or updates the email monitoring configuration for a specified organization.
+     * </p>
+     * 
+     * @param putEmailMonitoringConfigurationRequest
+     * @return Result of the PutEmailMonitoringConfiguration operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource cannot be found.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.PutEmailMonitoringConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/PutEmailMonitoringConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutEmailMonitoringConfigurationResult putEmailMonitoringConfiguration(PutEmailMonitoringConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executePutEmailMonitoringConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final PutEmailMonitoringConfigurationResult executePutEmailMonitoringConfiguration(
+            PutEmailMonitoringConfigurationRequest putEmailMonitoringConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putEmailMonitoringConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutEmailMonitoringConfigurationRequest> request = null;
+        Response<PutEmailMonitoringConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutEmailMonitoringConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putEmailMonitoringConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "WorkMail");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutEmailMonitoringConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutEmailMonitoringConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutEmailMonitoringConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

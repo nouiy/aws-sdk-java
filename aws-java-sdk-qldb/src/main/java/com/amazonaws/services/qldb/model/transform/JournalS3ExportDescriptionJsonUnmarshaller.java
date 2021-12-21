@@ -80,6 +80,10 @@ public class JournalS3ExportDescriptionJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     journalS3ExportDescription.setRoleArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("OutputFormat", targetDepth)) {
+                    context.nextToken();
+                    journalS3ExportDescription.setOutputFormat(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

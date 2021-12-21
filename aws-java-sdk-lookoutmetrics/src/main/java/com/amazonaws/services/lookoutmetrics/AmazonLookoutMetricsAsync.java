@@ -580,6 +580,41 @@ public interface AmazonLookoutMetricsAsync extends AmazonLookoutMetrics {
 
     /**
      * <p>
+     * Returns a list of measures that are potential causes or effects of an anomaly group.
+     * </p>
+     * 
+     * @param listAnomalyGroupRelatedMetricsRequest
+     * @return A Java Future containing the result of the ListAnomalyGroupRelatedMetrics operation returned by the
+     *         service.
+     * @sample AmazonLookoutMetricsAsync.ListAnomalyGroupRelatedMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutmetrics-2017-07-25/ListAnomalyGroupRelatedMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAnomalyGroupRelatedMetricsResult> listAnomalyGroupRelatedMetricsAsync(
+            ListAnomalyGroupRelatedMetricsRequest listAnomalyGroupRelatedMetricsRequest);
+
+    /**
+     * <p>
+     * Returns a list of measures that are potential causes or effects of an anomaly group.
+     * </p>
+     * 
+     * @param listAnomalyGroupRelatedMetricsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAnomalyGroupRelatedMetrics operation returned by the
+     *         service.
+     * @sample AmazonLookoutMetricsAsyncHandler.ListAnomalyGroupRelatedMetrics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutmetrics-2017-07-25/ListAnomalyGroupRelatedMetrics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAnomalyGroupRelatedMetricsResult> listAnomalyGroupRelatedMetricsAsync(
+            ListAnomalyGroupRelatedMetricsRequest listAnomalyGroupRelatedMetricsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAnomalyGroupRelatedMetricsRequest, ListAnomalyGroupRelatedMetricsResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of anomaly groups.
      * </p>
      * 

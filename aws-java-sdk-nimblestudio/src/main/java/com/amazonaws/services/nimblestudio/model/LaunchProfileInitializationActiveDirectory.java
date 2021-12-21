@@ -18,7 +18,10 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * <p/>
+ * <p>
+ * The Launch Profile Initialization Active Directory contains information required for the launch profile to connect to
+ * the Active Directory.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/nimble-2020-08-01/LaunchProfileInitializationActiveDirectory"
  *      target="_top">AWS API Documentation</a>

@@ -606,6 +606,40 @@ public class AmazonLookoutMetricsAsyncClient extends AmazonLookoutMetricsClient 
     }
 
     @Override
+    public java.util.concurrent.Future<ListAnomalyGroupRelatedMetricsResult> listAnomalyGroupRelatedMetricsAsync(ListAnomalyGroupRelatedMetricsRequest request) {
+
+        return listAnomalyGroupRelatedMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAnomalyGroupRelatedMetricsResult> listAnomalyGroupRelatedMetricsAsync(
+            final ListAnomalyGroupRelatedMetricsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAnomalyGroupRelatedMetricsRequest, ListAnomalyGroupRelatedMetricsResult> asyncHandler) {
+        final ListAnomalyGroupRelatedMetricsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAnomalyGroupRelatedMetricsResult>() {
+            @Override
+            public ListAnomalyGroupRelatedMetricsResult call() throws Exception {
+                ListAnomalyGroupRelatedMetricsResult result = null;
+
+                try {
+                    result = executeListAnomalyGroupRelatedMetrics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAnomalyGroupSummariesResult> listAnomalyGroupSummariesAsync(ListAnomalyGroupSummariesRequest request) {
 
         return listAnomalyGroupSummariesAsync(request, null);

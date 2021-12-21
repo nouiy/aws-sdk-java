@@ -48,6 +48,10 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<MediaStreamSourceConfiguration> mediaStreamSourceConfigurations;
     /** The name of the source. */
     private String name;
+    /** The port that the flow uses to send outbound requests to initiate connection with the sender. */
+    private Integer senderControlPort;
+    /** The IP address that the flow communicates with to initiate connection with the sender. */
+    private String senderIpAddress;
     /** The ARN of the source. */
     private String sourceArn;
     /** Attributes related to the transport stream that are used in the source. */
@@ -376,6 +380,74 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * 
+     * @param senderControlPort
+     *        The port that the flow uses to send outbound requests to initiate connection with the sender.
+     */
+
+    public void setSenderControlPort(Integer senderControlPort) {
+        this.senderControlPort = senderControlPort;
+    }
+
+    /**
+     * The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * 
+     * @return The port that the flow uses to send outbound requests to initiate connection with the sender.
+     */
+
+    public Integer getSenderControlPort() {
+        return this.senderControlPort;
+    }
+
+    /**
+     * The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * 
+     * @param senderControlPort
+     *        The port that the flow uses to send outbound requests to initiate connection with the sender.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Source withSenderControlPort(Integer senderControlPort) {
+        setSenderControlPort(senderControlPort);
+        return this;
+    }
+
+    /**
+     * The IP address that the flow communicates with to initiate connection with the sender.
+     * 
+     * @param senderIpAddress
+     *        The IP address that the flow communicates with to initiate connection with the sender.
+     */
+
+    public void setSenderIpAddress(String senderIpAddress) {
+        this.senderIpAddress = senderIpAddress;
+    }
+
+    /**
+     * The IP address that the flow communicates with to initiate connection with the sender.
+     * 
+     * @return The IP address that the flow communicates with to initiate connection with the sender.
+     */
+
+    public String getSenderIpAddress() {
+        return this.senderIpAddress;
+    }
+
+    /**
+     * The IP address that the flow communicates with to initiate connection with the sender.
+     * 
+     * @param senderIpAddress
+     *        The IP address that the flow communicates with to initiate connection with the sender.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Source withSenderIpAddress(String senderIpAddress) {
+        setSenderIpAddress(senderIpAddress);
+        return this;
+    }
+
+    /**
      * The ARN of the source.
      * 
      * @param sourceArn
@@ -545,6 +617,10 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
             sb.append("MediaStreamSourceConfigurations: ").append(getMediaStreamSourceConfigurations()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
+        if (getSenderControlPort() != null)
+            sb.append("SenderControlPort: ").append(getSenderControlPort()).append(",");
+        if (getSenderIpAddress() != null)
+            sb.append("SenderIpAddress: ").append(getSenderIpAddress()).append(",");
         if (getSourceArn() != null)
             sb.append("SourceArn: ").append(getSourceArn()).append(",");
         if (getTransport() != null)
@@ -601,6 +677,14 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
             return false;
+        if (other.getSenderControlPort() == null ^ this.getSenderControlPort() == null)
+            return false;
+        if (other.getSenderControlPort() != null && other.getSenderControlPort().equals(this.getSenderControlPort()) == false)
+            return false;
+        if (other.getSenderIpAddress() == null ^ this.getSenderIpAddress() == null)
+            return false;
+        if (other.getSenderIpAddress() != null && other.getSenderIpAddress().equals(this.getSenderIpAddress()) == false)
+            return false;
         if (other.getSourceArn() == null ^ this.getSourceArn() == null)
             return false;
         if (other.getSourceArn() != null && other.getSourceArn().equals(this.getSourceArn()) == false)
@@ -633,6 +717,8 @@ public class Source implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getIngestPort() == null) ? 0 : getIngestPort().hashCode());
         hashCode = prime * hashCode + ((getMediaStreamSourceConfigurations() == null) ? 0 : getMediaStreamSourceConfigurations().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getSenderControlPort() == null) ? 0 : getSenderControlPort().hashCode());
+        hashCode = prime * hashCode + ((getSenderIpAddress() == null) ? 0 : getSenderIpAddress().hashCode());
         hashCode = prime * hashCode + ((getSourceArn() == null) ? 0 : getSourceArn().hashCode());
         hashCode = prime * hashCode + ((getTransport() == null) ? 0 : getTransport().hashCode());
         hashCode = prime * hashCode + ((getVpcInterfaceName() == null) ? 0 : getVpcInterfaceName().hashCode());

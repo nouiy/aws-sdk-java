@@ -139,6 +139,11 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.
      * </p>
+     * <note>
+     * <p>
+     * Currently, Transfer Family does not accept elliptical curve keys (keys beginning with <code>ecdsa</code>).
+     * </p>
+     * </note>
      */
     private String sshPublicKeyBody;
     /**
@@ -966,9 +971,17 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.
      * </p>
+     * <note>
+     * <p>
+     * Currently, Transfer Family does not accept elliptical curve keys (keys beginning with <code>ecdsa</code>).
+     * </p>
+     * </note>
      * 
      * @param sshPublicKeyBody
-     *        The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.
+     *        The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.</p> <note>
+     *        <p>
+     *        Currently, Transfer Family does not accept elliptical curve keys (keys beginning with <code>ecdsa</code>).
+     *        </p>
      */
 
     public void setSshPublicKeyBody(String sshPublicKeyBody) {
@@ -979,8 +992,17 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.
      * </p>
+     * <note>
+     * <p>
+     * Currently, Transfer Family does not accept elliptical curve keys (keys beginning with <code>ecdsa</code>).
+     * </p>
+     * </note>
      * 
-     * @return The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.
+     * @return The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.</p> <note>
+     *         <p>
+     *         Currently, Transfer Family does not accept elliptical curve keys (keys beginning with <code>ecdsa</code>
+     *         ).
+     *         </p>
      */
 
     public String getSshPublicKeyBody() {
@@ -991,9 +1013,17 @@ public class CreateUserRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.
      * </p>
+     * <note>
+     * <p>
+     * Currently, Transfer Family does not accept elliptical curve keys (keys beginning with <code>ecdsa</code>).
+     * </p>
+     * </note>
      * 
      * @param sshPublicKeyBody
-     *        The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.
+     *        The public portion of the Secure Shell (SSH) key used to authenticate the user to the server.</p> <note>
+     *        <p>
+     *        Currently, Transfer Family does not accept elliptical curve keys (keys beginning with <code>ecdsa</code>).
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

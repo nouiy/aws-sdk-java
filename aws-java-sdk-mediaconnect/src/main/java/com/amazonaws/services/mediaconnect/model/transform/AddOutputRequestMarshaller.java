@@ -50,6 +50,8 @@ public class AddOutputRequestMarshaller {
             .marshallLocationName("protocol").build();
     private static final MarshallingInfo<String> REMOTEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("remoteId").build();
+    private static final MarshallingInfo<Integer> SENDERCONTROLPORT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("senderControlPort").build();
     private static final MarshallingInfo<Integer> SMOOTHINGLATENCY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("smoothingLatency").build();
     private static final MarshallingInfo<String> STREAMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -84,6 +86,7 @@ public class AddOutputRequestMarshaller {
             protocolMarshaller.marshall(addOutputRequest.getPort(), PORT_BINDING);
             protocolMarshaller.marshall(addOutputRequest.getProtocol(), PROTOCOL_BINDING);
             protocolMarshaller.marshall(addOutputRequest.getRemoteId(), REMOTEID_BINDING);
+            protocolMarshaller.marshall(addOutputRequest.getSenderControlPort(), SENDERCONTROLPORT_BINDING);
             protocolMarshaller.marshall(addOutputRequest.getSmoothingLatency(), SMOOTHINGLATENCY_BINDING);
             protocolMarshaller.marshall(addOutputRequest.getStreamId(), STREAMID_BINDING);
             protocolMarshaller.marshall(addOutputRequest.getVpcInterfaceAttachment(), VPCINTERFACEATTACHMENT_BINDING);

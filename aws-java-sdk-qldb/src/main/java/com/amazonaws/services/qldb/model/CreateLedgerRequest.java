@@ -27,8 +27,8 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The name of the ledger that you want to create. The name must be unique among all of the ledgers in your account
-     * in the current Region.
+     * The name of the ledger that you want to create. The name must be unique among all of the ledgers in your Amazon
+     * Web Services account in the current Region.
      * </p>
      * <p>
      * Naming constraints for ledger names are defined in <a
@@ -129,8 +129,8 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <p>
      * To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or alias
-     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different account, you
-     * must use the key ARN or alias ARN.
+     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different Amazon Web
+     * Services account, you must use the key ARN or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -167,8 +167,8 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The name of the ledger that you want to create. The name must be unique among all of the ledgers in your account
-     * in the current Region.
+     * The name of the ledger that you want to create. The name must be unique among all of the ledgers in your Amazon
+     * Web Services account in the current Region.
      * </p>
      * <p>
      * Naming constraints for ledger names are defined in <a
@@ -178,7 +178,7 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param name
      *        The name of the ledger that you want to create. The name must be unique among all of the ledgers in your
-     *        account in the current Region.</p>
+     *        Amazon Web Services account in the current Region.</p>
      *        <p>
      *        Naming constraints for ledger names are defined in <a
      *        href="https://docs.aws.amazon.com/qldb/latest/developerguide/limits.html#limits.naming">Quotas in Amazon
@@ -191,8 +191,8 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The name of the ledger that you want to create. The name must be unique among all of the ledgers in your account
-     * in the current Region.
+     * The name of the ledger that you want to create. The name must be unique among all of the ledgers in your Amazon
+     * Web Services account in the current Region.
      * </p>
      * <p>
      * Naming constraints for ledger names are defined in <a
@@ -201,7 +201,7 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @return The name of the ledger that you want to create. The name must be unique among all of the ledgers in your
-     *         account in the current Region.</p>
+     *         Amazon Web Services account in the current Region.</p>
      *         <p>
      *         Naming constraints for ledger names are defined in <a
      *         href="https://docs.aws.amazon.com/qldb/latest/developerguide/limits.html#limits.naming">Quotas in Amazon
@@ -214,8 +214,8 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The name of the ledger that you want to create. The name must be unique among all of the ledgers in your account
-     * in the current Region.
+     * The name of the ledger that you want to create. The name must be unique among all of the ledgers in your Amazon
+     * Web Services account in the current Region.
      * </p>
      * <p>
      * Naming constraints for ledger names are defined in <a
@@ -225,7 +225,7 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param name
      *        The name of the ledger that you want to create. The name must be unique among all of the ledgers in your
-     *        account in the current Region.</p>
+     *        Amazon Web Services account in the current Region.</p>
      *        <p>
      *        Naming constraints for ledger names are defined in <a
      *        href="https://docs.aws.amazon.com/qldb/latest/developerguide/limits.html#limits.naming">Quotas in Amazon
@@ -758,8 +758,8 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <p>
      * To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or alias
-     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different account, you
-     * must use the key ARN or alias ARN.
+     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different Amazon Web
+     * Services account, you must use the key ARN or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -827,7 +827,7 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or
      *        alias ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different
-     *        account, you must use the key ARN or alias ARN.
+     *        Amazon Web Services account, you must use the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        For example:
@@ -899,8 +899,8 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <p>
      * To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or alias
-     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different account, you
-     * must use the key ARN or alias ARN.
+     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different Amazon Web
+     * Services account, you must use the key ARN or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -967,7 +967,7 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <p>
      *         To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or
      *         alias ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a
-     *         different account, you must use the key ARN or alias ARN.
+     *         different Amazon Web Services account, you must use the key ARN or alias ARN.
      *         </p>
      *         <p>
      *         For example:
@@ -1039,8 +1039,8 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <p>
      * To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or alias
-     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different account, you
-     * must use the key ARN or alias ARN.
+     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different Amazon Web
+     * Services account, you must use the key ARN or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -1108,7 +1108,7 @@ public class CreateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or
      *        alias ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different
-     *        account, you must use the key ARN or alias ARN.
+     *        Amazon Web Services account, you must use the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        For example:

@@ -78,6 +78,14 @@ public class TransportJsonUnmarshaller implements Unmarshaller<Transport, JsonUn
                     context.nextToken();
                     transport.setRemoteId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("senderControlPort", targetDepth)) {
+                    context.nextToken();
+                    transport.setSenderControlPort(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
+                if (context.testExpression("senderIpAddress", targetDepth)) {
+                    context.nextToken();
+                    transport.setSenderIpAddress(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("smoothingLatency", targetDepth)) {
                     context.nextToken();
                     transport.setSmoothingLatency(context.getUnmarshaller(Integer.class).unmarshall(context));

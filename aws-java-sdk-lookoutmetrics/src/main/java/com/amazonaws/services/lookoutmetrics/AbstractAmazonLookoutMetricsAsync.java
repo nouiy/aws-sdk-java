@@ -238,6 +238,19 @@ public class AbstractAmazonLookoutMetricsAsync extends AbstractAmazonLookoutMetr
     }
 
     @Override
+    public java.util.concurrent.Future<ListAnomalyGroupRelatedMetricsResult> listAnomalyGroupRelatedMetricsAsync(ListAnomalyGroupRelatedMetricsRequest request) {
+
+        return listAnomalyGroupRelatedMetricsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAnomalyGroupRelatedMetricsResult> listAnomalyGroupRelatedMetricsAsync(ListAnomalyGroupRelatedMetricsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAnomalyGroupRelatedMetricsRequest, ListAnomalyGroupRelatedMetricsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAnomalyGroupSummariesResult> listAnomalyGroupSummariesAsync(ListAnomalyGroupSummariesRequest request) {
 
         return listAnomalyGroupSummariesAsync(request, null);

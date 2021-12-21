@@ -108,6 +108,11 @@ public class AbstractAmazonLookoutMetrics implements AmazonLookoutMetrics {
     }
 
     @Override
+    public ListAnomalyGroupRelatedMetricsResult listAnomalyGroupRelatedMetrics(ListAnomalyGroupRelatedMetricsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAnomalyGroupSummariesResult listAnomalyGroupSummaries(ListAnomalyGroupSummariesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

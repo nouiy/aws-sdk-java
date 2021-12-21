@@ -175,8 +175,8 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
-     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      */
@@ -231,6 +231,20 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </note>
      */
     private java.util.List<String> protocols;
+    /**
+     * <p>
+     * The protocol settings that are configured for your server.
+     * </p>
+     * <p>
+     * Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a single
+     * dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     * </p>
+     * <p>
+     * Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server resumes
+     * recent, negotiated sessions through a unique session ID.
+     * </p>
+     */
+    private ProtocolDetails protocolDetails;
     /**
      * <p>
      * Specifies the name of the security policy that is attached to the server.
@@ -1167,8 +1181,8 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
-     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1188,7 +1202,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        authentication using the <code>IdentityProviderDetails</code> parameter.
      *        </p>
      *        <p>
-     *        Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
+     *        Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
      *        choose this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter
      *        for the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
@@ -1215,8 +1229,8 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
-     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1235,7 +1249,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         authentication using the <code>IdentityProviderDetails</code> parameter.
      *         </p>
      *         <p>
-     *         Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
+     *         Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
      *         choose this value, you must specify the ARN for the lambda function in the <code>Function</code>
      *         parameter for the <code>IdentityProviderDetails</code> data type.
      * @see IdentityProviderType
@@ -1262,8 +1276,8 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
-     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1283,7 +1297,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        authentication using the <code>IdentityProviderDetails</code> parameter.
      *        </p>
      *        <p>
-     *        Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
+     *        Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
      *        choose this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter
      *        for the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1312,8 +1326,8 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * using the <code>IdentityProviderDetails</code> parameter.
      * </p>
      * <p>
-     * Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose this
-     * value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
+     * Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you choose
+     * this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter for the
      * <code>IdentityProviderDetails</code> data type.
      * </p>
      * 
@@ -1333,7 +1347,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        authentication using the <code>IdentityProviderDetails</code> parameter.
      *        </p>
      *        <p>
-     *        Use the <code>LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
+     *        Use the <code>AWS_LAMBDA</code> value to directly use a Lambda function as your identity provider. If you
      *        choose this value, you must specify the ARN for the lambda function in the <code>Function</code> parameter
      *        for the <code>IdentityProviderDetails</code> data type.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1857,6 +1871,91 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
+     * The protocol settings that are configured for your server.
+     * </p>
+     * <p>
+     * Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a single
+     * dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     * </p>
+     * <p>
+     * Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server resumes
+     * recent, negotiated sessions through a unique session ID.
+     * </p>
+     * 
+     * @param protocolDetails
+     *        The protocol settings that are configured for your server.</p>
+     *        <p>
+     *        Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a
+     *        single dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     *        </p>
+     *        <p>
+     *        Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server
+     *        resumes recent, negotiated sessions through a unique session ID.
+     */
+
+    public void setProtocolDetails(ProtocolDetails protocolDetails) {
+        this.protocolDetails = protocolDetails;
+    }
+
+    /**
+     * <p>
+     * The protocol settings that are configured for your server.
+     * </p>
+     * <p>
+     * Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a single
+     * dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     * </p>
+     * <p>
+     * Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server resumes
+     * recent, negotiated sessions through a unique session ID.
+     * </p>
+     * 
+     * @return The protocol settings that are configured for your server.</p>
+     *         <p>
+     *         Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a
+     *         single dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     *         </p>
+     *         <p>
+     *         Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server
+     *         resumes recent, negotiated sessions through a unique session ID.
+     */
+
+    public ProtocolDetails getProtocolDetails() {
+        return this.protocolDetails;
+    }
+
+    /**
+     * <p>
+     * The protocol settings that are configured for your server.
+     * </p>
+     * <p>
+     * Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a single
+     * dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     * </p>
+     * <p>
+     * Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server resumes
+     * recent, negotiated sessions through a unique session ID.
+     * </p>
+     * 
+     * @param protocolDetails
+     *        The protocol settings that are configured for your server.</p>
+     *        <p>
+     *        Use the <code>PassiveIp</code> parameter to indicate passive mode (for FTP and FTPS protocols). Enter a
+     *        single dotted-quad IPv4 address, such as the external IP address of a firewall, router, or load balancer.
+     *        </p>
+     *        <p>
+     *        Use the <code>TlsSessionResumptionMode</code> parameter to determine whether or not your Transfer server
+     *        resumes recent, negotiated sessions through a unique session ID.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateServerRequest withProtocolDetails(ProtocolDetails protocolDetails) {
+        setProtocolDetails(protocolDetails);
+        return this;
+    }
+
+    /**
+     * <p>
      * Specifies the name of the security policy that is attached to the server.
      * </p>
      * 
@@ -2038,6 +2137,8 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
             sb.append("LoggingRole: ").append(getLoggingRole()).append(",");
         if (getProtocols() != null)
             sb.append("Protocols: ").append(getProtocols()).append(",");
+        if (getProtocolDetails() != null)
+            sb.append("ProtocolDetails: ").append(getProtocolDetails()).append(",");
         if (getSecurityPolicyName() != null)
             sb.append("SecurityPolicyName: ").append(getSecurityPolicyName()).append(",");
         if (getTags() != null)
@@ -2094,6 +2195,10 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getProtocols() != null && other.getProtocols().equals(this.getProtocols()) == false)
             return false;
+        if (other.getProtocolDetails() == null ^ this.getProtocolDetails() == null)
+            return false;
+        if (other.getProtocolDetails() != null && other.getProtocolDetails().equals(this.getProtocolDetails()) == false)
+            return false;
         if (other.getSecurityPolicyName() == null ^ this.getSecurityPolicyName() == null)
             return false;
         if (other.getSecurityPolicyName() != null && other.getSecurityPolicyName().equals(this.getSecurityPolicyName()) == false)
@@ -2123,6 +2228,7 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getIdentityProviderType() == null) ? 0 : getIdentityProviderType().hashCode());
         hashCode = prime * hashCode + ((getLoggingRole() == null) ? 0 : getLoggingRole().hashCode());
         hashCode = prime * hashCode + ((getProtocols() == null) ? 0 : getProtocols().hashCode());
+        hashCode = prime * hashCode + ((getProtocolDetails() == null) ? 0 : getProtocolDetails().hashCode());
         hashCode = prime * hashCode + ((getSecurityPolicyName() == null) ? 0 : getSecurityPolicyName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getWorkflowDetails() == null) ? 0 : getWorkflowDetails().hashCode());

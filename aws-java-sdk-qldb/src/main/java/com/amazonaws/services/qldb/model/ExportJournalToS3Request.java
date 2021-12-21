@@ -80,13 +80,24 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption of your
+     * (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of your
      * exported data.
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * To pass a role to QLDB when requesting a journal export, you must have permissions to perform the
+     * <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal export requests.
+     * </p>
      */
     private String roleArn;
+    /**
+     * <p>
+     * The output format of your exported journal data. If this parameter is not specified, the exported data defaults
+     * to <code>ION_TEXT</code> format.
+     * </p>
+     */
+    private String outputFormat;
 
     /**
      * <p>
@@ -363,11 +374,15 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption of your
+     * (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of your
      * exported data.
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * To pass a role to QLDB when requesting a journal export, you must have permissions to perform the
+     * <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal export requests.
+     * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal export job to do
@@ -380,10 +395,15 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        <li>
      *        <p>
-     *        (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption
-     *        of your exported data.
+     *        (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of
+     *        your exported data.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        To pass a role to QLDB when requesting a journal export, you must have permissions to perform the
+     *        <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal export
+     *        requests.
      */
 
     public void setRoleArn(String roleArn) {
@@ -403,11 +423,15 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption of your
+     * (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of your
      * exported data.
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * To pass a role to QLDB when requesting a journal export, you must have permissions to perform the
+     * <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal export requests.
+     * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal export job to
      *         do the following:</p>
@@ -419,10 +443,15 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
      *         </li>
      *         <li>
      *         <p>
-     *         (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption
-     *         of your exported data.
+     *         (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of
+     *         your exported data.
      *         </p>
      *         </li>
+     *         </ul>
+     *         <p>
+     *         To pass a role to QLDB when requesting a journal export, you must have permissions to perform the
+     *         <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal export
+     *         requests.
      */
 
     public String getRoleArn() {
@@ -442,11 +471,15 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption of your
+     * (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of your
      * exported data.
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * To pass a role to QLDB when requesting a journal export, you must have permissions to perform the
+     * <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal export requests.
+     * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal export job to do
@@ -459,15 +492,87 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        <li>
      *        <p>
-     *        (Optional) Use your customer master key (CMK) in Key Management Service (KMS) for server-side encryption
-     *        of your exported data.
+     *        (Optional) Use your customer managed key in Key Management Service (KMS) for server-side encryption of
+     *        your exported data.
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        To pass a role to QLDB when requesting a journal export, you must have permissions to perform the
+     *        <code>iam:PassRole</code> action on the IAM role resource. This is required for all journal export
+     *        requests.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ExportJournalToS3Request withRoleArn(String roleArn) {
         setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The output format of your exported journal data. If this parameter is not specified, the exported data defaults
+     * to <code>ION_TEXT</code> format.
+     * </p>
+     * 
+     * @param outputFormat
+     *        The output format of your exported journal data. If this parameter is not specified, the exported data
+     *        defaults to <code>ION_TEXT</code> format.
+     * @see OutputFormat
+     */
+
+    public void setOutputFormat(String outputFormat) {
+        this.outputFormat = outputFormat;
+    }
+
+    /**
+     * <p>
+     * The output format of your exported journal data. If this parameter is not specified, the exported data defaults
+     * to <code>ION_TEXT</code> format.
+     * </p>
+     * 
+     * @return The output format of your exported journal data. If this parameter is not specified, the exported data
+     *         defaults to <code>ION_TEXT</code> format.
+     * @see OutputFormat
+     */
+
+    public String getOutputFormat() {
+        return this.outputFormat;
+    }
+
+    /**
+     * <p>
+     * The output format of your exported journal data. If this parameter is not specified, the exported data defaults
+     * to <code>ION_TEXT</code> format.
+     * </p>
+     * 
+     * @param outputFormat
+     *        The output format of your exported journal data. If this parameter is not specified, the exported data
+     *        defaults to <code>ION_TEXT</code> format.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OutputFormat
+     */
+
+    public ExportJournalToS3Request withOutputFormat(String outputFormat) {
+        setOutputFormat(outputFormat);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The output format of your exported journal data. If this parameter is not specified, the exported data defaults
+     * to <code>ION_TEXT</code> format.
+     * </p>
+     * 
+     * @param outputFormat
+     *        The output format of your exported journal data. If this parameter is not specified, the exported data
+     *        defaults to <code>ION_TEXT</code> format.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see OutputFormat
+     */
+
+    public ExportJournalToS3Request withOutputFormat(OutputFormat outputFormat) {
+        this.outputFormat = outputFormat.toString();
         return this;
     }
 
@@ -492,7 +597,9 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
         if (getS3ExportConfiguration() != null)
             sb.append("S3ExportConfiguration: ").append(getS3ExportConfiguration()).append(",");
         if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn());
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getOutputFormat() != null)
+            sb.append("OutputFormat: ").append(getOutputFormat());
         sb.append("}");
         return sb.toString();
     }
@@ -527,6 +634,10 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
+        if (other.getOutputFormat() == null ^ this.getOutputFormat() == null)
+            return false;
+        if (other.getOutputFormat() != null && other.getOutputFormat().equals(this.getOutputFormat()) == false)
+            return false;
         return true;
     }
 
@@ -540,6 +651,7 @@ public class ExportJournalToS3Request extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getExclusiveEndTime() == null) ? 0 : getExclusiveEndTime().hashCode());
         hashCode = prime * hashCode + ((getS3ExportConfiguration() == null) ? 0 : getS3ExportConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getOutputFormat() == null) ? 0 : getOutputFormat().hashCode());
         return hashCode;
     }
 

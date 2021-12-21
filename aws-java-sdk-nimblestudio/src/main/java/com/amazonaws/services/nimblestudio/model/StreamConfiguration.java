@@ -68,6 +68,12 @@ public class StreamConfiguration implements Serializable, Cloneable, StructuredP
     private Integer maxStoppedSessionLengthInMinutes;
     /**
      * <p>
+     * (Optional) The upload storage for a streaming session.
+     * </p>
+     */
+    private StreamConfigurationSessionStorage sessionStorage;
+    /**
+     * <p>
      * The streaming images that users can select from when launching a streaming session with this launch profile.
      * </p>
      */
@@ -402,6 +408,46 @@ public class StreamConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * (Optional) The upload storage for a streaming session.
+     * </p>
+     * 
+     * @param sessionStorage
+     *        (Optional) The upload storage for a streaming session.
+     */
+
+    public void setSessionStorage(StreamConfigurationSessionStorage sessionStorage) {
+        this.sessionStorage = sessionStorage;
+    }
+
+    /**
+     * <p>
+     * (Optional) The upload storage for a streaming session.
+     * </p>
+     * 
+     * @return (Optional) The upload storage for a streaming session.
+     */
+
+    public StreamConfigurationSessionStorage getSessionStorage() {
+        return this.sessionStorage;
+    }
+
+    /**
+     * <p>
+     * (Optional) The upload storage for a streaming session.
+     * </p>
+     * 
+     * @param sessionStorage
+     *        (Optional) The upload storage for a streaming session.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamConfiguration withSessionStorage(StreamConfigurationSessionStorage sessionStorage) {
+        setSessionStorage(sessionStorage);
+        return this;
+    }
+
+    /**
+     * <p>
      * The streaming images that users can select from when launching a streaming session with this launch profile.
      * </p>
      * 
@@ -494,6 +540,8 @@ public class StreamConfiguration implements Serializable, Cloneable, StructuredP
             sb.append("MaxSessionLengthInMinutes: ").append(getMaxSessionLengthInMinutes()).append(",");
         if (getMaxStoppedSessionLengthInMinutes() != null)
             sb.append("MaxStoppedSessionLengthInMinutes: ").append(getMaxStoppedSessionLengthInMinutes()).append(",");
+        if (getSessionStorage() != null)
+            sb.append("SessionStorage: ").append(getSessionStorage()).append(",");
         if (getStreamingImageIds() != null)
             sb.append("StreamingImageIds: ").append(getStreamingImageIds());
         sb.append("}");
@@ -527,6 +575,10 @@ public class StreamConfiguration implements Serializable, Cloneable, StructuredP
         if (other.getMaxStoppedSessionLengthInMinutes() != null
                 && other.getMaxStoppedSessionLengthInMinutes().equals(this.getMaxStoppedSessionLengthInMinutes()) == false)
             return false;
+        if (other.getSessionStorage() == null ^ this.getSessionStorage() == null)
+            return false;
+        if (other.getSessionStorage() != null && other.getSessionStorage().equals(this.getSessionStorage()) == false)
+            return false;
         if (other.getStreamingImageIds() == null ^ this.getStreamingImageIds() == null)
             return false;
         if (other.getStreamingImageIds() != null && other.getStreamingImageIds().equals(this.getStreamingImageIds()) == false)
@@ -543,6 +595,7 @@ public class StreamConfiguration implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getEc2InstanceTypes() == null) ? 0 : getEc2InstanceTypes().hashCode());
         hashCode = prime * hashCode + ((getMaxSessionLengthInMinutes() == null) ? 0 : getMaxSessionLengthInMinutes().hashCode());
         hashCode = prime * hashCode + ((getMaxStoppedSessionLengthInMinutes() == null) ? 0 : getMaxStoppedSessionLengthInMinutes().hashCode());
+        hashCode = prime * hashCode + ((getSessionStorage() == null) ? 0 : getSessionStorage().hashCode());
         hashCode = prime * hashCode + ((getStreamingImageIds() == null) ? 0 : getStreamingImageIds().hashCode());
         return hashCode;
     }

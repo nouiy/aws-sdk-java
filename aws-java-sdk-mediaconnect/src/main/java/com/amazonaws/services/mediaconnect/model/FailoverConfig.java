@@ -18,7 +18,7 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
- * The settings for source failover
+ * The settings for source failover.
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediaconnect-2018-11-14/FailoverConfig" target="_top">AWS API
  *      Documentation</a>

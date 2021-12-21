@@ -51,12 +51,27 @@ public class StreamConfigurationCreate implements Serializable, Cloneable, Struc
     private Integer maxSessionLengthInMinutes;
     /**
      * <p>
-     * The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After
-     * this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690
-     * minutes, and the maximum length of time is 30 days.
+     * Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED
+     * state. The default value is 0. The maximum value is 5760.
+     * </p>
+     * <p>
+     * If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the
+     * session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value,
+     * the session will automatically be terminated by AWS (instead of stopped).
+     * </p>
+     * <p>
+     * If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop
+     * sessions in the READY state. If the time that a session stays in the READY state exceeds the
+     * maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).
      * </p>
      */
     private Integer maxStoppedSessionLengthInMinutes;
+    /**
+     * <p>
+     * (Optional) The upload storage for a streaming workstation that is created using this launch profile.
+     * </p>
+     */
+    private StreamConfigurationSessionStorage sessionStorage;
     /**
      * <p>
      * The streaming images that users can select from when launching a streaming session with this launch profile.
@@ -288,15 +303,32 @@ public class StreamConfigurationCreate implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After
-     * this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690
-     * minutes, and the maximum length of time is 30 days.
+     * Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED
+     * state. The default value is 0. The maximum value is 5760.
+     * </p>
+     * <p>
+     * If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the
+     * session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value,
+     * the session will automatically be terminated by AWS (instead of stopped).
+     * </p>
+     * <p>
+     * If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop
+     * sessions in the READY state. If the time that a session stays in the READY state exceeds the
+     * maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).
      * </p>
      * 
      * @param maxStoppedSessionLengthInMinutes
-     *        The length of time, in minutes, that a streaming session can be active before it is stopped or terminated.
-     *        After this point, Nimble Studio automatically terminates or stops the session. The default length of time
-     *        is 690 minutes, and the maximum length of time is 30 days.
+     *        Integer that determines if you can start and stop your sessions and how long a session can stay in the
+     *        STOPPED state. The default value is 0. The maximum value is 5760.</p>
+     *        <p>
+     *        If the value is missing or set to 0, your sessions can’t be stopped. If you then call
+     *        StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the
+     *        maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).
+     *        </p>
+     *        <p>
+     *        If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to
+     *        stop sessions in the READY state. If the time that a session stays in the READY state exceeds the
+     *        maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).
      */
 
     public void setMaxStoppedSessionLengthInMinutes(Integer maxStoppedSessionLengthInMinutes) {
@@ -305,14 +337,33 @@ public class StreamConfigurationCreate implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After
-     * this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690
-     * minutes, and the maximum length of time is 30 days.
+     * Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED
+     * state. The default value is 0. The maximum value is 5760.
+     * </p>
+     * <p>
+     * If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the
+     * session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value,
+     * the session will automatically be terminated by AWS (instead of stopped).
+     * </p>
+     * <p>
+     * If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop
+     * sessions in the READY state. If the time that a session stays in the READY state exceeds the
+     * maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).
      * </p>
      * 
-     * @return The length of time, in minutes, that a streaming session can be active before it is stopped or
-     *         terminated. After this point, Nimble Studio automatically terminates or stops the session. The default
-     *         length of time is 690 minutes, and the maximum length of time is 30 days.
+     * @return Integer that determines if you can start and stop your sessions and how long a session can stay in the
+     *         STOPPED state. The default value is 0. The maximum value is 5760.</p>
+     *         <p>
+     *         If the value is missing or set to 0, your sessions can’t be stopped. If you then call
+     *         StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the
+     *         maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of
+     *         stopped).
+     *         </p>
+     *         <p>
+     *         If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession
+     *         to stop sessions in the READY state. If the time that a session stays in the READY state exceeds the
+     *         maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of
+     *         terminated).
      */
 
     public Integer getMaxStoppedSessionLengthInMinutes() {
@@ -321,20 +372,77 @@ public class StreamConfigurationCreate implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The length of time, in minutes, that a streaming session can be active before it is stopped or terminated. After
-     * this point, Nimble Studio automatically terminates or stops the session. The default length of time is 690
-     * minutes, and the maximum length of time is 30 days.
+     * Integer that determines if you can start and stop your sessions and how long a session can stay in the STOPPED
+     * state. The default value is 0. The maximum value is 5760.
+     * </p>
+     * <p>
+     * If the value is missing or set to 0, your sessions can’t be stopped. If you then call StopStreamingSession, the
+     * session fails. If the time that a session stays in the READY state exceeds the maxSessionLengthInMinutes value,
+     * the session will automatically be terminated by AWS (instead of stopped).
+     * </p>
+     * <p>
+     * If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to stop
+     * sessions in the READY state. If the time that a session stays in the READY state exceeds the
+     * maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).
      * </p>
      * 
      * @param maxStoppedSessionLengthInMinutes
-     *        The length of time, in minutes, that a streaming session can be active before it is stopped or terminated.
-     *        After this point, Nimble Studio automatically terminates or stops the session. The default length of time
-     *        is 690 minutes, and the maximum length of time is 30 days.
+     *        Integer that determines if you can start and stop your sessions and how long a session can stay in the
+     *        STOPPED state. The default value is 0. The maximum value is 5760.</p>
+     *        <p>
+     *        If the value is missing or set to 0, your sessions can’t be stopped. If you then call
+     *        StopStreamingSession, the session fails. If the time that a session stays in the READY state exceeds the
+     *        maxSessionLengthInMinutes value, the session will automatically be terminated by AWS (instead of stopped).
+     *        </p>
+     *        <p>
+     *        If the value is set to a positive number, the session can be stopped. You can call StopStreamingSession to
+     *        stop sessions in the READY state. If the time that a session stays in the READY state exceeds the
+     *        maxSessionLengthInMinutes value, the session will automatically be stopped by AWS (instead of terminated).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public StreamConfigurationCreate withMaxStoppedSessionLengthInMinutes(Integer maxStoppedSessionLengthInMinutes) {
         setMaxStoppedSessionLengthInMinutes(maxStoppedSessionLengthInMinutes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * (Optional) The upload storage for a streaming workstation that is created using this launch profile.
+     * </p>
+     * 
+     * @param sessionStorage
+     *        (Optional) The upload storage for a streaming workstation that is created using this launch profile.
+     */
+
+    public void setSessionStorage(StreamConfigurationSessionStorage sessionStorage) {
+        this.sessionStorage = sessionStorage;
+    }
+
+    /**
+     * <p>
+     * (Optional) The upload storage for a streaming workstation that is created using this launch profile.
+     * </p>
+     * 
+     * @return (Optional) The upload storage for a streaming workstation that is created using this launch profile.
+     */
+
+    public StreamConfigurationSessionStorage getSessionStorage() {
+        return this.sessionStorage;
+    }
+
+    /**
+     * <p>
+     * (Optional) The upload storage for a streaming workstation that is created using this launch profile.
+     * </p>
+     * 
+     * @param sessionStorage
+     *        (Optional) The upload storage for a streaming workstation that is created using this launch profile.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StreamConfigurationCreate withSessionStorage(StreamConfigurationSessionStorage sessionStorage) {
+        setSessionStorage(sessionStorage);
         return this;
     }
 
@@ -432,6 +540,8 @@ public class StreamConfigurationCreate implements Serializable, Cloneable, Struc
             sb.append("MaxSessionLengthInMinutes: ").append(getMaxSessionLengthInMinutes()).append(",");
         if (getMaxStoppedSessionLengthInMinutes() != null)
             sb.append("MaxStoppedSessionLengthInMinutes: ").append(getMaxStoppedSessionLengthInMinutes()).append(",");
+        if (getSessionStorage() != null)
+            sb.append("SessionStorage: ").append(getSessionStorage()).append(",");
         if (getStreamingImageIds() != null)
             sb.append("StreamingImageIds: ").append(getStreamingImageIds());
         sb.append("}");
@@ -465,6 +575,10 @@ public class StreamConfigurationCreate implements Serializable, Cloneable, Struc
         if (other.getMaxStoppedSessionLengthInMinutes() != null
                 && other.getMaxStoppedSessionLengthInMinutes().equals(this.getMaxStoppedSessionLengthInMinutes()) == false)
             return false;
+        if (other.getSessionStorage() == null ^ this.getSessionStorage() == null)
+            return false;
+        if (other.getSessionStorage() != null && other.getSessionStorage().equals(this.getSessionStorage()) == false)
+            return false;
         if (other.getStreamingImageIds() == null ^ this.getStreamingImageIds() == null)
             return false;
         if (other.getStreamingImageIds() != null && other.getStreamingImageIds().equals(this.getStreamingImageIds()) == false)
@@ -481,6 +595,7 @@ public class StreamConfigurationCreate implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getEc2InstanceTypes() == null) ? 0 : getEc2InstanceTypes().hashCode());
         hashCode = prime * hashCode + ((getMaxSessionLengthInMinutes() == null) ? 0 : getMaxSessionLengthInMinutes().hashCode());
         hashCode = prime * hashCode + ((getMaxStoppedSessionLengthInMinutes() == null) ? 0 : getMaxStoppedSessionLengthInMinutes().hashCode());
+        hashCode = prime * hashCode + ((getSessionStorage() == null) ? 0 : getSessionStorage().hashCode());
         hashCode = prime * hashCode + ((getStreamingImageIds() == null) ? 0 : getStreamingImageIds().hashCode());
         return hashCode;
     }

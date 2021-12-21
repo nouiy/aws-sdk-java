@@ -2573,6 +2573,11 @@ public class AmazonNimbleStudioClient extends AmazonWebServiceClient implements 
      * <p>
      * Get all users in a given studio membership.
      * </p>
+     * <note>
+     * <p>
+     * <code>ListStudioMembers</code> only returns admin members.
+     * </p>
+     * </note>
      * 
      * @param listStudioMembersRequest
      * @return Result of the ListStudioMembers operation returned by the service.

@@ -33,9 +33,9 @@ public class ListChannelMembershipsRequest extends com.amazonaws.AmazonWebServic
     private String channelArn;
     /**
      * <p>
-     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always returned
-     * as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type filter in
-     * <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not returned.
+     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are returned as part
+     * of <code>ListChannelMemberships</code> if no type is specified. Hidden members are only returned if the type
+     * filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>.
      * </p>
      */
     private String type;
@@ -100,16 +100,15 @@ public class ListChannelMembershipsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always returned
-     * as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type filter in
-     * <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not returned.
+     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are returned as part
+     * of <code>ListChannelMemberships</code> if no type is specified. Hidden members are only returned if the type
+     * filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>.
      * </p>
      * 
      * @param type
-     *        The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always
-     *        returned as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type
-     *        filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not
-     *        returned.
+     *        The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are returned
+     *        as part of <code>ListChannelMemberships</code> if no type is specified. Hidden members are only returned
+     *        if the type filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>.
      * @see ChannelMembershipType
      */
 
@@ -119,15 +118,14 @@ public class ListChannelMembershipsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always returned
-     * as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type filter in
-     * <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not returned.
+     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are returned as part
+     * of <code>ListChannelMemberships</code> if no type is specified. Hidden members are only returned if the type
+     * filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>.
      * </p>
      * 
-     * @return The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always
-     *         returned as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type
-     *         filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are
-     *         not returned.
+     * @return The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are returned
+     *         as part of <code>ListChannelMemberships</code> if no type is specified. Hidden members are only returned
+     *         if the type filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>.
      * @see ChannelMembershipType
      */
 
@@ -137,16 +135,15 @@ public class ListChannelMembershipsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always returned
-     * as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type filter in
-     * <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not returned.
+     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are returned as part
+     * of <code>ListChannelMemberships</code> if no type is specified. Hidden members are only returned if the type
+     * filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>.
      * </p>
      * 
      * @param type
-     *        The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always
-     *        returned as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type
-     *        filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not
-     *        returned.
+     *        The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are returned
+     *        as part of <code>ListChannelMemberships</code> if no type is specified. Hidden members are only returned
+     *        if the type filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChannelMembershipType
      */
@@ -158,16 +155,15 @@ public class ListChannelMembershipsRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always returned
-     * as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type filter in
-     * <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not returned.
+     * The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are returned as part
+     * of <code>ListChannelMemberships</code> if no type is specified. Hidden members are only returned if the type
+     * filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>.
      * </p>
      * 
      * @param type
-     *        The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are always
-     *        returned as part of <code>ListChannelMemberships</code>. Hidden members are only returned if the type
-     *        filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>. Otherwise hidden members are not
-     *        returned.
+     *        The membership type of a user, <code>DEFAULT</code> or <code>HIDDEN</code>. Default members are returned
+     *        as part of <code>ListChannelMemberships</code> if no type is specified. Hidden members are only returned
+     *        if the type filter in <code>ListChannelMemberships</code> equals <code>HIDDEN</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChannelMembershipType
      */

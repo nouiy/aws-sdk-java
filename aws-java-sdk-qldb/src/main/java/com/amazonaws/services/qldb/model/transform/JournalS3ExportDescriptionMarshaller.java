@@ -43,6 +43,8 @@ public class JournalS3ExportDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3ExportConfiguration").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("RoleArn").build();
+    private static final MarshallingInfo<String> OUTPUTFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutputFormat").build();
 
     private static final JournalS3ExportDescriptionMarshaller instance = new JournalS3ExportDescriptionMarshaller();
 
@@ -68,6 +70,7 @@ public class JournalS3ExportDescriptionMarshaller {
             protocolMarshaller.marshall(journalS3ExportDescription.getExclusiveEndTime(), EXCLUSIVEENDTIME_BINDING);
             protocolMarshaller.marshall(journalS3ExportDescription.getS3ExportConfiguration(), S3EXPORTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(journalS3ExportDescription.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(journalS3ExportDescription.getOutputFormat(), OUTPUTFORMAT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

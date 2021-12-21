@@ -77,8 +77,8 @@ public class UpdateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <p>
      * To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or alias
-     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different account, you
-     * must use the key ARN or alias ARN.
+     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different Amazon Web
+     * Services account, you must use the key ARN or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -276,8 +276,8 @@ public class UpdateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <p>
      * To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or alias
-     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different account, you
-     * must use the key ARN or alias ARN.
+     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different Amazon Web
+     * Services account, you must use the key ARN or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -345,7 +345,7 @@ public class UpdateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or
      *        alias ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different
-     *        account, you must use the key ARN or alias ARN.
+     *        Amazon Web Services account, you must use the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        For example:
@@ -417,8 +417,8 @@ public class UpdateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <p>
      * To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or alias
-     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different account, you
-     * must use the key ARN or alias ARN.
+     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different Amazon Web
+     * Services account, you must use the key ARN or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -485,7 +485,7 @@ public class UpdateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <p>
      *         To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or
      *         alias ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a
-     *         different account, you must use the key ARN or alias ARN.
+     *         different Amazon Web Services account, you must use the key ARN or alias ARN.
      *         </p>
      *         <p>
      *         For example:
@@ -557,8 +557,8 @@ public class UpdateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </ul>
      * <p>
      * To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or alias
-     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different account, you
-     * must use the key ARN or alias ARN.
+     * ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different Amazon Web
+     * Services account, you must use the key ARN or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -626,7 +626,7 @@ public class UpdateLedgerRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        To specify a customer managed KMS key, you can use its key ID, Amazon Resource Name (ARN), alias name, or
      *        alias ARN. When using an alias name, prefix it with <code>"alias/"</code>. To specify a key in a different
-     *        account, you must use the key ARN or alias ARN.
+     *        Amazon Web Services account, you must use the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        For example:

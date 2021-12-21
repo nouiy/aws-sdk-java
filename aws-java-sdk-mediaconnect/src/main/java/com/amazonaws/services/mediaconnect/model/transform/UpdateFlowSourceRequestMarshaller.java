@@ -50,6 +50,10 @@ public class UpdateFlowSourceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minLatency").build();
     private static final MarshallingInfo<String> PROTOCOL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("protocol").build();
+    private static final MarshallingInfo<Integer> SENDERCONTROLPORT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("senderControlPort").build();
+    private static final MarshallingInfo<String> SENDERIPADDRESS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("senderIpAddress").build();
     private static final MarshallingInfo<String> SOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("sourceArn").build();
     private static final MarshallingInfo<String> STREAMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -86,6 +90,8 @@ public class UpdateFlowSourceRequestMarshaller {
             protocolMarshaller.marshall(updateFlowSourceRequest.getMediaStreamSourceConfigurations(), MEDIASTREAMSOURCECONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(updateFlowSourceRequest.getMinLatency(), MINLATENCY_BINDING);
             protocolMarshaller.marshall(updateFlowSourceRequest.getProtocol(), PROTOCOL_BINDING);
+            protocolMarshaller.marshall(updateFlowSourceRequest.getSenderControlPort(), SENDERCONTROLPORT_BINDING);
+            protocolMarshaller.marshall(updateFlowSourceRequest.getSenderIpAddress(), SENDERIPADDRESS_BINDING);
             protocolMarshaller.marshall(updateFlowSourceRequest.getSourceArn(), SOURCEARN_BINDING);
             protocolMarshaller.marshall(updateFlowSourceRequest.getStreamId(), STREAMID_BINDING);
             protocolMarshaller.marshall(updateFlowSourceRequest.getVpcInterfaceName(), VPCINTERFACENAME_BINDING);

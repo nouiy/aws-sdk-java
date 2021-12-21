@@ -90,8 +90,15 @@ public class InfrastructureConfiguration implements Serializable, Cloneable, Str
     private Boolean terminateInstanceOnFailure;
     /**
      * <p>
-     * The SNS topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     * The Amazon Resource Name (ARN) for the SNS topic to which we send image build event notifications.
      * </p>
+     * <note>
+     * <p>
+     * EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys from other
+     * accounts. The key that is used to encrypt the SNS topic must reside in the account that the Image Builder service
+     * runs under.
+     * </p>
+     * </note>
      */
     private String snsTopicArn;
     /**
@@ -599,11 +606,24 @@ public class InfrastructureConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The SNS topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     * The Amazon Resource Name (ARN) for the SNS topic to which we send image build event notifications.
      * </p>
+     * <note>
+     * <p>
+     * EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys from other
+     * accounts. The key that is used to encrypt the SNS topic must reside in the account that the Image Builder service
+     * runs under.
+     * </p>
+     * </note>
      * 
      * @param snsTopicArn
-     *        The SNS topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     *        The Amazon Resource Name (ARN) for the SNS topic to which we send image build event notifications.</p>
+     *        <note>
+     *        <p>
+     *        EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys from other
+     *        accounts. The key that is used to encrypt the SNS topic must reside in the account that the Image Builder
+     *        service runs under.
+     *        </p>
      */
 
     public void setSnsTopicArn(String snsTopicArn) {
@@ -612,10 +632,23 @@ public class InfrastructureConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The SNS topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     * The Amazon Resource Name (ARN) for the SNS topic to which we send image build event notifications.
      * </p>
+     * <note>
+     * <p>
+     * EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys from other
+     * accounts. The key that is used to encrypt the SNS topic must reside in the account that the Image Builder service
+     * runs under.
+     * </p>
+     * </note>
      * 
-     * @return The SNS topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     * @return The Amazon Resource Name (ARN) for the SNS topic to which we send image build event notifications.</p>
+     *         <note>
+     *         <p>
+     *         EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys from other
+     *         accounts. The key that is used to encrypt the SNS topic must reside in the account that the Image Builder
+     *         service runs under.
+     *         </p>
      */
 
     public String getSnsTopicArn() {
@@ -624,11 +657,24 @@ public class InfrastructureConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The SNS topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     * The Amazon Resource Name (ARN) for the SNS topic to which we send image build event notifications.
      * </p>
+     * <note>
+     * <p>
+     * EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys from other
+     * accounts. The key that is used to encrypt the SNS topic must reside in the account that the Image Builder service
+     * runs under.
+     * </p>
+     * </note>
      * 
      * @param snsTopicArn
-     *        The SNS topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     *        The Amazon Resource Name (ARN) for the SNS topic to which we send image build event notifications.</p>
+     *        <note>
+     *        <p>
+     *        EC2 Image Builder is unable to send notifications to SNS topics that are encrypted using keys from other
+     *        accounts. The key that is used to encrypt the SNS topic must reside in the account that the Image Builder
+     *        service runs under.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

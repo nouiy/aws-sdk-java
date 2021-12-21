@@ -60,6 +60,15 @@ public class ChannelMessageCallbackJsonUnmarshaller implements Unmarshaller<Chan
                     context.nextToken();
                     channelMessageCallback.setMetadata(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("PushNotification", targetDepth)) {
+                    context.nextToken();
+                    channelMessageCallback.setPushNotification(PushNotificationConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("MessageAttributes", targetDepth)) {
+                    context.nextToken();
+                    channelMessageCallback.setMessageAttributes(new MapUnmarshaller<String, MessageAttributeValue>(context.getUnmarshaller(String.class),
+                            MessageAttributeValueJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

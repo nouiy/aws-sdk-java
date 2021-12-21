@@ -29,6 +29,8 @@ public class ProtocolDetailsMarshaller {
 
     private static final MarshallingInfo<String> PASSIVEIP_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("PassiveIp").build();
+    private static final MarshallingInfo<String> TLSSESSIONRESUMPTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TlsSessionResumptionMode").build();
 
     private static final ProtocolDetailsMarshaller instance = new ProtocolDetailsMarshaller();
 
@@ -47,6 +49,7 @@ public class ProtocolDetailsMarshaller {
 
         try {
             protocolMarshaller.marshall(protocolDetails.getPassiveIp(), PASSIVEIP_BINDING);
+            protocolMarshaller.marshall(protocolDetails.getTlsSessionResumptionMode(), TLSSESSIONRESUMPTIONMODE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

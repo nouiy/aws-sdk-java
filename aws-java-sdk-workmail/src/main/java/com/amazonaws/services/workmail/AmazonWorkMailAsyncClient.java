@@ -480,6 +480,41 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteEmailMonitoringConfigurationResult> deleteEmailMonitoringConfigurationAsync(
+            DeleteEmailMonitoringConfigurationRequest request) {
+
+        return deleteEmailMonitoringConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteEmailMonitoringConfigurationResult> deleteEmailMonitoringConfigurationAsync(
+            final DeleteEmailMonitoringConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteEmailMonitoringConfigurationRequest, DeleteEmailMonitoringConfigurationResult> asyncHandler) {
+        final DeleteEmailMonitoringConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteEmailMonitoringConfigurationResult>() {
+            @Override
+            public DeleteEmailMonitoringConfigurationResult call() throws Exception {
+                DeleteEmailMonitoringConfigurationResult result = null;
+
+                try {
+                    result = executeDeleteEmailMonitoringConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteGroupResult> deleteGroupAsync(DeleteGroupRequest request) {
 
         return deleteGroupAsync(request, null);
@@ -796,6 +831,41 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
 
                 try {
                     result = executeDeregisterMailDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEmailMonitoringConfigurationResult> describeEmailMonitoringConfigurationAsync(
+            DescribeEmailMonitoringConfigurationRequest request) {
+
+        return describeEmailMonitoringConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeEmailMonitoringConfigurationResult> describeEmailMonitoringConfigurationAsync(
+            final DescribeEmailMonitoringConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeEmailMonitoringConfigurationRequest, DescribeEmailMonitoringConfigurationResult> asyncHandler) {
+        final DescribeEmailMonitoringConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeEmailMonitoringConfigurationResult>() {
+            @Override
+            public DescribeEmailMonitoringConfigurationResult call() throws Exception {
+                DescribeEmailMonitoringConfigurationResult result = null;
+
+                try {
+                    result = executeDescribeEmailMonitoringConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1758,6 +1828,41 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
 
                 try {
                     result = executePutAccessControlRule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutEmailMonitoringConfigurationResult> putEmailMonitoringConfigurationAsync(
+            PutEmailMonitoringConfigurationRequest request) {
+
+        return putEmailMonitoringConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutEmailMonitoringConfigurationResult> putEmailMonitoringConfigurationAsync(
+            final PutEmailMonitoringConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutEmailMonitoringConfigurationRequest, PutEmailMonitoringConfigurationResult> asyncHandler) {
+        final PutEmailMonitoringConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutEmailMonitoringConfigurationResult>() {
+            @Override
+            public PutEmailMonitoringConfigurationResult call() throws Exception {
+                PutEmailMonitoringConfigurationResult result = null;
+
+                try {
+                    result = executePutEmailMonitoringConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

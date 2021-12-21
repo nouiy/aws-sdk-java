@@ -1167,6 +1167,11 @@ public interface AmazonNimbleStudioAsync extends AmazonNimbleStudio {
      * <p>
      * Get all users in a given studio membership.
      * </p>
+     * <note>
+     * <p>
+     * <code>ListStudioMembers</code> only returns admin members.
+     * </p>
+     * </note>
      * 
      * @param listStudioMembersRequest
      * @return A Java Future containing the result of the ListStudioMembers operation returned by the service.
@@ -1180,6 +1185,11 @@ public interface AmazonNimbleStudioAsync extends AmazonNimbleStudio {
      * <p>
      * Get all users in a given studio membership.
      * </p>
+     * <note>
+     * <p>
+     * <code>ListStudioMembers</code> only returns admin members.
+     * </p>
+     * </note>
      * 
      * @param listStudioMembersRequest
      * @param asyncHandler

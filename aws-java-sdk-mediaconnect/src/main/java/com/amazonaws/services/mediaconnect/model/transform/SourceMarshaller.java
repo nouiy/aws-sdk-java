@@ -44,6 +44,10 @@ public class SourceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("mediaStreamSourceConfigurations").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
+    private static final MarshallingInfo<Integer> SENDERCONTROLPORT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("senderControlPort").build();
+    private static final MarshallingInfo<String> SENDERIPADDRESS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("senderIpAddress").build();
     private static final MarshallingInfo<String> SOURCEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sourceArn").build();
     private static final MarshallingInfo<StructuredPojo> TRANSPORT_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -77,6 +81,8 @@ public class SourceMarshaller {
             protocolMarshaller.marshall(source.getIngestPort(), INGESTPORT_BINDING);
             protocolMarshaller.marshall(source.getMediaStreamSourceConfigurations(), MEDIASTREAMSOURCECONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(source.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(source.getSenderControlPort(), SENDERCONTROLPORT_BINDING);
+            protocolMarshaller.marshall(source.getSenderIpAddress(), SENDERIPADDRESS_BINDING);
             protocolMarshaller.marshall(source.getSourceArn(), SOURCEARN_BINDING);
             protocolMarshaller.marshall(source.getTransport(), TRANSPORT_BINDING);
             protocolMarshaller.marshall(source.getVpcInterfaceName(), VPCINTERFACENAME_BINDING);

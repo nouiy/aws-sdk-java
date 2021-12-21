@@ -52,6 +52,10 @@ public class UpdateFlowOutputRequestMarshaller {
             .marshallLocationName("protocol").build();
     private static final MarshallingInfo<String> REMOTEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("remoteId").build();
+    private static final MarshallingInfo<Integer> SENDERCONTROLPORT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("senderControlPort").build();
+    private static final MarshallingInfo<String> SENDERIPADDRESS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("senderIpAddress").build();
     private static final MarshallingInfo<Integer> SMOOTHINGLATENCY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("smoothingLatency").build();
     private static final MarshallingInfo<String> STREAMID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -87,6 +91,8 @@ public class UpdateFlowOutputRequestMarshaller {
             protocolMarshaller.marshall(updateFlowOutputRequest.getPort(), PORT_BINDING);
             protocolMarshaller.marshall(updateFlowOutputRequest.getProtocol(), PROTOCOL_BINDING);
             protocolMarshaller.marshall(updateFlowOutputRequest.getRemoteId(), REMOTEID_BINDING);
+            protocolMarshaller.marshall(updateFlowOutputRequest.getSenderControlPort(), SENDERCONTROLPORT_BINDING);
+            protocolMarshaller.marshall(updateFlowOutputRequest.getSenderIpAddress(), SENDERIPADDRESS_BINDING);
             protocolMarshaller.marshall(updateFlowOutputRequest.getSmoothingLatency(), SMOOTHINGLATENCY_BINDING);
             protocolMarshaller.marshall(updateFlowOutputRequest.getStreamId(), STREAMID_BINDING);
             protocolMarshaller.marshall(updateFlowOutputRequest.getVpcInterfaceAttachment(), VPCINTERFACEATTACHMENT_BINDING);
