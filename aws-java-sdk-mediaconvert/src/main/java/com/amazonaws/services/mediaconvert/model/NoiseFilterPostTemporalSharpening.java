@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -15,10 +15,12 @@ package com.amazonaws.services.mediaconvert.model;
 import javax.annotation.Generated;
 
 /**
- * Optional. When you set Noise reducer (noiseReducer) to Temporal (TEMPORAL), you can use this setting to apply
- * sharpening. The default behavior, Auto (AUTO), allows the transcoder to determine whether to apply filtering,
- * depending on input type and quality. When you set Noise reducer to Temporal, your output bandwidth is reduced. When
- * Post temporal sharpening is also enabled, that bandwidth reduction is smaller.
+ * When you set Noise reducer (noiseReducer) to Temporal (TEMPORAL), the sharpness of your output is reduced. You can
+ * optionally use Post temporal sharpening (PostTemporalSharpening) to apply sharpening to the edges of your output. The
+ * default behavior, Auto (AUTO), allows the transcoder to determine whether to apply sharpening, depending on your
+ * input type and quality. When you set Post temporal sharpening to Enabled (ENABLED), specify how much sharpening is
+ * applied using Post temporal sharpening strength (PostTemporalSharpeningStrength). Set Post temporal sharpening to
+ * Disabled (DISABLED) to not apply sharpening.
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum NoiseFilterPostTemporalSharpening {

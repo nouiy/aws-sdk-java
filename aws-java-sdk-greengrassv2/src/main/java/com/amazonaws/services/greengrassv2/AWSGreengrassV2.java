@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -57,11 +57,36 @@ public interface AWSGreengrassV2 {
 
     /**
      * <p>
-     * Associate a list of client devices with a core device. Use this API operation to specify which client devices can
-     * discover a core device through cloud discovery. With cloud discovery, client devices connect to IoT Greengrass to
-     * retrieve associated core devices' connectivity information and certificates. For more information, see <a
-     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-cloud-discovery.html">Configure cloud
-     * discovery</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
+     * Associates a Greengrass service role with IoT Greengrass for your Amazon Web Services account in this Amazon Web
+     * Services Region. IoT Greengrass uses this role to verify the identity of client devices and manage core device
+     * connectivity information. The role must include the <a href=
+     * "https://console.aws.amazon.com/iam/home#/policies/arn:awsiam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy"
+     * >AWSGreengrassResourceAccessRolePolicy</a> managed policy or a custom policy that defines equivalent permissions
+     * for the IoT Greengrass features that you use. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-service-role.html">Greengrass service
+     * role</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param associateServiceRoleToAccountRequest
+     * @return Result of the AssociateServiceRoleToAccount operation returned by the service.
+     * @throws ValidationException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters.
+     * @throws InternalServerException
+     *         IoT Greengrass can't process your request right now. Try again later.
+     * @sample AWSGreengrassV2.AssociateServiceRoleToAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/AssociateServiceRoleToAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateServiceRoleToAccountResult associateServiceRoleToAccount(AssociateServiceRoleToAccountRequest associateServiceRoleToAccountRequest);
+
+    /**
+     * <p>
+     * Associates a list of client devices with a core device. Use this API operation to specify which client devices
+     * can discover a core device through cloud discovery. With cloud discovery, client devices connect to IoT
+     * Greengrass to retrieve associated core devices' connectivity information and certificates. For more information,
+     * see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-cloud-discovery.html">Configure
+     * cloud discovery</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -97,7 +122,7 @@ public interface AWSGreengrassV2 {
 
     /**
      * <p>
-     * Disassociate a list of client devices from a core device. After you disassociate a client device from a core
+     * Disassociates a list of client devices from a core device. After you disassociate a client device from a core
      * device, the client device won't be able to use cloud discovery to retrieve the core device's connectivity
      * information and certificates.
      * </p>
@@ -395,6 +420,26 @@ public interface AWSGreengrassV2 {
 
     /**
      * <p>
+     * Disassociates the Greengrass service role from IoT Greengrass for your Amazon Web Services account in this Amazon
+     * Web Services Region. Without a service role, IoT Greengrass can't verify the identity of client devices or manage
+     * core device connectivity information. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-service-role.html">Greengrass service
+     * role</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param disassociateServiceRoleFromAccountRequest
+     * @return Result of the DisassociateServiceRoleFromAccount operation returned by the service.
+     * @throws InternalServerException
+     *         IoT Greengrass can't process your request right now. Try again later.
+     * @sample AWSGreengrassV2.DisassociateServiceRoleFromAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/DisassociateServiceRoleFromAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateServiceRoleFromAccountResult disassociateServiceRoleFromAccount(
+            DisassociateServiceRoleFromAccountRequest disassociateServiceRoleFromAccountRequest);
+
+    /**
+     * <p>
      * Gets the recipe for a version of a component. Core devices can call this operation to identify the artifacts and
      * requirements to install a component.
      * </p>
@@ -447,6 +492,33 @@ public interface AWSGreengrassV2 {
 
     /**
      * <p>
+     * Retrieves connectivity information for a Greengrass core device.
+     * </p>
+     * <p>
+     * Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the
+     * core device. When a client device calls the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">Greengrass discovery
+     * API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can
+     * connect. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client
+     * devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param getConnectivityInfoRequest
+     * @return Result of the GetConnectivityInfo operation returned by the service.
+     * @throws ValidationException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters.
+     * @throws InternalServerException
+     *         IoT Greengrass can't process your request right now. Try again later.
+     * @sample AWSGreengrassV2.GetConnectivityInfo
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetConnectivityInfo"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetConnectivityInfoResult getConnectivityInfo(GetConnectivityInfoRequest getConnectivityInfoRequest);
+
+    /**
+     * <p>
      * Retrieves metadata for a Greengrass core device.
      * </p>
      * 
@@ -494,6 +566,25 @@ public interface AWSGreengrassV2 {
      *      Documentation</a>
      */
     GetDeploymentResult getDeployment(GetDeploymentRequest getDeploymentRequest);
+
+    /**
+     * <p>
+     * Gets the service role associated with IoT Greengrass for your Amazon Web Services account in this Amazon Web
+     * Services Region. IoT Greengrass uses this role to verify the identity of client devices and manage core device
+     * connectivity information. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-service-role.html">Greengrass service
+     * role</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param getServiceRoleForAccountRequest
+     * @return Result of the GetServiceRoleForAccount operation returned by the service.
+     * @throws InternalServerException
+     *         IoT Greengrass can't process your request right now. Try again later.
+     * @sample AWSGreengrassV2.GetServiceRoleForAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetServiceRoleForAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetServiceRoleForAccountResult getServiceRoleForAccount(GetServiceRoleForAccountRequest getServiceRoleForAccountRequest);
 
     /**
      * <p>
@@ -774,6 +865,33 @@ public interface AWSGreengrassV2 {
      *      Documentation</a>
      */
     UntagResourceResult untagResource(UntagResourceRequest untagResourceRequest);
+
+    /**
+     * <p>
+     * Updates connectivity information for a Greengrass core device.
+     * </p>
+     * <p>
+     * Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the
+     * core device. When a client device calls the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">Greengrass discovery
+     * API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can
+     * connect. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client
+     * devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param updateConnectivityInfoRequest
+     * @return Result of the UpdateConnectivityInfo operation returned by the service.
+     * @throws ValidationException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters.
+     * @throws InternalServerException
+     *         IoT Greengrass can't process your request right now. Try again later.
+     * @sample AWSGreengrassV2.UpdateConnectivityInfo
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/UpdateConnectivityInfo"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateConnectivityInfoResult updateConnectivityInfo(UpdateConnectivityInfoRequest updateConnectivityInfoRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

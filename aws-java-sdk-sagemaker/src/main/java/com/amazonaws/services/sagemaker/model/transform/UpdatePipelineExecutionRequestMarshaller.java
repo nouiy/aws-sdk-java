@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -33,6 +33,8 @@ public class UpdatePipelineExecutionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineExecutionDescription").build();
     private static final MarshallingInfo<String> PIPELINEEXECUTIONDISPLAYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineExecutionDisplayName").build();
+    private static final MarshallingInfo<StructuredPojo> PARALLELISMCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParallelismConfiguration").build();
 
     private static final UpdatePipelineExecutionRequestMarshaller instance = new UpdatePipelineExecutionRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class UpdatePipelineExecutionRequestMarshaller {
             protocolMarshaller.marshall(updatePipelineExecutionRequest.getPipelineExecutionArn(), PIPELINEEXECUTIONARN_BINDING);
             protocolMarshaller.marshall(updatePipelineExecutionRequest.getPipelineExecutionDescription(), PIPELINEEXECUTIONDESCRIPTION_BINDING);
             protocolMarshaller.marshall(updatePipelineExecutionRequest.getPipelineExecutionDisplayName(), PIPELINEEXECUTIONDISPLAYNAME_BINDING);
+            protocolMarshaller.marshall(updatePipelineExecutionRequest.getParallelismConfiguration(), PARALLELISMCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

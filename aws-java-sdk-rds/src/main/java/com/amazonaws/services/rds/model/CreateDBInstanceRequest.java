@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -133,7 +133,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
-     * <b>Amazon RDS Custom</b>
+     * <b>Amazon RDS Custom for Oracle</b>
      * </p>
      * <p>
      * The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the default value
@@ -162,6 +162,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <b>Amazon RDS Custom for SQL Server</b>
+     * </p>
+     * <p>
+     * Not applicable. Must be null.
+     * </p>
      * <p>
      * <b>SQL Server</b>
      * </p>
@@ -273,12 +279,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
+     * Custom for SQL Server.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
+     * Custom for SQL Server.
      * </p>
      * </li>
      * </ul>
@@ -388,7 +396,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     * Enterprise and Standard editions: Must be an integer from 20 to 16384.
      * </p>
      * </li>
      * <li>
@@ -405,7 +413,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     * Enterprise and Standard editions: Must be an integer from 100 to 16384.
      * </p>
      * </li>
      * <li>
@@ -422,7 +430,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 1024.
+     * Enterprise and Standard editions: Must be an integer from 20 to 1024.
      * </p>
      * </li>
      * <li>
@@ -463,7 +471,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -473,7 +481,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>custom-oracle-ee (for RDS Custom instances)</code>
+     * <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
      * </p>
      * </li>
      * <li>
@@ -648,6 +671,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * and Availability Zones</a>.
      * </p>
      * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Availability Zones are managed by the DB cluster.
+     * </p>
+     * <p>
      * Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      * </p>
      * <p>
@@ -762,7 +791,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can't be set to 0 or 35 for an RDS Custom DB instance
+     * Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
      * </p>
      * </li>
      * </ul>
@@ -911,14 +940,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * cluster.
      * </p>
      * <p>
-     * <b>Amazon RDS Custom</b>
+     * <b>Amazon RDS Custom for Oracle</b>
      * </p>
      * <p>
-     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
-     * <code>19.my_cev1</code>. For more information, see <a
+     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom for
+     * Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
+     * is <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     * Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom for SQL Server</b>
+     * </p>
+     * <p>
+     * See <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
+     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -1145,8 +1182,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
      * </p>
      * <p>
-     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
-     * this parameter to <code>false</code>, RDS reports an error.
+     * For RDS Custom instances, either set this parameter to <code>true</code> or leave it unset. If you set this
+     * parameter to <code>false</code>, RDS reports an error.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -1180,9 +1217,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <b>Amazon RDS Custom</b>
      * </p>
      * <p>
-     * A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter empty
-     * while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom for Oracle
-     * doesn't use the default key when this parameter is empty. You must explicitly specify a key.
+     * A KMS key is required for RDS Custom instances. For most RDS engines, if you leave this parameter empty while
+     * enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom doesn't use the
+     * default key when this parameter is empty. You must explicitly specify a key.
      * </p>
      */
     private String kmsKeyId;
@@ -1556,12 +1593,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
+     *        for RDS Custom for SQL Server.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     *        Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for
+     *        RDS Custom for SQL Server.
      *        </p>
      *        </li>
      *        </ul>
@@ -1671,7 +1710,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     *        Enterprise and Standard editions: Must be an integer from 20 to 16384.
      *        </p>
      *        </li>
      *        <li>
@@ -1688,7 +1727,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     *        Enterprise and Standard editions: Must be an integer from 100 to 16384.
      *        </p>
      *        </li>
      *        <li>
@@ -1705,7 +1744,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Enterprise and Standard editions: Must be an integer from 200 to 1024.
+     *        Enterprise and Standard editions: Must be an integer from 20 to 1024.
      *        </p>
      *        </li>
      *        <li>
@@ -1737,7 +1776,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *        </p>
      *        </li>
      *        <li>
@@ -1747,7 +1786,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-oracle-ee (for RDS Custom instances)</code>
+     *        <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1996,7 +2050,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
-     * <b>Amazon RDS Custom</b>
+     * <b>Amazon RDS Custom for Oracle</b>
      * </p>
      * <p>
      * The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the default value
@@ -2025,6 +2079,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <b>Amazon RDS Custom for SQL Server</b>
+     * </p>
+     * <p>
+     * Not applicable. Must be null.
+     * </p>
      * <p>
      * <b>SQL Server</b>
      * </p>
@@ -2188,7 +2248,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        <p>
-     *        <b>Amazon RDS Custom</b>
+     *        <b>Amazon RDS Custom for Oracle</b>
      *        </p>
      *        <p>
      *        The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the
@@ -2217,6 +2277,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        <b>Amazon RDS Custom for SQL Server</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Must be null.
+     *        </p>
      *        <p>
      *        <b>SQL Server</b>
      *        </p>
@@ -2387,7 +2453,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
-     * <b>Amazon RDS Custom</b>
+     * <b>Amazon RDS Custom for Oracle</b>
      * </p>
      * <p>
      * The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the default value
@@ -2416,6 +2482,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <b>Amazon RDS Custom for SQL Server</b>
+     * </p>
+     * <p>
+     * Not applicable. Must be null.
+     * </p>
      * <p>
      * <b>SQL Server</b>
      * </p>
@@ -2578,7 +2650,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         </ul>
      *         <p>
-     *         <b>Amazon RDS Custom</b>
+     *         <b>Amazon RDS Custom for Oracle</b>
      *         </p>
      *         <p>
      *         The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the
@@ -2607,6 +2679,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         </li>
      *         </ul>
+     *         <p>
+     *         <b>Amazon RDS Custom for SQL Server</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. Must be null.
+     *         </p>
      *         <p>
      *         <b>SQL Server</b>
      *         </p>
@@ -2777,7 +2855,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
-     * <b>Amazon RDS Custom</b>
+     * <b>Amazon RDS Custom for Oracle</b>
      * </p>
      * <p>
      * The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the default value
@@ -2806,6 +2884,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * <b>Amazon RDS Custom for SQL Server</b>
+     * </p>
+     * <p>
+     * Not applicable. Must be null.
+     * </p>
      * <p>
      * <b>SQL Server</b>
      * </p>
@@ -2969,7 +3053,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        </ul>
      *        <p>
-     *        <b>Amazon RDS Custom</b>
+     *        <b>Amazon RDS Custom for Oracle</b>
      *        </p>
      *        <p>
      *        The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the
@@ -2998,6 +3082,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        </li>
      *        </ul>
+     *        <p>
+     *        <b>Amazon RDS Custom for SQL Server</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Must be null.
+     *        </p>
      *        <p>
      *        <b>SQL Server</b>
      *        </p>
@@ -3261,12 +3351,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
+     * Custom for SQL Server.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
+     * Custom for SQL Server.
      * </p>
      * </li>
      * </ul>
@@ -3376,7 +3468,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     * Enterprise and Standard editions: Must be an integer from 20 to 16384.
      * </p>
      * </li>
      * <li>
@@ -3393,7 +3485,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     * Enterprise and Standard editions: Must be an integer from 100 to 16384.
      * </p>
      * </li>
      * <li>
@@ -3410,7 +3502,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 1024.
+     * Enterprise and Standard editions: Must be an integer from 20 to 1024.
      * </p>
      * </li>
      * <li>
@@ -3443,12 +3535,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
+     *        for RDS Custom for SQL Server.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     *        Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for
+     *        RDS Custom for SQL Server.
      *        </p>
      *        </li>
      *        </ul>
@@ -3558,7 +3652,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     *        Enterprise and Standard editions: Must be an integer from 20 to 16384.
      *        </p>
      *        </li>
      *        <li>
@@ -3575,7 +3669,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     *        Enterprise and Standard editions: Must be an integer from 100 to 16384.
      *        </p>
      *        </li>
      *        <li>
@@ -3592,7 +3686,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Enterprise and Standard editions: Must be an integer from 200 to 1024.
+     *        Enterprise and Standard editions: Must be an integer from 20 to 1024.
      *        </p>
      *        </li>
      *        <li>
@@ -3631,12 +3725,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
+     * Custom for SQL Server.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
+     * Custom for SQL Server.
      * </p>
      * </li>
      * </ul>
@@ -3746,7 +3842,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     * Enterprise and Standard editions: Must be an integer from 20 to 16384.
      * </p>
      * </li>
      * <li>
@@ -3763,7 +3859,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     * Enterprise and Standard editions: Must be an integer from 100 to 16384.
      * </p>
      * </li>
      * <li>
@@ -3780,7 +3876,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 1024.
+     * Enterprise and Standard editions: Must be an integer from 20 to 1024.
      * </p>
      * </li>
      * <li>
@@ -3812,12 +3908,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     *         General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
+     *         for RDS Custom for SQL Server.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     *         Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for
+     *         RDS Custom for SQL Server.
      *         </p>
      *         </li>
      *         </ul>
@@ -3927,7 +4025,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     *         Enterprise and Standard editions: Must be an integer from 20 to 16384.
      *         </p>
      *         </li>
      *         <li>
@@ -3944,7 +4042,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     *         Enterprise and Standard editions: Must be an integer from 100 to 16384.
      *         </p>
      *         </li>
      *         <li>
@@ -3961,7 +4059,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <ul>
      *         <li>
      *         <p>
-     *         Enterprise and Standard editions: Must be an integer from 200 to 1024.
+     *         Enterprise and Standard editions: Must be an integer from 20 to 1024.
      *         </p>
      *         </li>
      *         <li>
@@ -4000,12 +4098,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
+     * Custom for SQL Server.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for RDS
+     * Custom for SQL Server.
      * </p>
      * </li>
      * </ul>
@@ -4115,7 +4215,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     * Enterprise and Standard editions: Must be an integer from 20 to 16384.
      * </p>
      * </li>
      * <li>
@@ -4132,7 +4232,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     * Enterprise and Standard editions: Must be an integer from 100 to 16384.
      * </p>
      * </li>
      * <li>
@@ -4149,7 +4249,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <ul>
      * <li>
      * <p>
-     * Enterprise and Standard editions: Must be an integer from 200 to 1024.
+     * Enterprise and Standard editions: Must be an integer from 20 to 1024.
      * </p>
      * </li>
      * <li>
@@ -4182,12 +4282,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384
+     *        for RDS Custom for SQL Server.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     *        Provisioned IOPS storage (io1): Must be an integer from 40 to 65536 for RDS Custom for Oracle, 16384 for
+     *        RDS Custom for SQL Server.
      *        </p>
      *        </li>
      *        </ul>
@@ -4297,7 +4399,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     *        Enterprise and Standard editions: Must be an integer from 20 to 16384.
      *        </p>
      *        </li>
      *        <li>
@@ -4314,7 +4416,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Enterprise and Standard editions: Must be an integer from 200 to 16384.
+     *        Enterprise and Standard editions: Must be an integer from 100 to 16384.
      *        </p>
      *        </li>
      *        <li>
@@ -4331,7 +4433,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <ul>
      *        <li>
      *        <p>
-     *        Enterprise and Standard editions: Must be an integer from 200 to 1024.
+     *        Enterprise and Standard editions: Must be an integer from 20 to 1024.
      *        </p>
      *        </li>
      *        <li>
@@ -4431,7 +4533,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -4441,7 +4543,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>custom-oracle-ee (for RDS Custom instances)</code>
+     * <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
      * </p>
      * </li>
      * <li>
@@ -4517,7 +4634,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *        </p>
      *        </li>
      *        <li>
@@ -4527,7 +4644,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-oracle-ee (for RDS Custom instances)</code>
+     *        <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
      *        </p>
      *        </li>
      *        <li>
@@ -4609,7 +4741,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -4619,7 +4751,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>custom-oracle-ee (for RDS Custom instances)</code>
+     * <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
      * </p>
      * </li>
      * <li>
@@ -4694,7 +4841,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *         <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *         </p>
      *         </li>
      *         <li>
@@ -4704,7 +4851,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         <code>custom-oracle-ee (for RDS Custom instances)</code>
+     *         <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
      *         </p>
      *         </li>
      *         <li>
@@ -4786,7 +4948,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -4796,7 +4958,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * <code>custom-oracle-ee (for RDS Custom instances)</code>
+     * <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
      * </p>
      * </li>
      * <li>
@@ -4872,7 +5049,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *        </p>
      *        </li>
      *        <li>
@@ -4882,7 +5059,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        <code>custom-oracle-ee (for RDS Custom instances)</code>
+     *        <code>custom-oracle-ee (for RDS Custom for Oracle instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-ee (for RDS Custom for SQL Server instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-se (for RDS Custom for SQL Server instances)</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-sqlserver-web (for RDS Custom for SQL Server instances)</code>
      *        </p>
      *        </li>
      *        <li>
@@ -5687,6 +5879,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * and Availability Zones</a>.
      * </p>
      * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Availability Zones are managed by the DB cluster.
+     * </p>
+     * <p>
      * Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      * </p>
      * <p>
@@ -5714,6 +5912,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Regions and Availability Zones, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
      *        >Regions and Availability Zones</a>. </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Availability Zones are managed by the DB cluster.
+     *        </p>
      *        <p>
      *        Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      *        </p>
@@ -5749,6 +5953,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * and Availability Zones</a>.
      * </p>
      * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Availability Zones are managed by the DB cluster.
+     * </p>
+     * <p>
      * Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      * </p>
      * <p>
@@ -5775,6 +5985,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         Regions and Availability Zones, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
      *         >Regions and Availability Zones</a>. </p>
+     *         <p>
+     *         <b>Amazon Aurora</b>
+     *         </p>
+     *         <p>
+     *         Not applicable. Availability Zones are managed by the DB cluster.
+     *         </p>
      *         <p>
      *         Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      *         </p>
@@ -5810,6 +6026,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * and Availability Zones</a>.
      * </p>
      * <p>
+     * <b>Amazon Aurora</b>
+     * </p>
+     * <p>
+     * Not applicable. Availability Zones are managed by the DB cluster.
+     * </p>
+     * <p>
      * Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      * </p>
      * <p>
@@ -5837,6 +6059,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Regions and Availability Zones, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html"
      *        >Regions and Availability Zones</a>. </p>
+     *        <p>
+     *        <b>Amazon Aurora</b>
+     *        </p>
+     *        <p>
+     *        Not applicable. Availability Zones are managed by the DB cluster.
+     *        </p>
      *        <p>
      *        Default: A random, system-chosen Availability Zone in the endpoint's Amazon Web Services Region.
      *        </p>
@@ -6265,7 +6493,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can't be set to 0 or 35 for an RDS Custom DB instance
+     * Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
      * </p>
      * </li>
      * </ul>
@@ -6298,7 +6526,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Can't be set to 0 or 35 for an RDS Custom DB instance
+     *        Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
      *        </p>
      *        </li>
      */
@@ -6337,7 +6565,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can't be set to 0 or 35 for an RDS Custom DB instance
+     * Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
      * </p>
      * </li>
      * </ul>
@@ -6369,7 +6597,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         Can't be set to 0 or 35 for an RDS Custom DB instance
+     *         Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
      *         </p>
      *         </li>
      */
@@ -6408,7 +6636,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Can't be set to 0 or 35 for an RDS Custom DB instance
+     * Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
      * </p>
      * </li>
      * </ul>
@@ -6441,7 +6669,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Can't be set to 0 or 35 for an RDS Custom DB instance
+     *        Can't be set to 0 or 35 for an RDS Custom for Oracle DB instance
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -7237,14 +7465,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * cluster.
      * </p>
      * <p>
-     * <b>Amazon RDS Custom</b>
+     * <b>Amazon RDS Custom for Oracle</b>
      * </p>
      * <p>
-     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
-     * <code>19.my_cev1</code>. For more information, see <a
+     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom for
+     * Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
+     * is <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     * Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom for SQL Server</b>
+     * </p>
+     * <p>
+     * See <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
+     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -7305,14 +7541,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        DB cluster.
      *        </p>
      *        <p>
-     *        <b>Amazon RDS Custom</b>
+     *        <b>Amazon RDS Custom for Oracle</b>
      *        </p>
      *        <p>
-     *        A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom.
-     *        The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
-     *        <code>19.my_cev1</code>. For more information, see <a
+     *        A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom
+     *        for Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example
+     *        identifier is <code>19.my_cev1</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     *        Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *        Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *        </p>
+     *        <p>
+     *        <b>Amazon RDS Custom for SQL Server</b>
+     *        </p>
+     *        <p>
+     *        See <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
+     *        >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
      *        </p>
      *        <p>
      *        <b>MariaDB</b>
@@ -7378,14 +7622,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * cluster.
      * </p>
      * <p>
-     * <b>Amazon RDS Custom</b>
+     * <b>Amazon RDS Custom for Oracle</b>
      * </p>
      * <p>
-     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
-     * <code>19.my_cev1</code>. For more information, see <a
+     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom for
+     * Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
+     * is <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     * Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom for SQL Server</b>
+     * </p>
+     * <p>
+     * See <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
+     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -7445,14 +7697,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         DB cluster.
      *         </p>
      *         <p>
-     *         <b>Amazon RDS Custom</b>
+     *         <b>Amazon RDS Custom for Oracle</b>
      *         </p>
      *         <p>
-     *         A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom.
-     *         The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
-     *         is <code>19.my_cev1</code>. For more information, see <a
+     *         A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom
+     *         for Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example
+     *         identifier is <code>19.my_cev1</code>. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create"
-     *         > Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *         > Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *         </p>
+     *         <p>
+     *         <b>Amazon RDS Custom for SQL Server</b>
+     *         </p>
+     *         <p>
+     *         See <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
+     *         >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
      *         </p>
      *         <p>
      *         <b>MariaDB</b>
@@ -7518,14 +7778,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * cluster.
      * </p>
      * <p>
-     * <b>Amazon RDS Custom</b>
+     * <b>Amazon RDS Custom for Oracle</b>
      * </p>
      * <p>
-     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom. The CEV
-     * name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
-     * <code>19.my_cev1</code>. For more information, see <a
+     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom for
+     * Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
+     * is <code>19.my_cev1</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     * Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom for SQL Server</b>
+     * </p>
+     * <p>
+     * See <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
+     * >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -7586,14 +7854,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        DB cluster.
      *        </p>
      *        <p>
-     *        <b>Amazon RDS Custom</b>
+     *        <b>Amazon RDS Custom for Oracle</b>
      *        </p>
      *        <p>
-     *        A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom.
-     *        The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
-     *        <code>19.my_cev1</code>. For more information, see <a
+     *        A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom
+     *        for Oracle. The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example
+     *        identifier is <code>19.my_cev1</code>. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
-     *        Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *        Creating an RDS Custom for Oracle DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *        </p>
+     *        <p>
+     *        <b>Amazon RDS Custom for SQL Server</b>
+     *        </p>
+     *        <p>
+     *        See <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-reqs-limits.html#custom-reqs-limits.reqsMS"
+     *        >RDS Custom for SQL Server general requirements</a> in the <i>Amazon RDS User Guide.</i>
      *        </p>
      *        <p>
      *        <b>MariaDB</b>
@@ -8900,8 +9176,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
      * </p>
      * <p>
-     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
-     * this parameter to <code>false</code>, RDS reports an error.
+     * For RDS Custom instances, either set this parameter to <code>true</code> or leave it unset. If you set this
+     * parameter to <code>false</code>, RDS reports an error.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -8913,8 +9189,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param storageEncrypted
      *        A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.</p>
      *        <p>
-     *        For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you
-     *        set this parameter to <code>false</code>, RDS reports an error.
+     *        For RDS Custom instances, either set this parameter to <code>true</code> or leave it unset. If you set
+     *        this parameter to <code>false</code>, RDS reports an error.
      *        </p>
      *        <p>
      *        <b>Amazon Aurora</b>
@@ -8932,8 +9208,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
      * </p>
      * <p>
-     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
-     * this parameter to <code>false</code>, RDS reports an error.
+     * For RDS Custom instances, either set this parameter to <code>true</code> or leave it unset. If you set this
+     * parameter to <code>false</code>, RDS reports an error.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -8944,8 +9220,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.</p>
      *         <p>
-     *         For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you
-     *         set this parameter to <code>false</code>, RDS reports an error.
+     *         For RDS Custom instances, either set this parameter to <code>true</code> or leave it unset. If you set
+     *         this parameter to <code>false</code>, RDS reports an error.
      *         </p>
      *         <p>
      *         <b>Amazon Aurora</b>
@@ -8963,8 +9239,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
      * </p>
      * <p>
-     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
-     * this parameter to <code>false</code>, RDS reports an error.
+     * For RDS Custom instances, either set this parameter to <code>true</code> or leave it unset. If you set this
+     * parameter to <code>false</code>, RDS reports an error.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -8976,8 +9252,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param storageEncrypted
      *        A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.</p>
      *        <p>
-     *        For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you
-     *        set this parameter to <code>false</code>, RDS reports an error.
+     *        For RDS Custom instances, either set this parameter to <code>true</code> or leave it unset. If you set
+     *        this parameter to <code>false</code>, RDS reports an error.
      *        </p>
      *        <p>
      *        <b>Amazon Aurora</b>
@@ -8997,8 +9273,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
      * </p>
      * <p>
-     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
-     * this parameter to <code>false</code>, RDS reports an error.
+     * For RDS Custom instances, either set this parameter to <code>true</code> or leave it unset. If you set this
+     * parameter to <code>false</code>, RDS reports an error.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -9009,8 +9285,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.</p>
      *         <p>
-     *         For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you
-     *         set this parameter to <code>false</code>, RDS reports an error.
+     *         For RDS Custom instances, either set this parameter to <code>true</code> or leave it unset. If you set
+     *         this parameter to <code>false</code>, RDS reports an error.
      *         </p>
      *         <p>
      *         <b>Amazon Aurora</b>
@@ -9047,9 +9323,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <b>Amazon RDS Custom</b>
      * </p>
      * <p>
-     * A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter empty
-     * while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom for Oracle
-     * doesn't use the default key when this parameter is empty. You must explicitly specify a key.
+     * A KMS key is required for RDS Custom instances. For most RDS engines, if you leave this parameter empty while
+     * enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom doesn't use the
+     * default key when this parameter is empty. You must explicitly specify a key.
      * </p>
      * 
      * @param kmsKeyId
@@ -9075,10 +9351,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <b>Amazon RDS Custom</b>
      *        </p>
      *        <p>
-     *        A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter
-     *        empty while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS
-     *        Custom for Oracle doesn't use the default key when this parameter is empty. You must explicitly specify a
-     *        key.
+     *        A KMS key is required for RDS Custom instances. For most RDS engines, if you leave this parameter empty
+     *        while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom
+     *        doesn't use the default key when this parameter is empty. You must explicitly specify a key.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -9109,9 +9384,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <b>Amazon RDS Custom</b>
      * </p>
      * <p>
-     * A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter empty
-     * while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom for Oracle
-     * doesn't use the default key when this parameter is empty. You must explicitly specify a key.
+     * A KMS key is required for RDS Custom instances. For most RDS engines, if you leave this parameter empty while
+     * enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom doesn't use the
+     * default key when this parameter is empty. You must explicitly specify a key.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier for an encrypted DB instance.</p>
@@ -9136,10 +9411,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <b>Amazon RDS Custom</b>
      *         </p>
      *         <p>
-     *         A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter
-     *         empty while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS
-     *         Custom for Oracle doesn't use the default key when this parameter is empty. You must explicitly specify a
-     *         key.
+     *         A KMS key is required for RDS Custom instances. For most RDS engines, if you leave this parameter empty
+     *         while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom
+     *         doesn't use the default key when this parameter is empty. You must explicitly specify a key.
      */
 
     public String getKmsKeyId() {
@@ -9170,9 +9444,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <b>Amazon RDS Custom</b>
      * </p>
      * <p>
-     * A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter empty
-     * while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom for Oracle
-     * doesn't use the default key when this parameter is empty. You must explicitly specify a key.
+     * A KMS key is required for RDS Custom instances. For most RDS engines, if you leave this parameter empty while
+     * enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom doesn't use the
+     * default key when this parameter is empty. You must explicitly specify a key.
      * </p>
      * 
      * @param kmsKeyId
@@ -9198,10 +9472,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <b>Amazon RDS Custom</b>
      *        </p>
      *        <p>
-     *        A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter
-     *        empty while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS
-     *        Custom for Oracle doesn't use the default key when this parameter is empty. You must explicitly specify a
-     *        key.
+     *        A KMS key is required for RDS Custom instances. For most RDS engines, if you leave this parameter empty
+     *        while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom
+     *        doesn't use the default key when this parameter is empty. You must explicitly specify a key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

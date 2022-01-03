@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -73,8 +73,25 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
     private Integer allocatedStorage;
     /**
      * <p>
-     * Specifies the status of this DB cluster snapshot.
+     * Specifies the status of this DB cluster snapshot. Valid statuses are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>available</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>copying</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>creating</code>
+     * </p>
+     * </li>
+     * </ul>
      */
     private String status;
     /**
@@ -479,11 +496,44 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the status of this DB cluster snapshot.
+     * Specifies the status of this DB cluster snapshot. Valid statuses are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>available</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>copying</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>creating</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        Specifies the status of this DB cluster snapshot.
+     *        Specifies the status of this DB cluster snapshot. Valid statuses are the following:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>available</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>copying</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>creating</code>
+     *        </p>
+     *        </li>
      */
 
     public void setStatus(String status) {
@@ -492,10 +542,43 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the status of this DB cluster snapshot.
+     * Specifies the status of this DB cluster snapshot. Valid statuses are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>available</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>copying</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>creating</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Specifies the status of this DB cluster snapshot.
+     * @return Specifies the status of this DB cluster snapshot. Valid statuses are the following:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>available</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>copying</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>creating</code>
+     *         </p>
+     *         </li>
      */
 
     public String getStatus() {
@@ -504,11 +587,44 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies the status of this DB cluster snapshot.
+     * Specifies the status of this DB cluster snapshot. Valid statuses are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>available</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>copying</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>creating</code>
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param status
-     *        Specifies the status of this DB cluster snapshot.
+     *        Specifies the status of this DB cluster snapshot. Valid statuses are the following:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>available</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>copying</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>creating</code>
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

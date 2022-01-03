@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -25,6 +25,19 @@ import com.amazonaws.services.greengrassv2.model.*;
 public class AbstractAWSGreengrassV2Async extends AbstractAWSGreengrassV2 implements AWSGreengrassV2Async {
 
     protected AbstractAWSGreengrassV2Async() {
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateServiceRoleToAccountResult> associateServiceRoleToAccountAsync(AssociateServiceRoleToAccountRequest request) {
+
+        return associateServiceRoleToAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateServiceRoleToAccountResult> associateServiceRoleToAccountAsync(AssociateServiceRoleToAccountRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateServiceRoleToAccountRequest, AssociateServiceRoleToAccountResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -136,6 +149,21 @@ public class AbstractAWSGreengrassV2Async extends AbstractAWSGreengrassV2 implem
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateServiceRoleFromAccountResult> disassociateServiceRoleFromAccountAsync(
+            DisassociateServiceRoleFromAccountRequest request) {
+
+        return disassociateServiceRoleFromAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateServiceRoleFromAccountResult> disassociateServiceRoleFromAccountAsync(
+            DisassociateServiceRoleFromAccountRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateServiceRoleFromAccountRequest, DisassociateServiceRoleFromAccountResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetComponentResult> getComponentAsync(GetComponentRequest request) {
 
         return getComponentAsync(request, null);
@@ -162,6 +190,19 @@ public class AbstractAWSGreengrassV2Async extends AbstractAWSGreengrassV2 implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetConnectivityInfoResult> getConnectivityInfoAsync(GetConnectivityInfoRequest request) {
+
+        return getConnectivityInfoAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConnectivityInfoResult> getConnectivityInfoAsync(GetConnectivityInfoRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetConnectivityInfoRequest, GetConnectivityInfoResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetCoreDeviceResult> getCoreDeviceAsync(GetCoreDeviceRequest request) {
 
         return getCoreDeviceAsync(request, null);
@@ -183,6 +224,19 @@ public class AbstractAWSGreengrassV2Async extends AbstractAWSGreengrassV2 implem
     @Override
     public java.util.concurrent.Future<GetDeploymentResult> getDeploymentAsync(GetDeploymentRequest request,
             com.amazonaws.handlers.AsyncHandler<GetDeploymentRequest, GetDeploymentResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceRoleForAccountResult> getServiceRoleForAccountAsync(GetServiceRoleForAccountRequest request) {
+
+        return getServiceRoleForAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceRoleForAccountResult> getServiceRoleForAccountAsync(GetServiceRoleForAccountRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetServiceRoleForAccountRequest, GetServiceRoleForAccountResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -328,6 +382,19 @@ public class AbstractAWSGreengrassV2Async extends AbstractAWSGreengrassV2 implem
     @Override
     public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConnectivityInfoResult> updateConnectivityInfoAsync(UpdateConnectivityInfoRequest request) {
+
+        return updateConnectivityInfoAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConnectivityInfoResult> updateConnectivityInfoAsync(UpdateConnectivityInfoRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateConnectivityInfoRequest, UpdateConnectivityInfoResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

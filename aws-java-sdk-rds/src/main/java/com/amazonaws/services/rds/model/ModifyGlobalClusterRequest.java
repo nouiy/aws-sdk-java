@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -91,8 +91,8 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * <code>aws rds describe-db-engine-versions --engine aurora --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
      * </p>
      * <p>
-     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora), use
-     * the following command:
+     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL
+     * 8.0-compatible Aurora), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
@@ -472,8 +472,8 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * <code>aws rds describe-db-engine-versions --engine aurora --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
      * </p>
      * <p>
-     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora), use
-     * the following command:
+     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL
+     * 8.0-compatible Aurora), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
@@ -497,8 +497,8 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      *        <code>aws rds describe-db-engine-versions --engine aurora --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
      *        </p>
      *        <p>
-     *        To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible
-     *        Aurora), use the following command:
+     *        To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and
+     *        MySQL 8.0-compatible Aurora), use the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
@@ -528,8 +528,8 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * <code>aws rds describe-db-engine-versions --engine aurora --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
      * </p>
      * <p>
-     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora), use
-     * the following command:
+     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL
+     * 8.0-compatible Aurora), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
@@ -552,8 +552,8 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      *         <code>aws rds describe-db-engine-versions --engine aurora --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
      *         </p>
      *         <p>
-     *         To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible
-     *         Aurora), use the following command:
+     *         To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and
+     *         MySQL 8.0-compatible Aurora), use the following command:
      *         </p>
      *         <p>
      *         <code>aws rds describe-db-engine-versions --engine aurora-mysql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
@@ -583,8 +583,8 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      * <code>aws rds describe-db-engine-versions --engine aurora --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
      * </p>
      * <p>
-     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora), use
-     * the following command:
+     * To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL
+     * 8.0-compatible Aurora), use the following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
@@ -608,8 +608,8 @@ public class ModifyGlobalClusterRequest extends com.amazonaws.AmazonWebServiceRe
      *        <code>aws rds describe-db-engine-versions --engine aurora --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>
      *        </p>
      *        <p>
-     *        To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible
-     *        Aurora), use the following command:
+     *        To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and
+     *        MySQL 8.0-compatible Aurora), use the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code>

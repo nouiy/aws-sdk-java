@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -38,6 +38,12 @@ public class RetryPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String clientRequestToken;
+    /**
+     * <p>
+     * This configuration, if specified, overrides the parallelism configuration of the parent pipeline.
+     * </p>
+     */
+    private ParallelismConfiguration parallelismConfiguration;
 
     /**
      * <p>
@@ -126,6 +132,46 @@ public class RetryPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * This configuration, if specified, overrides the parallelism configuration of the parent pipeline.
+     * </p>
+     * 
+     * @param parallelismConfiguration
+     *        This configuration, if specified, overrides the parallelism configuration of the parent pipeline.
+     */
+
+    public void setParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
+        this.parallelismConfiguration = parallelismConfiguration;
+    }
+
+    /**
+     * <p>
+     * This configuration, if specified, overrides the parallelism configuration of the parent pipeline.
+     * </p>
+     * 
+     * @return This configuration, if specified, overrides the parallelism configuration of the parent pipeline.
+     */
+
+    public ParallelismConfiguration getParallelismConfiguration() {
+        return this.parallelismConfiguration;
+    }
+
+    /**
+     * <p>
+     * This configuration, if specified, overrides the parallelism configuration of the parent pipeline.
+     * </p>
+     * 
+     * @param parallelismConfiguration
+     *        This configuration, if specified, overrides the parallelism configuration of the parent pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RetryPipelineExecutionRequest withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
+        setParallelismConfiguration(parallelismConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -140,7 +186,9 @@ public class RetryPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
         if (getPipelineExecutionArn() != null)
             sb.append("PipelineExecutionArn: ").append(getPipelineExecutionArn()).append(",");
         if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append(getClientRequestToken());
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
+        if (getParallelismConfiguration() != null)
+            sb.append("ParallelismConfiguration: ").append(getParallelismConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -163,6 +211,10 @@ public class RetryPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
+        if (other.getParallelismConfiguration() == null ^ this.getParallelismConfiguration() == null)
+            return false;
+        if (other.getParallelismConfiguration() != null && other.getParallelismConfiguration().equals(this.getParallelismConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -173,6 +225,7 @@ public class RetryPipelineExecutionRequest extends com.amazonaws.AmazonWebServic
 
         hashCode = prime * hashCode + ((getPipelineExecutionArn() == null) ? 0 : getPipelineExecutionArn().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
+        hashCode = prime * hashCode + ((getParallelismConfiguration() == null) ? 0 : getParallelismConfiguration().hashCode());
         return hashCode;
     }
 

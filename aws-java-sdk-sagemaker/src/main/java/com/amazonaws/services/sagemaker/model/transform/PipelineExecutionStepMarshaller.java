@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -29,6 +29,10 @@ public class PipelineExecutionStepMarshaller {
 
     private static final MarshallingInfo<String> STEPNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("StepName").build();
+    private static final MarshallingInfo<String> STEPDISPLAYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StepDisplayName").build();
+    private static final MarshallingInfo<String> STEPDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StepDescription").build();
     private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StartTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -61,6 +65,8 @@ public class PipelineExecutionStepMarshaller {
 
         try {
             protocolMarshaller.marshall(pipelineExecutionStep.getStepName(), STEPNAME_BINDING);
+            protocolMarshaller.marshall(pipelineExecutionStep.getStepDisplayName(), STEPDISPLAYNAME_BINDING);
+            protocolMarshaller.marshall(pipelineExecutionStep.getStepDescription(), STEPDESCRIPTION_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStep.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStep.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(pipelineExecutionStep.getStepStatus(), STEPSTATUS_BINDING);

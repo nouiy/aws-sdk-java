@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -175,7 +175,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -210,7 +210,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible Aurora, use the following command:
+     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
+     * following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -798,13 +799,13 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * This setting is required to create a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>io1</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     * When specified, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     * Default: <code>io1</code>
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -1885,7 +1886,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -1921,7 +1922,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *        </p>
      *        </li>
      *        <li>
@@ -1963,7 +1964,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -1998,7 +1999,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
-     *         <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *         <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *         </p>
      *         </li>
      *         <li>
@@ -2040,7 +2041,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -2076,7 +2077,7 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *        </p>
      *        </li>
      *        <li>
@@ -2116,7 +2117,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible Aurora, use the following command:
+     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
+     * following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2184,7 +2186,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
      *        </p>
      *        <p>
-     *        To list all of the available engine versions for MySQL 5.7-compatible Aurora, use the following command:
+     *        To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use
+     *        the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2258,7 +2261,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible Aurora, use the following command:
+     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
+     * following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2325,7 +2329,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
      *         </p>
      *         <p>
-     *         To list all of the available engine versions for MySQL 5.7-compatible Aurora, use the following command:
+     *         To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora,
+     *         use the following command:
      *         </p>
      *         <p>
      *         <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2399,7 +2404,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
      * </p>
      * <p>
-     * To list all of the available engine versions for MySQL 5.7-compatible Aurora, use the following command:
+     * To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use the
+     * following command:
      * </p>
      * <p>
      * <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -2467,7 +2473,8 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>aws rds describe-db-engine-versions --engine aurora --query "DBEngineVersions[].EngineVersion"</code>
      *        </p>
      *        <p>
-     *        To list all of the available engine versions for MySQL 5.7-compatible Aurora, use the following command:
+     *        To list all of the available engine versions for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora, use
+     *        the following command:
      *        </p>
      *        <p>
      *        <code>aws rds describe-db-engine-versions --engine aurora-mysql --query "DBEngineVersions[].EngineVersion"</code>
@@ -5967,13 +5974,13 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * This setting is required to create a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>io1</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     * When specified, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     * Default: <code>io1</code>
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -5985,13 +5992,13 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        This setting is required to create a Multi-AZ DB cluster.
      *        </p>
      *        <p>
-     *        Valid values: <code>standard | gp2 | io1</code>
+     *        Valid values: <code>io1</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     *        When specified, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     *        Default: <code>io1</code>
      *        </p>
      *        <p>
      *        Valid for: Multi-AZ DB clusters only
@@ -6009,13 +6016,13 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * This setting is required to create a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>io1</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     * When specified, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     * Default: <code>io1</code>
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -6026,13 +6033,13 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         This setting is required to create a Multi-AZ DB cluster.
      *         </p>
      *         <p>
-     *         Valid values: <code>standard | gp2 | io1</code>
+     *         Valid values: <code>io1</code>
      *         </p>
      *         <p>
-     *         If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     *         When specified, a value for the <code>Iops</code> parameter is required.
      *         </p>
      *         <p>
-     *         Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     *         Default: <code>io1</code>
      *         </p>
      *         <p>
      *         Valid for: Multi-AZ DB clusters only
@@ -6050,13 +6057,13 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * This setting is required to create a Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>io1</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     * When specified, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     * Default: <code>io1</code>
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -6068,13 +6075,13 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        This setting is required to create a Multi-AZ DB cluster.
      *        </p>
      *        <p>
-     *        Valid values: <code>standard | gp2 | io1</code>
+     *        Valid values: <code>io1</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     *        When specified, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     *        Default: <code>io1</code>
      *        </p>
      *        <p>
      *        Valid for: Multi-AZ DB clusters only

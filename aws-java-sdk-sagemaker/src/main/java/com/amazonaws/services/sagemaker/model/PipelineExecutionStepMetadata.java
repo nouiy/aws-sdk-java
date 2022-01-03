@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -181,6 +181,12 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
      * </ul>
      */
     private ClarifyCheckStepMetadata clarifyCheck;
+    /**
+     * <p>
+     * The configurations and outcomes of an EMR step execution.
+     * </p>
+     */
+    private EMRStepMetadata eMR;
 
     /**
      * <p>
@@ -1145,6 +1151,46 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The configurations and outcomes of an EMR step execution.
+     * </p>
+     * 
+     * @param eMR
+     *        The configurations and outcomes of an EMR step execution.
+     */
+
+    public void setEMR(EMRStepMetadata eMR) {
+        this.eMR = eMR;
+    }
+
+    /**
+     * <p>
+     * The configurations and outcomes of an EMR step execution.
+     * </p>
+     * 
+     * @return The configurations and outcomes of an EMR step execution.
+     */
+
+    public EMRStepMetadata getEMR() {
+        return this.eMR;
+    }
+
+    /**
+     * <p>
+     * The configurations and outcomes of an EMR step execution.
+     * </p>
+     * 
+     * @param eMR
+     *        The configurations and outcomes of an EMR step execution.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecutionStepMetadata withEMR(EMRStepMetadata eMR) {
+        setEMR(eMR);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1177,7 +1223,9 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
         if (getQualityCheck() != null)
             sb.append("QualityCheck: ").append(getQualityCheck()).append(",");
         if (getClarifyCheck() != null)
-            sb.append("ClarifyCheck: ").append(getClarifyCheck());
+            sb.append("ClarifyCheck: ").append(getClarifyCheck()).append(",");
+        if (getEMR() != null)
+            sb.append("EMR: ").append(getEMR());
         sb.append("}");
         return sb.toString();
     }
@@ -1236,6 +1284,10 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
             return false;
         if (other.getClarifyCheck() != null && other.getClarifyCheck().equals(this.getClarifyCheck()) == false)
             return false;
+        if (other.getEMR() == null ^ this.getEMR() == null)
+            return false;
+        if (other.getEMR() != null && other.getEMR().equals(this.getEMR()) == false)
+            return false;
         return true;
     }
 
@@ -1255,6 +1307,7 @@ public class PipelineExecutionStepMetadata implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getLambda() == null) ? 0 : getLambda().hashCode());
         hashCode = prime * hashCode + ((getQualityCheck() == null) ? 0 : getQualityCheck().hashCode());
         hashCode = prime * hashCode + ((getClarifyCheck() == null) ? 0 : getClarifyCheck().hashCode());
+        hashCode = prime * hashCode + ((getEMR() == null) ? 0 : getEMR().hashCode());
         return hashCode;
     }
 

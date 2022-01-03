@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -25,14 +25,14 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of AWS account identifiers for the member accounts that Detective successfully deleted from the behavior
-     * graph.
+     * The list of Amazon Web Services account identifiers for the member accounts that Detective successfully removed
+     * from the behavior graph.
      * </p>
      */
     private java.util.List<String> accountIds;
     /**
      * <p>
-     * The list of member accounts that Detective was not able to delete from the behavior graph. For each member
+     * The list of member accounts that Detective was not able to remove from the behavior graph. For each member
      * account, provides the reason that the deletion could not be processed.
      * </p>
      */
@@ -40,12 +40,12 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of AWS account identifiers for the member accounts that Detective successfully deleted from the behavior
-     * graph.
+     * The list of Amazon Web Services account identifiers for the member accounts that Detective successfully removed
+     * from the behavior graph.
      * </p>
      * 
-     * @return The list of AWS account identifiers for the member accounts that Detective successfully deleted from the
-     *         behavior graph.
+     * @return The list of Amazon Web Services account identifiers for the member accounts that Detective successfully
+     *         removed from the behavior graph.
      */
 
     public java.util.List<String> getAccountIds() {
@@ -54,13 +54,13 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of AWS account identifiers for the member accounts that Detective successfully deleted from the behavior
-     * graph.
+     * The list of Amazon Web Services account identifiers for the member accounts that Detective successfully removed
+     * from the behavior graph.
      * </p>
      * 
      * @param accountIds
-     *        The list of AWS account identifiers for the member accounts that Detective successfully deleted from the
-     *        behavior graph.
+     *        The list of Amazon Web Services account identifiers for the member accounts that Detective successfully
+     *        removed from the behavior graph.
      */
 
     public void setAccountIds(java.util.Collection<String> accountIds) {
@@ -74,8 +74,8 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of AWS account identifiers for the member accounts that Detective successfully deleted from the behavior
-     * graph.
+     * The list of Amazon Web Services account identifiers for the member accounts that Detective successfully removed
+     * from the behavior graph.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -84,8 +84,8 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      * 
      * @param accountIds
-     *        The list of AWS account identifiers for the member accounts that Detective successfully deleted from the
-     *        behavior graph.
+     *        The list of Amazon Web Services account identifiers for the member accounts that Detective successfully
+     *        removed from the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,13 +101,13 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of AWS account identifiers for the member accounts that Detective successfully deleted from the behavior
-     * graph.
+     * The list of Amazon Web Services account identifiers for the member accounts that Detective successfully removed
+     * from the behavior graph.
      * </p>
      * 
      * @param accountIds
-     *        The list of AWS account identifiers for the member accounts that Detective successfully deleted from the
-     *        behavior graph.
+     *        The list of Amazon Web Services account identifiers for the member accounts that Detective successfully
+     *        removed from the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,11 +118,11 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of member accounts that Detective was not able to delete from the behavior graph. For each member
+     * The list of member accounts that Detective was not able to remove from the behavior graph. For each member
      * account, provides the reason that the deletion could not be processed.
      * </p>
      * 
-     * @return The list of member accounts that Detective was not able to delete from the behavior graph. For each
+     * @return The list of member accounts that Detective was not able to remove from the behavior graph. For each
      *         member account, provides the reason that the deletion could not be processed.
      */
 
@@ -132,12 +132,12 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of member accounts that Detective was not able to delete from the behavior graph. For each member
+     * The list of member accounts that Detective was not able to remove from the behavior graph. For each member
      * account, provides the reason that the deletion could not be processed.
      * </p>
      * 
      * @param unprocessedAccounts
-     *        The list of member accounts that Detective was not able to delete from the behavior graph. For each member
+     *        The list of member accounts that Detective was not able to remove from the behavior graph. For each member
      *        account, provides the reason that the deletion could not be processed.
      */
 
@@ -152,7 +152,7 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of member accounts that Detective was not able to delete from the behavior graph. For each member
+     * The list of member accounts that Detective was not able to remove from the behavior graph. For each member
      * account, provides the reason that the deletion could not be processed.
      * </p>
      * <p>
@@ -162,7 +162,7 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      * 
      * @param unprocessedAccounts
-     *        The list of member accounts that Detective was not able to delete from the behavior graph. For each member
+     *        The list of member accounts that Detective was not able to remove from the behavior graph. For each member
      *        account, provides the reason that the deletion could not be processed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -179,12 +179,12 @@ public class DeleteMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of member accounts that Detective was not able to delete from the behavior graph. For each member
+     * The list of member accounts that Detective was not able to remove from the behavior graph. For each member
      * account, provides the reason that the deletion could not be processed.
      * </p>
      * 
      * @param unprocessedAccounts
-     *        The list of member accounts that Detective was not able to delete from the behavior graph. For each member
+     *        The list of member accounts that Detective was not able to remove from the behavior graph. For each member
      *        account, provides the reason that the deletion could not be processed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

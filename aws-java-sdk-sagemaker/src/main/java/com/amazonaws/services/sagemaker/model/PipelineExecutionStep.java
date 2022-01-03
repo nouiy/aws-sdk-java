@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -36,6 +36,18 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
     private String stepName;
     /**
      * <p>
+     * The display name of the step.
+     * </p>
+     */
+    private String stepDisplayName;
+    /**
+     * <p>
+     * The description of the step.
+     * </p>
+     */
+    private String stepDescription;
+    /**
+     * <p>
      * The time that the step started executing.
      * </p>
      */
@@ -58,7 +70,13 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
      * </p>
      */
     private CacheHitResult cacheHitResult;
-
+    /**
+     * <p>
+     * The current attempt of the execution step. For more information, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
+     * >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     * </p>
+     */
     private Integer attemptCount;
     /**
      * <p>
@@ -110,6 +128,86 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
 
     public PipelineExecutionStep withStepName(String stepName) {
         setStepName(stepName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The display name of the step.
+     * </p>
+     * 
+     * @param stepDisplayName
+     *        The display name of the step.
+     */
+
+    public void setStepDisplayName(String stepDisplayName) {
+        this.stepDisplayName = stepDisplayName;
+    }
+
+    /**
+     * <p>
+     * The display name of the step.
+     * </p>
+     * 
+     * @return The display name of the step.
+     */
+
+    public String getStepDisplayName() {
+        return this.stepDisplayName;
+    }
+
+    /**
+     * <p>
+     * The display name of the step.
+     * </p>
+     * 
+     * @param stepDisplayName
+     *        The display name of the step.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecutionStep withStepDisplayName(String stepDisplayName) {
+        setStepDisplayName(stepDisplayName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The description of the step.
+     * </p>
+     * 
+     * @param stepDescription
+     *        The description of the step.
+     */
+
+    public void setStepDescription(String stepDescription) {
+        this.stepDescription = stepDescription;
+    }
+
+    /**
+     * <p>
+     * The description of the step.
+     * </p>
+     * 
+     * @return The description of the step.
+     */
+
+    public String getStepDescription() {
+        return this.stepDescription;
+    }
+
+    /**
+     * <p>
+     * The description of the step.
+     * </p>
+     * 
+     * @param stepDescription
+     *        The description of the step.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PipelineExecutionStep withStepDescription(String stepDescription) {
+        setStepDescription(stepDescription);
         return this;
     }
 
@@ -293,7 +391,16 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The current attempt of the execution step. For more information, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
+     * >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     * </p>
+     * 
      * @param attemptCount
+     *        The current attempt of the execution step. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
+     *        >Retry Policy for Amazon SageMaker Pipelines steps</a>.
      */
 
     public void setAttemptCount(Integer attemptCount) {
@@ -301,7 +408,15 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
     }
 
     /**
-     * @return
+     * <p>
+     * The current attempt of the execution step. For more information, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
+     * >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     * </p>
+     * 
+     * @return The current attempt of the execution step. For more information, see <a
+     *         href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
+     *         >Retry Policy for Amazon SageMaker Pipelines steps</a>.
      */
 
     public Integer getAttemptCount() {
@@ -309,7 +424,16 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * The current attempt of the execution step. For more information, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
+     * >Retry Policy for Amazon SageMaker Pipelines steps</a>.
+     * </p>
+     * 
      * @param attemptCount
+     *        The current attempt of the execution step. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/https:/docs.aws.amazon.com/sagemaker/latest/dg/pipelines-retry-policy.html"
+     *        >Retry Policy for Amazon SageMaker Pipelines steps</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -412,6 +536,10 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
         sb.append("{");
         if (getStepName() != null)
             sb.append("StepName: ").append(getStepName()).append(",");
+        if (getStepDisplayName() != null)
+            sb.append("StepDisplayName: ").append(getStepDisplayName()).append(",");
+        if (getStepDescription() != null)
+            sb.append("StepDescription: ").append(getStepDescription()).append(",");
         if (getStartTime() != null)
             sb.append("StartTime: ").append(getStartTime()).append(",");
         if (getEndTime() != null)
@@ -443,6 +571,14 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
         if (other.getStepName() == null ^ this.getStepName() == null)
             return false;
         if (other.getStepName() != null && other.getStepName().equals(this.getStepName()) == false)
+            return false;
+        if (other.getStepDisplayName() == null ^ this.getStepDisplayName() == null)
+            return false;
+        if (other.getStepDisplayName() != null && other.getStepDisplayName().equals(this.getStepDisplayName()) == false)
+            return false;
+        if (other.getStepDescription() == null ^ this.getStepDescription() == null)
+            return false;
+        if (other.getStepDescription() != null && other.getStepDescription().equals(this.getStepDescription()) == false)
             return false;
         if (other.getStartTime() == null ^ this.getStartTime() == null)
             return false;
@@ -481,6 +617,8 @@ public class PipelineExecutionStep implements Serializable, Cloneable, Structure
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getStepName() == null) ? 0 : getStepName().hashCode());
+        hashCode = prime * hashCode + ((getStepDisplayName() == null) ? 0 : getStepDisplayName().hashCode());
+        hashCode = prime * hashCode + ((getStepDescription() == null) ? 0 : getStepDescription().hashCode());
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getStepStatus() == null) ? 0 : getStepStatus().hashCode());

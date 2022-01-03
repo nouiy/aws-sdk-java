@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -1528,7 +1528,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * <p>
      * Amazon RDS, which is a fully managed service, supplies the Amazon Machine Image (AMI) and database software. The
      * Amazon RDS database software is preinstalled, so you need only select a DB engine and version, and create your
-     * database. With Amazon RDS Custom, you upload your database installation files in Amazon S3.
+     * database. With Amazon RDS Custom for Oracle, you upload your database installation files in Amazon S3.
      * </p>
      * <p>
      * When you create a custom engine version, you specify the files in a JSON document called a CEV manifest. This

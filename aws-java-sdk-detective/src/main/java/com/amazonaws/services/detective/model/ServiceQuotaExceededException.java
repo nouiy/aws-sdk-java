@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -22,7 +22,7 @@ import javax.annotation.Generated;
  * <li>
  * <p>
  * The request would cause the number of member accounts in the behavior graph to exceed the maximum allowed. A behavior
- * graph cannot have more than 1000 member accounts.
+ * graph cannot have more than 1200 member accounts.
  * </p>
  * </li>
  * <li>

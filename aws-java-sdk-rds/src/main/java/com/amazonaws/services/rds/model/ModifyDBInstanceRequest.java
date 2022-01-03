@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -69,7 +69,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom for Oracle.
      * </p>
      * <p>
      * Default: Uses existing setting
@@ -157,7 +157,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * parameter changes can cause an outage and are applied on the next call to <a>RebootDBInstance</a>, or the next
      * failure reboot. Review the table of parameters in <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Modifying a DB
-     * Instance</a> in the <i>Amazon RDS User Guide.</i> to see the impact of enabling or disabling
+     * Instance</a> in the <i>Amazon RDS User Guide</i> to see the impact of enabling or disabling
      * <code>ApplyImmediately</code> for each modified parameter and to determine when the changes are applied.
      * </p>
      */
@@ -279,7 +279,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * It must be a value from 0 to 35. It can't be set to 0 if the DB instance is a source to read replicas. It can't
-     * be set to 0 or 35 for an RDS Custom DB instance.
+     * be set to 0 or 35 for an RDS Custom for Oracle DB instance.
      * </p>
      * </li>
      * <li>
@@ -394,7 +394,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * or call <code>DescribeDBEngineVersions</code>.
      * </p>
      * <p>
-     * In RDS Custom, this parameter is supported for read replicas only if they are in the
+     * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
      */
@@ -741,9 +741,6 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Changes to the <code>PubliclyAccessible</code> parameter are applied immediately regardless of the value of the
      * <code>ApplyImmediately</code> parameter.
-     * </p>
-     * <p>
-     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private Boolean publiclyAccessible;
@@ -1231,7 +1228,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom for Oracle.
      * </p>
      * <p>
      * Default: Uses existing setting
@@ -1248,7 +1245,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
      *        </p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        This setting doesn't apply to RDS Custom for Oracle.
      *        </p>
      *        <p>
      *        Default: Uses existing setting
@@ -1271,7 +1268,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom for Oracle.
      * </p>
      * <p>
      * Default: Uses existing setting
@@ -1287,7 +1284,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
      *         </p>
      *         <p>
-     *         This setting doesn't apply to RDS Custom.
+     *         This setting doesn't apply to RDS Custom for Oracle.
      *         </p>
      *         <p>
      *         Default: Uses existing setting
@@ -1310,7 +1307,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
      * </p>
      * <p>
-     * This setting doesn't apply to RDS Custom.
+     * This setting doesn't apply to RDS Custom for Oracle.
      * </p>
      * <p>
      * Default: Uses existing setting
@@ -1327,7 +1324,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        next maintenance window, unless <code>ApplyImmediately</code> is enabled for this request.
      *        </p>
      *        <p>
-     *        This setting doesn't apply to RDS Custom.
+     *        This setting doesn't apply to RDS Custom for Oracle.
      *        </p>
      *        <p>
      *        Default: Uses existing setting
@@ -1907,20 +1904,20 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * parameter changes can cause an outage and are applied on the next call to <a>RebootDBInstance</a>, or the next
      * failure reboot. Review the table of parameters in <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Modifying a DB
-     * Instance</a> in the <i>Amazon RDS User Guide.</i> to see the impact of enabling or disabling
+     * Instance</a> in the <i>Amazon RDS User Guide</i> to see the impact of enabling or disabling
      * <code>ApplyImmediately</code> for each modified parameter and to determine when the changes are applied.
      * </p>
      * 
      * @param applyImmediately
      *        A value that indicates whether the modifications in this request and any pending modifications are
      *        asynchronously applied as soon as possible, regardless of the <code>PreferredMaintenanceWindow</code>
-     *        setting for the DB instance. By default, this parameter is disabled. </p>
+     *        setting for the DB instance. By default, this parameter is disabled.</p>
      *        <p>
      *        If this parameter is disabled, changes to the DB instance are applied during the next maintenance window.
      *        Some parameter changes can cause an outage and are applied on the next call to <a>RebootDBInstance</a>, or
      *        the next failure reboot. Review the table of parameters in <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Modifying
-     *        a DB Instance</a> in the <i>Amazon RDS User Guide.</i> to see the impact of enabling or disabling
+     *        a DB Instance</a> in the <i>Amazon RDS User Guide</i> to see the impact of enabling or disabling
      *        <code>ApplyImmediately</code> for each modified parameter and to determine when the changes are applied.
      */
 
@@ -1939,19 +1936,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * parameter changes can cause an outage and are applied on the next call to <a>RebootDBInstance</a>, or the next
      * failure reboot. Review the table of parameters in <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Modifying a DB
-     * Instance</a> in the <i>Amazon RDS User Guide.</i> to see the impact of enabling or disabling
+     * Instance</a> in the <i>Amazon RDS User Guide</i> to see the impact of enabling or disabling
      * <code>ApplyImmediately</code> for each modified parameter and to determine when the changes are applied.
      * </p>
      * 
      * @return A value that indicates whether the modifications in this request and any pending modifications are
      *         asynchronously applied as soon as possible, regardless of the <code>PreferredMaintenanceWindow</code>
-     *         setting for the DB instance. By default, this parameter is disabled. </p>
+     *         setting for the DB instance. By default, this parameter is disabled.</p>
      *         <p>
      *         If this parameter is disabled, changes to the DB instance are applied during the next maintenance window.
      *         Some parameter changes can cause an outage and are applied on the next call to <a>RebootDBInstance</a>,
      *         or the next failure reboot. Review the table of parameters in <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html"
-     *         >Modifying a DB Instance</a> in the <i>Amazon RDS User Guide.</i> to see the impact of enabling or
+     *         >Modifying a DB Instance</a> in the <i>Amazon RDS User Guide</i> to see the impact of enabling or
      *         disabling <code>ApplyImmediately</code> for each modified parameter and to determine when the changes are
      *         applied.
      */
@@ -1971,20 +1968,20 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * parameter changes can cause an outage and are applied on the next call to <a>RebootDBInstance</a>, or the next
      * failure reboot. Review the table of parameters in <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Modifying a DB
-     * Instance</a> in the <i>Amazon RDS User Guide.</i> to see the impact of enabling or disabling
+     * Instance</a> in the <i>Amazon RDS User Guide</i> to see the impact of enabling or disabling
      * <code>ApplyImmediately</code> for each modified parameter and to determine when the changes are applied.
      * </p>
      * 
      * @param applyImmediately
      *        A value that indicates whether the modifications in this request and any pending modifications are
      *        asynchronously applied as soon as possible, regardless of the <code>PreferredMaintenanceWindow</code>
-     *        setting for the DB instance. By default, this parameter is disabled. </p>
+     *        setting for the DB instance. By default, this parameter is disabled.</p>
      *        <p>
      *        If this parameter is disabled, changes to the DB instance are applied during the next maintenance window.
      *        Some parameter changes can cause an outage and are applied on the next call to <a>RebootDBInstance</a>, or
      *        the next failure reboot. Review the table of parameters in <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Modifying
-     *        a DB Instance</a> in the <i>Amazon RDS User Guide.</i> to see the impact of enabling or disabling
+     *        a DB Instance</a> in the <i>Amazon RDS User Guide</i> to see the impact of enabling or disabling
      *        <code>ApplyImmediately</code> for each modified parameter and to determine when the changes are applied.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2005,19 +2002,19 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * parameter changes can cause an outage and are applied on the next call to <a>RebootDBInstance</a>, or the next
      * failure reboot. Review the table of parameters in <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Modifying a DB
-     * Instance</a> in the <i>Amazon RDS User Guide.</i> to see the impact of enabling or disabling
+     * Instance</a> in the <i>Amazon RDS User Guide</i> to see the impact of enabling or disabling
      * <code>ApplyImmediately</code> for each modified parameter and to determine when the changes are applied.
      * </p>
      * 
      * @return A value that indicates whether the modifications in this request and any pending modifications are
      *         asynchronously applied as soon as possible, regardless of the <code>PreferredMaintenanceWindow</code>
-     *         setting for the DB instance. By default, this parameter is disabled. </p>
+     *         setting for the DB instance. By default, this parameter is disabled.</p>
      *         <p>
      *         If this parameter is disabled, changes to the DB instance are applied during the next maintenance window.
      *         Some parameter changes can cause an outage and are applied on the next call to <a>RebootDBInstance</a>,
      *         or the next failure reboot. Review the table of parameters in <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html"
-     *         >Modifying a DB Instance</a> in the <i>Amazon RDS User Guide.</i> to see the impact of enabling or
+     *         >Modifying a DB Instance</a> in the <i>Amazon RDS User Guide</i> to see the impact of enabling or
      *         disabling <code>ApplyImmediately</code> for each modified parameter and to determine when the changes are
      *         applied.
      */
@@ -2568,7 +2565,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * It must be a value from 0 to 35. It can't be set to 0 if the DB instance is a source to read replicas. It can't
-     * be set to 0 or 35 for an RDS Custom DB instance.
+     * be set to 0 or 35 for an RDS Custom for Oracle DB instance.
      * </p>
      * </li>
      * <li>
@@ -2613,7 +2610,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        It must be a value from 0 to 35. It can't be set to 0 if the DB instance is a source to read replicas. It
-     *        can't be set to 0 or 35 for an RDS Custom DB instance.
+     *        can't be set to 0 or 35 for an RDS Custom for Oracle DB instance.
      *        </p>
      *        </li>
      *        <li>
@@ -2665,7 +2662,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * It must be a value from 0 to 35. It can't be set to 0 if the DB instance is a source to read replicas. It can't
-     * be set to 0 or 35 for an RDS Custom DB instance.
+     * be set to 0 or 35 for an RDS Custom for Oracle DB instance.
      * </p>
      * </li>
      * <li>
@@ -2709,7 +2706,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <li>
      *         <p>
      *         It must be a value from 0 to 35. It can't be set to 0 if the DB instance is a source to read replicas. It
-     *         can't be set to 0 or 35 for an RDS Custom DB instance.
+     *         can't be set to 0 or 35 for an RDS Custom for Oracle DB instance.
      *         </p>
      *         </li>
      *         <li>
@@ -2761,7 +2758,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * It must be a value from 0 to 35. It can't be set to 0 if the DB instance is a source to read replicas. It can't
-     * be set to 0 or 35 for an RDS Custom DB instance.
+     * be set to 0 or 35 for an RDS Custom for Oracle DB instance.
      * </p>
      * </li>
      * <li>
@@ -2806,7 +2803,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        It must be a value from 0 to 35. It can't be set to 0 if the DB instance is a source to read replicas. It
-     *        can't be set to 0 or 35 for an RDS Custom DB instance.
+     *        can't be set to 0 or 35 for an RDS Custom for Oracle DB instance.
      *        </p>
      *        </li>
      *        <li>
@@ -3363,7 +3360,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * or call <code>DescribeDBEngineVersions</code>.
      * </p>
      * <p>
-     * In RDS Custom, this parameter is supported for read replicas only if they are in the
+     * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
      * 
@@ -3382,7 +3379,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <code>CreateDBInstance</code>, or call <code>DescribeDBEngineVersions</code>.
      *        </p>
      *        <p>
-     *        In RDS Custom, this parameter is supported for read replicas only if they are in the
+     *        In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      *        <code>PATCH_DB_FAILURE</code> lifecycle.
      */
 
@@ -3407,7 +3404,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * or call <code>DescribeDBEngineVersions</code>.
      * </p>
      * <p>
-     * In RDS Custom, this parameter is supported for read replicas only if they are in the
+     * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
      * 
@@ -3425,7 +3422,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <code>CreateDBInstance</code>, or call <code>DescribeDBEngineVersions</code>.
      *         </p>
      *         <p>
-     *         In RDS Custom, this parameter is supported for read replicas only if they are in the
+     *         In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      *         <code>PATCH_DB_FAILURE</code> lifecycle.
      */
 
@@ -3450,7 +3447,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * or call <code>DescribeDBEngineVersions</code>.
      * </p>
      * <p>
-     * In RDS Custom, this parameter is supported for read replicas only if they are in the
+     * In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      * <code>PATCH_DB_FAILURE</code> lifecycle.
      * </p>
      * 
@@ -3469,7 +3466,7 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <code>CreateDBInstance</code>, or call <code>DescribeDBEngineVersions</code>.
      *        </p>
      *        <p>
-     *        In RDS Custom, this parameter is supported for read replicas only if they are in the
+     *        In RDS Custom for Oracle, this parameter is supported for read replicas only if they are in the
      *        <code>PATCH_DB_FAILURE</code> lifecycle.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -5576,9 +5573,6 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Changes to the <code>PubliclyAccessible</code> parameter are applied immediately regardless of the value of the
      * <code>ApplyImmediately</code> parameter.
      * </p>
-     * <p>
-     * This setting doesn't apply to RDS Custom.
-     * </p>
      * 
      * @param publiclyAccessible
      *        A value that indicates whether the DB instance is publicly accessible. </p>
@@ -5600,9 +5594,6 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        Changes to the <code>PubliclyAccessible</code> parameter are applied immediately regardless of the value
      *        of the <code>ApplyImmediately</code> parameter.
-     *        </p>
-     *        <p>
-     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setPubliclyAccessible(Boolean publiclyAccessible) {
@@ -5631,9 +5622,6 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Changes to the <code>PubliclyAccessible</code> parameter are applied immediately regardless of the value of the
      * <code>ApplyImmediately</code> parameter.
      * </p>
-     * <p>
-     * This setting doesn't apply to RDS Custom.
-     * </p>
      * 
      * @return A value that indicates whether the DB instance is publicly accessible. </p>
      *         <p>
@@ -5654,9 +5642,6 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         Changes to the <code>PubliclyAccessible</code> parameter are applied immediately regardless of the value
      *         of the <code>ApplyImmediately</code> parameter.
-     *         </p>
-     *         <p>
-     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean getPubliclyAccessible() {
@@ -5685,9 +5670,6 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Changes to the <code>PubliclyAccessible</code> parameter are applied immediately regardless of the value of the
      * <code>ApplyImmediately</code> parameter.
      * </p>
-     * <p>
-     * This setting doesn't apply to RDS Custom.
-     * </p>
      * 
      * @param publiclyAccessible
      *        A value that indicates whether the DB instance is publicly accessible. </p>
@@ -5709,9 +5691,6 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        Changes to the <code>PubliclyAccessible</code> parameter are applied immediately regardless of the value
      *        of the <code>ApplyImmediately</code> parameter.
-     *        </p>
-     *        <p>
-     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5742,9 +5721,6 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Changes to the <code>PubliclyAccessible</code> parameter are applied immediately regardless of the value of the
      * <code>ApplyImmediately</code> parameter.
      * </p>
-     * <p>
-     * This setting doesn't apply to RDS Custom.
-     * </p>
      * 
      * @return A value that indicates whether the DB instance is publicly accessible. </p>
      *         <p>
@@ -5765,9 +5741,6 @@ public class ModifyDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         Changes to the <code>PubliclyAccessible</code> parameter are applied immediately regardless of the value
      *         of the <code>ApplyImmediately</code> parameter.
-     *         </p>
-     *         <p>
-     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean isPubliclyAccessible() {

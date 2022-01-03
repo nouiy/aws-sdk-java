@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -87,6 +87,40 @@ public class AWSGreengrassV2AsyncClient extends AWSGreengrassV2Client implements
      */
     public ExecutorService getExecutorService() {
         return executorService;
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateServiceRoleToAccountResult> associateServiceRoleToAccountAsync(AssociateServiceRoleToAccountRequest request) {
+
+        return associateServiceRoleToAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateServiceRoleToAccountResult> associateServiceRoleToAccountAsync(
+            final AssociateServiceRoleToAccountRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateServiceRoleToAccountRequest, AssociateServiceRoleToAccountResult> asyncHandler) {
+        final AssociateServiceRoleToAccountRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateServiceRoleToAccountResult>() {
+            @Override
+            public AssociateServiceRoleToAccountResult call() throws Exception {
+                AssociateServiceRoleToAccountResult result = null;
+
+                try {
+                    result = executeAssociateServiceRoleToAccount(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
     }
 
     @Override
@@ -358,6 +392,41 @@ public class AWSGreengrassV2AsyncClient extends AWSGreengrassV2Client implements
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateServiceRoleFromAccountResult> disassociateServiceRoleFromAccountAsync(
+            DisassociateServiceRoleFromAccountRequest request) {
+
+        return disassociateServiceRoleFromAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateServiceRoleFromAccountResult> disassociateServiceRoleFromAccountAsync(
+            final DisassociateServiceRoleFromAccountRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateServiceRoleFromAccountRequest, DisassociateServiceRoleFromAccountResult> asyncHandler) {
+        final DisassociateServiceRoleFromAccountRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateServiceRoleFromAccountResult>() {
+            @Override
+            public DisassociateServiceRoleFromAccountResult call() throws Exception {
+                DisassociateServiceRoleFromAccountResult result = null;
+
+                try {
+                    result = executeDisassociateServiceRoleFromAccount(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetComponentResult> getComponentAsync(GetComponentRequest request) {
 
         return getComponentAsync(request, null);
@@ -424,6 +493,39 @@ public class AWSGreengrassV2AsyncClient extends AWSGreengrassV2Client implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetConnectivityInfoResult> getConnectivityInfoAsync(GetConnectivityInfoRequest request) {
+
+        return getConnectivityInfoAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetConnectivityInfoResult> getConnectivityInfoAsync(final GetConnectivityInfoRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetConnectivityInfoRequest, GetConnectivityInfoResult> asyncHandler) {
+        final GetConnectivityInfoRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetConnectivityInfoResult>() {
+            @Override
+            public GetConnectivityInfoResult call() throws Exception {
+                GetConnectivityInfoResult result = null;
+
+                try {
+                    result = executeGetConnectivityInfo(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetCoreDeviceResult> getCoreDeviceAsync(GetCoreDeviceRequest request) {
 
         return getCoreDeviceAsync(request, null);
@@ -474,6 +576,39 @@ public class AWSGreengrassV2AsyncClient extends AWSGreengrassV2Client implements
 
                 try {
                     result = executeGetDeployment(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceRoleForAccountResult> getServiceRoleForAccountAsync(GetServiceRoleForAccountRequest request) {
+
+        return getServiceRoleForAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetServiceRoleForAccountResult> getServiceRoleForAccountAsync(final GetServiceRoleForAccountRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetServiceRoleForAccountRequest, GetServiceRoleForAccountResult> asyncHandler) {
+        final GetServiceRoleForAccountRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetServiceRoleForAccountResult>() {
+            @Override
+            public GetServiceRoleForAccountResult call() throws Exception {
+                GetServiceRoleForAccountResult result = null;
+
+                try {
+                    result = executeGetServiceRoleForAccount(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -839,6 +974,39 @@ public class AWSGreengrassV2AsyncClient extends AWSGreengrassV2Client implements
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConnectivityInfoResult> updateConnectivityInfoAsync(UpdateConnectivityInfoRequest request) {
+
+        return updateConnectivityInfoAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateConnectivityInfoResult> updateConnectivityInfoAsync(final UpdateConnectivityInfoRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateConnectivityInfoRequest, UpdateConnectivityInfoResult> asyncHandler) {
+        final UpdateConnectivityInfoRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateConnectivityInfoResult>() {
+            @Override
+            public UpdateConnectivityInfoResult call() throws Exception {
+                UpdateConnectivityInfoResult result = null;
+
+                try {
+                    result = executeUpdateConnectivityInfo(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

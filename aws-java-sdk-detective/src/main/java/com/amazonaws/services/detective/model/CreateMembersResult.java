@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -25,29 +25,31 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The set of member account invitation requests that Detective was able to process. This includes accounts that are
-     * being verified, that failed verification, and that passed verification and are being sent an invitation.
+     * The set of member account invitation or enablement requests that Detective was able to process. This includes
+     * accounts that are being verified, that failed verification, and that passed verification and are being sent an
+     * invitation or are being enabled.
      * </p>
      */
     private java.util.List<MemberDetail> members;
     /**
      * <p>
-     * The list of accounts for which Detective was unable to process the invitation request. For each account, the list
-     * provides the reason why the request could not be processed. The list includes accounts that are already member
-     * accounts in the behavior graph.
+     * The list of accounts for which Detective was unable to process the invitation or enablement request. For each
+     * account, the list provides the reason why the request could not be processed. The list includes accounts that are
+     * already member accounts in the behavior graph.
      * </p>
      */
     private java.util.List<UnprocessedAccount> unprocessedAccounts;
 
     /**
      * <p>
-     * The set of member account invitation requests that Detective was able to process. This includes accounts that are
-     * being verified, that failed verification, and that passed verification and are being sent an invitation.
+     * The set of member account invitation or enablement requests that Detective was able to process. This includes
+     * accounts that are being verified, that failed verification, and that passed verification and are being sent an
+     * invitation or are being enabled.
      * </p>
      * 
-     * @return The set of member account invitation requests that Detective was able to process. This includes accounts
-     *         that are being verified, that failed verification, and that passed verification and are being sent an
-     *         invitation.
+     * @return The set of member account invitation or enablement requests that Detective was able to process. This
+     *         includes accounts that are being verified, that failed verification, and that passed verification and are
+     *         being sent an invitation or are being enabled.
      */
 
     public java.util.List<MemberDetail> getMembers() {
@@ -56,14 +58,15 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The set of member account invitation requests that Detective was able to process. This includes accounts that are
-     * being verified, that failed verification, and that passed verification and are being sent an invitation.
+     * The set of member account invitation or enablement requests that Detective was able to process. This includes
+     * accounts that are being verified, that failed verification, and that passed verification and are being sent an
+     * invitation or are being enabled.
      * </p>
      * 
      * @param members
-     *        The set of member account invitation requests that Detective was able to process. This includes accounts
-     *        that are being verified, that failed verification, and that passed verification and are being sent an
-     *        invitation.
+     *        The set of member account invitation or enablement requests that Detective was able to process. This
+     *        includes accounts that are being verified, that failed verification, and that passed verification and are
+     *        being sent an invitation or are being enabled.
      */
 
     public void setMembers(java.util.Collection<MemberDetail> members) {
@@ -77,8 +80,9 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The set of member account invitation requests that Detective was able to process. This includes accounts that are
-     * being verified, that failed verification, and that passed verification and are being sent an invitation.
+     * The set of member account invitation or enablement requests that Detective was able to process. This includes
+     * accounts that are being verified, that failed verification, and that passed verification and are being sent an
+     * invitation or are being enabled.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -87,9 +91,9 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      * 
      * @param members
-     *        The set of member account invitation requests that Detective was able to process. This includes accounts
-     *        that are being verified, that failed verification, and that passed verification and are being sent an
-     *        invitation.
+     *        The set of member account invitation or enablement requests that Detective was able to process. This
+     *        includes accounts that are being verified, that failed verification, and that passed verification and are
+     *        being sent an invitation or are being enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,14 +109,15 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The set of member account invitation requests that Detective was able to process. This includes accounts that are
-     * being verified, that failed verification, and that passed verification and are being sent an invitation.
+     * The set of member account invitation or enablement requests that Detective was able to process. This includes
+     * accounts that are being verified, that failed verification, and that passed verification and are being sent an
+     * invitation or are being enabled.
      * </p>
      * 
      * @param members
-     *        The set of member account invitation requests that Detective was able to process. This includes accounts
-     *        that are being verified, that failed verification, and that passed verification and are being sent an
-     *        invitation.
+     *        The set of member account invitation or enablement requests that Detective was able to process. This
+     *        includes accounts that are being verified, that failed verification, and that passed verification and are
+     *        being sent an invitation or are being enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -123,14 +128,14 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of accounts for which Detective was unable to process the invitation request. For each account, the list
-     * provides the reason why the request could not be processed. The list includes accounts that are already member
-     * accounts in the behavior graph.
+     * The list of accounts for which Detective was unable to process the invitation or enablement request. For each
+     * account, the list provides the reason why the request could not be processed. The list includes accounts that are
+     * already member accounts in the behavior graph.
      * </p>
      * 
-     * @return The list of accounts for which Detective was unable to process the invitation request. For each account,
-     *         the list provides the reason why the request could not be processed. The list includes accounts that are
-     *         already member accounts in the behavior graph.
+     * @return The list of accounts for which Detective was unable to process the invitation or enablement request. For
+     *         each account, the list provides the reason why the request could not be processed. The list includes
+     *         accounts that are already member accounts in the behavior graph.
      */
 
     public java.util.List<UnprocessedAccount> getUnprocessedAccounts() {
@@ -139,15 +144,15 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of accounts for which Detective was unable to process the invitation request. For each account, the list
-     * provides the reason why the request could not be processed. The list includes accounts that are already member
-     * accounts in the behavior graph.
+     * The list of accounts for which Detective was unable to process the invitation or enablement request. For each
+     * account, the list provides the reason why the request could not be processed. The list includes accounts that are
+     * already member accounts in the behavior graph.
      * </p>
      * 
      * @param unprocessedAccounts
-     *        The list of accounts for which Detective was unable to process the invitation request. For each account,
-     *        the list provides the reason why the request could not be processed. The list includes accounts that are
-     *        already member accounts in the behavior graph.
+     *        The list of accounts for which Detective was unable to process the invitation or enablement request. For
+     *        each account, the list provides the reason why the request could not be processed. The list includes
+     *        accounts that are already member accounts in the behavior graph.
      */
 
     public void setUnprocessedAccounts(java.util.Collection<UnprocessedAccount> unprocessedAccounts) {
@@ -161,9 +166,9 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of accounts for which Detective was unable to process the invitation request. For each account, the list
-     * provides the reason why the request could not be processed. The list includes accounts that are already member
-     * accounts in the behavior graph.
+     * The list of accounts for which Detective was unable to process the invitation or enablement request. For each
+     * account, the list provides the reason why the request could not be processed. The list includes accounts that are
+     * already member accounts in the behavior graph.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -172,9 +177,9 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      * 
      * @param unprocessedAccounts
-     *        The list of accounts for which Detective was unable to process the invitation request. For each account,
-     *        the list provides the reason why the request could not be processed. The list includes accounts that are
-     *        already member accounts in the behavior graph.
+     *        The list of accounts for which Detective was unable to process the invitation or enablement request. For
+     *        each account, the list provides the reason why the request could not be processed. The list includes
+     *        accounts that are already member accounts in the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -190,15 +195,15 @@ public class CreateMembersResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The list of accounts for which Detective was unable to process the invitation request. For each account, the list
-     * provides the reason why the request could not be processed. The list includes accounts that are already member
-     * accounts in the behavior graph.
+     * The list of accounts for which Detective was unable to process the invitation or enablement request. For each
+     * account, the list provides the reason why the request could not be processed. The list includes accounts that are
+     * already member accounts in the behavior graph.
      * </p>
      * 
      * @param unprocessedAccounts
-     *        The list of accounts for which Detective was unable to process the invitation request. For each account,
-     *        the list provides the reason why the request could not be processed. The list includes accounts that are
-     *        already member accounts in the behavior graph.
+     *        The list of accounts for which Detective was unable to process the invitation or enablement request. For
+     *        each account, the list provides the reason why the request could not be processed. The list includes
+     *        accounts that are already member accounts in the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

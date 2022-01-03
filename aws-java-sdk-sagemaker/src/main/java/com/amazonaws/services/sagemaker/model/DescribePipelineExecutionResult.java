@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -77,6 +77,12 @@ public class DescribePipelineExecutionResult extends com.amazonaws.AmazonWebServ
     private UserContext createdBy;
 
     private UserContext lastModifiedBy;
+    /**
+     * <p>
+     * The parallelism configuration applied to the pipeline.
+     * </p>
+     */
+    private ParallelismConfiguration parallelismConfiguration;
 
     /**
      * <p>
@@ -496,6 +502,46 @@ public class DescribePipelineExecutionResult extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The parallelism configuration applied to the pipeline.
+     * </p>
+     * 
+     * @param parallelismConfiguration
+     *        The parallelism configuration applied to the pipeline.
+     */
+
+    public void setParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
+        this.parallelismConfiguration = parallelismConfiguration;
+    }
+
+    /**
+     * <p>
+     * The parallelism configuration applied to the pipeline.
+     * </p>
+     * 
+     * @return The parallelism configuration applied to the pipeline.
+     */
+
+    public ParallelismConfiguration getParallelismConfiguration() {
+        return this.parallelismConfiguration;
+    }
+
+    /**
+     * <p>
+     * The parallelism configuration applied to the pipeline.
+     * </p>
+     * 
+     * @param parallelismConfiguration
+     *        The parallelism configuration applied to the pipeline.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribePipelineExecutionResult withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
+        setParallelismConfiguration(parallelismConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -528,7 +574,9 @@ public class DescribePipelineExecutionResult extends com.amazonaws.AmazonWebServ
         if (getCreatedBy() != null)
             sb.append("CreatedBy: ").append(getCreatedBy()).append(",");
         if (getLastModifiedBy() != null)
-            sb.append("LastModifiedBy: ").append(getLastModifiedBy());
+            sb.append("LastModifiedBy: ").append(getLastModifiedBy()).append(",");
+        if (getParallelismConfiguration() != null)
+            sb.append("ParallelismConfiguration: ").append(getParallelismConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -587,6 +635,10 @@ public class DescribePipelineExecutionResult extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getLastModifiedBy() != null && other.getLastModifiedBy().equals(this.getLastModifiedBy()) == false)
             return false;
+        if (other.getParallelismConfiguration() == null ^ this.getParallelismConfiguration() == null)
+            return false;
+        if (other.getParallelismConfiguration() != null && other.getParallelismConfiguration().equals(this.getParallelismConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -606,6 +658,7 @@ public class DescribePipelineExecutionResult extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedBy() == null) ? 0 : getLastModifiedBy().hashCode());
+        hashCode = prime * hashCode + ((getParallelismConfiguration() == null) ? 0 : getParallelismConfiguration().hashCode());
         return hashCode;
     }
 

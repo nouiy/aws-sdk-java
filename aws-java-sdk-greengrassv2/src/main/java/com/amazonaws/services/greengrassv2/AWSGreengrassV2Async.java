@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -48,11 +48,60 @@ public interface AWSGreengrassV2Async extends AWSGreengrassV2 {
 
     /**
      * <p>
-     * Associate a list of client devices with a core device. Use this API operation to specify which client devices can
-     * discover a core device through cloud discovery. With cloud discovery, client devices connect to IoT Greengrass to
-     * retrieve associated core devices' connectivity information and certificates. For more information, see <a
-     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-cloud-discovery.html">Configure cloud
-     * discovery</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
+     * Associates a Greengrass service role with IoT Greengrass for your Amazon Web Services account in this Amazon Web
+     * Services Region. IoT Greengrass uses this role to verify the identity of client devices and manage core device
+     * connectivity information. The role must include the <a href=
+     * "https://console.aws.amazon.com/iam/home#/policies/arn:awsiam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy"
+     * >AWSGreengrassResourceAccessRolePolicy</a> managed policy or a custom policy that defines equivalent permissions
+     * for the IoT Greengrass features that you use. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-service-role.html">Greengrass service
+     * role</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param associateServiceRoleToAccountRequest
+     * @return A Java Future containing the result of the AssociateServiceRoleToAccount operation returned by the
+     *         service.
+     * @sample AWSGreengrassV2Async.AssociateServiceRoleToAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/AssociateServiceRoleToAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateServiceRoleToAccountResult> associateServiceRoleToAccountAsync(
+            AssociateServiceRoleToAccountRequest associateServiceRoleToAccountRequest);
+
+    /**
+     * <p>
+     * Associates a Greengrass service role with IoT Greengrass for your Amazon Web Services account in this Amazon Web
+     * Services Region. IoT Greengrass uses this role to verify the identity of client devices and manage core device
+     * connectivity information. The role must include the <a href=
+     * "https://console.aws.amazon.com/iam/home#/policies/arn:awsiam::aws:policy/service-role/AWSGreengrassResourceAccessRolePolicy"
+     * >AWSGreengrassResourceAccessRolePolicy</a> managed policy or a custom policy that defines equivalent permissions
+     * for the IoT Greengrass features that you use. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-service-role.html">Greengrass service
+     * role</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param associateServiceRoleToAccountRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateServiceRoleToAccount operation returned by the
+     *         service.
+     * @sample AWSGreengrassV2AsyncHandler.AssociateServiceRoleToAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/AssociateServiceRoleToAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateServiceRoleToAccountResult> associateServiceRoleToAccountAsync(
+            AssociateServiceRoleToAccountRequest associateServiceRoleToAccountRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateServiceRoleToAccountRequest, AssociateServiceRoleToAccountResult> asyncHandler);
+
+    /**
+     * <p>
+     * Associates a list of client devices with a core device. Use this API operation to specify which client devices
+     * can discover a core device through cloud discovery. With cloud discovery, client devices connect to IoT
+     * Greengrass to retrieve associated core devices' connectivity information and certificates. For more information,
+     * see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-cloud-discovery.html">Configure
+     * cloud discovery</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -77,11 +126,11 @@ public interface AWSGreengrassV2Async extends AWSGreengrassV2 {
 
     /**
      * <p>
-     * Associate a list of client devices with a core device. Use this API operation to specify which client devices can
-     * discover a core device through cloud discovery. With cloud discovery, client devices connect to IoT Greengrass to
-     * retrieve associated core devices' connectivity information and certificates. For more information, see <a
-     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-cloud-discovery.html">Configure cloud
-     * discovery</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
+     * Associates a list of client devices with a core device. Use this API operation to specify which client devices
+     * can discover a core device through cloud discovery. With cloud discovery, client devices connect to IoT
+     * Greengrass to retrieve associated core devices' connectivity information and certificates. For more information,
+     * see <a href="https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-cloud-discovery.html">Configure
+     * cloud discovery</a> in the <i>IoT Greengrass V2 Developer Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -111,7 +160,7 @@ public interface AWSGreengrassV2Async extends AWSGreengrassV2 {
 
     /**
      * <p>
-     * Disassociate a list of client devices from a core device. After you disassociate a client device from a core
+     * Disassociates a list of client devices from a core device. After you disassociate a client device from a core
      * device, the client device won't be able to use cloud discovery to retrieve the core device's connectivity
      * information and certificates.
      * </p>
@@ -129,7 +178,7 @@ public interface AWSGreengrassV2Async extends AWSGreengrassV2 {
 
     /**
      * <p>
-     * Disassociate a list of client devices from a core device. After you disassociate a client device from a core
+     * Disassociates a list of client devices from a core device. After you disassociate a client device from a core
      * device, the client device won't be able to use cloud discovery to retrieve the core device's connectivity
      * information and certificates.
      * </p>
@@ -538,6 +587,49 @@ public interface AWSGreengrassV2Async extends AWSGreengrassV2 {
 
     /**
      * <p>
+     * Disassociates the Greengrass service role from IoT Greengrass for your Amazon Web Services account in this Amazon
+     * Web Services Region. Without a service role, IoT Greengrass can't verify the identity of client devices or manage
+     * core device connectivity information. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-service-role.html">Greengrass service
+     * role</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param disassociateServiceRoleFromAccountRequest
+     * @return A Java Future containing the result of the DisassociateServiceRoleFromAccount operation returned by the
+     *         service.
+     * @sample AWSGreengrassV2Async.DisassociateServiceRoleFromAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/DisassociateServiceRoleFromAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateServiceRoleFromAccountResult> disassociateServiceRoleFromAccountAsync(
+            DisassociateServiceRoleFromAccountRequest disassociateServiceRoleFromAccountRequest);
+
+    /**
+     * <p>
+     * Disassociates the Greengrass service role from IoT Greengrass for your Amazon Web Services account in this Amazon
+     * Web Services Region. Without a service role, IoT Greengrass can't verify the identity of client devices or manage
+     * core device connectivity information. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-service-role.html">Greengrass service
+     * role</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param disassociateServiceRoleFromAccountRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateServiceRoleFromAccount operation returned by the
+     *         service.
+     * @sample AWSGreengrassV2AsyncHandler.DisassociateServiceRoleFromAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/DisassociateServiceRoleFromAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateServiceRoleFromAccountResult> disassociateServiceRoleFromAccountAsync(
+            DisassociateServiceRoleFromAccountRequest disassociateServiceRoleFromAccountRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateServiceRoleFromAccountRequest, DisassociateServiceRoleFromAccountResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets the recipe for a version of a component. Core devices can call this operation to identify the artifacts and
      * requirements to install a component.
      * </p>
@@ -606,6 +698,55 @@ public interface AWSGreengrassV2Async extends AWSGreengrassV2 {
 
     /**
      * <p>
+     * Retrieves connectivity information for a Greengrass core device.
+     * </p>
+     * <p>
+     * Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the
+     * core device. When a client device calls the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">Greengrass discovery
+     * API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can
+     * connect. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client
+     * devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param getConnectivityInfoRequest
+     * @return A Java Future containing the result of the GetConnectivityInfo operation returned by the service.
+     * @sample AWSGreengrassV2Async.GetConnectivityInfo
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetConnectivityInfo"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConnectivityInfoResult> getConnectivityInfoAsync(GetConnectivityInfoRequest getConnectivityInfoRequest);
+
+    /**
+     * <p>
+     * Retrieves connectivity information for a Greengrass core device.
+     * </p>
+     * <p>
+     * Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the
+     * core device. When a client device calls the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">Greengrass discovery
+     * API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can
+     * connect. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client
+     * devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param getConnectivityInfoRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetConnectivityInfo operation returned by the service.
+     * @sample AWSGreengrassV2AsyncHandler.GetConnectivityInfo
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetConnectivityInfo"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetConnectivityInfoResult> getConnectivityInfoAsync(GetConnectivityInfoRequest getConnectivityInfoRequest,
+            com.amazonaws.handlers.AsyncHandler<GetConnectivityInfoRequest, GetConnectivityInfoResult> asyncHandler);
+
+    /**
+     * <p>
      * Retrieves metadata for a Greengrass core device.
      * </p>
      * 
@@ -665,6 +806,45 @@ public interface AWSGreengrassV2Async extends AWSGreengrassV2 {
      */
     java.util.concurrent.Future<GetDeploymentResult> getDeploymentAsync(GetDeploymentRequest getDeploymentRequest,
             com.amazonaws.handlers.AsyncHandler<GetDeploymentRequest, GetDeploymentResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets the service role associated with IoT Greengrass for your Amazon Web Services account in this Amazon Web
+     * Services Region. IoT Greengrass uses this role to verify the identity of client devices and manage core device
+     * connectivity information. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-service-role.html">Greengrass service
+     * role</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param getServiceRoleForAccountRequest
+     * @return A Java Future containing the result of the GetServiceRoleForAccount operation returned by the service.
+     * @sample AWSGreengrassV2Async.GetServiceRoleForAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetServiceRoleForAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetServiceRoleForAccountResult> getServiceRoleForAccountAsync(GetServiceRoleForAccountRequest getServiceRoleForAccountRequest);
+
+    /**
+     * <p>
+     * Gets the service role associated with IoT Greengrass for your Amazon Web Services account in this Amazon Web
+     * Services Region. IoT Greengrass uses this role to verify the identity of client devices and manage core device
+     * connectivity information. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-service-role.html">Greengrass service
+     * role</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param getServiceRoleForAccountRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetServiceRoleForAccount operation returned by the service.
+     * @sample AWSGreengrassV2AsyncHandler.GetServiceRoleForAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/GetServiceRoleForAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetServiceRoleForAccountResult> getServiceRoleForAccountAsync(GetServiceRoleForAccountRequest getServiceRoleForAccountRequest,
+            com.amazonaws.handlers.AsyncHandler<GetServiceRoleForAccountRequest, GetServiceRoleForAccountResult> asyncHandler);
 
     /**
      * <p>
@@ -1056,5 +1236,54 @@ public interface AWSGreengrassV2Async extends AWSGreengrassV2 {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates connectivity information for a Greengrass core device.
+     * </p>
+     * <p>
+     * Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the
+     * core device. When a client device calls the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">Greengrass discovery
+     * API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can
+     * connect. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client
+     * devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param updateConnectivityInfoRequest
+     * @return A Java Future containing the result of the UpdateConnectivityInfo operation returned by the service.
+     * @sample AWSGreengrassV2Async.UpdateConnectivityInfo
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/UpdateConnectivityInfo"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConnectivityInfoResult> updateConnectivityInfoAsync(UpdateConnectivityInfoRequest updateConnectivityInfoRequest);
+
+    /**
+     * <p>
+     * Updates connectivity information for a Greengrass core device.
+     * </p>
+     * <p>
+     * Connectivity information includes endpoints and ports where client devices can connect to an MQTT broker on the
+     * core device. When a client device calls the <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-discover-api.html">Greengrass discovery
+     * API</a>, IoT Greengrass returns connectivity information for all of the core devices where the client device can
+     * connect. For more information, see <a
+     * href="https://docs.aws.amazon.com/greengrass/v2/developerguide/connect-client-devices.html">Connect client
+     * devices to core devices</a> in the <i>IoT Greengrass Version 2 Developer Guide</i>.
+     * </p>
+     * 
+     * @param updateConnectivityInfoRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateConnectivityInfo operation returned by the service.
+     * @sample AWSGreengrassV2AsyncHandler.UpdateConnectivityInfo
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/greengrassv2-2020-11-30/UpdateConnectivityInfo"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateConnectivityInfoResult> updateConnectivityInfoAsync(UpdateConnectivityInfoRequest updateConnectivityInfoRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateConnectivityInfoRequest, UpdateConnectivityInfoResult> asyncHandler);
 
 }

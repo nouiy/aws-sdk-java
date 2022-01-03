@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -45,24 +45,35 @@ public class ModifyDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * An array of parameter names, values, and the application methods for the parameter update. At least one parameter
-     * name, value, and application method method must be supplied; later arguments are optional. A maximum of 20
-     * parameters can be modified in a single request.
+     * name, value, and application method must be supplied; later arguments are optional. A maximum of 20 parameters
+     * can be modified in a single request.
      * </p>
      * <p>
      * Valid Values (for the application method): <code>immediate | pending-reboot</code>
      * </p>
-     * <note>
      * <p>
      * You can use the <code>immediate</code> value with dynamic parameters only. You can use the
      * <code>pending-reboot</code> value for both dynamic and static parameters.
      * </p>
      * <p>
      * When the application method is <code>immediate</code>, changes to dynamic parameters are applied immediately to
-     * the DB instances associated with the parameter group. When the application method is <code>pending-reboot</code>,
-     * changes to dynamic and static parameters are applied after a reboot without failover to the DB instances
-     * associated with the parameter group.
+     * the DB instances associated with the parameter group.
+     * </p>
+     * <p>
+     * When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are applied
+     * after a reboot without failover to the DB instances associated with the parameter group.
+     * </p>
+     * <note>
+     * <p>
+     * You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     * <code>immediate</code>.
      * </p>
      * </note>
+     * <p>
+     * For more information on modifying DB parameters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working with DB
+     * parameter groups</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Parameter> parameters;
 
@@ -90,22 +101,33 @@ public class ModifyDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      *        </li>
      * @param parameters
      *        An array of parameter names, values, and the application methods for the parameter update. At least one
-     *        parameter name, value, and application method method must be supplied; later arguments are optional. A
-     *        maximum of 20 parameters can be modified in a single request.</p>
+     *        parameter name, value, and application method must be supplied; later arguments are optional. A maximum of
+     *        20 parameters can be modified in a single request.</p>
      *        <p>
      *        Valid Values (for the application method): <code>immediate | pending-reboot</code>
      *        </p>
-     *        <note>
      *        <p>
      *        You can use the <code>immediate</code> value with dynamic parameters only. You can use the <code>
      *        pending-reboot</code> value for both dynamic and static parameters.
      *        </p>
      *        <p>
      *        When the application method is <code>immediate</code>, changes to dynamic parameters are applied
-     *        immediately to the DB instances associated with the parameter group. When the application method is <code>
-     *        pending-reboot</code>, changes to dynamic and static parameters are applied after a reboot without
-     *        failover to the DB instances associated with the parameter group.
+     *        immediately to the DB instances associated with the parameter group.
      *        </p>
+     *        <p>
+     *        When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are
+     *        applied after a reboot without failover to the DB instances associated with the parameter group.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     *        <code>immediate</code>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information on modifying DB parameters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working
+     *        with DB parameter groups</a> in the <i>Amazon RDS User Guide</i>.
      */
     public ModifyDBParameterGroupRequest(String dBParameterGroupName, java.util.List<Parameter> parameters) {
         setDBParameterGroupName(dBParameterGroupName);
@@ -212,42 +234,64 @@ public class ModifyDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * An array of parameter names, values, and the application methods for the parameter update. At least one parameter
-     * name, value, and application method method must be supplied; later arguments are optional. A maximum of 20
-     * parameters can be modified in a single request.
+     * name, value, and application method must be supplied; later arguments are optional. A maximum of 20 parameters
+     * can be modified in a single request.
      * </p>
      * <p>
      * Valid Values (for the application method): <code>immediate | pending-reboot</code>
      * </p>
-     * <note>
      * <p>
      * You can use the <code>immediate</code> value with dynamic parameters only. You can use the
      * <code>pending-reboot</code> value for both dynamic and static parameters.
      * </p>
      * <p>
      * When the application method is <code>immediate</code>, changes to dynamic parameters are applied immediately to
-     * the DB instances associated with the parameter group. When the application method is <code>pending-reboot</code>,
-     * changes to dynamic and static parameters are applied after a reboot without failover to the DB instances
-     * associated with the parameter group.
+     * the DB instances associated with the parameter group.
+     * </p>
+     * <p>
+     * When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are applied
+     * after a reboot without failover to the DB instances associated with the parameter group.
+     * </p>
+     * <note>
+     * <p>
+     * You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     * <code>immediate</code>.
      * </p>
      * </note>
+     * <p>
+     * For more information on modifying DB parameters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working with DB
+     * parameter groups</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
      * 
      * @return An array of parameter names, values, and the application methods for the parameter update. At least one
-     *         parameter name, value, and application method method must be supplied; later arguments are optional. A
-     *         maximum of 20 parameters can be modified in a single request.</p>
+     *         parameter name, value, and application method must be supplied; later arguments are optional. A maximum
+     *         of 20 parameters can be modified in a single request.</p>
      *         <p>
      *         Valid Values (for the application method): <code>immediate | pending-reboot</code>
      *         </p>
-     *         <note>
      *         <p>
      *         You can use the <code>immediate</code> value with dynamic parameters only. You can use the
      *         <code>pending-reboot</code> value for both dynamic and static parameters.
      *         </p>
      *         <p>
      *         When the application method is <code>immediate</code>, changes to dynamic parameters are applied
-     *         immediately to the DB instances associated with the parameter group. When the application method is
-     *         <code>pending-reboot</code>, changes to dynamic and static parameters are applied after a reboot without
-     *         failover to the DB instances associated with the parameter group.
+     *         immediately to the DB instances associated with the parameter group.
      *         </p>
+     *         <p>
+     *         When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are
+     *         applied after a reboot without failover to the DB instances associated with the parameter group.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     *         <code>immediate</code>.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         For more information on modifying DB parameters, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working
+     *         with DB parameter groups</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public java.util.List<Parameter> getParameters() {
@@ -260,43 +304,65 @@ public class ModifyDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * An array of parameter names, values, and the application methods for the parameter update. At least one parameter
-     * name, value, and application method method must be supplied; later arguments are optional. A maximum of 20
-     * parameters can be modified in a single request.
+     * name, value, and application method must be supplied; later arguments are optional. A maximum of 20 parameters
+     * can be modified in a single request.
      * </p>
      * <p>
      * Valid Values (for the application method): <code>immediate | pending-reboot</code>
      * </p>
-     * <note>
      * <p>
      * You can use the <code>immediate</code> value with dynamic parameters only. You can use the
      * <code>pending-reboot</code> value for both dynamic and static parameters.
      * </p>
      * <p>
      * When the application method is <code>immediate</code>, changes to dynamic parameters are applied immediately to
-     * the DB instances associated with the parameter group. When the application method is <code>pending-reboot</code>,
-     * changes to dynamic and static parameters are applied after a reboot without failover to the DB instances
-     * associated with the parameter group.
+     * the DB instances associated with the parameter group.
+     * </p>
+     * <p>
+     * When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are applied
+     * after a reboot without failover to the DB instances associated with the parameter group.
+     * </p>
+     * <note>
+     * <p>
+     * You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     * <code>immediate</code>.
      * </p>
      * </note>
+     * <p>
+     * For more information on modifying DB parameters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working with DB
+     * parameter groups</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
      * 
      * @param parameters
      *        An array of parameter names, values, and the application methods for the parameter update. At least one
-     *        parameter name, value, and application method method must be supplied; later arguments are optional. A
-     *        maximum of 20 parameters can be modified in a single request.</p>
+     *        parameter name, value, and application method must be supplied; later arguments are optional. A maximum of
+     *        20 parameters can be modified in a single request.</p>
      *        <p>
      *        Valid Values (for the application method): <code>immediate | pending-reboot</code>
      *        </p>
-     *        <note>
      *        <p>
      *        You can use the <code>immediate</code> value with dynamic parameters only. You can use the
      *        <code>pending-reboot</code> value for both dynamic and static parameters.
      *        </p>
      *        <p>
      *        When the application method is <code>immediate</code>, changes to dynamic parameters are applied
-     *        immediately to the DB instances associated with the parameter group. When the application method is
-     *        <code>pending-reboot</code>, changes to dynamic and static parameters are applied after a reboot without
-     *        failover to the DB instances associated with the parameter group.
+     *        immediately to the DB instances associated with the parameter group.
      *        </p>
+     *        <p>
+     *        When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are
+     *        applied after a reboot without failover to the DB instances associated with the parameter group.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     *        <code>immediate</code>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information on modifying DB parameters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working
+     *        with DB parameter groups</a> in the <i>Amazon RDS User Guide</i>.
      */
 
     public void setParameters(java.util.Collection<Parameter> parameters) {
@@ -311,24 +377,35 @@ public class ModifyDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * An array of parameter names, values, and the application methods for the parameter update. At least one parameter
-     * name, value, and application method method must be supplied; later arguments are optional. A maximum of 20
-     * parameters can be modified in a single request.
+     * name, value, and application method must be supplied; later arguments are optional. A maximum of 20 parameters
+     * can be modified in a single request.
      * </p>
      * <p>
      * Valid Values (for the application method): <code>immediate | pending-reboot</code>
      * </p>
-     * <note>
      * <p>
      * You can use the <code>immediate</code> value with dynamic parameters only. You can use the
      * <code>pending-reboot</code> value for both dynamic and static parameters.
      * </p>
      * <p>
      * When the application method is <code>immediate</code>, changes to dynamic parameters are applied immediately to
-     * the DB instances associated with the parameter group. When the application method is <code>pending-reboot</code>,
-     * changes to dynamic and static parameters are applied after a reboot without failover to the DB instances
-     * associated with the parameter group.
+     * the DB instances associated with the parameter group.
+     * </p>
+     * <p>
+     * When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are applied
+     * after a reboot without failover to the DB instances associated with the parameter group.
+     * </p>
+     * <note>
+     * <p>
+     * You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     * <code>immediate</code>.
      * </p>
      * </note>
+     * <p>
+     * For more information on modifying DB parameters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working with DB
+     * parameter groups</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setParameters(java.util.Collection)} or {@link #withParameters(java.util.Collection)} if you want to
@@ -337,22 +414,33 @@ public class ModifyDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param parameters
      *        An array of parameter names, values, and the application methods for the parameter update. At least one
-     *        parameter name, value, and application method method must be supplied; later arguments are optional. A
-     *        maximum of 20 parameters can be modified in a single request.</p>
+     *        parameter name, value, and application method must be supplied; later arguments are optional. A maximum of
+     *        20 parameters can be modified in a single request.</p>
      *        <p>
      *        Valid Values (for the application method): <code>immediate | pending-reboot</code>
      *        </p>
-     *        <note>
      *        <p>
      *        You can use the <code>immediate</code> value with dynamic parameters only. You can use the
      *        <code>pending-reboot</code> value for both dynamic and static parameters.
      *        </p>
      *        <p>
      *        When the application method is <code>immediate</code>, changes to dynamic parameters are applied
-     *        immediately to the DB instances associated with the parameter group. When the application method is
-     *        <code>pending-reboot</code>, changes to dynamic and static parameters are applied after a reboot without
-     *        failover to the DB instances associated with the parameter group.
+     *        immediately to the DB instances associated with the parameter group.
      *        </p>
+     *        <p>
+     *        When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are
+     *        applied after a reboot without failover to the DB instances associated with the parameter group.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     *        <code>immediate</code>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information on modifying DB parameters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working
+     *        with DB parameter groups</a> in the <i>Amazon RDS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -369,43 +457,65 @@ public class ModifyDBParameterGroupRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * An array of parameter names, values, and the application methods for the parameter update. At least one parameter
-     * name, value, and application method method must be supplied; later arguments are optional. A maximum of 20
-     * parameters can be modified in a single request.
+     * name, value, and application method must be supplied; later arguments are optional. A maximum of 20 parameters
+     * can be modified in a single request.
      * </p>
      * <p>
      * Valid Values (for the application method): <code>immediate | pending-reboot</code>
      * </p>
-     * <note>
      * <p>
      * You can use the <code>immediate</code> value with dynamic parameters only. You can use the
      * <code>pending-reboot</code> value for both dynamic and static parameters.
      * </p>
      * <p>
      * When the application method is <code>immediate</code>, changes to dynamic parameters are applied immediately to
-     * the DB instances associated with the parameter group. When the application method is <code>pending-reboot</code>,
-     * changes to dynamic and static parameters are applied after a reboot without failover to the DB instances
-     * associated with the parameter group.
+     * the DB instances associated with the parameter group.
+     * </p>
+     * <p>
+     * When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are applied
+     * after a reboot without failover to the DB instances associated with the parameter group.
+     * </p>
+     * <note>
+     * <p>
+     * You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     * <code>immediate</code>.
      * </p>
      * </note>
+     * <p>
+     * For more information on modifying DB parameters, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working with DB
+     * parameter groups</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
      * 
      * @param parameters
      *        An array of parameter names, values, and the application methods for the parameter update. At least one
-     *        parameter name, value, and application method method must be supplied; later arguments are optional. A
-     *        maximum of 20 parameters can be modified in a single request.</p>
+     *        parameter name, value, and application method must be supplied; later arguments are optional. A maximum of
+     *        20 parameters can be modified in a single request.</p>
      *        <p>
      *        Valid Values (for the application method): <code>immediate | pending-reboot</code>
      *        </p>
-     *        <note>
      *        <p>
      *        You can use the <code>immediate</code> value with dynamic parameters only. You can use the
      *        <code>pending-reboot</code> value for both dynamic and static parameters.
      *        </p>
      *        <p>
      *        When the application method is <code>immediate</code>, changes to dynamic parameters are applied
-     *        immediately to the DB instances associated with the parameter group. When the application method is
-     *        <code>pending-reboot</code>, changes to dynamic and static parameters are applied after a reboot without
-     *        failover to the DB instances associated with the parameter group.
+     *        immediately to the DB instances associated with the parameter group.
      *        </p>
+     *        <p>
+     *        When the application method is <code>pending-reboot</code>, changes to dynamic and static parameters are
+     *        applied after a reboot without failover to the DB instances associated with the parameter group.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You can't use <code>pending-reboot</code> with dynamic parameters on RDS for SQL Server DB instances. Use
+     *        <code>immediate</code>.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For more information on modifying DB parameters, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html">Working
+     *        with DB parameter groups</a> in the <i>Amazon RDS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

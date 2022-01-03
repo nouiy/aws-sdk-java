@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -36,7 +36,8 @@ public class Graph implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * The date and time that the behavior graph was created. The value is in milliseconds since the epoch.
+     * The date and time that the behavior graph was created. The value is an ISO8601 formatted string. For example,
+     * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      */
     private java.util.Date createdTime;
@@ -83,11 +84,13 @@ public class Graph implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that the behavior graph was created. The value is in milliseconds since the epoch.
+     * The date and time that the behavior graph was created. The value is an ISO8601 formatted string. For example,
+     * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param createdTime
-     *        The date and time that the behavior graph was created. The value is in milliseconds since the epoch.
+     *        The date and time that the behavior graph was created. The value is an ISO8601 formatted string. For
+     *        example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public void setCreatedTime(java.util.Date createdTime) {
@@ -96,10 +99,12 @@ public class Graph implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that the behavior graph was created. The value is in milliseconds since the epoch.
+     * The date and time that the behavior graph was created. The value is an ISO8601 formatted string. For example,
+     * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
-     * @return The date and time that the behavior graph was created. The value is in milliseconds since the epoch.
+     * @return The date and time that the behavior graph was created. The value is an ISO8601 formatted string. For
+     *         example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public java.util.Date getCreatedTime() {
@@ -108,11 +113,13 @@ public class Graph implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that the behavior graph was created. The value is in milliseconds since the epoch.
+     * The date and time that the behavior graph was created. The value is an ISO8601 formatted string. For example,
+     * <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param createdTime
-     *        The date and time that the behavior graph was created. The value is in milliseconds since the epoch.
+     *        The date and time that the behavior graph was created. The value is an ISO8601 formatted string. For
+     *        example, <code>2021-08-18T16:35:56.284Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

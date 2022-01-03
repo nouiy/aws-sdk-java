@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -50,6 +50,8 @@ public class PipelineMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedBy").build();
     private static final MarshallingInfo<StructuredPojo> LASTMODIFIEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedBy").build();
+    private static final MarshallingInfo<StructuredPojo> PARALLELISMCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParallelismConfiguration").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
 
@@ -80,6 +82,7 @@ public class PipelineMarshaller {
             protocolMarshaller.marshall(pipeline.getLastRunTime(), LASTRUNTIME_BINDING);
             protocolMarshaller.marshall(pipeline.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(pipeline.getLastModifiedBy(), LASTMODIFIEDBY_BINDING);
+            protocolMarshaller.marshall(pipeline.getParallelismConfiguration(), PARALLELISMCONFIGURATION_BINDING);
             protocolMarshaller.marshall(pipeline.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

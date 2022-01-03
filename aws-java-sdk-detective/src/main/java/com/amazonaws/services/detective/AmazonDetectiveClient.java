@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -51,21 +51,32 @@ import com.amazonaws.services.detective.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * Detective uses machine learning and purpose-built visualizations to help you analyze and investigate security issues
- * across your Amazon Web Services (AWS) workloads. Detective automatically extracts time-based events such as login
- * attempts, API calls, and network traffic from AWS CloudTrail and Amazon Virtual Private Cloud (Amazon VPC) flow logs.
- * It also extracts findings detected by Amazon GuardDuty.
+ * Detective uses machine learning and purpose-built visualizations to help you to analyze and investigate security
+ * issues across your Amazon Web Services (Amazon Web Services) workloads. Detective automatically extracts time-based
+ * events such as login attempts, API calls, and network traffic from CloudTrail and Amazon Virtual Private Cloud
+ * (Amazon VPC) flow logs. It also extracts findings detected by Amazon GuardDuty.
  * </p>
  * <p>
  * The Detective API primarily supports the creation and management of behavior graphs. A behavior graph contains the
  * extracted data from a set of member accounts, and is created and managed by an administrator account.
  * </p>
  * <p>
- * Every behavior graph is specific to a Region. You can only use the API to manage graphs that belong to the Region
- * that is associated with the currently selected endpoint.
+ * To add a member account to the behavior graph, the administrator account sends an invitation to the account. When the
+ * account accepts the invitation, it becomes a member account in the behavior graph.
  * </p>
  * <p>
- * A Detective administrator account can use the Detective API to do the following:
+ * Detective is also integrated with Organizations. The organization management account designates the Detective
+ * administrator account for the organization. That account becomes the administrator account for the organization
+ * behavior graph. The Detective administrator account can enable any organization account as a member account in the
+ * organization behavior graph. The organization accounts do not receive invitations. The Detective administrator
+ * account can also invite other accounts to the organization behavior graph.
+ * </p>
+ * <p>
+ * Every behavior graph is specific to a Region. You can only use the API to manage behavior graphs that belong to the
+ * Region that is associated with the currently selected endpoint.
+ * </p>
+ * <p>
+ * The administrator account for a behavior graph can use the Detective API to do the following:
  * </p>
  * <ul>
  * <li>
@@ -88,9 +99,33 @@ import com.amazonaws.services.detective.model.transform.*;
  * Remove member accounts from a behavior graph.
  * </p>
  * </li>
+ * <li>
+ * <p>
+ * Apply tags to a behavior graph.
+ * </p>
+ * </li>
  * </ul>
  * <p>
- * A member account can use the Detective API to do the following:
+ * The organization management account can use the Detective API to select the delegated administrator for Detective.
+ * </p>
+ * <p>
+ * The Detective administrator account for an organization can use the Detective API to do the following:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Perform all of the functions of an administrator account.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Determine whether to automatically enable new organization accounts as member accounts in the organization behavior
+ * graph.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * An invited member account can use the Detective API to do the following:
  * </p>
  * <ul>
  * <li>
@@ -151,20 +186,23 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
                     .withSupportsIon(false)
                     .withContentTypeOverride("application/json")
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.detective.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.detective.model.transform.ConflictExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
                                     com.amazonaws.services.detective.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.detective.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
                                     com.amazonaws.services.detective.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.detective.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("TooManyRequestsException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.detective.model.transform.TooManyRequestsExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.detective.model.AmazonDetectiveException.class));
 
     public static AmazonDetectiveClientBuilder builder() {
@@ -319,7 +357,7 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
      *         <li>
      *         <p>
      *         The request would cause the number of member accounts in the behavior graph to exceed the maximum
-     *         allowed. A behavior graph cannot have more than 1000 member accounts.
+     *         allowed. A behavior graph cannot have more than 1200 member accounts.
      *         </p>
      *         </li>
      *         <li>
@@ -383,8 +421,14 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Sends a request to invite the specified AWS accounts to be member accounts in the behavior graph. This operation
-     * can only be called by the administrator account for a behavior graph.
+     * <code>CreateMembers</code> is used to send invitations to accounts. For the organization behavior graph, the
+     * Detective administrator account uses <code>CreateMembers</code> to enable organization accounts as member
+     * accounts.
+     * </p>
+     * <p>
+     * For invited accounts, <code>CreateMembers</code> sends a request to invite the specified Amazon Web Services
+     * accounts to be member accounts in the behavior graph. This operation can only be called by the administrator
+     * account for a behavior graph.
      * </p>
      * <p>
      * <code>CreateMembers</code> verifies the accounts and then invites the verified accounts. The administrator can
@@ -392,7 +436,11 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
      * administrator manages their member accounts centrally.
      * </p>
      * <p>
-     * The request provides the behavior graph ARN and the list of accounts to invite.
+     * For organization accounts in the organization behavior graph, <code>CreateMembers</code> attempts to enable the
+     * accounts. The organization accounts do not receive invitations.
+     * </p>
+     * <p>
+     * The request provides the behavior graph ARN and the list of accounts to invite or to enable.
      * </p>
      * <p>
      * The response separates the requested accounts into two lists:
@@ -400,9 +448,10 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
      * <ul>
      * <li>
      * <p>
-     * The accounts that <code>CreateMembers</code> was able to start the verification for. This list includes member
-     * accounts that are being verified, that have passed verification and are to be invited, and that have failed
-     * verification.
+     * The accounts that <code>CreateMembers</code> was able to process. For invited accounts, includes member accounts
+     * that are being verified, that have passed verification and are to be invited, and that have failed verification.
+     * For organization accounts in the organization behavior graph, includes accounts that can be enabled and that
+     * cannot be enabled.
      * </p>
      * </li>
      * <li>
@@ -427,7 +476,7 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
      *         <li>
      *         <p>
      *         The request would cause the number of member accounts in the behavior graph to exceed the maximum
-     *         allowed. A behavior graph cannot have more than 1000 member accounts.
+     *         allowed. A behavior graph cannot have more than 1200 member accounts.
      *         </p>
      *         </li>
      *         <li>
@@ -491,8 +540,8 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Disables the specified behavior graph and queues it to be deleted. This operation removes the graph from each
-     * member account's list of behavior graphs.
+     * Disables the specified behavior graph and queues it to be deleted. This operation removes the behavior graph from
+     * each member account's list of behavior graphs.
      * </p>
      * <p>
      * <code>DeleteGraph</code> can only be called by the administrator account for a behavior graph.
@@ -556,10 +605,21 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Deletes one or more member accounts from the administrator account's behavior graph. This operation can only be
-     * called by a Detective administrator account. That account cannot use <code>DeleteMembers</code> to delete their
-     * own account from the behavior graph. To disable a behavior graph, the administrator account uses the
-     * <code>DeleteGraph</code> API method.
+     * Removes the specified member accounts from the behavior graph. The removed accounts no longer contribute data to
+     * the behavior graph. This operation can only be called by the administrator account for the behavior graph.
+     * </p>
+     * <p>
+     * For invited accounts, the removed accounts are deleted from the list of accounts in the behavior graph. To
+     * restore the account, the administrator account must send another invitation.
+     * </p>
+     * <p>
+     * For organization accounts in the organization behavior graph, the Detective administrator account can always
+     * enable the organization account again. Organization accounts that are not enabled as member accounts are not
+     * included in the <code>ListMembers</code> results for the organization behavior graph.
+     * </p>
+     * <p>
+     * An administrator account cannot use <code>DeleteMembers</code> to remove their own account from the behavior
+     * graph. To disable a behavior graph, the administrator account uses the <code>DeleteGraph</code> API method.
      * </p>
      * 
      * @param deleteMembersRequest
@@ -622,8 +682,150 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Removes the member account from the specified behavior graph. This operation can only be called by a member
-     * account that has the <code>ENABLED</code> status.
+     * Returns information about the configuration for the organization behavior graph. Currently indicates whether to
+     * automatically enable new organization accounts as member accounts.
+     * </p>
+     * <p>
+     * Can only be called by the Detective administrator account for the organization.
+     * </p>
+     * 
+     * @param describeOrganizationConfigurationRequest
+     * @return Result of the DescribeOrganizationConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.DescribeOrganizationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/DescribeOrganizationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeOrganizationConfigurationResult describeOrganizationConfiguration(DescribeOrganizationConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeOrganizationConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final DescribeOrganizationConfigurationResult executeDescribeOrganizationConfiguration(
+            DescribeOrganizationConfigurationRequest describeOrganizationConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeOrganizationConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeOrganizationConfigurationRequest> request = null;
+        Response<DescribeOrganizationConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeOrganizationConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeOrganizationConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeOrganizationConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeOrganizationConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeOrganizationConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Removes the Detective administrator account for the organization in the current Region. Deletes the behavior
+     * graph for that account.
+     * </p>
+     * <p>
+     * Can only be called by the organization management account. Before you can select a different Detective
+     * administrator account, you must remove the Detective administrator account in all Regions.
+     * </p>
+     * 
+     * @param disableOrganizationAdminAccountRequest
+     * @return Result of the DisableOrganizationAdminAccount operation returned by the service.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.DisableOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/DisableOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisableOrganizationAdminAccountResult disableOrganizationAdminAccount(DisableOrganizationAdminAccountRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableOrganizationAdminAccount(request);
+    }
+
+    @SdkInternalApi
+    final DisableOrganizationAdminAccountResult executeDisableOrganizationAdminAccount(
+            DisableOrganizationAdminAccountRequest disableOrganizationAdminAccountRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableOrganizationAdminAccountRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableOrganizationAdminAccountRequest> request = null;
+        Response<DisableOrganizationAdminAccountResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableOrganizationAdminAccountRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(disableOrganizationAdminAccountRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableOrganizationAdminAccount");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisableOrganizationAdminAccountResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DisableOrganizationAdminAccountResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Removes the member account from the specified behavior graph. This operation can only be called by an invited
+     * member account that has the <code>ENABLED</code> status.
+     * </p>
+     * <p>
+     * <code>DisassociateMembership</code> cannot be called by an organization account in the organization behavior
+     * graph. For the organization behavior graph, the Detective administrator account determines which organization
+     * accounts to enable or disable as member accounts.
      * </p>
      * 
      * @param disassociateMembershipRequest
@@ -675,6 +877,80 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
             HttpResponseHandler<AmazonWebServiceResponse<DisassociateMembershipResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DisassociateMembershipResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Designates the Detective administrator account for the organization in the current Region.
+     * </p>
+     * <p>
+     * If the account does not have Detective enabled, then enables Detective for that account and creates a new
+     * behavior graph.
+     * </p>
+     * <p>
+     * Can only be called by the organization management account.
+     * </p>
+     * <p>
+     * The Detective administrator account for an organization must be the same in all Regions. If you already
+     * designated a Detective administrator account in another Region, then you must designate the same account.
+     * </p>
+     * 
+     * @param enableOrganizationAdminAccountRequest
+     * @return Result of the EnableOrganizationAdminAccount operation returned by the service.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.EnableOrganizationAdminAccount
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/EnableOrganizationAdminAccount"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public EnableOrganizationAdminAccountResult enableOrganizationAdminAccount(EnableOrganizationAdminAccountRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableOrganizationAdminAccount(request);
+    }
+
+    @SdkInternalApi
+    final EnableOrganizationAdminAccountResult executeEnableOrganizationAdminAccount(EnableOrganizationAdminAccountRequest enableOrganizationAdminAccountRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableOrganizationAdminAccountRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableOrganizationAdminAccountRequest> request = null;
+        Response<EnableOrganizationAdminAccountResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableOrganizationAdminAccountRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(enableOrganizationAdminAccountRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableOrganizationAdminAccount");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<EnableOrganizationAdminAccountResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new EnableOrganizationAdminAccountResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -813,7 +1089,7 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
     /**
      * <p>
      * Retrieves the list of open and accepted behavior graph invitations for the member account. This operation can
-     * only be called by a member account.
+     * only be called by an invited member account.
      * </p>
      * <p>
      * Open invitations are invitations that the member account has not responded to.
@@ -879,8 +1155,14 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Retrieves the list of member accounts for a behavior graph. Does not return member accounts that were removed
-     * from the behavior graph.
+     * Retrieves the list of member accounts for a behavior graph.
+     * </p>
+     * <p>
+     * For invited accounts, the results do not include member accounts that were removed from the behavior graph.
+     * </p>
+     * <p>
+     * For the organization behavior graph, the results do not include organization accounts that the Detective
+     * administrator account has not enabled as member accounts.
      * </p>
      * 
      * @param listMembersRequest
@@ -929,6 +1211,70 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<ListMembersResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListMembersResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information about the Detective administrator account for an organization. Can only be called by the
+     * organization management account.
+     * </p>
+     * 
+     * @param listOrganizationAdminAccountsRequest
+     * @return Result of the ListOrganizationAdminAccounts operation returned by the service.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.ListOrganizationAdminAccounts
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/ListOrganizationAdminAccounts"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListOrganizationAdminAccountsResult listOrganizationAdminAccounts(ListOrganizationAdminAccountsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListOrganizationAdminAccounts(request);
+    }
+
+    @SdkInternalApi
+    final ListOrganizationAdminAccountsResult executeListOrganizationAdminAccounts(ListOrganizationAdminAccountsRequest listOrganizationAdminAccountsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listOrganizationAdminAccountsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListOrganizationAdminAccountsRequest> request = null;
+        Response<ListOrganizationAdminAccountsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListOrganizationAdminAccountsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listOrganizationAdminAccountsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListOrganizationAdminAccounts");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListOrganizationAdminAccountsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListOrganizationAdminAccountsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1002,8 +1348,12 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Rejects an invitation to contribute the account data to a behavior graph. This operation must be called by a
-     * member account that has the <code>INVITED</code> status.
+     * Rejects an invitation to contribute the account data to a behavior graph. This operation must be called by an
+     * invited member account that has the <code>INVITED</code> status.
+     * </p>
+     * <p>
+     * <code>RejectInvitation</code> cannot be called by an organization account in the organization behavior graph. In
+     * the organization behavior graph, organization accounts do not receive an invitation.
      * </p>
      * 
      * @param rejectInvitationRequest
@@ -1099,7 +1449,7 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
      *         <li>
      *         <p>
      *         The request would cause the number of member accounts in the behavior graph to exceed the maximum
-     *         allowed. A behavior graph cannot have more than 1000 member accounts.
+     *         allowed. A behavior graph cannot have more than 1200 member accounts.
      *         </p>
      *         </li>
      *         <li>
@@ -1276,6 +1626,71 @@ public class AmazonDetectiveClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the configuration for the Organizations integration in the current Region. Can only be called by the
+     * Detective administrator account for the organization.
+     * </p>
+     * 
+     * @param updateOrganizationConfigurationRequest
+     * @return Result of the UpdateOrganizationConfiguration operation returned by the service.
+     * @throws InternalServerException
+     *         The request was valid but failed because of a problem with the service.
+     * @throws ValidationException
+     *         The request parameters are invalid.
+     * @throws TooManyRequestsException
+     *         The request cannot be completed because too many other requests are occurring at the same time.
+     * @sample AmazonDetective.UpdateOrganizationConfiguration
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/UpdateOrganizationConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateOrganizationConfigurationResult updateOrganizationConfiguration(UpdateOrganizationConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateOrganizationConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final UpdateOrganizationConfigurationResult executeUpdateOrganizationConfiguration(
+            UpdateOrganizationConfigurationRequest updateOrganizationConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateOrganizationConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateOrganizationConfigurationRequest> request = null;
+        Response<UpdateOrganizationConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateOrganizationConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateOrganizationConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Detective");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateOrganizationConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateOrganizationConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateOrganizationConfigurationResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

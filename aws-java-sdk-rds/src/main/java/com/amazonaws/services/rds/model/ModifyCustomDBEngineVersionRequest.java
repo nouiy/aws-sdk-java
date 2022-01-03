@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -33,9 +33,9 @@ public class ModifyCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
     private String engine;
     /**
      * <p>
-     * The custom engine version (CEV) that you want to modify. This option is required for RDS Custom, but optional for
-     * Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per customer per
-     * Amazon Web Services Region.
+     * The custom engine version (CEV) that you want to modify. This option is required for RDS Custom for Oracle, but
+     * optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per
+     * customer per Amazon Web Services Region.
      * </p>
      */
     private String engineVersion;
@@ -116,15 +116,15 @@ public class ModifyCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The custom engine version (CEV) that you want to modify. This option is required for RDS Custom, but optional for
-     * Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per customer per
-     * Amazon Web Services Region.
+     * The custom engine version (CEV) that you want to modify. This option is required for RDS Custom for Oracle, but
+     * optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per
+     * customer per Amazon Web Services Region.
      * </p>
      * 
      * @param engineVersion
-     *        The custom engine version (CEV) that you want to modify. This option is required for RDS Custom, but
-     *        optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique
-     *        per customer per Amazon Web Services Region.
+     *        The custom engine version (CEV) that you want to modify. This option is required for RDS Custom for
+     *        Oracle, but optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code>
+     *        is unique per customer per Amazon Web Services Region.
      */
 
     public void setEngineVersion(String engineVersion) {
@@ -133,14 +133,14 @@ public class ModifyCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The custom engine version (CEV) that you want to modify. This option is required for RDS Custom, but optional for
-     * Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per customer per
-     * Amazon Web Services Region.
+     * The custom engine version (CEV) that you want to modify. This option is required for RDS Custom for Oracle, but
+     * optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per
+     * customer per Amazon Web Services Region.
      * </p>
      * 
-     * @return The custom engine version (CEV) that you want to modify. This option is required for RDS Custom, but
-     *         optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique
-     *         per customer per Amazon Web Services Region.
+     * @return The custom engine version (CEV) that you want to modify. This option is required for RDS Custom for
+     *         Oracle, but optional for Amazon RDS. The combination of <code>Engine</code> and
+     *         <code>EngineVersion</code> is unique per customer per Amazon Web Services Region.
      */
 
     public String getEngineVersion() {
@@ -149,15 +149,15 @@ public class ModifyCustomDBEngineVersionRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The custom engine version (CEV) that you want to modify. This option is required for RDS Custom, but optional for
-     * Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per customer per
-     * Amazon Web Services Region.
+     * The custom engine version (CEV) that you want to modify. This option is required for RDS Custom for Oracle, but
+     * optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique per
+     * customer per Amazon Web Services Region.
      * </p>
      * 
      * @param engineVersion
-     *        The custom engine version (CEV) that you want to modify. This option is required for RDS Custom, but
-     *        optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code> is unique
-     *        per customer per Amazon Web Services Region.
+     *        The custom engine version (CEV) that you want to modify. This option is required for RDS Custom for
+     *        Oracle, but optional for Amazon RDS. The combination of <code>Engine</code> and <code>EngineVersion</code>
+     *        is unique per customer per Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

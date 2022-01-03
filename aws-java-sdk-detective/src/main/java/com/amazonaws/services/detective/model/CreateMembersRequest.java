@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -27,7 +27,7 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the behavior graph to invite the member accounts to contribute their data to.
+     * The ARN of the behavior graph.
      * </p>
      */
     private String graphArn;
@@ -39,27 +39,31 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String message;
     /**
      * <p>
-     * if set to <code>true</code>, then the member accounts do not receive email notifications. By default, this is set
-     * to <code>false</code>, and the member accounts receive email notifications.
+     * if set to <code>true</code>, then the invited accounts do not receive email notifications. By default, this is
+     * set to <code>false</code>, and the invited accounts receive email notifications.
+     * </p>
+     * <p>
+     * Organization accounts in the organization behavior graph do not receive email notifications.
      * </p>
      */
     private Boolean disableEmailNotification;
     /**
      * <p>
-     * The list of AWS accounts to invite to become member accounts in the behavior graph. You can invite up to 50
-     * accounts at a time. For each invited account, the account list contains the account identifier and the AWS
-     * account root user email address.
+     * The list of Amazon Web Services accounts to invite or to enable. You can invite or enable up to 50 accounts at a
+     * time. For each invited account, the account list contains the account identifier and the Amazon Web Services
+     * account root user email address. For organization accounts in the organization behavior graph, the email address
+     * is not required.
      * </p>
      */
     private java.util.List<Account> accounts;
 
     /**
      * <p>
-     * The ARN of the behavior graph to invite the member accounts to contribute their data to.
+     * The ARN of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph to invite the member accounts to contribute their data to.
+     *        The ARN of the behavior graph.
      */
 
     public void setGraphArn(String graphArn) {
@@ -68,10 +72,10 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the behavior graph to invite the member accounts to contribute their data to.
+     * The ARN of the behavior graph.
      * </p>
      * 
-     * @return The ARN of the behavior graph to invite the member accounts to contribute their data to.
+     * @return The ARN of the behavior graph.
      */
 
     public String getGraphArn() {
@@ -80,11 +84,11 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The ARN of the behavior graph to invite the member accounts to contribute their data to.
+     * The ARN of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph to invite the member accounts to contribute their data to.
+     *        The ARN of the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,13 +139,18 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * if set to <code>true</code>, then the member accounts do not receive email notifications. By default, this is set
-     * to <code>false</code>, and the member accounts receive email notifications.
+     * if set to <code>true</code>, then the invited accounts do not receive email notifications. By default, this is
+     * set to <code>false</code>, and the invited accounts receive email notifications.
+     * </p>
+     * <p>
+     * Organization accounts in the organization behavior graph do not receive email notifications.
      * </p>
      * 
      * @param disableEmailNotification
-     *        if set to <code>true</code>, then the member accounts do not receive email notifications. By default, this
-     *        is set to <code>false</code>, and the member accounts receive email notifications.
+     *        if set to <code>true</code>, then the invited accounts do not receive email notifications. By default,
+     *        this is set to <code>false</code>, and the invited accounts receive email notifications.</p>
+     *        <p>
+     *        Organization accounts in the organization behavior graph do not receive email notifications.
      */
 
     public void setDisableEmailNotification(Boolean disableEmailNotification) {
@@ -150,12 +159,17 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * if set to <code>true</code>, then the member accounts do not receive email notifications. By default, this is set
-     * to <code>false</code>, and the member accounts receive email notifications.
+     * if set to <code>true</code>, then the invited accounts do not receive email notifications. By default, this is
+     * set to <code>false</code>, and the invited accounts receive email notifications.
+     * </p>
+     * <p>
+     * Organization accounts in the organization behavior graph do not receive email notifications.
      * </p>
      * 
-     * @return if set to <code>true</code>, then the member accounts do not receive email notifications. By default,
-     *         this is set to <code>false</code>, and the member accounts receive email notifications.
+     * @return if set to <code>true</code>, then the invited accounts do not receive email notifications. By default,
+     *         this is set to <code>false</code>, and the invited accounts receive email notifications.</p>
+     *         <p>
+     *         Organization accounts in the organization behavior graph do not receive email notifications.
      */
 
     public Boolean getDisableEmailNotification() {
@@ -164,13 +178,18 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * if set to <code>true</code>, then the member accounts do not receive email notifications. By default, this is set
-     * to <code>false</code>, and the member accounts receive email notifications.
+     * if set to <code>true</code>, then the invited accounts do not receive email notifications. By default, this is
+     * set to <code>false</code>, and the invited accounts receive email notifications.
+     * </p>
+     * <p>
+     * Organization accounts in the organization behavior graph do not receive email notifications.
      * </p>
      * 
      * @param disableEmailNotification
-     *        if set to <code>true</code>, then the member accounts do not receive email notifications. By default, this
-     *        is set to <code>false</code>, and the member accounts receive email notifications.
+     *        if set to <code>true</code>, then the invited accounts do not receive email notifications. By default,
+     *        this is set to <code>false</code>, and the invited accounts receive email notifications.</p>
+     *        <p>
+     *        Organization accounts in the organization behavior graph do not receive email notifications.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -181,12 +200,17 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * if set to <code>true</code>, then the member accounts do not receive email notifications. By default, this is set
-     * to <code>false</code>, and the member accounts receive email notifications.
+     * if set to <code>true</code>, then the invited accounts do not receive email notifications. By default, this is
+     * set to <code>false</code>, and the invited accounts receive email notifications.
+     * </p>
+     * <p>
+     * Organization accounts in the organization behavior graph do not receive email notifications.
      * </p>
      * 
-     * @return if set to <code>true</code>, then the member accounts do not receive email notifications. By default,
-     *         this is set to <code>false</code>, and the member accounts receive email notifications.
+     * @return if set to <code>true</code>, then the invited accounts do not receive email notifications. By default,
+     *         this is set to <code>false</code>, and the invited accounts receive email notifications.</p>
+     *         <p>
+     *         Organization accounts in the organization behavior graph do not receive email notifications.
      */
 
     public Boolean isDisableEmailNotification() {
@@ -195,14 +219,16 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of AWS accounts to invite to become member accounts in the behavior graph. You can invite up to 50
-     * accounts at a time. For each invited account, the account list contains the account identifier and the AWS
-     * account root user email address.
+     * The list of Amazon Web Services accounts to invite or to enable. You can invite or enable up to 50 accounts at a
+     * time. For each invited account, the account list contains the account identifier and the Amazon Web Services
+     * account root user email address. For organization accounts in the organization behavior graph, the email address
+     * is not required.
      * </p>
      * 
-     * @return The list of AWS accounts to invite to become member accounts in the behavior graph. You can invite up to
-     *         50 accounts at a time. For each invited account, the account list contains the account identifier and the
-     *         AWS account root user email address.
+     * @return The list of Amazon Web Services accounts to invite or to enable. You can invite or enable up to 50
+     *         accounts at a time. For each invited account, the account list contains the account identifier and the
+     *         Amazon Web Services account root user email address. For organization accounts in the organization
+     *         behavior graph, the email address is not required.
      */
 
     public java.util.List<Account> getAccounts() {
@@ -211,15 +237,17 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of AWS accounts to invite to become member accounts in the behavior graph. You can invite up to 50
-     * accounts at a time. For each invited account, the account list contains the account identifier and the AWS
-     * account root user email address.
+     * The list of Amazon Web Services accounts to invite or to enable. You can invite or enable up to 50 accounts at a
+     * time. For each invited account, the account list contains the account identifier and the Amazon Web Services
+     * account root user email address. For organization accounts in the organization behavior graph, the email address
+     * is not required.
      * </p>
      * 
      * @param accounts
-     *        The list of AWS accounts to invite to become member accounts in the behavior graph. You can invite up to
-     *        50 accounts at a time. For each invited account, the account list contains the account identifier and the
-     *        AWS account root user email address.
+     *        The list of Amazon Web Services accounts to invite or to enable. You can invite or enable up to 50
+     *        accounts at a time. For each invited account, the account list contains the account identifier and the
+     *        Amazon Web Services account root user email address. For organization accounts in the organization
+     *        behavior graph, the email address is not required.
      */
 
     public void setAccounts(java.util.Collection<Account> accounts) {
@@ -233,9 +261,10 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of AWS accounts to invite to become member accounts in the behavior graph. You can invite up to 50
-     * accounts at a time. For each invited account, the account list contains the account identifier and the AWS
-     * account root user email address.
+     * The list of Amazon Web Services accounts to invite or to enable. You can invite or enable up to 50 accounts at a
+     * time. For each invited account, the account list contains the account identifier and the Amazon Web Services
+     * account root user email address. For organization accounts in the organization behavior graph, the email address
+     * is not required.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -244,9 +273,10 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param accounts
-     *        The list of AWS accounts to invite to become member accounts in the behavior graph. You can invite up to
-     *        50 accounts at a time. For each invited account, the account list contains the account identifier and the
-     *        AWS account root user email address.
+     *        The list of Amazon Web Services accounts to invite or to enable. You can invite or enable up to 50
+     *        accounts at a time. For each invited account, the account list contains the account identifier and the
+     *        Amazon Web Services account root user email address. For organization accounts in the organization
+     *        behavior graph, the email address is not required.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -262,15 +292,17 @@ public class CreateMembersRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The list of AWS accounts to invite to become member accounts in the behavior graph. You can invite up to 50
-     * accounts at a time. For each invited account, the account list contains the account identifier and the AWS
-     * account root user email address.
+     * The list of Amazon Web Services accounts to invite or to enable. You can invite or enable up to 50 accounts at a
+     * time. For each invited account, the account list contains the account identifier and the Amazon Web Services
+     * account root user email address. For organization accounts in the organization behavior graph, the email address
+     * is not required.
      * </p>
      * 
      * @param accounts
-     *        The list of AWS accounts to invite to become member accounts in the behavior graph. You can invite up to
-     *        50 accounts at a time. For each invited account, the account list contains the account identifier and the
-     *        AWS account root user email address.
+     *        The list of Amazon Web Services accounts to invite or to enable. You can invite or enable up to 50
+     *        accounts at a time. For each invited account, the account list contains the account identifier and the
+     *        Amazon Web Services account root user email address. For organization accounts in the organization
+     *        behavior graph, the email address is not required.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

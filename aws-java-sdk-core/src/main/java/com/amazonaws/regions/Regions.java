@@ -1,5 +1,5 @@
 /*
- * Copyright 2013-2021 Amazon Technologies, Inc.
+ * Copyright 2013-2022 Amazon Technologies, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,6 +40,7 @@ public enum Regions {
     AP_SOUTH_1("ap-south-1", "Asia Pacific (Mumbai)"),
     AP_SOUTHEAST_1("ap-southeast-1", "Asia Pacific (Singapore)"),
     AP_SOUTHEAST_2("ap-southeast-2", "Asia Pacific (Sydney)"),
+    AP_SOUTHEAST_3("ap-southeast-3", "Asia Pacific (Jakarta)"),
     AP_NORTHEAST_1("ap-northeast-1", "Asia Pacific (Tokyo)"),
     AP_NORTHEAST_2("ap-northeast-2", "Asia Pacific (Seoul)"),
     AP_NORTHEAST_3("ap-northeast-3", "Asia Pacific (Osaka)"),

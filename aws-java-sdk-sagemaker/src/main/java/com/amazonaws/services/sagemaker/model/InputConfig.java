@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -406,12 +406,15 @@ public class InputConfig implements Serializable, Cloneable, StructuredPojo {
     private String framework;
     /**
      * <p>
-     * Specifies the framework version to use.
+     * Specifies the framework version to use. This API field is only supported for the PyTorch and TensorFlow
+     * frameworks.
      * </p>
      * <p>
-     * This API field is only supported for PyTorch framework versions <code>1.4</code>, <code>1.5</code>, and
-     * <code>1.6</code> for cloud instance target devices: <code>ml_c4</code>, <code>ml_c5</code>, <code>ml_m4</code>,
-     * <code>ml_m5</code>, <code>ml_p2</code>, <code>ml_p3</code>, and <code>ml_g4dn</code>.
+     * For information about framework versions supported for cloud targets and edge devices, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-cloud.html">Cloud Supported Instance Types
+     * and Frameworks</a> and <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-devices-edge-frameworks.html">Edge Supported
+     * Frameworks</a>.
      * </p>
      */
     private String frameworkVersion;
@@ -2708,20 +2711,26 @@ public class InputConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the framework version to use.
+     * Specifies the framework version to use. This API field is only supported for the PyTorch and TensorFlow
+     * frameworks.
      * </p>
      * <p>
-     * This API field is only supported for PyTorch framework versions <code>1.4</code>, <code>1.5</code>, and
-     * <code>1.6</code> for cloud instance target devices: <code>ml_c4</code>, <code>ml_c5</code>, <code>ml_m4</code>,
-     * <code>ml_m5</code>, <code>ml_p2</code>, <code>ml_p3</code>, and <code>ml_g4dn</code>.
+     * For information about framework versions supported for cloud targets and edge devices, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-cloud.html">Cloud Supported Instance Types
+     * and Frameworks</a> and <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-devices-edge-frameworks.html">Edge Supported
+     * Frameworks</a>.
      * </p>
      * 
      * @param frameworkVersion
-     *        Specifies the framework version to use.</p>
+     *        Specifies the framework version to use. This API field is only supported for the PyTorch and TensorFlow
+     *        frameworks.</p>
      *        <p>
-     *        This API field is only supported for PyTorch framework versions <code>1.4</code>, <code>1.5</code>, and
-     *        <code>1.6</code> for cloud instance target devices: <code>ml_c4</code>, <code>ml_c5</code>,
-     *        <code>ml_m4</code>, <code>ml_m5</code>, <code>ml_p2</code>, <code>ml_p3</code>, and <code>ml_g4dn</code>.
+     *        For information about framework versions supported for cloud targets and edge devices, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-cloud.html">Cloud Supported Instance
+     *        Types and Frameworks</a> and <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-devices-edge-frameworks.html">Edge
+     *        Supported Frameworks</a>.
      */
 
     public void setFrameworkVersion(String frameworkVersion) {
@@ -2730,19 +2739,25 @@ public class InputConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the framework version to use.
+     * Specifies the framework version to use. This API field is only supported for the PyTorch and TensorFlow
+     * frameworks.
      * </p>
      * <p>
-     * This API field is only supported for PyTorch framework versions <code>1.4</code>, <code>1.5</code>, and
-     * <code>1.6</code> for cloud instance target devices: <code>ml_c4</code>, <code>ml_c5</code>, <code>ml_m4</code>,
-     * <code>ml_m5</code>, <code>ml_p2</code>, <code>ml_p3</code>, and <code>ml_g4dn</code>.
+     * For information about framework versions supported for cloud targets and edge devices, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-cloud.html">Cloud Supported Instance Types
+     * and Frameworks</a> and <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-devices-edge-frameworks.html">Edge Supported
+     * Frameworks</a>.
      * </p>
      * 
-     * @return Specifies the framework version to use.</p>
+     * @return Specifies the framework version to use. This API field is only supported for the PyTorch and TensorFlow
+     *         frameworks.</p>
      *         <p>
-     *         This API field is only supported for PyTorch framework versions <code>1.4</code>, <code>1.5</code>, and
-     *         <code>1.6</code> for cloud instance target devices: <code>ml_c4</code>, <code>ml_c5</code>,
-     *         <code>ml_m4</code>, <code>ml_m5</code>, <code>ml_p2</code>, <code>ml_p3</code>, and <code>ml_g4dn</code>.
+     *         For information about framework versions supported for cloud targets and edge devices, see <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-cloud.html">Cloud Supported Instance
+     *         Types and Frameworks</a> and <a
+     *         href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-devices-edge-frameworks.html">Edge
+     *         Supported Frameworks</a>.
      */
 
     public String getFrameworkVersion() {
@@ -2751,20 +2766,26 @@ public class InputConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the framework version to use.
+     * Specifies the framework version to use. This API field is only supported for the PyTorch and TensorFlow
+     * frameworks.
      * </p>
      * <p>
-     * This API field is only supported for PyTorch framework versions <code>1.4</code>, <code>1.5</code>, and
-     * <code>1.6</code> for cloud instance target devices: <code>ml_c4</code>, <code>ml_c5</code>, <code>ml_m4</code>,
-     * <code>ml_m5</code>, <code>ml_p2</code>, <code>ml_p3</code>, and <code>ml_g4dn</code>.
+     * For information about framework versions supported for cloud targets and edge devices, see <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-cloud.html">Cloud Supported Instance Types
+     * and Frameworks</a> and <a
+     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-devices-edge-frameworks.html">Edge Supported
+     * Frameworks</a>.
      * </p>
      * 
      * @param frameworkVersion
-     *        Specifies the framework version to use.</p>
+     *        Specifies the framework version to use. This API field is only supported for the PyTorch and TensorFlow
+     *        frameworks.</p>
      *        <p>
-     *        This API field is only supported for PyTorch framework versions <code>1.4</code>, <code>1.5</code>, and
-     *        <code>1.6</code> for cloud instance target devices: <code>ml_c4</code>, <code>ml_c5</code>,
-     *        <code>ml_m4</code>, <code>ml_m5</code>, <code>ml_p2</code>, <code>ml_p3</code>, and <code>ml_g4dn</code>.
+     *        For information about framework versions supported for cloud targets and edge devices, see <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-cloud.html">Cloud Supported Instance
+     *        Types and Frameworks</a> and <a
+     *        href="https://docs.aws.amazon.com/sagemaker/latest/dg/neo-supported-devices-edge-frameworks.html">Edge
+     *        Supported Frameworks</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

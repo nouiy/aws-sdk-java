@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -41,7 +41,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -198,7 +198,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -276,7 +276,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      *        </li>
      *        <li>
      *        <p>
-     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *        </p>
      *        </li>
      *        <li>
@@ -360,7 +360,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -437,7 +437,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      *         </li>
      *         <li>
      *         <p>
-     *         <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *         <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *         </p>
      *         </li>
      *         <li>
@@ -521,7 +521,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * </li>
      * <li>
      * <p>
-     * <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     * <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      * </p>
      * </li>
      * <li>
@@ -599,7 +599,7 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      *        </li>
      *        <li>
      *        <p>
-     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible Aurora)
+     *        <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora)
      *        </p>
      *        </li>
      *        <li>

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -30,7 +30,7 @@ public class UnprocessedAccount implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account identifier of the member account that was not processed.
+     * The Amazon Web Services account identifier of the member account that was not processed.
      * </p>
      */
     private String accountId;
@@ -43,11 +43,11 @@ public class UnprocessedAccount implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account identifier of the member account that was not processed.
+     * The Amazon Web Services account identifier of the member account that was not processed.
      * </p>
      * 
      * @param accountId
-     *        The AWS account identifier of the member account that was not processed.
+     *        The Amazon Web Services account identifier of the member account that was not processed.
      */
 
     public void setAccountId(String accountId) {
@@ -56,10 +56,10 @@ public class UnprocessedAccount implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account identifier of the member account that was not processed.
+     * The Amazon Web Services account identifier of the member account that was not processed.
      * </p>
      * 
-     * @return The AWS account identifier of the member account that was not processed.
+     * @return The Amazon Web Services account identifier of the member account that was not processed.
      */
 
     public String getAccountId() {
@@ -68,11 +68,11 @@ public class UnprocessedAccount implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account identifier of the member account that was not processed.
+     * The Amazon Web Services account identifier of the member account that was not processed.
      * </p>
      * 
      * @param accountId
-     *        The AWS account identifier of the member account that was not processed.
+     *        The Amazon Web Services account identifier of the member account that was not processed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

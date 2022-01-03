@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -43,6 +43,13 @@ public class UpdatePipelineExecutionRequest extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String pipelineExecutionDisplayName;
+    /**
+     * <p>
+     * This configuration, if specified, overrides the parallelism configuration of the parent pipeline for this
+     * specific run.
+     * </p>
+     */
+    private ParallelismConfiguration parallelismConfiguration;
 
     /**
      * <p>
@@ -165,6 +172,52 @@ public class UpdatePipelineExecutionRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * This configuration, if specified, overrides the parallelism configuration of the parent pipeline for this
+     * specific run.
+     * </p>
+     * 
+     * @param parallelismConfiguration
+     *        This configuration, if specified, overrides the parallelism configuration of the parent pipeline for this
+     *        specific run.
+     */
+
+    public void setParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
+        this.parallelismConfiguration = parallelismConfiguration;
+    }
+
+    /**
+     * <p>
+     * This configuration, if specified, overrides the parallelism configuration of the parent pipeline for this
+     * specific run.
+     * </p>
+     * 
+     * @return This configuration, if specified, overrides the parallelism configuration of the parent pipeline for this
+     *         specific run.
+     */
+
+    public ParallelismConfiguration getParallelismConfiguration() {
+        return this.parallelismConfiguration;
+    }
+
+    /**
+     * <p>
+     * This configuration, if specified, overrides the parallelism configuration of the parent pipeline for this
+     * specific run.
+     * </p>
+     * 
+     * @param parallelismConfiguration
+     *        This configuration, if specified, overrides the parallelism configuration of the parent pipeline for this
+     *        specific run.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipelineExecutionRequest withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
+        setParallelismConfiguration(parallelismConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +234,9 @@ public class UpdatePipelineExecutionRequest extends com.amazonaws.AmazonWebServi
         if (getPipelineExecutionDescription() != null)
             sb.append("PipelineExecutionDescription: ").append(getPipelineExecutionDescription()).append(",");
         if (getPipelineExecutionDisplayName() != null)
-            sb.append("PipelineExecutionDisplayName: ").append(getPipelineExecutionDisplayName());
+            sb.append("PipelineExecutionDisplayName: ").append(getPipelineExecutionDisplayName()).append(",");
+        if (getParallelismConfiguration() != null)
+            sb.append("ParallelismConfiguration: ").append(getParallelismConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +263,10 @@ public class UpdatePipelineExecutionRequest extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getPipelineExecutionDisplayName() != null && other.getPipelineExecutionDisplayName().equals(this.getPipelineExecutionDisplayName()) == false)
             return false;
+        if (other.getParallelismConfiguration() == null ^ this.getParallelismConfiguration() == null)
+            return false;
+        if (other.getParallelismConfiguration() != null && other.getParallelismConfiguration().equals(this.getParallelismConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +278,7 @@ public class UpdatePipelineExecutionRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getPipelineExecutionArn() == null) ? 0 : getPipelineExecutionArn().hashCode());
         hashCode = prime * hashCode + ((getPipelineExecutionDescription() == null) ? 0 : getPipelineExecutionDescription().hashCode());
         hashCode = prime * hashCode + ((getPipelineExecutionDisplayName() == null) ? 0 : getPipelineExecutionDisplayName().hashCode());
+        hashCode = prime * hashCode + ((getParallelismConfiguration() == null) ? 0 : getParallelismConfiguration().hashCode());
         return hashCode;
     }
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An AWS account that is the administrator account of or a member of a behavior graph.
+ * An Amazon Web Services account that is the administrator account of or a member of a behavior graph.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/Account" target="_top">AWS API
@@ -30,24 +30,24 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The account identifier of the AWS account.
+     * The account identifier of the Amazon Web Services account.
      * </p>
      */
     private String accountId;
     /**
      * <p>
-     * The AWS account root user email address for the AWS account.
+     * The Amazon Web Services account root user email address for the Amazon Web Services account.
      * </p>
      */
     private String emailAddress;
 
     /**
      * <p>
-     * The account identifier of the AWS account.
+     * The account identifier of the Amazon Web Services account.
      * </p>
      * 
      * @param accountId
-     *        The account identifier of the AWS account.
+     *        The account identifier of the Amazon Web Services account.
      */
 
     public void setAccountId(String accountId) {
@@ -56,10 +56,10 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The account identifier of the AWS account.
+     * The account identifier of the Amazon Web Services account.
      * </p>
      * 
-     * @return The account identifier of the AWS account.
+     * @return The account identifier of the Amazon Web Services account.
      */
 
     public String getAccountId() {
@@ -68,11 +68,11 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The account identifier of the AWS account.
+     * The account identifier of the Amazon Web Services account.
      * </p>
      * 
      * @param accountId
-     *        The account identifier of the AWS account.
+     *        The account identifier of the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account root user email address for the AWS account.
+     * The Amazon Web Services account root user email address for the Amazon Web Services account.
      * </p>
      * 
      * @param emailAddress
-     *        The AWS account root user email address for the AWS account.
+     *        The Amazon Web Services account root user email address for the Amazon Web Services account.
      */
 
     public void setEmailAddress(String emailAddress) {
@@ -96,10 +96,10 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account root user email address for the AWS account.
+     * The Amazon Web Services account root user email address for the Amazon Web Services account.
      * </p>
      * 
-     * @return The AWS account root user email address for the AWS account.
+     * @return The Amazon Web Services account root user email address for the Amazon Web Services account.
      */
 
     public String getEmailAddress() {
@@ -108,11 +108,11 @@ public class Account implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account root user email address for the AWS account.
+     * The Amazon Web Services account root user email address for the Amazon Web Services account.
      * </p>
      * 
      * @param emailAddress
-     *        The AWS account root user email address for the AWS account.
+     *        The Amazon Web Services account root user email address for the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

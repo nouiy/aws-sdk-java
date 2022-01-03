@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -45,6 +45,13 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
     private String pipelineDefinition;
     /**
      * <p>
+     * The location of the pipeline definition stored in Amazon S3. If specified, SageMaker will retrieve the pipeline
+     * definition from this location.
+     * </p>
+     */
+    private PipelineDefinitionS3Location pipelineDefinitionS3Location;
+    /**
+     * <p>
      * The description of the pipeline.
      * </p>
      */
@@ -55,6 +62,12 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String roleArn;
+    /**
+     * <p>
+     * If specified, it applies to all executions of this pipeline by default.
+     * </p>
+     */
+    private ParallelismConfiguration parallelismConfiguration;
 
     /**
      * <p>
@@ -178,6 +191,52 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
+     * The location of the pipeline definition stored in Amazon S3. If specified, SageMaker will retrieve the pipeline
+     * definition from this location.
+     * </p>
+     * 
+     * @param pipelineDefinitionS3Location
+     *        The location of the pipeline definition stored in Amazon S3. If specified, SageMaker will retrieve the
+     *        pipeline definition from this location.
+     */
+
+    public void setPipelineDefinitionS3Location(PipelineDefinitionS3Location pipelineDefinitionS3Location) {
+        this.pipelineDefinitionS3Location = pipelineDefinitionS3Location;
+    }
+
+    /**
+     * <p>
+     * The location of the pipeline definition stored in Amazon S3. If specified, SageMaker will retrieve the pipeline
+     * definition from this location.
+     * </p>
+     * 
+     * @return The location of the pipeline definition stored in Amazon S3. If specified, SageMaker will retrieve the
+     *         pipeline definition from this location.
+     */
+
+    public PipelineDefinitionS3Location getPipelineDefinitionS3Location() {
+        return this.pipelineDefinitionS3Location;
+    }
+
+    /**
+     * <p>
+     * The location of the pipeline definition stored in Amazon S3. If specified, SageMaker will retrieve the pipeline
+     * definition from this location.
+     * </p>
+     * 
+     * @param pipelineDefinitionS3Location
+     *        The location of the pipeline definition stored in Amazon S3. If specified, SageMaker will retrieve the
+     *        pipeline definition from this location.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipelineRequest withPipelineDefinitionS3Location(PipelineDefinitionS3Location pipelineDefinitionS3Location) {
+        setPipelineDefinitionS3Location(pipelineDefinitionS3Location);
+        return this;
+    }
+
+    /**
+     * <p>
      * The description of the pipeline.
      * </p>
      * 
@@ -257,6 +316,46 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * If specified, it applies to all executions of this pipeline by default.
+     * </p>
+     * 
+     * @param parallelismConfiguration
+     *        If specified, it applies to all executions of this pipeline by default.
+     */
+
+    public void setParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
+        this.parallelismConfiguration = parallelismConfiguration;
+    }
+
+    /**
+     * <p>
+     * If specified, it applies to all executions of this pipeline by default.
+     * </p>
+     * 
+     * @return If specified, it applies to all executions of this pipeline by default.
+     */
+
+    public ParallelismConfiguration getParallelismConfiguration() {
+        return this.parallelismConfiguration;
+    }
+
+    /**
+     * <p>
+     * If specified, it applies to all executions of this pipeline by default.
+     * </p>
+     * 
+     * @param parallelismConfiguration
+     *        If specified, it applies to all executions of this pipeline by default.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdatePipelineRequest withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
+        setParallelismConfiguration(parallelismConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -274,10 +373,14 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
             sb.append("PipelineDisplayName: ").append(getPipelineDisplayName()).append(",");
         if (getPipelineDefinition() != null)
             sb.append("PipelineDefinition: ").append(getPipelineDefinition()).append(",");
+        if (getPipelineDefinitionS3Location() != null)
+            sb.append("PipelineDefinitionS3Location: ").append(getPipelineDefinitionS3Location()).append(",");
         if (getPipelineDescription() != null)
             sb.append("PipelineDescription: ").append(getPipelineDescription()).append(",");
         if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn());
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getParallelismConfiguration() != null)
+            sb.append("ParallelismConfiguration: ").append(getParallelismConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -304,6 +407,10 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getPipelineDefinition() != null && other.getPipelineDefinition().equals(this.getPipelineDefinition()) == false)
             return false;
+        if (other.getPipelineDefinitionS3Location() == null ^ this.getPipelineDefinitionS3Location() == null)
+            return false;
+        if (other.getPipelineDefinitionS3Location() != null && other.getPipelineDefinitionS3Location().equals(this.getPipelineDefinitionS3Location()) == false)
+            return false;
         if (other.getPipelineDescription() == null ^ this.getPipelineDescription() == null)
             return false;
         if (other.getPipelineDescription() != null && other.getPipelineDescription().equals(this.getPipelineDescription()) == false)
@@ -311,6 +418,10 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
         if (other.getRoleArn() == null ^ this.getRoleArn() == null)
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
+            return false;
+        if (other.getParallelismConfiguration() == null ^ this.getParallelismConfiguration() == null)
+            return false;
+        if (other.getParallelismConfiguration() != null && other.getParallelismConfiguration().equals(this.getParallelismConfiguration()) == false)
             return false;
         return true;
     }
@@ -323,8 +434,10 @@ public class UpdatePipelineRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getPipelineName() == null) ? 0 : getPipelineName().hashCode());
         hashCode = prime * hashCode + ((getPipelineDisplayName() == null) ? 0 : getPipelineDisplayName().hashCode());
         hashCode = prime * hashCode + ((getPipelineDefinition() == null) ? 0 : getPipelineDefinition().hashCode());
+        hashCode = prime * hashCode + ((getPipelineDefinitionS3Location() == null) ? 0 : getPipelineDefinitionS3Location().hashCode());
         hashCode = prime * hashCode + ((getPipelineDescription() == null) ? 0 : getPipelineDescription().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getParallelismConfiguration() == null) ? 0 : getParallelismConfiguration().hashCode());
         return hashCode;
     }
 

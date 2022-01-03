@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -28,16 +28,20 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
      * The list of member accounts in the behavior graph.
      * </p>
      * <p>
-     * The results include member accounts that did not pass verification and member accounts that have not yet accepted
-     * the invitation to the behavior graph. The results do not include member accounts that were removed from the
-     * behavior graph.
+     * For invited accounts, the results include member accounts that did not pass verification and member accounts that
+     * have not yet accepted the invitation to the behavior graph. The results do not include member accounts that were
+     * removed from the behavior graph.
+     * </p>
+     * <p>
+     * For the organization behavior graph, the results do not include organization accounts that the Detective
+     * administrator account has not enabled as member accounts.
      * </p>
      */
     private java.util.List<MemberDetail> memberDetails;
     /**
      * <p>
-     * If there are more member accounts remaining in the results, then this is the pagination token to use to request
-     * the next page of member accounts.
+     * If there are more member accounts remaining in the results, then use this pagination token to request the next
+     * page of member accounts.
      * </p>
      */
     private String nextToken;
@@ -47,16 +51,24 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
      * The list of member accounts in the behavior graph.
      * </p>
      * <p>
-     * The results include member accounts that did not pass verification and member accounts that have not yet accepted
-     * the invitation to the behavior graph. The results do not include member accounts that were removed from the
-     * behavior graph.
+     * For invited accounts, the results include member accounts that did not pass verification and member accounts that
+     * have not yet accepted the invitation to the behavior graph. The results do not include member accounts that were
+     * removed from the behavior graph.
+     * </p>
+     * <p>
+     * For the organization behavior graph, the results do not include organization accounts that the Detective
+     * administrator account has not enabled as member accounts.
      * </p>
      * 
      * @return The list of member accounts in the behavior graph.</p>
      *         <p>
-     *         The results include member accounts that did not pass verification and member accounts that have not yet
-     *         accepted the invitation to the behavior graph. The results do not include member accounts that were
-     *         removed from the behavior graph.
+     *         For invited accounts, the results include member accounts that did not pass verification and member
+     *         accounts that have not yet accepted the invitation to the behavior graph. The results do not include
+     *         member accounts that were removed from the behavior graph.
+     *         </p>
+     *         <p>
+     *         For the organization behavior graph, the results do not include organization accounts that the Detective
+     *         administrator account has not enabled as member accounts.
      */
 
     public java.util.List<MemberDetail> getMemberDetails() {
@@ -68,17 +80,25 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
      * The list of member accounts in the behavior graph.
      * </p>
      * <p>
-     * The results include member accounts that did not pass verification and member accounts that have not yet accepted
-     * the invitation to the behavior graph. The results do not include member accounts that were removed from the
-     * behavior graph.
+     * For invited accounts, the results include member accounts that did not pass verification and member accounts that
+     * have not yet accepted the invitation to the behavior graph. The results do not include member accounts that were
+     * removed from the behavior graph.
+     * </p>
+     * <p>
+     * For the organization behavior graph, the results do not include organization accounts that the Detective
+     * administrator account has not enabled as member accounts.
      * </p>
      * 
      * @param memberDetails
      *        The list of member accounts in the behavior graph.</p>
      *        <p>
-     *        The results include member accounts that did not pass verification and member accounts that have not yet
-     *        accepted the invitation to the behavior graph. The results do not include member accounts that were
-     *        removed from the behavior graph.
+     *        For invited accounts, the results include member accounts that did not pass verification and member
+     *        accounts that have not yet accepted the invitation to the behavior graph. The results do not include
+     *        member accounts that were removed from the behavior graph.
+     *        </p>
+     *        <p>
+     *        For the organization behavior graph, the results do not include organization accounts that the Detective
+     *        administrator account has not enabled as member accounts.
      */
 
     public void setMemberDetails(java.util.Collection<MemberDetail> memberDetails) {
@@ -95,9 +115,13 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
      * The list of member accounts in the behavior graph.
      * </p>
      * <p>
-     * The results include member accounts that did not pass verification and member accounts that have not yet accepted
-     * the invitation to the behavior graph. The results do not include member accounts that were removed from the
-     * behavior graph.
+     * For invited accounts, the results include member accounts that did not pass verification and member accounts that
+     * have not yet accepted the invitation to the behavior graph. The results do not include member accounts that were
+     * removed from the behavior graph.
+     * </p>
+     * <p>
+     * For the organization behavior graph, the results do not include organization accounts that the Detective
+     * administrator account has not enabled as member accounts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -108,9 +132,13 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
      * @param memberDetails
      *        The list of member accounts in the behavior graph.</p>
      *        <p>
-     *        The results include member accounts that did not pass verification and member accounts that have not yet
-     *        accepted the invitation to the behavior graph. The results do not include member accounts that were
-     *        removed from the behavior graph.
+     *        For invited accounts, the results include member accounts that did not pass verification and member
+     *        accounts that have not yet accepted the invitation to the behavior graph. The results do not include
+     *        member accounts that were removed from the behavior graph.
+     *        </p>
+     *        <p>
+     *        For the organization behavior graph, the results do not include organization accounts that the Detective
+     *        administrator account has not enabled as member accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,17 +157,25 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
      * The list of member accounts in the behavior graph.
      * </p>
      * <p>
-     * The results include member accounts that did not pass verification and member accounts that have not yet accepted
-     * the invitation to the behavior graph. The results do not include member accounts that were removed from the
-     * behavior graph.
+     * For invited accounts, the results include member accounts that did not pass verification and member accounts that
+     * have not yet accepted the invitation to the behavior graph. The results do not include member accounts that were
+     * removed from the behavior graph.
+     * </p>
+     * <p>
+     * For the organization behavior graph, the results do not include organization accounts that the Detective
+     * administrator account has not enabled as member accounts.
      * </p>
      * 
      * @param memberDetails
      *        The list of member accounts in the behavior graph.</p>
      *        <p>
-     *        The results include member accounts that did not pass verification and member accounts that have not yet
-     *        accepted the invitation to the behavior graph. The results do not include member accounts that were
-     *        removed from the behavior graph.
+     *        For invited accounts, the results include member accounts that did not pass verification and member
+     *        accounts that have not yet accepted the invitation to the behavior graph. The results do not include
+     *        member accounts that were removed from the behavior graph.
+     *        </p>
+     *        <p>
+     *        For the organization behavior graph, the results do not include organization accounts that the Detective
+     *        administrator account has not enabled as member accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -150,13 +186,13 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If there are more member accounts remaining in the results, then this is the pagination token to use to request
-     * the next page of member accounts.
+     * If there are more member accounts remaining in the results, then use this pagination token to request the next
+     * page of member accounts.
      * </p>
      * 
      * @param nextToken
-     *        If there are more member accounts remaining in the results, then this is the pagination token to use to
-     *        request the next page of member accounts.
+     *        If there are more member accounts remaining in the results, then use this pagination token to request the
+     *        next page of member accounts.
      */
 
     public void setNextToken(String nextToken) {
@@ -165,12 +201,12 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If there are more member accounts remaining in the results, then this is the pagination token to use to request
-     * the next page of member accounts.
+     * If there are more member accounts remaining in the results, then use this pagination token to request the next
+     * page of member accounts.
      * </p>
      * 
-     * @return If there are more member accounts remaining in the results, then this is the pagination token to use to
-     *         request the next page of member accounts.
+     * @return If there are more member accounts remaining in the results, then use this pagination token to request the
+     *         next page of member accounts.
      */
 
     public String getNextToken() {
@@ -179,13 +215,13 @@ public class ListMembersResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If there are more member accounts remaining in the results, then this is the pagination token to use to request
-     * the next page of member accounts.
+     * If there are more member accounts remaining in the results, then use this pagination token to request the next
+     * page of member accounts.
      * </p>
      * 
      * @param nextToken
-     *        If there are more member accounts remaining in the results, then this is the pagination token to use to
-     *        request the next page of member accounts.
+     *        If there are more member accounts remaining in the results, then use this pagination token to request the
+     *        next page of member accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

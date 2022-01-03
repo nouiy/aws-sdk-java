@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -111,7 +111,7 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
     private String appNetworkAccessType;
     /**
      * <p>
-     * This member is deprecated and replaced with <code>KmsKeyId</code>.
+     * Use <code>KmsKeyId</code>.
      * </p>
      */
     @Deprecated
@@ -807,11 +807,11 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * This member is deprecated and replaced with <code>KmsKeyId</code>.
+     * Use <code>KmsKeyId</code>.
      * </p>
      * 
      * @param homeEfsFileSystemKmsKeyId
-     *        This member is deprecated and replaced with <code>KmsKeyId</code>.
+     *        Use <code>KmsKeyId</code>.
      */
     @Deprecated
     public void setHomeEfsFileSystemKmsKeyId(String homeEfsFileSystemKmsKeyId) {
@@ -820,10 +820,10 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * This member is deprecated and replaced with <code>KmsKeyId</code>.
+     * Use <code>KmsKeyId</code>.
      * </p>
      * 
-     * @return This member is deprecated and replaced with <code>KmsKeyId</code>.
+     * @return Use <code>KmsKeyId</code>.
      */
     @Deprecated
     public String getHomeEfsFileSystemKmsKeyId() {
@@ -832,11 +832,11 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * This member is deprecated and replaced with <code>KmsKeyId</code>.
+     * Use <code>KmsKeyId</code>.
      * </p>
      * 
      * @param homeEfsFileSystemKmsKeyId
-     *        This member is deprecated and replaced with <code>KmsKeyId</code>.
+     *        Use <code>KmsKeyId</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated

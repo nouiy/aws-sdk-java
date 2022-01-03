@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -418,13 +418,13 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>io1</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     * When specified, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     * Default: <code>io1</code>
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -3082,13 +3082,13 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>io1</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     * When specified, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     * Default: <code>io1</code>
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -3097,13 +3097,13 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * @param storageType
      *        Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.</p>
      *        <p>
-     *        Valid values: <code>standard | gp2 | io1</code>
+     *        Valid values: <code>io1</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     *        When specified, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     *        Default: <code>io1</code>
      *        </p>
      *        <p>
      *        Valid for: Multi-AZ DB clusters only
@@ -3118,13 +3118,13 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>io1</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     * When specified, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     * Default: <code>io1</code>
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -3132,13 +3132,13 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * 
      * @return Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.</p>
      *         <p>
-     *         Valid values: <code>standard | gp2 | io1</code>
+     *         Valid values: <code>io1</code>
      *         </p>
      *         <p>
-     *         If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     *         When specified, a value for the <code>Iops</code> parameter is required.
      *         </p>
      *         <p>
-     *         Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     *         Default: <code>io1</code>
      *         </p>
      *         <p>
      *         Valid for: Multi-AZ DB clusters only
@@ -3153,13 +3153,13 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.
      * </p>
      * <p>
-     * Valid values: <code>standard | gp2 | io1</code>
+     * Valid values: <code>io1</code>
      * </p>
      * <p>
-     * If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     * When specified, a value for the <code>Iops</code> parameter is required.
      * </p>
      * <p>
-     * Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     * Default: <code>io1</code>
      * </p>
      * <p>
      * Valid for: Multi-AZ DB clusters only
@@ -3168,13 +3168,13 @@ public class RestoreDBClusterToPointInTimeRequest extends com.amazonaws.AmazonWe
      * @param storageType
      *        Specifies the storage type to be associated with the each DB instance in the Multi-AZ DB cluster.</p>
      *        <p>
-     *        Valid values: <code>standard | gp2 | io1</code>
+     *        Valid values: <code>io1</code>
      *        </p>
      *        <p>
-     *        If you specify <code>io1</code>, also include a value for the <code>Iops</code> parameter.
+     *        When specified, a value for the <code>Iops</code> parameter is required.
      *        </p>
      *        <p>
-     *        Default: <code>io1</code> if the <code>Iops</code> parameter is specified, otherwise <code>gp2</code>
+     *        Default: <code>io1</code>
      *        </p>
      *        <p>
      *        Valid for: Multi-AZ DB clusters only

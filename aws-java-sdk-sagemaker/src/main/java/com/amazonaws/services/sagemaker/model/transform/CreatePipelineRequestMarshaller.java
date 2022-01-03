@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -36,6 +36,8 @@ public class CreatePipelineRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineDisplayName").build();
     private static final MarshallingInfo<String> PIPELINEDEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineDefinition").build();
+    private static final MarshallingInfo<StructuredPojo> PIPELINEDEFINITIONS3LOCATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineDefinitionS3Location").build();
     private static final MarshallingInfo<String> PIPELINEDESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PipelineDescription").build();
     private static final MarshallingInfo<String> CLIENTREQUESTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -45,6 +47,8 @@ public class CreatePipelineRequestMarshaller {
             .marshallLocationName("RoleArn").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<StructuredPojo> PARALLELISMCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParallelismConfiguration").build();
 
     private static final CreatePipelineRequestMarshaller instance = new CreatePipelineRequestMarshaller();
 
@@ -65,10 +69,12 @@ public class CreatePipelineRequestMarshaller {
             protocolMarshaller.marshall(createPipelineRequest.getPipelineName(), PIPELINENAME_BINDING);
             protocolMarshaller.marshall(createPipelineRequest.getPipelineDisplayName(), PIPELINEDISPLAYNAME_BINDING);
             protocolMarshaller.marshall(createPipelineRequest.getPipelineDefinition(), PIPELINEDEFINITION_BINDING);
+            protocolMarshaller.marshall(createPipelineRequest.getPipelineDefinitionS3Location(), PIPELINEDEFINITIONS3LOCATION_BINDING);
             protocolMarshaller.marshall(createPipelineRequest.getPipelineDescription(), PIPELINEDESCRIPTION_BINDING);
             protocolMarshaller.marshall(createPipelineRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(createPipelineRequest.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(createPipelineRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createPipelineRequest.getParallelismConfiguration(), PARALLELISMCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

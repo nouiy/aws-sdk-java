@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about a member account that was invited to contribute to a behavior graph.
+ * Details about a member account in a behavior graph.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/detective-2018-10-26/MemberDetail" target="_top">AWS API
@@ -30,32 +30,32 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier for the member account.
+     * The Amazon Web Services account identifier for the member account.
      * </p>
      */
     private String accountId;
     /**
      * <p>
-     * The AWS account root user email address for the member account.
+     * The Amazon Web Services account root user email address for the member account.
      * </p>
      */
     private String emailAddress;
     /**
      * <p>
-     * The ARN of the behavior graph that the member account was invited to.
+     * The ARN of the behavior graph.
      * </p>
      */
     private String graphArn;
     /**
      * <p>
-     * The AWS account identifier of the administrator account for the behavior graph.
+     * The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * </p>
      */
     @Deprecated
     private String masterId;
     /**
      * <p>
-     * The AWS account identifier of the administrator account for the behavior graph.
+     * The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * </p>
      */
     private String administratorId;
@@ -66,38 +66,47 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>INVITED</code> - Indicates that the member was sent an invitation but has not yet responded.
+     * <code>INVITED</code> - For invited accounts only. Indicates that the member was sent an invitation but has not
+     * yet responded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_IN_PROGRESS</code> - Indicates that Detective is verifying that the account identifier and
-     * email address provided for the member account match. If they do match, then Detective sends the invitation. If
-     * the email address and account identifier don't match, then the member cannot be added to the behavior graph.
+     * <code>VERIFICATION_IN_PROGRESS</code> - For invited accounts only, indicates that Detective is verifying that the
+     * account identifier and email address provided for the member account match. If they do match, then Detective
+     * sends the invitation. If the email address and account identifier don't match, then the member cannot be added to
+     * the behavior graph.
+     * </p>
+     * <p>
+     * For organization accounts in the organization behavior graph, indicates that Detective is verifying that the
+     * account belongs to the organization.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_FAILED</code> - Indicates that the account and email address provided for the member account
-     * do not match, and Detective did not send an invitation to the account.
+     * <code>VERIFICATION_FAILED</code> - For invited accounts only. Indicates that the account and email address
+     * provided for the member account do not match, and Detective did not send an invitation to the account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED</code> - Indicates that the member account accepted the invitation to contribute to the behavior
-     * graph.
+     * <code>ENABLED</code> - Indicates that the member account currently contributes data to the behavior graph. For
+     * invited accounts, the member account accepted the invitation. For organization accounts in the organization
+     * behavior graph, the Detective administrator account enabled the organization account as a member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCEPTED_BUT_DISABLED</code> - Indicates that the member account accepted the invitation but is prevented
-     * from contributing data to the behavior graph. <code>DisabledReason</code> provides the reason why the member
-     * account is not enabled.
+     * <code>ACCEPTED_BUT_DISABLED</code> - The account accepted the invitation, or was enabled by the Detective
+     * administrator account, but is prevented from contributing data to the behavior graph. <code>DisabledReason</code>
+     * provides the reason why the member account is not enabled.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Member accounts that declined an invitation or that were removed from the behavior graph are not included.
+     * Invited accounts that declined an invitation or that were removed from the behavior graph are not included. In
+     * the organization behavior graph, organization accounts that the Detective administrator account did not enable
+     * are not included.
      * </p>
      */
     private String status;
@@ -127,14 +136,15 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
     private String disabledReason;
     /**
      * <p>
-     * The date and time that Detective sent the invitation to the member account. The value is in milliseconds since
-     * the epoch.
+     * For invited accounts, the date and time that Detective sent the invitation to the account. The value is an
+     * ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      */
     private java.util.Date invitedTime;
     /**
      * <p>
-     * The date and time that the member account was last updated. The value is in milliseconds since the epoch.
+     * The date and time that the member account was last updated. The value is an ISO8601 formatted string. For
+     * example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      */
     private java.util.Date updatedTime;
@@ -146,7 +156,8 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
     private Long volumeUsageInBytes;
     /**
      * <p>
-     * The data and time when the member account data volume was last updated.
+     * The data and time when the member account data volume was last updated. The value is an ISO8601 formatted string.
+     * For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      */
     private java.util.Date volumeUsageUpdatedTime;
@@ -168,19 +179,32 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
     private Double percentOfGraphUtilization;
     /**
      * <p>
-     * The date and time when the graph utilization percentage was last updated.
+     * The date and time when the graph utilization percentage was last updated. The value is an ISO8601 formatted
+     * string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      */
     @Deprecated
     private java.util.Date percentOfGraphUtilizationUpdatedTime;
+    /**
+     * <p>
+     * The type of behavior graph membership.
+     * </p>
+     * <p>
+     * For an organization account in the organization behavior graph, the type is <code>ORGANIZATION</code>.
+     * </p>
+     * <p>
+     * For an account that was invited to a behavior graph, the type is <code>INVITATION</code>.
+     * </p>
+     */
+    private String invitationType;
 
     /**
      * <p>
-     * The AWS account identifier for the member account.
+     * The Amazon Web Services account identifier for the member account.
      * </p>
      * 
      * @param accountId
-     *        The AWS account identifier for the member account.
+     *        The Amazon Web Services account identifier for the member account.
      */
 
     public void setAccountId(String accountId) {
@@ -189,10 +213,10 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier for the member account.
+     * The Amazon Web Services account identifier for the member account.
      * </p>
      * 
-     * @return The AWS account identifier for the member account.
+     * @return The Amazon Web Services account identifier for the member account.
      */
 
     public String getAccountId() {
@@ -201,11 +225,11 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier for the member account.
+     * The Amazon Web Services account identifier for the member account.
      * </p>
      * 
      * @param accountId
-     *        The AWS account identifier for the member account.
+     *        The Amazon Web Services account identifier for the member account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -216,11 +240,11 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account root user email address for the member account.
+     * The Amazon Web Services account root user email address for the member account.
      * </p>
      * 
      * @param emailAddress
-     *        The AWS account root user email address for the member account.
+     *        The Amazon Web Services account root user email address for the member account.
      */
 
     public void setEmailAddress(String emailAddress) {
@@ -229,10 +253,10 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account root user email address for the member account.
+     * The Amazon Web Services account root user email address for the member account.
      * </p>
      * 
-     * @return The AWS account root user email address for the member account.
+     * @return The Amazon Web Services account root user email address for the member account.
      */
 
     public String getEmailAddress() {
@@ -241,11 +265,11 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account root user email address for the member account.
+     * The Amazon Web Services account root user email address for the member account.
      * </p>
      * 
      * @param emailAddress
-     *        The AWS account root user email address for the member account.
+     *        The Amazon Web Services account root user email address for the member account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -256,11 +280,11 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the behavior graph that the member account was invited to.
+     * The ARN of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph that the member account was invited to.
+     *        The ARN of the behavior graph.
      */
 
     public void setGraphArn(String graphArn) {
@@ -269,10 +293,10 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the behavior graph that the member account was invited to.
+     * The ARN of the behavior graph.
      * </p>
      * 
-     * @return The ARN of the behavior graph that the member account was invited to.
+     * @return The ARN of the behavior graph.
      */
 
     public String getGraphArn() {
@@ -281,11 +305,11 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the behavior graph that the member account was invited to.
+     * The ARN of the behavior graph.
      * </p>
      * 
      * @param graphArn
-     *        The ARN of the behavior graph that the member account was invited to.
+     *        The ARN of the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -296,11 +320,11 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the administrator account for the behavior graph.
+     * The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * </p>
      * 
      * @param masterId
-     *        The AWS account identifier of the administrator account for the behavior graph.
+     *        The Amazon Web Services account identifier of the administrator account for the behavior graph.
      */
     @Deprecated
     public void setMasterId(String masterId) {
@@ -309,10 +333,10 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the administrator account for the behavior graph.
+     * The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * </p>
      * 
-     * @return The AWS account identifier of the administrator account for the behavior graph.
+     * @return The Amazon Web Services account identifier of the administrator account for the behavior graph.
      */
     @Deprecated
     public String getMasterId() {
@@ -321,11 +345,11 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the administrator account for the behavior graph.
+     * The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * </p>
      * 
      * @param masterId
-     *        The AWS account identifier of the administrator account for the behavior graph.
+     *        The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated
@@ -336,11 +360,11 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the administrator account for the behavior graph.
+     * The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * </p>
      * 
      * @param administratorId
-     *        The AWS account identifier of the administrator account for the behavior graph.
+     *        The Amazon Web Services account identifier of the administrator account for the behavior graph.
      */
 
     public void setAdministratorId(String administratorId) {
@@ -349,10 +373,10 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the administrator account for the behavior graph.
+     * The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * </p>
      * 
-     * @return The AWS account identifier of the administrator account for the behavior graph.
+     * @return The Amazon Web Services account identifier of the administrator account for the behavior graph.
      */
 
     public String getAdministratorId() {
@@ -361,11 +385,11 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the administrator account for the behavior graph.
+     * The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * </p>
      * 
      * @param administratorId
-     *        The AWS account identifier of the administrator account for the behavior graph.
+     *        The Amazon Web Services account identifier of the administrator account for the behavior graph.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -381,38 +405,47 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>INVITED</code> - Indicates that the member was sent an invitation but has not yet responded.
+     * <code>INVITED</code> - For invited accounts only. Indicates that the member was sent an invitation but has not
+     * yet responded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_IN_PROGRESS</code> - Indicates that Detective is verifying that the account identifier and
-     * email address provided for the member account match. If they do match, then Detective sends the invitation. If
-     * the email address and account identifier don't match, then the member cannot be added to the behavior graph.
+     * <code>VERIFICATION_IN_PROGRESS</code> - For invited accounts only, indicates that Detective is verifying that the
+     * account identifier and email address provided for the member account match. If they do match, then Detective
+     * sends the invitation. If the email address and account identifier don't match, then the member cannot be added to
+     * the behavior graph.
+     * </p>
+     * <p>
+     * For organization accounts in the organization behavior graph, indicates that Detective is verifying that the
+     * account belongs to the organization.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_FAILED</code> - Indicates that the account and email address provided for the member account
-     * do not match, and Detective did not send an invitation to the account.
+     * <code>VERIFICATION_FAILED</code> - For invited accounts only. Indicates that the account and email address
+     * provided for the member account do not match, and Detective did not send an invitation to the account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED</code> - Indicates that the member account accepted the invitation to contribute to the behavior
-     * graph.
+     * <code>ENABLED</code> - Indicates that the member account currently contributes data to the behavior graph. For
+     * invited accounts, the member account accepted the invitation. For organization accounts in the organization
+     * behavior graph, the Detective administrator account enabled the organization account as a member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCEPTED_BUT_DISABLED</code> - Indicates that the member account accepted the invitation but is prevented
-     * from contributing data to the behavior graph. <code>DisabledReason</code> provides the reason why the member
-     * account is not enabled.
+     * <code>ACCEPTED_BUT_DISABLED</code> - The account accepted the invitation, or was enabled by the Detective
+     * administrator account, but is prevented from contributing data to the behavior graph. <code>DisabledReason</code>
+     * provides the reason why the member account is not enabled.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Member accounts that declined an invitation or that were removed from the behavior graph are not included.
+     * Invited accounts that declined an invitation or that were removed from the behavior graph are not included. In
+     * the organization behavior graph, organization accounts that the Detective administrator account did not enable
+     * are not included.
      * </p>
      * 
      * @param status
@@ -420,39 +453,48 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>INVITED</code> - Indicates that the member was sent an invitation but has not yet responded.
+     *        <code>INVITED</code> - For invited accounts only. Indicates that the member was sent an invitation but has
+     *        not yet responded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>VERIFICATION_IN_PROGRESS</code> - Indicates that Detective is verifying that the account identifier
-     *        and email address provided for the member account match. If they do match, then Detective sends the
-     *        invitation. If the email address and account identifier don't match, then the member cannot be added to
-     *        the behavior graph.
+     *        <code>VERIFICATION_IN_PROGRESS</code> - For invited accounts only, indicates that Detective is verifying
+     *        that the account identifier and email address provided for the member account match. If they do match,
+     *        then Detective sends the invitation. If the email address and account identifier don't match, then the
+     *        member cannot be added to the behavior graph.
+     *        </p>
+     *        <p>
+     *        For organization accounts in the organization behavior graph, indicates that Detective is verifying that
+     *        the account belongs to the organization.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>VERIFICATION_FAILED</code> - Indicates that the account and email address provided for the member
-     *        account do not match, and Detective did not send an invitation to the account.
+     *        <code>VERIFICATION_FAILED</code> - For invited accounts only. Indicates that the account and email address
+     *        provided for the member account do not match, and Detective did not send an invitation to the account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ENABLED</code> - Indicates that the member account accepted the invitation to contribute to the
-     *        behavior graph.
+     *        <code>ENABLED</code> - Indicates that the member account currently contributes data to the behavior graph.
+     *        For invited accounts, the member account accepted the invitation. For organization accounts in the
+     *        organization behavior graph, the Detective administrator account enabled the organization account as a
+     *        member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ACCEPTED_BUT_DISABLED</code> - Indicates that the member account accepted the invitation but is
-     *        prevented from contributing data to the behavior graph. <code>DisabledReason</code> provides the reason
-     *        why the member account is not enabled.
+     *        <code>ACCEPTED_BUT_DISABLED</code> - The account accepted the invitation, or was enabled by the Detective
+     *        administrator account, but is prevented from contributing data to the behavior graph.
+     *        <code>DisabledReason</code> provides the reason why the member account is not enabled.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Member accounts that declined an invitation or that were removed from the behavior graph are not included.
+     *        Invited accounts that declined an invitation or that were removed from the behavior graph are not
+     *        included. In the organization behavior graph, organization accounts that the Detective administrator
+     *        account did not enable are not included.
      * @see MemberStatus
      */
 
@@ -467,78 +509,96 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>INVITED</code> - Indicates that the member was sent an invitation but has not yet responded.
+     * <code>INVITED</code> - For invited accounts only. Indicates that the member was sent an invitation but has not
+     * yet responded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_IN_PROGRESS</code> - Indicates that Detective is verifying that the account identifier and
-     * email address provided for the member account match. If they do match, then Detective sends the invitation. If
-     * the email address and account identifier don't match, then the member cannot be added to the behavior graph.
+     * <code>VERIFICATION_IN_PROGRESS</code> - For invited accounts only, indicates that Detective is verifying that the
+     * account identifier and email address provided for the member account match. If they do match, then Detective
+     * sends the invitation. If the email address and account identifier don't match, then the member cannot be added to
+     * the behavior graph.
+     * </p>
+     * <p>
+     * For organization accounts in the organization behavior graph, indicates that Detective is verifying that the
+     * account belongs to the organization.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_FAILED</code> - Indicates that the account and email address provided for the member account
-     * do not match, and Detective did not send an invitation to the account.
+     * <code>VERIFICATION_FAILED</code> - For invited accounts only. Indicates that the account and email address
+     * provided for the member account do not match, and Detective did not send an invitation to the account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED</code> - Indicates that the member account accepted the invitation to contribute to the behavior
-     * graph.
+     * <code>ENABLED</code> - Indicates that the member account currently contributes data to the behavior graph. For
+     * invited accounts, the member account accepted the invitation. For organization accounts in the organization
+     * behavior graph, the Detective administrator account enabled the organization account as a member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCEPTED_BUT_DISABLED</code> - Indicates that the member account accepted the invitation but is prevented
-     * from contributing data to the behavior graph. <code>DisabledReason</code> provides the reason why the member
-     * account is not enabled.
+     * <code>ACCEPTED_BUT_DISABLED</code> - The account accepted the invitation, or was enabled by the Detective
+     * administrator account, but is prevented from contributing data to the behavior graph. <code>DisabledReason</code>
+     * provides the reason why the member account is not enabled.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Member accounts that declined an invitation or that were removed from the behavior graph are not included.
+     * Invited accounts that declined an invitation or that were removed from the behavior graph are not included. In
+     * the organization behavior graph, organization accounts that the Detective administrator account did not enable
+     * are not included.
      * </p>
      * 
      * @return The current membership status of the member account. The status can have one of the following values:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>INVITED</code> - Indicates that the member was sent an invitation but has not yet responded.
+     *         <code>INVITED</code> - For invited accounts only. Indicates that the member was sent an invitation but
+     *         has not yet responded.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>VERIFICATION_IN_PROGRESS</code> - Indicates that Detective is verifying that the account identifier
-     *         and email address provided for the member account match. If they do match, then Detective sends the
-     *         invitation. If the email address and account identifier don't match, then the member cannot be added to
-     *         the behavior graph.
+     *         <code>VERIFICATION_IN_PROGRESS</code> - For invited accounts only, indicates that Detective is verifying
+     *         that the account identifier and email address provided for the member account match. If they do match,
+     *         then Detective sends the invitation. If the email address and account identifier don't match, then the
+     *         member cannot be added to the behavior graph.
+     *         </p>
+     *         <p>
+     *         For organization accounts in the organization behavior graph, indicates that Detective is verifying that
+     *         the account belongs to the organization.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>VERIFICATION_FAILED</code> - Indicates that the account and email address provided for the member
-     *         account do not match, and Detective did not send an invitation to the account.
+     *         <code>VERIFICATION_FAILED</code> - For invited accounts only. Indicates that the account and email
+     *         address provided for the member account do not match, and Detective did not send an invitation to the
+     *         account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ENABLED</code> - Indicates that the member account accepted the invitation to contribute to the
-     *         behavior graph.
+     *         <code>ENABLED</code> - Indicates that the member account currently contributes data to the behavior
+     *         graph. For invited accounts, the member account accepted the invitation. For organization accounts in the
+     *         organization behavior graph, the Detective administrator account enabled the organization account as a
+     *         member account.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ACCEPTED_BUT_DISABLED</code> - Indicates that the member account accepted the invitation but is
-     *         prevented from contributing data to the behavior graph. <code>DisabledReason</code> provides the reason
-     *         why the member account is not enabled.
+     *         <code>ACCEPTED_BUT_DISABLED</code> - The account accepted the invitation, or was enabled by the Detective
+     *         administrator account, but is prevented from contributing data to the behavior graph.
+     *         <code>DisabledReason</code> provides the reason why the member account is not enabled.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         Member accounts that declined an invitation or that were removed from the behavior graph are not
-     *         included.
+     *         Invited accounts that declined an invitation or that were removed from the behavior graph are not
+     *         included. In the organization behavior graph, organization accounts that the Detective administrator
+     *         account did not enable are not included.
      * @see MemberStatus
      */
 
@@ -553,38 +613,47 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>INVITED</code> - Indicates that the member was sent an invitation but has not yet responded.
+     * <code>INVITED</code> - For invited accounts only. Indicates that the member was sent an invitation but has not
+     * yet responded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_IN_PROGRESS</code> - Indicates that Detective is verifying that the account identifier and
-     * email address provided for the member account match. If they do match, then Detective sends the invitation. If
-     * the email address and account identifier don't match, then the member cannot be added to the behavior graph.
+     * <code>VERIFICATION_IN_PROGRESS</code> - For invited accounts only, indicates that Detective is verifying that the
+     * account identifier and email address provided for the member account match. If they do match, then Detective
+     * sends the invitation. If the email address and account identifier don't match, then the member cannot be added to
+     * the behavior graph.
+     * </p>
+     * <p>
+     * For organization accounts in the organization behavior graph, indicates that Detective is verifying that the
+     * account belongs to the organization.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_FAILED</code> - Indicates that the account and email address provided for the member account
-     * do not match, and Detective did not send an invitation to the account.
+     * <code>VERIFICATION_FAILED</code> - For invited accounts only. Indicates that the account and email address
+     * provided for the member account do not match, and Detective did not send an invitation to the account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED</code> - Indicates that the member account accepted the invitation to contribute to the behavior
-     * graph.
+     * <code>ENABLED</code> - Indicates that the member account currently contributes data to the behavior graph. For
+     * invited accounts, the member account accepted the invitation. For organization accounts in the organization
+     * behavior graph, the Detective administrator account enabled the organization account as a member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCEPTED_BUT_DISABLED</code> - Indicates that the member account accepted the invitation but is prevented
-     * from contributing data to the behavior graph. <code>DisabledReason</code> provides the reason why the member
-     * account is not enabled.
+     * <code>ACCEPTED_BUT_DISABLED</code> - The account accepted the invitation, or was enabled by the Detective
+     * administrator account, but is prevented from contributing data to the behavior graph. <code>DisabledReason</code>
+     * provides the reason why the member account is not enabled.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Member accounts that declined an invitation or that were removed from the behavior graph are not included.
+     * Invited accounts that declined an invitation or that were removed from the behavior graph are not included. In
+     * the organization behavior graph, organization accounts that the Detective administrator account did not enable
+     * are not included.
      * </p>
      * 
      * @param status
@@ -592,39 +661,48 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>INVITED</code> - Indicates that the member was sent an invitation but has not yet responded.
+     *        <code>INVITED</code> - For invited accounts only. Indicates that the member was sent an invitation but has
+     *        not yet responded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>VERIFICATION_IN_PROGRESS</code> - Indicates that Detective is verifying that the account identifier
-     *        and email address provided for the member account match. If they do match, then Detective sends the
-     *        invitation. If the email address and account identifier don't match, then the member cannot be added to
-     *        the behavior graph.
+     *        <code>VERIFICATION_IN_PROGRESS</code> - For invited accounts only, indicates that Detective is verifying
+     *        that the account identifier and email address provided for the member account match. If they do match,
+     *        then Detective sends the invitation. If the email address and account identifier don't match, then the
+     *        member cannot be added to the behavior graph.
+     *        </p>
+     *        <p>
+     *        For organization accounts in the organization behavior graph, indicates that Detective is verifying that
+     *        the account belongs to the organization.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>VERIFICATION_FAILED</code> - Indicates that the account and email address provided for the member
-     *        account do not match, and Detective did not send an invitation to the account.
+     *        <code>VERIFICATION_FAILED</code> - For invited accounts only. Indicates that the account and email address
+     *        provided for the member account do not match, and Detective did not send an invitation to the account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ENABLED</code> - Indicates that the member account accepted the invitation to contribute to the
-     *        behavior graph.
+     *        <code>ENABLED</code> - Indicates that the member account currently contributes data to the behavior graph.
+     *        For invited accounts, the member account accepted the invitation. For organization accounts in the
+     *        organization behavior graph, the Detective administrator account enabled the organization account as a
+     *        member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ACCEPTED_BUT_DISABLED</code> - Indicates that the member account accepted the invitation but is
-     *        prevented from contributing data to the behavior graph. <code>DisabledReason</code> provides the reason
-     *        why the member account is not enabled.
+     *        <code>ACCEPTED_BUT_DISABLED</code> - The account accepted the invitation, or was enabled by the Detective
+     *        administrator account, but is prevented from contributing data to the behavior graph.
+     *        <code>DisabledReason</code> provides the reason why the member account is not enabled.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Member accounts that declined an invitation or that were removed from the behavior graph are not included.
+     *        Invited accounts that declined an invitation or that were removed from the behavior graph are not
+     *        included. In the organization behavior graph, organization accounts that the Detective administrator
+     *        account did not enable are not included.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MemberStatus
      */
@@ -641,38 +719,47 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>INVITED</code> - Indicates that the member was sent an invitation but has not yet responded.
+     * <code>INVITED</code> - For invited accounts only. Indicates that the member was sent an invitation but has not
+     * yet responded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_IN_PROGRESS</code> - Indicates that Detective is verifying that the account identifier and
-     * email address provided for the member account match. If they do match, then Detective sends the invitation. If
-     * the email address and account identifier don't match, then the member cannot be added to the behavior graph.
+     * <code>VERIFICATION_IN_PROGRESS</code> - For invited accounts only, indicates that Detective is verifying that the
+     * account identifier and email address provided for the member account match. If they do match, then Detective
+     * sends the invitation. If the email address and account identifier don't match, then the member cannot be added to
+     * the behavior graph.
+     * </p>
+     * <p>
+     * For organization accounts in the organization behavior graph, indicates that Detective is verifying that the
+     * account belongs to the organization.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>VERIFICATION_FAILED</code> - Indicates that the account and email address provided for the member account
-     * do not match, and Detective did not send an invitation to the account.
+     * <code>VERIFICATION_FAILED</code> - For invited accounts only. Indicates that the account and email address
+     * provided for the member account do not match, and Detective did not send an invitation to the account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ENABLED</code> - Indicates that the member account accepted the invitation to contribute to the behavior
-     * graph.
+     * <code>ENABLED</code> - Indicates that the member account currently contributes data to the behavior graph. For
+     * invited accounts, the member account accepted the invitation. For organization accounts in the organization
+     * behavior graph, the Detective administrator account enabled the organization account as a member account.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCEPTED_BUT_DISABLED</code> - Indicates that the member account accepted the invitation but is prevented
-     * from contributing data to the behavior graph. <code>DisabledReason</code> provides the reason why the member
-     * account is not enabled.
+     * <code>ACCEPTED_BUT_DISABLED</code> - The account accepted the invitation, or was enabled by the Detective
+     * administrator account, but is prevented from contributing data to the behavior graph. <code>DisabledReason</code>
+     * provides the reason why the member account is not enabled.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * Member accounts that declined an invitation or that were removed from the behavior graph are not included.
+     * Invited accounts that declined an invitation or that were removed from the behavior graph are not included. In
+     * the organization behavior graph, organization accounts that the Detective administrator account did not enable
+     * are not included.
      * </p>
      * 
      * @param status
@@ -680,39 +767,48 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>INVITED</code> - Indicates that the member was sent an invitation but has not yet responded.
+     *        <code>INVITED</code> - For invited accounts only. Indicates that the member was sent an invitation but has
+     *        not yet responded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>VERIFICATION_IN_PROGRESS</code> - Indicates that Detective is verifying that the account identifier
-     *        and email address provided for the member account match. If they do match, then Detective sends the
-     *        invitation. If the email address and account identifier don't match, then the member cannot be added to
-     *        the behavior graph.
+     *        <code>VERIFICATION_IN_PROGRESS</code> - For invited accounts only, indicates that Detective is verifying
+     *        that the account identifier and email address provided for the member account match. If they do match,
+     *        then Detective sends the invitation. If the email address and account identifier don't match, then the
+     *        member cannot be added to the behavior graph.
+     *        </p>
+     *        <p>
+     *        For organization accounts in the organization behavior graph, indicates that Detective is verifying that
+     *        the account belongs to the organization.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>VERIFICATION_FAILED</code> - Indicates that the account and email address provided for the member
-     *        account do not match, and Detective did not send an invitation to the account.
+     *        <code>VERIFICATION_FAILED</code> - For invited accounts only. Indicates that the account and email address
+     *        provided for the member account do not match, and Detective did not send an invitation to the account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ENABLED</code> - Indicates that the member account accepted the invitation to contribute to the
-     *        behavior graph.
+     *        <code>ENABLED</code> - Indicates that the member account currently contributes data to the behavior graph.
+     *        For invited accounts, the member account accepted the invitation. For organization accounts in the
+     *        organization behavior graph, the Detective administrator account enabled the organization account as a
+     *        member account.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ACCEPTED_BUT_DISABLED</code> - Indicates that the member account accepted the invitation but is
-     *        prevented from contributing data to the behavior graph. <code>DisabledReason</code> provides the reason
-     *        why the member account is not enabled.
+     *        <code>ACCEPTED_BUT_DISABLED</code> - The account accepted the invitation, or was enabled by the Detective
+     *        administrator account, but is prevented from contributing data to the behavior graph.
+     *        <code>DisabledReason</code> provides the reason why the member account is not enabled.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        Member accounts that declined an invitation or that were removed from the behavior graph are not included.
+     *        Invited accounts that declined an invitation or that were removed from the behavior graph are not
+     *        included. In the organization behavior graph, organization accounts that the Detective administrator
+     *        account did not enable are not included.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MemberStatus
      */
@@ -923,13 +1019,13 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that Detective sent the invitation to the member account. The value is in milliseconds since
-     * the epoch.
+     * For invited accounts, the date and time that Detective sent the invitation to the account. The value is an
+     * ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param invitedTime
-     *        The date and time that Detective sent the invitation to the member account. The value is in milliseconds
-     *        since the epoch.
+     *        For invited accounts, the date and time that Detective sent the invitation to the account. The value is an
+     *        ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public void setInvitedTime(java.util.Date invitedTime) {
@@ -938,12 +1034,12 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that Detective sent the invitation to the member account. The value is in milliseconds since
-     * the epoch.
+     * For invited accounts, the date and time that Detective sent the invitation to the account. The value is an
+     * ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
-     * @return The date and time that Detective sent the invitation to the member account. The value is in milliseconds
-     *         since the epoch.
+     * @return For invited accounts, the date and time that Detective sent the invitation to the account. The value is
+     *         an ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public java.util.Date getInvitedTime() {
@@ -952,13 +1048,13 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that Detective sent the invitation to the member account. The value is in milliseconds since
-     * the epoch.
+     * For invited accounts, the date and time that Detective sent the invitation to the account. The value is an
+     * ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param invitedTime
-     *        The date and time that Detective sent the invitation to the member account. The value is in milliseconds
-     *        since the epoch.
+     *        For invited accounts, the date and time that Detective sent the invitation to the account. The value is an
+     *        ISO8601 formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -969,11 +1065,13 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that the member account was last updated. The value is in milliseconds since the epoch.
+     * The date and time that the member account was last updated. The value is an ISO8601 formatted string. For
+     * example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param updatedTime
-     *        The date and time that the member account was last updated. The value is in milliseconds since the epoch.
+     *        The date and time that the member account was last updated. The value is an ISO8601 formatted string. For
+     *        example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public void setUpdatedTime(java.util.Date updatedTime) {
@@ -982,10 +1080,12 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that the member account was last updated. The value is in milliseconds since the epoch.
+     * The date and time that the member account was last updated. The value is an ISO8601 formatted string. For
+     * example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
-     * @return The date and time that the member account was last updated. The value is in milliseconds since the epoch.
+     * @return The date and time that the member account was last updated. The value is an ISO8601 formatted string. For
+     *         example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public java.util.Date getUpdatedTime() {
@@ -994,11 +1094,13 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time that the member account was last updated. The value is in milliseconds since the epoch.
+     * The date and time that the member account was last updated. The value is an ISO8601 formatted string. For
+     * example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param updatedTime
-     *        The date and time that the member account was last updated. The value is in milliseconds since the epoch.
+     *        The date and time that the member account was last updated. The value is an ISO8601 formatted string. For
+     *        example, <code>2021-08-18T16:35:56.284Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1049,11 +1151,13 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data and time when the member account data volume was last updated.
+     * The data and time when the member account data volume was last updated. The value is an ISO8601 formatted string.
+     * For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param volumeUsageUpdatedTime
-     *        The data and time when the member account data volume was last updated.
+     *        The data and time when the member account data volume was last updated. The value is an ISO8601 formatted
+     *        string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public void setVolumeUsageUpdatedTime(java.util.Date volumeUsageUpdatedTime) {
@@ -1062,10 +1166,12 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data and time when the member account data volume was last updated.
+     * The data and time when the member account data volume was last updated. The value is an ISO8601 formatted string.
+     * For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
-     * @return The data and time when the member account data volume was last updated.
+     * @return The data and time when the member account data volume was last updated. The value is an ISO8601 formatted
+     *         string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
 
     public java.util.Date getVolumeUsageUpdatedTime() {
@@ -1074,11 +1180,13 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data and time when the member account data volume was last updated.
+     * The data and time when the member account data volume was last updated. The value is an ISO8601 formatted string.
+     * For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param volumeUsageUpdatedTime
-     *        The data and time when the member account data volume was last updated.
+     *        The data and time when the member account data volume was last updated. The value is an ISO8601 formatted
+     *        string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1180,11 +1288,13 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time when the graph utilization percentage was last updated.
+     * The date and time when the graph utilization percentage was last updated. The value is an ISO8601 formatted
+     * string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param percentOfGraphUtilizationUpdatedTime
-     *        The date and time when the graph utilization percentage was last updated.
+     *        The date and time when the graph utilization percentage was last updated. The value is an ISO8601
+     *        formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
     @Deprecated
     public void setPercentOfGraphUtilizationUpdatedTime(java.util.Date percentOfGraphUtilizationUpdatedTime) {
@@ -1193,10 +1303,12 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time when the graph utilization percentage was last updated.
+     * The date and time when the graph utilization percentage was last updated. The value is an ISO8601 formatted
+     * string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
-     * @return The date and time when the graph utilization percentage was last updated.
+     * @return The date and time when the graph utilization percentage was last updated. The value is an ISO8601
+     *         formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      */
     @Deprecated
     public java.util.Date getPercentOfGraphUtilizationUpdatedTime() {
@@ -1205,16 +1317,121 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time when the graph utilization percentage was last updated.
+     * The date and time when the graph utilization percentage was last updated. The value is an ISO8601 formatted
+     * string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * </p>
      * 
      * @param percentOfGraphUtilizationUpdatedTime
-     *        The date and time when the graph utilization percentage was last updated.
+     *        The date and time when the graph utilization percentage was last updated. The value is an ISO8601
+     *        formatted string. For example, <code>2021-08-18T16:35:56.284Z</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated
     public MemberDetail withPercentOfGraphUtilizationUpdatedTime(java.util.Date percentOfGraphUtilizationUpdatedTime) {
         setPercentOfGraphUtilizationUpdatedTime(percentOfGraphUtilizationUpdatedTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of behavior graph membership.
+     * </p>
+     * <p>
+     * For an organization account in the organization behavior graph, the type is <code>ORGANIZATION</code>.
+     * </p>
+     * <p>
+     * For an account that was invited to a behavior graph, the type is <code>INVITATION</code>.
+     * </p>
+     * 
+     * @param invitationType
+     *        The type of behavior graph membership.</p>
+     *        <p>
+     *        For an organization account in the organization behavior graph, the type is <code>ORGANIZATION</code>.
+     *        </p>
+     *        <p>
+     *        For an account that was invited to a behavior graph, the type is <code>INVITATION</code>.
+     * @see InvitationType
+     */
+
+    public void setInvitationType(String invitationType) {
+        this.invitationType = invitationType;
+    }
+
+    /**
+     * <p>
+     * The type of behavior graph membership.
+     * </p>
+     * <p>
+     * For an organization account in the organization behavior graph, the type is <code>ORGANIZATION</code>.
+     * </p>
+     * <p>
+     * For an account that was invited to a behavior graph, the type is <code>INVITATION</code>.
+     * </p>
+     * 
+     * @return The type of behavior graph membership.</p>
+     *         <p>
+     *         For an organization account in the organization behavior graph, the type is <code>ORGANIZATION</code>.
+     *         </p>
+     *         <p>
+     *         For an account that was invited to a behavior graph, the type is <code>INVITATION</code>.
+     * @see InvitationType
+     */
+
+    public String getInvitationType() {
+        return this.invitationType;
+    }
+
+    /**
+     * <p>
+     * The type of behavior graph membership.
+     * </p>
+     * <p>
+     * For an organization account in the organization behavior graph, the type is <code>ORGANIZATION</code>.
+     * </p>
+     * <p>
+     * For an account that was invited to a behavior graph, the type is <code>INVITATION</code>.
+     * </p>
+     * 
+     * @param invitationType
+     *        The type of behavior graph membership.</p>
+     *        <p>
+     *        For an organization account in the organization behavior graph, the type is <code>ORGANIZATION</code>.
+     *        </p>
+     *        <p>
+     *        For an account that was invited to a behavior graph, the type is <code>INVITATION</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InvitationType
+     */
+
+    public MemberDetail withInvitationType(String invitationType) {
+        setInvitationType(invitationType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of behavior graph membership.
+     * </p>
+     * <p>
+     * For an organization account in the organization behavior graph, the type is <code>ORGANIZATION</code>.
+     * </p>
+     * <p>
+     * For an account that was invited to a behavior graph, the type is <code>INVITATION</code>.
+     * </p>
+     * 
+     * @param invitationType
+     *        The type of behavior graph membership.</p>
+     *        <p>
+     *        For an organization account in the organization behavior graph, the type is <code>ORGANIZATION</code>.
+     *        </p>
+     *        <p>
+     *        For an account that was invited to a behavior graph, the type is <code>INVITATION</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InvitationType
+     */
+
+    public MemberDetail withInvitationType(InvitationType invitationType) {
+        this.invitationType = invitationType.toString();
         return this;
     }
 
@@ -1255,7 +1472,9 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
         if (getPercentOfGraphUtilization() != null)
             sb.append("PercentOfGraphUtilization: ").append(getPercentOfGraphUtilization()).append(",");
         if (getPercentOfGraphUtilizationUpdatedTime() != null)
-            sb.append("PercentOfGraphUtilizationUpdatedTime: ").append(getPercentOfGraphUtilizationUpdatedTime());
+            sb.append("PercentOfGraphUtilizationUpdatedTime: ").append(getPercentOfGraphUtilizationUpdatedTime()).append(",");
+        if (getInvitationType() != null)
+            sb.append("InvitationType: ").append(getInvitationType());
         sb.append("}");
         return sb.toString();
     }
@@ -1323,6 +1542,10 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
         if (other.getPercentOfGraphUtilizationUpdatedTime() != null
                 && other.getPercentOfGraphUtilizationUpdatedTime().equals(this.getPercentOfGraphUtilizationUpdatedTime()) == false)
             return false;
+        if (other.getInvitationType() == null ^ this.getInvitationType() == null)
+            return false;
+        if (other.getInvitationType() != null && other.getInvitationType().equals(this.getInvitationType()) == false)
+            return false;
         return true;
     }
 
@@ -1344,6 +1567,7 @@ public class MemberDetail implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVolumeUsageUpdatedTime() == null) ? 0 : getVolumeUsageUpdatedTime().hashCode());
         hashCode = prime * hashCode + ((getPercentOfGraphUtilization() == null) ? 0 : getPercentOfGraphUtilization().hashCode());
         hashCode = prime * hashCode + ((getPercentOfGraphUtilizationUpdatedTime() == null) ? 0 : getPercentOfGraphUtilizationUpdatedTime().hashCode());
+        hashCode = prime * hashCode + ((getInvitationType() == null) ? 0 : getInvitationType().hashCode());
         return hashCode;
     }
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -26,21 +26,32 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * Detective uses machine learning and purpose-built visualizations to help you analyze and investigate security issues
- * across your Amazon Web Services (AWS) workloads. Detective automatically extracts time-based events such as login
- * attempts, API calls, and network traffic from AWS CloudTrail and Amazon Virtual Private Cloud (Amazon VPC) flow logs.
- * It also extracts findings detected by Amazon GuardDuty.
+ * Detective uses machine learning and purpose-built visualizations to help you to analyze and investigate security
+ * issues across your Amazon Web Services (Amazon Web Services) workloads. Detective automatically extracts time-based
+ * events such as login attempts, API calls, and network traffic from CloudTrail and Amazon Virtual Private Cloud
+ * (Amazon VPC) flow logs. It also extracts findings detected by Amazon GuardDuty.
  * </p>
  * <p>
  * The Detective API primarily supports the creation and management of behavior graphs. A behavior graph contains the
  * extracted data from a set of member accounts, and is created and managed by an administrator account.
  * </p>
  * <p>
- * Every behavior graph is specific to a Region. You can only use the API to manage graphs that belong to the Region
- * that is associated with the currently selected endpoint.
+ * To add a member account to the behavior graph, the administrator account sends an invitation to the account. When the
+ * account accepts the invitation, it becomes a member account in the behavior graph.
  * </p>
  * <p>
- * A Detective administrator account can use the Detective API to do the following:
+ * Detective is also integrated with Organizations. The organization management account designates the Detective
+ * administrator account for the organization. That account becomes the administrator account for the organization
+ * behavior graph. The Detective administrator account can enable any organization account as a member account in the
+ * organization behavior graph. The organization accounts do not receive invitations. The Detective administrator
+ * account can also invite other accounts to the organization behavior graph.
+ * </p>
+ * <p>
+ * Every behavior graph is specific to a Region. You can only use the API to manage behavior graphs that belong to the
+ * Region that is associated with the currently selected endpoint.
+ * </p>
+ * <p>
+ * The administrator account for a behavior graph can use the Detective API to do the following:
  * </p>
  * <ul>
  * <li>
@@ -63,9 +74,33 @@ import java.util.concurrent.ExecutorService;
  * Remove member accounts from a behavior graph.
  * </p>
  * </li>
+ * <li>
+ * <p>
+ * Apply tags to a behavior graph.
+ * </p>
+ * </li>
  * </ul>
  * <p>
- * A member account can use the Detective API to do the following:
+ * The organization management account can use the Detective API to select the delegated administrator for Detective.
+ * </p>
+ * <p>
+ * The Detective administrator account for an organization can use the Detective API to do the following:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Perform all of the functions of an administrator account.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Determine whether to automatically enable new organization accounts as member accounts in the organization behavior
+ * graph.
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * An invited member account can use the Detective API to do the following:
  * </p>
  * <ul>
  * <li>
@@ -314,6 +349,76 @@ public class AmazonDetectiveAsyncClient extends AmazonDetectiveClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeOrganizationConfigurationResult> describeOrganizationConfigurationAsync(
+            DescribeOrganizationConfigurationRequest request) {
+
+        return describeOrganizationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeOrganizationConfigurationResult> describeOrganizationConfigurationAsync(
+            final DescribeOrganizationConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeOrganizationConfigurationRequest, DescribeOrganizationConfigurationResult> asyncHandler) {
+        final DescribeOrganizationConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeOrganizationConfigurationResult>() {
+            @Override
+            public DescribeOrganizationConfigurationResult call() throws Exception {
+                DescribeOrganizationConfigurationResult result = null;
+
+                try {
+                    result = executeDescribeOrganizationConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableOrganizationAdminAccountResult> disableOrganizationAdminAccountAsync(
+            DisableOrganizationAdminAccountRequest request) {
+
+        return disableOrganizationAdminAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableOrganizationAdminAccountResult> disableOrganizationAdminAccountAsync(
+            final DisableOrganizationAdminAccountRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableOrganizationAdminAccountRequest, DisableOrganizationAdminAccountResult> asyncHandler) {
+        final DisableOrganizationAdminAccountRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableOrganizationAdminAccountResult>() {
+            @Override
+            public DisableOrganizationAdminAccountResult call() throws Exception {
+                DisableOrganizationAdminAccountResult result = null;
+
+                try {
+                    result = executeDisableOrganizationAdminAccount(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateMembershipResult> disassociateMembershipAsync(DisassociateMembershipRequest request) {
 
         return disassociateMembershipAsync(request, null);
@@ -331,6 +436,40 @@ public class AmazonDetectiveAsyncClient extends AmazonDetectiveClient implements
 
                 try {
                     result = executeDisassociateMembership(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableOrganizationAdminAccountResult> enableOrganizationAdminAccountAsync(EnableOrganizationAdminAccountRequest request) {
+
+        return enableOrganizationAdminAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableOrganizationAdminAccountResult> enableOrganizationAdminAccountAsync(
+            final EnableOrganizationAdminAccountRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableOrganizationAdminAccountRequest, EnableOrganizationAdminAccountResult> asyncHandler) {
+        final EnableOrganizationAdminAccountRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableOrganizationAdminAccountResult>() {
+            @Override
+            public EnableOrganizationAdminAccountResult call() throws Exception {
+                EnableOrganizationAdminAccountResult result = null;
+
+                try {
+                    result = executeEnableOrganizationAdminAccount(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -463,6 +602,40 @@ public class AmazonDetectiveAsyncClient extends AmazonDetectiveClient implements
 
                 try {
                     result = executeListMembers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOrganizationAdminAccountsResult> listOrganizationAdminAccountsAsync(ListOrganizationAdminAccountsRequest request) {
+
+        return listOrganizationAdminAccountsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListOrganizationAdminAccountsResult> listOrganizationAdminAccountsAsync(
+            final ListOrganizationAdminAccountsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListOrganizationAdminAccountsRequest, ListOrganizationAdminAccountsResult> asyncHandler) {
+        final ListOrganizationAdminAccountsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListOrganizationAdminAccountsResult>() {
+            @Override
+            public ListOrganizationAdminAccountsResult call() throws Exception {
+                ListOrganizationAdminAccountsResult result = null;
+
+                try {
+                    result = executeListOrganizationAdminAccounts(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -628,6 +801,41 @@ public class AmazonDetectiveAsyncClient extends AmazonDetectiveClient implements
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateOrganizationConfigurationResult> updateOrganizationConfigurationAsync(
+            UpdateOrganizationConfigurationRequest request) {
+
+        return updateOrganizationConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateOrganizationConfigurationResult> updateOrganizationConfigurationAsync(
+            final UpdateOrganizationConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateOrganizationConfigurationRequest, UpdateOrganizationConfigurationResult> asyncHandler) {
+        final UpdateOrganizationConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateOrganizationConfigurationResult>() {
+            @Override
+            public UpdateOrganizationConfigurationResult call() throws Exception {
+                UpdateOrganizationConfigurationResult result = null;
+
+                try {
+                    result = executeUpdateOrganizationConfiguration(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

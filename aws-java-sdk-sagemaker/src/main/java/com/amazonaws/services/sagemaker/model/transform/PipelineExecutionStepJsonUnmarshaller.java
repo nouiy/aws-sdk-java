@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -51,6 +51,14 @@ public class PipelineExecutionStepJsonUnmarshaller implements Unmarshaller<Pipel
                 if (context.testExpression("StepName", targetDepth)) {
                     context.nextToken();
                     pipelineExecutionStep.setStepName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("StepDisplayName", targetDepth)) {
+                    context.nextToken();
+                    pipelineExecutionStep.setStepDisplayName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("StepDescription", targetDepth)) {
+                    context.nextToken();
+                    pipelineExecutionStep.setStepDescription(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("StartTime", targetDepth)) {
                     context.nextToken();

@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * Copyright 2017-2022 Amazon.com, Inc. or its affiliates. All Rights Reserved.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
  * the License. A copy of the License is located at
@@ -25,6 +25,11 @@ import com.amazonaws.*;
 public class AbstractAWSGreengrassV2 implements AWSGreengrassV2 {
 
     protected AbstractAWSGreengrassV2() {
+    }
+
+    @Override
+    public AssociateServiceRoleToAccountResult associateServiceRoleToAccount(AssociateServiceRoleToAccountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
@@ -69,6 +74,11 @@ public class AbstractAWSGreengrassV2 implements AWSGreengrassV2 {
     }
 
     @Override
+    public DisassociateServiceRoleFromAccountResult disassociateServiceRoleFromAccount(DisassociateServiceRoleFromAccountRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetComponentResult getComponent(GetComponentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -79,12 +89,22 @@ public class AbstractAWSGreengrassV2 implements AWSGreengrassV2 {
     }
 
     @Override
+    public GetConnectivityInfoResult getConnectivityInfo(GetConnectivityInfoRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetCoreDeviceResult getCoreDevice(GetCoreDeviceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public GetDeploymentResult getDeployment(GetDeploymentRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetServiceRoleForAccountResult getServiceRoleForAccount(GetServiceRoleForAccountRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -140,6 +160,11 @@ public class AbstractAWSGreengrassV2 implements AWSGreengrassV2 {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateConnectivityInfoResult updateConnectivityInfo(UpdateConnectivityInfoRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
