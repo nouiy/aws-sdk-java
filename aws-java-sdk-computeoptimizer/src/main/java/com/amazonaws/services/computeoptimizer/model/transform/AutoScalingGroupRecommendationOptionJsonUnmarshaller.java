@@ -71,6 +71,10 @@ public class AutoScalingGroupRecommendationOptionJsonUnmarshaller implements Unm
                     context.nextToken();
                     autoScalingGroupRecommendationOption.setSavingsOpportunity(SavingsOpportunityJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("migrationEffort", targetDepth)) {
+                    context.nextToken();
+                    autoScalingGroupRecommendationOption.setMigrationEffort(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

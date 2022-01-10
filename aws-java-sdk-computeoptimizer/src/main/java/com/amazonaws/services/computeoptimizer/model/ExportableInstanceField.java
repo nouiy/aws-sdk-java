@@ -68,7 +68,10 @@ public enum ExportableInstanceField {
     RecommendationOptionsEstimatedMonthlySavingsCurrency("RecommendationOptionsEstimatedMonthlySavingsCurrency"),
     RecommendationOptionsEstimatedMonthlySavingsValue("RecommendationOptionsEstimatedMonthlySavingsValue"),
     EffectiveRecommendationPreferencesCpuVendorArchitectures("EffectiveRecommendationPreferencesCpuVendorArchitectures"),
-    EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics("EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics");
+    EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics("EffectiveRecommendationPreferencesEnhancedInfrastructureMetrics"),
+    EffectiveRecommendationPreferencesInferredWorkloadTypes("EffectiveRecommendationPreferencesInferredWorkloadTypes"),
+    InferredWorkloadTypes("InferredWorkloadTypes"),
+    RecommendationOptionsMigrationEffort("RecommendationOptionsMigrationEffort");
 
     private String value;
 

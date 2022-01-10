@@ -32,6 +32,8 @@ public class EffectiveRecommendationPreferencesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cpuVendorArchitectures").build();
     private static final MarshallingInfo<String> ENHANCEDINFRASTRUCTUREMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enhancedInfrastructureMetrics").build();
+    private static final MarshallingInfo<String> INFERREDWORKLOADTYPES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferredWorkloadTypes").build();
 
     private static final EffectiveRecommendationPreferencesMarshaller instance = new EffectiveRecommendationPreferencesMarshaller();
 
@@ -51,6 +53,7 @@ public class EffectiveRecommendationPreferencesMarshaller {
         try {
             protocolMarshaller.marshall(effectiveRecommendationPreferences.getCpuVendorArchitectures(), CPUVENDORARCHITECTURES_BINDING);
             protocolMarshaller.marshall(effectiveRecommendationPreferences.getEnhancedInfrastructureMetrics(), ENHANCEDINFRASTRUCTUREMETRICS_BINDING);
+            protocolMarshaller.marshall(effectiveRecommendationPreferences.getInferredWorkloadTypes(), INFERREDWORKLOADTYPES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

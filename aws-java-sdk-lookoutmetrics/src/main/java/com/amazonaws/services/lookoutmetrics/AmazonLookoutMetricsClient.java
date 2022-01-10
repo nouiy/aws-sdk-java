@@ -1867,6 +1867,8 @@ public class AmazonLookoutMetricsClient extends AmazonWebServiceClient implement
      *         You do not have sufficient permissions to perform this action.
      * @throws TooManyRequestsException
      *         The request was denied due to too many requests being submitted at the same time.
+     * @throws ServiceQuotaExceededException
+     *         The request exceeded the service's quotas. Check the service quotas and try again.
      * @sample AmazonLookoutMetrics.UpdateMetricSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lookoutmetrics-2017-07-25/UpdateMetricSet" target="_top">AWS
      *      API Documentation</a>

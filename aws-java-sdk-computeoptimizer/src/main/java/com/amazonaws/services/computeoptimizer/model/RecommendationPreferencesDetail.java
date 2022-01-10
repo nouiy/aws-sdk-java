@@ -57,10 +57,25 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      */
     private String enhancedInfrastructureMetrics;
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference.
+     * </p>
+     * <p>
+     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh. A
+     * status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     */
+    private String inferredWorkloadTypes;
 
     /**
      * <p>
@@ -236,14 +251,24 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param enhancedInfrastructureMetrics
      *        The status of the enhanced infrastructure metrics recommendation preference.</p>
      *        <p>
      *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @see EnhancedInfrastructureMetrics
      */
 
@@ -257,13 +282,23 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @return The status of the enhanced infrastructure metrics recommendation preference.</p>
      *         <p>
      *         A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *         refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *         refresh, and a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *         >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @see EnhancedInfrastructureMetrics
      */
 
@@ -277,14 +312,24 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param enhancedInfrastructureMetrics
      *        The status of the enhanced infrastructure metrics recommendation preference.</p>
      *        <p>
      *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnhancedInfrastructureMetrics
      */
@@ -300,20 +345,117 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param enhancedInfrastructureMetrics
      *        The status of the enhanced infrastructure metrics recommendation preference.</p>
      *        <p>
      *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnhancedInfrastructureMetrics
      */
 
     public RecommendationPreferencesDetail withEnhancedInfrastructureMetrics(EnhancedInfrastructureMetrics enhancedInfrastructureMetrics) {
         this.enhancedInfrastructureMetrics = enhancedInfrastructureMetrics.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference.
+     * </p>
+     * <p>
+     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh. A
+     * status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     * 
+     * @param inferredWorkloadTypes
+     *        The status of the inferred workload types recommendation preference.</p>
+     *        <p>
+     *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
+     *        refresh. A status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * @see InferredWorkloadTypesPreference
+     */
+
+    public void setInferredWorkloadTypes(String inferredWorkloadTypes) {
+        this.inferredWorkloadTypes = inferredWorkloadTypes;
+    }
+
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference.
+     * </p>
+     * <p>
+     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh. A
+     * status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     * 
+     * @return The status of the inferred workload types recommendation preference.</p>
+     *         <p>
+     *         A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
+     *         refresh. A status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * @see InferredWorkloadTypesPreference
+     */
+
+    public String getInferredWorkloadTypes() {
+        return this.inferredWorkloadTypes;
+    }
+
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference.
+     * </p>
+     * <p>
+     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh. A
+     * status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     * 
+     * @param inferredWorkloadTypes
+     *        The status of the inferred workload types recommendation preference.</p>
+     *        <p>
+     *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
+     *        refresh. A status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InferredWorkloadTypesPreference
+     */
+
+    public RecommendationPreferencesDetail withInferredWorkloadTypes(String inferredWorkloadTypes) {
+        setInferredWorkloadTypes(inferredWorkloadTypes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference.
+     * </p>
+     * <p>
+     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh. A
+     * status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * </p>
+     * 
+     * @param inferredWorkloadTypes
+     *        The status of the inferred workload types recommendation preference.</p>
+     *        <p>
+     *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
+     *        refresh. A status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InferredWorkloadTypesPreference
+     */
+
+    public RecommendationPreferencesDetail withInferredWorkloadTypes(InferredWorkloadTypesPreference inferredWorkloadTypes) {
+        this.inferredWorkloadTypes = inferredWorkloadTypes.toString();
         return this;
     }
 
@@ -334,7 +476,9 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
         if (getResourceType() != null)
             sb.append("ResourceType: ").append(getResourceType()).append(",");
         if (getEnhancedInfrastructureMetrics() != null)
-            sb.append("EnhancedInfrastructureMetrics: ").append(getEnhancedInfrastructureMetrics());
+            sb.append("EnhancedInfrastructureMetrics: ").append(getEnhancedInfrastructureMetrics()).append(",");
+        if (getInferredWorkloadTypes() != null)
+            sb.append("InferredWorkloadTypes: ").append(getInferredWorkloadTypes());
         sb.append("}");
         return sb.toString();
     }
@@ -362,6 +506,10 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
         if (other.getEnhancedInfrastructureMetrics() != null
                 && other.getEnhancedInfrastructureMetrics().equals(this.getEnhancedInfrastructureMetrics()) == false)
             return false;
+        if (other.getInferredWorkloadTypes() == null ^ this.getInferredWorkloadTypes() == null)
+            return false;
+        if (other.getInferredWorkloadTypes() != null && other.getInferredWorkloadTypes().equals(this.getInferredWorkloadTypes()) == false)
+            return false;
         return true;
     }
 
@@ -373,6 +521,7 @@ public class RecommendationPreferencesDetail implements Serializable, Cloneable,
         hashCode = prime * hashCode + ((getScope() == null) ? 0 : getScope().hashCode());
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         hashCode = prime * hashCode + ((getEnhancedInfrastructureMetrics() == null) ? 0 : getEnhancedInfrastructureMetrics().hashCode());
+        hashCode = prime * hashCode + ((getInferredWorkloadTypes() == null) ? 0 : getInferredWorkloadTypes().hashCode());
         return hashCode;
     }
 

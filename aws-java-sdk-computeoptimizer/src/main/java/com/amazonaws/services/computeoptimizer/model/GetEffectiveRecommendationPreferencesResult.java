@@ -32,12 +32,17 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
      * </p>
      * <p>
      * To validate whether the preference is applied to your last generated set of recommendations, review the
      * <code>effectiveRecommendationPreferences</code> value in the response of the
      * <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      */
     private String enhancedInfrastructureMetrics;
@@ -49,12 +54,17 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
      * </p>
      * <p>
      * To validate whether the preference is applied to your last generated set of recommendations, review the
      * <code>effectiveRecommendationPreferences</code> value in the response of the
      * <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param enhancedInfrastructureMetrics
@@ -62,12 +72,17 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      *        preferences that you might have set at the resource, account, and organization level.</p>
      *        <p>
      *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
      *        </p>
      *        <p>
      *        To validate whether the preference is applied to your last generated set of recommendations, review the
      *        <code>effectiveRecommendationPreferences</code> value in the response of the
      *        <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @see EnhancedInfrastructureMetrics
      */
 
@@ -82,24 +97,34 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
      * </p>
      * <p>
      * To validate whether the preference is applied to your last generated set of recommendations, review the
      * <code>effectiveRecommendationPreferences</code> value in the response of the
      * <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
      * 
      * @return The status of the enhanced infrastructure metrics recommendation preference. Considers all applicable
      *         preferences that you might have set at the resource, account, and organization level.</p>
      *         <p>
      *         A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *         refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *         refresh, and a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
      *         </p>
      *         <p>
      *         To validate whether the preference is applied to your last generated set of recommendations, review the
      *         <code>effectiveRecommendationPreferences</code> value in the response of the
      *         <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *         >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @see EnhancedInfrastructureMetrics
      */
 
@@ -114,12 +139,17 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
      * </p>
      * <p>
      * To validate whether the preference is applied to your last generated set of recommendations, review the
      * <code>effectiveRecommendationPreferences</code> value in the response of the
      * <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param enhancedInfrastructureMetrics
@@ -127,12 +157,17 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      *        preferences that you might have set at the resource, account, and organization level.</p>
      *        <p>
      *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
      *        </p>
      *        <p>
      *        To validate whether the preference is applied to your last generated set of recommendations, review the
      *        <code>effectiveRecommendationPreferences</code> value in the response of the
      *        <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnhancedInfrastructureMetrics
      */
@@ -149,12 +184,17 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      * </p>
      * <p>
      * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
      * </p>
      * <p>
      * To validate whether the preference is applied to your last generated set of recommendations, review the
      * <code>effectiveRecommendationPreferences</code> value in the response of the
      * <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param enhancedInfrastructureMetrics
@@ -162,12 +202,17 @@ public class GetEffectiveRecommendationPreferencesResult extends com.amazonaws.A
      *        preferences that you might have set at the resource, account, and organization level.</p>
      *        <p>
      *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied to recommendations.
      *        </p>
      *        <p>
      *        To validate whether the preference is applied to your last generated set of recommendations, review the
      *        <code>effectiveRecommendationPreferences</code> value in the response of the
      *        <a>GetAutoScalingGroupRecommendations</a> and <a>GetEC2InstanceRecommendations</a> actions.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnhancedInfrastructureMetrics
      */

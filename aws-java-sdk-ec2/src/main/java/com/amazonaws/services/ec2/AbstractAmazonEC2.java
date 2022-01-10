@@ -1169,6 +1169,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DescribeFastLaunchImagesResult describeFastLaunchImages(DescribeFastLaunchImagesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeFastSnapshotRestoresResult describeFastSnapshotRestores(DescribeFastSnapshotRestoresRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1932,6 +1937,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public DisableFastLaunchResult disableFastLaunch(DisableFastLaunchRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisableFastSnapshotRestoresResult disableFastSnapshotRestores(DisableFastSnapshotRestoresRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2028,6 +2038,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public EnableEbsEncryptionByDefaultResult enableEbsEncryptionByDefault(EnableEbsEncryptionByDefaultRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableFastLaunchResult enableFastLaunch(EnableFastLaunchRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

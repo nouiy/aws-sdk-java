@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Represents an Amazon S3 location (bucket name and object key) where DataBrew can read input data, or write output
- * from a job.
+ * Represents an Amazon S3 location (bucket name, bucket owner, and object key) where DataBrew can read input data, or
+ * write output from a job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/databrew-2017-07-25/S3Location" target="_top">AWS API
@@ -41,6 +41,12 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String key;
+    /**
+     * <p>
+     * The Amazon Web Services account ID of the bucket owner.
+     * </p>
+     */
+    private String bucketOwner;
 
     /**
      * <p>
@@ -123,6 +129,46 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Amazon Web Services account ID of the bucket owner.
+     * </p>
+     * 
+     * @param bucketOwner
+     *        The Amazon Web Services account ID of the bucket owner.
+     */
+
+    public void setBucketOwner(String bucketOwner) {
+        this.bucketOwner = bucketOwner;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account ID of the bucket owner.
+     * </p>
+     * 
+     * @return The Amazon Web Services account ID of the bucket owner.
+     */
+
+    public String getBucketOwner() {
+        return this.bucketOwner;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services account ID of the bucket owner.
+     * </p>
+     * 
+     * @param bucketOwner
+     *        The Amazon Web Services account ID of the bucket owner.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public S3Location withBucketOwner(String bucketOwner) {
+        setBucketOwner(bucketOwner);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,7 +183,9 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
         if (getBucket() != null)
             sb.append("Bucket: ").append(getBucket()).append(",");
         if (getKey() != null)
-            sb.append("Key: ").append(getKey());
+            sb.append("Key: ").append(getKey()).append(",");
+        if (getBucketOwner() != null)
+            sb.append("BucketOwner: ").append(getBucketOwner());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +208,10 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getKey() != null && other.getKey().equals(this.getKey()) == false)
             return false;
+        if (other.getBucketOwner() == null ^ this.getBucketOwner() == null)
+            return false;
+        if (other.getBucketOwner() != null && other.getBucketOwner().equals(this.getBucketOwner()) == false)
+            return false;
         return true;
     }
 
@@ -170,6 +222,7 @@ public class S3Location implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getBucket() == null) ? 0 : getBucket().hashCode());
         hashCode = prime * hashCode + ((getKey() == null) ? 0 : getKey().hashCode());
+        hashCode = prime * hashCode + ((getBucketOwner() == null) ? 0 : getBucketOwner().hashCode());
         return hashCode;
     }
 

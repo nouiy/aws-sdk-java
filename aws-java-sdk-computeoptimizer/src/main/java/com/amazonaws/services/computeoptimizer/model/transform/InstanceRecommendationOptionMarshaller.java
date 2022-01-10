@@ -40,6 +40,8 @@ public class InstanceRecommendationOptionMarshaller {
             .marshallLocationName("rank").build();
     private static final MarshallingInfo<StructuredPojo> SAVINGSOPPORTUNITY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("savingsOpportunity").build();
+    private static final MarshallingInfo<String> MIGRATIONEFFORT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("migrationEffort").build();
 
     private static final InstanceRecommendationOptionMarshaller instance = new InstanceRecommendationOptionMarshaller();
 
@@ -63,6 +65,7 @@ public class InstanceRecommendationOptionMarshaller {
             protocolMarshaller.marshall(instanceRecommendationOption.getPerformanceRisk(), PERFORMANCERISK_BINDING);
             protocolMarshaller.marshall(instanceRecommendationOption.getRank(), RANK_BINDING);
             protocolMarshaller.marshall(instanceRecommendationOption.getSavingsOpportunity(), SAVINGSOPPORTUNITY_BINDING);
+            protocolMarshaller.marshall(instanceRecommendationOption.getMigrationEffort(), MIGRATIONEFFORT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

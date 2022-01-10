@@ -3183,6 +3183,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeFastLaunchImagesResult> describeFastLaunchImagesAsync(DescribeFastLaunchImagesRequest request) {
+
+        return describeFastLaunchImagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeFastLaunchImagesResult> describeFastLaunchImagesAsync(DescribeFastLaunchImagesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeFastLaunchImagesRequest, DescribeFastLaunchImagesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFastSnapshotRestoresResult> describeFastSnapshotRestoresAsync(DescribeFastSnapshotRestoresRequest request) {
 
         return describeFastSnapshotRestoresAsync(request, null);
@@ -5608,6 +5621,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<DisableFastLaunchResult> disableFastLaunchAsync(DisableFastLaunchRequest request) {
+
+        return disableFastLaunchAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableFastLaunchResult> disableFastLaunchAsync(DisableFastLaunchRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisableFastLaunchRequest, DisableFastLaunchResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableFastSnapshotRestoresResult> disableFastSnapshotRestoresAsync(DisableFastSnapshotRestoresRequest request) {
 
         return disableFastSnapshotRestoresAsync(request, null);
@@ -5879,6 +5905,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<EnableEbsEncryptionByDefaultResult> enableEbsEncryptionByDefaultAsync(EnableEbsEncryptionByDefaultRequest request,
             com.amazonaws.handlers.AsyncHandler<EnableEbsEncryptionByDefaultRequest, EnableEbsEncryptionByDefaultResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableFastLaunchResult> enableFastLaunchAsync(EnableFastLaunchRequest request) {
+
+        return enableFastLaunchAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableFastLaunchResult> enableFastLaunchAsync(EnableFastLaunchRequest request,
+            com.amazonaws.handlers.AsyncHandler<EnableFastLaunchRequest, EnableFastLaunchResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

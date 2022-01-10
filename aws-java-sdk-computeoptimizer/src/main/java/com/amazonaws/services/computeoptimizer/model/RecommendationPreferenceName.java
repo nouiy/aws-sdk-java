@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum RecommendationPreferenceName {
 
-    EnhancedInfrastructureMetrics("EnhancedInfrastructureMetrics");
+    EnhancedInfrastructureMetrics("EnhancedInfrastructureMetrics"),
+    InferredWorkloadTypes("InferredWorkloadTypes");
 
     private String value;
 

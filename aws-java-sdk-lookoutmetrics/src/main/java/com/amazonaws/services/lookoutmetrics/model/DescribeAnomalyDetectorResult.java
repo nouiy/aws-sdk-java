@@ -67,7 +67,7 @@ public class DescribeAnomalyDetectorResult extends com.amazonaws.AmazonWebServic
     private String status;
     /**
      * <p>
-     * The reason that the detector failed, if any.
+     * The reason that the detector failed.
      * </p>
      */
     private String failureReason;
@@ -77,6 +77,12 @@ public class DescribeAnomalyDetectorResult extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String kmsKeyArn;
+    /**
+     * <p>
+     * The process that caused the detector to fail.
+     * </p>
+     */
+    private String failureType;
 
     /**
      * <p>
@@ -379,11 +385,11 @@ public class DescribeAnomalyDetectorResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The reason that the detector failed, if any.
+     * The reason that the detector failed.
      * </p>
      * 
      * @param failureReason
-     *        The reason that the detector failed, if any.
+     *        The reason that the detector failed.
      */
 
     public void setFailureReason(String failureReason) {
@@ -392,10 +398,10 @@ public class DescribeAnomalyDetectorResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The reason that the detector failed, if any.
+     * The reason that the detector failed.
      * </p>
      * 
-     * @return The reason that the detector failed, if any.
+     * @return The reason that the detector failed.
      */
 
     public String getFailureReason() {
@@ -404,11 +410,11 @@ public class DescribeAnomalyDetectorResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The reason that the detector failed, if any.
+     * The reason that the detector failed.
      * </p>
      * 
      * @param failureReason
-     *        The reason that the detector failed, if any.
+     *        The reason that the detector failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -458,6 +464,65 @@ public class DescribeAnomalyDetectorResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The process that caused the detector to fail.
+     * </p>
+     * 
+     * @param failureType
+     *        The process that caused the detector to fail.
+     * @see AnomalyDetectorFailureType
+     */
+
+    public void setFailureType(String failureType) {
+        this.failureType = failureType;
+    }
+
+    /**
+     * <p>
+     * The process that caused the detector to fail.
+     * </p>
+     * 
+     * @return The process that caused the detector to fail.
+     * @see AnomalyDetectorFailureType
+     */
+
+    public String getFailureType() {
+        return this.failureType;
+    }
+
+    /**
+     * <p>
+     * The process that caused the detector to fail.
+     * </p>
+     * 
+     * @param failureType
+     *        The process that caused the detector to fail.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnomalyDetectorFailureType
+     */
+
+    public DescribeAnomalyDetectorResult withFailureType(String failureType) {
+        setFailureType(failureType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The process that caused the detector to fail.
+     * </p>
+     * 
+     * @param failureType
+     *        The process that caused the detector to fail.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AnomalyDetectorFailureType
+     */
+
+    public DescribeAnomalyDetectorResult withFailureType(AnomalyDetectorFailureType failureType) {
+        this.failureType = failureType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -486,7 +551,9 @@ public class DescribeAnomalyDetectorResult extends com.amazonaws.AmazonWebServic
         if (getFailureReason() != null)
             sb.append("FailureReason: ").append(getFailureReason()).append(",");
         if (getKmsKeyArn() != null)
-            sb.append("KmsKeyArn: ").append(getKmsKeyArn());
+            sb.append("KmsKeyArn: ").append(getKmsKeyArn()).append(",");
+        if (getFailureType() != null)
+            sb.append("FailureType: ").append(getFailureType());
         sb.append("}");
         return sb.toString();
     }
@@ -537,6 +604,10 @@ public class DescribeAnomalyDetectorResult extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getKmsKeyArn() != null && other.getKmsKeyArn().equals(this.getKmsKeyArn()) == false)
             return false;
+        if (other.getFailureType() == null ^ this.getFailureType() == null)
+            return false;
+        if (other.getFailureType() != null && other.getFailureType().equals(this.getFailureType()) == false)
+            return false;
         return true;
     }
 
@@ -554,6 +625,7 @@ public class DescribeAnomalyDetectorResult extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getFailureReason() == null) ? 0 : getFailureReason().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyArn() == null) ? 0 : getKmsKeyArn().hashCode());
+        hashCode = prime * hashCode + ((getFailureType() == null) ? 0 : getFailureType().hashCode());
         return hashCode;
     }
 

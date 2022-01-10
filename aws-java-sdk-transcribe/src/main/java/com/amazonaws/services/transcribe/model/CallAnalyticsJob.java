@@ -48,8 +48,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      * If you don't know the language, you can leave this field blank, and Amazon Transcribe will use machine learning
      * to automatically identify the language. To improve the accuracy of language identification, you can provide an
      * array containing the possible language codes for the language spoken in your audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      */
     private String languageCode;
@@ -153,7 +153,7 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      * <p>
      * A value between zero and one that Amazon Transcribe assigned to the language that it identified in the source
      * audio. This value appears only when you don't provide a single language code. Larger values indicate that Amazon
-     * Transcribe has higher confidence in the language that it identified
+     * Transcribe has higher confidence in the language that it identified.
      * </p>
      */
     private Float identifiedLanguageScore;
@@ -278,8 +278,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      * If you don't know the language, you can leave this field blank, and Amazon Transcribe will use machine learning
      * to automatically identify the language. To improve the accuracy of language identification, you can provide an
      * array containing the possible language codes for the language spoken in your audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      * 
      * @param languageCode
@@ -289,8 +289,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      *        If you don't know the language, you can leave this field blank, and Amazon Transcribe will use machine
      *        learning to automatically identify the language. To improve the accuracy of language identification, you
      *        can provide an array containing the possible language codes for the language spoken in your audio. Refer
-     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     *        language-specific features</a> for additional information.
+     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *        languages</a> for additional information.
      * @see LanguageCode
      */
 
@@ -306,8 +306,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      * If you don't know the language, you can leave this field blank, and Amazon Transcribe will use machine learning
      * to automatically identify the language. To improve the accuracy of language identification, you can provide an
      * array containing the possible language codes for the language spoken in your audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      * 
      * @return If you know the language spoken between the customer and the agent, specify a language code for this
@@ -316,8 +316,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      *         If you don't know the language, you can leave this field blank, and Amazon Transcribe will use machine
      *         learning to automatically identify the language. To improve the accuracy of language identification, you
      *         can provide an array containing the possible language codes for the language spoken in your audio. Refer
-     *         to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     *         language-specific features</a> for additional information.
+     *         to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *         languages</a> for additional information.
      * @see LanguageCode
      */
 
@@ -333,8 +333,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      * If you don't know the language, you can leave this field blank, and Amazon Transcribe will use machine learning
      * to automatically identify the language. To improve the accuracy of language identification, you can provide an
      * array containing the possible language codes for the language spoken in your audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      * 
      * @param languageCode
@@ -344,8 +344,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      *        If you don't know the language, you can leave this field blank, and Amazon Transcribe will use machine
      *        learning to automatically identify the language. To improve the accuracy of language identification, you
      *        can provide an array containing the possible language codes for the language spoken in your audio. Refer
-     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     *        language-specific features</a> for additional information.
+     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *        languages</a> for additional information.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -363,8 +363,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      * If you don't know the language, you can leave this field blank, and Amazon Transcribe will use machine learning
      * to automatically identify the language. To improve the accuracy of language identification, you can provide an
      * array containing the possible language codes for the language spoken in your audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      * 
      * @param languageCode
@@ -374,8 +374,8 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      *        If you don't know the language, you can leave this field blank, and Amazon Transcribe will use machine
      *        learning to automatically identify the language. To improve the accuracy of language identification, you
      *        can provide an array containing the possible language codes for the language spoken in your audio. Refer
-     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     *        language-specific features</a> for additional information.
+     *        to <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *        languages</a> for additional information.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -1045,13 +1045,13 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      * <p>
      * A value between zero and one that Amazon Transcribe assigned to the language that it identified in the source
      * audio. This value appears only when you don't provide a single language code. Larger values indicate that Amazon
-     * Transcribe has higher confidence in the language that it identified
+     * Transcribe has higher confidence in the language that it identified.
      * </p>
      * 
      * @param identifiedLanguageScore
      *        A value between zero and one that Amazon Transcribe assigned to the language that it identified in the
      *        source audio. This value appears only when you don't provide a single language code. Larger values
-     *        indicate that Amazon Transcribe has higher confidence in the language that it identified
+     *        indicate that Amazon Transcribe has higher confidence in the language that it identified.
      */
 
     public void setIdentifiedLanguageScore(Float identifiedLanguageScore) {
@@ -1062,12 +1062,12 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      * <p>
      * A value between zero and one that Amazon Transcribe assigned to the language that it identified in the source
      * audio. This value appears only when you don't provide a single language code. Larger values indicate that Amazon
-     * Transcribe has higher confidence in the language that it identified
+     * Transcribe has higher confidence in the language that it identified.
      * </p>
      * 
      * @return A value between zero and one that Amazon Transcribe assigned to the language that it identified in the
      *         source audio. This value appears only when you don't provide a single language code. Larger values
-     *         indicate that Amazon Transcribe has higher confidence in the language that it identified
+     *         indicate that Amazon Transcribe has higher confidence in the language that it identified.
      */
 
     public Float getIdentifiedLanguageScore() {
@@ -1078,13 +1078,13 @@ public class CallAnalyticsJob implements Serializable, Cloneable, StructuredPojo
      * <p>
      * A value between zero and one that Amazon Transcribe assigned to the language that it identified in the source
      * audio. This value appears only when you don't provide a single language code. Larger values indicate that Amazon
-     * Transcribe has higher confidence in the language that it identified
+     * Transcribe has higher confidence in the language that it identified.
      * </p>
      * 
      * @param identifiedLanguageScore
      *        A value between zero and one that Amazon Transcribe assigned to the language that it identified in the
      *        source audio. This value appears only when you don't provide a single language code. Larger values
-     *        indicate that Amazon Transcribe has higher confidence in the language that it identified
+     *        indicate that Amazon Transcribe has higher confidence in the language that it identified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

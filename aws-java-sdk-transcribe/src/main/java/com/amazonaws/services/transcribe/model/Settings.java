@@ -317,7 +317,7 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param channelIdentification
      *        Instructs Amazon Transcribe to process each audio channel separately and then merge the transcription
-     *        output of each channel into a single transcription. </p>
+     *        output of each channel into a single transcription.</p>
      *        <p>
      *        Amazon Transcribe also produces a transcription of each item detected on an audio channel, including the
      *        start time and end time of the item and alternative transcriptions of the item including the confidence
@@ -348,7 +348,7 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @return Instructs Amazon Transcribe to process each audio channel separately and then merge the transcription
-     *         output of each channel into a single transcription. </p>
+     *         output of each channel into a single transcription.</p>
      *         <p>
      *         Amazon Transcribe also produces a transcription of each item detected on an audio channel, including the
      *         start time and end time of the item and alternative transcriptions of the item including the confidence
@@ -380,7 +380,7 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param channelIdentification
      *        Instructs Amazon Transcribe to process each audio channel separately and then merge the transcription
-     *        output of each channel into a single transcription. </p>
+     *        output of each channel into a single transcription.</p>
      *        <p>
      *        Amazon Transcribe also produces a transcription of each item detected on an audio channel, including the
      *        start time and end time of the item and alternative transcriptions of the item including the confidence
@@ -413,7 +413,7 @@ public class Settings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @return Instructs Amazon Transcribe to process each audio channel separately and then merge the transcription
-     *         output of each channel into a single transcription. </p>
+     *         output of each channel into a single transcription.</p>
      *         <p>
      *         Amazon Transcribe also produces a transcription of each item detected on an audio channel, including the
      *         start time and end time of the item and alternative transcriptions of the item including the confidence

@@ -36,8 +36,7 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The words to use in the vocabulary filter. Only use characters from the character set defined for custom
      * vocabularies. For a list of character sets, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom Vocabularies</a>.
      * </p>
      * <p>
      * If you provide a list of words in the <code>Words</code> parameter, you can't use the
@@ -49,8 +48,7 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The Amazon S3 location of a text file used as input to create the vocabulary filter. Only use characters from the
      * character set defined for custom vocabularies. For a list of character sets, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom Vocabularies</a>.
      * </p>
      * <p>
      * The specified file must be less than 50 KB of UTF-8 characters.
@@ -112,8 +110,7 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The words to use in the vocabulary filter. Only use characters from the character set defined for custom
      * vocabularies. For a list of character sets, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom Vocabularies</a>.
      * </p>
      * <p>
      * If you provide a list of words in the <code>Words</code> parameter, you can't use the
@@ -122,8 +119,8 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * 
      * @return The words to use in the vocabulary filter. Only use characters from the character set defined for custom
      *         vocabularies. For a list of character sets, see <a
-     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for
-     *         Custom Vocabularies</a>.</p>
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom
+     *         Vocabularies</a>.</p>
      *         <p>
      *         If you provide a list of words in the <code>Words</code> parameter, you can't use the
      *         <code>VocabularyFilterFileUri</code> parameter.
@@ -137,8 +134,7 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The words to use in the vocabulary filter. Only use characters from the character set defined for custom
      * vocabularies. For a list of character sets, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom Vocabularies</a>.
      * </p>
      * <p>
      * If you provide a list of words in the <code>Words</code> parameter, you can't use the
@@ -148,8 +144,8 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * @param words
      *        The words to use in the vocabulary filter. Only use characters from the character set defined for custom
      *        vocabularies. For a list of character sets, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for
-     *        Custom Vocabularies</a>.</p>
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom
+     *        Vocabularies</a>.</p>
      *        <p>
      *        If you provide a list of words in the <code>Words</code> parameter, you can't use the
      *        <code>VocabularyFilterFileUri</code> parameter.
@@ -168,8 +164,7 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The words to use in the vocabulary filter. Only use characters from the character set defined for custom
      * vocabularies. For a list of character sets, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom Vocabularies</a>.
      * </p>
      * <p>
      * If you provide a list of words in the <code>Words</code> parameter, you can't use the
@@ -184,8 +179,8 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * @param words
      *        The words to use in the vocabulary filter. Only use characters from the character set defined for custom
      *        vocabularies. For a list of character sets, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for
-     *        Custom Vocabularies</a>.</p>
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom
+     *        Vocabularies</a>.</p>
      *        <p>
      *        If you provide a list of words in the <code>Words</code> parameter, you can't use the
      *        <code>VocabularyFilterFileUri</code> parameter.
@@ -206,8 +201,7 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The words to use in the vocabulary filter. Only use characters from the character set defined for custom
      * vocabularies. For a list of character sets, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom Vocabularies</a>.
      * </p>
      * <p>
      * If you provide a list of words in the <code>Words</code> parameter, you can't use the
@@ -217,8 +211,8 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * @param words
      *        The words to use in the vocabulary filter. Only use characters from the character set defined for custom
      *        vocabularies. For a list of character sets, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for
-     *        Custom Vocabularies</a>.</p>
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom
+     *        Vocabularies</a>.</p>
      *        <p>
      *        If you provide a list of words in the <code>Words</code> parameter, you can't use the
      *        <code>VocabularyFilterFileUri</code> parameter.
@@ -234,8 +228,7 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The Amazon S3 location of a text file used as input to create the vocabulary filter. Only use characters from the
      * character set defined for custom vocabularies. For a list of character sets, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom Vocabularies</a>.
      * </p>
      * <p>
      * The specified file must be less than 50 KB of UTF-8 characters.
@@ -248,8 +241,8 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * @param vocabularyFilterFileUri
      *        The Amazon S3 location of a text file used as input to create the vocabulary filter. Only use characters
      *        from the character set defined for custom vocabularies. For a list of character sets, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for
-     *        Custom Vocabularies</a>.</p>
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom
+     *        Vocabularies</a>.</p>
      *        <p>
      *        The specified file must be less than 50 KB of UTF-8 characters.
      *        </p>
@@ -266,8 +259,7 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The Amazon S3 location of a text file used as input to create the vocabulary filter. Only use characters from the
      * character set defined for custom vocabularies. For a list of character sets, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom Vocabularies</a>.
      * </p>
      * <p>
      * The specified file must be less than 50 KB of UTF-8 characters.
@@ -279,8 +271,8 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * 
      * @return The Amazon S3 location of a text file used as input to create the vocabulary filter. Only use characters
      *         from the character set defined for custom vocabularies. For a list of character sets, see <a
-     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for
-     *         Custom Vocabularies</a>.</p>
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom
+     *         Vocabularies</a>.</p>
      *         <p>
      *         The specified file must be less than 50 KB of UTF-8 characters.
      *         </p>
@@ -297,8 +289,7 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * <p>
      * The Amazon S3 location of a text file used as input to create the vocabulary filter. Only use characters from the
      * character set defined for custom vocabularies. For a list of character sets, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom Vocabularies</a>.
      * </p>
      * <p>
      * The specified file must be less than 50 KB of UTF-8 characters.
@@ -311,8 +302,8 @@ public class UpdateVocabularyFilterRequest extends com.amazonaws.AmazonWebServic
      * @param vocabularyFilterFileUri
      *        The Amazon S3 location of a text file used as input to create the vocabulary filter. Only use characters
      *        from the character set defined for custom vocabularies. For a list of character sets, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-vocabulary.html#charsets">Character Sets for
-     *        Custom Vocabularies</a>.</p>
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/charsets.html">Character Sets for Custom
+     *        Vocabularies</a>.</p>
      *        <p>
      *        The specified file must be less than 50 KB of UTF-8 characters.
      *        </p>

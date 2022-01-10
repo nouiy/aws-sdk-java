@@ -275,7 +275,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current Lambda function requires more memory.
+     * more likely the current instance cannot meet the performance requirements of its workload.
      * </p>
      */
     private String currentPerformanceRisk;
@@ -285,6 +285,52 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
      * </p>
      */
     private EffectiveRecommendationPreferences effectiveRecommendationPreferences;
+    /**
+     * <p>
+     * The applications that might be running on the instance as inferred by Compute Optimizer.
+     * </p>
+     * <p>
+     * Compute Optimizer can infer if one of the following applications might be running on the instance:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Redis</code> - Infers that Redis might be running on the instance.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private java.util.List<String> inferredWorkloadTypes;
 
     /**
      * <p>
@@ -2652,12 +2698,12 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current Lambda function requires more memory.
+     * more likely the current instance cannot meet the performance requirements of its workload.
      * </p>
      * 
      * @param currentPerformanceRisk
      *        The risk of the current instance not meeting the performance needs of its workloads. The higher the risk,
-     *        the more likely the current Lambda function requires more memory.
+     *        the more likely the current instance cannot meet the performance requirements of its workload.
      * @see CurrentPerformanceRisk
      */
 
@@ -2668,11 +2714,11 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current Lambda function requires more memory.
+     * more likely the current instance cannot meet the performance requirements of its workload.
      * </p>
      * 
      * @return The risk of the current instance not meeting the performance needs of its workloads. The higher the risk,
-     *         the more likely the current Lambda function requires more memory.
+     *         the more likely the current instance cannot meet the performance requirements of its workload.
      * @see CurrentPerformanceRisk
      */
 
@@ -2683,12 +2729,12 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current Lambda function requires more memory.
+     * more likely the current instance cannot meet the performance requirements of its workload.
      * </p>
      * 
      * @param currentPerformanceRisk
      *        The risk of the current instance not meeting the performance needs of its workloads. The higher the risk,
-     *        the more likely the current Lambda function requires more memory.
+     *        the more likely the current instance cannot meet the performance requirements of its workload.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CurrentPerformanceRisk
      */
@@ -2701,12 +2747,12 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     /**
      * <p>
      * The risk of the current instance not meeting the performance needs of its workloads. The higher the risk, the
-     * more likely the current Lambda function requires more memory.
+     * more likely the current instance cannot meet the performance requirements of its workload.
      * </p>
      * 
      * @param currentPerformanceRisk
      *        The risk of the current instance not meeting the performance needs of its workloads. The higher the risk,
-     *        the more likely the current Lambda function requires more memory.
+     *        the more likely the current instance cannot meet the performance requirements of its workload.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CurrentPerformanceRisk
      */
@@ -2757,6 +2803,499 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
     }
 
     /**
+     * <p>
+     * The applications that might be running on the instance as inferred by Compute Optimizer.
+     * </p>
+     * <p>
+     * Compute Optimizer can infer if one of the following applications might be running on the instance:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Redis</code> - Infers that Redis might be running on the instance.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The applications that might be running on the instance as inferred by Compute Optimizer.</p>
+     *         <p>
+     *         Compute Optimizer can infer if one of the following applications might be running on the instance:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Redis</code> - Infers that Redis might be running on the instance.
+     *         </p>
+     *         </li>
+     * @see InferredWorkloadType
+     */
+
+    public java.util.List<String> getInferredWorkloadTypes() {
+        return inferredWorkloadTypes;
+    }
+
+    /**
+     * <p>
+     * The applications that might be running on the instance as inferred by Compute Optimizer.
+     * </p>
+     * <p>
+     * Compute Optimizer can infer if one of the following applications might be running on the instance:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Redis</code> - Infers that Redis might be running on the instance.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param inferredWorkloadTypes
+     *        The applications that might be running on the instance as inferred by Compute Optimizer.</p>
+     *        <p>
+     *        Compute Optimizer can infer if one of the following applications might be running on the instance:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Redis</code> - Infers that Redis might be running on the instance.
+     *        </p>
+     *        </li>
+     * @see InferredWorkloadType
+     */
+
+    public void setInferredWorkloadTypes(java.util.Collection<String> inferredWorkloadTypes) {
+        if (inferredWorkloadTypes == null) {
+            this.inferredWorkloadTypes = null;
+            return;
+        }
+
+        this.inferredWorkloadTypes = new java.util.ArrayList<String>(inferredWorkloadTypes);
+    }
+
+    /**
+     * <p>
+     * The applications that might be running on the instance as inferred by Compute Optimizer.
+     * </p>
+     * <p>
+     * Compute Optimizer can infer if one of the following applications might be running on the instance:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Redis</code> - Infers that Redis might be running on the instance.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setInferredWorkloadTypes(java.util.Collection)} or
+     * {@link #withInferredWorkloadTypes(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param inferredWorkloadTypes
+     *        The applications that might be running on the instance as inferred by Compute Optimizer.</p>
+     *        <p>
+     *        Compute Optimizer can infer if one of the following applications might be running on the instance:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Redis</code> - Infers that Redis might be running on the instance.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InferredWorkloadType
+     */
+
+    public InstanceRecommendation withInferredWorkloadTypes(String... inferredWorkloadTypes) {
+        if (this.inferredWorkloadTypes == null) {
+            setInferredWorkloadTypes(new java.util.ArrayList<String>(inferredWorkloadTypes.length));
+        }
+        for (String ele : inferredWorkloadTypes) {
+            this.inferredWorkloadTypes.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The applications that might be running on the instance as inferred by Compute Optimizer.
+     * </p>
+     * <p>
+     * Compute Optimizer can infer if one of the following applications might be running on the instance:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Redis</code> - Infers that Redis might be running on the instance.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param inferredWorkloadTypes
+     *        The applications that might be running on the instance as inferred by Compute Optimizer.</p>
+     *        <p>
+     *        Compute Optimizer can infer if one of the following applications might be running on the instance:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Redis</code> - Infers that Redis might be running on the instance.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InferredWorkloadType
+     */
+
+    public InstanceRecommendation withInferredWorkloadTypes(java.util.Collection<String> inferredWorkloadTypes) {
+        setInferredWorkloadTypes(inferredWorkloadTypes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The applications that might be running on the instance as inferred by Compute Optimizer.
+     * </p>
+     * <p>
+     * Compute Optimizer can infer if one of the following applications might be running on the instance:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Redis</code> - Infers that Redis might be running on the instance.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param inferredWorkloadTypes
+     *        The applications that might be running on the instance as inferred by Compute Optimizer.</p>
+     *        <p>
+     *        Compute Optimizer can infer if one of the following applications might be running on the instance:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AmazonEmr</code> - Infers that Amazon EMR might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApacheCassandra</code> - Infers that Apache Cassandra might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApacheHadoop</code> - Infers that Apache Hadoop might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Memcached</code> - Infers that Memcached might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NGINX</code> - Infers that NGINX might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>PostgreSql</code> - Infers that PostgreSQL might be running on the instance.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Redis</code> - Infers that Redis might be running on the instance.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InferredWorkloadType
+     */
+
+    public InstanceRecommendation withInferredWorkloadTypes(InferredWorkloadType... inferredWorkloadTypes) {
+        java.util.ArrayList<String> inferredWorkloadTypesCopy = new java.util.ArrayList<String>(inferredWorkloadTypes.length);
+        for (InferredWorkloadType value : inferredWorkloadTypes) {
+            inferredWorkloadTypesCopy.add(value.toString());
+        }
+        if (getInferredWorkloadTypes() == null) {
+            setInferredWorkloadTypes(inferredWorkloadTypesCopy);
+        } else {
+            getInferredWorkloadTypes().addAll(inferredWorkloadTypesCopy);
+        }
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2793,7 +3332,9 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         if (getCurrentPerformanceRisk() != null)
             sb.append("CurrentPerformanceRisk: ").append(getCurrentPerformanceRisk()).append(",");
         if (getEffectiveRecommendationPreferences() != null)
-            sb.append("EffectiveRecommendationPreferences: ").append(getEffectiveRecommendationPreferences());
+            sb.append("EffectiveRecommendationPreferences: ").append(getEffectiveRecommendationPreferences()).append(",");
+        if (getInferredWorkloadTypes() != null)
+            sb.append("InferredWorkloadTypes: ").append(getInferredWorkloadTypes());
         sb.append("}");
         return sb.toString();
     }
@@ -2861,6 +3402,10 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         if (other.getEffectiveRecommendationPreferences() != null
                 && other.getEffectiveRecommendationPreferences().equals(this.getEffectiveRecommendationPreferences()) == false)
             return false;
+        if (other.getInferredWorkloadTypes() == null ^ this.getInferredWorkloadTypes() == null)
+            return false;
+        if (other.getInferredWorkloadTypes() != null && other.getInferredWorkloadTypes().equals(this.getInferredWorkloadTypes()) == false)
+            return false;
         return true;
     }
 
@@ -2882,6 +3427,7 @@ public class InstanceRecommendation implements Serializable, Cloneable, Structur
         hashCode = prime * hashCode + ((getLastRefreshTimestamp() == null) ? 0 : getLastRefreshTimestamp().hashCode());
         hashCode = prime * hashCode + ((getCurrentPerformanceRisk() == null) ? 0 : getCurrentPerformanceRisk().hashCode());
         hashCode = prime * hashCode + ((getEffectiveRecommendationPreferences() == null) ? 0 : getEffectiveRecommendationPreferences().hashCode());
+        hashCode = prime * hashCode + ((getInferredWorkloadTypes() == null) ? 0 : getInferredWorkloadTypes().hashCode());
         return hashCode;
     }
 

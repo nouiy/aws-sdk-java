@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the estimated monthly savings amount possible for a given resource based on On-Demand instance pricing
+ * Describes the estimated monthly savings amount possible, based on On-Demand instance pricing, by adopting Compute
+ * Optimizer recommendations for a given resource.
  * </p>
  * <p>
  * For more information, see <a href=

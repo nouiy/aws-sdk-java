@@ -69,8 +69,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      * this field blank and Amazon Transcribe will use machine learning to identify the language for you. To improve the
      * ability of Amazon Transcribe to correctly identify the language, you can provide an array of the languages that
      * can be present in the audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      */
     private java.util.List<String> languageOptions;
@@ -335,8 +335,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      * this field blank and Amazon Transcribe will use machine learning to identify the language for you. To improve the
      * ability of Amazon Transcribe to correctly identify the language, you can provide an array of the languages that
      * can be present in the audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      * 
      * @return When you run a call analytics job, you can specify the language spoken in the audio, or you can have
@@ -346,8 +346,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      *         leave this field blank and Amazon Transcribe will use machine learning to identify the language for you.
      *         To improve the ability of Amazon Transcribe to correctly identify the language, you can provide an array
      *         of the languages that can be present in the audio. Refer to <a
-     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     *         language-specific features</a> for additional information.
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>
+     *         for additional information.
      * @see LanguageCode
      */
 
@@ -365,8 +365,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      * this field blank and Amazon Transcribe will use machine learning to identify the language for you. To improve the
      * ability of Amazon Transcribe to correctly identify the language, you can provide an array of the languages that
      * can be present in the audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      * 
      * @param languageOptions
@@ -377,8 +377,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      *        leave this field blank and Amazon Transcribe will use machine learning to identify the language for you.
      *        To improve the ability of Amazon Transcribe to correctly identify the language, you can provide an array
      *        of the languages that can be present in the audio. Refer to <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     *        language-specific features</a> for additional information.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>
+     *        for additional information.
      * @see LanguageCode
      */
 
@@ -401,8 +401,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      * this field blank and Amazon Transcribe will use machine learning to identify the language for you. To improve the
      * ability of Amazon Transcribe to correctly identify the language, you can provide an array of the languages that
      * can be present in the audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -418,8 +418,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      *        leave this field blank and Amazon Transcribe will use machine learning to identify the language for you.
      *        To improve the ability of Amazon Transcribe to correctly identify the language, you can provide an array
      *        of the languages that can be present in the audio. Refer to <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     *        language-specific features</a> for additional information.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>
+     *        for additional information.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -444,8 +444,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      * this field blank and Amazon Transcribe will use machine learning to identify the language for you. To improve the
      * ability of Amazon Transcribe to correctly identify the language, you can provide an array of the languages that
      * can be present in the audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      * 
      * @param languageOptions
@@ -456,8 +456,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      *        leave this field blank and Amazon Transcribe will use machine learning to identify the language for you.
      *        To improve the ability of Amazon Transcribe to correctly identify the language, you can provide an array
      *        of the languages that can be present in the audio. Refer to <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     *        language-specific features</a> for additional information.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>
+     *        for additional information.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -477,8 +477,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      * this field blank and Amazon Transcribe will use machine learning to identify the language for you. To improve the
      * ability of Amazon Transcribe to correctly identify the language, you can provide an array of the languages that
      * can be present in the audio. Refer to <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     * language-specific features</a> for additional information.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a> for
+     * additional information.
      * </p>
      * 
      * @param languageOptions
@@ -489,8 +489,8 @@ public class CallAnalyticsJobSettings implements Serializable, Cloneable, Struct
      *        leave this field blank and Amazon Transcribe will use machine learning to identify the language for you.
      *        To improve the ability of Amazon Transcribe to correctly identify the language, you can provide an array
      *        of the languages that can be present in the audio. Refer to <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html">Supported languages and
-     *        language-specific features</a> for additional information.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>
+     *        for additional information.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */

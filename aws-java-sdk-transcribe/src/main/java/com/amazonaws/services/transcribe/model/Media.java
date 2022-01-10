@@ -34,7 +34,16 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      * are calling. The general form is:
      * </p>
      * <p>
+     * <code> s3://&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     * </p>
+     * <p>
      * For example:
+     * </p>
+     * <p>
+     * <code>s3://AWSDOC-EXAMPLE-BUCKET/example.mp4</code>
+     * </p>
+     * <p>
+     * <code>s3://AWSDOC-EXAMPLE-BUCKET/mediadocs/example.mp4</code>
      * </p>
      * <p>
      * For more information about S3 object names, see <a
@@ -56,7 +65,16 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      * are calling. The general form is:
      * </p>
      * <p>
+     * <code> s3://&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     * </p>
+     * <p>
      * For example:
+     * </p>
+     * <p>
+     * <code>s3://AWSDOC-EXAMPLE-BUCKET/example.mp4</code>
+     * </p>
+     * <p>
+     * <code>s3://AWSDOC-EXAMPLE-BUCKET/mediadocs/example.mp4</code>
      * </p>
      * <p>
      * For more information about S3 object names, see <a
@@ -68,7 +86,16 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      *        The S3 object location of the input media file. The URI must be in the same region as the API endpoint
      *        that you are calling. The general form is:</p>
      *        <p>
+     *        <code> s3://&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     *        </p>
+     *        <p>
      *        For example:
+     *        </p>
+     *        <p>
+     *        <code>s3://AWSDOC-EXAMPLE-BUCKET/example.mp4</code>
+     *        </p>
+     *        <p>
+     *        <code>s3://AWSDOC-EXAMPLE-BUCKET/mediadocs/example.mp4</code>
      *        </p>
      *        <p>
      *        For more information about S3 object names, see <a
@@ -86,7 +113,16 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      * are calling. The general form is:
      * </p>
      * <p>
+     * <code> s3://&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     * </p>
+     * <p>
      * For example:
+     * </p>
+     * <p>
+     * <code>s3://AWSDOC-EXAMPLE-BUCKET/example.mp4</code>
+     * </p>
+     * <p>
+     * <code>s3://AWSDOC-EXAMPLE-BUCKET/mediadocs/example.mp4</code>
      * </p>
      * <p>
      * For more information about S3 object names, see <a
@@ -97,7 +133,16 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      * @return The S3 object location of the input media file. The URI must be in the same region as the API endpoint
      *         that you are calling. The general form is:</p>
      *         <p>
+     *         <code> s3://&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     *         </p>
+     *         <p>
      *         For example:
+     *         </p>
+     *         <p>
+     *         <code>s3://AWSDOC-EXAMPLE-BUCKET/example.mp4</code>
+     *         </p>
+     *         <p>
+     *         <code>s3://AWSDOC-EXAMPLE-BUCKET/mediadocs/example.mp4</code>
      *         </p>
      *         <p>
      *         For more information about S3 object names, see <a
@@ -115,7 +160,16 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      * are calling. The general form is:
      * </p>
      * <p>
+     * <code> s3://&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     * </p>
+     * <p>
      * For example:
+     * </p>
+     * <p>
+     * <code>s3://AWSDOC-EXAMPLE-BUCKET/example.mp4</code>
+     * </p>
+     * <p>
+     * <code>s3://AWSDOC-EXAMPLE-BUCKET/mediadocs/example.mp4</code>
      * </p>
      * <p>
      * For more information about S3 object names, see <a
@@ -127,7 +181,16 @@ public class Media implements Serializable, Cloneable, StructuredPojo {
      *        The S3 object location of the input media file. The URI must be in the same region as the API endpoint
      *        that you are calling. The general form is:</p>
      *        <p>
+     *        <code> s3://&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     *        </p>
+     *        <p>
      *        For example:
+     *        </p>
+     *        <p>
+     *        <code>s3://AWSDOC-EXAMPLE-BUCKET/example.mp4</code>
+     *        </p>
+     *        <p>
+     *        <code>s3://AWSDOC-EXAMPLE-BUCKET/mediadocs/example.mp4</code>
      *        </p>
      *        <p>
      *        For more information about S3 object names, see <a

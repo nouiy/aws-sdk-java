@@ -48,7 +48,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * <code>VocabularyFileUri</code> in the following format:
      * </p>
      * <p>
-     * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      * </p>
      * <p>
      * The following is an example URI for a vocabulary file that is stored in Amazon S3:
@@ -63,8 +63,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/vocabulary-med.html">Medical Custom Vocabularies</a>.
      * </p>
      */
     private String vocabularyFileUri;
@@ -210,7 +209,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * <code>VocabularyFileUri</code> in the following format:
      * </p>
      * <p>
-     * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      * </p>
      * <p>
      * The following is an example URI for a vocabulary file that is stored in Amazon S3:
@@ -225,8 +224,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/vocabulary-med.html">Medical Custom Vocabularies</a>.
      * </p>
      * 
      * @param vocabularyFileUri
@@ -234,7 +232,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *        the same Amazon Web Services Region as the resource that you're calling. Enter information about your
      *        <code>VocabularyFileUri</code> in the following format:</p>
      *        <p>
-     *        <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     *        <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      *        </p>
      *        <p>
      *        The following is an example URI for a vocabulary file that is stored in Amazon S3:
@@ -249,8 +247,8 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *        </p>
      *        <p>
      *        For more information about custom vocabularies, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical
-     *        Custom Vocabularies</a>.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/vocabulary-med.html">Medical Custom
+     *        Vocabularies</a>.
      */
 
     public void setVocabularyFileUri(String vocabularyFileUri) {
@@ -264,7 +262,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * <code>VocabularyFileUri</code> in the following format:
      * </p>
      * <p>
-     * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      * </p>
      * <p>
      * The following is an example URI for a vocabulary file that is stored in Amazon S3:
@@ -279,15 +277,14 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/vocabulary-med.html">Medical Custom Vocabularies</a>.
      * </p>
      * 
      * @return The location in Amazon S3 of the text file you use to define your custom vocabulary. The URI must be in
      *         the same Amazon Web Services Region as the resource that you're calling. Enter information about your
      *         <code>VocabularyFileUri</code> in the following format:</p>
      *         <p>
-     *         <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     *         <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      *         </p>
      *         <p>
      *         The following is an example URI for a vocabulary file that is stored in Amazon S3:
@@ -302,8 +299,8 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *         </p>
      *         <p>
      *         For more information about custom vocabularies, see <a
-     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical
-     *         Custom Vocabularies</a>.
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/vocabulary-med.html">Medical Custom
+     *         Vocabularies</a>.
      */
 
     public String getVocabularyFileUri() {
@@ -317,7 +314,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * <code>VocabularyFileUri</code> in the following format:
      * </p>
      * <p>
-     * <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     * <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      * </p>
      * <p>
      * The following is an example URI for a vocabulary file that is stored in Amazon S3:
@@ -332,8 +329,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical Custom
-     * Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/vocabulary-med.html">Medical Custom Vocabularies</a>.
      * </p>
      * 
      * @param vocabularyFileUri
@@ -341,7 +337,7 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *        the same Amazon Web Services Region as the resource that you're calling. Enter information about your
      *        <code>VocabularyFileUri</code> in the following format:</p>
      *        <p>
-     *        <code> https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt; </code>
+     *        <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;bucket-name&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      *        </p>
      *        <p>
      *        The following is an example URI for a vocabulary file that is stored in Amazon S3:
@@ -356,8 +352,8 @@ public class CreateMedicalVocabularyRequest extends com.amazonaws.AmazonWebServi
      *        </p>
      *        <p>
      *        For more information about custom vocabularies, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary-med">Medical
-     *        Custom Vocabularies</a>.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/vocabulary-med.html">Medical Custom
+     *        Vocabularies</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

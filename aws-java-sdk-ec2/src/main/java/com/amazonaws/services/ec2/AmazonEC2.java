@@ -4579,6 +4579,19 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Describe details for Windows AMIs that are configured for faster launching.
+     * </p>
+     * 
+     * @param describeFastLaunchImagesRequest
+     * @return Result of the DescribeFastLaunchImages operation returned by the service.
+     * @sample AmazonEC2.DescribeFastLaunchImages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFastLaunchImages" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeFastLaunchImagesResult describeFastLaunchImages(DescribeFastLaunchImagesRequest describeFastLaunchImagesRequest);
+
+    /**
+     * <p>
      * Describes the state of fast snapshot restores for your snapshots.
      * </p>
      * 
@@ -6944,6 +6957,21 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Discontinue faster launching for a Windows AMI, and clean up existing pre-provisioned snapshots. When you disable
+     * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
+     * be removed before you can enable faster launching again.
+     * </p>
+     * 
+     * @param disableFastLaunchRequest
+     * @return Result of the DisableFastLaunch operation returned by the service.
+     * @sample AmazonEC2.DisableFastLaunch
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableFastLaunch" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DisableFastLaunchResult disableFastLaunch(DisableFastLaunchRequest disableFastLaunchRequest);
+
+    /**
+     * <p>
      * Disables fast snapshot restores for the specified snapshots in the specified Availability Zones.
      * </p>
      * 
@@ -7304,6 +7332,23 @@ public interface AmazonEC2 {
      *      target="_top">AWS API Documentation</a>
      */
     EnableEbsEncryptionByDefaultResult enableEbsEncryptionByDefault(EnableEbsEncryptionByDefaultRequest enableEbsEncryptionByDefaultRequest);
+
+    /**
+     * <p>
+     * When you enable faster launching for a Windows AMI, images are pre-provisioned, using snapshots to launch
+     * instances up to 65% faster. To create the optimized Windows image, Amazon EC2 launches an instance and runs
+     * through Sysprep steps, rebooting as required. Then it creates a set of reserved snapshots that are used for
+     * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
+     * settings for launch frequency.
+     * </p>
+     * 
+     * @param enableFastLaunchRequest
+     * @return Result of the EnableFastLaunch operation returned by the service.
+     * @sample AmazonEC2.EnableFastLaunch
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableFastLaunch" target="_top">AWS API
+     *      Documentation</a>
+     */
+    EnableFastLaunchResult enableFastLaunch(EnableFastLaunchRequest enableFastLaunchRequest);
 
     /**
      * <p>

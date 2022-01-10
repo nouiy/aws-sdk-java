@@ -1,3 +1,24 @@
+# __1.12.137__ __2022-01-10__
+## __AWS Compute Optimizer__
+  - ### Features
+    - Adds support for new Compute Optimizer capability that makes it easier for customers to optimize their EC2 instances by leveraging multiple CPU architectures.
+
+## __AWS Glue DataBrew__
+  - ### Features
+    - This SDK release adds support for specifying a Bucket Owner for an S3 location.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - New feature: Updated EC2 API to support faster launching for Windows images. Optimized images are pre-provisioned, using snapshots to launch instances up to 65% faster.
+
+## __Amazon Lookout for Metrics__
+  - ### Features
+    - This release adds FailureType in the response of DescribeAnomalyDetector.
+
+## __Amazon Transcribe Service__
+  - ### Features
+    - Documentation updates for Amazon Transcribe.
+
 # __1.12.136__ __2022-01-07__
 ## __AWS Elemental MediaLive__
   - ### Features

@@ -31,7 +31,7 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * genereated.
+     * generated.
      * </p>
      */
     private java.util.List<String> formats;
@@ -45,11 +45,11 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * genereated.
+     * generated.
      * </p>
      * 
      * @return Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output
-     *         files are genereated.
+     *         files are generated.
      * @see SubtitleFormat
      */
 
@@ -60,12 +60,12 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * genereated.
+     * generated.
      * </p>
      * 
      * @param formats
      *        Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files
-     *        are genereated.
+     *        are generated.
      * @see SubtitleFormat
      */
 
@@ -81,7 +81,7 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * genereated.
+     * generated.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -91,7 +91,7 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
      * 
      * @param formats
      *        Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files
-     *        are genereated.
+     *        are generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SubtitleFormat
      */
@@ -109,12 +109,12 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * genereated.
+     * generated.
      * </p>
      * 
      * @param formats
      *        Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files
-     *        are genereated.
+     *        are generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SubtitleFormat
      */
@@ -127,12 +127,12 @@ public class SubtitlesOutput implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files are
-     * genereated.
+     * generated.
      * </p>
      * 
      * @param formats
      *        Specify the output format for your subtitle file; if you select both SRT and VTT formats, two output files
-     *        are genereated.
+     *        are generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SubtitleFormat
      */

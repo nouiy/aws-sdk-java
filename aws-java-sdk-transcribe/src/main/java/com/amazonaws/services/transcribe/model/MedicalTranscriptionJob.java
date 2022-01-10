@@ -54,8 +54,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to specify
-     * the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you should leave
-     * the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
+     * the sample rate, it must match the rate detected by Amazon Transcribe Medical.
      * </p>
      */
     private Integer mediaSampleRateHertz;
@@ -133,7 +132,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <code>Invalid file size: file size too large</code>- The size of your audio file is larger than what Amazon
      * Transcribe Medical can process. For more information, see <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and Quotas</a>
-     * in the <i>Amazon Transcribe Medical Guide</i>
+     * in the <i>Amazon Transcribe Medical Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -141,7 +140,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <code>Invalid number of channels: number of channels too large</code>- Your audio contains more channels than
      * Amazon Transcribe Medical is configured to process. To request additional channels, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/transcribe-medical.html">Amazon Transcribe Medical Endpoints
-     * and Quotas</a> in the <i>Amazon Web Services General Reference</i>
+     * and Quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * </li>
      * </ul>
@@ -365,17 +364,14 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to specify
-     * the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you should leave
-     * the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
+     * the sample rate, it must match the rate detected by Amazon Transcribe Medical.
      * </p>
      * 
      * @param mediaSampleRateHertz
      *        The sample rate, in Hertz, of the source audio containing medical information.</p>
      *        <p>
      *        If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to
-     *        specify the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you
-     *        should leave the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine
-     *        the sample rate.
+     *        specify the sample rate, it must match the rate detected by Amazon Transcribe Medical.
      */
 
     public void setMediaSampleRateHertz(Integer mediaSampleRateHertz) {
@@ -388,16 +384,13 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to specify
-     * the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you should leave
-     * the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
+     * the sample rate, it must match the rate detected by Amazon Transcribe Medical.
      * </p>
      * 
      * @return The sample rate, in Hertz, of the source audio containing medical information.</p>
      *         <p>
      *         If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to
-     *         specify the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you
-     *         should leave the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine
-     *         the sample rate.
+     *         specify the sample rate, it must match the rate detected by Amazon Transcribe Medical.
      */
 
     public Integer getMediaSampleRateHertz() {
@@ -410,17 +403,14 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * </p>
      * <p>
      * If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to specify
-     * the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you should leave
-     * the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine the sample rate.
+     * the sample rate, it must match the rate detected by Amazon Transcribe Medical.
      * </p>
      * 
      * @param mediaSampleRateHertz
      *        The sample rate, in Hertz, of the source audio containing medical information.</p>
      *        <p>
      *        If you don't specify the sample rate, Amazon Transcribe Medical determines it for you. If you choose to
-     *        specify the sample rate, it must match the rate detected by Amazon Transcribe Medical. In most cases, you
-     *        should leave the <code>MedicalMediaSampleHertz</code> blank and let Amazon Transcribe Medical determine
-     *        the sample rate.
+     *        specify the sample rate, it must match the rate detected by Amazon Transcribe Medical.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -721,7 +711,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <code>Invalid file size: file size too large</code>- The size of your audio file is larger than what Amazon
      * Transcribe Medical can process. For more information, see <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and Quotas</a>
-     * in the <i>Amazon Transcribe Medical Guide</i>
+     * in the <i>Amazon Transcribe Medical Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -729,7 +719,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <code>Invalid number of channels: number of channels too large</code>- Your audio contains more channels than
      * Amazon Transcribe Medical is configured to process. To request additional channels, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/transcribe-medical.html">Amazon Transcribe Medical Endpoints
-     * and Quotas</a> in the <i>Amazon Web Services General Reference</i>
+     * and Quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * </li>
      * </ul>
@@ -774,7 +764,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *        <code>Invalid file size: file size too large</code>- The size of your audio file is larger than what
      *        Amazon Transcribe Medical can process. For more information, see <a
      *        href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and
-     *        Quotas</a> in the <i>Amazon Transcribe Medical Guide</i>
+     *        Quotas</a> in the <i>Amazon Transcribe Medical Guide</i>.
      *        </p>
      *        </li>
      *        <li>
@@ -782,7 +772,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *        <code>Invalid number of channels: number of channels too large</code>- Your audio contains more channels
      *        than Amazon Transcribe Medical is configured to process. To request additional channels, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/transcribe-medical.html">Amazon Transcribe Medical
-     *        Endpoints and Quotas</a> in the <i>Amazon Web Services General Reference</i>
+     *        Endpoints and Quotas</a> in the <i>Amazon Web Services General Reference</i>.
      *        </p>
      *        </li>
      */
@@ -832,7 +822,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <code>Invalid file size: file size too large</code>- The size of your audio file is larger than what Amazon
      * Transcribe Medical can process. For more information, see <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and Quotas</a>
-     * in the <i>Amazon Transcribe Medical Guide</i>
+     * in the <i>Amazon Transcribe Medical Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -840,7 +830,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <code>Invalid number of channels: number of channels too large</code>- Your audio contains more channels than
      * Amazon Transcribe Medical is configured to process. To request additional channels, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/transcribe-medical.html">Amazon Transcribe Medical Endpoints
-     * and Quotas</a> in the <i>Amazon Web Services General Reference</i>
+     * and Quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * </li>
      * </ul>
@@ -884,7 +874,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *         <code>Invalid file size: file size too large</code>- The size of your audio file is larger than what
      *         Amazon Transcribe Medical can process. For more information, see <a
      *         href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and
-     *         Quotas</a> in the <i>Amazon Transcribe Medical Guide</i>
+     *         Quotas</a> in the <i>Amazon Transcribe Medical Guide</i>.
      *         </p>
      *         </li>
      *         <li>
@@ -892,7 +882,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *         <code>Invalid number of channels: number of channels too large</code>- Your audio contains more channels
      *         than Amazon Transcribe Medical is configured to process. To request additional channels, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/transcribe-medical.html">Amazon Transcribe Medical
-     *         Endpoints and Quotas</a> in the <i>Amazon Web Services General Reference</i>
+     *         Endpoints and Quotas</a> in the <i>Amazon Web Services General Reference</i>.
      *         </p>
      *         </li>
      */
@@ -942,7 +932,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <code>Invalid file size: file size too large</code>- The size of your audio file is larger than what Amazon
      * Transcribe Medical can process. For more information, see <a
      * href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and Quotas</a>
-     * in the <i>Amazon Transcribe Medical Guide</i>
+     * in the <i>Amazon Transcribe Medical Guide</i>.
      * </p>
      * </li>
      * <li>
@@ -950,7 +940,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      * <code>Invalid number of channels: number of channels too large</code>- Your audio contains more channels than
      * Amazon Transcribe Medical is configured to process. To request additional channels, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/transcribe-medical.html">Amazon Transcribe Medical Endpoints
-     * and Quotas</a> in the <i>Amazon Web Services General Reference</i>
+     * and Quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * </li>
      * </ul>
@@ -995,7 +985,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *        <code>Invalid file size: file size too large</code>- The size of your audio file is larger than what
      *        Amazon Transcribe Medical can process. For more information, see <a
      *        href="https://docs.aws.amazon.com/transcribe/latest/dg/limits-guidelines.html#limits">Guidelines and
-     *        Quotas</a> in the <i>Amazon Transcribe Medical Guide</i>
+     *        Quotas</a> in the <i>Amazon Transcribe Medical Guide</i>.
      *        </p>
      *        </li>
      *        <li>
@@ -1003,7 +993,7 @@ public class MedicalTranscriptionJob implements Serializable, Cloneable, Structu
      *        <code>Invalid number of channels: number of channels too large</code>- Your audio contains more channels
      *        than Amazon Transcribe Medical is configured to process. To request additional channels, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/transcribe-medical.html">Amazon Transcribe Medical
-     *        Endpoints and Quotas</a> in the <i>Amazon Web Services General Reference</i>
+     *        Endpoints and Quotas</a> in the <i>Amazon Web Services General Reference</i>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

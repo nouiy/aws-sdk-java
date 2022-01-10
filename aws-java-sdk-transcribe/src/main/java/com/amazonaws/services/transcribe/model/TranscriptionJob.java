@@ -48,7 +48,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
     private String languageCode;
     /**
      * <p>
-     * The sample rate, in Hertz, of the audio track in the input media file.
+     * The sample rate, in Hertz (Hz), of the audio track in the input media file.
      * </p>
      */
     private Integer mediaSampleRateHertz;
@@ -205,7 +205,7 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Language-specific settings that can be specified when language identification is enabled for your transcription
      * job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and
-     * <code>LanguageModelName</code>LanguageModelName.
+     * <code>LanguageModelName</code>.
      * </p>
      */
     private java.util.Map<String, LanguageIdSettings> languageIdSettings;
@@ -370,11 +370,11 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The sample rate, in Hertz, of the audio track in the input media file.
+     * The sample rate, in Hertz (Hz), of the audio track in the input media file.
      * </p>
      * 
      * @param mediaSampleRateHertz
-     *        The sample rate, in Hertz, of the audio track in the input media file.
+     *        The sample rate, in Hertz (Hz), of the audio track in the input media file.
      */
 
     public void setMediaSampleRateHertz(Integer mediaSampleRateHertz) {
@@ -383,10 +383,10 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The sample rate, in Hertz, of the audio track in the input media file.
+     * The sample rate, in Hertz (Hz), of the audio track in the input media file.
      * </p>
      * 
-     * @return The sample rate, in Hertz, of the audio track in the input media file.
+     * @return The sample rate, in Hertz (Hz), of the audio track in the input media file.
      */
 
     public Integer getMediaSampleRateHertz() {
@@ -395,11 +395,11 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The sample rate, in Hertz, of the audio track in the input media file.
+     * The sample rate, in Hertz (Hz), of the audio track in the input media file.
      * </p>
      * 
      * @param mediaSampleRateHertz
-     *        The sample rate, in Hertz, of the audio track in the input media file.
+     *        The sample rate, in Hertz (Hz), of the audio track in the input media file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1496,12 +1496,12 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Language-specific settings that can be specified when language identification is enabled for your transcription
      * job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and
-     * <code>LanguageModelName</code>LanguageModelName.
+     * <code>LanguageModelName</code>.
      * </p>
      * 
      * @return Language-specific settings that can be specified when language identification is enabled for your
      *         transcription job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>,
-     *         and <code>LanguageModelName</code>LanguageModelName.
+     *         and <code>LanguageModelName</code>.
      */
 
     public java.util.Map<String, LanguageIdSettings> getLanguageIdSettings() {
@@ -1512,13 +1512,13 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Language-specific settings that can be specified when language identification is enabled for your transcription
      * job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and
-     * <code>LanguageModelName</code>LanguageModelName.
+     * <code>LanguageModelName</code>.
      * </p>
      * 
      * @param languageIdSettings
      *        Language-specific settings that can be specified when language identification is enabled for your
      *        transcription job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>,
-     *        and <code>LanguageModelName</code>LanguageModelName.
+     *        and <code>LanguageModelName</code>.
      */
 
     public void setLanguageIdSettings(java.util.Map<String, LanguageIdSettings> languageIdSettings) {
@@ -1529,13 +1529,13 @@ public class TranscriptionJob implements Serializable, Cloneable, StructuredPojo
      * <p>
      * Language-specific settings that can be specified when language identification is enabled for your transcription
      * job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>, and
-     * <code>LanguageModelName</code>LanguageModelName.
+     * <code>LanguageModelName</code>.
      * </p>
      * 
      * @param languageIdSettings
      *        Language-specific settings that can be specified when language identification is enabled for your
      *        transcription job. These settings include <code>VocabularyName</code>, <code>VocabularyFilterName</code>,
-     *        and <code>LanguageModelName</code>LanguageModelName.
+     *        and <code>LanguageModelName</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

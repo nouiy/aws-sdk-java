@@ -86,6 +86,18 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
      * </p>
      */
     private SavingsOpportunity savingsOpportunity;
+    /**
+     * <p>
+     * The level of effort required to migrate from the current instance type to the recommended instance type.
+     * </p>
+     * <p>
+     * For example, the migration effort is <code>Low</code> if Amazon EMR is the inferred workload type and an Amazon
+     * Web Services Graviton instance type is recommended. The migration effort is <code>Medium</code> if a workload
+     * type couldn't be inferred but an Amazon Web Services Graviton instance type is recommended. The migration effort
+     * is <code>VeryLow</code> if both the current and recommended instance types are of the same CPU architecture.
+     * </p>
+     */
+    private String migrationEffort;
 
     /**
      * <p>
@@ -486,6 +498,117 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
     }
 
     /**
+     * <p>
+     * The level of effort required to migrate from the current instance type to the recommended instance type.
+     * </p>
+     * <p>
+     * For example, the migration effort is <code>Low</code> if Amazon EMR is the inferred workload type and an Amazon
+     * Web Services Graviton instance type is recommended. The migration effort is <code>Medium</code> if a workload
+     * type couldn't be inferred but an Amazon Web Services Graviton instance type is recommended. The migration effort
+     * is <code>VeryLow</code> if both the current and recommended instance types are of the same CPU architecture.
+     * </p>
+     * 
+     * @param migrationEffort
+     *        The level of effort required to migrate from the current instance type to the recommended instance
+     *        type.</p>
+     *        <p>
+     *        For example, the migration effort is <code>Low</code> if Amazon EMR is the inferred workload type and an
+     *        Amazon Web Services Graviton instance type is recommended. The migration effort is <code>Medium</code> if
+     *        a workload type couldn't be inferred but an Amazon Web Services Graviton instance type is recommended. The
+     *        migration effort is <code>VeryLow</code> if both the current and recommended instance types are of the
+     *        same CPU architecture.
+     * @see MigrationEffort
+     */
+
+    public void setMigrationEffort(String migrationEffort) {
+        this.migrationEffort = migrationEffort;
+    }
+
+    /**
+     * <p>
+     * The level of effort required to migrate from the current instance type to the recommended instance type.
+     * </p>
+     * <p>
+     * For example, the migration effort is <code>Low</code> if Amazon EMR is the inferred workload type and an Amazon
+     * Web Services Graviton instance type is recommended. The migration effort is <code>Medium</code> if a workload
+     * type couldn't be inferred but an Amazon Web Services Graviton instance type is recommended. The migration effort
+     * is <code>VeryLow</code> if both the current and recommended instance types are of the same CPU architecture.
+     * </p>
+     * 
+     * @return The level of effort required to migrate from the current instance type to the recommended instance
+     *         type.</p>
+     *         <p>
+     *         For example, the migration effort is <code>Low</code> if Amazon EMR is the inferred workload type and an
+     *         Amazon Web Services Graviton instance type is recommended. The migration effort is <code>Medium</code> if
+     *         a workload type couldn't be inferred but an Amazon Web Services Graviton instance type is recommended.
+     *         The migration effort is <code>VeryLow</code> if both the current and recommended instance types are of
+     *         the same CPU architecture.
+     * @see MigrationEffort
+     */
+
+    public String getMigrationEffort() {
+        return this.migrationEffort;
+    }
+
+    /**
+     * <p>
+     * The level of effort required to migrate from the current instance type to the recommended instance type.
+     * </p>
+     * <p>
+     * For example, the migration effort is <code>Low</code> if Amazon EMR is the inferred workload type and an Amazon
+     * Web Services Graviton instance type is recommended. The migration effort is <code>Medium</code> if a workload
+     * type couldn't be inferred but an Amazon Web Services Graviton instance type is recommended. The migration effort
+     * is <code>VeryLow</code> if both the current and recommended instance types are of the same CPU architecture.
+     * </p>
+     * 
+     * @param migrationEffort
+     *        The level of effort required to migrate from the current instance type to the recommended instance
+     *        type.</p>
+     *        <p>
+     *        For example, the migration effort is <code>Low</code> if Amazon EMR is the inferred workload type and an
+     *        Amazon Web Services Graviton instance type is recommended. The migration effort is <code>Medium</code> if
+     *        a workload type couldn't be inferred but an Amazon Web Services Graviton instance type is recommended. The
+     *        migration effort is <code>VeryLow</code> if both the current and recommended instance types are of the
+     *        same CPU architecture.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MigrationEffort
+     */
+
+    public AutoScalingGroupRecommendationOption withMigrationEffort(String migrationEffort) {
+        setMigrationEffort(migrationEffort);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The level of effort required to migrate from the current instance type to the recommended instance type.
+     * </p>
+     * <p>
+     * For example, the migration effort is <code>Low</code> if Amazon EMR is the inferred workload type and an Amazon
+     * Web Services Graviton instance type is recommended. The migration effort is <code>Medium</code> if a workload
+     * type couldn't be inferred but an Amazon Web Services Graviton instance type is recommended. The migration effort
+     * is <code>VeryLow</code> if both the current and recommended instance types are of the same CPU architecture.
+     * </p>
+     * 
+     * @param migrationEffort
+     *        The level of effort required to migrate from the current instance type to the recommended instance
+     *        type.</p>
+     *        <p>
+     *        For example, the migration effort is <code>Low</code> if Amazon EMR is the inferred workload type and an
+     *        Amazon Web Services Graviton instance type is recommended. The migration effort is <code>Medium</code> if
+     *        a workload type couldn't be inferred but an Amazon Web Services Graviton instance type is recommended. The
+     *        migration effort is <code>VeryLow</code> if both the current and recommended instance types are of the
+     *        same CPU architecture.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see MigrationEffort
+     */
+
+    public AutoScalingGroupRecommendationOption withMigrationEffort(MigrationEffort migrationEffort) {
+        this.migrationEffort = migrationEffort.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -506,7 +629,9 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
         if (getRank() != null)
             sb.append("Rank: ").append(getRank()).append(",");
         if (getSavingsOpportunity() != null)
-            sb.append("SavingsOpportunity: ").append(getSavingsOpportunity());
+            sb.append("SavingsOpportunity: ").append(getSavingsOpportunity()).append(",");
+        if (getMigrationEffort() != null)
+            sb.append("MigrationEffort: ").append(getMigrationEffort());
         sb.append("}");
         return sb.toString();
     }
@@ -541,6 +666,10 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
             return false;
         if (other.getSavingsOpportunity() != null && other.getSavingsOpportunity().equals(this.getSavingsOpportunity()) == false)
             return false;
+        if (other.getMigrationEffort() == null ^ this.getMigrationEffort() == null)
+            return false;
+        if (other.getMigrationEffort() != null && other.getMigrationEffort().equals(this.getMigrationEffort()) == false)
+            return false;
         return true;
     }
 
@@ -554,6 +683,7 @@ public class AutoScalingGroupRecommendationOption implements Serializable, Clone
         hashCode = prime * hashCode + ((getPerformanceRisk() == null) ? 0 : getPerformanceRisk().hashCode());
         hashCode = prime * hashCode + ((getRank() == null) ? 0 : getRank().hashCode());
         hashCode = prime * hashCode + ((getSavingsOpportunity() == null) ? 0 : getSavingsOpportunity().hashCode());
+        hashCode = prime * hashCode + ((getMigrationEffort() == null) ? 0 : getMigrationEffort().hashCode());
         return hashCode;
     }
 

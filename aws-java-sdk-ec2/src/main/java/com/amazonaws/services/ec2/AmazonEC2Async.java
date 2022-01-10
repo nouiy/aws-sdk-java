@@ -10282,6 +10282,37 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Describe details for Windows AMIs that are configured for faster launching.
+     * </p>
+     * 
+     * @param describeFastLaunchImagesRequest
+     * @return A Java Future containing the result of the DescribeFastLaunchImages operation returned by the service.
+     * @sample AmazonEC2Async.DescribeFastLaunchImages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFastLaunchImages" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeFastLaunchImagesResult> describeFastLaunchImagesAsync(DescribeFastLaunchImagesRequest describeFastLaunchImagesRequest);
+
+    /**
+     * <p>
+     * Describe details for Windows AMIs that are configured for faster launching.
+     * </p>
+     * 
+     * @param describeFastLaunchImagesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeFastLaunchImages operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DescribeFastLaunchImages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFastLaunchImages" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeFastLaunchImagesResult> describeFastLaunchImagesAsync(DescribeFastLaunchImagesRequest describeFastLaunchImagesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeFastLaunchImagesRequest, DescribeFastLaunchImagesResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the state of fast snapshot restores for your snapshots.
      * </p>
      * 
@@ -15797,6 +15828,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
+     * Discontinue faster launching for a Windows AMI, and clean up existing pre-provisioned snapshots. When you disable
+     * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
+     * be removed before you can enable faster launching again.
+     * </p>
+     * 
+     * @param disableFastLaunchRequest
+     * @return A Java Future containing the result of the DisableFastLaunch operation returned by the service.
+     * @sample AmazonEC2Async.DisableFastLaunch
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableFastLaunch" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisableFastLaunchResult> disableFastLaunchAsync(DisableFastLaunchRequest disableFastLaunchRequest);
+
+    /**
+     * <p>
+     * Discontinue faster launching for a Windows AMI, and clean up existing pre-provisioned snapshots. When you disable
+     * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
+     * be removed before you can enable faster launching again.
+     * </p>
+     * 
+     * @param disableFastLaunchRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisableFastLaunch operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.DisableFastLaunch
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableFastLaunch" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisableFastLaunchResult> disableFastLaunchAsync(DisableFastLaunchRequest disableFastLaunchRequest,
+            com.amazonaws.handlers.AsyncHandler<DisableFastLaunchRequest, DisableFastLaunchResult> asyncHandler);
+
+    /**
+     * <p>
      * Disables fast snapshot restores for the specified snapshots in the specified Availability Zones.
      * </p>
      * 
@@ -16658,6 +16724,45 @@ public interface AmazonEC2Async extends AmazonEC2 {
     java.util.concurrent.Future<EnableEbsEncryptionByDefaultResult> enableEbsEncryptionByDefaultAsync(
             EnableEbsEncryptionByDefaultRequest enableEbsEncryptionByDefaultRequest,
             com.amazonaws.handlers.AsyncHandler<EnableEbsEncryptionByDefaultRequest, EnableEbsEncryptionByDefaultResult> asyncHandler);
+
+    /**
+     * <p>
+     * When you enable faster launching for a Windows AMI, images are pre-provisioned, using snapshots to launch
+     * instances up to 65% faster. To create the optimized Windows image, Amazon EC2 launches an instance and runs
+     * through Sysprep steps, rebooting as required. Then it creates a set of reserved snapshots that are used for
+     * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
+     * settings for launch frequency.
+     * </p>
+     * 
+     * @param enableFastLaunchRequest
+     * @return A Java Future containing the result of the EnableFastLaunch operation returned by the service.
+     * @sample AmazonEC2Async.EnableFastLaunch
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableFastLaunch" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<EnableFastLaunchResult> enableFastLaunchAsync(EnableFastLaunchRequest enableFastLaunchRequest);
+
+    /**
+     * <p>
+     * When you enable faster launching for a Windows AMI, images are pre-provisioned, using snapshots to launch
+     * instances up to 65% faster. To create the optimized Windows image, Amazon EC2 launches an instance and runs
+     * through Sysprep steps, rebooting as required. Then it creates a set of reserved snapshots that are used for
+     * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
+     * settings for launch frequency.
+     * </p>
+     * 
+     * @param enableFastLaunchRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the EnableFastLaunch operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.EnableFastLaunch
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableFastLaunch" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<EnableFastLaunchResult> enableFastLaunchAsync(EnableFastLaunchRequest enableFastLaunchRequest,
+            com.amazonaws.handlers.AsyncHandler<EnableFastLaunchRequest, EnableFastLaunchResult> asyncHandler);
 
     /**
      * <p>

@@ -35,7 +35,7 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>transcribe-whatis</a>.
+     * <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      */
     private String languageCode;
@@ -48,10 +48,16 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the
-     * same region as the API endpoint that you are calling. The general form is
+     * same region as the API endpoint that you are calling. The general form is:
+     * </p>
+     * <p>
+     * <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      * </p>
      * <p>
      * For example:
+     * </p>
+     * <p>
+     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
      * </p>
      * <p>
      * For more information about S3 object names, see <a
@@ -60,7 +66,7 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Custom Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom Vocabularies</a>.
      * </p>
      */
     private String vocabularyFileUri;
@@ -114,12 +120,13 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>transcribe-whatis</a>.
+     * <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      * 
      * @param languageCode
      *        The language code of the vocabulary entries. For a list of languages and their corresponding language
-     *        codes, see <a>transcribe-whatis</a>.
+     *        codes, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *        languages</a>.
      * @see LanguageCode
      */
 
@@ -130,11 +137,12 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>transcribe-whatis</a>.
+     * <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      * 
      * @return The language code of the vocabulary entries. For a list of languages and their corresponding language
-     *         codes, see <a>transcribe-whatis</a>.
+     *         codes, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *         languages</a>.
      * @see LanguageCode
      */
 
@@ -145,12 +153,13 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>transcribe-whatis</a>.
+     * <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      * 
      * @param languageCode
      *        The language code of the vocabulary entries. For a list of languages and their corresponding language
-     *        codes, see <a>transcribe-whatis</a>.
+     *        codes, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *        languages</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -163,12 +172,13 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The language code of the vocabulary entries. For a list of languages and their corresponding language codes, see
-     * <a>transcribe-whatis</a>.
+     * <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported languages</a>.
      * </p>
      * 
      * @param languageCode
      *        The language code of the vocabulary entries. For a list of languages and their corresponding language
-     *        codes, see <a>transcribe-whatis</a>.
+     *        codes, see <a href="https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html">Supported
+     *        languages</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LanguageCode
      */
@@ -251,10 +261,16 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the
-     * same region as the API endpoint that you are calling. The general form is
+     * same region as the API endpoint that you are calling. The general form is:
+     * </p>
+     * <p>
+     * <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      * </p>
      * <p>
      * For example:
+     * </p>
+     * <p>
+     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
      * </p>
      * <p>
      * For more information about S3 object names, see <a
@@ -263,14 +279,20 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Custom Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom Vocabularies</a>.
      * </p>
      * 
      * @param vocabularyFileUri
      *        The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in
-     *        the same region as the API endpoint that you are calling. The general form is </p>
+     *        the same region as the API endpoint that you are calling. The general form is:</p>
+     *        <p>
+     *        <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     *        </p>
      *        <p>
      *        For example:
+     *        </p>
+     *        <p>
+     *        <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
      *        </p>
      *        <p>
      *        For more information about S3 object names, see <a
@@ -279,8 +301,7 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        For more information about custom vocabularies, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Custom
-     *        Vocabularies</a>.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom Vocabularies</a>.
      */
 
     public void setVocabularyFileUri(String vocabularyFileUri) {
@@ -290,10 +311,16 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the
-     * same region as the API endpoint that you are calling. The general form is
+     * same region as the API endpoint that you are calling. The general form is:
+     * </p>
+     * <p>
+     * <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      * </p>
      * <p>
      * For example:
+     * </p>
+     * <p>
+     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
      * </p>
      * <p>
      * For more information about S3 object names, see <a
@@ -302,13 +329,19 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Custom Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom Vocabularies</a>.
      * </p>
      * 
      * @return The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be
-     *         in the same region as the API endpoint that you are calling. The general form is </p>
+     *         in the same region as the API endpoint that you are calling. The general form is:</p>
+     *         <p>
+     *         <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     *         </p>
      *         <p>
      *         For example:
+     *         </p>
+     *         <p>
+     *         <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
      *         </p>
      *         <p>
      *         For more information about S3 object names, see <a
@@ -317,8 +350,7 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         For more information about custom vocabularies, see <a
-     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Custom
-     *         Vocabularies</a>.
+     *         href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom Vocabularies</a>.
      */
 
     public String getVocabularyFileUri() {
@@ -328,10 +360,16 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in the
-     * same region as the API endpoint that you are calling. The general form is
+     * same region as the API endpoint that you are calling. The general form is:
+     * </p>
+     * <p>
+     * <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
      * </p>
      * <p>
      * For example:
+     * </p>
+     * <p>
+     * <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
      * </p>
      * <p>
      * For more information about S3 object names, see <a
@@ -340,14 +378,20 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * For more information about custom vocabularies, see <a
-     * href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Custom Vocabularies</a>.
+     * href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom Vocabularies</a>.
      * </p>
      * 
      * @param vocabularyFileUri
      *        The S3 location of the text file that contains the definition of the custom vocabulary. The URI must be in
-     *        the same region as the API endpoint that you are calling. The general form is </p>
+     *        the same region as the API endpoint that you are calling. The general form is:</p>
+     *        <p>
+     *        <code>https://s3.&lt;aws-region&gt;.amazonaws.com/&lt;AWSDOC-EXAMPLE-BUCKET&gt;/&lt;keyprefix&gt;/&lt;objectkey&gt;</code>
+     *        </p>
      *        <p>
      *        For example:
+     *        </p>
+     *        <p>
+     *        <code>https://s3.us-east-1.amazonaws.com/AWSDOC-EXAMPLE-BUCKET/vocab.txt</code>
      *        </p>
      *        <p>
      *        For more information about S3 object names, see <a
@@ -356,8 +400,7 @@ public class UpdateVocabularyRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        For more information about custom vocabularies, see <a
-     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/how-it-works.html#how-vocabulary">Custom
-     *        Vocabularies</a>.
+     *        href="https://docs.aws.amazon.com/transcribe/latest/dg/custom-vocabulary.html">Custom Vocabularies</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

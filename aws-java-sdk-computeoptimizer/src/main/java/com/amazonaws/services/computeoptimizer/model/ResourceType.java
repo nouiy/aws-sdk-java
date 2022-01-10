@@ -23,7 +23,8 @@ public enum ResourceType {
     Ec2Instance("Ec2Instance"),
     AutoScalingGroup("AutoScalingGroup"),
     EbsVolume("EbsVolume"),
-    LambdaFunction("LambdaFunction");
+    LambdaFunction("LambdaFunction"),
+    NotApplicable("NotApplicable");
 
     private String value;
 

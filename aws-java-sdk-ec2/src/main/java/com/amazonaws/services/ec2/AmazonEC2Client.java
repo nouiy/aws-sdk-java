@@ -13786,6 +13786,62 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Describe details for Windows AMIs that are configured for faster launching.
+     * </p>
+     * 
+     * @param describeFastLaunchImagesRequest
+     * @return Result of the DescribeFastLaunchImages operation returned by the service.
+     * @sample AmazonEC2.DescribeFastLaunchImages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DescribeFastLaunchImages" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeFastLaunchImagesResult describeFastLaunchImages(DescribeFastLaunchImagesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeFastLaunchImages(request);
+    }
+
+    @SdkInternalApi
+    final DescribeFastLaunchImagesResult executeDescribeFastLaunchImages(DescribeFastLaunchImagesRequest describeFastLaunchImagesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeFastLaunchImagesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeFastLaunchImagesRequest> request = null;
+        Response<DescribeFastLaunchImagesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeFastLaunchImagesRequestMarshaller().marshall(super.beforeMarshalling(describeFastLaunchImagesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeFastLaunchImages");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DescribeFastLaunchImagesResult> responseHandler = new StaxResponseHandler<DescribeFastLaunchImagesResult>(
+                    new DescribeFastLaunchImagesResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes the state of fast snapshot restores for your snapshots.
      * </p>
      * 
@@ -21007,6 +21063,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Discontinue faster launching for a Windows AMI, and clean up existing pre-provisioned snapshots. When you disable
+     * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
+     * be removed before you can enable faster launching again.
+     * </p>
+     * 
+     * @param disableFastLaunchRequest
+     * @return Result of the DisableFastLaunch operation returned by the service.
+     * @sample AmazonEC2.DisableFastLaunch
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/DisableFastLaunch" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DisableFastLaunchResult disableFastLaunch(DisableFastLaunchRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisableFastLaunch(request);
+    }
+
+    @SdkInternalApi
+    final DisableFastLaunchResult executeDisableFastLaunch(DisableFastLaunchRequest disableFastLaunchRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disableFastLaunchRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisableFastLaunchRequest> request = null;
+        Response<DisableFastLaunchResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisableFastLaunchRequestMarshaller().marshall(super.beforeMarshalling(disableFastLaunchRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisableFastLaunch");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DisableFastLaunchResult> responseHandler = new StaxResponseHandler<DisableFastLaunchResult>(
+                    new DisableFastLaunchResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disables fast snapshot restores for the specified snapshots in the specified Availability Zones.
      * </p>
      * 
@@ -22225,6 +22339,66 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<EnableEbsEncryptionByDefaultResult> responseHandler = new StaxResponseHandler<EnableEbsEncryptionByDefaultResult>(
                     new EnableEbsEncryptionByDefaultResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * When you enable faster launching for a Windows AMI, images are pre-provisioned, using snapshots to launch
+     * instances up to 65% faster. To create the optimized Windows image, Amazon EC2 launches an instance and runs
+     * through Sysprep steps, rebooting as required. Then it creates a set of reserved snapshots that are used for
+     * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
+     * settings for launch frequency.
+     * </p>
+     * 
+     * @param enableFastLaunchRequest
+     * @return Result of the EnableFastLaunch operation returned by the service.
+     * @sample AmazonEC2.EnableFastLaunch
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/EnableFastLaunch" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public EnableFastLaunchResult enableFastLaunch(EnableFastLaunchRequest request) {
+        request = beforeClientExecution(request);
+        return executeEnableFastLaunch(request);
+    }
+
+    @SdkInternalApi
+    final EnableFastLaunchResult executeEnableFastLaunch(EnableFastLaunchRequest enableFastLaunchRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(enableFastLaunchRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<EnableFastLaunchRequest> request = null;
+        Response<EnableFastLaunchResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new EnableFastLaunchRequestMarshaller().marshall(super.beforeMarshalling(enableFastLaunchRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "EnableFastLaunch");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<EnableFastLaunchResult> responseHandler = new StaxResponseHandler<EnableFastLaunchResult>(
+                    new EnableFastLaunchResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

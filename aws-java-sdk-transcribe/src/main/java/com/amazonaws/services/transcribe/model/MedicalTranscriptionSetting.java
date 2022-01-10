@@ -61,7 +61,7 @@ public class MedicalTranscriptionSetting implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same request. If
-     * you set both, your request returns a <code>BadRequestException</code>
+     * you set both, your request returns a <code>BadRequestException</code>.
      * </p>
      */
     private Boolean channelIdentification;
@@ -255,7 +255,7 @@ public class MedicalTranscriptionSetting implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same request. If
-     * you set both, your request returns a <code>BadRequestException</code>
+     * you set both, your request returns a <code>BadRequestException</code>.
      * </p>
      * 
      * @param channelIdentification
@@ -268,7 +268,7 @@ public class MedicalTranscriptionSetting implements Serializable, Cloneable, Str
      *        </p>
      *        <p>
      *        You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same
-     *        request. If you set both, your request returns a <code>BadRequestException</code>
+     *        request. If you set both, your request returns a <code>BadRequestException</code>.
      */
 
     public void setChannelIdentification(Boolean channelIdentification) {
@@ -287,7 +287,7 @@ public class MedicalTranscriptionSetting implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same request. If
-     * you set both, your request returns a <code>BadRequestException</code>
+     * you set both, your request returns a <code>BadRequestException</code>.
      * </p>
      * 
      * @return Instructs Amazon Transcribe Medical to process each audio channel separately and then merge the
@@ -299,7 +299,7 @@ public class MedicalTranscriptionSetting implements Serializable, Cloneable, Str
      *         </p>
      *         <p>
      *         You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same
-     *         request. If you set both, your request returns a <code>BadRequestException</code>
+     *         request. If you set both, your request returns a <code>BadRequestException</code>.
      */
 
     public Boolean getChannelIdentification() {
@@ -318,7 +318,7 @@ public class MedicalTranscriptionSetting implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same request. If
-     * you set both, your request returns a <code>BadRequestException</code>
+     * you set both, your request returns a <code>BadRequestException</code>.
      * </p>
      * 
      * @param channelIdentification
@@ -331,7 +331,7 @@ public class MedicalTranscriptionSetting implements Serializable, Cloneable, Str
      *        </p>
      *        <p>
      *        You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same
-     *        request. If you set both, your request returns a <code>BadRequestException</code>
+     *        request. If you set both, your request returns a <code>BadRequestException</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -352,7 +352,7 @@ public class MedicalTranscriptionSetting implements Serializable, Cloneable, Str
      * </p>
      * <p>
      * You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same request. If
-     * you set both, your request returns a <code>BadRequestException</code>
+     * you set both, your request returns a <code>BadRequestException</code>.
      * </p>
      * 
      * @return Instructs Amazon Transcribe Medical to process each audio channel separately and then merge the
@@ -364,7 +364,7 @@ public class MedicalTranscriptionSetting implements Serializable, Cloneable, Str
      *         </p>
      *         <p>
      *         You can't set both <code>ShowSpeakerLabels</code> and <code>ChannelIdentification</code> in the same
-     *         request. If you set both, your request returns a <code>BadRequestException</code>
+     *         request. If you set both, your request returns a <code>BadRequestException</code>.
      */
 
     public Boolean isChannelIdentification() {

@@ -52,6 +52,11 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * should be null. If ColumnSelectors has been defined, then there should be no columnn reference in the left side
      * of a condition, for example, <code>is_between :val1 and :val2</code>.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/databrew/latest/dg/profile.data-quality-available-checks.html">Available
+     * checks</a>
+     * </p>
      */
     private String checkExpression;
     /**
@@ -188,6 +193,11 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * should be null. If ColumnSelectors has been defined, then there should be no columnn reference in the left side
      * of a condition, for example, <code>is_between :val1 and :val2</code>.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/databrew/latest/dg/profile.data-quality-available-checks.html">Available
+     * checks</a>
+     * </p>
      * 
      * @param checkExpression
      *        The expression which includes column references, condition names followed by variable references, possibly
@@ -197,7 +207,12 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      *        on the context, substitution variables' values can be either an actual value or a column name. These
      *        values are defined in the SubstitutionMap. If a CheckExpression starts with a column reference, then
      *        ColumnSelectors in the rule should be null. If ColumnSelectors has been defined, then there should be no
-     *        columnn reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>.
+     *        columnn reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>
+     *        .</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/databrew/latest/dg/profile.data-quality-available-checks.html">Available
+     *        checks</a>
      */
 
     public void setCheckExpression(String checkExpression) {
@@ -215,6 +230,11 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * should be null. If ColumnSelectors has been defined, then there should be no columnn reference in the left side
      * of a condition, for example, <code>is_between :val1 and :val2</code>.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/databrew/latest/dg/profile.data-quality-available-checks.html">Available
+     * checks</a>
+     * </p>
      * 
      * @return The expression which includes column references, condition names followed by variable references,
      *         possibly grouped and combined with other conditions. For example,
@@ -223,7 +243,12 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      *         on the context, substitution variables' values can be either an actual value or a column name. These
      *         values are defined in the SubstitutionMap. If a CheckExpression starts with a column reference, then
      *         ColumnSelectors in the rule should be null. If ColumnSelectors has been defined, then there should be no
-     *         columnn reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>.
+     *         columnn reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>
+     *         .</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/databrew/latest/dg/profile.data-quality-available-checks.html"
+     *         >Available checks</a>
      */
 
     public String getCheckExpression() {
@@ -241,6 +266,11 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      * should be null. If ColumnSelectors has been defined, then there should be no columnn reference in the left side
      * of a condition, for example, <code>is_between :val1 and :val2</code>.
      * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/databrew/latest/dg/profile.data-quality-available-checks.html">Available
+     * checks</a>
+     * </p>
      * 
      * @param checkExpression
      *        The expression which includes column references, condition names followed by variable references, possibly
@@ -250,7 +280,12 @@ public class Rule implements Serializable, Cloneable, StructuredPojo {
      *        on the context, substitution variables' values can be either an actual value or a column name. These
      *        values are defined in the SubstitutionMap. If a CheckExpression starts with a column reference, then
      *        ColumnSelectors in the rule should be null. If ColumnSelectors has been defined, then there should be no
-     *        columnn reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>.
+     *        columnn reference in the left side of a condition, for example, <code>is_between :val1 and :val2</code>
+     *        .</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/databrew/latest/dg/profile.data-quality-available-checks.html">Available
+     *        checks</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

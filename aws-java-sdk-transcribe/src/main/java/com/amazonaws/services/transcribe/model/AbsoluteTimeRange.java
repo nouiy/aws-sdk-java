@@ -75,14 +75,14 @@ public class AbsoluteTimeRange implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * A time range from the beginning of the call to the value that you've specified. For example, if you specify
-     * 100000, the time range is set to the first 100,000 milliseconds of the call.
+     * <code>100000</code>, the time range is set to the first 100,000 milliseconds of the call.
      * </p>
      */
     private Long first;
     /**
      * <p>
-     * A time range from the value that you've specified to the end of the call. For example, if you specify 100000, the
-     * time range is set to the last 100,000 milliseconds of the call.
+     * A time range from the value that you've specified to the end of the call. For example, if you specify
+     * <code>100000</code>, the time range is set to the last 100,000 milliseconds of the call.
      * </p>
      */
     private Long last;
@@ -356,12 +356,12 @@ public class AbsoluteTimeRange implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * A time range from the beginning of the call to the value that you've specified. For example, if you specify
-     * 100000, the time range is set to the first 100,000 milliseconds of the call.
+     * <code>100000</code>, the time range is set to the first 100,000 milliseconds of the call.
      * </p>
      * 
      * @param first
      *        A time range from the beginning of the call to the value that you've specified. For example, if you
-     *        specify 100000, the time range is set to the first 100,000 milliseconds of the call.
+     *        specify <code>100000</code>, the time range is set to the first 100,000 milliseconds of the call.
      */
 
     public void setFirst(Long first) {
@@ -371,11 +371,11 @@ public class AbsoluteTimeRange implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * A time range from the beginning of the call to the value that you've specified. For example, if you specify
-     * 100000, the time range is set to the first 100,000 milliseconds of the call.
+     * <code>100000</code>, the time range is set to the first 100,000 milliseconds of the call.
      * </p>
      * 
      * @return A time range from the beginning of the call to the value that you've specified. For example, if you
-     *         specify 100000, the time range is set to the first 100,000 milliseconds of the call.
+     *         specify <code>100000</code>, the time range is set to the first 100,000 milliseconds of the call.
      */
 
     public Long getFirst() {
@@ -385,12 +385,12 @@ public class AbsoluteTimeRange implements Serializable, Cloneable, StructuredPoj
     /**
      * <p>
      * A time range from the beginning of the call to the value that you've specified. For example, if you specify
-     * 100000, the time range is set to the first 100,000 milliseconds of the call.
+     * <code>100000</code>, the time range is set to the first 100,000 milliseconds of the call.
      * </p>
      * 
      * @param first
      *        A time range from the beginning of the call to the value that you've specified. For example, if you
-     *        specify 100000, the time range is set to the first 100,000 milliseconds of the call.
+     *        specify <code>100000</code>, the time range is set to the first 100,000 milliseconds of the call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -401,13 +401,13 @@ public class AbsoluteTimeRange implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A time range from the value that you've specified to the end of the call. For example, if you specify 100000, the
-     * time range is set to the last 100,000 milliseconds of the call.
+     * A time range from the value that you've specified to the end of the call. For example, if you specify
+     * <code>100000</code>, the time range is set to the last 100,000 milliseconds of the call.
      * </p>
      * 
      * @param last
      *        A time range from the value that you've specified to the end of the call. For example, if you specify
-     *        100000, the time range is set to the last 100,000 milliseconds of the call.
+     *        <code>100000</code>, the time range is set to the last 100,000 milliseconds of the call.
      */
 
     public void setLast(Long last) {
@@ -416,12 +416,12 @@ public class AbsoluteTimeRange implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A time range from the value that you've specified to the end of the call. For example, if you specify 100000, the
-     * time range is set to the last 100,000 milliseconds of the call.
+     * A time range from the value that you've specified to the end of the call. For example, if you specify
+     * <code>100000</code>, the time range is set to the last 100,000 milliseconds of the call.
      * </p>
      * 
      * @return A time range from the value that you've specified to the end of the call. For example, if you specify
-     *         100000, the time range is set to the last 100,000 milliseconds of the call.
+     *         <code>100000</code>, the time range is set to the last 100,000 milliseconds of the call.
      */
 
     public Long getLast() {
@@ -430,13 +430,13 @@ public class AbsoluteTimeRange implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * A time range from the value that you've specified to the end of the call. For example, if you specify 100000, the
-     * time range is set to the last 100,000 milliseconds of the call.
+     * A time range from the value that you've specified to the end of the call. For example, if you specify
+     * <code>100000</code>, the time range is set to the last 100,000 milliseconds of the call.
      * </p>
      * 
      * @param last
      *        A time range from the value that you've specified to the end of the call. For example, if you specify
-     *        100000, the time range is set to the last 100,000 milliseconds of the call.
+     *        <code>100000</code>, the time range is set to the last 100,000 milliseconds of the call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

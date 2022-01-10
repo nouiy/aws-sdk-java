@@ -51,7 +51,9 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * You cannot create recommendation preferences for Auto Scaling groups at the organization and account levels. You
      * can create recommendation preferences for Auto Scaling groups only at the resource level by specifying a scope
      * name of <code>ResourceArn</code> and a scope value of the Auto Scaling group Amazon Resource Name (ARN). This
-     * will configure the preference for all instances that are part of the specified the Auto Scaling group.
+     * will configure the preference for all instances that are part of the specified Auto Scaling group. You also
+     * cannot create recommendation preferences at the resource level for instances that are part of an Auto Scaling
+     * group. You can create recommendation preferences at the resource level only for standalone instances.
      * </p>
      * </note>
      */
@@ -61,11 +63,36 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * The status of the enhanced infrastructure metrics recommendation preference to create or update.
      * </p>
      * <p>
-     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * Specify the <code>Active</code> status to activate the preference, or specify <code>Inactive</code> to deactivate
+     * the preference.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      */
     private String enhancedInfrastructureMetrics;
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference to create or update.
+     * </p>
+     * <note>
+     * <p>
+     * The inferred workload type feature is active by default. To deactivate it, create a recommendation preference.
+     * </p>
+     * </note>
+     * <p>
+     * Specify the <code>Inactive</code> status to deactivate the feature, or specify <code>Active</code> to activate
+     * it.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/inferred-workload-types.html">Inferred workload
+     * types</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     */
+    private String inferredWorkloadTypes;
 
     /**
      * <p>
@@ -177,7 +204,9 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * You cannot create recommendation preferences for Auto Scaling groups at the organization and account levels. You
      * can create recommendation preferences for Auto Scaling groups only at the resource level by specifying a scope
      * name of <code>ResourceArn</code> and a scope value of the Auto Scaling group Amazon Resource Name (ARN). This
-     * will configure the preference for all instances that are part of the specified the Auto Scaling group.
+     * will configure the preference for all instances that are part of the specified Auto Scaling group. You also
+     * cannot create recommendation preferences at the resource level for instances that are part of an Auto Scaling
+     * group. You can create recommendation preferences at the resource level only for standalone instances.
      * </p>
      * </note>
      * 
@@ -195,7 +224,9 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      *        levels. You can create recommendation preferences for Auto Scaling groups only at the resource level by
      *        specifying a scope name of <code>ResourceArn</code> and a scope value of the Auto Scaling group Amazon
      *        Resource Name (ARN). This will configure the preference for all instances that are part of the specified
-     *        the Auto Scaling group.
+     *        Auto Scaling group. You also cannot create recommendation preferences at the resource level for instances
+     *        that are part of an Auto Scaling group. You can create recommendation preferences at the resource level
+     *        only for standalone instances.
      *        </p>
      */
 
@@ -218,7 +249,9 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * You cannot create recommendation preferences for Auto Scaling groups at the organization and account levels. You
      * can create recommendation preferences for Auto Scaling groups only at the resource level by specifying a scope
      * name of <code>ResourceArn</code> and a scope value of the Auto Scaling group Amazon Resource Name (ARN). This
-     * will configure the preference for all instances that are part of the specified the Auto Scaling group.
+     * will configure the preference for all instances that are part of the specified Auto Scaling group. You also
+     * cannot create recommendation preferences at the resource level for instances that are part of an Auto Scaling
+     * group. You can create recommendation preferences at the resource level only for standalone instances.
      * </p>
      * </note>
      * 
@@ -235,7 +268,9 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      *         levels. You can create recommendation preferences for Auto Scaling groups only at the resource level by
      *         specifying a scope name of <code>ResourceArn</code> and a scope value of the Auto Scaling group Amazon
      *         Resource Name (ARN). This will configure the preference for all instances that are part of the specified
-     *         the Auto Scaling group.
+     *         Auto Scaling group. You also cannot create recommendation preferences at the resource level for instances
+     *         that are part of an Auto Scaling group. You can create recommendation preferences at the resource level
+     *         only for standalone instances.
      *         </p>
      */
 
@@ -258,7 +293,9 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * You cannot create recommendation preferences for Auto Scaling groups at the organization and account levels. You
      * can create recommendation preferences for Auto Scaling groups only at the resource level by specifying a scope
      * name of <code>ResourceArn</code> and a scope value of the Auto Scaling group Amazon Resource Name (ARN). This
-     * will configure the preference for all instances that are part of the specified the Auto Scaling group.
+     * will configure the preference for all instances that are part of the specified Auto Scaling group. You also
+     * cannot create recommendation preferences at the resource level for instances that are part of an Auto Scaling
+     * group. You can create recommendation preferences at the resource level only for standalone instances.
      * </p>
      * </note>
      * 
@@ -276,7 +313,9 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      *        levels. You can create recommendation preferences for Auto Scaling groups only at the resource level by
      *        specifying a scope name of <code>ResourceArn</code> and a scope value of the Auto Scaling group Amazon
      *        Resource Name (ARN). This will configure the preference for all instances that are part of the specified
-     *        the Auto Scaling group.
+     *        Auto Scaling group. You also cannot create recommendation preferences at the resource level for instances
+     *        that are part of an Auto Scaling group. You can create recommendation preferences at the resource level
+     *        only for standalone instances.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -291,15 +330,25 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * The status of the enhanced infrastructure metrics recommendation preference to create or update.
      * </p>
      * <p>
-     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * Specify the <code>Active</code> status to activate the preference, or specify <code>Inactive</code> to deactivate
+     * the preference.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param enhancedInfrastructureMetrics
      *        The status of the enhanced infrastructure metrics recommendation preference to create or update.</p>
      *        <p>
-     *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *        Specify the <code>Active</code> status to activate the preference, or specify <code>Inactive</code> to
+     *        deactivate the preference.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @see EnhancedInfrastructureMetrics
      */
 
@@ -312,14 +361,24 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * The status of the enhanced infrastructure metrics recommendation preference to create or update.
      * </p>
      * <p>
-     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * Specify the <code>Active</code> status to activate the preference, or specify <code>Inactive</code> to deactivate
+     * the preference.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @return The status of the enhanced infrastructure metrics recommendation preference to create or update.</p>
      *         <p>
-     *         A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *         refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *         Specify the <code>Active</code> status to activate the preference, or specify <code>Inactive</code> to
+     *         deactivate the preference.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *         >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @see EnhancedInfrastructureMetrics
      */
 
@@ -332,15 +391,25 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * The status of the enhanced infrastructure metrics recommendation preference to create or update.
      * </p>
      * <p>
-     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * Specify the <code>Active</code> status to activate the preference, or specify <code>Inactive</code> to deactivate
+     * the preference.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param enhancedInfrastructureMetrics
      *        The status of the enhanced infrastructure metrics recommendation preference to create or update.</p>
      *        <p>
-     *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *        Specify the <code>Active</code> status to activate the preference, or specify <code>Inactive</code> to
+     *        deactivate the preference.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnhancedInfrastructureMetrics
      */
@@ -355,21 +424,198 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
      * The status of the enhanced infrastructure metrics recommendation preference to create or update.
      * </p>
      * <p>
-     * A status of <code>Active</code> confirms that the preference is applied in the latest recommendation refresh, and
-     * a status of <code>Inactive</code> confirms that it's not yet applied.
+     * Specify the <code>Active</code> status to activate the preference, or specify <code>Inactive</code> to deactivate
+     * the preference.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html">Enhanced
+     * infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * </p>
      * 
      * @param enhancedInfrastructureMetrics
      *        The status of the enhanced infrastructure metrics recommendation preference to create or update.</p>
      *        <p>
-     *        A status of <code>Active</code> confirms that the preference is applied in the latest recommendation
-     *        refresh, and a status of <code>Inactive</code> confirms that it's not yet applied.
+     *        Specify the <code>Active</code> status to activate the preference, or specify <code>Inactive</code> to
+     *        deactivate the preference.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/enhanced-infrastructure-metrics.html"
+     *        >Enhanced infrastructure metrics</a> in the <i>Compute Optimizer User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnhancedInfrastructureMetrics
      */
 
     public PutRecommendationPreferencesRequest withEnhancedInfrastructureMetrics(EnhancedInfrastructureMetrics enhancedInfrastructureMetrics) {
         this.enhancedInfrastructureMetrics = enhancedInfrastructureMetrics.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference to create or update.
+     * </p>
+     * <note>
+     * <p>
+     * The inferred workload type feature is active by default. To deactivate it, create a recommendation preference.
+     * </p>
+     * </note>
+     * <p>
+     * Specify the <code>Inactive</code> status to deactivate the feature, or specify <code>Active</code> to activate
+     * it.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/inferred-workload-types.html">Inferred workload
+     * types</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param inferredWorkloadTypes
+     *        The status of the inferred workload types recommendation preference to create or update.</p> <note>
+     *        <p>
+     *        The inferred workload type feature is active by default. To deactivate it, create a recommendation
+     *        preference.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Specify the <code>Inactive</code> status to deactivate the feature, or specify <code>Active</code> to
+     *        activate it.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/inferred-workload-types.html">Inferred
+     *        workload types</a> in the <i>Compute Optimizer User Guide</i>.
+     * @see InferredWorkloadTypesPreference
+     */
+
+    public void setInferredWorkloadTypes(String inferredWorkloadTypes) {
+        this.inferredWorkloadTypes = inferredWorkloadTypes;
+    }
+
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference to create or update.
+     * </p>
+     * <note>
+     * <p>
+     * The inferred workload type feature is active by default. To deactivate it, create a recommendation preference.
+     * </p>
+     * </note>
+     * <p>
+     * Specify the <code>Inactive</code> status to deactivate the feature, or specify <code>Active</code> to activate
+     * it.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/inferred-workload-types.html">Inferred workload
+     * types</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @return The status of the inferred workload types recommendation preference to create or update.</p> <note>
+     *         <p>
+     *         The inferred workload type feature is active by default. To deactivate it, create a recommendation
+     *         preference.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Specify the <code>Inactive</code> status to deactivate the feature, or specify <code>Active</code> to
+     *         activate it.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/inferred-workload-types.html">Inferred
+     *         workload types</a> in the <i>Compute Optimizer User Guide</i>.
+     * @see InferredWorkloadTypesPreference
+     */
+
+    public String getInferredWorkloadTypes() {
+        return this.inferredWorkloadTypes;
+    }
+
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference to create or update.
+     * </p>
+     * <note>
+     * <p>
+     * The inferred workload type feature is active by default. To deactivate it, create a recommendation preference.
+     * </p>
+     * </note>
+     * <p>
+     * Specify the <code>Inactive</code> status to deactivate the feature, or specify <code>Active</code> to activate
+     * it.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/inferred-workload-types.html">Inferred workload
+     * types</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param inferredWorkloadTypes
+     *        The status of the inferred workload types recommendation preference to create or update.</p> <note>
+     *        <p>
+     *        The inferred workload type feature is active by default. To deactivate it, create a recommendation
+     *        preference.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Specify the <code>Inactive</code> status to deactivate the feature, or specify <code>Active</code> to
+     *        activate it.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/inferred-workload-types.html">Inferred
+     *        workload types</a> in the <i>Compute Optimizer User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InferredWorkloadTypesPreference
+     */
+
+    public PutRecommendationPreferencesRequest withInferredWorkloadTypes(String inferredWorkloadTypes) {
+        setInferredWorkloadTypes(inferredWorkloadTypes);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the inferred workload types recommendation preference to create or update.
+     * </p>
+     * <note>
+     * <p>
+     * The inferred workload type feature is active by default. To deactivate it, create a recommendation preference.
+     * </p>
+     * </note>
+     * <p>
+     * Specify the <code>Inactive</code> status to deactivate the feature, or specify <code>Active</code> to activate
+     * it.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/inferred-workload-types.html">Inferred workload
+     * types</a> in the <i>Compute Optimizer User Guide</i>.
+     * </p>
+     * 
+     * @param inferredWorkloadTypes
+     *        The status of the inferred workload types recommendation preference to create or update.</p> <note>
+     *        <p>
+     *        The inferred workload type feature is active by default. To deactivate it, create a recommendation
+     *        preference.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Specify the <code>Inactive</code> status to deactivate the feature, or specify <code>Active</code> to
+     *        activate it.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/compute-optimizer/latest/ug/inferred-workload-types.html">Inferred
+     *        workload types</a> in the <i>Compute Optimizer User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InferredWorkloadTypesPreference
+     */
+
+    public PutRecommendationPreferencesRequest withInferredWorkloadTypes(InferredWorkloadTypesPreference inferredWorkloadTypes) {
+        this.inferredWorkloadTypes = inferredWorkloadTypes.toString();
         return this;
     }
 
@@ -390,7 +636,9 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
         if (getScope() != null)
             sb.append("Scope: ").append(getScope()).append(",");
         if (getEnhancedInfrastructureMetrics() != null)
-            sb.append("EnhancedInfrastructureMetrics: ").append(getEnhancedInfrastructureMetrics());
+            sb.append("EnhancedInfrastructureMetrics: ").append(getEnhancedInfrastructureMetrics()).append(",");
+        if (getInferredWorkloadTypes() != null)
+            sb.append("InferredWorkloadTypes: ").append(getInferredWorkloadTypes());
         sb.append("}");
         return sb.toString();
     }
@@ -418,6 +666,10 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
         if (other.getEnhancedInfrastructureMetrics() != null
                 && other.getEnhancedInfrastructureMetrics().equals(this.getEnhancedInfrastructureMetrics()) == false)
             return false;
+        if (other.getInferredWorkloadTypes() == null ^ this.getInferredWorkloadTypes() == null)
+            return false;
+        if (other.getInferredWorkloadTypes() != null && other.getInferredWorkloadTypes().equals(this.getInferredWorkloadTypes()) == false)
+            return false;
         return true;
     }
 
@@ -429,6 +681,7 @@ public class PutRecommendationPreferencesRequest extends com.amazonaws.AmazonWeb
         hashCode = prime * hashCode + ((getResourceType() == null) ? 0 : getResourceType().hashCode());
         hashCode = prime * hashCode + ((getScope() == null) ? 0 : getScope().hashCode());
         hashCode = prime * hashCode + ((getEnhancedInfrastructureMetrics() == null) ? 0 : getEnhancedInfrastructureMetrics().hashCode());
+        hashCode = prime * hashCode + ((getInferredWorkloadTypes() == null) ? 0 : getInferredWorkloadTypes().hashCode());
         return hashCode;
     }
 

@@ -33,6 +33,8 @@ public class RecommendationPreferencesDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("resourceType").build();
     private static final MarshallingInfo<String> ENHANCEDINFRASTRUCTUREMETRICS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("enhancedInfrastructureMetrics").build();
+    private static final MarshallingInfo<String> INFERREDWORKLOADTYPES_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferredWorkloadTypes").build();
 
     private static final RecommendationPreferencesDetailMarshaller instance = new RecommendationPreferencesDetailMarshaller();
 
@@ -53,6 +55,7 @@ public class RecommendationPreferencesDetailMarshaller {
             protocolMarshaller.marshall(recommendationPreferencesDetail.getScope(), SCOPE_BINDING);
             protocolMarshaller.marshall(recommendationPreferencesDetail.getResourceType(), RESOURCETYPE_BINDING);
             protocolMarshaller.marshall(recommendationPreferencesDetail.getEnhancedInfrastructureMetrics(), ENHANCEDINFRASTRUCTUREMETRICS_BINDING);
+            protocolMarshaller.marshall(recommendationPreferencesDetail.getInferredWorkloadTypes(), INFERREDWORKLOADTYPES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

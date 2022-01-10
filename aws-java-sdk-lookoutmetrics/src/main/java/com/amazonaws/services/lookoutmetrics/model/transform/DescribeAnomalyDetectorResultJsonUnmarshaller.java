@@ -84,6 +84,10 @@ public class DescribeAnomalyDetectorResultJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     describeAnomalyDetectorResult.setKmsKeyArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("FailureType", targetDepth)) {
+                    context.nextToken();
+                    describeAnomalyDetectorResult.setFailureType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

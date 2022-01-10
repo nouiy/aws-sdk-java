@@ -7661,6 +7661,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeFastLaunchImagesResult> describeFastLaunchImagesAsync(DescribeFastLaunchImagesRequest request) {
+
+        return describeFastLaunchImagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeFastLaunchImagesResult> describeFastLaunchImagesAsync(final DescribeFastLaunchImagesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeFastLaunchImagesRequest, DescribeFastLaunchImagesResult> asyncHandler) {
+        final DescribeFastLaunchImagesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeFastLaunchImagesResult>() {
+            @Override
+            public DescribeFastLaunchImagesResult call() throws Exception {
+                DescribeFastLaunchImagesResult result = null;
+
+                try {
+                    result = executeDescribeFastLaunchImages(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeFastSnapshotRestoresResult> describeFastSnapshotRestoresAsync(DescribeFastSnapshotRestoresRequest request) {
 
         return describeFastSnapshotRestoresAsync(request, null);
@@ -12374,6 +12407,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<DisableFastLaunchResult> disableFastLaunchAsync(DisableFastLaunchRequest request) {
+
+        return disableFastLaunchAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableFastLaunchResult> disableFastLaunchAsync(final DisableFastLaunchRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableFastLaunchRequest, DisableFastLaunchResult> asyncHandler) {
+        final DisableFastLaunchRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableFastLaunchResult>() {
+            @Override
+            public DisableFastLaunchResult call() throws Exception {
+                DisableFastLaunchResult result = null;
+
+                try {
+                    result = executeDisableFastLaunch(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisableFastSnapshotRestoresResult> disableFastSnapshotRestoresAsync(DisableFastSnapshotRestoresRequest request) {
 
         return disableFastSnapshotRestoresAsync(request, null);
@@ -13035,6 +13101,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeEnableEbsEncryptionByDefault(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableFastLaunchResult> enableFastLaunchAsync(EnableFastLaunchRequest request) {
+
+        return enableFastLaunchAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableFastLaunchResult> enableFastLaunchAsync(final EnableFastLaunchRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableFastLaunchRequest, EnableFastLaunchResult> asyncHandler) {
+        final EnableFastLaunchRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableFastLaunchResult>() {
+            @Override
+            public EnableFastLaunchResult call() throws Exception {
+                EnableFastLaunchResult result = null;
+
+                try {
+                    result = executeEnableFastLaunch(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

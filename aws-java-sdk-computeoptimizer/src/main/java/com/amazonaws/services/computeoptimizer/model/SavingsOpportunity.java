@@ -47,24 +47,28 @@ public class SavingsOpportunity implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The estimated monthly savings possible as a percentage of monthly cost.
+     * The estimated monthly savings possible as a percentage of monthly cost by adopting Compute Optimizer
+     * recommendations for a given resource.
      * </p>
      */
     private Double savingsOpportunityPercentage;
     /**
      * <p>
-     * An object that describes the estimated monthly savings amount possible based on On-Demand instance pricing.
+     * An object that describes the estimated monthly savings amount possible, based on On-Demand instance pricing, by
+     * adopting Compute Optimizer recommendations for a given resource.
      * </p>
      */
     private EstimatedMonthlySavings estimatedMonthlySavings;
 
     /**
      * <p>
-     * The estimated monthly savings possible as a percentage of monthly cost.
+     * The estimated monthly savings possible as a percentage of monthly cost by adopting Compute Optimizer
+     * recommendations for a given resource.
      * </p>
      * 
      * @param savingsOpportunityPercentage
-     *        The estimated monthly savings possible as a percentage of monthly cost.
+     *        The estimated monthly savings possible as a percentage of monthly cost by adopting Compute Optimizer
+     *        recommendations for a given resource.
      */
 
     public void setSavingsOpportunityPercentage(Double savingsOpportunityPercentage) {
@@ -73,10 +77,12 @@ public class SavingsOpportunity implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The estimated monthly savings possible as a percentage of monthly cost.
+     * The estimated monthly savings possible as a percentage of monthly cost by adopting Compute Optimizer
+     * recommendations for a given resource.
      * </p>
      * 
-     * @return The estimated monthly savings possible as a percentage of monthly cost.
+     * @return The estimated monthly savings possible as a percentage of monthly cost by adopting Compute Optimizer
+     *         recommendations for a given resource.
      */
 
     public Double getSavingsOpportunityPercentage() {
@@ -85,11 +91,13 @@ public class SavingsOpportunity implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The estimated monthly savings possible as a percentage of monthly cost.
+     * The estimated monthly savings possible as a percentage of monthly cost by adopting Compute Optimizer
+     * recommendations for a given resource.
      * </p>
      * 
      * @param savingsOpportunityPercentage
-     *        The estimated monthly savings possible as a percentage of monthly cost.
+     *        The estimated monthly savings possible as a percentage of monthly cost by adopting Compute Optimizer
+     *        recommendations for a given resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,12 +108,13 @@ public class SavingsOpportunity implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * An object that describes the estimated monthly savings amount possible based on On-Demand instance pricing.
+     * An object that describes the estimated monthly savings amount possible, based on On-Demand instance pricing, by
+     * adopting Compute Optimizer recommendations for a given resource.
      * </p>
      * 
      * @param estimatedMonthlySavings
-     *        An object that describes the estimated monthly savings amount possible based on On-Demand instance
-     *        pricing.
+     *        An object that describes the estimated monthly savings amount possible, based on On-Demand instance
+     *        pricing, by adopting Compute Optimizer recommendations for a given resource.
      */
 
     public void setEstimatedMonthlySavings(EstimatedMonthlySavings estimatedMonthlySavings) {
@@ -114,11 +123,12 @@ public class SavingsOpportunity implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * An object that describes the estimated monthly savings amount possible based on On-Demand instance pricing.
+     * An object that describes the estimated monthly savings amount possible, based on On-Demand instance pricing, by
+     * adopting Compute Optimizer recommendations for a given resource.
      * </p>
      * 
-     * @return An object that describes the estimated monthly savings amount possible based on On-Demand instance
-     *         pricing.
+     * @return An object that describes the estimated monthly savings amount possible, based on On-Demand instance
+     *         pricing, by adopting Compute Optimizer recommendations for a given resource.
      */
 
     public EstimatedMonthlySavings getEstimatedMonthlySavings() {
@@ -127,12 +137,13 @@ public class SavingsOpportunity implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * An object that describes the estimated monthly savings amount possible based on On-Demand instance pricing.
+     * An object that describes the estimated monthly savings amount possible, based on On-Demand instance pricing, by
+     * adopting Compute Optimizer recommendations for a given resource.
      * </p>
      * 
      * @param estimatedMonthlySavings
-     *        An object that describes the estimated monthly savings amount possible based on On-Demand instance
-     *        pricing.
+     *        An object that describes the estimated monthly savings amount possible, based on On-Demand instance
+     *        pricing, by adopting Compute Optimizer recommendations for a given resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

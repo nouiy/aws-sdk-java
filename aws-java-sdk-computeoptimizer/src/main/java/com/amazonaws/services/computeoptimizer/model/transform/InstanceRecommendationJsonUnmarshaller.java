@@ -111,6 +111,12 @@ public class InstanceRecommendationJsonUnmarshaller implements Unmarshaller<Inst
                     instanceRecommendation.setEffectiveRecommendationPreferences(EffectiveRecommendationPreferencesJsonUnmarshaller.getInstance().unmarshall(
                             context));
                 }
+                if (context.testExpression("inferredWorkloadTypes", targetDepth)) {
+                    context.nextToken();
+                    instanceRecommendation.setInferredWorkloadTypes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

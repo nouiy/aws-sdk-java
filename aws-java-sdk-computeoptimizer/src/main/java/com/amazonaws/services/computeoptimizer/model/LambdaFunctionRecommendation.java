@@ -172,7 +172,7 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     /**
      * <p>
      * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
-     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * the more likely the current Lambda function requires more memory.
      * </p>
      */
     private String currentPerformanceRisk;
@@ -1437,12 +1437,12 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     /**
      * <p>
      * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
-     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * the more likely the current Lambda function requires more memory.
      * </p>
      * 
      * @param currentPerformanceRisk
      *        The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the
-     *        risk, the more likely the current Lambda function configuration is underperforming in its workload.
+     *        risk, the more likely the current Lambda function requires more memory.
      * @see CurrentPerformanceRisk
      */
 
@@ -1453,11 +1453,11 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     /**
      * <p>
      * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
-     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * the more likely the current Lambda function requires more memory.
      * </p>
      * 
      * @return The risk of the current Lambda function not meeting the performance needs of its workloads. The higher
-     *         the risk, the more likely the current Lambda function configuration is underperforming in its workload.
+     *         the risk, the more likely the current Lambda function requires more memory.
      * @see CurrentPerformanceRisk
      */
 
@@ -1468,12 +1468,12 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     /**
      * <p>
      * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
-     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * the more likely the current Lambda function requires more memory.
      * </p>
      * 
      * @param currentPerformanceRisk
      *        The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the
-     *        risk, the more likely the current Lambda function configuration is underperforming in its workload.
+     *        risk, the more likely the current Lambda function requires more memory.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CurrentPerformanceRisk
      */
@@ -1486,12 +1486,12 @@ public class LambdaFunctionRecommendation implements Serializable, Cloneable, St
     /**
      * <p>
      * The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the risk,
-     * the more likely the current Lambda function configuration is underperforming in its workload.
+     * the more likely the current Lambda function requires more memory.
      * </p>
      * 
      * @param currentPerformanceRisk
      *        The risk of the current Lambda function not meeting the performance needs of its workloads. The higher the
-     *        risk, the more likely the current Lambda function configuration is underperforming in its workload.
+     *        risk, the more likely the current Lambda function requires more memory.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CurrentPerformanceRisk
      */
