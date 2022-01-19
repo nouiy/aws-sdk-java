@@ -117,6 +117,10 @@
         "exceptionName" : "EC2InstanceNotFoundException",
         "documentation" : "<p>The specified instance was not found.</p>",
         "httpStatusCode" : null
+      }, {
+        "exceptionName" : "EC2InstanceStateInvalidException",
+        "documentation" : "<p>Unable to connect because the instance is not in a valid state. Connecting to a stopped or terminated instance is not supported. If the instance is stopped, start your instance, and try to connect again.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -185,6 +189,10 @@
       }, {
         "exceptionName" : "SerialConsoleSessionUnavailableException",
         "documentation" : "<p>Unable to start a serial console session. Please try again.</p>",
+        "httpStatusCode" : null
+      }, {
+        "exceptionName" : "EC2InstanceStateInvalidException",
+        "documentation" : "<p>Unable to connect because the instance is not in a valid state. Connecting to a stopped or terminated instance is not supported. If the instance is stopped, start your instance, and try to connect again.</p>",
         "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
@@ -288,6 +296,47 @@
         "documentation" : null,
         "simpleType" : "EC2InstanceNotFoundException",
         "variableSetterType" : "EC2InstanceNotFoundException"
+      },
+      "wrapper" : false
+    },
+    "EC2InstanceStateInvalidException" : {
+      "c2jName" : "EC2InstanceStateInvalidException",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "<p>Unable to connect because the instance is not in a valid state. Connecting to a stopped or terminated instance is not supported. If the instance is stopped, start your instance, and try to connect again.</p>",
+      "endpointDiscoveryMembers" : null,
+      "enums" : null,
+      "errorCode" : "EC2InstanceStateInvalidException",
+      "fullyQualifiedName" : "com.amazonaws.services.ec2instanceconnect.exception.EC2InstanceStateInvalidException",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : [ ],
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.ec2instanceconnect.exception",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "EC2InstanceStateInvalidException",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : null,
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "EC2InstanceStateInvalidException",
+        "variableName" : "eC2InstanceStateInvalidException",
+        "variableType" : "EC2InstanceStateInvalidException",
+        "documentation" : null,
+        "simpleType" : "EC2InstanceStateInvalidException",
+        "variableSetterType" : "EC2InstanceStateInvalidException"
       },
       "wrapper" : false
     },
@@ -962,7 +1011,7 @@
       "packageName" : "com.amazonaws.services.ec2instanceconnect.request",
       "requestSignerAware" : false,
       "requestSignerClassFqcn" : null,
-      "required" : [ "InstanceId", "InstanceOSUser", "SSHPublicKey", "AvailabilityZone" ],
+      "required" : [ "InstanceId", "InstanceOSUser", "SSHPublicKey" ],
       "shapeName" : "SendSSHPublicKeyRequest",
       "signerAware" : false,
       "signerType" : null,

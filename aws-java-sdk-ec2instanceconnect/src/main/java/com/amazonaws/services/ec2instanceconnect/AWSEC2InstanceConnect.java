@@ -63,6 +63,9 @@ public interface AWSEC2InstanceConnect {
      *         the limit on your request frequency, contact AWS Support.
      * @throws EC2InstanceNotFoundException
      *         The specified instance was not found.
+     * @throws EC2InstanceStateInvalidException
+     *         Unable to connect because the instance is not in a valid state. Connecting to a stopped or terminated
+     *         instance is not supported. If the instance is stopped, start your instance, and try to connect again.
      * @sample AWSEC2InstanceConnect.SendSSHPublicKey
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-instance-connect-2018-04-02/SendSSHPublicKey"
      *      target="_top">AWS API Documentation</a>
@@ -102,6 +105,9 @@ public interface AWSEC2InstanceConnect {
      *         The instance currently has 1 active serial console session. Only 1 session is supported at a time.
      * @throws SerialConsoleSessionUnavailableException
      *         Unable to start a serial console session. Please try again.
+     * @throws EC2InstanceStateInvalidException
+     *         Unable to connect because the instance is not in a valid state. Connecting to a stopped or terminated
+     *         instance is not supported. If the instance is stopped, start your instance, and try to connect again.
      * @sample AWSEC2InstanceConnect.SendSerialConsoleSSHPublicKey
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/ec2-instance-connect-2018-04-02/SendSerialConsoleSSHPublicKey"

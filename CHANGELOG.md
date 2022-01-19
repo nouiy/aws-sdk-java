@@ -1,3 +1,12 @@
+# __1.12.143__ __2022-01-19__
+## __AWS EC2 Instance Connect__
+  - ### Features
+    - Adds support for ED25519 keys. PushSSHPublicKey Availability Zone parameter is now optional. Adds EC2InstanceStateInvalidException for instances that are not running. This was previously a service exception, so this may require updating your code to handle this new exception.
+
+## __Amazon Macie 2__
+  - ### Features
+    - This release of the Amazon Macie API introduces stricter validation of requests to create custom data identifiers.
+
 # __1.12.142__ __2022-01-18__
 ## __AWS CloudTrail__
   - ### Features
