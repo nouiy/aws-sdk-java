@@ -30,7 +30,9 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The queues to use to filter the metrics. You can specify up to 100 queues per request.
+     * The queues to use to filter the metrics. You should specify at least one queue, and can specify up to 100 queues
+     * per request. The <code>GetCurrentMetricsData</code> API in particular requires a queue when you include a
+     * <code>Filter</code> in your request.
      * </p>
      */
     private java.util.List<String> queues;
@@ -43,10 +45,14 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The queues to use to filter the metrics. You can specify up to 100 queues per request.
+     * The queues to use to filter the metrics. You should specify at least one queue, and can specify up to 100 queues
+     * per request. The <code>GetCurrentMetricsData</code> API in particular requires a queue when you include a
+     * <code>Filter</code> in your request.
      * </p>
      * 
-     * @return The queues to use to filter the metrics. You can specify up to 100 queues per request.
+     * @return The queues to use to filter the metrics. You should specify at least one queue, and can specify up to 100
+     *         queues per request. The <code>GetCurrentMetricsData</code> API in particular requires a queue when you
+     *         include a <code>Filter</code> in your request.
      */
 
     public java.util.List<String> getQueues() {
@@ -55,11 +61,15 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The queues to use to filter the metrics. You can specify up to 100 queues per request.
+     * The queues to use to filter the metrics. You should specify at least one queue, and can specify up to 100 queues
+     * per request. The <code>GetCurrentMetricsData</code> API in particular requires a queue when you include a
+     * <code>Filter</code> in your request.
      * </p>
      * 
      * @param queues
-     *        The queues to use to filter the metrics. You can specify up to 100 queues per request.
+     *        The queues to use to filter the metrics. You should specify at least one queue, and can specify up to 100
+     *        queues per request. The <code>GetCurrentMetricsData</code> API in particular requires a queue when you
+     *        include a <code>Filter</code> in your request.
      */
 
     public void setQueues(java.util.Collection<String> queues) {
@@ -73,7 +83,9 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The queues to use to filter the metrics. You can specify up to 100 queues per request.
+     * The queues to use to filter the metrics. You should specify at least one queue, and can specify up to 100 queues
+     * per request. The <code>GetCurrentMetricsData</code> API in particular requires a queue when you include a
+     * <code>Filter</code> in your request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -82,7 +94,9 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param queues
-     *        The queues to use to filter the metrics. You can specify up to 100 queues per request.
+     *        The queues to use to filter the metrics. You should specify at least one queue, and can specify up to 100
+     *        queues per request. The <code>GetCurrentMetricsData</code> API in particular requires a queue when you
+     *        include a <code>Filter</code> in your request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +112,15 @@ public class Filters implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The queues to use to filter the metrics. You can specify up to 100 queues per request.
+     * The queues to use to filter the metrics. You should specify at least one queue, and can specify up to 100 queues
+     * per request. The <code>GetCurrentMetricsData</code> API in particular requires a queue when you include a
+     * <code>Filter</code> in your request.
      * </p>
      * 
      * @param queues
-     *        The queues to use to filter the metrics. You can specify up to 100 queues per request.
+     *        The queues to use to filter the metrics. You should specify at least one queue, and can specify up to 100
+     *        queues per request. The <code>GetCurrentMetricsData</code> API in particular requires a queue when you
+     *        include a <code>Filter</code> in your request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

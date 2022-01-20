@@ -27,18 +27,21 @@ public class EnableOrganizationAdminAccountRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The AWS Account ID for the organization account to be enabled as a GuardDuty delegated administrator.
+     * The Amazon Web Services Account ID for the organization account to be enabled as a GuardDuty delegated
+     * administrator.
      * </p>
      */
     private String adminAccountId;
 
     /**
      * <p>
-     * The AWS Account ID for the organization account to be enabled as a GuardDuty delegated administrator.
+     * The Amazon Web Services Account ID for the organization account to be enabled as a GuardDuty delegated
+     * administrator.
      * </p>
      * 
      * @param adminAccountId
-     *        The AWS Account ID for the organization account to be enabled as a GuardDuty delegated administrator.
+     *        The Amazon Web Services Account ID for the organization account to be enabled as a GuardDuty delegated
+     *        administrator.
      */
 
     public void setAdminAccountId(String adminAccountId) {
@@ -47,10 +50,12 @@ public class EnableOrganizationAdminAccountRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The AWS Account ID for the organization account to be enabled as a GuardDuty delegated administrator.
+     * The Amazon Web Services Account ID for the organization account to be enabled as a GuardDuty delegated
+     * administrator.
      * </p>
      * 
-     * @return The AWS Account ID for the organization account to be enabled as a GuardDuty delegated administrator.
+     * @return The Amazon Web Services Account ID for the organization account to be enabled as a GuardDuty delegated
+     *         administrator.
      */
 
     public String getAdminAccountId() {
@@ -59,11 +64,13 @@ public class EnableOrganizationAdminAccountRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The AWS Account ID for the organization account to be enabled as a GuardDuty delegated administrator.
+     * The Amazon Web Services Account ID for the organization account to be enabled as a GuardDuty delegated
+     * administrator.
      * </p>
      * 
      * @param adminAccountId
-     *        The AWS Account ID for the organization account to be enabled as a GuardDuty delegated administrator.
+     *        The Amazon Web Services Account ID for the organization account to be enabled as a GuardDuty delegated
+     *        administrator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

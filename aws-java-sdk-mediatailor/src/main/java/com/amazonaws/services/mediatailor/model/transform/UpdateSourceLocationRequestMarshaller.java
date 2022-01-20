@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.mediatailor.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +34,8 @@ public class UpdateSourceLocationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultSegmentDeliveryConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> HTTPCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HttpConfiguration").build();
+    private static final MarshallingInfo<List> SEGMENTDELIVERYCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SegmentDeliveryConfigurations").build();
     private static final MarshallingInfo<String> SOURCELOCATIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("sourceLocationName").build();
 
@@ -55,6 +58,7 @@ public class UpdateSourceLocationRequestMarshaller {
             protocolMarshaller.marshall(updateSourceLocationRequest.getAccessConfiguration(), ACCESSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateSourceLocationRequest.getDefaultSegmentDeliveryConfiguration(), DEFAULTSEGMENTDELIVERYCONFIGURATION_BINDING);
             protocolMarshaller.marshall(updateSourceLocationRequest.getHttpConfiguration(), HTTPCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(updateSourceLocationRequest.getSegmentDeliveryConfigurations(), SEGMENTDELIVERYCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(updateSourceLocationRequest.getSourceLocationName(), SOURCELOCATIONNAME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

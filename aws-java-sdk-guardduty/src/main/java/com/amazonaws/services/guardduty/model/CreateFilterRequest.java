@@ -297,6 +297,31 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * resource.s3BucketDetails.publicAccess.effectivePermissions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.tags.key
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.tags.value
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.type
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.archived
      * </p>
      * <p>
@@ -815,6 +840,31 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * resource.s3BucketDetails.publicAccess.effectivePermissions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.tags.key
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.tags.value
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.type
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.archived
      * </p>
      * <p>
@@ -1082,6 +1132,31 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        service.additionalInfo.threatListName
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.publicAccess.effectivePermissions
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.name
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.tags.key
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.tags.value
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.type
      *        </p>
      *        </li>
      *        <li>
@@ -1363,6 +1438,31 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * resource.s3BucketDetails.publicAccess.effectivePermissions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.tags.key
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.tags.value
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.type
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.archived
      * </p>
      * <p>
@@ -1629,6 +1729,31 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <li>
      *         <p>
      *         service.additionalInfo.threatListName
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         resource.s3BucketDetails.publicAccess.effectivePermissions
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         resource.s3BucketDetails.name
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         resource.s3BucketDetails.tags.key
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         resource.s3BucketDetails.tags.value
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         resource.s3BucketDetails.type
      *         </p>
      *         </li>
      *         <li>
@@ -1910,6 +2035,31 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
+     * resource.s3BucketDetails.publicAccess.effectivePermissions
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.name
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.tags.key
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.tags.value
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * resource.s3BucketDetails.type
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * service.archived
      * </p>
      * <p>
@@ -2177,6 +2327,31 @@ public class CreateFilterRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <li>
      *        <p>
      *        service.additionalInfo.threatListName
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.publicAccess.effectivePermissions
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.name
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.tags.key
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.tags.value
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        resource.s3BucketDetails.type
      *        </p>
      *        </li>
      *        <li>

@@ -41,6 +41,10 @@ public class ExperimentActionMarshaller {
             .marshallLocationName("startAfter").build();
     private static final MarshallingInfo<StructuredPojo> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("state").build();
+    private static final MarshallingInfo<java.util.Date> STARTTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("startTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<java.util.Date> ENDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("unixTimestamp").build();
 
     private static final ExperimentActionMarshaller instance = new ExperimentActionMarshaller();
 
@@ -64,6 +68,8 @@ public class ExperimentActionMarshaller {
             protocolMarshaller.marshall(experimentAction.getTargets(), TARGETS_BINDING);
             protocolMarshaller.marshall(experimentAction.getStartAfter(), STARTAFTER_BINDING);
             protocolMarshaller.marshall(experimentAction.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(experimentAction.getStartTime(), STARTTIME_BINDING);
+            protocolMarshaller.marshall(experimentAction.getEndTime(), ENDTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

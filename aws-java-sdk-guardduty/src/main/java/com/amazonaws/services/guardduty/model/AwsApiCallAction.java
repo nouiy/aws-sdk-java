@@ -30,48 +30,55 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS API name.
+     * The Amazon Web Services API name.
      * </p>
      */
     private String api;
     /**
      * <p>
-     * The AWS API caller type.
+     * The Amazon Web Services API caller type.
      * </p>
      */
     private String callerType;
     /**
      * <p>
-     * The domain information for the AWS API call.
+     * The domain information for the Amazon Web Services API call.
      * </p>
      */
     private DomainDetails domainDetails;
     /**
      * <p>
-     * The error code of the failed AWS API action.
+     * The error code of the failed Amazon Web Services API action.
      * </p>
      */
     private String errorCode;
     /**
      * <p>
-     * The remote IP information of the connection that initiated the AWS API call.
+     * The remote IP information of the connection that initiated the Amazon Web Services API call.
      * </p>
      */
     private RemoteIpDetails remoteIpDetails;
     /**
      * <p>
-     * The AWS service name whose API was invoked.
+     * The Amazon Web Services service name whose API was invoked.
      * </p>
      */
     private String serviceName;
+    /**
+     * <p>
+     * The details of the Amazon Web Services account that made the API call. This field appears if the call was made
+     * from outside your account.
+     * </p>
+     */
+    private RemoteAccountDetails remoteAccountDetails;
 
     /**
      * <p>
-     * The AWS API name.
+     * The Amazon Web Services API name.
      * </p>
      * 
      * @param api
-     *        The AWS API name.
+     *        The Amazon Web Services API name.
      */
 
     public void setApi(String api) {
@@ -80,10 +87,10 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS API name.
+     * The Amazon Web Services API name.
      * </p>
      * 
-     * @return The AWS API name.
+     * @return The Amazon Web Services API name.
      */
 
     public String getApi() {
@@ -92,11 +99,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS API name.
+     * The Amazon Web Services API name.
      * </p>
      * 
      * @param api
-     *        The AWS API name.
+     *        The Amazon Web Services API name.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,11 +114,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS API caller type.
+     * The Amazon Web Services API caller type.
      * </p>
      * 
      * @param callerType
-     *        The AWS API caller type.
+     *        The Amazon Web Services API caller type.
      */
 
     public void setCallerType(String callerType) {
@@ -120,10 +127,10 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS API caller type.
+     * The Amazon Web Services API caller type.
      * </p>
      * 
-     * @return The AWS API caller type.
+     * @return The Amazon Web Services API caller type.
      */
 
     public String getCallerType() {
@@ -132,11 +139,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS API caller type.
+     * The Amazon Web Services API caller type.
      * </p>
      * 
      * @param callerType
-     *        The AWS API caller type.
+     *        The Amazon Web Services API caller type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,11 +154,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The domain information for the AWS API call.
+     * The domain information for the Amazon Web Services API call.
      * </p>
      * 
      * @param domainDetails
-     *        The domain information for the AWS API call.
+     *        The domain information for the Amazon Web Services API call.
      */
 
     public void setDomainDetails(DomainDetails domainDetails) {
@@ -160,10 +167,10 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The domain information for the AWS API call.
+     * The domain information for the Amazon Web Services API call.
      * </p>
      * 
-     * @return The domain information for the AWS API call.
+     * @return The domain information for the Amazon Web Services API call.
      */
 
     public DomainDetails getDomainDetails() {
@@ -172,11 +179,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The domain information for the AWS API call.
+     * The domain information for the Amazon Web Services API call.
      * </p>
      * 
      * @param domainDetails
-     *        The domain information for the AWS API call.
+     *        The domain information for the Amazon Web Services API call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,11 +194,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The error code of the failed AWS API action.
+     * The error code of the failed Amazon Web Services API action.
      * </p>
      * 
      * @param errorCode
-     *        The error code of the failed AWS API action.
+     *        The error code of the failed Amazon Web Services API action.
      */
 
     public void setErrorCode(String errorCode) {
@@ -200,10 +207,10 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The error code of the failed AWS API action.
+     * The error code of the failed Amazon Web Services API action.
      * </p>
      * 
-     * @return The error code of the failed AWS API action.
+     * @return The error code of the failed Amazon Web Services API action.
      */
 
     public String getErrorCode() {
@@ -212,11 +219,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The error code of the failed AWS API action.
+     * The error code of the failed Amazon Web Services API action.
      * </p>
      * 
      * @param errorCode
-     *        The error code of the failed AWS API action.
+     *        The error code of the failed Amazon Web Services API action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,11 +234,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The remote IP information of the connection that initiated the AWS API call.
+     * The remote IP information of the connection that initiated the Amazon Web Services API call.
      * </p>
      * 
      * @param remoteIpDetails
-     *        The remote IP information of the connection that initiated the AWS API call.
+     *        The remote IP information of the connection that initiated the Amazon Web Services API call.
      */
 
     public void setRemoteIpDetails(RemoteIpDetails remoteIpDetails) {
@@ -240,10 +247,10 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The remote IP information of the connection that initiated the AWS API call.
+     * The remote IP information of the connection that initiated the Amazon Web Services API call.
      * </p>
      * 
-     * @return The remote IP information of the connection that initiated the AWS API call.
+     * @return The remote IP information of the connection that initiated the Amazon Web Services API call.
      */
 
     public RemoteIpDetails getRemoteIpDetails() {
@@ -252,11 +259,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The remote IP information of the connection that initiated the AWS API call.
+     * The remote IP information of the connection that initiated the Amazon Web Services API call.
      * </p>
      * 
      * @param remoteIpDetails
-     *        The remote IP information of the connection that initiated the AWS API call.
+     *        The remote IP information of the connection that initiated the Amazon Web Services API call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,11 +274,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS service name whose API was invoked.
+     * The Amazon Web Services service name whose API was invoked.
      * </p>
      * 
      * @param serviceName
-     *        The AWS service name whose API was invoked.
+     *        The Amazon Web Services service name whose API was invoked.
      */
 
     public void setServiceName(String serviceName) {
@@ -280,10 +287,10 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS service name whose API was invoked.
+     * The Amazon Web Services service name whose API was invoked.
      * </p>
      * 
-     * @return The AWS service name whose API was invoked.
+     * @return The Amazon Web Services service name whose API was invoked.
      */
 
     public String getServiceName() {
@@ -292,16 +299,62 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS service name whose API was invoked.
+     * The Amazon Web Services service name whose API was invoked.
      * </p>
      * 
      * @param serviceName
-     *        The AWS service name whose API was invoked.
+     *        The Amazon Web Services service name whose API was invoked.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public AwsApiCallAction withServiceName(String serviceName) {
         setServiceName(serviceName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The details of the Amazon Web Services account that made the API call. This field appears if the call was made
+     * from outside your account.
+     * </p>
+     * 
+     * @param remoteAccountDetails
+     *        The details of the Amazon Web Services account that made the API call. This field appears if the call was
+     *        made from outside your account.
+     */
+
+    public void setRemoteAccountDetails(RemoteAccountDetails remoteAccountDetails) {
+        this.remoteAccountDetails = remoteAccountDetails;
+    }
+
+    /**
+     * <p>
+     * The details of the Amazon Web Services account that made the API call. This field appears if the call was made
+     * from outside your account.
+     * </p>
+     * 
+     * @return The details of the Amazon Web Services account that made the API call. This field appears if the call was
+     *         made from outside your account.
+     */
+
+    public RemoteAccountDetails getRemoteAccountDetails() {
+        return this.remoteAccountDetails;
+    }
+
+    /**
+     * <p>
+     * The details of the Amazon Web Services account that made the API call. This field appears if the call was made
+     * from outside your account.
+     * </p>
+     * 
+     * @param remoteAccountDetails
+     *        The details of the Amazon Web Services account that made the API call. This field appears if the call was
+     *        made from outside your account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsApiCallAction withRemoteAccountDetails(RemoteAccountDetails remoteAccountDetails) {
+        setRemoteAccountDetails(remoteAccountDetails);
         return this;
     }
 
@@ -328,7 +381,9 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
         if (getRemoteIpDetails() != null)
             sb.append("RemoteIpDetails: ").append(getRemoteIpDetails()).append(",");
         if (getServiceName() != null)
-            sb.append("ServiceName: ").append(getServiceName());
+            sb.append("ServiceName: ").append(getServiceName()).append(",");
+        if (getRemoteAccountDetails() != null)
+            sb.append("RemoteAccountDetails: ").append(getRemoteAccountDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -367,6 +422,10 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getServiceName() != null && other.getServiceName().equals(this.getServiceName()) == false)
             return false;
+        if (other.getRemoteAccountDetails() == null ^ this.getRemoteAccountDetails() == null)
+            return false;
+        if (other.getRemoteAccountDetails() != null && other.getRemoteAccountDetails().equals(this.getRemoteAccountDetails()) == false)
+            return false;
         return true;
     }
 
@@ -381,6 +440,7 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getErrorCode() == null) ? 0 : getErrorCode().hashCode());
         hashCode = prime * hashCode + ((getRemoteIpDetails() == null) ? 0 : getRemoteIpDetails().hashCode());
         hashCode = prime * hashCode + ((getServiceName() == null) ? 0 : getServiceName().hashCode());
+        hashCode = prime * hashCode + ((getRemoteAccountDetails() == null) ? 0 : getRemoteAccountDetails().hashCode());
         return hashCode;
     }
 

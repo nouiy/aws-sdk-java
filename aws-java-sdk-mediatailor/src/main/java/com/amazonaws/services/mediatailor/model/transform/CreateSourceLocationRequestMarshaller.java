@@ -13,7 +13,7 @@
 package com.amazonaws.services.mediatailor.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -35,6 +35,8 @@ public class CreateSourceLocationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultSegmentDeliveryConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> HTTPCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HttpConfiguration").build();
+    private static final MarshallingInfo<List> SEGMENTDELIVERYCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SegmentDeliveryConfigurations").build();
     private static final MarshallingInfo<String> SOURCELOCATIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("sourceLocationName").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -59,6 +61,7 @@ public class CreateSourceLocationRequestMarshaller {
             protocolMarshaller.marshall(createSourceLocationRequest.getAccessConfiguration(), ACCESSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createSourceLocationRequest.getDefaultSegmentDeliveryConfiguration(), DEFAULTSEGMENTDELIVERYCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createSourceLocationRequest.getHttpConfiguration(), HTTPCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(createSourceLocationRequest.getSegmentDeliveryConfigurations(), SEGMENTDELIVERYCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(createSourceLocationRequest.getSourceLocationName(), SOURCELOCATIONNAME_BINDING);
             protocolMarshaller.marshall(createSourceLocationRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {

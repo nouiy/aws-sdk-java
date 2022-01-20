@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information on the sum of usage based on an AWS resource.
+ * Contains information on the sum of usage based on an Amazon Web Services resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/UsageResourceResult" target="_top">AWS API
@@ -30,7 +30,7 @@ public class UsageResourceResult implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The AWS resource that generated usage.
+     * The Amazon Web Services resource that generated usage.
      * </p>
      */
     private String resource;
@@ -43,11 +43,11 @@ public class UsageResourceResult implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The AWS resource that generated usage.
+     * The Amazon Web Services resource that generated usage.
      * </p>
      * 
      * @param resource
-     *        The AWS resource that generated usage.
+     *        The Amazon Web Services resource that generated usage.
      */
 
     public void setResource(String resource) {
@@ -56,10 +56,10 @@ public class UsageResourceResult implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The AWS resource that generated usage.
+     * The Amazon Web Services resource that generated usage.
      * </p>
      * 
-     * @return The AWS resource that generated usage.
+     * @return The Amazon Web Services resource that generated usage.
      */
 
     public String getResource() {
@@ -68,11 +68,11 @@ public class UsageResourceResult implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The AWS resource that generated usage.
+     * The Amazon Web Services resource that generated usage.
      * </p>
      * 
      * @param resource
-     *        The AWS resource that generated usage.
+     *        The Amazon Web Services resource that generated usage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

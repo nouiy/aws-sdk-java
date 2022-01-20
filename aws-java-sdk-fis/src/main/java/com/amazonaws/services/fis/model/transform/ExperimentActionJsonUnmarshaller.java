@@ -76,6 +76,14 @@ public class ExperimentActionJsonUnmarshaller implements Unmarshaller<Experiment
                     context.nextToken();
                     experimentAction.setState(ExperimentActionStateJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("startTime", targetDepth)) {
+                    context.nextToken();
+                    experimentAction.setStartTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("endTime", targetDepth)) {
+                    context.nextToken();
+                    experimentAction.setEndTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.connect.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -37,6 +39,8 @@ public class HierarchyGroupMarshaller {
             .marshallLocationName("LevelId").build();
     private static final MarshallingInfo<StructuredPojo> HIERARCHYPATH_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HierarchyPath").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final HierarchyGroupMarshaller instance = new HierarchyGroupMarshaller();
 
@@ -59,6 +63,7 @@ public class HierarchyGroupMarshaller {
             protocolMarshaller.marshall(hierarchyGroup.getName(), NAME_BINDING);
             protocolMarshaller.marshall(hierarchyGroup.getLevelId(), LEVELID_BINDING);
             protocolMarshaller.marshall(hierarchyGroup.getHierarchyPath(), HIERARCHYPATH_BINDING);
+            protocolMarshaller.marshall(hierarchyGroup.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

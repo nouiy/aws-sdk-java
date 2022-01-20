@@ -13,7 +13,7 @@
 package com.amazonaws.services.mediatailor.model.transform;
 
 import java.util.Map;
-
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -41,6 +41,8 @@ public class SourceLocationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HttpConfiguration").build();
     private static final MarshallingInfo<java.util.Date> LASTMODIFIEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<List> SEGMENTDELIVERYCONFIGURATIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SegmentDeliveryConfigurations").build();
     private static final MarshallingInfo<String> SOURCELOCATIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceLocationName").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -68,6 +70,7 @@ public class SourceLocationMarshaller {
             protocolMarshaller.marshall(sourceLocation.getDefaultSegmentDeliveryConfiguration(), DEFAULTSEGMENTDELIVERYCONFIGURATION_BINDING);
             protocolMarshaller.marshall(sourceLocation.getHttpConfiguration(), HTTPCONFIGURATION_BINDING);
             protocolMarshaller.marshall(sourceLocation.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
+            protocolMarshaller.marshall(sourceLocation.getSegmentDeliveryConfigurations(), SEGMENTDELIVERYCONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(sourceLocation.getSourceLocationName(), SOURCELOCATIONNAME_BINDING);
             protocolMarshaller.marshall(sourceLocation.getTags(), TAGS_BINDING);
         } catch (Exception e) {

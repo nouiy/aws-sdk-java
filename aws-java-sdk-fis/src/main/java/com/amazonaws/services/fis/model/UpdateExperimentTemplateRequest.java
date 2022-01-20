@@ -57,8 +57,8 @@ public class UpdateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
     private java.util.Map<String, UpdateExperimentTemplateActionInputItem> actions;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      */
     private String roleArn;
@@ -351,13 +351,13 @@ public class UpdateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform
-     *        service actions on your behalf.
+     *        The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service
+     *        actions on your behalf.
      */
 
     public void setRoleArn(String roleArn) {
@@ -366,12 +366,12 @@ public class UpdateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform
-     *         service actions on your behalf.
+     * @return The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service
+     *         actions on your behalf.
      */
 
     public String getRoleArn() {
@@ -380,13 +380,13 @@ public class UpdateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform
-     *        service actions on your behalf.
+     *        The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service
+     *        actions on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

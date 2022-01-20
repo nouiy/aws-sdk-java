@@ -41,8 +41,9 @@ import com.amazonaws.services.connect.model.*;
  * Service Quotas</a> in the <i>Amazon Connect Administrator Guide</i>.
  * </p>
  * <p>
- * You can connect programmatically to an AWS service by using an endpoint. For a list of Amazon Connect endpoints, see
- * <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect Endpoints</a>.
+ * You can connect programmatically to an Amazon Web Services service by using an endpoint. For a list of Amazon Connect
+ * endpoints, see <a href="https://docs.aws.amazon.com/general/latest/gr/connect_region.html">Amazon Connect
+ * Endpoints</a>.
  * </p>
  * <note>
  * <p>
@@ -459,7 +460,7 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Creates an AWS resource association with an Amazon Connect instance.
+     * Creates an Amazon Web Services resource association with an Amazon Connect instance.
      * </p>
      * 
      * @param createIntegrationAssociationRequest
@@ -782,8 +783,8 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Deletes an AWS resource association from an Amazon Connect instance. The association must not have any use cases
-     * associated with it.
+     * Deletes an Amazon Web Services resource association from an Amazon Connect instance. The association must not
+     * have any use cases associated with it.
      * </p>
      * 
      * @param deleteIntegrationAssociationRequest
@@ -1890,7 +1891,8 @@ public interface AmazonConnect {
 
     /**
      * <p>
-     * Provides summary information about the AWS resource associations for the specified Amazon Connect instance.
+     * Provides summary information about the Amazon Web Services resource associations for the specified Amazon Connect
+     * instance.
      * </p>
      * 
      * @param listIntegrationAssociationsRequest

@@ -73,6 +73,13 @@ public class CreateSourceLocationResultJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     createSourceLocationResult.setLastModifiedTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("SegmentDeliveryConfigurations", targetDepth)) {
+                    context.nextToken();
+                    createSourceLocationResult.setSegmentDeliveryConfigurations(new ListUnmarshaller<SegmentDeliveryConfiguration>(
+                            SegmentDeliveryConfigurationJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("SourceLocationName", targetDepth)) {
                     context.nextToken();
                     createSourceLocationResult.setSourceLocationName(context.getUnmarshaller(String.class).unmarshall(context));

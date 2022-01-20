@@ -51,9 +51,9 @@ import com.amazonaws.services.fis.model.transform.*;
  * service call completes.
  * <p>
  * <p>
- * AWS Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your
- * AWS workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault
- * Injection Simulator User Guide</a>.
+ * Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon
+ * Web Services workloads. For more information, see the <a
+ * href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault Injection Simulator User Guide</a>.
  * </p>
  */
 @ThreadSafe
@@ -144,13 +144,13 @@ public class AWSFISClient extends AmazonWebServiceClient implements AWSFIS {
      * Creates an experiment template.
      * </p>
      * <p>
-     * To create a template, specify the following information:
+     * An experiment template includes the following components:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <b>Targets</b>: A target can be a specific resource in your AWS environment, or one or more resources that match
-     * criteria that you specify, for example, resources that have specific tags.
+     * <b>Targets</b>: A target can be a specific resource in your Amazon Web Services environment, or one or more
+     * resources that match criteria that you specify, for example, resources that have specific tags.
      * </p>
      * </li>
      * <li>
@@ -167,8 +167,9 @@ public class AWSFISClient extends AmazonWebServiceClient implements AWSFIS {
      * </li>
      * </ul>
      * <p>
-     * For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection
-     * Simulator User Guide</a>.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html">Experiment templates</a> in the
+     * <i>Fault Injection Simulator User Guide</i>.
      * </p>
      * 
      * @param createExperimentTemplateRequest
@@ -294,7 +295,7 @@ public class AWSFISClient extends AmazonWebServiceClient implements AWSFIS {
 
     /**
      * <p>
-     * Gets information about the specified AWS FIS action.
+     * Gets information about the specified FIS action.
      * </p>
      * 
      * @param getActionRequest
@@ -472,7 +473,7 @@ public class AWSFISClient extends AmazonWebServiceClient implements AWSFIS {
 
     /**
      * <p>
-     * Lists the available AWS FIS actions.
+     * Lists the available FIS actions.
      * </p>
      * 
      * @param listActionsRequest

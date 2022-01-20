@@ -39,6 +39,8 @@ public class AwsApiCallActionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("remoteIpDetails").build();
     private static final MarshallingInfo<String> SERVICENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("serviceName").build();
+    private static final MarshallingInfo<StructuredPojo> REMOTEACCOUNTDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("remoteAccountDetails").build();
 
     private static final AwsApiCallActionMarshaller instance = new AwsApiCallActionMarshaller();
 
@@ -62,6 +64,7 @@ public class AwsApiCallActionMarshaller {
             protocolMarshaller.marshall(awsApiCallAction.getErrorCode(), ERRORCODE_BINDING);
             protocolMarshaller.marshall(awsApiCallAction.getRemoteIpDetails(), REMOTEIPDETAILS_BINDING);
             protocolMarshaller.marshall(awsApiCallAction.getServiceName(), SERVICENAME_BINDING);
+            protocolMarshaller.marshall(awsApiCallAction.getRemoteAccountDetails(), REMOTEACCOUNTDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

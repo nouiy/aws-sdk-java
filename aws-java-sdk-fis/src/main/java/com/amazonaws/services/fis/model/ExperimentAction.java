@@ -64,6 +64,18 @@ public class ExperimentAction implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private ExperimentActionState state;
+    /**
+     * <p>
+     * The time that the action started.
+     * </p>
+     */
+    private java.util.Date startTime;
+    /**
+     * <p>
+     * The time that the action ended.
+     * </p>
+     */
+    private java.util.Date endTime;
 
     /**
      * <p>
@@ -392,6 +404,86 @@ public class ExperimentAction implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The time that the action started.
+     * </p>
+     * 
+     * @param startTime
+     *        The time that the action started.
+     */
+
+    public void setStartTime(java.util.Date startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * <p>
+     * The time that the action started.
+     * </p>
+     * 
+     * @return The time that the action started.
+     */
+
+    public java.util.Date getStartTime() {
+        return this.startTime;
+    }
+
+    /**
+     * <p>
+     * The time that the action started.
+     * </p>
+     * 
+     * @param startTime
+     *        The time that the action started.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExperimentAction withStartTime(java.util.Date startTime) {
+        setStartTime(startTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time that the action ended.
+     * </p>
+     * 
+     * @param endTime
+     *        The time that the action ended.
+     */
+
+    public void setEndTime(java.util.Date endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * <p>
+     * The time that the action ended.
+     * </p>
+     * 
+     * @return The time that the action ended.
+     */
+
+    public java.util.Date getEndTime() {
+        return this.endTime;
+    }
+
+    /**
+     * <p>
+     * The time that the action ended.
+     * </p>
+     * 
+     * @param endTime
+     *        The time that the action ended.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExperimentAction withEndTime(java.util.Date endTime) {
+        setEndTime(endTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -414,7 +506,11 @@ public class ExperimentAction implements Serializable, Cloneable, StructuredPojo
         if (getStartAfter() != null)
             sb.append("StartAfter: ").append(getStartAfter()).append(",");
         if (getState() != null)
-            sb.append("State: ").append(getState());
+            sb.append("State: ").append(getState()).append(",");
+        if (getStartTime() != null)
+            sb.append("StartTime: ").append(getStartTime()).append(",");
+        if (getEndTime() != null)
+            sb.append("EndTime: ").append(getEndTime());
         sb.append("}");
         return sb.toString();
     }
@@ -453,6 +549,14 @@ public class ExperimentAction implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
+        if (other.getStartTime() == null ^ this.getStartTime() == null)
+            return false;
+        if (other.getStartTime() != null && other.getStartTime().equals(this.getStartTime()) == false)
+            return false;
+        if (other.getEndTime() == null ^ this.getEndTime() == null)
+            return false;
+        if (other.getEndTime() != null && other.getEndTime().equals(this.getEndTime()) == false)
+            return false;
         return true;
     }
 
@@ -467,6 +571,8 @@ public class ExperimentAction implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getTargets() == null) ? 0 : getTargets().hashCode());
         hashCode = prime * hashCode + ((getStartAfter() == null) ? 0 : getStartAfter().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
+        hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         return hashCode;
     }
 

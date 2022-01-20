@@ -30,18 +30,18 @@ public class DomainDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The domain information for the AWS API call.
+     * The domain information for the Amazon Web Services API call.
      * </p>
      */
     private String domain;
 
     /**
      * <p>
-     * The domain information for the AWS API call.
+     * The domain information for the Amazon Web Services API call.
      * </p>
      * 
      * @param domain
-     *        The domain information for the AWS API call.
+     *        The domain information for the Amazon Web Services API call.
      */
 
     public void setDomain(String domain) {
@@ -50,10 +50,10 @@ public class DomainDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The domain information for the AWS API call.
+     * The domain information for the Amazon Web Services API call.
      * </p>
      * 
-     * @return The domain information for the AWS API call.
+     * @return The domain information for the Amazon Web Services API call.
      */
 
     public String getDomain() {
@@ -62,11 +62,11 @@ public class DomainDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The domain information for the AWS API call.
+     * The domain information for the Amazon Web Services API call.
      * </p>
      * 
      * @param domain
-     *        The domain information for the AWS API call.
+     *        The domain information for the Amazon Web Services API call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,6 +33,9 @@ public class DestinationProperties implements Serializable, Cloneable, Structure
      * <p>
      * The ARN of the resource to publish to.
      * </p>
+     * <p>
+     * To specify an S3 bucket folder use the following format: <code>arn:aws:s3:::DOC-EXAMPLE-BUCKET/myFolder/</code>
+     * </p>
      */
     private String destinationArn;
     /**
@@ -46,9 +49,15 @@ public class DestinationProperties implements Serializable, Cloneable, Structure
      * <p>
      * The ARN of the resource to publish to.
      * </p>
+     * <p>
+     * To specify an S3 bucket folder use the following format: <code>arn:aws:s3:::DOC-EXAMPLE-BUCKET/myFolder/</code>
+     * </p>
      * 
      * @param destinationArn
-     *        The ARN of the resource to publish to.
+     *        The ARN of the resource to publish to.</p>
+     *        <p>
+     *        To specify an S3 bucket folder use the following format:
+     *        <code>arn:aws:s3:::DOC-EXAMPLE-BUCKET/myFolder/</code>
      */
 
     public void setDestinationArn(String destinationArn) {
@@ -59,8 +68,14 @@ public class DestinationProperties implements Serializable, Cloneable, Structure
      * <p>
      * The ARN of the resource to publish to.
      * </p>
+     * <p>
+     * To specify an S3 bucket folder use the following format: <code>arn:aws:s3:::DOC-EXAMPLE-BUCKET/myFolder/</code>
+     * </p>
      * 
-     * @return The ARN of the resource to publish to.
+     * @return The ARN of the resource to publish to.</p>
+     *         <p>
+     *         To specify an S3 bucket folder use the following format:
+     *         <code>arn:aws:s3:::DOC-EXAMPLE-BUCKET/myFolder/</code>
      */
 
     public String getDestinationArn() {
@@ -71,9 +86,15 @@ public class DestinationProperties implements Serializable, Cloneable, Structure
      * <p>
      * The ARN of the resource to publish to.
      * </p>
+     * <p>
+     * To specify an S3 bucket folder use the following format: <code>arn:aws:s3:::DOC-EXAMPLE-BUCKET/myFolder/</code>
+     * </p>
      * 
      * @param destinationArn
-     *        The ARN of the resource to publish to.
+     *        The ARN of the resource to publish to.</p>
+     *        <p>
+     *        To specify an S3 bucket folder use the following format:
+     *        <code>arn:aws:s3:::DOC-EXAMPLE-BUCKET/myFolder/</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

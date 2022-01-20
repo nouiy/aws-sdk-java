@@ -22,6 +22,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Specifies a target for an experiment. You must specify at least one Amazon Resource Name (ARN) or at least one
  * resource tag. You cannot specify both ARNs and tags.
  * </p>
+ * <p>
+ * For more information, see <a href="https://docs.aws.amazon.com/fis/latest/userguide/targets.html">Targets</a> in the
+ * <i>Fault Injection Simulator User Guide</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/CreateExperimentTemplateTargetInput"
  *      target="_top">AWS API Documentation</a>
@@ -31,7 +35,7 @@ public class CreateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS resource type. The resource type must be supported for the specified action.
+     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * </p>
      */
     private String resourceType;
@@ -82,11 +86,11 @@ public class CreateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS resource type. The resource type must be supported for the specified action.
+     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * </p>
      * 
      * @param resourceType
-     *        The AWS resource type. The resource type must be supported for the specified action.
+     *        The Amazon Web Services resource type. The resource type must be supported for the specified action.
      */
 
     public void setResourceType(String resourceType) {
@@ -95,10 +99,10 @@ public class CreateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS resource type. The resource type must be supported for the specified action.
+     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * </p>
      * 
-     * @return The AWS resource type. The resource type must be supported for the specified action.
+     * @return The Amazon Web Services resource type. The resource type must be supported for the specified action.
      */
 
     public String getResourceType() {
@@ -107,11 +111,11 @@ public class CreateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS resource type. The resource type must be supported for the specified action.
+     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * </p>
      * 
      * @param resourceType
-     *        The AWS resource type. The resource type must be supported for the specified action.
+     *        The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

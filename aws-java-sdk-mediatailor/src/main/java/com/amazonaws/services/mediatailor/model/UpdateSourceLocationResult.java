@@ -59,6 +59,8 @@ public class UpdateSourceLocationResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private java.util.Date lastModifiedTime;
+
+    private java.util.List<SegmentDeliveryConfiguration> segmentDeliveryConfigurations;
     /**
      * <p>
      * The name of the source location.
@@ -313,6 +315,58 @@ public class UpdateSourceLocationResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * @return
+     */
+
+    public java.util.List<SegmentDeliveryConfiguration> getSegmentDeliveryConfigurations() {
+        return segmentDeliveryConfigurations;
+    }
+
+    /**
+     * @param segmentDeliveryConfigurations
+     */
+
+    public void setSegmentDeliveryConfigurations(java.util.Collection<SegmentDeliveryConfiguration> segmentDeliveryConfigurations) {
+        if (segmentDeliveryConfigurations == null) {
+            this.segmentDeliveryConfigurations = null;
+            return;
+        }
+
+        this.segmentDeliveryConfigurations = new java.util.ArrayList<SegmentDeliveryConfiguration>(segmentDeliveryConfigurations);
+    }
+
+    /**
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSegmentDeliveryConfigurations(java.util.Collection)} or
+     * {@link #withSegmentDeliveryConfigurations(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param segmentDeliveryConfigurations
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateSourceLocationResult withSegmentDeliveryConfigurations(SegmentDeliveryConfiguration... segmentDeliveryConfigurations) {
+        if (this.segmentDeliveryConfigurations == null) {
+            setSegmentDeliveryConfigurations(new java.util.ArrayList<SegmentDeliveryConfiguration>(segmentDeliveryConfigurations.length));
+        }
+        for (SegmentDeliveryConfiguration ele : segmentDeliveryConfigurations) {
+            this.segmentDeliveryConfigurations.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * @param segmentDeliveryConfigurations
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateSourceLocationResult withSegmentDeliveryConfigurations(java.util.Collection<SegmentDeliveryConfiguration> segmentDeliveryConfigurations) {
+        setSegmentDeliveryConfigurations(segmentDeliveryConfigurations);
+        return this;
+    }
+
+    /**
      * <p>
      * The name of the source location.
      * </p>
@@ -444,6 +498,8 @@ public class UpdateSourceLocationResult extends com.amazonaws.AmazonWebServiceRe
             sb.append("HttpConfiguration: ").append(getHttpConfiguration()).append(",");
         if (getLastModifiedTime() != null)
             sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
+        if (getSegmentDeliveryConfigurations() != null)
+            sb.append("SegmentDeliveryConfigurations: ").append(getSegmentDeliveryConfigurations()).append(",");
         if (getSourceLocationName() != null)
             sb.append("SourceLocationName: ").append(getSourceLocationName()).append(",");
         if (getTags() != null)
@@ -487,6 +543,11 @@ public class UpdateSourceLocationResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
             return false;
+        if (other.getSegmentDeliveryConfigurations() == null ^ this.getSegmentDeliveryConfigurations() == null)
+            return false;
+        if (other.getSegmentDeliveryConfigurations() != null
+                && other.getSegmentDeliveryConfigurations().equals(this.getSegmentDeliveryConfigurations()) == false)
+            return false;
         if (other.getSourceLocationName() == null ^ this.getSourceLocationName() == null)
             return false;
         if (other.getSourceLocationName() != null && other.getSourceLocationName().equals(this.getSourceLocationName()) == false)
@@ -509,6 +570,7 @@ public class UpdateSourceLocationResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getDefaultSegmentDeliveryConfiguration() == null) ? 0 : getDefaultSegmentDeliveryConfiguration().hashCode());
         hashCode = prime * hashCode + ((getHttpConfiguration() == null) ? 0 : getHttpConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
+        hashCode = prime * hashCode + ((getSegmentDeliveryConfigurations() == null) ? 0 : getSegmentDeliveryConfigurations().hashCode());
         hashCode = prime * hashCode + ((getSourceLocationName() == null) ? 0 : getSourceLocationName().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;

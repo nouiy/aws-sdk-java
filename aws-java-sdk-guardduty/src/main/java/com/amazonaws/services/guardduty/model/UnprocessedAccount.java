@@ -30,7 +30,7 @@ public class UnprocessedAccount implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      */
     private String accountId;
@@ -43,11 +43,11 @@ public class UnprocessedAccount implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID.
+     *        The Amazon Web Services account ID.
      */
 
     public void setAccountId(String accountId) {
@@ -56,10 +56,10 @@ public class UnprocessedAccount implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
-     * @return The AWS account ID.
+     * @return The Amazon Web Services account ID.
      */
 
     public String getAccountId() {
@@ -68,11 +68,11 @@ public class UnprocessedAccount implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account ID.
+     * The Amazon Web Services account ID.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID.
+     *        The Amazon Web Services account ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

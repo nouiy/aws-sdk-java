@@ -72,7 +72,8 @@ public class InstanceDetails implements Serializable, Cloneable, StructuredPojo 
     private String instanceType;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost. Only applicable to AWS Outposts instances.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost. Only applicable to Amazon Web Services
+     * Outposts instances.
      * </p>
      */
     private String outpostArn;
@@ -389,11 +390,13 @@ public class InstanceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost. Only applicable to AWS Outposts instances.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost. Only applicable to Amazon Web Services
+     * Outposts instances.
      * </p>
      * 
      * @param outpostArn
-     *        The Amazon Resource Name (ARN) of the AWS Outpost. Only applicable to AWS Outposts instances.
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Outpost. Only applicable to Amazon Web Services
+     *        Outposts instances.
      */
 
     public void setOutpostArn(String outpostArn) {
@@ -402,10 +405,12 @@ public class InstanceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost. Only applicable to AWS Outposts instances.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost. Only applicable to Amazon Web Services
+     * Outposts instances.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Outpost. Only applicable to AWS Outposts instances.
+     * @return The Amazon Resource Name (ARN) of the Amazon Web Services Outpost. Only applicable to Amazon Web Services
+     *         Outposts instances.
      */
 
     public String getOutpostArn() {
@@ -414,11 +419,13 @@ public class InstanceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Outpost. Only applicable to AWS Outposts instances.
+     * The Amazon Resource Name (ARN) of the Amazon Web Services Outpost. Only applicable to Amazon Web Services
+     * Outposts instances.
      * </p>
      * 
      * @param outpostArn
-     *        The Amazon Resource Name (ARN) of the AWS Outpost. Only applicable to AWS Outposts instances.
+     *        The Amazon Resource Name (ARN) of the Amazon Web Services Outpost. Only applicable to Amazon Web Services
+     *        Outposts instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about the AWS resource associated with the activity that prompted GuardDuty to generate a
- * finding.
+ * Contains information about the Amazon Web Services resource associated with the activity that prompted GuardDuty to
+ * generate a finding.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/guardduty-2017-11-28/Resource" target="_top">AWS API
@@ -51,7 +51,7 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     private InstanceDetails instanceDetails;
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      */
     private String resourceType;
@@ -220,11 +220,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource.
+     *        The type of Amazon Web Services resource.
      */
 
     public void setResourceType(String resourceType) {
@@ -233,10 +233,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
-     * @return The type of AWS resource.
+     * @return The type of Amazon Web Services resource.
      */
 
     public String getResourceType() {
@@ -245,11 +245,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of AWS resource.
+     * The type of Amazon Web Services resource.
      * </p>
      * 
      * @param resourceType
-     *        The type of AWS resource.
+     *        The type of Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

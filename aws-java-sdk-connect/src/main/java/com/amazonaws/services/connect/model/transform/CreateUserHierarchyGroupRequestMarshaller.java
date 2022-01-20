@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.connect.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -33,6 +35,8 @@ public class CreateUserHierarchyGroupRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ParentGroupId").build();
     private static final MarshallingInfo<String> INSTANCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("InstanceId").build();
+    private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Tags").build();
 
     private static final CreateUserHierarchyGroupRequestMarshaller instance = new CreateUserHierarchyGroupRequestMarshaller();
 
@@ -53,6 +57,7 @@ public class CreateUserHierarchyGroupRequestMarshaller {
             protocolMarshaller.marshall(createUserHierarchyGroupRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createUserHierarchyGroupRequest.getParentGroupId(), PARENTGROUPID_BINDING);
             protocolMarshaller.marshall(createUserHierarchyGroupRequest.getInstanceId(), INSTANCEID_BINDING);
+            protocolMarshaller.marshall(createUserHierarchyGroupRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -33,7 +33,7 @@ public class CreateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
     private String clientToken;
     /**
      * <p>
-     * A description for the experiment template. Can contain up to 64 letters (A-Z and a-z).
+     * A description for the experiment template.
      * </p>
      */
     private String description;
@@ -57,8 +57,8 @@ public class CreateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
     private java.util.Map<String, CreateExperimentTemplateActionInput> actions;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      */
     private String roleArn;
@@ -111,11 +111,11 @@ public class CreateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A description for the experiment template. Can contain up to 64 letters (A-Z and a-z).
+     * A description for the experiment template.
      * </p>
      * 
      * @param description
-     *        A description for the experiment template. Can contain up to 64 letters (A-Z and a-z).
+     *        A description for the experiment template.
      */
 
     public void setDescription(String description) {
@@ -124,10 +124,10 @@ public class CreateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A description for the experiment template. Can contain up to 64 letters (A-Z and a-z).
+     * A description for the experiment template.
      * </p>
      * 
-     * @return A description for the experiment template. Can contain up to 64 letters (A-Z and a-z).
+     * @return A description for the experiment template.
      */
 
     public String getDescription() {
@@ -136,11 +136,11 @@ public class CreateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A description for the experiment template. Can contain up to 64 letters (A-Z and a-z).
+     * A description for the experiment template.
      * </p>
      * 
      * @param description
-     *        A description for the experiment template. Can contain up to 64 letters (A-Z and a-z).
+     *        A description for the experiment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,13 +357,13 @@ public class CreateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform
-     *        service actions on your behalf.
+     *        The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service
+     *        actions on your behalf.
      */
 
     public void setRoleArn(String roleArn) {
@@ -372,12 +372,12 @@ public class CreateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform
-     *         service actions on your behalf.
+     * @return The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service
+     *         actions on your behalf.
      */
 
     public String getRoleArn() {
@@ -386,13 +386,13 @@ public class CreateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform
-     *        service actions on your behalf.
+     *        The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service
+     *        actions on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

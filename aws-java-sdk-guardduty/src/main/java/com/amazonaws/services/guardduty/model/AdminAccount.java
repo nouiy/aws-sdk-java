@@ -30,7 +30,7 @@ public class AdminAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID for the account.
+     * The Amazon Web Services account ID for the account.
      * </p>
      */
     private String adminAccountId;
@@ -43,11 +43,11 @@ public class AdminAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID for the account.
+     * The Amazon Web Services account ID for the account.
      * </p>
      * 
      * @param adminAccountId
-     *        The AWS account ID for the account.
+     *        The Amazon Web Services account ID for the account.
      */
 
     public void setAdminAccountId(String adminAccountId) {
@@ -56,10 +56,10 @@ public class AdminAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID for the account.
+     * The Amazon Web Services account ID for the account.
      * </p>
      * 
-     * @return The AWS account ID for the account.
+     * @return The Amazon Web Services account ID for the account.
      */
 
     public String getAdminAccountId() {
@@ -68,11 +68,11 @@ public class AdminAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID for the account.
+     * The Amazon Web Services account ID for the account.
      * </p>
      * 
      * @param adminAccountId
-     *        The AWS account ID for the account.
+     *        The Amazon Web Services account ID for the account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

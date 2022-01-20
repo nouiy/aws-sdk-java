@@ -1,3 +1,24 @@
+# __1.12.144__ __2022-01-20__
+## __AWS Fault Injection Simulator__
+  - ### Features
+    - Added action startTime and action endTime timestamp fields to the ExperimentAction object
+
+## __AWS MediaTailor__
+  - ### Features
+    - This release adds support for multiple Segment Delivery Configurations. Users can provide a list of names and URLs when creating or editing a source location. When retrieving content, users can send a header to choose which URL should be used to serve content.
+
+## __Amazon Connect Service__
+  - ### Features
+    - This release adds tagging support for UserHierarchyGroups resource.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - C6i, M6i and R6i instances are powered by a third-generation Intel Xeon Scalable processor (Ice Lake) delivering all-core turbo frequency of 3.5 GHz
+
+## __Amazon GuardDuty__
+  - ### Features
+    - Amazon GuardDuty findings now include remoteAccountDetails under AwsApiCallAction section if instance credential is exfiltrated.
+
 # __1.12.143__ __2022-01-19__
 ## __AWS EC2 Instance Connect__
   - ### Features

@@ -78,7 +78,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     private String resourceRole;
     /**
      * <p>
-     * The name of the AWS service (GuardDuty) that generated a finding.
+     * The name of the Amazon Web Services service (GuardDuty) that generated a finding.
      * </p>
      */
     private String serviceName;
@@ -423,11 +423,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service (GuardDuty) that generated a finding.
+     * The name of the Amazon Web Services service (GuardDuty) that generated a finding.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS service (GuardDuty) that generated a finding.
+     *        The name of the Amazon Web Services service (GuardDuty) that generated a finding.
      */
 
     public void setServiceName(String serviceName) {
@@ -436,10 +436,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service (GuardDuty) that generated a finding.
+     * The name of the Amazon Web Services service (GuardDuty) that generated a finding.
      * </p>
      * 
-     * @return The name of the AWS service (GuardDuty) that generated a finding.
+     * @return The name of the Amazon Web Services service (GuardDuty) that generated a finding.
      */
 
     public String getServiceName() {
@@ -448,11 +448,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the AWS service (GuardDuty) that generated a finding.
+     * The name of the Amazon Web Services service (GuardDuty) that generated a finding.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS service (GuardDuty) that generated a finding.
+     *        The name of the Amazon Web Services service (GuardDuty) that generated a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

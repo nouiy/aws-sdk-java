@@ -31,7 +31,7 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS resource type. The resource type must be supported for the specified action.
+     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * </p>
      */
     private String resourceType;
@@ -62,11 +62,11 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS resource type. The resource type must be supported for the specified action.
+     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * </p>
      * 
      * @param resourceType
-     *        The AWS resource type. The resource type must be supported for the specified action.
+     *        The Amazon Web Services resource type. The resource type must be supported for the specified action.
      */
 
     public void setResourceType(String resourceType) {
@@ -75,10 +75,10 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS resource type. The resource type must be supported for the specified action.
+     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * </p>
      * 
-     * @return The AWS resource type. The resource type must be supported for the specified action.
+     * @return The Amazon Web Services resource type. The resource type must be supported for the specified action.
      */
 
     public String getResourceType() {
@@ -87,11 +87,11 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The AWS resource type. The resource type must be supported for the specified action.
+     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * </p>
      * 
      * @param resourceType
-     *        The AWS resource type. The resource type must be supported for the specified action.
+     *        The Amazon Web Services resource type. The resource type must be supported for the specified action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

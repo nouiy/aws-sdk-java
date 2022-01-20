@@ -42,8 +42,8 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
     private String experimentTemplateId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      */
     private String roleArn;
@@ -73,13 +73,13 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<ExperimentStopCondition> stopConditions;
     /**
      * <p>
-     * The time the experiment was created.
+     * The time that the experiment was created.
      * </p>
      */
     private java.util.Date creationTime;
     /**
      * <p>
-     * The time that the experiment was started.
+     * The time that the experiment started.
      * </p>
      */
     private java.util.Date startTime;
@@ -178,13 +178,13 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform
-     *        service actions on your behalf.
+     *        The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service
+     *        actions on your behalf.
      */
 
     public void setRoleArn(String roleArn) {
@@ -193,12 +193,12 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform
-     *         service actions on your behalf.
+     * @return The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service
+     *         actions on your behalf.
      */
 
     public String getRoleArn() {
@@ -207,13 +207,13 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform service
-     * actions on your behalf.
+     * The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service actions
+     * on your behalf.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of an IAM role that grants the AWS FIS service permission to perform
-     *        service actions on your behalf.
+     *        The Amazon Resource Name (ARN) of an IAM role that grants the FIS service permission to perform service
+     *        actions on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -470,11 +470,11 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time the experiment was created.
+     * The time that the experiment was created.
      * </p>
      * 
      * @param creationTime
-     *        The time the experiment was created.
+     *        The time that the experiment was created.
      */
 
     public void setCreationTime(java.util.Date creationTime) {
@@ -483,10 +483,10 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time the experiment was created.
+     * The time that the experiment was created.
      * </p>
      * 
-     * @return The time the experiment was created.
+     * @return The time that the experiment was created.
      */
 
     public java.util.Date getCreationTime() {
@@ -495,11 +495,11 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time the experiment was created.
+     * The time that the experiment was created.
      * </p>
      * 
      * @param creationTime
-     *        The time the experiment was created.
+     *        The time that the experiment was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -510,11 +510,11 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that the experiment was started.
+     * The time that the experiment started.
      * </p>
      * 
      * @param startTime
-     *        The time that the experiment was started.
+     *        The time that the experiment started.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -523,10 +523,10 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that the experiment was started.
+     * The time that the experiment started.
      * </p>
      * 
-     * @return The time that the experiment was started.
+     * @return The time that the experiment started.
      */
 
     public java.util.Date getStartTime() {
@@ -535,11 +535,11 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time that the experiment was started.
+     * The time that the experiment started.
      * </p>
      * 
      * @param startTime
-     *        The time that the experiment was started.
+     *        The time that the experiment started.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

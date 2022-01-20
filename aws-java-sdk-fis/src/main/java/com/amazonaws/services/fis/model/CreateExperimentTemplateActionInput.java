@@ -21,6 +21,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Specifies an action for an experiment template.
  * </p>
+ * <p>
+ * For more information, see <a href="https://docs.aws.amazon.com/fis/latest/userguide/actions.html">Actions</a> in the
+ * <i>Fault Injection Simulator User Guide</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/CreateExperimentTemplateActionInput"
  *      target="_top">AWS API Documentation</a>
@@ -30,7 +34,7 @@ public class CreateExperimentTemplateActionInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The ID of the action.
+     * The ID of the action. The format of the action ID is: aws:<i>service-name</i>:<i>action-type</i>.
      * </p>
      */
     private String actionId;
@@ -62,11 +66,11 @@ public class CreateExperimentTemplateActionInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The ID of the action.
+     * The ID of the action. The format of the action ID is: aws:<i>service-name</i>:<i>action-type</i>.
      * </p>
      * 
      * @param actionId
-     *        The ID of the action.
+     *        The ID of the action. The format of the action ID is: aws:<i>service-name</i>:<i>action-type</i>.
      */
 
     public void setActionId(String actionId) {
@@ -75,10 +79,10 @@ public class CreateExperimentTemplateActionInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The ID of the action.
+     * The ID of the action. The format of the action ID is: aws:<i>service-name</i>:<i>action-type</i>.
      * </p>
      * 
-     * @return The ID of the action.
+     * @return The ID of the action. The format of the action ID is: aws:<i>service-name</i>:<i>action-type</i>.
      */
 
     public String getActionId() {
@@ -87,11 +91,11 @@ public class CreateExperimentTemplateActionInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The ID of the action.
+     * The ID of the action. The format of the action ID is: aws:<i>service-name</i>:<i>action-type</i>.
      * </p>
      * 
      * @param actionId
-     *        The ID of the action.
+     *        The ID of the action. The format of the action ID is: aws:<i>service-name</i>:<i>action-type</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

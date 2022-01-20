@@ -58,6 +58,12 @@ public class HierarchyGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private HierarchyPath hierarchyPath;
+    /**
+     * <p>
+     * The tags used to organize, track, or control access for this resource.
+     * </p>
+     */
+    private java.util.Map<String, String> tags;
 
     /**
      * <p>
@@ -260,6 +266,74 @@ public class HierarchyGroup implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The tags used to organize, track, or control access for this resource.
+     * </p>
+     * 
+     * @return The tags used to organize, track, or control access for this resource.
+     */
+
+    public java.util.Map<String, String> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * The tags used to organize, track, or control access for this resource.
+     * </p>
+     * 
+     * @param tags
+     *        The tags used to organize, track, or control access for this resource.
+     */
+
+    public void setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * <p>
+     * The tags used to organize, track, or control access for this resource.
+     * </p>
+     * 
+     * @param tags
+     *        The tags used to organize, track, or control access for this resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HierarchyGroup withTags(java.util.Map<String, String> tags) {
+        setTags(tags);
+        return this;
+    }
+
+    /**
+     * Add a single Tags entry
+     *
+     * @see HierarchyGroup#withTags
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HierarchyGroup addTagsEntry(String key, String value) {
+        if (null == this.tags) {
+            this.tags = new java.util.HashMap<String, String>();
+        }
+        if (this.tags.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.tags.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Tags.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public HierarchyGroup clearTagsEntries() {
+        this.tags = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -280,7 +354,9 @@ public class HierarchyGroup implements Serializable, Cloneable, StructuredPojo {
         if (getLevelId() != null)
             sb.append("LevelId: ").append(getLevelId()).append(",");
         if (getHierarchyPath() != null)
-            sb.append("HierarchyPath: ").append(getHierarchyPath());
+            sb.append("HierarchyPath: ").append(getHierarchyPath()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -315,6 +391,10 @@ public class HierarchyGroup implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getHierarchyPath() != null && other.getHierarchyPath().equals(this.getHierarchyPath()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -328,6 +408,7 @@ public class HierarchyGroup implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getLevelId() == null) ? 0 : getLevelId().hashCode());
         hashCode = prime * hashCode + ((getHierarchyPath() == null) ? 0 : getHierarchyPath().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 
