@@ -61,6 +61,8 @@ public class ConnectorProfilePropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Zendesk").build();
     private static final MarshallingInfo<StructuredPojo> SAPODATA_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SAPOData").build();
+    private static final MarshallingInfo<StructuredPojo> CUSTOMCONNECTOR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomConnector").build();
 
     private static final ConnectorProfilePropertiesMarshaller instance = new ConnectorProfilePropertiesMarshaller();
 
@@ -95,6 +97,7 @@ public class ConnectorProfilePropertiesMarshaller {
             protocolMarshaller.marshall(connectorProfileProperties.getVeeva(), VEEVA_BINDING);
             protocolMarshaller.marshall(connectorProfileProperties.getZendesk(), ZENDESK_BINDING);
             protocolMarshaller.marshall(connectorProfileProperties.getSAPOData(), SAPODATA_BINDING);
+            protocolMarshaller.marshall(connectorProfileProperties.getCustomConnector(), CUSTOMCONNECTOR_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

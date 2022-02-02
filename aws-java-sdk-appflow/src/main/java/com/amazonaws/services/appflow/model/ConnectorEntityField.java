@@ -37,10 +37,34 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
     private String identifier;
     /**
      * <p>
+     * The parent identifier of the connector field.
+     * </p>
+     */
+    private String parentIdentifier;
+    /**
+     * <p>
      * The label applied to a connector entity field.
      * </p>
      */
     private String label;
+    /**
+     * <p>
+     * Booelan value that indicates whether this field can be used as a primary key.
+     * </p>
+     */
+    private Boolean isPrimaryKey;
+    /**
+     * <p>
+     * Default value that can be assigned to this field.
+     * </p>
+     */
+    private String defaultValue;
+    /**
+     * <p>
+     * Booelan value that indicates whether this field is deprecated or not.
+     * </p>
+     */
+    private Boolean isDeprecated;
     /**
      * <p>
      * Contains details regarding the supported <code>FieldType</code>, including the corresponding
@@ -66,6 +90,12 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
      * </p>
      */
     private DestinationFieldProperties destinationProperties;
+    /**
+     * <p>
+     * A map that has specific properties related to the ConnectorEntityField.
+     * </p>
+     */
+    private java.util.Map<String, String> customProperties;
 
     /**
      * <p>
@@ -109,6 +139,46 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * The parent identifier of the connector field.
+     * </p>
+     * 
+     * @param parentIdentifier
+     *        The parent identifier of the connector field.
+     */
+
+    public void setParentIdentifier(String parentIdentifier) {
+        this.parentIdentifier = parentIdentifier;
+    }
+
+    /**
+     * <p>
+     * The parent identifier of the connector field.
+     * </p>
+     * 
+     * @return The parent identifier of the connector field.
+     */
+
+    public String getParentIdentifier() {
+        return this.parentIdentifier;
+    }
+
+    /**
+     * <p>
+     * The parent identifier of the connector field.
+     * </p>
+     * 
+     * @param parentIdentifier
+     *        The parent identifier of the connector field.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorEntityField withParentIdentifier(String parentIdentifier) {
+        setParentIdentifier(parentIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
      * The label applied to a connector entity field.
      * </p>
      * 
@@ -145,6 +215,150 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
     public ConnectorEntityField withLabel(String label) {
         setLabel(label);
         return this;
+    }
+
+    /**
+     * <p>
+     * Booelan value that indicates whether this field can be used as a primary key.
+     * </p>
+     * 
+     * @param isPrimaryKey
+     *        Booelan value that indicates whether this field can be used as a primary key.
+     */
+
+    public void setIsPrimaryKey(Boolean isPrimaryKey) {
+        this.isPrimaryKey = isPrimaryKey;
+    }
+
+    /**
+     * <p>
+     * Booelan value that indicates whether this field can be used as a primary key.
+     * </p>
+     * 
+     * @return Booelan value that indicates whether this field can be used as a primary key.
+     */
+
+    public Boolean getIsPrimaryKey() {
+        return this.isPrimaryKey;
+    }
+
+    /**
+     * <p>
+     * Booelan value that indicates whether this field can be used as a primary key.
+     * </p>
+     * 
+     * @param isPrimaryKey
+     *        Booelan value that indicates whether this field can be used as a primary key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorEntityField withIsPrimaryKey(Boolean isPrimaryKey) {
+        setIsPrimaryKey(isPrimaryKey);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Booelan value that indicates whether this field can be used as a primary key.
+     * </p>
+     * 
+     * @return Booelan value that indicates whether this field can be used as a primary key.
+     */
+
+    public Boolean isPrimaryKey() {
+        return this.isPrimaryKey;
+    }
+
+    /**
+     * <p>
+     * Default value that can be assigned to this field.
+     * </p>
+     * 
+     * @param defaultValue
+     *        Default value that can be assigned to this field.
+     */
+
+    public void setDefaultValue(String defaultValue) {
+        this.defaultValue = defaultValue;
+    }
+
+    /**
+     * <p>
+     * Default value that can be assigned to this field.
+     * </p>
+     * 
+     * @return Default value that can be assigned to this field.
+     */
+
+    public String getDefaultValue() {
+        return this.defaultValue;
+    }
+
+    /**
+     * <p>
+     * Default value that can be assigned to this field.
+     * </p>
+     * 
+     * @param defaultValue
+     *        Default value that can be assigned to this field.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorEntityField withDefaultValue(String defaultValue) {
+        setDefaultValue(defaultValue);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Booelan value that indicates whether this field is deprecated or not.
+     * </p>
+     * 
+     * @param isDeprecated
+     *        Booelan value that indicates whether this field is deprecated or not.
+     */
+
+    public void setIsDeprecated(Boolean isDeprecated) {
+        this.isDeprecated = isDeprecated;
+    }
+
+    /**
+     * <p>
+     * Booelan value that indicates whether this field is deprecated or not.
+     * </p>
+     * 
+     * @return Booelan value that indicates whether this field is deprecated or not.
+     */
+
+    public Boolean getIsDeprecated() {
+        return this.isDeprecated;
+    }
+
+    /**
+     * <p>
+     * Booelan value that indicates whether this field is deprecated or not.
+     * </p>
+     * 
+     * @param isDeprecated
+     *        Booelan value that indicates whether this field is deprecated or not.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorEntityField withIsDeprecated(Boolean isDeprecated) {
+        setIsDeprecated(isDeprecated);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Booelan value that indicates whether this field is deprecated or not.
+     * </p>
+     * 
+     * @return Booelan value that indicates whether this field is deprecated or not.
+     */
+
+    public Boolean isDeprecated() {
+        return this.isDeprecated;
     }
 
     /**
@@ -314,6 +528,74 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * A map that has specific properties related to the ConnectorEntityField.
+     * </p>
+     * 
+     * @return A map that has specific properties related to the ConnectorEntityField.
+     */
+
+    public java.util.Map<String, String> getCustomProperties() {
+        return customProperties;
+    }
+
+    /**
+     * <p>
+     * A map that has specific properties related to the ConnectorEntityField.
+     * </p>
+     * 
+     * @param customProperties
+     *        A map that has specific properties related to the ConnectorEntityField.
+     */
+
+    public void setCustomProperties(java.util.Map<String, String> customProperties) {
+        this.customProperties = customProperties;
+    }
+
+    /**
+     * <p>
+     * A map that has specific properties related to the ConnectorEntityField.
+     * </p>
+     * 
+     * @param customProperties
+     *        A map that has specific properties related to the ConnectorEntityField.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorEntityField withCustomProperties(java.util.Map<String, String> customProperties) {
+        setCustomProperties(customProperties);
+        return this;
+    }
+
+    /**
+     * Add a single CustomProperties entry
+     *
+     * @see ConnectorEntityField#withCustomProperties
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorEntityField addCustomPropertiesEntry(String key, String value) {
+        if (null == this.customProperties) {
+            this.customProperties = new java.util.HashMap<String, String>();
+        }
+        if (this.customProperties.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.customProperties.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CustomProperties.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorEntityField clearCustomPropertiesEntries() {
+        this.customProperties = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -327,8 +609,16 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
         sb.append("{");
         if (getIdentifier() != null)
             sb.append("Identifier: ").append(getIdentifier()).append(",");
+        if (getParentIdentifier() != null)
+            sb.append("ParentIdentifier: ").append(getParentIdentifier()).append(",");
         if (getLabel() != null)
             sb.append("Label: ").append(getLabel()).append(",");
+        if (getIsPrimaryKey() != null)
+            sb.append("IsPrimaryKey: ").append(getIsPrimaryKey()).append(",");
+        if (getDefaultValue() != null)
+            sb.append("DefaultValue: ").append(getDefaultValue()).append(",");
+        if (getIsDeprecated() != null)
+            sb.append("IsDeprecated: ").append(getIsDeprecated()).append(",");
         if (getSupportedFieldTypeDetails() != null)
             sb.append("SupportedFieldTypeDetails: ").append(getSupportedFieldTypeDetails()).append(",");
         if (getDescription() != null)
@@ -336,7 +626,9 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
         if (getSourceProperties() != null)
             sb.append("SourceProperties: ").append(getSourceProperties()).append(",");
         if (getDestinationProperties() != null)
-            sb.append("DestinationProperties: ").append(getDestinationProperties());
+            sb.append("DestinationProperties: ").append(getDestinationProperties()).append(",");
+        if (getCustomProperties() != null)
+            sb.append("CustomProperties: ").append(getCustomProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -355,9 +647,25 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
             return false;
         if (other.getIdentifier() != null && other.getIdentifier().equals(this.getIdentifier()) == false)
             return false;
+        if (other.getParentIdentifier() == null ^ this.getParentIdentifier() == null)
+            return false;
+        if (other.getParentIdentifier() != null && other.getParentIdentifier().equals(this.getParentIdentifier()) == false)
+            return false;
         if (other.getLabel() == null ^ this.getLabel() == null)
             return false;
         if (other.getLabel() != null && other.getLabel().equals(this.getLabel()) == false)
+            return false;
+        if (other.getIsPrimaryKey() == null ^ this.getIsPrimaryKey() == null)
+            return false;
+        if (other.getIsPrimaryKey() != null && other.getIsPrimaryKey().equals(this.getIsPrimaryKey()) == false)
+            return false;
+        if (other.getDefaultValue() == null ^ this.getDefaultValue() == null)
+            return false;
+        if (other.getDefaultValue() != null && other.getDefaultValue().equals(this.getDefaultValue()) == false)
+            return false;
+        if (other.getIsDeprecated() == null ^ this.getIsDeprecated() == null)
+            return false;
+        if (other.getIsDeprecated() != null && other.getIsDeprecated().equals(this.getIsDeprecated()) == false)
             return false;
         if (other.getSupportedFieldTypeDetails() == null ^ this.getSupportedFieldTypeDetails() == null)
             return false;
@@ -375,6 +683,10 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
             return false;
         if (other.getDestinationProperties() != null && other.getDestinationProperties().equals(this.getDestinationProperties()) == false)
             return false;
+        if (other.getCustomProperties() == null ^ this.getCustomProperties() == null)
+            return false;
+        if (other.getCustomProperties() != null && other.getCustomProperties().equals(this.getCustomProperties()) == false)
+            return false;
         return true;
     }
 
@@ -384,11 +696,16 @@ public class ConnectorEntityField implements Serializable, Cloneable, Structured
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getIdentifier() == null) ? 0 : getIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getParentIdentifier() == null) ? 0 : getParentIdentifier().hashCode());
         hashCode = prime * hashCode + ((getLabel() == null) ? 0 : getLabel().hashCode());
+        hashCode = prime * hashCode + ((getIsPrimaryKey() == null) ? 0 : getIsPrimaryKey().hashCode());
+        hashCode = prime * hashCode + ((getDefaultValue() == null) ? 0 : getDefaultValue().hashCode());
+        hashCode = prime * hashCode + ((getIsDeprecated() == null) ? 0 : getIsDeprecated().hashCode());
         hashCode = prime * hashCode + ((getSupportedFieldTypeDetails() == null) ? 0 : getSupportedFieldTypeDetails().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getSourceProperties() == null) ? 0 : getSourceProperties().hashCode());
         hashCode = prime * hashCode + ((getDestinationProperties() == null) ? 0 : getDestinationProperties().hashCode());
+        hashCode = prime * hashCode + ((getCustomProperties() == null) ? 0 : getCustomProperties().hashCode());
         return hashCode;
     }
 

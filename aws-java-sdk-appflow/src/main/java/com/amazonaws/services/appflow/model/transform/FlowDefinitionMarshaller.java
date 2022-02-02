@@ -39,8 +39,12 @@ public class FlowDefinitionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("flowStatus").build();
     private static final MarshallingInfo<String> SOURCECONNECTORTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceConnectorType").build();
+    private static final MarshallingInfo<String> SOURCECONNECTORLABEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceConnectorLabel").build();
     private static final MarshallingInfo<String> DESTINATIONCONNECTORTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConnectorType").build();
+    private static final MarshallingInfo<String> DESTINATIONCONNECTORLABEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationConnectorLabel").build();
     private static final MarshallingInfo<String> TRIGGERTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("triggerType").build();
     private static final MarshallingInfo<java.util.Date> CREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -77,7 +81,9 @@ public class FlowDefinitionMarshaller {
             protocolMarshaller.marshall(flowDefinition.getFlowName(), FLOWNAME_BINDING);
             protocolMarshaller.marshall(flowDefinition.getFlowStatus(), FLOWSTATUS_BINDING);
             protocolMarshaller.marshall(flowDefinition.getSourceConnectorType(), SOURCECONNECTORTYPE_BINDING);
+            protocolMarshaller.marshall(flowDefinition.getSourceConnectorLabel(), SOURCECONNECTORLABEL_BINDING);
             protocolMarshaller.marshall(flowDefinition.getDestinationConnectorType(), DESTINATIONCONNECTORTYPE_BINDING);
+            protocolMarshaller.marshall(flowDefinition.getDestinationConnectorLabel(), DESTINATIONCONNECTORLABEL_BINDING);
             protocolMarshaller.marshall(flowDefinition.getTriggerType(), TRIGGERTYPE_BINDING);
             protocolMarshaller.marshall(flowDefinition.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(flowDefinition.getLastUpdatedAt(), LASTUPDATEDAT_BINDING);

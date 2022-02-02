@@ -27,6 +27,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later, excluding 5.0.x versions.
  * Spot Instance allocation strategy is available in Amazon EMR version 5.12.1 and later.
  * </p>
+ * </note> <note>
+ * <p>
+ * Spot Instances with a defined duration (also known as Spot blocks) are no longer available to new customers from July
+ * 1, 2021. For customers who have previously used the feature, we will continue to support Spot Instances with a
+ * defined duration until December 31, 2022.
+ * </p>
  * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/SpotProvisioningSpecification"
@@ -61,6 +67,13 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
      * its instance ID. At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
      * Spot Instance termination notice, which gives the instance a two-minute warning before it terminates.
      * </p>
+     * <note>
+     * <p>
+     * Spot Instances with a defined duration (also known as Spot blocks) are no longer available to new customers from
+     * July 1, 2021. For customers who have previously used the feature, we will continue to support Spot Instances with
+     * a defined duration until December 31, 2022.
+     * </p>
+     * </note>
      */
     private Integer blockDurationMinutes;
     /**
@@ -245,6 +258,13 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
      * its instance ID. At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
      * Spot Instance termination notice, which gives the instance a two-minute warning before it terminates.
      * </p>
+     * <note>
+     * <p>
+     * Spot Instances with a defined duration (also known as Spot blocks) are no longer available to new customers from
+     * July 1, 2021. For customers who have previously used the feature, we will continue to support Spot Instances with
+     * a defined duration until December 31, 2022.
+     * </p>
+     * </note>
      * 
      * @param blockDurationMinutes
      *        The defined duration for Spot Instances (also known as Spot blocks) in minutes. When specified, the Spot
@@ -252,7 +272,12 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
      *        Instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as
      *        a Spot Instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot Instance
      *        for termination and provides a Spot Instance termination notice, which gives the instance a two-minute
-     *        warning before it terminates.
+     *        warning before it terminates. </p> <note>
+     *        <p>
+     *        Spot Instances with a defined duration (also known as Spot blocks) are no longer available to new
+     *        customers from July 1, 2021. For customers who have previously used the feature, we will continue to
+     *        support Spot Instances with a defined duration until December 31, 2022.
+     *        </p>
      */
 
     public void setBlockDurationMinutes(Integer blockDurationMinutes) {
@@ -267,13 +292,25 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
      * its instance ID. At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
      * Spot Instance termination notice, which gives the instance a two-minute warning before it terminates.
      * </p>
+     * <note>
+     * <p>
+     * Spot Instances with a defined duration (also known as Spot blocks) are no longer available to new customers from
+     * July 1, 2021. For customers who have previously used the feature, we will continue to support Spot Instances with
+     * a defined duration until December 31, 2022.
+     * </p>
+     * </note>
      * 
      * @return The defined duration for Spot Instances (also known as Spot blocks) in minutes. When specified, the Spot
      *         Instance does not terminate before the defined duration expires, and defined duration pricing for Spot
      *         Instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as
      *         a Spot Instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot Instance
      *         for termination and provides a Spot Instance termination notice, which gives the instance a two-minute
-     *         warning before it terminates.
+     *         warning before it terminates. </p> <note>
+     *         <p>
+     *         Spot Instances with a defined duration (also known as Spot blocks) are no longer available to new
+     *         customers from July 1, 2021. For customers who have previously used the feature, we will continue to
+     *         support Spot Instances with a defined duration until December 31, 2022.
+     *         </p>
      */
 
     public Integer getBlockDurationMinutes() {
@@ -288,6 +325,13 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
      * its instance ID. At the end of the duration, Amazon EC2 marks the Spot Instance for termination and provides a
      * Spot Instance termination notice, which gives the instance a two-minute warning before it terminates.
      * </p>
+     * <note>
+     * <p>
+     * Spot Instances with a defined duration (also known as Spot blocks) are no longer available to new customers from
+     * July 1, 2021. For customers who have previously used the feature, we will continue to support Spot Instances with
+     * a defined duration until December 31, 2022.
+     * </p>
+     * </note>
      * 
      * @param blockDurationMinutes
      *        The defined duration for Spot Instances (also known as Spot blocks) in minutes. When specified, the Spot
@@ -295,7 +339,12 @@ public class SpotProvisioningSpecification implements Serializable, Cloneable, S
      *        Instances applies. Valid values are 60, 120, 180, 240, 300, or 360. The duration period starts as soon as
      *        a Spot Instance receives its instance ID. At the end of the duration, Amazon EC2 marks the Spot Instance
      *        for termination and provides a Spot Instance termination notice, which gives the instance a two-minute
-     *        warning before it terminates.
+     *        warning before it terminates. </p> <note>
+     *        <p>
+     *        Spot Instances with a defined duration (also known as Spot blocks) are no longer available to new
+     *        customers from July 1, 2021. For customers who have previously used the feature, we will continue to
+     *        support Spot Instances with a defined duration until December 31, 2022.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

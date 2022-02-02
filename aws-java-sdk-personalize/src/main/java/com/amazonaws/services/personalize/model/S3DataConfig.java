@@ -37,7 +37,7 @@ public class S3DataConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to encrypt or
-     * decrypt the input and output files of a batch inference job.
+     * decrypt the input and output files.
      * </p>
      */
     private String kmsKeyArn;
@@ -85,12 +85,12 @@ public class S3DataConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to encrypt or
-     * decrypt the input and output files of a batch inference job.
+     * decrypt the input and output files.
      * </p>
      * 
      * @param kmsKeyArn
      *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to
-     *        encrypt or decrypt the input and output files of a batch inference job.
+     *        encrypt or decrypt the input and output files.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -100,11 +100,11 @@ public class S3DataConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to encrypt or
-     * decrypt the input and output files of a batch inference job.
+     * decrypt the input and output files.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to
-     *         encrypt or decrypt the input and output files of a batch inference job.
+     *         encrypt or decrypt the input and output files.
      */
 
     public String getKmsKeyArn() {
@@ -114,12 +114,12 @@ public class S3DataConfig implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to encrypt or
-     * decrypt the input and output files of a batch inference job.
+     * decrypt the input and output files.
      * </p>
      * 
      * @param kmsKeyArn
      *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to
-     *        encrypt or decrypt the input and output files of a batch inference job.
+     *        encrypt or decrypt the input and output files.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

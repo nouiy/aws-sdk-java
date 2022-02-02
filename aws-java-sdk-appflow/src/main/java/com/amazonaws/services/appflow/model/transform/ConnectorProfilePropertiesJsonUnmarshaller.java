@@ -116,6 +116,10 @@ public class ConnectorProfilePropertiesJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     connectorProfileProperties.setSAPOData(SAPODataConnectorProfilePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("CustomConnector", targetDepth)) {
+                    context.nextToken();
+                    connectorProfileProperties.setCustomConnector(CustomConnectorProfilePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

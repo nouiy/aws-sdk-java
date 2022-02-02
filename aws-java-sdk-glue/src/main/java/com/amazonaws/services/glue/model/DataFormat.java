@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum DataFormat {
 
     AVRO("AVRO"),
-    JSON("JSON");
+    JSON("JSON"),
+    PROTOBUF("PROTOBUF");
 
     private String value;
 

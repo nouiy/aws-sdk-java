@@ -55,6 +55,12 @@ public class DestinationFieldProperties implements Serializable, Cloneable, Stru
     private Boolean isUpdatable;
     /**
      * <p>
+     * Specifies whether the field can use the default value during a Create operation.
+     * </p>
+     */
+    private Boolean isDefaultedOnCreate;
+    /**
+     * <p>
      * A list of supported write operations. For each write operation listed, this field can be used in
      * <code>idFieldNames</code> when that write operation is present as a destination option.
      * </p>
@@ -283,6 +289,58 @@ public class DestinationFieldProperties implements Serializable, Cloneable, Stru
 
     /**
      * <p>
+     * Specifies whether the field can use the default value during a Create operation.
+     * </p>
+     * 
+     * @param isDefaultedOnCreate
+     *        Specifies whether the field can use the default value during a Create operation.
+     */
+
+    public void setIsDefaultedOnCreate(Boolean isDefaultedOnCreate) {
+        this.isDefaultedOnCreate = isDefaultedOnCreate;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the field can use the default value during a Create operation.
+     * </p>
+     * 
+     * @return Specifies whether the field can use the default value during a Create operation.
+     */
+
+    public Boolean getIsDefaultedOnCreate() {
+        return this.isDefaultedOnCreate;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the field can use the default value during a Create operation.
+     * </p>
+     * 
+     * @param isDefaultedOnCreate
+     *        Specifies whether the field can use the default value during a Create operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationFieldProperties withIsDefaultedOnCreate(Boolean isDefaultedOnCreate) {
+        setIsDefaultedOnCreate(isDefaultedOnCreate);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies whether the field can use the default value during a Create operation.
+     * </p>
+     * 
+     * @return Specifies whether the field can use the default value during a Create operation.
+     */
+
+    public Boolean isDefaultedOnCreate() {
+        return this.isDefaultedOnCreate;
+    }
+
+    /**
+     * <p>
      * A list of supported write operations. For each write operation listed, this field can be used in
      * <code>idFieldNames</code> when that write operation is present as a destination option.
      * </p>
@@ -409,6 +467,8 @@ public class DestinationFieldProperties implements Serializable, Cloneable, Stru
             sb.append("IsUpsertable: ").append(getIsUpsertable()).append(",");
         if (getIsUpdatable() != null)
             sb.append("IsUpdatable: ").append(getIsUpdatable()).append(",");
+        if (getIsDefaultedOnCreate() != null)
+            sb.append("IsDefaultedOnCreate: ").append(getIsDefaultedOnCreate()).append(",");
         if (getSupportedWriteOperations() != null)
             sb.append("SupportedWriteOperations: ").append(getSupportedWriteOperations());
         sb.append("}");
@@ -441,6 +501,10 @@ public class DestinationFieldProperties implements Serializable, Cloneable, Stru
             return false;
         if (other.getIsUpdatable() != null && other.getIsUpdatable().equals(this.getIsUpdatable()) == false)
             return false;
+        if (other.getIsDefaultedOnCreate() == null ^ this.getIsDefaultedOnCreate() == null)
+            return false;
+        if (other.getIsDefaultedOnCreate() != null && other.getIsDefaultedOnCreate().equals(this.getIsDefaultedOnCreate()) == false)
+            return false;
         if (other.getSupportedWriteOperations() == null ^ this.getSupportedWriteOperations() == null)
             return false;
         if (other.getSupportedWriteOperations() != null && other.getSupportedWriteOperations().equals(this.getSupportedWriteOperations()) == false)
@@ -457,6 +521,7 @@ public class DestinationFieldProperties implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getIsNullable() == null) ? 0 : getIsNullable().hashCode());
         hashCode = prime * hashCode + ((getIsUpsertable() == null) ? 0 : getIsUpsertable().hashCode());
         hashCode = prime * hashCode + ((getIsUpdatable() == null) ? 0 : getIsUpdatable().hashCode());
+        hashCode = prime * hashCode + ((getIsDefaultedOnCreate() == null) ? 0 : getIsDefaultedOnCreate().hashCode());
         hashCode = prime * hashCode + ((getSupportedWriteOperations() == null) ? 0 : getSupportedWriteOperations().hashCode());
         return hashCode;
     }

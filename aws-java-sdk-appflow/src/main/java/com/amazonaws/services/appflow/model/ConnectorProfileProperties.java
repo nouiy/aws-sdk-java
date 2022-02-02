@@ -126,6 +126,12 @@ public class ConnectorProfileProperties implements Serializable, Cloneable, Stru
     private ZendeskConnectorProfileProperties zendesk;
 
     private SAPODataConnectorProfileProperties sAPOData;
+    /**
+     * <p>
+     * The properties required by the custom connector.
+     * </p>
+     */
+    private CustomConnectorProfileProperties customConnector;
 
     /**
      * <p>
@@ -794,6 +800,46 @@ public class ConnectorProfileProperties implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The properties required by the custom connector.
+     * </p>
+     * 
+     * @param customConnector
+     *        The properties required by the custom connector.
+     */
+
+    public void setCustomConnector(CustomConnectorProfileProperties customConnector) {
+        this.customConnector = customConnector;
+    }
+
+    /**
+     * <p>
+     * The properties required by the custom connector.
+     * </p>
+     * 
+     * @return The properties required by the custom connector.
+     */
+
+    public CustomConnectorProfileProperties getCustomConnector() {
+        return this.customConnector;
+    }
+
+    /**
+     * <p>
+     * The properties required by the custom connector.
+     * </p>
+     * 
+     * @param customConnector
+     *        The properties required by the custom connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorProfileProperties withCustomConnector(CustomConnectorProfileProperties customConnector) {
+        setCustomConnector(customConnector);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -838,7 +884,9 @@ public class ConnectorProfileProperties implements Serializable, Cloneable, Stru
         if (getZendesk() != null)
             sb.append("Zendesk: ").append(getZendesk()).append(",");
         if (getSAPOData() != null)
-            sb.append("SAPOData: ").append(getSAPOData());
+            sb.append("SAPOData: ").append(getSAPOData()).append(",");
+        if (getCustomConnector() != null)
+            sb.append("CustomConnector: ").append(getCustomConnector());
         sb.append("}");
         return sb.toString();
     }
@@ -921,6 +969,10 @@ public class ConnectorProfileProperties implements Serializable, Cloneable, Stru
             return false;
         if (other.getSAPOData() != null && other.getSAPOData().equals(this.getSAPOData()) == false)
             return false;
+        if (other.getCustomConnector() == null ^ this.getCustomConnector() == null)
+            return false;
+        if (other.getCustomConnector() != null && other.getCustomConnector().equals(this.getCustomConnector()) == false)
+            return false;
         return true;
     }
 
@@ -946,6 +998,7 @@ public class ConnectorProfileProperties implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getVeeva() == null) ? 0 : getVeeva().hashCode());
         hashCode = prime * hashCode + ((getZendesk() == null) ? 0 : getZendesk().hashCode());
         hashCode = prime * hashCode + ((getSAPOData() == null) ? 0 : getSAPOData().hashCode());
+        hashCode = prime * hashCode + ((getCustomConnector() == null) ? 0 : getCustomConnector().hashCode());
         return hashCode;
     }
 

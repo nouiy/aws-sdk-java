@@ -115,6 +115,8 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
 
     private SAPODataSourceProperties sAPOData;
 
+    private CustomConnectorSourceProperties customConnector;
+
     /**
      * <p>
      * Specifies the information that is required for querying Amplitude.
@@ -702,6 +704,32 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
     }
 
     /**
+     * @param customConnector
+     */
+
+    public void setCustomConnector(CustomConnectorSourceProperties customConnector) {
+        this.customConnector = customConnector;
+    }
+
+    /**
+     * @return
+     */
+
+    public CustomConnectorSourceProperties getCustomConnector() {
+        return this.customConnector;
+    }
+
+    /**
+     * @param customConnector
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SourceConnectorProperties withCustomConnector(CustomConnectorSourceProperties customConnector) {
+        setCustomConnector(customConnector);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -742,7 +770,9 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
         if (getZendesk() != null)
             sb.append("Zendesk: ").append(getZendesk()).append(",");
         if (getSAPOData() != null)
-            sb.append("SAPOData: ").append(getSAPOData());
+            sb.append("SAPOData: ").append(getSAPOData()).append(",");
+        if (getCustomConnector() != null)
+            sb.append("CustomConnector: ").append(getCustomConnector());
         sb.append("}");
         return sb.toString();
     }
@@ -817,6 +847,10 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
             return false;
         if (other.getSAPOData() != null && other.getSAPOData().equals(this.getSAPOData()) == false)
             return false;
+        if (other.getCustomConnector() == null ^ this.getCustomConnector() == null)
+            return false;
+        if (other.getCustomConnector() != null && other.getCustomConnector().equals(this.getCustomConnector()) == false)
+            return false;
         return true;
     }
 
@@ -840,6 +874,7 @@ public class SourceConnectorProperties implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getVeeva() == null) ? 0 : getVeeva().hashCode());
         hashCode = prime * hashCode + ((getZendesk() == null) ? 0 : getZendesk().hashCode());
         hashCode = prime * hashCode + ((getSAPOData() == null) ? 0 : getSAPOData().hashCode());
+        hashCode = prime * hashCode + ((getCustomConnector() == null) ? 0 : getCustomConnector().hashCode());
         return hashCode;
     }
 

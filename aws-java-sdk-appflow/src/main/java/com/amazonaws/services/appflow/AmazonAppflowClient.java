@@ -143,8 +143,14 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
                             new JsonErrorShapeMetadata().withErrorCode("ConnectorAuthenticationException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appflow.model.transform.ConnectorAuthenticationExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.appflow.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConnectorServerException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appflow.model.transform.ConnectorServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.appflow.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.appflow.model.transform.ConflictExceptionUnmarshaller.getInstance()))
@@ -454,6 +460,68 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteFlowResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteFlowResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes the given custom connector registered in your Amazon Web Services account. This API can be used for
+     * custom connectors that are registered in your account and also for Amazon authored connectors.
+     * </p>
+     * 
+     * @param describeConnectorRequest
+     * @return Result of the DescribeConnector operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request (such as the source or destination connector profile) is not found.
+     * @sample AmazonAppflow.DescribeConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DescribeConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeConnectorResult describeConnector(DescribeConnectorRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeConnector(request);
+    }
+
+    @SdkInternalApi
+    final DescribeConnectorResult executeDescribeConnector(DescribeConnectorRequest describeConnectorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeConnectorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeConnectorRequest> request = null;
+        Response<DescribeConnectorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeConnectorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeConnectorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Appflow");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeConnector");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeConnectorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeConnectorResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -852,6 +920,66 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
 
     /**
      * <p>
+     * Returns the list of all registered custom connectors in your Amazon Web Services account. This API lists only
+     * custom connectors registered in this account, not the Amazon Web Services authored connectors.
+     * </p>
+     * 
+     * @param listConnectorsRequest
+     * @return Result of the ListConnectors operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AmazonAppflow.ListConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/ListConnectors" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListConnectorsResult listConnectors(ListConnectorsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListConnectors(request);
+    }
+
+    @SdkInternalApi
+    final ListConnectorsResult executeListConnectors(ListConnectorsRequest listConnectorsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listConnectorsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListConnectorsRequest> request = null;
+        Response<ListConnectorsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListConnectorsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listConnectorsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Appflow");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListConnectors");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListConnectorsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListConnectorsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists all of the flows associated with your account.
      * </p>
      * 
@@ -960,6 +1088,81 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Registers a new connector with your Amazon Web Services account. Before you can register the connector, you must
+     * deploy lambda in your account.
+     * </p>
+     * 
+     * @param registerConnectorRequest
+     * @return Result of the RegisterConnector operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws ConflictException
+     *         There was a conflict when processing the request (for example, a flow with the given name already exists
+     *         within the account. Check for conflicting resource names and try again.
+     * @throws AccessDeniedException
+     *         AppFlow/Requester has invalid or missing permissions.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request (such as the source or destination connector profile) is not found.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota (such as the number of flows) to be exceeded.
+     * @throws ThrottlingException
+     *         API calls have exceeded the maximum allowed API request rate per account and per Region.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ConnectorServerException
+     *         An error occurred when retrieving data from the connector endpoint.
+     * @throws ConnectorAuthenticationException
+     *         An error occurred when authenticating with the connector endpoint.
+     * @sample AmazonAppflow.RegisterConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/RegisterConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public RegisterConnectorResult registerConnector(RegisterConnectorRequest request) {
+        request = beforeClientExecution(request);
+        return executeRegisterConnector(request);
+    }
+
+    @SdkInternalApi
+    final RegisterConnectorResult executeRegisterConnector(RegisterConnectorRequest registerConnectorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(registerConnectorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RegisterConnectorRequest> request = null;
+        Response<RegisterConnectorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RegisterConnectorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(registerConnectorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Appflow");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RegisterConnector");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RegisterConnectorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new RegisterConnectorResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1152,6 +1355,69 @@ public class AmazonAppflowClient extends AmazonWebServiceClient implements Amazo
 
             HttpResponseHandler<AmazonWebServiceResponse<TagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new TagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Unregisters the custom connector registered in your account that matches the connectorLabel provided in the
+     * request.
+     * </p>
+     * 
+     * @param unregisterConnectorRequest
+     * @return Result of the UnregisterConnector operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request (such as the source or destination connector profile) is not found.
+     * @throws ConflictException
+     *         There was a conflict when processing the request (for example, a flow with the given name already exists
+     *         within the account. Check for conflicting resource names and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AmazonAppflow.UnregisterConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/UnregisterConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UnregisterConnectorResult unregisterConnector(UnregisterConnectorRequest request) {
+        request = beforeClientExecution(request);
+        return executeUnregisterConnector(request);
+    }
+
+    @SdkInternalApi
+    final UnregisterConnectorResult executeUnregisterConnector(UnregisterConnectorRequest unregisterConnectorRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(unregisterConnectorRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UnregisterConnectorRequest> request = null;
+        Response<UnregisterConnectorResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UnregisterConnectorRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(unregisterConnectorRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Appflow");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UnregisterConnector");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UnregisterConnectorResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UnregisterConnectorResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

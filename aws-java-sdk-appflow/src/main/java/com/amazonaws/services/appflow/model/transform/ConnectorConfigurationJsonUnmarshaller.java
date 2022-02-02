@@ -86,6 +86,89 @@ public class ConnectorConfigurationJsonUnmarshaller implements Unmarshaller<Conn
                     context.nextToken();
                     connectorConfiguration.setConnectorMetadata(ConnectorMetadataJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("connectorType", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("connectorLabel", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorLabel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("connectorDescription", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorDescription(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("connectorOwner", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorOwner(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("connectorName", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("connectorVersion", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("connectorArn", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("connectorModes", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorModes(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("authenticationConfig", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setAuthenticationConfig(AuthenticationConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("connectorRuntimeSettings", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorRuntimeSettings(new ListUnmarshaller<ConnectorRuntimeSetting>(ConnectorRuntimeSettingJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("supportedApiVersions", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setSupportedApiVersions(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("supportedOperators", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setSupportedOperators(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("supportedWriteOperations", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setSupportedWriteOperations(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("connectorProvisioningType", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorProvisioningType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("connectorProvisioningConfig", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setConnectorProvisioningConfig(ConnectorProvisioningConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("logoURL", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setLogoURL(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("registeredAt", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setRegisteredAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
+                if (context.testExpression("registeredBy", targetDepth)) {
+                    context.nextToken();
+                    connectorConfiguration.setRegisteredBy(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

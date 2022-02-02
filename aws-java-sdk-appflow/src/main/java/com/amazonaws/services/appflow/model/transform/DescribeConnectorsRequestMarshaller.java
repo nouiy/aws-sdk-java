@@ -30,6 +30,8 @@ public class DescribeConnectorsRequestMarshaller {
 
     private static final MarshallingInfo<List> CONNECTORTYPES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorTypes").build();
+    private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("nextToken").build();
 
@@ -50,6 +52,7 @@ public class DescribeConnectorsRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(describeConnectorsRequest.getConnectorTypes(), CONNECTORTYPES_BINDING);
+            protocolMarshaller.marshall(describeConnectorsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(describeConnectorsRequest.getNextToken(), NEXTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

@@ -29,6 +29,8 @@ public class SourceFlowConfigMarshaller {
 
     private static final MarshallingInfo<String> CONNECTORTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorType").build();
+    private static final MarshallingInfo<String> APIVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("apiVersion").build();
     private static final MarshallingInfo<String> CONNECTORPROFILENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorProfileName").build();
     private static final MarshallingInfo<StructuredPojo> SOURCECONNECTORPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -53,6 +55,7 @@ public class SourceFlowConfigMarshaller {
 
         try {
             protocolMarshaller.marshall(sourceFlowConfig.getConnectorType(), CONNECTORTYPE_BINDING);
+            protocolMarshaller.marshall(sourceFlowConfig.getApiVersion(), APIVERSION_BINDING);
             protocolMarshaller.marshall(sourceFlowConfig.getConnectorProfileName(), CONNECTORPROFILENAME_BINDING);
             protocolMarshaller.marshall(sourceFlowConfig.getSourceConnectorProperties(), SOURCECONNECTORPROPERTIES_BINDING);
             protocolMarshaller.marshall(sourceFlowConfig.getIncrementalPullConfig(), INCREMENTALPULLCONFIG_BINDING);

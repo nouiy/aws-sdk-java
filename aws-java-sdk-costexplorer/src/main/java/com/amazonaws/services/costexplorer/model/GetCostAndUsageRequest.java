@@ -51,12 +51,12 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
      * </p>
      * <p>
-     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
-     * </p>
-     * <p>
      * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
      * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     * </p>
+     * <p>
+     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
+     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
      * </p>
      */
     private Expression filter;
@@ -92,9 +92,9 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid values for the <code>DIMENSION</code> type are <code>AZ</code>, <code>INSTANCE_TYPE</code>,
-     * <code>LEGAL_ENTITY_NAME</code>, <code>LINKED_ACCOUNT</code>, <code>OPERATION</code>, <code>PLATFORM</code>,
-     * <code>PURCHASE_TYPE</code>, <code>SERVICE</code>, <code>TENANCY</code>, <code>RECORD_TYPE</code>, and
-     * <code>USAGE_TYPE</code>.
+     * <code>LEGAL_ENTITY_NAME</code>, <code>INVOICING_ENTITY</code>, <code>LINKED_ACCOUNT</code>,
+     * <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>,
+     * <code>TENANCY</code>, <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
      * </p>
      * <p>
      * When you group by the <code>TAG</code> type and include a valid tag key, you get all tag values, including empty
@@ -255,12 +255,12 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
      * </p>
      * <p>
-     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
-     * </p>
-     * <p>
      * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
      * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     * </p>
+     * <p>
+     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
+     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
      * </p>
      * 
      * @param filter
@@ -271,13 +271,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a>. </p>
      *        <p>
+     *        Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     *        <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     *        </p>
+     *        <p>
      *        The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
      *        <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
      *        <code>CASE_SENSITIVE</code>.
-     *        </p>
-     *        <p>
-     *        Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     *        <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
      */
 
     public void setFilter(Expression filter) {
@@ -293,12 +293,12 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
      * </p>
      * <p>
-     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
-     * </p>
-     * <p>
      * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
      * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     * </p>
+     * <p>
+     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
+     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
      * </p>
      * 
      * @return Filters Amazon Web Services costs by different dimensions. For example, you can specify
@@ -308,13 +308,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *         href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *         >Expression</a>. </p>
      *         <p>
+     *         Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     *         <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     *         </p>
+     *         <p>
      *         The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
      *         <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
      *         <code>CASE_SENSITIVE</code>.
-     *         </p>
-     *         <p>
-     *         Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     *         <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
      */
 
     public Expression getFilter() {
@@ -330,12 +330,12 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>.
      * </p>
      * <p>
-     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
-     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
-     * </p>
-     * <p>
      * Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
      * <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     * </p>
+     * <p>
+     * The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
+     * <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>.
      * </p>
      * 
      * @param filter
@@ -346,13 +346,13 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a>. </p>
      *        <p>
+     *        Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
+     *        <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
+     *        </p>
+     *        <p>
      *        The default values are <code>EQUALS</code> and <code>CASE_SENSITIVE</code>. Valid values for
      *        <code>MatchOptions</code> for <code>Dimensions</code> are <code>EQUALS</code> and
      *        <code>CASE_SENSITIVE</code>.
-     *        </p>
-     *        <p>
-     *        Valid values for <code>MatchOptions</code> for <code>CostCategories</code> and <code>Tags</code> are
-     *        <code>EQUALS</code>, <code>ABSENT</code>, and <code>CASE_SENSITIVE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -586,9 +586,9 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid values for the <code>DIMENSION</code> type are <code>AZ</code>, <code>INSTANCE_TYPE</code>,
-     * <code>LEGAL_ENTITY_NAME</code>, <code>LINKED_ACCOUNT</code>, <code>OPERATION</code>, <code>PLATFORM</code>,
-     * <code>PURCHASE_TYPE</code>, <code>SERVICE</code>, <code>TENANCY</code>, <code>RECORD_TYPE</code>, and
-     * <code>USAGE_TYPE</code>.
+     * <code>LEGAL_ENTITY_NAME</code>, <code>INVOICING_ENTITY</code>, <code>LINKED_ACCOUNT</code>,
+     * <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>,
+     * <code>TENANCY</code>, <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
      * </p>
      * <p>
      * When you group by the <code>TAG</code> type and include a valid tag key, you get all tag values, including empty
@@ -599,9 +599,9 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *         cost categories, or any two group by types.</p>
      *         <p>
      *         Valid values for the <code>DIMENSION</code> type are <code>AZ</code>, <code>INSTANCE_TYPE</code>,
-     *         <code>LEGAL_ENTITY_NAME</code>, <code>LINKED_ACCOUNT</code>, <code>OPERATION</code>,
-     *         <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>, <code>TENANCY</code>,
-     *         <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
+     *         <code>LEGAL_ENTITY_NAME</code>, <code>INVOICING_ENTITY</code>, <code>LINKED_ACCOUNT</code>,
+     *         <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>,
+     *         <code>TENANCY</code>, <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
      *         </p>
      *         <p>
      *         When you group by the <code>TAG</code> type and include a valid tag key, you get all tag values,
@@ -619,9 +619,9 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid values for the <code>DIMENSION</code> type are <code>AZ</code>, <code>INSTANCE_TYPE</code>,
-     * <code>LEGAL_ENTITY_NAME</code>, <code>LINKED_ACCOUNT</code>, <code>OPERATION</code>, <code>PLATFORM</code>,
-     * <code>PURCHASE_TYPE</code>, <code>SERVICE</code>, <code>TENANCY</code>, <code>RECORD_TYPE</code>, and
-     * <code>USAGE_TYPE</code>.
+     * <code>LEGAL_ENTITY_NAME</code>, <code>INVOICING_ENTITY</code>, <code>LINKED_ACCOUNT</code>,
+     * <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>,
+     * <code>TENANCY</code>, <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
      * </p>
      * <p>
      * When you group by the <code>TAG</code> type and include a valid tag key, you get all tag values, including empty
@@ -633,8 +633,9 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *        cost categories, or any two group by types.</p>
      *        <p>
      *        Valid values for the <code>DIMENSION</code> type are <code>AZ</code>, <code>INSTANCE_TYPE</code>,
-     *        <code>LEGAL_ENTITY_NAME</code>, <code>LINKED_ACCOUNT</code>, <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>, <code>TENANCY</code>, <code>RECORD_TYPE</code>, and
-     *        <code>USAGE_TYPE</code>.
+     *        <code>LEGAL_ENTITY_NAME</code>, <code>INVOICING_ENTITY</code>, <code>LINKED_ACCOUNT</code>,
+     *        <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>,
+     *        <code>TENANCY</code>, <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
      *        </p>
      *        <p>
      *        When you group by the <code>TAG</code> type and include a valid tag key, you get all tag values, including
@@ -657,9 +658,9 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid values for the <code>DIMENSION</code> type are <code>AZ</code>, <code>INSTANCE_TYPE</code>,
-     * <code>LEGAL_ENTITY_NAME</code>, <code>LINKED_ACCOUNT</code>, <code>OPERATION</code>, <code>PLATFORM</code>,
-     * <code>PURCHASE_TYPE</code>, <code>SERVICE</code>, <code>TENANCY</code>, <code>RECORD_TYPE</code>, and
-     * <code>USAGE_TYPE</code>.
+     * <code>LEGAL_ENTITY_NAME</code>, <code>INVOICING_ENTITY</code>, <code>LINKED_ACCOUNT</code>,
+     * <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>,
+     * <code>TENANCY</code>, <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
      * </p>
      * <p>
      * When you group by the <code>TAG</code> type and include a valid tag key, you get all tag values, including empty
@@ -676,8 +677,9 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *        cost categories, or any two group by types.</p>
      *        <p>
      *        Valid values for the <code>DIMENSION</code> type are <code>AZ</code>, <code>INSTANCE_TYPE</code>,
-     *        <code>LEGAL_ENTITY_NAME</code>, <code>LINKED_ACCOUNT</code>, <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>, <code>TENANCY</code>, <code>RECORD_TYPE</code>, and
-     *        <code>USAGE_TYPE</code>.
+     *        <code>LEGAL_ENTITY_NAME</code>, <code>INVOICING_ENTITY</code>, <code>LINKED_ACCOUNT</code>,
+     *        <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>,
+     *        <code>TENANCY</code>, <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
      *        </p>
      *        <p>
      *        When you group by the <code>TAG</code> type and include a valid tag key, you get all tag values, including
@@ -702,9 +704,9 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * Valid values for the <code>DIMENSION</code> type are <code>AZ</code>, <code>INSTANCE_TYPE</code>,
-     * <code>LEGAL_ENTITY_NAME</code>, <code>LINKED_ACCOUNT</code>, <code>OPERATION</code>, <code>PLATFORM</code>,
-     * <code>PURCHASE_TYPE</code>, <code>SERVICE</code>, <code>TENANCY</code>, <code>RECORD_TYPE</code>, and
-     * <code>USAGE_TYPE</code>.
+     * <code>LEGAL_ENTITY_NAME</code>, <code>INVOICING_ENTITY</code>, <code>LINKED_ACCOUNT</code>,
+     * <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>,
+     * <code>TENANCY</code>, <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
      * </p>
      * <p>
      * When you group by the <code>TAG</code> type and include a valid tag key, you get all tag values, including empty
@@ -716,8 +718,9 @@ public class GetCostAndUsageRequest extends com.amazonaws.AmazonWebServiceReques
      *        cost categories, or any two group by types.</p>
      *        <p>
      *        Valid values for the <code>DIMENSION</code> type are <code>AZ</code>, <code>INSTANCE_TYPE</code>,
-     *        <code>LEGAL_ENTITY_NAME</code>, <code>LINKED_ACCOUNT</code>, <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>, <code>TENANCY</code>, <code>RECORD_TYPE</code>, and
-     *        <code>USAGE_TYPE</code>.
+     *        <code>LEGAL_ENTITY_NAME</code>, <code>INVOICING_ENTITY</code>, <code>LINKED_ACCOUNT</code>,
+     *        <code>OPERATION</code>, <code>PLATFORM</code>, <code>PURCHASE_TYPE</code>, <code>SERVICE</code>,
+     *        <code>TENANCY</code>, <code>RECORD_TYPE</code>, and <code>USAGE_TYPE</code>.
      *        </p>
      *        <p>
      *        When you group by the <code>TAG</code> type and include a valid tag key, you get all tag values, including

@@ -68,9 +68,17 @@ public class FlowDefinitionJsonUnmarshaller implements Unmarshaller<FlowDefiniti
                     context.nextToken();
                     flowDefinition.setSourceConnectorType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("sourceConnectorLabel", targetDepth)) {
+                    context.nextToken();
+                    flowDefinition.setSourceConnectorLabel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("destinationConnectorType", targetDepth)) {
                     context.nextToken();
                     flowDefinition.setDestinationConnectorType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("destinationConnectorLabel", targetDepth)) {
+                    context.nextToken();
+                    flowDefinition.setDestinationConnectorLabel(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("triggerType", targetDepth)) {
                     context.nextToken();

@@ -53,6 +53,11 @@ public class AbstractAWSFIS implements AWSFIS {
     }
 
     @Override
+    public GetTargetResourceTypeResult getTargetResourceType(GetTargetResourceTypeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListActionsResult listActions(ListActionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +74,11 @@ public class AbstractAWSFIS implements AWSFIS {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTargetResourceTypesResult listTargetResourceTypes(ListTargetResourceTypesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

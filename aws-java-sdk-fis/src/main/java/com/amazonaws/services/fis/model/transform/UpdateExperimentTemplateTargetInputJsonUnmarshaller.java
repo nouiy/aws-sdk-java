@@ -74,6 +74,11 @@ public class UpdateExperimentTemplateTargetInputJsonUnmarshaller implements Unma
                     context.nextToken();
                     updateExperimentTemplateTargetInput.setSelectionMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("parameters", targetDepth)) {
+                    context.nextToken();
+                    updateExperimentTemplateTargetInput.setParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

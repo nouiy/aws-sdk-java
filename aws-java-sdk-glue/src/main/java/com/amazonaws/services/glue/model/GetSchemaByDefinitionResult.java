@@ -37,7 +37,8 @@ public class GetSchemaByDefinitionResult extends com.amazonaws.AmazonWebServiceR
     private String schemaArn;
     /**
      * <p>
-     * The data format of the schema definition. Currently only <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      */
     private String dataFormat;
@@ -136,12 +137,13 @@ public class GetSchemaByDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The data format of the schema definition. Currently only <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      * 
      * @param dataFormat
-     *        The data format of the schema definition. Currently only <code>AVRO</code> and <code>JSON</code> are
-     *        supported.
+     *        The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     *        <code>PROTOBUF</code> are supported.
      * @see DataFormat
      */
 
@@ -151,11 +153,12 @@ public class GetSchemaByDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The data format of the schema definition. Currently only <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      * 
-     * @return The data format of the schema definition. Currently only <code>AVRO</code> and <code>JSON</code> are
-     *         supported.
+     * @return The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     *         <code>PROTOBUF</code> are supported.
      * @see DataFormat
      */
 
@@ -165,12 +168,13 @@ public class GetSchemaByDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The data format of the schema definition. Currently only <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      * 
      * @param dataFormat
-     *        The data format of the schema definition. Currently only <code>AVRO</code> and <code>JSON</code> are
-     *        supported.
+     *        The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     *        <code>PROTOBUF</code> are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataFormat
      */
@@ -182,12 +186,13 @@ public class GetSchemaByDefinitionResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The data format of the schema definition. Currently only <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      * 
      * @param dataFormat
-     *        The data format of the schema definition. Currently only <code>AVRO</code> and <code>JSON</code> are
-     *        supported.
+     *        The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     *        <code>PROTOBUF</code> are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataFormat
      */

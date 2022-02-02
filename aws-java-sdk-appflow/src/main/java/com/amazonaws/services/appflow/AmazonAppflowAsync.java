@@ -217,6 +217,39 @@ public interface AmazonAppflowAsync extends AmazonAppflow {
 
     /**
      * <p>
+     * Describes the given custom connector registered in your Amazon Web Services account. This API can be used for
+     * custom connectors that are registered in your account and also for Amazon authored connectors.
+     * </p>
+     * 
+     * @param describeConnectorRequest
+     * @return A Java Future containing the result of the DescribeConnector operation returned by the service.
+     * @sample AmazonAppflowAsync.DescribeConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DescribeConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeConnectorResult> describeConnectorAsync(DescribeConnectorRequest describeConnectorRequest);
+
+    /**
+     * <p>
+     * Describes the given custom connector registered in your Amazon Web Services account. This API can be used for
+     * custom connectors that are registered in your account and also for Amazon authored connectors.
+     * </p>
+     * 
+     * @param describeConnectorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeConnector operation returned by the service.
+     * @sample AmazonAppflowAsyncHandler.DescribeConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DescribeConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeConnectorResult> describeConnectorAsync(DescribeConnectorRequest describeConnectorRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeConnectorRequest, DescribeConnectorResult> asyncHandler);
+
+    /**
+     * <p>
      * Provides details regarding the entity used with the connector, with a description of the data model for each
      * entity.
      * </p>
@@ -431,6 +464,39 @@ public interface AmazonAppflowAsync extends AmazonAppflow {
 
     /**
      * <p>
+     * Returns the list of all registered custom connectors in your Amazon Web Services account. This API lists only
+     * custom connectors registered in this account, not the Amazon Web Services authored connectors.
+     * </p>
+     * 
+     * @param listConnectorsRequest
+     * @return A Java Future containing the result of the ListConnectors operation returned by the service.
+     * @sample AmazonAppflowAsync.ListConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/ListConnectors" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListConnectorsResult> listConnectorsAsync(ListConnectorsRequest listConnectorsRequest);
+
+    /**
+     * <p>
+     * Returns the list of all registered custom connectors in your Amazon Web Services account. This API lists only
+     * custom connectors registered in this account, not the Amazon Web Services authored connectors.
+     * </p>
+     * 
+     * @param listConnectorsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListConnectors operation returned by the service.
+     * @sample AmazonAppflowAsyncHandler.ListConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/ListConnectors" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListConnectorsResult> listConnectorsAsync(ListConnectorsRequest listConnectorsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListConnectorsRequest, ListConnectorsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists all of the flows associated with your account.
      * </p>
      * 
@@ -490,6 +556,39 @@ public interface AmazonAppflowAsync extends AmazonAppflow {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Registers a new connector with your Amazon Web Services account. Before you can register the connector, you must
+     * deploy lambda in your account.
+     * </p>
+     * 
+     * @param registerConnectorRequest
+     * @return A Java Future containing the result of the RegisterConnector operation returned by the service.
+     * @sample AmazonAppflowAsync.RegisterConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/RegisterConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterConnectorResult> registerConnectorAsync(RegisterConnectorRequest registerConnectorRequest);
+
+    /**
+     * <p>
+     * Registers a new connector with your Amazon Web Services account. Before you can register the connector, you must
+     * deploy lambda in your account.
+     * </p>
+     * 
+     * @param registerConnectorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RegisterConnector operation returned by the service.
+     * @sample AmazonAppflowAsyncHandler.RegisterConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/RegisterConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterConnectorResult> registerConnectorAsync(RegisterConnectorRequest registerConnectorRequest,
+            com.amazonaws.handlers.AsyncHandler<RegisterConnectorRequest, RegisterConnectorResult> asyncHandler);
 
     /**
      * <p>
@@ -589,6 +688,39 @@ public interface AmazonAppflowAsync extends AmazonAppflow {
      */
     java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest tagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Unregisters the custom connector registered in your account that matches the connectorLabel provided in the
+     * request.
+     * </p>
+     * 
+     * @param unregisterConnectorRequest
+     * @return A Java Future containing the result of the UnregisterConnector operation returned by the service.
+     * @sample AmazonAppflowAsync.UnregisterConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/UnregisterConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UnregisterConnectorResult> unregisterConnectorAsync(UnregisterConnectorRequest unregisterConnectorRequest);
+
+    /**
+     * <p>
+     * Unregisters the custom connector registered in your account that matches the connectorLabel provided in the
+     * request.
+     * </p>
+     * 
+     * @param unregisterConnectorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UnregisterConnector operation returned by the service.
+     * @sample AmazonAppflowAsyncHandler.UnregisterConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/UnregisterConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UnregisterConnectorResult> unregisterConnectorAsync(UnregisterConnectorRequest unregisterConnectorRequest,
+            com.amazonaws.handlers.AsyncHandler<UnregisterConnectorRequest, UnregisterConnectorResult> asyncHandler);
 
     /**
      * <p>

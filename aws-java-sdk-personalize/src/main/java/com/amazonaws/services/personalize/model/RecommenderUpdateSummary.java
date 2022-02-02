@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides a summary of the properties of a recommender update. For a complete listing, call the
- * <a>DescribeRecommender</a> API.
+ * Provides a summary of the properties of a recommender update. For a complete listing, call the DescribeRecommender
+ * API operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/RecommenderUpdateSummary"

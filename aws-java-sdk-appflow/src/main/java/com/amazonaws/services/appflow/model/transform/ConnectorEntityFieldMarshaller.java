@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.appflow.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,8 +31,16 @@ public class ConnectorEntityFieldMarshaller {
 
     private static final MarshallingInfo<String> IDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("identifier").build();
+    private static final MarshallingInfo<String> PARENTIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("parentIdentifier").build();
     private static final MarshallingInfo<String> LABEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("label").build();
+    private static final MarshallingInfo<Boolean> ISPRIMARYKEY_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isPrimaryKey").build();
+    private static final MarshallingInfo<String> DEFAULTVALUE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("defaultValue").build();
+    private static final MarshallingInfo<Boolean> ISDEPRECATED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isDeprecated").build();
     private static final MarshallingInfo<StructuredPojo> SUPPORTEDFIELDTYPEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("supportedFieldTypeDetails").build();
     private static final MarshallingInfo<String> DESCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -39,6 +49,8 @@ public class ConnectorEntityFieldMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sourceProperties").build();
     private static final MarshallingInfo<StructuredPojo> DESTINATIONPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("destinationProperties").build();
+    private static final MarshallingInfo<Map> CUSTOMPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("customProperties").build();
 
     private static final ConnectorEntityFieldMarshaller instance = new ConnectorEntityFieldMarshaller();
 
@@ -57,11 +69,16 @@ public class ConnectorEntityFieldMarshaller {
 
         try {
             protocolMarshaller.marshall(connectorEntityField.getIdentifier(), IDENTIFIER_BINDING);
+            protocolMarshaller.marshall(connectorEntityField.getParentIdentifier(), PARENTIDENTIFIER_BINDING);
             protocolMarshaller.marshall(connectorEntityField.getLabel(), LABEL_BINDING);
+            protocolMarshaller.marshall(connectorEntityField.getIsPrimaryKey(), ISPRIMARYKEY_BINDING);
+            protocolMarshaller.marshall(connectorEntityField.getDefaultValue(), DEFAULTVALUE_BINDING);
+            protocolMarshaller.marshall(connectorEntityField.getIsDeprecated(), ISDEPRECATED_BINDING);
             protocolMarshaller.marshall(connectorEntityField.getSupportedFieldTypeDetails(), SUPPORTEDFIELDTYPEDETAILS_BINDING);
             protocolMarshaller.marshall(connectorEntityField.getDescription(), DESCRIPTION_BINDING);
             protocolMarshaller.marshall(connectorEntityField.getSourceProperties(), SOURCEPROPERTIES_BINDING);
             protocolMarshaller.marshall(connectorEntityField.getDestinationProperties(), DESTINATIONPROPERTIES_BINDING);
+            protocolMarshaller.marshall(connectorEntityField.getCustomProperties(), CUSTOMPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

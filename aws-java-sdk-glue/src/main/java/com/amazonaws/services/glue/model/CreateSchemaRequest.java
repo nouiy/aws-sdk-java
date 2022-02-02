@@ -42,7 +42,8 @@ public class CreateSchemaRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String schemaName;
     /**
      * <p>
-     * The data format of the schema definition. Currently <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      */
     private String dataFormat;
@@ -230,11 +231,13 @@ public class CreateSchemaRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The data format of the schema definition. Currently <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      * 
      * @param dataFormat
-     *        The data format of the schema definition. Currently <code>AVRO</code> and <code>JSON</code> are supported.
+     *        The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     *        <code>PROTOBUF</code> are supported.
      * @see DataFormat
      */
 
@@ -244,11 +247,12 @@ public class CreateSchemaRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The data format of the schema definition. Currently <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      * 
-     * @return The data format of the schema definition. Currently <code>AVRO</code> and <code>JSON</code> are
-     *         supported.
+     * @return The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     *         <code>PROTOBUF</code> are supported.
      * @see DataFormat
      */
 
@@ -258,11 +262,13 @@ public class CreateSchemaRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The data format of the schema definition. Currently <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      * 
      * @param dataFormat
-     *        The data format of the schema definition. Currently <code>AVRO</code> and <code>JSON</code> are supported.
+     *        The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     *        <code>PROTOBUF</code> are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataFormat
      */
@@ -274,11 +280,13 @@ public class CreateSchemaRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The data format of the schema definition. Currently <code>AVRO</code> and <code>JSON</code> are supported.
+     * The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     * <code>PROTOBUF</code> are supported.
      * </p>
      * 
      * @param dataFormat
-     *        The data format of the schema definition. Currently <code>AVRO</code> and <code>JSON</code> are supported.
+     *        The data format of the schema definition. Currently <code>AVRO</code>, <code>JSON</code> and
+     *        <code>PROTOBUF</code> are supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataFormat
      */

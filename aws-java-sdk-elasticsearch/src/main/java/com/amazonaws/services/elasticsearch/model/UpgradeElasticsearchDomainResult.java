@@ -38,6 +38,8 @@ public class UpgradeElasticsearchDomainResult extends com.amazonaws.AmazonWebSer
      */
     private Boolean performCheckOnly;
 
+    private ChangeProgressDetails changeProgressDetails;
+
     /**
      * @param domainName
      */
@@ -165,6 +167,32 @@ public class UpgradeElasticsearchDomainResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * @param changeProgressDetails
+     */
+
+    public void setChangeProgressDetails(ChangeProgressDetails changeProgressDetails) {
+        this.changeProgressDetails = changeProgressDetails;
+    }
+
+    /**
+     * @return
+     */
+
+    public ChangeProgressDetails getChangeProgressDetails() {
+        return this.changeProgressDetails;
+    }
+
+    /**
+     * @param changeProgressDetails
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpgradeElasticsearchDomainResult withChangeProgressDetails(ChangeProgressDetails changeProgressDetails) {
+        setChangeProgressDetails(changeProgressDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +209,9 @@ public class UpgradeElasticsearchDomainResult extends com.amazonaws.AmazonWebSer
         if (getTargetVersion() != null)
             sb.append("TargetVersion: ").append(getTargetVersion()).append(",");
         if (getPerformCheckOnly() != null)
-            sb.append("PerformCheckOnly: ").append(getPerformCheckOnly());
+            sb.append("PerformCheckOnly: ").append(getPerformCheckOnly()).append(",");
+        if (getChangeProgressDetails() != null)
+            sb.append("ChangeProgressDetails: ").append(getChangeProgressDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +238,10 @@ public class UpgradeElasticsearchDomainResult extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getPerformCheckOnly() != null && other.getPerformCheckOnly().equals(this.getPerformCheckOnly()) == false)
             return false;
+        if (other.getChangeProgressDetails() == null ^ this.getChangeProgressDetails() == null)
+            return false;
+        if (other.getChangeProgressDetails() != null && other.getChangeProgressDetails().equals(this.getChangeProgressDetails()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +253,7 @@ public class UpgradeElasticsearchDomainResult extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getDomainName() == null) ? 0 : getDomainName().hashCode());
         hashCode = prime * hashCode + ((getTargetVersion() == null) ? 0 : getTargetVersion().hashCode());
         hashCode = prime * hashCode + ((getPerformCheckOnly() == null) ? 0 : getPerformCheckOnly().hashCode());
+        hashCode = prime * hashCode + ((getChangeProgressDetails() == null) ? 0 : getChangeProgressDetails().hashCode());
         return hashCode;
     }
 

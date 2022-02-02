@@ -44,6 +44,12 @@ public class DescribeConnectorEntityRequest extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String connectorProfileName;
+    /**
+     * <p>
+     * The version of the API that's used by the connector.
+     * </p>
+     */
+    private String apiVersion;
 
     /**
      * <p>
@@ -191,6 +197,46 @@ public class DescribeConnectorEntityRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * The version of the API that's used by the connector.
+     * </p>
+     * 
+     * @param apiVersion
+     *        The version of the API that's used by the connector.
+     */
+
+    public void setApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the API that's used by the connector.
+     * </p>
+     * 
+     * @return The version of the API that's used by the connector.
+     */
+
+    public String getApiVersion() {
+        return this.apiVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the API that's used by the connector.
+     * </p>
+     * 
+     * @param apiVersion
+     *        The version of the API that's used by the connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeConnectorEntityRequest withApiVersion(String apiVersion) {
+        setApiVersion(apiVersion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -207,7 +253,9 @@ public class DescribeConnectorEntityRequest extends com.amazonaws.AmazonWebServi
         if (getConnectorType() != null)
             sb.append("ConnectorType: ").append(getConnectorType()).append(",");
         if (getConnectorProfileName() != null)
-            sb.append("ConnectorProfileName: ").append(getConnectorProfileName());
+            sb.append("ConnectorProfileName: ").append(getConnectorProfileName()).append(",");
+        if (getApiVersion() != null)
+            sb.append("ApiVersion: ").append(getApiVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -234,6 +282,10 @@ public class DescribeConnectorEntityRequest extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getConnectorProfileName() != null && other.getConnectorProfileName().equals(this.getConnectorProfileName()) == false)
             return false;
+        if (other.getApiVersion() == null ^ this.getApiVersion() == null)
+            return false;
+        if (other.getApiVersion() != null && other.getApiVersion().equals(this.getApiVersion()) == false)
+            return false;
         return true;
     }
 
@@ -245,6 +297,7 @@ public class DescribeConnectorEntityRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getConnectorEntityName() == null) ? 0 : getConnectorEntityName().hashCode());
         hashCode = prime * hashCode + ((getConnectorType() == null) ? 0 : getConnectorType().hashCode());
         hashCode = prime * hashCode + ((getConnectorProfileName() == null) ? 0 : getConnectorProfileName().hashCode());
+        hashCode = prime * hashCode + ((getApiVersion() == null) ? 0 : getApiVersion().hashCode());
         return hashCode;
     }
 

@@ -247,6 +247,37 @@ public interface AWSFISAsync extends AWSFIS {
 
     /**
      * <p>
+     * Gets information about the specified resource type.
+     * </p>
+     * 
+     * @param getTargetResourceTypeRequest
+     * @return A Java Future containing the result of the GetTargetResourceType operation returned by the service.
+     * @sample AWSFISAsync.GetTargetResourceType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/GetTargetResourceType" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetTargetResourceTypeResult> getTargetResourceTypeAsync(GetTargetResourceTypeRequest getTargetResourceTypeRequest);
+
+    /**
+     * <p>
+     * Gets information about the specified resource type.
+     * </p>
+     * 
+     * @param getTargetResourceTypeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTargetResourceType operation returned by the service.
+     * @sample AWSFISAsyncHandler.GetTargetResourceType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/GetTargetResourceType" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetTargetResourceTypeResult> getTargetResourceTypeAsync(GetTargetResourceTypeRequest getTargetResourceTypeRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTargetResourceTypeRequest, GetTargetResourceTypeResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the available FIS actions.
      * </p>
      * 
@@ -368,6 +399,37 @@ public interface AWSFISAsync extends AWSFIS {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the target resource types.
+     * </p>
+     * 
+     * @param listTargetResourceTypesRequest
+     * @return A Java Future containing the result of the ListTargetResourceTypes operation returned by the service.
+     * @sample AWSFISAsync.ListTargetResourceTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/ListTargetResourceTypes" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTargetResourceTypesResult> listTargetResourceTypesAsync(ListTargetResourceTypesRequest listTargetResourceTypesRequest);
+
+    /**
+     * <p>
+     * Lists the target resource types.
+     * </p>
+     * 
+     * @param listTargetResourceTypesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTargetResourceTypes operation returned by the service.
+     * @sample AWSFISAsyncHandler.ListTargetResourceTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/ListTargetResourceTypes" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTargetResourceTypesResult> listTargetResourceTypesAsync(ListTargetResourceTypesRequest listTargetResourceTypesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTargetResourceTypesRequest, ListTargetResourceTypesResult> asyncHandler);
 
     /**
      * <p>

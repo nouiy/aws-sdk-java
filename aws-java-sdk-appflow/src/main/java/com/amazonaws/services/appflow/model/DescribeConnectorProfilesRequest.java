@@ -40,6 +40,13 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
     private String connectorType;
     /**
      * <p>
+     * The name of the connector. The name is unique for each <code>ConnectorRegistration</code> in your Amazon Web
+     * Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * </p>
+     */
+    private String connectorLabel;
+    /**
+     * <p>
      * Specifies the maximum number of items that should be returned in the result set. The default for
      * <code>maxResults</code> is 20 (for all paginated API operations).
      * </p>
@@ -191,6 +198,52 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
+     * The name of the connector. The name is unique for each <code>ConnectorRegistration</code> in your Amazon Web
+     * Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * </p>
+     * 
+     * @param connectorLabel
+     *        The name of the connector. The name is unique for each <code>ConnectorRegistration</code> in your Amazon
+     *        Web Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     */
+
+    public void setConnectorLabel(String connectorLabel) {
+        this.connectorLabel = connectorLabel;
+    }
+
+    /**
+     * <p>
+     * The name of the connector. The name is unique for each <code>ConnectorRegistration</code> in your Amazon Web
+     * Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * </p>
+     * 
+     * @return The name of the connector. The name is unique for each <code>ConnectorRegistration</code> in your Amazon
+     *         Web Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     */
+
+    public String getConnectorLabel() {
+        return this.connectorLabel;
+    }
+
+    /**
+     * <p>
+     * The name of the connector. The name is unique for each <code>ConnectorRegistration</code> in your Amazon Web
+     * Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * </p>
+     * 
+     * @param connectorLabel
+     *        The name of the connector. The name is unique for each <code>ConnectorRegistration</code> in your Amazon
+     *        Web Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeConnectorProfilesRequest withConnectorLabel(String connectorLabel) {
+        setConnectorLabel(connectorLabel);
+        return this;
+    }
+
+    /**
+     * <p>
      * Specifies the maximum number of items that should be returned in the result set. The default for
      * <code>maxResults</code> is 20 (for all paginated API operations).
      * </p>
@@ -291,6 +344,8 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
             sb.append("ConnectorProfileNames: ").append(getConnectorProfileNames()).append(",");
         if (getConnectorType() != null)
             sb.append("ConnectorType: ").append(getConnectorType()).append(",");
+        if (getConnectorLabel() != null)
+            sb.append("ConnectorLabel: ").append(getConnectorLabel()).append(",");
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
@@ -317,6 +372,10 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getConnectorType() != null && other.getConnectorType().equals(this.getConnectorType()) == false)
             return false;
+        if (other.getConnectorLabel() == null ^ this.getConnectorLabel() == null)
+            return false;
+        if (other.getConnectorLabel() != null && other.getConnectorLabel().equals(this.getConnectorLabel()) == false)
+            return false;
         if (other.getMaxResults() == null ^ this.getMaxResults() == null)
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
@@ -335,6 +394,7 @@ public class DescribeConnectorProfilesRequest extends com.amazonaws.AmazonWebSer
 
         hashCode = prime * hashCode + ((getConnectorProfileNames() == null) ? 0 : getConnectorProfileNames().hashCode());
         hashCode = prime * hashCode + ((getConnectorType() == null) ? 0 : getConnectorType().hashCode());
+        hashCode = prime * hashCode + ((getConnectorLabel() == null) ? 0 : getConnectorLabel().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;

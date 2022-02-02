@@ -47,6 +47,30 @@ public class FieldTypeDetails implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private java.util.List<String> supportedValues;
+    /**
+     * <p>
+     * The regular expression pattern for the field name.
+     * </p>
+     */
+    private String valueRegexPattern;
+    /**
+     * <p>
+     * The date format that the field supports.
+     * </p>
+     */
+    private String supportedDateFormat;
+    /**
+     * <p>
+     * The range of values this field can hold.
+     * </p>
+     */
+    private Range fieldValueRange;
+    /**
+     * <p>
+     * This is the allowable length range for this field's value.
+     * </p>
+     */
+    private Range fieldLengthRange;
 
     /**
      * <p>
@@ -265,6 +289,166 @@ public class FieldTypeDetails implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The regular expression pattern for the field name.
+     * </p>
+     * 
+     * @param valueRegexPattern
+     *        The regular expression pattern for the field name.
+     */
+
+    public void setValueRegexPattern(String valueRegexPattern) {
+        this.valueRegexPattern = valueRegexPattern;
+    }
+
+    /**
+     * <p>
+     * The regular expression pattern for the field name.
+     * </p>
+     * 
+     * @return The regular expression pattern for the field name.
+     */
+
+    public String getValueRegexPattern() {
+        return this.valueRegexPattern;
+    }
+
+    /**
+     * <p>
+     * The regular expression pattern for the field name.
+     * </p>
+     * 
+     * @param valueRegexPattern
+     *        The regular expression pattern for the field name.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FieldTypeDetails withValueRegexPattern(String valueRegexPattern) {
+        setValueRegexPattern(valueRegexPattern);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date format that the field supports.
+     * </p>
+     * 
+     * @param supportedDateFormat
+     *        The date format that the field supports.
+     */
+
+    public void setSupportedDateFormat(String supportedDateFormat) {
+        this.supportedDateFormat = supportedDateFormat;
+    }
+
+    /**
+     * <p>
+     * The date format that the field supports.
+     * </p>
+     * 
+     * @return The date format that the field supports.
+     */
+
+    public String getSupportedDateFormat() {
+        return this.supportedDateFormat;
+    }
+
+    /**
+     * <p>
+     * The date format that the field supports.
+     * </p>
+     * 
+     * @param supportedDateFormat
+     *        The date format that the field supports.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FieldTypeDetails withSupportedDateFormat(String supportedDateFormat) {
+        setSupportedDateFormat(supportedDateFormat);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The range of values this field can hold.
+     * </p>
+     * 
+     * @param fieldValueRange
+     *        The range of values this field can hold.
+     */
+
+    public void setFieldValueRange(Range fieldValueRange) {
+        this.fieldValueRange = fieldValueRange;
+    }
+
+    /**
+     * <p>
+     * The range of values this field can hold.
+     * </p>
+     * 
+     * @return The range of values this field can hold.
+     */
+
+    public Range getFieldValueRange() {
+        return this.fieldValueRange;
+    }
+
+    /**
+     * <p>
+     * The range of values this field can hold.
+     * </p>
+     * 
+     * @param fieldValueRange
+     *        The range of values this field can hold.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FieldTypeDetails withFieldValueRange(Range fieldValueRange) {
+        setFieldValueRange(fieldValueRange);
+        return this;
+    }
+
+    /**
+     * <p>
+     * This is the allowable length range for this field's value.
+     * </p>
+     * 
+     * @param fieldLengthRange
+     *        This is the allowable length range for this field's value.
+     */
+
+    public void setFieldLengthRange(Range fieldLengthRange) {
+        this.fieldLengthRange = fieldLengthRange;
+    }
+
+    /**
+     * <p>
+     * This is the allowable length range for this field's value.
+     * </p>
+     * 
+     * @return This is the allowable length range for this field's value.
+     */
+
+    public Range getFieldLengthRange() {
+        return this.fieldLengthRange;
+    }
+
+    /**
+     * <p>
+     * This is the allowable length range for this field's value.
+     * </p>
+     * 
+     * @param fieldLengthRange
+     *        This is the allowable length range for this field's value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FieldTypeDetails withFieldLengthRange(Range fieldLengthRange) {
+        setFieldLengthRange(fieldLengthRange);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -281,7 +465,15 @@ public class FieldTypeDetails implements Serializable, Cloneable, StructuredPojo
         if (getFilterOperators() != null)
             sb.append("FilterOperators: ").append(getFilterOperators()).append(",");
         if (getSupportedValues() != null)
-            sb.append("SupportedValues: ").append(getSupportedValues());
+            sb.append("SupportedValues: ").append(getSupportedValues()).append(",");
+        if (getValueRegexPattern() != null)
+            sb.append("ValueRegexPattern: ").append(getValueRegexPattern()).append(",");
+        if (getSupportedDateFormat() != null)
+            sb.append("SupportedDateFormat: ").append(getSupportedDateFormat()).append(",");
+        if (getFieldValueRange() != null)
+            sb.append("FieldValueRange: ").append(getFieldValueRange()).append(",");
+        if (getFieldLengthRange() != null)
+            sb.append("FieldLengthRange: ").append(getFieldLengthRange());
         sb.append("}");
         return sb.toString();
     }
@@ -308,6 +500,22 @@ public class FieldTypeDetails implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getSupportedValues() != null && other.getSupportedValues().equals(this.getSupportedValues()) == false)
             return false;
+        if (other.getValueRegexPattern() == null ^ this.getValueRegexPattern() == null)
+            return false;
+        if (other.getValueRegexPattern() != null && other.getValueRegexPattern().equals(this.getValueRegexPattern()) == false)
+            return false;
+        if (other.getSupportedDateFormat() == null ^ this.getSupportedDateFormat() == null)
+            return false;
+        if (other.getSupportedDateFormat() != null && other.getSupportedDateFormat().equals(this.getSupportedDateFormat()) == false)
+            return false;
+        if (other.getFieldValueRange() == null ^ this.getFieldValueRange() == null)
+            return false;
+        if (other.getFieldValueRange() != null && other.getFieldValueRange().equals(this.getFieldValueRange()) == false)
+            return false;
+        if (other.getFieldLengthRange() == null ^ this.getFieldLengthRange() == null)
+            return false;
+        if (other.getFieldLengthRange() != null && other.getFieldLengthRange().equals(this.getFieldLengthRange()) == false)
+            return false;
         return true;
     }
 
@@ -319,6 +527,10 @@ public class FieldTypeDetails implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getFieldType() == null) ? 0 : getFieldType().hashCode());
         hashCode = prime * hashCode + ((getFilterOperators() == null) ? 0 : getFilterOperators().hashCode());
         hashCode = prime * hashCode + ((getSupportedValues() == null) ? 0 : getSupportedValues().hashCode());
+        hashCode = prime * hashCode + ((getValueRegexPattern() == null) ? 0 : getValueRegexPattern().hashCode());
+        hashCode = prime * hashCode + ((getSupportedDateFormat() == null) ? 0 : getSupportedDateFormat().hashCode());
+        hashCode = prime * hashCode + ((getFieldValueRange() == null) ? 0 : getFieldValueRange().hashCode());
+        hashCode = prime * hashCode + ((getFieldLengthRange() == null) ? 0 : getFieldLengthRange().hashCode());
         return hashCode;
     }
 

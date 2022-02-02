@@ -241,6 +241,39 @@ public class AWSFISAsyncClient extends AWSFISClient implements AWSFISAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetTargetResourceTypeResult> getTargetResourceTypeAsync(GetTargetResourceTypeRequest request) {
+
+        return getTargetResourceTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTargetResourceTypeResult> getTargetResourceTypeAsync(final GetTargetResourceTypeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTargetResourceTypeRequest, GetTargetResourceTypeResult> asyncHandler) {
+        final GetTargetResourceTypeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTargetResourceTypeResult>() {
+            @Override
+            public GetTargetResourceTypeResult call() throws Exception {
+                GetTargetResourceTypeResult result = null;
+
+                try {
+                    result = executeGetTargetResourceType(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListActionsResult> listActionsAsync(ListActionsRequest request) {
 
         return listActionsAsync(request, null);
@@ -357,6 +390,39 @@ public class AWSFISAsyncClient extends AWSFISClient implements AWSFISAsync {
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTargetResourceTypesResult> listTargetResourceTypesAsync(ListTargetResourceTypesRequest request) {
+
+        return listTargetResourceTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTargetResourceTypesResult> listTargetResourceTypesAsync(final ListTargetResourceTypesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTargetResourceTypesRequest, ListTargetResourceTypesResult> asyncHandler) {
+        final ListTargetResourceTypesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTargetResourceTypesResult>() {
+            @Override
+            public ListTargetResourceTypesResult call() throws Exception {
+                ListTargetResourceTypesResult result = null;
+
+                try {
+                    result = executeListTargetResourceTypes(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

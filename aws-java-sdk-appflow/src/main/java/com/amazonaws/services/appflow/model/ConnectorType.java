@@ -41,7 +41,8 @@ public enum ConnectorType {
     Upsolver("Upsolver"),
     Honeycode("Honeycode"),
     CustomerProfiles("CustomerProfiles"),
-    SAPOData("SAPOData");
+    SAPOData("SAPOData"),
+    CustomConnector("CustomConnector");
 
     private String value;
 

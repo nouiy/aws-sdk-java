@@ -413,6 +413,25 @@ public interface AmazonComprehend {
 
     /**
      * <p>
+     * Deletes a resource-based policy that is attached to a custom model.
+     * </p>
+     * 
+     * @param deleteResourcePolicyRequest
+     * @return Result of the DeleteResourcePolicy operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.DeleteResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DeleteResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest deleteResourcePolicyRequest);
+
+    /**
+     * <p>
      * Gets the properties associated with a document classification job. Use this operation to get the status of a
      * classification job.
      * </p>
@@ -609,6 +628,26 @@ public interface AmazonComprehend {
 
     /**
      * <p>
+     * Gets the details of a resource-based policy that is attached to a custom model, including the JSON body of the
+     * policy.
+     * </p>
+     * 
+     * @param describeResourcePolicyRequest
+     * @return Result of the DescribeResourcePolicy operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.DescribeResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/DescribeResourcePolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeResourcePolicyResult describeResourcePolicy(DescribeResourcePolicyRequest describeResourcePolicyRequest);
+
+    /**
+     * <p>
      * Gets the properties associated with a sentiment detection job. Use this operation to get the status of a
      * detection job.
      * </p>
@@ -792,6 +831,48 @@ public interface AmazonComprehend {
      *      Documentation</a>
      */
     DetectSyntaxResult detectSyntax(DetectSyntaxRequest detectSyntaxRequest);
+
+    /**
+     * <p>
+     * Creates a new custom model that replicates a source custom model that you import. The source model can be in your
+     * AWS account or another one.
+     * </p>
+     * <p>
+     * If the source model is in another AWS account, then it must have a resource-based policy that authorizes you to
+     * import it.
+     * </p>
+     * <p>
+     * The source model must be in the same AWS region that you're using when you import. You can't import a model
+     * that's in a different region.
+     * </p>
+     * 
+     * @param importModelRequest
+     * @return Result of the ImportModel operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws ResourceInUseException
+     *         The specified resource name is already in use. Use a different name and try your request again.
+     * @throws ResourceUnavailableException
+     *         The specified resource is not available. Check the resource and try your request again.
+     * @throws TooManyTagsException
+     *         The request contains more tags than can be associated with a resource (50 tags per resource). The maximum
+     *         number of tags includes both existing tags and those included in your current request.
+     * @throws TooManyRequestsException
+     *         The number of requests exceeds the limit. Resubmit your request later.
+     * @throws ResourceLimitExceededException
+     *         The maximum number of resources per account has been exceeded. Review the resources, and then try your
+     *         request again.
+     * @throws KmsKeyValidationException
+     *         The KMS customer managed key (CMK) entered cannot be validated. Verify the key and re-enter it.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.ImportModel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/ImportModel" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ImportModelResult importModel(ImportModelRequest importModelRequest);
 
     /**
      * <p>
@@ -1083,6 +1164,26 @@ public interface AmazonComprehend {
      *      target="_top">AWS API Documentation</a>
      */
     ListTopicsDetectionJobsResult listTopicsDetectionJobs(ListTopicsDetectionJobsRequest listTopicsDetectionJobsRequest);
+
+    /**
+     * <p>
+     * Attaches a resource-based policy to a custom model. You can use this policy to authorize an entity in another AWS
+     * account to import the custom model, which replicates it in Amazon Comprehend in their account.
+     * </p>
+     * 
+     * @param putResourcePolicyRequest
+     * @return Result of the PutResourcePolicy operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws ResourceNotFoundException
+     *         The specified resource ARN was not found. Check the ARN and try your request again.
+     * @throws InternalServerException
+     *         An internal server error occurred. Retry your request.
+     * @sample AmazonComprehend.PutResourcePolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/comprehend-2017-11-27/PutResourcePolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest putResourcePolicyRequest);
 
     /**
      * <p>

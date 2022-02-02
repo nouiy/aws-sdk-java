@@ -127,6 +127,8 @@ public class ConnectorProfileCredentials implements Serializable, Cloneable, Str
 
     private SAPODataConnectorProfileCredentials sAPOData;
 
+    private CustomConnectorProfileCredentials customConnector;
+
     /**
      * <p>
      * The connector-specific credentials required when using Amplitude.
@@ -794,6 +796,32 @@ public class ConnectorProfileCredentials implements Serializable, Cloneable, Str
     }
 
     /**
+     * @param customConnector
+     */
+
+    public void setCustomConnector(CustomConnectorProfileCredentials customConnector) {
+        this.customConnector = customConnector;
+    }
+
+    /**
+     * @return
+     */
+
+    public CustomConnectorProfileCredentials getCustomConnector() {
+        return this.customConnector;
+    }
+
+    /**
+     * @param customConnector
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorProfileCredentials withCustomConnector(CustomConnectorProfileCredentials customConnector) {
+        setCustomConnector(customConnector);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -838,7 +866,9 @@ public class ConnectorProfileCredentials implements Serializable, Cloneable, Str
         if (getZendesk() != null)
             sb.append("Zendesk: ").append(getZendesk()).append(",");
         if (getSAPOData() != null)
-            sb.append("SAPOData: ").append(getSAPOData());
+            sb.append("SAPOData: ").append(getSAPOData()).append(",");
+        if (getCustomConnector() != null)
+            sb.append("CustomConnector: ").append(getCustomConnector());
         sb.append("}");
         return sb.toString();
     }
@@ -921,6 +951,10 @@ public class ConnectorProfileCredentials implements Serializable, Cloneable, Str
             return false;
         if (other.getSAPOData() != null && other.getSAPOData().equals(this.getSAPOData()) == false)
             return false;
+        if (other.getCustomConnector() == null ^ this.getCustomConnector() == null)
+            return false;
+        if (other.getCustomConnector() != null && other.getCustomConnector().equals(this.getCustomConnector()) == false)
+            return false;
         return true;
     }
 
@@ -946,6 +980,7 @@ public class ConnectorProfileCredentials implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getVeeva() == null) ? 0 : getVeeva().hashCode());
         hashCode = prime * hashCode + ((getZendesk() == null) ? 0 : getZendesk().hashCode());
         hashCode = prime * hashCode + ((getSAPOData() == null) ? 0 : getSAPOData().hashCode());
+        hashCode = prime * hashCode + ((getCustomConnector() == null) ? 0 : getCustomConnector().hashCode());
         return hashCode;
     }
 

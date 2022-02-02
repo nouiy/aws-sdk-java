@@ -52,6 +52,12 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
     private String connectorType;
     /**
      * <p>
+     * The label for the connector profile being created.
+     * </p>
+     */
+    private String connectorLabel;
+    /**
+     * <p>
      * Indicates the connection mode and if it is public or private.
      * </p>
      */
@@ -229,6 +235,46 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
 
     public ConnectorProfile withConnectorType(ConnectorType connectorType) {
         this.connectorType = connectorType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The label for the connector profile being created.
+     * </p>
+     * 
+     * @param connectorLabel
+     *        The label for the connector profile being created.
+     */
+
+    public void setConnectorLabel(String connectorLabel) {
+        this.connectorLabel = connectorLabel;
+    }
+
+    /**
+     * <p>
+     * The label for the connector profile being created.
+     * </p>
+     * 
+     * @return The label for the connector profile being created.
+     */
+
+    public String getConnectorLabel() {
+        return this.connectorLabel;
+    }
+
+    /**
+     * <p>
+     * The label for the connector profile being created.
+     * </p>
+     * 
+     * @param connectorLabel
+     *        The label for the connector profile being created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConnectorProfile withConnectorLabel(String connectorLabel) {
+        setConnectorLabel(connectorLabel);
         return this;
     }
 
@@ -509,6 +555,8 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
             sb.append("ConnectorProfileName: ").append(getConnectorProfileName()).append(",");
         if (getConnectorType() != null)
             sb.append("ConnectorType: ").append(getConnectorType()).append(",");
+        if (getConnectorLabel() != null)
+            sb.append("ConnectorLabel: ").append(getConnectorLabel()).append(",");
         if (getConnectionMode() != null)
             sb.append("ConnectionMode: ").append(getConnectionMode()).append(",");
         if (getCredentialsArn() != null)
@@ -547,6 +595,10 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getConnectorType() != null && other.getConnectorType().equals(this.getConnectorType()) == false)
             return false;
+        if (other.getConnectorLabel() == null ^ this.getConnectorLabel() == null)
+            return false;
+        if (other.getConnectorLabel() != null && other.getConnectorLabel().equals(this.getConnectorLabel()) == false)
+            return false;
         if (other.getConnectionMode() == null ^ this.getConnectionMode() == null)
             return false;
         if (other.getConnectionMode() != null && other.getConnectionMode().equals(this.getConnectionMode()) == false)
@@ -583,6 +635,7 @@ public class ConnectorProfile implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getConnectorProfileArn() == null) ? 0 : getConnectorProfileArn().hashCode());
         hashCode = prime * hashCode + ((getConnectorProfileName() == null) ? 0 : getConnectorProfileName().hashCode());
         hashCode = prime * hashCode + ((getConnectorType() == null) ? 0 : getConnectorType().hashCode());
+        hashCode = prime * hashCode + ((getConnectorLabel() == null) ? 0 : getConnectorLabel().hashCode());
         hashCode = prime * hashCode + ((getConnectionMode() == null) ? 0 : getConnectionMode().hashCode());
         hashCode = prime * hashCode + ((getCredentialsArn() == null) ? 0 : getCredentialsArn().hashCode());
         hashCode = prime * hashCode + ((getConnectorProfileProperties() == null) ? 0 : getConnectorProfileProperties().hashCode());

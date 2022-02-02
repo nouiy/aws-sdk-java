@@ -439,6 +439,11 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
      * You can only add steps to a cluster that is in one of the following states: STARTING, BOOTSTRAPPING, RUNNING, or
      * WAITING.
      * </p>
+     * <note>
+     * <p>
+     * The string values passed into <code>HadoopJarStep</code> object cannot exceed a total of 10240 characters.
+     * </p>
+     * </note>
      * 
      * @param addJobFlowStepsRequest
      *        The input argument to the <a>AddJobFlowSteps</a> operation.
@@ -2615,6 +2620,13 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
     }
 
     /**
+     * <note>
+     * <p>
+     * Auto-termination is supported in Amazon EMR versions 5.30.0 and 6.1.0 and later. For more information, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-auto-termination-policy.html">Using an
+     * auto-termination policy</a>.
+     * </p>
+     * </note>
      * <p>
      * Creates or updates an auto-termination policy for an Amazon EMR cluster. An auto-termination policy defines the
      * amount of idle time in seconds after which a cluster automatically terminates. For alternative cluster
@@ -3204,6 +3216,14 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
     }
 
     /**
+     * <important>
+     * <p>
+     * The SetVisibleToAllUsers parameter is no longer supported. Your cluster may be visible to all users in your
+     * account. To restrict cluster access using an IAM policy, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html">Identity and Access
+     * Management for EMR</a>.
+     * </p>
+     * </important>
      * <p>
      * Sets the <a>Cluster$VisibleToAllUsers</a> value for an EMR cluster. When <code>true</code>, IAM principals in the
      * Amazon Web Services account can perform EMR cluster actions that their IAM policies allow. When

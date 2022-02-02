@@ -33,6 +33,8 @@ public class ConnectorProfileMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorProfileName").build();
     private static final MarshallingInfo<String> CONNECTORTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorType").build();
+    private static final MarshallingInfo<String> CONNECTORLABEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorLabel").build();
     private static final MarshallingInfo<String> CONNECTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectionMode").build();
     private static final MarshallingInfo<String> CREDENTIALSARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -65,6 +67,7 @@ public class ConnectorProfileMarshaller {
             protocolMarshaller.marshall(connectorProfile.getConnectorProfileArn(), CONNECTORPROFILEARN_BINDING);
             protocolMarshaller.marshall(connectorProfile.getConnectorProfileName(), CONNECTORPROFILENAME_BINDING);
             protocolMarshaller.marshall(connectorProfile.getConnectorType(), CONNECTORTYPE_BINDING);
+            protocolMarshaller.marshall(connectorProfile.getConnectorLabel(), CONNECTORLABEL_BINDING);
             protocolMarshaller.marshall(connectorProfile.getConnectionMode(), CONNECTIONMODE_BINDING);
             protocolMarshaller.marshall(connectorProfile.getCredentialsArn(), CREDENTIALSARN_BINDING);
             protocolMarshaller.marshall(connectorProfile.getConnectorProfileProperties(), CONNECTORPROFILEPROPERTIES_BINDING);

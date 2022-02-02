@@ -117,6 +117,10 @@ public class ConnectorProfileCredentialsJsonUnmarshaller implements Unmarshaller
                     context.nextToken();
                     connectorProfileCredentials.setSAPOData(SAPODataConnectorProfileCredentialsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("CustomConnector", targetDepth)) {
+                    context.nextToken();
+                    connectorProfileCredentials.setCustomConnector(CustomConnectorProfileCredentialsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

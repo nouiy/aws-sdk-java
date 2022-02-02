@@ -80,7 +80,7 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
     private Integer instanceRunningCount;
     /**
      * <p>
-     * State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     * State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * </p>
      */
     private String state;
@@ -141,7 +141,7 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
      * @param instanceRunningCount
      *        Actual count of running instances.
      * @param state
-     *        State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     *        State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * @param creationDateTime
      *        The date/time the instance group was created.
      */
@@ -168,7 +168,7 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
      * @param instanceRunningCount
      *        Actual count of running instances.
      * @param state
-     *        State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     *        State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * @param creationDateTime
      *        The date/time the instance group was created.
      */
@@ -582,11 +582,11 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     * State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * </p>
      * 
      * @param state
-     *        State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     *        State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * @see InstanceGroupState
      */
 
@@ -596,10 +596,10 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     * State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * </p>
      * 
-     * @return State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     * @return State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * @see InstanceGroupState
      */
 
@@ -609,11 +609,11 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     * State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * </p>
      * 
      * @param state
-     *        State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     *        State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceGroupState
      */
@@ -625,11 +625,11 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     * State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * </p>
      * 
      * @param state
-     *        State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     *        State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * @see InstanceGroupState
      */
 
@@ -639,11 +639,11 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     * State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * </p>
      * 
      * @param state
-     *        State of instance group. The following values are deprecated: STARTING, TERMINATED, and FAILED.
+     *        State of instance group. The following values are no longer supported: STARTING, TERMINATED, and FAILED.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceGroupState
      */

@@ -64,6 +64,10 @@ public class DestinationFieldPropertiesJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     destinationFieldProperties.setIsUpdatable(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("isDefaultedOnCreate", targetDepth)) {
+                    context.nextToken();
+                    destinationFieldProperties.setIsDefaultedOnCreate(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
                 if (context.testExpression("supportedWriteOperations", targetDepth)) {
                     context.nextToken();
                     destinationFieldProperties.setSupportedWriteOperations(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

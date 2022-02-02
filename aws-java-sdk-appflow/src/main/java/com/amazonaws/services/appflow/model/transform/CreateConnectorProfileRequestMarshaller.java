@@ -33,6 +33,8 @@ public class CreateConnectorProfileRequestMarshaller {
             .marshallLocationName("kmsArn").build();
     private static final MarshallingInfo<String> CONNECTORTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorType").build();
+    private static final MarshallingInfo<String> CONNECTORLABEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorLabel").build();
     private static final MarshallingInfo<String> CONNECTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectionMode").build();
     private static final MarshallingInfo<StructuredPojo> CONNECTORPROFILECONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -57,6 +59,7 @@ public class CreateConnectorProfileRequestMarshaller {
             protocolMarshaller.marshall(createConnectorProfileRequest.getConnectorProfileName(), CONNECTORPROFILENAME_BINDING);
             protocolMarshaller.marshall(createConnectorProfileRequest.getKmsArn(), KMSARN_BINDING);
             protocolMarshaller.marshall(createConnectorProfileRequest.getConnectorType(), CONNECTORTYPE_BINDING);
+            protocolMarshaller.marshall(createConnectorProfileRequest.getConnectorLabel(), CONNECTORLABEL_BINDING);
             protocolMarshaller.marshall(createConnectorProfileRequest.getConnectionMode(), CONNECTIONMODE_BINDING);
             protocolMarshaller.marshall(createConnectorProfileRequest.getConnectorProfileConfig(), CONNECTORPROFILECONFIG_BINDING);
         } catch (Exception e) {

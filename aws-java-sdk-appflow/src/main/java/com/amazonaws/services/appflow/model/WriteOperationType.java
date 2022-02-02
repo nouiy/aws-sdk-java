@@ -25,7 +25,8 @@ public enum WriteOperationType {
 
     INSERT("INSERT"),
     UPSERT("UPSERT"),
-    UPDATE("UPDATE");
+    UPDATE("UPDATE"),
+    DELETE("DELETE");
 
     private String value;
 

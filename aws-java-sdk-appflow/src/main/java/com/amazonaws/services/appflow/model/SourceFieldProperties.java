@@ -40,6 +40,12 @@ public class SourceFieldProperties implements Serializable, Cloneable, Structure
      * </p>
      */
     private Boolean isQueryable;
+    /**
+     * <p>
+     * Indicates if this timestamp field can be used for incremental queries.
+     * </p>
+     */
+    private Boolean isTimestampFieldForIncrementalQueries;
 
     /**
      * <p>
@@ -146,6 +152,58 @@ public class SourceFieldProperties implements Serializable, Cloneable, Structure
     }
 
     /**
+     * <p>
+     * Indicates if this timestamp field can be used for incremental queries.
+     * </p>
+     * 
+     * @param isTimestampFieldForIncrementalQueries
+     *        Indicates if this timestamp field can be used for incremental queries.
+     */
+
+    public void setIsTimestampFieldForIncrementalQueries(Boolean isTimestampFieldForIncrementalQueries) {
+        this.isTimestampFieldForIncrementalQueries = isTimestampFieldForIncrementalQueries;
+    }
+
+    /**
+     * <p>
+     * Indicates if this timestamp field can be used for incremental queries.
+     * </p>
+     * 
+     * @return Indicates if this timestamp field can be used for incremental queries.
+     */
+
+    public Boolean getIsTimestampFieldForIncrementalQueries() {
+        return this.isTimestampFieldForIncrementalQueries;
+    }
+
+    /**
+     * <p>
+     * Indicates if this timestamp field can be used for incremental queries.
+     * </p>
+     * 
+     * @param isTimestampFieldForIncrementalQueries
+     *        Indicates if this timestamp field can be used for incremental queries.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SourceFieldProperties withIsTimestampFieldForIncrementalQueries(Boolean isTimestampFieldForIncrementalQueries) {
+        setIsTimestampFieldForIncrementalQueries(isTimestampFieldForIncrementalQueries);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates if this timestamp field can be used for incremental queries.
+     * </p>
+     * 
+     * @return Indicates if this timestamp field can be used for incremental queries.
+     */
+
+    public Boolean isTimestampFieldForIncrementalQueries() {
+        return this.isTimestampFieldForIncrementalQueries;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -160,7 +218,9 @@ public class SourceFieldProperties implements Serializable, Cloneable, Structure
         if (getIsRetrievable() != null)
             sb.append("IsRetrievable: ").append(getIsRetrievable()).append(",");
         if (getIsQueryable() != null)
-            sb.append("IsQueryable: ").append(getIsQueryable());
+            sb.append("IsQueryable: ").append(getIsQueryable()).append(",");
+        if (getIsTimestampFieldForIncrementalQueries() != null)
+            sb.append("IsTimestampFieldForIncrementalQueries: ").append(getIsTimestampFieldForIncrementalQueries());
         sb.append("}");
         return sb.toString();
     }
@@ -183,6 +243,11 @@ public class SourceFieldProperties implements Serializable, Cloneable, Structure
             return false;
         if (other.getIsQueryable() != null && other.getIsQueryable().equals(this.getIsQueryable()) == false)
             return false;
+        if (other.getIsTimestampFieldForIncrementalQueries() == null ^ this.getIsTimestampFieldForIncrementalQueries() == null)
+            return false;
+        if (other.getIsTimestampFieldForIncrementalQueries() != null
+                && other.getIsTimestampFieldForIncrementalQueries().equals(this.getIsTimestampFieldForIncrementalQueries()) == false)
+            return false;
         return true;
     }
 
@@ -193,6 +258,7 @@ public class SourceFieldProperties implements Serializable, Cloneable, Structure
 
         hashCode = prime * hashCode + ((getIsRetrievable() == null) ? 0 : getIsRetrievable().hashCode());
         hashCode = prime * hashCode + ((getIsQueryable() == null) ? 0 : getIsQueryable().hashCode());
+        hashCode = prime * hashCode + ((getIsTimestampFieldForIncrementalQueries() == null) ? 0 : getIsTimestampFieldForIncrementalQueries().hashCode());
         return hashCode;
     }
 

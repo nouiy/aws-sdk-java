@@ -56,6 +56,10 @@ public class SourceFieldPropertiesJsonUnmarshaller implements Unmarshaller<Sourc
                     context.nextToken();
                     sourceFieldProperties.setIsQueryable(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("isTimestampFieldForIncrementalQueries", targetDepth)) {
+                    context.nextToken();
+                    sourceFieldProperties.setIsTimestampFieldForIncrementalQueries(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

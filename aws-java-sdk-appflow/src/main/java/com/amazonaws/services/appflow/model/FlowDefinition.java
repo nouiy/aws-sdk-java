@@ -60,10 +60,22 @@ public class FlowDefinition implements Serializable, Cloneable, StructuredPojo {
     private String sourceConnectorType;
     /**
      * <p>
+     * The label of the source connector in the flow.
+     * </p>
+     */
+    private String sourceConnectorLabel;
+    /**
+     * <p>
      * Specifies the destination connector type, such as Salesforce, Amazon S3, Amplitude, and so on.
      * </p>
      */
     private String destinationConnectorType;
+    /**
+     * <p>
+     * The label of the destination connector in the flow.
+     * </p>
+     */
+    private String destinationConnectorLabel;
     /**
      * <p>
      * Specifies the type of flow trigger. This can be <code>OnDemand</code>, <code>Scheduled</code>, or
@@ -348,6 +360,46 @@ public class FlowDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The label of the source connector in the flow.
+     * </p>
+     * 
+     * @param sourceConnectorLabel
+     *        The label of the source connector in the flow.
+     */
+
+    public void setSourceConnectorLabel(String sourceConnectorLabel) {
+        this.sourceConnectorLabel = sourceConnectorLabel;
+    }
+
+    /**
+     * <p>
+     * The label of the source connector in the flow.
+     * </p>
+     * 
+     * @return The label of the source connector in the flow.
+     */
+
+    public String getSourceConnectorLabel() {
+        return this.sourceConnectorLabel;
+    }
+
+    /**
+     * <p>
+     * The label of the source connector in the flow.
+     * </p>
+     * 
+     * @param sourceConnectorLabel
+     *        The label of the source connector in the flow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FlowDefinition withSourceConnectorLabel(String sourceConnectorLabel) {
+        setSourceConnectorLabel(sourceConnectorLabel);
+        return this;
+    }
+
+    /**
+     * <p>
      * Specifies the destination connector type, such as Salesforce, Amazon S3, Amplitude, and so on.
      * </p>
      * 
@@ -402,6 +454,46 @@ public class FlowDefinition implements Serializable, Cloneable, StructuredPojo {
 
     public FlowDefinition withDestinationConnectorType(ConnectorType destinationConnectorType) {
         this.destinationConnectorType = destinationConnectorType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The label of the destination connector in the flow.
+     * </p>
+     * 
+     * @param destinationConnectorLabel
+     *        The label of the destination connector in the flow.
+     */
+
+    public void setDestinationConnectorLabel(String destinationConnectorLabel) {
+        this.destinationConnectorLabel = destinationConnectorLabel;
+    }
+
+    /**
+     * <p>
+     * The label of the destination connector in the flow.
+     * </p>
+     * 
+     * @return The label of the destination connector in the flow.
+     */
+
+    public String getDestinationConnectorLabel() {
+        return this.destinationConnectorLabel;
+    }
+
+    /**
+     * <p>
+     * The label of the destination connector in the flow.
+     * </p>
+     * 
+     * @param destinationConnectorLabel
+     *        The label of the destination connector in the flow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FlowDefinition withDestinationConnectorLabel(String destinationConnectorLabel) {
+        setDestinationConnectorLabel(destinationConnectorLabel);
         return this;
     }
 
@@ -762,8 +854,12 @@ public class FlowDefinition implements Serializable, Cloneable, StructuredPojo {
             sb.append("FlowStatus: ").append(getFlowStatus()).append(",");
         if (getSourceConnectorType() != null)
             sb.append("SourceConnectorType: ").append(getSourceConnectorType()).append(",");
+        if (getSourceConnectorLabel() != null)
+            sb.append("SourceConnectorLabel: ").append(getSourceConnectorLabel()).append(",");
         if (getDestinationConnectorType() != null)
             sb.append("DestinationConnectorType: ").append(getDestinationConnectorType()).append(",");
+        if (getDestinationConnectorLabel() != null)
+            sb.append("DestinationConnectorLabel: ").append(getDestinationConnectorLabel()).append(",");
         if (getTriggerType() != null)
             sb.append("TriggerType: ").append(getTriggerType()).append(",");
         if (getCreatedAt() != null)
@@ -812,9 +908,17 @@ public class FlowDefinition implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSourceConnectorType() != null && other.getSourceConnectorType().equals(this.getSourceConnectorType()) == false)
             return false;
+        if (other.getSourceConnectorLabel() == null ^ this.getSourceConnectorLabel() == null)
+            return false;
+        if (other.getSourceConnectorLabel() != null && other.getSourceConnectorLabel().equals(this.getSourceConnectorLabel()) == false)
+            return false;
         if (other.getDestinationConnectorType() == null ^ this.getDestinationConnectorType() == null)
             return false;
         if (other.getDestinationConnectorType() != null && other.getDestinationConnectorType().equals(this.getDestinationConnectorType()) == false)
+            return false;
+        if (other.getDestinationConnectorLabel() == null ^ this.getDestinationConnectorLabel() == null)
+            return false;
+        if (other.getDestinationConnectorLabel() != null && other.getDestinationConnectorLabel().equals(this.getDestinationConnectorLabel()) == false)
             return false;
         if (other.getTriggerType() == null ^ this.getTriggerType() == null)
             return false;
@@ -857,7 +961,9 @@ public class FlowDefinition implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getFlowName() == null) ? 0 : getFlowName().hashCode());
         hashCode = prime * hashCode + ((getFlowStatus() == null) ? 0 : getFlowStatus().hashCode());
         hashCode = prime * hashCode + ((getSourceConnectorType() == null) ? 0 : getSourceConnectorType().hashCode());
+        hashCode = prime * hashCode + ((getSourceConnectorLabel() == null) ? 0 : getSourceConnectorLabel().hashCode());
         hashCode = prime * hashCode + ((getDestinationConnectorType() == null) ? 0 : getDestinationConnectorType().hashCode());
+        hashCode = prime * hashCode + ((getDestinationConnectorLabel() == null) ? 0 : getDestinationConnectorLabel().hashCode());
         hashCode = prime * hashCode + ((getTriggerType() == null) ? 0 : getTriggerType().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedAt() == null) ? 0 : getLastUpdatedAt().hashCode());

@@ -148,7 +148,7 @@ public class DatadogConnectorProfileCredentials implements Serializable, Cloneab
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getApiKey() != null)
-            sb.append("ApiKey: ").append(getApiKey()).append(",");
+            sb.append("ApiKey: ").append("***Sensitive Data Redacted***").append(",");
         if (getApplicationKey() != null)
             sb.append("ApplicationKey: ").append(getApplicationKey());
         sb.append("}");

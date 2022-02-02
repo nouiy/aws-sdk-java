@@ -88,6 +88,12 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
      * </p>
      */
     private ZendeskDestinationProperties zendesk;
+    /**
+     * <p>
+     * The properties that are required to query the custom Connector.
+     * </p>
+     */
+    private CustomConnectorDestinationProperties customConnector;
 
     /**
      * <p>
@@ -490,6 +496,46 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
     }
 
     /**
+     * <p>
+     * The properties that are required to query the custom Connector.
+     * </p>
+     * 
+     * @param customConnector
+     *        The properties that are required to query the custom Connector.
+     */
+
+    public void setCustomConnector(CustomConnectorDestinationProperties customConnector) {
+        this.customConnector = customConnector;
+    }
+
+    /**
+     * <p>
+     * The properties that are required to query the custom Connector.
+     * </p>
+     * 
+     * @return The properties that are required to query the custom Connector.
+     */
+
+    public CustomConnectorDestinationProperties getCustomConnector() {
+        return this.customConnector;
+    }
+
+    /**
+     * <p>
+     * The properties that are required to query the custom Connector.
+     * </p>
+     * 
+     * @param customConnector
+     *        The properties that are required to query the custom Connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationConnectorProperties withCustomConnector(CustomConnectorDestinationProperties customConnector) {
+        setCustomConnector(customConnector);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -520,7 +566,9 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
         if (getCustomerProfiles() != null)
             sb.append("CustomerProfiles: ").append(getCustomerProfiles()).append(",");
         if (getZendesk() != null)
-            sb.append("Zendesk: ").append(getZendesk());
+            sb.append("Zendesk: ").append(getZendesk()).append(",");
+        if (getCustomConnector() != null)
+            sb.append("CustomConnector: ").append(getCustomConnector());
         sb.append("}");
         return sb.toString();
     }
@@ -575,6 +623,10 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
             return false;
         if (other.getZendesk() != null && other.getZendesk().equals(this.getZendesk()) == false)
             return false;
+        if (other.getCustomConnector() == null ^ this.getCustomConnector() == null)
+            return false;
+        if (other.getCustomConnector() != null && other.getCustomConnector().equals(this.getCustomConnector()) == false)
+            return false;
         return true;
     }
 
@@ -593,6 +645,7 @@ public class DestinationConnectorProperties implements Serializable, Cloneable, 
         hashCode = prime * hashCode + ((getHoneycode() == null) ? 0 : getHoneycode().hashCode());
         hashCode = prime * hashCode + ((getCustomerProfiles() == null) ? 0 : getCustomerProfiles().hashCode());
         hashCode = prime * hashCode + ((getZendesk() == null) ? 0 : getZendesk().hashCode());
+        hashCode = prime * hashCode + ((getCustomConnector() == null) ? 0 : getCustomConnector().hashCode());
         return hashCode;
     }
 

@@ -31,7 +31,7 @@ public class VolumeSpecification implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The volume type. Volume types supported are gp2, io1, standard.
+     * The volume type. Volume types supported are gp2, io1, and standard.
      * </p>
      */
     private String volumeType;
@@ -51,11 +51,11 @@ public class VolumeSpecification implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The volume type. Volume types supported are gp2, io1, standard.
+     * The volume type. Volume types supported are gp2, io1, and standard.
      * </p>
      * 
      * @param volumeType
-     *        The volume type. Volume types supported are gp2, io1, standard.
+     *        The volume type. Volume types supported are gp2, io1, and standard.
      */
 
     public void setVolumeType(String volumeType) {
@@ -64,10 +64,10 @@ public class VolumeSpecification implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The volume type. Volume types supported are gp2, io1, standard.
+     * The volume type. Volume types supported are gp2, io1, and standard.
      * </p>
      * 
-     * @return The volume type. Volume types supported are gp2, io1, standard.
+     * @return The volume type. Volume types supported are gp2, io1, and standard.
      */
 
     public String getVolumeType() {
@@ -76,11 +76,11 @@ public class VolumeSpecification implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The volume type. Volume types supported are gp2, io1, standard.
+     * The volume type. Volume types supported are gp2, io1, and standard.
      * </p>
      * 
      * @param volumeType
-     *        The volume type. Volume types supported are gp2, io1, standard.
+     *        The volume type. Volume types supported are gp2, io1, and standard.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

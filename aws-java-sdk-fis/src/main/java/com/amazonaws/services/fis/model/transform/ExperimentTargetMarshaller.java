@@ -39,6 +39,8 @@ public class ExperimentTargetMarshaller {
             .marshallLocationName("filters").build();
     private static final MarshallingInfo<String> SELECTIONMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("selectionMode").build();
+    private static final MarshallingInfo<Map> PARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("parameters").build();
 
     private static final ExperimentTargetMarshaller instance = new ExperimentTargetMarshaller();
 
@@ -61,6 +63,7 @@ public class ExperimentTargetMarshaller {
             protocolMarshaller.marshall(experimentTarget.getResourceTags(), RESOURCETAGS_BINDING);
             protocolMarshaller.marshall(experimentTarget.getFilters(), FILTERS_BINDING);
             protocolMarshaller.marshall(experimentTarget.getSelectionMode(), SELECTIONMODE_BINDING);
+            protocolMarshaller.marshall(experimentTarget.getParameters(), PARAMETERS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

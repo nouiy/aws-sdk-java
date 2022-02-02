@@ -93,6 +93,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
     }
 
     @Override
+    public DeleteResourcePolicyResult deleteResourcePolicy(DeleteResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeDocumentClassificationJobResult describeDocumentClassificationJob(DescribeDocumentClassificationJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -138,6 +143,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
     }
 
     @Override
+    public DescribeResourcePolicyResult describeResourcePolicy(DescribeResourcePolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeSentimentDetectionJobResult describeSentimentDetectionJob(DescribeSentimentDetectionJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -174,6 +184,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
 
     @Override
     public DetectSyntaxResult detectSyntax(DetectSyntaxRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ImportModelResult importModel(ImportModelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -244,6 +259,11 @@ public class AbstractAmazonComprehend implements AmazonComprehend {
 
     @Override
     public ListTopicsDetectionJobsResult listTopicsDetectionJobs(ListTopicsDetectionJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PutResourcePolicyResult putResourcePolicy(PutResourcePolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -31,7 +31,7 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
+     * The resource type. The resource type must be supported for the specified action.
      * </p>
      */
     private String resourceType;
@@ -59,14 +59,20 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
      * </p>
      */
     private String selectionMode;
+    /**
+     * <p>
+     * The resource type parameters.
+     * </p>
+     */
+    private java.util.Map<String, String> parameters;
 
     /**
      * <p>
-     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
+     * The resource type. The resource type must be supported for the specified action.
      * </p>
      * 
      * @param resourceType
-     *        The Amazon Web Services resource type. The resource type must be supported for the specified action.
+     *        The resource type. The resource type must be supported for the specified action.
      */
 
     public void setResourceType(String resourceType) {
@@ -75,10 +81,10 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
+     * The resource type. The resource type must be supported for the specified action.
      * </p>
      * 
-     * @return The Amazon Web Services resource type. The resource type must be supported for the specified action.
+     * @return The resource type. The resource type must be supported for the specified action.
      */
 
     public String getResourceType() {
@@ -87,11 +93,11 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
 
     /**
      * <p>
-     * The Amazon Web Services resource type. The resource type must be supported for the specified action.
+     * The resource type. The resource type must be supported for the specified action.
      * </p>
      * 
      * @param resourceType
-     *        The Amazon Web Services resource type. The resource type must be supported for the specified action.
+     *        The resource type. The resource type must be supported for the specified action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -349,6 +355,74 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * The resource type parameters.
+     * </p>
+     * 
+     * @return The resource type parameters.
+     */
+
+    public java.util.Map<String, String> getParameters() {
+        return parameters;
+    }
+
+    /**
+     * <p>
+     * The resource type parameters.
+     * </p>
+     * 
+     * @param parameters
+     *        The resource type parameters.
+     */
+
+    public void setParameters(java.util.Map<String, String> parameters) {
+        this.parameters = parameters;
+    }
+
+    /**
+     * <p>
+     * The resource type parameters.
+     * </p>
+     * 
+     * @param parameters
+     *        The resource type parameters.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateExperimentTemplateTargetInput withParameters(java.util.Map<String, String> parameters) {
+        setParameters(parameters);
+        return this;
+    }
+
+    /**
+     * Add a single Parameters entry
+     *
+     * @see UpdateExperimentTemplateTargetInput#withParameters
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateExperimentTemplateTargetInput addParametersEntry(String key, String value) {
+        if (null == this.parameters) {
+            this.parameters = new java.util.HashMap<String, String>();
+        }
+        if (this.parameters.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.parameters.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Parameters.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateExperimentTemplateTargetInput clearParametersEntries() {
+        this.parameters = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -369,7 +443,9 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
         if (getFilters() != null)
             sb.append("Filters: ").append(getFilters()).append(",");
         if (getSelectionMode() != null)
-            sb.append("SelectionMode: ").append(getSelectionMode());
+            sb.append("SelectionMode: ").append(getSelectionMode()).append(",");
+        if (getParameters() != null)
+            sb.append("Parameters: ").append(getParameters());
         sb.append("}");
         return sb.toString();
     }
@@ -404,6 +480,10 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
             return false;
         if (other.getSelectionMode() != null && other.getSelectionMode().equals(this.getSelectionMode()) == false)
             return false;
+        if (other.getParameters() == null ^ this.getParameters() == null)
+            return false;
+        if (other.getParameters() != null && other.getParameters().equals(this.getParameters()) == false)
+            return false;
         return true;
     }
 
@@ -417,6 +497,7 @@ public class UpdateExperimentTemplateTargetInput implements Serializable, Clonea
         hashCode = prime * hashCode + ((getResourceTags() == null) ? 0 : getResourceTags().hashCode());
         hashCode = prime * hashCode + ((getFilters() == null) ? 0 : getFilters().hashCode());
         hashCode = prime * hashCode + ((getSelectionMode() == null) ? 0 : getSelectionMode().hashCode());
+        hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
         return hashCode;
     }
 

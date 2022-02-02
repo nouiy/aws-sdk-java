@@ -31,6 +31,8 @@ public class SourceFieldPropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isRetrievable").build();
     private static final MarshallingInfo<Boolean> ISQUERYABLE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isQueryable").build();
+    private static final MarshallingInfo<Boolean> ISTIMESTAMPFIELDFORINCREMENTALQUERIES_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("isTimestampFieldForIncrementalQueries").build();
 
     private static final SourceFieldPropertiesMarshaller instance = new SourceFieldPropertiesMarshaller();
 
@@ -50,6 +52,7 @@ public class SourceFieldPropertiesMarshaller {
         try {
             protocolMarshaller.marshall(sourceFieldProperties.getIsRetrievable(), ISRETRIEVABLE_BINDING);
             protocolMarshaller.marshall(sourceFieldProperties.getIsQueryable(), ISQUERYABLE_BINDING);
+            protocolMarshaller.marshall(sourceFieldProperties.getIsTimestampFieldForIncrementalQueries(), ISTIMESTAMPFIELDFORINCREMENTALQUERIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

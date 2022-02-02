@@ -47,6 +47,12 @@ public class ListConnectorEntitiesRequest extends com.amazonaws.AmazonWebService
      * </p>
      */
     private String entitiesPath;
+    /**
+     * <p>
+     * The version of the API that's used by the connector.
+     * </p>
+     */
+    private String apiVersion;
 
     /**
      * <p>
@@ -215,6 +221,46 @@ public class ListConnectorEntitiesRequest extends com.amazonaws.AmazonWebService
     }
 
     /**
+     * <p>
+     * The version of the API that's used by the connector.
+     * </p>
+     * 
+     * @param apiVersion
+     *        The version of the API that's used by the connector.
+     */
+
+    public void setApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the API that's used by the connector.
+     * </p>
+     * 
+     * @return The version of the API that's used by the connector.
+     */
+
+    public String getApiVersion() {
+        return this.apiVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the API that's used by the connector.
+     * </p>
+     * 
+     * @param apiVersion
+     *        The version of the API that's used by the connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListConnectorEntitiesRequest withApiVersion(String apiVersion) {
+        setApiVersion(apiVersion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -231,7 +277,9 @@ public class ListConnectorEntitiesRequest extends com.amazonaws.AmazonWebService
         if (getConnectorType() != null)
             sb.append("ConnectorType: ").append(getConnectorType()).append(",");
         if (getEntitiesPath() != null)
-            sb.append("EntitiesPath: ").append(getEntitiesPath());
+            sb.append("EntitiesPath: ").append(getEntitiesPath()).append(",");
+        if (getApiVersion() != null)
+            sb.append("ApiVersion: ").append(getApiVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -258,6 +306,10 @@ public class ListConnectorEntitiesRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getEntitiesPath() != null && other.getEntitiesPath().equals(this.getEntitiesPath()) == false)
             return false;
+        if (other.getApiVersion() == null ^ this.getApiVersion() == null)
+            return false;
+        if (other.getApiVersion() != null && other.getApiVersion().equals(this.getApiVersion()) == false)
+            return false;
         return true;
     }
 
@@ -269,6 +321,7 @@ public class ListConnectorEntitiesRequest extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getConnectorProfileName() == null) ? 0 : getConnectorProfileName().hashCode());
         hashCode = prime * hashCode + ((getConnectorType() == null) ? 0 : getConnectorType().hashCode());
         hashCode = prime * hashCode + ((getEntitiesPath() == null) ? 0 : getEntitiesPath().hashCode());
+        hashCode = prime * hashCode + ((getApiVersion() == null) ? 0 : getApiVersion().hashCode());
         return hashCode;
     }
 

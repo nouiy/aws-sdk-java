@@ -35,11 +35,6 @@ public class PointInTimeRecoveryDescription implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLING</code> - Point in time recovery is being enabled.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>ENABLED</code> - Point in time recovery is enabled.
      * </p>
      * </li>
@@ -72,11 +67,6 @@ public class PointInTimeRecoveryDescription implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLING</code> - Point in time recovery is being enabled.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>ENABLED</code> - Point in time recovery is enabled.
      * </p>
      * </li>
@@ -90,11 +80,6 @@ public class PointInTimeRecoveryDescription implements Serializable, Cloneable, 
      * @param pointInTimeRecoveryStatus
      *        The current state of point in time recovery:</p>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>ENABLING</code> - Point in time recovery is being enabled.
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        <code>ENABLED</code> - Point in time recovery is enabled.
@@ -119,11 +104,6 @@ public class PointInTimeRecoveryDescription implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLING</code> - Point in time recovery is being enabled.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>ENABLED</code> - Point in time recovery is enabled.
      * </p>
      * </li>
@@ -136,11 +116,6 @@ public class PointInTimeRecoveryDescription implements Serializable, Cloneable, 
      * 
      * @return The current state of point in time recovery:</p>
      *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>ENABLING</code> - Point in time recovery is being enabled.
-     *         </p>
-     *         </li>
      *         <li>
      *         <p>
      *         <code>ENABLED</code> - Point in time recovery is enabled.
@@ -165,11 +140,6 @@ public class PointInTimeRecoveryDescription implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLING</code> - Point in time recovery is being enabled.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>ENABLED</code> - Point in time recovery is enabled.
      * </p>
      * </li>
@@ -183,11 +153,6 @@ public class PointInTimeRecoveryDescription implements Serializable, Cloneable, 
      * @param pointInTimeRecoveryStatus
      *        The current state of point in time recovery:</p>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>ENABLING</code> - Point in time recovery is being enabled.
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        <code>ENABLED</code> - Point in time recovery is enabled.
@@ -214,11 +179,6 @@ public class PointInTimeRecoveryDescription implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>ENABLING</code> - Point in time recovery is being enabled.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>ENABLED</code> - Point in time recovery is enabled.
      * </p>
      * </li>
@@ -232,11 +192,6 @@ public class PointInTimeRecoveryDescription implements Serializable, Cloneable, 
      * @param pointInTimeRecoveryStatus
      *        The current state of point in time recovery:</p>
      *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>ENABLING</code> - Point in time recovery is being enabled.
-     *        </p>
-     *        </li>
      *        <li>
      *        <p>
      *        <code>ENABLED</code> - Point in time recovery is enabled.

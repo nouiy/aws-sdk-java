@@ -62,4 +62,11 @@ public class RetryUtilsTest {
         assertTrue(RetryUtils.isThrottlingException(ase));
     }
 
+    @Test
+    public void isThrottlingException_WhenReasonPhraseIsErrorCode() {
+        AmazonServiceException ase = new AmazonServiceException("msg");
+        ase.setStatusCode(503);
+        ase.setErrorCode("503 Slow Down");
+        assertTrue("503 Slow Down error code should be considered throttling", RetryUtils.isThrottlingException(ase));
+    }
 }

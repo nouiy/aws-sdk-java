@@ -92,6 +92,19 @@ public class AbstractAWSFISAsync extends AbstractAWSFIS implements AWSFISAsync {
     }
 
     @Override
+    public java.util.concurrent.Future<GetTargetResourceTypeResult> getTargetResourceTypeAsync(GetTargetResourceTypeRequest request) {
+
+        return getTargetResourceTypeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTargetResourceTypeResult> getTargetResourceTypeAsync(GetTargetResourceTypeRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTargetResourceTypeRequest, GetTargetResourceTypeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListActionsResult> listActionsAsync(ListActionsRequest request) {
 
         return listActionsAsync(request, null);
@@ -139,6 +152,19 @@ public class AbstractAWSFISAsync extends AbstractAWSFIS implements AWSFISAsync {
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTargetResourceTypesResult> listTargetResourceTypesAsync(ListTargetResourceTypesRequest request) {
+
+        return listTargetResourceTypesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTargetResourceTypesResult> listTargetResourceTypesAsync(ListTargetResourceTypesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTargetResourceTypesRequest, ListTargetResourceTypesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -31,6 +31,8 @@ public class RecommenderConfigMarshaller {
 
     private static final MarshallingInfo<Map> ITEMEXPLORATIONCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("itemExplorationConfig").build();
+    private static final MarshallingInfo<Integer> MINRECOMMENDATIONREQUESTSPERSECOND_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("minRecommendationRequestsPerSecond").build();
 
     private static final RecommenderConfigMarshaller instance = new RecommenderConfigMarshaller();
 
@@ -49,6 +51,7 @@ public class RecommenderConfigMarshaller {
 
         try {
             protocolMarshaller.marshall(recommenderConfig.getItemExplorationConfig(), ITEMEXPLORATIONCONFIG_BINDING);
+            protocolMarshaller.marshall(recommenderConfig.getMinRecommendationRequestsPerSecond(), MINRECOMMENDATIONREQUESTSPERSECOND_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

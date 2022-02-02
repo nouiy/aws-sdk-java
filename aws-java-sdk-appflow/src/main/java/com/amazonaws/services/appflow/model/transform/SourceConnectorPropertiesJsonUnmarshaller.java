@@ -108,6 +108,10 @@ public class SourceConnectorPropertiesJsonUnmarshaller implements Unmarshaller<S
                     context.nextToken();
                     sourceConnectorProperties.setSAPOData(SAPODataSourcePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("CustomConnector", targetDepth)) {
+                    context.nextToken();
+                    sourceConnectorProperties.setCustomConnector(CustomConnectorSourcePropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

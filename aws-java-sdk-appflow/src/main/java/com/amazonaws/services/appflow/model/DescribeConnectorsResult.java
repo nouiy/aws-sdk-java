@@ -31,6 +31,12 @@ public class DescribeConnectorsResult extends com.amazonaws.AmazonWebServiceResu
     private java.util.Map<String, ConnectorConfiguration> connectorConfigurations;
     /**
      * <p>
+     * Information about the connectors supported in Amazon AppFlow.
+     * </p>
+     */
+    private java.util.List<ConnectorDetail> connectors;
+    /**
+     * <p>
      * The pagination token for the next page of data.
      * </p>
      */
@@ -106,6 +112,76 @@ public class DescribeConnectorsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
+     * Information about the connectors supported in Amazon AppFlow.
+     * </p>
+     * 
+     * @return Information about the connectors supported in Amazon AppFlow.
+     */
+
+    public java.util.List<ConnectorDetail> getConnectors() {
+        return connectors;
+    }
+
+    /**
+     * <p>
+     * Information about the connectors supported in Amazon AppFlow.
+     * </p>
+     * 
+     * @param connectors
+     *        Information about the connectors supported in Amazon AppFlow.
+     */
+
+    public void setConnectors(java.util.Collection<ConnectorDetail> connectors) {
+        if (connectors == null) {
+            this.connectors = null;
+            return;
+        }
+
+        this.connectors = new java.util.ArrayList<ConnectorDetail>(connectors);
+    }
+
+    /**
+     * <p>
+     * Information about the connectors supported in Amazon AppFlow.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setConnectors(java.util.Collection)} or {@link #withConnectors(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param connectors
+     *        Information about the connectors supported in Amazon AppFlow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeConnectorsResult withConnectors(ConnectorDetail... connectors) {
+        if (this.connectors == null) {
+            setConnectors(new java.util.ArrayList<ConnectorDetail>(connectors.length));
+        }
+        for (ConnectorDetail ele : connectors) {
+            this.connectors.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about the connectors supported in Amazon AppFlow.
+     * </p>
+     * 
+     * @param connectors
+     *        Information about the connectors supported in Amazon AppFlow.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeConnectorsResult withConnectors(java.util.Collection<ConnectorDetail> connectors) {
+        setConnectors(connectors);
+        return this;
+    }
+
+    /**
+     * <p>
      * The pagination token for the next page of data.
      * </p>
      * 
@@ -158,6 +234,8 @@ public class DescribeConnectorsResult extends com.amazonaws.AmazonWebServiceResu
         sb.append("{");
         if (getConnectorConfigurations() != null)
             sb.append("ConnectorConfigurations: ").append(getConnectorConfigurations()).append(",");
+        if (getConnectors() != null)
+            sb.append("Connectors: ").append(getConnectors()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
@@ -178,6 +256,10 @@ public class DescribeConnectorsResult extends com.amazonaws.AmazonWebServiceResu
             return false;
         if (other.getConnectorConfigurations() != null && other.getConnectorConfigurations().equals(this.getConnectorConfigurations()) == false)
             return false;
+        if (other.getConnectors() == null ^ this.getConnectors() == null)
+            return false;
+        if (other.getConnectors() != null && other.getConnectors().equals(this.getConnectors()) == false)
+            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
@@ -191,6 +273,7 @@ public class DescribeConnectorsResult extends com.amazonaws.AmazonWebServiceResu
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getConnectorConfigurations() == null) ? 0 : getConnectorConfigurations().hashCode());
+        hashCode = prime * hashCode + ((getConnectors() == null) ? 0 : getConnectors().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }

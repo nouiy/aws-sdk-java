@@ -1946,6 +1946,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         A resource to be created or added already exists.
      * @throws ResourceNumberLimitExceededException
      *         A resource numerical limit was exceeded.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
      * @throws InternalServiceException
      *         An internal service error occurred.
      * @sample AWSGlue.CreateRegistry
@@ -2024,6 +2026,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         A resource to be created or added already exists.
      * @throws ResourceNumberLimitExceededException
      *         A resource numerical limit was exceeded.
+     * @throws ConcurrentModificationException
+     *         Two processes are trying to modify a resource simultaneously.
      * @throws InternalServiceException
      *         An internal service error occurred.
      * @sample AWSGlue.CreateSchema

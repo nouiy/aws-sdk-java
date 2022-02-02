@@ -52,9 +52,25 @@ public class ConnectorEntityFieldJsonUnmarshaller implements Unmarshaller<Connec
                     context.nextToken();
                     connectorEntityField.setIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("parentIdentifier", targetDepth)) {
+                    context.nextToken();
+                    connectorEntityField.setParentIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("label", targetDepth)) {
                     context.nextToken();
                     connectorEntityField.setLabel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("isPrimaryKey", targetDepth)) {
+                    context.nextToken();
+                    connectorEntityField.setIsPrimaryKey(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
+                if (context.testExpression("defaultValue", targetDepth)) {
+                    context.nextToken();
+                    connectorEntityField.setDefaultValue(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("isDeprecated", targetDepth)) {
+                    context.nextToken();
+                    connectorEntityField.setIsDeprecated(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
                 if (context.testExpression("supportedFieldTypeDetails", targetDepth)) {
                     context.nextToken();
@@ -71,6 +87,11 @@ public class ConnectorEntityFieldJsonUnmarshaller implements Unmarshaller<Connec
                 if (context.testExpression("destinationProperties", targetDepth)) {
                     context.nextToken();
                     connectorEntityField.setDestinationProperties(DestinationFieldPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("customProperties", targetDepth)) {
+                    context.nextToken();
+                    connectorEntityField.setCustomProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
                 }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {

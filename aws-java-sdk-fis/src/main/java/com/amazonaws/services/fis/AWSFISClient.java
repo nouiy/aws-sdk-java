@@ -473,6 +473,66 @@ public class AWSFISClient extends AmazonWebServiceClient implements AWSFIS {
 
     /**
      * <p>
+     * Gets information about the specified resource type.
+     * </p>
+     * 
+     * @param getTargetResourceTypeRequest
+     * @return Result of the GetTargetResourceType operation returned by the service.
+     * @throws ValidationException
+     *         The specified input is not valid, or fails to satisfy the constraints for the request.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @sample AWSFIS.GetTargetResourceType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/GetTargetResourceType" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetTargetResourceTypeResult getTargetResourceType(GetTargetResourceTypeRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetTargetResourceType(request);
+    }
+
+    @SdkInternalApi
+    final GetTargetResourceTypeResult executeGetTargetResourceType(GetTargetResourceTypeRequest getTargetResourceTypeRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getTargetResourceTypeRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetTargetResourceTypeRequest> request = null;
+        Response<GetTargetResourceTypeResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetTargetResourceTypeRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getTargetResourceTypeRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "fis");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetTargetResourceType");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetTargetResourceTypeResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetTargetResourceTypeResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the available FIS actions.
      * </p>
      * 
@@ -689,6 +749,65 @@ public class AWSFISClient extends AmazonWebServiceClient implements AWSFIS {
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the target resource types.
+     * </p>
+     * 
+     * @param listTargetResourceTypesRequest
+     * @return Result of the ListTargetResourceTypes operation returned by the service.
+     * @throws ValidationException
+     *         The specified input is not valid, or fails to satisfy the constraints for the request.
+     * @sample AWSFIS.ListTargetResourceTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/ListTargetResourceTypes" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListTargetResourceTypesResult listTargetResourceTypes(ListTargetResourceTypesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTargetResourceTypes(request);
+    }
+
+    @SdkInternalApi
+    final ListTargetResourceTypesResult executeListTargetResourceTypes(ListTargetResourceTypesRequest listTargetResourceTypesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTargetResourceTypesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTargetResourceTypesRequest> request = null;
+        Response<ListTargetResourceTypesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTargetResourceTypesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listTargetResourceTypesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "fis");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTargetResourceTypes");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTargetResourceTypesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListTargetResourceTypesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

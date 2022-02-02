@@ -118,7 +118,7 @@ public class GetReservationUtilizationRequest extends com.amazonaws.AmazonWebSer
      * <code>GetReservationUtilization</code> uses the same <a
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
      * object as the other operations, but only <code>AND</code> is supported among each dimension, and nesting is
-     * supported up to only one level deep.
+     * supported up to only one level deep. If there are multiple values for a dimension, they are OR'd together.
      * </p>
      */
     private Expression filter;
@@ -541,7 +541,7 @@ public class GetReservationUtilizationRequest extends com.amazonaws.AmazonWebSer
      * <code>GetReservationUtilization</code> uses the same <a
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
      * object as the other operations, but only <code>AND</code> is supported among each dimension, and nesting is
-     * supported up to only one level deep.
+     * supported up to only one level deep. If there are multiple values for a dimension, they are OR'd together.
      * </p>
      * 
      * @param filter
@@ -607,7 +607,8 @@ public class GetReservationUtilizationRequest extends com.amazonaws.AmazonWebSer
      *        <code>GetReservationUtilization</code> uses the same <a
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a> object as the other operations, but only <code>AND</code> is supported among each
-     *        dimension, and nesting is supported up to only one level deep.
+     *        dimension, and nesting is supported up to only one level deep. If there are multiple values for a
+     *        dimension, they are OR'd together.
      */
 
     public void setFilter(Expression filter) {
@@ -679,7 +680,7 @@ public class GetReservationUtilizationRequest extends com.amazonaws.AmazonWebSer
      * <code>GetReservationUtilization</code> uses the same <a
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
      * object as the other operations, but only <code>AND</code> is supported among each dimension, and nesting is
-     * supported up to only one level deep.
+     * supported up to only one level deep. If there are multiple values for a dimension, they are OR'd together.
      * </p>
      * 
      * @return Filters utilization data by dimensions. You can filter by the following dimensions:</p>
@@ -744,7 +745,8 @@ public class GetReservationUtilizationRequest extends com.amazonaws.AmazonWebSer
      *         <code>GetReservationUtilization</code> uses the same <a
      *         href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *         >Expression</a> object as the other operations, but only <code>AND</code> is supported among each
-     *         dimension, and nesting is supported up to only one level deep.
+     *         dimension, and nesting is supported up to only one level deep. If there are multiple values for a
+     *         dimension, they are OR'd together.
      */
 
     public Expression getFilter() {
@@ -816,7 +818,7 @@ public class GetReservationUtilizationRequest extends com.amazonaws.AmazonWebSer
      * <code>GetReservationUtilization</code> uses the same <a
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
      * object as the other operations, but only <code>AND</code> is supported among each dimension, and nesting is
-     * supported up to only one level deep.
+     * supported up to only one level deep. If there are multiple values for a dimension, they are OR'd together.
      * </p>
      * 
      * @param filter
@@ -882,7 +884,8 @@ public class GetReservationUtilizationRequest extends com.amazonaws.AmazonWebSer
      *        <code>GetReservationUtilization</code> uses the same <a
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a> object as the other operations, but only <code>AND</code> is supported among each
-     *        dimension, and nesting is supported up to only one level deep.
+     *        dimension, and nesting is supported up to only one level deep. If there are multiple values for a
+     *        dimension, they are OR'd together.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

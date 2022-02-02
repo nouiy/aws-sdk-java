@@ -253,6 +253,39 @@ public class AmazonAppflowAsyncClient extends AmazonAppflowClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeConnectorResult> describeConnectorAsync(DescribeConnectorRequest request) {
+
+        return describeConnectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeConnectorResult> describeConnectorAsync(final DescribeConnectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeConnectorRequest, DescribeConnectorResult> asyncHandler) {
+        final DescribeConnectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeConnectorResult>() {
+            @Override
+            public DescribeConnectorResult call() throws Exception {
+                DescribeConnectorResult result = null;
+
+                try {
+                    result = executeDescribeConnector(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeConnectorEntityResult> describeConnectorEntityAsync(DescribeConnectorEntityRequest request) {
 
         return describeConnectorEntityAsync(request, null);
@@ -451,6 +484,39 @@ public class AmazonAppflowAsyncClient extends AmazonAppflowClient implements Ama
     }
 
     @Override
+    public java.util.concurrent.Future<ListConnectorsResult> listConnectorsAsync(ListConnectorsRequest request) {
+
+        return listConnectorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListConnectorsResult> listConnectorsAsync(final ListConnectorsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListConnectorsRequest, ListConnectorsResult> asyncHandler) {
+        final ListConnectorsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListConnectorsResult>() {
+            @Override
+            public ListConnectorsResult call() throws Exception {
+                ListConnectorsResult result = null;
+
+                try {
+                    result = executeListConnectors(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListFlowsResult> listFlowsAsync(ListFlowsRequest request) {
 
         return listFlowsAsync(request, null);
@@ -501,6 +567,39 @@ public class AmazonAppflowAsyncClient extends AmazonAppflowClient implements Ama
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterConnectorResult> registerConnectorAsync(RegisterConnectorRequest request) {
+
+        return registerConnectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterConnectorResult> registerConnectorAsync(final RegisterConnectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RegisterConnectorRequest, RegisterConnectorResult> asyncHandler) {
+        final RegisterConnectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RegisterConnectorResult>() {
+            @Override
+            public RegisterConnectorResult call() throws Exception {
+                RegisterConnectorResult result = null;
+
+                try {
+                    result = executeRegisterConnector(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -600,6 +699,39 @@ public class AmazonAppflowAsyncClient extends AmazonAppflowClient implements Ama
 
                 try {
                     result = executeTagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnregisterConnectorResult> unregisterConnectorAsync(UnregisterConnectorRequest request) {
+
+        return unregisterConnectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnregisterConnectorResult> unregisterConnectorAsync(final UnregisterConnectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UnregisterConnectorRequest, UnregisterConnectorResult> asyncHandler) {
+        final UnregisterConnectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UnregisterConnectorResult>() {
+            @Override
+            public UnregisterConnectorResult call() throws Exception {
+                UnregisterConnectorResult result = null;
+
+                try {
+                    result = executeUnregisterConnector(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

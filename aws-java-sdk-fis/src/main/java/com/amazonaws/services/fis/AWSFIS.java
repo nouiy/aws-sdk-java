@@ -162,6 +162,23 @@ public interface AWSFIS {
 
     /**
      * <p>
+     * Gets information about the specified resource type.
+     * </p>
+     * 
+     * @param getTargetResourceTypeRequest
+     * @return Result of the GetTargetResourceType operation returned by the service.
+     * @throws ValidationException
+     *         The specified input is not valid, or fails to satisfy the constraints for the request.
+     * @throws ResourceNotFoundException
+     *         The specified resource cannot be found.
+     * @sample AWSFIS.GetTargetResourceType
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/GetTargetResourceType" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetTargetResourceTypeResult getTargetResourceType(GetTargetResourceTypeRequest getTargetResourceTypeRequest);
+
+    /**
+     * <p>
      * Lists the available FIS actions.
      * </p>
      * 
@@ -217,6 +234,21 @@ public interface AWSFIS {
      *      Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Lists the target resource types.
+     * </p>
+     * 
+     * @param listTargetResourceTypesRequest
+     * @return Result of the ListTargetResourceTypes operation returned by the service.
+     * @throws ValidationException
+     *         The specified input is not valid, or fails to satisfy the constraints for the request.
+     * @sample AWSFIS.ListTargetResourceTypes
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fis-2020-12-01/ListTargetResourceTypes" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListTargetResourceTypesResult listTargetResourceTypes(ListTargetResourceTypesRequest listTargetResourceTypesRequest);
 
     /**
      * <p>

@@ -151,6 +151,13 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
      * </p>
      */
     private String versionName;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to
+     * create the entity recognizer model in your AWS account.
+     * </p>
+     */
+    private String sourceModelArn;
 
     /**
      * <p>
@@ -985,6 +992,52 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to
+     * create the entity recognizer model in your AWS account.
+     * </p>
+     * 
+     * @param sourceModelArn
+     *        The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account
+     *        to create the entity recognizer model in your AWS account.
+     */
+
+    public void setSourceModelArn(String sourceModelArn) {
+        this.sourceModelArn = sourceModelArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to
+     * create the entity recognizer model in your AWS account.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account
+     *         to create the entity recognizer model in your AWS account.
+     */
+
+    public String getSourceModelArn() {
+        return this.sourceModelArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account to
+     * create the entity recognizer model in your AWS account.
+     * </p>
+     * 
+     * @param sourceModelArn
+     *        The Amazon Resource Name (ARN) of the source model. This model was imported from a different AWS account
+     *        to create the entity recognizer model in your AWS account.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EntityRecognizerProperties withSourceModelArn(String sourceModelArn) {
+        setSourceModelArn(sourceModelArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1025,7 +1078,9 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
         if (getModelKmsKeyId() != null)
             sb.append("ModelKmsKeyId: ").append(getModelKmsKeyId()).append(",");
         if (getVersionName() != null)
-            sb.append("VersionName: ").append(getVersionName());
+            sb.append("VersionName: ").append(getVersionName()).append(",");
+        if (getSourceModelArn() != null)
+            sb.append("SourceModelArn: ").append(getSourceModelArn());
         sb.append("}");
         return sb.toString();
     }
@@ -1100,6 +1155,10 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
             return false;
         if (other.getVersionName() != null && other.getVersionName().equals(this.getVersionName()) == false)
             return false;
+        if (other.getSourceModelArn() == null ^ this.getSourceModelArn() == null)
+            return false;
+        if (other.getSourceModelArn() != null && other.getSourceModelArn().equals(this.getSourceModelArn()) == false)
+            return false;
         return true;
     }
 
@@ -1123,6 +1182,7 @@ public class EntityRecognizerProperties implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getVpcConfig() == null) ? 0 : getVpcConfig().hashCode());
         hashCode = prime * hashCode + ((getModelKmsKeyId() == null) ? 0 : getModelKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getVersionName() == null) ? 0 : getVersionName().hashCode());
+        hashCode = prime * hashCode + ((getSourceModelArn() == null) ? 0 : getSourceModelArn().hashCode());
         return hashCode;
     }
 

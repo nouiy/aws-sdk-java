@@ -85,9 +85,6 @@ public class GetSavingsPlansUtilizationRequest extends com.amazonaws.AmazonWebSe
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
      * object as the other operations, but only <code>AND</code> is supported among each dimension.
      * </p>
-     * <p>
-     * Filtering by tags isn't supported.
-     * </p>
      */
     private Expression filter;
     /**
@@ -311,9 +308,6 @@ public class GetSavingsPlansUtilizationRequest extends com.amazonaws.AmazonWebSe
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
      * object as the other operations, but only <code>AND</code> is supported among each dimension.
      * </p>
-     * <p>
-     * Filtering by tags isn't supported.
-     * </p>
      * 
      * @param filter
      *        Filters Savings Plans utilization coverage data for active Savings Plans dimensions. You can filter data
@@ -355,9 +349,6 @@ public class GetSavingsPlansUtilizationRequest extends com.amazonaws.AmazonWebSe
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a> object as the other operations, but only <code>AND</code> is supported among each
      *        dimension.
-     *        </p>
-     *        <p>
-     *        Filtering by tags isn't supported.
      */
 
     public void setFilter(Expression filter) {
@@ -406,9 +397,6 @@ public class GetSavingsPlansUtilizationRequest extends com.amazonaws.AmazonWebSe
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
      * object as the other operations, but only <code>AND</code> is supported among each dimension.
      * </p>
-     * <p>
-     * Filtering by tags isn't supported.
-     * </p>
      * 
      * @return Filters Savings Plans utilization coverage data for active Savings Plans dimensions. You can filter data
      *         with the following dimensions:</p>
@@ -449,9 +437,6 @@ public class GetSavingsPlansUtilizationRequest extends com.amazonaws.AmazonWebSe
      *         href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *         >Expression</a> object as the other operations, but only <code>AND</code> is supported among each
      *         dimension.
-     *         </p>
-     *         <p>
-     *         Filtering by tags isn't supported.
      */
 
     public Expression getFilter() {
@@ -500,9 +485,6 @@ public class GetSavingsPlansUtilizationRequest extends com.amazonaws.AmazonWebSe
      * href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html">Expression</a>
      * object as the other operations, but only <code>AND</code> is supported among each dimension.
      * </p>
-     * <p>
-     * Filtering by tags isn't supported.
-     * </p>
      * 
      * @param filter
      *        Filters Savings Plans utilization coverage data for active Savings Plans dimensions. You can filter data
@@ -544,9 +526,6 @@ public class GetSavingsPlansUtilizationRequest extends com.amazonaws.AmazonWebSe
      *        href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Expression.html"
      *        >Expression</a> object as the other operations, but only <code>AND</code> is supported among each
      *        dimension.
-     *        </p>
-     *        <p>
-     *        Filtering by tags isn't supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

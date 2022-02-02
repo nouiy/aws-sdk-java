@@ -60,6 +60,10 @@ public class UpgradeElasticsearchDomainResultJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     upgradeElasticsearchDomainResult.setPerformCheckOnly(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("ChangeProgressDetails", targetDepth)) {
+                    context.nextToken();
+                    upgradeElasticsearchDomainResult.setChangeProgressDetails(ChangeProgressDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -32,6 +32,8 @@ public class DescribeConnectorProfilesRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorProfileNames").build();
     private static final MarshallingInfo<String> CONNECTORTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorType").build();
+    private static final MarshallingInfo<String> CONNECTORLABEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorLabel").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxResults").build();
     private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -55,6 +57,7 @@ public class DescribeConnectorProfilesRequestMarshaller {
         try {
             protocolMarshaller.marshall(describeConnectorProfilesRequest.getConnectorProfileNames(), CONNECTORPROFILENAMES_BINDING);
             protocolMarshaller.marshall(describeConnectorProfilesRequest.getConnectorType(), CONNECTORTYPE_BINDING);
+            protocolMarshaller.marshall(describeConnectorProfilesRequest.getConnectorLabel(), CONNECTORLABEL_BINDING);
             protocolMarshaller.marshall(describeConnectorProfilesRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(describeConnectorProfilesRequest.getNextToken(), NEXTTOKEN_BINDING);
         } catch (Exception e) {

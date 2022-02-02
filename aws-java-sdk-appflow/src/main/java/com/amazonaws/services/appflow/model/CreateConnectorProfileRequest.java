@@ -48,6 +48,13 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
     private String connectorType;
     /**
      * <p>
+     * The label of the connector. The label is unique for each <code>ConnectorRegistration</code> in your Amazon Web
+     * Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * </p>
+     */
+    private String connectorLabel;
+    /**
+     * <p>
      * Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
      * Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public
      * internet.
@@ -220,6 +227,52 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
+     * The label of the connector. The label is unique for each <code>ConnectorRegistration</code> in your Amazon Web
+     * Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * </p>
+     * 
+     * @param connectorLabel
+     *        The label of the connector. The label is unique for each <code>ConnectorRegistration</code> in your Amazon
+     *        Web Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     */
+
+    public void setConnectorLabel(String connectorLabel) {
+        this.connectorLabel = connectorLabel;
+    }
+
+    /**
+     * <p>
+     * The label of the connector. The label is unique for each <code>ConnectorRegistration</code> in your Amazon Web
+     * Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * </p>
+     * 
+     * @return The label of the connector. The label is unique for each <code>ConnectorRegistration</code> in your
+     *         Amazon Web Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     */
+
+    public String getConnectorLabel() {
+        return this.connectorLabel;
+    }
+
+    /**
+     * <p>
+     * The label of the connector. The label is unique for each <code>ConnectorRegistration</code> in your Amazon Web
+     * Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * </p>
+     * 
+     * @param connectorLabel
+     *        The label of the connector. The label is unique for each <code>ConnectorRegistration</code> in your Amazon
+     *        Web Services account. Only needed if calling for CUSTOMCONNECTOR connector type/.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateConnectorProfileRequest withConnectorLabel(String connectorLabel) {
+        setConnectorLabel(connectorLabel);
+        return this;
+    }
+
+    /**
+     * <p>
      * Indicates the connection mode and specifies whether it is public or private. Private flows use Amazon Web
      * Services PrivateLink to route data over Amazon Web Services infrastructure without exposing it to the public
      * internet.
@@ -351,6 +404,8 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
             sb.append("KmsArn: ").append(getKmsArn()).append(",");
         if (getConnectorType() != null)
             sb.append("ConnectorType: ").append(getConnectorType()).append(",");
+        if (getConnectorLabel() != null)
+            sb.append("ConnectorLabel: ").append(getConnectorLabel()).append(",");
         if (getConnectionMode() != null)
             sb.append("ConnectionMode: ").append(getConnectionMode()).append(",");
         if (getConnectorProfileConfig() != null)
@@ -381,6 +436,10 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getConnectorType() != null && other.getConnectorType().equals(this.getConnectorType()) == false)
             return false;
+        if (other.getConnectorLabel() == null ^ this.getConnectorLabel() == null)
+            return false;
+        if (other.getConnectorLabel() != null && other.getConnectorLabel().equals(this.getConnectorLabel()) == false)
+            return false;
         if (other.getConnectionMode() == null ^ this.getConnectionMode() == null)
             return false;
         if (other.getConnectionMode() != null && other.getConnectionMode().equals(this.getConnectionMode()) == false)
@@ -400,6 +459,7 @@ public class CreateConnectorProfileRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getConnectorProfileName() == null) ? 0 : getConnectorProfileName().hashCode());
         hashCode = prime * hashCode + ((getKmsArn() == null) ? 0 : getKmsArn().hashCode());
         hashCode = prime * hashCode + ((getConnectorType() == null) ? 0 : getConnectorType().hashCode());
+        hashCode = prime * hashCode + ((getConnectorLabel() == null) ? 0 : getConnectorLabel().hashCode());
         hashCode = prime * hashCode + ((getConnectionMode() == null) ? 0 : getConnectionMode().hashCode());
         hashCode = prime * hashCode + ((getConnectorProfileConfig() == null) ? 0 : getConnectorProfileConfig().hashCode());
         return hashCode;

@@ -118,6 +118,12 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String sAPOData;
+    /**
+     * <p>
+     * Operators supported by the custom connector.
+     * </p>
+     */
+    private String customConnector;
 
     /**
      * <p>
@@ -1005,6 +1011,65 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Operators supported by the custom connector.
+     * </p>
+     * 
+     * @param customConnector
+     *        Operators supported by the custom connector.
+     * @see Operator
+     */
+
+    public void setCustomConnector(String customConnector) {
+        this.customConnector = customConnector;
+    }
+
+    /**
+     * <p>
+     * Operators supported by the custom connector.
+     * </p>
+     * 
+     * @return Operators supported by the custom connector.
+     * @see Operator
+     */
+
+    public String getCustomConnector() {
+        return this.customConnector;
+    }
+
+    /**
+     * <p>
+     * Operators supported by the custom connector.
+     * </p>
+     * 
+     * @param customConnector
+     *        Operators supported by the custom connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Operator
+     */
+
+    public ConnectorOperator withCustomConnector(String customConnector) {
+        setCustomConnector(customConnector);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Operators supported by the custom connector.
+     * </p>
+     * 
+     * @param customConnector
+     *        Operators supported by the custom connector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Operator
+     */
+
+    public ConnectorOperator withCustomConnector(Operator customConnector) {
+        this.customConnector = customConnector.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1045,7 +1110,9 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
         if (getZendesk() != null)
             sb.append("Zendesk: ").append(getZendesk()).append(",");
         if (getSAPOData() != null)
-            sb.append("SAPOData: ").append(getSAPOData());
+            sb.append("SAPOData: ").append(getSAPOData()).append(",");
+        if (getCustomConnector() != null)
+            sb.append("CustomConnector: ").append(getCustomConnector());
         sb.append("}");
         return sb.toString();
     }
@@ -1120,6 +1187,10 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getSAPOData() != null && other.getSAPOData().equals(this.getSAPOData()) == false)
             return false;
+        if (other.getCustomConnector() == null ^ this.getCustomConnector() == null)
+            return false;
+        if (other.getCustomConnector() != null && other.getCustomConnector().equals(this.getCustomConnector()) == false)
+            return false;
         return true;
     }
 
@@ -1143,6 +1214,7 @@ public class ConnectorOperator implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getVeeva() == null) ? 0 : getVeeva().hashCode());
         hashCode = prime * hashCode + ((getZendesk() == null) ? 0 : getZendesk().hashCode());
         hashCode = prime * hashCode + ((getSAPOData() == null) ? 0 : getSAPOData().hashCode());
+        hashCode = prime * hashCode + ((getCustomConnector() == null) ? 0 : getCustomConnector().hashCode());
         return hashCode;
     }
 

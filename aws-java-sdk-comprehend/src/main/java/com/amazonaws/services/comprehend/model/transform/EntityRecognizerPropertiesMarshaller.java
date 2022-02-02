@@ -57,6 +57,8 @@ public class EntityRecognizerPropertiesMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelKmsKeyId").build();
     private static final MarshallingInfo<String> VERSIONNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VersionName").build();
+    private static final MarshallingInfo<String> SOURCEMODELARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceModelArn").build();
 
     private static final EntityRecognizerPropertiesMarshaller instance = new EntityRecognizerPropertiesMarshaller();
 
@@ -89,6 +91,7 @@ public class EntityRecognizerPropertiesMarshaller {
             protocolMarshaller.marshall(entityRecognizerProperties.getVpcConfig(), VPCCONFIG_BINDING);
             protocolMarshaller.marshall(entityRecognizerProperties.getModelKmsKeyId(), MODELKMSKEYID_BINDING);
             protocolMarshaller.marshall(entityRecognizerProperties.getVersionName(), VERSIONNAME_BINDING);
+            protocolMarshaller.marshall(entityRecognizerProperties.getSourceModelArn(), SOURCEMODELARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

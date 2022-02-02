@@ -55,6 +55,8 @@ public class CreateDocumentClassifierRequestMarshaller {
             .marshallLocationName("Mode").build();
     private static final MarshallingInfo<String> MODELKMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelKmsKeyId").build();
+    private static final MarshallingInfo<String> MODELPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelPolicy").build();
 
     private static final CreateDocumentClassifierRequestMarshaller instance = new CreateDocumentClassifierRequestMarshaller();
 
@@ -84,6 +86,7 @@ public class CreateDocumentClassifierRequestMarshaller {
             protocolMarshaller.marshall(createDocumentClassifierRequest.getVpcConfig(), VPCCONFIG_BINDING);
             protocolMarshaller.marshall(createDocumentClassifierRequest.getMode(), MODE_BINDING);
             protocolMarshaller.marshall(createDocumentClassifierRequest.getModelKmsKeyId(), MODELKMSKEYID_BINDING);
+            protocolMarshaller.marshall(createDocumentClassifierRequest.getModelPolicy(), MODELPOLICY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

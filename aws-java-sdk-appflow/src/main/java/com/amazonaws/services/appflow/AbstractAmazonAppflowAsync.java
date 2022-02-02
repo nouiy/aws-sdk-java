@@ -80,6 +80,19 @@ public class AbstractAmazonAppflowAsync extends AbstractAmazonAppflow implements
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeConnectorResult> describeConnectorAsync(DescribeConnectorRequest request) {
+
+        return describeConnectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeConnectorResult> describeConnectorAsync(DescribeConnectorRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeConnectorRequest, DescribeConnectorResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeConnectorEntityResult> describeConnectorEntityAsync(DescribeConnectorEntityRequest request) {
 
         return describeConnectorEntityAsync(request, null);
@@ -158,6 +171,19 @@ public class AbstractAmazonAppflowAsync extends AbstractAmazonAppflow implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListConnectorsResult> listConnectorsAsync(ListConnectorsRequest request) {
+
+        return listConnectorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListConnectorsResult> listConnectorsAsync(ListConnectorsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListConnectorsRequest, ListConnectorsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListFlowsResult> listFlowsAsync(ListFlowsRequest request) {
 
         return listFlowsAsync(request, null);
@@ -179,6 +205,19 @@ public class AbstractAmazonAppflowAsync extends AbstractAmazonAppflow implements
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterConnectorResult> registerConnectorAsync(RegisterConnectorRequest request) {
+
+        return registerConnectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterConnectorResult> registerConnectorAsync(RegisterConnectorRequest request,
+            com.amazonaws.handlers.AsyncHandler<RegisterConnectorRequest, RegisterConnectorResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -218,6 +257,19 @@ public class AbstractAmazonAppflowAsync extends AbstractAmazonAppflow implements
     @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnregisterConnectorResult> unregisterConnectorAsync(UnregisterConnectorRequest request) {
+
+        return unregisterConnectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UnregisterConnectorResult> unregisterConnectorAsync(UnregisterConnectorRequest request,
+            com.amazonaws.handlers.AsyncHandler<UnregisterConnectorRequest, UnregisterConnectorResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

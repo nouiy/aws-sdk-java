@@ -88,7 +88,7 @@ public class SingularConnectorProfileCredentials implements Serializable, Clonea
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getApiKey() != null)
-            sb.append("ApiKey: ").append(getApiKey());
+            sb.append("ApiKey: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

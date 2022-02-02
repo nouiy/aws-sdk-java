@@ -134,7 +134,7 @@ public class AmplitudeConnectorProfileCredentials implements Serializable, Clone
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getApiKey() != null)
-            sb.append("ApiKey: ").append(getApiKey()).append(",");
+            sb.append("ApiKey: ").append("***Sensitive Data Redacted***").append(",");
         if (getSecretKey() != null)
             sb.append("SecretKey: ").append("***Sensitive Data Redacted***");
         sb.append("}");

@@ -37,6 +37,13 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private java.util.Map<String, String> itemExplorationConfig;
+    /**
+     * <p>
+     * Specifies the requested minimum provisioned recommendation requests per second that Amazon Personalize will
+     * support.
+     * </p>
+     */
+    private Integer minRecommendationRequestsPerSecond;
 
     /**
      * <p>
@@ -125,6 +132,52 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
     }
 
     /**
+     * <p>
+     * Specifies the requested minimum provisioned recommendation requests per second that Amazon Personalize will
+     * support.
+     * </p>
+     * 
+     * @param minRecommendationRequestsPerSecond
+     *        Specifies the requested minimum provisioned recommendation requests per second that Amazon Personalize
+     *        will support.
+     */
+
+    public void setMinRecommendationRequestsPerSecond(Integer minRecommendationRequestsPerSecond) {
+        this.minRecommendationRequestsPerSecond = minRecommendationRequestsPerSecond;
+    }
+
+    /**
+     * <p>
+     * Specifies the requested minimum provisioned recommendation requests per second that Amazon Personalize will
+     * support.
+     * </p>
+     * 
+     * @return Specifies the requested minimum provisioned recommendation requests per second that Amazon Personalize
+     *         will support.
+     */
+
+    public Integer getMinRecommendationRequestsPerSecond() {
+        return this.minRecommendationRequestsPerSecond;
+    }
+
+    /**
+     * <p>
+     * Specifies the requested minimum provisioned recommendation requests per second that Amazon Personalize will
+     * support.
+     * </p>
+     * 
+     * @param minRecommendationRequestsPerSecond
+     *        Specifies the requested minimum provisioned recommendation requests per second that Amazon Personalize
+     *        will support.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RecommenderConfig withMinRecommendationRequestsPerSecond(Integer minRecommendationRequestsPerSecond) {
+        setMinRecommendationRequestsPerSecond(minRecommendationRequestsPerSecond);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,7 +190,9 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getItemExplorationConfig() != null)
-            sb.append("ItemExplorationConfig: ").append(getItemExplorationConfig());
+            sb.append("ItemExplorationConfig: ").append(getItemExplorationConfig()).append(",");
+        if (getMinRecommendationRequestsPerSecond() != null)
+            sb.append("MinRecommendationRequestsPerSecond: ").append(getMinRecommendationRequestsPerSecond());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +211,11 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getItemExplorationConfig() != null && other.getItemExplorationConfig().equals(this.getItemExplorationConfig()) == false)
             return false;
+        if (other.getMinRecommendationRequestsPerSecond() == null ^ this.getMinRecommendationRequestsPerSecond() == null)
+            return false;
+        if (other.getMinRecommendationRequestsPerSecond() != null
+                && other.getMinRecommendationRequestsPerSecond().equals(this.getMinRecommendationRequestsPerSecond()) == false)
+            return false;
         return true;
     }
 
@@ -165,6 +225,7 @@ public class RecommenderConfig implements Serializable, Cloneable, StructuredPoj
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getItemExplorationConfig() == null) ? 0 : getItemExplorationConfig().hashCode());
+        hashCode = prime * hashCode + ((getMinRecommendationRequestsPerSecond() == null) ? 0 : getMinRecommendationRequestsPerSecond().hashCode());
         return hashCode;
     }
 

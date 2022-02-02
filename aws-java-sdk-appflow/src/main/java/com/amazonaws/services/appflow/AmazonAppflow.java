@@ -188,6 +188,26 @@ public interface AmazonAppflow {
 
     /**
      * <p>
+     * Describes the given custom connector registered in your Amazon Web Services account. This API can be used for
+     * custom connectors that are registered in your account and also for Amazon authored connectors.
+     * </p>
+     * 
+     * @param describeConnectorRequest
+     * @return Result of the DescribeConnector operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request (such as the source or destination connector profile) is not found.
+     * @sample AmazonAppflow.DescribeConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/DescribeConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeConnectorResult describeConnector(DescribeConnectorRequest describeConnectorRequest);
+
+    /**
+     * <p>
      * Provides details regarding the entity used with the connector, with a description of the data model for each
      * entity.
      * </p>
@@ -315,6 +335,24 @@ public interface AmazonAppflow {
 
     /**
      * <p>
+     * Returns the list of all registered custom connectors in your Amazon Web Services account. This API lists only
+     * custom connectors registered in this account, not the Amazon Web Services authored connectors.
+     * </p>
+     * 
+     * @param listConnectorsRequest
+     * @return Result of the ListConnectors operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AmazonAppflow.ListConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/ListConnectors" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListConnectorsResult listConnectors(ListConnectorsRequest listConnectorsRequest);
+
+    /**
+     * <p>
      * Lists all of the flows associated with your account.
      * </p>
      * 
@@ -348,6 +386,39 @@ public interface AmazonAppflow {
      *      API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Registers a new connector with your Amazon Web Services account. Before you can register the connector, you must
+     * deploy lambda in your account.
+     * </p>
+     * 
+     * @param registerConnectorRequest
+     * @return Result of the RegisterConnector operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws ConflictException
+     *         There was a conflict when processing the request (for example, a flow with the given name already exists
+     *         within the account. Check for conflicting resource names and try again.
+     * @throws AccessDeniedException
+     *         AppFlow/Requester has invalid or missing permissions.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request (such as the source or destination connector profile) is not found.
+     * @throws ServiceQuotaExceededException
+     *         The request would cause a service quota (such as the number of flows) to be exceeded.
+     * @throws ThrottlingException
+     *         API calls have exceeded the maximum allowed API request rate per account and per Region.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ConnectorServerException
+     *         An error occurred when retrieving data from the connector endpoint.
+     * @throws ConnectorAuthenticationException
+     *         An error occurred when authenticating with the connector endpoint.
+     * @sample AmazonAppflow.RegisterConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/RegisterConnector" target="_top">AWS API
+     *      Documentation</a>
+     */
+    RegisterConnectorResult registerConnector(RegisterConnectorRequest registerConnectorRequest);
 
     /**
      * <p>
@@ -414,6 +485,27 @@ public interface AmazonAppflow {
      *      Documentation</a>
      */
     TagResourceResult tagResource(TagResourceRequest tagResourceRequest);
+
+    /**
+     * <p>
+     * Unregisters the custom connector registered in your account that matches the connectorLabel provided in the
+     * request.
+     * </p>
+     * 
+     * @param unregisterConnectorRequest
+     * @return Result of the UnregisterConnector operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource specified in the request (such as the source or destination connector profile) is not found.
+     * @throws ConflictException
+     *         There was a conflict when processing the request (for example, a flow with the given name already exists
+     *         within the account. Check for conflicting resource names and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AmazonAppflow.UnregisterConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appflow-2020-08-23/UnregisterConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UnregisterConnectorResult unregisterConnector(UnregisterConnectorRequest unregisterConnectorRequest);
 
     /**
      * <p>

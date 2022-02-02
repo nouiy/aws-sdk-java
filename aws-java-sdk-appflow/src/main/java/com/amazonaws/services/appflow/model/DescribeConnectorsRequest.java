@@ -33,6 +33,12 @@ public class DescribeConnectorsRequest extends com.amazonaws.AmazonWebServiceReq
     private java.util.List<String> connectorTypes;
     /**
      * <p>
+     * The maximum number of items that should be returned in the result set. The default is 20.
+     * </p>
+     */
+    private Integer maxResults;
+    /**
+     * <p>
      * The pagination token for the next page of data.
      * </p>
      */
@@ -138,6 +144,46 @@ public class DescribeConnectorsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
+     * The maximum number of items that should be returned in the result set. The default is 20.
+     * </p>
+     * 
+     * @param maxResults
+     *        The maximum number of items that should be returned in the result set. The default is 20.
+     */
+
+    public void setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+    }
+
+    /**
+     * <p>
+     * The maximum number of items that should be returned in the result set. The default is 20.
+     * </p>
+     * 
+     * @return The maximum number of items that should be returned in the result set. The default is 20.
+     */
+
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * <p>
+     * The maximum number of items that should be returned in the result set. The default is 20.
+     * </p>
+     * 
+     * @param maxResults
+     *        The maximum number of items that should be returned in the result set. The default is 20.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeConnectorsRequest withMaxResults(Integer maxResults) {
+        setMaxResults(maxResults);
+        return this;
+    }
+
+    /**
+     * <p>
      * The pagination token for the next page of data.
      * </p>
      * 
@@ -190,6 +236,8 @@ public class DescribeConnectorsRequest extends com.amazonaws.AmazonWebServiceReq
         sb.append("{");
         if (getConnectorTypes() != null)
             sb.append("ConnectorTypes: ").append(getConnectorTypes()).append(",");
+        if (getMaxResults() != null)
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
@@ -210,6 +258,10 @@ public class DescribeConnectorsRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getConnectorTypes() != null && other.getConnectorTypes().equals(this.getConnectorTypes()) == false)
             return false;
+        if (other.getMaxResults() == null ^ this.getMaxResults() == null)
+            return false;
+        if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
+            return false;
         if (other.getNextToken() == null ^ this.getNextToken() == null)
             return false;
         if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
@@ -223,6 +275,7 @@ public class DescribeConnectorsRequest extends com.amazonaws.AmazonWebServiceReq
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getConnectorTypes() == null) ? 0 : getConnectorTypes().hashCode());
+        hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }

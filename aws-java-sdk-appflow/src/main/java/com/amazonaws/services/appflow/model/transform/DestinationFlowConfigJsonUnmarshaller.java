@@ -52,6 +52,10 @@ public class DestinationFlowConfigJsonUnmarshaller implements Unmarshaller<Desti
                     context.nextToken();
                     destinationFlowConfig.setConnectorType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("apiVersion", targetDepth)) {
+                    context.nextToken();
+                    destinationFlowConfig.setApiVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("connectorProfileName", targetDepth)) {
                     context.nextToken();
                     destinationFlowConfig.setConnectorProfileName(context.getUnmarshaller(String.class).unmarshall(context));

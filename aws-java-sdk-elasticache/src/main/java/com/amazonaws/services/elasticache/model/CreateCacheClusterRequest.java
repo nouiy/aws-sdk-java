@@ -424,7 +424,6 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range
      * in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
-     * Valid values for <code>ddd</code> are:
      * </p>
      */
     private String preferredMaintenanceWindow;
@@ -3478,13 +3477,12 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range
      * in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
-     * Valid values for <code>ddd</code> are:
      * </p>
      * 
      * @param preferredMaintenanceWindow
      *        Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a
      *        range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute
-     *        period. Valid values for <code>ddd</code> are:
+     *        period.
      */
 
     public void setPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
@@ -3495,12 +3493,11 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range
      * in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
-     * Valid values for <code>ddd</code> are:
      * </p>
      * 
      * @return Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as
      *         a range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60
-     *         minute period. Valid values for <code>ddd</code> are:
+     *         minute period.
      */
 
     public String getPreferredMaintenanceWindow() {
@@ -3511,13 +3508,12 @@ public class CreateCacheClusterRequest extends com.amazonaws.AmazonWebServiceReq
      * <p>
      * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range
      * in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period.
-     * Valid values for <code>ddd</code> are:
      * </p>
      * 
      * @param preferredMaintenanceWindow
      *        Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a
      *        range in the format ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute
-     *        period. Valid values for <code>ddd</code> are:
+     *        period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -64,6 +64,22 @@ public class FieldTypeDetailsJsonUnmarshaller implements Unmarshaller<FieldTypeD
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("valueRegexPattern", targetDepth)) {
+                    context.nextToken();
+                    fieldTypeDetails.setValueRegexPattern(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("supportedDateFormat", targetDepth)) {
+                    context.nextToken();
+                    fieldTypeDetails.setSupportedDateFormat(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("fieldValueRange", targetDepth)) {
+                    context.nextToken();
+                    fieldTypeDetails.setFieldValueRange(RangeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("fieldLengthRange", targetDepth)) {
+                    context.nextToken();
+                    fieldTypeDetails.setFieldLengthRange(RangeJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

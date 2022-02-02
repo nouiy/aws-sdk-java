@@ -74,6 +74,11 @@ public class ExperimentTemplateTargetJsonUnmarshaller implements Unmarshaller<Ex
                     context.nextToken();
                     experimentTemplateTarget.setSelectionMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("parameters", targetDepth)) {
+                    context.nextToken();
+                    experimentTemplateTarget.setParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -36,6 +36,12 @@ public class DestinationFlowConfig implements Serializable, Cloneable, Structure
     private String connectorType;
     /**
      * <p>
+     * The API version that the destination connector uses.
+     * </p>
+     */
+    private String apiVersion;
+    /**
+     * <p>
      * The name of the connector profile. This name must be unique for each connector profile in the Amazon Web Services
      * account.
      * </p>
@@ -104,6 +110,46 @@ public class DestinationFlowConfig implements Serializable, Cloneable, Structure
 
     public DestinationFlowConfig withConnectorType(ConnectorType connectorType) {
         this.connectorType = connectorType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The API version that the destination connector uses.
+     * </p>
+     * 
+     * @param apiVersion
+     *        The API version that the destination connector uses.
+     */
+
+    public void setApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+    }
+
+    /**
+     * <p>
+     * The API version that the destination connector uses.
+     * </p>
+     * 
+     * @return The API version that the destination connector uses.
+     */
+
+    public String getApiVersion() {
+        return this.apiVersion;
+    }
+
+    /**
+     * <p>
+     * The API version that the destination connector uses.
+     * </p>
+     * 
+     * @param apiVersion
+     *        The API version that the destination connector uses.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DestinationFlowConfig withApiVersion(String apiVersion) {
+        setApiVersion(apiVersion);
         return this;
     }
 
@@ -207,6 +253,8 @@ public class DestinationFlowConfig implements Serializable, Cloneable, Structure
         sb.append("{");
         if (getConnectorType() != null)
             sb.append("ConnectorType: ").append(getConnectorType()).append(",");
+        if (getApiVersion() != null)
+            sb.append("ApiVersion: ").append(getApiVersion()).append(",");
         if (getConnectorProfileName() != null)
             sb.append("ConnectorProfileName: ").append(getConnectorProfileName()).append(",");
         if (getDestinationConnectorProperties() != null)
@@ -229,6 +277,10 @@ public class DestinationFlowConfig implements Serializable, Cloneable, Structure
             return false;
         if (other.getConnectorType() != null && other.getConnectorType().equals(this.getConnectorType()) == false)
             return false;
+        if (other.getApiVersion() == null ^ this.getApiVersion() == null)
+            return false;
+        if (other.getApiVersion() != null && other.getApiVersion().equals(this.getApiVersion()) == false)
+            return false;
         if (other.getConnectorProfileName() == null ^ this.getConnectorProfileName() == null)
             return false;
         if (other.getConnectorProfileName() != null && other.getConnectorProfileName().equals(this.getConnectorProfileName()) == false)
@@ -247,6 +299,7 @@ public class DestinationFlowConfig implements Serializable, Cloneable, Structure
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getConnectorType() == null) ? 0 : getConnectorType().hashCode());
+        hashCode = prime * hashCode + ((getApiVersion() == null) ? 0 : getApiVersion().hashCode());
         hashCode = prime * hashCode + ((getConnectorProfileName() == null) ? 0 : getConnectorProfileName().hashCode());
         hashCode = prime * hashCode + ((getDestinationConnectorProperties() == null) ? 0 : getDestinationConnectorProperties().hashCode());
         return hashCode;

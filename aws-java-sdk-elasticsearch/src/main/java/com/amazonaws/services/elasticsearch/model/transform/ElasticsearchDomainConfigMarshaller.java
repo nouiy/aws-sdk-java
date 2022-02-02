@@ -55,6 +55,8 @@ public class ElasticsearchDomainConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdvancedSecurityOptions").build();
     private static final MarshallingInfo<StructuredPojo> AUTOTUNEOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoTuneOptions").build();
+    private static final MarshallingInfo<StructuredPojo> CHANGEPROGRESSDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ChangeProgressDetails").build();
 
     private static final ElasticsearchDomainConfigMarshaller instance = new ElasticsearchDomainConfigMarshaller();
 
@@ -86,6 +88,7 @@ public class ElasticsearchDomainConfigMarshaller {
             protocolMarshaller.marshall(elasticsearchDomainConfig.getDomainEndpointOptions(), DOMAINENDPOINTOPTIONS_BINDING);
             protocolMarshaller.marshall(elasticsearchDomainConfig.getAdvancedSecurityOptions(), ADVANCEDSECURITYOPTIONS_BINDING);
             protocolMarshaller.marshall(elasticsearchDomainConfig.getAutoTuneOptions(), AUTOTUNEOPTIONS_BINDING);
+            protocolMarshaller.marshall(elasticsearchDomainConfig.getChangeProgressDetails(), CHANGEPROGRESSDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

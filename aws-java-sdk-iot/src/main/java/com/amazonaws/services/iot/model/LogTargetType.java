@@ -21,7 +21,10 @@ import javax.annotation.Generated;
 public enum LogTargetType {
 
     DEFAULT("DEFAULT"),
-    THING_GROUP("THING_GROUP");
+    THING_GROUP("THING_GROUP"),
+    CLIENT_ID("CLIENT_ID"),
+    SOURCE_IP("SOURCE_IP"),
+    PRINCIPAL_ID("PRINCIPAL_ID");
 
     private String value;
 

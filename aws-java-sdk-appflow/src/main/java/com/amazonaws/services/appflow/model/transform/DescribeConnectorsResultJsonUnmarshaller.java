@@ -53,6 +53,12 @@ public class DescribeConnectorsResultJsonUnmarshaller implements Unmarshaller<De
                     describeConnectorsResult.setConnectorConfigurations(new MapUnmarshaller<String, ConnectorConfiguration>(context
                             .getUnmarshaller(String.class), ConnectorConfigurationJsonUnmarshaller.getInstance()).unmarshall(context));
                 }
+                if (context.testExpression("connectors", targetDepth)) {
+                    context.nextToken();
+                    describeConnectorsResult.setConnectors(new ListUnmarshaller<ConnectorDetail>(ConnectorDetailJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("nextToken", targetDepth)) {
                     context.nextToken();
                     describeConnectorsResult.setNextToken(context.getUnmarshaller(String.class).unmarshall(context));

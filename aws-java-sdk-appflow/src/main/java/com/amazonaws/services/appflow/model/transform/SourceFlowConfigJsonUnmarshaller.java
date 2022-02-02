@@ -52,6 +52,10 @@ public class SourceFlowConfigJsonUnmarshaller implements Unmarshaller<SourceFlow
                     context.nextToken();
                     sourceFlowConfig.setConnectorType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("apiVersion", targetDepth)) {
+                    context.nextToken();
+                    sourceFlowConfig.setApiVersion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("connectorProfileName", targetDepth)) {
                     context.nextToken();
                     sourceFlowConfig.setConnectorProfileName(context.getUnmarshaller(String.class).unmarshall(context));

@@ -33,6 +33,8 @@ public class DescribeConnectorEntityRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorType").build();
     private static final MarshallingInfo<String> CONNECTORPROFILENAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("connectorProfileName").build();
+    private static final MarshallingInfo<String> APIVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("apiVersion").build();
 
     private static final DescribeConnectorEntityRequestMarshaller instance = new DescribeConnectorEntityRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class DescribeConnectorEntityRequestMarshaller {
             protocolMarshaller.marshall(describeConnectorEntityRequest.getConnectorEntityName(), CONNECTORENTITYNAME_BINDING);
             protocolMarshaller.marshall(describeConnectorEntityRequest.getConnectorType(), CONNECTORTYPE_BINDING);
             protocolMarshaller.marshall(describeConnectorEntityRequest.getConnectorProfileName(), CONNECTORPROFILENAME_BINDING);
+            protocolMarshaller.marshall(describeConnectorEntityRequest.getApiVersion(), APIVERSION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

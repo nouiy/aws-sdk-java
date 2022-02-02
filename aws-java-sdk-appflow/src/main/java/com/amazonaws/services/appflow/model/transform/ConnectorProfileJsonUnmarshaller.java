@@ -60,6 +60,10 @@ public class ConnectorProfileJsonUnmarshaller implements Unmarshaller<ConnectorP
                     context.nextToken();
                     connectorProfile.setConnectorType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("connectorLabel", targetDepth)) {
+                    context.nextToken();
+                    connectorProfile.setConnectorLabel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("connectionMode", targetDepth)) {
                     context.nextToken();
                     connectorProfile.setConnectionMode(context.getUnmarshaller(String.class).unmarshall(context));

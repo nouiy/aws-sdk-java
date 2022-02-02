@@ -48,6 +48,11 @@ public class AbstractAmazonAppflow implements AmazonAppflow {
     }
 
     @Override
+    public DescribeConnectorResult describeConnector(DescribeConnectorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeConnectorEntityResult describeConnectorEntity(DescribeConnectorEntityRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -78,12 +83,22 @@ public class AbstractAmazonAppflow implements AmazonAppflow {
     }
 
     @Override
+    public ListConnectorsResult listConnectors(ListConnectorsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListFlowsResult listFlows(ListFlowsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RegisterConnectorResult registerConnector(RegisterConnectorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -99,6 +114,11 @@ public class AbstractAmazonAppflow implements AmazonAppflow {
 
     @Override
     public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UnregisterConnectorResult unregisterConnector(UnregisterConnectorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
