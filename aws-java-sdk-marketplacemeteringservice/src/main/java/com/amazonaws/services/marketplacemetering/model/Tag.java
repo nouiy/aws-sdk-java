@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Metadata assigned to an allocation. Each tag is made up of a key and a value.
+ * Metadata assigned to an allocation. Each tag is made up of a <code>key</code> and a <code>value</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/meteringmarketplace-2016-01-14/Tag" target="_top">AWS API
@@ -30,28 +30,28 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * One part of a key-value pair that makes up a tag. A key is a label that acts like a category for the specific tag
-     * values.
+     * One part of a key-value pair that makes up a <code>tag</code>. A <code>key</code> is a label that acts like a
+     * category for the specific tag values.
      * </p>
      */
     private String key;
     /**
      * <p>
-     * One part of a key-value pair that makes up a tag. A value acts as a descriptor within a tag category (key). The
-     * value can be empty or null.
+     * One part of a key-value pair that makes up a <code>tag</code>. A <code>value</code> acts as a descriptor within a
+     * tag category (key). The value can be empty or null.
      * </p>
      */
     private String value;
 
     /**
      * <p>
-     * One part of a key-value pair that makes up a tag. A key is a label that acts like a category for the specific tag
-     * values.
+     * One part of a key-value pair that makes up a <code>tag</code>. A <code>key</code> is a label that acts like a
+     * category for the specific tag values.
      * </p>
      * 
      * @param key
-     *        One part of a key-value pair that makes up a tag. A key is a label that acts like a category for the
-     *        specific tag values.
+     *        One part of a key-value pair that makes up a <code>tag</code>. A <code>key</code> is a label that acts
+     *        like a category for the specific tag values.
      */
 
     public void setKey(String key) {
@@ -60,12 +60,12 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * One part of a key-value pair that makes up a tag. A key is a label that acts like a category for the specific tag
-     * values.
+     * One part of a key-value pair that makes up a <code>tag</code>. A <code>key</code> is a label that acts like a
+     * category for the specific tag values.
      * </p>
      * 
-     * @return One part of a key-value pair that makes up a tag. A key is a label that acts like a category for the
-     *         specific tag values.
+     * @return One part of a key-value pair that makes up a <code>tag</code>. A <code>key</code> is a label that acts
+     *         like a category for the specific tag values.
      */
 
     public String getKey() {
@@ -74,13 +74,13 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * One part of a key-value pair that makes up a tag. A key is a label that acts like a category for the specific tag
-     * values.
+     * One part of a key-value pair that makes up a <code>tag</code>. A <code>key</code> is a label that acts like a
+     * category for the specific tag values.
      * </p>
      * 
      * @param key
-     *        One part of a key-value pair that makes up a tag. A key is a label that acts like a category for the
-     *        specific tag values.
+     *        One part of a key-value pair that makes up a <code>tag</code>. A <code>key</code> is a label that acts
+     *        like a category for the specific tag values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,13 +91,13 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * One part of a key-value pair that makes up a tag. A value acts as a descriptor within a tag category (key). The
-     * value can be empty or null.
+     * One part of a key-value pair that makes up a <code>tag</code>. A <code>value</code> acts as a descriptor within a
+     * tag category (key). The value can be empty or null.
      * </p>
      * 
      * @param value
-     *        One part of a key-value pair that makes up a tag. A value acts as a descriptor within a tag category
-     *        (key). The value can be empty or null.
+     *        One part of a key-value pair that makes up a <code>tag</code>. A <code>value</code> acts as a descriptor
+     *        within a tag category (key). The value can be empty or null.
      */
 
     public void setValue(String value) {
@@ -106,12 +106,12 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * One part of a key-value pair that makes up a tag. A value acts as a descriptor within a tag category (key). The
-     * value can be empty or null.
+     * One part of a key-value pair that makes up a <code>tag</code>. A <code>value</code> acts as a descriptor within a
+     * tag category (key). The value can be empty or null.
      * </p>
      * 
-     * @return One part of a key-value pair that makes up a tag. A value acts as a descriptor within a tag category
-     *         (key). The value can be empty or null.
+     * @return One part of a key-value pair that makes up a <code>tag</code>. A <code>value</code> acts as a descriptor
+     *         within a tag category (key). The value can be empty or null.
      */
 
     public String getValue() {
@@ -120,13 +120,13 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * One part of a key-value pair that makes up a tag. A value acts as a descriptor within a tag category (key). The
-     * value can be empty or null.
+     * One part of a key-value pair that makes up a <code>tag</code>. A <code>value</code> acts as a descriptor within a
+     * tag category (key). The value can be empty or null.
      * </p>
      * 
      * @param value
-     *        One part of a key-value pair that makes up a tag. A value acts as a descriptor within a tag category
-     *        (key). The value can be empty or null.
+     *        One part of a key-value pair that makes up a <code>tag</code>. A <code>value</code> acts as a descriptor
+     *        within a tag category (key). The value can be empty or null.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

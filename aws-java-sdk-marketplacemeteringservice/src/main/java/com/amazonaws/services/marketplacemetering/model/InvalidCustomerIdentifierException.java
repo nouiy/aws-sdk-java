@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You have metered usage for a CustomerIdentifier that does not exist.
+ * You have metered usage for a <code>CustomerIdentifier</code> that does not exist.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

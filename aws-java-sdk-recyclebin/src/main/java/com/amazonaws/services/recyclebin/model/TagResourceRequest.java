@@ -27,24 +27,24 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource to which to assign the tags.
+     * The Amazon Resource Name (ARN) of the retention rule.
      * </p>
      */
     private String resourceArn;
     /**
      * <p>
-     * Information about the tags to assign to the resource.
+     * Information about the tags to assign to the retention rule.
      * </p>
      */
     private java.util.List<Tag> tags;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource to which to assign the tags.
+     * The Amazon Resource Name (ARN) of the retention rule.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource to which to assign the tags.
+     *        The Amazon Resource Name (ARN) of the retention rule.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -53,10 +53,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource to which to assign the tags.
+     * The Amazon Resource Name (ARN) of the retention rule.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the resource to which to assign the tags.
+     * @return The Amazon Resource Name (ARN) of the retention rule.
      */
 
     public String getResourceArn() {
@@ -65,11 +65,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource to which to assign the tags.
+     * The Amazon Resource Name (ARN) of the retention rule.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource to which to assign the tags.
+     *        The Amazon Resource Name (ARN) of the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +80,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Information about the tags to assign to the resource.
+     * Information about the tags to assign to the retention rule.
      * </p>
      * 
-     * @return Information about the tags to assign to the resource.
+     * @return Information about the tags to assign to the retention rule.
      */
 
     public java.util.List<Tag> getTags() {
@@ -92,11 +92,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Information about the tags to assign to the resource.
+     * Information about the tags to assign to the retention rule.
      * </p>
      * 
      * @param tags
-     *        Information about the tags to assign to the resource.
+     *        Information about the tags to assign to the retention rule.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -110,7 +110,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Information about the tags to assign to the resource.
+     * Information about the tags to assign to the retention rule.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +119,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param tags
-     *        Information about the tags to assign to the resource.
+     *        Information about the tags to assign to the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Information about the tags to assign to the resource.
+     * Information about the tags to assign to the retention rule.
      * </p>
      * 
      * @param tags
-     *        Information about the tags to assign to the resource.
+     *        Information about the tags to assign to the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

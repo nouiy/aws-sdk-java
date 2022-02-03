@@ -16,6 +16,10 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
+ * <p>
+ * Options for enabling a customizable text banner that will be displayed on Amazon Web Services provided clients when a
+ * VPN session is established.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ClientLoginBannerOptions" target="_top">AWS API
  *      Documentation</a>
@@ -23,12 +27,47 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ClientLoginBannerOptions implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Enable or disable a customizable text banner that will be displayed on Amazon Web Services provided clients when
+     * a VPN session is established.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     */
     private Boolean enabled;
-
+    /**
+     * <p>
+     * Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN session
+     * is established. UTF-8 encoded characters only. Maximum of 1400 characters.
+     * </p>
+     */
     private String bannerText;
 
     /**
+     * <p>
+     * Enable or disable a customizable text banner that will be displayed on Amazon Web Services provided clients when
+     * a VPN session is established.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     * 
      * @param enabled
+     *        Enable or disable a customizable text banner that will be displayed on Amazon Web Services provided
+     *        clients when a VPN session is established.</p>
+     *        <p>
+     *        Valid values: <code>true | false</code>
+     *        </p>
+     *        <p>
+     *        Default value: <code>false</code>
      */
 
     public void setEnabled(Boolean enabled) {
@@ -36,7 +75,24 @@ public class ClientLoginBannerOptions implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * Enable or disable a customizable text banner that will be displayed on Amazon Web Services provided clients when
+     * a VPN session is established.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     * 
+     * @return Enable or disable a customizable text banner that will be displayed on Amazon Web Services provided
+     *         clients when a VPN session is established.</p>
+     *         <p>
+     *         Valid values: <code>true | false</code>
+     *         </p>
+     *         <p>
+     *         Default value: <code>false</code>
      */
 
     public Boolean getEnabled() {
@@ -44,7 +100,25 @@ public class ClientLoginBannerOptions implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Enable or disable a customizable text banner that will be displayed on Amazon Web Services provided clients when
+     * a VPN session is established.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     * 
      * @param enabled
+     *        Enable or disable a customizable text banner that will be displayed on Amazon Web Services provided
+     *        clients when a VPN session is established.</p>
+     *        <p>
+     *        Valid values: <code>true | false</code>
+     *        </p>
+     *        <p>
+     *        Default value: <code>false</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -54,7 +128,24 @@ public class ClientLoginBannerOptions implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * Enable or disable a customizable text banner that will be displayed on Amazon Web Services provided clients when
+     * a VPN session is established.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     * <p>
+     * Default value: <code>false</code>
+     * </p>
+     * 
+     * @return Enable or disable a customizable text banner that will be displayed on Amazon Web Services provided
+     *         clients when a VPN session is established.</p>
+     *         <p>
+     *         Valid values: <code>true | false</code>
+     *         </p>
+     *         <p>
+     *         Default value: <code>false</code>
      */
 
     public Boolean isEnabled() {
@@ -62,7 +153,14 @@ public class ClientLoginBannerOptions implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN session
+     * is established. UTF-8 encoded characters only. Maximum of 1400 characters.
+     * </p>
+     * 
      * @param bannerText
+     *        Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN
+     *        session is established. UTF-8 encoded characters only. Maximum of 1400 characters.
      */
 
     public void setBannerText(String bannerText) {
@@ -70,7 +168,13 @@ public class ClientLoginBannerOptions implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN session
+     * is established. UTF-8 encoded characters only. Maximum of 1400 characters.
+     * </p>
+     * 
+     * @return Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN
+     *         session is established. UTF-8 encoded characters only. Maximum of 1400 characters.
      */
 
     public String getBannerText() {
@@ -78,7 +182,14 @@ public class ClientLoginBannerOptions implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN session
+     * is established. UTF-8 encoded characters only. Maximum of 1400 characters.
+     * </p>
+     * 
      * @param bannerText
+     *        Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN
+     *        session is established. UTF-8 encoded characters only. Maximum of 1400 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

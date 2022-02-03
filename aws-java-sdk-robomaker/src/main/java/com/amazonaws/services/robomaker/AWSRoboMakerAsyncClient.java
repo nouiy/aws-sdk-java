@@ -140,12 +140,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CancelDeploymentJobResult> cancelDeploymentJobAsync(CancelDeploymentJobRequest request) {
 
         return cancelDeploymentJobAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CancelDeploymentJobResult> cancelDeploymentJobAsync(final CancelDeploymentJobRequest request,
             final com.amazonaws.handlers.AsyncHandler<CancelDeploymentJobRequest, CancelDeploymentJobResult> asyncHandler) {
         final CancelDeploymentJobRequest finalRequest = beforeClientExecution(request);
@@ -305,12 +307,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateDeploymentJobResult> createDeploymentJobAsync(CreateDeploymentJobRequest request) {
 
         return createDeploymentJobAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateDeploymentJobResult> createDeploymentJobAsync(final CreateDeploymentJobRequest request,
             final com.amazonaws.handlers.AsyncHandler<CreateDeploymentJobRequest, CreateDeploymentJobResult> asyncHandler) {
         final CreateDeploymentJobRequest finalRequest = beforeClientExecution(request);
@@ -338,12 +342,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest request) {
 
         return createFleetAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateFleetResult> createFleetAsync(final CreateFleetRequest request,
             final com.amazonaws.handlers.AsyncHandler<CreateFleetRequest, CreateFleetResult> asyncHandler) {
         final CreateFleetRequest finalRequest = beforeClientExecution(request);
@@ -371,12 +377,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateRobotResult> createRobotAsync(CreateRobotRequest request) {
 
         return createRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateRobotResult> createRobotAsync(final CreateRobotRequest request,
             final com.amazonaws.handlers.AsyncHandler<CreateRobotRequest, CreateRobotResult> asyncHandler) {
         final CreateRobotRequest finalRequest = beforeClientExecution(request);
@@ -671,12 +679,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest request) {
 
         return deleteFleetAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(final DeleteFleetRequest request,
             final com.amazonaws.handlers.AsyncHandler<DeleteFleetRequest, DeleteFleetResult> asyncHandler) {
         final DeleteFleetRequest finalRequest = beforeClientExecution(request);
@@ -704,12 +714,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteRobotResult> deleteRobotAsync(DeleteRobotRequest request) {
 
         return deleteRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteRobotResult> deleteRobotAsync(final DeleteRobotRequest request,
             final com.amazonaws.handlers.AsyncHandler<DeleteRobotRequest, DeleteRobotResult> asyncHandler) {
         final DeleteRobotRequest finalRequest = beforeClientExecution(request);
@@ -836,12 +848,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeregisterRobotResult> deregisterRobotAsync(DeregisterRobotRequest request) {
 
         return deregisterRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeregisterRobotResult> deregisterRobotAsync(final DeregisterRobotRequest request,
             final com.amazonaws.handlers.AsyncHandler<DeregisterRobotRequest, DeregisterRobotResult> asyncHandler) {
         final DeregisterRobotRequest finalRequest = beforeClientExecution(request);
@@ -869,12 +883,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeDeploymentJobResult> describeDeploymentJobAsync(DescribeDeploymentJobRequest request) {
 
         return describeDeploymentJobAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeDeploymentJobResult> describeDeploymentJobAsync(final DescribeDeploymentJobRequest request,
             final com.amazonaws.handlers.AsyncHandler<DescribeDeploymentJobRequest, DescribeDeploymentJobResult> asyncHandler) {
         final DescribeDeploymentJobRequest finalRequest = beforeClientExecution(request);
@@ -902,12 +918,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeFleetResult> describeFleetAsync(DescribeFleetRequest request) {
 
         return describeFleetAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeFleetResult> describeFleetAsync(final DescribeFleetRequest request,
             final com.amazonaws.handlers.AsyncHandler<DescribeFleetRequest, DescribeFleetResult> asyncHandler) {
         final DescribeFleetRequest finalRequest = beforeClientExecution(request);
@@ -935,12 +953,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeRobotResult> describeRobotAsync(DescribeRobotRequest request) {
 
         return describeRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeRobotResult> describeRobotAsync(final DescribeRobotRequest request,
             final com.amazonaws.handlers.AsyncHandler<DescribeRobotRequest, DescribeRobotResult> asyncHandler) {
         final DescribeRobotRequest finalRequest = beforeClientExecution(request);
@@ -1266,12 +1286,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListDeploymentJobsResult> listDeploymentJobsAsync(ListDeploymentJobsRequest request) {
 
         return listDeploymentJobsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListDeploymentJobsResult> listDeploymentJobsAsync(final ListDeploymentJobsRequest request,
             final com.amazonaws.handlers.AsyncHandler<ListDeploymentJobsRequest, ListDeploymentJobsResult> asyncHandler) {
         final ListDeploymentJobsRequest finalRequest = beforeClientExecution(request);
@@ -1299,12 +1321,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest request) {
 
         return listFleetsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(final ListFleetsRequest request,
             final com.amazonaws.handlers.AsyncHandler<ListFleetsRequest, ListFleetsResult> asyncHandler) {
         final ListFleetsRequest finalRequest = beforeClientExecution(request);
@@ -1365,12 +1389,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListRobotsResult> listRobotsAsync(ListRobotsRequest request) {
 
         return listRobotsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListRobotsResult> listRobotsAsync(final ListRobotsRequest request,
             final com.amazonaws.handlers.AsyncHandler<ListRobotsRequest, ListRobotsResult> asyncHandler) {
         final ListRobotsRequest finalRequest = beforeClientExecution(request);
@@ -1662,12 +1688,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<RegisterRobotResult> registerRobotAsync(RegisterRobotRequest request) {
 
         return registerRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<RegisterRobotResult> registerRobotAsync(final RegisterRobotRequest request,
             final com.amazonaws.handlers.AsyncHandler<RegisterRobotRequest, RegisterRobotResult> asyncHandler) {
         final RegisterRobotRequest finalRequest = beforeClientExecution(request);
@@ -1761,12 +1789,14 @@ public class AWSRoboMakerAsyncClient extends AWSRoboMakerClient implements AWSRo
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<SyncDeploymentJobResult> syncDeploymentJobAsync(SyncDeploymentJobRequest request) {
 
         return syncDeploymentJobAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<SyncDeploymentJobResult> syncDeploymentJobAsync(final SyncDeploymentJobRequest request,
             final com.amazonaws.handlers.AsyncHandler<SyncDeploymentJobRequest, SyncDeploymentJobResult> asyncHandler) {
         final SyncDeploymentJobRequest finalRequest = beforeClientExecution(request);

@@ -4323,6 +4323,14 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * <p>
      * Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or stopped.
      * </p>
+     * <important>
+     * <p>
+     * By default, Amazon EC2 shuts down and reboots the instance before creating the AMI to ensure that everything on
+     * the instance is stopped and in a consistent state during the creation process. If you're confident that your
+     * instance is in a consistent state appropriate for AMI creation, use the <b>NoReboot</b> parameter to prevent
+     * Amazon EC2 from shutting down and rebooting the instance.
+     * </p>
+     * </important>
      * <p>
      * If you customized your instance with instance store volumes or Amazon EBS volumes in addition to the root device
      * volume, the new AMI contains block device mapping information for those volumes. When you launch an instance from
@@ -12043,9 +12051,17 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
-     * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances; however, it
-     * doesn't affect any instances that you've already launched from the AMI. You'll continue to incur usage costs for
-     * those instances until you terminate them.
+     * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances.
+     * </p>
+     * <p>
+     * If you deregister an AMI that matches a Recycle Bin retention rule, the AMI is retained in the Recycle Bin for
+     * the specified retention period. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * <p>
+     * When you deregister an AMI, it doesn't affect any instances that you've already launched from the AMI. You'll
+     * continue to incur usage costs for those instances until you terminate them.
      * </p>
      * <p>
      * When you deregister an Amazon EBS-backed AMI, it doesn't affect the snapshot that was created for the root volume
@@ -21067,6 +21083,11 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
      * be removed before you can enable faster launching again.
      * </p>
+     * <note>
+     * <p>
+     * To change these settings, you must own the AMI.
+     * </p>
+     * </note>
      * 
      * @param disableFastLaunchRequest
      * @return Result of the DisableFastLaunch operation returned by the service.
@@ -22358,6 +22379,11 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
      * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
      * settings for launch frequency.
      * </p>
+     * <note>
+     * <p>
+     * To change these settings, you must own the AMI.
+     * </p>
+     * </note>
      * 
      * @param enableFastLaunchRequest
      * @return Result of the EnableFastLaunch operation returned by the service.
@@ -25646,6 +25672,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
             }
 
             StaxResponseHandler<ImportVolumeResult> responseHandler = new StaxResponseHandler<ImportVolumeResult>(new ImportVolumeResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists one or more AMIs that are currently in the Recycle Bin. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * 
+     * @param listImagesInRecycleBinRequest
+     * @return Result of the ListImagesInRecycleBin operation returned by the service.
+     * @sample AmazonEC2.ListImagesInRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ListImagesInRecycleBin" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListImagesInRecycleBinResult listImagesInRecycleBin(ListImagesInRecycleBinRequest request) {
+        request = beforeClientExecution(request);
+        return executeListImagesInRecycleBin(request);
+    }
+
+    @SdkInternalApi
+    final ListImagesInRecycleBinResult executeListImagesInRecycleBin(ListImagesInRecycleBinRequest listImagesInRecycleBinRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listImagesInRecycleBinRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListImagesInRecycleBinRequest> request = null;
+        Response<ListImagesInRecycleBinResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListImagesInRecycleBinRequestMarshaller().marshall(super.beforeMarshalling(listImagesInRecycleBinRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListImagesInRecycleBin");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ListImagesInRecycleBinResult> responseHandler = new StaxResponseHandler<ListImagesInRecycleBinResult>(
+                    new ListImagesInRecycleBinResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -31744,6 +31828,64 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<RestoreAddressToClassicResult> responseHandler = new StaxResponseHandler<RestoreAddressToClassicResult>(
                     new RestoreAddressToClassicResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Restores an AMI from the Recycle Bin. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * 
+     * @param restoreImageFromRecycleBinRequest
+     * @return Result of the RestoreImageFromRecycleBin operation returned by the service.
+     * @sample AmazonEC2.RestoreImageFromRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreImageFromRecycleBin" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public RestoreImageFromRecycleBinResult restoreImageFromRecycleBin(RestoreImageFromRecycleBinRequest request) {
+        request = beforeClientExecution(request);
+        return executeRestoreImageFromRecycleBin(request);
+    }
+
+    @SdkInternalApi
+    final RestoreImageFromRecycleBinResult executeRestoreImageFromRecycleBin(RestoreImageFromRecycleBinRequest restoreImageFromRecycleBinRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(restoreImageFromRecycleBinRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RestoreImageFromRecycleBinRequest> request = null;
+        Response<RestoreImageFromRecycleBinResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RestoreImageFromRecycleBinRequestMarshaller().marshall(super.beforeMarshalling(restoreImageFromRecycleBinRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RestoreImageFromRecycleBin");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<RestoreImageFromRecycleBinResult> responseHandler = new StaxResponseHandler<RestoreImageFromRecycleBinResult>(
+                    new RestoreImageFromRecycleBinResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

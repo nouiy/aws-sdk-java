@@ -33,7 +33,7 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private RetentionPeriod retentionPeriod;
     /**
      * <p>
-     * A brief description for the retention rule.
+     * The retention rule description.
      * </p>
      */
     private String description;
@@ -45,19 +45,26 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots and EBS-backed AMIs
+     * are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>. To retain EBS-backed AMIs, specify
+     * <code>EC2_IMAGE</code>.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * Information about the resource tags to use to identify resources that are to be retained by the retention rule.
-     * The retention rule retains only deleted snapshots that have one or more of the specified tag key and value pairs.
-     * If a snapshot is deleted, but it does not have any of the specified tag key and value pairs, it is immediately
-     * deleted without being retained by the retention rule.
+     * Specifies the resource tags to use to identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that have one or more of
+     * the specified tag key and value pairs are retained. If a resource is deleted, but it does not have any of the
+     * specified tag key and value pairs, it is immediately deleted without being retained by the retention rule.
      * </p>
      * <p>
      * You can add the same tag key and value pair to a maximum or five retention rules.
+     * </p>
+     * <p>
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule does not have any
+     * resource tags specified. It retains all deleted resources of the specified resource type in the Region in which
+     * the rule is created, even if the resources are not tagged.
      * </p>
      */
     private java.util.List<ResourceTag> resourceTags;
@@ -104,11 +111,11 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A brief description for the retention rule.
+     * The retention rule description.
      * </p>
      * 
      * @param description
-     *        A brief description for the retention rule.
+     *        The retention rule description.
      */
 
     public void setDescription(String description) {
@@ -117,10 +124,10 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A brief description for the retention rule.
+     * The retention rule description.
      * </p>
      * 
-     * @return A brief description for the retention rule.
+     * @return The retention rule description.
      */
 
     public String getDescription() {
@@ -129,11 +136,11 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A brief description for the retention rule.
+     * The retention rule description.
      * </p>
      * 
      * @param description
-     *        A brief description for the retention rule.
+     *        The retention rule description.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -214,12 +221,15 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots and EBS-backed AMIs
+     * are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>. To retain EBS-backed AMIs, specify
+     * <code>EC2_IMAGE</code>.
      * </p>
      * 
      * @param resourceType
-     *        The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots are
-     *        supported.
+     *        The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots and
+     *        EBS-backed AMIs are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>. To retain
+     *        EBS-backed AMIs, specify <code>EC2_IMAGE</code>.
      * @see ResourceType
      */
 
@@ -229,11 +239,14 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots and EBS-backed AMIs
+     * are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>. To retain EBS-backed AMIs, specify
+     * <code>EC2_IMAGE</code>.
      * </p>
      * 
-     * @return The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots are
-     *         supported.
+     * @return The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots and
+     *         EBS-backed AMIs are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>. To retain
+     *         EBS-backed AMIs, specify <code>EC2_IMAGE</code>.
      * @see ResourceType
      */
 
@@ -243,12 +256,15 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots and EBS-backed AMIs
+     * are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>. To retain EBS-backed AMIs, specify
+     * <code>EC2_IMAGE</code>.
      * </p>
      * 
      * @param resourceType
-     *        The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots are
-     *        supported.
+     *        The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots and
+     *        EBS-backed AMIs are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>. To retain
+     *        EBS-backed AMIs, specify <code>EC2_IMAGE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -260,12 +276,15 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots and EBS-backed AMIs
+     * are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>. To retain EBS-backed AMIs, specify
+     * <code>EC2_IMAGE</code>.
      * </p>
      * 
      * @param resourceType
-     *        The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots are
-     *        supported.
+     *        The resource type to be retained by the retention rule. Currently, only Amazon EBS snapshots and
+     *        EBS-backed AMIs are supported. To retain snapshots, specify <code>EBS_SNAPSHOT</code>. To retain
+     *        EBS-backed AMIs, specify <code>EC2_IMAGE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -277,21 +296,32 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Information about the resource tags to use to identify resources that are to be retained by the retention rule.
-     * The retention rule retains only deleted snapshots that have one or more of the specified tag key and value pairs.
-     * If a snapshot is deleted, but it does not have any of the specified tag key and value pairs, it is immediately
-     * deleted without being retained by the retention rule.
+     * Specifies the resource tags to use to identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that have one or more of
+     * the specified tag key and value pairs are retained. If a resource is deleted, but it does not have any of the
+     * specified tag key and value pairs, it is immediately deleted without being retained by the retention rule.
      * </p>
      * <p>
      * You can add the same tag key and value pair to a maximum or five retention rules.
      * </p>
+     * <p>
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule does not have any
+     * resource tags specified. It retains all deleted resources of the specified resource type in the Region in which
+     * the rule is created, even if the resources are not tagged.
+     * </p>
      * 
-     * @return Information about the resource tags to use to identify resources that are to be retained by the retention
-     *         rule. The retention rule retains only deleted snapshots that have one or more of the specified tag key
-     *         and value pairs. If a snapshot is deleted, but it does not have any of the specified tag key and value
-     *         pairs, it is immediately deleted without being retained by the retention rule.</p>
+     * @return Specifies the resource tags to use to identify resources that are to be retained by a tag-level retention
+     *         rule. For tag-level retention rules, only deleted resources, of the specified resource type, that have
+     *         one or more of the specified tag key and value pairs are retained. If a resource is deleted, but it does
+     *         not have any of the specified tag key and value pairs, it is immediately deleted without being retained
+     *         by the retention rule.</p>
      *         <p>
      *         You can add the same tag key and value pair to a maximum or five retention rules.
+     *         </p>
+     *         <p>
+     *         To create a Region-level retention rule, omit this parameter. A Region-level retention rule does not have
+     *         any resource tags specified. It retains all deleted resources of the specified resource type in the
+     *         Region in which the rule is created, even if the resources are not tagged.
      */
 
     public java.util.List<ResourceTag> getResourceTags() {
@@ -300,22 +330,33 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Information about the resource tags to use to identify resources that are to be retained by the retention rule.
-     * The retention rule retains only deleted snapshots that have one or more of the specified tag key and value pairs.
-     * If a snapshot is deleted, but it does not have any of the specified tag key and value pairs, it is immediately
-     * deleted without being retained by the retention rule.
+     * Specifies the resource tags to use to identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that have one or more of
+     * the specified tag key and value pairs are retained. If a resource is deleted, but it does not have any of the
+     * specified tag key and value pairs, it is immediately deleted without being retained by the retention rule.
      * </p>
      * <p>
      * You can add the same tag key and value pair to a maximum or five retention rules.
      * </p>
+     * <p>
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule does not have any
+     * resource tags specified. It retains all deleted resources of the specified resource type in the Region in which
+     * the rule is created, even if the resources are not tagged.
+     * </p>
      * 
      * @param resourceTags
-     *        Information about the resource tags to use to identify resources that are to be retained by the retention
-     *        rule. The retention rule retains only deleted snapshots that have one or more of the specified tag key and
-     *        value pairs. If a snapshot is deleted, but it does not have any of the specified tag key and value pairs,
-     *        it is immediately deleted without being retained by the retention rule.</p>
+     *        Specifies the resource tags to use to identify resources that are to be retained by a tag-level retention
+     *        rule. For tag-level retention rules, only deleted resources, of the specified resource type, that have one
+     *        or more of the specified tag key and value pairs are retained. If a resource is deleted, but it does not
+     *        have any of the specified tag key and value pairs, it is immediately deleted without being retained by the
+     *        retention rule.</p>
      *        <p>
      *        You can add the same tag key and value pair to a maximum or five retention rules.
+     *        </p>
+     *        <p>
+     *        To create a Region-level retention rule, omit this parameter. A Region-level retention rule does not have
+     *        any resource tags specified. It retains all deleted resources of the specified resource type in the Region
+     *        in which the rule is created, even if the resources are not tagged.
      */
 
     public void setResourceTags(java.util.Collection<ResourceTag> resourceTags) {
@@ -329,13 +370,18 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Information about the resource tags to use to identify resources that are to be retained by the retention rule.
-     * The retention rule retains only deleted snapshots that have one or more of the specified tag key and value pairs.
-     * If a snapshot is deleted, but it does not have any of the specified tag key and value pairs, it is immediately
-     * deleted without being retained by the retention rule.
+     * Specifies the resource tags to use to identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that have one or more of
+     * the specified tag key and value pairs are retained. If a resource is deleted, but it does not have any of the
+     * specified tag key and value pairs, it is immediately deleted without being retained by the retention rule.
      * </p>
      * <p>
      * You can add the same tag key and value pair to a maximum or five retention rules.
+     * </p>
+     * <p>
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule does not have any
+     * resource tags specified. It retains all deleted resources of the specified resource type in the Region in which
+     * the rule is created, even if the resources are not tagged.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -344,12 +390,18 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param resourceTags
-     *        Information about the resource tags to use to identify resources that are to be retained by the retention
-     *        rule. The retention rule retains only deleted snapshots that have one or more of the specified tag key and
-     *        value pairs. If a snapshot is deleted, but it does not have any of the specified tag key and value pairs,
-     *        it is immediately deleted without being retained by the retention rule.</p>
+     *        Specifies the resource tags to use to identify resources that are to be retained by a tag-level retention
+     *        rule. For tag-level retention rules, only deleted resources, of the specified resource type, that have one
+     *        or more of the specified tag key and value pairs are retained. If a resource is deleted, but it does not
+     *        have any of the specified tag key and value pairs, it is immediately deleted without being retained by the
+     *        retention rule.</p>
      *        <p>
      *        You can add the same tag key and value pair to a maximum or five retention rules.
+     *        </p>
+     *        <p>
+     *        To create a Region-level retention rule, omit this parameter. A Region-level retention rule does not have
+     *        any resource tags specified. It retains all deleted resources of the specified resource type in the Region
+     *        in which the rule is created, even if the resources are not tagged.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -365,22 +417,33 @@ public class CreateRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Information about the resource tags to use to identify resources that are to be retained by the retention rule.
-     * The retention rule retains only deleted snapshots that have one or more of the specified tag key and value pairs.
-     * If a snapshot is deleted, but it does not have any of the specified tag key and value pairs, it is immediately
-     * deleted without being retained by the retention rule.
+     * Specifies the resource tags to use to identify resources that are to be retained by a tag-level retention rule.
+     * For tag-level retention rules, only deleted resources, of the specified resource type, that have one or more of
+     * the specified tag key and value pairs are retained. If a resource is deleted, but it does not have any of the
+     * specified tag key and value pairs, it is immediately deleted without being retained by the retention rule.
      * </p>
      * <p>
      * You can add the same tag key and value pair to a maximum or five retention rules.
      * </p>
+     * <p>
+     * To create a Region-level retention rule, omit this parameter. A Region-level retention rule does not have any
+     * resource tags specified. It retains all deleted resources of the specified resource type in the Region in which
+     * the rule is created, even if the resources are not tagged.
+     * </p>
      * 
      * @param resourceTags
-     *        Information about the resource tags to use to identify resources that are to be retained by the retention
-     *        rule. The retention rule retains only deleted snapshots that have one or more of the specified tag key and
-     *        value pairs. If a snapshot is deleted, but it does not have any of the specified tag key and value pairs,
-     *        it is immediately deleted without being retained by the retention rule.</p>
+     *        Specifies the resource tags to use to identify resources that are to be retained by a tag-level retention
+     *        rule. For tag-level retention rules, only deleted resources, of the specified resource type, that have one
+     *        or more of the specified tag key and value pairs are retained. If a resource is deleted, but it does not
+     *        have any of the specified tag key and value pairs, it is immediately deleted without being retained by the
+     *        retention rule.</p>
      *        <p>
      *        You can add the same tag key and value pair to a maximum or five retention rules.
+     *        </p>
+     *        <p>
+     *        To create a Region-level retention rule, omit this parameter. A Region-level retention rule does not have
+     *        any resource tags specified. It retains all deleted resources of the specified resource type in the Region
+     *        in which the rule is created, even if the resources are not tagged.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

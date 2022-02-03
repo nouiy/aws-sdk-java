@@ -87,6 +87,12 @@ public interface AWSRoboMaker {
      * <p>
      * Cancels the specified deployment job.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param cancelDeploymentJobRequest
      * @return Result of the CancelDeploymentJob operation returned by the service.
@@ -103,6 +109,7 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CancelDeploymentJob" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     CancelDeploymentJobResult cancelDeploymentJob(CancelDeploymentJobRequest cancelDeploymentJobRequest);
 
     /**
@@ -198,6 +205,11 @@ public interface AWSRoboMaker {
      * <p>
      * Deploys a specific version of a robot application to robots in a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * <p>
      * The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a
      * new version, use <code>CreateRobotApplicationVersion</code> or see <a
@@ -233,12 +245,18 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateDeploymentJob" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     CreateDeploymentJobResult createDeploymentJob(CreateDeploymentJobRequest createDeploymentJobRequest);
 
     /**
      * <p>
      * Creates a fleet, a logical group of robots running the same robot application.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param createFleetRequest
      * @return Result of the CreateFleet operation returned by the service.
@@ -256,12 +274,18 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     CreateFleetResult createFleet(CreateFleetRequest createFleetRequest);
 
     /**
      * <p>
      * Creates a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param createRobotRequest
      * @return Result of the CreateRobot operation returned by the service.
@@ -281,6 +305,7 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     CreateRobotResult createRobot(CreateRobotRequest createRobotRequest);
 
     /**
@@ -515,6 +540,12 @@ public interface AWSRoboMaker {
      * <p>
      * Deletes a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deleteFleetRequest
      * @return Result of the DeleteFleet operation returned by the service.
@@ -529,12 +560,19 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     DeleteFleetResult deleteFleet(DeleteFleetRequest deleteFleetRequest);
 
     /**
      * <p>
      * Deletes a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deleteRobotRequest
      * @return Result of the DeleteRobot operation returned by the service.
@@ -549,6 +587,7 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     DeleteRobotResult deleteRobot(DeleteRobotRequest deleteRobotRequest);
 
     /**
@@ -617,6 +656,12 @@ public interface AWSRoboMaker {
      * <p>
      * Deregisters a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deregisterRobotRequest
      * @return Result of the DeregisterRobot operation returned by the service.
@@ -633,12 +678,19 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeregisterRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     DeregisterRobotResult deregisterRobot(DeregisterRobotRequest deregisterRobotRequest);
 
     /**
      * <p>
      * Describes a deployment job.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeDeploymentJobRequest
      * @return Result of the DescribeDeploymentJob operation returned by the service.
@@ -655,12 +707,19 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeDeploymentJob"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     DescribeDeploymentJobResult describeDeploymentJob(DescribeDeploymentJobRequest describeDeploymentJobRequest);
 
     /**
      * <p>
      * Describes a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeFleetRequest
      * @return Result of the DescribeFleet operation returned by the service.
@@ -677,12 +736,19 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     DescribeFleetResult describeFleet(DescribeFleetRequest describeFleetRequest);
 
     /**
      * <p>
      * Describes a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeRobotRequest
      * @return Result of the DescribeRobot operation returned by the service.
@@ -699,6 +765,7 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     DescribeRobotResult describeRobot(DescribeRobotRequest describeRobotRequest);
 
     /**
@@ -902,6 +969,12 @@ public interface AWSRoboMaker {
      * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment
      * jobs.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listDeploymentJobsRequest
      * @return Result of the ListDeploymentJobs operation returned by the service.
@@ -918,12 +991,19 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListDeploymentJobs" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     ListDeploymentJobsResult listDeploymentJobs(ListDeploymentJobsRequest listDeploymentJobsRequest);
 
     /**
      * <p>
      * Returns a list of fleets. You can optionally provide filters to retrieve specific fleets.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listFleetsRequest
      * @return Result of the ListFleets operation returned by the service.
@@ -940,6 +1020,7 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListFleets" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     ListFleetsResult listFleets(ListFleetsRequest listFleetsRequest);
 
     /**
@@ -966,6 +1047,12 @@ public interface AWSRoboMaker {
      * <p>
      * Returns a list of robots. You can optionally provide filters to retrieve specific robots.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listRobotsRequest
      * @return Result of the ListRobots operation returned by the service.
@@ -982,6 +1069,7 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListRobots" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     ListRobotsResult listRobots(ListRobotsRequest listRobotsRequest);
 
     /**
@@ -1150,6 +1238,11 @@ public interface AWSRoboMaker {
      * <p>
      * Registers a robot with a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param registerRobotRequest
      * @return Result of the RegisterRobot operation returned by the service.
@@ -1169,6 +1262,7 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/RegisterRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     RegisterRobotResult registerRobot(RegisterRobotRequest registerRobotRequest);
 
     /**
@@ -1227,6 +1321,12 @@ public interface AWSRoboMaker {
      * <p>
      * Syncrhonizes robots in a fleet to the latest deployment. This is helpful if robots were added after a deployment.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param syncDeploymentJobRequest
      * @return Result of the SyncDeploymentJob operation returned by the service.
@@ -1251,6 +1351,7 @@ public interface AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/SyncDeploymentJob" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     SyncDeploymentJobResult syncDeploymentJob(SyncDeploymentJobRequest syncDeploymentJobRequest);
 
     /**

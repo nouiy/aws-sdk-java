@@ -36,13 +36,13 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
     private String identifier;
     /**
      * <p>
-     * The description for the retention rule.
+     * The retention rule description.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * Information about the retention period for which the retention rule retains resources
+     * Information about the retention period for which the retention rule is to retain resources.
      * </p>
      */
     private RetentionPeriod retentionPeriod;
@@ -89,11 +89,11 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description for the retention rule.
+     * The retention rule description.
      * </p>
      * 
      * @param description
-     *        The description for the retention rule.
+     *        The retention rule description.
      */
 
     public void setDescription(String description) {
@@ -102,10 +102,10 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description for the retention rule.
+     * The retention rule description.
      * </p>
      * 
-     * @return The description for the retention rule.
+     * @return The retention rule description.
      */
 
     public String getDescription() {
@@ -114,11 +114,11 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description for the retention rule.
+     * The retention rule description.
      * </p>
      * 
      * @param description
-     *        The description for the retention rule.
+     *        The retention rule description.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the retention period for which the retention rule retains resources
+     * Information about the retention period for which the retention rule is to retain resources.
      * </p>
      * 
      * @param retentionPeriod
-     *        Information about the retention period for which the retention rule retains resources
+     *        Information about the retention period for which the retention rule is to retain resources.
      */
 
     public void setRetentionPeriod(RetentionPeriod retentionPeriod) {
@@ -142,10 +142,10 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the retention period for which the retention rule retains resources
+     * Information about the retention period for which the retention rule is to retain resources.
      * </p>
      * 
-     * @return Information about the retention period for which the retention rule retains resources
+     * @return Information about the retention period for which the retention rule is to retain resources.
      */
 
     public RetentionPeriod getRetentionPeriod() {
@@ -154,11 +154,11 @@ public class RuleSummary implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the retention period for which the retention rule retains resources
+     * Information about the retention period for which the retention rule is to retain resources.
      * </p>
      * 
      * @param retentionPeriod
-     *        Information about the retention period for which the retention rule retains resources
+     *        Information about the retention period for which the retention rule is to retain resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

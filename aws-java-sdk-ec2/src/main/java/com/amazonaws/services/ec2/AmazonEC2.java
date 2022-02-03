@@ -1558,6 +1558,14 @@ public interface AmazonEC2 {
      * <p>
      * Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or stopped.
      * </p>
+     * <important>
+     * <p>
+     * By default, Amazon EC2 shuts down and reboots the instance before creating the AMI to ensure that everything on
+     * the instance is stopped and in a consistent state during the creation process. If you're confident that your
+     * instance is in a consistent state appropriate for AMI creation, use the <b>NoReboot</b> parameter to prevent
+     * Amazon EC2 from shutting down and rebooting the instance.
+     * </p>
+     * </important>
      * <p>
      * If you customized your instance with instance store volumes or Amazon EBS volumes in addition to the root device
      * volume, the new AMI contains block device mapping information for those volumes. When you launch an instance from
@@ -4032,9 +4040,17 @@ public interface AmazonEC2 {
 
     /**
      * <p>
-     * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances; however, it
-     * doesn't affect any instances that you've already launched from the AMI. You'll continue to incur usage costs for
-     * those instances until you terminate them.
+     * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances.
+     * </p>
+     * <p>
+     * If you deregister an AMI that matches a Recycle Bin retention rule, the AMI is retained in the Recycle Bin for
+     * the specified retention period. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * <p>
+     * When you deregister an AMI, it doesn't affect any instances that you've already launched from the AMI. You'll
+     * continue to incur usage costs for those instances until you terminate them.
      * </p>
      * <p>
      * When you deregister an Amazon EBS-backed AMI, it doesn't affect the snapshot that was created for the root volume
@@ -6961,6 +6977,11 @@ public interface AmazonEC2 {
      * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
      * be removed before you can enable faster launching again.
      * </p>
+     * <note>
+     * <p>
+     * To change these settings, you must own the AMI.
+     * </p>
+     * </note>
      * 
      * @param disableFastLaunchRequest
      * @return Result of the DisableFastLaunch operation returned by the service.
@@ -7341,6 +7362,11 @@ public interface AmazonEC2 {
      * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
      * settings for launch frequency.
      * </p>
+     * <note>
+     * <p>
+     * To change these settings, you must own the AMI.
+     * </p>
+     * </note>
      * 
      * @param enableFastLaunchRequest
      * @return Result of the EnableFastLaunch operation returned by the service.
@@ -8302,6 +8328,21 @@ public interface AmazonEC2 {
      *      Documentation</a>
      */
     ImportVolumeResult importVolume(ImportVolumeRequest importVolumeRequest);
+
+    /**
+     * <p>
+     * Lists one or more AMIs that are currently in the Recycle Bin. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * 
+     * @param listImagesInRecycleBinRequest
+     * @return Result of the ListImagesInRecycleBin operation returned by the service.
+     * @sample AmazonEC2.ListImagesInRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ListImagesInRecycleBin" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListImagesInRecycleBinResult listImagesInRecycleBin(ListImagesInRecycleBinRequest listImagesInRecycleBinRequest);
 
     /**
      * <p>
@@ -10339,6 +10380,21 @@ public interface AmazonEC2 {
      *      API Documentation</a>
      */
     RestoreAddressToClassicResult restoreAddressToClassic(RestoreAddressToClassicRequest restoreAddressToClassicRequest);
+
+    /**
+     * <p>
+     * Restores an AMI from the Recycle Bin. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * 
+     * @param restoreImageFromRecycleBinRequest
+     * @return Result of the RestoreImageFromRecycleBin operation returned by the service.
+     * @sample AmazonEC2.RestoreImageFromRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreImageFromRecycleBin" target="_top">AWS
+     *      API Documentation</a>
+     */
+    RestoreImageFromRecycleBinResult restoreImageFromRecycleBin(RestoreImageFromRecycleBinRequest restoreImageFromRecycleBinRequest);
 
     /**
      * <p>

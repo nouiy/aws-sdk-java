@@ -31,16 +31,18 @@ import com.amazonaws.services.recyclebin.model.*;
  * actions and data types in Recycle Bin.
  * </p>
  * <p>
- * Recycle Bin is a snapshot recovery feature that enables you to restore accidentally deleted snapshots. When using
- * Recycle Bin, if your snapshots are deleted, they are retained in the Recycle Bin for a time period that you specify.
+ * Recycle Bin is a resource recovery feature that enables you to restore accidentally deleted snapshots and EBS-backed
+ * AMIs. When using Recycle Bin, if your resources are deleted, they are retained in the Recycle Bin for a time period
+ * that you specify.
  * </p>
  * <p>
- * You can restore a snapshot from the Recycle Bin at any time before its retention period expires. After you restore a
- * snapshot from the Recycle Bin, the snapshot is removed from the Recycle Bin, and you can then use it in the same way
- * you use any other snapshot in your account. If the retention period expires and the snapshot is not restored, the
- * snapshot is permanently deleted from the Recycle Bin and is no longer available for recovery. For more information
- * about Recycle Bin, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-recycle-bin.html">
- * Recycle Bin</a> in the <i>Amazon EC2 User Guide</i>.
+ * You can restore a resource from the Recycle Bin at any time before its retention period expires. After you restore a
+ * resource from the Recycle Bin, the resource is removed from the Recycle Bin, and you can then use it in the same way
+ * you use any other resource of that type in your account. If the retention period expires and the resource is not
+ * restored, the resource is permanently deleted from the Recycle Bin and is no longer available for recovery. For more
+ * information about Recycle Bin, see <a
+ * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-recycle-bin.html"> Recycle Bin</a> in the
+ * <i>Amazon Elastic Compute Cloud User Guide</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -58,7 +60,7 @@ public interface AmazonRecycleBin {
      * <p>
      * Creates a Recycle Bin retention rule. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-create-rule"
-     * > Create Recycle Bin retention rules</a> in the <i>Amazon EC2 User Guide</i>.
+     * > Create Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param createRuleRequest
@@ -79,7 +81,7 @@ public interface AmazonRecycleBin {
      * <p>
      * Deletes a Recycle Bin retention rule. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-delete-rule"
-     * > Delete Recycle Bin retention rules</a> in the <i>Amazon EC2 User Guide</i>.
+     * > Delete Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param deleteRuleRequest
@@ -134,7 +136,7 @@ public interface AmazonRecycleBin {
 
     /**
      * <p>
-     * Lists the tags assigned a specific resource.
+     * Lists the tags assigned to a retention rule.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -153,7 +155,7 @@ public interface AmazonRecycleBin {
 
     /**
      * <p>
-     * Assigns tags to the specified resource.
+     * Assigns tags to the specified retention rule.
      * </p>
      * 
      * @param tagResourceRequest
@@ -174,7 +176,7 @@ public interface AmazonRecycleBin {
 
     /**
      * <p>
-     * Unassigns a tag from a resource.
+     * Unassigns a tag from a retention rule.
      * </p>
      * 
      * @param untagResourceRequest
@@ -195,7 +197,7 @@ public interface AmazonRecycleBin {
      * <p>
      * Updates an existing Recycle Bin retention rule. For more information, see <a href=
      * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin-working-with-rules.html#recycle-bin-update-rule"
-     * > Update Recycle Bin retention rules</a> in the <i>Amazon EC2 User Guide</i>.
+     * > Update Recycle Bin retention rules</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
      * 
      * @param updateRuleRequest

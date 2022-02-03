@@ -2326,6 +2326,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public ListImagesInRecycleBinResult listImagesInRecycleBin(ListImagesInRecycleBinRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListSnapshotsInRecycleBinResult listSnapshotsInRecycleBin(ListSnapshotsInRecycleBinRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2798,6 +2803,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public RestoreAddressToClassicResult restoreAddressToClassic(RestoreAddressToClassicRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RestoreImageFromRecycleBinResult restoreImageFromRecycleBin(RestoreImageFromRecycleBinRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

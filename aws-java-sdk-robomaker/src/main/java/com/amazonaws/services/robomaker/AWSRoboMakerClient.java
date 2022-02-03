@@ -284,6 +284,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Cancels the specified deployment job.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param cancelDeploymentJobRequest
      * @return Result of the CancelDeploymentJob operation returned by the service.
@@ -301,6 +307,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public CancelDeploymentJobResult cancelDeploymentJob(CancelDeploymentJobRequest request) {
         request = beforeClientExecution(request);
         return executeCancelDeploymentJob(request);
@@ -609,6 +616,11 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Deploys a specific version of a robot application to robots in a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * <p>
      * The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a
      * new version, use <code>CreateRobotApplicationVersion</code> or see <a
@@ -645,6 +657,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateDeploymentJobResult createDeploymentJob(CreateDeploymentJobRequest request) {
         request = beforeClientExecution(request);
         return executeCreateDeploymentJob(request);
@@ -692,6 +705,11 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Creates a fleet, a logical group of robots running the same robot application.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param createFleetRequest
      * @return Result of the CreateFleet operation returned by the service.
@@ -710,6 +728,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateFleetResult createFleet(CreateFleetRequest request) {
         request = beforeClientExecution(request);
         return executeCreateFleet(request);
@@ -757,6 +776,11 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Creates a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param createRobotRequest
      * @return Result of the CreateRobot operation returned by the service.
@@ -777,6 +801,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public CreateRobotResult createRobot(CreateRobotRequest request) {
         request = beforeClientExecution(request);
         return executeCreateRobot(request);
@@ -1397,6 +1422,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Deletes a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deleteFleetRequest
      * @return Result of the DeleteFleet operation returned by the service.
@@ -1412,6 +1443,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DeleteFleetResult deleteFleet(DeleteFleetRequest request) {
         request = beforeClientExecution(request);
         return executeDeleteFleet(request);
@@ -1459,6 +1491,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Deletes a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deleteRobotRequest
      * @return Result of the DeleteRobot operation returned by the service.
@@ -1474,6 +1512,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DeleteRobotResult deleteRobot(DeleteRobotRequest request) {
         request = beforeClientExecution(request);
         return executeDeleteRobot(request);
@@ -1712,6 +1751,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Deregisters a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deregisterRobotRequest
      * @return Result of the DeregisterRobot operation returned by the service.
@@ -1729,6 +1774,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DeregisterRobotResult deregisterRobot(DeregisterRobotRequest request) {
         request = beforeClientExecution(request);
         return executeDeregisterRobot(request);
@@ -1776,6 +1822,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Describes a deployment job.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeDeploymentJobRequest
      * @return Result of the DescribeDeploymentJob operation returned by the service.
@@ -1793,6 +1845,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      target="_top">AWS API Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeDeploymentJobResult describeDeploymentJob(DescribeDeploymentJobRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeDeploymentJob(request);
@@ -1841,6 +1894,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Describes a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeFleetRequest
      * @return Result of the DescribeFleet operation returned by the service.
@@ -1858,6 +1917,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeFleetResult describeFleet(DescribeFleetRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeFleet(request);
@@ -1905,6 +1965,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Describes a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeRobotRequest
      * @return Result of the DescribeRobot operation returned by the service.
@@ -1922,6 +1988,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public DescribeRobotResult describeRobot(DescribeRobotRequest request) {
         request = beforeClientExecution(request);
         return executeDescribeRobot(request);
@@ -2555,6 +2622,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment
      * jobs.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listDeploymentJobsRequest
      * @return Result of the ListDeploymentJobs operation returned by the service.
@@ -2572,6 +2645,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public ListDeploymentJobsResult listDeploymentJobs(ListDeploymentJobsRequest request) {
         request = beforeClientExecution(request);
         return executeListDeploymentJobs(request);
@@ -2619,6 +2693,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Returns a list of fleets. You can optionally provide filters to retrieve specific fleets.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listFleetsRequest
      * @return Result of the ListFleets operation returned by the service.
@@ -2636,6 +2716,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListFleetsResult listFleets(ListFleetsRequest request) {
         request = beforeClientExecution(request);
         return executeListFleets(request);
@@ -2746,6 +2827,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Returns a list of robots. You can optionally provide filters to retrieve specific robots.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listRobotsRequest
      * @return Result of the ListRobots operation returned by the service.
@@ -2763,6 +2850,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public ListRobotsResult listRobots(ListRobotsRequest request) {
         request = beforeClientExecution(request);
         return executeListRobots(request);
@@ -3314,6 +3402,11 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Registers a robot with a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param registerRobotRequest
      * @return Result of the RegisterRobot operation returned by the service.
@@ -3334,6 +3427,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      Documentation</a>
      */
     @Override
+    @Deprecated
     public RegisterRobotResult registerRobot(RegisterRobotRequest request) {
         request = beforeClientExecution(request);
         return executeRegisterRobot(request);
@@ -3519,6 +3613,12 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      * <p>
      * Syncrhonizes robots in a fleet to the latest deployment. This is helpful if robots were added after a deployment.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param syncDeploymentJobRequest
      * @return Result of the SyncDeploymentJob operation returned by the service.
@@ -3544,6 +3644,7 @@ public class AWSRoboMakerClient extends AmazonWebServiceClient implements AWSRob
      *      API Documentation</a>
      */
     @Override
+    @Deprecated
     public SyncDeploymentJobResult syncDeploymentJob(SyncDeploymentJobRequest request) {
         request = beforeClientExecution(request);
         return executeSyncDeploymentJob(request);

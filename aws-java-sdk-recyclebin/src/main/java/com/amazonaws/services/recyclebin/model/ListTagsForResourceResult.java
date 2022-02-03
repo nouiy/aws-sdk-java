@@ -25,17 +25,17 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about the tags assigned to the resource.
+     * Information about the tags assigned to the retention rule.
      * </p>
      */
     private java.util.List<Tag> tags;
 
     /**
      * <p>
-     * Information about the tags assigned to the resource.
+     * Information about the tags assigned to the retention rule.
      * </p>
      * 
-     * @return Information about the tags assigned to the resource.
+     * @return Information about the tags assigned to the retention rule.
      */
 
     public java.util.List<Tag> getTags() {
@@ -44,11 +44,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about the tags assigned to the resource.
+     * Information about the tags assigned to the retention rule.
      * </p>
      * 
      * @param tags
-     *        Information about the tags assigned to the resource.
+     *        Information about the tags assigned to the retention rule.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -62,7 +62,7 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about the tags assigned to the resource.
+     * Information about the tags assigned to the retention rule.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -71,7 +71,7 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      * 
      * @param tags
-     *        Information about the tags assigned to the resource.
+     *        Information about the tags assigned to the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,11 +87,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Information about the tags assigned to the resource.
+     * Information about the tags assigned to the retention rule.
      * </p>
      * 
      * @param tags
-     *        Information about the tags assigned to the resource.
+     *        Information about the tags assigned to the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

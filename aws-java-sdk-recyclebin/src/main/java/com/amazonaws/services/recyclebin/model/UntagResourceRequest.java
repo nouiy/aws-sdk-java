@@ -27,24 +27,24 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource from which to unassign the tags.
+     * The Amazon Resource Name (ARN) of the retention rule.
      * </p>
      */
     private String resourceArn;
     /**
      * <p>
-     * Information about the tags to unassign from the resource.
+     * The tag keys of the tags to unassign. All tags that have the specified tag key are unassigned.
      * </p>
      */
     private java.util.List<String> tagKeys;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource from which to unassign the tags.
+     * The Amazon Resource Name (ARN) of the retention rule.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource from which to unassign the tags.
+     *        The Amazon Resource Name (ARN) of the retention rule.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -53,10 +53,10 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource from which to unassign the tags.
+     * The Amazon Resource Name (ARN) of the retention rule.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the resource from which to unassign the tags.
+     * @return The Amazon Resource Name (ARN) of the retention rule.
      */
 
     public String getResourceArn() {
@@ -65,11 +65,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the resource from which to unassign the tags.
+     * The Amazon Resource Name (ARN) of the retention rule.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the resource from which to unassign the tags.
+     *        The Amazon Resource Name (ARN) of the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +80,10 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Information about the tags to unassign from the resource.
+     * The tag keys of the tags to unassign. All tags that have the specified tag key are unassigned.
      * </p>
      * 
-     * @return Information about the tags to unassign from the resource.
+     * @return The tag keys of the tags to unassign. All tags that have the specified tag key are unassigned.
      */
 
     public java.util.List<String> getTagKeys() {
@@ -92,11 +92,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Information about the tags to unassign from the resource.
+     * The tag keys of the tags to unassign. All tags that have the specified tag key are unassigned.
      * </p>
      * 
      * @param tagKeys
-     *        Information about the tags to unassign from the resource.
+     *        The tag keys of the tags to unassign. All tags that have the specified tag key are unassigned.
      */
 
     public void setTagKeys(java.util.Collection<String> tagKeys) {
@@ -110,7 +110,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Information about the tags to unassign from the resource.
+     * The tag keys of the tags to unassign. All tags that have the specified tag key are unassigned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +119,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tagKeys
-     *        Information about the tags to unassign from the resource.
+     *        The tag keys of the tags to unassign. All tags that have the specified tag key are unassigned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * Information about the tags to unassign from the resource.
+     * The tag keys of the tags to unassign. All tags that have the specified tag key are unassigned.
      * </p>
      * 
      * @param tagKeys
-     *        Information about the tags to unassign from the resource.
+     *        The tag keys of the tags to unassign. All tags that have the specified tag key are unassigned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

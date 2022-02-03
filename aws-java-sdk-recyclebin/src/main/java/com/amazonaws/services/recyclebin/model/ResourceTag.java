@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about a resource tag used to identify resources that are to be retained by a Recycle Bin retention rule.
+ * Information about the resource tags used to identify resources that are retained by the retention rule.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/ResourceTag" target="_top">AWS API

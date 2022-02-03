@@ -27,18 +27,18 @@ public class DeleteRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique ID of the retention rule to delete.
+     * The unique ID of the retention rule.
      * </p>
      */
     private String identifier;
 
     /**
      * <p>
-     * The unique ID of the retention rule to delete.
+     * The unique ID of the retention rule.
      * </p>
      * 
      * @param identifier
-     *        The unique ID of the retention rule to delete.
+     *        The unique ID of the retention rule.
      */
 
     public void setIdentifier(String identifier) {
@@ -47,10 +47,10 @@ public class DeleteRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique ID of the retention rule to delete.
+     * The unique ID of the retention rule.
      * </p>
      * 
-     * @return The unique ID of the retention rule to delete.
+     * @return The unique ID of the retention rule.
      */
 
     public String getIdentifier() {
@@ -59,11 +59,11 @@ public class DeleteRuleRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The unique ID of the retention rule to delete.
+     * The unique ID of the retention rule.
      * </p>
      * 
      * @param identifier
-     *        The unique ID of the retention rule to delete.
+     *        The unique ID of the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

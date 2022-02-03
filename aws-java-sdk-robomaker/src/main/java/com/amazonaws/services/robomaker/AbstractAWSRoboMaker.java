@@ -38,6 +38,7 @@ public class AbstractAWSRoboMaker implements AWSRoboMaker {
     }
 
     @Override
+    @Deprecated
     public CancelDeploymentJobResult cancelDeploymentJob(CancelDeploymentJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -63,16 +64,19 @@ public class AbstractAWSRoboMaker implements AWSRoboMaker {
     }
 
     @Override
+    @Deprecated
     public CreateDeploymentJobResult createDeploymentJob(CreateDeploymentJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    @Deprecated
     public CreateFleetResult createFleet(CreateFleetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    @Deprecated
     public CreateRobotResult createRobot(CreateRobotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -118,11 +122,13 @@ public class AbstractAWSRoboMaker implements AWSRoboMaker {
     }
 
     @Override
+    @Deprecated
     public DeleteFleetResult deleteFleet(DeleteFleetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    @Deprecated
     public DeleteRobotResult deleteRobot(DeleteRobotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -143,21 +149,25 @@ public class AbstractAWSRoboMaker implements AWSRoboMaker {
     }
 
     @Override
+    @Deprecated
     public DeregisterRobotResult deregisterRobot(DeregisterRobotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    @Deprecated
     public DescribeDeploymentJobResult describeDeploymentJob(DescribeDeploymentJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    @Deprecated
     public DescribeFleetResult describeFleet(DescribeFleetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    @Deprecated
     public DescribeRobotResult describeRobot(DescribeRobotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -208,11 +218,13 @@ public class AbstractAWSRoboMaker implements AWSRoboMaker {
     }
 
     @Override
+    @Deprecated
     public ListDeploymentJobsResult listDeploymentJobs(ListDeploymentJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    @Deprecated
     public ListFleetsResult listFleets(ListFleetsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -223,6 +235,7 @@ public class AbstractAWSRoboMaker implements AWSRoboMaker {
     }
 
     @Override
+    @Deprecated
     public ListRobotsResult listRobots(ListRobotsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -268,6 +281,7 @@ public class AbstractAWSRoboMaker implements AWSRoboMaker {
     }
 
     @Override
+    @Deprecated
     public RegisterRobotResult registerRobot(RegisterRobotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -283,6 +297,7 @@ public class AbstractAWSRoboMaker implements AWSRoboMaker {
     }
 
     @Override
+    @Deprecated
     public SyncDeploymentJobResult syncDeploymentJob(SyncDeploymentJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

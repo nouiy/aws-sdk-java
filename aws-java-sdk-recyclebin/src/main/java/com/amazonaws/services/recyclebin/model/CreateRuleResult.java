@@ -25,7 +25,7 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The unique identifier of the retention rule.
+     * The unique ID of the retention rule.
      * </p>
      */
     private String identifier;
@@ -39,7 +39,7 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private String description;
     /**
      * <p>
-     * The tags assigned to the retention rule.
+     * Information about the tags assigned to the retention rule.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -58,18 +58,18 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The unique identifier of the retention rule.
+     * The unique ID of the retention rule.
      * </p>
      * 
      * @param identifier
-     *        The unique identifier of the retention rule.
+     *        The unique ID of the retention rule.
      */
 
     public void setIdentifier(String identifier) {
@@ -78,10 +78,10 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The unique identifier of the retention rule.
+     * The unique ID of the retention rule.
      * </p>
      * 
-     * @return The unique identifier of the retention rule.
+     * @return The unique ID of the retention rule.
      */
 
     public String getIdentifier() {
@@ -90,11 +90,11 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The unique identifier of the retention rule.
+     * The unique ID of the retention rule.
      * </p>
      * 
      * @param identifier
-     *        The unique identifier of the retention rule.
+     *        The unique ID of the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -171,10 +171,10 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The tags assigned to the retention rule.
+     * Information about the tags assigned to the retention rule.
      * </p>
      * 
-     * @return The tags assigned to the retention rule.
+     * @return Information about the tags assigned to the retention rule.
      */
 
     public java.util.List<Tag> getTags() {
@@ -183,11 +183,11 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The tags assigned to the retention rule.
+     * Information about the tags assigned to the retention rule.
      * </p>
      * 
      * @param tags
-     *        The tags assigned to the retention rule.
+     *        Information about the tags assigned to the retention rule.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -201,7 +201,7 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The tags assigned to the retention rule.
+     * Information about the tags assigned to the retention rule.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -210,7 +210,7 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * 
      * @param tags
-     *        The tags assigned to the retention rule.
+     *        Information about the tags assigned to the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -226,11 +226,11 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The tags assigned to the retention rule.
+     * Information about the tags assigned to the retention rule.
      * </p>
      * 
      * @param tags
-     *        The tags assigned to the retention rule.
+     *        Information about the tags assigned to the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -371,12 +371,12 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @param status
      *        The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *        snapshots.
+     *        resources.
      * @see RuleStatus
      */
 
@@ -387,11 +387,11 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @return The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *         snapshots.
+     *         resources.
      * @see RuleStatus
      */
 
@@ -402,12 +402,12 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @param status
      *        The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *        snapshots.
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleStatus
      */
@@ -420,12 +420,12 @@ public class CreateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @param status
      *        The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *        snapshots.
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleStatus
      */

@@ -16,7 +16,11 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The timestamp value passed in the meterUsage() is out of allowed range.
+ * The <code>timestamp</code> value passed in the <code>UsageRecord</code> is out of allowed range.
+ * </p>
+ * <p>
+ * For <code>BatchMeterUsage</code>, if any of the records are outside of the allowed range, the entire batch is not
+ * processed. You must remove invalid records and try again.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

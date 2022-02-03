@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the retention period for which a retention rule is to retain resources.
+ * Information about the retention period for which the retention rule is to retain resources.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rbin-2021-06-15/RetentionPeriod" target="_top">AWS API

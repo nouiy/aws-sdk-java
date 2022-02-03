@@ -100,6 +100,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Cancels the specified deployment job.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param cancelDeploymentJobRequest
      * @return A Java Future containing the result of the CancelDeploymentJob operation returned by the service.
@@ -107,12 +113,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CancelDeploymentJob" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CancelDeploymentJobResult> cancelDeploymentJobAsync(CancelDeploymentJobRequest cancelDeploymentJobRequest);
 
     /**
      * <p>
      * Cancels the specified deployment job.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param cancelDeploymentJobRequest
      * @param asyncHandler
@@ -124,6 +137,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CancelDeploymentJob" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CancelDeploymentJobResult> cancelDeploymentJobAsync(CancelDeploymentJobRequest cancelDeploymentJobRequest,
             com.amazonaws.handlers.AsyncHandler<CancelDeploymentJobRequest, CancelDeploymentJobResult> asyncHandler);
 
@@ -257,6 +271,11 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Deploys a specific version of a robot application to robots in a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * <p>
      * The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a
      * new version, use <code>CreateRobotApplicationVersion</code> or see <a
@@ -275,12 +294,18 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateDeploymentJob" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateDeploymentJobResult> createDeploymentJobAsync(CreateDeploymentJobRequest createDeploymentJobRequest);
 
     /**
      * <p>
      * Deploys a specific version of a robot application to robots in a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * <p>
      * The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a
      * new version, use <code>CreateRobotApplicationVersion</code> or see <a
@@ -303,6 +328,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateDeploymentJob" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateDeploymentJobResult> createDeploymentJobAsync(CreateDeploymentJobRequest createDeploymentJobRequest,
             com.amazonaws.handlers.AsyncHandler<CreateDeploymentJobRequest, CreateDeploymentJobResult> asyncHandler);
 
@@ -310,6 +336,11 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Creates a fleet, a logical group of robots running the same robot application.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param createFleetRequest
      * @return A Java Future containing the result of the CreateFleet operation returned by the service.
@@ -317,12 +348,18 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest createFleetRequest);
 
     /**
      * <p>
      * Creates a fleet, a logical group of robots running the same robot application.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param createFleetRequest
      * @param asyncHandler
@@ -334,6 +371,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest createFleetRequest,
             com.amazonaws.handlers.AsyncHandler<CreateFleetRequest, CreateFleetResult> asyncHandler);
 
@@ -341,6 +379,11 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Creates a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param createRobotRequest
      * @return A Java Future containing the result of the CreateRobot operation returned by the service.
@@ -348,12 +391,18 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateRobotResult> createRobotAsync(CreateRobotRequest createRobotRequest);
 
     /**
      * <p>
      * Creates a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param createRobotRequest
      * @param asyncHandler
@@ -365,6 +414,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/CreateRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<CreateRobotResult> createRobotAsync(CreateRobotRequest createRobotRequest,
             com.amazonaws.handlers.AsyncHandler<CreateRobotRequest, CreateRobotResult> asyncHandler);
 
@@ -640,6 +690,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Deletes a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deleteFleetRequest
      * @return A Java Future containing the result of the DeleteFleet operation returned by the service.
@@ -647,12 +703,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest deleteFleetRequest);
 
     /**
      * <p>
      * Deletes a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deleteFleetRequest
      * @param asyncHandler
@@ -664,6 +727,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest deleteFleetRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteFleetRequest, DeleteFleetResult> asyncHandler);
 
@@ -671,6 +735,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Deletes a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deleteRobotRequest
      * @return A Java Future containing the result of the DeleteRobot operation returned by the service.
@@ -678,12 +748,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeleteRobotResult> deleteRobotAsync(DeleteRobotRequest deleteRobotRequest);
 
     /**
      * <p>
      * Deletes a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deleteRobotRequest
      * @param asyncHandler
@@ -695,6 +772,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeleteRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeleteRobotResult> deleteRobotAsync(DeleteRobotRequest deleteRobotRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteRobotRequest, DeleteRobotResult> asyncHandler);
 
@@ -797,6 +875,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Deregisters a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deregisterRobotRequest
      * @return A Java Future containing the result of the DeregisterRobot operation returned by the service.
@@ -804,12 +888,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeregisterRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeregisterRobotResult> deregisterRobotAsync(DeregisterRobotRequest deregisterRobotRequest);
 
     /**
      * <p>
      * Deregisters a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param deregisterRobotRequest
      * @param asyncHandler
@@ -821,6 +912,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DeregisterRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DeregisterRobotResult> deregisterRobotAsync(DeregisterRobotRequest deregisterRobotRequest,
             com.amazonaws.handlers.AsyncHandler<DeregisterRobotRequest, DeregisterRobotResult> asyncHandler);
 
@@ -828,6 +920,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Describes a deployment job.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeDeploymentJobRequest
      * @return A Java Future containing the result of the DescribeDeploymentJob operation returned by the service.
@@ -835,12 +933,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeDeploymentJob"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeDeploymentJobResult> describeDeploymentJobAsync(DescribeDeploymentJobRequest describeDeploymentJobRequest);
 
     /**
      * <p>
      * Describes a deployment job.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeDeploymentJobRequest
      * @param asyncHandler
@@ -852,6 +957,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeDeploymentJob"
      *      target="_top">AWS API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeDeploymentJobResult> describeDeploymentJobAsync(DescribeDeploymentJobRequest describeDeploymentJobRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeDeploymentJobRequest, DescribeDeploymentJobResult> asyncHandler);
 
@@ -859,6 +965,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Describes a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeFleetRequest
      * @return A Java Future containing the result of the DescribeFleet operation returned by the service.
@@ -866,12 +978,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeFleetResult> describeFleetAsync(DescribeFleetRequest describeFleetRequest);
 
     /**
      * <p>
      * Describes a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeFleetRequest
      * @param asyncHandler
@@ -883,6 +1002,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeFleet" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeFleetResult> describeFleetAsync(DescribeFleetRequest describeFleetRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeFleetRequest, DescribeFleetResult> asyncHandler);
 
@@ -890,6 +1010,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Describes a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeRobotRequest
      * @return A Java Future containing the result of the DescribeRobot operation returned by the service.
@@ -897,12 +1023,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeRobotResult> describeRobotAsync(DescribeRobotRequest describeRobotRequest);
 
     /**
      * <p>
      * Describes a robot.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param describeRobotRequest
      * @param asyncHandler
@@ -914,6 +1047,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<DescribeRobotResult> describeRobotAsync(DescribeRobotRequest describeRobotRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeRobotRequest, DescribeRobotResult> asyncHandler);
 
@@ -1209,6 +1343,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment
      * jobs.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listDeploymentJobsRequest
      * @return A Java Future containing the result of the ListDeploymentJobs operation returned by the service.
@@ -1216,6 +1356,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListDeploymentJobs" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDeploymentJobsResult> listDeploymentJobsAsync(ListDeploymentJobsRequest listDeploymentJobsRequest);
 
     /**
@@ -1223,6 +1364,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment
      * jobs.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listDeploymentJobsRequest
      * @param asyncHandler
@@ -1234,6 +1381,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListDeploymentJobs" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListDeploymentJobsResult> listDeploymentJobsAsync(ListDeploymentJobsRequest listDeploymentJobsRequest,
             com.amazonaws.handlers.AsyncHandler<ListDeploymentJobsRequest, ListDeploymentJobsResult> asyncHandler);
 
@@ -1241,6 +1389,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Returns a list of fleets. You can optionally provide filters to retrieve specific fleets.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listFleetsRequest
      * @return A Java Future containing the result of the ListFleets operation returned by the service.
@@ -1248,12 +1402,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListFleets" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest listFleetsRequest);
 
     /**
      * <p>
      * Returns a list of fleets. You can optionally provide filters to retrieve specific fleets.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listFleetsRequest
      * @param asyncHandler
@@ -1265,6 +1426,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListFleets" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest listFleetsRequest,
             com.amazonaws.handlers.AsyncHandler<ListFleetsRequest, ListFleetsResult> asyncHandler);
 
@@ -1303,6 +1465,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Returns a list of robots. You can optionally provide filters to retrieve specific robots.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listRobotsRequest
      * @return A Java Future containing the result of the ListRobots operation returned by the service.
@@ -1310,12 +1478,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListRobots" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListRobotsResult> listRobotsAsync(ListRobotsRequest listRobotsRequest);
 
     /**
      * <p>
      * Returns a list of robots. You can optionally provide filters to retrieve specific robots.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param listRobotsRequest
      * @param asyncHandler
@@ -1327,6 +1502,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/ListRobots" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<ListRobotsResult> listRobotsAsync(ListRobotsRequest listRobotsRequest,
             com.amazonaws.handlers.AsyncHandler<ListRobotsRequest, ListRobotsResult> asyncHandler);
 
@@ -1588,6 +1764,11 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Registers a robot with a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param registerRobotRequest
      * @return A Java Future containing the result of the RegisterRobot operation returned by the service.
@@ -1595,12 +1776,18 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/RegisterRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<RegisterRobotResult> registerRobotAsync(RegisterRobotRequest registerRobotRequest);
 
     /**
      * <p>
      * Registers a robot with a fleet.
      * </p>
+     * <important>
+     * <p>
+     * This API is no longer supported and will throw an error if used.
+     * </p>
+     * </important>
      * 
      * @param registerRobotRequest
      * @param asyncHandler
@@ -1612,6 +1799,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/RegisterRobot" target="_top">AWS API
      *      Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<RegisterRobotResult> registerRobotAsync(RegisterRobotRequest registerRobotRequest,
             com.amazonaws.handlers.AsyncHandler<RegisterRobotRequest, RegisterRobotResult> asyncHandler);
 
@@ -1683,6 +1871,12 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * <p>
      * Syncrhonizes robots in a fleet to the latest deployment. This is helpful if robots were added after a deployment.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param syncDeploymentJobRequest
      * @return A Java Future containing the result of the SyncDeploymentJob operation returned by the service.
@@ -1690,12 +1884,19 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/SyncDeploymentJob" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<SyncDeploymentJobResult> syncDeploymentJobAsync(SyncDeploymentJobRequest syncDeploymentJobRequest);
 
     /**
      * <p>
      * Syncrhonizes robots in a fleet to the latest deployment. This is helpful if robots were added after a deployment.
      * </p>
+     * <important>
+     * <p>
+     * This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for
+     * Deployment Service.
+     * </p>
+     * </important>
      * 
      * @param syncDeploymentJobRequest
      * @param asyncHandler
@@ -1707,6 +1908,7 @@ public interface AWSRoboMakerAsync extends AWSRoboMaker {
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/SyncDeploymentJob" target="_top">AWS
      *      API Documentation</a>
      */
+    @Deprecated
     java.util.concurrent.Future<SyncDeploymentJobResult> syncDeploymentJobAsync(SyncDeploymentJobRequest syncDeploymentJobRequest,
             com.amazonaws.handlers.AsyncHandler<SyncDeploymentJobRequest, SyncDeploymentJobResult> asyncHandler);
 

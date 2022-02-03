@@ -16,6 +16,10 @@ import java.io.Serializable;
 import javax.annotation.Generated;
 
 /**
+ * <p>
+ * Current state of options for customizable text banner that will be displayed on Amazon Web Services provided clients
+ * when a VPN session is established.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ClientLoginBannerResponseOptions"
  *      target="_top">AWS API Documentation</a>
@@ -23,12 +27,35 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ClientLoginBannerResponseOptions implements Serializable, Cloneable {
 
+    /**
+     * <p>
+     * Current state of text banner feature.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     */
     private Boolean enabled;
-
+    /**
+     * <p>
+     * Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN session
+     * is established. UTF-8 encoded characters only. Maximum of 1400 characters.
+     * </p>
+     */
     private String bannerText;
 
     /**
+     * <p>
+     * Current state of text banner feature.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     * 
      * @param enabled
+     *        Current state of text banner feature.</p>
+     *        <p>
+     *        Valid values: <code>true | false</code>
      */
 
     public void setEnabled(Boolean enabled) {
@@ -36,7 +63,16 @@ public class ClientLoginBannerResponseOptions implements Serializable, Cloneable
     }
 
     /**
-     * @return
+     * <p>
+     * Current state of text banner feature.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     * 
+     * @return Current state of text banner feature.</p>
+     *         <p>
+     *         Valid values: <code>true | false</code>
      */
 
     public Boolean getEnabled() {
@@ -44,7 +80,17 @@ public class ClientLoginBannerResponseOptions implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * Current state of text banner feature.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     * 
      * @param enabled
+     *        Current state of text banner feature.</p>
+     *        <p>
+     *        Valid values: <code>true | false</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -54,7 +100,16 @@ public class ClientLoginBannerResponseOptions implements Serializable, Cloneable
     }
 
     /**
-     * @return
+     * <p>
+     * Current state of text banner feature.
+     * </p>
+     * <p>
+     * Valid values: <code>true | false</code>
+     * </p>
+     * 
+     * @return Current state of text banner feature.</p>
+     *         <p>
+     *         Valid values: <code>true | false</code>
      */
 
     public Boolean isEnabled() {
@@ -62,7 +117,14 @@ public class ClientLoginBannerResponseOptions implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN session
+     * is established. UTF-8 encoded characters only. Maximum of 1400 characters.
+     * </p>
+     * 
      * @param bannerText
+     *        Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN
+     *        session is established. UTF-8 encoded characters only. Maximum of 1400 characters.
      */
 
     public void setBannerText(String bannerText) {
@@ -70,7 +132,13 @@ public class ClientLoginBannerResponseOptions implements Serializable, Cloneable
     }
 
     /**
-     * @return
+     * <p>
+     * Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN session
+     * is established. UTF-8 encoded characters only. Maximum of 1400 characters.
+     * </p>
+     * 
+     * @return Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN
+     *         session is established. UTF-8 encoded characters only. Maximum of 1400 characters.
      */
 
     public String getBannerText() {
@@ -78,7 +146,14 @@ public class ClientLoginBannerResponseOptions implements Serializable, Cloneable
     }
 
     /**
+     * <p>
+     * Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN session
+     * is established. UTF-8 encoded characters only. Maximum of 1400 characters.
+     * </p>
+     * 
      * @param bannerText
+     *        Customizable text that will be displayed in a banner on Amazon Web Services provided clients when a VPN
+     *        session is established. UTF-8 encoded characters only. Maximum of 1400 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

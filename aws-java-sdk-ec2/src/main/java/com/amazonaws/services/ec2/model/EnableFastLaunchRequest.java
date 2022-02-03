@@ -54,7 +54,8 @@ public class EnableFastLaunchRequest extends AmazonWebServiceRequest implements 
     private FastLaunchLaunchTemplateSpecificationRequest launchTemplate;
     /**
      * <p>
-     * The maximum number of parallel instances to launch for creating resources.
+     * The maximum number of parallel instances to launch for creating resources. Value must be <code>6</code> or
+     * greater.
      * </p>
      */
     private Integer maxParallelLaunches;
@@ -239,11 +240,13 @@ public class EnableFastLaunchRequest extends AmazonWebServiceRequest implements 
 
     /**
      * <p>
-     * The maximum number of parallel instances to launch for creating resources.
+     * The maximum number of parallel instances to launch for creating resources. Value must be <code>6</code> or
+     * greater.
      * </p>
      * 
      * @param maxParallelLaunches
-     *        The maximum number of parallel instances to launch for creating resources.
+     *        The maximum number of parallel instances to launch for creating resources. Value must be <code>6</code> or
+     *        greater.
      */
 
     public void setMaxParallelLaunches(Integer maxParallelLaunches) {
@@ -252,10 +255,12 @@ public class EnableFastLaunchRequest extends AmazonWebServiceRequest implements 
 
     /**
      * <p>
-     * The maximum number of parallel instances to launch for creating resources.
+     * The maximum number of parallel instances to launch for creating resources. Value must be <code>6</code> or
+     * greater.
      * </p>
      * 
-     * @return The maximum number of parallel instances to launch for creating resources.
+     * @return The maximum number of parallel instances to launch for creating resources. Value must be <code>6</code>
+     *         or greater.
      */
 
     public Integer getMaxParallelLaunches() {
@@ -264,11 +269,13 @@ public class EnableFastLaunchRequest extends AmazonWebServiceRequest implements 
 
     /**
      * <p>
-     * The maximum number of parallel instances to launch for creating resources.
+     * The maximum number of parallel instances to launch for creating resources. Value must be <code>6</code> or
+     * greater.
      * </p>
      * 
      * @param maxParallelLaunches
-     *        The maximum number of parallel instances to launch for creating resources.
+     *        The maximum number of parallel instances to launch for creating resources. Value must be <code>6</code> or
+     *        greater.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

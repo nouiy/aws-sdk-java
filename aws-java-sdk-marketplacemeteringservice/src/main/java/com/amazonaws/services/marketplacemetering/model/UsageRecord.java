@@ -19,10 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A UsageRecord indicates a quantity of usage for a given product, customer, dimension and time.
+ * A <code>UsageRecord</code> indicates a quantity of usage for a given product, customer, dimension and time.
  * </p>
  * <p>
- * Multiple requests with the same UsageRecords as input will be deduplicated to prevent double charges.
+ * Multiple requests with the same <code>UsageRecords</code> as input will be de-duplicated to prevent double charges.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/meteringmarketplace-2016-01-14/UsageRecord" target="_top">AWS
@@ -36,22 +36,22 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
      * Timestamp, in UTC, for which the usage is being reported.
      * </p>
      * <p>
-     * Your application can meter usage for up to one hour in the past. Make sure the timestamp value is not before the
-     * start of the software usage.
+     * Your application can meter usage for up to one hour in the past. Make sure the <code>timestamp</code> value is
+     * not before the start of the software usage.
      * </p>
      */
     private java.util.Date timestamp;
     /**
      * <p>
-     * The CustomerIdentifier is obtained through the ResolveCustomer operation and represents an individual buyer in
-     * your application.
+     * The <code>CustomerIdentifier</code> is obtained through the <code>ResolveCustomer</code> operation and represents
+     * an individual buyer in your application.
      * </p>
      */
     private String customerIdentifier;
     /**
      * <p>
-     * During the process of registering a product on AWS Marketplace, up to eight dimensions are specified. These
-     * represent different units of value in your application.
+     * During the process of registering a product on AWS Marketplace, dimensions are specified. These represent
+     * different units of value in your application.
      * </p>
      */
     private String dimension;
@@ -64,8 +64,8 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
     private Integer quantity;
     /**
      * <p>
-     * The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity of the
-     * UsageRecord.
+     * The set of <code>UsageAllocations</code> to submit. The sum of all <code>UsageAllocation</code> quantities must
+     * equal the Quantity of the <code>UsageRecord</code>.
      * </p>
      */
     private java.util.List<UsageAllocation> usageAllocations;
@@ -75,15 +75,15 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
      * Timestamp, in UTC, for which the usage is being reported.
      * </p>
      * <p>
-     * Your application can meter usage for up to one hour in the past. Make sure the timestamp value is not before the
-     * start of the software usage.
+     * Your application can meter usage for up to one hour in the past. Make sure the <code>timestamp</code> value is
+     * not before the start of the software usage.
      * </p>
      * 
      * @param timestamp
      *        Timestamp, in UTC, for which the usage is being reported.</p>
      *        <p>
-     *        Your application can meter usage for up to one hour in the past. Make sure the timestamp value is not
-     *        before the start of the software usage.
+     *        Your application can meter usage for up to one hour in the past. Make sure the <code>timestamp</code>
+     *        value is not before the start of the software usage.
      */
 
     public void setTimestamp(java.util.Date timestamp) {
@@ -95,14 +95,14 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
      * Timestamp, in UTC, for which the usage is being reported.
      * </p>
      * <p>
-     * Your application can meter usage for up to one hour in the past. Make sure the timestamp value is not before the
-     * start of the software usage.
+     * Your application can meter usage for up to one hour in the past. Make sure the <code>timestamp</code> value is
+     * not before the start of the software usage.
      * </p>
      * 
      * @return Timestamp, in UTC, for which the usage is being reported.</p>
      *         <p>
-     *         Your application can meter usage for up to one hour in the past. Make sure the timestamp value is not
-     *         before the start of the software usage.
+     *         Your application can meter usage for up to one hour in the past. Make sure the <code>timestamp</code>
+     *         value is not before the start of the software usage.
      */
 
     public java.util.Date getTimestamp() {
@@ -114,15 +114,15 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
      * Timestamp, in UTC, for which the usage is being reported.
      * </p>
      * <p>
-     * Your application can meter usage for up to one hour in the past. Make sure the timestamp value is not before the
-     * start of the software usage.
+     * Your application can meter usage for up to one hour in the past. Make sure the <code>timestamp</code> value is
+     * not before the start of the software usage.
      * </p>
      * 
      * @param timestamp
      *        Timestamp, in UTC, for which the usage is being reported.</p>
      *        <p>
-     *        Your application can meter usage for up to one hour in the past. Make sure the timestamp value is not
-     *        before the start of the software usage.
+     *        Your application can meter usage for up to one hour in the past. Make sure the <code>timestamp</code>
+     *        value is not before the start of the software usage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,13 +133,13 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The CustomerIdentifier is obtained through the ResolveCustomer operation and represents an individual buyer in
-     * your application.
+     * The <code>CustomerIdentifier</code> is obtained through the <code>ResolveCustomer</code> operation and represents
+     * an individual buyer in your application.
      * </p>
      * 
      * @param customerIdentifier
-     *        The CustomerIdentifier is obtained through the ResolveCustomer operation and represents an individual
-     *        buyer in your application.
+     *        The <code>CustomerIdentifier</code> is obtained through the <code>ResolveCustomer</code> operation and
+     *        represents an individual buyer in your application.
      */
 
     public void setCustomerIdentifier(String customerIdentifier) {
@@ -148,12 +148,12 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The CustomerIdentifier is obtained through the ResolveCustomer operation and represents an individual buyer in
-     * your application.
+     * The <code>CustomerIdentifier</code> is obtained through the <code>ResolveCustomer</code> operation and represents
+     * an individual buyer in your application.
      * </p>
      * 
-     * @return The CustomerIdentifier is obtained through the ResolveCustomer operation and represents an individual
-     *         buyer in your application.
+     * @return The <code>CustomerIdentifier</code> is obtained through the <code>ResolveCustomer</code> operation and
+     *         represents an individual buyer in your application.
      */
 
     public String getCustomerIdentifier() {
@@ -162,13 +162,13 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The CustomerIdentifier is obtained through the ResolveCustomer operation and represents an individual buyer in
-     * your application.
+     * The <code>CustomerIdentifier</code> is obtained through the <code>ResolveCustomer</code> operation and represents
+     * an individual buyer in your application.
      * </p>
      * 
      * @param customerIdentifier
-     *        The CustomerIdentifier is obtained through the ResolveCustomer operation and represents an individual
-     *        buyer in your application.
+     *        The <code>CustomerIdentifier</code> is obtained through the <code>ResolveCustomer</code> operation and
+     *        represents an individual buyer in your application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -179,13 +179,13 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * During the process of registering a product on AWS Marketplace, up to eight dimensions are specified. These
-     * represent different units of value in your application.
+     * During the process of registering a product on AWS Marketplace, dimensions are specified. These represent
+     * different units of value in your application.
      * </p>
      * 
      * @param dimension
-     *        During the process of registering a product on AWS Marketplace, up to eight dimensions are specified.
-     *        These represent different units of value in your application.
+     *        During the process of registering a product on AWS Marketplace, dimensions are specified. These represent
+     *        different units of value in your application.
      */
 
     public void setDimension(String dimension) {
@@ -194,12 +194,12 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * During the process of registering a product on AWS Marketplace, up to eight dimensions are specified. These
-     * represent different units of value in your application.
+     * During the process of registering a product on AWS Marketplace, dimensions are specified. These represent
+     * different units of value in your application.
      * </p>
      * 
-     * @return During the process of registering a product on AWS Marketplace, up to eight dimensions are specified.
-     *         These represent different units of value in your application.
+     * @return During the process of registering a product on AWS Marketplace, dimensions are specified. These represent
+     *         different units of value in your application.
      */
 
     public String getDimension() {
@@ -208,13 +208,13 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * During the process of registering a product on AWS Marketplace, up to eight dimensions are specified. These
-     * represent different units of value in your application.
+     * During the process of registering a product on AWS Marketplace, dimensions are specified. These represent
+     * different units of value in your application.
      * </p>
      * 
      * @param dimension
-     *        During the process of registering a product on AWS Marketplace, up to eight dimensions are specified.
-     *        These represent different units of value in your application.
+     *        During the process of registering a product on AWS Marketplace, dimensions are specified. These represent
+     *        different units of value in your application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -271,12 +271,12 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity of the
-     * UsageRecord.
+     * The set of <code>UsageAllocations</code> to submit. The sum of all <code>UsageAllocation</code> quantities must
+     * equal the Quantity of the <code>UsageRecord</code>.
      * </p>
      * 
-     * @return The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity
-     *         of the UsageRecord.
+     * @return The set of <code>UsageAllocations</code> to submit. The sum of all <code>UsageAllocation</code>
+     *         quantities must equal the Quantity of the <code>UsageRecord</code>.
      */
 
     public java.util.List<UsageAllocation> getUsageAllocations() {
@@ -285,13 +285,13 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity of the
-     * UsageRecord.
+     * The set of <code>UsageAllocations</code> to submit. The sum of all <code>UsageAllocation</code> quantities must
+     * equal the Quantity of the <code>UsageRecord</code>.
      * </p>
      * 
      * @param usageAllocations
-     *        The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity
-     *        of the UsageRecord.
+     *        The set of <code>UsageAllocations</code> to submit. The sum of all <code>UsageAllocation</code> quantities
+     *        must equal the Quantity of the <code>UsageRecord</code>.
      */
 
     public void setUsageAllocations(java.util.Collection<UsageAllocation> usageAllocations) {
@@ -305,8 +305,8 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity of the
-     * UsageRecord.
+     * The set of <code>UsageAllocations</code> to submit. The sum of all <code>UsageAllocation</code> quantities must
+     * equal the Quantity of the <code>UsageRecord</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -315,8 +315,8 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param usageAllocations
-     *        The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity
-     *        of the UsageRecord.
+     *        The set of <code>UsageAllocations</code> to submit. The sum of all <code>UsageAllocation</code> quantities
+     *        must equal the Quantity of the <code>UsageRecord</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -332,13 +332,13 @@ public class UsageRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity of the
-     * UsageRecord.
+     * The set of <code>UsageAllocations</code> to submit. The sum of all <code>UsageAllocation</code> quantities must
+     * equal the Quantity of the <code>UsageRecord</code>.
      * </p>
      * 
      * @param usageAllocations
-     *        The set of UsageAllocations to submit. The sum of all UsageAllocation quantities must equal the Quantity
-     *        of the UsageRecord.
+     *        The set of <code>UsageAllocations</code> to submit. The sum of all <code>UsageAllocation</code> quantities
+     *        must equal the Quantity of the <code>UsageRecord</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

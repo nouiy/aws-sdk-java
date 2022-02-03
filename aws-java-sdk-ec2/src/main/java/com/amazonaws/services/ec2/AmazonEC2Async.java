@@ -3289,6 +3289,14 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or stopped.
      * </p>
+     * <important>
+     * <p>
+     * By default, Amazon EC2 shuts down and reboots the instance before creating the AMI to ensure that everything on
+     * the instance is stopped and in a consistent state during the creation process. If you're confident that your
+     * instance is in a consistent state appropriate for AMI creation, use the <b>NoReboot</b> parameter to prevent
+     * Amazon EC2 from shutting down and rebooting the instance.
+     * </p>
+     * </important>
      * <p>
      * If you customized your instance with instance store volumes or Amazon EBS volumes in addition to the root device
      * volume, the new AMI contains block device mapping information for those volumes. When you launch an instance from
@@ -3312,6 +3320,14 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * <p>
      * Creates an Amazon EBS-backed AMI from an Amazon EBS-backed instance that is either running or stopped.
      * </p>
+     * <important>
+     * <p>
+     * By default, Amazon EC2 shuts down and reboots the instance before creating the AMI to ensure that everything on
+     * the instance is stopped and in a consistent state during the creation process. If you're confident that your
+     * instance is in a consistent state appropriate for AMI creation, use the <b>NoReboot</b> parameter to prevent
+     * Amazon EC2 from shutting down and rebooting the instance.
+     * </p>
+     * </important>
      * <p>
      * If you customized your instance with instance store volumes or Amazon EBS volumes in addition to the root device
      * volume, the new AMI contains block device mapping information for those volumes. When you launch an instance from
@@ -8999,9 +9015,17 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances; however, it
-     * doesn't affect any instances that you've already launched from the AMI. You'll continue to incur usage costs for
-     * those instances until you terminate them.
+     * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances.
+     * </p>
+     * <p>
+     * If you deregister an AMI that matches a Recycle Bin retention rule, the AMI is retained in the Recycle Bin for
+     * the specified retention period. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * <p>
+     * When you deregister an AMI, it doesn't affect any instances that you've already launched from the AMI. You'll
+     * continue to incur usage costs for those instances until you terminate them.
      * </p>
      * <p>
      * When you deregister an Amazon EBS-backed AMI, it doesn't affect the snapshot that was created for the root volume
@@ -9020,9 +9044,17 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances; however, it
-     * doesn't affect any instances that you've already launched from the AMI. You'll continue to incur usage costs for
-     * those instances until you terminate them.
+     * Deregisters the specified AMI. After you deregister an AMI, it can't be used to launch new instances.
+     * </p>
+     * <p>
+     * If you deregister an AMI that matches a Recycle Bin retention rule, the AMI is retained in the Recycle Bin for
+     * the specified retention period. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * <p>
+     * When you deregister an AMI, it doesn't affect any instances that you've already launched from the AMI. You'll
+     * continue to incur usage costs for those instances until you terminate them.
      * </p>
      * <p>
      * When you deregister an Amazon EBS-backed AMI, it doesn't affect the snapshot that was created for the root volume
@@ -15832,6 +15864,11 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
      * be removed before you can enable faster launching again.
      * </p>
+     * <note>
+     * <p>
+     * To change these settings, you must own the AMI.
+     * </p>
+     * </note>
      * 
      * @param disableFastLaunchRequest
      * @return A Java Future containing the result of the DisableFastLaunch operation returned by the service.
@@ -15847,6 +15884,11 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * faster launching, the AMI uses the standard launch process for each instance. All pre-provisioned snapshots must
      * be removed before you can enable faster launching again.
      * </p>
+     * <note>
+     * <p>
+     * To change these settings, you must own the AMI.
+     * </p>
+     * </note>
      * 
      * @param disableFastLaunchRequest
      * @param asyncHandler
@@ -16733,6 +16775,11 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
      * settings for launch frequency.
      * </p>
+     * <note>
+     * <p>
+     * To change these settings, you must own the AMI.
+     * </p>
+     * </note>
      * 
      * @param enableFastLaunchRequest
      * @return A Java Future containing the result of the EnableFastLaunch operation returned by the service.
@@ -16750,6 +16797,11 @@ public interface AmazonEC2Async extends AmazonEC2 {
      * subsequent launches. The reserved snapshots are automatically replenished as they are used, depending on your
      * settings for launch frequency.
      * </p>
+     * <note>
+     * <p>
+     * To change these settings, you must own the AMI.
+     * </p>
+     * </note>
      * 
      * @param enableFastLaunchRequest
      * @param asyncHandler
@@ -19017,6 +19069,41 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<ImportVolumeResult> importVolumeAsync(ImportVolumeRequest importVolumeRequest,
             com.amazonaws.handlers.AsyncHandler<ImportVolumeRequest, ImportVolumeResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists one or more AMIs that are currently in the Recycle Bin. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * 
+     * @param listImagesInRecycleBinRequest
+     * @return A Java Future containing the result of the ListImagesInRecycleBin operation returned by the service.
+     * @sample AmazonEC2Async.ListImagesInRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ListImagesInRecycleBin" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListImagesInRecycleBinResult> listImagesInRecycleBinAsync(ListImagesInRecycleBinRequest listImagesInRecycleBinRequest);
+
+    /**
+     * <p>
+     * Lists one or more AMIs that are currently in the Recycle Bin. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * 
+     * @param listImagesInRecycleBinRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListImagesInRecycleBin operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.ListImagesInRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/ListImagesInRecycleBin" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListImagesInRecycleBinResult> listImagesInRecycleBinAsync(ListImagesInRecycleBinRequest listImagesInRecycleBinRequest,
+            com.amazonaws.handlers.AsyncHandler<ListImagesInRecycleBinRequest, ListImagesInRecycleBinResult> asyncHandler);
 
     /**
      * <p>
@@ -23673,6 +23760,43 @@ public interface AmazonEC2Async extends AmazonEC2 {
      */
     java.util.concurrent.Future<RestoreAddressToClassicResult> restoreAddressToClassicAsync(RestoreAddressToClassicRequest restoreAddressToClassicRequest,
             com.amazonaws.handlers.AsyncHandler<RestoreAddressToClassicRequest, RestoreAddressToClassicResult> asyncHandler);
+
+    /**
+     * <p>
+     * Restores an AMI from the Recycle Bin. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * 
+     * @param restoreImageFromRecycleBinRequest
+     * @return A Java Future containing the result of the RestoreImageFromRecycleBin operation returned by the service.
+     * @sample AmazonEC2Async.RestoreImageFromRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreImageFromRecycleBin" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreImageFromRecycleBinResult> restoreImageFromRecycleBinAsync(
+            RestoreImageFromRecycleBinRequest restoreImageFromRecycleBinRequest);
+
+    /**
+     * <p>
+     * Restores an AMI from the Recycle Bin. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recycle-bin.html">Recycle Bin</a> in the Amazon Elastic
+     * Compute Cloud User Guide.
+     * </p>
+     * 
+     * @param restoreImageFromRecycleBinRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RestoreImageFromRecycleBin operation returned by the service.
+     * @sample AmazonEC2AsyncHandler.RestoreImageFromRecycleBin
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/RestoreImageFromRecycleBin" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreImageFromRecycleBinResult> restoreImageFromRecycleBinAsync(
+            RestoreImageFromRecycleBinRequest restoreImageFromRecycleBinRequest,
+            com.amazonaws.handlers.AsyncHandler<RestoreImageFromRecycleBinRequest, RestoreImageFromRecycleBinResult> asyncHandler);
 
     /**
      * <p>

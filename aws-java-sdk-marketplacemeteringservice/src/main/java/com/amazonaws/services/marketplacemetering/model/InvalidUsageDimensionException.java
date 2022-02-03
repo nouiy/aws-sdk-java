@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The usage dimension does not match one of the UsageDimensions associated with products.
+ * The usage dimension does not match one of the <code>UsageDimensions</code> associated with products.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

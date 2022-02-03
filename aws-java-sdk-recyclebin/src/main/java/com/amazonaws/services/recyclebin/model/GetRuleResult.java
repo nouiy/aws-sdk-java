@@ -30,32 +30,32 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     private String identifier;
     /**
      * <p>
-     * The description assigned to the retention rule.
+     * The retention rule description.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The resource type retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type retained by the retention rule.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * Information about the period for which the retention rule retains resources.
+     * Information about the retention period for which the retention rule is to retain resources.
      * </p>
      */
     private RetentionPeriod retentionPeriod;
     /**
      * <p>
-     * The resource tags used to identify resources that are to be retained by the retention rule.
+     * Information about the resource tags used to identify resources that are retained by the retention rule.
      * </p>
      */
     private java.util.List<ResourceTag> resourceTags;
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      */
     private String status;
@@ -102,11 +102,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The description assigned to the retention rule.
+     * The retention rule description.
      * </p>
      * 
      * @param description
-     *        The description assigned to the retention rule.
+     *        The retention rule description.
      */
 
     public void setDescription(String description) {
@@ -115,10 +115,10 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The description assigned to the retention rule.
+     * The retention rule description.
      * </p>
      * 
-     * @return The description assigned to the retention rule.
+     * @return The retention rule description.
      */
 
     public String getDescription() {
@@ -127,11 +127,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The description assigned to the retention rule.
+     * The retention rule description.
      * </p>
      * 
      * @param description
-     *        The description assigned to the retention rule.
+     *        The retention rule description.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,11 +142,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The resource type retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type retained by the retention rule.
      * </p>
      * 
      * @param resourceType
-     *        The resource type retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     *        The resource type retained by the retention rule.
      * @see ResourceType
      */
 
@@ -156,10 +156,10 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The resource type retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type retained by the retention rule.
      * </p>
      * 
-     * @return The resource type retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * @return The resource type retained by the retention rule.
      * @see ResourceType
      */
 
@@ -169,11 +169,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The resource type retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type retained by the retention rule.
      * </p>
      * 
      * @param resourceType
-     *        The resource type retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     *        The resource type retained by the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -185,11 +185,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The resource type retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     * The resource type retained by the retention rule.
      * </p>
      * 
      * @param resourceType
-     *        The resource type retained by the retention rule. Currently, only Amazon EBS snapshots are supported.
+     *        The resource type retained by the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -201,11 +201,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * Information about the period for which the retention rule retains resources.
+     * Information about the retention period for which the retention rule is to retain resources.
      * </p>
      * 
      * @param retentionPeriod
-     *        Information about the period for which the retention rule retains resources.
+     *        Information about the retention period for which the retention rule is to retain resources.
      */
 
     public void setRetentionPeriod(RetentionPeriod retentionPeriod) {
@@ -214,10 +214,10 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * Information about the period for which the retention rule retains resources.
+     * Information about the retention period for which the retention rule is to retain resources.
      * </p>
      * 
-     * @return Information about the period for which the retention rule retains resources.
+     * @return Information about the retention period for which the retention rule is to retain resources.
      */
 
     public RetentionPeriod getRetentionPeriod() {
@@ -226,11 +226,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * Information about the period for which the retention rule retains resources.
+     * Information about the retention period for which the retention rule is to retain resources.
      * </p>
      * 
      * @param retentionPeriod
-     *        Information about the period for which the retention rule retains resources.
+     *        Information about the retention period for which the retention rule is to retain resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -241,10 +241,10 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The resource tags used to identify resources that are to be retained by the retention rule.
+     * Information about the resource tags used to identify resources that are retained by the retention rule.
      * </p>
      * 
-     * @return The resource tags used to identify resources that are to be retained by the retention rule.
+     * @return Information about the resource tags used to identify resources that are retained by the retention rule.
      */
 
     public java.util.List<ResourceTag> getResourceTags() {
@@ -253,11 +253,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The resource tags used to identify resources that are to be retained by the retention rule.
+     * Information about the resource tags used to identify resources that are retained by the retention rule.
      * </p>
      * 
      * @param resourceTags
-     *        The resource tags used to identify resources that are to be retained by the retention rule.
+     *        Information about the resource tags used to identify resources that are retained by the retention rule.
      */
 
     public void setResourceTags(java.util.Collection<ResourceTag> resourceTags) {
@@ -271,7 +271,7 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The resource tags used to identify resources that are to be retained by the retention rule.
+     * Information about the resource tags used to identify resources that are retained by the retention rule.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -280,7 +280,7 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * </p>
      * 
      * @param resourceTags
-     *        The resource tags used to identify resources that are to be retained by the retention rule.
+     *        Information about the resource tags used to identify resources that are retained by the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -296,11 +296,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * The resource tags used to identify resources that are to be retained by the retention rule.
+     * Information about the resource tags used to identify resources that are retained by the retention rule.
      * </p>
      * 
      * @param resourceTags
-     *        The resource tags used to identify resources that are to be retained by the retention rule.
+     *        Information about the resource tags used to identify resources that are retained by the retention rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -312,12 +312,12 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @param status
      *        The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *        snapshots.
+     *        resources.
      * @see RuleStatus
      */
 
@@ -328,11 +328,11 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @return The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *         snapshots.
+     *         resources.
      * @see RuleStatus
      */
 
@@ -343,12 +343,12 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @param status
      *        The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *        snapshots.
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleStatus
      */
@@ -361,12 +361,12 @@ public class GetRuleResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @param status
      *        The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *        snapshots.
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleStatus
      */

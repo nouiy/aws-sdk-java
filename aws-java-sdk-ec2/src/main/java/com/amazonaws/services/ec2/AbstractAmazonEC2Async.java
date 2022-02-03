@@ -6696,6 +6696,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<ListImagesInRecycleBinResult> listImagesInRecycleBinAsync(ListImagesInRecycleBinRequest request) {
+
+        return listImagesInRecycleBinAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListImagesInRecycleBinResult> listImagesInRecycleBinAsync(ListImagesInRecycleBinRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListImagesInRecycleBinRequest, ListImagesInRecycleBinResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSnapshotsInRecycleBinResult> listSnapshotsInRecycleBinAsync(ListSnapshotsInRecycleBinRequest request) {
 
         return listSnapshotsInRecycleBinAsync(request, null);
@@ -7953,6 +7966,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<RestoreAddressToClassicResult> restoreAddressToClassicAsync(RestoreAddressToClassicRequest request,
             com.amazonaws.handlers.AsyncHandler<RestoreAddressToClassicRequest, RestoreAddressToClassicResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreImageFromRecycleBinResult> restoreImageFromRecycleBinAsync(RestoreImageFromRecycleBinRequest request) {
+
+        return restoreImageFromRecycleBinAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreImageFromRecycleBinResult> restoreImageFromRecycleBinAsync(RestoreImageFromRecycleBinRequest request,
+            com.amazonaws.handlers.AsyncHandler<RestoreImageFromRecycleBinRequest, RestoreImageFromRecycleBinResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

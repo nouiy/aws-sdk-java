@@ -35,7 +35,7 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Timestamp, in UTC, for which the usage is being reported. Your application can meter usage for up to one hour in
-     * the past. Make sure the timestamp value is not before the start of the software usage.
+     * the past. Make sure the <code>timestamp</code> value is not before the start of the software usage.
      * </p>
      */
     private java.util.Date timestamp;
@@ -54,18 +54,19 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Checks whether you have the permissions required for the action, but does not make the request. If you have the
-     * permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException. Defaults to
-     * <code>false</code> if not specified.
+     * permissions, the request returns <code>DryRunOperation</code>; otherwise, it returns
+     * <code>UnauthorizedException</code>. Defaults to <code>false</code> if not specified.
      * </p>
      */
     private Boolean dryRun;
     /**
      * <p>
-     * The set of UsageAllocations to submit.
+     * The set of <code>UsageAllocations</code> to submit.
      * </p>
      * <p>
-     * The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and each
-     * UsageAllocation must have a unique set of tags (include no tags).
+     * The sum of all <code>UsageAllocation</code> quantities must equal the <code>UsageQuantity</code> of the
+     * <code>MeterUsage</code> request, and each <code>UsageAllocation</code> must have a unique set of tags (include no
+     * tags).
      * </p>
      */
     private java.util.List<UsageAllocation> usageAllocations;
@@ -119,12 +120,13 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Timestamp, in UTC, for which the usage is being reported. Your application can meter usage for up to one hour in
-     * the past. Make sure the timestamp value is not before the start of the software usage.
+     * the past. Make sure the <code>timestamp</code> value is not before the start of the software usage.
      * </p>
      * 
      * @param timestamp
      *        Timestamp, in UTC, for which the usage is being reported. Your application can meter usage for up to one
-     *        hour in the past. Make sure the timestamp value is not before the start of the software usage.
+     *        hour in the past. Make sure the <code>timestamp</code> value is not before the start of the software
+     *        usage.
      */
 
     public void setTimestamp(java.util.Date timestamp) {
@@ -134,11 +136,12 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Timestamp, in UTC, for which the usage is being reported. Your application can meter usage for up to one hour in
-     * the past. Make sure the timestamp value is not before the start of the software usage.
+     * the past. Make sure the <code>timestamp</code> value is not before the start of the software usage.
      * </p>
      * 
      * @return Timestamp, in UTC, for which the usage is being reported. Your application can meter usage for up to one
-     *         hour in the past. Make sure the timestamp value is not before the start of the software usage.
+     *         hour in the past. Make sure the <code>timestamp</code> value is not before the start of the software
+     *         usage.
      */
 
     public java.util.Date getTimestamp() {
@@ -148,12 +151,13 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Timestamp, in UTC, for which the usage is being reported. Your application can meter usage for up to one hour in
-     * the past. Make sure the timestamp value is not before the start of the software usage.
+     * the past. Make sure the <code>timestamp</code> value is not before the start of the software usage.
      * </p>
      * 
      * @param timestamp
      *        Timestamp, in UTC, for which the usage is being reported. Your application can meter usage for up to one
-     *        hour in the past. Make sure the timestamp value is not before the start of the software usage.
+     *        hour in the past. Make sure the <code>timestamp</code> value is not before the start of the software
+     *        usage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,14 +249,14 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Checks whether you have the permissions required for the action, but does not make the request. If you have the
-     * permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException. Defaults to
-     * <code>false</code> if not specified.
+     * permissions, the request returns <code>DryRunOperation</code>; otherwise, it returns
+     * <code>UnauthorizedException</code>. Defaults to <code>false</code> if not specified.
      * </p>
      * 
      * @param dryRun
      *        Checks whether you have the permissions required for the action, but does not make the request. If you
-     *        have the permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException.
-     *        Defaults to <code>false</code> if not specified.
+     *        have the permissions, the request returns <code>DryRunOperation</code>; otherwise, it returns
+     *        <code>UnauthorizedException</code>. Defaults to <code>false</code> if not specified.
      */
 
     public void setDryRun(Boolean dryRun) {
@@ -262,13 +266,13 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Checks whether you have the permissions required for the action, but does not make the request. If you have the
-     * permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException. Defaults to
-     * <code>false</code> if not specified.
+     * permissions, the request returns <code>DryRunOperation</code>; otherwise, it returns
+     * <code>UnauthorizedException</code>. Defaults to <code>false</code> if not specified.
      * </p>
      * 
      * @return Checks whether you have the permissions required for the action, but does not make the request. If you
-     *         have the permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException.
-     *         Defaults to <code>false</code> if not specified.
+     *         have the permissions, the request returns <code>DryRunOperation</code>; otherwise, it returns
+     *         <code>UnauthorizedException</code>. Defaults to <code>false</code> if not specified.
      */
 
     public Boolean getDryRun() {
@@ -278,14 +282,14 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Checks whether you have the permissions required for the action, but does not make the request. If you have the
-     * permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException. Defaults to
-     * <code>false</code> if not specified.
+     * permissions, the request returns <code>DryRunOperation</code>; otherwise, it returns
+     * <code>UnauthorizedException</code>. Defaults to <code>false</code> if not specified.
      * </p>
      * 
      * @param dryRun
      *        Checks whether you have the permissions required for the action, but does not make the request. If you
-     *        have the permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException.
-     *        Defaults to <code>false</code> if not specified.
+     *        have the permissions, the request returns <code>DryRunOperation</code>; otherwise, it returns
+     *        <code>UnauthorizedException</code>. Defaults to <code>false</code> if not specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -297,13 +301,13 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * Checks whether you have the permissions required for the action, but does not make the request. If you have the
-     * permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException. Defaults to
-     * <code>false</code> if not specified.
+     * permissions, the request returns <code>DryRunOperation</code>; otherwise, it returns
+     * <code>UnauthorizedException</code>. Defaults to <code>false</code> if not specified.
      * </p>
      * 
      * @return Checks whether you have the permissions required for the action, but does not make the request. If you
-     *         have the permissions, the request returns DryRunOperation; otherwise, it returns UnauthorizedException.
-     *         Defaults to <code>false</code> if not specified.
+     *         have the permissions, the request returns <code>DryRunOperation</code>; otherwise, it returns
+     *         <code>UnauthorizedException</code>. Defaults to <code>false</code> if not specified.
      */
 
     public Boolean isDryRun() {
@@ -312,17 +316,19 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The set of UsageAllocations to submit.
+     * The set of <code>UsageAllocations</code> to submit.
      * </p>
      * <p>
-     * The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and each
-     * UsageAllocation must have a unique set of tags (include no tags).
+     * The sum of all <code>UsageAllocation</code> quantities must equal the <code>UsageQuantity</code> of the
+     * <code>MeterUsage</code> request, and each <code>UsageAllocation</code> must have a unique set of tags (include no
+     * tags).
      * </p>
      * 
-     * @return The set of UsageAllocations to submit.</p>
+     * @return The set of <code>UsageAllocations</code> to submit.</p>
      *         <p>
-     *         The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and
-     *         each UsageAllocation must have a unique set of tags (include no tags).
+     *         The sum of all <code>UsageAllocation</code> quantities must equal the <code>UsageQuantity</code> of the
+     *         <code>MeterUsage</code> request, and each <code>UsageAllocation</code> must have a unique set of tags
+     *         (include no tags).
      */
 
     public java.util.List<UsageAllocation> getUsageAllocations() {
@@ -331,18 +337,20 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The set of UsageAllocations to submit.
+     * The set of <code>UsageAllocations</code> to submit.
      * </p>
      * <p>
-     * The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and each
-     * UsageAllocation must have a unique set of tags (include no tags).
+     * The sum of all <code>UsageAllocation</code> quantities must equal the <code>UsageQuantity</code> of the
+     * <code>MeterUsage</code> request, and each <code>UsageAllocation</code> must have a unique set of tags (include no
+     * tags).
      * </p>
      * 
      * @param usageAllocations
-     *        The set of UsageAllocations to submit.</p>
+     *        The set of <code>UsageAllocations</code> to submit.</p>
      *        <p>
-     *        The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and each
-     *        UsageAllocation must have a unique set of tags (include no tags).
+     *        The sum of all <code>UsageAllocation</code> quantities must equal the <code>UsageQuantity</code> of the
+     *        <code>MeterUsage</code> request, and each <code>UsageAllocation</code> must have a unique set of tags
+     *        (include no tags).
      */
 
     public void setUsageAllocations(java.util.Collection<UsageAllocation> usageAllocations) {
@@ -356,11 +364,12 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The set of UsageAllocations to submit.
+     * The set of <code>UsageAllocations</code> to submit.
      * </p>
      * <p>
-     * The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and each
-     * UsageAllocation must have a unique set of tags (include no tags).
+     * The sum of all <code>UsageAllocation</code> quantities must equal the <code>UsageQuantity</code> of the
+     * <code>MeterUsage</code> request, and each <code>UsageAllocation</code> must have a unique set of tags (include no
+     * tags).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -369,10 +378,11 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param usageAllocations
-     *        The set of UsageAllocations to submit.</p>
+     *        The set of <code>UsageAllocations</code> to submit.</p>
      *        <p>
-     *        The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and each
-     *        UsageAllocation must have a unique set of tags (include no tags).
+     *        The sum of all <code>UsageAllocation</code> quantities must equal the <code>UsageQuantity</code> of the
+     *        <code>MeterUsage</code> request, and each <code>UsageAllocation</code> must have a unique set of tags
+     *        (include no tags).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -388,18 +398,20 @@ public class MeterUsageRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The set of UsageAllocations to submit.
+     * The set of <code>UsageAllocations</code> to submit.
      * </p>
      * <p>
-     * The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and each
-     * UsageAllocation must have a unique set of tags (include no tags).
+     * The sum of all <code>UsageAllocation</code> quantities must equal the <code>UsageQuantity</code> of the
+     * <code>MeterUsage</code> request, and each <code>UsageAllocation</code> must have a unique set of tags (include no
+     * tags).
      * </p>
      * 
      * @param usageAllocations
-     *        The set of UsageAllocations to submit.</p>
+     *        The set of <code>UsageAllocations</code> to submit.</p>
      *        <p>
-     *        The sum of all UsageAllocation quantities must equal the UsageQuantity of the MeterUsage request, and each
-     *        UsageAllocation must have a unique set of tags (include no tags).
+     *        The sum of all <code>UsageAllocation</code> quantities must equal the <code>UsageQuantity</code> of the
+     *        <code>MeterUsage</code> request, and each <code>UsageAllocation</code> must have a unique set of tags
+     *        (include no tags).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

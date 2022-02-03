@@ -54,12 +54,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CancelDeploymentJobResult> cancelDeploymentJobAsync(CancelDeploymentJobRequest request) {
 
         return cancelDeploymentJobAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CancelDeploymentJobResult> cancelDeploymentJobAsync(CancelDeploymentJobRequest request,
             com.amazonaws.handlers.AsyncHandler<CancelDeploymentJobRequest, CancelDeploymentJobResult> asyncHandler) {
 
@@ -119,12 +121,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateDeploymentJobResult> createDeploymentJobAsync(CreateDeploymentJobRequest request) {
 
         return createDeploymentJobAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateDeploymentJobResult> createDeploymentJobAsync(CreateDeploymentJobRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateDeploymentJobRequest, CreateDeploymentJobResult> asyncHandler) {
 
@@ -132,12 +136,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest request) {
 
         return createFleetAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateFleetResult> createFleetAsync(CreateFleetRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateFleetRequest, CreateFleetResult> asyncHandler) {
 
@@ -145,12 +151,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateRobotResult> createRobotAsync(CreateRobotRequest request) {
 
         return createRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<CreateRobotResult> createRobotAsync(CreateRobotRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateRobotRequest, CreateRobotResult> asyncHandler) {
 
@@ -264,12 +272,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest request) {
 
         return deleteFleetAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteFleetResult> deleteFleetAsync(DeleteFleetRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteFleetRequest, DeleteFleetResult> asyncHandler) {
 
@@ -277,12 +287,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteRobotResult> deleteRobotAsync(DeleteRobotRequest request) {
 
         return deleteRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeleteRobotResult> deleteRobotAsync(DeleteRobotRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteRobotRequest, DeleteRobotResult> asyncHandler) {
 
@@ -329,12 +341,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeregisterRobotResult> deregisterRobotAsync(DeregisterRobotRequest request) {
 
         return deregisterRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DeregisterRobotResult> deregisterRobotAsync(DeregisterRobotRequest request,
             com.amazonaws.handlers.AsyncHandler<DeregisterRobotRequest, DeregisterRobotResult> asyncHandler) {
 
@@ -342,12 +356,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeDeploymentJobResult> describeDeploymentJobAsync(DescribeDeploymentJobRequest request) {
 
         return describeDeploymentJobAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeDeploymentJobResult> describeDeploymentJobAsync(DescribeDeploymentJobRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeDeploymentJobRequest, DescribeDeploymentJobResult> asyncHandler) {
 
@@ -355,12 +371,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeFleetResult> describeFleetAsync(DescribeFleetRequest request) {
 
         return describeFleetAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeFleetResult> describeFleetAsync(DescribeFleetRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeFleetRequest, DescribeFleetResult> asyncHandler) {
 
@@ -368,12 +386,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeRobotResult> describeRobotAsync(DescribeRobotRequest request) {
 
         return describeRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<DescribeRobotResult> describeRobotAsync(DescribeRobotRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeRobotRequest, DescribeRobotResult> asyncHandler) {
 
@@ -498,12 +518,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListDeploymentJobsResult> listDeploymentJobsAsync(ListDeploymentJobsRequest request) {
 
         return listDeploymentJobsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListDeploymentJobsResult> listDeploymentJobsAsync(ListDeploymentJobsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListDeploymentJobsRequest, ListDeploymentJobsResult> asyncHandler) {
 
@@ -511,12 +533,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest request) {
 
         return listFleetsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListFleetsResult> listFleetsAsync(ListFleetsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListFleetsRequest, ListFleetsResult> asyncHandler) {
 
@@ -537,12 +561,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListRobotsResult> listRobotsAsync(ListRobotsRequest request) {
 
         return listRobotsAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<ListRobotsResult> listRobotsAsync(ListRobotsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListRobotsRequest, ListRobotsResult> asyncHandler) {
 
@@ -654,12 +680,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<RegisterRobotResult> registerRobotAsync(RegisterRobotRequest request) {
 
         return registerRobotAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<RegisterRobotResult> registerRobotAsync(RegisterRobotRequest request,
             com.amazonaws.handlers.AsyncHandler<RegisterRobotRequest, RegisterRobotResult> asyncHandler) {
 
@@ -693,12 +721,14 @@ public class AbstractAWSRoboMakerAsync extends AbstractAWSRoboMaker implements A
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<SyncDeploymentJobResult> syncDeploymentJobAsync(SyncDeploymentJobRequest request) {
 
         return syncDeploymentJobAsync(request, null);
     }
 
     @Override
+    @Deprecated
     public java.util.concurrent.Future<SyncDeploymentJobResult> syncDeploymentJobAsync(SyncDeploymentJobRequest request,
             com.amazonaws.handlers.AsyncHandler<SyncDeploymentJobRequest, SyncDeploymentJobResult> asyncHandler) {
 

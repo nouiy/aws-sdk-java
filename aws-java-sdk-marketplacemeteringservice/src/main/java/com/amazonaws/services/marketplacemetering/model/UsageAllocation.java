@@ -22,7 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Usage allocations allow you to split usage into buckets by tags.
  * </p>
  * <p>
- * Each UsageAllocation indicates the usage quantity for a specific set of tags.
+ * Each <code>UsageAllocation</code> indicates the usage quantity for a specific set of tags.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/meteringmarketplace-2016-01-14/UsageAllocation"

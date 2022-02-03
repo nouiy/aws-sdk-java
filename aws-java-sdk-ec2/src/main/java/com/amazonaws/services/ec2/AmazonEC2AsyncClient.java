@@ -14986,6 +14986,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<ListImagesInRecycleBinResult> listImagesInRecycleBinAsync(ListImagesInRecycleBinRequest request) {
+
+        return listImagesInRecycleBinAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListImagesInRecycleBinResult> listImagesInRecycleBinAsync(final ListImagesInRecycleBinRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListImagesInRecycleBinRequest, ListImagesInRecycleBinResult> asyncHandler) {
+        final ListImagesInRecycleBinRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListImagesInRecycleBinResult>() {
+            @Override
+            public ListImagesInRecycleBinResult call() throws Exception {
+                ListImagesInRecycleBinResult result = null;
+
+                try {
+                    result = executeListImagesInRecycleBin(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListSnapshotsInRecycleBinResult> listSnapshotsInRecycleBinAsync(ListSnapshotsInRecycleBinRequest request) {
 
         return listSnapshotsInRecycleBinAsync(request, null);
@@ -18116,6 +18149,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeRestoreAddressToClassic(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreImageFromRecycleBinResult> restoreImageFromRecycleBinAsync(RestoreImageFromRecycleBinRequest request) {
+
+        return restoreImageFromRecycleBinAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreImageFromRecycleBinResult> restoreImageFromRecycleBinAsync(final RestoreImageFromRecycleBinRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RestoreImageFromRecycleBinRequest, RestoreImageFromRecycleBinResult> asyncHandler) {
+        final RestoreImageFromRecycleBinRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RestoreImageFromRecycleBinResult>() {
+            @Override
+            public RestoreImageFromRecycleBinResult call() throws Exception {
+                RestoreImageFromRecycleBinResult result = null;
+
+                try {
+                    result = executeRestoreImageFromRecycleBin(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -158,9 +158,24 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
      * </p>
      */
     private ClientConnectResponseOptions clientConnectOptions;
-
+    /**
+     * <p>
+     * The maximum VPN session duration time in hours.
+     * </p>
+     * <p>
+     * Valid values: <code>8 | 10 | 12 | 24</code>
+     * </p>
+     * <p>
+     * Default value: <code>24</code>
+     * </p>
+     */
     private Integer sessionTimeoutHours;
-
+    /**
+     * <p>
+     * Options for enabling a customizable text banner that will be displayed on Amazon Web Services provided clients
+     * when a VPN session is established.
+     * </p>
+     */
     private ClientLoginBannerResponseOptions clientLoginBannerOptions;
 
     /**
@@ -1255,7 +1270,23 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The maximum VPN session duration time in hours.
+     * </p>
+     * <p>
+     * Valid values: <code>8 | 10 | 12 | 24</code>
+     * </p>
+     * <p>
+     * Default value: <code>24</code>
+     * </p>
+     * 
      * @param sessionTimeoutHours
+     *        The maximum VPN session duration time in hours.</p>
+     *        <p>
+     *        Valid values: <code>8 | 10 | 12 | 24</code>
+     *        </p>
+     *        <p>
+     *        Default value: <code>24</code>
      */
 
     public void setSessionTimeoutHours(Integer sessionTimeoutHours) {
@@ -1263,7 +1294,22 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * The maximum VPN session duration time in hours.
+     * </p>
+     * <p>
+     * Valid values: <code>8 | 10 | 12 | 24</code>
+     * </p>
+     * <p>
+     * Default value: <code>24</code>
+     * </p>
+     * 
+     * @return The maximum VPN session duration time in hours.</p>
+     *         <p>
+     *         Valid values: <code>8 | 10 | 12 | 24</code>
+     *         </p>
+     *         <p>
+     *         Default value: <code>24</code>
      */
 
     public Integer getSessionTimeoutHours() {
@@ -1271,7 +1317,23 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The maximum VPN session duration time in hours.
+     * </p>
+     * <p>
+     * Valid values: <code>8 | 10 | 12 | 24</code>
+     * </p>
+     * <p>
+     * Default value: <code>24</code>
+     * </p>
+     * 
      * @param sessionTimeoutHours
+     *        The maximum VPN session duration time in hours.</p>
+     *        <p>
+     *        Valid values: <code>8 | 10 | 12 | 24</code>
+     *        </p>
+     *        <p>
+     *        Default value: <code>24</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1281,7 +1343,14 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Options for enabling a customizable text banner that will be displayed on Amazon Web Services provided clients
+     * when a VPN session is established.
+     * </p>
+     * 
      * @param clientLoginBannerOptions
+     *        Options for enabling a customizable text banner that will be displayed on Amazon Web Services provided
+     *        clients when a VPN session is established.
      */
 
     public void setClientLoginBannerOptions(ClientLoginBannerResponseOptions clientLoginBannerOptions) {
@@ -1289,7 +1358,13 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * Options for enabling a customizable text banner that will be displayed on Amazon Web Services provided clients
+     * when a VPN session is established.
+     * </p>
+     * 
+     * @return Options for enabling a customizable text banner that will be displayed on Amazon Web Services provided
+     *         clients when a VPN session is established.
      */
 
     public ClientLoginBannerResponseOptions getClientLoginBannerOptions() {
@@ -1297,7 +1372,14 @@ public class ClientVpnEndpoint implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Options for enabling a customizable text banner that will be displayed on Amazon Web Services provided clients
+     * when a VPN session is established.
+     * </p>
+     * 
      * @param clientLoginBannerOptions
+     *        Options for enabling a customizable text banner that will be displayed on Amazon Web Services provided
+     *        clients when a VPN session is established.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

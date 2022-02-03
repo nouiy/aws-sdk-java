@@ -20,6 +20,7 @@ import javax.annotation.Generated;
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/robomaker-2018-06-29/DescribeRobot" target="_top">AWS API
  *      Documentation</a>
  */
+@Deprecated
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class DescribeRobotResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 

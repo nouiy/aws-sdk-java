@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ResourceType {
 
-    EBS_SNAPSHOT("EBS_SNAPSHOT");
+    EBS_SNAPSHOT("EBS_SNAPSHOT"),
+    EC2_IMAGE("EC2_IMAGE");
 
     private String value;
 

@@ -52,7 +52,7 @@ public class UpdateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      */
     private String status;
@@ -295,12 +295,12 @@ public class UpdateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @param status
      *        The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *        snapshots.
+     *        resources.
      * @see RuleStatus
      */
 
@@ -311,11 +311,11 @@ public class UpdateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @return The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *         snapshots.
+     *         resources.
      * @see RuleStatus
      */
 
@@ -326,12 +326,12 @@ public class UpdateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @param status
      *        The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *        snapshots.
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleStatus
      */
@@ -344,12 +344,12 @@ public class UpdateRuleResult extends com.amazonaws.AmazonWebServiceResult<com.a
     /**
      * <p>
      * The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     * snapshots.
+     * resources.
      * </p>
      * 
      * @param status
      *        The state of the retention rule. Only retention rules that are in the <code>available</code> state retain
-     *        snapshots.
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RuleStatus
      */

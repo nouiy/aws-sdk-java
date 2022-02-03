@@ -56,6 +56,10 @@ public class ResolveCustomerResultJsonUnmarshaller implements Unmarshaller<Resol
                     context.nextToken();
                     resolveCustomerResult.setProductCode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("CustomerAWSAccountId", targetDepth)) {
+                    context.nextToken();
+                    resolveCustomerResult.setCustomerAWSAccountId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
