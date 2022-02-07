@@ -39,7 +39,8 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. We recommend using a memorable and unique string.
+     * The ID of the target within the specified rule. Use this ID to reference the target when updating the rule. We
+     * recommend using a memorable and unique string.
      * </p>
      */
     private String id;
@@ -167,11 +168,13 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. We recommend using a memorable and unique string.
+     * The ID of the target within the specified rule. Use this ID to reference the target when updating the rule. We
+     * recommend using a memorable and unique string.
      * </p>
      * 
      * @param id
-     *        The ID of the target. We recommend using a memorable and unique string.
+     *        The ID of the target within the specified rule. Use this ID to reference the target when updating the
+     *        rule. We recommend using a memorable and unique string.
      */
 
     public void setId(String id) {
@@ -180,10 +183,12 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. We recommend using a memorable and unique string.
+     * The ID of the target within the specified rule. Use this ID to reference the target when updating the rule. We
+     * recommend using a memorable and unique string.
      * </p>
      * 
-     * @return The ID of the target. We recommend using a memorable and unique string.
+     * @return The ID of the target within the specified rule. Use this ID to reference the target when updating the
+     *         rule. We recommend using a memorable and unique string.
      */
 
     public String getId() {
@@ -192,11 +197,13 @@ public class Target implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the target. We recommend using a memorable and unique string.
+     * The ID of the target within the specified rule. Use this ID to reference the target when updating the rule. We
+     * recommend using a memorable and unique string.
      * </p>
      * 
      * @param id
-     *        The ID of the target. We recommend using a memorable and unique string.
+     *        The ID of the target within the specified rule. Use this ID to reference the target when updating the
+     *        rule. We recommend using a memorable and unique string.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

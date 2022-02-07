@@ -25,7 +25,8 @@ public enum ItemType {
     METRIC("METRIC"),
     PARENT("PARENT"),
     ATTACHMENT("ATTACHMENT"),
-    OTHER("OTHER");
+    OTHER("OTHER"),
+    AUTOMATION("AUTOMATION");
 
     private String value;
 

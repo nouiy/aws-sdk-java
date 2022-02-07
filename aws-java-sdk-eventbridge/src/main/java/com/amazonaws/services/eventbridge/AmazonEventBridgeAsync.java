@@ -1741,6 +1741,11 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * <p>
      * Targets are the resources that are invoked when a rule is triggered.
      * </p>
+     * <note>
+     * <p>
+     * Each rule can have up to five (5) targets associated with it at one time.
+     * </p>
+     * </note>
      * <p>
      * You can configure the following as targets for Events:
      * </p>
@@ -1783,6 +1788,11 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * <li>
      * <p>
      * Amazon EC2 <code>CreateSnapshot</code> API call
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EC2 Image Builder
      * </p>
      * </li>
      * <li>
@@ -1846,7 +1856,7 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Amazon SQS queues (includes FIFO queues
+     * Amazon SQS queues (includes FIFO queues)
      * </p>
      * </li>
      * <li>
@@ -1977,6 +1987,11 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * <p>
      * Targets are the resources that are invoked when a rule is triggered.
      * </p>
+     * <note>
+     * <p>
+     * Each rule can have up to five (5) targets associated with it at one time.
+     * </p>
+     * </note>
      * <p>
      * You can configure the following as targets for Events:
      * </p>
@@ -2019,6 +2034,11 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * <li>
      * <p>
      * Amazon EC2 <code>CreateSnapshot</code> API call
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * EC2 Image Builder
      * </p>
      * </li>
      * <li>
@@ -2082,7 +2102,7 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * </li>
      * <li>
      * <p>
-     * Amazon SQS queues (includes FIFO queues
+     * Amazon SQS queues (includes FIFO queues)
      * </p>
      * </li>
      * <li>
@@ -2256,6 +2276,12 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * Removes the specified targets from the specified rule. When the rule is triggered, those targets are no longer be
      * invoked.
      * </p>
+     * <note>
+     * <p>
+     * A successful execution of <code>RemoveTargets</code> doesn't guarantee all targets are removed from the rule, it
+     * means that the target(s) listed in the request are removed.
+     * </p>
+     * </note>
      * <p>
      * When you remove a target, when the associated rule triggers, removed targets might continue to be invoked. Allow
      * a short period of time for changes to take effect.
@@ -2279,6 +2305,12 @@ public interface AmazonEventBridgeAsync extends AmazonEventBridge {
      * Removes the specified targets from the specified rule. When the rule is triggered, those targets are no longer be
      * invoked.
      * </p>
+     * <note>
+     * <p>
+     * A successful execution of <code>RemoveTargets</code> doesn't guarantee all targets are removed from the rule, it
+     * means that the target(s) listed in the request are removed.
+     * </p>
+     * </note>
      * <p>
      * When you remove a target, when the associated rule triggers, removed targets might continue to be invoked. Allow
      * a short period of time for changes to take effect.

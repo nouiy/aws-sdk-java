@@ -55,7 +55,11 @@ public class CanaryCodeInput implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you input your canary script directly into the canary instead of referring to an S3 location, the value of
      * this parameter is the base64-encoded contents of the .zip file that contains the script. It must be smaller than
-     * 256 Kb.
+     * 225 Kb.
+     * </p>
+     * <p>
+     * For large canary scripts, we recommend that you use an S3 location instead of inputting it directly with this
+     * parameter.
      * </p>
      */
     private java.nio.ByteBuffer zipFile;
@@ -206,7 +210,11 @@ public class CanaryCodeInput implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you input your canary script directly into the canary instead of referring to an S3 location, the value of
      * this parameter is the base64-encoded contents of the .zip file that contains the script. It must be smaller than
-     * 256 Kb.
+     * 225 Kb.
+     * </p>
+     * <p>
+     * For large canary scripts, we recommend that you use an S3 location instead of inputting it directly with this
+     * parameter.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -222,7 +230,10 @@ public class CanaryCodeInput implements Serializable, Cloneable, StructuredPojo 
      * @param zipFile
      *        If you input your canary script directly into the canary instead of referring to an S3 location, the value
      *        of this parameter is the base64-encoded contents of the .zip file that contains the script. It must be
-     *        smaller than 256 Kb.
+     *        smaller than 225 Kb.</p>
+     *        <p>
+     *        For large canary scripts, we recommend that you use an S3 location instead of inputting it directly with
+     *        this parameter.
      */
 
     public void setZipFile(java.nio.ByteBuffer zipFile) {
@@ -233,7 +244,11 @@ public class CanaryCodeInput implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you input your canary script directly into the canary instead of referring to an S3 location, the value of
      * this parameter is the base64-encoded contents of the .zip file that contains the script. It must be smaller than
-     * 256 Kb.
+     * 225 Kb.
+     * </p>
+     * <p>
+     * For large canary scripts, we recommend that you use an S3 location instead of inputting it directly with this
+     * parameter.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -245,7 +260,10 @@ public class CanaryCodeInput implements Serializable, Cloneable, StructuredPojo 
      * 
      * @return If you input your canary script directly into the canary instead of referring to an S3 location, the
      *         value of this parameter is the base64-encoded contents of the .zip file that contains the script. It must
-     *         be smaller than 256 Kb.
+     *         be smaller than 225 Kb.</p>
+     *         <p>
+     *         For large canary scripts, we recommend that you use an S3 location instead of inputting it directly with
+     *         this parameter.
      */
 
     public java.nio.ByteBuffer getZipFile() {
@@ -256,7 +274,11 @@ public class CanaryCodeInput implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * If you input your canary script directly into the canary instead of referring to an S3 location, the value of
      * this parameter is the base64-encoded contents of the .zip file that contains the script. It must be smaller than
-     * 256 Kb.
+     * 225 Kb.
+     * </p>
+     * <p>
+     * For large canary scripts, we recommend that you use an S3 location instead of inputting it directly with this
+     * parameter.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -272,7 +294,10 @@ public class CanaryCodeInput implements Serializable, Cloneable, StructuredPojo 
      * @param zipFile
      *        If you input your canary script directly into the canary instead of referring to an S3 location, the value
      *        of this parameter is the base64-encoded contents of the .zip file that contains the script. It must be
-     *        smaller than 256 Kb.
+     *        smaller than 225 Kb.</p>
+     *        <p>
+     *        For large canary scripts, we recommend that you use an S3 location instead of inputting it directly with
+     *        this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

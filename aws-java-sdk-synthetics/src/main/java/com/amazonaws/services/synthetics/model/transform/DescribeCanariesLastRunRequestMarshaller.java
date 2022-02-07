@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.synthetics.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class DescribeCanariesLastRunRequestMarshaller {
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<List> NAMES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Names").build();
 
     private static final DescribeCanariesLastRunRequestMarshaller instance = new DescribeCanariesLastRunRequestMarshaller();
 
@@ -50,6 +53,7 @@ public class DescribeCanariesLastRunRequestMarshaller {
         try {
             protocolMarshaller.marshall(describeCanariesLastRunRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(describeCanariesLastRunRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(describeCanariesLastRunRequest.getNames(), NAMES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

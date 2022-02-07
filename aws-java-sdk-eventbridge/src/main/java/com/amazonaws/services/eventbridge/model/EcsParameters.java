@@ -44,7 +44,7 @@ public class EcsParameters implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Specifies the launch type on which your task is running. The launch type that you specify here must match one of
      * the launch type (compatibilities) of the target task. The <code>FARGATE</code> value is supported only in the
-     * Regions where Fargate witt Amazon ECS is supported. For more information, see <a
+     * Regions where Fargate with Amazon ECS is supported. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS-Fargate.html">Fargate on Amazon ECS</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -229,7 +229,7 @@ public class EcsParameters implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Specifies the launch type on which your task is running. The launch type that you specify here must match one of
      * the launch type (compatibilities) of the target task. The <code>FARGATE</code> value is supported only in the
-     * Regions where Fargate witt Amazon ECS is supported. For more information, see <a
+     * Regions where Fargate with Amazon ECS is supported. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS-Fargate.html">Fargate on Amazon ECS</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -237,7 +237,7 @@ public class EcsParameters implements Serializable, Cloneable, StructuredPojo {
      * @param launchType
      *        Specifies the launch type on which your task is running. The launch type that you specify here must match
      *        one of the launch type (compatibilities) of the target task. The <code>FARGATE</code> value is supported
-     *        only in the Regions where Fargate witt Amazon ECS is supported. For more information, see <a
+     *        only in the Regions where Fargate with Amazon ECS is supported. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS-Fargate.html">Fargate on Amazon
      *        ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @see LaunchType
@@ -251,14 +251,14 @@ public class EcsParameters implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Specifies the launch type on which your task is running. The launch type that you specify here must match one of
      * the launch type (compatibilities) of the target task. The <code>FARGATE</code> value is supported only in the
-     * Regions where Fargate witt Amazon ECS is supported. For more information, see <a
+     * Regions where Fargate with Amazon ECS is supported. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS-Fargate.html">Fargate on Amazon ECS</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
      * 
      * @return Specifies the launch type on which your task is running. The launch type that you specify here must match
      *         one of the launch type (compatibilities) of the target task. The <code>FARGATE</code> value is supported
-     *         only in the Regions where Fargate witt Amazon ECS is supported. For more information, see <a
+     *         only in the Regions where Fargate with Amazon ECS is supported. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS-Fargate.html">Fargate on Amazon
      *         ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @see LaunchType
@@ -272,7 +272,7 @@ public class EcsParameters implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Specifies the launch type on which your task is running. The launch type that you specify here must match one of
      * the launch type (compatibilities) of the target task. The <code>FARGATE</code> value is supported only in the
-     * Regions where Fargate witt Amazon ECS is supported. For more information, see <a
+     * Regions where Fargate with Amazon ECS is supported. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS-Fargate.html">Fargate on Amazon ECS</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -280,7 +280,7 @@ public class EcsParameters implements Serializable, Cloneable, StructuredPojo {
      * @param launchType
      *        Specifies the launch type on which your task is running. The launch type that you specify here must match
      *        one of the launch type (compatibilities) of the target task. The <code>FARGATE</code> value is supported
-     *        only in the Regions where Fargate witt Amazon ECS is supported. For more information, see <a
+     *        only in the Regions where Fargate with Amazon ECS is supported. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS-Fargate.html">Fargate on Amazon
      *        ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -296,7 +296,7 @@ public class EcsParameters implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Specifies the launch type on which your task is running. The launch type that you specify here must match one of
      * the launch type (compatibilities) of the target task. The <code>FARGATE</code> value is supported only in the
-     * Regions where Fargate witt Amazon ECS is supported. For more information, see <a
+     * Regions where Fargate with Amazon ECS is supported. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS-Fargate.html">Fargate on Amazon ECS</a> in
      * the <i>Amazon Elastic Container Service Developer Guide</i>.
      * </p>
@@ -304,7 +304,7 @@ public class EcsParameters implements Serializable, Cloneable, StructuredPojo {
      * @param launchType
      *        Specifies the launch type on which your task is running. The launch type that you specify here must match
      *        one of the launch type (compatibilities) of the target task. The <code>FARGATE</code> value is supported
-     *        only in the Regions where Fargate witt Amazon ECS is supported. For more information, see <a
+     *        only in the Regions where Fargate with Amazon ECS is supported. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS-Fargate.html">Fargate on Amazon
      *        ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

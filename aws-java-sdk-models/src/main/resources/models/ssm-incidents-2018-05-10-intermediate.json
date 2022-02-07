@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "ClientMutationMethods", "ClientConstructors", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -19814,6 +19814,9 @@
       }, {
         "name" : "OTHER",
         "value" : "OTHER"
+      }, {
+        "name" : "AUTOMATION",
+        "value" : "AUTOMATION"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.ssmincidents.enum.ItemType",

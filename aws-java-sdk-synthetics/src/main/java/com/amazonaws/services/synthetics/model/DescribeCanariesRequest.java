@@ -39,6 +39,24 @@ public class DescribeCanariesRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * Use this parameter to return only canaries that match the names that you specify here. You can specify as many as
+     * five canary names.
+     * </p>
+     * <p>
+     * If you specify this parameter, the operation is successful only if you have authorization to view all the
+     * canaries that you specify in your request. If you do not have permission to view any of the canaries, the request
+     * fails with a 403 response.
+     * </p>
+     * <p>
+     * You are required to use this parameter if you are logged on to a user or role that has an IAM policy that
+     * restricts which canaries that you are allowed to view. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html">
+     * Limiting a user to viewing specific canaries</a>.
+     * </p>
+     */
+    private java.util.List<String> names;
 
     /**
      * <p>
@@ -133,6 +151,168 @@ public class DescribeCanariesRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Use this parameter to return only canaries that match the names that you specify here. You can specify as many as
+     * five canary names.
+     * </p>
+     * <p>
+     * If you specify this parameter, the operation is successful only if you have authorization to view all the
+     * canaries that you specify in your request. If you do not have permission to view any of the canaries, the request
+     * fails with a 403 response.
+     * </p>
+     * <p>
+     * You are required to use this parameter if you are logged on to a user or role that has an IAM policy that
+     * restricts which canaries that you are allowed to view. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html">
+     * Limiting a user to viewing specific canaries</a>.
+     * </p>
+     * 
+     * @return Use this parameter to return only canaries that match the names that you specify here. You can specify as
+     *         many as five canary names.</p>
+     *         <p>
+     *         If you specify this parameter, the operation is successful only if you have authorization to view all the
+     *         canaries that you specify in your request. If you do not have permission to view any of the canaries, the
+     *         request fails with a 403 response.
+     *         </p>
+     *         <p>
+     *         You are required to use this parameter if you are logged on to a user or role that has an IAM policy that
+     *         restricts which canaries that you are allowed to view. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html"
+     *         > Limiting a user to viewing specific canaries</a>.
+     */
+
+    public java.util.List<String> getNames() {
+        return names;
+    }
+
+    /**
+     * <p>
+     * Use this parameter to return only canaries that match the names that you specify here. You can specify as many as
+     * five canary names.
+     * </p>
+     * <p>
+     * If you specify this parameter, the operation is successful only if you have authorization to view all the
+     * canaries that you specify in your request. If you do not have permission to view any of the canaries, the request
+     * fails with a 403 response.
+     * </p>
+     * <p>
+     * You are required to use this parameter if you are logged on to a user or role that has an IAM policy that
+     * restricts which canaries that you are allowed to view. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html">
+     * Limiting a user to viewing specific canaries</a>.
+     * </p>
+     * 
+     * @param names
+     *        Use this parameter to return only canaries that match the names that you specify here. You can specify as
+     *        many as five canary names.</p>
+     *        <p>
+     *        If you specify this parameter, the operation is successful only if you have authorization to view all the
+     *        canaries that you specify in your request. If you do not have permission to view any of the canaries, the
+     *        request fails with a 403 response.
+     *        </p>
+     *        <p>
+     *        You are required to use this parameter if you are logged on to a user or role that has an IAM policy that
+     *        restricts which canaries that you are allowed to view. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html"
+     *        > Limiting a user to viewing specific canaries</a>.
+     */
+
+    public void setNames(java.util.Collection<String> names) {
+        if (names == null) {
+            this.names = null;
+            return;
+        }
+
+        this.names = new java.util.ArrayList<String>(names);
+    }
+
+    /**
+     * <p>
+     * Use this parameter to return only canaries that match the names that you specify here. You can specify as many as
+     * five canary names.
+     * </p>
+     * <p>
+     * If you specify this parameter, the operation is successful only if you have authorization to view all the
+     * canaries that you specify in your request. If you do not have permission to view any of the canaries, the request
+     * fails with a 403 response.
+     * </p>
+     * <p>
+     * You are required to use this parameter if you are logged on to a user or role that has an IAM policy that
+     * restricts which canaries that you are allowed to view. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html">
+     * Limiting a user to viewing specific canaries</a>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setNames(java.util.Collection)} or {@link #withNames(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param names
+     *        Use this parameter to return only canaries that match the names that you specify here. You can specify as
+     *        many as five canary names.</p>
+     *        <p>
+     *        If you specify this parameter, the operation is successful only if you have authorization to view all the
+     *        canaries that you specify in your request. If you do not have permission to view any of the canaries, the
+     *        request fails with a 403 response.
+     *        </p>
+     *        <p>
+     *        You are required to use this parameter if you are logged on to a user or role that has an IAM policy that
+     *        restricts which canaries that you are allowed to view. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html"
+     *        > Limiting a user to viewing specific canaries</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeCanariesRequest withNames(String... names) {
+        if (this.names == null) {
+            setNames(new java.util.ArrayList<String>(names.length));
+        }
+        for (String ele : names) {
+            this.names.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use this parameter to return only canaries that match the names that you specify here. You can specify as many as
+     * five canary names.
+     * </p>
+     * <p>
+     * If you specify this parameter, the operation is successful only if you have authorization to view all the
+     * canaries that you specify in your request. If you do not have permission to view any of the canaries, the request
+     * fails with a 403 response.
+     * </p>
+     * <p>
+     * You are required to use this parameter if you are logged on to a user or role that has an IAM policy that
+     * restricts which canaries that you are allowed to view. For more information, see <a href=
+     * "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html">
+     * Limiting a user to viewing specific canaries</a>.
+     * </p>
+     * 
+     * @param names
+     *        Use this parameter to return only canaries that match the names that you specify here. You can specify as
+     *        many as five canary names.</p>
+     *        <p>
+     *        If you specify this parameter, the operation is successful only if you have authorization to view all the
+     *        canaries that you specify in your request. If you do not have permission to view any of the canaries, the
+     *        request fails with a 403 response.
+     *        </p>
+     *        <p>
+     *        You are required to use this parameter if you are logged on to a user or role that has an IAM policy that
+     *        restricts which canaries that you are allowed to view. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html"
+     *        > Limiting a user to viewing specific canaries</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeCanariesRequest withNames(java.util.Collection<String> names) {
+        setNames(names);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -147,7 +327,9 @@ public class DescribeCanariesRequest extends com.amazonaws.AmazonWebServiceReque
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getNames() != null)
+            sb.append("Names: ").append(getNames());
         sb.append("}");
         return sb.toString();
     }
@@ -170,6 +352,10 @@ public class DescribeCanariesRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getNames() == null ^ this.getNames() == null)
+            return false;
+        if (other.getNames() != null && other.getNames().equals(this.getNames()) == false)
+            return false;
         return true;
     }
 
@@ -180,6 +366,7 @@ public class DescribeCanariesRequest extends com.amazonaws.AmazonWebServiceReque
 
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getNames() == null) ? 0 : getNames().hashCode());
         return hashCode;
     }
 

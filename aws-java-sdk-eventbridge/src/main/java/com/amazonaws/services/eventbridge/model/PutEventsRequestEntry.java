@@ -70,7 +70,7 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
     private String eventBusName;
     /**
      * <p>
-     * An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
+     * An X-Ray trace header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
      * event.
      * </p>
      * <p>
@@ -385,7 +385,7 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
+     * An X-Ray trace header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
      * event.
      * </p>
      * <p>
@@ -395,7 +395,7 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param traceHeader
-     *        An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
+     *        An X-Ray trace header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
      *        with the event.</p>
      *        <p>
      *        To learn more about X-Ray trace headers, see <a
@@ -409,7 +409,7 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
+     * An X-Ray trace header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
      * event.
      * </p>
      * <p>
@@ -418,7 +418,7 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
      * header</a> in the X-Ray Developer Guide.
      * </p>
      * 
-     * @return An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
+     * @return An X-Ray trace header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
      *         with the event.</p>
      *         <p>
      *         To learn more about X-Ray trace headers, see <a
@@ -432,7 +432,7 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
+     * An X-Ray trace header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated with the
      * event.
      * </p>
      * <p>
@@ -442,7 +442,7 @@ public class PutEventsRequestEntry implements Serializable, Cloneable, Structure
      * </p>
      * 
      * @param traceHeader
-     *        An X-Ray trade header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
+     *        An X-Ray trace header, which is an http header (X-Amzn-Trace-Id) that contains the trace-id associated
      *        with the event.</p>
      *        <p>
      *        To learn more about X-Ray trace headers, see <a

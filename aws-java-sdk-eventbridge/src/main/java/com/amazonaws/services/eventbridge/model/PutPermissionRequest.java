@@ -57,6 +57,11 @@ public class PutPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
      * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemovePermission.html"
      * >RemovePermission</a>.
      * </p>
+     * <note>
+     * <p>
+     * Each <code>StatementId</code> must be unique.
+     * </p>
+     * </note>
      */
     private String statementId;
     /**
@@ -252,13 +257,21 @@ public class PutPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
      * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemovePermission.html"
      * >RemovePermission</a>.
      * </p>
+     * <note>
+     * <p>
+     * Each <code>StatementId</code> must be unique.
+     * </p>
+     * </note>
      * 
      * @param statementId
      *        An identifier string for the external account that you are granting permissions to. If you later want to
      *        revoke the permission for this external account, specify this <code>StatementId</code> when you run <a
      *        href
      *        ="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemovePermission.html">RemovePermission
-     *        </a>.
+     *        </a>.</p> <note>
+     *        <p>
+     *        Each <code>StatementId</code> must be unique.
+     *        </p>
      */
 
     public void setStatementId(String statementId) {
@@ -272,11 +285,19 @@ public class PutPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
      * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemovePermission.html"
      * >RemovePermission</a>.
      * </p>
+     * <note>
+     * <p>
+     * Each <code>StatementId</code> must be unique.
+     * </p>
+     * </note>
      * 
      * @return An identifier string for the external account that you are granting permissions to. If you later want to
      *         revoke the permission for this external account, specify this <code>StatementId</code> when you run <a
      *         href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemovePermission.html">
-     *         RemovePermission</a>.
+     *         RemovePermission</a>.</p> <note>
+     *         <p>
+     *         Each <code>StatementId</code> must be unique.
+     *         </p>
      */
 
     public String getStatementId() {
@@ -290,13 +311,21 @@ public class PutPermissionRequest extends com.amazonaws.AmazonWebServiceRequest 
      * href="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemovePermission.html"
      * >RemovePermission</a>.
      * </p>
+     * <note>
+     * <p>
+     * Each <code>StatementId</code> must be unique.
+     * </p>
+     * </note>
      * 
      * @param statementId
      *        An identifier string for the external account that you are granting permissions to. If you later want to
      *        revoke the permission for this external account, specify this <code>StatementId</code> when you run <a
      *        href
      *        ="https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemovePermission.html">RemovePermission
-     *        </a>.
+     *        </a>.</p> <note>
+     *        <p>
+     *        Each <code>StatementId</code> must be unique.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
