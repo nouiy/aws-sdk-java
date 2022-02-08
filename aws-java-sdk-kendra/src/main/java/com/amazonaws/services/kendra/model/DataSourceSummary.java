@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Summary information for a Amazon Kendra data source. Returned in a call to the <code>DescribeDataSource</code>
- * operation.
+ * Summary information for an Amazon Kendra data source. Returned in a call to the <code>DescribeDataSource</code> API.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DataSourceSummary" target="_top">AWS API

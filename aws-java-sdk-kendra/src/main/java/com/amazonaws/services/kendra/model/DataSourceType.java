@@ -30,7 +30,8 @@ public enum DataSourceType {
     CONFLUENCE("CONFLUENCE"),
     GOOGLEDRIVE("GOOGLEDRIVE"),
     WEBCRAWLER("WEBCRAWLER"),
-    WORKDOCS("WORKDOCS");
+    WORKDOCS("WORKDOCS"),
+    FSX("FSX");
 
     private String value;
 

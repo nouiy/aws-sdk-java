@@ -120,7 +120,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that
      * App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web
-     * Services managed CMK.
+     * Services managed key.
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
@@ -137,6 +137,12 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private AutoScalingConfigurationSummary autoScalingConfigurationSummary;
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that this service runs.
+     * </p>
+     */
+    private NetworkConfiguration networkConfiguration;
 
     /**
      * <p>
@@ -707,13 +713,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that
      * App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web
-     * Services managed CMK.
+     * Services managed key.
      * </p>
      * 
      * @param encryptionConfiguration
      *        The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository
      *        that App Runner maintains for the service. It can be either a customer-provided encryption key or an
-     *        Amazon Web Services managed CMK.
+     *        Amazon Web Services managed key.
      */
 
     public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
@@ -724,12 +730,12 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that
      * App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web
-     * Services managed CMK.
+     * Services managed key.
      * </p>
      * 
      * @return The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository
      *         that App Runner maintains for the service. It can be either a customer-provided encryption key or an
-     *         Amazon Web Services managed CMK.
+     *         Amazon Web Services managed key.
      */
 
     public EncryptionConfiguration getEncryptionConfiguration() {
@@ -740,13 +746,13 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository that
      * App Runner maintains for the service. It can be either a customer-provided encryption key or an Amazon Web
-     * Services managed CMK.
+     * Services managed key.
      * </p>
      * 
      * @param encryptionConfiguration
      *        The encryption key that App Runner uses to encrypt the service logs and the copy of the source repository
      *        that App Runner maintains for the service. It can be either a customer-provided encryption key or an
-     *        Amazon Web Services managed CMK.
+     *        Amazon Web Services managed key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -842,6 +848,46 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that this service runs.
+     * </p>
+     * 
+     * @param networkConfiguration
+     *        Configuration settings related to network traffic of the web application that this service runs.
+     */
+
+    public void setNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        this.networkConfiguration = networkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that this service runs.
+     * </p>
+     * 
+     * @return Configuration settings related to network traffic of the web application that this service runs.
+     */
+
+    public NetworkConfiguration getNetworkConfiguration() {
+        return this.networkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that this service runs.
+     * </p>
+     * 
+     * @param networkConfiguration
+     *        Configuration settings related to network traffic of the web application that this service runs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Service withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        setNetworkConfiguration(networkConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -878,7 +924,9 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         if (getHealthCheckConfiguration() != null)
             sb.append("HealthCheckConfiguration: ").append(getHealthCheckConfiguration()).append(",");
         if (getAutoScalingConfigurationSummary() != null)
-            sb.append("AutoScalingConfigurationSummary: ").append(getAutoScalingConfigurationSummary());
+            sb.append("AutoScalingConfigurationSummary: ").append(getAutoScalingConfigurationSummary()).append(",");
+        if (getNetworkConfiguration() != null)
+            sb.append("NetworkConfiguration: ").append(getNetworkConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -946,6 +994,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         if (other.getAutoScalingConfigurationSummary() != null
                 && other.getAutoScalingConfigurationSummary().equals(this.getAutoScalingConfigurationSummary()) == false)
             return false;
+        if (other.getNetworkConfiguration() == null ^ this.getNetworkConfiguration() == null)
+            return false;
+        if (other.getNetworkConfiguration() != null && other.getNetworkConfiguration().equals(this.getNetworkConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -967,6 +1019,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getHealthCheckConfiguration() == null) ? 0 : getHealthCheckConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAutoScalingConfigurationSummary() == null) ? 0 : getAutoScalingConfigurationSummary().hashCode());
+        hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
         return hashCode;
     }
 

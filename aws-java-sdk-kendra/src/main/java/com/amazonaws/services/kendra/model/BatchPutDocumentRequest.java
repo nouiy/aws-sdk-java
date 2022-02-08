@@ -28,14 +28,14 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The identifier of the index to add the documents to. You need to create the index first using the
-     * <code>CreateIndex</code> operation.
+     * <code>CreateIndex</code> API.
      * </p>
      */
     private String indexId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> operation. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
+     * The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> API. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
      * Kendra</a>.
      * </p>
      */
@@ -43,12 +43,6 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * One or more documents to add to the index.
-     * </p>
-     * <p>
-     * Documents can include custom attributes. For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom
-     * attributes that provide information on the synchronization of documents running on a data source. Note,
-     * 'DataSourceSyncJobId' could be an optional custom attribute as Amazon Kendra will use the ID of a running sync
-     * job.
      * </p>
      * <p>
      * Documents have the following file size limits.
@@ -79,7 +73,7 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Configuration information for altering your document metadata and content during the document ingestion process
-     * when you use the <code>BatchPutDocument</code> operation.
+     * when you use the <code>BatchPutDocument</code> API.
      * </p>
      * <p>
      * For more information on how to create, modify and delete document metadata, or make other content alterations
@@ -93,12 +87,12 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The identifier of the index to add the documents to. You need to create the index first using the
-     * <code>CreateIndex</code> operation.
+     * <code>CreateIndex</code> API.
      * </p>
      * 
      * @param indexId
      *        The identifier of the index to add the documents to. You need to create the index first using the
-     *        <code>CreateIndex</code> operation.
+     *        <code>CreateIndex</code> API.
      */
 
     public void setIndexId(String indexId) {
@@ -108,11 +102,11 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The identifier of the index to add the documents to. You need to create the index first using the
-     * <code>CreateIndex</code> operation.
+     * <code>CreateIndex</code> API.
      * </p>
      * 
      * @return The identifier of the index to add the documents to. You need to create the index first using the
-     *         <code>CreateIndex</code> operation.
+     *         <code>CreateIndex</code> API.
      */
 
     public String getIndexId() {
@@ -122,12 +116,12 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The identifier of the index to add the documents to. You need to create the index first using the
-     * <code>CreateIndex</code> operation.
+     * <code>CreateIndex</code> API.
      * </p>
      * 
      * @param indexId
      *        The identifier of the index to add the documents to. You need to create the index first using the
-     *        <code>CreateIndex</code> operation.
+     *        <code>CreateIndex</code> API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,15 +132,15 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> operation. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
+     * The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> API. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
      * Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code>
-     *        operation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
+     *        The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> API. For
+     *        more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for
+     *        Amazon Kendra</a>.
      */
 
     public void setRoleArn(String roleArn) {
@@ -155,14 +149,14 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> operation. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
+     * The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> API. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
      * Kendra</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code>
-     *         operation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
+     * @return The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> API.
+     *         For more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles
+     *         for Amazon Kendra</a>.
      */
 
     public String getRoleArn() {
@@ -171,15 +165,15 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> operation. For
-     * more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
+     * The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> API. For more
+     * information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon
      * Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code>
-     *        operation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for Amazon Kendra</a>.
+     *        The Amazon Resource Name (ARN) of a role that is allowed to run the <code>BatchPutDocument</code> API. For
+     *        more information, see <a href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM Roles for
+     *        Amazon Kendra</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -191,12 +185,6 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * One or more documents to add to the index.
-     * </p>
-     * <p>
-     * Documents can include custom attributes. For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom
-     * attributes that provide information on the synchronization of documents running on a data source. Note,
-     * 'DataSourceSyncJobId' could be an optional custom attribute as Amazon Kendra will use the ID of a running sync
-     * job.
      * </p>
      * <p>
      * Documents have the following file size limits.
@@ -224,12 +212,6 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @return One or more documents to add to the index.</p>
-     *         <p>
-     *         Documents can include custom attributes. For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom
-     *         attributes that provide information on the synchronization of documents running on a data source. Note,
-     *         'DataSourceSyncJobId' could be an optional custom attribute as Amazon Kendra will use the ID of a running
-     *         sync job.
-     *         </p>
      *         <p>
      *         Documents have the following file size limits.
      *         </p>
@@ -264,12 +246,6 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * One or more documents to add to the index.
      * </p>
      * <p>
-     * Documents can include custom attributes. For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom
-     * attributes that provide information on the synchronization of documents running on a data source. Note,
-     * 'DataSourceSyncJobId' could be an optional custom attribute as Amazon Kendra will use the ID of a running sync
-     * job.
-     * </p>
-     * <p>
      * Documents have the following file size limits.
      * </p>
      * <ul>
@@ -296,12 +272,6 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param documents
      *        One or more documents to add to the index.</p>
-     *        <p>
-     *        Documents can include custom attributes. For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom
-     *        attributes that provide information on the synchronization of documents running on a data source. Note,
-     *        'DataSourceSyncJobId' could be an optional custom attribute as Amazon Kendra will use the ID of a running
-     *        sync job.
-     *        </p>
      *        <p>
      *        Documents have the following file size limits.
      *        </p>
@@ -341,12 +311,6 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * One or more documents to add to the index.
      * </p>
      * <p>
-     * Documents can include custom attributes. For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom
-     * attributes that provide information on the synchronization of documents running on a data source. Note,
-     * 'DataSourceSyncJobId' could be an optional custom attribute as Amazon Kendra will use the ID of a running sync
-     * job.
-     * </p>
-     * <p>
      * Documents have the following file size limits.
      * </p>
      * <ul>
@@ -378,12 +342,6 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param documents
      *        One or more documents to add to the index.</p>
-     *        <p>
-     *        Documents can include custom attributes. For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom
-     *        attributes that provide information on the synchronization of documents running on a data source. Note,
-     *        'DataSourceSyncJobId' could be an optional custom attribute as Amazon Kendra will use the ID of a running
-     *        sync job.
-     *        </p>
      *        <p>
      *        Documents have the following file size limits.
      *        </p>
@@ -425,12 +383,6 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * One or more documents to add to the index.
      * </p>
      * <p>
-     * Documents can include custom attributes. For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom
-     * attributes that provide information on the synchronization of documents running on a data source. Note,
-     * 'DataSourceSyncJobId' could be an optional custom attribute as Amazon Kendra will use the ID of a running sync
-     * job.
-     * </p>
-     * <p>
      * Documents have the following file size limits.
      * </p>
      * <ul>
@@ -457,12 +409,6 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param documents
      *        One or more documents to add to the index.</p>
-     *        <p>
-     *        Documents can include custom attributes. For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom
-     *        attributes that provide information on the synchronization of documents running on a data source. Note,
-     *        'DataSourceSyncJobId' could be an optional custom attribute as Amazon Kendra will use the ID of a running
-     *        sync job.
-     *        </p>
      *        <p>
      *        Documents have the following file size limits.
      *        </p>
@@ -497,7 +443,7 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Configuration information for altering your document metadata and content during the document ingestion process
-     * when you use the <code>BatchPutDocument</code> operation.
+     * when you use the <code>BatchPutDocument</code> API.
      * </p>
      * <p>
      * For more information on how to create, modify and delete document metadata, or make other content alterations
@@ -508,7 +454,7 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param customDocumentEnrichmentConfiguration
      *        Configuration information for altering your document metadata and content during the document ingestion
-     *        process when you use the <code>BatchPutDocument</code> operation.</p>
+     *        process when you use the <code>BatchPutDocument</code> API.</p>
      *        <p>
      *        For more information on how to create, modify and delete document metadata, or make other content
      *        alterations when you ingest documents into Amazon Kendra, see <a
@@ -523,7 +469,7 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Configuration information for altering your document metadata and content during the document ingestion process
-     * when you use the <code>BatchPutDocument</code> operation.
+     * when you use the <code>BatchPutDocument</code> API.
      * </p>
      * <p>
      * For more information on how to create, modify and delete document metadata, or make other content alterations
@@ -533,7 +479,7 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @return Configuration information for altering your document metadata and content during the document ingestion
-     *         process when you use the <code>BatchPutDocument</code> operation.</p>
+     *         process when you use the <code>BatchPutDocument</code> API.</p>
      *         <p>
      *         For more information on how to create, modify and delete document metadata, or make other content
      *         alterations when you ingest documents into Amazon Kendra, see <a
@@ -548,7 +494,7 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Configuration information for altering your document metadata and content during the document ingestion process
-     * when you use the <code>BatchPutDocument</code> operation.
+     * when you use the <code>BatchPutDocument</code> API.
      * </p>
      * <p>
      * For more information on how to create, modify and delete document metadata, or make other content alterations
@@ -559,7 +505,7 @@ public class BatchPutDocumentRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param customDocumentEnrichmentConfiguration
      *        Configuration information for altering your document metadata and content during the document ingestion
-     *        process when you use the <code>BatchPutDocument</code> operation.</p>
+     *        process when you use the <code>BatchPutDocument</code> API.</p>
      *        <p>
      *        For more information on how to create, modify and delete document metadata, or make other content
      *        alterations when you ingest documents into Amazon Kendra, see <a

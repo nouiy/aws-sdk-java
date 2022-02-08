@@ -28,7 +28,7 @@ public class BatchGetDocumentStatusRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The identifier of the index to add documents to. The index ID is returned by the <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html"> CreateIndex </a> operation.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html">CreateIndex </a> API.
      * </p>
      */
     private String indexId;
@@ -43,12 +43,12 @@ public class BatchGetDocumentStatusRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The identifier of the index to add documents to. The index ID is returned by the <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html"> CreateIndex </a> operation.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html">CreateIndex </a> API.
      * </p>
      * 
      * @param indexId
      *        The identifier of the index to add documents to. The index ID is returned by the <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html"> CreateIndex </a> operation.
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html">CreateIndex </a> API.
      */
 
     public void setIndexId(String indexId) {
@@ -58,11 +58,11 @@ public class BatchGetDocumentStatusRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The identifier of the index to add documents to. The index ID is returned by the <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html"> CreateIndex </a> operation.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html">CreateIndex </a> API.
      * </p>
      * 
      * @return The identifier of the index to add documents to. The index ID is returned by the <a
-     *         href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html"> CreateIndex </a> operation.
+     *         href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html">CreateIndex </a> API.
      */
 
     public String getIndexId() {
@@ -72,12 +72,12 @@ public class BatchGetDocumentStatusRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * The identifier of the index to add documents to. The index ID is returned by the <a
-     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html"> CreateIndex </a> operation.
+     * href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html">CreateIndex </a> API.
      * </p>
      * 
      * @param indexId
      *        The identifier of the index to add documents to. The index ID is returned by the <a
-     *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html"> CreateIndex </a> operation.
+     *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_CreateIndex.html">CreateIndex </a> API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

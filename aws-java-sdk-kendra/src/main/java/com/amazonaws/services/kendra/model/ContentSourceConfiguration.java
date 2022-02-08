@@ -43,7 +43,7 @@ public class ContentSourceConfiguration implements Serializable, Cloneable, Stru
     private java.util.List<String> faqIds;
     /**
      * <p>
-     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> operation.
+     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> API.
      * </p>
      */
     private Boolean directPutContent;
@@ -190,11 +190,11 @@ public class ContentSourceConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> operation.
+     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> API.
      * </p>
      * 
      * @param directPutContent
-     *        <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> operation.
+     *        <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> API.
      */
 
     public void setDirectPutContent(Boolean directPutContent) {
@@ -203,11 +203,10 @@ public class ContentSourceConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> operation.
+     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> API.
      * </p>
      * 
-     * @return <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code>
-     *         operation.
+     * @return <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> API.
      */
 
     public Boolean getDirectPutContent() {
@@ -216,11 +215,11 @@ public class ContentSourceConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> operation.
+     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> API.
      * </p>
      * 
      * @param directPutContent
-     *        <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> operation.
+     *        <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -231,11 +230,10 @@ public class ContentSourceConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> operation.
+     * <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> API.
      * </p>
      * 
-     * @return <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code>
-     *         operation.
+     * @return <code>TRUE</code> to use documents you indexed directly using the <code>BatchPutDocument</code> API.
      */
 
     public Boolean isDirectPutContent() {

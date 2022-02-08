@@ -233,6 +233,39 @@ public class AWSAppRunnerAsyncClient extends AWSAppRunnerClient implements AWSAp
     }
 
     @Override
+    public java.util.concurrent.Future<CreateVpcConnectorResult> createVpcConnectorAsync(CreateVpcConnectorRequest request) {
+
+        return createVpcConnectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateVpcConnectorResult> createVpcConnectorAsync(final CreateVpcConnectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateVpcConnectorRequest, CreateVpcConnectorResult> asyncHandler) {
+        final CreateVpcConnectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateVpcConnectorResult>() {
+            @Override
+            public CreateVpcConnectorResult call() throws Exception {
+                CreateVpcConnectorResult result = null;
+
+                try {
+                    result = executeCreateVpcConnector(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAutoScalingConfigurationResult> deleteAutoScalingConfigurationAsync(DeleteAutoScalingConfigurationRequest request) {
 
         return deleteAutoScalingConfigurationAsync(request, null);
@@ -317,6 +350,39 @@ public class AWSAppRunnerAsyncClient extends AWSAppRunnerClient implements AWSAp
 
                 try {
                     result = executeDeleteService(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVpcConnectorResult> deleteVpcConnectorAsync(DeleteVpcConnectorRequest request) {
+
+        return deleteVpcConnectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteVpcConnectorResult> deleteVpcConnectorAsync(final DeleteVpcConnectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteVpcConnectorRequest, DeleteVpcConnectorResult> asyncHandler) {
+        final DeleteVpcConnectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteVpcConnectorResult>() {
+            @Override
+            public DeleteVpcConnectorResult call() throws Exception {
+                DeleteVpcConnectorResult result = null;
+
+                try {
+                    result = executeDeleteVpcConnector(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -418,6 +484,39 @@ public class AWSAppRunnerAsyncClient extends AWSAppRunnerClient implements AWSAp
 
                 try {
                     result = executeDescribeService(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVpcConnectorResult> describeVpcConnectorAsync(DescribeVpcConnectorRequest request) {
+
+        return describeVpcConnectorAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeVpcConnectorResult> describeVpcConnectorAsync(final DescribeVpcConnectorRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeVpcConnectorRequest, DescribeVpcConnectorResult> asyncHandler) {
+        final DescribeVpcConnectorRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeVpcConnectorResult>() {
+            @Override
+            public DescribeVpcConnectorResult call() throws Exception {
+                DescribeVpcConnectorResult result = null;
+
+                try {
+                    result = executeDescribeVpcConnector(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -617,6 +716,39 @@ public class AWSAppRunnerAsyncClient extends AWSAppRunnerClient implements AWSAp
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVpcConnectorsResult> listVpcConnectorsAsync(ListVpcConnectorsRequest request) {
+
+        return listVpcConnectorsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListVpcConnectorsResult> listVpcConnectorsAsync(final ListVpcConnectorsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListVpcConnectorsRequest, ListVpcConnectorsResult> asyncHandler) {
+        final ListVpcConnectorsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListVpcConnectorsResult>() {
+            @Override
+            public ListVpcConnectorsResult call() throws Exception {
+                ListVpcConnectorsResult result = null;
+
+                try {
+                    result = executeListVpcConnectors(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -82,6 +82,11 @@ public class JobOperationStaxUnmarshaller implements Unmarshaller<JobOperation, 
                     jobOperation.setS3PutObjectRetention(S3SetObjectRetentionOperationStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("S3ReplicateObject", targetDepth)) {
+                    jobOperation.setS3ReplicateObject(S3ReplicateObjectOperationStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return jobOperation;

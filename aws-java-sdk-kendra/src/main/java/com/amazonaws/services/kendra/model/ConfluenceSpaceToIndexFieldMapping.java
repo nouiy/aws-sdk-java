@@ -19,10 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the mapping between a field in the Confluence data source to a Amazon Kendra index field.
+ * Defines the mapping between a field in the Confluence data source to an Amazon Kendra index field.
  * </p>
  * <p>
- * You must first create the index field using the <code>UpdateIndex</code> operation.
+ * You must first create the index field using the <code>UpdateIndex</code> API.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ConfluenceSpaceToIndexFieldMapping"

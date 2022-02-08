@@ -34,7 +34,9 @@ public enum AutoMLJobSecondaryStatus {
     Completed("Completed"),
     ExplainabilityError("ExplainabilityError"),
     DeployingModel("DeployingModel"),
-    ModelDeploymentError("ModelDeploymentError");
+    ModelDeploymentError("ModelDeploymentError"),
+    GeneratingModelInsightsReport("GeneratingModelInsightsReport"),
+    ModelInsightsError("ModelInsightsError");
 
     private String value;
 

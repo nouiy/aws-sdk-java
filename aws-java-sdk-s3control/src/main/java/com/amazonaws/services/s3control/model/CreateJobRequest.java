@@ -92,6 +92,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      */
     private java.util.List<S3Tag> tags;
+    /**
+     * <p>
+     * The attribute container for the ManifestGenerator details. Jobs must be created with either a manifest file or a
+     * ManifestGenerator, but not both.
+     * </p>
+     */
+    private JobManifestGenerator manifestGenerator;
 
     /**
      * <p>
@@ -580,6 +587,52 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     }
 
     /**
+     * <p>
+     * The attribute container for the ManifestGenerator details. Jobs must be created with either a manifest file or a
+     * ManifestGenerator, but not both.
+     * </p>
+     * 
+     * @param manifestGenerator
+     *        The attribute container for the ManifestGenerator details. Jobs must be created with either a manifest
+     *        file or a ManifestGenerator, but not both.
+     */
+
+    public void setManifestGenerator(JobManifestGenerator manifestGenerator) {
+        this.manifestGenerator = manifestGenerator;
+    }
+
+    /**
+     * <p>
+     * The attribute container for the ManifestGenerator details. Jobs must be created with either a manifest file or a
+     * ManifestGenerator, but not both.
+     * </p>
+     * 
+     * @return The attribute container for the ManifestGenerator details. Jobs must be created with either a manifest
+     *         file or a ManifestGenerator, but not both.
+     */
+
+    public JobManifestGenerator getManifestGenerator() {
+        return this.manifestGenerator;
+    }
+
+    /**
+     * <p>
+     * The attribute container for the ManifestGenerator details. Jobs must be created with either a manifest file or a
+     * ManifestGenerator, but not both.
+     * </p>
+     * 
+     * @param manifestGenerator
+     *        The attribute container for the ManifestGenerator details. Jobs must be created with either a manifest
+     *        file or a ManifestGenerator, but not both.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateJobRequest withManifestGenerator(JobManifestGenerator manifestGenerator) {
+        setManifestGenerator(manifestGenerator);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -610,7 +663,9 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getManifestGenerator() != null)
+            sb.append("ManifestGenerator: ").append(getManifestGenerator());
         sb.append("}");
         return sb.toString();
     }
@@ -665,6 +720,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getManifestGenerator() == null ^ this.getManifestGenerator() == null)
+            return false;
+        if (other.getManifestGenerator() != null && other.getManifestGenerator().equals(this.getManifestGenerator()) == false)
+            return false;
         return true;
     }
 
@@ -683,6 +742,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         hashCode = prime * hashCode + ((getPriority() == null) ? 0 : getPriority().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getManifestGenerator() == null) ? 0 : getManifestGenerator().hashCode());
         return hashCode;
     }
 

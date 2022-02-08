@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides feedback on how relevant a document is to a search. Your application uses the <code>SubmitFeedback</code>
- * operation to provide relevance information.
+ * API to provide relevance information.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/RelevanceFeedback" target="_top">AWS API

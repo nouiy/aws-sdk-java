@@ -112,9 +112,10 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
      * across multiple services.
      * </p>
      * <p>
-     * Create multiple revisions of a configuration by using the same <code>AutoScalingConfigurationName</code> and
-     * different <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use
-     * the latest active revision of an auto scaling configuration or a specific revision.
+     * Create multiple revisions of a configuration by calling this action multiple times using the same
+     * <code>AutoScalingConfigurationName</code>. The call returns incremental
+     * <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest
+     * active revision of an auto scaling configuration or a specific revision.
      * </p>
      * <p>
      * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability
@@ -142,9 +143,10 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
      * across multiple services.
      * </p>
      * <p>
-     * Create multiple revisions of a configuration by using the same <code>AutoScalingConfigurationName</code> and
-     * different <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use
-     * the latest active revision of an auto scaling configuration or a specific revision.
+     * Create multiple revisions of a configuration by calling this action multiple times using the same
+     * <code>AutoScalingConfigurationName</code>. The call returns incremental
+     * <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest
+     * active revision of an auto scaling configuration or a specific revision.
      * </p>
      * <p>
      * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability
@@ -253,6 +255,39 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
      */
     java.util.concurrent.Future<CreateServiceResult> createServiceAsync(CreateServiceRequest createServiceRequest,
             com.amazonaws.handlers.AsyncHandler<CreateServiceRequest, CreateServiceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create an App Runner VPC connector resource. App Runner requires this resource when you want to associate your
+     * App Runner service to a custom Amazon Virtual Private Cloud (Amazon VPC).
+     * </p>
+     * 
+     * @param createVpcConnectorRequest
+     * @return A Java Future containing the result of the CreateVpcConnector operation returned by the service.
+     * @sample AWSAppRunnerAsync.CreateVpcConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/CreateVpcConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateVpcConnectorResult> createVpcConnectorAsync(CreateVpcConnectorRequest createVpcConnectorRequest);
+
+    /**
+     * <p>
+     * Create an App Runner VPC connector resource. App Runner requires this resource when you want to associate your
+     * App Runner service to a custom Amazon Virtual Private Cloud (Amazon VPC).
+     * </p>
+     * 
+     * @param createVpcConnectorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateVpcConnector operation returned by the service.
+     * @sample AWSAppRunnerAsyncHandler.CreateVpcConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/CreateVpcConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateVpcConnectorResult> createVpcConnectorAsync(CreateVpcConnectorRequest createVpcConnectorRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateVpcConnectorRequest, CreateVpcConnectorResult> asyncHandler);
 
     /**
      * <p>
@@ -365,6 +400,39 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
 
     /**
      * <p>
+     * Delete an App Runner VPC connector resource. You can't delete a connector that's used by one or more App Runner
+     * services.
+     * </p>
+     * 
+     * @param deleteVpcConnectorRequest
+     * @return A Java Future containing the result of the DeleteVpcConnector operation returned by the service.
+     * @sample AWSAppRunnerAsync.DeleteVpcConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DeleteVpcConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVpcConnectorResult> deleteVpcConnectorAsync(DeleteVpcConnectorRequest deleteVpcConnectorRequest);
+
+    /**
+     * <p>
+     * Delete an App Runner VPC connector resource. You can't delete a connector that's used by one or more App Runner
+     * services.
+     * </p>
+     * 
+     * @param deleteVpcConnectorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteVpcConnector operation returned by the service.
+     * @sample AWSAppRunnerAsyncHandler.DeleteVpcConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DeleteVpcConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteVpcConnectorResult> deleteVpcConnectorAsync(DeleteVpcConnectorRequest deleteVpcConnectorRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteVpcConnectorRequest, DeleteVpcConnectorResult> asyncHandler);
+
+    /**
+     * <p>
      * Return a full description of an App Runner automatic scaling configuration resource.
      * </p>
      * 
@@ -459,6 +527,37 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
      */
     java.util.concurrent.Future<DescribeServiceResult> describeServiceAsync(DescribeServiceRequest describeServiceRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeServiceRequest, DescribeServiceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Return a description of an App Runner VPC connector resource.
+     * </p>
+     * 
+     * @param describeVpcConnectorRequest
+     * @return A Java Future containing the result of the DescribeVpcConnector operation returned by the service.
+     * @sample AWSAppRunnerAsync.DescribeVpcConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DescribeVpcConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeVpcConnectorResult> describeVpcConnectorAsync(DescribeVpcConnectorRequest describeVpcConnectorRequest);
+
+    /**
+     * <p>
+     * Return a description of an App Runner VPC connector resource.
+     * </p>
+     * 
+     * @param describeVpcConnectorRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeVpcConnector operation returned by the service.
+     * @sample AWSAppRunnerAsyncHandler.DescribeVpcConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DescribeVpcConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeVpcConnectorResult> describeVpcConnectorAsync(DescribeVpcConnectorRequest describeVpcConnectorRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeVpcConnectorRequest, DescribeVpcConnectorResult> asyncHandler);
 
     /**
      * <p>
@@ -675,6 +774,37 @@ public interface AWSAppRunnerAsync extends AWSAppRunner {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of App Runner VPC connectors in your Amazon Web Services account.
+     * </p>
+     * 
+     * @param listVpcConnectorsRequest
+     * @return A Java Future containing the result of the ListVpcConnectors operation returned by the service.
+     * @sample AWSAppRunnerAsync.ListVpcConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/ListVpcConnectors" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListVpcConnectorsResult> listVpcConnectorsAsync(ListVpcConnectorsRequest listVpcConnectorsRequest);
+
+    /**
+     * <p>
+     * Returns a list of App Runner VPC connectors in your Amazon Web Services account.
+     * </p>
+     * 
+     * @param listVpcConnectorsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListVpcConnectors operation returned by the service.
+     * @sample AWSAppRunnerAsyncHandler.ListVpcConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/ListVpcConnectors" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListVpcConnectorsResult> listVpcConnectorsAsync(ListVpcConnectorsRequest listVpcConnectorsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListVpcConnectorsRequest, ListVpcConnectorsResult> asyncHandler);
 
     /**
      * <p>

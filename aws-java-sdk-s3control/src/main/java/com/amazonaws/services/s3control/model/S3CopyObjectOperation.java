@@ -43,7 +43,13 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     private String metadataDirective;
     /** <p/> */
     private java.util.Date modifiedSinceConstraint;
-    /** <p/> */
+    /**
+     * <p>
+     * If you don't provide this parameter, Amazon S3 copies all the metadata from the original objects. If you specify
+     * an empty set, the new objects will have no tags. Otherwise, Amazon S3 assigns the supplied tags to the new
+     * objects.
+     * </p>
+     */
     private S3ObjectMetadata newObjectMetadata;
     /** <p/> */
     private java.util.List<S3Tag> newObjectTagging;
@@ -334,9 +340,16 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * If you don't provide this parameter, Amazon S3 copies all the metadata from the original objects. If you specify
+     * an empty set, the new objects will have no tags. Otherwise, Amazon S3 assigns the supplied tags to the new
+     * objects.
+     * </p>
      * 
      * @param newObjectMetadata
+     *        If you don't provide this parameter, Amazon S3 copies all the metadata from the original objects. If you
+     *        specify an empty set, the new objects will have no tags. Otherwise, Amazon S3 assigns the supplied tags to
+     *        the new objects.
      */
 
     public void setNewObjectMetadata(S3ObjectMetadata newObjectMetadata) {
@@ -344,9 +357,15 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * If you don't provide this parameter, Amazon S3 copies all the metadata from the original objects. If you specify
+     * an empty set, the new objects will have no tags. Otherwise, Amazon S3 assigns the supplied tags to the new
+     * objects.
+     * </p>
      * 
-     * @return
+     * @return If you don't provide this parameter, Amazon S3 copies all the metadata from the original objects. If you
+     *         specify an empty set, the new objects will have no tags. Otherwise, Amazon S3 assigns the supplied tags
+     *         to the new objects.
      */
 
     public S3ObjectMetadata getNewObjectMetadata() {
@@ -354,9 +373,16 @@ public class S3CopyObjectOperation implements Serializable, Cloneable {
     }
 
     /**
-     * <p/>
+     * <p>
+     * If you don't provide this parameter, Amazon S3 copies all the metadata from the original objects. If you specify
+     * an empty set, the new objects will have no tags. Otherwise, Amazon S3 assigns the supplied tags to the new
+     * objects.
+     * </p>
      * 
      * @param newObjectMetadata
+     *        If you don't provide this parameter, Amazon S3 copies all the metadata from the original objects. If you
+     *        specify an empty set, the new objects will have no tags. Otherwise, Amazon S3 assigns the supplied tags to
+     *        the new objects.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

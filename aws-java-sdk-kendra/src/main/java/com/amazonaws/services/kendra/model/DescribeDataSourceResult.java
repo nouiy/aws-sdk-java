@@ -82,7 +82,7 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
     private String status;
     /**
      * <p>
-     * The schedule that Amazon Kendra will update the data source.
+     * The schedule for Amazon Kendra to update the index.
      * </p>
      */
     private String schedule;
@@ -544,11 +544,11 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The schedule that Amazon Kendra will update the data source.
+     * The schedule for Amazon Kendra to update the index.
      * </p>
      * 
      * @param schedule
-     *        The schedule that Amazon Kendra will update the data source.
+     *        The schedule for Amazon Kendra to update the index.
      */
 
     public void setSchedule(String schedule) {
@@ -557,10 +557,10 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The schedule that Amazon Kendra will update the data source.
+     * The schedule for Amazon Kendra to update the index.
      * </p>
      * 
-     * @return The schedule that Amazon Kendra will update the data source.
+     * @return The schedule for Amazon Kendra to update the index.
      */
 
     public String getSchedule() {
@@ -569,11 +569,11 @@ public class DescribeDataSourceResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The schedule that Amazon Kendra will update the data source.
+     * The schedule for Amazon Kendra to update the index.
      * </p>
      * 
      * @param schedule
-     *        The schedule that Amazon Kendra will update the data source.
+     *        The schedule for Amazon Kendra to update the index.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

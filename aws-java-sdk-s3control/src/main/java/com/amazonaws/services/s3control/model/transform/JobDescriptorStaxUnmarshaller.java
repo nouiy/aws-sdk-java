@@ -134,6 +134,16 @@ public class JobDescriptorStaxUnmarshaller implements Unmarshaller<JobDescriptor
                     jobDescriptor.setSuspendedCause(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("ManifestGenerator", targetDepth)) {
+                    jobDescriptor.setManifestGenerator(JobManifestGeneratorStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("GeneratedManifestDescriptor", targetDepth)) {
+                    jobDescriptor.setGeneratedManifestDescriptor(S3GeneratedManifestDescriptorStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return jobDescriptor;

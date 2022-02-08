@@ -31,6 +31,17 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      * App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls,
      * App Runner creates incremental revisions of the configuration.
      * </p>
+     * <note>
+     * <p>
+     * The name <code>DefaultConfiguration</code> is reserved (it's the configuration that App Runner uses if you don't
+     * provide a custome one). You can't use it to create a new auto scaling configuration, and you can't create a
+     * revision of it.
+     * </p>
+     * <p>
+     * When you want to use your own auto scaling configuration for your App Runner service, <i>create a configuration
+     * with a different name</i>, and then provide it when you create or update your service.
+     * </p>
+     * </note>
      */
     private String autoScalingConfigurationName;
     /**
@@ -83,11 +94,31 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      * App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls,
      * App Runner creates incremental revisions of the configuration.
      * </p>
+     * <note>
+     * <p>
+     * The name <code>DefaultConfiguration</code> is reserved (it's the configuration that App Runner uses if you don't
+     * provide a custome one). You can't use it to create a new auto scaling configuration, and you can't create a
+     * revision of it.
+     * </p>
+     * <p>
+     * When you want to use your own auto scaling configuration for your App Runner service, <i>create a configuration
+     * with a different name</i>, and then provide it when you create or update your service.
+     * </p>
+     * </note>
      * 
      * @param autoScalingConfigurationName
      *        A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services
      *        Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in
-     *        subsequent calls, App Runner creates incremental revisions of the configuration.
+     *        subsequent calls, App Runner creates incremental revisions of the configuration.</p> <note>
+     *        <p>
+     *        The name <code>DefaultConfiguration</code> is reserved (it's the configuration that App Runner uses if you
+     *        don't provide a custome one). You can't use it to create a new auto scaling configuration, and you can't
+     *        create a revision of it.
+     *        </p>
+     *        <p>
+     *        When you want to use your own auto scaling configuration for your App Runner service, <i>create a
+     *        configuration with a different name</i>, and then provide it when you create or update your service.
+     *        </p>
      */
 
     public void setAutoScalingConfigurationName(String autoScalingConfigurationName) {
@@ -100,10 +131,30 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      * App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls,
      * App Runner creates incremental revisions of the configuration.
      * </p>
+     * <note>
+     * <p>
+     * The name <code>DefaultConfiguration</code> is reserved (it's the configuration that App Runner uses if you don't
+     * provide a custome one). You can't use it to create a new auto scaling configuration, and you can't create a
+     * revision of it.
+     * </p>
+     * <p>
+     * When you want to use your own auto scaling configuration for your App Runner service, <i>create a configuration
+     * with a different name</i>, and then provide it when you create or update your service.
+     * </p>
+     * </note>
      * 
      * @return A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services
      *         Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in
-     *         subsequent calls, App Runner creates incremental revisions of the configuration.
+     *         subsequent calls, App Runner creates incremental revisions of the configuration.</p> <note>
+     *         <p>
+     *         The name <code>DefaultConfiguration</code> is reserved (it's the configuration that App Runner uses if
+     *         you don't provide a custome one). You can't use it to create a new auto scaling configuration, and you
+     *         can't create a revision of it.
+     *         </p>
+     *         <p>
+     *         When you want to use your own auto scaling configuration for your App Runner service, <i>create a
+     *         configuration with a different name</i>, and then provide it when you create or update your service.
+     *         </p>
      */
 
     public String getAutoScalingConfigurationName() {
@@ -116,11 +167,31 @@ public class CreateAutoScalingConfigurationRequest extends com.amazonaws.AmazonW
      * App Runner creates revision number <code>1</code> of this name. When you use the same name in subsequent calls,
      * App Runner creates incremental revisions of the configuration.
      * </p>
+     * <note>
+     * <p>
+     * The name <code>DefaultConfiguration</code> is reserved (it's the configuration that App Runner uses if you don't
+     * provide a custome one). You can't use it to create a new auto scaling configuration, and you can't create a
+     * revision of it.
+     * </p>
+     * <p>
+     * When you want to use your own auto scaling configuration for your App Runner service, <i>create a configuration
+     * with a different name</i>, and then provide it when you create or update your service.
+     * </p>
+     * </note>
      * 
      * @param autoScalingConfigurationName
      *        A name for the auto scaling configuration. When you use it for the first time in an Amazon Web Services
      *        Region, App Runner creates revision number <code>1</code> of this name. When you use the same name in
-     *        subsequent calls, App Runner creates incremental revisions of the configuration.
+     *        subsequent calls, App Runner creates incremental revisions of the configuration.</p> <note>
+     *        <p>
+     *        The name <code>DefaultConfiguration</code> is reserved (it's the configuration that App Runner uses if you
+     *        don't provide a custome one). You can't use it to create a new auto scaling configuration, and you can't
+     *        create a revision of it.
+     *        </p>
+     *        <p>
+     *        When you want to use your own auto scaling configuration for your App Runner service, <i>create a
+     *        configuration with a different name</i>, and then provide it when you create or update your service.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

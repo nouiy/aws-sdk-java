@@ -63,7 +63,7 @@ public class ConfluenceSpaceConfiguration implements Serializable, Cloneable, St
     /**
      * <p>
      * Defines how space metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>SpaceFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -386,7 +386,7 @@ public class ConfluenceSpaceConfiguration implements Serializable, Cloneable, St
     /**
      * <p>
      * Defines how space metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>SpaceFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -394,7 +394,7 @@ public class ConfluenceSpaceConfiguration implements Serializable, Cloneable, St
      * 
      * @return Defines how space metadata fields should be mapped to index fields. Before you can map a field, you must
      *         first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *         operation.</p>
+     *         API.</p>
      *         <p>
      *         If you specify the <code>SpaceFieldMappings</code> parameter, you must specify at least one field
      *         mapping.
@@ -407,7 +407,7 @@ public class ConfluenceSpaceConfiguration implements Serializable, Cloneable, St
     /**
      * <p>
      * Defines how space metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>SpaceFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -416,7 +416,7 @@ public class ConfluenceSpaceConfiguration implements Serializable, Cloneable, St
      * @param spaceFieldMappings
      *        Defines how space metadata fields should be mapped to index fields. Before you can map a field, you must
      *        first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>SpaceFieldMappings</code> parameter, you must specify at least one field mapping.
      */
@@ -433,7 +433,7 @@ public class ConfluenceSpaceConfiguration implements Serializable, Cloneable, St
     /**
      * <p>
      * Defines how space metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>SpaceFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -447,7 +447,7 @@ public class ConfluenceSpaceConfiguration implements Serializable, Cloneable, St
      * @param spaceFieldMappings
      *        Defines how space metadata fields should be mapped to index fields. Before you can map a field, you must
      *        first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>SpaceFieldMappings</code> parameter, you must specify at least one field mapping.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -466,7 +466,7 @@ public class ConfluenceSpaceConfiguration implements Serializable, Cloneable, St
     /**
      * <p>
      * Defines how space metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>SpaceFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -475,7 +475,7 @@ public class ConfluenceSpaceConfiguration implements Serializable, Cloneable, St
      * @param spaceFieldMappings
      *        Defines how space metadata fields should be mapped to index fields. Before you can map a field, you must
      *        first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>SpaceFieldMappings</code> parameter, you must specify at least one field mapping.
      * @return Returns a reference to this object so that method calls can be chained together.

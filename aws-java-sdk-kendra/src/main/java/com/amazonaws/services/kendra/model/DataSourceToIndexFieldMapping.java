@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Maps a column or attribute in the data source to an index field. You must first create the fields in the index using
- * the <code>UpdateIndex</code> operation.
+ * the <code>UpdateIndex</code> API.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DataSourceToIndexFieldMapping"

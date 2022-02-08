@@ -31,7 +31,7 @@ public class ConfluencePageConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how page metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>PageFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -42,7 +42,7 @@ public class ConfluencePageConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how page metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>PageFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -50,7 +50,7 @@ public class ConfluencePageConfiguration implements Serializable, Cloneable, Str
      * 
      * @return Defines how page metadata fields should be mapped to index fields. Before you can map a field, you must
      *         first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *         operation.</p>
+     *         API.</p>
      *         <p>
      *         If you specify the <code>PageFieldMappings</code> parameter, you must specify at least one field mapping.
      */
@@ -62,7 +62,7 @@ public class ConfluencePageConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how page metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>PageFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -71,7 +71,7 @@ public class ConfluencePageConfiguration implements Serializable, Cloneable, Str
      * @param pageFieldMappings
      *        Defines how page metadata fields should be mapped to index fields. Before you can map a field, you must
      *        first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>PageFieldMappings</code> parameter, you must specify at least one field mapping.
      */
@@ -88,7 +88,7 @@ public class ConfluencePageConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how page metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>PageFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -102,7 +102,7 @@ public class ConfluencePageConfiguration implements Serializable, Cloneable, Str
      * @param pageFieldMappings
      *        Defines how page metadata fields should be mapped to index fields. Before you can map a field, you must
      *        first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>PageFieldMappings</code> parameter, you must specify at least one field mapping.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -121,7 +121,7 @@ public class ConfluencePageConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how page metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>PageFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -130,7 +130,7 @@ public class ConfluencePageConfiguration implements Serializable, Cloneable, Str
      * @param pageFieldMappings
      *        Defines how page metadata fields should be mapped to index fields. Before you can map a field, you must
      *        first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>PageFieldMappings</code> parameter, you must specify at least one field mapping.
      * @return Returns a reference to this object so that method calls can be chained together.

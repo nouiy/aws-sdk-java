@@ -29,7 +29,10 @@ import com.amazonaws.http.server.MockServer;
 import com.amazonaws.http.settings.HttpClientSettings;
 
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
+import utils.Retryable;
+import utils.RetryableTestRule;
 
 import java.io.IOException;
 
@@ -45,6 +48,9 @@ import static org.mockito.Mockito.spy;
  */
 public class DummyResponseServerIntegrationTests extends MockServerTestBase {
 
+    @Rule
+    public RetryableTestRule retryableTestRule = new RetryableTestRule();
+    
     private static final int STATUS_CODE = 500;
     private AmazonHttpClient httpClient;
 
@@ -60,6 +66,7 @@ public class DummyResponseServerIntegrationTests extends MockServerTestBase {
     }
 
     @Test(timeout = TEST_TIMEOUT)
+    @Retryable
     public void requestTimeoutEnabled_ServerRespondsWithRetryableError_RetriesUpToLimitThenThrowsServerException()
             throws IOException {
         int maxRetries = 2;

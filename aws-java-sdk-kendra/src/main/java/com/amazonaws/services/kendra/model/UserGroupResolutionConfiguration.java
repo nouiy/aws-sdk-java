@@ -23,7 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Sign On identity source. This is useful for setting up user context filtering, where Amazon Kendra filters search
  * results for different users based on their group's access to documents. You can also map your users to their groups
  * for user context filtering using the <a
- * href="https://docs.aws.amazon.com/kendra/latest/dg/API_PutPrincipalMapping.html">PutPrincipalMapping operation</a>.
+ * href="https://docs.aws.amazon.com/kendra/latest/dg/API_PutPrincipalMapping.html">PutPrincipalMapping API</a>.
  * </p>
  * <p>
  * To set up an Amazon Web Services SSO identity source in the console to use with Amazon Kendra, see <a
@@ -36,7 +36,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Amazon Kendra currently does not support using <code>UserGroupResolutionConfiguration</code> with an Amazon Web
  * Services organization member account for your Amazon Web Services SSO identify source. You must create your index in
- * the parent account for the organization in order to use <code>UserGroupResolutionConfiguration</code>.
+ * the management account for the organization in order to use <code>UserGroupResolutionConfiguration</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/UserGroupResolutionConfiguration"

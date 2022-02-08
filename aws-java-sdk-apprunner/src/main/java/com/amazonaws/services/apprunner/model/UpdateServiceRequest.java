@@ -53,16 +53,22 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with your service.
+     * associate with the App Runner service.
      * </p>
      */
     private String autoScalingConfigurationArn;
     /**
      * <p>
-     * The settings for the health check that App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of the App Runner service.
      * </p>
      */
     private HealthCheckConfiguration healthCheckConfiguration;
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * </p>
+     */
+    private NetworkConfiguration networkConfiguration;
 
     /**
      * <p>
@@ -226,12 +232,12 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with your service.
+     * associate with the App Runner service.
      * </p>
      * 
      * @param autoScalingConfigurationArn
      *        The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     *        associate with your service.
+     *        associate with the App Runner service.
      */
 
     public void setAutoScalingConfigurationArn(String autoScalingConfigurationArn) {
@@ -241,11 +247,11 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with your service.
+     * associate with the App Runner service.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     *         associate with your service.
+     *         associate with the App Runner service.
      */
 
     public String getAutoScalingConfigurationArn() {
@@ -255,12 +261,12 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with your service.
+     * associate with the App Runner service.
      * </p>
      * 
      * @param autoScalingConfigurationArn
      *        The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     *        associate with your service.
+     *        associate with the App Runner service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -271,11 +277,12 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of the App Runner service.
      * </p>
      * 
      * @param healthCheckConfiguration
-     *        The settings for the health check that App Runner performs to monitor the health of your service.
+     *        The settings for the health check that App Runner performs to monitor the health of the App Runner
+     *        service.
      */
 
     public void setHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
@@ -284,10 +291,11 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of the App Runner service.
      * </p>
      * 
-     * @return The settings for the health check that App Runner performs to monitor the health of your service.
+     * @return The settings for the health check that App Runner performs to monitor the health of the App Runner
+     *         service.
      */
 
     public HealthCheckConfiguration getHealthCheckConfiguration() {
@@ -296,16 +304,58 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of the App Runner service.
      * </p>
      * 
      * @param healthCheckConfiguration
-     *        The settings for the health check that App Runner performs to monitor the health of your service.
+     *        The settings for the health check that App Runner performs to monitor the health of the App Runner
+     *        service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateServiceRequest withHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
         setHealthCheckConfiguration(healthCheckConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * </p>
+     * 
+     * @param networkConfiguration
+     *        Configuration settings related to network traffic of the web application that the App Runner service runs.
+     */
+
+    public void setNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        this.networkConfiguration = networkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * </p>
+     * 
+     * @return Configuration settings related to network traffic of the web application that the App Runner service
+     *         runs.
+     */
+
+    public NetworkConfiguration getNetworkConfiguration() {
+        return this.networkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * </p>
+     * 
+     * @param networkConfiguration
+     *        Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateServiceRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        setNetworkConfiguration(networkConfiguration);
         return this;
     }
 
@@ -330,7 +380,9 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getAutoScalingConfigurationArn() != null)
             sb.append("AutoScalingConfigurationArn: ").append(getAutoScalingConfigurationArn()).append(",");
         if (getHealthCheckConfiguration() != null)
-            sb.append("HealthCheckConfiguration: ").append(getHealthCheckConfiguration());
+            sb.append("HealthCheckConfiguration: ").append(getHealthCheckConfiguration()).append(",");
+        if (getNetworkConfiguration() != null)
+            sb.append("NetworkConfiguration: ").append(getNetworkConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -365,6 +417,10 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getHealthCheckConfiguration() != null && other.getHealthCheckConfiguration().equals(this.getHealthCheckConfiguration()) == false)
             return false;
+        if (other.getNetworkConfiguration() == null ^ this.getNetworkConfiguration() == null)
+            return false;
+        if (other.getNetworkConfiguration() != null && other.getNetworkConfiguration().equals(this.getNetworkConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -378,6 +434,7 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getInstanceConfiguration() == null) ? 0 : getInstanceConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAutoScalingConfigurationArn() == null) ? 0 : getAutoScalingConfigurationArn().hashCode());
         hashCode = prime * hashCode + ((getHealthCheckConfiguration() == null) ? 0 : getHealthCheckConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
         return hashCode;
     }
 

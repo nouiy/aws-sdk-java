@@ -454,6 +454,15 @@ public class CreateJobRequestMarshaller implements Marshaller<Request<CreateJobR
                                 xmlWriter.endElement();
                             }
                         }
+
+                        {
+                            S3ReplicateObjectOperation s3ReplicateObject = operation.getS3ReplicateObject();
+                            if (s3ReplicateObject != null) {
+                                xmlWriter.startElement("S3ReplicateObject");
+
+                                xmlWriter.endElement();
+                            }
+                        }
                         xmlWriter.endElement();
                     }
                 }
@@ -569,6 +578,120 @@ public class CreateJobRequestMarshaller implements Marshaller<Request<CreateJobR
                         xmlWriter.endElement();
                     }
                     xmlWriter.endElement();
+                }
+
+                {
+                    JobManifestGenerator manifestGenerator = createJobRequest.getManifestGenerator();
+                    if (manifestGenerator != null) {
+                        xmlWriter.startElement("ManifestGenerator");
+
+                        {
+                            S3JobManifestGenerator s3JobManifestGenerator = manifestGenerator.getS3JobManifestGenerator();
+                            if (s3JobManifestGenerator != null) {
+                                xmlWriter.startElement("S3JobManifestGenerator");
+
+                                if (s3JobManifestGenerator.getExpectedBucketOwner() != null) {
+                                    xmlWriter.startElement("ExpectedBucketOwner").value(s3JobManifestGenerator.getExpectedBucketOwner()).endElement();
+                                }
+
+                                if (s3JobManifestGenerator.getSourceBucket() != null) {
+                                    xmlWriter.startElement("SourceBucket").value(s3JobManifestGenerator.getSourceBucket()).endElement();
+                                }
+
+                                {
+                                    S3ManifestOutputLocation manifestOutputLocation = s3JobManifestGenerator.getManifestOutputLocation();
+                                    if (manifestOutputLocation != null) {
+                                        xmlWriter.startElement("ManifestOutputLocation");
+
+                                        if (manifestOutputLocation.getExpectedManifestBucketOwner() != null) {
+                                            xmlWriter.startElement("ExpectedManifestBucketOwner")
+                                                    .value(manifestOutputLocation.getExpectedManifestBucketOwner()).endElement();
+                                        }
+
+                                        if (manifestOutputLocation.getBucket() != null) {
+                                            xmlWriter.startElement("Bucket").value(manifestOutputLocation.getBucket()).endElement();
+                                        }
+
+                                        if (manifestOutputLocation.getManifestPrefix() != null) {
+                                            xmlWriter.startElement("ManifestPrefix").value(manifestOutputLocation.getManifestPrefix()).endElement();
+                                        }
+
+                                        {
+                                            GeneratedManifestEncryption manifestEncryption = manifestOutputLocation.getManifestEncryption();
+                                            if (manifestEncryption != null) {
+                                                xmlWriter.startElement("ManifestEncryption");
+
+                                                {
+                                                    SSES3Encryption sSES3 = manifestEncryption.getSSES3();
+                                                    if (sSES3 != null) {
+                                                        xmlWriter.startElement("SSE-S3");
+
+                                                        xmlWriter.endElement();
+                                                    }
+                                                }
+
+                                                {
+                                                    SSEKMSEncryption sSEKMS = manifestEncryption.getSSEKMS();
+                                                    if (sSEKMS != null) {
+                                                        xmlWriter.startElement("SSE-KMS");
+
+                                                        if (sSEKMS.getKeyId() != null) {
+                                                            xmlWriter.startElement("KeyId").value(sSEKMS.getKeyId()).endElement();
+                                                        }
+                                                        xmlWriter.endElement();
+                                                    }
+                                                }
+                                                xmlWriter.endElement();
+                                            }
+                                        }
+
+                                        if (manifestOutputLocation.getManifestFormat() != null) {
+                                            xmlWriter.startElement("ManifestFormat").value(manifestOutputLocation.getManifestFormat()).endElement();
+                                        }
+                                        xmlWriter.endElement();
+                                    }
+                                }
+
+                                {
+                                    JobManifestGeneratorFilter filter = s3JobManifestGenerator.getFilter();
+                                    if (filter != null) {
+                                        xmlWriter.startElement("Filter");
+
+                                        if (filter.getEligibleForReplication() != null) {
+                                            xmlWriter.startElement("EligibleForReplication").value(filter.getEligibleForReplication()).endElement();
+                                        }
+
+                                        if (filter.getCreatedAfter() != null) {
+                                            xmlWriter.startElement("CreatedAfter").value(filter.getCreatedAfter()).endElement();
+                                        }
+
+                                        if (filter.getCreatedBefore() != null) {
+                                            xmlWriter.startElement("CreatedBefore").value(filter.getCreatedBefore()).endElement();
+                                        }
+
+                                        java.util.List<String> jobManifestGeneratorFilterObjectReplicationStatusesList = filter.getObjectReplicationStatuses();
+                                        if (jobManifestGeneratorFilterObjectReplicationStatusesList != null) {
+                                            xmlWriter.startElement("ObjectReplicationStatuses");
+
+                                            for (String jobManifestGeneratorFilterObjectReplicationStatusesListValue : jobManifestGeneratorFilterObjectReplicationStatusesList) {
+                                                xmlWriter.startElement("member");
+                                                xmlWriter.value(jobManifestGeneratorFilterObjectReplicationStatusesListValue);
+                                                xmlWriter.endElement();
+                                            }
+                                            xmlWriter.endElement();
+                                        }
+                                        xmlWriter.endElement();
+                                    }
+                                }
+
+                                if (s3JobManifestGenerator.getEnableManifestOutput() != null) {
+                                    xmlWriter.startElement("EnableManifestOutput").value(s3JobManifestGenerator.getEnableManifestOutput()).endElement();
+                                }
+                                xmlWriter.endElement();
+                            }
+                        }
+                        xmlWriter.endElement();
+                    }
                 }
             }
             xmlWriter.endElement();

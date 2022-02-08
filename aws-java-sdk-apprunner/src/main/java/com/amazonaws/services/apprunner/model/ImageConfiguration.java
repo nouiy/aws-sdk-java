@@ -243,7 +243,7 @@ public class ImageConfiguration implements Serializable, Cloneable, StructuredPo
         if (getRuntimeEnvironmentVariables() != null)
             sb.append("RuntimeEnvironmentVariables: ").append("***Sensitive Data Redacted***").append(",");
         if (getStartCommand() != null)
-            sb.append("StartCommand: ").append(getStartCommand()).append(",");
+            sb.append("StartCommand: ").append("***Sensitive Data Redacted***").append(",");
         if (getPort() != null)
             sb.append("Port: ").append(getPort());
         sb.append("}");

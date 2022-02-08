@@ -39,9 +39,9 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
     private String indexId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> operations,
-     * <code>QuerySuggestions</code> operations, <code>SubmitFeedback</code> operations, and Amazon Web Services SSO
-     * that stores your user and group information. For more information, see <a
+     * The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> API,
+     * <code>QuerySuggestions</code> API, <code>SubmitFeedback</code> API, and Amazon Web Services SSO that stores your
+     * user and group information. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon Kendra</a>.
      * </p>
      */
@@ -64,7 +64,7 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A token that you provide to identify the request to create your Amazon Kendra experience. Multiple calls to the
-     * <code>CreateExperience</code> operation with the same client token creates only one Amazon Kendra experience.
+     * <code>CreateExperience</code> API with the same client token creates only one Amazon Kendra experience.
      * </p>
      */
     private String clientToken;
@@ -151,16 +151,16 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> operations,
-     * <code>QuerySuggestions</code> operations, <code>SubmitFeedback</code> operations, and Amazon Web Services SSO
-     * that stores your user and group information. For more information, see <a
+     * The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> API,
+     * <code>QuerySuggestions</code> API, <code>SubmitFeedback</code> API, and Amazon Web Services SSO that stores your
+     * user and group information. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> operations,
-     *        <code>QuerySuggestions</code> operations, <code>SubmitFeedback</code> operations, and Amazon Web Services
-     *        SSO that stores your user and group information. For more information, see <a
+     *        The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> API,
+     *        <code>QuerySuggestions</code> API, <code>SubmitFeedback</code> API, and Amazon Web Services SSO that
+     *        stores your user and group information. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon Kendra</a>.
      */
 
@@ -170,15 +170,15 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> operations,
-     * <code>QuerySuggestions</code> operations, <code>SubmitFeedback</code> operations, and Amazon Web Services SSO
-     * that stores your user and group information. For more information, see <a
+     * The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> API,
+     * <code>QuerySuggestions</code> API, <code>SubmitFeedback</code> API, and Amazon Web Services SSO that stores your
+     * user and group information. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon Kendra</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> operations,
-     *         <code>QuerySuggestions</code> operations, <code>SubmitFeedback</code> operations, and Amazon Web Services
-     *         SSO that stores your user and group information. For more information, see <a
+     * @return The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> API,
+     *         <code>QuerySuggestions</code> API, <code>SubmitFeedback</code> API, and Amazon Web Services SSO that
+     *         stores your user and group information. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon Kendra</a>.
      */
 
@@ -188,16 +188,16 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> operations,
-     * <code>QuerySuggestions</code> operations, <code>SubmitFeedback</code> operations, and Amazon Web Services SSO
-     * that stores your user and group information. For more information, see <a
+     * The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> API,
+     * <code>QuerySuggestions</code> API, <code>SubmitFeedback</code> API, and Amazon Web Services SSO that stores your
+     * user and group information. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon Kendra</a>.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> operations,
-     *        <code>QuerySuggestions</code> operations, <code>SubmitFeedback</code> operations, and Amazon Web Services
-     *        SSO that stores your user and group information. For more information, see <a
+     *        The Amazon Resource Name (ARN) of a role with permission to access <code>Query</code> API,
+     *        <code>QuerySuggestions</code> API, <code>SubmitFeedback</code> API, and Amazon Web Services SSO that
+     *        stores your user and group information. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html">IAM roles for Amazon Kendra</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -308,12 +308,12 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A token that you provide to identify the request to create your Amazon Kendra experience. Multiple calls to the
-     * <code>CreateExperience</code> operation with the same client token creates only one Amazon Kendra experience.
+     * <code>CreateExperience</code> API with the same client token creates only one Amazon Kendra experience.
      * </p>
      * 
      * @param clientToken
      *        A token that you provide to identify the request to create your Amazon Kendra experience. Multiple calls
-     *        to the <code>CreateExperience</code> operation with the same client token creates only one Amazon Kendra
+     *        to the <code>CreateExperience</code> API with the same client token creates only one Amazon Kendra
      *        experience.
      */
 
@@ -324,11 +324,11 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A token that you provide to identify the request to create your Amazon Kendra experience. Multiple calls to the
-     * <code>CreateExperience</code> operation with the same client token creates only one Amazon Kendra experience.
+     * <code>CreateExperience</code> API with the same client token creates only one Amazon Kendra experience.
      * </p>
      * 
      * @return A token that you provide to identify the request to create your Amazon Kendra experience. Multiple calls
-     *         to the <code>CreateExperience</code> operation with the same client token creates only one Amazon Kendra
+     *         to the <code>CreateExperience</code> API with the same client token creates only one Amazon Kendra
      *         experience.
      */
 
@@ -339,12 +339,12 @@ public class CreateExperienceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A token that you provide to identify the request to create your Amazon Kendra experience. Multiple calls to the
-     * <code>CreateExperience</code> operation with the same client token creates only one Amazon Kendra experience.
+     * <code>CreateExperience</code> API with the same client token creates only one Amazon Kendra experience.
      * </p>
      * 
      * @param clientToken
      *        A token that you provide to identify the request to create your Amazon Kendra experience. Multiple calls
-     *        to the <code>CreateExperience</code> operation with the same client token creates only one Amazon Kendra
+     *        to the <code>CreateExperience</code> API with the same client token creates only one Amazon Kendra
      *        experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

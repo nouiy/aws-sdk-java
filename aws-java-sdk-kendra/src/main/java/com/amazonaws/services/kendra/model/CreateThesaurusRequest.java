@@ -65,7 +65,7 @@ public class CreateThesaurusRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A token that you provide to identify the request to create a thesaurus. Multiple calls to the
-     * <code>CreateThesaurus</code> operation with the same client token will create only one thesaurus.
+     * <code>CreateThesaurus</code> API with the same client token will create only one thesaurus.
      * </p>
      */
     private String clientToken;
@@ -354,12 +354,12 @@ public class CreateThesaurusRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A token that you provide to identify the request to create a thesaurus. Multiple calls to the
-     * <code>CreateThesaurus</code> operation with the same client token will create only one thesaurus.
+     * <code>CreateThesaurus</code> API with the same client token will create only one thesaurus.
      * </p>
      * 
      * @param clientToken
      *        A token that you provide to identify the request to create a thesaurus. Multiple calls to the
-     *        <code>CreateThesaurus</code> operation with the same client token will create only one thesaurus.
+     *        <code>CreateThesaurus</code> API with the same client token will create only one thesaurus.
      */
 
     public void setClientToken(String clientToken) {
@@ -369,11 +369,11 @@ public class CreateThesaurusRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A token that you provide to identify the request to create a thesaurus. Multiple calls to the
-     * <code>CreateThesaurus</code> operation with the same client token will create only one thesaurus.
+     * <code>CreateThesaurus</code> API with the same client token will create only one thesaurus.
      * </p>
      * 
      * @return A token that you provide to identify the request to create a thesaurus. Multiple calls to the
-     *         <code>CreateThesaurus</code> operation with the same client token will create only one thesaurus.
+     *         <code>CreateThesaurus</code> API with the same client token will create only one thesaurus.
      */
 
     public String getClientToken() {
@@ -383,12 +383,12 @@ public class CreateThesaurusRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A token that you provide to identify the request to create a thesaurus. Multiple calls to the
-     * <code>CreateThesaurus</code> operation with the same client token will create only one thesaurus.
+     * <code>CreateThesaurus</code> API with the same client token will create only one thesaurus.
      * </p>
      * 
      * @param clientToken
      *        A token that you provide to identify the request to create a thesaurus. Multiple calls to the
-     *        <code>CreateThesaurus</code> operation with the same client token will create only one thesaurus.
+     *        <code>CreateThesaurus</code> API with the same client token will create only one thesaurus.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

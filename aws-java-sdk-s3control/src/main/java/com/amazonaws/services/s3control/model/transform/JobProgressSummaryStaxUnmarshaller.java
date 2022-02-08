@@ -57,6 +57,11 @@ public class JobProgressSummaryStaxUnmarshaller implements Unmarshaller<JobProgr
                     jobProgressSummary.setNumberOfTasksFailed(LongStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("Timers", targetDepth)) {
+                    jobProgressSummary.setTimers(JobTimersStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return jobProgressSummary;

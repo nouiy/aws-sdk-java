@@ -65,9 +65,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String description;
     /**
      * <p>
-     * Sets the frequency that Amazon Kendra will check the documents in your repository and update the index. If you
-     * don't set a schedule Amazon Kendra will not periodically update the index. You can call the
-     * <code>StartDataSourceSyncJob</code> operation to update the index.
+     * Sets the frequency for Amazon Kendra to check the documents in your repository and update the index. If you don't
+     * set a schedule Amazon Kendra will not periodically update the index. You can call the
+     * <code>StartDataSourceSyncJob</code> API to update the index.
      * </p>
      * <p>
      * You can't specify the <code>Schedule</code> parameter when the <code>Type</code> parameter is set to
@@ -99,7 +99,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A token that you provide to identify the request to create a data source. Multiple calls to the
-     * <code>CreateDataSource</code> operation with the same client token will create only one data source.
+     * <code>CreateDataSource</code> API with the same client token will create only one data source.
      * </p>
      */
     private String clientToken;
@@ -392,9 +392,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Sets the frequency that Amazon Kendra will check the documents in your repository and update the index. If you
-     * don't set a schedule Amazon Kendra will not periodically update the index. You can call the
-     * <code>StartDataSourceSyncJob</code> operation to update the index.
+     * Sets the frequency for Amazon Kendra to check the documents in your repository and update the index. If you don't
+     * set a schedule Amazon Kendra will not periodically update the index. You can call the
+     * <code>StartDataSourceSyncJob</code> API to update the index.
      * </p>
      * <p>
      * You can't specify the <code>Schedule</code> parameter when the <code>Type</code> parameter is set to
@@ -402,9 +402,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param schedule
-     *        Sets the frequency that Amazon Kendra will check the documents in your repository and update the index. If
+     *        Sets the frequency for Amazon Kendra to check the documents in your repository and update the index. If
      *        you don't set a schedule Amazon Kendra will not periodically update the index. You can call the
-     *        <code>StartDataSourceSyncJob</code> operation to update the index.</p>
+     *        <code>StartDataSourceSyncJob</code> API to update the index.</p>
      *        <p>
      *        You can't specify the <code>Schedule</code> parameter when the <code>Type</code> parameter is set to
      *        <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.
@@ -416,18 +416,18 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Sets the frequency that Amazon Kendra will check the documents in your repository and update the index. If you
-     * don't set a schedule Amazon Kendra will not periodically update the index. You can call the
-     * <code>StartDataSourceSyncJob</code> operation to update the index.
+     * Sets the frequency for Amazon Kendra to check the documents in your repository and update the index. If you don't
+     * set a schedule Amazon Kendra will not periodically update the index. You can call the
+     * <code>StartDataSourceSyncJob</code> API to update the index.
      * </p>
      * <p>
      * You can't specify the <code>Schedule</code> parameter when the <code>Type</code> parameter is set to
      * <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.
      * </p>
      * 
-     * @return Sets the frequency that Amazon Kendra will check the documents in your repository and update the index.
-     *         If you don't set a schedule Amazon Kendra will not periodically update the index. You can call the
-     *         <code>StartDataSourceSyncJob</code> operation to update the index.</p>
+     * @return Sets the frequency for Amazon Kendra to check the documents in your repository and update the index. If
+     *         you don't set a schedule Amazon Kendra will not periodically update the index. You can call the
+     *         <code>StartDataSourceSyncJob</code> API to update the index.</p>
      *         <p>
      *         You can't specify the <code>Schedule</code> parameter when the <code>Type</code> parameter is set to
      *         <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.
@@ -439,9 +439,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Sets the frequency that Amazon Kendra will check the documents in your repository and update the index. If you
-     * don't set a schedule Amazon Kendra will not periodically update the index. You can call the
-     * <code>StartDataSourceSyncJob</code> operation to update the index.
+     * Sets the frequency for Amazon Kendra to check the documents in your repository and update the index. If you don't
+     * set a schedule Amazon Kendra will not periodically update the index. You can call the
+     * <code>StartDataSourceSyncJob</code> API to update the index.
      * </p>
      * <p>
      * You can't specify the <code>Schedule</code> parameter when the <code>Type</code> parameter is set to
@@ -449,9 +449,9 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param schedule
-     *        Sets the frequency that Amazon Kendra will check the documents in your repository and update the index. If
+     *        Sets the frequency for Amazon Kendra to check the documents in your repository and update the index. If
      *        you don't set a schedule Amazon Kendra will not periodically update the index. You can call the
-     *        <code>StartDataSourceSyncJob</code> operation to update the index.</p>
+     *        <code>StartDataSourceSyncJob</code> API to update the index.</p>
      *        <p>
      *        You can't specify the <code>Schedule</code> parameter when the <code>Type</code> parameter is set to
      *        <code>CUSTOM</code>. If you do, you receive a <code>ValidationException</code> exception.
@@ -632,12 +632,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A token that you provide to identify the request to create a data source. Multiple calls to the
-     * <code>CreateDataSource</code> operation with the same client token will create only one data source.
+     * <code>CreateDataSource</code> API with the same client token will create only one data source.
      * </p>
      * 
      * @param clientToken
      *        A token that you provide to identify the request to create a data source. Multiple calls to the
-     *        <code>CreateDataSource</code> operation with the same client token will create only one data source.
+     *        <code>CreateDataSource</code> API with the same client token will create only one data source.
      */
 
     public void setClientToken(String clientToken) {
@@ -647,11 +647,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A token that you provide to identify the request to create a data source. Multiple calls to the
-     * <code>CreateDataSource</code> operation with the same client token will create only one data source.
+     * <code>CreateDataSource</code> API with the same client token will create only one data source.
      * </p>
      * 
      * @return A token that you provide to identify the request to create a data source. Multiple calls to the
-     *         <code>CreateDataSource</code> operation with the same client token will create only one data source.
+     *         <code>CreateDataSource</code> API with the same client token will create only one data source.
      */
 
     public String getClientToken() {
@@ -661,12 +661,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A token that you provide to identify the request to create a data source. Multiple calls to the
-     * <code>CreateDataSource</code> operation with the same client token will create only one data source.
+     * <code>CreateDataSource</code> API with the same client token will create only one data source.
      * </p>
      * 
      * @param clientToken
      *        A token that you provide to identify the request to create a data source. Multiple calls to the
-     *        <code>CreateDataSource</code> operation with the same client token will create only one data source.
+     *        <code>CreateDataSource</code> API with the same client token will create only one data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

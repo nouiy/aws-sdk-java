@@ -42,6 +42,8 @@ public class CreateServiceRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HealthCheckConfiguration").build();
     private static final MarshallingInfo<String> AUTOSCALINGCONFIGURATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoScalingConfigurationArn").build();
+    private static final MarshallingInfo<StructuredPojo> NETWORKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkConfiguration").build();
 
     private static final CreateServiceRequestMarshaller instance = new CreateServiceRequestMarshaller();
 
@@ -66,6 +68,7 @@ public class CreateServiceRequestMarshaller {
             protocolMarshaller.marshall(createServiceRequest.getEncryptionConfiguration(), ENCRYPTIONCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createServiceRequest.getHealthCheckConfiguration(), HEALTHCHECKCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createServiceRequest.getAutoScalingConfigurationArn(), AUTOSCALINGCONFIGURATIONARN_BINDING);
+            protocolMarshaller.marshall(createServiceRequest.getNetworkConfiguration(), NETWORKCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

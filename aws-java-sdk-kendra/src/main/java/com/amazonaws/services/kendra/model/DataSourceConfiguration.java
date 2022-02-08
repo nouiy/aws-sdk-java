@@ -80,10 +80,16 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     private WebCrawlerConfiguration webCrawlerConfiguration;
     /**
      * <p>
-     * Provides the configuration information to connect to WorkDocs as your data source.
+     * Provides the configuration information to connect to Amazon WorkDocs as your data source.
      * </p>
      */
     private WorkDocsConfiguration workDocsConfiguration;
+    /**
+     * <p>
+     * Provides the configuration information to connect to Amazon FSx as your data source.
+     * </p>
+     */
+    private FsxConfiguration fsxConfiguration;
 
     /**
      * <p>
@@ -433,11 +439,11 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides the configuration information to connect to WorkDocs as your data source.
+     * Provides the configuration information to connect to Amazon WorkDocs as your data source.
      * </p>
      * 
      * @param workDocsConfiguration
-     *        Provides the configuration information to connect to WorkDocs as your data source.
+     *        Provides the configuration information to connect to Amazon WorkDocs as your data source.
      */
 
     public void setWorkDocsConfiguration(WorkDocsConfiguration workDocsConfiguration) {
@@ -446,10 +452,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides the configuration information to connect to WorkDocs as your data source.
+     * Provides the configuration information to connect to Amazon WorkDocs as your data source.
      * </p>
      * 
-     * @return Provides the configuration information to connect to WorkDocs as your data source.
+     * @return Provides the configuration information to connect to Amazon WorkDocs as your data source.
      */
 
     public WorkDocsConfiguration getWorkDocsConfiguration() {
@@ -458,16 +464,56 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * Provides the configuration information to connect to WorkDocs as your data source.
+     * Provides the configuration information to connect to Amazon WorkDocs as your data source.
      * </p>
      * 
      * @param workDocsConfiguration
-     *        Provides the configuration information to connect to WorkDocs as your data source.
+     *        Provides the configuration information to connect to Amazon WorkDocs as your data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public DataSourceConfiguration withWorkDocsConfiguration(WorkDocsConfiguration workDocsConfiguration) {
         setWorkDocsConfiguration(workDocsConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Amazon FSx as your data source.
+     * </p>
+     * 
+     * @param fsxConfiguration
+     *        Provides the configuration information to connect to Amazon FSx as your data source.
+     */
+
+    public void setFsxConfiguration(FsxConfiguration fsxConfiguration) {
+        this.fsxConfiguration = fsxConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Amazon FSx as your data source.
+     * </p>
+     * 
+     * @return Provides the configuration information to connect to Amazon FSx as your data source.
+     */
+
+    public FsxConfiguration getFsxConfiguration() {
+        return this.fsxConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to Amazon FSx as your data source.
+     * </p>
+     * 
+     * @param fsxConfiguration
+     *        Provides the configuration information to connect to Amazon FSx as your data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceConfiguration withFsxConfiguration(FsxConfiguration fsxConfiguration) {
+        setFsxConfiguration(fsxConfiguration);
         return this;
     }
 
@@ -502,7 +548,9 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         if (getWebCrawlerConfiguration() != null)
             sb.append("WebCrawlerConfiguration: ").append(getWebCrawlerConfiguration()).append(",");
         if (getWorkDocsConfiguration() != null)
-            sb.append("WorkDocsConfiguration: ").append(getWorkDocsConfiguration());
+            sb.append("WorkDocsConfiguration: ").append(getWorkDocsConfiguration()).append(",");
+        if (getFsxConfiguration() != null)
+            sb.append("FsxConfiguration: ").append(getFsxConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -557,6 +605,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getWorkDocsConfiguration() != null && other.getWorkDocsConfiguration().equals(this.getWorkDocsConfiguration()) == false)
             return false;
+        if (other.getFsxConfiguration() == null ^ this.getFsxConfiguration() == null)
+            return false;
+        if (other.getFsxConfiguration() != null && other.getFsxConfiguration().equals(this.getFsxConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -575,6 +627,7 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getGoogleDriveConfiguration() == null) ? 0 : getGoogleDriveConfiguration().hashCode());
         hashCode = prime * hashCode + ((getWebCrawlerConfiguration() == null) ? 0 : getWebCrawlerConfiguration().hashCode());
         hashCode = prime * hashCode + ((getWorkDocsConfiguration() == null) ? 0 : getWorkDocsConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getFsxConfiguration() == null) ? 0 : getFsxConfiguration().hashCode());
         return hashCode;
     }
 

@@ -29,6 +29,8 @@ public class CandidateArtifactLocationsMarshaller {
 
     private static final MarshallingInfo<String> EXPLAINABILITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Explainability").build();
+    private static final MarshallingInfo<String> MODELINSIGHTS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ModelInsights").build();
 
     private static final CandidateArtifactLocationsMarshaller instance = new CandidateArtifactLocationsMarshaller();
 
@@ -47,6 +49,7 @@ public class CandidateArtifactLocationsMarshaller {
 
         try {
             protocolMarshaller.marshall(candidateArtifactLocations.getExplainability(), EXPLAINABILITY_BINDING);
+            protocolMarshaller.marshall(candidateArtifactLocations.getModelInsights(), MODELINSIGHTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

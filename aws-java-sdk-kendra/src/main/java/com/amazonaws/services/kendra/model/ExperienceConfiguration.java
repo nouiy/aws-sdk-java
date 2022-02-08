@@ -32,7 +32,7 @@ public class ExperienceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the
-     * <code>BatchPutDocument</code> operation. This is the content you want to use for your Amazon Kendra experience.
+     * <code>BatchPutDocument</code> API. This is the content you want to use for your Amazon Kendra experience.
      * </p>
      */
     private ContentSourceConfiguration contentSourceConfiguration;
@@ -46,13 +46,13 @@ public class ExperienceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the
-     * <code>BatchPutDocument</code> operation. This is the content you want to use for your Amazon Kendra experience.
+     * <code>BatchPutDocument</code> API. This is the content you want to use for your Amazon Kendra experience.
      * </p>
      * 
      * @param contentSourceConfiguration
      *        The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed
-     *        via the <code>BatchPutDocument</code> operation. This is the content you want to use for your Amazon
-     *        Kendra experience.
+     *        via the <code>BatchPutDocument</code> API. This is the content you want to use for your Amazon Kendra
+     *        experience.
      */
 
     public void setContentSourceConfiguration(ContentSourceConfiguration contentSourceConfiguration) {
@@ -62,12 +62,12 @@ public class ExperienceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the
-     * <code>BatchPutDocument</code> operation. This is the content you want to use for your Amazon Kendra experience.
+     * <code>BatchPutDocument</code> API. This is the content you want to use for your Amazon Kendra experience.
      * </p>
      * 
      * @return The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed
-     *         via the <code>BatchPutDocument</code> operation. This is the content you want to use for your Amazon
-     *         Kendra experience.
+     *         via the <code>BatchPutDocument</code> API. This is the content you want to use for your Amazon Kendra
+     *         experience.
      */
 
     public ContentSourceConfiguration getContentSourceConfiguration() {
@@ -77,13 +77,13 @@ public class ExperienceConfiguration implements Serializable, Cloneable, Structu
     /**
      * <p>
      * The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed via the
-     * <code>BatchPutDocument</code> operation. This is the content you want to use for your Amazon Kendra experience.
+     * <code>BatchPutDocument</code> API. This is the content you want to use for your Amazon Kendra experience.
      * </p>
      * 
      * @param contentSourceConfiguration
      *        The identifiers of your data sources and FAQs. Or, you can specify that you want to use documents indexed
-     *        via the <code>BatchPutDocument</code> operation. This is the content you want to use for your Amazon
-     *        Kendra experience.
+     *        via the <code>BatchPutDocument</code> API. This is the content you want to use for your Amazon Kendra
+     *        experience.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

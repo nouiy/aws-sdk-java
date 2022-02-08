@@ -38,7 +38,7 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -101,7 +101,7 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -109,7 +109,7 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
      * 
      * @return Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you
      *         must first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *         operation.</p>
+     *         API.</p>
      *         <p>
      *         If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field
      *         mapping.
@@ -122,7 +122,7 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -131,7 +131,7 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
      * @param attachmentFieldMappings
      *        Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you
      *        must first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field
      *        mapping.
@@ -149,7 +149,7 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -163,7 +163,7 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
      * @param attachmentFieldMappings
      *        Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you
      *        must first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field
      *        mapping.
@@ -183,7 +183,7 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
     /**
      * <p>
      * Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you must
-     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * first create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -192,7 +192,7 @@ public class ConfluenceAttachmentConfiguration implements Serializable, Cloneabl
      * @param attachmentFieldMappings
      *        Defines how attachment metadata fields should be mapped to index fields. Before you can map a field, you
      *        must first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>AttachentFieldMappings</code> parameter, you must specify at least one field
      *        mapping.

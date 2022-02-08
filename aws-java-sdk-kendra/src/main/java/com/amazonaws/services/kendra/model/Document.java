@@ -46,8 +46,8 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Documents passed to the <code>Blob</code> parameter must be base64 encoded. Your code might not need to encode
-     * the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra operations. If you are
-     * calling the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before sending.
+     * the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra APIs. If you are calling
+     * the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before sending.
      * </p>
      */
     private java.nio.ByteBuffer blob;
@@ -57,6 +57,11 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * Custom attributes to apply to the document. Use the custom attributes to provide additional information for
      * searching, to provide facets for refining searches, and to provide additional information in the query response.
+     * </p>
+     * <p>
+     * For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom attributes that provide information on the
+     * synchronization of documents running on a data source. Note, 'DataSourceSyncJobId' could be an optional custom
+     * attribute as Amazon Kendra will use the ID of a running sync job.
      * </p>
      */
     private java.util.List<DocumentAttribute> attributes;
@@ -166,8 +171,8 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Documents passed to the <code>Blob</code> parameter must be base64 encoded. Your code might not need to encode
-     * the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra operations. If you are
-     * calling the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before sending.
+     * the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra APIs. If you are calling
+     * the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before sending.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -184,9 +189,9 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      *        The contents of the document. </p>
      *        <p>
      *        Documents passed to the <code>Blob</code> parameter must be base64 encoded. Your code might not need to
-     *        encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra
-     *        operations. If you are calling the Amazon Kendra endpoint directly using REST, you must base64 encode the
-     *        contents before sending.
+     *        encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra APIs. If
+     *        you are calling the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before
+     *        sending.
      */
 
     public void setBlob(java.nio.ByteBuffer blob) {
@@ -199,8 +204,8 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Documents passed to the <code>Blob</code> parameter must be base64 encoded. Your code might not need to encode
-     * the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra operations. If you are
-     * calling the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before sending.
+     * the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra APIs. If you are calling
+     * the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before sending.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -213,9 +218,9 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * @return The contents of the document. </p>
      *         <p>
      *         Documents passed to the <code>Blob</code> parameter must be base64 encoded. Your code might not need to
-     *         encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra
-     *         operations. If you are calling the Amazon Kendra endpoint directly using REST, you must base64 encode the
-     *         contents before sending.
+     *         encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra APIs. If
+     *         you are calling the Amazon Kendra endpoint directly using REST, you must base64 encode the contents
+     *         before sending.
      */
 
     public java.nio.ByteBuffer getBlob() {
@@ -228,8 +233,8 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * Documents passed to the <code>Blob</code> parameter must be base64 encoded. Your code might not need to encode
-     * the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra operations. If you are
-     * calling the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before sending.
+     * the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra APIs. If you are calling
+     * the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before sending.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -246,9 +251,9 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      *        The contents of the document. </p>
      *        <p>
      *        Documents passed to the <code>Blob</code> parameter must be base64 encoded. Your code might not need to
-     *        encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra
-     *        operations. If you are calling the Amazon Kendra endpoint directly using REST, you must base64 encode the
-     *        contents before sending.
+     *        encode the document file bytes if you're using an Amazon Web Services SDK to call Amazon Kendra APIs. If
+     *        you are calling the Amazon Kendra endpoint directly using REST, you must base64 encode the contents before
+     *        sending.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -288,10 +293,19 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * Custom attributes to apply to the document. Use the custom attributes to provide additional information for
      * searching, to provide facets for refining searches, and to provide additional information in the query response.
      * </p>
+     * <p>
+     * For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom attributes that provide information on the
+     * synchronization of documents running on a data source. Note, 'DataSourceSyncJobId' could be an optional custom
+     * attribute as Amazon Kendra will use the ID of a running sync job.
+     * </p>
      * 
      * @return Custom attributes to apply to the document. Use the custom attributes to provide additional information
      *         for searching, to provide facets for refining searches, and to provide additional information in the
-     *         query response.
+     *         query response.</p>
+     *         <p>
+     *         For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom attributes that provide information on
+     *         the synchronization of documents running on a data source. Note, 'DataSourceSyncJobId' could be an
+     *         optional custom attribute as Amazon Kendra will use the ID of a running sync job.
      */
 
     public java.util.List<DocumentAttribute> getAttributes() {
@@ -303,11 +317,20 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * Custom attributes to apply to the document. Use the custom attributes to provide additional information for
      * searching, to provide facets for refining searches, and to provide additional information in the query response.
      * </p>
+     * <p>
+     * For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom attributes that provide information on the
+     * synchronization of documents running on a data source. Note, 'DataSourceSyncJobId' could be an optional custom
+     * attribute as Amazon Kendra will use the ID of a running sync job.
+     * </p>
      * 
      * @param attributes
      *        Custom attributes to apply to the document. Use the custom attributes to provide additional information
      *        for searching, to provide facets for refining searches, and to provide additional information in the query
-     *        response.
+     *        response.</p>
+     *        <p>
+     *        For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom attributes that provide information on
+     *        the synchronization of documents running on a data source. Note, 'DataSourceSyncJobId' could be an
+     *        optional custom attribute as Amazon Kendra will use the ID of a running sync job.
      */
 
     public void setAttributes(java.util.Collection<DocumentAttribute> attributes) {
@@ -325,6 +348,11 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * searching, to provide facets for refining searches, and to provide additional information in the query response.
      * </p>
      * <p>
+     * For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom attributes that provide information on the
+     * synchronization of documents running on a data source. Note, 'DataSourceSyncJobId' could be an optional custom
+     * attribute as Amazon Kendra will use the ID of a running sync job.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAttributes(java.util.Collection)} or {@link #withAttributes(java.util.Collection)} if you want to
      * override the existing values.
@@ -333,7 +361,11 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * @param attributes
      *        Custom attributes to apply to the document. Use the custom attributes to provide additional information
      *        for searching, to provide facets for refining searches, and to provide additional information in the query
-     *        response.
+     *        response.</p>
+     *        <p>
+     *        For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom attributes that provide information on
+     *        the synchronization of documents running on a data source. Note, 'DataSourceSyncJobId' could be an
+     *        optional custom attribute as Amazon Kendra will use the ID of a running sync job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -352,11 +384,20 @@ public class Document implements Serializable, Cloneable, StructuredPojo {
      * Custom attributes to apply to the document. Use the custom attributes to provide additional information for
      * searching, to provide facets for refining searches, and to provide additional information in the query response.
      * </p>
+     * <p>
+     * For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom attributes that provide information on the
+     * synchronization of documents running on a data source. Note, 'DataSourceSyncJobId' could be an optional custom
+     * attribute as Amazon Kendra will use the ID of a running sync job.
+     * </p>
      * 
      * @param attributes
      *        Custom attributes to apply to the document. Use the custom attributes to provide additional information
      *        for searching, to provide facets for refining searches, and to provide additional information in the query
-     *        response.
+     *        response.</p>
+     *        <p>
+     *        For example, 'DataSourceId' and 'DataSourceSyncJobId' are custom attributes that provide information on
+     *        the synchronization of documents running on a data source. Note, 'DataSourceSyncJobId' could be an
+     *        optional custom attribute as Amazon Kendra will use the ID of a running sync job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -69,6 +69,12 @@ public class JobOperation implements Serializable, Cloneable {
     private S3SetObjectLegalHoldOperation s3PutObjectLegalHold;
 
     private S3SetObjectRetentionOperation s3PutObjectRetention;
+    /**
+     * <p>
+     * Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     * </p>
+     */
+    private S3ReplicateObjectOperation s3ReplicateObject;
 
     /**
      * <p>
@@ -363,6 +369,46 @@ public class JobOperation implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     * </p>
+     * 
+     * @param s3ReplicateObject
+     *        Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     */
+
+    public void setS3ReplicateObject(S3ReplicateObjectOperation s3ReplicateObject) {
+        this.s3ReplicateObject = s3ReplicateObject;
+    }
+
+    /**
+     * <p>
+     * Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     * </p>
+     * 
+     * @return Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     */
+
+    public S3ReplicateObjectOperation getS3ReplicateObject() {
+        return this.s3ReplicateObject;
+    }
+
+    /**
+     * <p>
+     * Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     * </p>
+     * 
+     * @param s3ReplicateObject
+     *        Directs the specified job to invoke <code>ReplicateObject</code> on every object in the job's manifest.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobOperation withS3ReplicateObject(S3ReplicateObjectOperation s3ReplicateObject) {
+        setS3ReplicateObject(s3ReplicateObject);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -389,7 +435,9 @@ public class JobOperation implements Serializable, Cloneable {
         if (getS3PutObjectLegalHold() != null)
             sb.append("S3PutObjectLegalHold: ").append(getS3PutObjectLegalHold()).append(",");
         if (getS3PutObjectRetention() != null)
-            sb.append("S3PutObjectRetention: ").append(getS3PutObjectRetention());
+            sb.append("S3PutObjectRetention: ").append(getS3PutObjectRetention()).append(",");
+        if (getS3ReplicateObject() != null)
+            sb.append("S3ReplicateObject: ").append(getS3ReplicateObject());
         sb.append("}");
         return sb.toString();
     }
@@ -436,6 +484,10 @@ public class JobOperation implements Serializable, Cloneable {
             return false;
         if (other.getS3PutObjectRetention() != null && other.getS3PutObjectRetention().equals(this.getS3PutObjectRetention()) == false)
             return false;
+        if (other.getS3ReplicateObject() == null ^ this.getS3ReplicateObject() == null)
+            return false;
+        if (other.getS3ReplicateObject() != null && other.getS3ReplicateObject().equals(this.getS3ReplicateObject()) == false)
+            return false;
         return true;
     }
 
@@ -452,6 +504,7 @@ public class JobOperation implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getS3InitiateRestoreObject() == null) ? 0 : getS3InitiateRestoreObject().hashCode());
         hashCode = prime * hashCode + ((getS3PutObjectLegalHold() == null) ? 0 : getS3PutObjectLegalHold().hashCode());
         hashCode = prime * hashCode + ((getS3PutObjectRetention() == null) ? 0 : getS3PutObjectRetention().hashCode());
+        hashCode = prime * hashCode + ((getS3ReplicateObject() == null) ? 0 : getS3ReplicateObject().hashCode());
         return hashCode;
     }
 

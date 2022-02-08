@@ -32,7 +32,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      * By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions for your
      * users. You can change the mode using the <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html"
-     * >UpdateQuerySuggestionsConfig</a> operation.
+     * >UpdateQuerySuggestionsConfig</a> API.
      * </p>
      */
     private String mode;
@@ -108,7 +108,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      * By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions for your
      * users. You can change the mode using the <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html"
-     * >UpdateQuerySuggestionsConfig</a> operation.
+     * >UpdateQuerySuggestionsConfig</a> API.
      * </p>
      * 
      * @param mode
@@ -118,7 +118,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      *        By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions
      *        for your users. You can change the mode using the <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html"
-     *        >UpdateQuerySuggestionsConfig</a> operation.
+     *        >UpdateQuerySuggestionsConfig</a> API.
      * @see Mode
      */
 
@@ -134,7 +134,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      * By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions for your
      * users. You can change the mode using the <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html"
-     * >UpdateQuerySuggestionsConfig</a> operation.
+     * >UpdateQuerySuggestionsConfig</a> API.
      * </p>
      * 
      * @return Shows whether query suggestions are currently in <code>ENABLED</code> mode or <code>LEARN_ONLY</code>
@@ -143,7 +143,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      *         By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions
      *         for your users. You can change the mode using the <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html"
-     *         >UpdateQuerySuggestionsConfig</a> operation.
+     *         >UpdateQuerySuggestionsConfig</a> API.
      * @see Mode
      */
 
@@ -159,7 +159,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      * By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions for your
      * users. You can change the mode using the <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html"
-     * >UpdateQuerySuggestionsConfig</a> operation.
+     * >UpdateQuerySuggestionsConfig</a> API.
      * </p>
      * 
      * @param mode
@@ -169,7 +169,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      *        By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions
      *        for your users. You can change the mode using the <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html"
-     *        >UpdateQuerySuggestionsConfig</a> operation.
+     *        >UpdateQuerySuggestionsConfig</a> API.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Mode
      */
@@ -187,7 +187,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      * By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions for your
      * users. You can change the mode using the <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html"
-     * >UpdateQuerySuggestionsConfig</a> operation.
+     * >UpdateQuerySuggestionsConfig</a> API.
      * </p>
      * 
      * @param mode
@@ -197,7 +197,7 @@ public class DescribeQuerySuggestionsConfigResult extends com.amazonaws.AmazonWe
      *        By default, Amazon Kendra enables query suggestions.<code>LEARN_ONLY</code> turns off query suggestions
      *        for your users. You can change the mode using the <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateQuerySuggestionsConfig.html"
-     *        >UpdateQuerySuggestionsConfig</a> operation.
+     *        >UpdateQuerySuggestionsConfig</a> API.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Mode
      */

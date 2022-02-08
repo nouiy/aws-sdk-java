@@ -27,8 +27,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A name for the new service. It must be unique across all the running App Runner services in your Amazon Web
-     * Services account in the Amazon Web Services Region.
+     * A name for the App Runner service. It must be unique across all the running App Runner services in your Amazon
+     * Web Services account in the Amazon Web Services Region.
      * </p>
      */
     private String serviceName;
@@ -46,41 +46,48 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     private InstanceConfiguration instanceConfiguration;
     /**
      * <p>
-     * An optional list of metadata items that you can associate with your service resource. A tag is a key-value pair.
+     * An optional list of metadata items that you can associate with the App Runner service resource. A tag is a
+     * key-value pair.
      * </p>
      */
     private java.util.List<Tag> tags;
     /**
      * <p>
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it
-     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
+     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed key.
      * </p>
      */
     private EncryptionConfiguration encryptionConfiguration;
     /**
      * <p>
-     * The settings for the health check that App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of the App Runner service.
      * </p>
      */
     private HealthCheckConfiguration healthCheckConfiguration;
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling
-     * configuration.
+     * associate with the App Runner service. If not provided, App Runner associates the latest revision of a default
+     * auto scaling configuration.
      * </p>
      */
     private String autoScalingConfigurationArn;
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * </p>
+     */
+    private NetworkConfiguration networkConfiguration;
 
     /**
      * <p>
-     * A name for the new service. It must be unique across all the running App Runner services in your Amazon Web
-     * Services account in the Amazon Web Services Region.
+     * A name for the App Runner service. It must be unique across all the running App Runner services in your Amazon
+     * Web Services account in the Amazon Web Services Region.
      * </p>
      * 
      * @param serviceName
-     *        A name for the new service. It must be unique across all the running App Runner services in your Amazon
-     *        Web Services account in the Amazon Web Services Region.
+     *        A name for the App Runner service. It must be unique across all the running App Runner services in your
+     *        Amazon Web Services account in the Amazon Web Services Region.
      */
 
     public void setServiceName(String serviceName) {
@@ -89,12 +96,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A name for the new service. It must be unique across all the running App Runner services in your Amazon Web
-     * Services account in the Amazon Web Services Region.
+     * A name for the App Runner service. It must be unique across all the running App Runner services in your Amazon
+     * Web Services account in the Amazon Web Services Region.
      * </p>
      * 
-     * @return A name for the new service. It must be unique across all the running App Runner services in your Amazon
-     *         Web Services account in the Amazon Web Services Region.
+     * @return A name for the App Runner service. It must be unique across all the running App Runner services in your
+     *         Amazon Web Services account in the Amazon Web Services Region.
      */
 
     public String getServiceName() {
@@ -103,13 +110,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A name for the new service. It must be unique across all the running App Runner services in your Amazon Web
-     * Services account in the Amazon Web Services Region.
+     * A name for the App Runner service. It must be unique across all the running App Runner services in your Amazon
+     * Web Services account in the Amazon Web Services Region.
      * </p>
      * 
      * @param serviceName
-     *        A name for the new service. It must be unique across all the running App Runner services in your Amazon
-     *        Web Services account in the Amazon Web Services Region.
+     *        A name for the App Runner service. It must be unique across all the running App Runner services in your
+     *        Amazon Web Services account in the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,11 +207,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An optional list of metadata items that you can associate with your service resource. A tag is a key-value pair.
+     * An optional list of metadata items that you can associate with the App Runner service resource. A tag is a
+     * key-value pair.
      * </p>
      * 
-     * @return An optional list of metadata items that you can associate with your service resource. A tag is a
-     *         key-value pair.
+     * @return An optional list of metadata items that you can associate with the App Runner service resource. A tag is
+     *         a key-value pair.
      */
 
     public java.util.List<Tag> getTags() {
@@ -213,12 +221,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An optional list of metadata items that you can associate with your service resource. A tag is a key-value pair.
+     * An optional list of metadata items that you can associate with the App Runner service resource. A tag is a
+     * key-value pair.
      * </p>
      * 
      * @param tags
-     *        An optional list of metadata items that you can associate with your service resource. A tag is a key-value
-     *        pair.
+     *        An optional list of metadata items that you can associate with the App Runner service resource. A tag is a
+     *        key-value pair.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -232,7 +241,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An optional list of metadata items that you can associate with your service resource. A tag is a key-value pair.
+     * An optional list of metadata items that you can associate with the App Runner service resource. A tag is a
+     * key-value pair.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -241,8 +251,8 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tags
-     *        An optional list of metadata items that you can associate with your service resource. A tag is a key-value
-     *        pair.
+     *        An optional list of metadata items that you can associate with the App Runner service resource. A tag is a
+     *        key-value pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -258,12 +268,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An optional list of metadata items that you can associate with your service resource. A tag is a key-value pair.
+     * An optional list of metadata items that you can associate with the App Runner service resource. A tag is a
+     * key-value pair.
      * </p>
      * 
      * @param tags
-     *        An optional list of metadata items that you can associate with your service resource. A tag is a key-value
-     *        pair.
+     *        An optional list of metadata items that you can associate with the App Runner service resource. A tag is a
+     *        key-value pair.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -275,12 +286,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it
-     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
+     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed key.
      * </p>
      * 
      * @param encryptionConfiguration
      *        An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that
-     *        it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
+     *        it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed key.
      */
 
     public void setEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
@@ -290,11 +301,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it
-     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
+     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed key.
      * </p>
      * 
      * @return An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that
-     *         it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
+     *         it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed key.
      */
 
     public EncryptionConfiguration getEncryptionConfiguration() {
@@ -304,12 +315,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it
-     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
+     * maintains and your service logs. By default, App Runner uses an Amazon Web Services managed key.
      * </p>
      * 
      * @param encryptionConfiguration
      *        An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that
-     *        it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed CMK.
+     *        it maintains and your service logs. By default, App Runner uses an Amazon Web Services managed key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -320,11 +331,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of the App Runner service.
      * </p>
      * 
      * @param healthCheckConfiguration
-     *        The settings for the health check that App Runner performs to monitor the health of your service.
+     *        The settings for the health check that App Runner performs to monitor the health of the App Runner
+     *        service.
      */
 
     public void setHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
@@ -333,10 +345,11 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of the App Runner service.
      * </p>
      * 
-     * @return The settings for the health check that App Runner performs to monitor the health of your service.
+     * @return The settings for the health check that App Runner performs to monitor the health of the App Runner
+     *         service.
      */
 
     public HealthCheckConfiguration getHealthCheckConfiguration() {
@@ -345,11 +358,12 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The settings for the health check that App Runner performs to monitor the health of your service.
+     * The settings for the health check that App Runner performs to monitor the health of the App Runner service.
      * </p>
      * 
      * @param healthCheckConfiguration
-     *        The settings for the health check that App Runner performs to monitor the health of your service.
+     *        The settings for the health check that App Runner performs to monitor the health of the App Runner
+     *        service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -361,14 +375,14 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling
-     * configuration.
+     * associate with the App Runner service. If not provided, App Runner associates the latest revision of a default
+     * auto scaling configuration.
      * </p>
      * 
      * @param autoScalingConfigurationArn
      *        The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     *        associate with your service. If not provided, App Runner associates the latest revision of a default auto
-     *        scaling configuration.
+     *        associate with the App Runner service. If not provided, App Runner associates the latest revision of a
+     *        default auto scaling configuration.
      */
 
     public void setAutoScalingConfigurationArn(String autoScalingConfigurationArn) {
@@ -378,13 +392,13 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling
-     * configuration.
+     * associate with the App Runner service. If not provided, App Runner associates the latest revision of a default
+     * auto scaling configuration.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     *         associate with your service. If not provided, App Runner associates the latest revision of a default auto
-     *         scaling configuration.
+     *         associate with the App Runner service. If not provided, App Runner associates the latest revision of a
+     *         default auto scaling configuration.
      */
 
     public String getAutoScalingConfigurationArn() {
@@ -394,19 +408,60 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     * associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling
-     * configuration.
+     * associate with the App Runner service. If not provided, App Runner associates the latest revision of a default
+     * auto scaling configuration.
      * </p>
      * 
      * @param autoScalingConfigurationArn
      *        The Amazon Resource Name (ARN) of an App Runner automatic scaling configuration resource that you want to
-     *        associate with your service. If not provided, App Runner associates the latest revision of a default auto
-     *        scaling configuration.
+     *        associate with the App Runner service. If not provided, App Runner associates the latest revision of a
+     *        default auto scaling configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateServiceRequest withAutoScalingConfigurationArn(String autoScalingConfigurationArn) {
         setAutoScalingConfigurationArn(autoScalingConfigurationArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * </p>
+     * 
+     * @param networkConfiguration
+     *        Configuration settings related to network traffic of the web application that the App Runner service runs.
+     */
+
+    public void setNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        this.networkConfiguration = networkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * </p>
+     * 
+     * @return Configuration settings related to network traffic of the web application that the App Runner service
+     *         runs.
+     */
+
+    public NetworkConfiguration getNetworkConfiguration() {
+        return this.networkConfiguration;
+    }
+
+    /**
+     * <p>
+     * Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * </p>
+     * 
+     * @param networkConfiguration
+     *        Configuration settings related to network traffic of the web application that the App Runner service runs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateServiceRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
+        setNetworkConfiguration(networkConfiguration);
         return this;
     }
 
@@ -435,7 +490,9 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getHealthCheckConfiguration() != null)
             sb.append("HealthCheckConfiguration: ").append(getHealthCheckConfiguration()).append(",");
         if (getAutoScalingConfigurationArn() != null)
-            sb.append("AutoScalingConfigurationArn: ").append(getAutoScalingConfigurationArn());
+            sb.append("AutoScalingConfigurationArn: ").append(getAutoScalingConfigurationArn()).append(",");
+        if (getNetworkConfiguration() != null)
+            sb.append("NetworkConfiguration: ").append(getNetworkConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -478,6 +535,10 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getAutoScalingConfigurationArn() != null && other.getAutoScalingConfigurationArn().equals(this.getAutoScalingConfigurationArn()) == false)
             return false;
+        if (other.getNetworkConfiguration() == null ^ this.getNetworkConfiguration() == null)
+            return false;
+        if (other.getNetworkConfiguration() != null && other.getNetworkConfiguration().equals(this.getNetworkConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -493,6 +554,7 @@ public class CreateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getEncryptionConfiguration() == null) ? 0 : getEncryptionConfiguration().hashCode());
         hashCode = prime * hashCode + ((getHealthCheckConfiguration() == null) ? 0 : getHealthCheckConfiguration().hashCode());
         hashCode = prime * hashCode + ((getAutoScalingConfigurationArn() == null) ? 0 : getAutoScalingConfigurationArn().hashCode());
+        hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
         return hashCode;
     }
 

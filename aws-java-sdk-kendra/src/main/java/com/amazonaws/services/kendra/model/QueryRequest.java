@@ -27,7 +27,7 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     /**
      * <p>
      * The unique identifier of the index to search. The identifier is returned in the response from the
-     * <code>CreateIndex</code> operation.
+     * <code>CreateIndex</code> API.
      * </p>
      */
     private String indexId;
@@ -131,12 +131,12 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     /**
      * <p>
      * The unique identifier of the index to search. The identifier is returned in the response from the
-     * <code>CreateIndex</code> operation.
+     * <code>CreateIndex</code> API.
      * </p>
      * 
      * @param indexId
      *        The unique identifier of the index to search. The identifier is returned in the response from the
-     *        <code>CreateIndex</code> operation.
+     *        <code>CreateIndex</code> API.
      */
 
     public void setIndexId(String indexId) {
@@ -146,11 +146,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     /**
      * <p>
      * The unique identifier of the index to search. The identifier is returned in the response from the
-     * <code>CreateIndex</code> operation.
+     * <code>CreateIndex</code> API.
      * </p>
      * 
      * @return The unique identifier of the index to search. The identifier is returned in the response from the
-     *         <code>CreateIndex</code> operation.
+     *         <code>CreateIndex</code> API.
      */
 
     public String getIndexId() {
@@ -160,12 +160,12 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
     /**
      * <p>
      * The unique identifier of the index to search. The identifier is returned in the response from the
-     * <code>CreateIndex</code> operation.
+     * <code>CreateIndex</code> API.
      * </p>
      * 
      * @param indexId
      *        The unique identifier of the index to search. The identifier is returned in the response from the
-     *        <code>CreateIndex</code> operation.
+     *        <code>CreateIndex</code> API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

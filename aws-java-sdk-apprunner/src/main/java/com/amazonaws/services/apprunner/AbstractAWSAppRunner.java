@@ -48,6 +48,11 @@ public class AbstractAWSAppRunner implements AWSAppRunner {
     }
 
     @Override
+    public CreateVpcConnectorResult createVpcConnector(CreateVpcConnectorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAutoScalingConfigurationResult deleteAutoScalingConfiguration(DeleteAutoScalingConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -63,6 +68,11 @@ public class AbstractAWSAppRunner implements AWSAppRunner {
     }
 
     @Override
+    public DeleteVpcConnectorResult deleteVpcConnector(DeleteVpcConnectorRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAutoScalingConfigurationResult describeAutoScalingConfiguration(DescribeAutoScalingConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -74,6 +84,11 @@ public class AbstractAWSAppRunner implements AWSAppRunner {
 
     @Override
     public DescribeServiceResult describeService(DescribeServiceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeVpcConnectorResult describeVpcConnector(DescribeVpcConnectorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -104,6 +119,11 @@ public class AbstractAWSAppRunner implements AWSAppRunner {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListVpcConnectorsResult listVpcConnectors(ListVpcConnectorsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

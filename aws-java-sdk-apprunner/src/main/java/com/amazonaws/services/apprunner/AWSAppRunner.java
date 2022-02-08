@@ -102,9 +102,10 @@ public interface AWSAppRunner {
      * across multiple services.
      * </p>
      * <p>
-     * Create multiple revisions of a configuration by using the same <code>AutoScalingConfigurationName</code> and
-     * different <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use
-     * the latest active revision of an auto scaling configuration or a specific revision.
+     * Create multiple revisions of a configuration by calling this action multiple times using the same
+     * <code>AutoScalingConfigurationName</code>. The call returns incremental
+     * <code>AutoScalingConfigurationRevision</code> values. When you create a service, you can set it to use the latest
+     * active revision of an auto scaling configuration or a specific revision.
      * </p>
      * <p>
      * Configure a higher <code>MinSize</code> to increase the spread of your App Runner service over more Availability
@@ -195,6 +196,31 @@ public interface AWSAppRunner {
 
     /**
      * <p>
+     * Create an App Runner VPC connector resource. App Runner requires this resource when you want to associate your
+     * App Runner service to a custom Amazon Virtual Private Cloud (Amazon VPC).
+     * </p>
+     * 
+     * @param createVpcConnectorRequest
+     * @return Result of the CreateVpcConnector operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @throws ServiceQuotaExceededException
+     *         App Runner can't create this resource. You've reached your account quota for this resource type.</p>
+     *         <p>
+     *         For App Runner per-resource quotas, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/apprunner.html">App Runner endpoints and quotas</a>
+     *         in the <i>Amazon Web Services General Reference</i>.
+     * @sample AWSAppRunner.CreateVpcConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/CreateVpcConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateVpcConnectorResult createVpcConnector(CreateVpcConnectorRequest createVpcConnectorRequest);
+
+    /**
+     * <p>
      * Delete an App Runner automatic scaling configuration resource. You can delete a specific revision or the latest
      * active revision. You can't delete a configuration that's used by one or more App Runner services.
      * </p>
@@ -266,6 +292,28 @@ public interface AWSAppRunner {
 
     /**
      * <p>
+     * Delete an App Runner VPC connector resource. You can't delete a connector that's used by one or more App Runner
+     * services.
+     * </p>
+     * 
+     * @param deleteVpcConnectorRequest
+     * @return Result of the DeleteVpcConnector operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @throws ResourceNotFoundException
+     *         A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services
+     *         account.
+     * @sample AWSAppRunner.DeleteVpcConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DeleteVpcConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteVpcConnectorResult deleteVpcConnector(DeleteVpcConnectorRequest deleteVpcConnectorRequest);
+
+    /**
+     * <p>
      * Return a full description of an App Runner automatic scaling configuration resource.
      * </p>
      * 
@@ -326,6 +374,27 @@ public interface AWSAppRunner {
      *      Documentation</a>
      */
     DescribeServiceResult describeService(DescribeServiceRequest describeServiceRequest);
+
+    /**
+     * <p>
+     * Return a description of an App Runner VPC connector resource.
+     * </p>
+     * 
+     * @param describeVpcConnectorRequest
+     * @return Result of the DescribeVpcConnector operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @throws ResourceNotFoundException
+     *         A resource doesn't exist for the specified Amazon Resource Name (ARN) in your Amazon Web Services
+     *         account.
+     * @sample AWSAppRunner.DescribeVpcConnector
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/DescribeVpcConnector" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeVpcConnectorResult describeVpcConnector(DescribeVpcConnectorRequest describeVpcConnectorRequest);
 
     /**
      * <p>
@@ -460,6 +529,24 @@ public interface AWSAppRunner {
      *      API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Returns a list of App Runner VPC connectors in your Amazon Web Services account.
+     * </p>
+     * 
+     * @param listVpcConnectorsRequest
+     * @return Result of the ListVpcConnectors operation returned by the service.
+     * @throws InvalidRequestException
+     *         One or more input parameters aren't valid. Refer to the API action's document page, correct the input
+     *         parameters, and try the action again.
+     * @throws InternalServiceErrorException
+     *         An unexpected service exception occurred.
+     * @sample AWSAppRunner.ListVpcConnectors
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/apprunner-2020-05-15/ListVpcConnectors" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListVpcConnectorsResult listVpcConnectors(ListVpcConnectorsRequest listVpcConnectorsRequest);
 
     /**
      * <p>

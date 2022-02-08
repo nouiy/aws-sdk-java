@@ -21,7 +21,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Specifies the blog settings for the Confluence data source. Blogs are always indexed unless filtered from the index
  * by the <code>ExclusionPatterns</code> or <code>InclusionPatterns</code> fields in the
- * <code>ConfluenceConfiguration</code> type.
+ * <code>ConfluenceConfiguration</code> object.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/ConfluenceBlogConfiguration" target="_top">AWS
@@ -33,7 +33,7 @@ public class ConfluenceBlogConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how blog metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>BlogFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -44,7 +44,7 @@ public class ConfluenceBlogConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how blog metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>BlogFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -52,7 +52,7 @@ public class ConfluenceBlogConfiguration implements Serializable, Cloneable, Str
      * 
      * @return Defines how blog metadata fields should be mapped to index fields. Before you can map a field, you must
      *         first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *         operation.</p>
+     *         API.</p>
      *         <p>
      *         If you specify the <code>BlogFieldMappings</code> parameter, you must specify at least one field mapping.
      */
@@ -64,7 +64,7 @@ public class ConfluenceBlogConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how blog metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>BlogFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -73,7 +73,7 @@ public class ConfluenceBlogConfiguration implements Serializable, Cloneable, Str
      * @param blogFieldMappings
      *        Defines how blog metadata fields should be mapped to index fields. Before you can map a field, you must
      *        first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>BlogFieldMappings</code> parameter, you must specify at least one field mapping.
      */
@@ -90,7 +90,7 @@ public class ConfluenceBlogConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how blog metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>BlogFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -104,7 +104,7 @@ public class ConfluenceBlogConfiguration implements Serializable, Cloneable, Str
      * @param blogFieldMappings
      *        Defines how blog metadata fields should be mapped to index fields. Before you can map a field, you must
      *        first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>BlogFieldMappings</code> parameter, you must specify at least one field mapping.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -123,7 +123,7 @@ public class ConfluenceBlogConfiguration implements Serializable, Cloneable, Str
     /**
      * <p>
      * Defines how blog metadata fields should be mapped to index fields. Before you can map a field, you must first
-     * create an index field with a matching type using the console or the <code>UpdateIndex</code> operation.
+     * create an index field with a matching type using the console or the <code>UpdateIndex</code> API.
      * </p>
      * <p>
      * If you specify the <code>BlogFieldMappings</code> parameter, you must specify at least one field mapping.
@@ -132,7 +132,7 @@ public class ConfluenceBlogConfiguration implements Serializable, Cloneable, Str
      * @param blogFieldMappings
      *        Defines how blog metadata fields should be mapped to index fields. Before you can map a field, you must
      *        first create an index field with a matching type using the console or the <code>UpdateIndex</code>
-     *        operation.</p>
+     *        API.</p>
      *        <p>
      *        If you specify the <code>BlogFieldMappings</code> parameter, you must specify at least one field mapping.
      * @return Returns a reference to this object so that method calls can be chained together.

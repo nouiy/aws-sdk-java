@@ -40,9 +40,10 @@ public class ListAccessPointsForObjectLambdaRequest extends com.amazonaws.Amazon
     private String nextToken;
     /**
      * <p>
-     * The maximum number of access points that you want to include in the list. If there are more than this number of
-     * access points, then the response will include a continuation token in the <code>NextToken</code> field that you
-     * can use to retrieve the next page of access points.
+     * The maximum number of access points that you want to include in the list. The response may contain fewer access
+     * points but will never contain more. If there are more than this number of access points, then the response will
+     * include a continuation token in the <code>NextToken</code> field that you can use to retrieve the next page of
+     * access points.
      * </p>
      */
     private Integer maxResults;
@@ -138,15 +139,17 @@ public class ListAccessPointsForObjectLambdaRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The maximum number of access points that you want to include in the list. If there are more than this number of
-     * access points, then the response will include a continuation token in the <code>NextToken</code> field that you
-     * can use to retrieve the next page of access points.
+     * The maximum number of access points that you want to include in the list. The response may contain fewer access
+     * points but will never contain more. If there are more than this number of access points, then the response will
+     * include a continuation token in the <code>NextToken</code> field that you can use to retrieve the next page of
+     * access points.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of access points that you want to include in the list. If there are more than this
-     *        number of access points, then the response will include a continuation token in the <code>NextToken</code>
-     *        field that you can use to retrieve the next page of access points.
+     *        The maximum number of access points that you want to include in the list. The response may contain fewer
+     *        access points but will never contain more. If there are more than this number of access points, then the
+     *        response will include a continuation token in the <code>NextToken</code> field that you can use to
+     *        retrieve the next page of access points.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -155,14 +158,16 @@ public class ListAccessPointsForObjectLambdaRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The maximum number of access points that you want to include in the list. If there are more than this number of
-     * access points, then the response will include a continuation token in the <code>NextToken</code> field that you
-     * can use to retrieve the next page of access points.
+     * The maximum number of access points that you want to include in the list. The response may contain fewer access
+     * points but will never contain more. If there are more than this number of access points, then the response will
+     * include a continuation token in the <code>NextToken</code> field that you can use to retrieve the next page of
+     * access points.
      * </p>
      * 
-     * @return The maximum number of access points that you want to include in the list. If there are more than this
-     *         number of access points, then the response will include a continuation token in the
-     *         <code>NextToken</code> field that you can use to retrieve the next page of access points.
+     * @return The maximum number of access points that you want to include in the list. The response may contain fewer
+     *         access points but will never contain more. If there are more than this number of access points, then the
+     *         response will include a continuation token in the <code>NextToken</code> field that you can use to
+     *         retrieve the next page of access points.
      */
 
     public Integer getMaxResults() {
@@ -171,15 +176,17 @@ public class ListAccessPointsForObjectLambdaRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The maximum number of access points that you want to include in the list. If there are more than this number of
-     * access points, then the response will include a continuation token in the <code>NextToken</code> field that you
-     * can use to retrieve the next page of access points.
+     * The maximum number of access points that you want to include in the list. The response may contain fewer access
+     * points but will never contain more. If there are more than this number of access points, then the response will
+     * include a continuation token in the <code>NextToken</code> field that you can use to retrieve the next page of
+     * access points.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of access points that you want to include in the list. If there are more than this
-     *        number of access points, then the response will include a continuation token in the <code>NextToken</code>
-     *        field that you can use to retrieve the next page of access points.
+     *        The maximum number of access points that you want to include in the list. The response may contain fewer
+     *        access points but will never contain more. If there are more than this number of access points, then the
+     *        response will include a continuation token in the <code>NextToken</code> field that you can use to
+     *        retrieve the next page of access points.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -34,6 +34,12 @@ public class CandidateArtifactLocations implements Serializable, Cloneable, Stru
      * </p>
      */
     private String explainability;
+    /**
+     * <p>
+     * The Amazon S3 prefix to the model insight artifacts generated for the AutoML candidate.
+     * </p>
+     */
+    private String modelInsights;
 
     /**
      * <p>
@@ -76,6 +82,46 @@ public class CandidateArtifactLocations implements Serializable, Cloneable, Stru
     }
 
     /**
+     * <p>
+     * The Amazon S3 prefix to the model insight artifacts generated for the AutoML candidate.
+     * </p>
+     * 
+     * @param modelInsights
+     *        The Amazon S3 prefix to the model insight artifacts generated for the AutoML candidate.
+     */
+
+    public void setModelInsights(String modelInsights) {
+        this.modelInsights = modelInsights;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 prefix to the model insight artifacts generated for the AutoML candidate.
+     * </p>
+     * 
+     * @return The Amazon S3 prefix to the model insight artifacts generated for the AutoML candidate.
+     */
+
+    public String getModelInsights() {
+        return this.modelInsights;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 prefix to the model insight artifacts generated for the AutoML candidate.
+     * </p>
+     * 
+     * @param modelInsights
+     *        The Amazon S3 prefix to the model insight artifacts generated for the AutoML candidate.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CandidateArtifactLocations withModelInsights(String modelInsights) {
+        setModelInsights(modelInsights);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -88,7 +134,9 @@ public class CandidateArtifactLocations implements Serializable, Cloneable, Stru
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getExplainability() != null)
-            sb.append("Explainability: ").append(getExplainability());
+            sb.append("Explainability: ").append(getExplainability()).append(",");
+        if (getModelInsights() != null)
+            sb.append("ModelInsights: ").append(getModelInsights());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +155,10 @@ public class CandidateArtifactLocations implements Serializable, Cloneable, Stru
             return false;
         if (other.getExplainability() != null && other.getExplainability().equals(this.getExplainability()) == false)
             return false;
+        if (other.getModelInsights() == null ^ this.getModelInsights() == null)
+            return false;
+        if (other.getModelInsights() != null && other.getModelInsights().equals(this.getModelInsights()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +168,7 @@ public class CandidateArtifactLocations implements Serializable, Cloneable, Stru
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getExplainability() == null) ? 0 : getExplainability().hashCode());
+        hashCode = prime * hashCode + ((getModelInsights() == null) ? 0 : getModelInsights().hashCode());
         return hashCode;
     }
 

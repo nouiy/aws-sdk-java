@@ -39,9 +39,16 @@ import org.apache.http.conn.ManagedClientConnection;
 import org.apache.http.conn.routing.HttpRoute;
 import org.apache.http.conn.scheme.SchemeRegistry;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import utils.Retryable;
+import utils.RetryableTestRule;
 
 public class IdleConnectionReaperTest {
+
+    @Rule
+    public RetryableTestRule retryableTestRule = new RetryableTestRule();
+
     @Before
     public void init() {
         IdleConnectionReaper.shutdown();
@@ -60,6 +67,7 @@ public class IdleConnectionReaperTest {
     }
 
     @Test
+    @Retryable
     public void autoShutdown() throws Exception {
         assertEquals(0, IdleConnectionReaper.size());
         for (int i = 0; i < 3; i++) {

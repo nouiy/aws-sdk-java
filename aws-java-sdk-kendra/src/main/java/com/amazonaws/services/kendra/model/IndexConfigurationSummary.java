@@ -36,7 +36,7 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
     private String name;
     /**
      * <p>
-     * A unique identifier for the index. Use this to identify the index when you are using operations such as
+     * A unique identifier for the index. Use this to identify the index when you are using APIs such as
      * <code>Query</code>, <code>DescribeIndex</code>, <code>UpdateIndex</code>, and <code>DeleteIndex</code>.
      * </p>
      */
@@ -55,7 +55,7 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
     private java.util.Date createdAt;
     /**
      * <p>
-     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> operation.
+     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
      * </p>
      */
     private java.util.Date updatedAt;
@@ -108,12 +108,12 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A unique identifier for the index. Use this to identify the index when you are using operations such as
+     * A unique identifier for the index. Use this to identify the index when you are using APIs such as
      * <code>Query</code>, <code>DescribeIndex</code>, <code>UpdateIndex</code>, and <code>DeleteIndex</code>.
      * </p>
      * 
      * @param id
-     *        A unique identifier for the index. Use this to identify the index when you are using operations such as
+     *        A unique identifier for the index. Use this to identify the index when you are using APIs such as
      *        <code>Query</code>, <code>DescribeIndex</code>, <code>UpdateIndex</code>, and <code>DeleteIndex</code>.
      */
 
@@ -123,11 +123,11 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A unique identifier for the index. Use this to identify the index when you are using operations such as
+     * A unique identifier for the index. Use this to identify the index when you are using APIs such as
      * <code>Query</code>, <code>DescribeIndex</code>, <code>UpdateIndex</code>, and <code>DeleteIndex</code>.
      * </p>
      * 
-     * @return A unique identifier for the index. Use this to identify the index when you are using operations such as
+     * @return A unique identifier for the index. Use this to identify the index when you are using APIs such as
      *         <code>Query</code>, <code>DescribeIndex</code>, <code>UpdateIndex</code>, and <code>DeleteIndex</code>.
      */
 
@@ -137,12 +137,12 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A unique identifier for the index. Use this to identify the index when you are using operations such as
+     * A unique identifier for the index. Use this to identify the index when you are using APIs such as
      * <code>Query</code>, <code>DescribeIndex</code>, <code>UpdateIndex</code>, and <code>DeleteIndex</code>.
      * </p>
      * 
      * @param id
-     *        A unique identifier for the index. Use this to identify the index when you are using operations such as
+     *        A unique identifier for the index. Use this to identify the index when you are using APIs such as
      *        <code>Query</code>, <code>DescribeIndex</code>, <code>UpdateIndex</code>, and <code>DeleteIndex</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -253,11 +253,11 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> operation.
+     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> operation.
+     *        The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
      */
 
     public void setUpdatedAt(java.util.Date updatedAt) {
@@ -266,10 +266,10 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> operation.
+     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
      * </p>
      * 
-     * @return The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> operation.
+     * @return The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
      */
 
     public java.util.Date getUpdatedAt() {
@@ -278,11 +278,11 @@ public class IndexConfigurationSummary implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> operation.
+     * The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
      * </p>
      * 
      * @param updatedAt
-     *        The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> operation.
+     *        The Unix timestamp when the index was last updated by the <code>UpdateIndex</code> API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

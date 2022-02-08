@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides information about a synchronization job.
+ * Provides information about a data source synchronization job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/DataSourceSyncJob" target="_top">AWS API
@@ -36,13 +36,13 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
     private String executionId;
     /**
      * <p>
-     * The UNIX datetime that the synchronization job was started.
+     * The UNIX datetime that the synchronization job started.
      * </p>
      */
     private java.util.Date startTime;
     /**
      * <p>
-     * The UNIX datetime that the synchronization job was completed.
+     * The UNIX datetime that the synchronization job completed.
      * </p>
      */
     private java.util.Date endTime;
@@ -63,8 +63,8 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
     private String errorMessage;
     /**
      * <p>
-     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field contains a the
-     * reason that the synchronization failed.
+     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field indicates the
+     * reason the synchronization failed.
      * </p>
      */
     private String errorCode;
@@ -125,11 +125,11 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job was started.
+     * The UNIX datetime that the synchronization job started.
      * </p>
      * 
      * @param startTime
-     *        The UNIX datetime that the synchronization job was started.
+     *        The UNIX datetime that the synchronization job started.
      */
 
     public void setStartTime(java.util.Date startTime) {
@@ -138,10 +138,10 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job was started.
+     * The UNIX datetime that the synchronization job started.
      * </p>
      * 
-     * @return The UNIX datetime that the synchronization job was started.
+     * @return The UNIX datetime that the synchronization job started.
      */
 
     public java.util.Date getStartTime() {
@@ -150,11 +150,11 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job was started.
+     * The UNIX datetime that the synchronization job started.
      * </p>
      * 
      * @param startTime
-     *        The UNIX datetime that the synchronization job was started.
+     *        The UNIX datetime that the synchronization job started.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,11 +165,11 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job was completed.
+     * The UNIX datetime that the synchronization job completed.
      * </p>
      * 
      * @param endTime
-     *        The UNIX datetime that the synchronization job was completed.
+     *        The UNIX datetime that the synchronization job completed.
      */
 
     public void setEndTime(java.util.Date endTime) {
@@ -178,10 +178,10 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job was completed.
+     * The UNIX datetime that the synchronization job completed.
      * </p>
      * 
-     * @return The UNIX datetime that the synchronization job was completed.
+     * @return The UNIX datetime that the synchronization job completed.
      */
 
     public java.util.Date getEndTime() {
@@ -190,11 +190,11 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The UNIX datetime that the synchronization job was completed.
+     * The UNIX datetime that the synchronization job completed.
      * </p>
      * 
      * @param endTime
-     *        The UNIX datetime that the synchronization job was completed.
+     *        The UNIX datetime that the synchronization job completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -326,13 +326,13 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field contains a the
-     * reason that the synchronization failed.
+     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field indicates the
+     * reason the synchronization failed.
      * </p>
      * 
      * @param errorCode
-     *        If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field contains
-     *        a the reason that the synchronization failed.
+     *        If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field indicates
+     *        the reason the synchronization failed.
      * @see ErrorCode
      */
 
@@ -342,12 +342,12 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field contains a the
-     * reason that the synchronization failed.
+     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field indicates the
+     * reason the synchronization failed.
      * </p>
      * 
-     * @return If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field contains
-     *         a the reason that the synchronization failed.
+     * @return If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field
+     *         indicates the reason the synchronization failed.
      * @see ErrorCode
      */
 
@@ -357,13 +357,13 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field contains a the
-     * reason that the synchronization failed.
+     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field indicates the
+     * reason the synchronization failed.
      * </p>
      * 
      * @param errorCode
-     *        If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field contains
-     *        a the reason that the synchronization failed.
+     *        If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field indicates
+     *        the reason the synchronization failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ErrorCode
      */
@@ -375,13 +375,13 @@ public class DataSourceSyncJob implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field contains a the
-     * reason that the synchronization failed.
+     * If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field indicates the
+     * reason the synchronization failed.
      * </p>
      * 
      * @param errorCode
-     *        If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field contains
-     *        a the reason that the synchronization failed.
+     *        If the <code>Status</code> field is set to <code>FAILED</code>, the <code>ErrorCode</code> field indicates
+     *        the reason the synchronization failed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ErrorCode
      */

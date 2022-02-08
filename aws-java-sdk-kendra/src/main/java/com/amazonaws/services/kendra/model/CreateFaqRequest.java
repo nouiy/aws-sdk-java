@@ -82,7 +82,7 @@ public class CreateFaqRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A token that you provide to identify the request to create a FAQ. Multiple calls to the
-     * <code>CreateFaqRequest</code> operation with the same client token will create only one FAQ.
+     * <code>CreateFaqRequest</code> API with the same client token will create only one FAQ.
      * </p>
      */
     private String clientToken;
@@ -517,12 +517,12 @@ public class CreateFaqRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A token that you provide to identify the request to create a FAQ. Multiple calls to the
-     * <code>CreateFaqRequest</code> operation with the same client token will create only one FAQ.
+     * <code>CreateFaqRequest</code> API with the same client token will create only one FAQ.
      * </p>
      * 
      * @param clientToken
      *        A token that you provide to identify the request to create a FAQ. Multiple calls to the
-     *        <code>CreateFaqRequest</code> operation with the same client token will create only one FAQ.
+     *        <code>CreateFaqRequest</code> API with the same client token will create only one FAQ.
      */
 
     public void setClientToken(String clientToken) {
@@ -532,11 +532,11 @@ public class CreateFaqRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A token that you provide to identify the request to create a FAQ. Multiple calls to the
-     * <code>CreateFaqRequest</code> operation with the same client token will create only one FAQ.
+     * <code>CreateFaqRequest</code> API with the same client token will create only one FAQ.
      * </p>
      * 
      * @return A token that you provide to identify the request to create a FAQ. Multiple calls to the
-     *         <code>CreateFaqRequest</code> operation with the same client token will create only one FAQ.
+     *         <code>CreateFaqRequest</code> API with the same client token will create only one FAQ.
      */
 
     public String getClientToken() {
@@ -546,12 +546,12 @@ public class CreateFaqRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * A token that you provide to identify the request to create a FAQ. Multiple calls to the
-     * <code>CreateFaqRequest</code> operation with the same client token will create only one FAQ.
+     * <code>CreateFaqRequest</code> API with the same client token will create only one FAQ.
      * </p>
      * 
      * @param clientToken
      *        A token that you provide to identify the request to create a FAQ. Multiple calls to the
-     *        <code>CreateFaqRequest</code> operation with the same client token will create only one FAQ.
+     *        <code>CreateFaqRequest</code> API with the same client token will create only one FAQ.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

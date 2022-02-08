@@ -100,6 +100,10 @@ public class ServiceJsonUnmarshaller implements Unmarshaller<Service, JsonUnmars
                     context.nextToken();
                     service.setAutoScalingConfigurationSummary(AutoScalingConfigurationSummaryJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("NetworkConfiguration", targetDepth)) {
+                    context.nextToken();
+                    service.setNetworkConfiguration(NetworkConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)
